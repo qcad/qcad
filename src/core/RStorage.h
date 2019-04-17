@@ -114,7 +114,7 @@ public:
     /**
      * \return A set of all object IDs of the document.
      */
-    virtual QSet<RObject::Id> queryAllObjects() = 0;
+    virtual QSet<RObject::Id> queryAllObjects() const = 0;
 
     virtual QSet<REntity::Id> queryAllVisibleEntities() = 0;
 
@@ -208,6 +208,11 @@ public:
      * \return A set of entity IDs of all selected entities.
      */
     virtual QSet<REntity::Id> querySelectedEntities() const = 0;
+
+    /**
+     * \return A set of object IDs of all selected objects (layers, ...).
+     */
+    virtual QSet<RObject::Id> querySelectedLayers() const = 0;
 
     /**
      * \return A set of entity IDs of all infinite entities (xlines).

@@ -43,7 +43,8 @@ public:
 
     virtual void clear();
 
-    virtual QSet<RObject::Id> queryAllObjects();
+    virtual QSet<RObject::Id> queryAllObjects() const;
+    virtual QSet<RObject::Id> querySelectedLayers() const;
     virtual QSet<REntity::Id> queryAllVisibleEntities();
     virtual QSet<REntity::Id> queryAllEntities(bool undone = false, bool allBlocks = false, RS::EntityType type = RS::EntityAll);
     virtual QSet<REntity::Id> queryAllEntities(bool undone, bool allBlocks, QList<RS::EntityType> types);

@@ -31,9 +31,14 @@ RLinkedStorage::RLinkedStorage(RStorage& backStorage) :
 RLinkedStorage::~RLinkedStorage() {
 }
 
-QSet<RObject::Id> RLinkedStorage::queryAllObjects() {
+QSet<RObject::Id> RLinkedStorage::queryAllObjects() const {
     return RMemoryStorage::queryAllObjects()
             .unite(backStorage->queryAllObjects());
+}
+
+QSet<RObject::Id> RLinkedStorage::querySelectedLayers() const {
+    return RMemoryStorage::querySelectedLayers()
+            .unite(backStorage->querySelectedLayers());
 }
 
 QSet<REntity::Id> RLinkedStorage::queryAllVisibleEntities() {

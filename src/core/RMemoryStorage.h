@@ -49,7 +49,8 @@ public:
 
     //virtual QList<REntity::Id> orderBackToFront(const QSet<REntity::Id>& entityIds);
 
-    virtual QSet<RObject::Id> queryAllObjects();
+    virtual QSet<RObject::Id> queryAllObjects() const;
+    virtual QSet<RObject::Id> querySelectedLayers() const;
     virtual QSet<REntity::Id> queryAllVisibleEntities();
     virtual QSet<REntity::Id> queryAllEntities(bool undone = false, bool allBlocks = false, RS::EntityType type = RS::EntityAll);
     virtual QSet<REntity::Id> queryAllEntities(bool undone, bool allBlocks, QList<RS::EntityType> types);
@@ -99,6 +100,7 @@ public:
 
     void clearSelectionCache();
     void updateSelectedEntityMap() const;
+    void updateSelectedLayerMap() const;
 
     virtual int countSelectedEntities() const;
     virtual void clearEntitySelection(QSet<REntity::Id>* affectedEntities = NULL);
@@ -224,6 +226,8 @@ protected:
     QHash<REntity::Id, QSharedPointer<REntity> > entityMap;
     mutable QHash<REntity::Id, QSharedPointer<REntity> > selectedEntityMap;
     mutable bool selectedEntityMapDirty;
+    mutable QHash<RLayer::Id, QSharedPointer<RLayer> > selectedLayerMap;
+    mutable bool selectedLayerMapDirty;
     QHash<RBlock::Id, QHash<REntity::Id, QSharedPointer<REntity> > > blockEntityMap;
     QHash<RBlock::Id, QSharedPointer<RBlock> > blockMap;
     QHash<RLayer::Id, QSharedPointer<RLayer> > layerMap;

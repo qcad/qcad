@@ -28,7 +28,8 @@ RMemoryStorage::RMemoryStorage() :
     //boundingBoxIgnoreHiddenLayers(false),
     //boundingBoxIgnoreEmpty(false),
     inTransaction(false),
-    selectedEntityMapDirty(true) {
+    selectedEntityMapDirty(true),
+    selectedLayerMapDirty(true) {
 
     setLastTransactionId(-1);
 }
@@ -51,6 +52,8 @@ void RMemoryStorage::clear() {
     entityMap.clear();
     selectedEntityMap.clear();
     selectedEntityMapDirty = true;
+    selectedLayerMap.clear();
+    selectedLayerMapDirty = true;
     blockEntityMap.clear();
     blockMap.clear();
     layerMap.clear();
@@ -131,11 +134,11 @@ void RMemoryStorage::rollbackTransaction() {
     //Q_ASSERT(false);
 }
 
-QSet<RObject::Id> RMemoryStorage::queryAllObjects() {
+QSet<RObject::Id> RMemoryStorage::queryAllObjects() const {
     //result = QSet<RObject::Id>::fromList(objectMap.keys());
     QSet<RObject::Id> result;
-    QHash<RObject::Id, QSharedPointer<RObject> >::iterator it;
-    for (it = objectMap.begin(); it != objectMap.end(); ++it) {
+    QHash<RObject::Id, QSharedPointer<RObject> >::const_iterator it;
+    for (it = objectMap.constBegin(); it != objectMap.constEnd(); ++it) {
         if (!(*it).isNull() && !(*it)->isUndone()) {
             result.insert((*it)->getId());
         }
@@ -395,12 +398,17 @@ QSet<REntity::Id> RMemoryStorage::queryInfiniteEntities() {
 void RMemoryStorage::clearSelectionCache() {
     selectedEntityMap.clear();
     selectedEntityMapDirty = true;
+
+    selectedLayerMap.clear();
+    selectedLayerMapDirty = true;
 }
 
 void RMemoryStorage::updateSelectedEntityMap() const {
     if (!selectedEntityMapDirty) {
         return;
     }
+
+    selectedEntityMap.clear();
 
     RBlock::Id currentBlock = getCurrentBlockId();
     QHash<RObject::Id, QSharedPointer<REntity> >::const_iterator it;
@@ -419,6 +427,31 @@ QSet<REntity::Id> RMemoryStorage::querySelectedEntities() const {
     updateSelectedEntityMap();
 
     return selectedEntityMap.keys().toSet();
+}
+
+void RMemoryStorage::updateSelectedLayerMap() const {
+//    if (!selectedObjectMapDirty) {
+//        return;
+//    }
+
+    selectedLayerMap.clear();
+
+    // TODO: implement for other objects than layers:
+    QHash<RLayer::Id, QSharedPointer<RLayer> >::const_iterator it;
+    for (it = layerMap.constBegin(); it != layerMap.constEnd(); ++it) {
+        QSharedPointer<RLayer> obj = *it;
+        if (!obj.isNull() && !obj->isUndone() && obj->isSelected()) {
+            selectedLayerMap.insert(obj->getId(), obj);
+        }
+    }
+
+    selectedLayerMapDirty = false;
+}
+
+QSet<RObject::Id> RMemoryStorage::querySelectedLayers() const {
+    updateSelectedLayerMap();
+
+    return selectedLayerMap.keys().toSet();
 }
 
 QSet<REntity::Id> RMemoryStorage::queryLayerEntities(RLayer::Id layerId, bool allBlocks) {
