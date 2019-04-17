@@ -72,7 +72,7 @@
     
     
       void setCurrentLayer(
-                RDocumentInterface * documentInterface
+                RDocumentInterface * documentInterface, RLayer::Id previousLayerId
             );
         
     

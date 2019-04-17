@@ -73,6 +73,7 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyType</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyHandle</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyProtected</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertySelected</name></decl>;</decl_stmt>
 
     <enum>enum <name>XYZ</name> <block>{
         <expr><name>X</name></expr>, <expr><name>Y</name></expr>, <expr><name>Z</name></expr>
@@ -82,7 +83,8 @@
     <enum>enum <name>ObjectFlag</name> <block>{
         <expr><name>NoFlags</name> = 0x000</expr>,
         <expr><name>Undone</name> = 0x001</expr>,           <comment type="line">//!&lt; object is undone</comment>
-        <expr><name>Protect</name> = 0x002</expr>          <comment type="line">//!&lt; object is protected</comment>
+        <expr><name>Protect</name> = 0x002</expr>,          <comment type="line">//!&lt; object is protected</comment>
+        <expr><name>Selected</name> = 0x004</expr>          <comment type="line">//!&lt; object is selected</comment>
     }</block>;</enum>
     <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Flags</argument>, <argument>ObjectFlag</argument>)</argument_list></macro>
 
@@ -159,6 +161,14 @@
         <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Protect</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
 
+    <function><type><name>virtual</name> <name>bool</name></type> <name>isSelected</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name><name>RObject</name>::<name>Selected</name></name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>setSelected</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Selected</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
     <function><type><name>bool</name></type> <name>isUndone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name><name>RObject</name>::<name>Undone</name></name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
@@ -197,7 +207,7 @@
      *      that the properties of this object should for example
      *      be shown in a property editor.
      */</comment>
-    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>isSelectedForPropertyEditing</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+<comment type="line">//    virtual bool isSelectedForPropertyEditing() = 0;</comment>
 
     <function_decl><type><name>bool</name></type> <name>hasCustomProperties</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>hasCustomProperty</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>

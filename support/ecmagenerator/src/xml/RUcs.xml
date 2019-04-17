@@ -34,11 +34,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RUcs *" isPureVirtual="false" />
     </method>
-    <method name="isSelectedForPropertyEditing"
-    cppName="isSelectedForPropertyEditing" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false" />
-    </method>
     <method name="getProperty" cppName="getProperty"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

@@ -125,6 +125,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, querySelectedEntities, "querySelectedEntities");
             
+            REcmaHelper::registerFunction(&engine, proto, querySelectedLayers, "querySelectedLayers");
+            
             REcmaHelper::registerFunction(&engine, proto, queryInfiniteEntities, "queryInfiniteEntities");
             
             REcmaHelper::registerFunction(&engine, proto, queryDocumentVariables, "queryDocumentVariables");
@@ -2526,6 +2528,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::querySelectedEntities", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::querySelectedLayers
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::querySelectedLayers", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::querySelectedLayers";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("querySelectedLayers", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
+        
+               self->querySelectedLayers();
+        // return type: QSet < RObject::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.querySelectedLayers().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::querySelectedLayers", context, engine);
             return result;
         }
          QScriptValue

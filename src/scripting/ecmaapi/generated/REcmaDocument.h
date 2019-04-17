@@ -81,6 +81,9 @@
         queryAllObjects
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        querySelectedLayers
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryAllVisibleEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

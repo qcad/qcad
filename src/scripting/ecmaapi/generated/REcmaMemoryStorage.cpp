@@ -80,6 +80,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryAllObjects, "queryAllObjects");
             
+            REcmaHelper::registerFunction(&engine, proto, querySelectedLayers, "querySelectedLayers");
+            
             REcmaHelper::registerFunction(&engine, proto, queryAllVisibleEntities, "queryAllVisibleEntities");
             
             REcmaHelper::registerFunction(&engine, proto, queryAllEntities, "queryAllEntities");
@@ -153,6 +155,8 @@
             REcmaHelper::registerFunction(&engine, proto, clearSelectionCache, "clearSelectionCache");
             
             REcmaHelper::registerFunction(&engine, proto, updateSelectedEntityMap, "updateSelectedEntityMap");
+            
+            REcmaHelper::registerFunction(&engine, proto, updateSelectedLayerMap, "updateSelectedLayerMap");
             
             REcmaHelper::registerFunction(&engine, proto, countSelectedEntities, "countSelectedEntities");
             
@@ -685,6 +689,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMemoryStorage::queryAllObjects", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMemoryStorage::querySelectedLayers
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::querySelectedLayers", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::querySelectedLayers";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("querySelectedLayers", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
+        
+               self->querySelectedLayers();
+        // return type: QSet < RObject::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.querySelectedLayers().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::querySelectedLayers", context, engine);
             return result;
         }
          QScriptValue
@@ -3507,6 +3561,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMemoryStorage::updateSelectedEntityMap", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMemoryStorage::updateSelectedLayerMap
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::updateSelectedLayerMap", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::updateSelectedLayerMap";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("updateSelectedLayerMap", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->updateSelectedLayerMap();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.updateSelectedLayerMap().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::updateSelectedLayerMap", context, engine);
             return result;
         }
          QScriptValue

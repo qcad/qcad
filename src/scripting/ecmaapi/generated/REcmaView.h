@@ -92,9 +92,6 @@
         ;static  QScriptValue
         setProperty
         (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        isSelectedForPropertyEditing
-        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

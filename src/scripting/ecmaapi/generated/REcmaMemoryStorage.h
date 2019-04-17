@@ -68,6 +68,9 @@
         queryAllObjects
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        querySelectedLayers
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryAllVisibleEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -177,6 +180,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         updateSelectedEntityMap
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateSelectedLayerMap
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         countSelectedEntities

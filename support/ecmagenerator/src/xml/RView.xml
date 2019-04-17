@@ -120,11 +120,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
-    <method name="isSelectedForPropertyEditing"
-    cppName="isSelectedForPropertyEditing" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false" />
-    </method>
     <property name="PropertyName" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyCenterPoint" type="RPropertyTypeId"

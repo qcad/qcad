@@ -156,7 +156,7 @@
     <comment type="block">/**
      * \copydoc REntityData::isSelected
      */</comment>
-    <function><type><name>bool</name></type> <name>isSelected</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name>virtual</name> <name>bool</name></type> <name>isSelected</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>isSelected</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
@@ -625,9 +625,9 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportEntity</name><parameter_list>(<param><decl><type><name>RExporter</name>&amp;</type> <name>e</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
 
     <comment type="line">// from RObject:</comment>
-    <function><type><name>virtual</name> <name>bool</name></type> <name>isSelectedForPropertyEditing</name><parameter_list>()</parameter_list> <block>{
-        <return>return <expr><call><name>isSelected</name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
+<comment type="line">//    virtual bool isSelectedForPropertyEditing() {</comment>
+<comment type="line">//        return isSelected();</comment>
+<comment type="line">//    }</comment>
 
     <function><type><name>virtual</name> <name>void</name></type> <name>setAutoUpdatesBlocked</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setAutoUpdatesBlocked</name><argument_list>(<argument><expr><name>on</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>

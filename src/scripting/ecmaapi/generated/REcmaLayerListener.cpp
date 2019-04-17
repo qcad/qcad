@@ -217,11 +217,14 @@
                 
     
     if( context->argumentCount() ==
-    1 && (
+    2 && (
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
         ) /* type: RDocumentInterface * */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: RLayer::Id */
     
     ){
     // prepare arguments:
@@ -239,12 +242,22 @@
                         return REcmaHelper::throwError("RLayerListener: Argument 0 is not of type RDocumentInterface *RDocumentInterface *.", context);                    
                     }
                 
+                    // argument isStandardType
+                    RLayer::Id
+                    a1 =
+                    (RLayer::Id)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
     // end of arguments
 
     // call C++ function:
     // return type 'void'
     
-               self->setCurrentLayer(a0);
+               self->setCurrentLayer(a0
+        ,
+    a1);
     } else
 
 

@@ -79,6 +79,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setProtected, "setProtected");
             
+            REcmaHelper::registerFunction(&engine, proto, isSelected, "isSelected");
+            
+            REcmaHelper::registerFunction(&engine, proto, setSelected, "setSelected");
+            
             REcmaHelper::registerFunction(&engine, proto, isUndone, "isUndone");
             
             REcmaHelper::registerFunction(&engine, proto, getPropertyTypeIds, "getPropertyTypeIds");
@@ -90,8 +94,6 @@
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
             
             REcmaHelper::registerFunction(&engine, proto, hasPropertyType, "hasPropertyType");
-            
-            REcmaHelper::registerFunction(&engine, proto, isSelectedForPropertyEditing, "isSelectedForPropertyEditing");
             
             REcmaHelper::registerFunction(&engine, proto, hasCustomProperties, "hasCustomProperties");
             
@@ -163,6 +165,10 @@
                 qScriptValueFromValue(&engine, RObject::PropertyProtected),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertySelected",
+                qScriptValueFromValue(&engine, RObject::PropertySelected),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
 
     // enum values:
     
@@ -194,6 +200,11 @@
 
     ctor.setProperty("Protect",
     QScriptValue(RObject::Protect),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Selected",
+    QScriptValue(RObject::Selected),
     QScriptValue::ReadOnly);
 
 
@@ -925,6 +936,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerObject::setProtected", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerObject::isSelected
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerObject::isSelected", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::isSelected";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("isSelected", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isSelected();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.isSelected().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerObject::isSelected", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerObject::setSelected
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerObject::setSelected", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::setSelected";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("setSelected", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setSelected(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.setSelected().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerObject::setSelected", context, engine);
             return result;
         }
          QScriptValue
@@ -1717,55 +1832,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerObject::hasPropertyType", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaSharedPointerObject::isSelectedForPropertyEditing
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::isSelectedForPropertyEditing", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::isSelectedForPropertyEditing";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RObject* self = 
-                        getSelf("isSelectedForPropertyEditing", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        
-               self->isSelectedForPropertyEditing();
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.isSelectedForPropertyEditing().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::isSelectedForPropertyEditing", context, engine);
             return result;
         }
          QScriptValue

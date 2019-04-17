@@ -32,6 +32,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RDocumentInterface *"
         typeName="RDocumentInterface *" name="documentInterface"
         isConst="false" />
+        <arg type="RLayer::Id" typeName="RLayer::Id"
+        name="previousLayerId" isConst="false" />
       </variant>
     </method>
     <method name="clearLayers" cppName="clearLayers"

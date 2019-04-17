@@ -137,9 +137,6 @@
         setProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        isSelectedForPropertyEditing
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         hasChildLayers
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

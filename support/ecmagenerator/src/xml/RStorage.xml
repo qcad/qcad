@@ -67,7 +67,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="QSet &lt; RObject::Id &gt;"
-      isPureVirtual="true" />
+      isPureVirtual="false" />
     </method>
     <method name="queryAllVisibleEntities"
     cppName="queryAllVisibleEntities" specifier="public"
@@ -245,6 +245,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="querySelectedEntities" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="QSet &lt; REntity::Id &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="querySelectedLayers"
+    cppName="querySelectedLayers" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QSet &lt; RObject::Id &gt;"
       isPureVirtual="false" />
     </method>
     <method name="queryInfiniteEntities"

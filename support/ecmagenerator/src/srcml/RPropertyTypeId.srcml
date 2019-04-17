@@ -122,10 +122,10 @@
 
 </public><public>public:
     <decl_stmt><decl><type><name>const</name> <name>static</name> <name>long</name> <name>int</name></type> <name>INVALID_ID</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>long</name> <name>int</name></type> <name>id</name></decl>;</decl_stmt>
     <comment type="line">//const static QString blockAttributePrefix;</comment>
 
 </public><private>private:
-    <decl_stmt><decl><type><name>long</name> <name>int</name></type> <name>id</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RPropertyAttributes</name>::<name>Options</name></name></type> <name>options</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QString</name></type> <name>customPropertyTitle</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QString</name></type> <name>customPropertyName</name></decl>;</decl_stmt>

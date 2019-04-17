@@ -230,11 +230,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
-    <method name="isSelectedForPropertyEditing"
-    cppName="isSelectedForPropertyEditing" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false" />
-    </method>
     <method name="hasChildLayers" cppName="hasChildLayers"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -347,6 +342,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyHandle" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyProtected" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertySelected" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyName" type="RPropertyTypeId"
     isConst="false" isStatic="true" />

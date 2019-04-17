@@ -73,6 +73,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setProtected, "setProtected");
             
+            REcmaHelper::registerFunction(&engine, proto, isSelected, "isSelected");
+            
+            REcmaHelper::registerFunction(&engine, proto, setSelected, "setSelected");
+            
             REcmaHelper::registerFunction(&engine, proto, isUndone, "isUndone");
             
             REcmaHelper::registerFunction(&engine, proto, getPropertyTypeIds, "getPropertyTypeIds");
@@ -84,8 +88,6 @@
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
             
             REcmaHelper::registerFunction(&engine, proto, hasPropertyType, "hasPropertyType");
-            
-            REcmaHelper::registerFunction(&engine, proto, isSelectedForPropertyEditing, "isSelectedForPropertyEditing");
             
             REcmaHelper::registerFunction(&engine, proto, hasCustomProperties, "hasCustomProperties");
             
@@ -158,6 +160,10 @@
                 qScriptValueFromValue(&engine, RObject::PropertyProtected),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertySelected",
+                qScriptValueFromValue(&engine, RObject::PropertySelected),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
 
     // enum values:
     
@@ -189,6 +195,11 @@
 
     ctor.setProperty("Protect",
     QScriptValue(RObject::Protect),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Selected",
+    QScriptValue(RObject::Selected),
     QScriptValue::ReadOnly);
 
 
@@ -920,6 +931,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaObject::setProtected", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaObject::isSelected
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaObject::isSelected", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaObject::isSelected";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("isSelected", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isSelected();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.isSelected().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaObject::isSelected", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaObject::setSelected
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaObject::setSelected", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaObject::setSelected";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("setSelected", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setSelected(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.setSelected().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaObject::setSelected", context, engine);
             return result;
         }
          QScriptValue
@@ -1712,55 +1827,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaObject::hasPropertyType", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaObject::isSelectedForPropertyEditing
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaObject::isSelectedForPropertyEditing", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaObject::isSelectedForPropertyEditing";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RObject* self = 
-                        getSelf("isSelectedForPropertyEditing", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        
-               self->isSelectedForPropertyEditing();
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.isSelectedForPropertyEditing().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaObject::isSelectedForPropertyEditing", context, engine);
             return result;
         }
          QScriptValue

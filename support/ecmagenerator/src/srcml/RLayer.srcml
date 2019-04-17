@@ -52,6 +52,7 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyType</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyHandle</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyProtected</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertySelected</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyName</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyOff</name></decl>;</decl_stmt>
@@ -68,6 +69,7 @@
 
 </public><public>public:
     <enum>enum <name>LayerFlag</name> <block>{
+        <comment type="line">// these complement the RObject flags</comment>
         <expr><name>Off</name> = 0x010</expr>,              <comment type="line">//!&lt; layer is off</comment>
         <expr><name>Frozen</name> = 0x020</expr>,           <comment type="line">//!&lt; layer is frozen</comment>
         <expr><name>Locked</name> = 0x040</expr>,           <comment type="line">//!&lt; layer is locked</comment>
@@ -198,7 +200,7 @@
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>setProperty</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl></param>,
             <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name>=<init><expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
-    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>isSelectedForPropertyEditing</name><parameter_list>()</parameter_list>;</function_decl>
+    <comment type="line">//virtual bool isSelectedForPropertyEditing();</comment>
 
     <function><type><name>bool</name></type> <name>hasChildLayers</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <decl_stmt><decl><type><name>const</name> <name>RDocument</name>*</type> <name>doc</name> =<init> <expr><call><name>getDocument</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>

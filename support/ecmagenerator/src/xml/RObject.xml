@@ -16,6 +16,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="NoFlags" />
       <value name="Undone" />
       <value name="Protect" />
+      <value name="Selected" />
     </enum>
     <constructor>
       <variant>
@@ -98,6 +99,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="isSelected" cppName="isSelected"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setSelected" cppName="setSelected"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="isUndone" cppName="isUndone" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
@@ -156,11 +170,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RPropertyTypeId" typeName="RPropertyTypeId"
         name="propertyTypeId" isConst="false" />
       </variant>
-    </method>
-    <method name="isSelectedForPropertyEditing"
-    cppName="isSelectedForPropertyEditing" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="true" />
     </method>
     <method name="hasCustomProperties"
     cppName="hasCustomProperties" specifier="public"
@@ -364,6 +373,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyHandle" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyProtected" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertySelected" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
   </class>
 </unit>

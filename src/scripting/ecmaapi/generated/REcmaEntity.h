@@ -273,9 +273,6 @@
         exportEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        isSelectedForPropertyEditing
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         setAutoUpdatesBlocked
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

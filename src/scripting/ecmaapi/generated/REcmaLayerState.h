@@ -66,9 +66,6 @@
         setProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        isSelectedForPropertyEditing
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         getName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
