@@ -33,6 +33,7 @@ RPropertyTypeId RObject::PropertyCustom;
 RPropertyTypeId RObject::PropertyType;
 RPropertyTypeId RObject::PropertyHandle;
 RPropertyTypeId RObject::PropertyProtected;
+RPropertyTypeId RObject::PropertySelected;
 
 RObject::RObject(RDocument* document) :
     document(document),
@@ -66,6 +67,7 @@ void RObject::init() {
     RObject::PropertyType.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Type"));
     RObject::PropertyHandle.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Handle"));
     RObject::PropertyProtected.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Protected"));
+    RObject::PropertySelected.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Selected"));
 }
 
 void RObject::setUndone(bool on) {
@@ -102,16 +104,19 @@ QPair<QVariant, RPropertyAttributes> RObject::getProperty(RPropertyTypeId& prope
     Q_UNUSED(noAttributes)
     Q_UNUSED(showOnRequest)
 
-    if (propertyTypeId == PropertyType) {
+    if (propertyTypeId==PropertyType) {
         return qMakePair(QVariant(getType()), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     }
-    if (propertyTypeId == PropertyHandle) {
+    if (propertyTypeId==PropertyHandle) {
         return qMakePair(QVariant(handle), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     }
-    if (propertyTypeId == PropertyProtected) {
-        //return qMakePair(QVariant(protect), RPropertyAttributes(RPropertyAttributes::Invisible));
+    if (propertyTypeId==PropertyProtected) {
         return qMakePair(QVariant(isProtected()), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     }
+    if (propertyTypeId==PropertySelected) {
+        return qMakePair(QVariant(isSelected()), RPropertyAttributes(RPropertyAttributes::Invisible));
+    }
+
     if (propertyTypeId.isCustom()) {
         QString appId = propertyTypeId.getCustomPropertyTitle();
         QString name = propertyTypeId.getCustomPropertyName();
@@ -139,6 +144,7 @@ bool RObject::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
     bool ret = false;
 
     ret = ret || RObject::setMemberFlag(RObject::Protect, value, PropertyProtected == propertyTypeId);
+    ret = ret || RObject::setMemberFlag(RObject::Selected, value, PropertySelected == propertyTypeId);
 
     // set custom property:
     if (propertyTypeId.getId()==RPropertyTypeId::INVALID_ID) {
@@ -642,6 +648,7 @@ void RObject::print(QDebug dbg) const {
             << ", address: " << QString("0x%1").arg((long int) this, 0, 16)
             << ", undone: " << (int)isUndone()
             << ", protected: " << (int)isProtected()
+            << ", selected: " << (int)isSelected()
             << ")";
 
     if (!customProperties.isEmpty()) {

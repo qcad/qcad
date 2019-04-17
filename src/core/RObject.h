@@ -72,6 +72,7 @@ public:
     static RPropertyTypeId PropertyType;
     static RPropertyTypeId PropertyHandle;
     static RPropertyTypeId PropertyProtected;
+    static RPropertyTypeId PropertySelected;
 
     enum XYZ {
         X, Y, Z
@@ -81,7 +82,8 @@ public:
     enum ObjectFlag {
         NoFlags = 0x000,
         Undone = 0x001,           //!< object is undone
-        Protect = 0x002          //!< object is protected
+        Protect = 0x002,          //!< object is protected
+        Selected = 0x004          //!< object is selected
     };
     Q_DECLARE_FLAGS(Flags, ObjectFlag)
 
@@ -158,6 +160,14 @@ public:
         setFlag(RObject::Protect, on);
     }
 
+    virtual bool isSelected() const {
+        return getFlag(RObject::Selected);
+    }
+
+    virtual void setSelected(bool on) {
+        setFlag(RObject::Selected, on);
+    }
+
     bool isUndone() const {
         return getFlag(RObject::Undone);
     }
@@ -190,13 +200,6 @@ public:
     virtual bool hasPropertyType(RPropertyTypeId propertyTypeId) {
         return RPropertyTypeId::hasPropertyType(typeid(*this), propertyTypeId);
     }
-
-    /**
-     * \return True if this object is selected for editing. This means
-     *      that the properties of this object should for example
-     *      be shown in a property editor.
-     */
-    virtual bool isSelectedForPropertyEditing() = 0;
 
     bool hasCustomProperties() const;
     bool hasCustomProperty(const QString& title, const QString& key) const;
