@@ -40,8 +40,8 @@ public:
         emit layersUpdated(documentInterface, layerIds);
     }
 
-    virtual void setCurrentLayer(RDocumentInterface* documentInterface) {
-        emit currentLayerSet(documentInterface);
+    virtual void setCurrentLayer(RDocumentInterface* documentInterface, RLayer::Id previousLayerId) {
+        emit currentLayerSet(documentInterface, previousLayerId);
     }
 
     virtual void clearLayers() {
@@ -50,7 +50,7 @@ public:
 
 signals:
     void layersUpdated(RDocumentInterface* documentInterface, QList<int> layerIds);
-    void currentLayerSet(RDocumentInterface* documentInterface);
+    void currentLayerSet(RDocumentInterface* documentInterface, int previousLayerId);
     void layersCleared();
 };
 
