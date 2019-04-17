@@ -596,7 +596,9 @@ void RSettings::loadTranslations(const QString& module, const QStringList& dirs)
             break;
         }
         else {
-            qWarning() << "Cannot load translation:" << name;
+            if (locale!="en") {
+                qWarning() << "Cannot load translation:" << name;
+            }
         }
     }
 }
