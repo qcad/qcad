@@ -202,13 +202,6 @@
         <return>return <expr><call><name><name>RPropertyTypeId</name>::<name>hasPropertyType</name></name><argument_list>(<argument><expr><call><name>typeid</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr></argument>, <argument><expr><name>propertyTypeId</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
-    <comment type="block">/**
-     * \return True if this object is selected for editing. This means
-     *      that the properties of this object should for example
-     *      be shown in a property editor.
-     */</comment>
-<comment type="line">//    virtual bool isSelectedForPropertyEditing() = 0;</comment>
-
     <function_decl><type><name>bool</name></type> <name>hasCustomProperties</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>hasCustomProperty</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 

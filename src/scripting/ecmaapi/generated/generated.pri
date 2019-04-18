@@ -146,6 +146,7 @@ HEADERS += \
     $$PWD/REcmaMainWindow.h \
     $$PWD/REcmaMainWindowQt.h \
     $$PWD/REcmaMath.h \
+    $$PWD/REcmaMathComboBox.h \
     $$PWD/REcmaMathLineEdit.h \
     $$PWD/REcmaMatrix.h \
     $$PWD/REcmaMdiArea.h \
@@ -519,6 +520,7 @@ SOURCES += \
     $$PWD/REcmaMainWindow.cpp \
     $$PWD/REcmaMainWindowQt.cpp \
     $$PWD/REcmaMath.cpp \
+    $$PWD/REcmaMathComboBox.cpp \
     $$PWD/REcmaMathLineEdit.cpp \
     $$PWD/REcmaMatrix.cpp \
     $$PWD/REcmaMdiArea.cpp \

@@ -24,7 +24,6 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"gui_global.h"</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QLabel&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QLineEdit&gt;</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMath.h"</cpp:file></cpp:include>
@@ -114,7 +113,6 @@
     <decl_stmt><decl><type><name>bool</name></type> <name>noEmit</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>noResultInToolTip</name></decl>;</decl_stmt>
     <comment type="line">//double defaultValue;</comment>
-<comment type="line">//    QLabel* resultTip;</comment>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RMathLineEdit*</argument>)</argument_list></macro>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./gui" filename="RMathComboBox.h"><comment type="block">/**
+ * Copyright (c) 2011-2019 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RMATHCOMBOBOX_H_</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RMATHCOMBOBOX_H_</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"gui_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QComboBox&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMath.h"</cpp:file></cpp:include>
+
+<comment type="block">/**
+ * \scriptable
+ * \ingroup gui
+ */</comment>
+<class>class <macro><name>QCADGUI_EXPORT</name></macro> <name>RMathComboBox</name><super>: <specifier>public</specifier> <name>QComboBox</name></super> <block>{<private type="default">
+
+<macro><name>Q_OBJECT</name></macro>
+
+<comment type="line">// keep extra ';' in place for the benefit of ecmagenerator:</comment>
+<comment type="line">//Q_PROPERTY(bool angle READ isAngle WRITE setAngle);</comment>
+<comment type="line">//Q_PROPERTY(bool integer READ isInteger WRITE setInteger);</comment>
+<comment type="line">//Q_PROPERTY(double defaultValue READ getDefaultValue WRITE setDefaultValue);</comment>
+<comment type="line">//Q_PROPERTY(int defaultUnit READ getDefaultUnit WRITE setDefaultUnit);</comment>
+<comment type="line">//Q_PROPERTY(RS::Unit defaultUnit READ getDefaultUnit WRITE setDefaultUnit);</comment>
+<comment type="line">//Q_ENUMS(RS::Unit);</comment>
+
+</private><public>public:
+    <constructor_decl><name>RMathComboBox</name><parameter_list>(<param><decl><type><name>QWidget</name>*</type> <name>parent</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+
+<comment type="line">//    bool isAngle() const {</comment>
+<comment type="line">//       return angle;</comment>
+<comment type="line">//    }</comment>
+<comment type="line">//    void setAngle(bool on) {</comment>
+<comment type="line">//       angle = on;</comment>
+<comment type="line">//    }</comment>
+<comment type="line">//    bool isInteger() const {</comment>
+<comment type="line">//        return integer;</comment>
+<comment type="line">//    }</comment>
+<comment type="line">//    void setInteger(bool on) {</comment>
+<comment type="line">//        integer = on;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    void setValue(double v, int precision=6);</comment>
+<comment type="line">//    double getValue();</comment>
+<comment type="line">//    QString getError();</comment>
+<comment type="line">//    void clearError();</comment>
+
+<comment type="line">//    bool isValid() {</comment>
+<comment type="line">//        return !RMath::isNaN(value);</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    bool isSane() {</comment>
+<comment type="line">//        return RMath::isSane(value);</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    void setToolTip(const QString&amp; toolTip);</comment>
+
+<comment type="line">//    /*</comment>
+<comment type="line">//    double getDefaultValue() {</comment>
+<comment type="line">//        return defaultValue;</comment>
+<comment type="line">//    }</comment>
+<comment type="line">//    void setDefaultValue(double v) {</comment>
+<comment type="line">//        defaultValue = v;</comment>
+<comment type="line">//    }</comment>
+<comment type="line">//    */</comment>
+
+<comment type="line">//    //void setDefaultUnit(int defaultUnit);</comment>
+<comment type="line">//    //int getDefaultUnit();</comment>
+
+</public><protected>protected:
+<comment type="line">//    virtual void keyPressEvent(QKeyEvent* event);</comment>
+<comment type="line">//    virtual void keyReleaseEvent(QKeyEvent* event);</comment>
+<comment type="line">//    virtual bool eventFilter(QObject* obj, QEvent* event);</comment>
+
+</protected><public>public slots:
+<comment type="line">//    void slotTextChanged(const QString&amp; text);</comment>
+<comment type="line">//    void slotTextEdited(const QString&amp; text);</comment>
+
+<label><name>signals</name>:</label>
+<comment type="line">//    void valueChanged(double value, const QString&amp; error);</comment>
+<comment type="line">//    void upKeyPressed();</comment>
+<comment type="line">//    void downKeyPressed();</comment>
+<comment type="line">//    void enterKeyPressed();</comment>
+
+</public><private>private:
+<comment type="line">//    QPalette oriPalette;</comment>
+<comment type="line">//    bool angle;</comment>
+<comment type="line">//    bool integer;</comment>
+<comment type="line">//    double value;</comment>
+<comment type="line">//    //RS::Unit defaultUnit;</comment>
+<comment type="line">//    QString error;</comment>
+<comment type="line">//    QString originalToolTip;</comment>
+<comment type="line">//    bool noEmit;</comment>
+<comment type="line">//    bool noResultInToolTip;</comment>
+<comment type="line">//    //double defaultValue;</comment>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RMathComboBox*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>
