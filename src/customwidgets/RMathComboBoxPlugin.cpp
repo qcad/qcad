@@ -18,70 +18,67 @@
  */
 #include <QtPlugin>
 
-#include "RMathLineEdit.h"
-#include "RMathLineEditPlugin.h"
+#include "RMathComboBox.h"
+#include "RMathComboBoxPlugin.h"
 
-RMathLineEditPlugin::RMathLineEditPlugin(QObject *parent) :
+RMathComboBoxPlugin::RMathComboBoxPlugin(QObject *parent) :
     QObject(parent) {
     initialized = false;
 }
 
-void RMathLineEditPlugin::initialize(QDesignerFormEditorInterface * /* core */) {
+void RMathComboBoxPlugin::initialize(QDesignerFormEditorInterface * /* core */) {
     if (initialized) {
         return;
     }
     initialized = true;
 }
 
-bool RMathLineEditPlugin::isInitialized() const {
+bool RMathComboBoxPlugin::isInitialized() const {
     return initialized;
 }
 
-QWidget *RMathLineEditPlugin::createWidget(QWidget *parent) {
-    return new RMathLineEdit(parent);
+QWidget *RMathComboBoxPlugin::createWidget(QWidget *parent) {
+    return new RMathComboBox(parent);
 }
 
-QString RMathLineEditPlugin::name() const {
-    return "RMathLineEdit";
+QString RMathComboBoxPlugin::name() const {
+    return "RMathComboBox";
 }
 
-QString RMathLineEditPlugin::group() const {
+QString RMathComboBoxPlugin::group() const {
     return "RCustomWidgets";
 }
 
-QIcon RMathLineEditPlugin::icon() const {
+QIcon RMathComboBoxPlugin::icon() const {
     return QIcon();
 }
 
-QString RMathLineEditPlugin::toolTip() const {
+QString RMathComboBoxPlugin::toolTip() const {
     return "";
 }
 
-QString RMathLineEditPlugin::whatsThis() const {
+QString RMathComboBoxPlugin::whatsThis() const {
     return "";
 }
 
-bool RMathLineEditPlugin::isContainer() const {
+bool RMathComboBoxPlugin::isContainer() const {
     return false;
 }
 
-QString RMathLineEditPlugin::domXml() const {
+QString RMathComboBoxPlugin::domXml() const {
     return
         "<ui language=\"c++\">\n"
-        " <widget class=\"RMathLineEdit\" name=\"lineEdit\">\n"
+        " <widget class=\"RMathComboBox\" name=\"comboBox\">\n"
         "   <property name=\"angle\" stdset=\"0\">\n"
         "     <bool>false</bool>\n"
         "   </property>\n"
         "   <property name=\"integer\" stdset=\"0\">\n"
         "     <bool>false</bool>\n"
         "   </property>\n"
-        //"   <property name=\"defaultUnit\">\n"
-        //"     <number>0</number>\n"
-        //"   </property>\n"
         " </widget>\n"
         "</ui>\n";
 }
 
-QString RMathLineEditPlugin::includeFile() const {
-    return "RMathLineEdit.h";
+QString RMathComboBoxPlugin::includeFile() const {
+    return "RMathComboBox.h";
 }

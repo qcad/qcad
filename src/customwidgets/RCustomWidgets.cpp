@@ -21,6 +21,7 @@
 #include "RTextEditPlugin.h"
 #include "RCommandLinePlugin.h"
 #include "RGraphicsViewQtPlugin.h"
+#include "RMathComboBoxPlugin.h"
 #include "RMathLineEditPlugin.h"
 #include "RMdiChildQtPlugin.h"
 #include "RColorComboPlugin.h"
@@ -38,6 +39,7 @@ RCustomWidgets::RCustomWidgets(QObject *parent) :
     widgets.append(new RTextEditPlugin(this));
     widgets.append(new RCommandLinePlugin(this));
     widgets.append(new RGraphicsViewQtPlugin(this));
+    widgets.append(new RMathComboBoxPlugin(this));
     widgets.append(new RMathLineEditPlugin(this));
     widgets.append(new RMdiChildQtPlugin(this));
     widgets.append(new RColorComboPlugin(this));

@@ -13,6 +13,7 @@ SOURCES = RShortcutLineEditPlugin.cpp \
     RCommandLinePlugin.cpp \
     RMdiChildQtPlugin.cpp \
     RTextEditPlugin.cpp \
+    RMathComboBoxPlugin.cpp \
     RMathLineEditPlugin.cpp \
     RGraphicsViewQtPlugin.cpp \
     RListViewPlugin.cpp
@@ -27,6 +28,7 @@ HEADERS = RShortcutLineEditPlugin.h \
     RCommandLinePlugin.h \
     RMdiChildQtPlugin.h \
     RTextEditPlugin.h \
+    RMathComboBoxPlugin.h \
     RMathLineEditPlugin.h \
     RGraphicsViewQtPlugin.h \
     RListViewPlugin.h
