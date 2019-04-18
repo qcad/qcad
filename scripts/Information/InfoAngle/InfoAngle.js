@@ -161,10 +161,23 @@ InfoAngle.prototype.pickEntity = function(event, preview) {
                 op.destroy();
             }
 
-            this.setState(InfoAngle.State.SettingFirstShape);
             if (!isNull(this.arc)) {
-                var angleText = this.formatAngularResultCmd(this.arc.getAngleLength());
+                var value = this.arc.getAngleLength();
+                var angleText = this.formatAngularResultCmd(value);
                 EAction.getMainWindow().handleUserInfo(qsTr("Angle:") + " " + angleText);
+
+                if (this.autoTerminate) {
+                    this.updateLineEdit(RMath.rad2deg(value));
+                    this.setNoState(false);
+                    this.terminate();
+                    return;
+                }
+                else {
+                    this.setState(InfoAngle.State.SettingFirstShape);
+                }
+            }
+            else {
+                this.setState(InfoAngle.State.SettingFirstShape);
             }
         }
         break;
