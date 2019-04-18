@@ -22,6 +22,7 @@ SOURCES += \
     RListView.cpp \
     RListWidget.cpp \
     RMainWindowQt.cpp \
+    RMathComboBox.cpp \
     RMathLineEdit.cpp \
     RMdiArea.cpp \
     RMdiChildQt.cpp \
@@ -54,6 +55,7 @@ HEADERS += \
     RListView.h \
     RListWidget.h \
     RMainWindowQt.h \
+    RMathComboBox.h \
     RMathLineEdit.h \
     RMdiArea.h \
     RMdiChildQt.h \
