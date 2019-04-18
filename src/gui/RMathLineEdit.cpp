@@ -18,6 +18,7 @@
  */
 #include <QColor>
 #include <QKeyEvent>
+#include <QLabel>
 #include <QPalette>
 #include <QTimer>
 #include <QToolTip>
