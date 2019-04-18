@@ -1007,6 +1007,7 @@
     <file alias="scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui">../../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui</file>
     <file alias="scripts/Misc/Examples/QtExamples/QtExamples.js">../../scripts/Misc/Examples/QtExamples/QtExamples.js</file>
     <file alias="scripts/Misc/Misc.js">../../scripts/Misc/Misc.js</file>
+    <file alias="scripts/Misc/Misc.svg">../../scripts/Misc/Misc.svg</file>
     <file alias="scripts/Misc/MiscBlock/BlockFixNames/BlockFixNames.js">../../scripts/Misc/MiscBlock/BlockFixNames/BlockFixNames.js</file>
     <file alias="scripts/Misc/MiscBlock/BlockListAttributes/BlockListAttributes.js">../../scripts/Misc/MiscBlock/BlockListAttributes/BlockListAttributes.js</file>
     <file alias="scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js">../../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js</file>
