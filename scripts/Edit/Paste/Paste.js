@@ -159,22 +159,12 @@ Paste.prototype.getAuxPreview = function() {
 };
 
 Paste.prototype.slotScaleChanged = function(value) {
-    var scale = RMath.eval(value);
-    if (RMath.getError()==="") {
-        this.scale = scale;
-    } else {
-        this.scale = 1;
-    }
+    this.scale = value;
     this.updatePreview(true);
 };
 
 Paste.prototype.slotRotationChanged = function(value) {
-    var rotation = RMath.eval(value);
-    if (RMath.getError()==="") {
-        this.rotation = RMath.deg2rad(rotation);
-    } else {
-        this.rotation = 0;
-    }
+    this.rotation = value;
     this.updatePreview(true);
 };
 
