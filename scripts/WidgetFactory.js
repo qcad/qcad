@@ -251,6 +251,9 @@ WidgetFactory.saveState = function(widget, group, document, map) {
             //value = [c.text, c.getDefaultUnit()];
             value = c.text;
         }
+        else if (isOfType(c, RMathComboBox)) {
+            value = c.currentText;
+        }
         else if (isOfType(c, QCheckBox)) {
             value = c.checked;
         }
@@ -565,6 +568,24 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
                     else {
                         c.text = "%1".arg(value);
                     }
+                }
+            }
+            continue;
+        }
+        if (isOfType(c, RMathComboBox)) {
+            WidgetFactory.connect(c.valueChanged, signalReceiver, c.objectName);
+            c.valueChanged.connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
+            if (isNull(c.defaultValue)) {
+                //c.defaultValue = [c.text, c.getDefaultUnit()];
+                c.defaultValue = c.currentText;
+                c.slotTextChanged(c.currentText);
+            }
+            if (!isNull(value)) {
+                if (isString(value)) {
+                    c.currentText = value;
+                }
+                else {
+                    c.currentText = "%1".arg(value);
                 }
             }
             continue;
@@ -913,7 +934,8 @@ WidgetFactory.processChildren = function(c) {
         isOfType(c, QComboBox) ||
         isOfType(c, QFontComboBox) ||
         isOfType(c, QPlainTextEdit) ||
-        isOfType(c, RMathLineEdit)) {
+        isOfType(c, RMathLineEdit) ||
+        isOfType(c, RMathComboBox)) {
 
         return false;
     }
@@ -995,7 +1017,7 @@ WidgetFactory.moveChildren = function(sourceWidget, targetWidget, settingsGroup)
                 }
             }
             // add line edit or math edit with maximum width:
-            if (isOfType(w, QLineEdit) || isOfType(w, RMathLineEdit)) {
+            if (isOfType(w, QLineEdit) || isOfType(w, RMathLineEdit) || isOfType(w, RMathComboBox)) {
                 if (w.maximumWidth>=1024) {
                     w.maximumWidth = 75;
                 }
