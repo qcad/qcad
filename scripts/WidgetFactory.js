@@ -1001,7 +1001,7 @@ WidgetFactory.moveChildren = function(sourceWidget, targetWidget, settingsGroup)
                 }
             }
 
-            if (isOfType(w, RMathLineEdit)) {
+            if (isOfType(w, RMathLineEdit) || isOfType(w, RMathComboBox)) {
                 WidgetFactory.initLineEditInfoTools(w);
             }
 
