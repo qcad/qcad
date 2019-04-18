@@ -12085,7 +12085,7 @@ Modo de búsqueda:</translatorcomment>
         <translation>&amp;Seleccionar capa</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+55"/>
+        <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
         <translation>%1 entidades añadidas a la selección.</translation>
     </message>

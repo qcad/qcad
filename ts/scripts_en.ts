@@ -10140,7 +10140,7 @@ shown in search results:</translation>
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+55"/>
+        <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
         <translation>%1 entities added to selection.</translation>
     </message>

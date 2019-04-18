@@ -12495,7 +12495,7 @@ nicht öffnen.
         <translation>Layer &amp;selektieren</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+55"/>
+        <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
         <translation>%1 Objekte zur Selektion hinzugefügt.</translation>
     </message>

@@ -9865,7 +9865,7 @@ shown in search results:</source>
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+55"/>
+        <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
         <translation type="unfinished"></translation>
     </message>

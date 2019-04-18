@@ -13997,7 +13997,7 @@ Interseção com a seleção atual</translatorcomment>
         <translation>&amp;Selecione uma Camada</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+55"/>
+        <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
         <translation>%1 entidades adicionadas à seleção.</translation>
     </message>

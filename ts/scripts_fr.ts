@@ -12079,7 +12079,7 @@ Mode de couleur :</translatorcomment>
         <translation>&amp;Sélectionner calque</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+55"/>
+        <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
         <translation>%1 entités ajoutées à la sélection.</translation>
     </message>

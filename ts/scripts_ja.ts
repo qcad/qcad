@@ -10669,7 +10669,7 @@ shown in search results:</source>
         <translation type="obsolete">同じ画層の全てのエンティティを選択（選択解除）</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+55"/>
+        <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
         <translation type="unfinished"></translation>
     </message>

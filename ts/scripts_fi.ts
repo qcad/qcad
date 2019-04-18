@@ -10313,7 +10313,7 @@ näkyy hakutuloksissa:</translation>
         <translation>&amp;Valitse taso</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+55"/>
+        <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
         <translation>%1 kohdetta lisättiin valintaan.</translation>
     </message>

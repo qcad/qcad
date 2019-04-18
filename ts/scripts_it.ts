@@ -12059,7 +12059,7 @@ Interseca con la selezione corrente</translatorcomment>
         <translation>&amp;Seleziona livello</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+55"/>
+        <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
         <translation>%1 entità aggiunte alla selezione.</translation>
     </message>

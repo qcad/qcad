@@ -10260,7 +10260,7 @@ shown in search results:</source>
         <translation>&amp;Выделить слой</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+55"/>
+        <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
         <translation>%1 объекта(ов) добавлены к выделению.</translation>
     </message>
