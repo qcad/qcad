@@ -296,14 +296,23 @@ Information.prototype.updateLineEdit = function(value) {
         return;
     }
 
-    if (!isOfType(lineEdit, QLineEdit) && !isOfType(lineEdit, RMathLineEdit) && !isOfType(lineEdit, RCommandLine)) {
+    if (!isOfType(lineEdit, QLineEdit) &&
+        !isOfType(lineEdit, RMathComboBox) &&
+        !isOfType(lineEdit, RMathLineEdit) &&
+        !isOfType(lineEdit, RCommandLine)) {
         return;
     }
 
     var di = this.getDocumentInterface();
     var doc = di.getDocument();
     var varName = doc.addAutoVariable(value);
-    lineEdit.insert(varName);
+
+    if (isOfType(lineEdit, RMathComboBox)) {
+        lineEdit.lineEdit().insert(varName);
+    }
+    else {
+        lineEdit.insert(varName);
+    }
 };
 
 Information.getMenu = function() {
