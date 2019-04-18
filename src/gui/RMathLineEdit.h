@@ -23,7 +23,6 @@
 #include "gui_global.h"
 
 #include <QMetaType>
-#include <QLabel>
 #include <QLineEdit>
 
 #include "RMath.h"
@@ -113,7 +112,6 @@ private:
     bool noEmit;
     bool noResultInToolTip;
     //double defaultValue;
-//    QLabel* resultTip;
 };
 
 Q_DECLARE_METATYPE(RMathLineEdit*)
