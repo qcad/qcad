@@ -187,6 +187,7 @@
 #include "REcmaMainWindowQt.h"
 #include "REcmaMath.h"
 #include "REcmaMatrix.h"
+#include "REcmaMathComboBox.h"
 #include "REcmaMathLineEdit.h"
 #include "REcmaMdiArea.h"
 #include "REcmaMdiChildQt.h"
@@ -918,6 +919,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaCommandLine::initEcma(*engine);
     REcmaTextEdit::initEcma(*engine);
     REcmaMathLineEdit::initEcma(*engine);
+    REcmaMathComboBox::initEcma(*engine);
     REcmaCharacterWidget::initEcma(*engine);
     REcmaDockWidget::initEcma(*engine);
     REcmaToolButton::initEcma(*engine);
