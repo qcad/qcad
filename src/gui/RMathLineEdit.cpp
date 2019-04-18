@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include <QColor>
+#include <QComboBox>
 #include <QKeyEvent>
 #include <QLabel>
 #include <QPalette>
@@ -42,11 +43,8 @@ RMathLineEdit::RMathLineEdit(QWidget* parent) :
     originalToolTip = QString();
     QLineEdit::setToolTip("");
 
-    connect(this, SIGNAL(textChanged(QString)),
-       this, SLOT(slotTextChanged(QString)));
-
-    connect(this, SIGNAL(textEdited(QString)),
-       this, SLOT(slotTextEdited(QString)));
+    connect(this, SIGNAL(textChanged(QString)), this, SLOT(slotTextChanged(QString)));
+    connect(this, SIGNAL(textEdited(QString)), this, SLOT(slotTextEdited(QString)));
 }
 
 //int RMathLineEdit::getDefaultUnit() {
@@ -94,25 +92,17 @@ void RMathLineEdit::slotTextChanged(const QString& text) {
         hasFormula = true;
     }
 
-    QPalette p = palette();
     if (hasError) {
         error = RMath::getError();
         //res = defaultValue;
         // special case: don't report an error for text between *
         // (e.g. *VARIES* in property editor)
         if (!(text.startsWith('*') && text.endsWith('*'))) {
-            p.setColor(QPalette::Text, QColor(Qt::red));
             setToolTip(error);
         }
     }
     else {
         error = "";
-//        if (RSettings::hasDarkGuiBackground()) {
-//            p.setColor(QPalette::Text, QColor(Qt::white));
-//        }
-//        else {
-            p.setColor(QPalette::Text, QColor(Qt::black));
-//        }
         QString str;
         //str.sprintf("%.6g%s",value,(const char*)RUnit::unitToSymbol(defaultUnit).toUtf8());
         str.sprintf("%.6g",value);
@@ -120,8 +110,9 @@ void RMathLineEdit::slotTextChanged(const QString& text) {
     }
 
     if (isEnabled()) {
-        setPalette(p);
-    } else {
+        setTextColor(hasError);
+    }
+    else {
         setPalette(oriPalette);
     }
 
@@ -283,6 +274,18 @@ void RMathLineEdit::setToolTip(const QString& toolTip) {
         .arg(error.isEmpty() ? textCol : "red")
         .arg(toolTip)
     );
+}
+
+void RMathLineEdit::setTextColor(bool error) {
+    QPalette p = palette();
+    p.setColor(QPalette::Text, QColor(error ? Qt::red : Qt::black));
+    setPalette(p);
+
+    QWidget* parent = parentWidget();
+    QComboBox* cb = dynamic_cast<QComboBox*>(parent);
+    if (cb!=NULL) {
+        cb->setPalette(p);
+    }
 }
 
 void RMathLineEdit::keyPressEvent(QKeyEvent* event) {
