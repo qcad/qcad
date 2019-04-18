@@ -42,20 +42,36 @@ SelectLayer.prototype.beginEvent = function() {
 };
 
 SelectLayer.prototype.selectLayer = function(layer) {
+    return this.selectLayers([layer]);
+};
+
+SelectLayer.prototype.selectLayers = function(layers) {
+    var ret = true;
     var doc = this.getDocument();
     var di = this.getDocumentInterface();
-    if (layer.isOffOrFrozen()) {
-        return false;
-    }
 
     var num;
-    var ids = doc.queryLayerEntities(layer.getId());
-    if (this.select) {
-        num = di.selectEntities(ids, true);
-        EAction.handleUserMessage(qsTr("%1 entities added to selection.").arg(num));
+    var ids = [];
+    for (var i=0; i<layers.length; i++) {
+        var layer = layers[i];
+        if (layer.isOffOrFrozen()) {
+            ret = false;
+        }
+        else {
+            ids = ids.concat(doc.queryLayerEntities(layer.getId()));
+        }
     }
-    else {
-        num = di.deselectEntities(ids);
-        EAction.handleUserMessage(qsTr("%1 entities removed from selection.").arg(num));
+
+    if (ids.length>0) {
+        if (this.select) {
+            num = di.selectEntities(ids, true);
+            EAction.handleUserMessage(qsTr("%1 entities added to selection.").arg(num));
+        }
+        else {
+            num = di.deselectEntities(ids);
+            EAction.handleUserMessage(qsTr("%1 entities removed from selection.").arg(num));
+        }
     }
+
+    return ret;
 };
