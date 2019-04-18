@@ -26,6 +26,7 @@
 #include <QComboBox>
 
 #include "RMath.h"
+#include "RMathLineEdit.h"
 
 /**
  * \scriptable
@@ -36,8 +37,8 @@ class QCADGUI_EXPORT RMathComboBox: public QComboBox {
 Q_OBJECT
 
 // keep extra ';' in place for the benefit of ecmagenerator:
-//Q_PROPERTY(bool angle READ isAngle WRITE setAngle);
-//Q_PROPERTY(bool integer READ isInteger WRITE setInteger);
+Q_PROPERTY(bool angle READ isAngle WRITE setAngle);
+Q_PROPERTY(bool integer READ isInteger WRITE setInteger);
 //Q_PROPERTY(double defaultValue READ getDefaultValue WRITE setDefaultValue);
 //Q_PROPERTY(int defaultUnit READ getDefaultUnit WRITE setDefaultUnit);
 //Q_PROPERTY(RS::Unit defaultUnit READ getDefaultUnit WRITE setDefaultUnit);
@@ -46,33 +47,53 @@ Q_OBJECT
 public:
     RMathComboBox(QWidget* parent = NULL);
 
-//    bool isAngle() const {
-//       return angle;
-//    }
-//    void setAngle(bool on) {
-//       angle = on;
-//    }
-//    bool isInteger() const {
-//        return integer;
-//    }
-//    void setInteger(bool on) {
-//        integer = on;
-//    }
+    RMathLineEdit* getMathLineEdit() const {
+        QLineEdit* le = lineEdit();
+        RMathLineEdit* me = dynamic_cast<RMathLineEdit*>(le);
+        Q_ASSERT(me!=NULL);
+        return me;
+    }
 
-//    void setValue(double v, int precision=6);
-//    double getValue();
-//    QString getError();
-//    void clearError();
+    bool isAngle() const {
+        return getMathLineEdit()->isAngle();
+    }
+    void setAngle(bool on) {
+        getMathLineEdit()->setAngle(on);
+    }
+    bool isInteger() const {
+        return getMathLineEdit()->isInteger();
+    }
+    void setInteger(bool on) {
+        getMathLineEdit()->setInteger(on);
+    }
 
-//    bool isValid() {
+    void setValue(double v, int precision=6) {
+        getMathLineEdit()->setValue(v, precision);
+    }
+    double getValue() {
+        return getMathLineEdit()->getValue();
+    }
+    QString getError() {
+        return getMathLineEdit()->getError();
+    }
+    void clearError() {
+        getMathLineEdit()->clearError();
+    }
+
+    bool isValid() {
+        return getMathLineEdit()->isValid();
 //        return !RMath::isNaN(value);
-//    }
+    }
 
-//    bool isSane() {
+    bool isSane() {
 //        return RMath::isSane(value);
-//    }
+        return getMathLineEdit()->isSane();
+    }
 
 //    void setToolTip(const QString& toolTip);
+//    void setToolTip(const QString& str) {
+//        getMathLineEdit()->setToolTip(str);
+//    }
 
 //    /*
 //    double getDefaultValue() {
@@ -92,11 +113,17 @@ protected:
 //    virtual bool eventFilter(QObject* obj, QEvent* event);
 
 public slots:
-//    void slotTextChanged(const QString& text);
+    void slotTextChanged(const QString& text) {
+        getMathLineEdit()->slotTextChanged(text);
+    }
 //    void slotTextEdited(const QString& text);
+    void slotValueChanged(double value, const QString& error) {
+        // forward signal from RMathLineEdit:
+        emit valueChanged(value, error);
+    }
 
 signals:
-//    void valueChanged(double value, const QString& error);
+    void valueChanged(double value, const QString& error);
 //    void upKeyPressed();
 //    void downKeyPressed();
 //    void enterKeyPressed();
