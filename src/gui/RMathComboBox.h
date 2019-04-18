@@ -39,10 +39,6 @@ Q_OBJECT
 // keep extra ';' in place for the benefit of ecmagenerator:
 Q_PROPERTY(bool angle READ isAngle WRITE setAngle);
 Q_PROPERTY(bool integer READ isInteger WRITE setInteger);
-//Q_PROPERTY(double defaultValue READ getDefaultValue WRITE setDefaultValue);
-//Q_PROPERTY(int defaultUnit READ getDefaultUnit WRITE setDefaultUnit);
-//Q_PROPERTY(RS::Unit defaultUnit READ getDefaultUnit WRITE setDefaultUnit);
-//Q_ENUMS(RS::Unit);
 
 public:
     RMathComboBox(QWidget* parent = NULL);
@@ -82,41 +78,16 @@ public:
 
     bool isValid() {
         return getMathLineEdit()->isValid();
-//        return !RMath::isNaN(value);
     }
 
     bool isSane() {
-//        return RMath::isSane(value);
         return getMathLineEdit()->isSane();
     }
-
-//    void setToolTip(const QString& toolTip);
-//    void setToolTip(const QString& str) {
-//        getMathLineEdit()->setToolTip(str);
-//    }
-
-//    /*
-//    double getDefaultValue() {
-//        return defaultValue;
-//    }
-//    void setDefaultValue(double v) {
-//        defaultValue = v;
-//    }
-//    */
-
-//    //void setDefaultUnit(int defaultUnit);
-//    //int getDefaultUnit();
-
-protected:
-//    virtual void keyPressEvent(QKeyEvent* event);
-//    virtual void keyReleaseEvent(QKeyEvent* event);
-//    virtual bool eventFilter(QObject* obj, QEvent* event);
 
 public slots:
     void slotTextChanged(const QString& text) {
         getMathLineEdit()->slotTextChanged(text);
     }
-//    void slotTextEdited(const QString& text);
     void slotValueChanged(double value, const QString& error) {
         // forward signal from RMathLineEdit:
         emit valueChanged(value, error);
@@ -124,21 +95,6 @@ public slots:
 
 signals:
     void valueChanged(double value, const QString& error);
-//    void upKeyPressed();
-//    void downKeyPressed();
-//    void enterKeyPressed();
-
-private:
-//    QPalette oriPalette;
-//    bool angle;
-//    bool integer;
-//    double value;
-//    //RS::Unit defaultUnit;
-//    QString error;
-//    QString originalToolTip;
-//    bool noEmit;
-//    bool noResultInToolTip;
-//    //double defaultValue;
 };
 
 Q_DECLARE_METATYPE(RMathComboBox*)

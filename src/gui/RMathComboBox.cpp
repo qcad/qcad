@@ -33,33 +33,7 @@ RMathComboBox::RMathComboBox(QWidget* parent) :
     QComboBox(parent) {
 
     RMathLineEdit* me = new RMathLineEdit(this);
-    //me->setToolTip(toolTip());
     setLineEdit(me);
 
     connect(me, SIGNAL(valueChanged(double,QString)), this, SLOT(slotValueChanged(double,QString)));
 }
-
-//int RMathComboBox::getDefaultUnit() {
-//    return (int)defaultUnit;
-//}
-
-//void RMathComboBox::setDefaultUnit(int defaultUnit) {
-//    this->defaultUnit = (RS::Unit)defaultUnit;
-//}
-
-//void RMathComboBox::setToolTip(const QString& str) {
-//    getMathLineEdit()->setToolTip(str);
-//}
-
-//void RMathComboBox::slotTextChanged(const QString& text) {
-//    QLineEdit* le = lineEdit();
-//    RMathLineEdit* me = dynamic_cast<RMathLineEdit*>(le);
-//    if (me!=NULL) {
-//        me->slotTextChanged(text);
-//    }
-//}
-
-//void RMathComboBox::slotValueChanged(double value, const QString& error) {
-//    // forward signal from RMathLineEdit:
-//    emit valueChanged(value, error);
-//}
