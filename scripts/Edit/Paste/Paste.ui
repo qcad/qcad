@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>867</width>
+    <width>871</width>
     <height>50</height>
    </rect>
   </property>
@@ -19,7 +19,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QComboBox" name="Rotation">
+    <widget class="RMathComboBox" name="Rotation">
      <property name="minimumSize">
       <size>
        <width>100</width>
@@ -32,10 +32,10 @@
        <height>16777215</height>
       </size>
      </property>
-     <property name="toolTip">
-      <string>Rotate pasted entities&lt;br&gt;by this angle</string>
-     </property>
      <property name="editable">
+      <bool>true</bool>
+     </property>
+     <property name="angle" stdset="0">
       <bool>true</bool>
      </property>
      <item>
@@ -145,7 +145,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QComboBox" name="Scale">
+    <widget class="RMathComboBox" name="Scale">
      <property name="minimumSize">
       <size>
        <width>100</width>
@@ -157,9 +157,6 @@
        <width>100</width>
        <height>16777215</height>
       </size>
-     </property>
-     <property name="toolTip">
-      <string>Scale pasted entities&lt;br&gt;by this factor</string>
      </property>
      <property name="editable">
       <bool>true</bool>
@@ -305,6 +302,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RMathComboBox</class>
+   <extends>QComboBox</extends>
+   <header>RMathComboBox.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
