@@ -271,6 +271,7 @@ public:
     static QString rxUnderline;
     static QString escUnderline;
     static QString rxNoOp;
+    static QString rxNoOpEnd;
     static QString escNoOp;
     static QString rxUnicode;
 

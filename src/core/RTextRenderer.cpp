@@ -84,7 +84,9 @@ QString RTextRenderer::rxDiameter = "%%[cC]";
 QString RTextRenderer::escDiameter = "%%c";
 QString RTextRenderer::rxUnderline = "%%[uU]";
 QString RTextRenderer::escUnderline = "%%u";
-QString RTextRenderer::rxNoOp = "%%";
+// invalid escape sequence (to replace %%x with "x"):
+QString RTextRenderer::rxNoOp = "%%([^uUcCpPdD])";
+QString RTextRenderer::rxNoOpEnd = "%%$";
 QString RTextRenderer::escNoOp = "%%";
 QString RTextRenderer::rxUnicode = "\\\\[Uu]\\+([0-9a-fA-F]{4})";
 
@@ -178,8 +180,10 @@ void RTextRenderer::renderSimple() {
     text.replace(QRegExp(RTextRenderer::rxDiameter), RTextRenderer::chDiameter);
     // underlined:
     //text.replace(QRegExp(RTextRenderer::rxUnderline), "");
-    // no op (%%):
-    text.replace(QRegExp(RTextRenderer::rxNoOp), "");
+    // no op (%%x -> x):
+    text.replace(QRegExp(RTextRenderer::rxNoOp), "\\1");
+    // no op at end of string (%% -> ""):
+    text.replace(QRegExp(RTextRenderer::rxNoOpEnd), "");
     // unicode:
     text = RDxfServices::parseUnicode(text);
 //    QRegExp reg;
