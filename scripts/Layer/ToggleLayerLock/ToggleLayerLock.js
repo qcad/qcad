@@ -33,13 +33,26 @@ ToggleLayerLock.prototype = new Layer();
 ToggleLayerLock.prototype.beginEvent = function() {
     Layer.prototype.beginEvent.call(this);
 
-    var layer = this.getCurrentLayer();
-    layer.setLocked(!layer.isLocked());
+    var layers = this.getSelectedLayers();
 
-    var operation = new RModifyObjectOperation(layer);
-    var di = this.getDocumentInterface();
-    di.applyOperation(operation);
+    var op = new RModifyObjectsOperation();
+    for (var i=0; i<layers.length; i++) {
+        var layer = layers[i];
+        layer.setLocked(!layer.isLocked());
+        op.addObject(layer);
+    }
+
+    if (!op.isEmpty()) {
+        var di = this.getDocumentInterface();
+        di.applyOperation(op);
+    }
+    else {
+        op.destroy();
+    }
 
     this.terminate();
 };
 
+ToggleLayerLock.prototype.getSelectedLayers = function() {
+    return [ this.getCurrentLayer() ];
+};

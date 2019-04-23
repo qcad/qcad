@@ -33,39 +33,55 @@ ToggleLayerVisibility.prototype = new Layer();
 ToggleLayerVisibility.prototype.beginEvent = function() {
     Layer.prototype.beginEvent.call(this);
 
-    var layer = this.getCurrentLayer();
+    var layers = this.getSelectedLayers();
 
     var showFrozen = Layer.getShowFrozen();
     var freezeLayer = Layer.getFreezeLayer();
 
-    // separate column for frozen is shown:
-    // always toggle off:
-    if (showFrozen) {
-        layer.setOff(!layer.isOff());
-    }
-    else {
-        // freeze layers:
-        if (freezeLayer) {
-            if (!layer.isFrozen() && !layer.isOff()) {
-                layer.setFrozen(true);
+    var op = new RModifyObjectsOperation();
+    for (var i=0; i<layers.length; i++) {
+        var layer = layers[i];
+
+        // separate column for frozen is shown:
+        // always toggle off:
+        if (showFrozen) {
+            layer.setOff(!layer.isOff());
+            op.addObject(layer);
+        }
+        else {
+            // freeze layers:
+            if (freezeLayer) {
+                if (!layer.isFrozen() && !layer.isOff()) {
+                    layer.setFrozen(true);
+                    op.addObject(layer);
+                }
+                else {
+                    layer.setFrozen(false);
+                    layer.setOff(false);
+                    op.addObject(layer);
+                }
             }
+
+            // never freeze layers:
             else {
                 layer.setFrozen(false);
-                layer.setOff(false);
+                layer.setOff(!layer.isOff());
+                op.addObject(layer);
             }
-        }
-
-        // never freeze layers:
-        else {
-            layer.setFrozen(false);
-            layer.setOff(!layer.isOff());
         }
     }
 
-    var operation = new RModifyObjectOperation(layer);
-    var di = this.getDocumentInterface();
-    di.applyOperation(operation);
+    if (!op.isEmpty()) {
+        var di = this.getDocumentInterface();
+        di.applyOperation(op);
+    }
+    else {
+        op.destroy();
+    }
 
     this.terminate();
 };
 
+ToggleLayerVisibility.prototype.getSelectedLayers = function() {
+    return [ this.getCurrentLayer() ];
+};
