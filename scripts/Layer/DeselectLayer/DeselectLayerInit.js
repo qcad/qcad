@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("DeselectLayer", "&Deselect Layer"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("DeselectLayer", "&Deselect Layer Entities"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/DeselectLayer.js");
     action.setIcon(basePath + "/DeselectLayer.svg");
