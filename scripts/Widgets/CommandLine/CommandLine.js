@@ -321,6 +321,7 @@ CommandLine.init = function(basePath) {
                         "format in the application preferences.")
                 );
             }
+            leCommand.clear();
             return;
         }
 
