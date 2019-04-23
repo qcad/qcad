@@ -775,8 +775,6 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
             text.replace(RTextRenderer::chPlusMinus, RTextRenderer::escPlusMinus);
             // diameter (%%d):
             text.replace(RTextRenderer::chDiameter, RTextRenderer::escDiameter);
-            // no code (%%):
-            text.replace("", RTextRenderer::escNoOp);
 
             /*
             // unicode:
