@@ -55,6 +55,13 @@ ToggleLayerVisibilityTest00.prototype.testToggle = function(showFrozen, freezeLa
     var di = EAction.getDocumentInterface();
     var doc = di.getDocument();
 
+//    qDebug("showFrozen: ", showFrozen);
+//    qDebug("freezeLayer: ", freezeLayer);
+//    qDebug("frozen: ", frozen);
+//    qDebug("off: ", off);
+//    qDebug("frozenRes: ", frozenRes);
+//    qDebug("offRes: ", offRes);
+
     RSettings.setValue("LayerListPro/ShowFrozen", showFrozen);
     RSettings.setValue("LayerListPro/FreezeLayer", freezeLayer);
 
