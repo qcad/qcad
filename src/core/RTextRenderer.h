@@ -270,6 +270,8 @@ public:
     static QString escDiameter;
     static QString rxUnderline;
     static QString escUnderline;
+    static QString rxNoOp;
+    static QString escNoOp;
     static QString rxUnicode;
 
     static QString rxAll;

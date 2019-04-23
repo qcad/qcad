@@ -84,6 +84,8 @@ QString RTextRenderer::rxDiameter = "%%[cC]";
 QString RTextRenderer::escDiameter = "%%c";
 QString RTextRenderer::rxUnderline = "%%[uU]";
 QString RTextRenderer::escUnderline = "%%u";
+QString RTextRenderer::rxNoOp = "%%";
+QString RTextRenderer::escNoOp = "%%";
 QString RTextRenderer::rxUnicode = "\\\\[Uu]\\+([0-9a-fA-F]{4})";
 
 QString RTextRenderer::rxAll = "("
@@ -176,6 +178,8 @@ void RTextRenderer::renderSimple() {
     text.replace(QRegExp(RTextRenderer::rxDiameter), RTextRenderer::chDiameter);
     // underlined:
     //text.replace(QRegExp(RTextRenderer::rxUnderline), "");
+    // no op (%%):
+    text.replace(QRegExp(RTextRenderer::rxNoOp), "");
     // unicode:
     text = RDxfServices::parseUnicode(text);
 //    QRegExp reg;
