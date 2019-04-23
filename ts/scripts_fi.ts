@@ -1532,7 +1532,7 @@ Haluatko palauttaa sen?</translation>
     <name>CadToolBarPanel</name>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+70"/>
+        <location line="+71"/>
         <source>Back</source>
         <translation>Takaisin</translation>
     </message>
@@ -2247,7 +2247,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Voit vaihtaa numeroiden / koordinaattien muotoa sovelluksen ominaisuuksista.</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Toiminto keskeytetty. Tarkista lohkojen rekursio/määrittely sekä lukitut tai näkymättömät tasot tai lohkot.</translation>
     </message>
@@ -2687,9 +2687,13 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>DeselectLayer</name>
     <message>
-        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer</source>
-        <translation>&amp;Poista tason valinta</translation>
+        <translation type="vanished">&amp;Poista tason valinta</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
+        <source>&amp;Deselect Layer Entities</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6167,7 +6171,7 @@ on jo luettelossa.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+325"/>
+        <location filename="../scripts/Information/Information.js" line="+334"/>
         <source>Information Tools</source>
         <translation>Tietotyökalut</translation>
     </message>
@@ -8700,22 +8704,20 @@ näkyy hakutuloksissa:</translation>
         <translation>Kiertäminen:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation>Kierrä liitetyt kohteet&lt;br&gt;tämän kulman mukaan</translation>
+        <translation type="vanished">Kierrä liitetyt kohteet&lt;br&gt;tämän kulman mukaan</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+126"/>
         <source>Scale:</source>
         <translation>Mittakaava:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>Mittakaavaan liitetyt kohteet&lt;br&gt;tämän tekijän mukaan</translation>
+        <translation type="vanished">Mittakaavaan liitetyt kohteet&lt;br&gt;tämän tekijän mukaan</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+88"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translation>Käännä liitetyt kohteet&lt;br&gt;vaakasuoraan</translation>
     </message>
@@ -10308,9 +10310,8 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer</source>
-        <translation>&amp;Valitse taso</translation>
+        <translation type="vanished">&amp;Valitse taso</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
@@ -10321,6 +10322,11 @@ näkyy hakutuloksissa:</translation>
         <location line="+4"/>
         <source>%1 entities removed from selection.</source>
         <translation>%1 kohdetta poistettu valinnasta.</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
+        <source>&amp;Select Layer Entities</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12696,7 +12702,7 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1038"/>
         <source>Restore defaults</source>
         <translation>Palauta oletusarvot</translation>
     </message>

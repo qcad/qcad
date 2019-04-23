@@ -1479,7 +1479,7 @@ Do you wish to recover it?</source>
     <name>CadToolBarPanel</name>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+70"/>
+        <location line="+71"/>
         <source>Back</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2162,7 +2162,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2603,7 +2603,7 @@ Do you wish to recover it?</source>
     <name>DeselectLayer</name>
     <message>
         <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
-        <source>&amp;Deselect Layer</source>
+        <source>&amp;Deselect Layer Entities</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5914,7 +5914,7 @@ is already in the list.</source>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+325"/>
+        <location filename="../scripts/Information/Information.js" line="+334"/>
         <source>Information Tools</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8362,22 +8362,20 @@ shown in search results:</source>
         <translation type="unfinished">Rotacija:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="unfinished">Rotiraj zalijepljene entitete&lt;br&gt;za ovaj kut</translation>
+        <translation type="obsolete">Rotiraj zalijepljene entitete&lt;br&gt;za ovaj kut</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+126"/>
         <source>Scale:</source>
         <translation type="unfinished">Mjerilo:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="unfinished">Promijeni mjerilo zalijepljenih entiteta&lt;br&gt;za ovaj faktor</translation>
+        <translation type="obsolete">Promijeni mjerilo zalijepljenih entiteta&lt;br&gt;za ovaj faktor</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+88"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translation type="unfinished">Obrni zalijepljene entitete&lt;br&gt;horizontalno</translation>
     </message>
@@ -9876,7 +9874,7 @@ shown in search results:</source>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
-        <source>&amp;Select Layer</source>
+        <source>&amp;Select Layer Entities</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -12075,7 +12073,7 @@ shown in search results:</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1038"/>
         <source>Restore defaults</source>
         <translation type="unfinished"></translation>
     </message>

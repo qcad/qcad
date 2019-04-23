@@ -1562,7 +1562,7 @@ Do you wish to recover it?</source>
     <name>CadToolBarPanel</name>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+70"/>
+        <location line="+71"/>
         <source>Back</source>
         <translation>Назад</translation>
     </message>
@@ -2241,7 +2241,7 @@ Do you wish to recover it?</source>
         <translation>Вы можете изменить формат чисел/координат в предпочтениях программы.</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Транзакция не удалась. Пожалуйста, проверьте рекурсии блоков и блокировки, или невидимые слои, или блоки.</translation>
     </message>
@@ -2689,9 +2689,13 @@ Do you wish to recover it?</source>
 <context>
     <name>DeselectLayer</name>
     <message>
-        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer</source>
-        <translation>&amp;Отменить выделение слоя</translation>
+        <translation type="vanished">&amp;Отменить выделение слоя</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
+        <source>&amp;Deselect Layer Entities</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6107,7 +6111,7 @@ is already in the list.</source>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+325"/>
+        <location filename="../scripts/Information/Information.js" line="+334"/>
         <source>Information Tools</source>
         <translation>Утилиты информации</translation>
     </message>
@@ -8651,22 +8655,20 @@ shown in search results:</source>
         <translation>Вращение:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation>Вращать вставленный элемент&lt;br&gt;на заданный угол</translation>
+        <translation type="vanished">Вращать вставленный элемент&lt;br&gt;на заданный угол</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+126"/>
         <source>Scale:</source>
         <translation>Масштаб:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>Масштабировать вставленный элемент&lt;br&gt;на заданный коэффициент</translation>
+        <translation type="vanished">Масштабировать вставленный элемент&lt;br&gt;на заданный коэффициент</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+88"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translation>Развернуть вставленный элемент&lt;br&gt;по горизонтали</translation>
     </message>
@@ -10255,9 +10257,8 @@ shown in search results:</source>
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer</source>
-        <translation>&amp;Выделить слой</translation>
+        <translation type="vanished">&amp;Выделить слой</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
@@ -10268,6 +10269,11 @@ shown in search results:</source>
         <location line="+4"/>
         <source>%1 entities removed from selection.</source>
         <translation>%1 объекта(ов) удалены из выделения.</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
+        <source>&amp;Select Layer Entities</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12566,7 +12572,7 @@ shown in search results:</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1038"/>
         <source>Restore defaults</source>
         <translation>Восстановить умолчания</translation>
     </message>

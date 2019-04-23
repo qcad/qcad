@@ -1570,7 +1570,7 @@ Wilt u het herstellen?</translation>
     <name>CadToolBarPanel</name>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+70"/>
+        <location line="+71"/>
         <source>Back</source>
         <translation>Terug</translation>
     </message>
@@ -2253,7 +2253,7 @@ Wilt u het herstellen?</translation>
         <translation>U kunt het formaat voor getallen en coördinaten in de programma voorkeursinstellingen wijzigen.</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Transactie mislukt. Controleer tekening voor blok recursies en vergrendeld of onzichtbare lagen of blokken.</translation>
     </message>
@@ -2705,9 +2705,13 @@ Wilt u het herstellen?</translation>
 <context>
     <name>DeselectLayer</name>
     <message>
-        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer</source>
-        <translation>Laag &amp;deselecteren</translation>
+        <translation type="vanished">Laag &amp;deselecteren</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
+        <source>&amp;Deselect Layer Entities</source>
+        <translation>Laagobjecten &amp;deselecteren</translation>
     </message>
 </context>
 <context>
@@ -6132,7 +6136,7 @@ is al in de lijst.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+325"/>
+        <location filename="../scripts/Information/Information.js" line="+334"/>
         <source>Information Tools</source>
         <translation>Informatie gereedschappen</translation>
     </message>
@@ -8686,22 +8690,20 @@ getoond in zoekresultaten:</translation>
         <translation>Rotatie:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation>Draai ingevoegde objecten&lt;br&gt;over deze hoek</translation>
+        <translation type="vanished">Draai ingevoegde objecten&lt;br&gt;over deze hoek</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+126"/>
         <source>Scale:</source>
         <translation>Schaal:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>Schaal ingevoegde objecten&lt;br&gt;met deze factor</translation>
+        <translation type="vanished">Schaal ingevoegde objecten&lt;br&gt;met deze factor</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+88"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translation>Ingevoegde objecten&lt;br&gt;horizontaal spiegelen</translation>
     </message>
@@ -10290,9 +10292,8 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer</source>
-        <translation>Laag &amp;selecteren</translation>
+        <translation type="vanished">Laag &amp;selecteren</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
@@ -10303,6 +10304,11 @@ getoond in zoekresultaten:</translation>
         <location line="+4"/>
         <source>%1 entities removed from selection.</source>
         <translation>%1 objecten verwijderd uit selectie.</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
+        <source>&amp;Select Layer Entities</source>
+        <translation>Laagobjecten &amp;selecteren</translation>
     </message>
 </context>
 <context>
@@ -12605,7 +12611,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1038"/>
         <source>Restore defaults</source>
         <translation>Standaardinstellingen herstellen</translation>
     </message>

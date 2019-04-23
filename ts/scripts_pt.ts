@@ -1982,7 +1982,7 @@ Colunas:</translatorcomment>
     <name>CadToolBarPanel</name>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+70"/>
+        <location line="+71"/>
         <source>Back</source>
         <translation>Retorne</translation>
     </message>
@@ -2908,7 +2908,7 @@ Linha de Comando</translatorcomment>
         <translation>Você pode modificar o número/formato das coordenadas nas preferências do aplicativo.</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Falha na transação. Por favor verifique por autorreferências em Blocos ou camadas bloqueadas ou invisíveis nos Blocos.</translation>
     </message>
@@ -2922,7 +2922,7 @@ Linha de Comando</translatorcomment>
         <translation type="obsolete">Tentando aproveitar ou modificar as entidades em uma camada bloqueada.</translation>
     </message>
     <message>
-        <location line="-358"/>
+        <location line="-359"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -2937,7 +2937,7 @@ Linha de Comando</translatorcomment>
         <translation>Coordenada ou distância inválida &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+120"/>
         <source>Warning</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
@@ -3470,9 +3470,13 @@ De&amp;sseleciona Tudo</translatorcomment>
 <context>
     <name>DeselectLayer</name>
     <message>
-        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer</source>
-        <translation>&amp;Desmarque a Camada</translation>
+        <translation type="vanished">&amp;Desmarque a Camada</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
+        <source>&amp;Deselect Layer Entities</source>
+        <translation>&amp;Desmarcar entidades de camada</translation>
     </message>
 </context>
 <context>
@@ -8091,7 +8095,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+325"/>
+        <location filename="../scripts/Information/Information.js" line="+334"/>
         <source>Information Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ferramentas de Informações</translation>
@@ -11710,15 +11714,14 @@ Co&amp;lar</translatorcomment>
         <translation>Co&amp;le</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/Paste/Paste.ui" line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--
 Girar entidades colado&lt;br&gt;por este ângulo</translatorcomment>
-        <translation>Rotacione as entidades coladas&lt;br&gt;por este ângulo</translation>
+        <translation type="vanished">Rotacione as entidades coladas&lt;br&gt;por este ângulo</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location filename="../scripts/Edit/Paste/Paste.ui" line="+126"/>
         <source>Scale:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -11727,15 +11730,14 @@ Escala de tipo de linha global:</translatorcomment>
         <translation>Escala:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--
 Escala entidades colado&lt;br&gt;por este factor</translatorcomment>
-        <translation>Escalone as entidades coladas&lt;br&gt;por este fator</translation>
+        <translation type="vanished">Escalone as entidades coladas&lt;br&gt;por este fator</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+88"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--
@@ -13992,9 +13994,8 @@ Interseção com a seleção atual</translatorcomment>
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer</source>
-        <translation>&amp;Selecione uma Camada</translation>
+        <translation type="vanished">&amp;Selecione uma Camada</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
@@ -14065,6 +14066,11 @@ Subtrair da seleção atual</translatorcomment>
 --file: SelectContour_pt.ts--
 Interseção com a seleção atual</translatorcomment>
         <translation type="obsolete">Interseção com a seleção atual</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
+        <source>&amp;Select Layer Entities</source>
+        <translation>&amp;Selecionar entidades de camada</translation>
     </message>
 </context>
 <context>
@@ -17257,7 +17263,7 @@ Visite &amp;Websítio</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1038"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pt.ts--

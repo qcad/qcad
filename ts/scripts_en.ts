@@ -1536,7 +1536,7 @@ Do you wish to recover it?</translation>
     <name>CadToolBarPanel</name>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+70"/>
+        <location line="+71"/>
         <source>Back</source>
         <translation>Back</translation>
     </message>
@@ -2207,7 +2207,7 @@ Do you wish to recover it?</translation>
         <translation>You may change the number / coordinate format in the application preferences.</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</translation>
     </message>
@@ -2663,9 +2663,13 @@ Do you wish to recover it?</translation>
 <context>
     <name>DeselectLayer</name>
     <message>
-        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer</source>
-        <translation>&amp;Deselect Layer</translation>
+        <translation type="vanished">&amp;Deselect Layer</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
+        <source>&amp;Deselect Layer Entities</source>
+        <translation>&amp;Deselect Layer Entities</translation>
     </message>
 </context>
 <context>
@@ -6057,7 +6061,7 @@ is already in the list.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+325"/>
+        <location filename="../scripts/Information/Information.js" line="+334"/>
         <source>Information Tools</source>
         <translation>Information Tools</translation>
     </message>
@@ -8552,22 +8556,20 @@ shown in search results:</translation>
         <translation>Rotation:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation>Rotate pasted entities&lt;br&gt;by this angle</translation>
+        <translation type="vanished">Rotate pasted entities&lt;br&gt;by this angle</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+126"/>
         <source>Scale:</source>
         <translation>Scale:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>Scale pasted entities&lt;br&gt;by this factor</translation>
+        <translation type="vanished">Scale pasted entities&lt;br&gt;by this factor</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+88"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translation>Flip pasted entities&lt;br&gt;horizontally</translation>
     </message>
@@ -10150,9 +10152,13 @@ shown in search results:</translation>
         <translation>%1 entities removed from selection.</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer</source>
-        <translation>&amp;Select Layer</translation>
+        <translation type="vanished">&amp;Select Layer</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
+        <source>&amp;Select Layer Entities</source>
+        <translation>&amp;Select Layer Entities</translation>
     </message>
 </context>
 <context>
@@ -12400,7 +12406,7 @@ shown in search results:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1038"/>
         <source>Restore defaults</source>
         <translation>Restore defaults</translation>
     </message>

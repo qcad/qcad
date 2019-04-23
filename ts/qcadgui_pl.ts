@@ -93,7 +93,7 @@ Własne filtry</translatorcomment>
 <context>
     <name>RMathLineEdit</name>
     <message>
-        <location filename="../src/gui/RMathLineEdit.cpp" line="+176"/>
+        <location filename="../src/gui/RMathLineEdit.cpp" line="+168"/>
         <source>Invalid</source>
         <translation>Nieprawidłowy</translation>
     </message>

@@ -1782,7 +1782,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <name>CadToolBarPanel</name>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+70"/>
+        <location line="+71"/>
         <source>Back</source>
         <translation>Zurück</translation>
     </message>
@@ -2552,7 +2552,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Sie können das Format für Zahlen und Koordinaten in den Einstellungen anpassen.</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Transaktion fehlgeschlagen. Bitte überprüfen Sie Ihre Zeichnung auf mögliche Blockrekursionen und gesperrte oder unsichtbare Layer oder Blöcke.</translation>
     </message>
@@ -2565,7 +2565,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation type="obsolete">Versuch Objekte auf gesperrtem Layer zu zeichnen oder zu bearbeiten.</translation>
     </message>
     <message>
-        <location line="-358"/>
+        <location line="-359"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -2580,7 +2580,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Ungültige Koordinate oder Distanz &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+120"/>
         <source>Warning</source>
         <translation>Warnung</translation>
     </message>
@@ -3083,9 +3083,13 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>DeselectLayer</name>
     <message>
-        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer</source>
-        <translation>Layer &amp;deselektieren</translation>
+        <translation type="vanished">Layer &amp;deselektieren</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
+        <source>&amp;Deselect Layer Entities</source>
+        <translation>Layerobjekte &amp;deselektieren</translation>
     </message>
 </context>
 <context>
@@ -7238,7 +7242,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+352"/>
+        <location filename="../scripts/Information/Information.js" line="+361"/>
         <source>&amp;Info</source>
         <translation>&amp;Info</translation>
     </message>
@@ -10485,7 +10489,7 @@ nicht öffnen.
         <translation>Skalierung:</translation>
     </message>
     <message>
-        <location line="+129"/>
+        <location line="+126"/>
         <source>To current layer</source>
         <translation>Auf aktuellen Layer</translation>
     </message>
@@ -10570,14 +10574,12 @@ nicht öffnen.
         <translation type="obsolete">&lt;html&gt; &lt;head&gt; &lt;title&gt;QCad User Reference Manual - Basic Editing Commands&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;br&gt;&lt;/br&gt; &lt;h1&gt;10. Grundlegende Bearbeitungsbefehle&lt;/h1&gt; &lt;p&gt;This chapter lists the basic edit commands of QCad. These commands are not CAD specific and often also available in other applications. For CAD specific editing commands, please refer to chapter &amp;quot;Modification&amp;quot;.&lt;/p&gt; &lt;a name=&apos;1&apos;&gt;link&lt;/a&gt; &lt;h2&gt; &lt;a name=&apos;5&apos;&gt;10.5. Paste&lt;/a&gt; &lt;/h2&gt; &lt;a name=&apos;paste&apos; id=&apos;paste&apos;&gt;&lt;/a&gt; &lt;a name=&apos;edit - paste&apos; id=&apos;edit - paste&apos;&gt;&lt;/a&gt; &lt;p&gt; &lt;strong&gt;Toolbar:&lt;/strong&gt; &lt;/p&gt; &lt;p&gt; &lt;img src=&apos;img/toolbar_edit_paste.png&apos;&gt;&lt;/img&gt; &lt;/p&gt; &lt;p&gt; &lt;strong&gt;Menu:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; Edit - Paste &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Hotkey:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; Ctrl-V &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Command:&lt;/strong&gt; &lt;/p&gt; &lt;pre&gt; paste, ps &lt;/pre&gt; &lt;p&gt; &lt;strong&gt;Description:&lt;/strong&gt; &lt;/p&gt; &lt;p&gt; The paste command inserts the entities previously copied to the clipboard. Paste is especially useful to transfer entities from one drawing to another.&lt;br&gt;&lt;/br&gt; All layers needed by the clipboard contents are pasted into the layerlist. Existing layers with the same name don&apos;t get overwritten. Sometimes this might lead to unexpected results. If an entity gets its attributes from the layer, it might be red in the original drawing and appear green in the drawing where you paste it. That is the case if a layer exists in both drawings with different attributes.&lt;br&gt;&lt;/br&gt; Inserts (references to blocks) that are on the clipboard will be pasted together with the blocks they refer to. Blocks in the current drawing don&apos;t get overwritten. This might lead to totally unexpected results in some cases. Make sure that different blocks never have the same name in drawings for which you use the copy / paste tools.&lt;/p&gt; &lt;p&gt; &lt;strong&gt;Procedure:&lt;/strong&gt; &lt;/p&gt; &lt;ol&gt; &lt;li&gt;Activate the paste function.&lt;/li&gt; &lt;li&gt;Set the target point of for the pasted entities with the mouse or enter a coordinate in the command line. The target point corresponds to the reference point that was chosen when copying or cutting the entities.&lt;/li&gt; &lt;/ol&gt; &lt;br&gt;&lt;/br&gt; &lt;/body&gt;  &lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/Paste/Paste.ui" line="-236"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation>Eingefügte Elemente um&lt;br&gt;diesen Winkel rotieren</translation>
+        <translation type="vanished">Eingefügte Elemente um&lt;br&gt;diesen Winkel rotieren</translation>
     </message>
     <message>
-        <location line="+126"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>Eingefügte Elemente um&lt;br&gt;diesen Faktor skalieren</translation>
+        <translation type="vanished">Eingefügte Elemente um&lt;br&gt;diesen Faktor skalieren</translation>
     </message>
     <message>
         <source>1/3</source>
@@ -10592,7 +10594,7 @@ nicht öffnen.
         <translation type="obsolete">1/5</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location filename="../scripts/Edit/Paste/Paste.ui" line="-38"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translation>Eingefügte Elemente&lt;br&gt;horizontal spiegeln</translation>
     </message>
@@ -12490,9 +12492,8 @@ nicht öffnen.
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer</source>
-        <translation>Layer &amp;selektieren</translation>
+        <translation type="vanished">Layer &amp;selektieren</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
@@ -12503,6 +12504,11 @@ nicht öffnen.
         <location line="+4"/>
         <source>%1 entities removed from selection.</source>
         <translation>%1 Objekte aus der Selektion entfernt.</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
+        <source>&amp;Select Layer Entities</source>
+        <translation>Layerobjekte &amp;selektieren</translation>
     </message>
 </context>
 <context>
@@ -15203,7 +15209,7 @@ Kursiv
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1038"/>
         <source>Restore defaults</source>
         <translation>Standardwerte wieder herstellen</translation>
     </message>

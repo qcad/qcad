@@ -1521,7 +1521,7 @@ Přejete si ho obnovit?</translation>
     <name>CadToolBarPanel</name>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+70"/>
+        <location line="+71"/>
         <source>Back</source>
         <translation>Zpět</translation>
     </message>
@@ -2208,7 +2208,7 @@ Přejete si ho obnovit?</translation>
         <translation>V předvolbách aplikace můžete změnit formát čísla / souřadnice.</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Provádění selhalo. Zkontrolujte prosím blokové rekurze a uzamčené nebo neviditelné vrstvy nebo bloky.</translation>
     </message>
@@ -2656,9 +2656,13 @@ Přejete si ho obnovit?</translation>
 <context>
     <name>DeselectLayer</name>
     <message>
-        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer</source>
-        <translation>Zr&amp;ušit výběr vrstvy</translation>
+        <translation type="vanished">Zr&amp;ušit výběr vrstvy</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
+        <source>&amp;Deselect Layer Entities</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5998,7 +6002,7 @@ již v seznamu je.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+325"/>
+        <location filename="../scripts/Information/Information.js" line="+334"/>
         <source>Information Tools</source>
         <translation>Informační nástroje</translation>
     </message>
@@ -8470,22 +8474,20 @@ ve výsledcích vyhledávání:</translation>
         <translation>Natočení:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation>Natočit vložené prvky&lt;br&gt;v tomto úhlu</translation>
+        <translation type="vanished">Natočit vložené prvky&lt;br&gt;v tomto úhlu</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+126"/>
         <source>Scale:</source>
         <translation>Měřítko:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>Změnit měřítko vložených prvků&lt;br&gt;tímto faktorem</translation>
+        <translation type="vanished">Změnit měřítko vložených prvků&lt;br&gt;tímto faktorem</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+88"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translation>Překlopit vložené prvky&lt;br&gt;horizontálně</translation>
     </message>
@@ -10050,9 +10052,8 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer</source>
-        <translation>&amp;Vybrat vrstvu</translation>
+        <translation type="vanished">&amp;Vybrat vrstvu</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
@@ -10063,6 +10064,11 @@ ve výsledcích vyhledávání:</translation>
         <location line="+4"/>
         <source>%1 entities removed from selection.</source>
         <translation>%1 prvků odebráno z výběru.</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
+        <source>&amp;Select Layer Entities</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12306,7 +12312,7 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1038"/>
         <source>Restore defaults</source>
         <translation>Obnovit výchozí nastavení</translation>
     </message>

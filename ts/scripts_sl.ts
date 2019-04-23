@@ -1564,7 +1564,7 @@ Do you wish to recover it?</source>
     <name>CadToolBarPanel</name>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+70"/>
+        <location line="+71"/>
         <source>Back</source>
         <translation>Nazaj</translation>
     </message>
@@ -2279,7 +2279,7 @@ Do you wish to recover it?</source>
         <translation>Fromat zapisa števil / koordintat lahko spremenite v nastavitvah aplikacije.</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Prenos je spodletel. Preverite za rekurzije blokov ter zaklenjenih ali nevidnih slovjev oz blokov.</translation>
     </message>
@@ -2739,9 +2739,13 @@ Do you wish to recover it?</source>
 <context>
     <name>DeselectLayer</name>
     <message>
-        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer</source>
-        <translation>&amp;Razveljavi izbor plasti</translation>
+        <translation type="vanished">&amp;Razveljavi izbor plasti</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
+        <source>&amp;Deselect Layer Entities</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6325,7 +6329,7 @@ je že na seznamu.</translation>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+325"/>
+        <location filename="../scripts/Information/Information.js" line="+334"/>
         <source>Information Tools</source>
         <translation>Orodja informacij</translation>
     </message>
@@ -9082,22 +9086,20 @@ shown in search results:</source>
         <translation>Rotacija:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation>Rotiraj prilepljene entitete&lt;br&gt;za ta kot</translation>
+        <translation type="vanished">Rotiraj prilepljene entitete&lt;br&gt;za ta kot</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+126"/>
         <source>Scale:</source>
         <translation>Razmerje:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>Povečaj/pomanjšaj entitete&lt;br&gt;za ta faktor</translation>
+        <translation type="vanished">Povečaj/pomanjšaj entitete&lt;br&gt;za ta faktor</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+88"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translation>Zrcali prilepljene entitete&lt;br&gt;po vodoravni osi</translation>
     </message>
@@ -10738,9 +10740,8 @@ shown in search results:</source>
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer</source>
-        <translation>&amp;Izberi plast</translation>
+        <translation type="vanished">&amp;Izberi plast</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
@@ -10750,6 +10751,11 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>%1 entities removed from selection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
+        <source>&amp;Select Layer Entities</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -13174,7 +13180,7 @@ shown in search results:</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1038"/>
         <source>Restore defaults</source>
         <translation>Obnovi privzeto</translation>
     </message>

@@ -1715,7 +1715,7 @@ Espacement de grille minimal (px)</translatorcomment>
     <name>CadToolBarPanel</name>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+70"/>
+        <location line="+71"/>
         <source>Back</source>
         <translation>Précédent</translation>
     </message>
@@ -2478,7 +2478,7 @@ Espacement de grille minimal (px)</translatorcomment>
         <translation>Vous pouvez changer le format de nombre et coordonnées dans les préférences de l&apos;application.</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Essayant de tirer ou de modifier des entités sur un calque verrouillé.</translation>
     </message>
@@ -2492,7 +2492,7 @@ Espacement de grille minimal (px)</translatorcomment>
         <translation type="obsolete">Essayant de tirer ou de modifier des entités sur un calque verrouillé.</translation>
     </message>
     <message>
-        <location line="-358"/>
+        <location line="-359"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -2507,7 +2507,7 @@ Espacement de grille minimal (px)</translatorcomment>
         <translation>Invalid coordonner ou distance &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+120"/>
         <source>Warning</source>
         <translation>Avertissement</translation>
     </message>
@@ -3002,9 +3002,13 @@ KeyNavigation est disponible uniquement via les propriétés attachées</transla
 <context>
     <name>DeselectLayer</name>
     <message>
-        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer</source>
-        <translation>&amp;Désélectionnez calque</translation>
+        <translation type="vanished">&amp;Désélectionnez calque</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
+        <source>&amp;Deselect Layer Entities</source>
+        <translation>&amp;Désélectionner entités de calque</translation>
     </message>
 </context>
 <context>
@@ -7052,7 +7056,7 @@ Sélections persistantes</translatorcomment>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+325"/>
+        <location filename="../scripts/Information/Information.js" line="+334"/>
         <source>Information Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Outils d&apos;information</translation>
@@ -10158,22 +10162,20 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
         <translation type="obsolete">Retourner bloc&lt;br&gt;verticalement</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation>Pivoter les entités&lt;br&gt;collées par cet angle</translation>
+        <translation type="vanished">Pivoter les entités&lt;br&gt;collées par cet angle</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+126"/>
         <source>Scale:</source>
         <translation>Echelle :</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>Échelle des entités&lt;br&gt;collées par ce facteur</translation>
+        <translation type="vanished">Échelle des entités&lt;br&gt;collées par ce facteur</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+88"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translation>Retourner les entités&lt;br&gt;collé horizontalement</translation>
     </message>
@@ -12074,9 +12076,8 @@ Mode de couleur :</translatorcomment>
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer</source>
-        <translation>&amp;Sélectionner calque</translation>
+        <translation type="vanished">&amp;Sélectionner calque</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
@@ -12132,6 +12133,11 @@ Mode de couleur :</translatorcomment>
         <source>Intersect with the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="obsolete">Intersection avec la sélection courante</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
+        <source>&amp;Select Layer Entities</source>
+        <translation>&amp;Sélectionner entités de calque</translation>
     </message>
 </context>
 <context>
@@ -14763,7 +14769,7 @@ Indiquer le point cible</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1038"/>
         <source>Restore defaults</source>
         <translation>Restaurer les valeurs par défaut</translation>
     </message>

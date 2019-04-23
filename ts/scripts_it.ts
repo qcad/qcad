@@ -1712,7 +1712,7 @@ Spaziatura Griglia minima (px):</translatorcomment>
     <name>CadToolBarPanel</name>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+70"/>
+        <location line="+71"/>
         <source>Back</source>
         <translation>Indietro</translation>
     </message>
@@ -2479,7 +2479,7 @@ Visualizzazione grafica</translatorcomment>
         <translation>È possibile modificare il formato numero e coordinate nelle preferenze dell&apos;applicazione.</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Cercando di disegnare o modificare le entità su un livello bloccato.</translation>
     </message>
@@ -2493,7 +2493,7 @@ Visualizzazione grafica</translatorcomment>
         <translation type="obsolete">Cercando di disegnare o modificare le entità su un livello bloccato.</translation>
     </message>
     <message>
-        <location line="-358"/>
+        <location line="-359"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -2508,7 +2508,7 @@ Visualizzazione grafica</translatorcomment>
         <translation>Non valido coordinate o distanza &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+120"/>
         <source>Warning</source>
         <translation>Attenzione</translation>
     </message>
@@ -3005,9 +3005,13 @@ Layer ad alta risoluzione possono rallentare la navigazione in QGIS.</translator
 <context>
     <name>DeselectLayer</name>
     <message>
-        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer</source>
-        <translation>&amp;Deselezionare livello</translation>
+        <translation type="vanished">&amp;Deselezionare livello</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
+        <source>&amp;Deselect Layer Entities</source>
+        <translation>&amp;Deselezionare entità di livello</translation>
     </message>
 </context>
 <context>
@@ -7025,7 +7029,7 @@ Visualizzazione grafica</translatorcomment>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+325"/>
+        <location filename="../scripts/Information/Information.js" line="+334"/>
         <source>Information Tools</source>
         <translation>Strumenti informazione</translation>
     </message>
@@ -10117,22 +10121,20 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation type="obsolete">Rifletti blocco&lt;br&gt;verticalmente</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation>Ruotare le entità incollato&lt;br&gt;da questa angolazione</translation>
+        <translation type="vanished">Ruotare le entità incollato&lt;br&gt;da questa angolazione</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+126"/>
         <source>Scale:</source>
         <translation>Scala:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>Scala entità incollate&lt;br&gt;da questo fattore</translation>
+        <translation type="vanished">Scala entità incollate&lt;br&gt;da questo fattore</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+88"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translation>Rifletti entità&lt;br&gt;incollate orizzontalmente</translation>
     </message>
@@ -12054,9 +12056,8 @@ Interseca con la selezione corrente</translatorcomment>
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer</source>
-        <translation>&amp;Seleziona livello</translation>
+        <translation type="vanished">&amp;Seleziona livello</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
@@ -12124,6 +12125,11 @@ Sottrai dalla selezione corrente</translatorcomment>
 --file: SelectContour_it.ts--
 Interseca con la selezione corrente</translatorcomment>
         <translation type="obsolete">Interseca con la selezione corrente</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
+        <source>&amp;Select Layer Entities</source>
+        <translation>&amp;Selezionare entità di livello</translation>
     </message>
 </context>
 <context>
@@ -14787,7 +14793,7 @@ Visita il &amp;sito web</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1038"/>
         <source>Restore defaults</source>
         <translation>Ripristina predefiniti</translation>
     </message>

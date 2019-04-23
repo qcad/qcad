@@ -1859,7 +1859,7 @@ Kolumn:</translatorcomment>
     <name>CadToolBarPanel</name>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+70"/>
+        <location line="+71"/>
         <source>Back</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -2724,7 +2724,7 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation>Format liczb i współrzędnych można zmienić w preferencjach programu.</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Nieudana transakcja. Proszę sprawdzić rekurencję bloku oraz zablokowane lub niewidoczne warstwy lub bloki.</translation>
     </message>
@@ -2734,7 +2734,7 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="obsolete">Próbuje zwrócić na lub modyfikować jednostki na warstwie zablokowanej lub niewidoczne.</translation>
     </message>
     <message>
-        <location line="-358"/>
+        <location line="-359"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
@@ -2749,7 +2749,7 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation>Nieprawidłowa współrzędna lub odległość „%1”.</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+120"/>
         <source>Warning</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -3272,9 +3272,13 @@ Odznacz w&amp;szystko</translatorcomment>
 <context>
     <name>DeselectLayer</name>
     <message>
-        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer</source>
-        <translation>&amp;Odznacz warstwę</translation>
+        <translation type="vanished">&amp;Odznacz warstwę</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
+        <source>&amp;Deselect Layer Entities</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7595,7 +7599,7 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+325"/>
+        <location filename="../scripts/Information/Information.js" line="+334"/>
         <source>Information Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Narzędzia informacji</translation>
@@ -10984,13 +10988,12 @@ Wskaż pozycje</translatorcomment>
         <translation>Położenie</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/Paste/Paste.ui" line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Obraca wklejone obiekty o zadany kąt</translation>
+        <translation type="vanished">Obraca wklejone obiekty o zadany kąt</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location filename="../scripts/Edit/Paste/Paste.ui" line="+126"/>
         <source>Scale:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -10998,13 +11001,12 @@ Skala:</translatorcomment>
         <translation>Skala:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Skaluje wklejone obiekty przez zadany współczynnik</translation>
+        <translation type="vanished">Skaluje wklejone obiekty przez zadany współczynnik</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+88"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Odbij lustrzanie wklejony obiekty poziomo</translation>
@@ -13127,9 +13129,8 @@ Wskaż drugi punkt linii odbicia</translatorcomment>
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer</source>
-        <translation>&amp;Zaznacz warstwę</translation>
+        <translation type="vanished">&amp;Zaznacz warstwę</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
@@ -13189,6 +13190,11 @@ Wskaż drugi punkt linii odbicia</translatorcomment>
         <source>(De-)Select all entities on the same layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="obsolete">(De-) wybrać wszystkie elementy tej samej warstwy</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
+        <source>&amp;Select Layer Entities</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -16233,7 +16239,7 @@ Odwiedź &amp;stronę</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1038"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pl.ts--

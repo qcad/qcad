@@ -1716,7 +1716,7 @@ Seleccionador de varios métodos de entrada que usa el menú contextual de los e
     <name>CadToolBarPanel</name>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+70"/>
+        <location line="+71"/>
         <source>Back</source>
         <translation>Atrás</translation>
     </message>
@@ -2472,7 +2472,7 @@ Ver gráficos</translatorcomment>
         <translation>Usted puede cambiar el formato número y coordenada en las preferencias de la aplicación.</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>Tratando de aprovechar o modificar las entidades de una capa bloqueada.</translation>
     </message>
@@ -2486,7 +2486,7 @@ Ver gráficos</translatorcomment>
         <translation type="obsolete">Tratando de aprovechar o modificar las entidades de una capa bloqueada.</translation>
     </message>
     <message>
-        <location line="-358"/>
+        <location line="-359"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -2501,7 +2501,7 @@ Ver gráficos</translatorcomment>
         <translation>Inválida coordinar o distancia &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+120"/>
         <source>Warning</source>
         <translation>Aviso</translation>
     </message>
@@ -2994,9 +2994,13 @@ Las capas ráster de elevada resolución pueden ralentizar la navegación en QGI
 <context>
     <name>DeselectLayer</name>
     <message>
-        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer</source>
-        <translation>&amp;Deseleccionar capa</translation>
+        <translation type="vanished">&amp;Deseleccionar capa</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
+        <source>&amp;Deselect Layer Entities</source>
+        <translation>&amp;Deseleccionar entidades de capa</translation>
     </message>
 </context>
 <context>
@@ -7034,7 +7038,7 @@ Delta Y:</translatorcomment>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+325"/>
+        <location filename="../scripts/Information/Information.js" line="+334"/>
         <source>Information Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Herramientas de información</translation>
@@ -10137,22 +10141,20 @@ en los resultados de búsqueda:</translation>
         <translation type="obsolete">Voltear bloque&lt;br&gt;verticalmente</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation>Girar las entidades&lt;br&gt;pegadas por este ángulo</translation>
+        <translation type="vanished">Girar las entidades&lt;br&gt;pegadas por este ángulo</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+126"/>
         <source>Scale:</source>
         <translation>Escala:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>Escala de entidades&lt;br&gt;pegadas por este factor</translation>
+        <translation type="vanished">Escala de entidades&lt;br&gt;pegadas por este factor</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+88"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translation>Voltear las entidades&lt;br&gt;pegado horizontal</translation>
     </message>
@@ -12080,9 +12082,8 @@ Modo de búsqueda:</translatorcomment>
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer</source>
-        <translation>&amp;Seleccionar capa</translation>
+        <translation type="vanished">&amp;Seleccionar capa</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
@@ -12140,6 +12141,11 @@ Modo de búsqueda:</translatorcomment>
         <source>Intersect with the current selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="obsolete">Se cruzan con la selección actual</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
+        <source>&amp;Select Layer Entities</source>
+        <translation>&amp;Seleccionar entidades de capa</translation>
     </message>
 </context>
 <context>
@@ -14805,7 +14811,7 @@ Visita el sitio &amp;Web</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1038"/>
         <source>Restore defaults</source>
         <translation>Restaurar los valores predeterminados</translation>
     </message>

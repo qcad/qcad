@@ -1564,7 +1564,7 @@ Do you wish to recover it?</source>
     <name>CadToolBarPanel</name>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
-        <location line="+70"/>
+        <location line="+71"/>
         <source>Back</source>
         <translation>戻る</translation>
     </message>
@@ -2268,7 +2268,7 @@ Do you wish to recover it?</source>
         <translation>数値/座標のフォーマットをアプリケーション設定で変更できます。</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
         <translation>ロックされたまたは不可視な画層のエンティティを描画、修正しようとしています。</translation>
     </message>
@@ -2277,7 +2277,7 @@ Do you wish to recover it?</source>
         <translation type="obsolete">ロックされたまたは不可視な画層のエンティティを描画、修正しようとしています。</translation>
     </message>
     <message>
-        <location line="-358"/>
+        <location line="-359"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -2292,7 +2292,7 @@ Do you wish to recover it?</source>
         <translation>無効な座標または距離 &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+120"/>
         <source>Warning</source>
         <translation>警告</translation>
     </message>
@@ -2735,9 +2735,13 @@ Do you wish to recover it?</source>
 <context>
     <name>DeselectLayer</name>
     <message>
-        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer</source>
-        <translation>&amp;D レイヤーを選択解除</translation>
+        <translation type="vanished">&amp;D レイヤーを選択解除</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
+        <source>&amp;Deselect Layer Entities</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6312,7 +6316,7 @@ is already in the list.</source>
 <context>
     <name>Information</name>
     <message>
-        <location filename="../scripts/Information/Information.js" line="+325"/>
+        <location filename="../scripts/Information/Information.js" line="+334"/>
         <source>Information Tools</source>
         <translation>情報ツール</translation>
     </message>
@@ -9016,22 +9020,20 @@ shown in search results:</source>
         <translation>位置</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/Paste/Paste.ui" line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation>貼り付けエンティティを回転&lt;br&gt;この角度で</translation>
+        <translation type="vanished">貼り付けエンティティを回転&lt;br&gt;この角度で</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location filename="../scripts/Edit/Paste/Paste.ui" line="+126"/>
         <source>Scale:</source>
         <translation>縮尺:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation>貼り付けエンティティを拡縮&lt;br&gt;この係数で</translation>
+        <translation type="vanished">貼り付けエンティティを拡縮&lt;br&gt;この係数で</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+88"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translation>貼り付けエンティティを反転&lt;br&gt;水平</translation>
     </message>
@@ -10628,9 +10630,8 @@ shown in search results:</source>
 <context>
     <name>SelectLayer</name>
     <message>
-        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer</source>
-        <translation>&amp;S レイヤーを選択</translation>
+        <translation type="vanished">&amp;S レイヤーを選択</translation>
     </message>
     <message>
         <source>Choose entity on layer</source>
@@ -10676,6 +10677,11 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>%1 entities removed from selection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
+        <source>&amp;Select Layer Entities</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -13091,7 +13097,7 @@ shown in search results:</source>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1016"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1038"/>
         <source>Restore defaults</source>
         <translation>デフォルトを置き換え</translation>
     </message>
