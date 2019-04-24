@@ -1169,6 +1169,8 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
         // prevent black on black / white on white drawing
         applyColorCorrection(pen);
         applyColorCorrection(brush);
+
+        // apply minimum line weight:
         applyMinimumLineweight(pen);
 
         // highlighted:
