@@ -8850,7 +8850,7 @@ shown in search results:</translation>
         <translation>Done</translation>
     </message>
     <message>
-        <location line="+414"/>
+        <location line="+416"/>
         <source>Export to PDF</source>
         <translation>Export to PDF</translation>
     </message>

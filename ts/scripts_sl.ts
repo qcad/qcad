@@ -9388,7 +9388,7 @@ shown in search results:</source>
         <translation>Končano</translation>
     </message>
     <message>
-        <location line="+414"/>
+        <location line="+416"/>
         <source>Export to PDF</source>
         <translation>Izvozi v PDF</translation>
     </message>

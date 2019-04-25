@@ -8688,7 +8688,7 @@ shown in search results:</source>
         <translation>Bitti</translation>
     </message>
     <message>
-        <location line="+414"/>
+        <location line="+416"/>
         <source>Export to PDF</source>
         <translation>PDF Olarak Dışa Aktar</translation>
     </message>

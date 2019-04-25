@@ -10442,7 +10442,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation>Fatto</translation>
     </message>
     <message>
-        <location line="+414"/>
+        <location line="+416"/>
         <source>Export to PDF</source>
         <translation>Esporta PDF</translation>
     </message>

@@ -9058,7 +9058,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Hotovo</translation>
     </message>
     <message>
-        <location line="+414"/>
+        <location line="+416"/>
         <source>Export to PDF</source>
         <translation>Exportovať do PDF</translation>
     </message>

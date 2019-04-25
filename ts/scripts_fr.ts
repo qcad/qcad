@@ -10483,7 +10483,7 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
         <translation>Terminer</translation>
     </message>
     <message>
-        <location line="+414"/>
+        <location line="+416"/>
         <source>Export to PDF</source>
         <translation>Exporter vers PDF</translation>
     </message>

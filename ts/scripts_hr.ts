@@ -8643,7 +8643,7 @@ shown in search results:</source>
         <translation type="unfinished">Završeno</translation>
     </message>
     <message>
-        <location line="+414"/>
+        <location line="+416"/>
         <source>Export to PDF</source>
         <translation type="unfinished"></translation>
     </message>

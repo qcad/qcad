@@ -8953,7 +8953,7 @@ shown in search results:</source>
         <translation>Завершено</translation>
     </message>
     <message>
-        <location line="+414"/>
+        <location line="+416"/>
         <source>Export to PDF</source>
         <translation>Экспортировать в PDF</translation>
     </message>
