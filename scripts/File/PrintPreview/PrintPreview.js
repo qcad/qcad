@@ -436,9 +436,11 @@ PrintPreviewImpl.prototype.showUiOptions = function(resume) {
     }
 
     if (Print.getHairlineMode(document)) {
-        widgets["Hairline"].blockSignals(true);
-        widgets["Hairline"].checked=true;
-        widgets["Hairline"].blockSignals(false);
+        if (!isNull(widgets["Hairline"])) {
+            widgets["Hairline"].blockSignals(true);
+            widgets["Hairline"].checked=true;
+            widgets["Hairline"].blockSignals(false);
+        }
     }
 
     widgets["Portrait"].blockSignals(true);
