@@ -44,8 +44,3 @@ PdfExport.prototype.beginEvent = function() {
 
     this.terminate();
 };
-
-PdfExport.prototype.getPrintPreviewAction = function() {
-    return new PrintPreview();
-};
-
