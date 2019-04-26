@@ -608,7 +608,12 @@ EAction.prototype.showDialog = function() {
     this.dialog = WidgetFactory.createDialog(this.includeBasePath, this.dialogUiFile, EAction.getMainWindow());
     this.initUiOptions(false, this.dialog);
     WidgetFactory.restoreState(this.dialog, this.settingsGroup, this);
-    this.dialog.windowTitle = this.getToolTitle();
+    var title = this.getToolTitle();
+    if (title.indexOf("\t")!==-1) {
+        // remove shortcuts Windows:
+        title = title.replace(/\t.*/g, "");
+    }
+    this.dialog.windowTitle = title;
     this.dialog.windowIcon = new QIcon();
 
     // give focus to control with custom property 'DefaultFocus':
