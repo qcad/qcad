@@ -188,10 +188,10 @@ RLayerListQt.prototype.layerActivated = function() {
 
 
 function LayerList(guiAction) {
-    Widgets.call(this, guiAction);
+    EAction.call(this, guiAction);
 }
 
-LayerList.prototype = new Widgets();
+LayerList.prototype = new EAction();
 
 LayerList.getPreferencesCategory = function() {
     return [ qsTr("Widgets"), qsTr("Layer List") ];
@@ -212,7 +212,7 @@ LayerList.applyPreferences = function(doc, mdiChild) {
  * Shows / hides the layer list.
  */
 LayerList.prototype.beginEvent = function() {
-    Widgets.prototype.beginEvent.call(this);
+    EAction.prototype.beginEvent.call(this);
 
     var appWin = RMainWindowQt.getMainWindow();
     var dock = appWin.findChild("LayerListDock");
