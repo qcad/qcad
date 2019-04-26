@@ -399,7 +399,9 @@ RCadToolMatrixTree.prototype.updateListViewMode = function() {
 };
 
 RCadToolMatrixTree.prototype.setListViewMode = function(enable) {
-    this.setProperty("listViewMode", enable);
+    if (isFunction(this.setProperty)) {
+        this.setProperty("listViewMode", enable);
+    }
     var embeddedWidgets = RCadToolMatrixTree.getItemsAndEmbeddedWidgets(this);
     for (var i=0; i<embeddedWidgets.length; i++) {
         var embeddedWidget = embeddedWidgets[i][2];
