@@ -133,6 +133,32 @@ void RStorage::setCurrentLayer(const QString& layerName, RTransaction* transacti
     if (layerId == RLayer::INVALID_ID) {
         return;
     }
+
+//    QSet<RLayer::Id> selectedLayerIds = querySelectedLayers();
+//    qDebug() << "selectedLayerIds:" << selectedLayerIds;
+//    if (selectedLayerIds.size()<=1) {
+//        // deselect selected layer:
+//        if (!selectedLayerIds.isEmpty()) {
+//            RLayer::Id selectedLayerId = selectedLayerIds.toList().first();
+//            qDebug() << "deselect:" << selectedLayerId;
+//            QSharedPointer<RLayer> selectedLayer = queryLayer(selectedLayerId);
+//            if (!selectedLayer.isNull()) {
+//                if (selectedLayer->getId()!=layerId) {
+//                    selectedLayer->setSelected(false);
+//                    transaction->addObject(selectedLayer);
+//                }
+//            }
+//        }
+//    }
+
+//    // always select current layer:
+//    QSharedPointer<RLayer> layer = queryLayer(layerId);
+//    if (!layer.isNull()) {
+//        qDebug() << "select:" << layerId;
+//        layer->setSelected(true);
+//        transaction->addObject(layer);
+//    }
+
     docVars->setCurrentLayerId(layerId);
     endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
 }
