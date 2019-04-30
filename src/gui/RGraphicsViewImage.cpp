@@ -430,7 +430,12 @@ void RGraphicsViewImage::paintReferencePoint(QPainter& painter, const RRefPoint&
                 painter.setPen(QPen(Qt::black));
             }
             else {
-                painter.setPen(QPen(Qt::gray));
+                if (pos.isSelected()) {
+                    painter.setPen(QPen(Qt::red));
+                }
+                else {
+                    painter.setPen(QPen(Qt::gray));
+                }
             }
         }
         if (pos.isCenter() || pos.isArrow()) {
