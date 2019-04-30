@@ -71,6 +71,20 @@ function addLayer(name, colorName, linetypeName, lineWeight) {
 }
 
 /**
+ * Sets the current layer to the given layer.
+ * \ingroup ecma_simple
+ *
+ * \param layerName Layer name or ID.
+ */
+function setCurrentLayer(layerName) {
+    var di = getTransactionDocumentInterface();
+    if (isNull(di)) {
+        return false;
+    }
+    di.setCurrentLayer(layerName);
+}
+
+/**
  * Adds a point to the drawing.
  * \ingroup ecma_simple
  *
