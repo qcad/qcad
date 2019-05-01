@@ -1891,7 +1891,7 @@ Powrót do poprzedniego menu</translatorcomment>
         <translation>Widok ikon</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+36"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
@@ -4551,7 +4551,7 @@ Powrót do poprzedniego menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2073"/>
+        <location line="+2078"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -4560,7 +4560,7 @@ Anuluj
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location line="-1796"/>
+        <location line="-1801"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
@@ -4576,7 +4576,7 @@ Wyrażenia &quot;pragma&quot; nie są obsługiwane. Dlatego musi wystąpić wyra
         <translation>Brak</translation>
     </message>
     <message>
-        <location line="+664"/>
+        <location line="+669"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

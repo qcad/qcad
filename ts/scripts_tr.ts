@@ -1540,7 +1540,7 @@ Onu kurtarmak ister misiniz?</translation>
         <translation>Simge Görünümü</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+36"/>
         <source>Widgets</source>
         <translation type="unfinished">Widgetler</translation>
     </message>
@@ -3610,12 +3610,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2073"/>
+        <location line="+2078"/>
         <source>Cancel</source>
         <translation type="unfinished">İptal</translation>
     </message>
     <message>
-        <location line="-1796"/>
+        <location line="-1801"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation type="unfinished"></translation>
@@ -3626,7 +3626,7 @@ is already in the list.</source>
         <translation type="unfinished">Yok</translation>
     </message>
     <message>
-        <location line="+664"/>
+        <location line="+669"/>
         <source>Options</source>
         <translation type="unfinished"></translation>
     </message>

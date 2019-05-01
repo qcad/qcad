@@ -1740,7 +1740,7 @@ Spaziatura Griglia minima (px):</translatorcomment>
         <translation>Visualizza icone</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+36"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -4097,12 +4097,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2073"/>
+        <location line="+2078"/>
         <source>Cancel</source>
         <translation>Annulla</translation>
     </message>
     <message>
-        <location line="-1796"/>
+        <location line="-1801"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
@@ -4114,7 +4114,7 @@ is already in the list.</source>
         <translation>Niente</translation>
     </message>
     <message>
-        <location line="+664"/>
+        <location line="+669"/>
         <source>Options</source>
         <translation>Opzioni</translation>
     </message>

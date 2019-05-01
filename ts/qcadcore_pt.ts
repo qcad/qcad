@@ -676,7 +676,7 @@ Abre diálogo de cores</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Font Name</source>
-        <translation>Nome da Fonte</translation>
+        <translation>Nome da fonte</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -1592,7 +1592,7 @@ Do you wish to recover it?</source>
         <translation>Prikaz ikon</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+36"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -3785,12 +3785,12 @@ je že na seznamu.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2073"/>
+        <location line="+2078"/>
         <source>Cancel</source>
         <translation>Prekliči</translation>
     </message>
     <message>
-        <location line="-1796"/>
+        <location line="-1801"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Aktivno orodje:</translation>
@@ -3801,7 +3801,7 @@ je že na seznamu.</translation>
         <translation>Brez</translation>
     </message>
     <message>
-        <location line="+664"/>
+        <location line="+669"/>
         <source>Options</source>
         <translation>Nastavitve</translation>
     </message>

@@ -1501,7 +1501,7 @@ Vill du återställa den?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+36"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3545,12 +3545,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2073"/>
+        <location line="+2078"/>
         <source>Cancel</source>
         <translation type="unfinished">Avbryt</translation>
     </message>
     <message>
-        <location line="-1796"/>
+        <location line="-1801"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation type="unfinished"></translation>
@@ -3561,7 +3561,7 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+664"/>
+        <location line="+669"/>
         <source>Options</source>
         <translation type="unfinished"></translation>
     </message>

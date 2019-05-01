@@ -1743,7 +1743,7 @@ Espacement de grille minimal (px)</translatorcomment>
         <translation>Vue en icônes</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+36"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -4097,12 +4097,12 @@ est déjà dans la liste.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2073"/>
+        <location line="+2078"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
     <message>
-        <location line="-1796"/>
+        <location line="-1801"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Outil actif:</translation>
@@ -4118,7 +4118,7 @@ est déjà dans la liste.</translation>
         <translation>Aucun</translation>
     </message>
     <message>
-        <location line="+664"/>
+        <location line="+669"/>
         <source>Options</source>
         <translation>Options</translation>
     </message>

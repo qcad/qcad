@@ -1810,7 +1810,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Iconansicht</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+36"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -4172,12 +4172,12 @@ ist bereits in der Liste.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2073"/>
+        <location line="+2078"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="-1796"/>
+        <location line="-1801"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Aktives Werkzeug:</translation>
@@ -4192,7 +4192,7 @@ ist bereits in der Liste.</translation>
         <translation>Kein</translation>
     </message>
     <message>
-        <location line="+664"/>
+        <location line="+669"/>
         <source>Options</source>
         <translation>Optionen</translation>
     </message>

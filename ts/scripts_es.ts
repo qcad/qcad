@@ -1744,7 +1744,7 @@ Seleccionador de varios métodos de entrada que usa el menú contextual de los e
         <translation>Vista de iconos</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+36"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -4087,12 +4087,12 @@ ya está en la lista.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2073"/>
+        <location line="+2078"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="-1796"/>
+        <location line="-1801"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Herramienta activa:</translation>
@@ -4108,7 +4108,7 @@ ya está en la lista.</translation>
         <translation>Ninguno</translation>
     </message>
     <message>
-        <location line="+664"/>
+        <location line="+669"/>
         <source>Options</source>
         <translation>Opciones</translation>
     </message>
