@@ -2695,7 +2695,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer Entities</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Отменить выделение объектов слоя</translation>
     </message>
 </context>
 <context>
@@ -10273,7 +10273,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer Entities</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Выделить объекты слоя</translation>
     </message>
 </context>
 <context>
