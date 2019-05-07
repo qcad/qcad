@@ -32,6 +32,22 @@ function setCurrentColor(color) {
 }
 
 /**
+ * Checks if the given layer exists.
+ * \ingroup ecma_simple
+ *
+ * \code
+ * hasLayer("MyLayer1")
+ * \endcode
+ */
+function hasLayer(name) {
+    var doc = getTransactionDocument();
+    if (isNull(doc)) {
+        return false;
+    }
+    return doc.hasLayer(name);
+}
+
+/**
  * Adds a layer to the drawing.
  * \ingroup ecma_simple
  *
@@ -230,13 +246,24 @@ function addPolyline(points, closed, relative) {
                 rel = points[i][2];
             }
         }
-        else {
+        else if (isArray(points[i])) {
             v0 = new RVector(points[i][0], points[i][1]);
             if (!isNull(points[i][2])) {
                 b = points[i][2];
             }
             if (!isNull(points[i][3])) {
                 rel = points[i][3];
+            }
+        }
+        else if (isNumber(points[i].x) && isNumber(points[i].y)){
+            if (isNumber(points[i].z)) {
+                v0 = new RVector(points[i].x, points[i].y, points[i].z);
+            }
+            else {
+                v0 = new RVector(points[i].x, points[i].y);
+            }
+            if (isNumber(points[i].b)) {
+                b = points[i].b;
             }
         }
 
