@@ -80,6 +80,7 @@ public:
     bool appendShapeAuto(const RShape& shape);
 
     void appendVertex(const RVector& vertex, double bulge = 0.0, double w1 = 0.0, double w2 = 0.0);
+    void appendVertex(double x, double y, double bulge = 0.0, double w1 = 0.0, double w2 = 0.0);
     void prependVertex(const RVector& vertex, double bulge = 0.0, double w1 = 0.0, double w2 = 0.0);
     void insertVertex(int index, const RVector& vertex, double bulgeBefore = 0.0, double bulgeAfter = 0.0);
     void insertVertexAt(const RVector& point);

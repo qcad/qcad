@@ -312,6 +312,10 @@ void RPolyline::appendVertex(const RVector& vertex, double bulge, double w1, dou
     Q_ASSERT(vertices.length()==endWidths.length());
 }
 
+void RPolyline::appendVertex(double x, double y, double bulge, double w1, double w2) {
+    appendVertex(RVector(x, y), bulge, w1, w2);
+}
+
 void RPolyline::prependVertex(const RVector& vertex, double bulge, double w1, double w2) {
     vertices.prepend(vertex);
     bulges.prepend(bulge);
