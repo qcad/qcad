@@ -129,7 +129,7 @@ function exportBitmap(doc, scene, fileName, properties, view) {
         view.zoomToEntities(properties["entityIds"], properties["margin"]);
     }
     else {
-        view.autoZoom(properties["margin"], true, false);
+        view.autoZoom(properties["margin"], true, properties["noWeightMargin"]);
     }
 
     // make sure we use the desired resolution:
