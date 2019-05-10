@@ -75,6 +75,8 @@
 
     <function_decl><type><name>void</name></type> <name>setToolTip</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>toolTip</name></decl></param>)</parameter_list>;</function_decl>
 
+    <function_decl><type><name>void</name></type> <name>setTextColor</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>error</name></decl></param>)</parameter_list>;</function_decl>
+
     <comment type="block">/*
     double getDefaultValue() {
         return defaultValue;

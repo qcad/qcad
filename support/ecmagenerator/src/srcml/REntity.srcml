@@ -279,9 +279,6 @@
      * \copydoc REntityData::setLinetypeScale
      */</comment>
     <function><type><name>void</name></type> <name>setLinetypeScale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>linetypeScale</name></decl></param>)</parameter_list> <block>{
-        <if>if <condition>(<expr><name>linetypeScale</name>&lt;0.0</expr>)</condition><then> <block>{
-            <expr_stmt><expr><call><name>qDebug</name><argument_list>()</argument_list></call> &lt;&lt; "setLinetypeScale to -1"</expr>;</expr_stmt>
-        }</block></then></if>
         <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setLinetypeScale</name><argument_list>(<argument><expr><name>linetypeScale</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 

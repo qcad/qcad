@@ -47,7 +47,46 @@
     
 
     // public methods:
-    static  QScriptValue toString
+    static  QScriptValue
+        getMathLineEdit
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isInteger
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setInteger
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setValue
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getValue
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getError
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        clearError
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isValid
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isSane
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        slotTextChanged
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        slotValueChanged
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RMathComboBox* getSelf(const QString& fName, QScriptContext* context)

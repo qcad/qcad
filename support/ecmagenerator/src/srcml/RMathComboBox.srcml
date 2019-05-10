@@ -27,6 +27,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QComboBox&gt;</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMath.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMathLineEdit.h"</cpp:file></cpp:include>
 
 <comment type="block">/**
  * \scriptable
@@ -34,86 +35,68 @@
  */</comment>
 <class>class <macro><name>QCADGUI_EXPORT</name></macro> <name>RMathComboBox</name><super>: <specifier>public</specifier> <name>QComboBox</name></super> <block>{<private type="default">
 
-<macro><name>Q_OBJECT</name></macro>
+<function_decl><type><name>Q_OBJECT</name></type>
 
 <comment type="line">// keep extra ';' in place for the benefit of ecmagenerator:</comment>
-<comment type="line">//Q_PROPERTY(bool angle READ isAngle WRITE setAngle);</comment>
-<comment type="line">//Q_PROPERTY(bool integer READ isInteger WRITE setInteger);</comment>
-<comment type="line">//Q_PROPERTY(double defaultValue READ getDefaultValue WRITE setDefaultValue);</comment>
-<comment type="line">//Q_PROPERTY(int defaultUnit READ getDefaultUnit WRITE setDefaultUnit);</comment>
-<comment type="line">//Q_PROPERTY(RS::Unit defaultUnit READ getDefaultUnit WRITE setDefaultUnit);</comment>
-<comment type="line">//Q_ENUMS(RS::Unit);</comment>
+<name>Q_PROPERTY</name><parameter_list>(<param><decl><type><name>bool</name> <name>angle</name> <name>READ</name> <name>isAngle</name> <name>WRITE</name></type> <name>setAngle</name></decl></param>)</parameter_list>;</function_decl>
+<constructor_decl><name>Q_PROPERTY</name><parameter_list>(<param><decl><type><name>bool</name> <name>integer</name> <name>READ</name> <name>isInteger</name> <name>WRITE</name></type> <name>setInteger</name></decl></param>)</parameter_list>;</constructor_decl>
 
 </private><public>public:
     <constructor_decl><name>RMathComboBox</name><parameter_list>(<param><decl><type><name>QWidget</name>*</type> <name>parent</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
 
-<comment type="line">//    bool isAngle() const {</comment>
-<comment type="line">//       return angle;</comment>
-<comment type="line">//    }</comment>
-<comment type="line">//    void setAngle(bool on) {</comment>
-<comment type="line">//       angle = on;</comment>
-<comment type="line">//    }</comment>
-<comment type="line">//    bool isInteger() const {</comment>
-<comment type="line">//        return integer;</comment>
-<comment type="line">//    }</comment>
-<comment type="line">//    void setInteger(bool on) {</comment>
-<comment type="line">//        integer = on;</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>RMathLineEdit</name>*</type> <name>getMathLineEdit</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <decl_stmt><decl><type><name>QLineEdit</name>*</type> <name>le</name> =<init> <expr><call><name>lineEdit</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>RMathLineEdit</name>*</type> <name>me</name> =<init> <expr><call><name>dynamic_cast<argument_list>&lt;<argument><name>RMathLineEdit</name>*</argument>&gt;</argument_list></name><argument_list>(<argument><expr><name>le</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+        <expr_stmt><expr><call><name>Q_ASSERT</name><argument_list>(<argument><expr><name>me</name>!=<name>NULL</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <return>return <expr><name>me</name></expr>;</return>
+    }</block></function>
 
-<comment type="line">//    void setValue(double v, int precision=6);</comment>
-<comment type="line">//    double getValue();</comment>
-<comment type="line">//    QString getError();</comment>
-<comment type="line">//    void clearError();</comment>
+    <function><type><name>bool</name></type> <name>isAngle</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getMathLineEdit</name><argument_list>()</argument_list></call>-&gt;<call><name>isAngle</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setAngle</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getMathLineEdit</name><argument_list>()</argument_list></call>-&gt;<call><name>setAngle</name><argument_list>(<argument><expr><name>on</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>bool</name></type> <name>isInteger</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getMathLineEdit</name><argument_list>()</argument_list></call>-&gt;<call><name>isInteger</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setInteger</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getMathLineEdit</name><argument_list>()</argument_list></call>-&gt;<call><name>setInteger</name><argument_list>(<argument><expr><name>on</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
 
-<comment type="line">//    bool isValid() {</comment>
-<comment type="line">//        return !RMath::isNaN(value);</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>void</name></type> <name>setValue</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>, <param><decl><type><name>int</name></type> <name>precision</name>=<init><expr>6</expr></init></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getMathLineEdit</name><argument_list>()</argument_list></call>-&gt;<call><name>setValue</name><argument_list>(<argument><expr><name>v</name></expr></argument>, <argument><expr><name>precision</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>double</name></type> <name>getValue</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name>getMathLineEdit</name><argument_list>()</argument_list></call>-&gt;<call><name>getValue</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+    <function><type><name>QString</name></type> <name>getError</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name>getMathLineEdit</name><argument_list>()</argument_list></call>-&gt;<call><name>getError</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>clearError</name><parameter_list>()</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getMathLineEdit</name><argument_list>()</argument_list></call>-&gt;<call><name>clearError</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
 
-<comment type="line">//    bool isSane() {</comment>
-<comment type="line">//        return RMath::isSane(value);</comment>
-<comment type="line">//    }</comment>
+    <function><type><name>bool</name></type> <name>isValid</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name>getMathLineEdit</name><argument_list>()</argument_list></call>-&gt;<call><name>isValid</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
 
-<comment type="line">//    void setToolTip(const QString&amp; toolTip);</comment>
+    <function><type><name>bool</name></type> <name>isSane</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name>getMathLineEdit</name><argument_list>()</argument_list></call>-&gt;<call><name>isSane</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
 
-<comment type="line">//    /*</comment>
-<comment type="line">//    double getDefaultValue() {</comment>
-<comment type="line">//        return defaultValue;</comment>
-<comment type="line">//    }</comment>
-<comment type="line">//    void setDefaultValue(double v) {</comment>
-<comment type="line">//        defaultValue = v;</comment>
-<comment type="line">//    }</comment>
-<comment type="line">//    */</comment>
-
-<comment type="line">//    //void setDefaultUnit(int defaultUnit);</comment>
-<comment type="line">//    //int getDefaultUnit();</comment>
-
-</public><protected>protected:
-<comment type="line">//    virtual void keyPressEvent(QKeyEvent* event);</comment>
-<comment type="line">//    virtual void keyReleaseEvent(QKeyEvent* event);</comment>
-<comment type="line">//    virtual bool eventFilter(QObject* obj, QEvent* event);</comment>
-
-</protected><public>public slots:
-<comment type="line">//    void slotTextChanged(const QString&amp; text);</comment>
-<comment type="line">//    void slotTextEdited(const QString&amp; text);</comment>
+</public><public>public slots:
+    <function><type><name>void</name></type> <name>slotTextChanged</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getMathLineEdit</name><argument_list>()</argument_list></call>-&gt;<call><name>slotTextChanged</name><argument_list>(<argument><expr><name>text</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>void</name></type> <name>slotValueChanged</name><parameter_list>(<param><decl><type><name>double</name></type> <name>value</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>error</name></decl></param>)</parameter_list> <block>{
+        <comment type="line">// forward signal from RMathLineEdit:</comment>
+        <function_decl><type><name>emit</name></type> <name>valueChanged</name><parameter_list>(<param><decl><type><name>value</name></type></decl></param>, <param><decl><type><name>error</name></type></decl></param>)</parameter_list>;</function_decl>
+    }</block></function>
 
 <label><name>signals</name>:</label>
-<comment type="line">//    void valueChanged(double value, const QString&amp; error);</comment>
-<comment type="line">//    void upKeyPressed();</comment>
-<comment type="line">//    void downKeyPressed();</comment>
-<comment type="line">//    void enterKeyPressed();</comment>
-
-</public><private>private:
-<comment type="line">//    QPalette oriPalette;</comment>
-<comment type="line">//    bool angle;</comment>
-<comment type="line">//    bool integer;</comment>
-<comment type="line">//    double value;</comment>
-<comment type="line">//    //RS::Unit defaultUnit;</comment>
-<comment type="line">//    QString error;</comment>
-<comment type="line">//    QString originalToolTip;</comment>
-<comment type="line">//    bool noEmit;</comment>
-<comment type="line">//    bool noResultInToolTip;</comment>
-<comment type="line">//    //double defaultValue;</comment>
-</private>}</block>;</class>
+    <function_decl><type><name>void</name></type> <name>valueChanged</name><parameter_list>(<param><decl><type><name>double</name></type> <name>value</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>error</name></decl></param>)</parameter_list>;</function_decl>
+</public>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RMathComboBox*</argument>)</argument_list></macro>
 

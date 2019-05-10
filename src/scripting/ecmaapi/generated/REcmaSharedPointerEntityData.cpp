@@ -81,6 +81,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
             
+            REcmaHelper::registerFunction(&engine, proto, copyAttributesFrom, "copyAttributesFrom");
+            
             REcmaHelper::registerFunction(&engine, proto, to2D, "to2D");
             
             REcmaHelper::registerFunction(&engine, proto, setZ, "setZ");
@@ -1136,6 +1138,121 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerEntityData::getBoundingBox", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerEntityData::copyAttributesFrom
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerEntityData::copyAttributesFrom", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEntityData::copyAttributesFrom";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntityData* self = 
+                        getSelf("copyAttributesFrom", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: REntityData */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    REntityData*
+                    ap0 =
+                    qscriptvalue_cast<
+                    REntityData*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("REntityData: Argument 0 is not of type REntityData*.",
+                               context);                    
+                    }
+                    REntityData& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->copyAttributesFrom(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: REntityData */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    REntityData*
+                    ap0 =
+                    qscriptvalue_cast<
+                    REntityData*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("REntityData: Argument 0 is not of type REntityData*.",
+                               context);                    
+                    }
+                    REntityData& a0 = *ap0;
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->copyAttributesFrom(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntityData.copyAttributesFrom().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerEntityData::copyAttributesFrom", context, engine);
             return result;
         }
          QScriptValue

@@ -142,6 +142,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" />
     <property name="escUnderline" type="QString" isConst="false"
     isStatic="true" />
+    <property name="rxNoOp" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxNoOpEnd" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="escNoOp" type="QString" isConst="false"
+    isStatic="true" />
     <property name="rxUnicode" type="QString" isConst="false"
     isStatic="true" />
     <property name="rxAll" type="QString" isConst="false"

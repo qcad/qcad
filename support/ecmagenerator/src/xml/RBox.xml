@@ -260,6 +260,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double" name="offset"
         isConst="false" />
       </variant>
+      <variant returnType="RBox &amp;" isPureVirtual="false">
+        <arg type="double" typeName="double" name="offsetX"
+        isConst="false" />
+        <arg type="double" typeName="double" name="offsetY"
+        isConst="false" />
+      </variant>
     </method>
     <method name="move" cppName="move" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

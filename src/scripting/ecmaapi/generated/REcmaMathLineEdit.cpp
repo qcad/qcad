@@ -85,6 +85,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setToolTip, "setToolTip");
             
+            REcmaHelper::registerFunction(&engine, proto, setTextColor, "setTextColor");
+            
             REcmaHelper::registerFunction(&engine, proto, slotTextChanged, "slotTextChanged");
             
             REcmaHelper::registerFunction(&engine, proto, slotTextEdited, "slotTextEdited");
@@ -844,6 +846,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMathLineEdit::setToolTip", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMathLineEdit::setTextColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMathLineEdit::setTextColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMathLineEdit::setTextColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMathLineEdit* self = 
+                        getSelf("setTextColor", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setTextColor(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMathLineEdit.setTextColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMathLineEdit::setTextColor", context, engine);
             return result;
         }
          QScriptValue

@@ -63,6 +63,32 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getMathLineEdit, "getMathLineEdit");
+            
+            REcmaHelper::registerFunction(&engine, proto, isAngle, "isAngle");
+            
+            REcmaHelper::registerFunction(&engine, proto, setAngle, "setAngle");
+            
+            REcmaHelper::registerFunction(&engine, proto, isInteger, "isInteger");
+            
+            REcmaHelper::registerFunction(&engine, proto, setInteger, "setInteger");
+            
+            REcmaHelper::registerFunction(&engine, proto, setValue, "setValue");
+            
+            REcmaHelper::registerFunction(&engine, proto, getValue, "getValue");
+            
+            REcmaHelper::registerFunction(&engine, proto, getError, "getError");
+            
+            REcmaHelper::registerFunction(&engine, proto, clearError, "clearError");
+            
+            REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
+            
+            REcmaHelper::registerFunction(&engine, proto, isSane, "isSane");
+            
+            REcmaHelper::registerFunction(&engine, proto, slotTextChanged, "slotTextChanged");
+            
+            REcmaHelper::registerFunction(&engine, proto, slotValueChanged, "slotValueChanged");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RMathComboBox*>(), *proto);
 
@@ -222,7 +248,722 @@
     
 
     // public methods:
-     QScriptValue REcmaMathComboBox::toString
+     QScriptValue
+        REcmaMathComboBox::getMathLineEdit
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMathComboBox::getMathLineEdit", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMathComboBox::getMathLineEdit";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMathComboBox* self = 
+                        getSelf("getMathLineEdit", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RMathLineEdit *'
+    RMathLineEdit * cppResult =
+        
+               self->getMathLineEdit();
+        // return type: RMathLineEdit *
+                // QObject
+                result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMathComboBox.getMathLineEdit().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMathComboBox::getMathLineEdit", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMathComboBox::isAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMathComboBox::isAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMathComboBox::isAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMathComboBox* self = 
+                        getSelf("isAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isAngle();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMathComboBox.isAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMathComboBox::isAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMathComboBox::setAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMathComboBox::setAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMathComboBox::setAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMathComboBox* self = 
+                        getSelf("setAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setAngle(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMathComboBox.setAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMathComboBox::setAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMathComboBox::isInteger
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMathComboBox::isInteger", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMathComboBox::isInteger";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMathComboBox* self = 
+                        getSelf("isInteger", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isInteger();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMathComboBox.isInteger().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMathComboBox::isInteger", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMathComboBox::setInteger
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMathComboBox::setInteger", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMathComboBox::setInteger";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMathComboBox* self = 
+                        getSelf("setInteger", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setInteger(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMathComboBox.setInteger().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMathComboBox::setInteger", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMathComboBox::setValue
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMathComboBox::setValue", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMathComboBox::setValue";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMathComboBox* self = 
+                        getSelf("setValue", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setValue(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setValue(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMathComboBox.setValue().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMathComboBox::setValue", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMathComboBox::getValue
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMathComboBox::getValue", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMathComboBox::getValue";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMathComboBox* self = 
+                        getSelf("getValue", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getValue();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMathComboBox.getValue().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMathComboBox::getValue", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMathComboBox::getError
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMathComboBox::getError", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMathComboBox::getError";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMathComboBox* self = 
+                        getSelf("getError", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getError();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMathComboBox.getError().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMathComboBox::getError", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMathComboBox::clearError
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMathComboBox::clearError", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMathComboBox::clearError";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMathComboBox* self = 
+                        getSelf("clearError", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clearError();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMathComboBox.clearError().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMathComboBox::clearError", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMathComboBox::isValid
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMathComboBox::isValid", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMathComboBox::isValid";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMathComboBox* self = 
+                        getSelf("isValid", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isValid();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMathComboBox.isValid().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMathComboBox::isValid", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMathComboBox::isSane
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMathComboBox::isSane", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMathComboBox::isSane";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMathComboBox* self = 
+                        getSelf("isSane", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isSane();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMathComboBox.isSane().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMathComboBox::isSane", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMathComboBox::slotTextChanged
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMathComboBox::slotTextChanged", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMathComboBox::slotTextChanged";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMathComboBox* self = 
+                        getSelf("slotTextChanged", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->slotTextChanged(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMathComboBox.slotTextChanged().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMathComboBox::slotTextChanged", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMathComboBox::slotValueChanged
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMathComboBox::slotValueChanged", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMathComboBox::slotValueChanged";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMathComboBox* self = 
+                        getSelf("slotValueChanged", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->slotValueChanged(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMathComboBox.slotValueChanged().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMathComboBox::slotValueChanged", context, engine);
+            return result;
+        }
+         QScriptValue REcmaMathComboBox::toString
     (QScriptContext *context, QScriptEngine *engine)
     
     {
