@@ -107,6 +107,7 @@ public:
 
     RBox& grow(double offset);
     RBox& growXY(double offset);
+    RBox& growXY(double offsetX, double offsetY);
 
     void move(const RVector& offset);
     bool scaleByReference(const RVector& referencePoint, const RVector& targetPoint, bool keepAspectRatio = false, bool fromCenter = false);
