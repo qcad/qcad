@@ -202,7 +202,7 @@ Shape.getShapes = function(action, vertices) {
         shapes.push(new RLine(vertices[i], vertices[(i+1)%vertices.length]));
     }
 
-    if (action.roundCorners===true && isNumber(action.radius)) {
+    if (action.roundCorners===true && isNumberGreaterZero(action.radius)) {
         var newShapes = [];
         var cursor = undefined;
         for (i=0; i<shapes.length; ++i) {
