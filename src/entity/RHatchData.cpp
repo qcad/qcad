@@ -518,7 +518,7 @@ void RHatchData::addBoundary(QSharedPointer<RShape> shape) {
         }
     }
     else {
-        // if the current loop is not empty, check if entity connects:
+        // if the current loop is not empty, check if shape connects:
         if (!boundary.last().isEmpty()) {
             QSharedPointer<RShape> prev = boundary.last().last();
             QSharedPointer<RShape> next = shape;
