@@ -118,6 +118,20 @@ RBox& RBox::growXY(double offset) {
 }
 
 /**
+ * Grows this box by the given offsets in X and Y only.
+ * \return pointer to this box
+ */
+RBox& RBox::growXY(double offsetX, double offsetY) {
+    RVector min = getMinimum();
+    RVector max = getMaximum();
+    min -= RVector(offsetX, offsetY);
+    max += RVector(offsetX, offsetY);
+    c1 = min;
+    c2 = max;
+    return *this;
+}
+
+/**
  * Moves this box by the given offset.
  */
 void RBox::move(const RVector& offset) {
