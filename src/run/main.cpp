@@ -146,9 +146,6 @@ int main(int argc, char *argv[]) {
 #endif
 
 #ifdef Q_OS_MAC
-    // TODO: make available as script function:
-    QCoreApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
-
     if (QSysInfo::MacintoshVersion>=0x000B) {
         // system font change bug fix on OS X 10.9 (Mavericks):
         QFont::insertSubstitution(".Lucida Grande UI", "Lucida Grande");
@@ -198,6 +195,11 @@ int main(int argc, char *argv[]) {
         if (GetCurrentProcess(&psn) == noErr) {
             TransformProcessType(&psn, kProcessTransformToForegroundApplication);
         }
+    }
+
+    // TODO: make available as script function:
+    if (!app->arguments().contains("-show-menu-icons")) {
+        QCoreApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
     }
 #endif
 
