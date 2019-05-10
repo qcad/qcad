@@ -307,6 +307,23 @@ RBox REntityData::getBoundingBox(bool ignoreEmpty) const {
     return ret;
 }
 
+void REntityData::copyAttributesFrom(const REntityData& entityData, bool copyBlockId) {
+    if (getDocument()!=entityData.getDocument()) {
+        qWarning("REntityData::copyAttributesFrom: source entity not from same document");
+        return;
+    }
+
+    setLayerId(entityData.getLayerId());
+    if (copyBlockId) {
+        setBlockId(entityData.getBlockId());
+    }
+    setColor(entityData.getColor());
+    setLineweight(entityData.getLineweight());
+    setLinetypeId(entityData.getLinetypeId());
+    setLinetypeScale(entityData.getLinetypeScale());
+    setDrawOrder(entityData.getDrawOrder());
+}
+
 void REntityData::to2D() {
     RShape* shape = castToShape();
     if (shape==NULL) {

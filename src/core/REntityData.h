@@ -135,6 +135,8 @@ public:
 
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
+    void copyAttributesFrom(const REntityData& entityData, bool copyBlockId = true);
+
     virtual void to2D();
     virtual void setZ(double z);
 
