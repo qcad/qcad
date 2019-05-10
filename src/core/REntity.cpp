@@ -166,33 +166,10 @@ void REntity::copyAttributesFrom(const REntity* entity, bool copyBlockId) {
     }
 
     copyAttributesFrom(entity->getData(), copyBlockId);
-
-//    setLayerId(entity->getLayerId());
-//    if (copyBlockId) {
-//        setBlockId(entity->getBlockId());
-//    }
-//    setColor(entity->getColor());
-//    setLineweight(entity->getLineweight());
-//    setLinetypeId(entity->getLinetypeId());
-//    setLinetypeScale(entity->getLinetypeScale());
-//    setDrawOrder(entity->getDrawOrder());
 }
 
 void REntity::copyAttributesFrom(const REntityData& entityData, bool copyBlockId) {
-    if (getDocument()!=entityData.getDocument()) {
-        qWarning("REntity::copyAttributesFrom: source entity not from same document");
-        return;
-    }
-
-    setLayerId(entityData.getLayerId());
-    if (copyBlockId) {
-        setBlockId(entityData.getBlockId());
-    }
-    setColor(entityData.getColor());
-    setLineweight(entityData.getLineweight());
-    setLinetypeId(entityData.getLinetypeId());
-    setLinetypeScale(entityData.getLinetypeScale());
-    setDrawOrder(entityData.getDrawOrder());
+    getData().copyAttributesFrom(entityData, copyBlockId);
 }
 
 QList<RVector> REntity::getIntersectionPoints(
