@@ -313,6 +313,22 @@ Scale.prototype.getOperation = function(preview) {
     return Transform.prototype.getOperation.call(this, preview);
 };
 
+Scale.prototype.transformArc = function(shape, sv) {
+    if (isCircleShape(shape)) {
+        shape = ShapeAlgorithms.circleToArc(shape, 0.0);
+    }
+
+    var self=this;
+    var ret = ShapeAlgorithms.transformArc(
+        shape,
+        function(p) {
+            return p.scale(sv, self.focusPoint);
+        }
+    );
+
+    return ret;
+};
+
 /**
  * Callback function for Transform.getOperation.
  */
@@ -324,23 +340,17 @@ Scale.prototype.transform = function(entity, k, op, preview, flags) {
         return;
     }
 
+    var e;
+
     // non-uniform scaling of arc, circle or ellipse:
     var sv = new RVector(Math.pow(this.factorX, k), Math.pow(this.factorY, k));
+
     if (isArcEntity(entity) || isCircleEntity(entity) || isEllipseEntity(entity)) {
         var arc = entity.castToShape();
-        if (isCircleShape(arc)) {
-            arc = ShapeAlgorithms.circleToArc(arc);
-        }
 
-        var self=this;
-        var shape = ShapeAlgorithms.transformArc(
-            arc,
-            function(p) {
-                return p.scale(sv, self.focusPoint);
-            }
-        );
+        var shape = this.transformArc(arc, sv);
 
-        var e = shapeToEntity(this.getDocument(), shape);
+        e = shapeToEntity(this.getDocument(), shape);
         if (!isNull(e)) {
             e.copyAttributesFrom(entity);
             e.setDrawOrder(entity.getDrawOrder());
@@ -353,6 +363,40 @@ Scale.prototype.transform = function(entity, k, op, preview, flags) {
         if (!isNull(e)) {
             op.addObject(e, flags);
         }
+        return;
+    }
+
+    // non-uniform scaling of hatches:
+    if (isHatchEntity(entity)) {
+        //debugger;
+        var data = entity.getData();
+        qDebug("data.getDocument()", data.getDocument());
+        var newHatchData = data.copy();
+        newHatchData.setDocument(data.getDocument());
+        newHatchData.copyAttributesFrom(data);
+
+        newHatchData.clearBoundary();
+
+        for (var i=0; i<entity.getLoopCount(); i++) {
+            newHatchData.newLoop();
+
+            var shapes = entity.getLoopBoundary(i);
+            for (var n=0; n<shapes.length; n++) {
+                shape = shapes[n];
+
+                if (isArcShape(shape) || isCircleShape(shape) || isEllipseShape(shape)) {
+                    var newShape = this.transformArc(shape, sv);
+                    newHatchData.addBoundary(newShape);
+                }
+                else {
+                    // line, spline:
+                    shape.scale(sv, this.focusPoint);
+                    newHatchData.addBoundary(shape);
+                }
+            }
+        }
+        entity.setData(newHatchData);
+        op.addObject(entity, flags);
         return;
     }
 
