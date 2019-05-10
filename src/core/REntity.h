@@ -278,9 +278,6 @@ public:
      * \copydoc REntityData::setLinetypeScale
      */
     void setLinetypeScale(double linetypeScale) {
-        if (linetypeScale<0.0) {
-            qDebug() << "setLinetypeScale to -1";
-        }
         getData().setLinetypeScale(linetypeScale);
     }
 
