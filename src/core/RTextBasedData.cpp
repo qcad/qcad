@@ -689,29 +689,6 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
                 //qDebug() << "height: " << format.fontPointSize();
             }
 
-            // handle stacked text:
-            QString text;
-            if (verticalAlignmentChanged) {
-                if (previousVerticalAlignment==QTextCharFormat::AlignNormal) {
-                    ret += "\\S";
-                    if (fontVerticalAlignment==QTextCharFormat::AlignSubScript) {
-                        ret += "^";
-                    }
-                }
-                else if (previousVerticalAlignment==QTextCharFormat::AlignSuperScript) {
-                    ret += "^";
-                    if (fontVerticalAlignment==QTextCharFormat::AlignNormal) {
-                        ret += ";";
-                    }
-                }
-                else if (previousVerticalAlignment==QTextCharFormat::AlignSubScript) {
-                    ret += ";";
-                    if (fontVerticalAlignment==QTextCharFormat::AlignSuperScript) {
-                        ret += "\\S";
-                    }
-                }
-            }
-
             if (fontChanged) {
                 if (RFontList::isCadFont(fontFamily, "")) {
                     ret += QString("\\F%1|c0;")
@@ -748,7 +725,29 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
                 ret += QString("\\H%1;").arg(fontHeight);
             }
 
-            text = fragment.text();
+            // handle stacked text:
+            if (verticalAlignmentChanged) {
+                if (previousVerticalAlignment==QTextCharFormat::AlignNormal) {
+                    ret += "\\S";
+                    if (fontVerticalAlignment==QTextCharFormat::AlignSubScript) {
+                        ret += "^";
+                    }
+                }
+                else if (previousVerticalAlignment==QTextCharFormat::AlignSuperScript) {
+                    ret += "^";
+                    if (fontVerticalAlignment==QTextCharFormat::AlignNormal) {
+                        ret += ";";
+                    }
+                }
+                else if (previousVerticalAlignment==QTextCharFormat::AlignSubScript) {
+                    ret += ";";
+                    if (fontVerticalAlignment==QTextCharFormat::AlignSuperScript) {
+                        ret += "\\S";
+                    }
+                }
+            }
+
+            QString text = fragment.text();
 
             //qDebug() << "text frag:";
             //RDebug::hexDump(text);
