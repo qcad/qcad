@@ -70,7 +70,9 @@ public:
 
     virtual bool cloneOnChange() const {
         // force clone to preserve custom pattern for undo:
-        return hasCustomPattern();
+        //return hasCustomPattern();
+        // 20190510: always clone (since allowing non-uniform scaling of hatches)
+        return true;
     }
 
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
