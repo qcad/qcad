@@ -991,6 +991,7 @@ TextDialog.prototype.updateSource = function(force) {
         textDocument.defaultFont = this.getTextDocument().defaultFont;
         var cbSimpleText = this.dialog.findChild("SimpleText");
         var source = RTextBasedData.toEscapedText(textDocument, this.initialColor, this.fontHeightFactor, cbSimpleText.checked);
+        //qDebug("source: \n\n", source, "\n\n");
         this.sourceEdit.setPlainText(source);
         this.getTextDocument().modified = false;
     }
