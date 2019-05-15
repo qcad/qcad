@@ -91,7 +91,7 @@ public:
     void removeVerticesAfter(int index);
     void removeVerticesBefore(int index);
 
-    bool isEmpty() {
+    bool isEmpty() const {
         return countVertices()==0;
     }
 
