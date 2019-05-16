@@ -8,7 +8,7 @@
 #include "RVersion.h"
 
 bool RScriptsPlugin::init() {
-    qDebug() << "RScriptsPlugin::init";
+    //qDebug() << "RScriptsPlugin::init";
 
     RSettings::loadTranslations("scripts", QStringList() << ":ts");
 
