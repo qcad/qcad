@@ -71,7 +71,9 @@
 
     <function><type><name>virtual</name> <name>bool</name></type> <name>cloneOnChange</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <comment type="line">// force clone to preserve custom pattern for undo:</comment>
-        <return>return <expr><call><name>hasCustomPattern</name><argument_list>()</argument_list></call></expr>;</return>
+        <comment type="line">//return hasCustomPattern();</comment>
+        <comment type="line">// 20190510: always clone (since allowing non-uniform scaling of hatches)</comment>
+        <return>return <expr><name>true</name></expr>;</return>
     }</block></function>
 
     <function_decl><type><name>virtual</name> <name>RBox</name></type> <name>getBoundingBox</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>ignoreEmpty</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>

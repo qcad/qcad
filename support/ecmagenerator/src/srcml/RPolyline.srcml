@@ -92,7 +92,7 @@
     <function_decl><type><name>void</name></type> <name>removeVerticesAfter</name><parameter_list>(<param><decl><type><name>int</name></type> <name>index</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>removeVerticesBefore</name><parameter_list>(<param><decl><type><name>int</name></type> <name>index</name></decl></param>)</parameter_list>;</function_decl>
 
-    <function><type><name>bool</name></type> <name>isEmpty</name><parameter_list>()</parameter_list> <block>{
+    <function><type><name>bool</name></type> <name>isEmpty</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><call><name>countVertices</name><argument_list>()</argument_list></call>==0</expr>;</return>
     }</block></function>
 
