@@ -17,10 +17,10 @@
  * along with QCAD.
  */
 #include <QtCore>
-#include <QWheelEvent>
 #include <QDragMoveEvent>
-#include <QScrollBar>
 #include <QPainter>
+#include <QScrollBar>
+#include <QWheelEvent>
 
 #include "RDebug.h"
 #include "RDocument.h"
