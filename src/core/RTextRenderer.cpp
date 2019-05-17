@@ -1499,7 +1499,10 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
     layout->draw(&ppPainter, QPoint(0,0));
     ppPainter.end();
 
-    QColor currentColor = currentFormat.top().foreground().color();
+    QColor currentColor = Qt::white;
+    if (!currentFormat.isEmpty()) {
+        currentColor = currentFormat.top().foreground().color();
+    }
 
     // transform to exactly 1.0 height for an 'A',
     // reference point is bottom left (to make sure that texts of different
