@@ -749,7 +749,9 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
         }
 
         generalGroup.enabled = true;
-        this.geometryGroup.enabled = true;
+        if (!isNull(this.geometryGroup)) {
+            this.geometryGroup.enabled = true;
+        }
     //}
 
     // add custom property button:
