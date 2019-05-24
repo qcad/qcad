@@ -71,7 +71,7 @@ InfoDistanceEE.prototype.setState = function(state) {
         var trSecondEntity = qsTr("Specify second entity");
         this.setCommandPrompt(trSecondEntity);
         this.setLeftMouseTip(trSecondEntity);
-        this.setRightMouseTip(qsTr("Done"));
+        this.setRightMouseTip(EAction.trDone);
         break;
     }
 

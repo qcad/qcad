@@ -65,7 +65,7 @@ ShapePolygonPP.prototype.setState = function(state) {
         var trCorner2 = qsTr("Corner point");
         this.setCommandPrompt(trCorner2);
         this.setLeftMouseTip(trCorner2);
-        this.setRightMouseTip(qsTr("Done"));
+        this.setRightMouseTip(EAction.trDone);
         break;
     }
 

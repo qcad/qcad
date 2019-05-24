@@ -80,7 +80,7 @@ DrawPolyline.prototype.initState = function(state) {
         var trNextVertex = qsTr("Next vertex");
         this.setCommandPrompt(trNextVertex);
         this.setLeftMouseTip(trNextVertex);
-        this.setRightMouseTip(qsTr("Done"));
+        this.setRightMouseTip(EAction.trDone);
         EAction.showSnapTools();
         break;
     }

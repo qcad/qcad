@@ -67,6 +67,7 @@ EAction.includeBasePath = includeBasePath;
 // some commonly used translated strings:
 EAction.trBack = qsTr("Back");
 EAction.trCancel = qsTr("Cancel");
+EAction.trDone = qsTr("Done");
 
 EAction.crossCursor = undefined;
 EAction.noRelativeZeroResume = false;

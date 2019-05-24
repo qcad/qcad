@@ -76,7 +76,7 @@ InfoAngle.prototype.setState = function(state) {
         var trSecondLine = qsTr("Specify second line");
         this.setCommandPrompt(trSecondLine);
         this.setLeftMouseTip(trSecondLine);
-        this.setRightMouseTip(qsTr("Done"));
+        this.setRightMouseTip(EAction.trDone);
         break;
     }
 

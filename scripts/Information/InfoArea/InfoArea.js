@@ -73,7 +73,7 @@ InfoArea.prototype.setState = function(state) {
     case InfoArea.State.SettingPoint:
         this.setCommandPrompt(trSelectPoint);
         this.setLeftMouseTip(trSelectPoint);
-        this.setRightMouseTip(qsTr("Done"));
+        this.setRightMouseTip(EAction.trDone);
         break;
     case InfoArea.State.Done:
         this.setCommandPrompt(trSelectPoint);

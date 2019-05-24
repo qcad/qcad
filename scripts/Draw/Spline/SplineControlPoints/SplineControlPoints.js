@@ -70,7 +70,7 @@ SplineControlPoints.prototype.setState = function(state) {
         this.setCommandPrompt(trNextPoint);
         this.setLeftMouseTip(trNextPoint);
         if (this.spline.isValid()) {
-            this.setRightMouseTip(qsTr("Done"));
+            this.setRightMouseTip(EAction.trDone);
         }
         else {
             this.setRightMouseTip(EAction.trCancel);

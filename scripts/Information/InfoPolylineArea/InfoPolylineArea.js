@@ -56,7 +56,7 @@ InfoPolylineArea.prototype.setState = function(state) {
     case InfoPolylineArea.State.ChoosingPolyline:
         this.setCommandPrompt(trSelectPolyline);
         this.setLeftMouseTip(trSelectPolyline);
-        this.setRightMouseTip(qsTr("Done"));
+        this.setRightMouseTip(EAction.trDone);
         break;
     }
 

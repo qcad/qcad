@@ -78,7 +78,7 @@ SelectRectangle.prototype.setState = function(state) {
 
     case SelectRectangle.State.SettingPoint2:
         this.setLeftMouseTip(qsTr("Second corner"));
-        this.setRightMouseTip(qsTr("Done"));
+        this.setRightMouseTip(EAction.trDone);
         break;
     }
 

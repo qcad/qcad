@@ -77,7 +77,7 @@ Line2P.prototype.setState = function(state) {
         var trNextPoint = qsTr("Next point");
         this.setCommandPrompt(trNextPoint);
         this.setLeftMouseTip(trNextPoint);
-        this.setRightMouseTip(qsTr("Done"));
+        this.setRightMouseTip(EAction.trDone);
         break;
     }
 

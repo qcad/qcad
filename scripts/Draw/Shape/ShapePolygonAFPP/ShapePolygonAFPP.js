@@ -72,7 +72,7 @@ ShapePolygonAFPP.prototype.setState = function(state) {
         }
         this.setCommandPrompt(trCorner2);
         this.setLeftMouseTip(trCorner2);
-        this.setRightMouseTip(qsTr("Done"));
+        this.setRightMouseTip(EAction.trDone);
         break;
     }
 

@@ -69,7 +69,7 @@ ShapePolygonAFCP.prototype.setState = function(state) {
         var trMiddlePoint = qsTr("Middle of Side");
         this.setCommandPrompt(trMiddlePoint);
         this.setLeftMouseTip(trMiddlePoint);
-        this.setRightMouseTip(qsTr("Done"));
+        this.setRightMouseTip(EAction.trDone);
         break;
     }
 

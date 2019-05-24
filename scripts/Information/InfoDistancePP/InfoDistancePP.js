@@ -66,7 +66,7 @@ InfoDistancePP.prototype.setState = function(state) {
         var trSecondPoint = qsTr("Second point");
         this.setCommandPrompt(trSecondPoint);
         this.setLeftMouseTip(trSecondPoint);
-        this.setRightMouseTip(qsTr("Done"));
+        this.setRightMouseTip(EAction.trDone);
         break;
     }
 
