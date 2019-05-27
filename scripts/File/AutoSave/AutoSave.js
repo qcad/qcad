@@ -137,16 +137,19 @@ AutoSave.autoSave = function() {
 
     fi = new QFileInfo(bakFileName);
 
+    var failed = true;
+
     // temp file name to make sure that a failed save does not overwrite
     // a good save (e.g. /home/tux/data/~~file.dxf):
     var tmpBakFileName = fi.absolutePath() + QDir.separator + "~" + fi.fileName();
-    var failed = true;
-
-    if (documentInterface.exportFile(tmpBakFileName, fileVersion, false)) {
-        var bakFile = new QFile(bakFileName);
-        var tmpBakFile = new QFile(tmpBakFileName);
-        if ((!bakFile.exists() || bakFile.remove()) && tmpBakFile.rename(bakFileName)) {
-            failed = false;
+    var fiDir = new QFileInfo(fi.absolutePath());
+    if (fiDir.isWritable()) {
+        if (documentInterface.exportFile(tmpBakFileName, fileVersion, false)) {
+            var bakFile = new QFile(bakFileName);
+            var tmpBakFile = new QFile(tmpBakFileName);
+            if ((!bakFile.exists() || bakFile.remove()) && tmpBakFile.rename(bakFileName)) {
+                failed = false;
+            }
         }
     }
 
