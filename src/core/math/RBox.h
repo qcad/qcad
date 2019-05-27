@@ -62,6 +62,7 @@ public:
     double getWidth() const;
     double getHeight() const;
     RVector getSize() const;
+    double getArea() const;
     RVector getCenter() const;
     RVector getMinimum() const;
     RVector getMaximum() const;

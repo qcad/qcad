@@ -310,6 +310,10 @@ RVector RBox::getSize() const {
     return c2 - c1;
 }
 
+double RBox::getArea() const {
+    return getWidth() * getHeight();
+}
+
 /**
  * \return Center of this box.
  */
