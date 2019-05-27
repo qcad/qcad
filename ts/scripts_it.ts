@@ -5576,7 +5576,7 @@ Seleziona Singolo Oggetto</translatorcomment>
     <message>
         <location line="+10"/>
         <source>Solid grid lines</source>
-        <translation>Linne griglia spesse</translation>
+        <translation type="unfinished">linee griglia continue</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12819,16 +12819,16 @@ Conversione non riuscita per il livello &quot;%1&quot;</translatorcomment>
         <location filename="../scripts/Snap/Snap.js" line="+57"/>
         <source>Snap Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Strumenti scatto</translation>
+        <translation type="unfinished">Impostazioni calamita</translation>
     </message>
     <message>
         <source>Show snap tools</source>
-        <translation type="vanished">Mostra strumenti scatto</translation>
+        <translation type="unfinished">Mostra impostazioni calamita</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Snap</source>
-        <translation>&amp;Scatto</translation>
+        <translation type="unfinished">&amp;Calamita</translation>
     </message>
 </context>
 <context>
@@ -12841,12 +12841,12 @@ Conversione non riuscita per il livello &quot;%1&quot;</translatorcomment>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAuto.js" line="+34"/>
         <source>Snap</source>
-        <translation>Scatto</translation>
+        <translation type="unfinished">Calamita</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Auto Snap</source>
-        <translation>Scatto automatico</translation>
+        <translation type="unfinished">Auto selezione</translation>
     </message>
 </context>
 <context>
@@ -14447,7 +14447,7 @@ Usa livello e gli &amp;attributi corrente</translatorcomment>
         <location line="-2"/>
         <location line="+2"/>
         <source>Drawing Unit</source>
-        <translation>Disegno unitario</translation>
+        <translation type="unfinished">Unità di misura del disegno</translation>
     </message>
     <message>
         <location line="-2"/>
