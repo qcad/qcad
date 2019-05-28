@@ -1418,6 +1418,12 @@ RColor RSettings::getColorValue(const QString& key, const RColor& defaultValue) 
     if (ret.canConvert<RColor>()) {
         return ret.value<RColor>();
     }
+    else if (ret.canConvert(QMetaType::QString)) {
+        return RColor(ret.toString());
+    }
+    else if (ret.canConvert(QMetaType::QColor)) {
+        return RColor(ret.value<QColor>());
+    }
     else {
         return defaultValue;
     }
