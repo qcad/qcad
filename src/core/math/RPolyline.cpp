@@ -2120,3 +2120,10 @@ RPolyline RPolyline::roundAllCorners(double radius) const {
     }
     return *this;
 }
+
+RPolyline RPolyline::getPolygonHull(double angle, bool inner) const {
+    if (polylineProxy!=NULL) {
+        return polylineProxy->getPolygonHull(*this, angle, inner);
+    }
+    return *this;
+}
