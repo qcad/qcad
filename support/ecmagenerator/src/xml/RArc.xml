@@ -513,6 +513,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RPolyline" isPureVirtual="false">
         <arg type="double" typeName="double" name="segmentLength"
         isConst="false" />
+        <arg type="double" typeName="double" name="angle"
+        hasDefault="true" default="0.0" isConst="false" />
       </variant>
     </method>
     <method name="approximateWithLinesTan"
@@ -521,6 +523,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RPolyline" isPureVirtual="false">
         <arg type="double" typeName="double" name="segmentLength"
         isConst="false" />
+        <arg type="double" typeName="double" name="angle"
+        hasDefault="true" default="0.0" isConst="false" />
       </variant>
     </method>
     <method name="getTangents" cppName="getTangents"

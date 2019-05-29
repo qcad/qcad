@@ -90,6 +90,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getSize, "getSize");
             
+            REcmaHelper::registerFunction(&engine, proto, getArea, "getArea");
+            
             REcmaHelper::registerFunction(&engine, proto, getCenter, "getCenter");
             
             REcmaHelper::registerFunction(&engine, proto, getMinimum, "getMinimum");
@@ -1274,6 +1276,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerBox::getSize", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBox::getArea
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBox::getArea", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBox::getArea";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBox* self = 
+                        getSelf("getArea", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getArea();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBox.getArea().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBox::getArea", context, engine);
             return result;
         }
          QScriptValue

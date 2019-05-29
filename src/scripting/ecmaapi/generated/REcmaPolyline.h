@@ -439,6 +439,9 @@
         roundAllCorners
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getPolygonHull
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasProxy
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

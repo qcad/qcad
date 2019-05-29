@@ -1031,6 +1031,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getPolygonHull" cppName="getPolygonHull"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RPolyline" isPureVirtual="false">
+        <arg type="double" typeName="double" name="angle"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="inner"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
+    </method>
     <method name="hasProxy" cppName="hasProxy" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
