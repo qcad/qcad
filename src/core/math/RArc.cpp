@@ -809,24 +809,33 @@ double RArc::getDistanceFromStart(const RVector& p) const {
     }
 }
 
-RPolyline RArc::approximateWithLines(double segmentLength) const {
+/**
+ * \return Polyline aproximation of arc with line segments of given length or (if length is 0) given angle.
+ * Polyline is on the inside of the arc.
+ */
+RPolyline RArc::approximateWithLines(double segmentLength, double angle) const {
     RPolyline polyline;
 
-    // avoid a segment length of 0:
-    if (segmentLength>0.0 && segmentLength<1.0e-6) {
-        segmentLength = 1.0e-6;
+    double aStep;
+    if (segmentLength<RS::PointTolerance && angle>RS::PointTolerance) {
+        aStep = angle;
+    }
+    else {
+        // avoid a segment length of 0:
+        if (segmentLength>0.0 && segmentLength<1.0e-6) {
+            segmentLength = 1.0e-6;
+        }
+        if (segmentLength>0.0) {
+            aStep = segmentLength / radius;
+        }
+        else {
+            // negative segment length: auto:
+            aStep = 1.0;
+        }
     }
 
     double a1 = getStartAngle();
     double a2 = getEndAngle();
-    double aStep;
-    if (segmentLength>0.0) {
-        aStep = segmentLength / radius;
-    }
-    else {
-        // negative segment length: auto:
-        aStep = 1.0;
-    }
     double a, cix, ciy;
 
     polyline.appendVertex(getStartPoint());
@@ -856,29 +865,46 @@ RPolyline RArc::approximateWithLines(double segmentLength) const {
     return polyline;
 }
 
-RPolyline RArc::approximateWithLinesTan(double segmentLength) const {
+/**
+ * \return Polyline aproximation of arc with line segments of given length or (if length is 0) given angle.
+ * Polyline is on the outside of the arc.
+ */
+RPolyline RArc::approximateWithLinesTan(double segmentLength, double angle) const {
     RPolyline polyline;
 
-    // avoid a segment length of 0:
-    if (segmentLength<1.0e-6) {
-        segmentLength = 1.0e-6;
+    double aStep;
+    if (segmentLength<RS::PointTolerance && angle>RS::PointTolerance) {
+        aStep = angle;
+        double sw = fabs(getSweep());
+        if (aStep>sw) {
+            // make sure aStep is not too large for arc:
+            aStep = sw/2;
+        }
     }
+    else {
+        // avoid a segment length of 0:
+        if (segmentLength<1.0e-6) {
+            segmentLength = 1.0e-6;
+        }
+
+        // ideal angle step to satisfy segmentLength:
+        aStep = segmentLength / radius;
+
+        int steps = ceil(fabs(getSweep()) / aStep);
+        // real angle step:
+        aStep = fabs(getSweep()) / steps;
+        if (fabs(cos(aStep/2))<RS::PointTolerance) {
+            qWarning() << "RArc::approximateWithLinesTan: segmentLength to coarse to yield meaningful result";
+            polyline.appendVertex(getStartPoint());
+            polyline.appendVertex(getEndPoint());
+            return polyline;
+        }
+    }
+
+    double r2 = radius / cos(aStep/2);
 
     double a1 = getStartAngle();
     double a2 = getEndAngle();
-
-    // ideal angle step to satisfy segmentLength:
-    double aStep = segmentLength / radius;
-    int steps = floor(fabs(getSweep()) / aStep);
-    // real angle step:
-    aStep = fabs(getSweep()) / steps;
-    if (fabs(cos(aStep/2))<RS::PointTolerance) {
-        qWarning() << "RArc::approximateWithLinesTan: segmentLength to coarse to yield meaningful result";
-        polyline.appendVertex(getStartPoint());
-        polyline.appendVertex(getEndPoint());
-        return polyline;
-    }
-    double r2 = radius / cos(aStep/2);
 
     double a, cix, ciy;
 
@@ -904,6 +930,15 @@ RPolyline RArc::approximateWithLinesTan(double segmentLength) const {
             polyline.appendVertex(RVector(cix, ciy));
         }
     }
+
+    if (polyline.countVertices()==1) {
+        // only got start point, add point in the middle:
+        a = getAngleAtPercent(0.5);
+        cix = center.x + cos(a) * r2;
+        ciy = center.y + sin(a) * r2;
+        polyline.appendVertex(RVector(cix, ciy));
+    }
+
     polyline.appendVertex(getEndPoint());
 
     return polyline;

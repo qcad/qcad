@@ -152,8 +152,8 @@ public:
     }
     virtual double getDistanceFromStart(const RVector& p) const;
 
-    RPolyline approximateWithLines(double segmentLength) const;
-    RPolyline approximateWithLinesTan(double segmentLength) const;
+    RPolyline approximateWithLines(double segmentLength, double angle = 0.0) const;
+    RPolyline approximateWithLinesTan(double segmentLength, double angle = 0.0) const;
 
     QList<RLine> getTangents(const RVector& point) const;
 
