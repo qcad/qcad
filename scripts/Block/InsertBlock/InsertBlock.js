@@ -229,14 +229,16 @@ InsertBlock.prototype.slotKeepProportionsChanged = function(value) {
 }
 
 InsertBlock.prototype.slotScaleXChanged = function(value) {
+    if (!isNumber(value)) {
+        this.blockReferenceData.setScaleFactors(new RVector(1, 1));
+        return;
+    }
+
     var optionsToolBar = EAction.getOptionsToolBar();
     var keepProportionsSwitch = optionsToolBar.findChild("KeepProportions");
     var keepProportions = keepProportionsSwitch.checked;
 
-    var scaleX = RMath.eval(value);
-    if (!RMath.getError().isEmpty()) {
-        return;
-    }
+    var scaleX = value;
     var scaleY = this.blockReferenceData.getScaleFactors().y;
 
     // if keep proportions is checked, adjust y scale proportionally to x scale:
@@ -253,18 +255,16 @@ InsertBlock.prototype.slotScaleXChanged = function(value) {
 };
 
 InsertBlock.prototype.slotScaleYChanged = function(value) {
-    var scaleY = RMath.eval(value);
-    if (RMath.getError().isEmpty()) {
-        this.blockReferenceData.setScaleFactors(new RVector(this.blockReferenceData.getScaleFactors().x, scaleY));
+    if (isNumber(value)) {
+        this.blockReferenceData.setScaleFactors(new RVector(this.blockReferenceData.getScaleFactors().x, value));
     } else {
         this.blockReferenceData.setScaleFactors(new RVector(this.blockReferenceData.getScaleFactors().x, 1.0));
     }
 };
 
 InsertBlock.prototype.slotRotationChanged = function(value) {
-    var rotation = RMath.eval(value);
-    if (RMath.getError().isEmpty()) {
-        this.blockReferenceData.setRotation(RMath.deg2rad(rotation));
+    if (isNumber(value)) {
+        this.blockReferenceData.setRotation(value);
     } else {
         this.blockReferenceData.setRotation(0);
     }

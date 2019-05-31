@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>844</width>
+    <width>1025</width>
     <height>50</height>
    </rect>
   </property>
@@ -19,7 +19,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QComboBox" name="Rotation">
+    <widget class="RMathComboBox" name="Rotation">
      <property name="minimumSize">
       <size>
        <width>50</width>
@@ -36,6 +36,9 @@
       <string>Rotate block&lt;br&gt;by this angle</string>
      </property>
      <property name="editable">
+      <bool>true</bool>
+     </property>
+     <property name="angle" stdset="0">
       <bool>true</bool>
      </property>
      <item>
@@ -145,7 +148,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QComboBox" name="ScaleX">
+    <widget class="RMathComboBox" name="ScaleX">
      <property name="minimumSize">
       <size>
        <width>50</width>
@@ -232,7 +235,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QComboBox" name="ScaleY">
+    <widget class="RMathComboBox" name="ScaleY">
      <property name="enabled">
       <bool>false</bool>
      </property>
@@ -478,6 +481,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RMathComboBox</class>
+   <extends>QComboBox</extends>
+   <header>RMathComboBox.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
