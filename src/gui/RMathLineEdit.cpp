@@ -83,6 +83,7 @@ void RMathLineEdit::slotTextChanged(const QString& text) {
         }
 
         if (doc!=NULL) {
+            // this calls RMath::eval, so it's OK to call RMath::hasError after:
             value = doc->eval(text);
         }
         else {
@@ -113,6 +114,8 @@ void RMathLineEdit::slotTextChanged(const QString& text) {
         setTextColor(hasError);
     }
     else {
+        // update text color of line edit / math line combo:
+        setTextColor(false);
         setPalette(oriPalette);
     }
 
