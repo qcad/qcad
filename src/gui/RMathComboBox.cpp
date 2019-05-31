@@ -33,6 +33,7 @@ RMathComboBox::RMathComboBox(QWidget* parent) :
     QComboBox(parent) {
 
     RMathLineEdit* me = new RMathLineEdit(this);
+    me->setObjectName("MathLineEdit");
     setLineEdit(me);
 
     connect(me, SIGNAL(valueChanged(double,QString)), this, SLOT(slotValueChanged(double,QString)));
