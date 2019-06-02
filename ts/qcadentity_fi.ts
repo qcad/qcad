@@ -312,35 +312,35 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 Start</source>
-        <translation>Viiva 1 Alku</translation>
+        <translation>Viiva 1 alku</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 End</source>
-        <translation>Viiva 1 Loppu</translation>
+        <translation>Viiva 1 loppu</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngular2LEntity.cpp" line="+10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 Start</source>
-        <translation>Viiva 2 Alku</translation>
+        <translation>Viiva 2 alku</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 End</source>
-        <translation>Viiva 2 Loppu</translation>
+        <translation>Viiva 2 loppu</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Arc</source>
-        <translation>Mitoitus kaari</translation>
+        <translation>Kaaren mitoitus</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-6"/>
@@ -487,12 +487,12 @@
     <message>
         <location line="+1"/>
         <source>Start Parameter</source>
-        <translation>Alkuparametri</translation>
+        <translation>Aloitusparametri</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End Parameter</source>
-        <translation>Loppuparametri</translation>
+        <translation>Lopetusparametri</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -600,13 +600,13 @@
         <location line="+2"/>
         <location line="+1"/>
         <source>U</source>
-        <translation type="unfinished"></translation>
+        <translation>U</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation>V</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -656,7 +656,7 @@
     <message>
         <location line="+4"/>
         <source>Bulge</source>
-        <translation>Pullotus</translation>
+        <translation>Pullistuma</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -723,7 +723,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Second Point</source>
-        <translation>Toinen Piste</translation>
+        <translation>Toinen piste</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -820,7 +820,7 @@
     <message>
         <location line="+1"/>
         <source>Knot Vector</source>
-        <translation>Solmu vektori</translation>
+        <translation>Solmuvektori</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -873,7 +873,7 @@
     </message>
     <message>
         <source>X Scale</source>
-        <translation type="vanished">X Mittakaava</translation>
+        <translation>X mittakaava</translation>
     </message>
     <message>
         <source>Bold</source>
