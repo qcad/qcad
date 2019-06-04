@@ -42,6 +42,7 @@ QString RTextRenderer::rxAlignmentRight = "\\\\pqr;";
 QString RTextRenderer::rxXAlignmentLeft = "\\\\pxql;";
 QString RTextRenderer::rxXAlignmentCenter = "\\\\pxqc;";
 QString RTextRenderer::rxXAlignmentRight = "\\\\pxqr;";
+QString RTextRenderer::rxXSpaceMText = "\\\\pxsm(\\d*\\.?\\d+);";
 QString RTextRenderer::rxParagraphFeed = "\\\\P";
 QString RTextRenderer::rxXFeed = "\\\\X";
 QString RTextRenderer::rxHeightChange = "\\\\H(\\d*\\.?\\d+)(x?);";
@@ -70,6 +71,7 @@ QString RTextRenderer::rxFontChangeTtf = "\\\\f([^|]*)"
                                          "(?:\\|([bicp])(\\d+))?"
                                          "(?:\\|([bicp])(\\d+))?"
                                          "(?:\\|([bicp])(\\d+))?"
+                                         "\\|?" // optional "|" at end, see FS#1882
                                          ";";
 QString RTextRenderer::rxBeginBlock = "\\{";
 QString RTextRenderer::rxEndBlock = "\\}";
@@ -98,6 +100,7 @@ QString RTextRenderer::rxAll = "("
     + RTextRenderer::rxXAlignmentLeft + "|"
     + RTextRenderer::rxXAlignmentCenter + "|"
     + RTextRenderer::rxXAlignmentRight + "|"
+    + RTextRenderer::rxXSpaceMText + "|"
     + RTextRenderer::rxParagraphFeed + "|"
     + RTextRenderer::rxXFeed + "|"
     + RTextRenderer::rxHeightChange + "|"
