@@ -1179,7 +1179,7 @@ const RSpatialIndex& RDocument::getSpatialIndex() const {
     return spatialIndex;
 }
 
-RSpatialIndex* RDocument::getSpatialIndexForBlock(RBlock::Id blockId) {
+RSpatialIndex* RDocument::getSpatialIndexForBlock(RBlock::Id blockId) const {
     if (disableSpatialIndicesByBlock) {
         return &spatialIndex;
     }
@@ -1190,7 +1190,7 @@ RSpatialIndex* RDocument::getSpatialIndexForBlock(RBlock::Id blockId) {
     return spatialIndicesByBlock[blockId];
 }
 
-RSpatialIndex* RDocument::getSpatialIndexForCurrentBlock() {
+RSpatialIndex* RDocument::getSpatialIndexForCurrentBlock() const {
     RBlock::Id currentBlockId = getCurrentBlockId();
     return getSpatialIndexForBlock(currentBlockId);
 }
@@ -1463,7 +1463,7 @@ REntity::Id RDocument::queryClosestXY(
     return ret;
 }
 
-QSet<REntity::Id> RDocument::queryInfiniteEntities() {
+QSet<REntity::Id> RDocument::queryInfiniteEntities() const {
     return storage.queryInfiniteEntities();
 }
 
@@ -1475,7 +1475,7 @@ QSet<REntity::Id> RDocument::queryInfiniteEntities() {
  * \param result Set of IDs of entities that are completely inside the
  *      given area.
  */
-QSet<REntity::Id> RDocument::queryContainedEntities(const RBox& box) {
+QSet<REntity::Id> RDocument::queryContainedEntities(const RBox& box) const {
     RSpatialIndex* si = getSpatialIndexForCurrentBlock();
     QSet<REntity::Id> ret = si->queryContained(box).keys().toSet();
 
@@ -1488,14 +1488,14 @@ QSet<REntity::Id> RDocument::queryContainedEntities(const RBox& box) {
 
 QSet<REntity::Id> RDocument::queryIntersectedEntitiesXY(
         const RBox& box, bool checkBoundingBoxOnly, bool includeLockedLayers, RBlock::Id blockId,
-        const QList<RS::EntityType>& filter, bool selectedOnly) {
+        const QList<RS::EntityType>& filter, bool selectedOnly) const {
 
     return queryIntersectedShapesXY(box, checkBoundingBoxOnly, includeLockedLayers, blockId, filter, selectedOnly).keys().toSet();
 }
 
 QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
         const RBox& box, bool checkBoundingBoxOnly, bool includeLockedLayers, RBlock::Id blockId,
-        const QList<RS::EntityType>& filter, bool selectedOnly) {
+        const QList<RS::EntityType>& filter, bool selectedOnly) const {
 
     QSet<RS::EntityType> filterSet = filter.toSet();
     RBox boxExpanded = box;
@@ -1654,7 +1654,7 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
 }
 
 
-QSet<REntity::Id> RDocument::queryContainedEntitiesXY(const RBox& box) {
+QSet<REntity::Id> RDocument::queryContainedEntitiesXY(const RBox& box) const {
     RBox boxExpanded = box;
     boxExpanded.c1.z = RMINDOUBLE;
     boxExpanded.c2.z = RMAXDOUBLE;
@@ -1755,7 +1755,7 @@ QSet<REntity::Id> RDocument::queryEntitiesContainedXYIntersectedZ(const RBox& bo
  *
  * \return Set of IDs of all selected entities.
  */
-QSet<REntity::Id> RDocument::querySelectedEntities() {
+QSet<REntity::Id> RDocument::querySelectedEntities() const {
     return storage.querySelectedEntities();
 }
 

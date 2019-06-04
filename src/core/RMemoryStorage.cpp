@@ -357,11 +357,11 @@ QSet<RLinetype::Id> RMemoryStorage::queryAllLinetypes() {
     return result;
 }
 
-QSet<REntity::Id> RMemoryStorage::queryInfiniteEntities() {
+QSet<REntity::Id> RMemoryStorage::queryInfiniteEntities() const {
     QSet<REntity::Id> result;
 
     RBlock::Id currentBlockId = getCurrentBlockId();
-    QHash<REntity::Id, QSharedPointer<REntity> >* map;
+    const QHash<REntity::Id, QSharedPointer<REntity> >* map;
     if (blockEntityMap.contains(currentBlockId)) {
         map = &blockEntityMap[currentBlockId];
     }
@@ -369,8 +369,8 @@ QSet<REntity::Id> RMemoryStorage::queryInfiniteEntities() {
         return result;
     }
 
-    QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
-    for (it = map->begin(); it != map->end(); ++it) {
+    QHash<RObject::Id, QSharedPointer<REntity> >::const_iterator it;
+    for (it = map->constBegin(); it != map->constEnd(); ++it) {
         QSharedPointer<REntity> e = *it;
         if (e.isNull()) {
             continue;
@@ -389,7 +389,6 @@ QSet<REntity::Id> RMemoryStorage::queryInfiniteEntities() {
 //        }
 
         result.insert(e->getId());
-
     }
 
     return result;
@@ -545,7 +544,7 @@ QSet<REntity::Id> RMemoryStorage::queryChildEntities(REntity::Id parentId, RS::E
     */
 }
 
-bool RMemoryStorage::hasChildEntities(REntity::Id parentId) {
+bool RMemoryStorage::hasChildEntities(REntity::Id parentId) const {
     return childMap.contains(parentId);
 
     /*
@@ -563,10 +562,10 @@ bool RMemoryStorage::hasChildEntities(REntity::Id parentId) {
     */
 }
 
-QSet<REntity::Id> RMemoryStorage::queryBlockReferences(RBlock::Id blockId) {
+QSet<REntity::Id> RMemoryStorage::queryBlockReferences(RBlock::Id blockId) const {
     QSet<REntity::Id> result;
-    QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
-    for (it = entityMap.begin(); it != entityMap.end(); ++it) {
+    QHash<RObject::Id, QSharedPointer<REntity> >::const_iterator it;
+    for (it = entityMap.constBegin(); it != entityMap.constEnd(); ++it) {
         QSharedPointer<RBlockReferenceEntity> e = it->dynamicCast<RBlockReferenceEntity>();
         if (!e.isNull() && e->getReferencedBlockId() == blockId && !e->isUndone()) {
             result.insert(e->getId());
@@ -575,10 +574,10 @@ QSet<REntity::Id> RMemoryStorage::queryBlockReferences(RBlock::Id blockId) {
     return result;
 }
 
-QSet<REntity::Id> RMemoryStorage::queryAllBlockReferences() {
+QSet<REntity::Id> RMemoryStorage::queryAllBlockReferences() const {
     QSet<REntity::Id> result;
-    QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
-    for (it = entityMap.begin(); it != entityMap.end(); ++it) {
+    QHash<RObject::Id, QSharedPointer<REntity> >::const_iterator it;
+    for (it = entityMap.constBegin(); it != entityMap.constEnd(); ++it) {
         QSharedPointer<RBlockReferenceEntity> e = it->dynamicCast<RBlockReferenceEntity>();
         if (!e.isNull() && !e->isUndone()) {
             result.insert(e->getId());

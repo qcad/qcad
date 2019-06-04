@@ -96,7 +96,7 @@ QSet<RLinetype::Id> RLinkedStorage::queryAllLinetypes() {
             .unite(backStorage->queryAllLinetypes());
 }
 
-QSet<REntity::Id> RLinkedStorage::queryInfiniteEntities() {
+QSet<REntity::Id> RLinkedStorage::queryInfiniteEntities() const{
     return RMemoryStorage::queryInfiniteEntities()
             .unite(backStorage->queryInfiniteEntities());
 }
@@ -149,7 +149,7 @@ QSet<REntity::Id> RLinkedStorage::queryChildEntities(REntity::Id parentId, RS::E
     }
 }
 
-bool RLinkedStorage::hasChildEntities(REntity::Id parentId) {
+bool RLinkedStorage::hasChildEntities(REntity::Id parentId) const {
     if (entityMap.contains(parentId)) {
         return RMemoryStorage::hasChildEntities(parentId);
     }
@@ -158,12 +158,12 @@ bool RLinkedStorage::hasChildEntities(REntity::Id parentId) {
     }
 }
 
-QSet<REntity::Id> RLinkedStorage::queryBlockReferences(RBlock::Id blockId) {
+QSet<REntity::Id> RLinkedStorage::queryBlockReferences(RBlock::Id blockId) const {
     return RMemoryStorage::queryBlockReferences(blockId)
             .unite(backStorage->queryBlockReferences(blockId));
 }
 
-QSet<REntity::Id> RLinkedStorage::queryAllBlockReferences() {
+QSet<REntity::Id> RLinkedStorage::queryAllBlockReferences() const {
     return RMemoryStorage::queryAllBlockReferences()
             .unite(backStorage->queryAllBlockReferences());
 }

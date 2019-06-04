@@ -78,8 +78,8 @@ public:
     const RStorage& getStorage() const;
     RSpatialIndex& getSpatialIndex();
     const RSpatialIndex& getSpatialIndex() const;
-    RSpatialIndex* getSpatialIndexForBlock(RBlock::Id blockId);
-    RSpatialIndex* getSpatialIndexForCurrentBlock();
+    RSpatialIndex* getSpatialIndexForBlock(RBlock::Id blockId) const;
+    RSpatialIndex* getSpatialIndexForCurrentBlock() const;
     RTransactionStack& getTransactionStack();
 
     void clear(bool beforeLoad=false);
@@ -123,9 +123,9 @@ public:
     QSet<REntity::Id> queryBlockReferences(RBlock::Id blockId) const;
     QSet<REntity::Id> queryAllBlockReferences() const;
 
-    QSet<REntity::Id> queryContainedEntities(const RBox& box);
+    QSet<REntity::Id> queryContainedEntities(const RBox& box) const;
 
-    QSet<REntity::Id> queryInfiniteEntities();
+    QSet<REntity::Id> queryInfiniteEntities() const;
     QSet<REntity::Id> queryIntersectedEntitiesXY(
             const RBox& box,
             bool checkBoundingBoxOnly=false,
@@ -133,7 +133,7 @@ public:
             RBlock::Id blockId = RBlock::INVALID_ID,
             const QList<RS::EntityType>& filter = RDEFAULT_QLIST_RS_ENTITYTYPE,
             bool selectedOnly = false
-    );
+    ) const;
 
     QMap<REntity::Id, QSet<int> > queryIntersectedShapesXY(
         const RBox& box,
@@ -142,13 +142,11 @@ public:
         RBlock::Id blockId = RBlock::INVALID_ID,
         const QList<RS::EntityType>& filter = RDEFAULT_QLIST_RS_ENTITYTYPE,
         bool selectedOnly = false
-    );
+    ) const;
 
-    QSet<REntity::Id> queryContainedEntitiesXY(
-        const RBox& box
-    );
+    QSet<REntity::Id> queryContainedEntitiesXY(const RBox& box) const;
 
-    QSet<REntity::Id> querySelectedEntities();
+    QSet<REntity::Id> querySelectedEntities() const;
 
     QSet<REntity::Id> queryConnectedEntities(REntity::Id entityId, double tolerance = RS::PointTolerance);
 
@@ -452,7 +450,7 @@ private:
     RSpatialIndex& spatialIndex;
     bool disableSpatialIndicesByBlock;
     // map of spatial indices (per block):
-    QMap<RBlock::Id, RSpatialIndex*> spatialIndicesByBlock;
+    mutable QMap<RBlock::Id, RSpatialIndex*> spatialIndicesByBlock;
     RTransactionStack transactionStack;
     //RBlock::Id modelSpaceBlockId;
     RLinetype::Id linetypeByLayerId;

@@ -56,7 +56,7 @@ public:
     virtual QSet<RLayout::Id> queryAllLayouts(bool undone = false);
     virtual QSet<RView::Id> queryAllViews(bool undone = false);
     virtual QSet<RLinetype::Id> queryAllLinetypes();
-    virtual QSet<REntity::Id> queryInfiniteEntities();
+    virtual QSet<REntity::Id> queryInfiniteEntities() const;
     virtual QSet<REntity::Id> querySelectedEntities() const;
 
     virtual QSet<REntity::Id> queryLayerEntities(RLayer::Id layerId, bool allBlocks = false);
@@ -64,9 +64,9 @@ public:
     virtual QSet<REntity::Id> queryBlockEntities(RBlock::Id blockId);
     virtual QSet<REntity::Id> queryLayerBlockEntities(RLayer::Id layerId, RBlock::Id blockId);
     virtual QSet<REntity::Id> queryChildEntities(REntity::Id parentId, RS::EntityType type = RS::EntityAll);
-    virtual bool hasChildEntities(REntity::Id parentId);
-    virtual QSet<REntity::Id> queryBlockReferences(RBlock::Id blockId);
-    virtual QSet<REntity::Id> queryAllBlockReferences();
+    virtual bool hasChildEntities(REntity::Id parentId) const;
+    virtual QSet<REntity::Id> queryBlockReferences(RBlock::Id blockId) const;
+    virtual QSet<REntity::Id> queryAllBlockReferences() const;
 
     QSharedPointer<RDocumentVariables> queryDocumentVariablesDirect() const;
     QSharedPointer<RDocumentVariables> queryDocumentVariables() const;
