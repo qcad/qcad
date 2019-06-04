@@ -575,6 +575,8 @@ function main() {
         first.showDialog();
     }
 
+    RPluginLoader.initTranslations();
+
     // correct library paths from 'library' to 'libraries':
     if (RSettings.getIntValue("Application/Version", 0)<=3000008) {
         var oldDefaultSource = new QFileInfo("library").absoluteFilePath();

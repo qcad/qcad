@@ -81,6 +81,13 @@ public:
     virtual void initScriptExtensions(QScriptEngine& engine) = 0;
 
     /**
+     * Called when the user chosen language changed.
+     *
+     * \nonscriptable
+     */
+    virtual void initTranslations() = 0;
+
+    /**
      * \return An RPluginInfo object with at least the following keys:
      * - 'Version' - Version string
      * - 'Name' - Plugin name
