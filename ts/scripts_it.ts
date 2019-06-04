@@ -15736,7 +15736,7 @@ in linee, solidi e testi</translatorcomment>
     <message>
         <location line="+10"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation>Seconda entità non può essere tagliato.</translation>
+        <translation type="unfinished">Seconda entità non può essere tagliata.</translation>
     </message>
 </context>
 </TS>

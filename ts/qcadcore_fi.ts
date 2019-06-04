@@ -96,7 +96,7 @@
     <message>
         <location line="+3"/>
         <source>Astro</source>
-        <translation>au</translation>
+        <translation>Astronominen</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -106,7 +106,7 @@
     <message>
         <location line="+3"/>
         <source>Parsec</source>
-        <translation>Parsek</translation>
+        <translation>Parsek/Tähtiväli</translation>
     </message>
 </context>
 <context>
@@ -409,7 +409,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Boundary</source>
-        <translation>Raja</translation>
+        <translation>Rajaviiva</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -454,7 +454,7 @@
     <message>
         <location line="+1"/>
         <source>Selected</source>
-        <translation type="unfinished"></translation>
+        <translation>Valittu</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
