@@ -1128,35 +1128,38 @@ QString RSettings::getOSVersion() {
     case QSysInfo::MV_10_2:
         return "Mac OS X 10.2 (Unsupported)";
     case QSysInfo::MV_10_3:
-        return "Mac OS X 10.3";
+        return "Mac OS X 10.3 (Panther)";
     case QSysInfo::MV_10_4:
-        return "Mac OS X 10.4";
+        return "Mac OS X 10.4 (Tiger)";
     case QSysInfo::MV_10_5:
-        return "Mac OS X 10.5";
+        return "Mac OS X 10.5 (Leopard)";
     case QSysInfo::MV_10_6:
-        return "Mac OS X 10.6";
+        return "Mac OS X 10.6 (Snow Leopard)";
     case QSysInfo::MV_10_7:
-        return "Mac OS X 10.7";
+        return "Mac OS X 10.7 (Lion)";
     case QSysInfo::MV_10_8:
-        return "Mac OS X 10.8";
+        return "Mac OS X 10.8 (Mountain Lion)";
     // QSysInfo::MV_10_9:
     case 0x000B:
-        return "Mac OS X 10.9";
+        return "Mac OS X 10.9 (Mavericks)";
     // QSysInfo::MV_10_10:
     case 0x000C:
-        return "Mac OS X 10.10";
+        return "Mac OS X 10.10 (Yosemite)";
     // QSysInfo::MV_10_11:
     case 0x000D:
-        return "Mac OS X 10.11";
+        return "Mac OS X 10.11 (El Capitan)";
     // QSysInfo::MV_10_12:
     case 0x000E:
-        return "macOS 10.12";
+        return "macOS 10.12 (Sierra)";
     // QSysInfo::MV_10_13:
     case 0x000F:
-        return "macOS 10.13";
+        return "macOS 10.13 (High Sierra)";
     // QSysInfo::MV_10_14:
     case 0x0010:
-        return "macOS 10.14";
+        return "macOS 10.14 (Mojave)";
+    // QSysInfo::MV_10_15:
+    case 0x0011:
+        return "macOS 10.15 (Catalina)";
     default:
     case QSysInfo::MV_Unknown:
         return "macOS > 10.14 (Unsupported)";
