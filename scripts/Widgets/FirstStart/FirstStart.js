@@ -179,7 +179,8 @@ FirstStart.prototype.changeLanguage = function(code) {
     
     if (code !== "en") {
         var translators = [
-            [ "scripts", "ts" ]
+            [ "scripts", "ts" ],
+            [ "scripts", ":/ts" ]
         ];
 
         for (i=0; i<translators.length; i++) {
