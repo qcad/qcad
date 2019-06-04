@@ -179,12 +179,10 @@ FirstStart.prototype.changeLanguage = function(code) {
     
     if (code !== "en") {
         var translators = [
-            [ "FirstStart", this.path + "/ts" ],
-            [ "UnitSettings", "scripts/Edit/DrawingPreferences/UnitSettings/ts" ],
-            [ "InputPreferences", "scripts/Edit/AppPreferences/InputPreferences/ts" ]
+            [ "scripts", "ts" ]
         ];
 
-        for (var i=0; i<translators.length; i++) {
+        for (i=0; i<translators.length; i++) {
             var translator = new QTranslator(qApp);
             if (translator.load(translators[i][0] + "_" + code, translators[i][1])) {
                 QCoreApplication.installTranslator(translator);
