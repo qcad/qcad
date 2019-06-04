@@ -63,6 +63,13 @@
      */</comment>
     <function_decl><type><name>static</name> <name>void</name></type> <name>initScriptExtensions</name><parameter_list>(<param><decl><type><name>QObject</name>*</type> <name>plugin</name></decl></param>, <param><decl><type><name>QScriptEngine</name>&amp;</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
 
+    <function_decl><type><name>static</name> <name>void</name></type> <name>initTranslations</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>initTranslations</name><parameter_list>(<param><decl><type><name>QObject</name>*</type> <name>plugin</name></decl></param>)</parameter_list>;</function_decl>
+
     <function><type><name>static</name> <name>int</name></type> <name>countPlugins</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr><name>pluginsInfo</name>.<call><name>count</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>

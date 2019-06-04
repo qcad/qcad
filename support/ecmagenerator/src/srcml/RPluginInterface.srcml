@@ -82,6 +82,13 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>initScriptExtensions</name><parameter_list>(<param><decl><type><name>QScriptEngine</name>&amp;</type> <name>engine</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
     <comment type="block">/**
+     * Called when the user chosen language changed.
+     *
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>initTranslations</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
      * \return An RPluginInfo object with at least the following keys:
      * - 'Version' - Version string
      * - 'Name' - Plugin name

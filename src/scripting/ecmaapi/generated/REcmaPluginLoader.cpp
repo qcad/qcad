@@ -69,6 +69,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, postInitPlugins, "postInitPlugins");
             
+            REcmaHelper::registerFunction(&engine, &ctor, initTranslations, "initTranslations");
+            
             REcmaHelper::registerFunction(&engine, &ctor, countPlugins, "countPlugins");
             
             REcmaHelper::registerFunction(&engine, &ctor, getPluginInfo, "getPluginInfo");
@@ -529,6 +531,40 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPluginLoader::postInitPlugins", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPluginLoader::initTranslations
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPluginLoader::initTranslations", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPluginLoader::initTranslations";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RPluginLoader::
+       initTranslations();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPluginLoader.initTranslations().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPluginLoader::initTranslations", context, engine);
             return result;
         }
          QScriptValue

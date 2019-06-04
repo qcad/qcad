@@ -53,6 +53,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="initTranslations" cppName="initTranslations"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="countPlugins" cppName="countPlugins"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

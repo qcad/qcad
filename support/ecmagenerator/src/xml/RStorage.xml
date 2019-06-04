@@ -221,7 +221,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="hasChildEntities" cppName="hasChildEntities"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="true">
+      <variant returnType="bool" isPureVirtual="false">
         <arg type="REntity::Id" typeName="REntity::Id"
         name="parentId" isConst="false" />
       </variant>
@@ -230,7 +230,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="queryBlockReferences" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="QSet &lt; REntity::Id &gt;"
-      isPureVirtual="true">
+      isPureVirtual="false">
         <arg type="RBlock::Id" typeName="RBlock::Id" name="blockId"
         isConst="false" />
       </variant>
@@ -239,7 +239,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="queryAllBlockReferences" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="QSet &lt; REntity::Id &gt;"
-      isPureVirtual="true" />
+      isPureVirtual="false" />
     </method>
     <method name="querySelectedEntities"
     cppName="querySelectedEntities" specifier="public"
@@ -257,7 +257,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="queryInfiniteEntities" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="QSet &lt; REntity::Id &gt;"
-      isPureVirtual="true" />
+      isPureVirtual="false" />
     </method>
     <method name="queryDocumentVariables"
     cppName="queryDocumentVariables" specifier="public"

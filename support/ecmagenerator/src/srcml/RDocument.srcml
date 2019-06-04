@@ -79,8 +79,8 @@
     <function_decl><type><name>const</name> <name>RStorage</name>&amp;</type> <name>getStorage</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>RSpatialIndex</name>&amp;</type> <name>getSpatialIndex</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>const</name> <name>RSpatialIndex</name>&amp;</type> <name>getSpatialIndex</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>RSpatialIndex</name>*</type> <name>getSpatialIndexForBlock</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>RSpatialIndex</name>*</type> <name>getSpatialIndexForCurrentBlock</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>RSpatialIndex</name>*</type> <name>getSpatialIndexForBlock</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RSpatialIndex</name>*</type> <name>getSpatialIndexForCurrentBlock</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>RTransactionStack</name>&amp;</type> <name>getTransactionStack</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>clear</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>beforeLoad</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
@@ -124,9 +124,9 @@
     <function_decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryBlockReferences</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryAllBlockReferences</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
-    <function_decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryContainedEntities</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryContainedEntities</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
-    <function_decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryInfiniteEntities</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryInfiniteEntities</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryIntersectedEntitiesXY</name><parameter_list>(
             <param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>,
             <param><decl><type><name>bool</name></type> <name>checkBoundingBoxOnly</name>=<init><expr><name>false</name></expr></init></decl></param>,
@@ -134,7 +134,7 @@
             <param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name> =<init> <expr><name><name>RBlock</name>::<name>INVALID_ID</name></name></expr></init></decl></param>,
             <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name><name>RS</name>::<name>EntityType</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>filter</name> =<init> <expr><name>RDEFAULT_QLIST_RS_ENTITYTYPE</name></expr></init></decl></param>,
             <param><decl><type><name>bool</name></type> <name>selectedOnly</name> =<init> <expr><name>false</name></expr></init></decl></param>
-    )</parameter_list>;</function_decl>
+    )</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QSet<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>queryIntersectedShapesXY</name><parameter_list>(
         <param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>,
@@ -143,13 +143,11 @@
         <param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name> =<init> <expr><name><name>RBlock</name>::<name>INVALID_ID</name></name></expr></init></decl></param>,
         <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name><name>RS</name>::<name>EntityType</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>filter</name> =<init> <expr><name>RDEFAULT_QLIST_RS_ENTITYTYPE</name></expr></init></decl></param>,
         <param><decl><type><name>bool</name></type> <name>selectedOnly</name> =<init> <expr><name>false</name></expr></init></decl></param>
-    )</parameter_list>;</function_decl>
+    )</parameter_list> <specifier>const</specifier>;</function_decl>
 
-    <function_decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryContainedEntitiesXY</name><parameter_list>(
-        <param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>
-    )</parameter_list>;</function_decl>
+    <function_decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryContainedEntitiesXY</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
-    <function_decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>querySelectedEntities</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>querySelectedEntities</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryConnectedEntities</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>double</name></type> <name>tolerance</name> =<init> <expr><name><name>RS</name>::<name>PointTolerance</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
@@ -453,7 +451,7 @@
     <decl_stmt><decl><type><name>RSpatialIndex</name>&amp;</type> <name>spatialIndex</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>disableSpatialIndicesByBlock</name></decl>;</decl_stmt>
     <comment type="line">// map of spatial indices (per block):</comment>
-    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>RBlock</name>::<name>Id</name></name></argument>, <argument><name>RSpatialIndex</name>*</argument>&gt;</argument_list></name></type> <name>spatialIndicesByBlock</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>QMap<argument_list>&lt;<argument><name><name>RBlock</name>::<name>Id</name></name></argument>, <argument><name>RSpatialIndex</name>*</argument>&gt;</argument_list></name></type> <name>spatialIndicesByBlock</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RTransactionStack</name></type> <name>transactionStack</name></decl>;</decl_stmt>
     <comment type="line">//RBlock::Id modelSpaceBlockId;</comment>
     <decl_stmt><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeByLayerId</name></decl>;</decl_stmt>
