@@ -196,6 +196,16 @@ bool RPolyline::appendShape(const RShape& shape, bool prepend) {
         }
     }
 
+    // append circle as polyline to empty polyline:
+    else if (shape.getShapeType()==RShape::Circle && isEmpty()) {
+        const RCircle* circle = dynamic_cast<const RCircle*>(&shape);
+        if (circle!=NULL) {
+            appendShape(RArc(circle->getCenter(), circle->getRadius(), 0.0, M_PI, false));
+            appendShape(RArc(circle->getCenter(), circle->getRadius(), M_PI, 2*M_PI, false));
+            return true;
+        }
+    }
+
     // append polyline:
     else if (shape.getShapeType()==RShape::Polyline) {
         const RPolyline* pl = dynamic_cast<const RPolyline*>(&shape);
@@ -246,6 +256,7 @@ bool RPolyline::appendShape(const RShape& shape, bool prepend) {
         connectionPoint = shape.getEndPoint();
         nextPoint = shape.getStartPoint();
         if (vertices.size()==0) {
+            // first point:
             appendVertex(connectionPoint);
         }
         gap = vertices.first().getDistanceTo(connectionPoint);
@@ -255,6 +266,7 @@ bool RPolyline::appendShape(const RShape& shape, bool prepend) {
         connectionPoint = shape.getStartPoint();
         nextPoint = shape.getEndPoint();
         if (vertices.size()==0) {
+            // first point:
             appendVertex(connectionPoint);
         }
         gap = vertices.last().getDistanceTo(connectionPoint);
@@ -1243,10 +1255,21 @@ bool RPolyline::containsShape(const RShape& shape) const {
         return contains(shape.getStartPoint()) && contains(shape.getEndPoint());
     }
     else {
-        // e.g. circle:
-        RVector pointOnShape = shape.getPointOnShape();
-        if (contains(pointOnShape, true)) {
-            return true;
+        // circle:
+        if (RShape::isCircleShape(shape)) {
+            const RCircle& circle = dynamic_cast<const RCircle&>(shape);
+            RVector p1 = circle.getCenter() + RVector(circle.getRadius(), 0);
+            RVector p2 = circle.getCenter() + RVector(-circle.getRadius(), 0);
+            if (contains(p1) || contains(p2)) {
+                return true;
+            }
+        }
+        else {
+            // other shapes:
+            RVector pointOnShape = shape.getPointOnShape();
+            if (contains(pointOnShape, true)) {
+                return true;
+            }
         }
     }
 
