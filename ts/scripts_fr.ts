@@ -971,7 +971,7 @@ pour appliquer les modifications.</translation>
         <translation>Fichier</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+123"/>
         <source>Autosave failed:</source>
         <translation>Sauvegarde automatique échoué:</translation>
     </message>
@@ -1080,7 +1080,7 @@ Voulez-vous le récupérer?</translation>
         <translation type="obsolete">Choisissez le dossier d&apos;enregistrement automatique</translation>
     </message>
     <message>
-        <location line="-50"/>
+        <location line="-53"/>
         <source>Autosaving to:</source>
         <translation>Sauvegarde automatique de :</translation>
     </message>
@@ -1267,12 +1267,12 @@ Voulez-vous le récupérer?</translation>
     <message>
         <location line="+6"/>
         <source>Width:</source>
-        <translation>Largeur : </translation>
+        <translation>Largeur&#xa0;: </translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Height:</source>
-        <translation>Hauteur : </translation>
+        <translation>Hauteur&#xa0;: </translation>
     </message>
     <message>
         <location line="+23"/>
@@ -1622,14 +1622,11 @@ Voulez-vous le récupérer?</translation>
         <translation>Premier point de coupe</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+8"/>
-        <location line="+7"/>
         <source>Done</source>
-        <translation>Terminer</translation>
+        <translation type="vanished">Terminer</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+8"/>
         <source>Second break point</source>
         <translation>Deuxième point de coupure</translation>
     </message>
@@ -3950,12 +3947,11 @@ est déjà dans la liste.</translation>
         <translation>Suivant vertex</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Terminer</translation>
+        <translation type="vanished">Terminer</translation>
     </message>
     <message>
-        <location line="+418"/>
+        <location line="+421"/>
         <source>close</source>
         <translation>close</translation>
     </message>
@@ -4097,12 +4093,17 @@ est déjà dans la liste.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2078"/>
+        <location line="+2079"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
     <message>
-        <location line="-1801"/>
+        <location line="-2078"/>
+        <source>Done</source>
+        <translation type="unfinished">Terminer</translation>
+    </message>
+    <message>
+        <location line="+277"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Outil actif:</translation>
@@ -5188,7 +5189,7 @@ Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer?
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+250"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+249"/>
         <source>Black</source>
         <translation>Noir</translation>
     </message>
@@ -5207,8 +5208,8 @@ Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer?
         <translation type="obsolete">Bienvenue à QCAD</translation>
     </message>
     <message>
-        <location line="-220"/>
-        <location line="+219"/>
+        <location line="-219"/>
+        <location line="+218"/>
         <source>%1 First Start</source>
         <translation>%1 premier démarrage</translation>
     </message>
@@ -6568,7 +6569,7 @@ Sélections persistantes</translatorcomment>
         <translation>Pivoter les entités&lt;br&gt;collées par cet angle</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale:</source>
         <translation>Echelle :</translation>
     </message>
@@ -6649,12 +6650,11 @@ Sélections persistantes</translatorcomment>
         <translation>Indiquer la seconde ligne</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Terminer</translation>
+        <translation type="vanished">Terminer</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+91"/>
         <source>Angle:</source>
         <translation>Angle :</translation>
     </message>
@@ -6675,12 +6675,11 @@ Sélections persistantes</translatorcomment>
         <translation type="vanished">Sélectionner cercle, arc, ellipse ou ellipse arc</translation>
     </message>
     <message>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+73"/>
         <source>Done</source>
-        <translation>Terminer</translation>
+        <translation type="vanished">Terminer</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+306"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -6828,12 +6827,11 @@ Sélections persistantes</translatorcomment>
         <translation>Spécifiez le point d&apos;angle prochaine de polygone</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation>Terminer</translation>
+        <translation type="vanished">Terminer</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+144"/>
         <source>Polygon area:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Superficie du polygone:</translation>
@@ -6878,12 +6876,11 @@ Sélections persistantes</translatorcomment>
         <translation>Indiquer deuxième objet</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Terminer</translation>
+        <translation type="vanished">Terminer</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+95"/>
         <source>Distance:</source>
         <translation>Distance :</translation>
     </message>
@@ -6906,12 +6903,11 @@ Sélections persistantes</translatorcomment>
         <translation>Indiquer le point</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Terminer</translation>
+        <translation type="vanished">Terminer</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+81"/>
         <source>Distance:</source>
         <translation>Distance :</translation>
     </message>
@@ -6938,12 +6934,11 @@ Sélections persistantes</translatorcomment>
         <translation>Deuxième point</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Terminer</translation>
+        <translation type="vanished">Terminer</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+53"/>
         <source>Distance:</source>
         <translation>Distance :</translation>
     </message>
@@ -6982,12 +6977,11 @@ Sélections persistantes</translatorcomment>
         <translation>Choose polyline</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation>Terminer</translation>
+        <translation type="vanished">Terminer</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+51"/>
         <source>Area</source>
         <translation>Aire</translation>
     </message>
@@ -7299,7 +7293,7 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <translation>Faire pivoter le&lt;br&gt;bloc de cet angle</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale X:</source>
         <translation>Echelle X:</translation>
     </message>
@@ -7398,7 +7392,7 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <translation>Pivoter les entités&lt;br&gt;collées par cet angle</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+103"/>
         <source>Scale:</source>
         <translation>Echelle :</translation>
     </message>
@@ -7983,9 +7977,8 @@ Indiquer le point cible</translatorcomment>
         <translation>Suivant vertex</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Terminer</translation>
+        <translation type="vanished">Terminer</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
@@ -8438,9 +8431,8 @@ dans les résultats de recherche :</translation>
         <translation>Point suivant</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Terminer</translation>
+        <translation type="vanished">Terminer</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
@@ -8596,9 +8588,8 @@ dans les résultats de recherche :</translation>
         <translation>Deuxième point</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Terminer</translation>
+        <translation type="vanished">Terminer</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
@@ -8663,9 +8654,8 @@ dans les résultats de recherche :</translation>
         <translation>Deuxième point</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Terminer</translation>
+        <translation type="vanished">Terminer</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
@@ -10682,7 +10672,7 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
         <translation>Retirer ce propriété à partir des objets sélectionnés</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+92"/>
         <source>Add custom property to selected objects</source>
         <translation>Ajouter une propriété personnalisée pour les objets sélectionnés</translation>
     </message>
@@ -10732,7 +10722,7 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1236"/>
+        <location line="-1238"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_fr.ts--
@@ -10791,7 +10781,7 @@ Sélectionner l&apos;entité de base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="+185"/>
+        <location line="+187"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -12195,9 +12185,8 @@ Mode de couleur :</translatorcomment>
         <translation>Premier point d&apos;angle</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>Done</source>
-        <translation>Terminer</translation>
+        <translation type="vanished">Terminer</translation>
     </message>
     <message>
         <source>Select &amp;Rectangular Area</source>
@@ -12216,7 +12205,7 @@ Mode de couleur :</translatorcomment>
         <translation>(Dé)sélectionner toutes les entités à l&apos;intérieur d&apos;un rectangle</translation>
     </message>
     <message>
-        <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="-1"/>
+        <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="+7"/>
         <source>Second corner</source>
         <translation>Deuxième point d&apos;angle</translation>
     </message>
@@ -12476,9 +12465,8 @@ Indiquer le premier point de cassure sur une polyligne</translatorcomment>
         <translation>Moyen de côté</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Terminer</translation>
+        <translation type="vanished">Terminer</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
@@ -12519,9 +12507,8 @@ Indiquer le premier point de cassure sur une polyligne</translatorcomment>
         <translation>Deuxième point d&apos;angle</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation>Terminer</translation>
+        <translation type="vanished">Terminer</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
@@ -12561,9 +12548,8 @@ Indiquer le premier point de cassure sur une polyligne</translatorcomment>
         <translation>Point d&apos;angle</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Terminer</translation>
+        <translation type="vanished">Terminer</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
@@ -12598,9 +12584,8 @@ Indiquer le premier point de cassure sur une polyligne</translatorcomment>
         <translation>Point d&apos;angle</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Terminer</translation>
+        <translation type="vanished">Terminer</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
@@ -13183,9 +13168,8 @@ Indiquer le premier point de cassure sur une polyligne</translatorcomment>
         <translation>Sommet de contrôle suivant</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation>Terminer</translation>
+        <translation type="vanished">Terminer</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
@@ -13470,7 +13454,7 @@ Indiquer le point cible</translatorcomment>
         <location line="+20"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+23"/>
         <source>Height:</source>
-        <translation>Hauteur : </translation>
+        <translation>Hauteur&#xa0;: </translation>
     </message>
     <message>
         <location line="+20"/>
@@ -13646,7 +13630,7 @@ Indiquer le point cible</translatorcomment>
         <translation>Autres...</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+133"/>
         <source>Degree</source>
         <translation>Degré</translation>
     </message>
@@ -13733,7 +13717,7 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location line="+24"/>
         <source>Height:</source>
-        <translation>Hauteur : </translation>
+        <translation>Hauteur&#xa0;: </translation>
     </message>
     <message>
         <location line="+7"/>

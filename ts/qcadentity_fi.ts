@@ -873,7 +873,7 @@
     </message>
     <message>
         <source>X Scale</source>
-        <translation>X mittakaava</translation>
+        <translation type="vanished">X mittakaava</translation>
     </message>
     <message>
         <source>Bold</source>

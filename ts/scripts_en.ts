@@ -857,12 +857,12 @@ the preference changes to take effect.</translation>
         <translation>Autosave</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+100"/>
         <source>Autosaving to:</source>
         <translation>Autosaving to:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>Autosave failed:</source>
         <translation>Autosave failed:</translation>
     </message>
@@ -1459,14 +1459,11 @@ Do you wish to recover it?</translation>
         <translation>First break point</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+8"/>
-        <location line="+7"/>
         <source>Done</source>
-        <translation>Done</translation>
+        <translation type="vanished">Done</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+8"/>
         <source>Second break point</source>
         <translation>Second break point</translation>
     </message>
@@ -3520,12 +3517,11 @@ is already in the list.</translation>
         <translation>Next vertex</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Done</translation>
+        <translation type="vanished">Done</translation>
     </message>
     <message>
-        <location line="+418"/>
+        <location line="+421"/>
         <source>close</source>
         <translation>close</translation>
     </message>
@@ -3645,12 +3641,17 @@ is already in the list.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2078"/>
+        <location line="+2079"/>
         <source>Cancel</source>
         <translation>Cancel</translation>
     </message>
     <message>
-        <location line="-1801"/>
+        <location line="-2078"/>
+        <source>Done</source>
+        <translation type="unfinished">Done</translation>
+    </message>
+    <message>
+        <location line="+277"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Active Tool:</translation>
@@ -4661,7 +4662,7 @@ is already in the list.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+219"/>
+        <location line="+218"/>
         <source>%1 First Start</source>
         <translation>%1 First Start</translation>
     </message>
@@ -5603,7 +5604,7 @@ is already in the list.</translation>
         <translation>Rotate pasted entities&lt;br&gt;by this angle</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale:</source>
         <translation>Scale:</translation>
     </message>
@@ -5684,12 +5685,11 @@ is already in the list.</translation>
         <translation>Specify second line</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Done</translation>
+        <translation type="vanished">Done</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+91"/>
         <source>Angle:</source>
         <translation>Angle:</translation>
     </message>
@@ -5707,12 +5707,11 @@ is already in the list.</translation>
         <translation>Choose arc, circle, ellipse or elliptical arc</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Done</translation>
+        <translation type="vanished">Done</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location line="+236"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -5854,12 +5853,11 @@ is already in the list.</translation>
         <translation>Set next polygon corner</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation>Done</translation>
+        <translation type="vanished">Done</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+144"/>
         <source>Polygon area:</source>
         <translation>Polygon area:</translation>
     </message>
@@ -5897,12 +5895,11 @@ is already in the list.</translation>
         <translation>Specify second entity</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Done</translation>
+        <translation type="vanished">Done</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+95"/>
         <source>Distance:</source>
         <translation>Distance:</translation>
     </message>
@@ -5925,12 +5922,11 @@ is already in the list.</translation>
         <translation>Specify point</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Done</translation>
+        <translation type="vanished">Done</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+81"/>
         <source>Distance:</source>
         <translation>Distance:</translation>
     </message>
@@ -5953,12 +5949,11 @@ is already in the list.</translation>
         <translation>Second point</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Done</translation>
+        <translation type="vanished">Done</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+53"/>
         <source>Distance:</source>
         <translation>Distance:</translation>
     </message>
@@ -5991,12 +5986,11 @@ is already in the list.</translation>
         <translation>Choose polyline</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation>Done</translation>
+        <translation type="vanished">Done</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+51"/>
         <source>Area</source>
         <translation>Area</translation>
     </message>
@@ -6213,7 +6207,7 @@ is already in the list.</translation>
         <translation>Rotate block&lt;br&gt;by this angle</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale X:</source>
         <translation>Scale X:</translation>
     </message>
@@ -6316,7 +6310,7 @@ is already in the list.</translation>
         <translation>Rotate pasted entities&lt;br&gt;by this angle</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+103"/>
         <source>Scale:</source>
         <translation>Scale:</translation>
     </message>
@@ -6759,9 +6753,8 @@ is already in the list.</translation>
         <translation>Next vertex</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Done</translation>
+        <translation type="vanished">Done</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
@@ -7180,9 +7173,8 @@ shown in search results:</translation>
         <translation>Next point</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Done</translation>
+        <translation type="vanished">Done</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
@@ -7334,9 +7326,8 @@ shown in search results:</translation>
         <translation>Second point</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Done</translation>
+        <translation type="vanished">Done</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
@@ -7401,9 +7392,8 @@ shown in search results:</translation>
         <translation>Second point</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Done</translation>
+        <translation type="vanished">Done</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
@@ -9055,7 +9045,7 @@ shown in search results:</translation>
         <translation>All</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+24"/>
         <source>Add custom property to selected objects</source>
         <translation>Add custom property to selected objects</translation>
     </message>
@@ -10221,9 +10211,8 @@ shown in search results:</translation>
         <translation>Second corner</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Done</source>
-        <translation>Done</translation>
+        <translation type="vanished">Done</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
@@ -10428,9 +10417,8 @@ shown in search results:</translation>
         <translation>Middle of Side</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Done</translation>
+        <translation type="vanished">Done</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui" line="+17"/>
@@ -10471,9 +10459,8 @@ shown in search results:</translation>
         <translation>Second Corner</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation>Done</translation>
+        <translation type="vanished">Done</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.ui" line="+17"/>
@@ -10509,9 +10496,8 @@ shown in search results:</translation>
         <translation>Corner point</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Done</translation>
+        <translation type="vanished">Done</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
@@ -10542,9 +10528,8 @@ shown in search results:</translation>
         <translation>Corner point</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Done</translation>
+        <translation type="vanished">Done</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
@@ -11012,9 +10997,8 @@ shown in search results:</translation>
         <translation>Next control point</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation>Done</translation>
+        <translation type="vanished">Done</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui" line="+23"/>
@@ -11454,7 +11438,7 @@ shown in search results:</translation>
         <translation>Others...</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+133"/>
         <source>Degree</source>
         <translation>Degree</translation>
     </message>

@@ -999,7 +999,7 @@ um die Änderungen zu übernehmen.</translation>
         <translation>Datei</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+123"/>
         <source>Autosave failed:</source>
         <translation>Autosave fehlgeschlagen:</translation>
     </message>
@@ -1102,7 +1102,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation type="obsolete">Verzeichnis für automatisches Speichern wählen</translation>
     </message>
     <message>
-        <location line="-50"/>
+        <location line="-53"/>
         <source>Autosaving to:</source>
         <translation>Automatisches Speichern in:</translation>
     </message>
@@ -1653,14 +1653,11 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Erster Trennpunkt</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+8"/>
-        <location line="+7"/>
         <source>Done</source>
-        <translation>Fertig</translation>
+        <translation type="vanished">Fertig</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+8"/>
         <source>Second break point</source>
         <translation>Zweiter Trennpunkt</translation>
     </message>
@@ -4022,12 +4019,11 @@ ist bereits in der Liste.</translation>
         <translation>Nächster Eckpunkt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Fertig</translation>
+        <translation type="vanished">Fertig</translation>
     </message>
     <message>
-        <location line="+418"/>
+        <location line="+421"/>
         <source>close</source>
         <translation>close</translation>
     </message>
@@ -4172,12 +4168,17 @@ ist bereits in der Liste.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2078"/>
+        <location line="+2079"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="-1801"/>
+        <location line="-2078"/>
+        <source>Done</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+277"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Aktives Werkzeug:</translation>
@@ -5312,7 +5313,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+250"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+249"/>
         <source>Black</source>
         <translation>Schwarz</translation>
     </message>
@@ -5331,8 +5332,8 @@ ist bereits in der Liste.</translation>
         <translation type="obsolete">Willkommen zu QCAD</translation>
     </message>
     <message>
-        <location line="-220"/>
-        <location line="+219"/>
+        <location line="-219"/>
+        <location line="+218"/>
         <source>%1 First Start</source>
         <translation>%1 Erster Start</translation>
     </message>
@@ -6696,7 +6697,7 @@ ist bereits in der Liste.</translation>
         <translation>Eingefügte Objekte um&lt;br&gt;diesen Winkel rotieren</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale:</source>
         <translation>Skalierung:</translation>
     </message>
@@ -6777,12 +6778,11 @@ ist bereits in der Liste.</translation>
         <translation>Zweite Linie wählen</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Fertig</translation>
+        <translation type="vanished">Fertig</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+91"/>
         <source>Angle:</source>
         <translation>Winkel:</translation>
     </message>
@@ -6807,12 +6807,11 @@ ist bereits in der Liste.</translation>
         <translation type="vanished">Kreis, Kreisbogen, Ellipse oder Ellipsenbogen wählen</translation>
     </message>
     <message>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+73"/>
         <source>Done</source>
-        <translation>Abbrechen</translation>
+        <translation type="vanished">Abbrechen</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+306"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -7002,12 +7001,11 @@ ist bereits in der Liste.</translation>
 <context>
     <name>InfoArea</name>
     <message>
-        <location filename="../scripts/Information/InfoArea/InfoArea.js" line="+76"/>
         <source>Done</source>
-        <translation>Fertig</translation>
+        <translation type="vanished">Fertig</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location filename="../scripts/Information/InfoArea/InfoArea.js" line="+214"/>
         <source>Polygon area:</source>
         <translation>Polygonfläche:</translation>
     </message>
@@ -7058,12 +7056,11 @@ ist bereits in der Liste.</translation>
         <translation>Zweites Objekt wählen</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Fertig</translation>
+        <translation type="vanished">Fertig</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+95"/>
         <source>Distance:</source>
         <translation>Abstand:</translation>
     </message>
@@ -7086,12 +7083,11 @@ ist bereits in der Liste.</translation>
         <translation>Punkt angeben</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Fertig</translation>
+        <translation type="vanished">Fertig</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+81"/>
         <source>Distance:</source>
         <translation>Abstand:</translation>
     </message>
@@ -7122,12 +7118,11 @@ ist bereits in der Liste.</translation>
         <translation>Zweiter Punkt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Fertig</translation>
+        <translation type="vanished">Fertig</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+53"/>
         <source>Distance:</source>
         <translation>Abstand:</translation>
     </message>
@@ -7168,12 +7163,11 @@ ist bereits in der Liste.</translation>
         <translation>Polyline wählen</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation>Fertig</translation>
+        <translation type="vanished">Fertig</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+51"/>
         <source>Area</source>
         <translation>Fläche</translation>
     </message>
@@ -7462,7 +7456,7 @@ ist bereits in der Liste.</translation>
         <translation>Block rotieren&lt;br&gt;um diesen Winkel</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale X:</source>
         <translation>Skalierung X:</translation>
     </message>
@@ -7561,7 +7555,7 @@ ist bereits in der Liste.</translation>
         <translation>Eingefügte Objekte um&lt;br&gt;diesen Winkel rotieren</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+103"/>
         <source>Scale:</source>
         <translation>Skalierung:</translation>
     </message>
@@ -8134,9 +8128,8 @@ ist bereits in der Liste.</translation>
         <translation>Nächster Eckpunkt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Fertig</translation>
+        <translation type="vanished">Fertig</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
@@ -8607,9 +8600,8 @@ im Suchresultat:</translation>
         <translation>Nächster Punkt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Fertig</translation>
+        <translation type="vanished">Fertig</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
@@ -8801,9 +8793,8 @@ im Suchresultat:</translation>
         <translation>Zweiter Punkt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Fertig</translation>
+        <translation type="vanished">Fertig</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
@@ -8893,9 +8884,8 @@ im Suchresultat:</translation>
         <translation>Zweiter Punkt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Fertig</translation>
+        <translation type="vanished">Fertig</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="-4"/>
@@ -11086,12 +11076,12 @@ nicht öffnen.
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1429"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1431"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="-1236"/>
+        <location line="-1238"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -11130,7 +11120,7 @@ nicht öffnen.
         <translation>Alle</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+69"/>
         <source>Show</source>
         <translation>Anzeigen</translation>
     </message>
@@ -11275,7 +11265,7 @@ nicht öffnen.
         <translation type="vanished">Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1105"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1107"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>
@@ -12571,9 +12561,8 @@ nicht öffnen.
         <translation>Zweiter Eckpunkt</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Done</source>
-        <translation>Fertig</translation>
+        <translation type="vanished">Fertig</translation>
     </message>
     <message>
         <source>Select &amp;Rectangular Area</source>
@@ -12825,9 +12814,8 @@ SelectionMode</translatorcomment>
         <translation>Mittelpunkt einer Seite</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Fertig</translation>
+        <translation type="vanished">Fertig</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
@@ -12868,9 +12856,8 @@ SelectionMode</translatorcomment>
         <translation>Zweiter Eckpunkt</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation>Fertig</translation>
+        <translation type="vanished">Fertig</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
@@ -12910,9 +12897,8 @@ SelectionMode</translatorcomment>
         <translation>Eckpunkt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Fertig</translation>
+        <translation type="vanished">Fertig</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
@@ -12947,9 +12933,8 @@ SelectionMode</translatorcomment>
         <translation>Eckpunkt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Fertig</translation>
+        <translation type="vanished">Fertig</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
@@ -13522,9 +13507,8 @@ SelectionMode</translatorcomment>
 <context>
     <name>SplineControlPoints</name>
     <message>
-        <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.js" line="+73"/>
         <source>Done</source>
-        <translation>Fertig</translation>
+        <translation type="vanished">Fertig</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui" line="+23"/>
@@ -13550,7 +13534,7 @@ SelectionMode</translatorcomment>
         <translation>Geschlossen</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.js" line="-13"/>
+        <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.js" line="+60"/>
         <source>First control point</source>
         <translation>Erster Kontrollpunkt</translation>
     </message>
@@ -13978,7 +13962,7 @@ SelectionMode</translatorcomment>
         <translation>&amp;Unterstreichen</translation>
     </message>
     <message>
-        <location line="+472"/>
+        <location line="+473"/>
         <source>Degree</source>
         <translation>Grad</translation>
     </message>
@@ -14164,7 +14148,7 @@ SelectionMode</translatorcomment>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="-505"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="-506"/>
         <source>&amp;Bold</source>
         <translation>&amp;Fett</translation>
     </message>
@@ -14199,7 +14183,7 @@ SelectionMode</translatorcomment>
         <translation>Andere...</translation>
     </message>
     <message>
-        <location line="+133"/>
+        <location line="+134"/>
         <source>Plus-Minus</source>
         <translation>Plus-Minus</translation>
     </message>

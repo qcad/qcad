@@ -1121,7 +1121,7 @@ Número:</translatorcomment>
         <translation>Ficheiro</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+123"/>
         <source>Autosave failed:</source>
         <translation>Gravação automática falhou:</translation>
     </message>
@@ -1231,7 +1231,7 @@ Você deseja recuperá-lo?</translation>
         <translation type="obsolete">Escolha diretório gravação automática</translation>
     </message>
     <message>
-        <location line="-50"/>
+        <location line="-53"/>
         <source>Autosaving to:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Gravação automática para:</translation>
@@ -1876,14 +1876,11 @@ Remove Segmento</translatorcomment>
         <translation>Primeiro ponto de quebra</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+8"/>
-        <location line="+7"/>
         <source>Done</source>
-        <translation>Concluído</translation>
+        <translation type="vanished">Concluído</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+8"/>
         <source>Second break point</source>
         <translation>Segundo ponto de quebra</translation>
     </message>
@@ -4656,17 +4653,16 @@ Próximo vértice</translatorcomment>
         <translation>Próximo vértice</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Concluído
 Cópias de segurança de desenhos não salvos foram feitas para os seguintes
 lugares:\</translatorcomment>
-        <translation>Concluído</translation>
+        <translation type="vanished">Concluído</translation>
     </message>
     <message>
-        <location line="+418"/>
+        <location line="+421"/>
         <source>close</source>
         <translation>encerre</translation>
     </message>
@@ -4811,7 +4807,7 @@ Retorna ao último menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2078"/>
+        <location line="+2079"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -4820,7 +4816,12 @@ Cancelar
         <translation>Cancele</translation>
     </message>
     <message>
-        <location line="-1801"/>
+        <location line="-2078"/>
+        <source>Done</source>
+        <translation type="unfinished">Concluído</translation>
+    </message>
+    <message>
+        <location line="+277"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Ferramenta Ativa:</translation>
@@ -5987,7 +5988,7 @@ O arquivo &apos;%1&apos; já existe. Você deseja substituí-lo?</translatorcomm
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+250"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+249"/>
         <source>Black</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -6020,8 +6021,8 @@ Idioma GUI:</translatorcomment>
         <translation type="obsolete">Bem-vindo ao QCAD</translation>
     </message>
     <message>
-        <location line="-220"/>
-        <location line="+219"/>
+        <location line="-219"/>
+        <location line="+218"/>
         <source>%1 First Start</source>
         <translation>%1 Primeiro Início</translation>
     </message>
@@ -7555,7 +7556,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>Rotacione as entidades coladas&lt;br&gt;por este ângulo</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale:</source>
         <translation>Escala:</translation>
     </message>
@@ -7642,17 +7643,16 @@ Especifique a segunda linha</translatorcomment>
         <translation>Especifique a segunda linha</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Concluído
 Cópias de segurança de desenhos não salvos foram feitas para os seguintes
 lugares:\</translatorcomment>
-        <translation>Concluído</translation>
+        <translation type="vanished">Concluído</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+91"/>
         <source>Angle:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -7677,12 +7677,11 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation type="vanished">Selecione um Arco, Círculo, Elipse ou Arco Elíptico</translation>
     </message>
     <message>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+73"/>
         <source>Done</source>
-        <translation>Concluído</translation>
+        <translation type="vanished">Concluído</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+306"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -7830,17 +7829,16 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>Defina o próximo vértice do polígono</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Concluído
 Cópias de segurança de desenhos não salvos foram feitas para os seguintes
 lugares:\</translatorcomment>
-        <translation>Concluído</translation>
+        <translation type="vanished">Concluído</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+144"/>
         <source>Polygon area:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Área do polígono:</translation>
@@ -7882,12 +7880,11 @@ lugares:\</translatorcomment>
         <translation>Indique a segunda entidade</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Concluído</translation>
+        <translation type="vanished">Concluído</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+95"/>
         <source>Distance:</source>
         <translation>Distância:</translation>
     </message>
@@ -7917,17 +7914,16 @@ Especifique o ponto</translatorcomment>
         <translation>Especifique o ponto</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Concluído
 Cópias de segurança de desenhos não salvos foram feitas para os seguintes
 lugares:\</translatorcomment>
-        <translation>Concluído</translation>
+        <translation type="vanished">Concluído</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+81"/>
         <source>Distance:</source>
         <translatorcomment>--exact match--
 --file: PolylineEquidistant_pt.ts--
@@ -7963,17 +7959,16 @@ Especifique o segundo ponto de distância</translatorcomment>
         <translation>Segundo ponto</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Concluído
 Cópias de segurança de desenhos não salvos foram feitas para os seguintes
 lugares:\</translatorcomment>
-        <translation>Concluído</translation>
+        <translation type="vanished">Concluído</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+53"/>
         <source>Distance:</source>
         <translatorcomment>--exact match--
 --file: InfoDistanceEP_pt.ts--
@@ -8021,12 +8016,11 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>Selecione a polilinha</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation>Concluído</translation>
+        <translation type="vanished">Concluído</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+51"/>
         <source>Area</source>
         <translation>Área</translation>
     </message>
@@ -8370,7 +8364,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <translation>Rotacione o Bloco&lt;br&gt;por este ângulo</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale X:</source>
         <translation>Escala X:</translation>
     </message>
@@ -8478,7 +8472,7 @@ _Rotação</translatorcomment>
         <translation>Rotacione as entidades coladas &lt;br&gt;por este ângulo</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+103"/>
         <source>Scale:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -9143,14 +9137,13 @@ Lista de Camadas</translatorcomment>
         <translation>Próximo vértice</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Cópias de segurança de desenhos não salvos foram feitas para os seguintes
 lugares:\
 Traçado: Terminado. %ld nós criados</translatorcomment>
-        <translation>Concluído</translation>
+        <translation type="vanished">Concluído</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
@@ -9627,14 +9620,13 @@ Especifique o próximo ponto do polígono</translatorcomment>
         <translation>Próximo ponto</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Concluído
 Cópias de segurança de desenhos não salvos foram feitas para os seguintes
 lugares:\</translatorcomment>
-        <translation>Concluído</translation>
+        <translation type="vanished">Concluído</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
@@ -9839,9 +9831,8 @@ Número:</translatorcomment>
         <translation>Segundo ponto</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Concluído</translation>
+        <translation type="vanished">Concluído</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
@@ -9902,9 +9893,8 @@ Número:</translatorcomment>
         <translation>Segundo ponto</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Concluído</translation>
+        <translation type="vanished">Concluído</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
@@ -12332,13 +12322,13 @@ Cultura marcas de impressão</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1429"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1431"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1236"/>
+        <location line="-1238"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: pt.po--
@@ -12404,7 +12394,7 @@ Fecha todas as janelas</translatorcomment>
         <translation>Todos</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+69"/>
         <source>Show</source>
         <translation>Mostrar</translation>
     </message>
@@ -14141,14 +14131,13 @@ Segundo ponto de canto</translatorcomment>
         <translation>Segundo vértice</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Concluído
 Cópias de segurança de desenhos não salvos foram feitas para os seguintes
 lugares:\</translatorcomment>
-        <translation>Concluído</translation>
+        <translation type="vanished">Concluído</translation>
     </message>
     <message>
         <source>Select &amp;Rectangular Area</source>
@@ -14434,9 +14423,8 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <translation>Meio da Aresta</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Concluído</translation>
+        <translation type="vanished">Concluído</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
@@ -14477,9 +14465,8 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <translation>Segundo Vértice</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation>Concluído</translation>
+        <translation type="vanished">Concluído</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
@@ -14519,9 +14506,8 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <translation>Vértice</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Concluído</translation>
+        <translation type="vanished">Concluído</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
@@ -14556,9 +14542,8 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <translation>Vértice</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Concluído</translation>
+        <translation type="vanished">Concluído</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
@@ -15225,14 +15210,13 @@ Especifique o próximo ponto de controle</translatorcomment>
         <translation>Ponto de controle seguinte</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Concluído
 Cópias de segurança de desenhos não salvos foram feitas para os seguintes
 lugares:\</translatorcomment>
-        <translation>Concluído</translation>
+        <translation type="vanished">Concluído</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
@@ -15778,7 +15762,7 @@ Co&amp;lar</translatorcomment>
         <translation>Outros...</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+133"/>
         <source>Degree</source>
         <translatorcomment>--exact match--
 --file: SplineControlPoints_pt.ts--

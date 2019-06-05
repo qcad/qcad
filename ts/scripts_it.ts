@@ -970,7 +970,7 @@ applicare le modifiche.</translation>
         <translation>File</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+123"/>
         <source>Autosave failed:</source>
         <translation>Autosave fallito:</translation>
     </message>
@@ -1079,7 +1079,7 @@ Vuoi recuperarlo?</translation>
         <translation type="obsolete">Scegli directory per salvataggio automatico</translation>
     </message>
     <message>
-        <location line="-50"/>
+        <location line="-53"/>
         <source>Autosaving to:</source>
         <translation>Salvataggio automatico per:</translation>
     </message>
@@ -1611,14 +1611,11 @@ Vuoi recuperarlo?</translation>
         <translation>Primo punto di taglio</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+8"/>
-        <location line="+7"/>
         <source>Done</source>
-        <translation>Fatto</translation>
+        <translation type="vanished">Fatto</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+8"/>
         <source>Second break point</source>
         <translation>Secondo punto di taglio</translation>
     </message>
@@ -3912,12 +3909,11 @@ is already in the list.</source>
         <translation>Prossimo vertice</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Fatto</translation>
+        <translation type="vanished">Fatto</translation>
     </message>
     <message>
-        <location line="+418"/>
+        <location line="+421"/>
         <source>close</source>
         <translation>close</translation>
     </message>
@@ -4061,12 +4057,17 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2078"/>
+        <location line="+2079"/>
         <source>Cancel</source>
         <translation>Annulla</translation>
     </message>
     <message>
-        <location line="-1801"/>
+        <location line="-2078"/>
+        <source>Done</source>
+        <translation type="unfinished">Fatto</translation>
+    </message>
+    <message>
+        <location line="+277"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Strumento attivo:</translation>
@@ -5134,7 +5135,7 @@ Il file &apos;%1&apos; esiste già. Vuoi sovrascriverlo?</translatorcomment>
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+250"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+249"/>
         <source>Black</source>
         <translation>Nero</translation>
     </message>
@@ -5153,8 +5154,8 @@ Il file &apos;%1&apos; esiste già. Vuoi sovrascriverlo?</translatorcomment>
         <translation type="obsolete">Benvenuti a QCAD</translation>
     </message>
     <message>
-        <location line="-220"/>
-        <location line="+219"/>
+        <location line="-219"/>
+        <location line="+218"/>
         <source>%1 First Start</source>
         <translation>%1 primo avvio</translation>
     </message>
@@ -6448,7 +6449,7 @@ Visualizzazione grafica</translatorcomment>
         <translation>Ruotare le entità incollato&lt;br&gt;da questa angolazione</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale:</source>
         <translation>Scala:</translation>
     </message>
@@ -6529,12 +6530,11 @@ Visualizzazione grafica</translatorcomment>
         <translation>Seconda linea</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Fatto</translation>
+        <translation type="vanished">Fatto</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+91"/>
         <source>Angle:</source>
         <translation>Angolo:</translation>
     </message>
@@ -6559,12 +6559,11 @@ Visualizzazione grafica</translatorcomment>
         <translation type="vanished">Selezionare arco, cerchio, ellisse o arco ellittico</translation>
     </message>
     <message>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+73"/>
         <source>Done</source>
-        <translation>Fatto</translation>
+        <translation type="vanished">Fatto</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+306"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -6711,12 +6710,11 @@ Visualizzazione grafica</translatorcomment>
         <translation>Impostare angolo successiva del poligono</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation>Fatto</translation>
+        <translation type="vanished">Fatto</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+144"/>
         <source>Polygon area:</source>
         <translatorcomment>--ignored colon--
 --file: qgis_it.ts--</translatorcomment>
@@ -6760,12 +6758,11 @@ Visualizzazione grafica</translatorcomment>
         <translation>Secondo oggetto</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Fatto</translation>
+        <translation type="vanished">Fatto</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+95"/>
         <source>Distance:</source>
         <translation>Distanza:</translation>
     </message>
@@ -6788,12 +6785,11 @@ Visualizzazione grafica</translatorcomment>
         <translation>Punto</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Fatto</translation>
+        <translation type="vanished">Fatto</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+81"/>
         <source>Distance:</source>
         <translation>Distanza:</translation>
     </message>
@@ -6820,12 +6816,11 @@ Visualizzazione grafica</translatorcomment>
         <translation>Secondo punto</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Fatto</translation>
+        <translation type="vanished">Fatto</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+53"/>
         <source>Distance:</source>
         <translation>Distanza:</translation>
     </message>
@@ -6862,12 +6857,11 @@ Visualizzazione grafica</translatorcomment>
         <translation>Scegli polilinea</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation>Fatto</translation>
+        <translation type="vanished">Fatto</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+51"/>
         <source>Area</source>
         <translation>Area</translation>
     </message>
@@ -7168,7 +7162,7 @@ Percentuale di elementi
         <translation>Ruotare blocco&lt;br&gt;da questo angolo</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale X:</source>
         <translation>Scala X:</translation>
     </message>
@@ -7267,7 +7261,7 @@ Percentuale di elementi
         <translation>Ruotare le entità incollato&lt;br&gt;da questa angolazione</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+103"/>
         <source>Scale:</source>
         <translation>Scala:</translation>
     </message>
@@ -7853,9 +7847,8 @@ Per favore riavvia Photivo per cambiare le impostazioni della lingua</translator
         <translation>Prossimo vertice</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Fatto</translation>
+        <translation type="vanished">Fatto</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
@@ -8306,9 +8299,8 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Punto successivo</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Fatto</translation>
+        <translation type="vanished">Fatto</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
@@ -8464,9 +8456,8 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Secondo punto</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Fatto</translation>
+        <translation type="vanished">Fatto</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
@@ -8531,9 +8522,8 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Secondo punto</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Fatto</translation>
+        <translation type="vanished">Fatto</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
@@ -10511,7 +10501,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation type="vanished">Geometria</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+761"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+763"/>
         <source>Add custom property to selected objects</source>
         <translation>Aggiungere una proprietà personalizzata per gli oggetti selezionati</translation>
     </message>
@@ -10545,7 +10535,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation>*VARIE*</translation>
     </message>
     <message>
-        <location line="-1236"/>
+        <location line="-1238"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: Arduino_it_IT.po--
@@ -10592,7 +10582,7 @@ Nessuna selezione</translatorcomment>
         <translation>Tutto</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+69"/>
         <source>Show</source>
         <translation>Mostra</translation>
     </message>
@@ -12045,9 +12035,8 @@ Interseca con la selezione corrente</translatorcomment>
         <translation>Primo punto dell&apos;angolo</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>Done</source>
-        <translation>Fatto</translation>
+        <translation type="vanished">Fatto</translation>
     </message>
     <message>
         <source>Select &amp;Rectangular Area</source>
@@ -12064,7 +12053,7 @@ Interseca con la selezione corrente</translatorcomment>
         <translation>(De-)seleziona tutte le entità all&apos;interno di un rettangolo</translation>
     </message>
     <message>
-        <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="-1"/>
+        <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="+7"/>
         <source>Second corner</source>
         <translation>Secondo punto dell&apos;angolo</translation>
     </message>
@@ -12328,9 +12317,8 @@ Conversione non riuscita per il livello &quot;%1&quot;</translatorcomment>
         <translation>Metà del lato</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Fatto</translation>
+        <translation type="vanished">Fatto</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
@@ -12371,9 +12359,8 @@ Conversione non riuscita per il livello &quot;%1&quot;</translatorcomment>
         <translation>Secondo punto dell&apos;angolo</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation>Fatto</translation>
+        <translation type="vanished">Fatto</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
@@ -12413,9 +12400,8 @@ Conversione non riuscita per il livello &quot;%1&quot;</translatorcomment>
         <translation>Punto dell&apos;angolo</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Fatto</translation>
+        <translation type="vanished">Fatto</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
@@ -12450,9 +12436,8 @@ Conversione non riuscita per il livello &quot;%1&quot;</translatorcomment>
         <translation>Punto dell&apos;angolo</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Fatto</translation>
+        <translation type="vanished">Fatto</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
@@ -12665,7 +12650,7 @@ Conversione non riuscita per il livello &quot;%1&quot;</translatorcomment>
     </message>
     <message>
         <source>Show snap tools</source>
-        <translation>Mostra strumenti scatto</translation>
+        <translation type="vanished">Mostra strumenti scatto</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -13049,9 +13034,8 @@ Conversione non riuscita per il livello &quot;%1&quot;</translatorcomment>
         <translation>Punto di controllo successivo</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation>Fatto</translation>
+        <translation type="vanished">Fatto</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
@@ -13490,7 +13474,7 @@ Tutti i file</translatorcomment>
         <translation>Altri...</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+133"/>
         <source>Degree</source>
         <translation>Gradi</translation>
     </message>

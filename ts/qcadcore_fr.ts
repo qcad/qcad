@@ -237,7 +237,7 @@ Cyan</translatorcomment>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
 Bleu
-Bleu : 
+Bleu&#xa0;: 
 Bluetooth</translatorcomment>
         <translation>Bleu</translation>
     </message>

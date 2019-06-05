@@ -873,12 +873,12 @@ musíte znovu spustiť QCAD.</translation>
         <translation>Súbor</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+100"/>
         <source>Autosaving to:</source>
         <translation>Automaticky ukladať do:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>Autosave failed:</source>
         <translation>Automatické ukladanie zlyhalo:</translation>
     </message>
@@ -1503,14 +1503,11 @@ Prajete si ho obnoviť?</translation>
         <translation>Prvý bod rezu</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+8"/>
-        <location line="+7"/>
         <source>Done</source>
-        <translation>Hotovo</translation>
+        <translation type="vanished">Hotovo</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+8"/>
         <source>Second break point</source>
         <translation>Druhý bod rezu</translation>
     </message>
@@ -3616,12 +3613,11 @@ už existuje v zozname.</translation>
         <translation>Ďalší bod</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Hotovo</translation>
+        <translation type="vanished">Hotovo</translation>
     </message>
     <message>
-        <location line="+418"/>
+        <location line="+421"/>
         <source>close</source>
         <translation>zavrieť</translation>
     </message>
@@ -3743,12 +3739,17 @@ už existuje v zozname.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2078"/>
+        <location line="+2079"/>
         <source>Cancel</source>
         <translation>Zrušiť</translation>
     </message>
     <message>
-        <location line="-1801"/>
+        <location line="-2078"/>
+        <source>Done</source>
+        <translation type="unfinished">Hotovo</translation>
+    </message>
+    <message>
+        <location line="+277"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Aktívny Nástroj:</translation>
@@ -4768,7 +4769,7 @@ už existuje v zozname.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+219"/>
+        <location line="+218"/>
         <source>%1 First Start</source>
         <translation>%1 - Prvé spustenie</translation>
     </message>
@@ -5730,7 +5731,7 @@ už existuje v zozname.</translation>
         <translation>Natočiť vkladané prvky&lt;br&gt;pod týmto uhlom</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale:</source>
         <translation>Mierka:</translation>
     </message>
@@ -5811,12 +5812,11 @@ už existuje v zozname.</translation>
         <translation>Vyberte druhú čiaru</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Hotovo</translation>
+        <translation type="vanished">Hotovo</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+91"/>
         <source>Angle:</source>
         <translation>Uhol:</translation>
     </message>
@@ -5834,12 +5834,11 @@ už existuje v zozname.</translation>
         <translation>Vyberte oblúk, kružnicu, elipsu alebo eliptický oblúk</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Hotovo</translation>
+        <translation type="vanished">Hotovo</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location line="+236"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -5981,12 +5980,11 @@ už existuje v zozname.</translation>
         <translation>Nastavte roh polygónu</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation>Hotovo</translation>
+        <translation type="vanished">Hotovo</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+144"/>
         <source>Polygon area:</source>
         <translation>Plocha polygónu:</translation>
     </message>
@@ -6024,12 +6022,11 @@ už existuje v zozname.</translation>
         <translation>Určte druhý prvok</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Hotovo</translation>
+        <translation type="vanished">Hotovo</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+95"/>
         <source>Distance:</source>
         <translation>Vzdialenosť:</translation>
     </message>
@@ -6052,12 +6049,11 @@ už existuje v zozname.</translation>
         <translation>Zvoľte bod</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Hotovo</translation>
+        <translation type="vanished">Hotovo</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+81"/>
         <source>Distance:</source>
         <translation>Vzdialenosť:</translation>
     </message>
@@ -6080,12 +6076,11 @@ už existuje v zozname.</translation>
         <translation>Druhý bod</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Hotovo</translation>
+        <translation type="vanished">Hotovo</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+53"/>
         <source>Distance:</source>
         <translation>Vzdialenosť:</translation>
     </message>
@@ -6118,12 +6113,11 @@ už existuje v zozname.</translation>
         <translation>Vyberte krivku</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation>Hotovo</translation>
+        <translation type="vanished">Hotovo</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+51"/>
         <source>Area</source>
         <translation>Plocha</translation>
     </message>
@@ -6344,7 +6338,7 @@ už existuje v zozname.</translation>
         <translation>Natočiť blok&lt;br&gt;pod týmto uhlom</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale X:</source>
         <translation>Mierka osi X:</translation>
     </message>
@@ -6447,7 +6441,7 @@ už existuje v zozname.</translation>
         <translation>Natočiť vkladané prvky&lt;br&gt;pod týmto uhlom</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+103"/>
         <source>Scale:</source>
         <translation>Mierka:</translation>
     </message>
@@ -6913,9 +6907,8 @@ už existuje v zozname.</translation>
         <translation>Ďalší bod</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Hotovo</translation>
+        <translation type="vanished">Hotovo</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
@@ -7342,9 +7335,8 @@ vo výsledku vyhľadania:</translation>
         <translation>Ďalší bod</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Hotovo</translation>
+        <translation type="vanished">Hotovo</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
@@ -7486,9 +7478,8 @@ vo výsledku vyhľadania:</translation>
 <context>
     <name>LineBoxJoint</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.js" line="+73"/>
         <source>Done</source>
-        <translation>Hotovo</translation>
+        <translation type="vanished">Hotovo</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+97"/>
@@ -7501,7 +7492,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Čapy</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.js" line="-3"/>
+        <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.js" line="+70"/>
         <source>Second point</source>
         <translation>Druhý bod</translation>
     </message>
@@ -7589,9 +7580,8 @@ vo výsledku vyhľadania:</translation>
         <translation>Druhý bod</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Hotovo</translation>
+        <translation type="vanished">Hotovo</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+18"/>
@@ -9223,12 +9213,12 @@ vo výsledku vyhľadania:</translation>
         <translation>Vždy zobrazovať všetky vlastnosti (môže to spomaliť výber prvkov)</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1429"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1431"/>
         <source>*VARIES*</source>
         <translation>*Rôzne*</translation>
     </message>
     <message>
-        <location line="-1236"/>
+        <location line="-1238"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9272,7 +9262,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Všetko</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+24"/>
         <source>Add custom property to selected objects</source>
         <translation>Pridať vlastné vlastnosti k vybraným prvkom</translation>
     </message>
@@ -10449,9 +10439,8 @@ vo výsledku vyhľadania:</translation>
         <translation>Druhý roh</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Done</source>
-        <translation>Hotovo</translation>
+        <translation type="vanished">Hotovo</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
@@ -10679,9 +10668,8 @@ vo výsledku vyhľadania:</translation>
         <translation>1/2 strany</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Hotovo</translation>
+        <translation type="vanished">Hotovo</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui" line="+17"/>
@@ -10722,9 +10710,8 @@ vo výsledku vyhľadania:</translation>
         <translation>Druhý roh</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation>Hotovo</translation>
+        <translation type="vanished">Hotovo</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.ui" line="+17"/>
@@ -10760,9 +10747,8 @@ vo výsledku vyhľadania:</translation>
         <translation>Rohový bod</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Hotovo</translation>
+        <translation type="vanished">Hotovo</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
@@ -10793,9 +10779,8 @@ vo výsledku vyhľadania:</translation>
         <translation>Rohový bod</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Hotovo</translation>
+        <translation type="vanished">Hotovo</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
@@ -11263,9 +11248,8 @@ vo výsledku vyhľadania:</translation>
         <translation>Ďalší bod</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation>Hotovo</translation>
+        <translation type="vanished">Hotovo</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui" line="+23"/>
@@ -11705,7 +11689,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Ďalšie...</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+133"/>
         <source>Degree</source>
         <translation>Stupne</translation>
     </message>

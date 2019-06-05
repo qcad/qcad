@@ -840,12 +840,12 @@ the preference changes to take effect.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+100"/>
         <source>Autosaving to:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>Autosave failed:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1402,14 +1402,11 @@ Do you wish to recover it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+8"/>
-        <location line="+7"/>
         <source>Done</source>
-        <translation type="unfinished">Završeno</translation>
+        <translation type="obsolete">Završeno</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+8"/>
         <source>Second break point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3450,12 +3447,11 @@ is already in the list.</source>
         <translation type="unfinished">Sljedeći vertex</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Završeno</translation>
+        <translation type="obsolete">Završeno</translation>
     </message>
     <message>
-        <location line="+418"/>
+        <location line="+421"/>
         <source>close</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3569,12 +3565,17 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2078"/>
+        <location line="+2079"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-1801"/>
+        <location line="-2078"/>
+        <source>Done</source>
+        <translation type="unfinished">Završeno</translation>
+    </message>
+    <message>
+        <location line="+277"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation type="unfinished"></translation>
@@ -4538,7 +4539,7 @@ is already in the list.</source>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+219"/>
+        <location line="+218"/>
         <source>%1 First Start</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5456,7 +5457,7 @@ is already in the list.</source>
         <translation type="unfinished">Rotiraj zalijepljene entitete&lt;br&gt;za ovaj kut</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale:</source>
         <translation type="unfinished">Mjerilo:</translation>
     </message>
@@ -5537,12 +5538,11 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Završeno</translation>
+        <translation type="obsolete">Završeno</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+91"/>
         <source>Angle:</source>
         <translation type="unfinished">Kut:</translation>
     </message>
@@ -5560,12 +5560,11 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Završeno</translation>
+        <translation type="obsolete">Završeno</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location line="+236"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -5707,12 +5706,11 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation type="unfinished">Završeno</translation>
+        <translation type="obsolete">Završeno</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+144"/>
         <source>Polygon area:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5750,12 +5748,11 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Završeno</translation>
+        <translation type="obsolete">Završeno</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+95"/>
         <source>Distance:</source>
         <translation type="unfinished">Udaljenost:</translation>
     </message>
@@ -5778,12 +5775,11 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Završeno</translation>
+        <translation type="obsolete">Završeno</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+81"/>
         <source>Distance:</source>
         <translation type="unfinished">Udaljenost:</translation>
     </message>
@@ -5806,12 +5802,11 @@ is already in the list.</source>
         <translation type="unfinished">Druga točka</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Završeno</translation>
+        <translation type="obsolete">Završeno</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+53"/>
         <source>Distance:</source>
         <translation type="unfinished">Udaljenost:</translation>
     </message>
@@ -5844,12 +5839,11 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation type="unfinished">Završeno</translation>
+        <translation type="obsolete">Završeno</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+51"/>
         <source>Area</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6062,7 +6056,7 @@ is already in the list.</source>
         <translation>Rotiraj blok&lt;br&gt;za kut</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale X:</source>
         <translation>Omjer X:</translation>
     </message>
@@ -6165,7 +6159,7 @@ is already in the list.</source>
         <translation>Rotiraj zalijepljene entitete&lt;br&gt;za ovaj kut</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+103"/>
         <source>Scale:</source>
         <translation>Mjerilo:</translation>
     </message>
@@ -6611,9 +6605,8 @@ is already in the list.</source>
         <translation>Sljedeći vertex</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Završeno</translation>
+        <translation type="vanished">Završeno</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
@@ -7019,9 +7012,8 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Završeno</translation>
+        <translation type="obsolete">Završeno</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
@@ -7173,9 +7165,8 @@ shown in search results:</source>
         <translation type="unfinished">Druga točka</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Završeno</translation>
+        <translation type="obsolete">Završeno</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
@@ -7236,9 +7227,8 @@ shown in search results:</source>
         <translation type="unfinished">Druga točka</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Završeno</translation>
+        <translation type="obsolete">Završeno</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
@@ -8824,7 +8814,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+24"/>
         <source>Add custom property to selected objects</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9934,9 +9924,8 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Done</source>
-        <translation type="unfinished">Završeno</translation>
+        <translation type="obsolete">Završeno</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
@@ -10123,9 +10112,8 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Završeno</translation>
+        <translation type="obsolete">Završeno</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
@@ -10166,9 +10154,8 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation type="unfinished">Završeno</translation>
+        <translation type="obsolete">Završeno</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
@@ -10204,9 +10191,8 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Završeno</translation>
+        <translation type="obsolete">Završeno</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCPInit.js" line="+2"/>
@@ -10237,9 +10223,8 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Završeno</translation>
+        <translation type="obsolete">Završeno</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js" line="+2"/>
@@ -10695,9 +10680,8 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation type="unfinished">Završeno</translation>
+        <translation type="obsolete">Završeno</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
@@ -11133,7 +11117,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+133"/>
         <source>Degree</source>
         <translation type="unfinished"></translation>
     </message>

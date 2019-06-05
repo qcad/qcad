@@ -873,12 +873,12 @@ the preference changes to take effect.</source>
         <translation>Файл</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+100"/>
         <source>Autosaving to:</source>
         <translation>Автосохранение в:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>Autosave failed:</source>
         <translation>Автосохранение неудачно:</translation>
     </message>
@@ -1485,14 +1485,11 @@ Do you wish to recover it?</source>
         <translation>Первая точка разбиения</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+8"/>
-        <location line="+7"/>
         <source>Done</source>
-        <translation>Завершено</translation>
+        <translation type="vanished">Завершено</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+8"/>
         <source>Second break point</source>
         <translation>Вторая точка разбиения</translation>
     </message>
@@ -3551,12 +3548,11 @@ is already in the list.</source>
         <translation>Следующая вершина</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Завершено</translation>
+        <translation type="vanished">Завершено</translation>
     </message>
     <message>
-        <location line="+418"/>
+        <location line="+421"/>
         <source>close</source>
         <translation>закрыть</translation>
     </message>
@@ -3678,12 +3674,17 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2078"/>
+        <location line="+2079"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location line="-1801"/>
+        <location line="-2078"/>
+        <source>Done</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+277"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Активный инструмент:</translation>
@@ -4699,7 +4700,7 @@ is already in the list.</source>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+219"/>
+        <location line="+218"/>
         <source>%1 First Start</source>
         <translation>%1 первый запуск</translation>
     </message>
@@ -5653,7 +5654,7 @@ is already in the list.</source>
         <translation>Вращать вставленные элементы&lt;br&gt;на заданный угол</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale:</source>
         <translation>Масштаб:</translation>
     </message>
@@ -5734,12 +5735,11 @@ is already in the list.</source>
         <translation>Указать вторую линию</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Завершено</translation>
+        <translation type="vanished">Завершено</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+91"/>
         <source>Angle:</source>
         <translation>Угол:</translation>
     </message>
@@ -5752,12 +5752,11 @@ is already in the list.</source>
 <context>
     <name>InfoArcCircleArea</name>
     <message>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+73"/>
         <source>Done</source>
-        <translation>Готово</translation>
+        <translation type="vanished">Готово</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+306"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -5904,12 +5903,11 @@ is already in the list.</source>
         <translation>Установить следующий угол многоугольника</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation>Завершено</translation>
+        <translation type="vanished">Завершено</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+144"/>
         <source>Polygon area:</source>
         <translation>Площадь многоугольника:</translation>
     </message>
@@ -5947,12 +5945,11 @@ is already in the list.</source>
         <translation>Указать второй объект</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Завершено</translation>
+        <translation type="vanished">Завершено</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+95"/>
         <source>Distance:</source>
         <translation>Расстояние:</translation>
     </message>
@@ -5975,12 +5972,11 @@ is already in the list.</source>
         <translation>Указать точку</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Завершено</translation>
+        <translation type="vanished">Завершено</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+81"/>
         <source>Distance:</source>
         <translation>Расстояние:</translation>
     </message>
@@ -6003,12 +5999,11 @@ is already in the list.</source>
         <translation>Вторая точка</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Завершено</translation>
+        <translation type="vanished">Завершено</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+53"/>
         <source>Distance:</source>
         <translation>Расстояние:</translation>
     </message>
@@ -6041,12 +6036,11 @@ is already in the list.</source>
         <translation>Выбрать ломаную</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation>Готово</translation>
+        <translation type="vanished">Готово</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+51"/>
         <source>Area</source>
         <translation>Площадь</translation>
     </message>
@@ -6267,7 +6261,7 @@ is already in the list.</source>
         <translation>Вращать блок&lt;br&gt;на заданный угол</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale X:</source>
         <translation>Масштаб по X:</translation>
     </message>
@@ -6370,7 +6364,7 @@ is already in the list.</source>
         <translation>Вращать вставленный элемент&lt;br&gt;на заданный угол</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+103"/>
         <source>Scale:</source>
         <translation>Масштаб:</translation>
     </message>
@@ -6836,9 +6830,8 @@ is already in the list.</source>
         <translation>Следующая вершина</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Завершено</translation>
+        <translation type="vanished">Завершено</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
@@ -7265,9 +7258,8 @@ shown in search results:</source>
         <translation>Следующая точка</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Завершено</translation>
+        <translation type="vanished">Завершено</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
@@ -7419,9 +7411,8 @@ shown in search results:</source>
         <translation>Вторая точка</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Завершено</translation>
+        <translation type="vanished">Завершено</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
@@ -7508,9 +7499,8 @@ shown in search results:</source>
         <translation>Вторая точка</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Готово</translation>
+        <translation type="vanished">Готово</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+18"/>
@@ -9098,12 +9088,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1429"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1431"/>
         <source>*VARIES*</source>
         <translation>*ВАРЬИРОВАНИЕ*</translation>
     </message>
     <message>
-        <location line="-1236"/>
+        <location line="-1238"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9143,7 +9133,7 @@ shown in search results:</source>
         <translation>Все</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+24"/>
         <source>Add custom property to selected objects</source>
         <translation>Добавить пользовательское свойство к выделенным объектам</translation>
     </message>
@@ -10336,9 +10326,8 @@ shown in search results:</source>
         <translation>Второй угол</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Done</source>
-        <translation>Завершено</translation>
+        <translation type="vanished">Завершено</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
@@ -10554,9 +10543,8 @@ shown in search results:</source>
         <translation>Середина стороны</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Завершено</translation>
+        <translation type="vanished">Завершено</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
@@ -10597,9 +10585,8 @@ shown in search results:</source>
         <translation>Второй угол</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation>Завершено</translation>
+        <translation type="vanished">Завершено</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
@@ -10635,9 +10622,8 @@ shown in search results:</source>
         <translation>Угловая точка</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Завершено</translation>
+        <translation type="vanished">Завершено</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
@@ -10668,9 +10654,8 @@ shown in search results:</source>
         <translation>Угловая точка</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Завершено</translation>
+        <translation type="vanished">Завершено</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
@@ -11138,9 +11123,8 @@ shown in search results:</source>
         <translation>Следующая контрольная точка</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation>Завершено</translation>
+        <translation type="vanished">Завершено</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui" line="+23"/>
@@ -11576,7 +11560,7 @@ shown in search results:</source>
         <translation>Другие...</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+133"/>
         <source>Degree</source>
         <translation>Градусы</translation>
     </message>

@@ -881,12 +881,12 @@ de wijzigingen door te voeren.</translation>
         <translation>Bestand</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+100"/>
         <source>Autosaving to:</source>
         <translation>Auto-opslaan naar:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>Autosave failed:</source>
         <translation>Auto-opslaan gefaald:</translation>
     </message>
@@ -1493,14 +1493,11 @@ Wilt u het herstellen?</translation>
         <translation>Eerste breekpunt</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+8"/>
-        <location line="+7"/>
         <source>Done</source>
-        <translation>Klaar</translation>
+        <translation type="vanished">Klaar</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+8"/>
         <source>Second break point</source>
         <translation>Tweede breekpunt</translation>
     </message>
@@ -3570,12 +3567,11 @@ is al in de lijst.</translation>
         <translation>Volgende hoekpunt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Klaar</translation>
+        <translation type="vanished">Klaar</translation>
     </message>
     <message>
-        <location line="+418"/>
+        <location line="+421"/>
         <source>close</source>
         <translation>close</translation>
     </message>
@@ -3696,12 +3692,17 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2078"/>
+        <location line="+2079"/>
         <source>Cancel</source>
         <translation>Annuleer</translation>
     </message>
     <message>
-        <location line="-1801"/>
+        <location line="-2078"/>
+        <source>Done</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+277"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Actief gereedschap:</translation>
@@ -4708,7 +4709,7 @@ is al in de lijst.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+219"/>
+        <location line="+218"/>
         <source>%1 First Start</source>
         <translation>%1 eerste start</translation>
     </message>
@@ -5678,7 +5679,7 @@ is al in de lijst.</translation>
         <translation>Draai ingevoegde objecten&lt;br&gt;over deze hoek</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale:</source>
         <translation>Schaal:</translation>
     </message>
@@ -5759,12 +5760,11 @@ is al in de lijst.</translation>
         <translation>Tweede lijn kiezen</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Klaar</translation>
+        <translation type="vanished">Klaar</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+91"/>
         <source>Angle:</source>
         <translation>Hoek:</translation>
     </message>
@@ -5777,12 +5777,11 @@ is al in de lijst.</translation>
 <context>
     <name>InfoArcCircleArea</name>
     <message>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+73"/>
         <source>Done</source>
-        <translation>Klaar</translation>
+        <translation type="vanished">Klaar</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+306"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -5929,12 +5928,11 @@ is al in de lijst.</translation>
         <translation>Set volgende polygoon hoek</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation>Klaar</translation>
+        <translation type="vanished">Klaar</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+144"/>
         <source>Polygon area:</source>
         <translation>Polygoonoppervlakte:</translation>
     </message>
@@ -5972,12 +5970,11 @@ is al in de lijst.</translation>
         <translation>Tweede object kiezen</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Klaar</translation>
+        <translation type="vanished">Klaar</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+95"/>
         <source>Distance:</source>
         <translation>Afstand:</translation>
     </message>
@@ -6000,12 +5997,11 @@ is al in de lijst.</translation>
         <translation>Punt kiezen</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Klaar</translation>
+        <translation type="vanished">Klaar</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+81"/>
         <source>Distance:</source>
         <translation>Afstand:</translation>
     </message>
@@ -6028,12 +6024,11 @@ is al in de lijst.</translation>
         <translation>Tweede punt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Klaar</translation>
+        <translation type="vanished">Klaar</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+53"/>
         <source>Distance:</source>
         <translation>Afstand:</translation>
     </message>
@@ -6066,12 +6061,11 @@ is al in de lijst.</translation>
         <translation>Polylijn kiesen</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation>Klaar</translation>
+        <translation type="vanished">Klaar</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+51"/>
         <source>Area</source>
         <translation>Oppervlakte</translation>
     </message>
@@ -6292,7 +6286,7 @@ is al in de lijst.</translation>
         <translation>Blok roteren&lt;br&gt;om deze hoek</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale X:</source>
         <translation>Schaal X:</translation>
     </message>
@@ -6395,7 +6389,7 @@ is al in de lijst.</translation>
         <translation>Draai ingevoegde objecten&lt;br&gt;over deze hoek</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+103"/>
         <source>Scale:</source>
         <translation>Schaal:</translation>
     </message>
@@ -6889,9 +6883,8 @@ is al in de lijst.</translation>
         <translation>Volgende hoekpunt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Klaar</translation>
+        <translation type="vanished">Klaar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
@@ -7310,9 +7303,8 @@ getoond in zoekresultaten:</translation>
         <translation>Volgende punt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Klaar</translation>
+        <translation type="vanished">Klaar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
@@ -7464,9 +7456,8 @@ getoond in zoekresultaten:</translation>
         <translation>Tweede punt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Gedaan</translation>
+        <translation type="vanished">Gedaan</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
@@ -7527,9 +7518,8 @@ getoond in zoekresultaten:</translation>
         <translation>Tweede punt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Klaar</translation>
+        <translation type="vanished">Klaar</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
@@ -9133,12 +9123,12 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1429"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1431"/>
         <source>*VARIES*</source>
         <translation>*VARIEERT*</translation>
     </message>
     <message>
-        <location line="-1236"/>
+        <location line="-1238"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9178,7 +9168,7 @@ getoond in zoekresultaten:</translation>
         <translation>Alle</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+24"/>
         <source>Add custom property to selected objects</source>
         <translation>Gebruiker gedefinieerde eigenschap aan geselecteerde objecten toevoegen</translation>
     </message>
@@ -10371,9 +10361,8 @@ getoond in zoekresultaten:</translation>
         <translation>Tweede hoekpunt</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Done</source>
-        <translation>Klaar</translation>
+        <translation type="vanished">Klaar</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
@@ -10586,9 +10575,8 @@ getoond in zoekresultaten:</translation>
         <translation>Midden van zijkant</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Klaar</translation>
+        <translation type="vanished">Klaar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
@@ -10629,9 +10617,8 @@ getoond in zoekresultaten:</translation>
         <translation>Tweede hoek</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation>Klaar</translation>
+        <translation type="vanished">Klaar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
@@ -10667,9 +10654,8 @@ getoond in zoekresultaten:</translation>
         <translation>Hoekpunt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Klaar</translation>
+        <translation type="vanished">Klaar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
@@ -10700,9 +10686,8 @@ getoond in zoekresultaten:</translation>
         <translation>Hoekpunt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Klaar</translation>
+        <translation type="vanished">Klaar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
@@ -11174,9 +11159,8 @@ getoond in zoekresultaten:</translation>
         <translation>Volgende controlepunt</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation>Klaar</translation>
+        <translation type="vanished">Klaar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui" line="+23"/>
@@ -11612,7 +11596,7 @@ getoond in zoekresultaten:</translation>
         <translation>Andere...</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+133"/>
         <source>Degree</source>
         <translation>Graad</translation>
     </message>

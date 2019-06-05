@@ -978,7 +978,7 @@ Tipo de línea:</translatorcomment>
         <translation>Fichero</translation>
     </message>
     <message>
-        <location line="+115"/>
+        <location line="+123"/>
         <source>Autosave failed:</source>
         <translation>Guardado automático fallado:</translation>
     </message>
@@ -1077,7 +1077,7 @@ Do you wish to recover it?</source>
         <translation type="obsolete">Elija el directorio de guardado automático</translation>
     </message>
     <message>
-        <location line="-50"/>
+        <location line="-53"/>
         <source>Autosaving to:</source>
         <translation>Guardado automático de:</translation>
     </message>
@@ -1619,14 +1619,11 @@ Do you wish to recover it?</source>
         <translation>Primer punto de corte</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+8"/>
-        <location line="+7"/>
         <source>Done</source>
-        <translation>Terminar</translation>
+        <translation type="vanished">Terminar</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+8"/>
         <source>Second break point</source>
         <translation>Segundo punto de corte</translation>
     </message>
@@ -3940,12 +3937,11 @@ ya está en la lista.</translation>
         <translation>Siguiente vértice</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Terminar</translation>
+        <translation type="vanished">Terminar</translation>
     </message>
     <message>
-        <location line="+418"/>
+        <location line="+421"/>
         <source>close</source>
         <translation>close</translation>
     </message>
@@ -4087,12 +4083,17 @@ ya está en la lista.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2078"/>
+        <location line="+2079"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="-1801"/>
+        <location line="-2078"/>
+        <source>Done</source>
+        <translation type="unfinished">Terminar</translation>
+    </message>
+    <message>
+        <location line="+277"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Herramienta activa:</translation>
@@ -5173,7 +5174,7 @@ El archivo &apos;%1&apos; ya existe. ¿Desea sobreescribirlo?</translatorcomment
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+250"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+249"/>
         <source>Black</source>
         <translation>Negro</translation>
     </message>
@@ -5193,8 +5194,8 @@ El archivo &apos;%1&apos; ya existe. ¿Desea sobreescribirlo?</translatorcomment
         <translation type="obsolete">Bienvenido a QCAD</translation>
     </message>
     <message>
-        <location line="-220"/>
-        <location line="+219"/>
+        <location line="-219"/>
+        <location line="+218"/>
         <source>%1 First Start</source>
         <translation>Primera puesta en %1</translation>
     </message>
@@ -6549,7 +6550,7 @@ Ver gráficos</translatorcomment>
         <translation>Girar las entidades&lt;br&gt;pegadas por este ángulo</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale:</source>
         <translation>Escala:</translation>
     </message>
@@ -6630,12 +6631,11 @@ Ver gráficos</translatorcomment>
         <translation>Especifique la segunda línea</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Terminar</translation>
+        <translation type="vanished">Terminar</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+91"/>
         <source>Angle:</source>
         <translation>Ángulo:</translation>
     </message>
@@ -6656,12 +6656,11 @@ Ver gráficos</translatorcomment>
         <translation type="vanished">Seleccione arco, círculo, elipse o elíptica arco</translation>
     </message>
     <message>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+73"/>
         <source>Done</source>
-        <translation>Terminar</translation>
+        <translation type="vanished">Terminar</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+306"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -6808,12 +6807,11 @@ Ver gráficos</translatorcomment>
         <translation>Establecer la esquina siguiente polígono</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation>Terminar</translation>
+        <translation type="vanished">Terminar</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+144"/>
         <source>Polygon area:</source>
         <translation>Área de un polígono:</translation>
     </message>
@@ -6855,12 +6853,11 @@ Ver gráficos</translatorcomment>
         <translation>Especifique segunda entidad</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Terminar</translation>
+        <translation type="vanished">Terminar</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+95"/>
         <source>Distance:</source>
         <translation>Distancia:</translation>
     </message>
@@ -6883,12 +6880,11 @@ Ver gráficos</translatorcomment>
         <translation>Especifique punto</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Terminar</translation>
+        <translation type="vanished">Terminar</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+81"/>
         <source>Distance:</source>
         <translation>Distancia:</translation>
     </message>
@@ -6915,12 +6911,11 @@ Ver gráficos</translatorcomment>
         <translation>Segundo punto</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Terminar</translation>
+        <translation type="vanished">Terminar</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+53"/>
         <source>Distance:</source>
         <translation>Distancia:</translation>
     </message>
@@ -6964,12 +6959,11 @@ Delta Y:</translatorcomment>
         <translation>Elija la polilínea</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation>Terminar</translation>
+        <translation type="vanished">Terminar</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+51"/>
         <source>Area</source>
         <translation>Área</translation>
     </message>
@@ -7287,7 +7281,7 @@ Aleatorizar el desplazamiento horizontal este porcentaje</translatorcomment>
         <translation>Girar bloque de&lt;br&gt;este punto de vista</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale X:</source>
         <translation>Escala X:</translation>
     </message>
@@ -7386,7 +7380,7 @@ Aleatorizar el desplazamiento horizontal este porcentaje</translatorcomment>
         <translation>Girar las entidades&lt;br&gt;pegadas por este ángulo</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+103"/>
         <source>Scale:</source>
         <translation>Escala:</translation>
     </message>
@@ -7978,9 +7972,8 @@ Capacidad de remuestreo de datos de capa de mapa rster de GRASS</translatorcomme
         <translation>Siguiente vértice</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Terminar</translation>
+        <translation type="vanished">Terminar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
@@ -8433,9 +8426,8 @@ en los resultados de búsqueda:</translation>
         <translation>Siguiente punto</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Terminar</translation>
+        <translation type="vanished">Terminar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
@@ -8591,9 +8583,8 @@ en los resultados de búsqueda:</translation>
         <translation>Segundo punto</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Terminar</translation>
+        <translation type="vanished">Terminar</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
@@ -8654,9 +8645,8 @@ en los resultados de búsqueda:</translation>
         <translation>Segundo punto</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Terminar</translation>
+        <translation type="vanished">Terminar</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
@@ -10646,7 +10636,7 @@ en los resultados de búsqueda:</translation>
         <translation type="vanished">Geometría</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+761"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+763"/>
         <source>Add custom property to selected objects</source>
         <translation>Agregar una propiedad personalizada a los objetos seleccionados</translation>
     </message>
@@ -10681,7 +10671,7 @@ en los resultados de búsqueda:</translation>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1236"/>
+        <location line="-1238"/>
         <source>:</source>
         <translatorcomment>--exact match--
 --file: artisan_es.ts--
@@ -10739,7 +10729,7 @@ Mosaico horizontal
         <translation>Todo</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+69"/>
         <source>Show</source>
         <translation>Mostrar</translation>
     </message>
@@ -12203,9 +12193,8 @@ Modo de búsqueda:</translatorcomment>
         <translation>Primer punto de esquina</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>Done</source>
-        <translation>Terminar</translation>
+        <translation type="vanished">Terminar</translation>
     </message>
     <message>
         <source>Select &amp;Rectangular Area</source>
@@ -12224,7 +12213,7 @@ Modo de búsqueda:</translatorcomment>
         <translation>(De-)seleccionar todas las entidades dentro de un rectángulo</translation>
     </message>
     <message>
-        <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="-1"/>
+        <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="+7"/>
         <source>Second corner</source>
         <translation>Segunda punto de esquina</translation>
     </message>
@@ -12499,9 +12488,8 @@ No se pudo transformar la capa &quot;%1&quot;</translatorcomment>
         <translation>Medio de lado</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Terminar</translation>
+        <translation type="vanished">Terminar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
@@ -12542,9 +12530,8 @@ No se pudo transformar la capa &quot;%1&quot;</translatorcomment>
         <translation>Segunda punto de esquina</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation>Terminar</translation>
+        <translation type="vanished">Terminar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
@@ -12584,9 +12571,8 @@ No se pudo transformar la capa &quot;%1&quot;</translatorcomment>
         <translation>Punto de esquina</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Terminar</translation>
+        <translation type="vanished">Terminar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
@@ -12621,9 +12607,8 @@ No se pudo transformar la capa &quot;%1&quot;</translatorcomment>
         <translation>Esquina</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Terminar</translation>
+        <translation type="vanished">Terminar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
@@ -13205,9 +13190,8 @@ No se pudo transformar la capa &quot;%1&quot;</translatorcomment>
         <translation>Siguiente punto de control</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation>Terminar</translation>
+        <translation type="vanished">Terminar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
@@ -13671,7 +13655,7 @@ Punto objetivo</translatorcomment>
         <translation>Otros...</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+133"/>
         <source>Degree</source>
         <translation>Grados</translation>
     </message>

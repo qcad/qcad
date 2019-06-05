@@ -841,12 +841,12 @@ the preference changes to take effect.</source>
         <translation>Automatisk sparning</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+100"/>
         <source>Autosaving to:</source>
         <translation>Autospara till:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>Autosave failed:</source>
         <translation>Autosave misslyckades:</translation>
     </message>
@@ -1396,14 +1396,11 @@ Vill du återställa den?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+8"/>
-        <location line="+7"/>
         <source>Done</source>
-        <translation type="unfinished">Klar</translation>
+        <translation type="obsolete">Klar</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+8"/>
         <source>Second break point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3427,12 +3424,11 @@ is already in the list.</source>
         <translation type="unfinished">nästa spets</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Klar</translation>
+        <translation type="obsolete">Klar</translation>
     </message>
     <message>
-        <location line="+418"/>
+        <location line="+421"/>
         <source>close</source>
         <translation>stäng</translation>
     </message>
@@ -3545,12 +3541,17 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2078"/>
+        <location line="+2079"/>
         <source>Cancel</source>
         <translation type="unfinished">Avbryt</translation>
     </message>
     <message>
-        <location line="-1801"/>
+        <location line="-2078"/>
+        <source>Done</source>
+        <translation type="unfinished">Klar</translation>
+    </message>
+    <message>
+        <location line="+277"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation type="unfinished"></translation>
@@ -4509,7 +4510,7 @@ is already in the list.</source>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+219"/>
+        <location line="+218"/>
         <source>%1 First Start</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5439,7 +5440,7 @@ is already in the list.</source>
         <translation type="unfinished">Rotera klistrade objekt&lt;br&gt;med denna vinkel</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale:</source>
         <translation type="unfinished">Skala:</translation>
     </message>
@@ -5520,12 +5521,11 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Klar</translation>
+        <translation type="obsolete">Klar</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+91"/>
         <source>Angle:</source>
         <translation type="unfinished">Vinkel:</translation>
     </message>
@@ -5543,12 +5543,11 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Klar</translation>
+        <translation type="obsolete">Klar</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location line="+236"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -5690,12 +5689,11 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation type="unfinished">Klar</translation>
+        <translation type="obsolete">Klar</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+144"/>
         <source>Polygon area:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5733,12 +5731,11 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Klar</translation>
+        <translation type="obsolete">Klar</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+95"/>
         <source>Distance:</source>
         <translation type="unfinished">Avstånd:</translation>
     </message>
@@ -5761,12 +5758,11 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Klar</translation>
+        <translation type="obsolete">Klar</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+81"/>
         <source>Distance:</source>
         <translation type="unfinished">Avstånd:</translation>
     </message>
@@ -5789,12 +5785,11 @@ is already in the list.</source>
         <translation type="unfinished">Andra punkten</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Klar</translation>
+        <translation type="obsolete">Klar</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+53"/>
         <source>Distance:</source>
         <translation type="unfinished">Avstånd:</translation>
     </message>
@@ -5827,12 +5822,11 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation type="unfinished">Klar</translation>
+        <translation type="obsolete">Klar</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+51"/>
         <source>Area</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6045,7 +6039,7 @@ is already in the list.</source>
         <translation>Rotera block&lt;br&gt;med denna vinkeln</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale X:</source>
         <translation>Skala X:</translation>
     </message>
@@ -6148,7 +6142,7 @@ is already in the list.</source>
         <translation>Rotera klistrade objekt&lt;br&gt;med denna vinkel</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+103"/>
         <source>Scale:</source>
         <translation>Skala:</translation>
     </message>
@@ -6587,9 +6581,8 @@ is already in the list.</source>
         <translation>nästa spets</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Klar</translation>
+        <translation type="vanished">Klar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
@@ -6999,9 +6992,8 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Klar</translation>
+        <translation type="obsolete">Klar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
@@ -7153,9 +7145,8 @@ shown in search results:</source>
         <translation type="unfinished">Andra punkten</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Klar</translation>
+        <translation type="obsolete">Klar</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
@@ -7216,9 +7207,8 @@ shown in search results:</source>
         <translation type="unfinished">Andra punkten</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Klar</translation>
+        <translation type="obsolete">Klar</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
@@ -8798,7 +8788,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+24"/>
         <source>Add custom property to selected objects</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9908,9 +9898,8 @@ shown in search results:</source>
         <translation type="unfinished">Andra hörnet</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Done</source>
-        <translation type="unfinished">Klar</translation>
+        <translation type="obsolete">Klar</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
@@ -10098,9 +10087,8 @@ shown in search results:</source>
         <translation>Mitten av sida</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Klar</translation>
+        <translation type="vanished">Klar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui" line="+17"/>
@@ -10141,9 +10129,8 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation type="unfinished">Klar</translation>
+        <translation type="obsolete">Klar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
@@ -10179,9 +10166,8 @@ shown in search results:</source>
         <translation>Hörnpunkt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Klar</translation>
+        <translation type="vanished">Klar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
@@ -10212,9 +10198,8 @@ shown in search results:</source>
         <translation>Hörnpunkt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Klar</translation>
+        <translation type="vanished">Klar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
@@ -10670,9 +10655,8 @@ shown in search results:</source>
         <translation>Nästa kontrollpunkt</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation>Klar</translation>
+        <translation type="vanished">Klar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
@@ -11108,7 +11092,7 @@ shown in search results:</source>
         <translation>Andra...</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+133"/>
         <source>Degree</source>
         <translation>Grad</translation>
     </message>

@@ -845,12 +845,12 @@ lütfen QCAD&apos;i yeniden başlatın.</translation>
         <translation>Dosya</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+100"/>
         <source>Autosaving to:</source>
         <translation>Otomatik kaydet :</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>Autosave failed:</source>
         <translation>Otomatik kaydet  hatası:</translation>
     </message>
@@ -1445,14 +1445,7 @@ Onu kurtarmak ister misiniz?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
         <location line="+8"/>
-        <location line="+7"/>
-        <source>Done</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-10"/>
         <source>Second break point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3493,12 +3486,11 @@ is already in the list.</source>
         <translation type="unfinished">Sonraki tepe</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Bitti</translation>
+        <translation type="vanished">Bitti</translation>
     </message>
     <message>
-        <location line="+418"/>
+        <location line="+421"/>
         <source>close</source>
         <translation>kapat</translation>
     </message>
@@ -3610,12 +3602,17 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2078"/>
+        <location line="+2079"/>
         <source>Cancel</source>
         <translation type="unfinished">İptal</translation>
     </message>
     <message>
-        <location line="-1801"/>
+        <location line="-2078"/>
+        <source>Done</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+277"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation type="unfinished"></translation>
@@ -4585,7 +4582,7 @@ is already in the list.</source>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+219"/>
+        <location line="+218"/>
         <source>%1 First Start</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5507,7 +5504,7 @@ is already in the list.</source>
         <translation type="unfinished">Bu açıdan yapıştırılmış&lt;br&gt;varlıkları döndür</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale:</source>
         <translation type="unfinished">Ölçek:</translation>
     </message>
@@ -5588,12 +5585,11 @@ is already in the list.</source>
         <translation>İkinci satırı belirt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Bitti</translation>
+        <translation type="vanished">Bitti</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+91"/>
         <source>Angle:</source>
         <translation>Açı:</translation>
     </message>
@@ -5611,12 +5607,11 @@ is already in the list.</source>
         <translation>Ark, daire, elips veya eliptik yayı seç</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Bitti</translation>
+        <translation type="vanished">Bitti</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location line="+236"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -5758,12 +5753,11 @@ is already in the list.</source>
         <translation>Bir sonraki çokgen köşeyi ayarla</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation>Bitti</translation>
+        <translation type="vanished">Bitti</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+144"/>
         <source>Polygon area:</source>
         <translation>Çokgen alanı:</translation>
     </message>
@@ -5801,12 +5795,11 @@ is already in the list.</source>
         <translation>İikinci varlığı belirt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Bitti</translation>
+        <translation type="vanished">Bitti</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+95"/>
         <source>Distance:</source>
         <translation>Ara:</translation>
     </message>
@@ -5829,12 +5822,11 @@ is already in the list.</source>
         <translation>Noktayı belirtin</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Bitti</translation>
+        <translation type="vanished">Bitti</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+81"/>
         <source>Distance:</source>
         <translation>Mesafe:</translation>
     </message>
@@ -5857,12 +5849,11 @@ is already in the list.</source>
         <translation>İkinci nokta</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Bitti</translation>
+        <translation type="vanished">Bitti</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+53"/>
         <source>Distance:</source>
         <translation>Mesafe:</translation>
     </message>
@@ -5895,12 +5886,11 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation>Bitti</translation>
+        <translation type="vanished">Bitti</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+51"/>
         <source>Area</source>
         <translation type="unfinished">Alan</translation>
     </message>
@@ -6118,7 +6108,7 @@ is already in the list.</source>
         <translation>Bloğu döndür&lt;br&gt;bu açıya göre</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale X:</source>
         <translation>Ölçek X:</translation>
     </message>
@@ -6221,7 +6211,7 @@ is already in the list.</source>
         <translation>Bu açıdan yapıştırılmış&lt;br&gt;varlıkları döndür</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+103"/>
         <source>Scale:</source>
         <translation>Ölçek:</translation>
     </message>
@@ -6656,9 +6646,8 @@ is already in the list.</source>
         <translation>Sonraki tepe</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Oldu</translation>
+        <translation type="vanished">Oldu</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
@@ -7068,9 +7057,8 @@ shown in search results:</source>
         <translation>Sonraki nokta</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Bitti</translation>
+        <translation type="vanished">Bitti</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
@@ -7222,11 +7210,6 @@ shown in search results:</source>
         <translation type="unfinished">İkinci nokta</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Done</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
         <translation type="unfinished"></translation>
@@ -7283,11 +7266,6 @@ shown in search results:</source>
         <location line="+7"/>
         <source>Second point</source>
         <translation type="unfinished">İkinci nokta</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Done</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
@@ -8893,7 +8871,7 @@ shown in search results:</source>
         <translation>Tümü</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+24"/>
         <source>Add custom property to selected objects</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10011,11 +9989,6 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Done</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
         <source>(De-)Select &amp;Rectangular Area</source>
         <translation type="unfinished"></translation>
@@ -10194,9 +10167,8 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Bitti</translation>
+        <translation type="vanished">Bitti</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.ui" line="+17"/>
@@ -10256,11 +10228,6 @@ shown in search results:</source>
         <source>Second Corner</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location line="+4"/>
-        <source>Done</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ShapePolygonCP</name>
@@ -10275,9 +10242,8 @@ shown in search results:</source>
         <translation type="unfinished">Köşe noktası</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Bitti</translation>
+        <translation type="vanished">Bitti</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
@@ -10308,9 +10274,8 @@ shown in search results:</source>
         <translation>Köşe noktası</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Bitti</translation>
+        <translation type="vanished">Bitti</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
@@ -10795,11 +10760,6 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>Done</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
         <source>&amp;Spline (Control Points)</source>
         <translation type="unfinished"></translation>
@@ -11208,7 +11168,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+133"/>
         <source>Degree</source>
         <translation type="unfinished"></translation>
     </message>

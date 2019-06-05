@@ -877,12 +877,12 @@ da bodo spremembe začele delovat.</translation>
         <translation>Datoteka</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+100"/>
         <source>Autosaving to:</source>
         <translation>Samodejno shranjevanje v:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>Autosave failed:</source>
         <translation>Samodejno shranjevanje spodletelo:</translation>
     </message>
@@ -1483,14 +1483,11 @@ Do you wish to recover it?</source>
         <translation>Prva točka lomljenja</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+8"/>
-        <location line="+7"/>
         <source>Done</source>
-        <translation>Končano</translation>
+        <translation type="vanished">Končano</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+8"/>
         <source>Second break point</source>
         <translation>Druga točka lomljenja</translation>
     </message>
@@ -3653,12 +3650,11 @@ je že na seznamu.</translation>
         <translation>Naslednji lom</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Končano</translation>
+        <translation type="vanished">Končano</translation>
     </message>
     <message>
-        <location line="+418"/>
+        <location line="+421"/>
         <source>close</source>
         <translation>zapri</translation>
     </message>
@@ -3785,12 +3781,17 @@ je že na seznamu.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2078"/>
+        <location line="+2079"/>
         <source>Cancel</source>
         <translation>Prekliči</translation>
     </message>
     <message>
-        <location line="-1801"/>
+        <location line="-2078"/>
+        <source>Done</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+277"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Aktivno orodje:</translation>
@@ -4833,7 +4834,7 @@ je že na seznamu.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+219"/>
+        <location line="+218"/>
         <source>%1 First Start</source>
         <translation>%1 prvi začetek</translation>
     </message>
@@ -5871,7 +5872,7 @@ je že na seznamu.</translation>
         <translation type="unfinished">Rotiraj prilepljene entitete&lt;br&gt;za ta kot</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5952,12 +5953,11 @@ je že na seznamu.</translation>
         <translation>Določi drugo črto</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Končano</translation>
+        <translation type="vanished">Končano</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+91"/>
         <source>Angle:</source>
         <translation>Kot:</translation>
     </message>
@@ -5970,12 +5970,11 @@ je že na seznamu.</translation>
 <context>
     <name>InfoArcCircleArea</name>
     <message>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+73"/>
         <source>Done</source>
-        <translation>Končano</translation>
+        <translation type="vanished">Končano</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+306"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -6122,12 +6121,11 @@ je že na seznamu.</translation>
         <translation>Nastavi naslednji kot poligona</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation>Končano</translation>
+        <translation type="vanished">Končano</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+144"/>
         <source>Polygon area:</source>
         <translation>Ploščina poligona:</translation>
     </message>
@@ -6165,12 +6163,11 @@ je že na seznamu.</translation>
         <translation>Določi drugo entiteto</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Končano</translation>
+        <translation type="vanished">Končano</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+95"/>
         <source>Distance:</source>
         <translation>Razdalja:</translation>
     </message>
@@ -6193,12 +6190,11 @@ je že na seznamu.</translation>
         <translation>Določi točko</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Končano</translation>
+        <translation type="vanished">Končano</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+81"/>
         <source>Distance:</source>
         <translation>Razdalja:</translation>
     </message>
@@ -6221,12 +6217,11 @@ je že na seznamu.</translation>
         <translation>Druga točka</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Končano</translation>
+        <translation type="vanished">Končano</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+53"/>
         <source>Distance:</source>
         <translation>Razdalja:</translation>
     </message>
@@ -6259,12 +6254,11 @@ je že na seznamu.</translation>
         <translation>Izberite lomljenko</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation>Končano</translation>
+        <translation type="vanished">Končano</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+51"/>
         <source>Area</source>
         <translation>Območje</translation>
     </message>
@@ -6485,7 +6479,7 @@ je že na seznamu.</translation>
         <translation>Rotiraj blok&lt;br&gt;za ta kot</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale X:</source>
         <translation>Razmerje X:</translation>
     </message>
@@ -6588,7 +6582,7 @@ je že na seznamu.</translation>
         <translation>Rotiraj prilepljene entitete&lt;br&gt;za ta kot</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+103"/>
         <source>Scale:</source>
         <translation>Razmerje:</translation>
     </message>
@@ -7058,9 +7052,8 @@ je že na seznamu.</translation>
         <translation>Naslednji lom</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Končano</translation>
+        <translation type="vanished">Končano</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
@@ -7487,9 +7480,8 @@ shown in search results:</source>
         <translation>Naslednja točka</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Končano</translation>
+        <translation type="vanished">Končano</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
@@ -7641,9 +7633,8 @@ shown in search results:</source>
         <translation>Druga točka</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Končano</translation>
+        <translation type="vanished">Končano</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
@@ -7729,9 +7720,8 @@ shown in search results:</source>
         <translation>Druga točka</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Končaj</translation>
+        <translation type="vanished">Končaj</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="-4"/>
@@ -9533,12 +9523,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1429"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1431"/>
         <source>*VARIES*</source>
         <translation>*RAZLIČNO*</translation>
     </message>
     <message>
-        <location line="-1236"/>
+        <location line="-1238"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9582,7 +9572,7 @@ shown in search results:</source>
         <translation>Vse</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+24"/>
         <source>Add custom property to selected objects</source>
         <translation>Izbranim objektom dodaj dodatno lastnost</translation>
     </message>
@@ -10819,9 +10809,8 @@ shown in search results:</source>
         <translation>Drugi kot</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Done</source>
-        <translation>Končano</translation>
+        <translation type="vanished">Končano</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
@@ -11059,9 +11048,8 @@ shown in search results:</source>
         <translation>Sredina strani</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Končaj</translation>
+        <translation type="vanished">Končaj</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
@@ -11102,9 +11090,8 @@ shown in search results:</source>
         <translation>Drugi kot</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation>Končaj</translation>
+        <translation type="vanished">Končaj</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
@@ -11140,9 +11127,8 @@ shown in search results:</source>
         <translation>Vogalna točka</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Končano</translation>
+        <translation type="vanished">Končano</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
@@ -11177,9 +11163,8 @@ shown in search results:</source>
         <translation>Točka vogala</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Končano</translation>
+        <translation type="vanished">Končano</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
@@ -11730,9 +11715,8 @@ shown in search results:</source>
         <translation>Naslednja kontrolna točka</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation>Končano</translation>
+        <translation type="vanished">Končano</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui" line="+23"/>
@@ -12172,7 +12156,7 @@ shown in search results:</source>
         <translation>Drugo...</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+133"/>
         <source>Degree</source>
         <translation>Stopinje</translation>
     </message>

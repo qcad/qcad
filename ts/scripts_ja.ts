@@ -881,12 +881,12 @@ QCADを再起動してください。</translation>
         <translation type="unfinished">ファイル</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+100"/>
         <source>Autosaving to:</source>
         <translation>オートセーブ中:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>Autosave failed:</source>
         <translation>オートセーブ失敗:</translation>
     </message>
@@ -1483,14 +1483,11 @@ Do you wish to recover it?</source>
         <translation>最初のブレークポイント</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+8"/>
-        <location line="+7"/>
         <source>Done</source>
-        <translation>完了</translation>
+        <translation type="vanished">完了</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+8"/>
         <source>Second break point</source>
         <translation>第2のブレークポイント</translation>
     </message>
@@ -3650,12 +3647,11 @@ is already in the list.</source>
         <translation>次の頂点</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>完了</translation>
+        <translation type="vanished">完了</translation>
     </message>
     <message>
-        <location line="+418"/>
+        <location line="+421"/>
         <source>close</source>
         <translation>close</translation>
     </message>
@@ -3779,12 +3775,17 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2078"/>
+        <location line="+2079"/>
         <source>Cancel</source>
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location line="-1801"/>
+        <location line="-2078"/>
+        <source>Done</source>
+        <translation type="unfinished">完了</translation>
+    </message>
+    <message>
+        <location line="+277"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>アクティブツール:</translation>
@@ -4784,7 +4785,7 @@ is already in the list.</source>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+219"/>
+        <location line="+218"/>
         <source>%1 First Start</source>
         <translation>%1 初回実行</translation>
     </message>
@@ -5854,7 +5855,7 @@ is already in the list.</source>
         <translation type="unfinished">貼り付けエンティティを回転&lt;br&gt;この角度で</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale:</source>
         <translation type="unfinished">縮尺:</translation>
     </message>
@@ -5935,12 +5936,11 @@ is already in the list.</source>
         <translation>第２線を指定</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>完了</translation>
+        <translation type="vanished">完了</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+91"/>
         <source>Angle:</source>
         <translation>角度:</translation>
     </message>
@@ -5953,12 +5953,11 @@ is already in the list.</source>
 <context>
     <name>InfoArcCircleArea</name>
     <message>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+73"/>
         <source>Done</source>
-        <translation>完了</translation>
+        <translation type="vanished">完了</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+306"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -6105,12 +6104,11 @@ is already in the list.</source>
         <translation>次のポリゴン頂点を設定</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation>完了</translation>
+        <translation type="vanished">完了</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+144"/>
         <source>Polygon area:</source>
         <translation>ポリゴンエリア（面積）:</translation>
     </message>
@@ -6148,12 +6146,11 @@ is already in the list.</source>
         <translation>2つ目のエンティティを指定して下さい</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>完了</translation>
+        <translation type="vanished">完了</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+95"/>
         <source>Distance:</source>
         <translation>距離:</translation>
     </message>
@@ -6176,12 +6173,11 @@ is already in the list.</source>
         <translation>点を指定</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>完了</translation>
+        <translation type="vanished">完了</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+81"/>
         <source>Distance:</source>
         <translation>距離:</translation>
     </message>
@@ -6204,12 +6200,11 @@ is already in the list.</source>
         <translation>第２点</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>完了</translation>
+        <translation type="vanished">完了</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+53"/>
         <source>Distance:</source>
         <translation>距離:</translation>
     </message>
@@ -6242,12 +6237,11 @@ is already in the list.</source>
         <translation>ポリラインを選択</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation>完了</translation>
+        <translation type="vanished">完了</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+51"/>
         <source>Area</source>
         <translation>面積</translation>
     </message>
@@ -6477,7 +6471,7 @@ is already in the list.</source>
         <translation>ブロック回転&lt;br&gt;この角度で</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale X:</source>
         <translation>スケールX:</translation>
     </message>
@@ -6575,7 +6569,7 @@ is already in the list.</source>
         <translation>貼り付けエンティティを回転&lt;br&gt;この角度で</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+103"/>
         <source>Scale:</source>
         <translation>縮尺:</translation>
     </message>
@@ -7041,9 +7035,8 @@ is already in the list.</source>
         <translation>次の頂点</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>完了</translation>
+        <translation type="vanished">完了</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
@@ -7470,9 +7463,8 @@ shown in search results:</source>
         <translation>次の点</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>完了</translation>
+        <translation type="vanished">完了</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
@@ -7624,9 +7616,8 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">完了</translation>
+        <translation type="obsolete">完了</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
@@ -7687,9 +7678,8 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">完了</translation>
+        <translation type="obsolete">完了</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
@@ -9463,12 +9453,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1429"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1431"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
     <message>
-        <location line="-1236"/>
+        <location line="-1238"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9512,7 +9502,7 @@ shown in search results:</source>
         <translation>全て</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+69"/>
         <source>Show</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10745,9 +10735,8 @@ shown in search results:</source>
         <translation>第2角</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Done</source>
-        <translation>完了</translation>
+        <translation type="vanished">完了</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
@@ -10977,9 +10966,8 @@ shown in search results:</source>
         <translation>辺の中央</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>完了</translation>
+        <translation type="vanished">完了</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
@@ -11020,9 +11008,8 @@ shown in search results:</source>
         <translation>第２の頂点</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation>完了</translation>
+        <translation type="vanished">完了</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
@@ -11058,9 +11045,8 @@ shown in search results:</source>
         <translation>頂点</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>完了</translation>
+        <translation type="vanished">完了</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
@@ -11095,9 +11081,8 @@ shown in search results:</source>
         <translation>頂点</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>完了</translation>
+        <translation type="vanished">完了</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
@@ -11648,9 +11633,8 @@ shown in search results:</source>
         <translation>次の制御点</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation>完了</translation>
+        <translation type="vanished">完了</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui" line="+23"/>
@@ -12086,7 +12070,7 @@ shown in search results:</source>
         <translation>その他...</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+133"/>
         <source>Degree</source>
         <translation>角度</translation>
     </message>

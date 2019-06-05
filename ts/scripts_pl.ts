@@ -1038,13 +1038,13 @@ Promień:</translatorcomment>
         <translation>Plik</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+100"/>
         <source>Autosaving to:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Automatyczne zapisywanie do pliku:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+23"/>
         <source>Autosave failed:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nie udało się zapisać automatycznie:</translation>
@@ -1760,14 +1760,11 @@ Podziel &amp;2</translatorcomment>
         <translation>Pierwszy punkt podziału</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+8"/>
-        <location line="+7"/>
         <source>Done</source>
-        <translation>Zrobione</translation>
+        <translation type="vanished">Zrobione</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+8"/>
         <source>Second break point</source>
         <translation>Drugi punkt podziału</translation>
     </message>
@@ -4403,17 +4400,16 @@ Podziel &amp;2</translatorcomment>
         <translation>Następny wierzchołek</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Zrobione.
 Zrobione
 &amp;Zrobione i do następnego</translatorcomment>
-        <translation>Zrobione</translation>
+        <translation type="vanished">Zrobione</translation>
     </message>
     <message>
-        <location line="+418"/>
+        <location line="+421"/>
         <source>close</source>
         <translation>zamknij</translation>
     </message>
@@ -4551,7 +4547,7 @@ Powrót do poprzedniego menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2078"/>
+        <location line="+2079"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -4560,7 +4556,12 @@ Anuluj
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location line="-1801"/>
+        <location line="-2078"/>
+        <source>Done</source>
+        <translation type="unfinished">Zrobione</translation>
+    </message>
+    <message>
+        <location line="+277"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
@@ -5682,7 +5683,7 @@ Format:</translatorcomment>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+219"/>
+        <location line="+218"/>
         <source>%1 First Start</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Pierwsze uruchomienie %1</translation>
@@ -7069,7 +7070,7 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
         <translation type="unfinished">Obraca wklejone obiekty o zadany kąt</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale:</source>
         <translation type="unfinished">Skala:</translation>
     </message>
@@ -7156,17 +7157,16 @@ Wskaż drugą linie</translatorcomment>
         <translation>Proszę wskazać drugą linię</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Zrobione.
 Zrobione
 &amp;Zrobione i do następnego</translatorcomment>
-        <translation>Zrobione</translation>
+        <translation type="vanished">Zrobione</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+91"/>
         <source>Angle:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -7187,12 +7187,11 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
 <context>
     <name>InfoArcCircleArea</name>
     <message>
-        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+73"/>
         <source>Done</source>
-        <translation>Zrobione</translation>
+        <translation type="vanished">Zrobione</translation>
     </message>
     <message>
-        <location line="+233"/>
+        <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+306"/>
         <location line="+21"/>
         <location line="+24"/>
         <location line="+21"/>
@@ -7340,17 +7339,16 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
         <translation>Proszę wskazać następny narożnik wielokąta</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Zrobione.
 Zrobione
 &amp;Zrobione i do następnego</translatorcomment>
-        <translation>Zrobione</translation>
+        <translation type="vanished">Zrobione</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+144"/>
         <source>Polygon area:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Pole wielokąta:</translation>
@@ -7394,12 +7392,11 @@ Obwód: %1</translatorcomment>
         <translation>Proszę wskazać drugi obiekt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Zrobione</translation>
+        <translation type="vanished">Zrobione</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+95"/>
         <source>Distance:</source>
         <translation>Odległość:</translation>
     </message>
@@ -7429,17 +7426,16 @@ Wskaż punkt</translatorcomment>
         <translation type="unfinished">Wskaż punkt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Zrobione.
 Zrobione
 &amp;Zrobione i do następnego</translatorcomment>
-        <translation type="unfinished">Zrobione</translation>
+        <translation type="obsolete">Zrobione</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+81"/>
         <source>Distance:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -7475,17 +7471,16 @@ Wskaż drugi punkt linii odbicia</translatorcomment>
         <translation>Drugi punkt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Zrobione.
 Zrobione
 &amp;Zrobione i do następnego</translatorcomment>
-        <translation>Zrobione</translation>
+        <translation type="vanished">Zrobione</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+53"/>
         <source>Distance:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -7529,12 +7524,11 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
         <translation>Proszę wskazać linię łamaną</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Done</source>
-        <translation>Zrobione</translation>
+        <translation type="vanished">Zrobione</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+51"/>
         <source>Area</source>
         <translation>Pole powierzchni</translation>
     </message>
@@ -7814,7 +7808,7 @@ Wskaż pozycje</translatorcomment>
         <translation>Obraca blok&lt;br&gt;o zadany kąt</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+110"/>
         <source>Scale X:</source>
         <translation>Skala X:</translation>
     </message>
@@ -7922,7 +7916,7 @@ Obracanie:</translatorcomment>
         <translation>Obraca wklejone obiekty o zadany kąt</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+103"/>
         <source>Scale:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -8469,14 +8463,13 @@ Lista warstw</translatorcomment>
         <translation>Następny wierzchołek</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Zrobione.
 Zrobione
 &amp;Zrobione i do następnego</translatorcomment>
-        <translation>Zrobione</translation>
+        <translation type="vanished">Zrobione</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
@@ -9060,14 +9053,13 @@ Wskaż następny punkt wieloboku</translatorcomment>
         <translation>Następny punkt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Zrobione.
 Zrobione
 &amp;Zrobione i do następnego</translatorcomment>
-        <translation>Zrobione</translation>
+        <translation type="vanished">Zrobione</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
@@ -9273,9 +9265,8 @@ Liczba:</translatorcomment>
         <translation type="unfinished">Drugi punkt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Zrobione</translation>
+        <translation type="obsolete">Zrobione</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
@@ -9336,9 +9327,8 @@ Liczba:</translatorcomment>
         <translation type="unfinished">Drugi punkt</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Zrobione</translation>
+        <translation type="obsolete">Zrobione</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
@@ -11598,13 +11588,13 @@ Wskaż punkt docelowy</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1429"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1431"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*RÓŻNE*</translation>
     </message>
     <message>
-        <location line="-1236"/>
+        <location line="-1238"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_pl.ts--
@@ -11672,7 +11662,7 @@ Czy chcesz zamknąć plik
         <translation>Wszystkie</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+69"/>
         <source>Show</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13261,14 +13251,13 @@ Wskaż drugi wierzchołek</translatorcomment>
         <translation>Drugi narożnik</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Zrobione.
 Zrobione
 &amp;Zrobione i do następnego</translatorcomment>
-        <translation>Zrobione</translation>
+        <translation type="vanished">Zrobione</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
@@ -13542,9 +13531,8 @@ Wskaż pozycje</translatorcomment>
         <translation>Środek boku</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Zrobione</translation>
+        <translation type="vanished">Zrobione</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
@@ -13585,9 +13573,8 @@ Wskaż pozycje</translatorcomment>
         <translation>Drugi narożnik</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
-        <translation>Zrobione</translation>
+        <translation type="vanished">Zrobione</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
@@ -13623,9 +13610,8 @@ Wskaż pozycje</translatorcomment>
         <translation>Punkt narożnika</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Zrobione</translation>
+        <translation type="vanished">Zrobione</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui" line="+17"/>
@@ -13660,9 +13646,8 @@ Wskaż pozycje</translatorcomment>
         <translation>Punkt narożnika</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Done</source>
-        <translation>Zrobione</translation>
+        <translation type="vanished">Zrobione</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui" line="+17"/>
@@ -14304,14 +14289,13 @@ Wskaż następny punkt kontrolny</translatorcomment>
         <translation>Następny punkt kontrolny</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Done</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Zrobione.
 Zrobione
 &amp;Zrobione i do następnego</translatorcomment>
-        <translation>Zrobione</translation>
+        <translation type="vanished">Zrobione</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui" line="+23"/>
@@ -14843,7 +14827,7 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
         <translation>Inne...</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+133"/>
         <source>Degree</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
