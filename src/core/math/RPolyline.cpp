@@ -1248,10 +1248,20 @@ bool RPolyline::containsShape(const RShape& shape) const {
         return false;
     }
 
+    if (RShape::isPolylineShape(shape)) {
+        const RPolyline& pl = dynamic_cast<const RPolyline&>(shape);
+        for (int i=0; i<pl.countVertices() && i<5; i++) {
+            if (contains(pl.getVertexAt(i))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     // check if the shape is completely inside the polygon.
     // this is the case if one point on the entity is inside the polygon
     // and the entity does not intersect with the polygon.
-    if (shape.isDirected()) {
+    else if (shape.isDirected()) {
         return contains(shape.getStartPoint()) && contains(shape.getEndPoint());
     }
     else {
@@ -1263,6 +1273,7 @@ bool RPolyline::containsShape(const RShape& shape) const {
             if (contains(p1) || contains(p2)) {
                 return true;
             }
+            return false;
         }
         else {
             // other shapes:
@@ -1270,6 +1281,7 @@ bool RPolyline::containsShape(const RShape& shape) const {
             if (contains(pointOnShape, true)) {
                 return true;
             }
+            return false;
         }
     }
 
