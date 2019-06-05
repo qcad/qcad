@@ -4175,7 +4175,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="-2078"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Fertig</translation>
     </message>
     <message>
         <location line="+277"/>
