@@ -4090,7 +4090,7 @@ ya está en la lista.</translation>
     <message>
         <location line="-2078"/>
         <source>Done</source>
-        <translation type="unfinished">Terminar</translation>
+        <translation>Terminar</translation>
     </message>
     <message>
         <location line="+277"/>
