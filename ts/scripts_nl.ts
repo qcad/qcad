@@ -3699,7 +3699,7 @@ is al in de lijst.</translation>
     <message>
         <location line="-2078"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Klaar</translation>
     </message>
     <message>
         <location line="+277"/>
