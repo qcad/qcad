@@ -4064,7 +4064,7 @@ is already in the list.</source>
     <message>
         <location line="-2078"/>
         <source>Done</source>
-        <translation type="unfinished">Fatto</translation>
+        <translation>Fatto</translation>
     </message>
     <message>
         <location line="+277"/>
