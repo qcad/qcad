@@ -1307,12 +1307,13 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
             int pMode = getDocument()->getKnownVariable(RS::PDMODE, 0).toInt();
 
             // FS#481: for printing, point size does not depend on current viewing factor:
-            if (isPrintingOrExporting() || isPrintPreview()) {
+            if (isPrinting() || isPrintPreview()) {
                 pMode = 0;
             }
             else {
                 // When not printing, set pen width to zero so when zooming in
                 // the lines don't turn into a blob
+                // This also applies when exporting (e.g. to bitmap):
                 QPen pen = painter->pen();
                 pen.setWidth(0);
                 painter->setPen(pen);
@@ -1476,10 +1477,11 @@ double RGraphicsViewImage::getPointSize(double pSize) {
 
 void RGraphicsViewImage::drawDot(QPainter* painter, QPointF pt) {
     qreal r;
-    if (isPrintingOrExporting() || isPrintPreview()) {
+    if (isPrinting() || isPrintPreview()) {
         RDocument* doc = getDocument();
         r = RUnit::convert(doc->getVariable("PageSettings/PointSize", 0.5, true).toDouble()/2.0, RS::Millimeter, doc->getUnit());
     } else {
+        // screen rendering / (bitmap) exporting
         r = mapDistanceFromView(1.5);
     }
     painter->setBrush(painter->pen().color());
