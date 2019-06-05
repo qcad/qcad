@@ -104,6 +104,10 @@
                 qScriptValueFromValue(&engine, RTextRenderer::rxXAlignmentRight),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxXSpaceMText",
+                qScriptValueFromValue(&engine, RTextRenderer::rxXSpaceMText),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxParagraphFeed",
                 qScriptValueFromValue(&engine, RTextRenderer::rxParagraphFeed),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

@@ -76,6 +76,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="rxXAlignmentRight" type="QString"
     isConst="false" isStatic="true" />
+    <property name="rxXSpaceMText" type="QString" isConst="false"
+    isStatic="true" />
     <property name="rxParagraphFeed" type="QString" isConst="false"
     isStatic="true" />
     <property name="rxXFeed" type="QString" isConst="false"
