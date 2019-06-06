@@ -3724,7 +3724,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="-2078"/>
         <source>Done</source>
-        <translation type="unfinished">Valmis</translation>
+        <translation>Valmis</translation>
     </message>
     <message>
         <location line="+277"/>
