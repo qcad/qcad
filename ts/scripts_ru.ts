@@ -3681,7 +3681,7 @@ is already in the list.</source>
     <message>
         <location line="-2078"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Готово</translation>
     </message>
     <message>
         <location line="+277"/>
