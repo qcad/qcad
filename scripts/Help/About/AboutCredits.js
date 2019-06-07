@@ -55,7 +55,7 @@ var credits =
         //[ "Wang Zhen Zhe",     "Chinese (zh_CN) translation." ],
         [ "Petr Zgraja, 'fialot'", "Czech (cs) translation" ],
         [ "Andrew Mustun",       "Dutch (nl) translation" ],
-        [ "Timo Seppola",        "Finnish (fi) translation" ],
+        [ "Timo Seppola, Jarmo", "Finnish (fi) translation" ],
         [ "Andrew Mustun",       "German (de) translation" ],
         [ "Fabrizio Margini",    "Italian (it) translation" ],
         [ "Tanaka Hidemune",     "Japanese (ja) translation and Japanese user reference manual" ],
