@@ -1267,12 +1267,12 @@ Voulez-vous le récupérer?</translation>
     <message>
         <location line="+6"/>
         <source>Width:</source>
-        <translation>Largeur : </translation>
+        <translation>Largeur : </translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Height:</source>
-        <translation>Hauteur : </translation>
+        <translation>Hauteur : </translation>
     </message>
     <message>
         <location line="+23"/>
@@ -13454,7 +13454,7 @@ Indiquer le point cible</translatorcomment>
         <location line="+20"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+23"/>
         <source>Height:</source>
-        <translation>Hauteur : </translation>
+        <translation>Hauteur : </translation>
     </message>
     <message>
         <location line="+20"/>
@@ -13717,7 +13717,7 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location line="+24"/>
         <source>Height:</source>
-        <translation>Hauteur : </translation>
+        <translation>Hauteur : </translation>
     </message>
     <message>
         <location line="+7"/>
