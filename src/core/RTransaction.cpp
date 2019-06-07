@@ -358,10 +358,13 @@ void RTransaction::commit() {
         //return;
     }
 
-    RMainWindow* mainWindow = RMainWindow::getMainWindow();
-    if (mainWindow!=NULL && storage->getDocument()!=NULL) {
-        mainWindow->notifyInterTransactionListeners(storage->getDocument(), this);
-    }
+    //if (!isPreview()) {
+        // no inter translation listener notification in preview:
+        RMainWindow* mainWindow = RMainWindow::getMainWindow();
+        if (mainWindow!=NULL && storage->getDocument()!=NULL) {
+            mainWindow->notifyInterTransactionListeners(storage->getDocument(), this);
+        }
+    //}
 
     if (affectedObjectIds.size()>0) {
         storage->saveTransaction(*this);
