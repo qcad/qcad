@@ -1421,10 +1421,18 @@ RColor RSettings::getColorValue(const QString& key, const RColor& defaultValue) 
     if (ret.canConvert<RColor>()) {
         return ret.value<RColor>();
     }
+#if QT_VERSION >= 0x050000
     else if (ret.canConvert(QMetaType::QString)) {
+#else
+    else if (ret.canConvert(QVariant::String)) {
+#endif
         return RColor(ret.toString());
     }
+#if QT_VERSION >= 0x050000
     else if (ret.canConvert(QMetaType::QColor)) {
+#else
+    else if (ret.canConvert(QVariant::Color)) {
+#endif
         return RColor(ret.value<QColor>());
     }
     else {
