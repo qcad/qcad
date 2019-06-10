@@ -216,7 +216,6 @@ QList<RBox> RBlockReferenceData::getBoundingBoxes(bool ignoreEmpty) const {
     }
 
     if (document == NULL) {
-        qWarning() << "RBlockReferenceData::getBoundingBox: document is NULL";
         return QList<RBox>();
     }
 
@@ -251,6 +250,9 @@ QList<RBox> RBlockReferenceData::getBoundingBoxes(bool ignoreEmpty) const {
             for (it = ids.begin(); it != ids.end(); it++) {
                 QSharedPointer<REntity> entity = queryEntity(*it);
                 if (entity.isNull()) {
+                    continue;
+                }
+                if (!entity->isVisible()) {
                     continue;
                 }
                 if (col!=0 || row!=0) {
