@@ -182,6 +182,46 @@
         <return>return <expr><call><name><name>RPolyline</name>::<name>getOrientation</name></name><argument_list>(<argument><expr><name>implicitelyClosed</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>setGlobalWidth</name><parameter_list>(<param><decl><type><name>double</name></type> <name>w</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RPolyline::setGlobalWidth</name><parameter_list>(<param><decl><type><name>w</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setStartWidthAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>, <param><decl><type><name>double</name></type> <name>w</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RPolyline::setStartWidthAt</name><parameter_list>(<param><decl><type><name>i</name></type></decl></param>, <param><decl><type><name>w</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getStartWidthAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RPolyline</name>::<name>getStartWidthAt</name></name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setEndWidthAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>, <param><decl><type><name>double</name></type> <name>w</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RPolyline::setEndWidthAt</name><parameter_list>(<param><decl><type><name>i</name></type></decl></param>, <param><decl><type><name>w</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getEndWidthAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RPolyline</name>::<name>getEndWidthAt</name></name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>hasWidths</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RPolyline</name>::<name>hasWidths</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setStartWidths</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name>&amp;</type> <name>sw</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RPolyline::setStartWidths</name><parameter_list>(<param><decl><type><name>sw</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>QList<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name></type> <name>getStartWidths</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RPolyline</name>::<name>getStartWidths</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setEndWidths</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name>&amp;</type> <name>ew</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RPolyline::setEndWidths</name><parameter_list>(<param><decl><type><name>ew</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>QList<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name></type> <name>getEndWidths</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RPolyline</name>::<name>getEndWidths</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
     <function><type><name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getExploded</name><parameter_list>(<param><decl><type><name>int</name></type> <name>segments</name> =<init> <expr><name>RDEFAULT_MIN1</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><call><name><name>RPolyline</name>::<name>getExploded</name></name><argument_list>(<argument><expr><name>segments</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>

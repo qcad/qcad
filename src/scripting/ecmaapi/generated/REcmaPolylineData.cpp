@@ -135,6 +135,26 @@
             
             REcmaHelper::registerFunction(&engine, proto, getOrientation, "getOrientation");
             
+            REcmaHelper::registerFunction(&engine, proto, setGlobalWidth, "setGlobalWidth");
+            
+            REcmaHelper::registerFunction(&engine, proto, setStartWidthAt, "setStartWidthAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, getStartWidthAt, "getStartWidthAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, setEndWidthAt, "setEndWidthAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, getEndWidthAt, "getEndWidthAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, hasWidths, "hasWidths");
+            
+            REcmaHelper::registerFunction(&engine, proto, setStartWidths, "setStartWidths");
+            
+            REcmaHelper::registerFunction(&engine, proto, getStartWidths, "getStartWidths");
+            
+            REcmaHelper::registerFunction(&engine, proto, setEndWidths, "setEndWidths");
+            
+            REcmaHelper::registerFunction(&engine, proto, getEndWidths, "getEndWidths");
+            
             REcmaHelper::registerFunction(&engine, proto, getExploded, "getExploded");
             
             REcmaHelper::registerFunction(&engine, proto, toPainterPath, "toPainterPath");
@@ -3042,6 +3062,576 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolylineData::getOrientation", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineData::setGlobalWidth
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineData::setGlobalWidth", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineData::setGlobalWidth";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineData* self = 
+                        getSelf("setGlobalWidth", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setGlobalWidth(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineData.setGlobalWidth().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineData::setGlobalWidth", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineData::setStartWidthAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineData::setStartWidthAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineData::setStartWidthAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineData* self = 
+                        getSelf("setStartWidthAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setStartWidthAt(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineData.setStartWidthAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineData::setStartWidthAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineData::getStartWidthAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineData::getStartWidthAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineData::getStartWidthAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineData* self = 
+                        getSelf("getStartWidthAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getStartWidthAt(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineData.getStartWidthAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineData::getStartWidthAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineData::setEndWidthAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineData::setEndWidthAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineData::setEndWidthAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineData* self = 
+                        getSelf("setEndWidthAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setEndWidthAt(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineData.setEndWidthAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineData::setEndWidthAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineData::getEndWidthAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineData::getEndWidthAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineData::getEndWidthAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineData* self = 
+                        getSelf("getEndWidthAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getEndWidthAt(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineData.getEndWidthAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineData::getEndWidthAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineData::hasWidths
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineData::hasWidths", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineData::hasWidths";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineData* self = 
+                        getSelf("hasWidths", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasWidths();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineData.hasWidths().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineData::hasWidths", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineData::setStartWidths
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineData::setStartWidths", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineData::setStartWidths";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineData* self = 
+                        getSelf("setStartWidths", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < double > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < double >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setStartWidths(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineData.setStartWidths().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineData::setStartWidths", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineData::getStartWidths
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineData::getStartWidths", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineData::getStartWidths";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineData* self = 
+                        getSelf("getStartWidths", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < double >'
+    QList < double > cppResult =
+        
+               self->getStartWidths();
+        // return type: QList < double >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineData.getStartWidths().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineData::getStartWidths", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineData::setEndWidths
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineData::setEndWidths", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineData::setEndWidths";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineData* self = 
+                        getSelf("setEndWidths", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < double > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < double >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setEndWidths(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineData.setEndWidths().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineData::setEndWidths", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineData::getEndWidths
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineData::getEndWidths", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineData::getEndWidths";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineData* self = 
+                        getSelf("getEndWidths", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < double >'
+    QList < double > cppResult =
+        
+               self->getEndWidths();
+        // return type: QList < double >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineData.getEndWidths().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineData::getEndWidths", context, engine);
             return result;
         }
          QScriptValue

@@ -245,11 +245,37 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="setGlobalWidth" cppName="setGlobalWidth"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="w"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setStartWidthAt" cppName="setStartWidthAt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+        <arg type="double" typeName="double" name="w"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getStartWidthAt" cppName="getStartWidthAt"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false">
         <arg type="int" typeName="int" name="i" isConst="false" />
+      </variant>
+    </method>
+    <method name="setEndWidthAt" cppName="setEndWidthAt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+        <arg type="double" typeName="double" name="w"
+        isConst="false" />
       </variant>
     </method>
     <method name="getEndWidthAt" cppName="getEndWidthAt"
@@ -258,6 +284,40 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="double" isPureVirtual="false">
         <arg type="int" typeName="int" name="i" isConst="false" />
       </variant>
+    </method>
+    <method name="hasWidths" cppName="hasWidths" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setStartWidths" cppName="setStartWidths"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QList &lt; double &gt; &amp;"
+        typeName="QList &lt; double &gt;" name="sw"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getStartWidths" cppName="getStartWidths"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; double &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="setEndWidths" cppName="setEndWidths"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QList &lt; double &gt; &amp;"
+        typeName="QList &lt; double &gt;" name="ew"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getEndWidths" cppName="getEndWidths"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; double &gt;"
+      isPureVirtual="false" />
     </method>
     <method name="getDirection1" cppName="getDirection1"
     specifier="public" isStatic="false" isVirtual="false"
@@ -482,6 +542,26 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="target" isConst="true" />
         <arg type="int" typeName="int" name="steps"
         isConst="false" />
+      </variant>
+    </method>
+    <method name="contains" cppName="contains" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="point"
+        isConst="true" />
+        <arg type="bool" typeName="bool" name="borderIsInside"
+        hasDefault="true" default="false" isConst="false" />
+        <arg type="double" typeName="double" name="tolerance"
+        hasDefault="true" default="RS :: PointTolerance"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="containsShape" cppName="containsShape"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RShape &amp;" typeName="RShape" name="shape"
+        isConst="true" />
       </variant>
     </method>
     <method name="print" cppName="print" specifier="protected"
