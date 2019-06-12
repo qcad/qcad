@@ -60,11 +60,8 @@ REntity::~REntity() {
 }
 
 bool REntity::isComplex(const RS::EntityType type) {
-    return (type==RS::EntityAttributeDefinition ||
-            type==RS::EntityAttribute ||
-            type==RS::EntityHatch ||
-            type==RS::EntityTextBased ||
-            type==RS::EntityText ||
+    return (type==RS::EntityHatch ||
+            isTextBased(type) ||
             isDimension(type));
 }
 
@@ -78,6 +75,13 @@ bool REntity::isDimension(const RS::EntityType type) {
             type==RS::EntityDimAngular2L ||
             type==RS::EntityDimAngular3P ||
             type==RS::EntityDimOrdinate);
+}
+
+bool REntity::isTextBased(const RS::EntityType type) {
+    return (type==RS::EntityAttributeDefinition ||
+            type==RS::EntityAttribute ||
+            type==RS::EntityTextBased ||
+            type==RS::EntityText);
 }
 
 void REntity::init() {

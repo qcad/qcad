@@ -116,6 +116,7 @@ public:
 
     static bool isComplex(const RS::EntityType type);
     static bool isDimension(const RS::EntityType type);
+    static bool isTextBased(const RS::EntityType type);
 
     /**
      * \return Reference to the data object of the entity.
