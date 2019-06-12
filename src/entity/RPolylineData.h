@@ -181,6 +181,46 @@ public:
         return RPolyline::getOrientation(implicitelyClosed);
     }
 
+    void setGlobalWidth(double w) {
+        RPolyline::setGlobalWidth(w);
+    }
+
+    void setStartWidthAt(int i, double w) {
+        RPolyline::setStartWidthAt(i, w);
+    }
+
+    double getStartWidthAt(int i) const {
+        return RPolyline::getStartWidthAt(i);
+    }
+
+    void setEndWidthAt(int i, double w) {
+        RPolyline::setEndWidthAt(i, w);
+    }
+
+    double getEndWidthAt(int i) const {
+        return RPolyline::getEndWidthAt(i);
+    }
+
+    bool hasWidths() const {
+        return RPolyline::hasWidths();
+    }
+
+    void setStartWidths(const QList<double>& sw) {
+        RPolyline::setStartWidths(sw);
+    }
+
+    QList<double> getStartWidths() const {
+        return RPolyline::getStartWidths();
+    }
+
+    void setEndWidths(const QList<double>& ew) {
+        RPolyline::setEndWidths(ew);
+    }
+
+    QList<double> getEndWidths() const {
+        return RPolyline::getEndWidths();
+    }
+
     QList<QSharedPointer<RShape> > getExploded(int segments = RDEFAULT_MIN1) const {
         return RPolyline::getExploded(segments);
     }
