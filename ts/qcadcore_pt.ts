@@ -505,7 +505,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>Atributos</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+87"/>
+        <location filename="../src/core/REntity.cpp" line="+91"/>
         <location filename="../src/core/RObject.cpp" line="+67"/>
         <source>Type</source>
         <translatorcomment>--exact match--
@@ -845,7 +845,7 @@ Abre diálogo de cores</translatorcomment>
         <translation type="vanished">Margens de trama</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+651"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+653"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Foi detectada uma referência de bloco circular (recursiva):</translation>
     </message>

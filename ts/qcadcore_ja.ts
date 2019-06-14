@@ -354,7 +354,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+87"/>
+        <location filename="../src/core/REntity.cpp" line="+91"/>
         <location filename="../src/core/RObject.cpp" line="+67"/>
         <source>Type</source>
         <translation>タイプ</translation>
@@ -671,7 +671,7 @@
         <translation>最大範囲</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+651"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+653"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>回状（再起的）ブロック参照が検出されました:</translation>
     </message>

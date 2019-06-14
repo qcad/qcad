@@ -510,7 +510,7 @@ Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
         <translation>Attributs</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+87"/>
+        <location filename="../src/core/REntity.cpp" line="+91"/>
         <location filename="../src/core/RObject.cpp" line="+67"/>
         <source>Type</source>
         <translatorcomment>--exact match--
@@ -844,7 +844,7 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
         <translation type="vanished">Marges des tracés</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+651"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+653"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Une référence de bloc circulaire (récursive) a été détectée :</translation>
     </message>

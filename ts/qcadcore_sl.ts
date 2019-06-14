@@ -355,7 +355,7 @@
         <translation>Značilke</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+87"/>
+        <location filename="../src/core/REntity.cpp" line="+91"/>
         <location filename="../src/core/RObject.cpp" line="+67"/>
         <source>Type</source>
         <translation>Vrsta</translation>
@@ -666,7 +666,7 @@
         <translation>Maks. razširitev</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+651"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+653"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Zaznano krožno (rekurzivno) sklicevanje zbirov:</translation>
     </message>

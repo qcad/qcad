@@ -363,7 +363,7 @@
         <translation>Attribute</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+87"/>
+        <location filename="../src/core/REntity.cpp" line="+91"/>
         <location filename="../src/core/RObject.cpp" line="+67"/>
         <source>Type</source>
         <translation>Typ</translation>
@@ -682,7 +682,7 @@
         <translation type="obsolete">Plot Papiergrösse</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+651"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+653"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Circuläre (rekursive) Blockreferenzierung detektiert:</translation>
     </message>
