@@ -694,6 +694,11 @@ QList<RVector> REllipse::getPointsWithDistanceToEnd(double distance, int from) c
     return ret;
 }
 
+QList<RVector> REllipse::getPointCloud(double segmentLength) const {
+    RPolyline pl = approximateWithArcs(64);
+    return pl.getPointCloud(segmentLength);
+}
+
 RVector REllipse::getVectorTo(const RVector& point, bool limited, double strictRange) const {
     Q_UNUSED(strictRange)
 

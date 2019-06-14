@@ -1116,6 +1116,11 @@ QList<RVector> RSpline::getPointsWithDistanceToEnd(double distance, int from) co
     return ret;
 }
 
+QList<RVector> RSpline::getPointCloud(double segmentLength) const {
+    RPolyline pl = approximateWithArcs(0.01);
+    return pl.getPointCloud(segmentLength);
+}
+
 RVector RSpline::getVectorTo(const RVector& point, bool limited, double strictRange) const {
     if (splineProxy!=NULL) {
         return splineProxy->getVectorTo(*this, point, limited, strictRange);

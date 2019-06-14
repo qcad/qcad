@@ -181,6 +181,11 @@ QList<RVector> RCircle::getPointsWithDistanceToEnd(double distance, int from) co
     return ret;
 }
 
+QList<RVector> RCircle::getPointCloud(double segmentLength) const {
+    RArc arc = toArc();
+    return arc.getPointCloud(segmentLength);
+}
+
 double RCircle::getAngleAt(double distance, RS::From from) const {
     Q_UNUSED(distance)
     Q_UNUSED(from)

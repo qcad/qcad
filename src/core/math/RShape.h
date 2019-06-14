@@ -186,7 +186,9 @@ public:
      */
     virtual QList<RVector> getCenterPoints() const = 0;
 
-    RVector getPointOnShape() const;
+    virtual RVector getPointOnShape() const;
+
+    virtual QList<RVector> getPointCloud(double segmentLength) const = 0;
 
     /**
      * \return All points on this shape with the given distance to an endpoint.

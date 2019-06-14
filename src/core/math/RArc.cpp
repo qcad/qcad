@@ -636,6 +636,15 @@ QList<RVector> RArc::getPointsWithDistanceToEnd(double distance, int from) const
     return ret;
 }
 
+QList<RVector> RArc::getPointCloud(double segmentLength) const {
+    QList<RVector> ret;
+    RPolyline pl = approximateWithLines(segmentLength);
+    ret.append(pl.getVertices());
+    pl = approximateWithLinesTan(segmentLength);
+    ret.append(pl.getVertices());
+    return ret;
+}
+
 RVector RArc::getVectorTo(const RVector& point, bool limited, double strictRange) const {
     Q_UNUSED(strictRange)
 

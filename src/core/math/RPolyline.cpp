@@ -1606,6 +1606,16 @@ QList<RVector> RPolyline::getCenterPoints() const {
     return ret;
 }
 
+RVector RPolyline::getPointAtPercent(double p) const {
+    double length = getLength();
+    double distance = p * length;
+    QList<RVector> candidates = getPointsWithDistanceToEnd(distance, RS::FromStart|RS::AlongPolyline);
+    if (candidates.length()!=1) {
+        return RVector::invalid;
+    }
+    return candidates.at(0);
+}
+
 QList<RVector> RPolyline::getPointsWithDistanceToEnd(double distance, int from) const {
     QList<RVector> ret;
 
@@ -1666,6 +1676,18 @@ QList<RVector> RPolyline::getPointsWithDistanceToEnd(double distance, int from) 
         }
     }
 
+    return ret;
+}
+
+QList<RVector> RPolyline::getPointCloud(double segmentLength) const {
+    QList<RVector> ret;
+    for (int i=0; i<countSegments(); i++) {
+        QSharedPointer<RShape> seg = getSegmentAt(i);
+        if (seg.isNull()) {
+            continue;
+        }
+        ret.append(seg->getPointCloud(segmentLength));
+    }
     return ret;
 }
 

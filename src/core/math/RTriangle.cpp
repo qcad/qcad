@@ -198,6 +198,16 @@ QList<RVector> RTriangle::getPointsWithDistanceToEnd(double distance, int from) 
     return c;
 }
 
+QList<RVector> RTriangle::getPointCloud(double segmentLength) const {
+    Q_UNUSED(segmentLength)
+
+    QList<RVector> ret;
+    ret.append(corner[0]);
+    ret.append(corner[1]);
+    ret.append(corner[2]);
+    return ret;
+}
+
 /**
  * \sa http://en.wikipedia.org/wiki/Normal_vector
  * \sa http://en.wikipedia.org/wiki/Cross_product#Definition

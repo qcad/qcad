@@ -188,6 +188,11 @@ QList<RVector> RXLine::getPointsWithDistanceToEnd(double distance, int from) con
     return QList<RVector>();
 }
 
+QList<RVector> RXLine::getPointCloud(double segmentLength) const {
+    Q_UNUSED(segmentLength)
+    return QList<RVector>();
+}
+
 double RXLine::getAngleAt(double distance, RS::From from) const {
     Q_UNUSED(distance)
     Q_UNUSED(from)

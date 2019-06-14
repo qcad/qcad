@@ -92,6 +92,14 @@ QList<RVector> RPoint::getPointsWithDistanceToEnd(double distance, int from) con
     return ret;
 }
 
+QList<RVector> RPoint::getPointCloud(double segmentLength) const {
+    Q_UNUSED(segmentLength)
+
+    QList<RVector> ret;
+    ret.append(getPosition());
+    return ret;
+}
+
 double RPoint::getAngleAt(double distance, RS::From from) const {
     Q_UNUSED(distance)
     Q_UNUSED(from)
