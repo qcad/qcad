@@ -1046,7 +1046,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
         RGraphicsSceneDrawable drawable = i.next();
 
         // drawable is not plottable (from layer for which plottable is off):
-        if (drawable.getNoPlot() && (isPrintingOrExporting() || (showOnlyPlottable && isPrintPreview()))) {
+        if (drawable.getNoPlot() && (isPrinting() || (showOnlyPlottable && isPrintPreview()))) {
             continue;
         }
 
@@ -1411,12 +1411,12 @@ void RGraphicsViewImage::applyColorMode(QPen& pen) {
     switch (colorMode) {
     case RGraphicsView::BlackWhite:
         // dark background: everything white:
-        if (bgColorLightness < 64 && !isPrintingOrExporting()) {
+        if (bgColorLightness < 64 && !isPrinting()) {
             if (pen.style() != Qt::NoPen) {
                 pen.setColor(Qt::white);
             }
         }
-        // bright background: everything black:
+        // bright background or printing: everything black:
         else {
             if (pen.style() != Qt::NoPen) {
                 pen.setColor(Qt::black);
