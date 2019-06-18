@@ -72,6 +72,9 @@
         isDimension
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isTextBased
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getData
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -246,7 +246,11 @@
             
             REcmaHelper::registerFunction(&engine, proto, getCenterPoints, "getCenterPoints");
             
+            REcmaHelper::registerFunction(&engine, proto, getPointAtPercent, "getPointAtPercent");
+            
             REcmaHelper::registerFunction(&engine, proto, getPointsWithDistanceToEnd, "getPointsWithDistanceToEnd");
+            
+            REcmaHelper::registerFunction(&engine, proto, getPointCloud, "getPointCloud");
             
             REcmaHelper::registerFunction(&engine, proto, getAngleAt, "getAngleAt");
             
@@ -6505,6 +6509,66 @@
             return result;
         }
          QScriptValue
+        REcmaPolyline::getPointAtPercent
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::getPointAtPercent", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::getPointAtPercent";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getPointAtPercent", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getPointAtPercent(a0);
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getPointAtPercent().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::getPointAtPercent", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaPolyline::getPointsWithDistanceToEnd
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -6607,6 +6671,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolyline::getPointsWithDistanceToEnd", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::getPointCloud
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::getPointCloud", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::getPointCloud";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getPointCloud", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getPointCloud(a0);
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getPointCloud().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::getPointCloud", context, engine);
             return result;
         }
          QScriptValue
@@ -10920,8 +11044,11 @@
                 
     
     if( context->argumentCount() ==
-    1 && (
+    2 && (
             context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isNumber()
         ) /* type: double */
     
     ){
@@ -10935,13 +11062,23 @@
                     context->argument( 0 ).
                     toNumber();
                 
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
     // end of arguments
 
     // call C++ function:
     // return type 'RPolyline'
     RPolyline cppResult =
         
-               self->getPolygonHull(a0);
+               self->getPolygonHull(a0
+        ,
+    a1);
         // return type: RPolyline
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
@@ -10952,11 +11089,14 @@
         
     
     if( context->argumentCount() ==
-    2 && (
+    3 && (
             context->argument(0).isNumber()
         ) /* type: double */
      && (
-            context->argument(1).isBool()
+            context->argument(1).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(2).isBool()
         ) /* type: bool */
     
     ){
@@ -10971,11 +11111,19 @@
                     toNumber();
                 
                     // argument isStandardType
-                    bool
+                    double
                     a1 =
-                    (bool)
+                    (double)
                     
                     context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
                     toBool();
                 
     // end of arguments
@@ -10986,7 +11134,9 @@
         
                self->getPolygonHull(a0
         ,
-    a1);
+    a1
+        ,
+    a2);
         // return type: RPolyline
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);

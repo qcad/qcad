@@ -246,6 +246,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, isDimension, "isDimension");
             
+            REcmaHelper::registerFunction(&engine, &ctor, isTextBased, "isTextBased");
+            
 
     // static properties:
     
@@ -763,6 +765,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerEntity::isDimension", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerEntity::isTextBased
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerEntity::isTextBased", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEntity::isTextBased";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::EntityType */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::EntityType
+                    a0 =
+                    (RS::EntityType)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        REntity::
+       isTextBased(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntity.isTextBased().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerEntity::isTextBased", context, engine);
             return result;
         }
          QScriptValue

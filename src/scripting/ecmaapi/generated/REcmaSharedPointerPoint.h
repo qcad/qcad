@@ -88,6 +88,9 @@
         getPointsWithDistanceToEnd
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getPointCloud
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getAngleAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

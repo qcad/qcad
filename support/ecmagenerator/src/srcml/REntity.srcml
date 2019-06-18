@@ -117,6 +117,7 @@
 
     <function_decl><type><name>static</name> <name>bool</name></type> <name>isComplex</name><parameter_list>(<param><decl><type><name>const</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>type</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>isDimension</name><parameter_list>(<param><decl><type><name>const</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>type</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>isTextBased</name><parameter_list>(<param><decl><type><name>const</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>type</name></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="block">/**
      * \return Reference to the data object of the entity.

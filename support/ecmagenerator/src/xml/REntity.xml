@@ -66,6 +66,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="type" isConst="true" />
       </variant>
     </method>
+    <method name="isTextBased" cppName="isTextBased"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="type" isConst="true" />
+      </variant>
+    </method>
     <method name="getData" cppName="getData" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="REntityData &amp;"
