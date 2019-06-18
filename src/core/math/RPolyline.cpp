@@ -1959,8 +1959,6 @@ void RPolyline::print(QDebug dbg) const {
 }
 
 /**
- * TODO: use douglas peuker for polylines with only line segments
- *
  * Simplify by attempting to skip nodes within given tolerance.
  * \return True if nodes have been skipped.
  */
@@ -2178,9 +2176,9 @@ RPolyline RPolyline::roundAllCorners(double radius) const {
     return *this;
 }
 
-RPolyline RPolyline::getPolygonHull(double angle, bool inner) const {
+RPolyline RPolyline::getPolygonHull(double angle, double tolerance, bool inner) const {
     if (polylineProxy!=NULL) {
-        return polylineProxy->getPolygonHull(*this, angle, inner);
+        return polylineProxy->getPolygonHull(*this, angle, tolerance, inner);
     }
     return *this;
 }

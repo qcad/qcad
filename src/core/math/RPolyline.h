@@ -256,7 +256,7 @@ public:
 
     QList<RPolyline> morph(const RPolyline& target, int steps, RS::Easing easing = RS::Linear, bool zLinear = true, double customFactor = RNANDOUBLE) const;
     RPolyline roundAllCorners(double radius) const;
-    RPolyline getPolygonHull(double angle, bool inner = false) const;
+    RPolyline getPolygonHull(double angle, double tolerance, bool inner = false) const;
 
     static bool hasProxy() {
         return polylineProxy!=NULL;
