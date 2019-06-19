@@ -164,6 +164,7 @@ BitmapExport.prototype.getProperties = function() {
     var antiAliasingCheckbox = this.dialog.findChild("AntiAliasing");
 
     var selectionCheckbox = this.dialog.findChild("Selection");
+    selectionCheckbox.toggled.connect(this, "selectionChanged");
     var weightMarginCheckbox = this.dialog.findChild("WeightMargin");
 
     widthEdit.valueChanged.connect(
@@ -217,12 +218,20 @@ BitmapExport.prototype.getProperties = function() {
 
     if (selectionCheckbox.checked) {
         var doc = this.getDocument();
-        ret["entityids"] = doc.querySelectedEntities();
+        ret["entityIds"] = doc.querySelectedEntities();
     }
 
     this.dialog.destroy();
     EAction.activateMainWindow();
     return ret;
+};
+
+BitmapExport.prototype.selectionChanged = function(value) {
+    this.documentWidth = undefined;
+    this.documentHeight = undefined;
+
+    var resolutionCombo = this.dialog.findChild("Resolution");
+    this.resolutionChanged(resolutionCombo.currentText);
 };
 
 BitmapExport.prototype.resolutionChanged = function(str) {
