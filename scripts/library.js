@@ -2406,6 +2406,7 @@ function applyTheme() {
                 var flags = new QIODevice.OpenMode(QIODevice.ReadOnly | QIODevice.Text);
                 if (file.open(flags)) {
                     var textStream = new QTextStream(file);
+                    textStream.setCodec("UTF-8");
                     var allLines = textStream.readAll();
                     file.close();
                     allLines = allLines.replace(/url\(/g, "url(" + path);
@@ -2428,6 +2429,7 @@ function readTextFile(fileName) {
     var flags = new QIODevice.OpenMode(QIODevice.ReadOnly | QIODevice.Text);
     if (file.open(flags)) {
         var textStream = new QTextStream(file);
+        textStream.setCodec("UTF-8");
         var contents = textStream.readAll();
         file.close();
         return contents;
@@ -2441,6 +2443,7 @@ function writeTextFile(fileName, str) {
     var flags = new QIODevice.OpenMode(QIODevice.WriteOnly | QIODevice.Text);
     if (file.open(flags)) {
         var textStream = new QTextStream(file);
+        textStream.setCodec("UTF-8");
         textStream.writeString(str);
     }
     file.close();

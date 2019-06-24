@@ -49,6 +49,7 @@ BlockListExport.prototype.beginEvent = function() {
     }
 
     var ts = new QTextStream(file);
+    ts.setCodec("UTF-8");
     ts.writeString("Reference Count\tBlock Name");
 
     var doc = this.getDocument();

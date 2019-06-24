@@ -47,6 +47,7 @@ ShowReadme.prototype.beginEvent = function() {
                 ShowReadme.readmeFile);
     } else {
         var textStream = new QTextStream(file);
+        textStream.setCodec("UTF-8");
         var allLines = textStream.readAll();
         file.close();
         text.plainText = allLines;

@@ -76,6 +76,7 @@ ImportPoints.prototype.beginEvent = function() {
     }
 
     var ts = new QTextStream(file);
+    ts.setCodec("UTF-8");
     var line;
     var coordinates;
     var point;

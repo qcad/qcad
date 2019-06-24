@@ -90,6 +90,7 @@ ExFileExporter.prototype.exportFile = function(fileName, nameFilter, setFileName
     }
 
     var ts = new QTextStream(file);
+    ts.setCodec("UTF-8");
     ts.writeString("Example");
 
     file.close();

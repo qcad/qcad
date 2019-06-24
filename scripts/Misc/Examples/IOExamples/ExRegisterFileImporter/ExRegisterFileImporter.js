@@ -81,6 +81,7 @@ ExFileImporter.prototype.importFile = function(fileName, nameFilter) {
     this.startImport();
 
     var ts = new QTextStream(file);
+    ts.setCodec("UTF-8");
     var line;
 
     do {
