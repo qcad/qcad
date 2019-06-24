@@ -1365,7 +1365,7 @@ Přejete si ho obnovit?</translation>
 <context>
     <name>BlockListExport</name>
     <message>
-        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+91"/>
+        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+92"/>
         <source>Export Block List (CSV)</source>
         <translation>Exportovat seznam bloků (CSV)</translation>
     </message>
@@ -4350,7 +4350,7 @@ již v seznamu je.</translation>
         <translation>Soubory s příklady %1</translation>
     </message>
     <message>
-        <location line="+83"/>
+        <location line="+84"/>
         <source>Info</source>
         <translation>Informace</translation>
     </message>
@@ -4373,7 +4373,7 @@ již v seznamu je.</translation>
         <translation>Soubory s příklady %1</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+54"/>
         <source>Read from file: &quot;%1&quot;</source>
         <translation>Číst ze souboru: &quot;%1&quot;</translation>
     </message>
@@ -5608,7 +5608,7 @@ již v seznamu je.</translation>
         <translation>Importovat body</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>&amp;Import Points</source>
         <translation>&amp;Importovat body</translation>
     </message>

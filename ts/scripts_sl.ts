@@ -1396,7 +1396,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockListExport</name>
     <message>
-        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+91"/>
+        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+92"/>
         <source>Export Block List (CSV)</source>
         <translation>Izvozi blokovni seznam (CSV)</translation>
     </message>
@@ -4548,7 +4548,7 @@ je že na seznamu.</translation>
         <translation>Primeri datotek %1</translation>
     </message>
     <message>
-        <location line="+83"/>
+        <location line="+84"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>
@@ -4575,7 +4575,7 @@ je že na seznamu.</translation>
         <translation>Primeri datotek %1</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+54"/>
         <source>Read from file: &quot;%1&quot;</source>
         <translation>Beri iz datoteke &quot;%1&quot;</translation>
     </message>
@@ -5935,7 +5935,7 @@ je že na seznamu.</translation>
         <translation>Uvozi točke</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>&amp;Import Points</source>
         <translation>&amp;Uvozi točke</translation>
     </message>

@@ -1368,7 +1368,7 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>BlockListExport</name>
     <message>
-        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+91"/>
+        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+92"/>
         <source>Export Block List (CSV)</source>
         <translation>Vie lohkoluettelo (CSV)</translation>
     </message>
@@ -4456,7 +4456,7 @@ on jo luettelossa.</translation>
         <translation>Esimerkkitiedostot %1</translation>
     </message>
     <message>
-        <location line="+83"/>
+        <location line="+84"/>
         <source>Info</source>
         <translation>Tiedot</translation>
     </message>
@@ -4479,7 +4479,7 @@ on jo luettelossa.</translation>
         <translation>Esimerkkitiedostot %1</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+54"/>
         <source>Read from file: &quot;%1&quot;</source>
         <translation>Lue tiedostosta: &quot;%1&quot;</translation>
     </message>
@@ -5777,7 +5777,7 @@ on jo luettelossa.</translation>
         <translation>Tuo pisteet</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>&amp;Import Points</source>
         <translation>&amp;Tuo pisteet</translation>
     </message>

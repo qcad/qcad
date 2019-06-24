@@ -1547,7 +1547,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>BlockListExport</name>
     <message>
-        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+91"/>
+        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+92"/>
         <source>Export Block List (CSV)</source>
         <translation>Blockliste exportieren (CSV)</translation>
     </message>
@@ -5007,7 +5007,7 @@ ist bereits in der Liste.</translation>
         <translation>Beispieldateien %1</translation>
     </message>
     <message>
-        <location line="+83"/>
+        <location line="+84"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>
@@ -5034,7 +5034,7 @@ ist bereits in der Liste.</translation>
         <translation>Beispieldateien %1</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+54"/>
         <source>Read from file: &quot;%1&quot;</source>
         <translation>Aus Datei gelesen: &quot;%1&quot;</translation>
     </message>
@@ -6760,7 +6760,7 @@ ist bereits in der Liste.</translation>
         <translation>Punkte importieren</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>&amp;Import Points</source>
         <translation>Punkte &amp;importieren</translation>
     </message>

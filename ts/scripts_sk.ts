@@ -1412,7 +1412,7 @@ Prajete si ho obnoviť?</translation>
 <context>
     <name>BlockListExport</name>
     <message>
-        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+92"/>
+        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+93"/>
         <source>CSV</source>
         <translation>CSV</translation>
     </message>
@@ -4484,7 +4484,7 @@ už existuje v zozname.</translation>
         <translation>Example súbory %1</translation>
     </message>
     <message>
-        <location line="+83"/>
+        <location line="+84"/>
         <source>Info</source>
         <translation>Informácia</translation>
     </message>
@@ -4511,7 +4511,7 @@ už existuje v zozname.</translation>
         <translation>Example súbory %1</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+54"/>
         <source>Read from file: &quot;%1&quot;</source>
         <translation>Čítať zo súboru: &quot;%1&quot;</translation>
     </message>
@@ -5789,12 +5789,12 @@ už existuje v zozname.</translation>
         <translation>Importovať body</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>&amp;Import Points</source>
         <translation>&amp;Importovať body</translation>
     </message>
     <message>
-        <location line="-69"/>
+        <location line="-70"/>
         <source>All Files</source>
         <translation>Všetky súbory</translation>
     </message>

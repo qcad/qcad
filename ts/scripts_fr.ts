@@ -1522,7 +1522,7 @@ Voulez-vous le récupérer?</translation>
 <context>
     <name>BlockListExport</name>
     <message>
-        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+91"/>
+        <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+92"/>
         <source>Export Block List (CSV)</source>
         <translation>Exporter la liste de blocs (CSV)</translation>
     </message>
@@ -4884,7 +4884,7 @@ est déjà dans la liste.</translation>
         <translation>Fichiers d&apos;exemple %1</translation>
     </message>
     <message>
-        <location line="+83"/>
+        <location line="+84"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>
@@ -4911,7 +4911,7 @@ est déjà dans la liste.</translation>
         <translation>Fichiers d&apos;exemple %1</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+54"/>
         <source>Read from file: &quot;%1&quot;</source>
         <translation>Lire du fichier : &quot;%1&quot;</translation>
     </message>
@@ -6632,7 +6632,7 @@ Sélections persistantes</translatorcomment>
         <translation>Importer points</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>&amp;Import Points</source>
         <translation>&amp;Importer points</translation>
     </message>
