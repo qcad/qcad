@@ -2066,6 +2066,10 @@ RPolyline RPolyline::modifyPolylineCorner(const RShape& trimmedShape1, RS::Endin
     return pl;
 }
 
+bool RPolyline::isConcave() const {
+    return !getConcaveVertices().isEmpty();
+}
+
 QList<RVector> RPolyline::getConvexVertices(bool convex) const {
     if (!isGeometricallyClosed()) {
         return QList<RVector>();
