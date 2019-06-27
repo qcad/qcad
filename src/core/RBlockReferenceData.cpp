@@ -252,8 +252,10 @@ QList<RBox> RBlockReferenceData::getBoundingBoxes(bool ignoreEmpty) const {
                 if (entity.isNull()) {
                     continue;
                 }
-                if (!entity->isVisible()) {
-                    continue;
+                if (ignoreEmpty) {
+                    if (!entity->isVisible()) {
+                        continue;
+                    }
                 }
                 if (col!=0 || row!=0) {
                     // entity might be from cache: clone:
