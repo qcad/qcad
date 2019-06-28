@@ -462,7 +462,9 @@ void RGraphicsViewImage::paintErase(QPaintDevice& device, const QRect& rect) {
     if (!rect.isNull()) {
         gridPainter->setClipRect(rf);
     }
-    gridPainter->setCompositionMode(QPainter::CompositionMode_Clear);
+    if (backgroundColor.alpha()==0) {
+        gridPainter->setCompositionMode(QPainter::CompositionMode_Clear);
+    }
     gridPainter->eraseRect(rf);
 
     delete gridPainter;
