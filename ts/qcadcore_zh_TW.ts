@@ -534,7 +534,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation type="unfinished"></translation>
+        <translation>文字位置</translation>
     </message>
     <message>
         <location line="+1"/>
