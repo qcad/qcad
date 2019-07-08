@@ -14,7 +14,7 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 #define VER_COMPANYNAME_STR         "RibbonSoft, GmbH"
 #define VER_FILEDESCRIPTION_STR     "QCAD"
 #define VER_INTERNALNAME_STR        "QCAD"
-#define VER_LEGALCOPYRIGHT_STR      "Copyright (c) 2018 RibbonSoft, GmbH"
+#define VER_LEGALCOPYRIGHT_STR      "Copyright (c) 2019 RibbonSoft, GmbH"
 #define VER_LEGALTRADEMARKS1_STR    "All Rights Reserved"
 #define VER_LEGALTRADEMARKS2_STR    VER_LEGALTRADEMARKS1_STR
 #define VER_PRODUCTNAME_STR         "QCAD"
