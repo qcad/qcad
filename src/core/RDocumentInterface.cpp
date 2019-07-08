@@ -1688,9 +1688,11 @@ void RDocumentInterface::selectBoxXY(const RBox& box, bool add) {
     QSet<REntity::Id> entityIds;
 
     if (box.c2.x<box.c1.x) {
+        // cross selection:
         entityIds = document.queryIntersectedEntitiesXY(box);
     }
     else {
+        // contained selection:
         entityIds = document.queryContainedEntitiesXY(box);
     }
 
