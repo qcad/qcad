@@ -73,6 +73,16 @@ QStringList RPluginLoader::getPluginFiles() {
         pluginFiles.append(pluginsDir.absoluteFilePath(fileName));
     }
 
+    // make sure plugins which depend on other plugins are loaded last:
+    pluginFiles.sort();
+    for (int i=0; i<pluginFiles.length(); i++) {
+        if (pluginFiles[i].contains("nest")) {
+            QString pf = pluginFiles.takeAt(i);
+            pluginFiles.append(pf);
+            break;
+        }
+    }
+
     return pluginFiles;
 }
 
