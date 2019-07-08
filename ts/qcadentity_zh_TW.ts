@@ -450,7 +450,7 @@
     <message>
         <location line="+1"/>
         <source>Extension Line Length</source>
-        <translation type="unfinished"></translation>
+        <translation>延伸線長度</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -477,7 +477,7 @@
     <message>
         <location line="+1"/>
         <source>Block Name</source>
-        <translation type="unfinished"></translation>
+        <translation>圖塊名稱</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -616,12 +616,12 @@
     <message>
         <location line="+2"/>
         <source>Width Factor</source>
-        <translation type="unfinished"></translation>
+        <translation>width factor</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Height Factor</source>
-        <translation type="unfinished"></translation>
+        <translation>高度係數</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -641,7 +641,7 @@
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-4"/>
         <source>Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>箭頭</translation>
     </message>
     <message>
         <location line="+1"/>
