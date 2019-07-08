@@ -416,7 +416,7 @@
     <message>
         <location line="+1"/>
         <source>Lower Limit</source>
-        <translation type="unfinished"></translation>
+        <translation>下限</translation>
     </message>
     <message>
         <location line="+1"/>
