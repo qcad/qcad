@@ -251,7 +251,7 @@
     </message>
     <message>
         <source>about:blank</source>
-        <translation type="unfinished">about:blank</translation>
+        <translation type="obsolete">about:blank</translation>
     </message>
     <message>
         <location line="+67"/>
@@ -1664,7 +1664,7 @@ Prajete si ho obnoviť?</translation>
     </message>
     <message>
         <source>about:blank</source>
-        <translation type="unfinished">about:blank</translation>
+        <translation type="obsolete">about:blank</translation>
     </message>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+53"/>
@@ -2983,10 +2983,12 @@ Prajete si ho obnoviť?</translation>
     <message numerus="yes">
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
-        <translation><numerusform>Pozícia textu %n kóty(kót) bola resetovaná.</numerusform>
-        <numerusform>Pozícia textu %n kót bola resetovaná.</numerusform>
-        <numerusform></numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Pozícia textu %n kóty(kót) bola resetovaná.</numerusform>
+            <numerusform>Pozícia textu %n kót bola resetovaná.</numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message>
         <source>Reset label position of %1 dimension(s).</source>
         <translation type="vanished">Vynulovalo pozíciu textu na %1 kótach (kóte).</translation>
@@ -3721,10 +3723,12 @@ už existuje v zozname.</translation>
     <message numerus="yes">
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+54"/>
         <source>%n entity/ies duplicated</source>
-        <translation><numerusform>%n duplicitný(-ých) prvok(-ov)</numerusform>
-        <numerusform>%n duplicitné prvky</numerusform>
-        <numerusform></numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>%n duplicitný(-ých) prvok(-ov)</numerusform>
+            <numerusform>%n duplicitné prvky</numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
 </context>
 <context>
     <name>EAction</name>
@@ -3880,7 +3884,7 @@ už existuje v zozname.</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to enable the ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Through the ECMAScript Shell you can &lt;span style=&quot; color:#ff0000;&quot;&gt;modify your drawings&lt;/span&gt; but also &lt;span style=&quot; color:#ff0000;&quot;&gt;delete files&lt;/span&gt; or &lt;span style=&quot; color:#ff0000;&quot;&gt;crash the application&lt;/span&gt; which can lead to &lt;span style=&quot; color:#ff0000;&quot;&gt;data loss&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;For inexperienced programmers, it is recommended to limit the use of the ECMAScript shell to the &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; which is considered to be &apos;safe&apos; to use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Chystáte sa povoliť prostredie ECMAScript.&lt;/p&gt;&lt;p&gt;Prostredníctvom ECMAScript môžete&lt;span style=&quot; color:#ff0000;&quot;&gt;upraviť svoje výkresy&lt;/span&gt;, ale ak &lt;span style=&quot; color:#ff0000;&quot;&gt;vymažete súbory&lt;/span&gt;, alebo &lt;span style=&quot; color:#ff0000;&quot;&gt;aplikácia padne&lt;/span&gt;, môže to viesť k &lt;span style=&quot; color:#ff0000;&quot;&gt;strate dát&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;For inexperienced programmers, it is recommended to limit the use of the ECMAScript shell to the &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; which is considered to be &apos;safe&apos; to use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="obsolete">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Chystáte sa povoliť prostredie ECMAScript.&lt;/p&gt;&lt;p&gt;Prostredníctvom ECMAScript môžete&lt;span style=&quot; color:#ff0000;&quot;&gt;upraviť svoje výkresy&lt;/span&gt;, ale ak &lt;span style=&quot; color:#ff0000;&quot;&gt;vymažete súbory&lt;/span&gt;, alebo &lt;span style=&quot; color:#ff0000;&quot;&gt;aplikácia padne&lt;/span&gt;, môže to viesť k &lt;span style=&quot; color:#ff0000;&quot;&gt;strate dát&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;For inexperienced programmers, it is recommended to limit the use of the ECMAScript shell to the &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; which is considered to be &apos;safe&apos; to use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4348,7 +4352,7 @@ už existuje v zozname.</translation>
     <name>ExDumpPolyline</name>
     <message>
         <source>&amp;Dump Polyline</source>
-        <translation>&amp;Vyhodiť krivku</translation>
+        <translation type="vanished">&amp;Vyhodiť krivku</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExDumpPolyline/ExDumpPolyline.js" line="+48"/>
@@ -4599,10 +4603,12 @@ už existuje v zozname.</translation>
     <message numerus="yes">
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
-        <translation><numerusform>Transakcia ovplyvnila %n objekt(-y).</numerusform>
-        <numerusform></numerusform>
-        <numerusform></numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Transakcia ovplyvnila %n objekt(-y).</numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
@@ -10212,7 +10218,7 @@ vo výsledku vyhľadania:</translation>
     <name>SelectByHandle</name>
     <message>
         <source>Object selected: </source>
-        <translation>Vybraný prvok: </translation>
+        <translation type="vanished">Vybraný prvok: </translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js" line="+2"/>
@@ -10221,7 +10227,7 @@ vo výsledku vyhľadania:</translation>
     </message>
     <message>
         <source>Object is not an entity: </source>
-        <translation>Hodnota nie je prvok: </translation>
+        <translation type="vanished">Hodnota nie je prvok: </translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.js" line="+58"/>
@@ -10499,10 +10505,12 @@ vo výsledku vyhľadania:</translation>
     </message>
     <message numerus="yes">
         <source>%n Entities on Layer &apos;%1&apos;</source>
-        <translation><numerusform>%n prvky na vrstve &apos;%1&apos;</numerusform>
-        <numerusform>%n prvky na vrstve &apos;%1&apos;</numerusform>
-        <numerusform></numerusform>
-        </translation></message>
+        <translation type="vanished">
+            <numerusform>%n prvky na vrstve &apos;%1&apos;</numerusform>
+            <numerusform>%n prvky na vrstve &apos;%1&apos;</numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message>
         <location line="-3"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
@@ -10511,17 +10519,21 @@ vo výsledku vyhľadania:</translation>
     <message numerus="yes">
         <location line="+7"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
-        <translation><numerusform>%n prvky na vrstve &quot;%1&quot;</numerusform>
-        <numerusform>%n prvky na vrstve &quot;%1&quot;</numerusform>
-        <numerusform></numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>%n prvky na vrstve &quot;%1&quot;</numerusform>
+            <numerusform>%n prvky na vrstve &quot;%1&quot;</numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
-        <translation><numerusform>%n prvky</numerusform>
-        <numerusform>%n prvky</numerusform>
-        <numerusform></numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>%n prvky</numerusform>
+            <numerusform>%n prvky</numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message>
         <location line="+0"/>
         <source>on</source>
@@ -10530,10 +10542,12 @@ vo výsledku vyhľadania:</translation>
     <message numerus="yes">
         <location line="+0"/>
         <source>%n Layers</source>
-        <translation><numerusform>%n vrstvy</numerusform>
-        <numerusform>%n vrstvy</numerusform>
-        <numerusform></numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>%n vrstvy</numerusform>
+            <numerusform>%n vrstvy</numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message>
         <source>%1 Entities on Layer &apos;%2&apos;</source>
         <translation type="vanished">%1 Prvkov(-y) na Vrstve &apos;%2&apos;</translation>
