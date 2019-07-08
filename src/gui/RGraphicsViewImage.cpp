@@ -701,6 +701,7 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
     RVector c2 = mapFromView(RVector(r.right()+1,r.top()-1), 1e300);
     RBox queryBox(c1, c2);
 
+    // TODO: paint in N threads using N painters to N bitmaps and combine:
     paintEntities(painter, queryBox);
 
     // paint selected entities on top:
