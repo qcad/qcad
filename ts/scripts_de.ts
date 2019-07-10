@@ -3110,6 +3110,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeDialog.ui" line="+14"/>
+        <location filename="../scripts/MyTools/QuickPrintToPdf/QPTPDialog.ui" line="+14"/>
         <source>Dialog</source>
         <translation>Dialog</translation>
     </message>
@@ -3188,6 +3189,36 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <location line="+7"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
+    </message>
+    <message>
+        <location filename="../scripts/MyTools/QuickPrintToPdf/QPTPDialog.ui" line="+38"/>
+        <source>Reference layer (specifies center)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Scale:</source>
+        <translation type="unfinished">Skalierung:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>0.01</source>
+        <translation type="unfinished">0.01</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>297</source>
+        <translation type="unfinished">297</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>210</source>
+        <translation type="unfinished">210</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Pagesize:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4134,6 +4165,14 @@ ist bereits in der Liste.</translation>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
         <translation>Zeichnungs&amp;einstellungen</translation>
+    </message>
+</context>
+<context>
+    <name>DupRemover</name>
+    <message>
+        <location filename="../scripts/MyTools/DupRemover/DupRemover.js" line="+59"/>
+        <source>&amp;DupRemover</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9938,6 +9977,14 @@ im Suchresultat:</translation>
     </message>
 </context>
 <context>
+    <name>MultiPrintToPdf</name>
+    <message>
+        <location filename="../scripts/MyTools/MultiPrintToPdf/MultiPrintToPdf.js" line="+77"/>
+        <source>Multi-Export to PDF</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>MyPositionDialog</name>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui" line="+14"/>
@@ -9967,6 +10014,14 @@ im Suchresultat:</translation>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MyScripts.js" line="+53"/>
         <source>My Scripts</source>
         <translation>Meine Skripte</translation>
+    </message>
+</context>
+<context>
+    <name>MyTools</name>
+    <message>
+        <location filename="../scripts/MyTools/MyTools.js" line="+34"/>
+        <source>My&amp;Tools</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10790,6 +10845,14 @@ nicht öffnen.
     </message>
 </context>
 <context>
+    <name>PredefSelectionDialog</name>
+    <message>
+        <location filename="../scripts/MyTools/PredefSelectDialog.ui" line="+17"/>
+        <source>Select Predef</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Preferences</name>
     <message>
         <source>&amp;Window</source>
@@ -11299,6 +11362,14 @@ nicht öffnen.
     </message>
 </context>
 <context>
+    <name>QuickPrintToPdf</name>
+    <message>
+        <location filename="../scripts/MyTools/QuickPrintToPdf/QuickPrintToPdf.js" line="+71"/>
+        <source>Multi-Export to PDF</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Quit</name>
     <message>
         <location filename="../scripts/File/Quit/QuitInit.js" line="+8"/>
@@ -11357,6 +11428,34 @@ nicht öffnen.
         <location filename="../scripts/File/RecentFiles/PreferencesPage.ui" line="+17"/>
         <source>Recent files history size:</source>
         <translation>Anzahl zuletzt geöffnete Dateien:</translation>
+    </message>
+</context>
+<context>
+    <name>Reconcile</name>
+    <message>
+        <location filename="../scripts/MyTools/Reconcile/Reconcile.js" line="+60"/>
+        <source>First point to adopt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Second point to adopt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>First target point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Second target point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+121"/>
+        <source>&amp;Reconcile</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12614,6 +12713,136 @@ SelectionMode</translatorcomment>
         <location line="+27"/>
         <source>Cross Selection</source>
         <translation>Kreuzende Selektion</translation>
+    </message>
+</context>
+<context>
+    <name>SelectWidget</name>
+    <message>
+        <location filename="../scripts/MyTools/SelectWidget/SelectWidget.js" line="+151"/>
+        <source>*VARIES*</source>
+        <translation type="unfinished">*VARIIERT*</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>:</source>
+        <translation type="unfinished">:</translation>
+    </message>
+    <message>
+        <location line="+128"/>
+        <source>No Selection</source>
+        <translation type="unfinished">Keine Selektion</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Geometry</source>
+        <translation type="unfinished">Geometrie</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Custom</source>
+        <translation type="unfinished">Benutzerdefiniert</translation>
+    </message>
+    <message>
+        <location line="+157"/>
+        <source>All</source>
+        <translation type="unfinished">Alle</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>Left</source>
+        <translation type="unfinished">Links</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Center</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Right</source>
+        <translation type="unfinished">Rechts</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Aligned</source>
+        <translation type="unfinished">Ausgerichtet</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+9"/>
+        <source>Middle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-9"/>
+        <source>Fit</source>
+        <translation type="unfinished">Anpassen</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Top</source>
+        <translation type="unfinished">Oben</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Base</source>
+        <translation type="unfinished">Basis</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Bottom</source>
+        <translation type="unfinished">Unten</translation>
+    </message>
+    <message>
+        <location line="+54"/>
+        <source>Auto</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+141"/>
+        <source>Yes</source>
+        <translation type="unfinished">Ja</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>No</source>
+        <translation type="unfinished">Nein</translation>
+    </message>
+    <message>
+        <location line="+241"/>
+        <location line="+8"/>
+        <source>Select Widget</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/MyTools/SelectWidget/SelectWidget.ui" line="+40"/>
+        <source>Reduction:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>by</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>nearby</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Type:</source>
+        <translation type="unfinished">Typ:</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>General</source>
+        <translation type="unfinished">Allgemein</translation>
     </message>
 </context>
 <context>

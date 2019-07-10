@@ -2750,6 +2750,7 @@ Prajete si ho obnoviť?</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeDialog.ui" line="+14"/>
+        <location filename="../scripts/MyTools/QuickPrintToPdf/QPTPDialog.ui" line="+14"/>
         <source>Dialog</source>
         <translation>Dialóg</translation>
     </message>
@@ -2828,6 +2829,36 @@ Prajete si ho obnoviť?</translation>
         <location line="+7"/>
         <source>Cancel</source>
         <translation>Zrušiť</translation>
+    </message>
+    <message>
+        <location filename="../scripts/MyTools/QuickPrintToPdf/QPTPDialog.ui" line="+38"/>
+        <source>Reference layer (specifies center)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Scale:</source>
+        <translation type="unfinished">Mierka:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>0.01</source>
+        <translation type="unfinished">Rozostup medzi písmenami {0.01?}</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>297</source>
+        <translation type="unfinished">Rozostup medzi písmenami {297?}</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>210</source>
+        <translation type="unfinished">Rozostup medzi písmenami {210?}</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Pagesize:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3703,6 +3734,14 @@ už existuje v zozname.</translation>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
         <translation>Nastavenia &amp;Kreslenia</translation>
+    </message>
+</context>
+<context>
+    <name>DupRemover</name>
+    <message>
+        <location filename="../scripts/MyTools/DupRemover/DupRemover.js" line="+59"/>
+        <source>&amp;DupRemover</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8364,6 +8403,14 @@ vo výsledku vyhľadania:</translation>
     </message>
 </context>
 <context>
+    <name>MultiPrintToPdf</name>
+    <message>
+        <location filename="../scripts/MyTools/MultiPrintToPdf/MultiPrintToPdf.js" line="+77"/>
+        <source>Multi-Export to PDF</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>MyPositionDialog</name>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui" line="+14"/>
@@ -8393,6 +8440,14 @@ vo výsledku vyhľadania:</translation>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MyScripts.js" line="+53"/>
         <source>My Scripts</source>
         <translation>Moje skripty</translation>
+    </message>
+</context>
+<context>
+    <name>MyTools</name>
+    <message>
+        <location filename="../scripts/MyTools/MyTools.js" line="+34"/>
+        <source>My&amp;Tools</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8960,6 +9015,14 @@ vo výsledku vyhľadania:</translation>
     </message>
 </context>
 <context>
+    <name>PredefSelectionDialog</name>
+    <message>
+        <location filename="../scripts/MyTools/PredefSelectDialog.ui" line="+17"/>
+        <source>Select Predef</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
@@ -9356,6 +9419,14 @@ vo výsledku vyhľadania:</translation>
     </message>
 </context>
 <context>
+    <name>QuickPrintToPdf</name>
+    <message>
+        <location filename="../scripts/MyTools/QuickPrintToPdf/QuickPrintToPdf.js" line="+71"/>
+        <source>Multi-Export to PDF</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Quit</name>
     <message>
         <location filename="../scripts/File/Quit/QuitInit.js" line="+8"/>
@@ -9406,6 +9477,34 @@ vo výsledku vyhľadania:</translation>
         <location line="+10"/>
         <source>Open &amp;Recent</source>
         <translation>Naposledy otvo&amp;rené</translation>
+    </message>
+</context>
+<context>
+    <name>Reconcile</name>
+    <message>
+        <location filename="../scripts/MyTools/Reconcile/Reconcile.js" line="+60"/>
+        <source>First point to adopt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Second point to adopt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>First target point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Second target point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+121"/>
+        <source>&amp;Reconcile</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10485,6 +10584,136 @@ vo výsledku vyhľadania:</translation>
         <location line="+4"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translation>Vybrať všetky prvky v obdĺžniku</translation>
+    </message>
+</context>
+<context>
+    <name>SelectWidget</name>
+    <message>
+        <location filename="../scripts/MyTools/SelectWidget/SelectWidget.js" line="+151"/>
+        <source>*VARIES*</source>
+        <translation type="unfinished">*Rôzne*</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>:</source>
+        <translation type="unfinished">:</translation>
+    </message>
+    <message>
+        <location line="+128"/>
+        <source>No Selection</source>
+        <translation type="unfinished">Nič nie je vybraté</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Geometry</source>
+        <translation type="unfinished">Geometria</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Custom</source>
+        <translation type="unfinished">Vlastné</translation>
+    </message>
+    <message>
+        <location line="+157"/>
+        <source>All</source>
+        <translation type="unfinished">Všetko</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Center</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Aligned</source>
+        <translation type="unfinished">Zarovnané</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+9"/>
+        <source>Middle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-9"/>
+        <source>Fit</source>
+        <translation type="unfinished">Prispôsobiť</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Top</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Base</source>
+        <translation type="unfinished">Základ</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Bottom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+54"/>
+        <source>Auto</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+141"/>
+        <source>Yes</source>
+        <translation type="unfinished">Áno</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>No</source>
+        <translation type="unfinished">Nie</translation>
+    </message>
+    <message>
+        <location line="+241"/>
+        <location line="+8"/>
+        <source>Select Widget</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/MyTools/SelectWidget/SelectWidget.ui" line="+40"/>
+        <source>Reduction:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>by</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>nearby</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Type:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>General</source>
+        <translation type="unfinished">Všeobecné</translation>
     </message>
 </context>
 <context>
