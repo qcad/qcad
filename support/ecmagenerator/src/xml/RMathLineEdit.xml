@@ -73,6 +73,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="getNormalTextColor" cppName="getNormalTextColor"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QColor" isPureVirtual="false" />
+    </method>
     <method name="setTextColor" cppName="setTextColor"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

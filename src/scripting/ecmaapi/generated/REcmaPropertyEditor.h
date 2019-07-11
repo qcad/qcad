@@ -55,6 +55,9 @@
 
     // public methods:
     static  QScriptValue
+        getInstance
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         updateFromDocument
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

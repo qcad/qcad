@@ -81,6 +81,9 @@
         setToolTip
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getNormalTextColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setTextColor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

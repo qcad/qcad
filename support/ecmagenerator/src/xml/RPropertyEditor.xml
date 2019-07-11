@@ -10,6 +10,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     <constructor>
       <variant />
     </constructor>
+    <method name="getInstance" cppName="getInstance"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RPropertyEditor *"
+      isPureVirtual="false" />
+    </method>
     <method name="updateFromDocument" cppName="updateFromDocument"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

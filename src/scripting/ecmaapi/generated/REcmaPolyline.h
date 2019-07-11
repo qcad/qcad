@@ -412,6 +412,9 @@
         modifyPolylineCorner
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isConcave
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getConvexVertices
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

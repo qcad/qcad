@@ -318,6 +318,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, modifyPolylineCorner, "modifyPolylineCorner");
             
+            REcmaHelper::registerFunction(&engine, proto, isConcave, "isConcave");
+            
             REcmaHelper::registerFunction(&engine, proto, getConvexVertices, "getConvexVertices");
             
             REcmaHelper::registerFunction(&engine, proto, getConcaveVertices, "getConcaveVertices");
@@ -10119,6 +10121,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolyline::modifyPolylineCorner", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::isConcave
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::isConcave", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::isConcave";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("isConcave", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isConcave();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.isConcave().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::isConcave", context, engine);
             return result;
         }
          QScriptValue

@@ -121,6 +121,8 @@
     
     // static methods:
     
+            REcmaHelper::registerFunction(&engine, &ctor, getInstance, "getInstance");
+            
             REcmaHelper::registerFunction(&engine, &ctor, checkType, "checkType");
             
 
@@ -243,6 +245,45 @@
 
     // public methods:
      QScriptValue
+        REcmaPropertyEditor::getInstance
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyEditor::getInstance", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyEditor::getInstance";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RPropertyEditor *'
+    RPropertyEditor * cppResult =
+        RPropertyEditor::
+       getInstance();
+        // return type: RPropertyEditor *
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyEditor.getInstance().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyEditor::getInstance", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaPropertyEditor::updateFromDocument
         (QScriptContext* context, QScriptEngine* engine) 
         

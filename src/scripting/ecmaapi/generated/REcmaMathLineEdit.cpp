@@ -85,6 +85,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setToolTip, "setToolTip");
             
+            REcmaHelper::registerFunction(&engine, proto, getNormalTextColor, "getNormalTextColor");
+            
             REcmaHelper::registerFunction(&engine, proto, setTextColor, "setTextColor");
             
             REcmaHelper::registerFunction(&engine, proto, slotTextChanged, "slotTextChanged");
@@ -846,6 +848,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMathLineEdit::setToolTip", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMathLineEdit::getNormalTextColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMathLineEdit::getNormalTextColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMathLineEdit::getNormalTextColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMathLineEdit* self = 
+                        getSelf("getNormalTextColor", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QColor'
+    QColor cppResult =
+        
+               self->getNormalTextColor();
+        // return type: QColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMathLineEdit.getNormalTextColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMathLineEdit::getNormalTextColor", context, engine);
             return result;
         }
          QScriptValue

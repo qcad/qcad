@@ -52,6 +52,8 @@
     <constructor_decl><name>RPropertyEditor</name><parameter_list>()</parameter_list>;</constructor_decl>
     <destructor_decl><specifier>virtual</specifier> <name>~RPropertyEditor</name><parameter_list>()</parameter_list>;</destructor_decl>
 
+    <function_decl><type><name>static</name> <name>RPropertyEditor</name>*</type> <name>getInstance</name><parameter_list>()</parameter_list>;</function_decl>
+
     <comment type="line">// from RPropertyListener interface:</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateFromDocument</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>bool</name></type> <name>onlyChanges</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>filter</name> =<init> <expr><name><name>RS</name>::<name>EntityUnknown</name></name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>manual</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>showOnRequest</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateFromObject</name><parameter_list>(<param><decl><type><name>RObject</name>*</type> <name>object</name></decl></param>, <param><decl><type><name>RDocument</name>*</type> <name>document</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
@@ -116,6 +118,8 @@
     <decl_stmt><decl><type><name>bool</name></type> <name>updatesDisabled</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>entityTypeFilter</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyEditor</name>*</type> <name>instance</name></decl>;</decl_stmt>
 </protected>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RPropertyEditor*</argument>)</argument_list></macro>

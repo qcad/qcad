@@ -39,6 +39,12 @@
         
     
     
+      RPropertyEditor * getInstance(
+                
+            );
+        
+    
+    
       void updateFromDocument(
                 RDocument * document, bool onlyChanges, RS::EntityType filter
         = RS :: EntityUnknown, bool manual
