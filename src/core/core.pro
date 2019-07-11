@@ -274,6 +274,11 @@ HEADERS = \
     math/RVector.h \
     math/RXLine.h
 
+macx {
+    OBJECTIVE_SOURCES += $$PWD/detectmacdarkmode.mm
+    OBJECTIVE_HEADERS += $$PWD/detectmacdarkmode.h
+}
+
 TEMPLATE = lib
 
 r_static_libs {

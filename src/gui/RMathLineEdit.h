@@ -74,6 +74,7 @@ public:
 
     void setToolTip(const QString& toolTip);
 
+    QColor getNormalTextColor() const;
     void setTextColor(bool error);
 
     /*
