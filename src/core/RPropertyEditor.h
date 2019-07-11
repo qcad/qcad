@@ -51,6 +51,8 @@ public:
     RPropertyEditor();
     virtual ~RPropertyEditor();
 
+    static RPropertyEditor* getInstance();
+
     // from RPropertyListener interface:
     virtual void updateFromDocument(RDocument* document, bool onlyChanges, RS::EntityType filter = RS::EntityUnknown, bool manual = false, bool showOnRequest = false);
     virtual void updateFromObject(RObject* object, RDocument* document = NULL);
@@ -115,6 +117,8 @@ protected:
     bool updatesDisabled;
 
     RS::EntityType entityTypeFilter;
+
+    static RPropertyEditor* instance;
 };
 
 Q_DECLARE_METATYPE(RPropertyEditor*)

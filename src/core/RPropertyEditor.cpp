@@ -25,6 +25,8 @@
 #include "RPropertyEditor.h"
 #include "RPropertyEvent.h"
 
+RPropertyEditor* RPropertyEditor::instance = NULL;
+
 /**
  * Default Constructor.
  */
@@ -32,12 +34,18 @@ RPropertyEditor::RPropertyEditor()
     : guiUpToDate(false),
       updatesDisabled(false),
       entityTypeFilter(RS::EntityAll) {
+
+    instance = this;
 }
 
 /**
  * Destructor
  */
 RPropertyEditor::~RPropertyEditor() {
+}
+
+RPropertyEditor* RPropertyEditor::getInstance() {
+    return instance;
 }
 
 /**
@@ -513,7 +521,7 @@ int RPropertyEditor::getTypeCount(RS::EntityType type) {
         return combinedTypes.value(type);
     }
     else {
-        return -1;
+        return 0;
     }
 }
 
