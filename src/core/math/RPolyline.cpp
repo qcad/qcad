@@ -807,18 +807,16 @@ RS::Orientation RPolyline::getOrientation(bool implicitelyClosed) const {
         return RS::Any;
     }
 
-    RPolyline pl = convertArcToLineSegments(16);
-
     RVector minV = RVector::invalid;
     QSharedPointer<RShape> shapeBefore;
     QSharedPointer<RShape> shapeAfter;
     QSharedPointer<RShape> shape;
-    QSharedPointer<RShape> previousShape = pl.getSegmentAt(pl.countSegments()-1);
+    QSharedPointer<RShape> previousShape = getSegmentAt(countSegments()-1);
 
     // find minimum vertex (lower left corner):
-    QList<QSharedPointer<RShape> > segments = pl.getExploded();
+    QList<QSharedPointer<RShape> > segments = getExploded();
     for (int i=0; i<segments.length(); i++) {
-        shape = pl.getSegmentAt(i);
+        shape = getSegmentAt(i);
         if (shape.isNull()) {
             continue;
         }
@@ -843,7 +841,7 @@ RS::Orientation RPolyline::getOrientation(bool implicitelyClosed) const {
     QSharedPointer<RArc> arcBefore = shapeBefore.dynamicCast<RArc>();
     if (!arcBefore.isNull()) {
         l = arcBefore->getLength();
-        list = arcBefore->getPointsWithDistanceToEnd(l/10, RS::FromStart);
+        list = arcBefore->getPointsWithDistanceToEnd(l/10, RS::FromEnd);
         if (!list.isEmpty()) {
             p = list[0];
             shapeBefore = QSharedPointer<RLine>(new RLine(p, arcBefore->getEndPoint()));
@@ -853,7 +851,7 @@ RS::Orientation RPolyline::getOrientation(bool implicitelyClosed) const {
     QSharedPointer<RArc> arcAfter = shapeAfter.dynamicCast<RArc>();
     if (!arcAfter.isNull()) {
         l = arcAfter->getLength();
-        list = arcAfter->getPointsWithDistanceToEnd(l/10, RS::FromEnd);
+        list = arcAfter->getPointsWithDistanceToEnd(l/10, RS::FromStart);
         if (!list.isEmpty()) {
             p = list[0];
             shapeAfter = QSharedPointer<RLine>(new RLine(arcAfter->getStartPoint(), p));
@@ -1426,61 +1424,6 @@ double RPolyline::getArea() const {
         ret = polylineProxy->getArea(*this, 0.01);
     }
     return ret;
-
-    /*
-     * \author Robert S.
-
-    // fails for certain cases
-    // see FS#1756 - Faults with the area of Polylines with arcs
-    RPolyline closedCopy = *this;
-    if (!closedCopy.isGeometricallyClosed()) {
-        closedCopy.setClosed(true);
-    }
-
-    // polygonal area (all segments treated as lines):
-    QList<RVector> pts = closedCopy.getVertices();
-    double area = 0;
-    int nPts = closedCopy.countVertices();
-    int j = nPts - 1;
-    RVector p1;
-    RVector p2;
-
-    for (int i=0; i<nPts; j=i++) {
-        p1 = pts[i];
-        p2 = pts[j];
-        area += p1.x * p2.y;
-        area -= p1.y * p2.x;
-    }
-    area /= 2;
-    area = fabs(area);
-
-    // add / subtract arc segment sector area:
-    if (closedCopy.hasArcSegments()) {
-        bool plReversed = (closedCopy.getOrientation()==RS::CW);
-        for (int i = 0; i < closedCopy.countSegments(); i++) {
-            if (closedCopy.isArcSegmentAt(i)) {
-                QSharedPointer<RShape> shape = closedCopy.getSegmentAt(i);
-                QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
-                if (!arc.isNull()) {
-                    double chordArea = arc->getChordArea();
-
-                    if (arc->isReversed()==plReversed) {
-                        // arc has same orientation as polyline: add
-                        area = area + chordArea;
-                    }
-                    else {
-                        // arc has opposite orientation of polyline: subtract
-                        area = area - chordArea;
-                    }
-                }
-            }
-        }
-    }
-
-    area = fabs(area);
-    //qDebug() << "error: " << fabs(area - control);
-    return area;
-    */
 }
 
 double RPolyline::getLength() const {
