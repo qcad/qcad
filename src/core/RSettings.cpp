@@ -27,6 +27,7 @@
 #include <QStringList>
 #include <QSysInfo>
 #include <QTranslator>
+#include <QWindow>
 
 #if QT_VERSION >= 0x050000
 #  include <QStandardPaths>
@@ -125,6 +126,10 @@ QString RSettings::getAppId() {
  */
 double RSettings::getDevicePixelRatio() {
 #if QT_VERSION >= 0x050000
+    QWindow* window = QGuiApplication::focusWindow();
+    if (window!=NULL) {
+        return window->devicePixelRatio();
+    }
     return qApp->devicePixelRatio();
 #else
     return 1.0;
