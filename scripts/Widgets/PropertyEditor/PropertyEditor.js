@@ -732,7 +732,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
             totalCount += typeCount;
 
             //qDebug("type: ", type, " / count: ", typeCount);
-            selectionCombo.addItem(entityTypeToString(type) + " (" + typeCount + ")", type);
+            selectionCombo.addItem(entityTypeToString(type) + " [" + typeCount + "]", type);
         }
         if (types.length!==1) {
             // TODO: add at 0 if 'no selection' item present at 0:
