@@ -507,9 +507,24 @@ PrintPreviewImpl.prototype.updateBackgroundDecoration = function() {
         return;
     }
 
+    var colBg;
+    var colShadow;
+    var colBorder;
+
+    if (RSettings.hasDarkGuiBackground()) {
+        colBg = "#888888";
+        colShadow = "#333333";
+        colBorder = "black";
+    }
+    else {
+        colBg = "lightgray";
+        colShadow = "gray";
+        colBorder = "#c8c8c8";
+    }
+
     path = new RPainterPath();
     path.setPen(new QPen(Qt.NoPen));
-    path.setBrush(new QBrush(new QColor("lightgray")));
+    path.setBrush(new QBrush(new QColor(colBg)));
     path.addRect(new QRectF(-1.0e8, -1.0e8, 2.0e8, 2.0e8));
     this.view.addToBackground(path);
 
@@ -519,7 +534,7 @@ PrintPreviewImpl.prototype.updateBackgroundDecoration = function() {
         for (i = 0; i < pages.length; ++i) {
             path = new RPainterPath();
             path.setPen(new QPen(Qt.NoPen));
-            path.setBrush(new QBrush(new QColor("gray")));
+            path.setBrush(new QBrush(new QColor(colShadow)));
             this.drawShadow(path, pages[i]);
             this.view.addToBackground(path);
         }
@@ -538,7 +553,7 @@ PrintPreviewImpl.prototype.updateBackgroundDecoration = function() {
         // paper border
         for (i = 0; i < pages.length; ++i) {
             path = new RPainterPath();
-            path.setPen(new QPen(new QColor(0xc8, 0xc8, 0xc8)));
+            path.setPen(new QPen(new QColor(colBorder)));
             path.setBrush(new QBrush(Qt.NoBrush));
             this.drawPaper(path, pages[i]);
             this.view.addToBackground(path);
