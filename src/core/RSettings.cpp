@@ -27,9 +27,9 @@
 #include <QStringList>
 #include <QSysInfo>
 #include <QTranslator>
-#include <QWindow>
 
 #if QT_VERSION >= 0x050000
+#  include <QWindow>
 #  include <QStandardPaths>
 #else
 #  include <QDesktopServices>
