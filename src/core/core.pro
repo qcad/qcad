@@ -303,7 +303,7 @@ win32 {
 }
 
 macx {
-    QMAKE_LFLAGS += -framework ApplicationServices
+    QMAKE_LFLAGS += -framework ApplicationServices -framework Foundation
 }
 
 linux-g++* {
