@@ -3,9 +3,17 @@
 #import <AppKit/NSWindow.h>
 
 bool isMacDarkMode() {
-    NSString *osxMode = [[NSUserDefaults standardUserDefaults] stringForKey:@"AppleInterfaceStyle"];
-    if (osxMode==nil) {
-        return false;
+    NSNumber *plistRequiresAquaAppearance = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSRequiresAquaSystemAppearance"];
+    if (plistRequiresAquaAppearance==nil) {
+        // no value in plist:
+        // detect OS dark mode:
+        NSString *osxMode = [[NSUserDefaults standardUserDefaults] stringForKey:@"AppleInterfaceStyle"];
+        if (osxMode==nil) {
+            return false;
+        }
+        return true;
     }
-    return true;
+    else {
+        return ![plistRequiresAquaAppearance boolValue];
+    }
 }
