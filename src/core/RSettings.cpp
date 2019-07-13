@@ -979,17 +979,28 @@ QString RSettings::getRelativeCoordinatePrefix() {
 
 bool RSettings::hasDarkGuiBackground() {
     if (darkGuiBackground==-1) {
+        // detect dark QCAD theme:
         if (qApp->styleSheet().contains("IconPostfix:inverse", Qt::CaseInsensitive)) {
             darkGuiBackground = 1;
         }
         else {
 #ifdef Q_OS_MAC
+            // detect macOS dark mode:
             if (isMacDarkMode()) {
                 darkGuiBackground = 1;
             }
             else {
                 darkGuiBackground = 0;
             }
+            // TODO: support Windows Dark Theme:
+//#elif Q_OS_WINDOWS
+//            QSettings settings("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize",QSettings::NativeFormat);
+//            if (settings.value("AppsUseLightTheme")==0){
+//                darkGuiBackground = 1;
+//            }
+//            else {
+//                darkGuiBackground = 0;
+//            }
 #else
             darkGuiBackground = 0;
 #endif
