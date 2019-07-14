@@ -799,17 +799,6 @@ SOURCES = \
 ../scripts/Modify/TrimBoth/Tests/TrimBothTest04.js \
 ../scripts/Modify/TrimBoth/TrimBoth.js \
 ../scripts/Modify/TrimBoth/TrimBothInit.js \
-../scripts/MyTools/ActivateLayerConfig/ActivateLayerConfig.js \
-../scripts/MyTools/ActivatePredef/ActivatePredef.js \
-../scripts/MyTools/DupRemover/DupRemover.js \
-../scripts/MyTools/ListActiveLayers/ListActiveLayers.js \
-../scripts/MyTools/ListLayerConfigs/ListLayerConfigs.js \
-../scripts/MyTools/MultiPrintToPdf/MultiPrintToPdf.js \
-../scripts/MyTools/MyTools.js \
-../scripts/MyTools/PredefTools.js \
-../scripts/MyTools/QuickPrintToPdf/QuickPrintToPdf.js \
-../scripts/MyTools/Reconcile/Reconcile.js \
-../scripts/MyTools/SelectWidget/SelectWidget.js \
 ../scripts/Navigation/DefaultNavigation/DefaultNavigation.js \
 ../scripts/Projection/IsometricProjection/IsoProject/IsoProject.js \
 ../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js \
@@ -1152,9 +1141,6 @@ SOURCES = \
 ../scripts/Modify/Translate/TranslateDialog.ui \
 ../scripts/Modify/TranslateRotate/TranslateRotate.ui \
 ../scripts/Modify/TranslateRotate/TranslateRotateDialog.ui \
-../scripts/MyTools/PredefSelectDialog.ui \
-../scripts/MyTools/QuickPrintToPdf/QPTPDialog.ui \
-../scripts/MyTools/SelectWidget/SelectWidget.ui \
 ../scripts/Navigation/DefaultNavigation/PreferencesPage.ui \
 ../scripts/Projection/IsometricProjection/IsoProject/IsoProject.ui \
 ../scripts/Select/SelectContour/SelectContour.ui \

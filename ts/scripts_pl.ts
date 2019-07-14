@@ -2682,7 +2682,7 @@ Aktywuj linię &amp;poleceń</translatorcomment>
     </message>
     <message>
         <location line="-30"/>
-        <location line="+47"/>
+        <location line="+60"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translatorcomment>--exact match--
@@ -2731,12 +2731,12 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="obsolete">Próbuje zwrócić na lub modyfikować jednostki na warstwie zablokowanej lub niewidoczne.</translation>
     </message>
     <message>
-        <location line="-359"/>
+        <location line="-372"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
     <message>
-        <location line="+234"/>
+        <location line="+247"/>
         <source>Invalid value:</source>
         <translation>Nieprawidłowa wartość:</translation>
     </message>
@@ -3296,7 +3296,6 @@ Odznacz w&amp;szystko</translatorcomment>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeDialog.ui" line="+14"/>
-        <location filename="../scripts/MyTools/QuickPrintToPdf/QPTPDialog.ui" line="+14"/>
         <source>Dialog</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
@@ -3416,34 +3415,20 @@ Anuluj
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location filename="../scripts/MyTools/QuickPrintToPdf/QPTPDialog.ui" line="+38"/>
-        <source>Reference layer (specifies center)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
         <source>Scale:</source>
-        <translation type="unfinished">Skala:</translation>
+        <translation type="obsolete">Skala:</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>0.01</source>
-        <translation type="unfinished">0.01</translation>
+        <translation type="obsolete">0.01</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>297</source>
-        <translation type="unfinished">297</translation>
+        <translation type="obsolete">297</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>210</source>
-        <translation type="unfinished">210</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Pagesize:</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">210</translation>
     </message>
 </context>
 <context>
@@ -4539,14 +4524,6 @@ Zrobione
     </message>
 </context>
 <context>
-    <name>DupRemover</name>
-    <message>
-        <location filename="../scripts/MyTools/DupRemover/DupRemover.js" line="+59"/>
-        <source>&amp;DupRemover</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Duplicate</name>
     <message>
         <location filename="../scripts/Edit/Duplicate/DuplicateInit.js" line="+2"/>
@@ -4586,7 +4563,7 @@ Powrót do poprzedniego menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2079"/>
+        <location line="+2097"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -4595,7 +4572,7 @@ Anuluj
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location line="-2078"/>
+        <location line="-2096"/>
         <source>Done</source>
         <translation type="unfinished">Zrobione</translation>
     </message>
@@ -4616,7 +4593,7 @@ Wyrażenia &quot;pragma&quot; nie są obsługiwane. Dlatego musi wystąpić wyra
         <translation>Brak</translation>
     </message>
     <message>
-        <location line="+669"/>
+        <location line="+687"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -4741,7 +4718,7 @@ Narzędzia CAD</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+38"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation type="unfinished"></translation>
@@ -10464,14 +10441,6 @@ Wprowadź liczbę kopii</translatorcomment>
     </message>
 </context>
 <context>
-    <name>MultiPrintToPdf</name>
-    <message>
-        <location filename="../scripts/MyTools/MultiPrintToPdf/MultiPrintToPdf.js" line="+77"/>
-        <source>Multi-Export to PDF</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>MyPositionDialog</name>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui" line="+14"/>
@@ -10500,14 +10469,6 @@ Wprowadź liczbę kopii</translatorcomment>
     <message>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MyScripts.js" line="+53"/>
         <source>My Scripts</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>MyTools</name>
-    <message>
-        <location filename="../scripts/MyTools/MyTools.js" line="+34"/>
-        <source>My&amp;Tools</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -11291,14 +11252,6 @@ Linia ł&amp;amana</translatorcomment>
     </message>
 </context>
 <context>
-    <name>PredefSelectionDialog</name>
-    <message>
-        <location filename="../scripts/MyTools/PredefSelectDialog.ui" line="+17"/>
-        <source>Select Predef</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
@@ -11415,7 +11368,7 @@ Zrobione
         <translation>Zrobione</translation>
     </message>
     <message>
-        <location line="+416"/>
+        <location line="+431"/>
         <source>Export to PDF</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -11944,14 +11897,6 @@ General Punctuation</translatorcomment>
     </message>
 </context>
 <context>
-    <name>QuickPrintToPdf</name>
-    <message>
-        <location filename="../scripts/MyTools/QuickPrintToPdf/QuickPrintToPdf.js" line="+71"/>
-        <source>Multi-Export to PDF</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Quit</name>
     <message>
         <location filename="../scripts/File/Quit/QuitInit.js" line="+8"/>
@@ -12011,34 +11956,6 @@ Za&amp;kończ</translatorcomment>
         <location filename="../scripts/File/RecentFiles/PreferencesPage.ui" line="+17"/>
         <source>Recent files history size:</source>
         <translation>Rozmiar historii ostatnich plików:</translation>
-    </message>
-</context>
-<context>
-    <name>Reconcile</name>
-    <message>
-        <location filename="../scripts/MyTools/Reconcile/Reconcile.js" line="+60"/>
-        <source>First point to adopt</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Second point to adopt</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>First target point</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Second target point</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+121"/>
-        <source>&amp;Reconcile</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13415,131 +13332,48 @@ Zrobione
 <context>
     <name>SelectWidget</name>
     <message>
-        <location filename="../scripts/MyTools/SelectWidget/SelectWidget.js" line="+151"/>
         <source>*VARIES*</source>
-        <translation type="unfinished">*RÓŻNE*</translation>
+        <translation type="obsolete">*RÓŻNE*</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>:</source>
-        <translation type="unfinished">:</translation>
+        <translation type="obsolete">:</translation>
     </message>
     <message>
-        <location line="+128"/>
         <source>No Selection</source>
-        <translation type="unfinished">Brak zaznaczenia</translation>
+        <translation type="obsolete">Brak zaznaczenia</translation>
     </message>
     <message>
-        <location line="+15"/>
         <source>Geometry</source>
-        <translation type="unfinished">Geometria</translation>
+        <translation type="obsolete">Geometria</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Custom</source>
-        <translation type="unfinished">Dostosowany</translation>
+        <translation type="obsolete">Dostosowany</translation>
     </message>
     <message>
-        <location line="+157"/>
         <source>All</source>
-        <translation type="unfinished">Wszystkie</translation>
+        <translation type="obsolete">Wszystkie</translation>
     </message>
     <message>
-        <location line="+49"/>
-        <source>Left</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Center</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Right</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Aligned</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <location line="+9"/>
-        <source>Middle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-9"/>
-        <source>Fit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Top</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
         <source>Base</source>
-        <translation type="unfinished">Podstawa</translation>
+        <translation type="obsolete">Podstawa</translation>
     </message>
     <message>
-        <location line="+0"/>
-        <source>Bottom</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+54"/>
         <source>Auto</source>
-        <translation type="unfinished">Automatycznie</translation>
+        <translation type="obsolete">Automatycznie</translation>
     </message>
     <message>
-        <location line="+141"/>
         <source>Yes</source>
-        <translation type="unfinished">Tak</translation>
+        <translation type="obsolete">Tak</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>No</source>
-        <translation type="unfinished">Nie</translation>
+        <translation type="obsolete">Nie</translation>
     </message>
     <message>
-        <location line="+241"/>
-        <location line="+8"/>
-        <source>Select Widget</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../scripts/MyTools/SelectWidget/SelectWidget.ui" line="+40"/>
-        <source>Reduction:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>to</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>by</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>nearby</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
         <source>Type:</source>
-        <translation type="unfinished">Typ:</translation>
-    </message>
-    <message>
-        <location line="+31"/>
-        <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Typ:</translation>
     </message>
 </context>
 <context>
@@ -14961,7 +14795,7 @@ Rysuj obiekty tekstowe</translatorcomment>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+241"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+248"/>
         <source>Default value:</source>
         <translation>Domyślna wartość:</translation>
     </message>
@@ -15056,7 +14890,7 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
         <translation>Inne...</translation>
     </message>
     <message>
-        <location line="+133"/>
+        <location line="+135"/>
         <source>Degree</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--

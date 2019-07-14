@@ -2215,18 +2215,18 @@ Prajete si ho obnoviť?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+47"/>
+        <location line="+60"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Príkazový riadok</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="-30"/>
         <source>&amp;Command Line</source>
         <translation>&amp;Príkazový riadok</translation>
     </message>
     <message>
-        <location line="+204"/>
+        <location line="+217"/>
         <source>Invalid value:</source>
         <translation>Neplatná hodnota:</translation>
     </message>
@@ -2750,7 +2750,6 @@ Prajete si ho obnoviť?</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeDialog.ui" line="+14"/>
-        <location filename="../scripts/MyTools/QuickPrintToPdf/QPTPDialog.ui" line="+14"/>
         <source>Dialog</source>
         <translation>Dialóg</translation>
     </message>
@@ -2831,34 +2830,20 @@ Prajete si ho obnoviť?</translation>
         <translation>Zrušiť</translation>
     </message>
     <message>
-        <location filename="../scripts/MyTools/QuickPrintToPdf/QPTPDialog.ui" line="+38"/>
-        <source>Reference layer (specifies center)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
         <source>Scale:</source>
-        <translation type="unfinished">Mierka:</translation>
+        <translation type="obsolete">Mierka:</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>0.01</source>
-        <translation type="unfinished">Rozostup medzi písmenami {0.01?}</translation>
+        <translation type="obsolete">Rozostup medzi písmenami {0.01?}</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>297</source>
-        <translation type="unfinished">Rozostup medzi písmenami {297?}</translation>
+        <translation type="obsolete">Rozostup medzi písmenami {297?}</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>210</source>
-        <translation type="unfinished">Rozostup medzi písmenami {210?}</translation>
-    </message>
-    <message>
-        <location line="+13"/>
-        <source>Pagesize:</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Rozostup medzi písmenami {210?}</translation>
     </message>
 </context>
 <context>
@@ -3737,14 +3722,6 @@ už existuje v zozname.</translation>
     </message>
 </context>
 <context>
-    <name>DupRemover</name>
-    <message>
-        <location filename="../scripts/MyTools/DupRemover/DupRemover.js" line="+59"/>
-        <source>&amp;DupRemover</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Duplicate</name>
     <message>
         <location filename="../scripts/Edit/Duplicate/DuplicateInit.js" line="+2"/>
@@ -3778,12 +3755,12 @@ už existuje v zozname.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2079"/>
+        <location line="+2097"/>
         <source>Cancel</source>
         <translation>Zrušiť</translation>
     </message>
     <message>
-        <location line="-2078"/>
+        <location line="-2096"/>
         <source>Done</source>
         <translation>Hotovo</translation>
     </message>
@@ -3799,7 +3776,7 @@ už existuje v zozname.</translation>
         <translation>Žiadne</translation>
     </message>
     <message>
-        <location line="+669"/>
+        <location line="+687"/>
         <source>Options</source>
         <translation>Možnosti</translation>
     </message>
@@ -3901,13 +3878,13 @@ už existuje v zozname.</translation>
         <translation>Zobraziť ECMAScript</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+76"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation>Správca skriptu</translation>
     </message>
     <message>
-        <location line="-25"/>
+        <location line="-38"/>
         <source>&amp;Script Shell</source>
         <translation>&amp;Správca skriptu</translation>
     </message>
@@ -4642,10 +4619,12 @@ už existuje v zozname.</translation>
     <message numerus="yes">
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
-        <translation><numerusform>Transakcia ovplyvnila %n objekt(-y).</numerusform>
-        <numerusform>Transakcia ovplyvnila %n objekty.</numerusform>
-        <numerusform>Transakcia ovplyvnila %n objektov.</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Transakcia ovplyvnila %n objekt(-y).</numerusform>
+            <numerusform>Transakcia ovplyvnila %n objekty.</numerusform>
+            <numerusform>Transakcia ovplyvnila %n objektov.</numerusform>
+        </translation>
+    </message>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
@@ -8401,14 +8380,6 @@ vo výsledku vyhľadania:</translation>
     </message>
 </context>
 <context>
-    <name>MultiPrintToPdf</name>
-    <message>
-        <location filename="../scripts/MyTools/MultiPrintToPdf/MultiPrintToPdf.js" line="+77"/>
-        <source>Multi-Export to PDF</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>MyPositionDialog</name>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui" line="+14"/>
@@ -8438,14 +8409,6 @@ vo výsledku vyhľadania:</translation>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MyScripts.js" line="+53"/>
         <source>My Scripts</source>
         <translation>Moje skripty</translation>
-    </message>
-</context>
-<context>
-    <name>MyTools</name>
-    <message>
-        <location filename="../scripts/MyTools/MyTools.js" line="+34"/>
-        <source>My&amp;Tools</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8562,17 +8525,21 @@ vo výsledku vyhľadania:</translation>
     <message numerus="yes">
         <location line="+89"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
-        <translation><numerusform>Polomer klesol pod hodnotu 0.0 za %n paralelnú kružnicu(-e).</numerusform>
-        <numerusform>Polomer klesol pod hodnotu 0.0 za %n paralelné kružnice.</numerusform>
-        <numerusform>Polomer klesol pod hodnotu 0.0 za %n paralelných kružníc.</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Polomer klesol pod hodnotu 0.0 za %n paralelnú kružnicu(-e).</numerusform>
+            <numerusform>Polomer klesol pod hodnotu 0.0 za %n paralelné kružnice.</numerusform>
+            <numerusform>Polomer klesol pod hodnotu 0.0 za %n paralelných kružníc.</numerusform>
+        </translation>
+    </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
-        <translation><numerusform>Polomer klesol pod hodnotu 0.0 za %n paralelný oblúk(-y).</numerusform>
-        <numerusform>Polomer klesol pod hodnotu 0.0 za %n paralelné oblúky.</numerusform>
-        <numerusform>Polomer klesol pod hodnotu 0.0 za %n paralelných oblúkov.</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Polomer klesol pod hodnotu 0.0 za %n paralelný oblúk(-y).</numerusform>
+            <numerusform>Polomer klesol pod hodnotu 0.0 za %n paralelné oblúky.</numerusform>
+            <numerusform>Polomer klesol pod hodnotu 0.0 za %n paralelných oblúkov.</numerusform>
+        </translation>
+    </message>
     <message>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translation type="vanished">Polomer klesol pod 0.0 po %1 sústredných kružniciach.</translation>
@@ -9009,14 +8976,6 @@ vo výsledku vyhľadania:</translation>
     </message>
 </context>
 <context>
-    <name>PredefSelectionDialog</name>
-    <message>
-        <location filename="../scripts/MyTools/PredefSelectDialog.ui" line="+17"/>
-        <source>Select Predef</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>PreferencesDialog</name>
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.ui" line="+14"/>
@@ -9105,7 +9064,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Hotovo</translation>
     </message>
     <message>
-        <location line="+416"/>
+        <location line="+431"/>
         <source>Export to PDF</source>
         <translation>Exportovať do PDF</translation>
     </message>
@@ -9413,14 +9372,6 @@ vo výsledku vyhľadania:</translation>
     </message>
 </context>
 <context>
-    <name>QuickPrintToPdf</name>
-    <message>
-        <location filename="../scripts/MyTools/QuickPrintToPdf/QuickPrintToPdf.js" line="+71"/>
-        <source>Multi-Export to PDF</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>Quit</name>
     <message>
         <location filename="../scripts/File/Quit/QuitInit.js" line="+8"/>
@@ -9471,34 +9422,6 @@ vo výsledku vyhľadania:</translation>
         <location line="+10"/>
         <source>Open &amp;Recent</source>
         <translation>Naposledy otvo&amp;rené</translation>
-    </message>
-</context>
-<context>
-    <name>Reconcile</name>
-    <message>
-        <location filename="../scripts/MyTools/Reconcile/Reconcile.js" line="+60"/>
-        <source>First point to adopt</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Second point to adopt</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>First target point</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Second target point</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+121"/>
-        <source>&amp;Reconcile</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10583,131 +10506,52 @@ vo výsledku vyhľadania:</translation>
 <context>
     <name>SelectWidget</name>
     <message>
-        <location filename="../scripts/MyTools/SelectWidget/SelectWidget.js" line="+151"/>
         <source>*VARIES*</source>
-        <translation type="unfinished">*Rôzne*</translation>
+        <translation type="obsolete">*Rôzne*</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>:</source>
-        <translation type="unfinished">:</translation>
+        <translation type="obsolete">:</translation>
     </message>
     <message>
-        <location line="+128"/>
         <source>No Selection</source>
-        <translation type="unfinished">Nič nie je vybraté</translation>
+        <translation type="obsolete">Nič nie je vybraté</translation>
     </message>
     <message>
-        <location line="+15"/>
         <source>Geometry</source>
-        <translation type="unfinished">Geometria</translation>
+        <translation type="obsolete">Geometria</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Custom</source>
-        <translation type="unfinished">Vlastné</translation>
+        <translation type="obsolete">Vlastné</translation>
     </message>
     <message>
-        <location line="+157"/>
         <source>All</source>
-        <translation type="unfinished">Všetko</translation>
+        <translation type="obsolete">Všetko</translation>
     </message>
     <message>
-        <location line="+49"/>
-        <source>Left</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Center</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Right</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
         <source>Aligned</source>
-        <translation type="unfinished">Zarovnané</translation>
+        <translation type="obsolete">Zarovnané</translation>
     </message>
     <message>
-        <location line="+0"/>
-        <location line="+9"/>
-        <source>Middle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-9"/>
         <source>Fit</source>
-        <translation type="unfinished">Prispôsobiť</translation>
+        <translation type="obsolete">Prispôsobiť</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>Top</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
         <source>Base</source>
-        <translation type="unfinished">Základ</translation>
+        <translation type="obsolete">Základ</translation>
     </message>
     <message>
-        <location line="+0"/>
-        <source>Bottom</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+54"/>
-        <source>Auto</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+141"/>
         <source>Yes</source>
-        <translation type="unfinished">Áno</translation>
+        <translation type="obsolete">Áno</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>No</source>
-        <translation type="unfinished">Nie</translation>
+        <translation type="obsolete">Nie</translation>
     </message>
     <message>
-        <location line="+241"/>
-        <location line="+8"/>
-        <source>Select Widget</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../scripts/MyTools/SelectWidget/SelectWidget.ui" line="+40"/>
-        <source>Reduction:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>to</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>by</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>nearby</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Type:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+31"/>
         <source>General</source>
-        <translation type="unfinished">Všeobecné</translation>
+        <translation type="obsolete">Všeobecné</translation>
     </message>
 </context>
 <context>
@@ -11842,7 +11686,7 @@ vo výsledku vyhľadania:</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+241"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+248"/>
         <source>Default value:</source>
         <translation>Prednastavené:</translation>
     </message>
@@ -11912,7 +11756,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Ďalšie...</translation>
     </message>
     <message>
-        <location line="+133"/>
+        <location line="+135"/>
         <source>Degree</source>
         <translation>Stupne</translation>
     </message>
