@@ -4642,12 +4642,10 @@ už existuje v zozname.</translation>
     <message numerus="yes">
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
-        <translation>
-            <numerusform>Transakcia ovplyvnila %n objekt(-y).</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Transakcia ovplyvnila %n objekt(-y).</numerusform>
+        <numerusform>Transakcia ovplyvnila %n objekty.</numerusform>
+        <numerusform>Transakcia ovplyvnila %n objektov.</numerusform>
+        </translation></message>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
@@ -8564,21 +8562,17 @@ vo výsledku vyhľadania:</translation>
     <message numerus="yes">
         <location line="+89"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
-        <translation>
-            <numerusform>Polomer klesol pod hodnotu 0.0 za %n paralelnú kružnicu(-e).</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Polomer klesol pod hodnotu 0.0 za %n paralelnú kružnicu(-e).</numerusform>
+        <numerusform>Polomer klesol pod hodnotu 0.0 za %n paralelné kružnice.</numerusform>
+        <numerusform>Polomer klesol pod hodnotu 0.0 za %n paralelných kružníc.</numerusform>
+        </translation></message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
-        <translation>
-            <numerusform>Polomer klesol pod hodnotu 0.0 za %n paralelný oblúk(-y).</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Polomer klesol pod hodnotu 0.0 za %n paralelný oblúk(-y).</numerusform>
+        <numerusform>Polomer klesol pod hodnotu 0.0 za %n paralelné oblúky.</numerusform>
+        <numerusform>Polomer klesol pod hodnotu 0.0 za %n paralelných oblúkov.</numerusform>
+        </translation></message>
     <message>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translation type="vanished">Polomer klesol pod 0.0 po %1 sústredných kružniciach.</translation>
@@ -11203,7 +11197,7 @@ vo výsledku vyhľadania:</translation>
     <message>
         <location line="+13"/>
         <source>Tick for Relative Coordinate</source>
-        <translation>Súradnice vychádzajúce z posledného bodu   </translation>
+        <translation>Súradnice vychádzajúce z posledného bodu</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11241,7 +11235,7 @@ vo výsledku vyhľadania:</translation>
     <message>
         <location line="+13"/>
         <source>Tick for Relative Coordinate</source>
-        <translation>Súradnice vychádzajúce z posledného bodu pod uhlom   </translation>
+        <translation>Súradnice vychádzajúce z posledného bodu pod uhlom</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12855,12 +12849,12 @@ vo výsledku vyhľadania:</translation>
     <message>
         <location line="+21"/>
         <source>Importing file: </source>
-        <translation>Importuje sa súbor:</translation>
+        <translation>Importuje sa súbor: </translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Importing URL: </source>
-        <translation>Importuje sa URL:</translation>
+        <translation>Importuje sa URL: </translation>
     </message>
     <message>
         <source>Grid</source>
