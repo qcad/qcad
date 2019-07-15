@@ -129,6 +129,12 @@ QString RSettings::getAppId() {
  * \return Device pixel ratio of the display. Usually 1 or 2 (for retina/high res displays).
  */
 double RSettings::getDevicePixelRatio() {
+    // DPR can be overridden in settings:
+    int dpr = RSettings::getIntValue("Appearance/DevicePixelRatio", 0);
+    if (dpr>0) {
+        return dpr;
+    }
+
 #if QT_VERSION >= 0x050000
     QWindow* window = QGuiApplication::focusWindow();
     if (window!=NULL) {
