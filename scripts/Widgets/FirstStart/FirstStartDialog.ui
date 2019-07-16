@@ -24,10 +24,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
-    <widget class="QWidget" name="LanguageBackground" native="true">
-     <property name="styleSheet">
-      <string notr="true">.QWidget{background-color: rgba(255, 255, 255, 200);}</string>
-     </property>
+    <widget class="QGroupBox" name="LanguageBackground">
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QLabel" name="LanguageLabel">
@@ -92,10 +89,7 @@
       </layout>
      </item>
      <item>
-      <widget class="QWidget" name="Background" native="true">
-       <property name="styleSheet">
-        <string notr="true">.QWidget{background-color: rgba(255, 255, 255, 200);}</string>
-       </property>
+      <widget class="QGroupBox" name="Background">
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
          <widget class="QTextBrowser" name="Text">
