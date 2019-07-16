@@ -169,7 +169,7 @@ QString RGuiAction::formatToolTip(const QString& text, const QString& shortcut) 
     sc.replace("Ctrl+", QString("%1").arg(QChar(0x2318)));
     sc.replace("Shift+", QString("%1").arg(QChar(0x21E7)));
 #endif
-    QString col = /*RSettings::hasDarkGuiBackground() ? "white" :*/ "gray";
+    QString col = RSettings::hasDarkGuiBackground() ? "lightgray" : "gray";
 
     return QString("%1 <span style=\"color: " + col + "; font-size: small\">%2</span>")
                 .arg(text)
