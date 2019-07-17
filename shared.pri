@@ -61,6 +61,13 @@ win32-msvc2010 {
     CONFIG+=win32-msvc
 }
 
+win32-msvc2015 {
+    contains(QMAKE_TARGET.arch, x86_64) {
+        # fix wrong library path under MSVC 2015 64bit:
+        LIBS += -L"C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x64"
+    }
+}
+
 # building for Mac OS X on the PowerPC platform:
 macx {
     rppc {
