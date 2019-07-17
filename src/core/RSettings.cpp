@@ -60,6 +60,7 @@ RColor* RSettings::startReferencePointColor = NULL;
 RColor* RSettings::endReferencePointColor = NULL;
 RColor* RSettings::secondaryReferencePointColor = NULL;
 RColor* RSettings::tertiaryReferencePointColor = NULL;
+int RSettings::darkMode = -1;
 int RSettings::darkGuiBackground = -1;
 int RSettings::snapRange = -1;
 int RSettings::pickRange = -1;
@@ -981,6 +982,20 @@ QString RSettings::getRelativeCoordinatePrefix() {
         relativeCoordinatePrefix = getStringValue("Input/RelativeCoordinatePrefix", "@");
     }
     return relativeCoordinatePrefix;
+}
+
+/**
+ * \return True for macOS dark mode only.
+ */
+bool RSettings::isDarkMode() {
+    if (darkMode==-1) {
+#ifdef Q_OS_MAC
+        darkMode = (isMacDarkMode() ? 1 : 0);
+#else
+        darkMode = 0;
+#endif
+    }
+    return darkMode==1;
 }
 
 bool RSettings::hasDarkGuiBackground() {

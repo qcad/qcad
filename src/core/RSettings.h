@@ -280,6 +280,7 @@ public:
     static QString getCartesianCoordinateSeparator();
     static QString getRelativeCoordinatePrefix();
 
+    static bool isDarkMode();
     static bool hasDarkGuiBackground();
     static bool hasCustomStyleSheet();
 
@@ -309,6 +310,7 @@ private:
     static RColor* endReferencePointColor;
     static RColor* secondaryReferencePointColor;
     static RColor* tertiaryReferencePointColor;
+    static int darkMode;
     static int darkGuiBackground;
     static int snapRange;
     static int pickRange;
