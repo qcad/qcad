@@ -262,9 +262,9 @@ void RMathLineEdit::setToolTip(const QString& toolTip) {
     }
 
     QString textCol = palette().toolTipText().color().name();
-//    if (RSettings::hasDarkGuiBackground()) {
-//        textCol = "white";
-//    }
+    if (RSettings::isDarkMode()) {
+        textCol = "white";
+    }
 
     QLineEdit::setToolTip(
         QString(
