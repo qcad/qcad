@@ -4,6 +4,7 @@
 #import <AppKit/NSWindow.h>
 
 bool isMacDarkMode() {
+    // read value from plist file:
     NSNumber* plistRequiresAquaAppearance = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSRequiresAquaSystemAppearance"];
     if (plistRequiresAquaAppearance!=nil) {
         // value found in plist file:
@@ -22,7 +23,27 @@ bool isMacDarkMode() {
     else {
         // no value in plist file
         // use system setting
-        qDebug() << "no dark mode value in plist file: use system setting";
+        qDebug() << "no dark mode value in plist file: use app defaults or system setting";
+    }
+
+    // read value from "defaults":
+    //CFStringRef orient = (CFBoolea) CFPreferencesCopyAppValue( CFSTR("NSRequiresAquaSystemAppearance"), CFSTR("QCAD-Pro") );
+    Boolean requiresAquaSystemAppearanceIsValid = false;
+    Boolean requiresAquaSystemAppearance = CFPreferencesGetAppBooleanValue( CFSTR("NSRequiresAquaSystemAppearance"), CFSTR("QCAD-Pro"), &requiresAquaSystemAppearanceIsValid );
+    if (requiresAquaSystemAppearanceIsValid) {
+        qDebug() << "app default for dark mode valid";
+    }
+    else {
+        qDebug() << "app default for dark mode NOT valid";
+    }
+    if (requiresAquaSystemAppearance) {
+        // dark mode disabled in app defaults, i.e.:
+        // defaults write -app "QCAD-Pro" NSRequiresAquaSystemAppearance -bool true
+        qDebug() << "dark mode disabled as app default";
+        return false;
+    }
+    else {
+        qDebug() << "dark mode NOT disabled as app default";
     }
 
     // no value in plist or dark mode enabled in plist:
