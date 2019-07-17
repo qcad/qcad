@@ -1363,10 +1363,20 @@ PropertyEditorImpl.prototype.makeReadOnly = function(control) {
     }
 
     var p = control.palette;
-    p.setColor(QPalette.Base, new QColor("#eeeeee"));
+    if (isNull(control.oriBase)) {
+        control.setProperty("oriBase", control.palette.color(QPalette.Base));
+    }
+
+    if (RSettings.hasDarkGuiBackground()) {
+        p.setColor(QPalette.Base, new QColor("#0a0a0a"));
+    }
+    else {
+        p.setColor(QPalette.Base, new QColor("#eeeeee"));
+    }
     control.palette = p;
+
     control.readOnly = true;
-    // leave enebaled to allow copy / page (20140411):
+    // leave enabled to allow copy / page (20140411):
     //control.enabled = false;
 };
 
@@ -1379,8 +1389,17 @@ PropertyEditorImpl.prototype.makeReadWrite = function(control) {
     }
 
     var p = control.palette;
-    p.setColor(QPalette.Base, new QColor("#ffffff"));
+    if (isNull(control.oriBase)) {
+        control.setProperty("oriBase", control.palette.color(QPalette.Base));
+    }
+    //if (RSettings.hasDarkGuiBackground()) {
+        p.setColor(QPalette.Base, control.oriBase);
+//    }
+//    else {
+//        p.setColor(QPalette.Base, new QColor("#ffffff"));
+//    }
     control.palette = p;
+
     control.readOnly = false;
     control.enabled = true;
 };
