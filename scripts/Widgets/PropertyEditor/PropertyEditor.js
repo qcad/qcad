@@ -1369,6 +1369,7 @@ PropertyEditorImpl.prototype.makeReadOnly = function(control) {
     }
 
     p.setColor(QPalette.Active, QPalette.Text, control.oriPalette.color(QPalette.Disabled, QPalette.WindowText));
+    p.setColor(QPalette.Inactive, QPalette.Text, control.oriPalette.color(QPalette.Disabled, QPalette.WindowText));
 
 //    if (RSettings.hasDarkGuiBackground()) {
 //        p.setColor(QPalette.Base, new QColor("#0a0a0a"));
@@ -1397,6 +1398,7 @@ PropertyEditorImpl.prototype.makeReadWrite = function(control) {
     }
 
     p.setColor(QPalette.Active, QPalette.Text, control.oriPalette.color(QPalette.Active, QPalette.WindowText));
+    p.setColor(QPalette.Inactive, QPalette.Text, control.oriPalette.color(QPalette.Inactive, QPalette.WindowText));
 //    //if (RSettings.hasDarkGuiBackground()) {
 //        p.setColor(QPalette.Base, control.oriBase);
 ////    }
