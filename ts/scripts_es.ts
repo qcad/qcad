@@ -5190,7 +5190,7 @@ El archivo &apos;%1&apos; ya existe. ¿Desea sobreescribirlo?</translatorcomment
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+249"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+256"/>
         <source>Black</source>
         <translation>Negro</translation>
     </message>
@@ -5210,8 +5210,8 @@ El archivo &apos;%1&apos; ya existe. ¿Desea sobreescribirlo?</translatorcomment
         <translation type="obsolete">Bienvenido a QCAD</translation>
     </message>
     <message>
-        <location line="-219"/>
-        <location line="+218"/>
+        <location line="-226"/>
+        <location line="+225"/>
         <source>%1 First Start</source>
         <translation>Primera puesta en %1</translation>
     </message>
@@ -10681,13 +10681,13 @@ en los resultados de búsqueda:</translation>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="+668"/>
+        <location line="+687"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1238"/>
+        <location line="-1257"/>
         <source>:</source>
         <translatorcomment>--exact match--
 --file: artisan_es.ts--
@@ -10755,7 +10755,7 @@ Mosaico horizontal
         <translation>Mostrar todas las propiedades</translation>
     </message>
     <message>
-        <location line="+625"/>
+        <location line="+644"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -10785,7 +10785,7 @@ Seleccione entidad base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="-508"/>
+        <location line="-527"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -10806,7 +10806,7 @@ Seleccione entidad base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+336"/>
+        <location line="+355"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>

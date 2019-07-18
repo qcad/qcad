@@ -4561,7 +4561,7 @@ is already in the list.</source>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+218"/>
+        <location line="+225"/>
         <source>%1 First Start</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8875,7 +8875,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+333"/>
+        <location line="+352"/>
         <source>*VARIES*</source>
         <translation type="unfinished"></translation>
     </message>

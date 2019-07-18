@@ -5151,7 +5151,7 @@ Il file &apos;%1&apos; esiste già. Vuoi sovrascriverlo?</translatorcomment>
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+249"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+256"/>
         <source>Black</source>
         <translation>Nero</translation>
     </message>
@@ -5170,8 +5170,8 @@ Il file &apos;%1&apos; esiste già. Vuoi sovrascriverlo?</translatorcomment>
         <translation type="obsolete">Benvenuti a QCAD</translation>
     </message>
     <message>
-        <location line="-219"/>
-        <location line="+218"/>
+        <location line="-226"/>
+        <location line="+225"/>
         <source>%1 First Start</source>
         <translation>%1 primo avvio</translation>
     </message>
@@ -10546,12 +10546,12 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="+668"/>
+        <location line="+687"/>
         <source>*VARIES*</source>
         <translation>*VARIE*</translation>
     </message>
     <message>
-        <location line="-1238"/>
+        <location line="-1257"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: Arduino_it_IT.po--
@@ -10608,7 +10608,7 @@ Nessuna selezione</translatorcomment>
         <translation>Mostra tutte le proprietà</translation>
     </message>
     <message>
-        <location line="+625"/>
+        <location line="+644"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -10637,7 +10637,7 @@ Specifica la base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="-508"/>
+        <location line="-527"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -10657,7 +10657,7 @@ Specifica la base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+336"/>
+        <location line="+355"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>

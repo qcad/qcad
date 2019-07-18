@@ -6000,7 +6000,7 @@ O arquivo &apos;%1&apos; já existe. Você deseja substituí-lo?</translatorcomm
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+249"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+256"/>
         <source>Black</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -6033,8 +6033,8 @@ Idioma GUI:</translatorcomment>
         <translation type="obsolete">Bem-vindo ao QCAD</translation>
     </message>
     <message>
-        <location line="-219"/>
-        <location line="+218"/>
+        <location line="-226"/>
+        <location line="+225"/>
         <source>%1 First Start</source>
         <translation>%1 Primeiro Início</translation>
     </message>
@@ -12334,13 +12334,13 @@ Cultura marcas de impressão</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1431"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1450"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1238"/>
+        <location line="-1257"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: pt.po--
@@ -12416,7 +12416,7 @@ Fecha todas as janelas</translatorcomment>
         <translation>Mostrar todas as propriedades</translation>
     </message>
     <message>
-        <location line="+625"/>
+        <location line="+644"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -12426,7 +12426,7 @@ Fecha todas as janelas</translatorcomment>
         <translation type="obsolete">Adicionar propriedade personalizada</translation>
     </message>
     <message>
-        <location line="-671"/>
+        <location line="-690"/>
         <source>Add custom property to selected objects</source>
         <translation>Adicione uma propriedade personalizada aos objetos selecionados</translation>
     </message>
@@ -12550,7 +12550,7 @@ Por favor verifique as permissões.</translatorcomment>
         <translation>Não</translation>
     </message>
     <message>
-        <location line="+336"/>
+        <location line="+355"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>

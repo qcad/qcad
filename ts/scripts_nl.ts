@@ -4725,7 +4725,7 @@ is al in de lijst.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+218"/>
+        <location line="+225"/>
         <source>%1 First Start</source>
         <translation>%1 eerste start</translation>
     </message>
@@ -9139,12 +9139,12 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1431"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1450"/>
         <source>*VARIES*</source>
         <translation>*VARIEERT*</translation>
     </message>
     <message>
-        <location line="-1238"/>
+        <location line="-1257"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9219,7 +9219,7 @@ getoond in zoekresultaten:</translation>
         <translation>Nee</translation>
     </message>
     <message>
-        <location line="+336"/>
+        <location line="+355"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>

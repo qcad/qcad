@@ -5205,7 +5205,7 @@ Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer?
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+249"/>
+        <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+256"/>
         <source>Black</source>
         <translation>Noir</translation>
     </message>
@@ -5224,8 +5224,8 @@ Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer?
         <translation type="obsolete">Bienvenue à QCAD</translation>
     </message>
     <message>
-        <location line="-219"/>
-        <location line="+218"/>
+        <location line="-226"/>
+        <location line="+225"/>
         <source>%1 First Start</source>
         <translation>%1 premier démarrage</translation>
     </message>
@@ -10703,7 +10703,7 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
         <translation>Afficher toutes les propriétés</translation>
     </message>
     <message>
-        <location line="+625"/>
+        <location line="+644"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -10738,7 +10738,7 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1238"/>
+        <location line="-1257"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_fr.ts--
@@ -10826,7 +10826,7 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+336"/>
+        <location line="+355"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>

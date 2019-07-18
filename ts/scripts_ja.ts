@@ -4801,7 +4801,7 @@ is already in the list.</source>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+218"/>
+        <location line="+225"/>
         <source>%1 First Start</source>
         <translation>%1 初回実行</translation>
     </message>
@@ -9469,12 +9469,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1431"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1450"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
     <message>
-        <location line="-1238"/>
+        <location line="-1257"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9528,7 +9528,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+625"/>
+        <location line="+644"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -9537,7 +9537,7 @@ shown in search results:</source>
         <translation type="obsolete">カスタムプロパティを追加</translation>
     </message>
     <message>
-        <location line="-671"/>
+        <location line="-690"/>
         <source>Add custom property to selected objects</source>
         <translation>選択したオブジェクトにカスタムプロパティを追加</translation>
     </message>
@@ -9562,7 +9562,7 @@ shown in search results:</source>
         <translation>いいえ</translation>
     </message>
     <message>
-        <location line="+336"/>
+        <location line="+355"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>

@@ -4639,7 +4639,7 @@ již v seznamu je.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+218"/>
+        <location line="+225"/>
         <source>%1 First Start</source>
         <translation>%1 První spuštění</translation>
     </message>
@@ -9018,7 +9018,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Ne</translation>
     </message>
     <message>
-        <location line="+333"/>
+        <location line="+352"/>
         <source>*VARIES*</source>
         <translation>*RŮZNÉ*</translation>
     </message>

@@ -4740,7 +4740,7 @@ on jo luettelossa.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+218"/>
+        <location line="+225"/>
         <source>%1 First Start</source>
         <translation>%1 Ensimmäinen aloitus</translation>
     </message>
@@ -9169,12 +9169,12 @@ näkyy hakutuloksissa:</translation>
         <translation>Näytä aina kaikki ominaisuudet (tämä voi hidastaa kohteiden valintaa)</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1431"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1450"/>
         <source>*VARIES*</source>
         <translation>*VAIHTELEVA*</translation>
     </message>
     <message>
-        <location line="-1238"/>
+        <location line="-1257"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9253,7 +9253,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Ei</translation>
     </message>
     <message>
-        <location line="+336"/>
+        <location line="+355"/>
         <source>Widgets</source>
         <translation>Pienoisohjelmat</translation>
     </message>

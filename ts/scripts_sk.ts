@@ -4785,7 +4785,7 @@ už existuje v zozname.</translation>
     <name>FirstStart</name>
     <message>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
-        <location line="+218"/>
+        <location line="+225"/>
         <source>%1 First Start</source>
         <translation>%1 - Prvé spustenie</translation>
     </message>
@@ -9229,12 +9229,12 @@ vo výsledku vyhľadania:</translation>
         <translation>Vždy zobrazovať všetky vlastnosti (môže to spomaliť výber prvkov)</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1431"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1450"/>
         <source>*VARIES*</source>
         <translation>*Rôzne*</translation>
     </message>
     <message>
-        <location line="-1238"/>
+        <location line="-1257"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9313,7 +9313,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Nie</translation>
     </message>
     <message>
-        <location line="+336"/>
+        <location line="+355"/>
         <source>Widgets</source>
         <translation>Pomôcky</translation>
     </message>
