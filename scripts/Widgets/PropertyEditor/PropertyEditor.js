@@ -712,6 +712,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
     this.widget.findChild("LabelLinetypeScale").enabled = gotLinetypeScaleProperty;
     w = this.widget.findChild("LinetypeScale");
     w.enabled = gotLinetypeScaleProperty;
+    w.setTextColor(false);
     if (!gotLinetypeScaleProperty) {
         w.text = "";
     }
@@ -1362,10 +1363,12 @@ PropertyEditorImpl.prototype.makeReadOnly = function(control) {
         return;
     }
 
-//    var p = control.palette;
-//    if (isNull(control.oriBase)) {
-//        control.setProperty("oriBase", control.palette.color(QPalette.Base));
-//    }
+    var p = control.palette;
+    if (isNull(control.oriPalette)) {
+        control.setProperty("oriPalette", control.palette);
+    }
+
+    p.setColor(QPalette.Active, QPalette.Text, control.oriPalette.color(QPalette.Disabled, QPalette.WindowText));
 
 //    if (RSettings.hasDarkGuiBackground()) {
 //        p.setColor(QPalette.Base, new QColor("#0a0a0a"));
@@ -1373,7 +1376,7 @@ PropertyEditorImpl.prototype.makeReadOnly = function(control) {
 //    else {
 //        p.setColor(QPalette.Base, new QColor("#eeeeee"));
 //    }
-//    control.palette = p;
+    control.palette = p;
 
     control.readOnly = true;
     // leave enabled to allow copy / page (20140411):
@@ -1388,17 +1391,19 @@ PropertyEditorImpl.prototype.makeReadWrite = function(control) {
         return;
     }
 
-//    var p = control.palette;
-//    if (isNull(control.oriBase)) {
-//        control.setProperty("oriBase", control.palette.color(QPalette.Base));
-//    }
+    var p = control.palette;
+    if (isNull(control.oriPalette)) {
+        control.setProperty("oriPalette", control.palette);
+    }
+
+    p.setColor(QPalette.Active, QPalette.Text, control.oriPalette.color(QPalette.Active, QPalette.WindowText));
 //    //if (RSettings.hasDarkGuiBackground()) {
 //        p.setColor(QPalette.Base, control.oriBase);
 ////    }
 ////    else {
 ////        p.setColor(QPalette.Base, new QColor("#ffffff"));
 ////    }
-//    control.palette = p;
+    control.palette = p;
 
     control.readOnly = false;
     control.enabled = true;
