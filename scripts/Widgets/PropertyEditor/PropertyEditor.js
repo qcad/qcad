@@ -1362,18 +1362,18 @@ PropertyEditorImpl.prototype.makeReadOnly = function(control) {
         return;
     }
 
-    var p = control.palette;
-    if (isNull(control.oriBase)) {
-        control.setProperty("oriBase", control.palette.color(QPalette.Base));
-    }
+//    var p = control.palette;
+//    if (isNull(control.oriBase)) {
+//        control.setProperty("oriBase", control.palette.color(QPalette.Base));
+//    }
 
-    if (RSettings.hasDarkGuiBackground()) {
-        p.setColor(QPalette.Base, new QColor("#0a0a0a"));
-    }
-    else {
-        p.setColor(QPalette.Base, new QColor("#eeeeee"));
-    }
-    control.palette = p;
+//    if (RSettings.hasDarkGuiBackground()) {
+//        p.setColor(QPalette.Base, new QColor("#0a0a0a"));
+//    }
+//    else {
+//        p.setColor(QPalette.Base, new QColor("#eeeeee"));
+//    }
+//    control.palette = p;
 
     control.readOnly = true;
     // leave enabled to allow copy / page (20140411):
@@ -1388,17 +1388,17 @@ PropertyEditorImpl.prototype.makeReadWrite = function(control) {
         return;
     }
 
-    var p = control.palette;
-    if (isNull(control.oriBase)) {
-        control.setProperty("oriBase", control.palette.color(QPalette.Base));
-    }
-    //if (RSettings.hasDarkGuiBackground()) {
-        p.setColor(QPalette.Base, control.oriBase);
+//    var p = control.palette;
+//    if (isNull(control.oriBase)) {
+//        control.setProperty("oriBase", control.palette.color(QPalette.Base));
 //    }
-//    else {
-//        p.setColor(QPalette.Base, new QColor("#ffffff"));
-//    }
-    control.palette = p;
+//    //if (RSettings.hasDarkGuiBackground()) {
+//        p.setColor(QPalette.Base, control.oriBase);
+////    }
+////    else {
+////        p.setColor(QPalette.Base, new QColor("#ffffff"));
+////    }
+//    control.palette = p;
 
     control.readOnly = false;
     control.enabled = true;
