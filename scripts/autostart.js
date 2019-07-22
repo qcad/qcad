@@ -596,7 +596,7 @@ function main() {
 
     // splash:
     var splash = undefined;
-    if (RSettings.getBoolValue("Start/EnableSplashScreen", true)) {
+    if (RSettings.getBoolValue("Startup/EnableSplashScreen", true)) {
         var fn;
         var key;
         if (RSettings.getDevicePixelRatio()===2) {
