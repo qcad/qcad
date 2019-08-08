@@ -4,6 +4,13 @@
 #import <AppKit/NSWindow.h>
 
 bool isMacDarkMode() {
+    
+    if (QSysInfo::MacintoshVersion<0x0010) {
+        // no dark mode before 10.14 (Mojave):
+        // High Sierra reports dark menu bar as dark mode:
+        return false;
+    }
+
     // read value from plist file:
     NSNumber* plistRequiresAquaAppearance = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSRequiresAquaSystemAppearance"];
     if (plistRequiresAquaAppearance!=nil) {
