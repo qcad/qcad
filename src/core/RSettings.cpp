@@ -1201,7 +1201,7 @@ QString RSettings::getOSVersion() {
         return "macOS 10.15 (Catalina)";
     default:
     case QSysInfo::MV_Unknown:
-        return "macOS > 10.14 (Unsupported)";
+        return "macOS > 10.15 (Unsupported)";
     }
 #else
     return "Unknown";
