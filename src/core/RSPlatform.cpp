@@ -37,13 +37,13 @@
 #endif
 
 /**
- * \return Unique combination of system ID (linux, osx, win) and host name.
+ * \return Unique combination of system ID (linux, openbsd, osx, win) and host name.
  * E.g. "linux_vertigo". Used for test data that may differ on different machines.
  */
 QString RS::getHostId() {
     return QString("%1_%2")
             .arg(getSystemId())
-#if defined(Q_OS_LINUX)
+#if defined(Q_OS_LINUX) || defined(Q_OS_OPENBSD)
     .arg(getenv("HOSTNAME"));
 #elif defined(Q_OS_MAC)
     // environment variable HOSTNAME not exported on OS X by default:
@@ -56,11 +56,13 @@ QString RS::getHostId() {
 }
 
 /**
- * \return Unique system ID ("linux", "osx", "win").
+ * \return Unique system ID ("linux", "openbsd", "osx", "win").
  */
 QString RS::getSystemId() {
 #if defined(Q_OS_LINUX)
     return "linux";
+#elif defined(Q_OS_OPENBSD)
+    return "openbsd";
 #elif defined(Q_OS_MAC)
     return "osx";
 #elif defined(Q_OS_WIN)
