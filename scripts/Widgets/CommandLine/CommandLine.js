@@ -478,6 +478,9 @@ CommandLine.init = function(basePath) {
     case "linux":
         system = "Linux";
         break;
+    case "openbsd":
+        system = "OpenBSD";
+        break;
     }
     EAction.handleUserMessage(
                 "%1 %2 / %3 %4"

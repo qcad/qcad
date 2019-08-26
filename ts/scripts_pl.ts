@@ -125,7 +125,7 @@
     <message>
         <location line="+3"/>
         <source>License Key:</source>
-        <translation type="unfinished"></translation>
+        <translation>Klucz licencji:</translation>
     </message>
     <message>
         <location line="+5"/>
