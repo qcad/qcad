@@ -10517,7 +10517,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation type="vanished">Geometria</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+763"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+764"/>
         <source>Add custom property to selected objects</source>
         <translation>Aggiungere una proprietà personalizzata per gli oggetti selezionati</translation>
     </message>
@@ -10546,12 +10546,12 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="+687"/>
+        <location line="+693"/>
         <source>*VARIES*</source>
         <translation>*VARIE*</translation>
     </message>
     <message>
-        <location line="-1257"/>
+        <location line="-1264"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: Arduino_it_IT.po--
@@ -10593,7 +10593,7 @@ Nessuna selezione</translatorcomment>
         <translation>Rimuovere questa proprietà dagli oggetti selezionati</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>All</source>
         <translation>Tutto</translation>
     </message>
@@ -10608,7 +10608,7 @@ Nessuna selezione</translatorcomment>
         <translation>Mostra tutte le proprietà</translation>
     </message>
     <message>
-        <location line="+644"/>
+        <location line="+650"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -10637,7 +10637,7 @@ Specifica la base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="-527"/>
+        <location line="-533"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -10657,7 +10657,7 @@ Specifica la base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+355"/>
+        <location line="+361"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>

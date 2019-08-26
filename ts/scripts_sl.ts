@@ -9535,12 +9535,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1450"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1457"/>
         <source>*VARIES*</source>
         <translation>*RAZLIČNO*</translation>
     </message>
     <message>
-        <location line="-1257"/>
+        <location line="-1264"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9579,7 +9579,7 @@ shown in search results:</source>
         <translation>Odstrani to lastnost iz izbranih objektov</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>All</source>
         <translation>Vse</translation>
     </message>
@@ -9599,7 +9599,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+644"/>
+        <location line="+650"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -9640,7 +9640,7 @@ shown in search results:</source>
         <translation type="obsolete">Dno</translation>
     </message>
     <message>
-        <location line="-527"/>
+        <location line="-533"/>
         <source>Auto</source>
         <translation>Samodejno</translation>
     </message>
@@ -9660,7 +9660,7 @@ shown in search results:</source>
         <translation>Ne</translation>
     </message>
     <message>
-        <location line="+355"/>
+        <location line="+361"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>

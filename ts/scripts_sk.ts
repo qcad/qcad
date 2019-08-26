@@ -9229,12 +9229,12 @@ vo výsledku vyhľadania:</translation>
         <translation>Vždy zobrazovať všetky vlastnosti (môže to spomaliť výber prvkov)</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1450"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1457"/>
         <source>*VARIES*</source>
         <translation>*Rôzne*</translation>
     </message>
     <message>
-        <location line="-1257"/>
+        <location line="-1264"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9273,7 +9273,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Odstrániť vlastnosť z vybraných prvkov</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>All</source>
         <translation>Všetko</translation>
     </message>
@@ -9313,7 +9313,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Nie</translation>
     </message>
     <message>
-        <location line="+355"/>
+        <location line="+361"/>
         <source>Widgets</source>
         <translation>Pomôcky</translation>
     </message>

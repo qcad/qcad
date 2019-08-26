@@ -8978,7 +8978,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Odebrat tuto vlastnost vybraným objektům</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>All</source>
         <translation>Vše</translation>
     </message>
@@ -9018,7 +9018,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Ne</translation>
     </message>
     <message>
-        <location line="+352"/>
+        <location line="+358"/>
         <source>*VARIES*</source>
         <translation>*RŮZNÉ*</translation>
     </message>

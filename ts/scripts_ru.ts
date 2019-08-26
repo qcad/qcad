@@ -9104,12 +9104,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1450"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1457"/>
         <source>*VARIES*</source>
         <translation>*ВАРЬИРОВАНИЕ*</translation>
     </message>
     <message>
-        <location line="-1257"/>
+        <location line="-1264"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9144,7 +9144,7 @@ shown in search results:</source>
         <translation>Удалить это свойство из выделенных объектов</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>All</source>
         <translation>Все</translation>
     </message>
@@ -9184,7 +9184,7 @@ shown in search results:</source>
         <translation>Нет</translation>
     </message>
     <message>
-        <location line="+355"/>
+        <location line="+361"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>

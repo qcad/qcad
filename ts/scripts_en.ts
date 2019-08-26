@@ -9056,7 +9056,7 @@ shown in search results:</translation>
         <translation>Remove this property from selected objects</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>All</source>
         <translation>All</translation>
     </message>
@@ -9096,7 +9096,7 @@ shown in search results:</translation>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+352"/>
+        <location line="+358"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>

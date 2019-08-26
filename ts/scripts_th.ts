@@ -8651,7 +8651,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>All</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8691,7 +8691,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+352"/>
+        <location line="+358"/>
         <source>*VARIES*</source>
         <translation type="unfinished"></translation>
     </message>

@@ -9169,12 +9169,12 @@ näkyy hakutuloksissa:</translation>
         <translation>Näytä aina kaikki ominaisuudet (tämä voi hidastaa kohteiden valintaa)</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1450"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1457"/>
         <source>*VARIES*</source>
         <translation>*VAIHTELEVA*</translation>
     </message>
     <message>
-        <location line="-1257"/>
+        <location line="-1264"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9213,7 +9213,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Poista tämä ominaisuus valituilta kohteilta</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>All</source>
         <translation>Kaikki</translation>
     </message>
@@ -9253,7 +9253,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Ei</translation>
     </message>
     <message>
-        <location line="+355"/>
+        <location line="+361"/>
         <source>Widgets</source>
         <translation>Pienoisohjelmat</translation>
     </message>

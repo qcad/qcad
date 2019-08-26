@@ -10652,7 +10652,7 @@ en los resultados de búsqueda:</translation>
         <translation type="vanished">Geometría</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+763"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+764"/>
         <source>Add custom property to selected objects</source>
         <translation>Agregar una propiedad personalizada a los objetos seleccionados</translation>
     </message>
@@ -10681,13 +10681,13 @@ en los resultados de búsqueda:</translation>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="+687"/>
+        <location line="+693"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1257"/>
+        <location line="-1264"/>
         <source>:</source>
         <translatorcomment>--exact match--
 --file: artisan_es.ts--
@@ -10734,7 +10734,7 @@ Valor indexado</translatorcomment>
         <translation>Retire esta propiedad de los objetos seleccionados</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>All</source>
         <translatorcomment>--exact match--
 --file: qtiplot_es.ts--
@@ -10755,7 +10755,7 @@ Mosaico horizontal
         <translation>Mostrar todas las propiedades</translation>
     </message>
     <message>
-        <location line="+644"/>
+        <location line="+650"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -10785,7 +10785,7 @@ Seleccione entidad base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="-527"/>
+        <location line="-533"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -10806,7 +10806,7 @@ Seleccione entidad base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+355"/>
+        <location line="+361"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>

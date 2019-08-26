@@ -9139,12 +9139,12 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1450"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1457"/>
         <source>*VARIES*</source>
         <translation>*VARIEERT*</translation>
     </message>
     <message>
-        <location line="-1257"/>
+        <location line="-1264"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9179,7 +9179,7 @@ getoond in zoekresultaten:</translation>
         <translation>Eigenschap van geselecteerde objecten verwijderen</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+69"/>
         <source>All</source>
         <translation>Alle</translation>
     </message>
@@ -9219,7 +9219,7 @@ getoond in zoekresultaten:</translation>
         <translation>Nee</translation>
     </message>
     <message>
-        <location line="+355"/>
+        <location line="+361"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>

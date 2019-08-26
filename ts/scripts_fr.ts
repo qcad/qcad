@@ -10688,7 +10688,7 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
         <translation>Retirer ce propriété à partir des objets sélectionnés</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+93"/>
         <source>Add custom property to selected objects</source>
         <translation>Ajouter une propriété personnalisée pour les objets sélectionnés</translation>
     </message>
@@ -10703,7 +10703,7 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
         <translation>Afficher toutes les propriétés</translation>
     </message>
     <message>
-        <location line="+644"/>
+        <location line="+650"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -10738,7 +10738,7 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1257"/>
+        <location line="-1264"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_fr.ts--
@@ -10763,7 +10763,7 @@ Dessin enregistré : %1</translatorcomment>
         <translation>Entités dépendantes</translation>
     </message>
     <message>
-        <location line="+361"/>
+        <location line="+362"/>
         <source>All</source>
         <translatorcomment>--google--
 Partage &amp;Horizontal
@@ -10826,7 +10826,7 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+355"/>
+        <location line="+361"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>
