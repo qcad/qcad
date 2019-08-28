@@ -168,7 +168,7 @@ RCadToolMatrixTree.prototype.updatePanelSizes = function() {
         embeddedWidget.setFixedHeight(height);
         subItem.setSizeHint(0, new QSize(width, height));
     }
-    this.updateGeometries();
+    //this.updateGeometries();
 };
 
 /**
