@@ -98,6 +98,9 @@ public:
     virtual QSharedPointer<RLinetype> queryLinetype(RLinetype::Id linetypeId) const;
     virtual QSharedPointer<RLinetype> queryLinetype(const QString& linetypeName) const;
 
+    void clearVisibleCache();
+    void updateVisibleCache() const;
+
     void clearSelectionCache();
     void updateSelectedEntityMap() const;
     void updateSelectedLayerMap() const;
@@ -117,6 +120,8 @@ public:
     void setEntitySelected(QSharedPointer<REntity> entity, bool on,
         QSet<REntity::Id>* affectedEntities = NULL, bool onlyDescend = false);
     virtual bool isSelected(REntity::Id entityId);
+
+    virtual bool isEntityVisible(const REntity& entity) const;
 
     virtual bool hasSelection() const;
 
@@ -183,6 +188,7 @@ public:
 
     virtual QSharedPointer<RObject> queryObjectDirect(RObject::Id objectId) const;
     virtual QSharedPointer<REntity> queryEntityDirect(REntity::Id objectId) const;
+    virtual QSharedPointer<REntity> queryVisibleEntityDirect(REntity::Id objectId) const;
     virtual QSharedPointer<RUcs> queryUcsDirect(RUcs::Id ucsId) const;
     virtual QSharedPointer<RLayer> queryLayerDirect(RLayer::Id layerId) const;
     virtual QSharedPointer<RLayerState> queryLayerStateDirect(RLayerState::Id layerStateId) const;
@@ -226,6 +232,8 @@ protected:
     QHash<REntity::Id, QSharedPointer<REntity> > entityMap;
     mutable QHash<REntity::Id, QSharedPointer<REntity> > selectedEntityMap;
     mutable bool selectedEntityMapDirty;
+    mutable QHash<REntity::Id, QSharedPointer<REntity> > visibleEntityMap;
+    mutable bool visibleEntityMapDirty;
     mutable QHash<RLayer::Id, QSharedPointer<RLayer> > selectedLayerMap;
     mutable bool selectedLayerMapDirty;
     mutable QHash<RBlock::Id, QHash<REntity::Id, QSharedPointer<REntity> > > blockEntityMap;
