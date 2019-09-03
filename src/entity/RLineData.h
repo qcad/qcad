@@ -56,6 +56,8 @@ public:
         return *this;
     }
 
+    virtual RBox getBoundingBox(bool ignoreEmpty) const;
+
     virtual RPolyline getHull(double offset) const;
 
     RVector getStartPoint() const {

@@ -39,6 +39,12 @@ RLineData::RLineData(const RVector& startPoint, const RVector& endPoint) :
     RLine(startPoint, endPoint) {
 }
 
+RBox RLineData::getBoundingBox(bool ignoreEmpty) const {
+    Q_UNUSED(ignoreEmpty)
+
+    return RLine::getBoundingBox();
+}
+
 RPolyline RLineData::getHull(double offset) const {
     RVector vRight = RVector::createPolar(offset, getAngle()-M_PI/2);
 
