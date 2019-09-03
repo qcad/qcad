@@ -77,31 +77,8 @@ double REntityData::getLineweightInUnits(const QStack<REntity*>& blockRefStack) 
     return lw / 100.0;
 }
 
-/**
- * \return Color of this entity.
- *
- * \param resolve Resolve color if ByLayer or ByBlock.
- */
-RColor REntityData::getColor(bool resolve, const QStack<REntity*>& blockRefStack) const {
-    if (!resolve) {
-        return getColor();
-    }
-
-    if (getType()==RS::EntityAttribute && document!=NULL) {
-        if (getLayerId()==document->getLayer0Id() && RSettings::isLayer0CompatibilityOn()) {
-            REntity::Id blockRefId = getParentId();
-            QSharedPointer<REntity> parentEntity = document->queryEntityDirect(blockRefId);
-            QSharedPointer<RBlockReferenceEntity> blockRef = parentEntity.dynamicCast<RBlockReferenceEntity>();
-            if (!blockRef.isNull()) {
-                // delegate color of block attribute to block reference:
-                //qDebug() << "delegate color to block ref:";
-                //qDebug() << "color of block ref: " << blockRef->getColor(true, blockRefStack);
-                return blockRef->getColor(true, blockRefStack);
-            }
-        }
-    }
-
-    if (color.isByLayer()) {
+RColor REntityData::getColor(const RColor& unresolvedColor, const QStack<REntity*>& blockRefStack) const {
+    if (unresolvedColor.isByLayer()) {
         if (document==NULL) {
             qWarning() << "REntityData::getColor: "
                           "color is ByLayer but layer is NULL "
@@ -131,14 +108,41 @@ RColor REntityData::getColor(bool resolve, const QStack<REntity*>& blockRefStack
         return l->getColor();
     }
 
-    if (color.isByBlock()) {
+    if (unresolvedColor.isByBlock()) {
         if (blockRefStack.isEmpty()) {
             return RColor(Qt::white);
         }
         return blockRefStack.top()->getColor(true, blockRefStack);
     }
 
-    return getColor();
+    return unresolvedColor;
+}
+
+/**
+ * \return Color of this entity.
+ *
+ * \param resolve Resolve color if ByLayer or ByBlock.
+ */
+RColor REntityData::getColor(bool resolve, const QStack<REntity*>& blockRefStack) const {
+    if (!resolve) {
+        return getColor();
+    }
+
+    if (getType()==RS::EntityAttribute && document!=NULL) {
+        if (getLayerId()==document->getLayer0Id() && RSettings::isLayer0CompatibilityOn()) {
+            REntity::Id blockRefId = getParentId();
+            QSharedPointer<REntity> parentEntity = document->queryEntityDirect(blockRefId);
+            QSharedPointer<RBlockReferenceEntity> blockRef = parentEntity.dynamicCast<RBlockReferenceEntity>();
+            if (!blockRef.isNull()) {
+                // delegate color of block attribute to block reference:
+                //qDebug() << "delegate color to block ref:";
+                //qDebug() << "color of block ref: " << blockRef->getColor(true, blockRefStack);
+                return blockRef->getColor(true, blockRefStack);
+            }
+        }
+    }
+
+    return getColor(getColor(), blockRefStack);
 }
 
 /**

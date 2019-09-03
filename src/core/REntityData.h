@@ -289,6 +289,7 @@ public:
         return color;
     }
 
+    virtual RColor getColor(const RColor& unresolvedColor, const QStack<REntity *>& blockRefStack) const;
     virtual RColor getColor(bool resolve, const QStack<REntity *>& blockRefStack) const;
 
     virtual RColor getDisplayColor() {

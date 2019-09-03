@@ -104,6 +104,7 @@ public:
     virtual QBrush getBrush(const RPainterPath& path);
     virtual QBrush getBrush();
 
+    virtual RColor getColor(const RColor& unresolvedColor);
     virtual RColor getColor(bool resolve);
 
     virtual void setEntityAttributes(bool forceSelected=false);

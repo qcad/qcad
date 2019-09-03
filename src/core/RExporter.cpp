@@ -314,9 +314,20 @@ QBrush RExporter::getBrush() {
     return currentBrush;
 }
 
+RColor RExporter::getColor(const RColor& unresolvedColor) {
+    REntity* currentEntity = getEntity();
+    if (currentEntity == NULL) {
+        qWarning() << "no current entity";
+        return RColor();
+    }
+
+    return currentEntity->getColor(unresolvedColor, blockRefViewportStack);
+}
+
 RColor RExporter::getColor(bool resolve) {
     REntity* currentEntity = getEntity();
     if (currentEntity == NULL) {
+        qWarning() << "no current entity";
         return RColor();
     }
 
