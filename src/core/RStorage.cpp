@@ -1092,3 +1092,69 @@ bool RStorage::isParentLayerPlottable(const RLayer& layer) const {
     }
     return isParentLayerPlottable(*pl);
 }
+
+bool RStorage::isEntityVisible(const REntity& entity, RObject::Id blockId) const {
+    RLayer::Id layerId = entity.getLayerId();
+    bool isLayer0 = (layerId==getLayer0Id());
+    bool ignoreLayerVisibility = false;
+
+    QSharedPointer<RLayer> layer = queryLayerDirect(layerId);
+
+//    qDebug() << "entity: ";
+//    dump();
+//    qDebug() << "layer: " << layer->getName();
+//    qDebug() << "model space: " << doc->getModelSpaceBlockId();
+//    qDebug() << "block ID: " << getBlockId();
+//    qDebug() << "layer 0 compat: " << RSettings::isLayer0CompatibilityOn();
+
+    if (isLayer0 &&
+        RSettings::isLayer0CompatibilityOn()) {
+
+        if (blockId==RBlock::INVALID_ID) {
+            blockId = getCurrentBlockId();
+        }
+
+        if (entity.getBlockId()!=blockId) {
+
+            // entity is on layer 0 and not in model space block:
+            // if layer 0 compatibility is on, the visibility of layer 0
+            // does not affect the visibility of the entity:
+            ignoreLayerVisibility = true;
+        }
+    }
+
+    // check if layer is frozen:
+    if (isLayerFrozen(*layer) && !ignoreLayerVisibility) {
+        if (entity.getType()!=RS::EntityViewport) {
+            return false;
+        }
+    }
+
+    // check if layer is off and this is not a block reference:
+    // block references on layer X remain visible if X is off but not frozen:
+    if (isLayerOff(*layer) && !ignoreLayerVisibility) {
+        if (entity.getType()!=RS::EntityBlockRef && entity.getType()!=RS::EntityViewport) {
+            return false;
+        }
+    }
+
+    // if entity is on layer 0 and layer of current rendering context block reference
+    // is off, entity is off:
+    // -> this is implemented in RBlockReference::exportEntity
+
+    // check if block is frozen:
+    if (entity.getType()==RS::EntityBlockRef) {
+        const RBlockReferenceEntity* blockRef = dynamic_cast<const RBlockReferenceEntity*>(this);
+        if (blockRef!=NULL) {
+            RBlock::Id refBlockId = blockRef->getReferencedBlockId();
+            if (refBlockId!=RBlock::INVALID_ID) {
+                QSharedPointer<RBlock> block = queryBlockDirect(refBlockId);
+                if (!block.isNull() && block->isFrozen()) {
+                    return false;
+                }
+            }
+        }
+    }
+
+    return true;
+}

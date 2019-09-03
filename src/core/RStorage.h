@@ -243,6 +243,20 @@ public:
         return queryEntity(entityId);
     }
 
+    virtual QSharedPointer<REntity> queryVisibleEntityDirect(REntity::Id entityId) const {
+        QSharedPointer<REntity> ret = queryEntityDirect(entityId);
+//        if (ret->isUndone()) {
+//            return QSharedPointer<REntity>();
+//        }
+//        if (ret->getBlockId()!=currentBlockId) {
+//            return QSharedPointer<REntity>();
+//        }
+        if (!ret->isVisible()) {
+            return QSharedPointer<REntity>();
+        }
+        return ret;
+    }
+
     /**
      * \return A pointer to the UCS with the given \c ucsId
      *      or NULL if no such UCS exists.
@@ -639,6 +653,8 @@ public:
     virtual bool isLayerPlottable(const RLayer& layer) const;
     virtual bool isParentLayerPlottable(RLayer::Id layerId) const;
     virtual bool isParentLayerPlottable(const RLayer& layer) const;
+
+    virtual bool isEntityVisible(const REntity& entity, RBlock::Id blockId) const;
 
     /**
      * \return True if the given block is frozen.
