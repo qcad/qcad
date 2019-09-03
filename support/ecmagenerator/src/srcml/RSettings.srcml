@@ -281,6 +281,7 @@
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getCartesianCoordinateSeparator</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getRelativeCoordinatePrefix</name><parameter_list>()</parameter_list>;</function_decl>
 
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>isDarkMode</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>hasDarkGuiBackground</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>hasCustomStyleSheet</name><parameter_list>()</parameter_list>;</function_decl>
 
@@ -310,6 +311,7 @@
     <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>endReferencePointColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>secondaryReferencePointColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RColor</name>*</type> <name>tertiaryReferencePointColor</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>darkMode</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>darkGuiBackground</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>snapRange</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>pickRange</name></decl>;</decl_stmt>

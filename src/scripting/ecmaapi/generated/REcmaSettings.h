@@ -466,6 +466,9 @@
         getRelativeCoordinatePrefix
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isDarkMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasDarkGuiBackground
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

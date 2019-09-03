@@ -163,6 +163,10 @@
         
     
       RColor getColor(
+                const RColor & unresolvedColor
+            );
+        
+      RColor getColor(
                 bool resolve
             );
         

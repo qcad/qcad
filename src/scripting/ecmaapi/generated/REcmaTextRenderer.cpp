@@ -108,6 +108,14 @@
                 qScriptValueFromValue(&engine, RTextRenderer::rxXSpaceMText),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxTabMM",
+                qScriptValueFromValue(&engine, RTextRenderer::rxTabMM),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxTabIN",
+                qScriptValueFromValue(&engine, RTextRenderer::rxTabIN),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxParagraphFeed",
                 qScriptValueFromValue(&engine, RTextRenderer::rxParagraphFeed),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

@@ -314,6 +314,13 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RColor" isPureVirtual="false" />
       <variant returnType="RColor" isPureVirtual="false">
+        <arg type="RColor &amp;" typeName="RColor"
+        name="unresolvedColor" isConst="true" />
+        <arg type="QStack &lt; REntity * &gt; &amp;"
+        typeName="QStack &lt; REntity * &gt;" name="blockRefStack"
+        isConst="true" />
+      </variant>
+      <variant returnType="RColor" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="resolve"
         isConst="false" />
         <arg type="QStack &lt; REntity * &gt; &amp;"

@@ -2477,6 +2477,73 @@
     
     if( context->argumentCount() ==
     2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RColor */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: QStack < REntity * > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RColor*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RColor*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RColor.",
+                               context);                    
+                    }
+                    RColor 
+                    a0 = 
+                    *ap0;
+                
+                    // argument is reference
+                    QStack < REntity * >*
+                    ap1 =
+                    qscriptvalue_cast<
+                    QStack < REntity * >*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if( ap1 == NULL ){
+                           return REcmaHelper::throwError("REntity: Argument 1 is not of type QStack < REntity * >*.",
+                               context);                    
+                    }
+                    QStack < REntity * >& a1 = *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RColor'
+    RColor cppResult =
+        
+               self->getColor(a0
+        ,
+    a1);
+        // return type: RColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
             context->argument(0).isBool()
         ) /* type: bool */
      && (

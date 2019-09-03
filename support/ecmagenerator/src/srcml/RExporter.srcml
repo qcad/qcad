@@ -105,6 +105,7 @@
     <function_decl><type><name>virtual</name> <name>QBrush</name></type> <name>getBrush</name><parameter_list>(<param><decl><type><name>const</name> <name>RPainterPath</name>&amp;</type> <name>path</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QBrush</name></type> <name>getBrush</name><parameter_list>()</parameter_list>;</function_decl>
 
+    <function_decl><type><name>virtual</name> <name>RColor</name></type> <name>getColor</name><parameter_list>(<param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>unresolvedColor</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>RColor</name></type> <name>getColor</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>resolve</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setEntityAttributes</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>forceSelected</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>

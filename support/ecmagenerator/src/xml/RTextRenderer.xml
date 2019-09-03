@@ -78,6 +78,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="rxXSpaceMText" type="QString" isConst="false"
     isStatic="true" />
+    <property name="rxTabMM" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxTabIN" type="QString" isConst="false"
+    isStatic="true" />
     <property name="rxParagraphFeed" type="QString" isConst="false"
     isStatic="true" />
     <property name="rxXFeed" type="QString" isConst="false"
