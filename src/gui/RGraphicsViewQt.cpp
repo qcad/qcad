@@ -96,8 +96,6 @@ void RGraphicsViewQt::viewportChangeEvent() {
  * \see invalidate
  */
 void RGraphicsViewQt::paintEvent(QPaintEvent* e) {
-    // enable timer for performance monitoring:
-    //RDebug::startTimer();
     RDocumentInterface* di = getDocumentInterface();
     if (di!=NULL && di->isSuspended()) {
         QPainter wPainter(this);
@@ -122,8 +120,6 @@ void RGraphicsViewQt::paintEvent(QPaintEvent* e) {
         //wPainter.drawPixmap(this->rect(), pm);
         wPainter.end();
     }
-
-    //RDebug::stopTimer("paintEvent");
 }
 
 /**
@@ -141,7 +137,7 @@ bool RGraphicsViewQt::event(QEvent* e) {
     }
 
 #if QT_VERSION >= 0x050A00 && QT_VERSION <= 0x050C00
-    // workaround for Qt 5.10.0-5.11.2 bug QTBUG-65559 with Wacom tablets:
+    // workaround for Qt 5.10.0-5.12.0 bug QTBUG-65559 with Wacom tablets:
     // TabletMove events are triggered instead of mouseMoveEvents if pen does NOT
     // hover over tablet when application is started:
     // convert to mouseMoveEvents here:
