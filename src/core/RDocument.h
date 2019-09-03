@@ -159,6 +159,7 @@ public:
     QSharedPointer<RObject> queryObjectByHandle(RObject::Handle objectHandle) const;
     QSharedPointer<REntity> queryEntity(REntity::Id entityId) const;
     QSharedPointer<REntity> queryEntityDirect(REntity::Id entityId) const;
+    QSharedPointer<REntity> queryVisibleEntityDirect(REntity::Id entityId) const;
     QSharedPointer<RUcs> queryUcs(RUcs::Id ucsId) const;
     QSharedPointer<RUcs> queryUcs(const QString& ucsName) const;
     QSharedPointer<RLayer> queryLayer(RLayer::Id layerId) const;
@@ -229,6 +230,8 @@ public:
     bool isBlockFrozen(RBlock::Id blockId) const;
     bool isLayoutBlock(RBlock::Id blockId) const;
     bool isEntityLayerFrozen(REntity::Id entityId) const;
+
+    bool isEntityVisible(const REntity& entity, RBlock::Id blockId = RBlock::INVALID_ID) const;
 
     bool isParentLayerSnappable(RLayer::Id layerId) const;
     bool isParentLayerSnappable(const RLayer& layer) const;

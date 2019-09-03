@@ -1497,6 +1497,8 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
         const RBox& box, bool checkBoundingBoxOnly, bool includeLockedLayers, RBlock::Id blockId,
         const QList<RS::EntityType>& filter, bool selectedOnly) const {
 
+    bool onlyVisible = false;
+
     QSet<RS::EntityType> filterSet = filter.toSet();
     RBox boxExpanded = box;
     boxExpanded.c1.z = RMINDOUBLE;
@@ -1504,6 +1506,8 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
     bool usingCurrentBlock = false;
     if (blockId==RBlock::INVALID_ID) {
         blockId = getCurrentBlockId();
+        onlyVisible = true;
+        //qDebug() << "onlyVisible:" << onlyVisible;
     }
 
     usingCurrentBlock = (blockId == getCurrentBlockId());
@@ -1527,7 +1531,14 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
 
     // box contains bounding box of this document:
     if (usingCurrentBlock && boxExpanded.contains(getBoundingBox())) {
-        QSet<REntity::Id> ids = queryAllEntities(false, false);
+        QSet<REntity::Id> ids;
+        if (onlyVisible) {
+            ids = queryAllVisibleEntities();
+            //qDebug() << "all visible ids:" << ids;
+        }
+        else {
+            ids = queryAllEntities(false, false);
+        }
         QSet<REntity::Id>::iterator it;
         for (it=ids.begin(); it!=ids.end(); it++) {
             candidates.insert(*it, QSet<int>());
@@ -1557,29 +1568,38 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
         if (RMouseEvent::hasMouseMoved()) {
             return QMap<REntity::Id, QSet<int> >();
         }
-        QSharedPointer<REntity> entity = queryEntityDirect(it.key());
+
+        QSharedPointer<REntity> entity;
+        if (onlyVisible) {
+            entity = queryVisibleEntityDirect(it.key());
+        }
+        else {
+            entity = queryEntityDirect(it.key());
+        }
         if (entity.isNull()) {
             continue;
         }
 
-        // undone:
-        if (entity->isUndone()) {
-            continue;
-        }
+        if (!onlyVisible) {
+            // undone:
+            if (entity->isUndone()) {
+                continue;
+            }
 
-        // not on current or given block:
-        if (entity->getBlockId()!=blockId) {
-            continue;
+            // not on current or given block:
+            if (entity->getBlockId()!=blockId) {
+                continue;
+            }
+
+            if (!entity->isVisible()) {
+                continue;
+            }
         }
 
         if (selectedOnly) {
             if (!entity->isSelected()) {
                 continue;
             }
-        }
-
-        if (!entity->isVisible()) {
-            continue;
         }
 
         // layer is off:
@@ -1932,7 +1952,9 @@ QSharedPointer<REntity> RDocument::queryEntityDirect(REntity::Id entityId) const
     return storage.queryEntityDirect(entityId);
 }
 
-
+QSharedPointer<REntity> RDocument::queryVisibleEntityDirect(REntity::Id entityId) const {
+    return storage.queryVisibleEntityDirect(entityId);
+}
 
 /**
  * Queries the UCS with the given ID.
@@ -2248,6 +2270,10 @@ bool RDocument::isEntityLayerFrozen(REntity::Id entityId) const {
     }
 
     return storage.isLayerFrozen(entity->getLayerId());
+}
+
+bool RDocument::isEntityVisible(const REntity& entity, RObject::Id blockId) const {
+    return storage.isEntityVisible(entity, blockId);
 }
 
 /**
