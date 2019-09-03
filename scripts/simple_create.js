@@ -148,6 +148,33 @@ function addLine(startPoint, endPoint) {
 }
 
 /**
+ * Adds an infinite line to the drawing.
+ * The two vectors are the base point and the direction vector
+ * (point relative to base point)
+ * \ingroup ecma_simple
+ *
+ * \code
+ * addXLine(x1,y1, dx,dy)
+ * addXLine([x1,y1], [dx,dy])
+ * addXLine(new RVector(x1,y1), new RVector(dx,dy))
+ * \endcode
+ */
+function addXLine(startPoint, directionVector) {
+    if (arguments.length===4) {
+        return addXLine(new RVector(arguments[0], arguments[1]), new RVector(arguments[2], arguments[3]));
+    }
+
+    if (isArray(startPoint)) {
+        startPoint = new RVector(startPoint);
+    }
+    if (isArray(directionVector)) {
+        directionVector = new RVector(directionVector);
+    }
+
+    return addShape(new RXLine(startPoint, directionVector));
+}
+
+/**
  * Adds an arc to the drawing.
  * \ingroup ecma_simple
  *
