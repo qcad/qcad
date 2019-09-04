@@ -317,7 +317,7 @@ function addPolyline(points, closed, relative) {
  *
  * \code
  * addSpline([[x1,y1],[x2,y2],[x3,y3]], false)
- * addSpline([new RVector(x1,y1)],new RVector(x2,y2),new RVector(x3,y3)], false)
+ * addSpline([new RVector(x1,y1),new RVector(x2,y2),new RVector(x3,y3)], false)
  * \endcode
  */
 function addSpline(points, closed) {
