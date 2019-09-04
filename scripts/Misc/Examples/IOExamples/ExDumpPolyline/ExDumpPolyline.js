@@ -62,9 +62,6 @@ ExDumpPolyline.prototype.beginEvent = function() {
     this.terminate();
 };
 
-/**
- * Adds a menu for this action to Examples/Math Examples/ExDumpPolyline.
- */
 ExDumpPolyline.init = function(basePath) {
     var action = new RGuiAction(qsTr("&Output Polyline Vertices"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);

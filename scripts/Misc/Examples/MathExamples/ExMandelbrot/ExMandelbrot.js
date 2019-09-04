@@ -17,13 +17,13 @@
  * along with QCAD.
  */
 
-include("sctipts/EAction.js");
+include("scripts/EAction.js");
 include("scripts/simple.js");
 
 /**
  * \ingroup ecma_misc_examples_mathexamples
  * \class ExMandelbrot
- * This action draws a simple spiral (center at 0/0).
+ * This action plots the Mandelbrot set.
  */
 function ExMandelbrot(guiAction) {
     EAction.call(this, guiAction);
@@ -44,9 +44,6 @@ ExMandelbrot.prototype.beginEvent = function() {
     this.terminate();
 };
 
-/**
- * Adds a menu for this action to Examples/Math Examples/Spiral.
- */
 ExMandelbrot.init = function(basePath) {
     var action = new RGuiAction(qsTr("&Mandelbrot Example"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
