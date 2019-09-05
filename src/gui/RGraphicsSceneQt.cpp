@@ -690,13 +690,14 @@ void RGraphicsSceneQt::deleteDrawables() {
 /**
  * \return A list of all painter paths that represent the entity with the
  * given ID.
+ * TODO: return reference or pointer
  */
 QList<RGraphicsSceneDrawable> RGraphicsSceneQt::getDrawables(REntity::Id entityId) {
-    if (drawables.contains(entityId)) {
+    //if (drawables.contains(entityId)) {
         return drawables[entityId];
-    }
+    //}
 
-    return QList<RGraphicsSceneDrawable>();
+    //return QList<RGraphicsSceneDrawable>();
 }
 
 bool RGraphicsSceneQt::hasClipRectangleFor(REntity::Id entityId, bool preview) {
