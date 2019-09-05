@@ -16,6 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RAttributeEntity.h"
 #include "RDocument.h"
 #include "RSettings.h"
 #include "RStorage.h"
@@ -243,7 +244,8 @@ QList<REntity::Id> RStorage::orderBackToFront(const QSet<REntity::Id>& entityIds
     }
 
     // sort by draw order and enitty ID:
-    qSort(res.begin(), res.end(), lessThan);
+    //qSort(res.begin(), res.end(), lessThan);
+    std::sort(res.begin(), res.end(), lessThan);
 
     // copy into list of sorted IDs:
     QList<REntity::Id> ret;
@@ -1093,9 +1095,48 @@ bool RStorage::isParentLayerPlottable(const RLayer& layer) const {
     return isParentLayerPlottable(*pl);
 }
 
+/**
+ * \return True if the given entity is visible in the context of the given block or the current block (default).
+ */
 bool RStorage::isEntityVisible(const REntity& entity, RObject::Id blockId) const {
     RLayer::Id layerId = entity.getLayerId();
     bool isLayer0 = (layerId==getLayer0Id());
+
+    // delegate attribute visibility to block reference:
+    // only show block attributes of visible blocks:
+    if (entity.getType()==RS::EntityAttribute) {
+        if (RSettings::getHideAttributeWithBlock()) {
+            if (document!=NULL) {
+                RLayer::Id layer0Id = document->getLayer0Id();
+                REntity::Id blockRefId = entity.getParentId();
+                QSharedPointer<REntity> parentEntity = document->queryEntityDirect(blockRefId);
+                QSharedPointer<RBlockReferenceEntity> blockRef = parentEntity.dynamicCast<RBlockReferenceEntity>();
+                if (!blockRef.isNull()) {
+                    bool blockRefOnLayer0 = blockRef->getLayerId()==layer0Id;
+                    // delegate visibility of block attribute to block reference:
+                    if (isLayer0) {
+                        if (blockRefOnLayer0) {
+                            QSharedPointer<RLayer> layer0 = document->queryLayerDirect(layerId);
+                            if (!layer0.isNull() && layer0->isOff()) {
+                                return false;
+                            }
+                        }
+                        else {
+                            QSharedPointer<RLayer> layer = document->queryLayerDirect(blockRef->getLayerId());
+                            if (!layer.isNull() && layer->isOff()) {
+                                return false;
+                            }
+                        }
+                        return blockRef->isVisible();
+                    }
+                    else if (!blockRef->isVisible()) {
+                        return false;
+                    }
+                }
+            }
+        }
+    }
+
     bool ignoreLayerVisibility = false;
 
     QSharedPointer<RLayer> layer = queryLayerDirect(layerId);

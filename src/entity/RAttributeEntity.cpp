@@ -127,45 +127,6 @@ QPair<QVariant, RPropertyAttributes> RAttributeEntity::getProperty(
     return RTextBasedEntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
-bool RAttributeEntity::isVisible() const {
-    // delegate attribute visibility to block reference:
-    // only show block attributes of visible blocks:
-    if (RSettings::getHideAttributeWithBlock()) {
-        REntity::Id blockRefId = getParentId();
-        const RDocument* document = getDocument();
-        if (document!=NULL) {
-            RLayer::Id layer0Id = document->getLayer0Id();
-            bool onLayer0 = getLayerId()==layer0Id;
-            QSharedPointer<REntity> parentEntity = document->queryEntityDirect(blockRefId);
-            QSharedPointer<RBlockReferenceEntity> blockRef = parentEntity.dynamicCast<RBlockReferenceEntity>();
-            if (!blockRef.isNull()) {
-                bool blockRefOnLayer0 = blockRef->getLayerId()==layer0Id;
-                // delegate visibility of block attribute to block reference:
-                if (onLayer0) {
-                    if (blockRefOnLayer0) {
-                        QSharedPointer<RLayer> layer0 = document->queryLayerDirect(getLayerId());
-                        if (!layer0.isNull() && layer0->isOff()) {
-                            return false;
-                        }
-                    }
-                    else {
-                        QSharedPointer<RLayer> layer = document->queryLayerDirect(blockRef->getLayerId());
-                        if (!layer.isNull() && layer->isOff()) {
-                            return false;
-                        }
-                    }
-                    return blockRef->isVisible();
-                }
-                else if (!blockRef->isVisible()) {
-                    return false;
-                }
-            }
-        }
-    }
-
-    return REntity::isVisible();
-}
-
 void RAttributeEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
     Q_UNUSED(e);
     Q_UNUSED(preview);

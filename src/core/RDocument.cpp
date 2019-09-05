@@ -1486,9 +1486,74 @@ QSet<REntity::Id> RDocument::queryContainedEntities(const RBox& box) const {
 }
 
 
+QSet<REntity::Id> RDocument::queryIntersectedEntitiesXYFast(const RBox& box) {
+    RBox boxExpanded = box;
+    boxExpanded.c1.z = RMINDOUBLE;
+    boxExpanded.c2.z = RMAXDOUBLE;
+
+    // box contains bounding box of this document:
+    // return all visible entities:
+    if (boxExpanded.contains(getBoundingBox())) {
+        QSet<REntity::Id> ids;
+        RDebug::startTimer(70);
+        ids = queryAllVisibleEntities();
+        RDebug::stopTimer(70, "queryAllVisibleEntities");
+        return ids;
+    }
+
+    return queryIntersectedShapesXYFast(boxExpanded);
+}
+
+QSet<REntity::Id> RDocument::queryIntersectedShapesXYFast(const RBox& box) {
+    // always include construction lines (XLine):
+    QSet<REntity::Id> infinites = queryInfiniteEntities();
+
+    // box is completely outside the bounding box of this document:
+    if (box.isOutside(getBoundingBox())) {
+        return infinites;
+    }
+
+    RSpatialIndex* si = getSpatialIndexForBlock(getCurrentBlockId());
+    RDebug::startTimer(120);
+    QSet<REntity::Id> candidates = si->queryIntersected(box).keys().toSet();
+    RDebug::stopTimer(120, "si->queryIntersected");
+    candidates.unite(infinites);
+
+    return candidates;
+}
+
 QSet<REntity::Id> RDocument::queryIntersectedEntitiesXY(
         const RBox& box, bool checkBoundingBoxOnly, bool includeLockedLayers, RBlock::Id blockId,
         const QList<RS::EntityType>& filter, bool selectedOnly) const {
+
+    bool onlyVisible = false;
+
+    RBox boxExpanded = box;
+    boxExpanded.c1.z = RMINDOUBLE;
+    boxExpanded.c2.z = RMAXDOUBLE;
+
+    if (blockId==RBlock::INVALID_ID) {
+        blockId = getCurrentBlockId();
+        onlyVisible = true;
+    }
+    bool usingCurrentBlock = (blockId == getCurrentBlockId());
+
+    // box contains bounding box of this document:
+    // return all visible entities:
+    if (usingCurrentBlock && boxExpanded.contains(getBoundingBox())) {
+        QSet<REntity::Id> ids;
+        if (onlyVisible) {
+            RDebug::startTimer(70);
+            ids = queryAllVisibleEntities();
+            RDebug::stopTimer(70, "queryAllVisibleEntities");
+            //qDebug() << "all visible ids:" << ids;
+        }
+        else {
+            ids = queryAllEntities(false, false);
+        }
+
+        return ids;
+    }
 
     return queryIntersectedShapesXY(box, checkBoundingBoxOnly, includeLockedLayers, blockId, filter, selectedOnly).keys().toSet();
 }
@@ -1503,14 +1568,14 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
     RBox boxExpanded = box;
     boxExpanded.c1.z = RMINDOUBLE;
     boxExpanded.c2.z = RMAXDOUBLE;
-    bool usingCurrentBlock = false;
+    //bool usingCurrentBlock = false;
     if (blockId==RBlock::INVALID_ID) {
         blockId = getCurrentBlockId();
         onlyVisible = true;
         //qDebug() << "onlyVisible:" << onlyVisible;
     }
 
-    usingCurrentBlock = (blockId == getCurrentBlockId());
+    bool usingCurrentBlock = (blockId == getCurrentBlockId());
 
     // always include construction lines (XLine):
     QMap<REntity::Id, QSet<int> > infinites;
@@ -1534,7 +1599,6 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
         QSet<REntity::Id> ids;
         if (onlyVisible) {
             ids = queryAllVisibleEntities();
-            //qDebug() << "all visible ids:" << ids;
         }
         else {
             ids = queryAllEntities(false, false);
@@ -2272,6 +2336,9 @@ bool RDocument::isEntityLayerFrozen(REntity::Id entityId) const {
     return storage.isLayerFrozen(entity->getLayerId());
 }
 
+/**
+ * \copydoc RStorage::isEntityVisible
+ */
 bool RDocument::isEntityVisible(const REntity& entity, RObject::Id blockId) const {
     return storage.isEntityVisible(entity, blockId);
 }
