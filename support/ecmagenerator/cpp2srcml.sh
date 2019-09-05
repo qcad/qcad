@@ -10,7 +10,7 @@ else
     exit 0
 fi
 
-maxThreads=16
+maxThreads=1024
 
 src2srcml_output=`src2srcml -h | grep \\\-\\\-output`
 

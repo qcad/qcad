@@ -710,7 +710,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="isVisible" cppName="isVisible" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false" />
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RBlock::Id" typeName="RBlock::Id" name="blockId"
+        hasDefault="true" default="RBlock :: INVALID_ID"
+        isConst="false" />
+      </variant>
     </method>
     <method name="isEditable" cppName="isEditable"
     specifier="public" isStatic="false" isVirtual="true"

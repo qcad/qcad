@@ -176,6 +176,12 @@
         queryLinetype
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        clearVisibleCache
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateVisibleCache
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clearSelectionCache
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -210,6 +216,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isSelected
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isEntityVisible
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         hasSelection
@@ -348,6 +357,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         queryEntityDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        queryVisibleEntityDirect
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         queryUcsDirect

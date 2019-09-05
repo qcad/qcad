@@ -2,7 +2,7 @@
 
 echo "xml to cpp..."
 
-maxThreads=128
+maxThreads=1024
 if [ -z $1 ]; then
     scope="src"
 else

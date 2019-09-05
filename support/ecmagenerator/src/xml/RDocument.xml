@@ -294,6 +294,24 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QSet &lt; REntity::Id &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="queryIntersectedEntitiesXYFast"
+    cppName="queryIntersectedEntitiesXYFast" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSet &lt; REntity::Id &gt;"
+      isPureVirtual="false">
+        <arg type="RBox &amp;" typeName="RBox" name="box"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="queryIntersectedShapesXYFast"
+    cppName="queryIntersectedShapesXYFast" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSet &lt; REntity::Id &gt;"
+      isPureVirtual="false">
+        <arg type="RBox &amp;" typeName="RBox" name="box"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="queryIntersectedEntitiesXY"
     cppName="queryIntersectedEntitiesXY" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -424,6 +442,15 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="queryEntityDirect" cppName="queryEntityDirect"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; REntity &gt;"
+      isPureVirtual="false">
+        <arg type="REntity::Id" typeName="REntity::Id"
+        name="entityId" isConst="false" />
+      </variant>
+    </method>
+    <method name="queryVisibleEntityDirect"
+    cppName="queryVisibleEntityDirect" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QSharedPointer &lt; REntity &gt;"
       isPureVirtual="false">
         <arg type="REntity::Id" typeName="REntity::Id"
@@ -768,6 +795,17 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="REntity::Id" typeName="REntity::Id"
         name="entityId" isConst="false" />
+      </variant>
+    </method>
+    <method name="isEntityVisible" cppName="isEntityVisible"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="REntity &amp;" typeName="REntity" name="entity"
+        isConst="true" />
+        <arg type="RBlock::Id" typeName="RBlock::Id" name="blockId"
+        hasDefault="true" default="RBlock :: INVALID_ID"
+        isConst="false" />
       </variant>
     </method>
     <method name="isParentLayerSnappable"

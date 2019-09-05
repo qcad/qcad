@@ -399,6 +399,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="linetypeName" isConst="true" />
       </variant>
     </method>
+    <method name="clearVisibleCache" cppName="clearVisibleCache"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="updateVisibleCache" cppName="updateVisibleCache"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="clearSelectionCache"
     cppName="clearSelectionCache" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -516,6 +526,14 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="REntity::Id" typeName="REntity::Id"
         name="entityId" isConst="false" />
+      </variant>
+    </method>
+    <method name="isEntityVisible" cppName="isEntityVisible"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="REntity &amp;" typeName="REntity" name="entity"
+        isConst="true" />
       </variant>
     </method>
     <method name="hasSelection" cppName="hasSelection"
@@ -905,6 +923,15 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="queryEntityDirect" cppName="queryEntityDirect"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; REntity &gt;"
+      isPureVirtual="false">
+        <arg type="REntity::Id" typeName="REntity::Id"
+        name="objectId" isConst="false" />
+      </variant>
+    </method>
+    <method name="queryVisibleEntityDirect"
+    cppName="queryVisibleEntityDirect" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="QSharedPointer &lt; REntity &gt;"
       isPureVirtual="false">
         <arg type="REntity::Id" typeName="REntity::Id"

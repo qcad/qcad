@@ -571,6 +571,16 @@
             );
         
     
+      void paintEntitiesMulti(
+                QList < QPainter * > painterThread, const RBox & queryBox
+            );
+        
+    
+      void paintEntitiesThread(
+                QPainter * painter, QList < REntity::Id > & list, int start, int end
+            );
+        
+    
       void paintEntity(
                 QPainter * painter, REntity::Id id, bool preview
         = false

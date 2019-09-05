@@ -243,6 +243,12 @@
         paintEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        paintEntitiesMulti
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        paintEntitiesThread
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         paintEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -159,6 +159,9 @@
         queryEntityDirect
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryVisibleEntityDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryUcs
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -466,6 +469,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isParentLayerPlottable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isEntityVisible
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isBlockFrozen

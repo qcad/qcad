@@ -2,7 +2,7 @@
 
 echo "srcml to xml ..."
 
-maxThreads=16
+maxThreads=1024
 SPATH=$(pwd)
 if [ -z $1 ]; then
     scope="src"

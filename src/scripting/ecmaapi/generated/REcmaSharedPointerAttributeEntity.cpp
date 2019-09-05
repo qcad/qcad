@@ -87,8 +87,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
             
-            REcmaHelper::registerFunction(&engine, proto, isVisible, "isVisible");
-            
             REcmaHelper::registerFunction(&engine, proto, exportEntity, "exportEntity");
             
             REcmaHelper::registerFunction(&engine, proto, getTag, "getTag");
@@ -1204,55 +1202,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerAttributeEntity::getProperty", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaSharedPointerAttributeEntity::isVisible
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaSharedPointerAttributeEntity::isVisible", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerAttributeEntity::isVisible";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RAttributeEntity* self = 
-                        getSelf("isVisible", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        
-               self->isVisible();
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeEntity.isVisible().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaSharedPointerAttributeEntity::isVisible", context, engine);
             return result;
         }
          QScriptValue

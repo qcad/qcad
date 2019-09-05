@@ -144,6 +144,12 @@
         queryInfiniteEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryIntersectedEntitiesXYFast
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        queryIntersectedShapesXYFast
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryIntersectedEntitiesXY
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -181,6 +187,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         queryEntityDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        queryVisibleEntityDirect
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         queryUcs
@@ -271,6 +280,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isEntityLayerFrozen
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isEntityVisible
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isParentLayerSnappable

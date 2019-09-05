@@ -152,6 +152,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryLinetype, "queryLinetype");
             
+            REcmaHelper::registerFunction(&engine, proto, clearVisibleCache, "clearVisibleCache");
+            
+            REcmaHelper::registerFunction(&engine, proto, updateVisibleCache, "updateVisibleCache");
+            
             REcmaHelper::registerFunction(&engine, proto, clearSelectionCache, "clearSelectionCache");
             
             REcmaHelper::registerFunction(&engine, proto, updateSelectedEntityMap, "updateSelectedEntityMap");
@@ -175,6 +179,8 @@
             REcmaHelper::registerFunction(&engine, proto, setEntitySelected, "setEntitySelected");
             
             REcmaHelper::registerFunction(&engine, proto, isSelected, "isSelected");
+            
+            REcmaHelper::registerFunction(&engine, proto, isEntityVisible, "isEntityVisible");
             
             REcmaHelper::registerFunction(&engine, proto, hasSelection, "hasSelection");
             
@@ -267,6 +273,8 @@
             REcmaHelper::registerFunction(&engine, proto, queryObjectDirect, "queryObjectDirect");
             
             REcmaHelper::registerFunction(&engine, proto, queryEntityDirect, "queryEntityDirect");
+            
+            REcmaHelper::registerFunction(&engine, proto, queryVisibleEntityDirect, "queryVisibleEntityDirect");
             
             REcmaHelper::registerFunction(&engine, proto, queryUcsDirect, "queryUcsDirect");
             
@@ -3476,6 +3484,94 @@
             return result;
         }
          QScriptValue
+        REcmaMemoryStorage::clearVisibleCache
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::clearVisibleCache", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::clearVisibleCache";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("clearVisibleCache", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clearVisibleCache();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.clearVisibleCache().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::clearVisibleCache", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMemoryStorage::updateVisibleCache
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::updateVisibleCache", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::updateVisibleCache";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("updateVisibleCache", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->updateVisibleCache();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.updateVisibleCache().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::updateVisibleCache", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaMemoryStorage::clearSelectionCache
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -4692,6 +4788,76 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMemoryStorage::isSelected", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMemoryStorage::isEntityVisible
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::isEntityVisible", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::isEntityVisible";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("isEntityVisible", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: REntity */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    REntity*
+                    ap0 =
+                    qscriptvalue_cast<
+                    REntity*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RMemoryStorage: Argument 0 is not of type REntity*.",
+                               context);                    
+                    }
+                    REntity& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isEntityVisible(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.isEntityVisible().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::isEntityVisible", context, engine);
             return result;
         }
          QScriptValue
@@ -8044,6 +8210,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMemoryStorage::queryEntityDirect", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMemoryStorage::queryVisibleEntityDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::queryVisibleEntityDirect", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::queryVisibleEntityDirect";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("queryVisibleEntityDirect", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: REntity::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    REntity::Id
+                    a0 =
+                    (REntity::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < REntity >'
+    QSharedPointer < REntity > cppResult =
+        
+               self->queryVisibleEntityDirect(a0);
+        // return type: QSharedPointer < REntity >
+                // Shared pointer to entity, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.queryVisibleEntityDirect().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::queryVisibleEntityDirect", context, engine);
             return result;
         }
          QScriptValue

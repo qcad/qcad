@@ -204,6 +204,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, paintEntities, "paintEntities");
             
+            REcmaHelper::registerFunction(&engine, proto, paintEntitiesMulti, "paintEntitiesMulti");
+            
+            REcmaHelper::registerFunction(&engine, proto, paintEntitiesThread, "paintEntitiesThread");
+            
             REcmaHelper::registerFunction(&engine, proto, paintEntity, "paintEntity");
             
             REcmaHelper::registerFunction(&engine, proto, paintOverlay, "paintOverlay");
@@ -4290,6 +4294,189 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsViewQt::paintEntities", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewQt::paintEntitiesMulti
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewQt::paintEntitiesMulti", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::paintEntitiesMulti";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewQt* self = 
+                        getSelf("paintEntitiesMulti", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isArray()
+        ) /* type: QList < QPainter * > */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RBox */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < QPainter * >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RBox*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RBox*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 1 is not of type RBox.",
+                               context);                    
+                    }
+                    RBox 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->paintEntitiesMulti(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.paintEntitiesMulti().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::paintEntitiesMulti", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewQt::paintEntitiesThread
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewQt::paintEntitiesThread", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::paintEntitiesThread";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewQt* self = 
+                        getSelf("paintEntitiesThread", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    4 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QPainter * */
+     && (
+            context->argument(1).isArray()
+        ) /* type: QList < REntity::Id > */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(3).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    QPainter * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<QPainter >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type QPainter *QPainter *.", context);                    
+                    }
+                
+                    // argument isArray
+                    QList < REntity::Id >
+                    a1;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(1),
+                        a1
+                    );
+                
+                    // argument isStandardType
+                    int
+                    a2 =
+                    (int)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a3 =
+                    (int)
+                    
+                    context->argument( 3 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->paintEntitiesThread(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.paintEntitiesThread().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::paintEntitiesThread", context, engine);
             return result;
         }
          QScriptValue
