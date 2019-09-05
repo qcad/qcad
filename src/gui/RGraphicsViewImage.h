@@ -266,6 +266,9 @@ public:
     bool getPanOptimization();
 
     virtual void paintEntities(QPainter* painter, const RBox& queryBox);
+    void paintEntitiesMulti(QList<QPainter*> painterThread, const RBox& queryBox);
+    void paintEntitiesThread(QPainter* painter, QList<REntity::Id>& list, int start, int end);
+
     virtual void paintEntity(QPainter* painter, REntity::Id id, bool preview = false);
 
     virtual void paintOverlay(QPainter* painter);
@@ -356,7 +359,7 @@ protected:
     void updateTransformation() const;
 
 protected:
-    QImage graphicsBuffer;
+    QList<QImage> graphicsBufferThread;
     QImage graphicsBufferWithPreview;
 
 protected:

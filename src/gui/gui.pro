@@ -1,5 +1,7 @@
 include( ../../shared.pri )
 
+QT += concurrent
+
 SOURCES += \
     RShortcutLineEdit.cpp \
     RCharacterWidget.cpp \

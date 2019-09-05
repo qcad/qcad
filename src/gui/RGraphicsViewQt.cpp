@@ -99,11 +99,7 @@ void RGraphicsViewQt::paintEvent(QPaintEvent* e) {
     RDocumentInterface* di = getDocumentInterface();
     if (di!=NULL && di->isSuspended()) {
         QPainter wPainter(this);
-        //wPainter.drawImage(0, 0, graphicsBuffer);
-        wPainter.drawImage(getRect(), graphicsBuffer);
-        //QPixmap pm;
-        //pm.convertFromImage(graphicsBuffer);
-        //wPainter.drawPixmap(this->rect(), pm);
+        wPainter.drawImage(getRect(), graphicsBufferWithPreview);
         wPainter.end();
         return;
     }
