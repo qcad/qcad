@@ -38,6 +38,18 @@
         
     
     
+      int getNumThreads(
+                
+            );
+        
+    
+    
+      void setNumThreads(
+                int n
+            );
+        
+    
+    
       void clear(
                 
             );

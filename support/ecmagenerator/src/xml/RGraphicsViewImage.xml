@@ -17,6 +17,18 @@ xmlns:rs="http://www.ribbonsoft.com">
     <constructor>
       <variant />
     </constructor>
+    <method name="getNumThreads" cppName="getNumThreads"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="setNumThreads" cppName="setNumThreads"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="n" isConst="false" />
+      </variant>
+    </method>
     <method name="clear" cppName="clear" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
@@ -481,7 +493,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
-    <method name="paintEntity" cppName="paintEntity"
+    <method name="paintEntityThread" cppName="paintEntityThread"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">

@@ -81,6 +81,10 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getNumThreads, "getNumThreads");
+            
+            REcmaHelper::registerFunction(&engine, proto, setNumThreads, "setNumThreads");
+            
             REcmaHelper::registerFunction(&engine, proto, clear, "clear");
             
             REcmaHelper::registerFunction(&engine, proto, setViewportNumber, "setViewportNumber");
@@ -215,7 +219,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, paintEntitiesThread, "paintEntitiesThread");
             
-            REcmaHelper::registerFunction(&engine, proto, paintEntity, "paintEntity");
+            REcmaHelper::registerFunction(&engine, proto, paintEntityThread, "paintEntityThread");
             
             REcmaHelper::registerFunction(&engine, proto, paintOverlay, "paintOverlay");
             
@@ -365,6 +369,110 @@
 
     // public methods:
      QScriptValue
+        REcmaGraphicsViewImage::getNumThreads
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::getNumThreads", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::getNumThreads";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("getNumThreads", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getNumThreads();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.getNumThreads().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getNumThreads", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::setNumThreads
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::setNumThreads", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::setNumThreads";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("setNumThreads", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setNumThreads(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.setNumThreads().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::setNumThreads", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaGraphicsViewImage::clear
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -4633,19 +4741,19 @@
             return result;
         }
          QScriptValue
-        REcmaGraphicsViewImage::paintEntity
+        REcmaGraphicsViewImage::paintEntityThread
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsViewImage::paintEntity", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::paintEntity";
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::paintEntityThread", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::paintEntityThread";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RGraphicsViewImage* self = 
-                        getSelf("paintEntity", context);
+                        getSelf("paintEntityThread", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -4761,10 +4869,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.paintEntity().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.paintEntityThread().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::paintEntity", context, engine);
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::paintEntityThread", context, engine);
             return result;
         }
          QScriptValue

@@ -269,6 +269,16 @@
   
         // methods of 1st level base class RGraphicsViewImage:
         
+      int getNumThreads(
+                
+            );
+        
+    
+      void setNumThreads(
+                int n
+            );
+        
+    
       void clear(
                 
             );

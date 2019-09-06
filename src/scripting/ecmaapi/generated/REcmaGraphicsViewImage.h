@@ -48,6 +48,12 @@
 
     // public methods:
     static  QScriptValue
+        getNumThreads
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setNumThreads
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clear
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -249,7 +255,7 @@
         paintEntitiesThread
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        paintEntity
+        paintEntityThread
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         paintOverlay
