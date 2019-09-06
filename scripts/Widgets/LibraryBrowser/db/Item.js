@@ -191,6 +191,7 @@ Item.prototype.getIcon = function(small, regenerate, noFavoritesMark) {
     di.setNotifyListeners(false);
     var scene = new RGraphicsSceneQt(di);
     var view = new RGraphicsViewImage();
+    view.setNumThreads(1);
     view.setAntialiasing(true);
     view.setPaintOrigin(false);
     if (RSettings.hasDarkGuiBackground()) {
