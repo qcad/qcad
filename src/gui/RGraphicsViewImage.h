@@ -55,6 +55,11 @@ public:
     RGraphicsViewImage();
     virtual ~RGraphicsViewImage();
 
+    int getNumThreads() const {
+        return numThreads;
+    }
+    void setNumThreads(int n);
+
     void clear();
 
     // TODO: these methods are not found in RGraphicsViewQt, due to the
@@ -269,7 +274,7 @@ public:
     void paintEntitiesMulti(QList<QPainter*> painterThread, const RBox& queryBox);
     void paintEntitiesThread(QPainter* painter, QList<REntity::Id>& list, int start, int end);
 
-    virtual void paintEntity(QPainter* painter, REntity::Id id, bool preview = false);
+    virtual void paintEntityThread(QPainter* painter, REntity::Id id, bool preview = false);
 
     virtual void paintOverlay(QPainter* painter);
 
@@ -361,6 +366,7 @@ protected:
 protected:
     QList<QImage> graphicsBufferThread;
     QImage graphicsBufferWithPreview;
+    int numThreads;
 
 protected:
     bool panOptimization;

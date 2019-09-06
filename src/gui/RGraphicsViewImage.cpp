@@ -48,6 +48,7 @@
 
 RGraphicsViewImage::RGraphicsViewImage()
     : RGraphicsView(),
+      numThreads(1),
       panOptimization(false),
       sceneQt(NULL),
       lastSize(0,0),
@@ -65,12 +66,17 @@ RGraphicsViewImage::RGraphicsViewImage()
       alphaEnabled(false),
       showOnlyPlottable(false) {
 
+    numThreads = QThread::idealThreadCount();
     currentScale = 1.0;
     saveViewport();
     graphicsBufferNeedsUpdate = true;
 }
 
 RGraphicsViewImage::~RGraphicsViewImage() {
+}
+
+void RGraphicsViewImage::setNumThreads(int n) {
+    numThreads = n;
 }
 
 void RGraphicsViewImage::clear() {
@@ -170,7 +176,10 @@ void RGraphicsViewImage::updateImage() {
         return;
     }
 
+
     if (graphicsBufferNeedsUpdate) {
+        RDebug::startTimer(77);
+
         // update drawing scale from document setting:
         QString scaleString;
         if (doc->getCurrentBlockId()==doc->getModelSpaceBlockId()) {
@@ -262,9 +271,9 @@ void RGraphicsViewImage::updateImage() {
                 paintOrigin(graphicsBufferThread.first());
             }
 
-            RDebug::startTimer();
+            //RDebug::startTimer();
             paintDocument();
-            RDebug::stopTimer("paintDocument");
+            //RDebug::stopTimer("paintDocument");
 
             if (displayGrid) {
                 paintMetaGrid(graphicsBufferThread.last());
@@ -279,6 +288,7 @@ void RGraphicsViewImage::updateImage() {
 
         //RDebug::stopTimer("update graphics view");
         //qDebug() << "updateImage: OK";
+        RDebug::stopTimer(77, "updateImage");
     }
 
     //RDebug::startTimer();
@@ -320,7 +330,7 @@ void RGraphicsViewImage::updateImage() {
         isSelected = false;
         QList<REntity::Id> ids = sceneQt->getPreviewEntityIds();
         for (int i=0; i<ids.length(); i++) {
-            paintEntity(painter, ids[i], true);
+            paintEntityThread(painter, ids[i], true);
         }
         painter->end();
         delete painter;
@@ -694,10 +704,7 @@ void RGraphicsViewImage::updateGraphicsBuffer() {
     QSize newSize(int(getWidth()*dpr), int(getHeight()*dpr));
 
     if (graphicsBufferThread.isEmpty()) {
-        int itc = QThread::idealThreadCount();
-        itc = 14;
-        qDebug() << "QThread::idealThreadCount():" << itc;
-        for (int i=0; i<itc; i++) {
+        for (int i=0; i<numThreads; i++) {
             graphicsBufferThread.append(QImage());
         }
     }
@@ -756,7 +763,7 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
         QList<REntity::Id> list = document->getStorage().orderBackToFront(selectedIds);
         QListIterator<RObject::Id> i(list);
         while (i.hasNext()) {
-            paintEntity(painterThread.last(), i.next());
+            paintEntityThread(painterThread.last(), i.next());
         }
     }
 
@@ -970,21 +977,21 @@ void RGraphicsViewImage::paintEntitiesMulti(QList<QPainter*> painterThread, cons
         )
     );
 
-    RDebug::startTimer(60);
+    //RDebug::startTimer(60);
     //mutexSi.lock();
     QSet<REntity::Id> ids;
     ids = document->queryIntersectedEntitiesXYFast(qb);
     //qDebug() << "RGraphicsViewImage::paintEntities: ids: " << ids;
     //mutexSi.unlock();
-    RDebug::stopTimer(60, "spatial index");
+    //RDebug::stopTimer(60, "spatial index");
 
     // draw painter paths:
     isSelected = false;
 
-    RDebug::startTimer(60);
+    //RDebug::startTimer(60);
     QList<REntity::Id> list = document->getStorage().orderBackToFront(ids);
     //QList<REntity::Id> list = ids.toList();
-    RDebug::stopTimer(60, "ordering");
+    //RDebug::stopTimer(60, "ordering");
 
     //RDebug::startTimer();
 
@@ -1002,6 +1009,51 @@ void RGraphicsViewImage::paintEntitiesMulti(QList<QPainter*> painterThread, cons
                     );
     }
 
+    // regen arcs if necessary:
+    for (int i=0; i<list.length(); i++) {
+        REntity::Id id = list[i];
+
+        // get drawables of the given entity:
+        QList<RGraphicsSceneDrawable> drawables = sceneQt->getDrawables(id);
+
+        // TODO: move to part before multi threading:
+        // if at least one arc path is too detailed or not detailed enough,
+        // or the path is an XLine or Ray, regen:
+
+        // ideal pixel size for rendering arc at current zoom level:
+        double ps = mapDistanceFromView(1.0);
+        if (isPrintingOrExporting()) {
+            ps = getScene()->getPixelSizeHint();
+        }
+
+        // do we need to regen the path?
+        bool regen = false;
+
+        for (int p=0; p<drawables.size(); p++) {
+            if (drawables.at(p).getType()==RGraphicsSceneDrawable::PainterPath) {
+                if (drawables.at(p).getPainterPath().getAlwaysRegen()==true) {
+                    regen = true;
+                    break;
+                }
+                if (drawables.at(p).getPainterPath().getAutoRegen()==true) {
+                    if (drawables.at(p).getPainterPath().getPixelSizeHint()>RS::PointTolerance &&
+                            (drawables.at(p).getPainterPath().getPixelSizeHint()<ps/5 || drawables.at(p).getPainterPath().getPixelSizeHint()>ps*5)) {
+
+                        regen = true;
+                        break;
+                    }
+                }
+            }
+        }
+
+        // regen:
+        if (regen) {
+            // TODO: breaks multithreading:
+            sceneQt->exportEntity(id, true);
+            //drawables = sceneQt->getDrawables(id);
+        }
+    }
+
     //RDebug::startTimer(100);
     //qDebug() << "list.length():" << list.length();
     int slice = int(floor(double(list.length())/painterThread.length()));
@@ -1015,42 +1067,22 @@ void RGraphicsViewImage::paintEntitiesMulti(QList<QPainter*> painterThread, cons
         //qDebug() << "slice:" << start << end;
         futureThread.append(QtConcurrent::run(this, &RGraphicsViewImage::paintEntitiesThread, painterThread[i], list, start, end));
     }
-    //QFuture<void> future1 = QtConcurrent::run(this, &RGraphicsViewImage::paintEntitiesThread, painter, list, 0, mid);
-    //QFuture<void> future2 = QtConcurrent::run(this, &RGraphicsViewImage::paintEntitiesThread, painter2, list, mid, list.length());
     //RDebug::stopTimer(100, "launch threads");
 
-    RDebug::startTimer(100);
+    //RDebug::startTimer(100);
     for (int i=0; i<futureThread.length(); i++) {
         futureThread[i].waitForFinished();
     }
-    RDebug::stopTimer(100, "waitForFinished");
-    //future1.waitForFinished();
-    //future2.waitForFinished();
-
-//    do {
-//        // wait
-//    } while (!future1.isFinished() || !future2.isFinished());
-
-    // TODO: two threads:
-//    QListIterator<REntity::Id> it(list);
-//    while (it.hasNext()) {
-//        paintEntity(painter, it.next());
-//    }
-
-    //RDebug::stopTimer("painting");
+    //RDebug::stopTimer(100, "waitForFinished");
 }
 
 void RGraphicsViewImage::paintEntitiesThread(QPainter* painter, QList<REntity::Id>& list, int start, int end) {
     for (int i=start; i<end; i++) {
-        paintEntity(painter, list[i]);
+        paintEntityThread(painter, list[i]);
     }
-//    QListIterator<REntity::Id> it(list);
-//    while (it.hasNext()) {
-//        paintEntity(painter, it.next());
-//    }
 }
 
-void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool preview) {
+void RGraphicsViewImage::paintEntityThread(QPainter* painter, REntity::Id id, bool preview) {
     if (!preview && !isPrintingOrExporting() && !isSelected && getDocument()->isSelected(id)) {
         static QMutex m;
         m.lock();
@@ -1106,41 +1138,42 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
         // get drawables of the given entity:
         drawables = sceneQt->getDrawables(id);
 
-        // if at least one arc path is too detailed or not detailed enough,
-        // or the path is an XLine or Ray, regen:
+//        // TODO: move to part before multi threading:
+//        // if at least one arc path is too detailed or not detailed enough,
+//        // or the path is an XLine or Ray, regen:
 
-        // ideal pixel size for rendering arc at current zoom level:
-        double ps = mapDistanceFromView(1.0);
-        if (isPrintingOrExporting()) {
-            ps = getScene()->getPixelSizeHint();
-        }
+//        // ideal pixel size for rendering arc at current zoom level:
+//        double ps = mapDistanceFromView(1.0);
+//        if (isPrintingOrExporting()) {
+//            ps = getScene()->getPixelSizeHint();
+//        }
 
-        // do we need to regen the path?
-        bool regen = false;
+//        // do we need to regen the path?
+//        bool regen = false;
 
-        for (int p=0; p<drawables.size(); p++) {
-            if (drawables.at(p).getType()==RGraphicsSceneDrawable::PainterPath) {
-                if (drawables.at(p).getPainterPath().getAlwaysRegen()==true) {
-                    regen = true;
-                    break;
-                }
-                if (drawables.at(p).getPainterPath().getAutoRegen()==true) {
-                    if (drawables.at(p).getPainterPath().getPixelSizeHint()>RS::PointTolerance &&
-                            (drawables.at(p).getPainterPath().getPixelSizeHint()<ps/5 || drawables.at(p).getPainterPath().getPixelSizeHint()>ps*5)) {
+//        for (int p=0; p<drawables.size(); p++) {
+//            if (drawables.at(p).getType()==RGraphicsSceneDrawable::PainterPath) {
+//                if (drawables.at(p).getPainterPath().getAlwaysRegen()==true) {
+//                    regen = true;
+//                    break;
+//                }
+//                if (drawables.at(p).getPainterPath().getAutoRegen()==true) {
+//                    if (drawables.at(p).getPainterPath().getPixelSizeHint()>RS::PointTolerance &&
+//                            (drawables.at(p).getPainterPath().getPixelSizeHint()<ps/5 || drawables.at(p).getPainterPath().getPixelSizeHint()>ps*5)) {
 
-                        regen = true;
-                        break;
-                    }
-                }
-            }
-        }
+//                        regen = true;
+//                        break;
+//                    }
+//                }
+//            }
+//        }
 
-        // regen:
-        if (regen) {
-            // TODO: breaks multithreading:
-            //sceneQt->exportEntity(id, true);
-            //drawables = sceneQt->getDrawables(id);
-        }
+//        // regen:
+//        if (regen) {
+//            // TODO: breaks multithreading:
+//            //sceneQt->exportEntity(id, true);
+//            //drawables = sceneQt->getDrawables(id);
+//        }
     }
 
     // paint drawables (painter paths, texts, images):
