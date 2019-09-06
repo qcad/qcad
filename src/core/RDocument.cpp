@@ -1495,9 +1495,9 @@ QSet<REntity::Id> RDocument::queryIntersectedEntitiesXYFast(const RBox& box) {
     // return all visible entities:
     if (boxExpanded.contains(getBoundingBox())) {
         QSet<REntity::Id> ids;
-        RDebug::startTimer(70);
+        //RDebug::startTimer(70);
         ids = queryAllVisibleEntities();
-        RDebug::stopTimer(70, "queryAllVisibleEntities");
+        //RDebug::stopTimer(70, "queryAllVisibleEntities");
         return ids;
     }
 
@@ -1514,9 +1514,9 @@ QSet<REntity::Id> RDocument::queryIntersectedShapesXYFast(const RBox& box) {
     }
 
     RSpatialIndex* si = getSpatialIndexForBlock(getCurrentBlockId());
-    RDebug::startTimer(120);
+    //RDebug::startTimer(120);
     QSet<REntity::Id> candidates = si->queryIntersected(box).keys().toSet();
-    RDebug::stopTimer(120, "si->queryIntersected");
+    //RDebug::stopTimer(120, "si->queryIntersected");
     candidates.unite(infinites);
 
     return candidates;
