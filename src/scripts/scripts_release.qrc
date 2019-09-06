@@ -993,6 +993,15 @@
     <file alias="scripts/Misc/Examples/ListenerExamples/ListenerExamples.js">../../scripts/Misc/Examples/ListenerExamples/ListenerExamples.js</file>
     <file alias="scripts/Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js">../../scripts/Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js</file>
     <file alias="scripts/Misc/Examples/MathExamples/ExMathSpiral/ExMathSpiral.js">../../scripts/Misc/Examples/MathExamples/ExMathSpiral/ExMathSpiral.js</file>
+    <file alias="scripts/Misc/Examples/MathExamples/FlexPainter/CurtainRope.svg">../../scripts/Misc/Examples/MathExamples/FlexPainter/CurtainRope.svg</file>
+    <file alias="scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js">../../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js</file>
+    <file alias="scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.svg">../../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.svg</file>
+    <file alias="scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.svg">../../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.svg</file>
+    <file alias="scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui">../../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui</file>
+    <file alias="scripts/Misc/Examples/MathExamples/FlexPainter/PreserveLookOff.svg">../../scripts/Misc/Examples/MathExamples/FlexPainter/PreserveLookOff.svg</file>
+    <file alias="scripts/Misc/Examples/MathExamples/FlexPainter/PreserveLookOffSq.svg">../../scripts/Misc/Examples/MathExamples/FlexPainter/PreserveLookOffSq.svg</file>
+    <file alias="scripts/Misc/Examples/MathExamples/FlexPainter/PreserveLookOn.svg">../../scripts/Misc/Examples/MathExamples/FlexPainter/PreserveLookOn.svg</file>
+    <file alias="scripts/Misc/Examples/MathExamples/FlexPainter/PreserveLookOnSq.svg">../../scripts/Misc/Examples/MathExamples/FlexPainter/PreserveLookOnSq.svg</file>
     <file alias="scripts/Misc/Examples/MathExamples/MathExamples.js">../../scripts/Misc/Examples/MathExamples/MathExamples.js</file>
     <file alias="scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js">../../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js</file>
     <file alias="scripts/Misc/Examples/ModifyExamples/ModifyExamples.js">../../scripts/Misc/Examples/ModifyExamples/ModifyExamples.js</file>
