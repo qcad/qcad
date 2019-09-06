@@ -4693,7 +4693,7 @@
     // call C++ function:
     // return type 'void'
     
-               self->paintEntity(a0
+               self->paintEntityThread(a0
         ,
     a1);
     } else
@@ -4751,7 +4751,7 @@
     // call C++ function:
     // return type 'void'
     
-               self->paintEntity(a0
+               self->paintEntityThread(a0
         ,
     a1
         ,

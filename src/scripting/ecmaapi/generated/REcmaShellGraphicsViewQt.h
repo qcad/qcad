@@ -581,7 +581,7 @@
             );
         
     
-      void paintEntity(
+      void paintEntityThread(
                 QPainter * painter, REntity::Id id, bool preview
         = false
             );

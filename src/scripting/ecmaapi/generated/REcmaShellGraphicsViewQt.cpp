@@ -6842,7 +6842,7 @@
             }
         
     
-      void REcmaShellGraphicsViewQt::paintEntity(
+      void REcmaShellGraphicsViewQt::paintEntityThread(
                 QPainter * painter, REntity::Id id, bool preview
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
@@ -6868,7 +6868,7 @@
                         //if (cppSig!="RGraphicsViewQt::event") {
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
-                        RGraphicsViewQt::paintEntity(
+                        RGraphicsViewQt::paintEntityThread(
                             painter, id, preview
                         );
 
