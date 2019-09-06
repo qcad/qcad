@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FlexPainterOptions</class>
+ <widget class="QDialog" name="FlexPainterOptions">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>422</width>
+    <height>377</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Painter Options</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_4">
+   <property name="spacing">
+    <number>4</number>
+   </property>
+   <property name="bottomMargin">
+    <number>6</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" name="Options">
+     <item>
+      <layout class="QVBoxLayout" name="CastingOptions">
+       <item>
+        <widget class="QGroupBox" name="PainterBox">
+         <property name="title">
+          <string>Painters casting options</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <property name="topMargin">
+           <number>6</number>
+          </property>
+          <item>
+           <widget class="QCheckBox" name="FlipPainter">
+            <property name="toolTip">
+             <string>Mirroring painters over baseline</string>
+            </property>
+            <property name="text">
+             <string>Flip Painters</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="GroupCasts">
+            <property name="toolTip">
+             <string>Group all castings to one operation</string>
+            </property>
+            <property name="text">
+             <string>Cast in group</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="HasBeginApex">
+            <property name="toolTip">
+             <string>Start with casting a begin apex on open forms</string>
+            </property>
+            <property name="text">
+             <string>Add Begin Apex</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="HasEndApex">
+            <property name="toolTip">
+             <string>End with casting an end apex on open forms</string>
+            </property>
+            <property name="text">
+             <string>Add End Apex</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="HasInserts">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="toolTip">
+             <string>Add insertions in between eg. spacers, knots</string>
+            </property>
+            <property name="text">
+             <string>Add Insertions</string>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="DelEntity">
+            <property name="toolTip">
+             <string>Deleted painted over base entity (persistent off)</string>
+            </property>
+            <property name="text">
+             <string>Delete Entities(*)</string>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QToolButton" name="PreviewPainters">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>55</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Preview</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 1px inset; background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>CurtainRope.svg</normaloff>CurtainRope.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>100</width>
+           <height>50</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="PainterSet">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="toolTip">
+          <string>Select painter type</string>
+         </property>
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+         <property name="currentText">
+          <string>CurtainRope</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>CurtainRope</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>TelephoneCoil</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Maximum</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>13</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item>
+        <widget class="QToolButton" name="toolButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>210</width>
+           <height>155</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 1px inset; background-color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>FlexPainterDialog.svg</normaloff>FlexPainterDialog.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>210</width>
+           <height>155</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="FactorEntry" native="true">
+         <layout class="QGridLayout" name="gridLayout">
+          <property name="leftMargin">
+           <number>6</number>
+          </property>
+          <property name="topMargin">
+           <number>4</number>
+          </property>
+          <property name="rightMargin">
+           <number>6</number>
+          </property>
+          <property name="bottomMargin">
+           <number>4</number>
+          </property>
+          <item row="0" column="2" rowspan="2">
+           <widget class="QToolButton" name="PreserveLook">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="toolTip">
+             <string>Keep painters proportional</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>PreserveLookOn.svg</normaloff>PreserveLookOn.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>16</width>
+              <height>32</height>
+             </size>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+            <property name="autoRepeatDelay">
+             <number>300</number>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="LabelY">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Factor Y:</string>
+            </property>
+            <property name="buddy">
+             <cstring>MainScaleY</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="RMathLineEdit" name="MainScaleY">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string notr="true">2.5</string>
+            </property>
+            <property name="cursorPosition">
+             <number>3</number>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="LabelX">
+            <property name="text">
+             <string>Factor X:</string>
+            </property>
+            <property name="buddy">
+             <cstring>mainScaleX</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="RMathLineEdit" name="MainScaleX">
+            <property name="text">
+             <string notr="true">2.5</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="ScaleBox">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="title">
+          <string>Open forms scaling options</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="spacing">
+           <number>4</number>
+          </property>
+          <property name="topMargin">
+           <number>6</number>
+          </property>
+          <property name="bottomMargin">
+           <number>6</number>
+          </property>
+          <item>
+           <widget class="QCheckBox" name="ForcedDyn">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="toolTip">
+             <string>Adapt scaling f 1.00-0.90 to fit the whole form</string>
+            </property>
+            <property name="text">
+             <string>Dynamically scale to fit</string>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>20</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QRadioButton" name="AlignBegin">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Align with begin</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="AlignCenter">
+              <property name="text">
+               <string>Centered</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="AlignEnd">
+              <property name="text">
+               <string>Align with End</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QWidget" name="horizontalWidget" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="2" column="0">
+         <widget class="QCheckBox" name="BeVerbose">
+          <property name="toolTip">
+           <string>Verbose info (persistent on)</string>
+          </property>
+          <property name="text">
+           <string>Verbose(*)</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QDialogButtonBox" name="buttonBox">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="standardButtons">
+         <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RMathLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>RMathLineEdit.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>MainScaleY</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>PreserveLook</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainScaleY</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>392</x>
+     <y>235</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>301</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>PreserveLook</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>LabelY</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>392</x>
+     <y>235</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ForcedDyn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>AlignBegin</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>294</x>
+     <y>274</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>296</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ForcedDyn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>AlignCenter</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>294</x>
+     <y>274</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>318</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ForcedDyn</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>AlignEnd</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>298</x>
+     <y>281</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>346</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>FlexPainterOptions</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>257</x>
+     <y>350</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>210</x>
+     <y>187</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>FlexPainterOptions</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>257</x>
+     <y>350</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>210</x>
+     <y>187</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
