@@ -51,6 +51,10 @@ function exportBitmap(doc, scene, fileName, properties, view) {
         view.setScene(scene, false);
         viewCreated = true;
     }
+    var numThreadsOri = view.getNumThreads();
+
+    // crashes with multiple threads:
+    view.setNumThreads(1);
     view.setAlphaEnabled(true);
 
     view.setPaintOrigin(properties["origin"]==null ? false : properties["origin"]);
@@ -113,6 +117,7 @@ function exportBitmap(doc, scene, fileName, properties, view) {
     if (properties["width"] * properties["height"] > 2147483647/4) {
         qDebug("invalid image size");
         ret = [ false, qsTr("Invalid image size (width x height must be less than %1)").arg(536870911) ];
+        view.setNumThreads(numThreadsOri);
         return ret;
     }
 
@@ -154,6 +159,7 @@ function exportBitmap(doc, scene, fileName, properties, view) {
     // export file
     var buffer = view.getBuffer();
 
+    view.setNumThreads(numThreadsOri);
     if (viewCreated) {
         scene.unregisterView(view);
         view.destroy();
