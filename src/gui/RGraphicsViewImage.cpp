@@ -178,7 +178,7 @@ void RGraphicsViewImage::updateImage() {
 
 
     if (graphicsBufferNeedsUpdate) {
-        RDebug::startTimer(77);
+        //RDebug::startTimer(77);
 
         // update drawing scale from document setting:
         QString scaleString;
@@ -288,7 +288,7 @@ void RGraphicsViewImage::updateImage() {
 
         //RDebug::stopTimer("update graphics view");
         //qDebug() << "updateImage: OK";
-        RDebug::stopTimer(77, "updateImage");
+        //RDebug::stopTimer(77, "updateImage");
     }
 
     //RDebug::startTimer();
