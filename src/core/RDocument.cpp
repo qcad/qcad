@@ -1543,9 +1543,9 @@ QSet<REntity::Id> RDocument::queryIntersectedEntitiesXY(
     if (usingCurrentBlock && boxExpanded.contains(getBoundingBox())) {
         QSet<REntity::Id> ids;
         if (onlyVisible) {
-            RDebug::startTimer(70);
+            //RDebug::startTimer(70);
             ids = queryAllVisibleEntities();
-            RDebug::stopTimer(70, "queryAllVisibleEntities");
+            //RDebug::stopTimer(70, "queryAllVisibleEntities");
             //qDebug() << "all visible ids:" << ids;
         }
         else {
