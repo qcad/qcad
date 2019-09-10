@@ -510,6 +510,7 @@ void RMainWindowQt::setGraphicsViewCursor(const QCursor& cursor) {
             continue;
         }
 
+        // false here prevents recursion:
         diOther->setCursor(cursor, false);
     }
 }
