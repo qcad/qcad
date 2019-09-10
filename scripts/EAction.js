@@ -780,14 +780,14 @@ EAction.prototype.setCursor = function(cursor, name) {
     if (!isNull(di)) {
         di.setCursor(cursor);
     }
-    if (!isNull(name)) {
-        var views = this.getGraphicsViews();
-        for (var i=0; i<views.length; i++) {
-            if (isFunction(views[i].setProperty)) {
-                views[i].setProperty("CursorName", name);
-            }
-        }
-    }
+//    if (!isNull(name)) {
+//        var views = this.getGraphicsViews();
+//        for (var i=0; i<views.length; i++) {
+//            if (isFunction(views[i].setProperty)) {
+//                views[i].setProperty("CursorName", name);
+//            }
+//        }
+//    }
 };
 
 /**
