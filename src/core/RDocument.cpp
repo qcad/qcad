@@ -1519,7 +1519,28 @@ QSet<REntity::Id> RDocument::queryIntersectedShapesXYFast(const RBox& box) {
     //RDebug::stopTimer(120, "si->queryIntersected");
     candidates.unite(infinites);
 
-    return candidates;
+    QSet<REntity::Id> res;
+    QSet<REntity::Id>::iterator it;
+    for (it=candidates.begin(); it!=candidates.end(); ++it) {
+        if (RMouseEvent::hasMouseMoved()) {
+            return QSet<REntity::Id>();
+        }
+
+        QSharedPointer<REntity> entity;
+        entity = queryVisibleEntityDirect(*it);
+        if (entity.isNull()) {
+            continue;
+        }
+
+        if (!entity->isVisible()) {
+            continue;
+        }
+
+        res.insert(*it);
+    }
+
+    return res;
+    //return candidates;
 }
 
 QSet<REntity::Id> RDocument::queryIntersectedEntitiesXY(
