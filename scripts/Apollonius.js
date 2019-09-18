@@ -1444,11 +1444,11 @@ Apollonius.getSolutionsPLL = function(point, line1, line2) {
 
     var ret = [];
     for (c=0; c<centers.length; c++) {
-        var r2 = centers[c].getDistanceTo(point.position);
-        if (RMath.fuzzyCompare(r2, 0.0)) {
+        var r = centers[c].getDistanceTo(point.position);
+        if (RMath.fuzzyCompare(r, 0.0)) {
             continue;
         }
-        ret.push(new RCircle(centers[c], r2));
+        ret.push(new RCircle(centers[c], r));
     }
     return ret;
 };
