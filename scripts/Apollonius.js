@@ -1300,6 +1300,8 @@ Apollonius.getSolutionsPLL = function(point, line1, line2) {
     else {
         line2Data = line2;
     }
+
+    // intersection between two lines line1, line2:
     var ipsLL = line1.getIntersectionPoints(line2Data, false);
 
     var ips;
@@ -1312,6 +1314,14 @@ Apollonius.getSolutionsPLL = function(point, line1, line2) {
 
     var onLine1 = line1.isOnShape(point.position, false);
     var onLine2 = line2.isOnShape(point.position, false);
+
+    var onBisector = false;
+    for (k=0; k<bisectorLines.length; k++) {
+        if (bisectorLines[k].isOnShape(point.position, false)) {
+            onBisector = true;
+            break;
+        }
+    }
 
     // lines are parallel:
     if (ipsLL.length===0) {
@@ -1342,48 +1352,81 @@ Apollonius.getSolutionsPLL = function(point, line1, line2) {
     }
 
     else {
-        // circle C tangential to two lines with center E:
-        circles = Apollonius.getCircles2TR(line1, line2, 10.0);
-        if (isNull(circles) || circles.length===0) {
-            return [];
-        }
-
         var centerCandidates = [];
-        for (i=0; i<circles.length; i++) {
-            circle = circles[i];
-            var e = circle.getCenter();
 
-            // line L from intersection between the two lines to the point:
-            var line;
-            if (ipsLL.length===0) {
-                // lines parallel:
-                line = line1.clone();
-                line.move(point.position.operator_subtract(line1.getStartPoint()));
+        // point on bisector:
+        if (onBisector) {
+            if (ipsLL.length!==1) {
+                return [];
             }
-            else {
-                line = new RLine(ipsLL[0], point.position);
-            }
+            // distance from point to line1 (radius of circle around point, tangential to lines):
+            var rp = line1.getDistanceTo(point.position, false);
+            // distance from intersection line1/line2 to point:
+            var dp = ipsLL[0].getDistanceTo(point.position);
+            // distances from intersection line1/line2 to intersection of bisector line with circle around point, touching line1, line2:
+            var dc1 = dp + rp;
+            var dc2 = dp - rp;
+            // factors to scale circle to reach results:
+            var f1 = dp / dc1;
+            var f2 = dp / dc2;
+            // radius of solution
+            var r1 = rp * f1;
+            var r2 = rp * f2;
 
-            // intersections beteeen line L and circle C -> G, H:
-            var ipsLC = line.getIntersectionPoints(circle, false);
-            if (ipsLC.length!==2) {
-                continue;
-            }
-
-            var g = ipsLC[0];
-            var h = ipsLC[1];
-
-            // two lines L1, L2 with same angle as EG, EH through point:
-            var l1 = new RLine(e, g);
-            var l2 = new RLine(e, h);
-            l1.move(point.position.operator_subtract(l1.getStartPoint()));
-            l2.move(point.position.operator_subtract(l2.getStartPoint()));
-
-            // intersection of angle bisector and lines L1, L2 are centers of candidates:
             for (k=0; k<bisectorLines.length; k++) {
                 bisectorLine = bisectorLines[k];
-                centerCandidates = centerCandidates.concat(l1.getIntersectionPoints(bisectorLine, false));
-                centerCandidates = centerCandidates.concat(l2.getIntersectionPoints(bisectorLine, false));
+                var a = bisectorLine.getAngle();
+                centerCandidates.push(ipsLL[0].operator_add(RVector.createPolar(dp + r2, a)));
+                centerCandidates.push(ipsLL[0].operator_add(RVector.createPolar(dp - r1, a)));
+                centerCandidates.push(ipsLL[0].operator_add(RVector.createPolar(dp + r2, a + Math.PI)));
+                centerCandidates.push(ipsLL[0].operator_add(RVector.createPolar(dp - r1, a + Math.PI)));
+            }
+        }
+
+        // circle C tangential to two lines with center E, radius 10:
+        else {
+            circles = Apollonius.getCircles2TR(line1, line2, 10.0);
+            if (isNull(circles) || circles.length===0) {
+                return [];
+            }
+
+            for (i=0; i<circles.length; i++) {
+                circle = circles[i];
+                var e = circle.getCenter();
+
+                // line L from intersection between the two lines to the point:
+                // center of solution is on this line
+                var line;
+                if (ipsLL.length===0) {
+                    // lines parallel:
+                    line = line1.clone();
+                    line.move(point.position.operator_subtract(line1.getStartPoint()));
+                }
+                else {
+                    line = new RLine(ipsLL[0], point.position);
+                }
+
+                // intersections beteeen line L and circle C -> G, H:
+                var ipsLC = line.getIntersectionPoints(circle, false);
+                if (ipsLC.length!==2) {
+                    continue;
+                }
+
+                var g = ipsLC[0];
+                var h = ipsLC[1];
+
+                // two lines L1, L2 with same angle as EG, EH through point:
+                var l1 = new RLine(e, g);
+                var l2 = new RLine(e, h);
+                l1.move(point.position.operator_subtract(l1.getStartPoint()));
+                l2.move(point.position.operator_subtract(l2.getStartPoint()));
+
+                // intersection of angle bisector and lines L1, L2 are centers of candidates:
+                for (k=0; k<bisectorLines.length; k++) {
+                    bisectorLine = bisectorLines[k];
+                    centerCandidates = centerCandidates.concat(l1.getIntersectionPoints(bisectorLine, false));
+                    centerCandidates = centerCandidates.concat(l2.getIntersectionPoints(bisectorLine, false));
+                }
             }
         }
 
@@ -1401,11 +1444,11 @@ Apollonius.getSolutionsPLL = function(point, line1, line2) {
 
     var ret = [];
     for (c=0; c<centers.length; c++) {
-        var r = centers[c].getDistanceTo(point.position);
-        if (RMath.fuzzyCompare(r, 0.0)) {
+        var r2 = centers[c].getDistanceTo(point.position);
+        if (RMath.fuzzyCompare(r2, 0.0)) {
             continue;
         }
-        ret.push(new RCircle(centers[c], r));
+        ret.push(new RCircle(centers[c], r2));
     }
     return ret;
 };
