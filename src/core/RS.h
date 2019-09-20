@@ -656,6 +656,7 @@ public:
                         const QPair<QVariant, RPropertyAttributes>& p2,
                         bool noTolerance = false);
     static int getCpuCores();
+    static int getIdealThreadCount();
     static QString getBuildCpuArchitecture();
 
     static QString getHostId();

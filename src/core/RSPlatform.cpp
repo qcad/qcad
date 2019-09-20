@@ -20,6 +20,7 @@
 #include <QDir>
 #include <QFileInfo>
 #include <QHostInfo>
+#include <QThread>
 #ifdef Q_OS_WIN
 #include <Windows.h>
 #else
@@ -232,6 +233,13 @@ int RS::getCpuCores() {
         cores = 1;
     }
     return cores;
+}
+
+/**
+ * \return Ideal thread count for multithreading.
+ */
+int RS::getIdealThreadCount() {
+    return QThread::idealThreadCount();
 }
 
 /**
