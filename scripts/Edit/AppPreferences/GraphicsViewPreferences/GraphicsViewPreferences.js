@@ -45,6 +45,8 @@ GraphicsViewPreferences.applyPreferences = function(doc, mdiChild) {
         return;
     }
 
+    var mt = RSettings.getBoolValue("GraphicsView/Multithreading", true);
+
     var di = mdiChild.getDocumentInterface();
     var scenes = di.getGraphicsScenes();
 
@@ -56,6 +58,12 @@ GraphicsViewPreferences.applyPreferences = function(doc, mdiChild) {
             // setting bg color to invalid will automatically update it:
             if (!view.isPrintPreview()) {
                 view.setBackgroundColor(new QColor());
+            }
+            if (mt) {
+                view.setNumThreads(RS.getIdealThreadCount());
+            }
+            else {
+                view.setNumThreads(1);
             }
             view.regenerate(false);
         }

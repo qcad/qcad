@@ -19,7 +19,6 @@
 
 function AutoZoomView(parent) {
     RGraphicsViewQt.call(this, parent, false);
-    this.setNumThreads(1);
 }
 
 AutoZoomView.prototype = new RGraphicsViewQt();
