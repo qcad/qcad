@@ -1185,7 +1185,7 @@ bool RStorage::isEntityVisible(const REntity& entity, RObject::Id blockId) const
 
     // check if block is frozen:
     if (entity.getType()==RS::EntityBlockRef) {
-        const RBlockReferenceEntity* blockRef = dynamic_cast<const RBlockReferenceEntity*>(this);
+        const RBlockReferenceEntity* blockRef = dynamic_cast<const RBlockReferenceEntity*>(&entity);
         if (blockRef!=NULL) {
             RBlock::Id refBlockId = blockRef->getReferencedBlockId();
             if (refBlockId!=RBlock::INVALID_ID) {
