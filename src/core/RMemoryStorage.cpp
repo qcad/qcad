@@ -436,8 +436,6 @@ void RMemoryStorage::updateVisibleCache() const {
         return;
     }
 
-    //qDebug() << "RMemoryStorage::updateVisibleCache()";
-
     visibleEntityMap.clear();
 
     RBlock::Id currentBlockId = getCurrentBlockId();
