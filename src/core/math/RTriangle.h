@@ -106,8 +106,7 @@ public:
         corner[2].rotate(rotation, center);
         return true;
     }
-    virtual bool scale(const RVector& scaleFactors, const RVector& center =
-            RVector()) {
+    virtual bool scale(const RVector& scaleFactors, const RVector& center = RDEFAULT_RVECTOR) {
         corner[0].scale(scaleFactors, center);
         corner[1].scale(scaleFactors, center);
         corner[2].scale(scaleFactors, center);
