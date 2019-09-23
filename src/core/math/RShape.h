@@ -341,11 +341,11 @@ public:
     static QList<RVector> getIntersectionPoints(const RShape& shape1,
             const RShape& shape2, bool limited = true, bool same = false, bool force = false);
 
-    virtual bool move(const RVector& offset)=0;
-    virtual bool rotate(double rotation, const RVector& center = RDEFAULT_RVECTOR)=0;
+    virtual bool move(const RVector& offset) = 0;
+    virtual bool rotate(double rotation, const RVector& center = RDEFAULT_RVECTOR) = 0;
     virtual bool scale(double scaleFactor, const RVector& center = RVector());
-    virtual bool scale(const RVector& scaleFactors, const RVector& center = RVector())=0;
-    virtual bool mirror(const RLine& axis)=0;
+    virtual bool scale(const RVector& scaleFactors, const RVector& center = RVector()) = 0;
+    virtual bool mirror(const RLine& axis) = 0;
     virtual bool flipHorizontal();
     virtual bool flipVertical();
     virtual bool stretch(const RBox& area, const RVector& offset);
