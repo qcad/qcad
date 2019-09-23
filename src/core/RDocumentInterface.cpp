@@ -602,6 +602,7 @@ RAction::ClickMode RDocumentInterface::getClickMode() {
 
 void RDocumentInterface::setCursor(const QCursor& cursor, bool global) {
     if (global) {
+        // set cursor for all document interfaces:
         RMainWindow* appWin = RMainWindow::getMainWindow();
         if (appWin!=NULL) {
             appWin->setGraphicsViewCursor(cursor);
@@ -610,6 +611,7 @@ void RDocumentInterface::setCursor(const QCursor& cursor, bool global) {
         return;
     }
 
+    // set cursor for this document interface and attached views:
     QList<RGraphicsScene*>::iterator it;
     for (it = scenes.begin(); it != scenes.end(); it++) {
         (*it)->setCursor(cursor);
