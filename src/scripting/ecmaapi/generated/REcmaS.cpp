@@ -65,6 +65,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getCpuCores, "getCpuCores");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getIdealThreadCount, "getIdealThreadCount");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getBuildCpuArchitecture, "getBuildCpuArchitecture");
             
             REcmaHelper::registerFunction(&engine, &ctor, getHostId, "getHostId");
@@ -2548,6 +2550,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaS::getCpuCores", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaS::getIdealThreadCount
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaS::getIdealThreadCount", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaS::getIdealThreadCount";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RS::
+       getIdealThreadCount();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RS.getIdealThreadCount().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaS::getIdealThreadCount", context, engine);
             return result;
         }
          QScriptValue
