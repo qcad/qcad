@@ -424,6 +424,7 @@ ShapeAlgorithms.autoSplit = function(shape, otherShapes, position, extend) {
     }
 
     // find intersection points closest to position:
+    // array of two distances and two point vectors:
     var cutDistances = ShapeAlgorithms.getClosestIntersectionPointDistances(shape, ips, position);
 
     // distance along shape to clicked position:
@@ -498,10 +499,18 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
         cutDist2 = shape.getDistanceFromStart(cutPos2);
     }
 
-    if (RMath.fuzzyCompare(cutDist1, 0.0) && shape.getStartPoint().equalsFuzzy(cutPos1) &&
-        RMath.fuzzyCompare(cutDist2, shape.getLength()) && shape.getEndPoint().equalsFuzzy(cutPos2)) {
+    if (isNull(cutDist2)) {
+        // ray, nothing to cut:
+        if (RMath.fuzzyCompare(cutDist1, 0.0) && shape.getStartPoint().equalsFuzzy(cutPos1)) {
+            return [undefined, undefined, shape.clone()];
+        }
+    }
+    else {
+        if (RMath.fuzzyCompare(cutDist1, 0.0) && shape.getStartPoint().equalsFuzzy(cutPos1) &&
+            RMath.fuzzyCompare(cutDist2, shape.getLength()) && shape.getEndPoint().equalsFuzzy(cutPos2)) {
 
-        return [undefined, undefined, shape.clone()];
+            return [undefined, undefined, shape.clone()];
+        }
     }
 
     var rest1 = undefined;
@@ -601,6 +610,7 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
 //            cutDist1 = cutDist2;
 //            cutDist2 = undefined;
 //        }
+
 
         // <--------x-------o-------x---------
         // rest2   cp2   segment   cp1   rest1
