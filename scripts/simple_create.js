@@ -239,8 +239,8 @@ function addCircle(center, radius) {
  * \code
  * addPolyline([[x1,y1],[x2,y2],[x3,y3]], false)
  * addPolyline([ [ 100 , 0 ], [ 20 , -10 , 1 ], [ 0 , 40 , 0 , true ], [ -20 , -10 , 1 , true ] ])
- * addPolyline([new RVector(x1,y1)],new RVector(x2,y2),new RVector(x3,y3)], closed, relative)
- * addPolyline([new RVector(x1,y1),bulge1,rel1],[new RVector(x2,y2),bulge2,rel2],[new RVector(x3,y3),bulge3,rel3]], closed, relative)
+ * addPolyline([new RVector(x1,y1),new RVector(x2,y2),new RVector(x3,y3)], closed, relative)
+ * addPolyline([new RVector(x1,y1),bulge1,rel1],[new RVector(x2,y2),bulge2,rel2],[new RVector(x3,y3),bulge3,rel3], closed, relative)
  * \endcode
  */
 function addPolyline(points, closed, relative) {
