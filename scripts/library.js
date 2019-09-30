@@ -167,7 +167,7 @@ function isString(obj) {
  * \return true if the given object is an RVector object.
  */
 function isVector(obj) {
-    return (typeof(obj)==="object" && obj.toString().startsWith("RVector"));
+    return (typeof(obj)==="object" && isOfType(obj, RVector));
 }
 
 /**
