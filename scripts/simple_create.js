@@ -264,25 +264,28 @@ function addPolyline(points, closed, relative) {
             v0 = points[i];
         }
         // first item in vertex tuple is RVector or x,y pair:
-        else if (isVector(points[i][0])) {
-            v0 = points[i][0];
-            if (!isNull(points[i][1])) {
-                b = points[i][1];
-            }
-            if (!isNull(points[i][2])) {
-                rel = points[i][2];
-            }
-        }
         else if (isArray(points[i])) {
-            v0 = new RVector(points[i][0], points[i][1]);
-            if (!isNull(points[i][2])) {
-                b = points[i][2];
+            if (isVector(points[i][0])) {
+                v0 = points[i][0];
+                if (!isNull(points[i][1])) {
+                    b = points[i][1];
+                }
+                if (!isNull(points[i][2])) {
+                    rel = points[i][2];
+                }
             }
-            if (!isNull(points[i][3])) {
-                rel = points[i][3];
+            else {
+                v0 = new RVector(points[i][0], points[i][1]);
+                if (!isNull(points[i][2])) {
+                    b = points[i][2];
+                }
+                if (!isNull(points[i][3])) {
+                    rel = points[i][3];
+                }
             }
         }
-        else if (isNumber(points[i].x) && isNumber(points[i].y)){
+        // custom objects with .x, .y (, .z, .b) members:
+        else if (isNumber(points[i].x) && isNumber(points[i].y)) {
             if (isNumber(points[i].z)) {
                 v0 = new RVector(points[i].x, points[i].y, points[i].z);
             }
