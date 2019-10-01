@@ -168,6 +168,15 @@
         applyTransformationTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getTransform
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        exportTransforms
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        exportEndTransforms
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getColumnRowOffset
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

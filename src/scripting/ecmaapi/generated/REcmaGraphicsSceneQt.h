@@ -122,6 +122,12 @@
         exportClipRectangle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        exportTransform
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        exportEndTransform
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLineTypePatternScale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

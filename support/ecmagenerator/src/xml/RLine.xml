@@ -188,6 +188,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="isParallel" cppName="isParallel"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RLine &amp;" typeName="RLine" name="line"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="isVertical" cppName="isVertical"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

@@ -127,6 +127,9 @@
         rotate
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        scale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         mirror
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

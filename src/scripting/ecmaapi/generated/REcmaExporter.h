@@ -268,6 +268,30 @@
         exportClipRectangle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        exportTransform
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        exportEndTransform
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        exportTranslation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        exportEndTranslation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        exportRotation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        exportEndRotation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        exportScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        exportEndScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         exportThickPolyline
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -347,6 +371,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setPixelWidth
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCombineTransforms
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCombineTransforms
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

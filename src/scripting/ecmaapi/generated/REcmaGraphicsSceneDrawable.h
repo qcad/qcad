@@ -55,6 +55,12 @@
         createFromText
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        createFromTransform
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        createEndTransform
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         uninit
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -86,6 +92,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getText
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTransform
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getOffset

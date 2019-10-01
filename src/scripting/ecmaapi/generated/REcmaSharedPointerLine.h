@@ -123,6 +123,9 @@
         setAngle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isParallel
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isVertical
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

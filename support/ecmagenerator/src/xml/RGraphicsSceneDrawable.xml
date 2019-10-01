@@ -10,6 +10,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="PainterPath" />
       <value name="Image" />
       <value name="Text" />
+      <value name="Transform" />
+      <value name="EndTransform" />
     </enum>
     <enum name="Mode">
       <value name="NoMode" />
@@ -57,6 +59,27 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="txt" isConst="true" />
         <arg type="RVector &amp;" typeName="RVector" name="offset"
         hasDefault="true" default="RVector :: nullVector"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="createFromTransform"
+    cppName="createFromTransform" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RGraphicsSceneDrawable"
+      isPureVirtual="false">
+        <arg type="QTransform &amp;" typeName="QTransform"
+        name="transfrom" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="offset"
+        hasDefault="true" default="RVector :: nullVector"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="createEndTransform" cppName="createEndTransform"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RGraphicsSceneDrawable"
+      isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="offset"
         isConst="true" />
       </variant>
     </method>
@@ -125,6 +148,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getText" cppName="getText" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RTextBasedData &amp;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getTransform" cppName="getTransform"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QTransform &amp;"
       isPureVirtual="false" />
     </method>
     <method name="getOffset" cppName="getOffset" specifier="public"

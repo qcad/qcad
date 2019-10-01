@@ -511,6 +511,46 @@
             );
         
     
+      void exportTransform(
+                const QTransform & t
+            );
+        
+    
+      void exportEndTransform(
+                
+            );
+        
+    
+      void exportTranslation(
+                const RVector & offset
+            );
+        
+    
+      void exportEndTranslation(
+                
+            );
+        
+    
+      void exportRotation(
+                double angle
+            );
+        
+    
+      void exportEndRotation(
+                
+            );
+        
+    
+      void exportScale(
+                const RVector & factors
+            );
+        
+    
+      void exportEndScale(
+                
+            );
+        
+    
       void exportThickPolyline(
                 const RPolyline & polyline
             );
@@ -632,6 +672,16 @@
         
     
       void setPixelWidth(
+                bool on
+            );
+        
+    
+      bool getCombineTransforms(
+                
+            );
+        
+    
+      void setCombineTransforms(
                 bool on
             );
         

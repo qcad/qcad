@@ -30,6 +30,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPen&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QStack&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTextLayout&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTransform&gt;</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntity.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RImageData.h"</cpp:file></cpp:include>
@@ -242,6 +243,24 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportImage</name><parameter_list>(<param><decl><type><name>const</name> <name>RImageData</name>&amp;</type> <name>image</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>exportText</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>text</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportClipRectangle</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>clipRectangle</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportTransform</name><parameter_list>(<param><decl><type><name>const</name> <name>QTransform</name>&amp;</type> <name>t</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportEndTransform</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportTranslation</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportEndTranslation</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportRotation</name><parameter_list>(<param><decl><type><name>double</name></type> <name>angle</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportEndRotation</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportScale</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>factors</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportEndScale</name><parameter_list>()</parameter_list>;</function_decl>
+
+<comment type="line">//    virtual void clearTransform() {</comment>
+<comment type="line">//        transform = QTransform();</comment>
+<comment type="line">//    }</comment>
+<comment type="line">//    virtual QTransform getTransform() const {</comment>
+<comment type="line">//        return transform;</comment>
+<comment type="line">//    }</comment>
 
     <function><type><name>virtual</name> <name>void</name></type> <name>exportThickPolyline</name><parameter_list>(<param><decl><type><name>const</name> <name>RPolyline</name>&amp;</type> <name>polyline</name></decl></param>)</parameter_list> <block>{
         <decl_stmt><decl><type><name>RPolyline</name></type> <name>pl</name> =<init> <expr><name>polyline</name></expr></init></decl>;</decl_stmt>
@@ -361,8 +380,17 @@
         <expr_stmt><expr><name>pixelWidth</name> = <name>on</name></expr>;</expr_stmt>
     }</block></function>
 
+    <function><type><name>bool</name></type> <name>getCombineTransforms</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>combineTransforms</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setCombineTransforms</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>combineTransforms</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
 </public><protected>protected:
     <decl_stmt><decl><type><name>RDocument</name>*</type> <name>document</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QTransform</name></type> <name>transform</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QPen</name></type> <name>currentPen</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RLinetypePattern</name></type> <name>currentLinetypePattern</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QBrush</name></type> <name>currentBrush</name></decl>;</decl_stmt>
@@ -381,6 +409,7 @@
     <decl_stmt><decl><type><name>bool</name></type> <name>clipping</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>pixelWidth</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>Qt</name>::<name>PenCapStyle</name></name></type> <name>penCapStyle</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>combineTransforms</name></decl>;</decl_stmt>
 
 </protected><private>private:
     <decl_stmt><decl><type><name><name>RS</name>::<name>ProjectionRenderingHint</name></name></type> <name>projectionRenderingHint</name></decl>;</decl_stmt>
