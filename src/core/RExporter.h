@@ -29,6 +29,7 @@
 #include <QPen>
 #include <QStack>
 #include <QTextLayout>
+#include <QTransform>
 
 #include "REntity.h"
 #include "RImageData.h"
@@ -241,6 +242,24 @@ public:
     virtual void exportImage(const RImageData& image, bool forceSelected = false);
     virtual QList<RPainterPath> exportText(const RTextBasedData& text, bool forceSelected = false);
     virtual void exportClipRectangle(const RBox& clipRectangle, bool forceSelected = false);
+    virtual void exportTransform(const QTransform& t);
+    virtual void exportEndTransform();
+
+    virtual void exportTranslation(const RVector& offset);
+    virtual void exportEndTranslation();
+
+    virtual void exportRotation(double angle);
+    virtual void exportEndRotation();
+
+    virtual void exportScale(const RVector& factors);
+    virtual void exportEndScale();
+
+//    virtual void clearTransform() {
+//        transform = QTransform();
+//    }
+//    virtual QTransform getTransform() const {
+//        return transform;
+//    }
 
     virtual void exportThickPolyline(const RPolyline& polyline) {
         RPolyline pl = polyline;
@@ -360,8 +379,17 @@ public:
         pixelWidth = on;
     }
 
+    bool getCombineTransforms() const {
+        return combineTransforms;
+    }
+
+    void setCombineTransforms(bool on) {
+        combineTransforms = on;
+    }
+
 protected:
     RDocument* document;
+    QTransform transform;
     QPen currentPen;
     RLinetypePattern currentLinetypePattern;
     QBrush currentBrush;
@@ -380,6 +408,7 @@ protected:
     bool clipping;
     bool pixelWidth;
     Qt::PenCapStyle penCapStyle;
+    bool combineTransforms;
 
 private:
     RS::ProjectionRenderingHint projectionRenderingHint;

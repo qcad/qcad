@@ -59,6 +59,7 @@ RExporter::RExporter()
       clipping(false),
       pixelWidth(false),
       penCapStyle(Qt::RoundCap),
+      combineTransforms(true),
       projectionRenderingHint(RS::RenderThreeD) {
 
     init();
@@ -78,6 +79,7 @@ RExporter::RExporter(RDocument& document, RMessageHandler *messageHandler, RProg
       clipping(false),
       pixelWidth(false),
       penCapStyle(Qt::RoundCap),
+      combineTransforms(true),
       projectionRenderingHint(RS::RenderThreeD) {
 
     Q_UNUSED(messageHandler)
@@ -1614,6 +1616,34 @@ QList<RPainterPath> RExporter::exportText(const RTextBasedData& text, bool force
 void RExporter::exportClipRectangle(const RBox& clipRectangle, bool forceSelected) {
     Q_UNUSED(clipRectangle)
     Q_UNUSED(forceSelected)
+}
+
+void RExporter::exportTransform(const QTransform& t) {
+    Q_UNUSED(t)
+}
+
+void RExporter::exportEndTransform() {
+}
+
+void RExporter::exportTranslation(const RVector& offset) {
+    Q_UNUSED(offset)
+}
+
+void RExporter::exportEndTranslation() {
+}
+
+void RExporter::exportRotation(double angle) {
+    Q_UNUSED(angle)
+}
+
+void RExporter::exportEndRotation() {
+}
+
+void RExporter::exportScale(const RVector& factors) {
+    Q_UNUSED(factors)
+}
+
+void RExporter::exportEndScale() {
 }
 
 double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {
