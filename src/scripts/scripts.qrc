@@ -244,9 +244,11 @@
     <file alias="scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest00.js">../../scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest00.js</file>
     <file alias="scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest01.js">../../scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest01.js</file>
     <file alias="scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest02.js">../../scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest02.js</file>
+    <file alias="scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest03.js">../../scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest03.js</file>
     <file alias="scripts/Draw/Circle/Circle2TP/Tests/required/Circle2TPTest00_000.dxf">../../scripts/Draw/Circle/Circle2TP/Tests/required/Circle2TPTest00_000.dxf</file>
     <file alias="scripts/Draw/Circle/Circle2TP/Tests/required/Circle2TPTest01_000.dxf">../../scripts/Draw/Circle/Circle2TP/Tests/required/Circle2TPTest01_000.dxf</file>
     <file alias="scripts/Draw/Circle/Circle2TP/Tests/required/Circle2TPTest02_000.dxf">../../scripts/Draw/Circle/Circle2TP/Tests/required/Circle2TPTest02_000.dxf</file>
+    <file alias="scripts/Draw/Circle/Circle2TP/Tests/required/Circle2TPTest03_000.dxf">../../scripts/Draw/Circle/Circle2TP/Tests/required/Circle2TPTest03_000.dxf</file>
     <file alias="scripts/Draw/Circle/Circle2TR/Circle2TR-inverse.svg">../../scripts/Draw/Circle/Circle2TR/Circle2TR-inverse.svg</file>
     <file alias="scripts/Draw/Circle/Circle2TR/Circle2TR.js">../../scripts/Draw/Circle/Circle2TR/Circle2TR.js</file>
     <file alias="scripts/Draw/Circle/Circle2TR/Circle2TR.svg">../../scripts/Draw/Circle/Circle2TR/Circle2TR.svg</file>
@@ -1495,6 +1497,7 @@
     <file alias="scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.js">../../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.js</file>
     <file alias="scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui">../../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui</file>
     <file alias="scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js">../../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js</file>
+    <file alias="scripts/Misc/MyCustomUI/MyCustomUI.js">../../scripts/Misc/MyCustomUI/MyCustomUI.js</file>
     <file alias="scripts/Misc/Screencast/ScMirrored/ArrowCursor-inverse.svg">../../scripts/Misc/Screencast/ScMirrored/ArrowCursor-inverse.svg</file>
     <file alias="scripts/Misc/Screencast/ScMirrored/ArrowCursor.svg">../../scripts/Misc/Screencast/ScMirrored/ArrowCursor.svg</file>
     <file alias="scripts/Misc/Screencast/ScMirrored/ClosedHandCursor-inverse.svg">../../scripts/Misc/Screencast/ScMirrored/ClosedHandCursor-inverse.svg</file>
