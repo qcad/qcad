@@ -106,7 +106,7 @@
     <message>
         <location line="+3"/>
         <source>Parsec</source>
-        <translation>Parsek/Tähtiväli</translation>
+        <translation>Parsek</translation>
     </message>
 </context>
 <context>
@@ -217,7 +217,7 @@
     <message>
         <location filename="../src/core/RDocumentVariables.cpp" line="+45"/>
         <source>Current Layer ID</source>
-        <translation>Nykyinen tason tunniste</translation>
+        <translation>Nykyisen tason tunniste</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -557,13 +557,13 @@
     <message>
         <location line="+1"/>
         <source>On</source>
-        <translation> </translation>
+        <translation>Päälle</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation>Näytä keskus</translation>
+        <translation>Näytä keskiosa</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -649,7 +649,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Insertion Base</source>
-        <translation>Lisäosa</translation>
+        <translation>Lisäysalusta</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -668,7 +668,7 @@
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+655"/>
         <source>Circular (recursive) block referencing detected:</source>
-        <translation>Pyöreä (rekursiivinen) lohkojen vertailu havaittu:</translation>
+        <translation>Pyöreä (rekursiivinen) lohkoviittaus havaittu:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -708,11 +708,11 @@
     </message>
     <message>
         <source>Linetype</source>
-        <translation type="vanished">Viivan tyyppi</translation>
+        <translation>Viivatyyppi</translation>
     </message>
     <message>
         <source>Lineweight</source>
-        <translation type="vanished">Viivan paksuus</translation>
+        <translation>Viivapaksuus</translation>
     </message>
 </context>
 <context>
@@ -814,7 +814,7 @@
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation>Metrijärjestelmä</translation>
+        <translation>Metrinen</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -858,7 +858,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dash dot</source>
-        <translation>Viiva - piste</translation>
+        <translation>Pisteviiva</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -918,7 +918,7 @@
     <message>
         <location line="+1"/>
         <source>ISO long-dash triple-dot</source>
-        <translation>ISO pitkäviiva - kolmoispiste</translation>
+        <translation>ISO pitkä ajatusviiva - kolmoispiste</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -988,7 +988,7 @@
     <message>
         <location line="+1"/>
         <source>Zig Zag</source>
-        <translation>Siksak kuvio</translation>
+        <translation>Siksak</translation>
     </message>
     <message>
         <location line="+1"/>
