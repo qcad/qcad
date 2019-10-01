@@ -480,7 +480,7 @@ Explode.explodeEntity = function(entity, options) {
         if (data.getColumnCount()>1 || data.getRowCount()>1) {
             for (col=0; col<data.getColumnCount(); col++) {
                 for (row=0; row<data.getRowCount(); row++) {
-                    var offset = data.getColumnRowOffset(col, row);
+                    var offset = data.getColumnRowOffset(col, row, true);
 
                     e = entity.clone();
                     e.setRowCount(1);
@@ -497,7 +497,7 @@ Explode.explodeEntity = function(entity, options) {
         else {
             var subIds = document.queryBlockEntities(data.getReferencedBlockId());
             for (k=0; k<subIds.length; k++) {
-                var subEntity = data.queryEntity(subIds[k]);
+                var subEntity = data.queryEntity(subIds[k], true);
                 if (isNull(subEntity)) {
                     continue;
                 }
