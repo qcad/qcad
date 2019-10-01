@@ -645,6 +645,18 @@ void RGraphicsSceneQt::exportClipRectangle(const RBox& clipRectangle, bool force
     }
 }
 
+void RGraphicsSceneQt::exportTransform(const QTransform& t) {
+    REntity::Id id = getBlockRefOrEntityId();
+    RGraphicsSceneDrawable d(t);
+    addDrawable(id, d, draftMode, exportToPreview);
+}
+
+void RGraphicsSceneQt::exportEndTransform() {
+    REntity::Id id = getBlockRefOrEntityId();
+    RGraphicsSceneDrawable d(RGraphicsSceneDrawable::EndTransform);
+    addDrawable(id, d, draftMode, exportToPreview);
+}
+
 /**
  * \return Pattern scale factor with scale applied if we are printing.
  */
@@ -700,7 +712,7 @@ QList<RGraphicsSceneDrawable> RGraphicsSceneQt::getDrawables(REntity::Id entityI
     //return QList<RGraphicsSceneDrawable>();
 }
 
-bool RGraphicsSceneQt::hasClipRectangleFor(REntity::Id entityId, bool preview) {
+bool RGraphicsSceneQt::hasClipRectangleFor(REntity::Id entityId, bool preview) const {
     if (preview) {
         return previewClipRectangles.contains(entityId);
     }
@@ -709,7 +721,7 @@ bool RGraphicsSceneQt::hasClipRectangleFor(REntity::Id entityId, bool preview) {
     }
 }
 
-RBox RGraphicsSceneQt::getClipRectangle(REntity::Id entityId, bool preview) {
+RBox RGraphicsSceneQt::getClipRectangle(REntity::Id entityId, bool preview) const {
     if (preview) {
         if (previewClipRectangles.contains(entityId)) {
             return previewClipRectangles.value(entityId);
@@ -847,9 +859,9 @@ void RGraphicsSceneQt::startEntity(bool topLevelEntity) {
  */
 QDebug operator<<(QDebug dbg, RGraphicsSceneQt& gs) {
     dbg.nospace() << "RGraphicsSceneQt(" << QString("%1").arg((long int)&gs, 0, 16) << ")";
-    QMap<REntity::Id, QList<RGraphicsSceneDrawable> >::iterator it;
-    for (it=gs.drawables.begin(); it!=gs.drawables.end(); it++) {
+    //QMap<REntity::Id, QList<RGraphicsSceneDrawable> >::iterator it;
+    //for (it=gs.drawables.begin(); it!=gs.drawables.end(); it++) {
         //dbg.nospace() << "\n" << it.key() << "\n  " << it.value() << "\n";
-    }
+    //}
     return dbg.space();
 }

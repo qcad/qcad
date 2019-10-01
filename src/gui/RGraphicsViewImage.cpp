@@ -66,7 +66,6 @@ RGraphicsViewImage::RGraphicsViewImage()
       alphaEnabled(false),
       showOnlyPlottable(false) {
 
-    numThreads = QThread::idealThreadCount();
     currentScale = 1.0;
     saveViewport();
     graphicsBufferNeedsUpdate = true;
@@ -77,6 +76,9 @@ RGraphicsViewImage::~RGraphicsViewImage() {
 
 void RGraphicsViewImage::setNumThreads(int n) {
     numThreads = n;
+    graphicsBufferThread.clear();
+    updateGraphicsBuffer();
+    lastSize = QSize(0,0);
 }
 
 void RGraphicsViewImage::clear() {
@@ -1194,8 +1196,32 @@ void RGraphicsViewImage::paintEntityThread(QPainter* painter, REntity::Id id, bo
             }
             RImageData image = drawable.getImage();
             image.move(drawable.getOffset());
-            image.move(paintOffset);
+
+            if (entityTransform.isEmpty()) {
+                image.move(paintOffset);
+            }
+            else {
+                // transform (image in block reference):
+                painter->save();
+                for (int k=0; k<entityTransform.length(); k++) {
+                    if (k==0) {
+                        // paintOffset must be applied here to get the correct placement for
+                        // texts with non-uniform scale:
+                        QTransform tt;
+                        tt.translate(paintOffset.x, paintOffset.y);
+                        painter->setTransform(tt, true);
+                    }
+
+                    QTransform t = entityTransform[k];
+                    painter->setTransform(t, true);
+                }
+            }
+
             paintImage(painter, image);
+
+            if (!entityTransform.isEmpty()) {
+                painter->restore();
+            }
         }
 
         // TTF text block (CAD text block is painter path):
@@ -1207,9 +1233,41 @@ void RGraphicsViewImage::paintEntityThread(QPainter* painter, REntity::Id id, bo
             }
 
             text.move(drawable.getOffset());
-            text.move(paintOffset);
+            if (entityTransform.isEmpty()) {
+                text.move(paintOffset);
+            }
+            else {
+                // transform (text in block reference):
+                painter->save();
+                for (int k=0; k<entityTransform.length(); k++) {
+                    if (k==0) {
+                        // paintOffset must be applied here to get the correct placement for
+                        // texts with non-uniform scale:
+                        QTransform tt;
+                        tt.translate(paintOffset.x, paintOffset.y);
+                        painter->setTransform(tt, true);
+                    }
+
+                    QTransform t = entityTransform[k];
+                    painter->setTransform(t, true);
+                }
+            }
 
             paintText(painter, text);
+
+            if (!entityTransform.isEmpty()) {
+                painter->restore();
+            }
+        }
+
+        // Transform:
+        if (drawable.getType()==RGraphicsSceneDrawable::Transform) {
+            QTransform transform = drawable.getTransform();
+            entityTransform.push(transform);
+        }
+
+        if (drawable.getType()==RGraphicsSceneDrawable::EndTransform) {
+            entityTransform.pop();
         }
 
         // unknown drawable or already handled:
@@ -1221,6 +1279,13 @@ void RGraphicsViewImage::paintEntityThread(QPainter* painter, REntity::Id id, bo
         RPainterPath path = drawable.getPainterPath();
         if (!path.isSane()) {
             continue;
+        }
+
+        // local transform of entity (e.g. block reference transforms):
+        if (!entityTransform.isEmpty()) {
+            for (int k=entityTransform.length()-1; k>=0; k--) {
+                path.transform(entityTransform[k]);
+            }
         }
 
         if (drawable.getPixelUnit() || path.getPixelUnit()) {

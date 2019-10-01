@@ -36,7 +36,9 @@ public:
         Invalid,
         PainterPath,
         Image,
-        Text
+        Text,
+        Transform,
+        EndTransform
     };
 
     enum Mode {
@@ -47,7 +49,7 @@ public:
     Q_DECLARE_FLAGS(Modes, Mode)
 
 public:
-    RGraphicsSceneDrawable() : type(Invalid), modes(NoMode), painterPath(NULL), image(NULL), text(NULL) {}
+    RGraphicsSceneDrawable() : type(Invalid), modes(NoMode), painterPath(NULL), image(NULL), text(NULL), transform(NULL) {}
     RGraphicsSceneDrawable(const RGraphicsSceneDrawable& other);
 
     /**
@@ -65,11 +67,23 @@ public:
      */
     RGraphicsSceneDrawable(const RTextBasedData& txt, const RVector& os = RVector::nullVector);
 
+    /**
+     * \nonscriptable
+     */
+    RGraphicsSceneDrawable(const QTransform& tf, const RVector& os = RVector::nullVector);
+
+    /**
+     * \nonscriptable
+     */
+    RGraphicsSceneDrawable(const Type& t, const RVector& os = RVector::nullVector);
+
     ~RGraphicsSceneDrawable();
 
     static RGraphicsSceneDrawable createFromPainterPath(const RPainterPath& pp, const RVector& offset = RVector::nullVector);
     static RGraphicsSceneDrawable createFromImage(const RImageData& img, const RVector& offset = RVector::nullVector);
     static RGraphicsSceneDrawable createFromText(const RTextBasedData& txt, const RVector& offset = RVector::nullVector);
+    static RGraphicsSceneDrawable createFromTransform(const QTransform& transfrom, const RVector& offset = RVector::nullVector);
+    static RGraphicsSceneDrawable createEndTransform(const RVector& offset);
 
     void uninit();
 
@@ -117,6 +131,11 @@ public:
         return *text;
     }
 
+    QTransform& getTransform() const {
+        Q_ASSERT(transform!=NULL);
+        return *transform;
+    }
+
     RVector getOffset() const {
         return offset;
     }
@@ -141,6 +160,7 @@ protected:
         RPainterPath* painterPath;
         RImageData* image;
         RTextBasedData* text;
+        QTransform* transform;
     //};
 };
 

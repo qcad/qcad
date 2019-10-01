@@ -24,6 +24,7 @@
 
 #include <QtCore>
 #include <QPinchGesture>
+#include <QTransform>
 
 #include "RGraphicsView.h"
 #include "RPainterPath.h"
@@ -408,6 +409,7 @@ protected:
     QMap<int, QMap<RObject::Id, QList<RGraphicsSceneDrawable> > > overlayDrawables;
 
     RBox clipBox;
+    QStack<QTransform> entityTransform;
     RVector paintOffset;
     bool alphaEnabled;
 

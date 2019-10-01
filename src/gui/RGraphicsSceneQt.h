@@ -96,6 +96,8 @@ public:
     virtual void exportImage(const RImageData& image, bool forceSelected = false);
     virtual QList<RPainterPath> exportText(const RTextBasedData& text, bool forceSelected = false);
     virtual void exportClipRectangle(const RBox& clipRectangles, bool forceSelected = false);
+    virtual void exportTransform(const QTransform& t);
+    virtual void exportEndTransform();
 
     virtual double getLineTypePatternScale(const RLinetypePattern& p) const;
     
@@ -111,8 +113,8 @@ public:
     virtual void addToPreview(REntity::Id entityId, RGraphicsSceneDrawable& drawable);
     void addTextToPreview(const RTextBasedData& text);
 
-    bool hasClipRectangleFor(REntity::Id entityId, bool preview = false);
-    RBox getClipRectangle(REntity::Id entityId, bool preview = false);
+    bool hasClipRectangleFor(REntity::Id entityId, bool preview = false) const;
+    RBox getClipRectangle(REntity::Id entityId, bool preview = false) const;
 
     void addDrawable(REntity::Id entityId, RGraphicsSceneDrawable& drawable, bool draft = false, bool preview = false);
 

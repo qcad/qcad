@@ -1,27 +1,37 @@
 #include "RGraphicsSceneDrawable.h"
 
 RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RGraphicsSceneDrawable& other) :
-    type(Invalid), modes(NoMode), painterPath(NULL), image(NULL), text(NULL) {
+    type(Invalid), modes(NoMode), painterPath(NULL), image(NULL), text(NULL), transform(NULL) {
 
     operator =(other);
 }
 
 RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RPainterPath& pp, const RVector& os) :
-    type(PainterPath), offset(os), modes(NoMode), painterPath(NULL), image(NULL), text(NULL) {
+    type(PainterPath), offset(os), modes(NoMode), painterPath(NULL), image(NULL), text(NULL), transform(NULL) {
 
     painterPath = new RPainterPath(pp);
 }
 
 RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RImageData& img, const RVector& os) :
-    type(Image), offset(os), modes(NoMode), painterPath(NULL), image(NULL), text(NULL) {
+    type(Image), offset(os), modes(NoMode), painterPath(NULL), image(NULL), text(NULL), transform(NULL) {
 
     image = new RImageData(img);
 }
 
 RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RTextBasedData& txt, const RVector& os) :
-    type(Text), offset(os), modes(NoMode), painterPath(NULL), image(NULL), text(NULL) {
+    type(Text), offset(os), modes(NoMode), painterPath(NULL), image(NULL), text(NULL), transform(NULL) {
 
     text = new RTextBasedData(txt);
+}
+
+RGraphicsSceneDrawable::RGraphicsSceneDrawable(const QTransform& tf, const RVector& os) :
+    type(Transform), offset(os), modes(NoMode), painterPath(NULL), image(NULL), text(NULL), transform(NULL) {
+
+    transform = new QTransform(tf);
+}
+
+RGraphicsSceneDrawable::RGraphicsSceneDrawable(const Type& t, const RVector& os) :
+    type(t), offset(os), modes(NoMode), painterPath(NULL), image(NULL), text(NULL), transform(NULL) {
 }
 
 RGraphicsSceneDrawable::~RGraphicsSceneDrawable() {
@@ -40,20 +50,37 @@ RGraphicsSceneDrawable RGraphicsSceneDrawable::createFromText(const RTextBasedDa
     return RGraphicsSceneDrawable(txt, offset);
 }
 
+RGraphicsSceneDrawable RGraphicsSceneDrawable::createFromTransform(const QTransform& transform, const RVector& offset) {
+    return RGraphicsSceneDrawable(transform, offset);
+}
+
+RGraphicsSceneDrawable RGraphicsSceneDrawable::createEndTransform(const RVector& offset) {
+    return RGraphicsSceneDrawable(EndTransform, offset);
+}
+
 void RGraphicsSceneDrawable::uninit() {
-    if (type==PainterPath) {
+    switch (type) {
+    case PainterPath:
         delete painterPath;
-    }
-    if (type==Image) {
+        break;
+    case Image:
         delete image;
-    }
-    if (type==Text) {
+        break;
+    case Text:
         delete text;
+        break;
+    case Transform:
+        delete transform;
+        break;
+    default:
+        break;
     }
 
     painterPath = NULL;
     image = NULL;
     text = NULL;
+    transform = NULL;
+
     type = Invalid;
     modes = NoMode;
 }
@@ -79,6 +106,8 @@ void RGraphicsSceneDrawable::setSelected(bool on) {
     case Text:
         text->setSelected(on);
         break;
+    case Transform:
+        break;
     default:
         break;
     }
@@ -94,6 +123,8 @@ void RGraphicsSceneDrawable::setHighlighted(bool on) {
     case Text:
         text->setHighlighted(on);
         break;
+    case Transform:
+        break;
     default:
         break;
     }
@@ -102,18 +133,27 @@ void RGraphicsSceneDrawable::setHighlighted(bool on) {
 RGraphicsSceneDrawable& RGraphicsSceneDrawable::operator=(const RGraphicsSceneDrawable& other) {
     uninit();
 
-    if (other.type==PainterPath) {
+    switch (other.type) {
+    case PainterPath:
         Q_ASSERT(other.painterPath!=NULL);
         painterPath = new RPainterPath(*other.painterPath);
-    }
-    else if (other.type==Image) {
+        break;
+    case Image:
         Q_ASSERT(other.image!=NULL);
         image = new RImageData(*other.image);
-    }
-    else if (other.type==Text) {
+        break;
+    case Text:
         Q_ASSERT(other.text!=NULL);
         text = new RTextBasedData(*other.text);
+        break;
+    case Transform:
+        Q_ASSERT(other.transform!=NULL);
+        transform = new QTransform(*other.transform);
+        break;
+    default:
+        break;
     }
+
     type = other.type;
     modes = other.modes;
     offset = other.offset;
@@ -131,6 +171,12 @@ QDebug operator<<(QDebug dbg, const RGraphicsSceneDrawable& d) {
     }
     else if (d.getType()==RGraphicsSceneDrawable::Text) {
         dbg.nospace() << d.getText();
+    }
+    else if (d.getType()==RGraphicsSceneDrawable::Transform) {
+        dbg.nospace() << d.getTransform();
+    }
+    else if (d.getType()==RGraphicsSceneDrawable::EndTransform) {
+        dbg.nospace() << "end transform";
     }
     dbg.nospace() << ")";
     return dbg.space();

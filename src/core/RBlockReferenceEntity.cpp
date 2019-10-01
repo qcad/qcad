@@ -397,32 +397,69 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
 //    QSet<REntity::Id> attributeIds = document->queryChildEntities(getId(), RS::EntityAttribute);
 //    QList<REntity::Id> attributeList = document->getStorage().orderBackToFront(attributeIds);
 
+    QSharedPointer<RBlock> block = document->queryBlockDirect(data.referencedBlockId);
+    if (block.isNull()) {
+        qWarning() << "block" << data.referencedBlockId << "is NULL";
+        return;
+    }
+
+    // transform for whole block reference:
+    QTransform blockRefTransform;
+    if (e.getCombineTransforms()) {
+        blockRefTransform = data.getTransform();
+    }
+    else {
+        data.exportTransforms(e);
+    }
+
     int i;
     QList<REntity::Id>::iterator it;
 
     i = 0;
     for (int col=0; col<data.columnCount; col++) {
         for (int row=0; row<data.rowCount; row++) {
+
+            // export transform for entities in current col / row:
+            RVector offs = data.getColumnRowOffset(col, row);
+            if (RMath::fuzzyCompare(data.scaleFactors.x, 0.0)) {
+                offs.x = 0.0;
+            }
+            else {
+                offs.x /= data.scaleFactors.x;
+            }
+            if (RMath::fuzzyCompare(data.scaleFactors.y, 0.0)) {
+                offs.y = 0.0;
+            }
+            else {
+                offs.y /= data.scaleFactors.y;
+            }
+
+            if (e.getCombineTransforms()) {
+                QTransform t = blockRefTransform;
+                if (col!=0 || row!=0) {
+                    t.translate(offs.x, offs.y);
+                }
+                e.exportTransform(t);
+            }
+            else {
+                e.exportTranslation(offs);
+            }
+
             for (it = entityList.begin(); it != entityList.end(); it++) {
                 i++;
                 if (preview && i>RSettings::getPreviewEntities()) {
                     break;
                 }
 
-                // query entity from block reference (applies transformations):
+                // query entity from block reference (does NOT apply transformations):
                 QSharedPointer<REntity> entityBase = data.queryEntity(*it);
                 if (entityBase.isNull()) {
                     continue;
                 }
 
+                // col / row transform:
                 QSharedPointer<REntity> entity;
-                if (col!=0 || row!=0) {
-                    entity = QSharedPointer<REntity>(entityBase->clone());
-                    data.applyColumnRowOffsetTo(*entity, col, row);
-                }
-                else {
-                    entity = entityBase;
-                }
+                entity = entityBase;
 
                 // special visibility case:
                 // if entity is on layer 0 and rendered in the context of a block reference
@@ -452,6 +489,14 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
                 }
 
                 e.exportEntity(*entity, preview, true, isSelected() || forceSelected);
+            }
+
+            // clear transform:
+            if (e.getCombineTransforms()) {
+                e.exportEndTransform();
+            }
+            else {
+                e.exportEndTranslation();
             }
 
             /*
@@ -502,6 +547,10 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
 //    }
 
 //    RDebug::stopTimer(4, "bb");
+
+    if (!e.getCombineTransforms()) {
+        data.exportEndTransforms(e);
+    }
 
     recursionDepth--;
 }
