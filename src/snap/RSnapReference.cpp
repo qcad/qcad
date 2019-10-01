@@ -23,9 +23,9 @@ QList<RVector> RSnapReference::snapEntity(QSharedPointer<REntity> entity,
                                           const RVector& point,
                                           const RBox& queryBox,
                                           RGraphicsView& view) {
-    Q_UNUSED(point);
-    Q_UNUSED(queryBox);
-    Q_UNUSED(view);
+    Q_UNUSED(point)
+    Q_UNUSED(queryBox)
+    Q_UNUSED(view)
 
     QList<RRefPoint> ret = entity->getInternalReferencePoints();
     QSharedPointer<RBlockReferenceEntity> blockRef = entity.dynamicCast<RBlockReferenceEntity>();
