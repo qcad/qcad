@@ -1540,7 +1540,6 @@ QSet<REntity::Id> RDocument::queryIntersectedShapesXYFast(const RBox& box) {
     }
 
     return res;
-    //return candidates;
 }
 
 QSet<REntity::Id> RDocument::queryIntersectedEntitiesXY(
