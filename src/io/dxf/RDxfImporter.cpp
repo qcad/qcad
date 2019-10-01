@@ -715,6 +715,8 @@ void RDxfImporter::addTextStyle(const DL_StyleData& data) {
     s.font = decode(data.primaryFontFile.c_str());
     //qDebug() << "text style: name:" << (const char*)data.name.c_str();
     //qDebug() << "text style: s.font:" << s.font;
+    s.font = s.font.replace(".ttf", "", Qt::CaseInsensitive);
+    s.font = s.font.replace(".shx", "", Qt::CaseInsensitive);
     if (s.font.isEmpty()) {
         s.font = xDataFont;
         //qDebug() << "text style: xDataFont:" << xDataFont;
