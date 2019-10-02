@@ -1664,157 +1664,16 @@ ShapeAlgorithms.createEllipseInscribedFromLines = function(line1, line2, line3, 
     if (isNull(quad)) {
         return undefined;
     }
-    return ShapeAlgorithms.createEllipseInscribedFromVertices(quad[0], quad[1], quad[2], quad[3]);
+    return REllipse.createInscribed(quad[0], quad[1], quad[2], quad[3]);
 };
 
 
 /**
  * Produces an ellipse inscribed in the quadrilateral defined by the
  * four given ordered vertices (RVector).
- *
- * Based on:
- * http://chrisjones.id.au/Ellipses/ellipse.html
- * http://mathworld.wolfram.com/Ellipse.html
  */
 ShapeAlgorithms.createEllipseInscribedFromVertices = function(v1, v2, v3, v4) {
-    var scale = undefined;
-    var offset = new RVector(0,0);
-
-    var i;
-    var quad = [v1, v2, v3, v4];
-
-    var extr = new RBox(RVector.getMinimum(quad), RVector.getMaximum(quad));
-
-    // offset to reduce magnitudes:
-    offset = extr.getCenter().getNegated();
-    v1.move(offset);
-    v2.move(offset);
-    v3.move(offset);
-    v4.move(offset);
-
-    // numbers in this algorithm can get extremely large, so we scale down here
-    // a bit if appropriate:
-    if (extr.getWidth()>100.0 || extr.getHeight()>100.0) {
-        scale = 100.0/Math.max(extr.getWidth(), extr.getHeight());
-        v1.scale(scale);
-        v2.scale(scale);
-        v3.scale(scale);
-        v4.scale(scale);
-    }
-
-    var edges = [];
-    for (i=0; i<4; i++) {
-        edges[i] = new RLine(quad[i], quad[(i+1)%4]);
-    }
-
-    var x0 = quad[0].x;
-    var y0 = quad[0].y;
-    var x1 = quad[1].x;
-    var y1 = quad[1].y;
-    var x2 = quad[2].x;
-    var y2 = quad[2].y;
-    var x3 = quad[3].x;
-    var y3 = quad[3].y;
-
-    var ma =  x1 * x2 * y3 - x0 * x2 * y3 - x1 * y2 * x3 + x0 * y2 * x3 - x0 * y1 * x3 + y0 * x1 * x3 + x0 * y1 * x2 - y0 * x1 * x2;
-    var mb =  x0 * x2 * y3 - x0 * x1 * y3 - x1 * y2 * x3 + y1 * x2 * x3 - y0 * x2 * x3 + y0 * x1 * x3 + x0 * x1 * y2 - x0 * y1 * x2;
-    var mc =  x1 * x2 * y3 - x0 * x1 * y3 - x0 * y2 * x3 - y1 * x2 * x3 + y0 * x2 * x3 + x0 * y1 * x3 + x0 * x1 * y2 - y0 * x1 * x2;
-    var md =  y1 * x2 * y3 - y0 * x2 * y3 - x0 * y1 * y3 + y0 * x1 * y3 - y1 * y2 * x3 + y0 * y2 * x3 + x0 * y1 * y2 - y0 * x1 * y2;
-    var me = -x1 * y2 * y3 + x0 * y2 * y3 + y1 * x2 * y3 - x0 * y1 * y3 - y0 * y2 * x3 + y0 * y1 * x3 + y0 * x1 * y2 - y0 * y1 * x2;
-    var mf =  x1 * y2 * y3 - x0 * y2 * y3 + y0 * x2 * y3 - y0 * x1 * y3 - y1 * y2 * x3 + y0 * y1 * x3 + x0 * y1 * y2 - y0 * y1 * x2;
-    var mg =  x1 * y3 - x0 * y3 - y1 * x3 + y0 * x3 - x1 * y2 + x0 * y2 + y1 * x2 - y0 * x2;
-    var mh =  x2 * y3 - x1 * y3 - y2 * x3 + y1 * x3 + x0 * y2 - y0 * x2 - x0 * y1 + y0 * x1;
-    var mi =  x2 * y3 - x0 * y3 - y2 * x3 + y0 * x3 + x1 * y2 - y1 * x2 + x0 * y1 - y0 * x1;
-
-    var T = RMatrix.create3x3(
-        ma, mb, mc,
-        md, me, mf,
-        mg, mh, mi
-    );
-
-    var TI = T.getInverse();
-
-    var mj = TI.get(0, 0);
-    var mk = TI.get(0, 1);
-    var ml = TI.get(0, 2);
-    var mm = TI.get(1, 0);
-    var mn = TI.get(1, 1);
-    var mo = TI.get(1, 2);
-    var mp = TI.get(2, 0);
-    var mq = TI.get(2, 1);
-    var mr = TI.get(2, 2);
-
-    var a = mj*mj + mm*mm - mp*mp;
-    var b = mj*mk + mm*mn - mp*mq;
-    var c = mk*mk + mn*mn - mq*mq;
-    var d = mj*ml + mm*mo - mp*mr;
-    var f = mk*ml + mn*mo - mq*mr;
-    var g = ml*ml + mo*mo - mr*mr;
-
-    var term = (b*b - a*c);
-
-    var cx, cy, axis1, axis2;
-
-    // circle:
-    if (Math.abs(term)<1e-50) {
-        cx = (v1.x + v3.x)/2;
-        cy = (v1.y + v3.y)/2;
-        axis1 = v1.getDistanceTo(v2)/2;
-        axis2 = axis1;
-    }
-    else {
-        cx = (c*d - b*f) / term;
-        cy = (a*f - b*d) / term;
-
-        var term1 = (2 * (a*f*f + c*d*d + g*b*b - 2*b*d*f - a*c*g));
-        var term2 = Math.sqrt((a-c)*(a-c) + 4*b*b);
-        var term3 = (a + c);
-
-        axis1 = Math.sqrt(term1 / (term * (term2-term3)));
-        axis2 = Math.sqrt(term1 / (term * (-term2-term3)));
-    }
-
-    var center = new RVector(cx, cy);
-
-    var angle;
-
-    if (b===0.0) {
-        angle = 0;
-    }
-    else {
-        var arccot = function(v) {
-            return Math.PI/2 - Math.atan(v);
-        };
-
-        angle = 0.5 * arccot((a-c)/(2*b));
-    }
-
-    if (a>c) {
-        angle += Math.PI/2;
-    }
-
-    var majorPoint = RVector.createPolar(axis1, angle);
-
-    var ellipse = new REllipse(center, majorPoint, axis2/axis1, 0.0, 2*Math.PI, false);
-
-    // workaround if the algorithm above does not produce the correct angle
-    // (90 degrees off):
-    for (i=0; i<4; i++) {
-        var ips = ellipse.getIntersectionPoints(edges[i], false);
-        if (ips.length===2) {
-            if (!ips[0].equalsFuzzy(ips[1], 0.001)) {
-                ellipse.rotate(Math.PI/2, ellipse.getCenter());
-                break;
-            }
-        }
-    }
-
-    if (!isNull(scale)) {
-        ellipse.scale(new RVector(1.0/scale,1.0/scale));
-    }
-    ellipse.move(offset.getNegated());
-
-    return ellipse;
+    return REllipse.createInscribed(v1, v2, v3, v4);
 };
 
 /**
@@ -1948,24 +1807,7 @@ ShapeAlgorithms.splitAt = function(shape, points) {
  * the given ellipse best.
  */
 ShapeAlgorithms.ellipseToArcCircleEllipse = function(ellipse) {
-    if (ellipse.isCircular()) {
-        if (ellipse.isFullEllipse()) {
-            return new RCircle(ellipse.getCenter(), ellipse.getMajorRadius());
-        }
-        else {
-            var c = ellipse.getCenter();
-            var ret = new RArc(c, ellipse.getMajorRadius(),
-                //ellipse.getStartAngle(), ellipse.getEndAngle(),
-                0.0, 2*Math.PI,
-                ellipse.isReversed());
-            ret.setStartAngle(c.getAngleTo(ellipse.getStartPoint()));
-            ret.setEndAngle(c.getAngleTo(ellipse.getEndPoint()));
-            return ret;
-        }
-    }
-    else {
-        return ellipse;
-    }
+    return RShape.ellipseToArcCircleEllipse(ellipse);
 };
 
 /**
@@ -1973,6 +1815,8 @@ ShapeAlgorithms.ellipseToArcCircleEllipse = function(ellipse) {
  * using the given function which projects an RVector to another RVector.
  *
  * \returns An REllipse or in special cases an RArc or RCircle.
+ *
+ * OBSOLETE use RShape::transformArc instead
  */
 ShapeAlgorithms.transformArc = function(arc, fun) {
     var r1, r2;
