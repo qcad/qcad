@@ -1844,38 +1844,43 @@ function stringToDirectDistanceEntry(relativeZero, cursorPosition, str) {
  * Creates and returns a new entity based on the given shape.
  */
 function shapeToEntity(document, shape) {
-    if (isPointShape(shape)) {
-        return new RPointEntity(document, new RPointData(shape.getPosition()));
-    }
-    else if (isLineShape(shape)) {
-        return new RLineEntity(document, new RLineData(shape));
-    }
-    else if (isRayShape(shape)) {
-        return new RRayEntity(document, new RRayData(shape));
-    }
-    else if (isXLineShape(shape)) {
-        return new RXLineEntity(document, new RXLineData(shape));
-    }
-    else if (isArcShape(shape)) {
-        return new RArcEntity(document, new RArcData(shape));
-    }
-    else if (isCircleShape(shape)) {
-        return new RCircleEntity(document, new RCircleData(shape));
-    }
-    else if (isEllipseShape(shape)) {
-        return new REllipseEntity(document, new REllipseData(shape));
-    }
-    else if (isPolylineShape(shape)) {
-        return new RPolylineEntity(document, new RPolylineData(shape));
-    }
-    else if (isSplineShape(shape)) {
-        return new RSplineEntity(document, new RSplineData(shape));
-    }
-    else if (isTriangleShape(shape)) {
-        return new RSolidEntity(document, new RSolidData(shape));
+    var s = shape;
+    if (isFunction(s.data)) {
+        s = s.data();
     }
 
-    qWarning("shapeToEntity: unknown shape: ", shape);
+    if (isPointShape(s)) {
+        return new RPointEntity(document, new RPointData(s.getPosition()));
+    }
+    else if (isLineShape(s)) {
+        return new RLineEntity(document, new RLineData(s));
+    }
+    else if (isRayShape(s)) {
+        return new RRayEntity(document, new RRayData(s));
+    }
+    else if (isXLineShape(s)) {
+        return new RXLineEntity(document, new RXLineData(s));
+    }
+    else if (isArcShape(s)) {
+        return new RArcEntity(document, new RArcData(s));
+    }
+    else if (isCircleShape(s)) {
+        return new RCircleEntity(document, new RCircleData(s));
+    }
+    else if (isEllipseShape(s)) {
+        return new REllipseEntity(document, new REllipseData(s));
+    }
+    else if (isPolylineShape(s)) {
+        return new RPolylineEntity(document, new RPolylineData(s));
+    }
+    else if (isSplineShape(s)) {
+        return new RSplineEntity(document, new RSplineData(s));
+    }
+    else if (isTriangleShape(s)) {
+        return new RSolidEntity(document, new RSolidData(s));
+    }
+
+    qWarning("shapeToEntity: unknown shape: ", s);
     return undefined;
 }
 
