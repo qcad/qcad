@@ -49,6 +49,8 @@ public:
              bool reversed);
     virtual ~REllipse();
 
+    static REllipse createInscribed(const RVector& p1, const RVector& p2, const RVector& p3, const RVector& p4);
+
     virtual RShape::Type getShapeType() const {
         return Ellipse;
     }
