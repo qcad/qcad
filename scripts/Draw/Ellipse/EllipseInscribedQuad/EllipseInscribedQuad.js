@@ -243,10 +243,13 @@ EllipseInscribedQuad.prototype.getOperation = function(preview) {
         return undefined;
     }
 
+    if (isEllipseShape(shape)) {
+        shape = RShape.ellipseToArcCircleEllipse(shape);
+    }
+
     shape = Ellipse.postProcess(shape);
 
     var doc = this.getDocument();
-
     var e = shapeToEntity(doc, shape);
     if (isNull(e)) {
         return undefined;
