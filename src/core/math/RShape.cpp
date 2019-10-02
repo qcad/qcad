@@ -2519,6 +2519,90 @@ QSharedPointer<RShape> RShape::rayToLine(QSharedPointer<RShape> shape) {
     return shape;
 }
 
+QSharedPointer<RShape> RShape::transformArc(QSharedPointer<RShape> shape, RVector (*function)(const RVector&)) {
+    if (shape.isNull()) {
+        return QSharedPointer<RShape>();
+    }
+
+    RVector r1, r2;
+    RVector c;
+
+    if (isEllipseShape(*shape)) {
+        QSharedPointer<REllipse> ellipse = shape.dynamicCast<REllipse>();
+        r1 = ellipse->getMajorPoint();
+        r2 = ellipse->getMinorPoint();
+        c = ellipse->getCenter();
+    }
+    else {
+        QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
+        r1 = RVector(arc->getRadius(), 0);
+        r2 = RVector(0, arc->getRadius());
+        c = arc->getCenter();
+    }
+
+    RVector v1 = c + r1 + r2;
+    RVector v2 = c + r1 - r2;
+    RVector v3 = c - r1 - r2;
+    RVector v4 = c - r1 + r2;
+
+    v1 = function(v1);
+    v2 = function(v2);
+    v3 = function(v3);
+    v4 = function(v4);
+
+    //var ret = [];
+    REllipse ellipse = REllipse::createInscribed(v1, v2, v3, v4);
+    //var ellipse = ShapeAlgorithms.createEllipseInscribedFromVertices(v1, v2, v3, v4);
+    //ret.push(ellipse.copy());
+
+    if (isArcShape(*shape) || isEllipseShape(*shape)) {
+        RVector sp = shape->getStartPoint();
+        RVector ep = shape->getEndPoint();
+        RVector mp = shape->getMiddlePoint();
+
+        sp = function(sp);
+        ep = function(ep);
+        mp = function(mp);
+
+        ellipse.setStartParam(ellipse.getParamTo(sp));
+        ellipse.setEndParam(ellipse.getParamTo(ep));
+
+        double d1 = ellipse.getMiddlePoint().getDistanceTo(mp);
+        ellipse.setReversed(true);
+        double d2 = ellipse.getMiddlePoint().getDistanceTo(mp);
+
+        if (d1<d2) {
+            ellipse.setReversed(false);
+        }
+    }
+
+    //ret.push(ShapeAlgorithms.ellipseToArcCircleEllipse(ellipse));
+    //ret = ret.concat([new RLine(v1, v2), new RLine(v2, v3), new RLine(v3, v4), new RLine(v4, v1)]);
+
+    return RShape::ellipseToArcCircleEllipse(ellipse);
+}
+
+QSharedPointer<RShape> RShape::ellipseToArcCircleEllipse(const REllipse& ellipse) {
+    if (ellipse.isCircular()) {
+        if (ellipse.isFullEllipse()) {
+            return QSharedPointer<RShape>(new RCircle(ellipse.getCenter(), ellipse.getMajorRadius()));
+        }
+        else {
+            RVector c = ellipse.getCenter();
+            QSharedPointer<RArc> ret(new RArc(c, ellipse.getMajorRadius(),
+                //ellipse.getStartAngle(), ellipse.getEndAngle(),
+                0.0, 2*M_PI,
+                ellipse.isReversed()));
+            ret->setStartAngle(c.getAngleTo(ellipse.getStartPoint()));
+            ret->setEndAngle(c.getAngleTo(ellipse.getEndPoint()));
+            return ret.dynamicCast<RShape>();
+        }
+    }
+    else {
+        return QSharedPointer<RShape>(ellipse.clone());
+    }
+}
+
 void RShape::dump() const{
     qDebug() << *this;
 }

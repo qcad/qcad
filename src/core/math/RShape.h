@@ -452,6 +452,12 @@ public:
     static QSharedPointer<RShape> xLineToRay(QSharedPointer<RShape> shape);
     static QSharedPointer<RShape> rayToLine(QSharedPointer<RShape> shape);
 
+    /**
+     * \nonscriptable
+     */
+    static QSharedPointer<RShape> transformArc(QSharedPointer<RShape> shape, RVector (*function)(const RVector&));
+    static QSharedPointer<RShape> ellipseToArcCircleEllipse(const REllipse& ellipse);
+
     static int getErrorCode() {
         return errorCode;
     }
