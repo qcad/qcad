@@ -90,6 +90,8 @@ public:
 
     virtual void exportEntity(RExporter& e, bool preview=false, bool forceSelected=false) const;
 
+    virtual QSharedPointer<REntity> scaleNonUniform(const RVector& scaleFactors, const RVector& center);
+
     QList<RPainterPath> getPainterPaths(bool draft = false) const {
         return getData().getPainterPaths(draft);
     }

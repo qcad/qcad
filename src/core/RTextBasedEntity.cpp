@@ -170,6 +170,10 @@ void RTextBasedEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
     }
 }
 
+QSharedPointer<REntity> RTextBasedEntity::scaleNonUniform(const RVector& scaleFactors, const RVector& center) {
+    return QSharedPointer<REntity>();
+}
+
 void RTextBasedEntity::print(QDebug dbg) const {
     dbg.nospace() << "RTextBasedEntity(";
     REntity::print(dbg);
