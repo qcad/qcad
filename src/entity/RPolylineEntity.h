@@ -172,6 +172,10 @@ public:
         return data.isArcSegmentAt(i);
     }
 
+    bool hasArcSegments() const {
+        return data.hasArcSegments();
+    }
+
     int getClosestSegment(const RVector& point) const {
         return data.getClosestSegment(point);
     }
