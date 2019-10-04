@@ -318,15 +318,7 @@ Scale.prototype.transformArc = function(shape, sv) {
         shape = ShapeAlgorithms.circleToArc(shape, 0.0);
     }
 
-    var self=this;
-    var ret = ShapeAlgorithms.transformArc(
-        shape,
-        function(p) {
-            return p.scale(sv, self.focusPoint);
-        }
-    );
-
-    return ret;
+    return RShape.scaleArc(shape, sv, this.focusPoint);
 };
 
 /**
@@ -370,7 +362,6 @@ Scale.prototype.transform = function(entity, k, op, preview, flags) {
     if (isHatchEntity(entity)) {
         //debugger;
         var data = entity.getData();
-        qDebug("data.getDocument()", data.getDocument());
         var newHatchData = data.copy();
         newHatchData.setDocument(data.getDocument());
         newHatchData.copyAttributesFrom(data);
