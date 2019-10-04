@@ -145,6 +145,10 @@ public:
 
     QSharedPointer<REntity> queryEntity(REntity::Id entityId, bool transform = false) const;
     bool applyTransformationTo(REntity& entity) const;
+    /**
+     * \nonscriptable
+     */
+    bool applyTransformationTo(QSharedPointer<REntity>& entity) const;
 
     QTransform getTransform() const;
     void exportTransforms(RExporter& e) const;

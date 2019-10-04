@@ -384,7 +384,7 @@ QSharedPointer<REntity> RBlockReferenceData::queryEntity(REntity::Id entityId, b
 
     // transform entity into (new type of) entity:
     if (transform) {
-        applyTransformationTo(*entity);
+        applyTransformationTo(entity);
     }
 
     if (!transform) {
@@ -458,6 +458,58 @@ bool RBlockReferenceData::applyTransformationTo(REntity& entity) const {
     //entity.scale(scaleFactors, RVector(), newShapes);
     entity.rotate(rotation);
     entity.move(position);
+
+    return true;
+}
+
+bool RBlockReferenceData::applyTransformationTo(QSharedPointer<REntity>& entity) const {
+//    qDebug() << "swap";
+
+    //QSharedPointer<REntity> e = QSharedPointer<REntity>(new RBlockReferenceEntity(entity->getDocument(), RBlockReferenceData()));
+    //entity.swap(e);
+    //entity = ;
+
+    QSharedPointer<RBlock> block = document->queryBlockDirect(referencedBlockId);
+    if (block.isNull()) {
+        qWarning("RBlockReferenceData::applyTransformationTo: "
+            "block %d is NULL", referencedBlockId);
+        return false;
+    }
+
+    // nested block reference with negative scale factors (flipped):
+    RBlockReferenceEntity* blockReference = dynamic_cast<RBlockReferenceEntity*>(entity.data());
+    if (blockReference!=NULL && scaleFactors.y<0.0) {
+        blockReference->move(-block->getOrigin());
+        blockReference->scale(scaleFactors);
+        blockReference->rotate(-2*blockReference->getRotation(), blockReference->getPosition());
+        blockReference->rotate(rotation);
+        blockReference->move(position);
+        if (!RMath::fuzzyCompare(visualPropertiesScale, 1.0)) {
+            blockReference->scaleVisualProperties(visualPropertiesScale);
+        }
+        return true;
+    }
+
+    if (!RMath::fuzzyCompare(visualPropertiesScale, 1.0)) {
+        entity->scaleVisualProperties(visualPropertiesScale);
+    }
+
+    entity->move(-block->getOrigin());
+    if (!RMath::fuzzyCompare(scaleFactors.x, scaleFactors.y)) {
+        // non-uniform scale:
+        QSharedPointer<REntity> e = entity->scaleNonUniform(scaleFactors, RVector());
+        if (!e.isNull() && e.data()!=entity.data()) {
+            entity.swap(e);
+        }
+    }
+    else {
+        // uniform scale:
+        entity->scale(scaleFactors.x, RVector());
+    }
+    //entity->scale(scaleFactors, RVector());
+    //entity.scale(scaleFactors, RVector(), newShapes);
+    entity->rotate(rotation);
+    entity->move(position);
 
     return true;
 }

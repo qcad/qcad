@@ -404,6 +404,16 @@ void REntity::setSelected(bool on) {
     getData().setSelected(on);
 }
 
+QSharedPointer<REntity> REntity::scaleNonUniform(const RVector& scaleFactors, const RVector& center) {
+    QSharedPointer<REntity> cl(clone());
+    RShape* s = cl->castToShape();
+    if (s==NULL) {
+        return QSharedPointer<REntity>();
+    }
+    s->scale(scaleFactors, center);
+    return cl;
+}
+
 /**
  * Stream operator for QDebug
  */

@@ -545,6 +545,11 @@ public:
     }
 
     /**
+     * \copydoc REntityData::scaleNonUniform
+     */
+    virtual QSharedPointer<REntity> scaleNonUniform(const RVector& scaleFactors, const RVector& center = RDEFAULT_RVECTOR);
+
+    /**
      * \copydoc REntityData::scale
      */
     virtual bool scale(double scaleFactor, const RVector& center = RDEFAULT_RVECTOR) {
