@@ -200,6 +200,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="i" isConst="false" />
       </variant>
     </method>
+    <method name="hasArcSegments" cppName="hasArcSegments"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="getClosestSegment" cppName="getClosestSegment"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

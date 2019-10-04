@@ -116,6 +116,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isArcSegmentAt, "isArcSegmentAt");
             
+            REcmaHelper::registerFunction(&engine, proto, hasArcSegments, "hasArcSegments");
+            
             REcmaHelper::registerFunction(&engine, proto, getClosestSegment, "getClosestSegment");
             
             REcmaHelper::registerFunction(&engine, proto, getClosestVertex, "getClosestVertex");
@@ -2767,6 +2769,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolylineEntity::isArcSegmentAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineEntity::hasArcSegments
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineEntity::hasArcSegments", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::hasArcSegments";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineEntity* self = 
+                        getSelf("hasArcSegments", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasArcSegments();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.hasArcSegments().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::hasArcSegments", context, engine);
             return result;
         }
          QScriptValue

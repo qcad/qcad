@@ -80,6 +80,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, exportEntity, "exportEntity");
             
+            REcmaHelper::registerFunction(&engine, proto, scaleNonUniform, "scaleNonUniform");
+            
             REcmaHelper::registerFunction(&engine, proto, getData, "getData");
             
             REcmaHelper::registerFunction(&engine, proto, getCenter, "getCenter");
@@ -1244,6 +1246,103 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaCircleEntity::exportEntity", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCircleEntity::scaleNonUniform
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCircleEntity::scaleNonUniform", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCircleEntity::scaleNonUniform";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCircleEntity* self = 
+                        getSelf("scaleNonUniform", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RCircleEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RCircleEntity: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < REntity >'
+    QSharedPointer < REntity > cppResult =
+        
+               self->scaleNonUniform(a0
+        ,
+    a1);
+        // return type: QSharedPointer < REntity >
+                // Shared pointer to entity, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCircleEntity.scaleNonUniform().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCircleEntity::scaleNonUniform", context, engine);
             return result;
         }
          QScriptValue

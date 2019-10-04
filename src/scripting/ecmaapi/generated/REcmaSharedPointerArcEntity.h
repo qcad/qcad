@@ -73,6 +73,9 @@
         exportEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        scaleNonUniform
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getData
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -118,6 +118,9 @@
         isArcSegmentAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        hasArcSegments
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getClosestSegment
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -79,6 +79,17 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
+    <method name="scaleNonUniform" cppName="scaleNonUniform"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; REntity &gt;"
+      isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="scaleFactors" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="center"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getData" cppName="getData" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="REllipseData &amp;"

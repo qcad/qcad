@@ -346,6 +346,12 @@
         rayToLine
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        scaleArc
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        ellipseToArcCircleEllipse
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getErrorCode
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

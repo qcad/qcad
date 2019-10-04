@@ -44,6 +44,25 @@
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_TOLERANCE_1E_MIN4</name> 1.0e-4</cpp:define>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
+<class>class <name>RShapeTransformation</name> <block>{<private type="default">
+</private><public>public:
+    <destructor><specifier>virtual</specifier> <name>~RShapeTransformation</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
+    <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>transform</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+</public>}</block>;</class>
+
+<class>class <name>RShapeTransformationScale</name> <super>: <specifier>public</specifier> <name>RShapeTransformation</name></super> <block>{<private type="default">
+</private><public>public:
+    <constructor><name>RShapeTransformationScale</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>factors</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name></decl></param>)</parameter_list> <member_list>: <call><name>factors</name><argument_list>(<argument><expr><name>factors</name></expr></argument>)</argument_list></call>, <call><name>center</name><argument_list>(<argument><expr><name>center</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
+    <destructor><specifier>virtual</specifier> <name>~RShapeTransformationScale</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
+
+    <function><type><name>virtual</name> <name>RVector</name></type> <name>transform</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <return>return <expr><name>v</name>.<call><name>getScaled</name><argument_list>(<argument><expr><name>factors</name></expr></argument>, <argument><expr><name>center</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <decl_stmt><decl><type><name>RVector</name></type> <name>factors</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>center</name></decl>;</decl_stmt>
+</public>}</block>;</class>
+
 <comment type="block">/**
  * Interface for geometrical shape classes.
  *
@@ -452,6 +471,17 @@
 
     <function_decl><type><name>static</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>xLineToRay</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>shape</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>rayToLine</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>shape</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>static</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>scaleArc</name><parameter_list>(<param><decl><type><name>const</name> <name>RShape</name>&amp;</type> <name>shape</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>scaleFactors</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name> =<init> <expr><name>RDEFAULT_RVECTOR</name></expr></init></decl></param>)</parameter_list> <block>{
+        <function_decl><type><name>RShapeTransformationScale</name></type> <name>t</name><parameter_list>(<param><decl><type><name>scaleFactors</name></type></decl></param>, <param><decl><type><name>center</name></type></decl></param>)</parameter_list>;</function_decl>
+        <return>return <expr><call><name>transformArc</name><argument_list>(<argument><expr><name>shape</name></expr></argument>, <argument><expr><name>t</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>transformArc</name><parameter_list>(<param><decl><type><name>const</name> <name>RShape</name>&amp;</type> <name>shape</name></decl></param>, <param><decl><type><name>RShapeTransformation</name>&amp;</type> <name>transformation</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>ellipseToArcCircleEllipse</name><parameter_list>(<param><decl><type><name>const</name> <name>REllipse</name>&amp;</type> <name>ellipse</name></decl></param>)</parameter_list>;</function_decl>
 
     <function><type><name>static</name> <name>int</name></type> <name>getErrorCode</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr><name>errorCode</name></expr>;</return>

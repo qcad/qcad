@@ -252,6 +252,9 @@
         scale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        scaleNonUniform
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         scaleVisualProperties
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

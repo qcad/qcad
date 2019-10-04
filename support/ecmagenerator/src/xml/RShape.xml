@@ -10,6 +10,16 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RPolyline" />
   <class_decl name="RSpline" />
   <class_decl name="RTriangle" />
+  <class name="RShapeTransformation"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="true"
+  isScriptable="false" />
+  <class name="RShapeTransformationScale"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false"
+  isScriptable="false" />
   <class name="RShape" xsi:noNamespaceSchemaLocation="../class.xsd"
   isCopyable="false" hasShell="false" sharedPointerSupport="true"
   isQObject="false" hasStreamOperator="false" isAbstract="true"
@@ -1080,6 +1090,28 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QSharedPointer &lt; RShape &gt;"
         typeName="QSharedPointer &lt; RShape &gt;" name="shape"
         isConst="false" />
+      </variant>
+    </method>
+    <method name="scaleArc" cppName="scaleArc" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RShape &gt;"
+      isPureVirtual="false">
+        <arg type="RShape &amp;" typeName="RShape" name="shape"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="scaleFactors" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="center"
+        hasDefault="true" default="RDEFAULT_RVECTOR"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="ellipseToArcCircleEllipse"
+    cppName="ellipseToArcCircleEllipse" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RShape &gt;"
+      isPureVirtual="false">
+        <arg type="REllipse &amp;" typeName="REllipse"
+        name="ellipse" isConst="true" />
       </variant>
     </method>
     <method name="getErrorCode" cppName="getErrorCode"

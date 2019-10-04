@@ -60,6 +60,9 @@
 
     // public methods:
     static  QScriptValue
+        createInscribed
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getShapeType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

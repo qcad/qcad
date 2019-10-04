@@ -117,9 +117,6 @@
     <function_decl><type><name>bool</name></type> <name>hasClipRectangleFor</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>RBox</name></type> <name>getClipRectangle</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
-<comment type="line">//    bool hasTransformFor(REntity::Id entityId, bool preview = false) const;</comment>
-<comment type="line">//    QTransform getTransform(REntity::Id entityId, bool preview = false) const;</comment>
-
     <function_decl><type><name>void</name></type> <name>addDrawable</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>RGraphicsSceneDrawable</name>&amp;</type> <name>drawable</name></decl></param>, <param><decl><type><name>bool</name></type> <name>draft</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>startEntity</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>topLevelEntity</name></decl></param>)</parameter_list>;</function_decl>
@@ -145,11 +142,9 @@
 
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RGraphicsSceneDrawable</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>drawables</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>RBox</name></argument>&gt;</argument_list></name></type> <name>clipRectangles</name></decl>;</decl_stmt>
-    <comment type="line">//QMap&lt;REntity::Id, QTransform&gt; transforms; // TODO: as drawables in list in order</comment>
 
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RGraphicsSceneDrawable</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>previewDrawables</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>RBox</name></argument>&gt;</argument_list></name></type> <name>previewClipRectangles</name></decl>;</decl_stmt>
-    <comment type="line">//QMap&lt;REntity::Id, QTransform&gt; previewTransforms;</comment>
 
     <decl_stmt><decl><type><name>bool</name></type> <name>decorating</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>screenBasedLinetypesOverride</name></decl>;</decl_stmt>
