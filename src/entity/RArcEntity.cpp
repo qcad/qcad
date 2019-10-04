@@ -17,6 +17,8 @@
  * along with QCAD.
  */
 #include "RArcEntity.h"
+#include "RCircleEntity.h"
+#include "REllipseEntity.h"
 #include "RExporter.h"
 #include "RPoint.h"
 
@@ -180,6 +182,57 @@ void RArcEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) co
 
     e.setBrush(Qt::NoBrush);
     e.exportArc(data);
+}
+
+QSharedPointer<REntity> RArcEntity::scaleNonUniform(const RVector& scaleFactors, const RVector& center) {
+    return scaleNonUniform(*this, scaleFactors, center);
+}
+
+QSharedPointer<REntity> RArcEntity::scaleNonUniform(REntity& entity, const RVector& scaleFactors, const RVector& center) {
+    RShape* s = entity.castToShape();
+    if (s==NULL) {
+        return QSharedPointer<REntity>();
+    }
+
+    RShapeTransformationScale scale(scaleFactors, center);
+    QSharedPointer<RShape> shapeT = RShape::transformArc(*s, scale);
+    if (shapeT.isNull()) {
+        return QSharedPointer<REntity>();
+    }
+
+    if (RShape::isEllipseShape(*shapeT)) {
+        QSharedPointer<REllipse> ellipseT = shapeT.dynamicCast<REllipse>();
+        if (ellipseT.isNull()) {
+            return QSharedPointer<REntity>();
+        }
+        REllipseEntity* e = new REllipseEntity(entity.getDocument(), REllipseData(*ellipseT));
+        return QSharedPointer<REntity>(e);
+    }
+    else if (RShape::isArcShape(*shapeT)) {
+        QSharedPointer<RArc> arcT = shapeT.dynamicCast<RArc>();
+        if (arcT.isNull()) {
+            return QSharedPointer<REntity>();
+        }
+        RArcEntity* arcEntity = dynamic_cast<RArcEntity*>(&entity);
+        if (arcEntity==NULL) {
+            return QSharedPointer<REntity>();
+        }
+        RArcEntity* cl = arcEntity->clone();
+        cl->setShape(*arcT);
+        return QSharedPointer<REntity>(cl);
+    }
+    else if (RShape::isCircleShape(*shapeT)) {
+        QSharedPointer<RCircle> circleT = shapeT.dynamicCast<RCircle>();
+        if (circleT.isNull()) {
+            return QSharedPointer<REntity>();
+        }
+        RCircleEntity* e = new RCircleEntity(entity.getDocument(), RCircleData(*circleT));
+        return QSharedPointer<REntity>(e);
+    }
+
+    qWarning() << "Unexpected shape returned from RShape::transformArc";
+    return QSharedPointer<REntity>();
+
 }
 
 void RArcEntity::print(QDebug dbg) const {

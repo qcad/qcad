@@ -16,6 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RArcEntity.h"
 #include "RCircleEntity.h"
 #include "RExporter.h"
 #include "RPoint.h"
@@ -132,11 +133,15 @@ QPair<QVariant, RPropertyAttributes> RCircleEntity::getProperty(
 
 
 void RCircleEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
-    Q_UNUSED(preview);
-    Q_UNUSED(forceSelected);
+    Q_UNUSED(preview)
+    Q_UNUSED(forceSelected)
 
     e.setBrush(Qt::NoBrush);
     e.exportCircle(data);
+}
+
+QSharedPointer<REntity> RCircleEntity::scaleNonUniform(const RVector& scaleFactors, const RVector& center) {
+    return RArcEntity::scaleNonUniform(*this, scaleFactors, center);
 }
 
 void RCircleEntity::print(QDebug dbg) const {

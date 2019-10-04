@@ -16,6 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RArcEntity.h"
 #include "REllipseEntity.h"
 #include "RExporter.h"
 #include "RPoint.h"
@@ -187,11 +188,15 @@ void REllipseEntity::setShape(const REllipse& e) {
 }
 
 void REllipseEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
-    Q_UNUSED(preview);
-    Q_UNUSED(forceSelected);
+    Q_UNUSED(preview)
+    Q_UNUSED(forceSelected)
 
     e.setBrush(Qt::NoBrush);
     e.exportEllipse(data);
+}
+
+QSharedPointer<REntity> REllipseEntity::scaleNonUniform(const RVector& scaleFactors, const RVector& center) {
+    return RArcEntity::scaleNonUniform(*this, scaleFactors, center);
 }
 
 void REllipseEntity::print(QDebug dbg) const {

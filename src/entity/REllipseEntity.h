@@ -98,6 +98,8 @@ public:
 
     virtual void exportEntity(RExporter& e, bool preview=false, bool forceSelected=false) const;
 
+    virtual QSharedPointer<REntity> scaleNonUniform(const RVector& scaleFactors, const RVector& center);
+
     virtual REllipseData& getData() {
         return data;
     }

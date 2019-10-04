@@ -92,6 +92,9 @@ public:
 
     virtual void exportEntity(RExporter& e, bool preview=false, bool forceSelected=false) const;
 
+    virtual QSharedPointer<REntity> scaleNonUniform(const RVector& scaleFactors, const RVector& center);
+    static QSharedPointer<REntity> scaleNonUniform(REntity& entity, const RVector& scaleFactors, const RVector& center);
+
     virtual RArcData& getData() {
         return data;
     }
