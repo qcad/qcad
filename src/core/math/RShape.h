@@ -43,6 +43,25 @@ class RTriangle;
 #define RDEFAULT_TOLERANCE_1E_MIN4 1.0e-4
 #endif
 
+class RShapeTransformation {
+public:
+    virtual ~RShapeTransformation() {}
+    virtual RVector transform(const RVector& v) = 0;
+};
+
+class RShapeTransformationScale : public RShapeTransformation {
+public:
+    RShapeTransformationScale(const RVector& factors, const RVector& center) : factors(factors), center(center) {}
+    virtual ~RShapeTransformationScale() {}
+
+    virtual RVector transform(const RVector& v) {
+        return v.getScaled(factors, center);
+    }
+
+    RVector factors;
+    RVector center;
+};
+
 /**
  * Interface for geometrical shape classes.
  *
@@ -452,10 +471,15 @@ public:
     static QSharedPointer<RShape> xLineToRay(QSharedPointer<RShape> shape);
     static QSharedPointer<RShape> rayToLine(QSharedPointer<RShape> shape);
 
+    static QSharedPointer<RShape> scaleArc(const RShape& shape, const RVector& scaleFactors, const RVector& center = RDEFAULT_RVECTOR) {
+        RShapeTransformationScale t(scaleFactors, center);
+        return transformArc(shape, t);
+    }
+
     /**
      * \nonscriptable
      */
-    static QSharedPointer<RShape> transformArc(QSharedPointer<RShape> shape, RVector (*function)(const RVector&));
+    static QSharedPointer<RShape> transformArc(const RShape& shape, RShapeTransformation& transformation);
     static QSharedPointer<RShape> ellipseToArcCircleEllipse(const REllipse& ellipse);
 
     static int getErrorCode() {

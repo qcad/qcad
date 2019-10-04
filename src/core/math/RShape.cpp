@@ -2519,25 +2519,27 @@ QSharedPointer<RShape> RShape::rayToLine(QSharedPointer<RShape> shape) {
     return shape;
 }
 
-QSharedPointer<RShape> RShape::transformArc(QSharedPointer<RShape> shape, RVector (*function)(const RVector&)) {
-    if (shape.isNull()) {
-        return QSharedPointer<RShape>();
-    }
-
+QSharedPointer<RShape> RShape::transformArc(const RShape& shape, RShapeTransformation& transformation) {
     RVector r1, r2;
     RVector c;
 
-    if (isEllipseShape(*shape)) {
-        QSharedPointer<REllipse> ellipse = shape.dynamicCast<REllipse>();
-        r1 = ellipse->getMajorPoint();
-        r2 = ellipse->getMinorPoint();
-        c = ellipse->getCenter();
+    if (isEllipseShape(shape)) {
+        const REllipse& ellipse = dynamic_cast<const REllipse&>(shape);
+        r1 = ellipse.getMajorPoint();
+        r2 = ellipse.getMinorPoint();
+        c = ellipse.getCenter();
     }
-    else {
-        QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
-        r1 = RVector(arc->getRadius(), 0);
-        r2 = RVector(0, arc->getRadius());
-        c = arc->getCenter();
+    else if (isArcShape(shape)) {
+        const RArc& arc = dynamic_cast<const RArc&>(shape);
+        r1 = RVector(arc.getRadius(), 0);
+        r2 = RVector(0, arc.getRadius());
+        c = arc.getCenter();
+    }
+    else if (isCircleShape(shape)) {
+        const RCircle& circle = dynamic_cast<const RCircle&>(shape);
+        r1 = RVector(circle.getRadius(), 0);
+        r2 = RVector(0, circle.getRadius());
+        c = circle.getCenter();
     }
 
     RVector v1 = c + r1 + r2;
@@ -2545,24 +2547,24 @@ QSharedPointer<RShape> RShape::transformArc(QSharedPointer<RShape> shape, RVecto
     RVector v3 = c - r1 - r2;
     RVector v4 = c - r1 + r2;
 
-    v1 = function(v1);
-    v2 = function(v2);
-    v3 = function(v3);
-    v4 = function(v4);
+    v1 = transformation.transform(v1);
+    v2 = transformation.transform(v2);
+    v3 = transformation.transform(v3);
+    v4 = transformation.transform(v4);
 
     //var ret = [];
     REllipse ellipse = REllipse::createInscribed(v1, v2, v3, v4);
     //var ellipse = ShapeAlgorithms.createEllipseInscribedFromVertices(v1, v2, v3, v4);
     //ret.push(ellipse.copy());
 
-    if (isArcShape(*shape) || isEllipseShape(*shape)) {
-        RVector sp = shape->getStartPoint();
-        RVector ep = shape->getEndPoint();
-        RVector mp = shape->getMiddlePoint();
+    if (isArcShape(shape) || isEllipseShape(shape)) {
+        RVector sp = shape.getStartPoint();
+        RVector ep = shape.getEndPoint();
+        RVector mp = shape.getMiddlePoint();
 
-        sp = function(sp);
-        ep = function(ep);
-        mp = function(mp);
+        sp = transformation.transform(sp);
+        ep = transformation.transform(ep);
+        mp = transformation.transform(mp);
 
         ellipse.setStartParam(ellipse.getParamTo(sp));
         ellipse.setEndParam(ellipse.getParamTo(ep));
