@@ -1776,6 +1776,37 @@ bool RPolyline::scale(double scaleFactor, const RVector& center) {
 }
 
 bool RPolyline::scale(const RVector& scaleFactors, const RVector& center) {
+    if (hasArcSegments() && !RMath::fuzzyCompare(scaleFactors.x, scaleFactors.y)) {
+        // non-uniform scaling of polyline with arcs:
+        RPolyline pl;
+        for (int i=0; i<countSegments(); i++) {
+            QSharedPointer<RShape> seg = getSegmentAt(i);
+            if (seg.isNull()) {
+                continue;
+            }
+
+            // TODO: apply widths to new segments:
+            //double w1 = getStartWidthAt(i);
+            //double w2 = getStartWidthAt((i+1)%countVertices());
+
+            QSharedPointer<RShape> newSeg;
+            if (RShape::isLineShape(*seg)) {
+                newSeg = seg;
+                newSeg->scale(scaleFactors, center);
+            }
+            else {
+                newSeg = RShape::scaleArc(*seg, scaleFactors, center);
+            }
+
+            if (!newSeg.isNull()) {
+                pl.appendShape(*newSeg);
+            }
+        }
+        // new polyline with tangentially connected small arc segments for original arc segments:
+        *this = pl;
+        return true;
+    }
+
     for (int i=0; i<vertices.size(); i++) {
         vertices[i].scale(scaleFactors, center);
     }
