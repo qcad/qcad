@@ -233,7 +233,7 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
             break;
         }
 
-        QSharedPointer<REntity> entity = modelSpaceData.queryEntity(*it);
+        QSharedPointer<REntity> entity = modelSpaceData.queryEntity(*it, true);
         if (entity.isNull()) {
             continue;
         }
