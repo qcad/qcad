@@ -1267,7 +1267,12 @@ void RGraphicsViewImage::paintEntityThread(QPainter* painter, REntity::Id id, bo
         }
 
         if (drawable.getType()==RGraphicsSceneDrawable::EndTransform) {
-            entityTransform.pop();
+            if (!entityTransform.isEmpty()) {
+                entityTransform.pop();
+            }
+            else {
+                qWarning() << "pop transform: stack empty";
+            }
         }
 
         // unknown drawable or already handled:
