@@ -666,7 +666,7 @@
         <translation>Maks. razširitev</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+655"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+831"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Zaznano krožno (rekurzivno) sklicevanje zbirov:</translation>
     </message>

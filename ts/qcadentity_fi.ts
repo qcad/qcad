@@ -4,10 +4,10 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/entity/RArcEntity.cpp" line="+88"/>
+        <location filename="../src/entity/RArcEntity.cpp" line="+90"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RCircleEntity.cpp" line="+76"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="+77"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="+107"/>
@@ -16,7 +16,7 @@
         <location filename="../src/entity/RDimRadialEntity.cpp" line="+103"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="+79"/>
+        <location filename="../src/entity/REllipseEntity.cpp" line="+80"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>

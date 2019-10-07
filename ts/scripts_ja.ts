@@ -210,7 +210,7 @@
         <translation>プログラミング</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+52"/>
         <source>Translations</source>
         <translation>翻訳</translation>
     </message>
@@ -388,7 +388,7 @@ QCADを再起動してください。</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1769"/>
+        <location filename="../scripts/Apollonius.js" line="+1812"/>
         <source>Invalid radius</source>
         <translation>無効な半径</translation>
     </message>
@@ -1251,7 +1251,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+115"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+119"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation> 無効な画像サイズ(幅x高さは%1よりも小さく)</translation>
     </message>
@@ -4423,7 +4423,7 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+15"/>
         <source>&amp;Output Polyline Vertices</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4475,7 +4475,7 @@ is already in the list.</source>
 <context>
     <name>ExMandelbrot</name>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js" line="+51"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js" line="+48"/>
         <source>&amp;Mandelbrot Example</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4852,6 +4852,163 @@ is already in the list.</source>
     </message>
 </context>
 <context>
+    <name>FlexPainter</name>
+    <message>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+612"/>
+        <source>&amp;FlexPainter</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>FlexPainterOptions</name>
+    <message>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
+        <source>Painter Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Painters casting options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Mirroring painters over baseline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Flip Painters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Group all castings to one operation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Cast in group</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Start with casting a begin apex on open forms</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Add Begin Apex</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>End with casting an end apex on open forms</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Add End Apex</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Add insertions in between eg. spacers, knots</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Add Insertions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Deleted painted over base entity (persistent off)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Delete Entities(*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>Preview</source>
+        <translation type="unfinished">プレビュー</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Select painter type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <location line="+4"/>
+        <source>CurtainRope</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>TelephoneCoil</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+81"/>
+        <source>Keep painters proportional</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Factor Y:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Factor X:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Open forms scaling options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Adapt scaling f 1.00-0.90 to fit the whole form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Dynamically scale to fit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Align with begin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Centered</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Align with End</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Verbose info (persistent on)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Verbose(*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>FlipHorizontal</name>
     <message>
         <location filename="../scripts/Modify/FlipHorizontal/FlipHorizontalInit.js" line="+2"/>
@@ -5223,7 +5380,12 @@ is already in the list.</source>
         <translation>エンティティをこの数以上の連続点として表示する</translation>
     </message>
     <message>
-        <location line="-82"/>
+        <location line="+181"/>
+        <source>Use multithreading</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-263"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>弧を描く時に分割する最小角度（度）</translation>
     </message>
@@ -5279,7 +5441,7 @@ is already in the list.</source>
         <translation type="obsolete">テキスト高さの表示閾値:</translation>
     </message>
     <message>
-        <location line="+335"/>
+        <location line="+345"/>
         <source>Selection</source>
         <translation>選択</translation>
     </message>
@@ -11010,7 +11172,7 @@ shown in search results:</source>
         <translation type="vanished">%1同心弧の半径が0.0を下回りました。</translation>
     </message>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1413"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1423"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>少なくとも2点が同一です。</translation>
@@ -13064,7 +13226,7 @@ shown in search results:</source>
         <translation>プレビュー</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+99"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+102"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation type="unfinished">グリッド間隔＜メタグリッド間隔</translation>
     </message>
@@ -13095,7 +13257,7 @@ shown in search results:</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+281"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+286"/>
         <source>Dropped data not supported</source>
         <translation>ドロップされたデータはサポートされていません</translation>
     </message>

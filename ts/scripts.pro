@@ -95,6 +95,7 @@ SOURCES = \
 ../scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest00.js \
 ../scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest01.js \
 ../scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest02.js \
+../scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest03.js \
 ../scripts/Draw/Circle/Circle2TR/Circle2TR.js \
 ../scripts/Draw/Circle/Circle2TR/Circle2TRInit.js \
 ../scripts/Draw/Circle/Circle2TR/Tests/Circle2TRTest00.js \
@@ -560,6 +561,7 @@ SOURCES = \
 ../scripts/Misc/Examples/ListenerExamples/ListenerExamples.js \
 ../scripts/Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js \
 ../scripts/Misc/Examples/MathExamples/ExMathSpiral/ExMathSpiral.js \
+../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js \
 ../scripts/Misc/Examples/MathExamples/MathExamples.js \
 ../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js \
 ../scripts/Misc/Examples/ModifyExamples/ModifyExamples.js \
@@ -619,6 +621,7 @@ SOURCES = \
 ../scripts/Misc/MiscSelect/SelectByColor/SelectByColorInit.js \
 ../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.js \
 ../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js \
+../scripts/Misc/MyCustomUI/MyCustomUI.js \
 ../scripts/Misc/Screencast/ScMirrored/ScMirrored.js \
 ../scripts/Misc/Screencast/ScMirrored/ScMirroredInit.js \
 ../scripts/Misc/Screencast/ScPrepare/ScPrepare.js \
@@ -1101,6 +1104,7 @@ SOURCES = \
 ../scripts/Layer/AddLayer/PreferencesPage.ui \
 ../scripts/Layer/LayerDialog.ui \
 ../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui \
+../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui \
 ../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.ui \
 ../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui \
 ../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui \

@@ -198,7 +198,7 @@
         <translation>Ohjelmointi</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+52"/>
         <source>Translations</source>
         <translation>Käännökset</translation>
     </message>
@@ -360,7 +360,7 @@ asetuksien muutokset astuvat voimaan.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1769"/>
+        <location filename="../scripts/Apollonius.js" line="+1812"/>
         <source>Invalid radius</source>
         <translation>Virheellinen säde</translation>
     </message>
@@ -823,7 +823,7 @@ asetuksien muutokset astuvat voimaan.</translation>
     </message>
     <message>
         <source>&amp;Tangentially connected</source>
-        <translation>&amp;Tangentiaallisesti kytkettynä</translation>
+        <translation type="vanished">&amp;Tangentiaallisesti kytkettynä</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangentialInit.js" line="+2"/>
@@ -888,13 +888,13 @@ Haluatko palauttaa sen?</translation>
     <message>
         <source>An autosave backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
-        <translation>Automaattisen tallennuksen nimettömän piirroksen varmuuskopiotiedosto löytyi.
+        <translation type="vanished">Automaattisen tallennuksen nimettömän piirroksen varmuuskopiotiedosto löytyi.
 Haluatko palauttaa sen sen?</translation>
     </message>
     <message>
         <source>%1 autosave backup files for untitled drawings were found.
 Do you wish to recover them?</source>
-        <translation>%1 automaattisen tallennuksen varmuuskopiotiedostoja löytyi nimettömille piirroksille.
+        <translation type="vanished">%1 automaattisen tallennuksen varmuuskopiotiedostoja löytyi nimettömille piirroksille.
 Haluatko palauttaa ne?</translation>
     </message>
     <message>
@@ -915,7 +915,7 @@ Haluatko palauttaa ne?</translation>
     <message>
         <source>An autosave backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
-        <translation>Automaattisen tallennuksen varmuuskopiotiedosto &apos;%1&apos; on jo olemassa.
+        <translation type="vanished">Automaattisen tallennuksen varmuuskopiotiedosto &apos;%1&apos; on jo olemassa.
 Haluatko palauttaa sen?</translation>
     </message>
     <message>
@@ -1085,7 +1085,7 @@ Haluatko palauttaa sen?</translation>
     <name>BitmapExport</name>
     <message>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
-        <translation>Virhe bittikarttatiedostoa luotaessa &apos;%1&apos;: %2</translation>
+        <translation type="vanished">Virhe bittikarttatiedostoa luotaessa &apos;%1&apos;: %2</translation>
     </message>
     <message>
         <source>Bitmap file has been exported to &apos;%1&apos;</source>
@@ -1227,7 +1227,7 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+115"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+119"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Väärä kuvan koko (leveys x korkeus on oltava pienempi kuin %1)</translation>
     </message>
@@ -1761,7 +1761,7 @@ Haluatko palauttaa sen?</translation>
     </message>
     <message>
         <source>Point, 2 Tan&amp;gents</source>
-        <translation>Piste, 2 Tan&amp;genttia</translation>
+        <translation type="vanished">Piste, 2 Tan&amp;genttia</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+2"/>
@@ -2065,7 +2065,7 @@ Haluatko palauttaa sen?</translation>
     </message>
     <message>
         <source>2 Poin&amp;ts and Tangent</source>
-        <translation>2 Pistet&amp;tä ja tangentti</translation>
+        <translation type="vanished">2 Pistet&amp;tä ja tangentti</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleT2P/CircleT2PInit.js" line="+2"/>
@@ -3218,7 +3218,7 @@ Haluatko palauttaa sen?</translation>
     </message>
     <message>
         <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation>Piirroksen yksikön pitää olla &apos;tuuma&apos; tai &apos;jalka&apos; jotta näytetään mittaselitteet muodossa &apos;arkkitehtuurinen&apos; tai &apos;tekninen&apos;. Muoto vaihdettu &apos;desimaaliseksi&apos;.</translation>
+        <translation type="vanished">Piirroksen yksikön pitää olla &apos;tuuma&apos; tai &apos;jalka&apos; jotta näytetään mittaselitteet muodossa &apos;arkkitehtuurinen&apos; tai &apos;tekninen&apos;. Muoto vaihdettu &apos;desimaaliseksi&apos;.</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+29"/>
@@ -4361,7 +4361,7 @@ on jo luettelossa.</translation>
         <translation>Moniviiva astapäivään:</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+15"/>
         <source>&amp;Output Polyline Vertices</source>
         <translation>&amp;Tulosta moniviivan kärkipisteet</translation>
     </message>
@@ -4413,7 +4413,7 @@ on jo luettelossa.</translation>
 <context>
     <name>ExMandelbrot</name>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js" line="+51"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js" line="+48"/>
         <source>&amp;Mandelbrot Example</source>
         <translation>&amp;Mandelbrot -esimerkki</translation>
     </message>
@@ -4575,9 +4575,11 @@ on jo luettelossa.</translation>
     <message numerus="yes">
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
-        <translation><numerusform>Tapahtuma vaikutti %n kohteeseen.</numerusform>
-        <numerusform>Tapahtuma vaikutti %n kohteisiin.</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Tapahtuma vaikutti %n kohteeseen.</numerusform>
+            <numerusform>Tapahtuma vaikutti %n kohteisiin.</numerusform>
+        </translation>
+    </message>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
@@ -4786,6 +4788,163 @@ on jo luettelossa.</translation>
         <location line="+1"/>
         <source>Background Color:</source>
         <translation>Taustaväri:</translation>
+    </message>
+</context>
+<context>
+    <name>FlexPainter</name>
+    <message>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+612"/>
+        <source>&amp;FlexPainter</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>FlexPainterOptions</name>
+    <message>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
+        <source>Painter Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Painters casting options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Mirroring painters over baseline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Flip Painters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Group all castings to one operation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Cast in group</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Start with casting a begin apex on open forms</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Add Begin Apex</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>End with casting an end apex on open forms</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Add End Apex</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Add insertions in between eg. spacers, knots</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Add Insertions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Deleted painted over base entity (persistent off)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Delete Entities(*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>Preview</source>
+        <translation type="unfinished">Esikatselu</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Select painter type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <location line="+4"/>
+        <source>CurtainRope</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>TelephoneCoil</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+81"/>
+        <source>Keep painters proportional</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Factor Y:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Factor X:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Open forms scaling options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Adapt scaling f 1.00-0.90 to fit the whole form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Dynamically scale to fit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Align with begin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Centered</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Align with End</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Verbose info (persistent on)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Verbose(*)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5168,7 +5327,12 @@ on jo luettelossa.</translation>
         <translation>Näytettävien viitepisteiden enimmäismäärä:</translation>
     </message>
     <message>
-        <location line="+80"/>
+        <location line="+77"/>
+        <source>Use multithreading</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Selection</source>
         <translation>Valinta</translation>
     </message>
@@ -6552,7 +6716,7 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <source>True scale</source>
-        <translation>Tosimitta</translation>
+        <translation type="vanished">Tosimitta</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
@@ -7255,7 +7419,7 @@ näkyy hakutuloksissa:</translation>
     </message>
     <message>
         <source>about:blank</source>
-        <translation>tietoja:tyhjä</translation>
+        <translation type="vanished">tietoja:tyhjä</translation>
     </message>
     <message>
         <location line="+129"/>
@@ -9334,7 +9498,7 @@ näkyy hakutuloksissa:</translation>
     <name>RecentFiles</name>
     <message>
         <source>Load/Save</source>
-        <translation>Avaa/tallenna</translation>
+        <translation type="vanished">Avaa/tallenna</translation>
     </message>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFiles.js" line="+35"/>
@@ -9911,7 +10075,7 @@ näkyy hakutuloksissa:</translation>
     </message>
     <message>
         <source>Load/Save</source>
-        <translation>Avaa/tallenna</translation>
+        <translation type="vanished">Avaa/tallenna</translation>
     </message>
     <message>
         <source>Save as</source>
@@ -10627,7 +10791,7 @@ näkyy hakutuloksissa:</translation>
         <translation type="vanished">Säde on pudonnut alle 0.0 arvon %1 samankeskisen kaaren (kaarien) jälkeen.</translation>
     </message>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1413"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1423"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vähintään kaksi pistettä ovat samat.</translation>
@@ -10791,7 +10955,7 @@ näkyy hakutuloksissa:</translation>
     </message>
     <message>
         <source>Polygo&amp;n (Two Corners)</source>
-        <translation>Monikulmio (kaksi kulmaa)</translation>
+        <translation type="vanished">Monikulmio (kaksi kulmaa)</translation>
     </message>
     <message>
         <source>Draw regular polygon from two corner points</source>
@@ -12651,7 +12815,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Esikatselu</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+99"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+102"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation>Ruudukon välit &lt; Aliruudukon välit</translation>
     </message>
@@ -12718,7 +12882,7 @@ näkyy hakutuloksissa:</translation>
         <translation type="vanished">Ruudukon välit &lt; Aliruudukon välit</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+281"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+286"/>
         <source>Dropped data not supported</source>
         <translation>Poistettuja tietoja ei tueta</translation>
     </message>

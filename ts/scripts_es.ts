@@ -234,7 +234,7 @@
         <translation>Programación</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+52"/>
         <source>Translations</source>
         <translation>Traducciones</translation>
     </message>
@@ -435,7 +435,7 @@ Tipo de línea:</translatorcomment>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1769"/>
+        <location filename="../scripts/Apollonius.js" line="+1812"/>
         <source>Invalid radius</source>
         <translation>Radio no válido</translation>
     </message>
@@ -1369,7 +1369,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+115"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+119"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Tamaño de imagen no válido (anchura x altura debe ser menor que %1)</translation>
     </message>
@@ -4775,7 +4775,7 @@ ya está en la lista.</translation>
         <translation>Polilínea en sentido antihorario:</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+15"/>
         <source>&amp;Output Polyline Vertices</source>
         <translation>&amp;Salida de los vértices de polilínea</translation>
     </message>
@@ -4835,7 +4835,7 @@ ya está en la lista.</translation>
         <translation type="vanished">&amp;Mandelbrot</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js" line="+51"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js" line="+48"/>
         <source>&amp;Mandelbrot Example</source>
         <translation>&amp;Mandelbrot</translation>
     </message>
@@ -5254,6 +5254,163 @@ Punto decimal:</translatorcomment>
         <source>QCAD First Start</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="obsolete">Primera puesta en QCAD</translation>
+    </message>
+</context>
+<context>
+    <name>FlexPainter</name>
+    <message>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+612"/>
+        <source>&amp;FlexPainter</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>FlexPainterOptions</name>
+    <message>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
+        <source>Painter Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Painters casting options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Mirroring painters over baseline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Flip Painters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Group all castings to one operation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Cast in group</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Start with casting a begin apex on open forms</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Add Begin Apex</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>End with casting an end apex on open forms</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Add End Apex</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Add insertions in between eg. spacers, knots</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Add Insertions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Deleted painted over base entity (persistent off)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Delete Entities(*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>Preview</source>
+        <translation type="unfinished">Previsualización</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Select painter type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <location line="+4"/>
+        <source>CurtainRope</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>TelephoneCoil</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+81"/>
+        <source>Keep painters proportional</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Factor Y:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Factor X:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Open forms scaling options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Adapt scaling f 1.00-0.90 to fit the whole form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Dynamically scale to fit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Align with begin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Centered</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Align with End</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Verbose info (persistent on)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Verbose(*)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5709,7 +5866,12 @@ Selecciona entidades solas</translatorcomment>
         <translation>Mostrar las entidades con más de N guiones como contínua:</translation>
     </message>
     <message>
-        <location line="-82"/>
+        <location line="+181"/>
+        <source>Use multithreading</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-263"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Paso ángulo mínimo para la prestación de arcos (grados):</translation>
     </message>
@@ -5773,7 +5935,7 @@ Selecciona entidades solas</translatorcomment>
         <translation type="obsolete">Mostrar límite para el texto:</translation>
     </message>
     <message>
-        <location line="+335"/>
+        <location line="+345"/>
         <source>Selection</source>
         <translation>Selección</translation>
     </message>
@@ -12536,7 +12698,7 @@ No se pudo transformar la capa &quot;%1&quot;</translatorcomment>
         <translation type="vanished">Radio caído por debajo de 0,0 después %1 de arcos concéntricos.</translation>
     </message>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1413"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1423"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -14767,7 +14929,7 @@ Usar capa y los &amp;atributos actual</translatorcomment>
         <translation>Previsualización</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+99"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+102"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation>Espaciado de la rejilla &lt; Meta espaciado de rejilla</translation>
     </message>
@@ -14802,7 +14964,7 @@ Usar capa y los &amp;atributos actual</translatorcomment>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+281"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+286"/>
         <source>Dropped data not supported</source>
         <translation>Datos insertados no compatibles</translation>
     </message>

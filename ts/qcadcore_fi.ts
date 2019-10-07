@@ -666,7 +666,7 @@
         <translation>Suurin määrä</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+655"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+831"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Pyöreä (rekursiivinen) lohkoviittaus havaittu:</translation>
     </message>
@@ -708,11 +708,11 @@
     </message>
     <message>
         <source>Linetype</source>
-        <translation>Viivatyyppi</translation>
+        <translation type="vanished">Viivatyyppi</translation>
     </message>
     <message>
         <source>Lineweight</source>
-        <translation>Viivapaksuus</translation>
+        <translation type="vanished">Viivapaksuus</translation>
     </message>
 </context>
 <context>
