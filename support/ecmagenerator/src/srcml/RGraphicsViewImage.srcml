@@ -313,6 +313,10 @@
         <expr_stmt><expr><name>minimumLineweight</name> = <name>lw</name></expr>;</expr_stmt>
     }</block></function>
 
+    <function><type><name>double</name></type> <name>getMinimumLineweight</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>minimumLineweight</name></expr>;</return>
+    }</block></function>
+
     <function><type><name>void</name></type> <name>setPaintOffset</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>paintOffset</name> = <name>offset</name></expr>;</expr_stmt>
     }</block></function>

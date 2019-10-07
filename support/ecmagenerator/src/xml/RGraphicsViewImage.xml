@@ -612,6 +612,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getMinimumLineweight"
+    cppName="getMinimumLineweight" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
     <method name="setPaintOffset" cppName="setPaintOffset"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

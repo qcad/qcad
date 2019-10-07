@@ -273,6 +273,9 @@
         setMinimumLineweight
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getMinimumLineweight
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setPaintOffset
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

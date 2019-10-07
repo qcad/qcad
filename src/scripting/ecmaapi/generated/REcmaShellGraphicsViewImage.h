@@ -553,6 +553,12 @@
         
     
     
+      double getMinimumLineweight(
+                
+            );
+        
+    
+    
       void setPaintOffset(
                 const RVector & offset
             );
