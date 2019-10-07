@@ -312,6 +312,10 @@ public:
         minimumLineweight = lw;
     }
 
+    double getMinimumLineweight() const {
+        return minimumLineweight;
+    }
+
     void setPaintOffset(const RVector& offset) {
         paintOffset = offset;
     }
