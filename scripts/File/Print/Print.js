@@ -210,6 +210,12 @@ Print.prototype.printCurrentBlock = function(printer, painter) {
 
     this.view.setBackgroundColor(Print.getBackgroundColor(this.document));
     this.view.setPrinting(true);
+    // 20191007: avoid invisible lines in prints and PDF output:
+    var minLineweightSet = false;
+    if (this.view.getMinimumLineweight()<RS.PointTolerance) {
+        this.view.setMinimumLineweight(0.01);
+        minLineweightSet = true;
+    }
 
     var draftMode = false;
     var screenBasedLinetypes = false;
@@ -336,6 +342,9 @@ Print.prototype.printCurrentBlock = function(printer, painter) {
 
     this.view.setBackgroundColor(bgColor);
     this.view.setPrinting(false);
+    if (minLineweightSet) {
+        this.view.setMinimumLineweight(0.0);
+    }
 
     //return true;
 };
