@@ -1203,7 +1203,7 @@ void RGraphicsViewImage::paintEntityThread(QPainter* painter, REntity::Id id, bo
             else {
                 // transform (image in block reference):
                 painter->save();
-                for (int k=0; k<entityTransform.length(); k++) {
+                for (int k=0; k<entityTransform.size(); k++) {
                     if (k==0) {
                         // paintOffset must be applied here to get the correct placement for
                         // texts with non-uniform scale:
@@ -1239,7 +1239,7 @@ void RGraphicsViewImage::paintEntityThread(QPainter* painter, REntity::Id id, bo
             else {
                 // transform (text in block reference):
                 painter->save();
-                for (int k=0; k<entityTransform.length(); k++) {
+                for (int k=0; k<entityTransform.size(); k++) {
                     if (k==0) {
                         // paintOffset must be applied here to get the correct placement for
                         // texts with non-uniform scale:
@@ -1288,7 +1288,7 @@ void RGraphicsViewImage::paintEntityThread(QPainter* painter, REntity::Id id, bo
 
         // local transform of entity (e.g. block reference transforms):
         if (!entityTransform.isEmpty()) {
-            for (int k=entityTransform.length()-1; k>=0; k--) {
+            for (int k=entityTransform.size()-1; k>=0; k--) {
                 path.transform(entityTransform[k]);
             }
         }
