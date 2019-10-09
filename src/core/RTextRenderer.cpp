@@ -1571,9 +1571,13 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
         }
 
         // 20120309: resort to standard font (better than nothing):
-        font = RFontList::get("standard");
+        // 20191009: no substitution
+        font = RFontList::get("Standard", false);
         if (font==NULL) {
             qWarning() << "standard font not found";
+            // make sure layout and transforms are always added:
+            lineBlockTransforms.append(QTransform());
+            textLayouts.append(RTextLayout());
             return QList<RPainterPath>() << RPainterPath();
         }
     }
