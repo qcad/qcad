@@ -39,7 +39,7 @@ public:
 
     static QStringList getNames();
     static QString getSubName(const QString& resName);
-    static RFont* get(const QString& resName);
+    static RFont* get(const QString& resName, bool substitute = true);
     static bool isCadFont(const QString& fontName, const QString& fontFile);
 
 private:
