@@ -316,6 +316,14 @@ public:
         return minimumLineweight;
     }
 
+    void setMaximumLineweight(double lw) {
+        maximumLineweight = lw;
+    }
+
+    double getMaximumLineweight() const {
+        return maximumLineweight;
+    }
+
     void setPaintOffset(const RVector& offset) {
         paintOffset = offset;
     }
@@ -399,6 +407,7 @@ protected:
     int colorThreshold;
 
     double minimumLineweight;
+    double maximumLineweight;
 
 //    int textHeightThresholdOverride;
 //    int textHeightThreshold;

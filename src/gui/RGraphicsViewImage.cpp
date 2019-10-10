@@ -62,6 +62,7 @@ RGraphicsViewImage::RGraphicsViewImage()
       colorCorrection(false),
       colorThreshold(10),
       minimumLineweight(0.0),
+      maximumLineweight(-1.0),
       drawingScale(1.0),
       alphaEnabled(false),
       showOnlyPlottable(false) {
@@ -1580,6 +1581,9 @@ QList<RPainterPath> RGraphicsViewImage::getTextLayoutsPainterPaths(const RTextBa
 void RGraphicsViewImage::applyMinimumLineweight(QPen& pen) {
     if (minimumLineweight>1.0e-6 && pen.widthF()<minimumLineweight) {
         pen.setWidthF(minimumLineweight);
+    }
+    if (maximumLineweight>-0.1 && pen.widthF()>maximumLineweight) {
+        pen.setWidthF(maximumLineweight);
     }
 }
 
