@@ -35,6 +35,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RFont *" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString" name="resName"
         isConst="true" />
+        <arg type="bool" typeName="bool" name="substitute"
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="isCadFont" cppName="isCadFont" specifier="public"

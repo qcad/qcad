@@ -617,6 +617,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
     </method>
+    <method name="setMaximumLineweight"
+    cppName="setMaximumLineweight" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="lw"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getMaximumLineweight"
+    cppName="getMaximumLineweight" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
     <method name="setPaintOffset" cppName="setPaintOffset"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

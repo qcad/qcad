@@ -79,8 +79,11 @@
      * \return Resource with the given name or an invalid resource.
      * The returned resource is loaded first if it isn't already.
      */</comment>
-    <function><type><name>T</name>*</type> <name>get</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>resName</name></decl></param>)</parameter_list> <block>{
-        <decl_stmt><decl><type><name>QString</name></type> <name>resNameSub</name> =<init> <expr><call><name>getSubName</name><argument_list>(<argument><expr><name>resName</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+    <function><type><name>T</name>*</type> <name>get</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>resName</name></decl></param>, <param><decl><type><name>bool</name></type> <name>substitute</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <block>{
+        <decl_stmt><decl><type><name>QString</name></type> <name>resNameSub</name> =<init> <expr><name>resName</name></expr></init></decl>;</decl_stmt>
+        <if>if <condition>(<expr><name>substitute</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>resNameSub</name> = <call><name>getSubName</name><argument_list>(<argument><expr><name>resName</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></then></if>
 
         <comment type="line">// check if resource is available:</comment>
         <if>if <condition>(<expr>!<call><name><name>RS</name>::<name>mapContainsCaseInsensitive</name></name><argument_list>(<argument><expr><name>resMap</name></expr></argument>, <argument><expr><name>resNameSub</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{

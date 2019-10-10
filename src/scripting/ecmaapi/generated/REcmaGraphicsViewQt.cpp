@@ -238,6 +238,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getMinimumLineweight, "getMinimumLineweight");
             
+            REcmaHelper::registerFunction(&engine, proto, setMaximumLineweight, "setMaximumLineweight");
+            
+            REcmaHelper::registerFunction(&engine, proto, getMaximumLineweight, "getMaximumLineweight");
+            
             REcmaHelper::registerFunction(&engine, proto, setPaintOffset, "setPaintOffset");
             
             REcmaHelper::registerFunction(&engine, proto, getPaintOffset, "getPaintOffset");
@@ -5469,6 +5473,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsViewQt::getMinimumLineweight", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewQt::setMaximumLineweight
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewQt::setMaximumLineweight", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::setMaximumLineweight";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewQt* self = 
+                        getSelf("setMaximumLineweight", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setMaximumLineweight(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.setMaximumLineweight().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::setMaximumLineweight", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewQt::getMaximumLineweight
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewQt::getMaximumLineweight", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::getMaximumLineweight";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewQt* self = 
+                        getSelf("getMaximumLineweight", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getMaximumLineweight();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.getMaximumLineweight().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::getMaximumLineweight", context, engine);
             return result;
         }
          QScriptValue

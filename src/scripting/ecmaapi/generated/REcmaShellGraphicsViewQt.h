@@ -661,6 +661,16 @@
             );
         
     
+      void setMaximumLineweight(
+                double lw
+            );
+        
+    
+      double getMaximumLineweight(
+                
+            );
+        
+    
       void setPaintOffset(
                 const RVector & offset
             );
