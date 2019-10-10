@@ -11551,7 +11551,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Modify/Stretch/StretchInit.js" line="+2"/>
         <source>&amp;Stretch</source>
-        <translation>&amp;Uitrekken</translation>
+        <translation>&amp;Rekken</translation>
     </message>
 </context>
 <context>
