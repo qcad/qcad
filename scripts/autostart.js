@@ -594,6 +594,11 @@ function main() {
     // theme:
     applyTheme();
 
+    // native / non-native menubar:
+    if (RSettings.getBoolValue("MenuBar/UseNativeMenuBar", true)===false) {
+        QCoreApplication.setAttribute(Qt.AA_DontUseNativeMenuBar);
+    }
+
     // splash:
     var splash = undefined;
     if (RSettings.getBoolValue("Startup/EnableSplashScreen", true)) {
