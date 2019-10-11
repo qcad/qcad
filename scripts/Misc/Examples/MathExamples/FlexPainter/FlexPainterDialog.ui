@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>FlexPainterOptions</class>
- <widget class="QDialog" name="FlexPainterOptions">
+ <class>FlexPainterDialog</class>
+ <widget class="QDialog" name="FlexPainterDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>422</width>
-    <height>377</height>
+    <width>413</width>
+    <height>477</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,15 +15,24 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_4">
    <property name="spacing">
-    <number>4</number>
-   </property>
-   <property name="bottomMargin">
     <number>6</number>
    </property>
+   <property name="bottomMargin">
+    <number>9</number>
+   </property>
    <item>
-    <layout class="QHBoxLayout" name="Options">
+    <layout class="QHBoxLayout" name="FlexPainterOptions">
+     <property name="spacing">
+      <number>6</number>
+     </property>
      <item>
-      <layout class="QVBoxLayout" name="CastingOptions">
+      <layout class="QVBoxLayout" name="PainterOptions">
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <property name="topMargin">
+        <number>4</number>
+       </property>
        <item>
         <widget class="QGroupBox" name="PainterBox">
          <property name="title">
@@ -34,12 +43,18 @@
            <number>6</number>
           </property>
           <property name="topMargin">
+           <number>4</number>
+          </property>
+          <property name="rightMargin">
            <number>6</number>
+          </property>
+          <property name="bottomMargin">
+           <number>4</number>
           </property>
           <item>
            <widget class="QCheckBox" name="FlipPainter">
             <property name="toolTip">
-             <string>Mirroring painters over baseline</string>
+             <string>Mirror painters over baseline</string>
             </property>
             <property name="text">
              <string>Flip Painters</string>
@@ -57,7 +72,23 @@
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="HasBeginApex">
+           <widget class="QCheckBox" name="SubLayerCasts">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="toolTip">
+             <string>Cast on newly sub-layer 'Painted' if applicable</string>
+            </property>
+            <property name="text">
+             <string>Cast on sub-layer</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="DoBeginApex">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
             <property name="toolTip">
              <string>Start with casting a begin apex on open forms</string>
             </property>
@@ -70,7 +101,10 @@
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="HasEndApex">
+           <widget class="QCheckBox" name="DoEndApex">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
             <property name="toolTip">
              <string>End with casting an end apex on open forms</string>
             </property>
@@ -83,7 +117,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="HasInserts">
+           <widget class="QCheckBox" name="DoInserts">
             <property name="enabled">
              <bool>false</bool>
             </property>
@@ -98,106 +132,301 @@
             </property>
            </widget>
           </item>
-          <item>
-           <widget class="QCheckBox" name="DelEntity">
-            <property name="toolTip">
-             <string>Deleted painted over base entity (persistent off)</string>
-            </property>
-            <property name="text">
-             <string>Delete Entities(*)</string>
-            </property>
-            <property name="checked">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
          </layout>
         </widget>
        </item>
        <item>
-        <spacer name="verticalSpacer">
+        <spacer name="verticalSpacer_L">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
            <width>20</width>
-           <height>20</height>
+           <height>40</height>
           </size>
          </property>
         </spacer>
        </item>
        <item>
-        <widget class="QToolButton" name="PreviewPainters">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
+        <widget class="QGroupBox" name="SetBox">
+         <property name="title">
+          <string>Painter set</string>
          </property>
-         <property name="minimumSize">
-          <size>
-           <width>150</width>
-           <height>55</height>
-          </size>
-         </property>
-         <property name="toolTip">
-          <string>Preview</string>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border: 1px inset; background-color: rgb(255, 255, 255);</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>CurtainRope.svg</normaloff>CurtainRope.svg</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>100</width>
-           <height>50</height>
-          </size>
-         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <property name="spacing">
+           <number>4</number>
+          </property>
+          <property name="topMargin">
+           <number>4</number>
+          </property>
+          <property name="rightMargin">
+           <number>6</number>
+          </property>
+          <property name="bottomMargin">
+           <number>4</number>
+          </property>
+          <item alignment="Qt::AlignLeft">
+           <widget class="QToolButton" name="PreviewPainters">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="toolTip">
+             <string>Preview of painters</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border: 1px inset; background-color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>Icons/CurtainRope.svg</normaloff>Icons/CurtainRope.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>150</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="autoRaise">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="PainterSelection">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>Select painter set</string>
+            </property>
+            <property name="inputMethodHints">
+             <set>Qt::ImhNone</set>
+            </property>
+            <property name="editable">
+             <bool>true</bool>
+            </property>
+            <property name="currentText">
+             <string/>
+            </property>
+            <property name="currentIndex">
+             <number>-1</number>
+            </property>
+            <property name="insertPolicy">
+             <enum>QComboBox::NoInsert</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QComboBox::AdjustToContents</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>CurtainRope</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>OrthogonalBar</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>OrthogonalPointsGlobal</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>SinusoidWave</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>SinusoidWaveGlobal</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>3PhaseWaveGlobal</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>TriangleWave</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>SawtoothWave</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>SqaureWave</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>SteppedWave</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>SqauredShape</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>SqauredShapeFlexing</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>AllPainterDataTypes</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+         <zorder>PainterSelection</zorder>
+         <zorder>PreviewPainters</zorder>
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="PainterSet">
+        <widget class="QGroupBox" name="KnotsBox">
          <property name="enabled">
           <bool>false</bool>
          </property>
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
+         <property name="title">
+          <string>Insertion type</string>
          </property>
-         <property name="toolTip">
-          <string>Select painter type</string>
-         </property>
-         <property name="editable">
-          <bool>true</bool>
-         </property>
-         <property name="currentText">
-          <string>CurtainRope</string>
-         </property>
-         <item>
-          <property name="text">
-           <string>CurtainRope</string>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <property name="spacing">
+           <number>4</number>
           </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>TelephoneCoil</string>
+          <property name="topMargin">
+           <number>4</number>
           </property>
-         </item>
+          <property name="rightMargin">
+           <number>6</number>
+          </property>
+          <property name="bottomMargin">
+           <number>4</number>
+          </property>
+          <item alignment="Qt::AlignHCenter">
+           <widget class="QToolButton" name="PreviewKnot">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="toolTip">
+             <string>Preview of insertion</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border: 1px inset; background-color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>Icons/CurtainRopeKnot.svg</normaloff>Icons/CurtainRopeKnot.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>80</width>
+              <height>80</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignLeft">
+           <widget class="QComboBox" name="KnotSelection">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::WheelFocus</enum>
+            </property>
+            <property name="toolTip">
+             <string>Select Insertion or Enter void space</string>
+            </property>
+            <property name="insertPolicy">
+             <enum>QComboBox::InsertAtTop</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QComboBox::AdjustToContents</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>&lt;Enter space size&gt;</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Curtain Rope Knot</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
       </layout>
      </item>
      <item>
-      <spacer name="horizontalSpacer">
+      <spacer name="horizontalSpacer_Mid">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -213,14 +442,14 @@
       </spacer>
      </item>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
+      <layout class="QVBoxLayout" name="CastingOptions">
        <property name="spacing">
         <number>4</number>
        </property>
-       <item>
-        <widget class="QToolButton" name="toolButton">
+       <item alignment="Qt::AlignRight">
+        <widget class="QToolButton" name="CommandPic">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -230,6 +459,9 @@
            <width>210</width>
            <height>155</height>
           </size>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
          </property>
          <property name="styleSheet">
           <string notr="true">border: 1px inset; background-color: rgb(255, 255, 255);</string>
@@ -244,13 +476,318 @@
            <height>155</height>
           </size>
          </property>
+         <property name="autoRaise">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
-        <widget class="QWidget" name="FactorEntry" native="true">
+        <spacer name="verticalSpacer_R">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+        <widget class="QLineEdit" name="UnitsLabel">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>133</width>
+           <height>15</height>
+          </size>
+         </property>
+         <property name="palette">
+          <palette>
+           <active>
+            <colorrole role="WindowText">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Midlight">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>227</red>
+               <green>227</green>
+               <blue>227</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Text">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="ButtonText">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Shadow">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>105</red>
+               <green>105</green>
+               <blue>105</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Highlight">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>51</red>
+               <green>153</green>
+               <blue>255</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="HighlightedText">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
+              </color>
+             </brush>
+            </colorrole>
+           </active>
+           <inactive>
+            <colorrole role="WindowText">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Midlight">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>227</red>
+               <green>227</green>
+               <blue>227</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Text">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="ButtonText">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Shadow">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>105</red>
+               <green>105</green>
+               <blue>105</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Highlight">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>240</red>
+               <green>240</green>
+               <blue>240</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="HighlightedText">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
+           </inactive>
+           <disabled>
+            <colorrole role="WindowText">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Midlight">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>227</red>
+               <green>227</green>
+               <blue>227</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Text">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="ButtonText">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Shadow">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>105</red>
+               <green>105</green>
+               <blue>105</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Highlight">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="HighlightedText">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
+           </disabled>
+          </palette>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="acceptDrops">
+          <bool>false</bool>
+         </property>
+         <property name="toolTip">
+          <string>Document Units</string>
+         </property>
+         <property name="statusTip">
+          <string/>
+         </property>
+         <property name="text">
+          <string>#Undefined#</string>
+         </property>
+         <property name="frame">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="readOnly">
+          <bool>false</bool>
+         </property>
+         <property name="clearButtonEnabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="WidthBox">
+         <property name="leftMargin">
+          <number>9</number>
+         </property>
+         <property name="topMargin">
+          <number>4</number>
+         </property>
+         <property name="rightMargin">
+          <number>6</number>
+         </property>
+         <property name="bottomMargin">
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="labelWidth">
+           <property name="toolTip">
+            <string>Enter painter width (+0)</string>
+           </property>
+           <property name="text">
+            <string>Width : </string>
+           </property>
+           <property name="buddy">
+            <cstring>MainWidth</cstring>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="RMathLineEdit" name="MainWidth">
+           <property name="minimumSize">
+            <size>
+             <width>80</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="MainPainterBox">
+         <property name="title">
+          <string>Repetitive Painter options</string>
+         </property>
          <layout class="QGridLayout" name="gridLayout">
           <property name="leftMargin">
-           <number>6</number>
+           <number>9</number>
           </property>
           <property name="topMargin">
            <number>4</number>
@@ -261,13 +798,89 @@
           <property name="bottomMargin">
            <number>4</number>
           </property>
-          <item row="0" column="2" rowspan="2">
+          <property name="horizontalSpacing">
+           <number>6</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>4</number>
+          </property>
+          <item row="1" column="1">
+           <widget class="RMathLineEdit" name="MainStepX">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string notr="true">0</string>
+            </property>
+            <property name="cursorPosition">
+             <number>1</number>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="RMathLineEdit" name="MainLengthX">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string notr="true">0</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="LabelStepsize">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="toolTip">
+             <string>Enter main painter stepsize (+0)</string>
+            </property>
+            <property name="text">
+             <string>Stepsize :</string>
+            </property>
+            <property name="buddy">
+             <cstring>MainStepX</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="LabelLength">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="toolTip">
+             <string>Enter main painter length (+)</string>
+            </property>
+            <property name="text">
+             <string>Length :</string>
+            </property>
+            <property name="buddy">
+             <cstring>MainLengthX</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2" rowspan="2" alignment="Qt::AlignHCenter">
            <widget class="QToolButton" name="PreserveLook">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::ClickFocus</enum>
             </property>
             <property name="toolTip">
              <string>Keep painters proportional</string>
@@ -293,46 +906,62 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="LabelY">
+          <item row="2" column="0" colspan="2" alignment="Qt::AlignRight">
+           <widget class="QLabel" name="LabelCloseShift">
             <property name="enabled">
-             <bool>false</bool>
+             <bool>true</bool>
+            </property>
+            <property name="toolTip">
+             <string>Select percentage of Stepsize</string>
             </property>
             <property name="text">
-             <string>Factor Y:</string>
+             <string>Closed Forms shifting % :</string>
             </property>
             <property name="buddy">
-             <cstring>MainScaleY</cstring>
+             <cstring>CloseShift</cstring>
             </property>
            </widget>
           </item>
-          <item row="1" column="1">
-           <widget class="RMathLineEdit" name="MainScaleY">
+          <item row="2" column="2" alignment="Qt::AlignHCenter">
+           <widget class="QSpinBox" name="CloseShift">
             <property name="enabled">
-             <bool>false</bool>
+             <bool>true</bool>
             </property>
-            <property name="text">
-             <string notr="true">2.5</string>
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>0</height>
+             </size>
             </property>
-            <property name="cursorPosition">
-             <number>3</number>
+            <property name="focusPolicy">
+             <enum>Qt::WheelFocus</enum>
             </property>
-           </widget>
-          </item>
-          <item row="0" column="0">
-           <widget class="QLabel" name="LabelX">
-            <property name="text">
-             <string>Factor X:</string>
+            <property name="specialValueText">
+             <string/>
             </property>
-            <property name="buddy">
-             <cstring>mainScaleX</cstring>
+            <property name="accelerated">
+             <bool>true</bool>
             </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="RMathLineEdit" name="MainScaleX">
-            <property name="text">
-             <string notr="true">2.5</string>
+            <property name="suffix">
+             <string/>
+            </property>
+            <property name="prefix">
+             <string/>
+            </property>
+            <property name="minimum">
+             <number>0</number>
+            </property>
+            <property name="maximum">
+             <number>100</number>
+            </property>
+            <property name="singleStep">
+             <number>1</number>
+            </property>
+            <property name="value">
+             <number>50</number>
+            </property>
+            <property name="displayIntegerBase">
+             <number>10</number>
             </property>
            </widget>
           </item>
@@ -340,7 +969,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QGroupBox" name="ScaleBox">
+        <widget class="QGroupBox" name="OpenScaleBox">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -355,10 +984,13 @@
            <number>4</number>
           </property>
           <property name="topMargin">
+           <number>4</number>
+          </property>
+          <property name="rightMargin">
            <number>6</number>
           </property>
           <property name="bottomMargin">
-           <number>6</number>
+           <number>4</number>
           </property>
           <item>
            <widget class="QCheckBox" name="ForcedDyn">
@@ -377,9 +1009,9 @@
            </widget>
           </item>
           <item>
-           <layout class="QVBoxLayout" name="verticalLayout_5">
+           <layout class="QVBoxLayout" name="AlignOptions">
             <property name="spacing">
-             <number>0</number>
+             <number>2</number>
             </property>
             <property name="leftMargin">
              <number>20</number>
@@ -436,61 +1068,68 @@
     </layout>
    </item>
    <item>
-    <widget class="QWidget" name="horizontalWidget" native="true">
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <property name="spacing">
-       <number>0</number>
-      </property>
-      <property name="leftMargin">
-       <number>0</number>
-      </property>
-      <property name="topMargin">
-       <number>0</number>
-      </property>
-      <property name="rightMargin">
-       <number>0</number>
-      </property>
-      <property name="bottomMargin">
-       <number>0</number>
-      </property>
-      <item>
-       <layout class="QGridLayout" name="gridLayout_2">
-        <property name="leftMargin">
-         <number>0</number>
-        </property>
-        <property name="rightMargin">
-         <number>0</number>
-        </property>
-        <property name="spacing">
-         <number>0</number>
-        </property>
-        <item row="2" column="0">
-         <widget class="QCheckBox" name="BeVerbose">
-          <property name="toolTip">
-           <string>Verbose info (persistent on)</string>
-          </property>
-          <property name="text">
-           <string>Verbose(*)</string>
-          </property>
-          <property name="checked">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <widget class="QDialogButtonBox" name="buttonBox">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="standardButtons">
-         <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
+    <layout class="QHBoxLayout" name="DialogBox">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QCheckBox" name="BeVerbose">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="toolTip">
+        <string>Verbose info (persistent on)</string>
+       </property>
+       <property name="text">
+        <string>Verbose *</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="DelEntity">
+       <property name="focusPolicy">
+        <enum>Qt::NoFocus</enum>
+       </property>
+       <property name="toolTip">
+        <string>Deleted painted over base entities (persistent off)</string>
+       </property>
+       <property name="text">
+        <string>Delete Base Entities *</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="focusPolicy">
+        <enum>Qt::ClickFocus</enum>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>
@@ -502,42 +1141,27 @@
   </customwidget>
  </customwidgets>
  <tabstops>
-  <tabstop>MainScaleY</tabstop>
+  <tabstop>BeVerbose</tabstop>
+  <tabstop>PreserveLook</tabstop>
+  <tabstop>MainLengthX</tabstop>
+  <tabstop>MainStepX</tabstop>
+  <tabstop>ForcedDyn</tabstop>
+  <tabstop>AlignBegin</tabstop>
+  <tabstop>AlignCenter</tabstop>
+  <tabstop>AlignEnd</tabstop>
+  <tabstop>FlipPainter</tabstop>
+  <tabstop>GroupCasts</tabstop>
+  <tabstop>DoBeginApex</tabstop>
+  <tabstop>DoEndApex</tabstop>
+  <tabstop>DoInserts</tabstop>
+  <tabstop>PainterSelection</tabstop>
+  <tabstop>KnotSelection</tabstop>
+  <tabstop>MainWidth</tabstop>
+  <tabstop>DelEntity</tabstop>
+  <tabstop>buttonBox</tabstop>
  </tabstops>
  <resources/>
  <connections>
-  <connection>
-   <sender>PreserveLook</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>MainScaleY</receiver>
-   <slot>setDisabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>392</x>
-     <y>235</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>301</x>
-     <y>249</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>PreserveLook</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>LabelY</receiver>
-   <slot>setDisabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>392</x>
-     <y>235</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>199</x>
-     <y>249</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>ForcedDyn</sender>
    <signal>toggled(bool)</signal>
@@ -545,12 +1169,12 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>294</x>
-     <y>274</y>
+     <x>394</x>
+     <y>351</y>
     </hint>
     <hint type="destinationlabel">
-     <x>294</x>
-     <y>296</y>
+     <x>393</x>
+     <y>373</y>
     </hint>
    </hints>
   </connection>
@@ -561,12 +1185,12 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>294</x>
-     <y>274</y>
+     <x>394</x>
+     <y>351</y>
     </hint>
     <hint type="destinationlabel">
-     <x>294</x>
-     <y>318</y>
+     <x>393</x>
+     <y>392</y>
     </hint>
    </hints>
   </connection>
@@ -577,24 +1201,24 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>298</x>
-     <y>281</y>
+     <x>394</x>
+     <y>351</y>
     </hint>
     <hint type="destinationlabel">
-     <x>308</x>
-     <y>346</y>
+     <x>393</x>
+     <y>411</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>FlexPainterOptions</receiver>
+   <receiver>FlexPainterDialog</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>257</x>
-     <y>350</y>
+     <x>402</x>
+     <y>449</y>
     </hint>
     <hint type="destinationlabel">
      <x>210</x>
@@ -605,16 +1229,112 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>FlexPainterOptions</receiver>
+   <receiver>FlexPainterDialog</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>257</x>
-     <y>350</y>
+     <x>402</x>
+     <y>449</y>
     </hint>
     <hint type="destinationlabel">
      <x>210</x>
      <y>187</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>PreserveLook</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>LabelLength</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>380</x>
+     <y>283</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>248</x>
+     <y>259</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>PreserveLook</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>LabelStepsize</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>380</x>
+     <y>283</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>248</x>
+     <y>283</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>PreserveLook</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainLengthX</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>380</x>
+     <y>283</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>338</x>
+     <y>259</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>PreserveLook</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainStepX</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>380</x>
+     <y>283</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>338</x>
+     <y>283</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>DoInserts</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>KnotSelection</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>88</x>
+     <y>129</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>128</x>
+     <y>412</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>DoInserts</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>PreviewKnot</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>88</x>
+     <y>129</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>137</x>
+     <y>388</y>
     </hint>
    </hints>
   </connection>
