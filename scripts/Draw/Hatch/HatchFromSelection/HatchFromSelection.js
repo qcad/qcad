@@ -270,7 +270,11 @@ HatchFromSelection.traverse = function(hatchData, docOrBlockRef, entity, candida
         return ret;
     }
 
-    var shape = entity.getData().castToShape().clone();
+    var shape = entity.getData().castToShape();
+    if (isNull(shape)) {
+        return false;
+    }
+    shape = shape.clone();
     if (isFunction(shape.getLength)) {
         if (shape.getLength()<RS.PointTolerance) {
             // ignore zero length entity:
@@ -320,6 +324,11 @@ HatchFromSelection.traverse = function(hatchData, docOrBlockRef, entity, candida
                     docOrBlockRef.traversed[entityId] = true;
                     continue;
                 }
+            }
+
+            if (!isFunction(entity.getStartPoint)) {
+                // ignore entities without start / end points (existing hatches, etc..):
+                continue;
             }
 
             var sp = entity.getStartPoint();
