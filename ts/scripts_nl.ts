@@ -4780,7 +4780,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+612"/>
         <source>&amp;FlexPainter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -4788,12 +4788,12 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Painter opties</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Painters casting options</source>
-        <translation type="unfinished"></translation>
+        <translation>Painter opties voor het casten</translation>
     </message>
     <message>
         <location line="+12"/>
