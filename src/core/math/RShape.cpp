@@ -1776,7 +1776,8 @@ bool RShape::order(QList<QList<QSharedPointer<RShape> > >& boundary) {
         QList<QSharedPointer<RShape> > loop = boundary.at(i);
         qDebug() << "loop: " << i;
         for (int k=0; k<loop.size(); ++k) {
-            qDebug() << "boundary shape: " << *loop.at(k);
+            //qDebug() << "   boundary shape: " << *loop.at(k);
+            qDebug() << "   boundary shape: " << loop.at(k)->getStartPoint() << loop.at(k)->getEndPoint();
         }
     }
     */
@@ -1907,11 +1908,14 @@ bool RShape::order(QList<QList<QSharedPointer<RShape> > >& boundary) {
         */
 
         if (cursor.isValid() && loopStartPoint.isValid() &&
-                !cursor.equalsFuzzy(loopStartPoint, 0.001)) {
+            !cursor.equalsFuzzy(loopStartPoint, 0.001)) {
 
             qWarning() << "RShape::order: loop not closed: "
                        << "end (cursor): " << cursor <<  " does not connect to "
                        << "start: " << loopStartPoint << "";
+
+            //newBoundary.last().append(QSharedPointer<RLine>(new RLine(cursor, loopStartPoint)));
+
             return false;
         }
     }
