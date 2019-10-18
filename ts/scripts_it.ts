@@ -5218,7 +5218,7 @@ Punto decimale:</translatorcomment>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+612"/>
         <source>&amp;FlexPainter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -5226,57 +5226,57 @@ Punto decimale:</translatorcomment>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opzioni pittore</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Painters casting options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opzioni di colata dei pittori</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Mirroring painters over baseline</source>
-        <translation type="unfinished"></translation>
+        <translation>Mirroring pittori oltre la linea di base</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Flip Painters</source>
-        <translation type="unfinished"></translation>
+        <translation>Specchio i pittori</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Group all castings to one operation</source>
-        <translation type="unfinished"></translation>
+        <translation>Raggruppa tutti i casting in un&apos;unica operazione</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Cast in group</source>
-        <translation type="unfinished"></translation>
+        <translation>Cast in gruppo</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Start with casting a begin apex on open forms</source>
-        <translation type="unfinished"></translation>
+        <translation>Iniziare con il casting di un apice iniziale su forme aperte</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add Begin Apex</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi apice di inizio</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>End with casting an end apex on open forms</source>
-        <translation type="unfinished"></translation>
+        <translation>Terminare con il casting di un apice finale su forme aperte</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add End Apex</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi apice finale</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add insertions in between eg. spacers, knots</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi inserzioni tra ad es. distanziatori, nodi</translation>
     </message>
     <message>
         <location line="+3"/>
