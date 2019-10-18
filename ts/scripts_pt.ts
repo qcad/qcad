@@ -6091,7 +6091,7 @@ Cor de plano de fundo</translatorcomment>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+612"/>
         <source>&amp;FlexPainter</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -6099,7 +6099,7 @@ Cor de plano de fundo</translatorcomment>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opções do pintor</translation>
     </message>
     <message>
         <location line="+16"/>
