@@ -807,6 +807,11 @@ RS::Orientation RPolyline::getOrientation(bool implicitelyClosed) const {
         return RS::Any;
     }
 
+    if (hasArcSegments()) {
+        RPolyline plSegmented = convertArcToLineSegments(16);
+        return plSegmented.getOrientation(implicitelyClosed);
+    }
+
     RVector minV = RVector::invalid;
     QSharedPointer<RShape> shapeBefore;
     QSharedPointer<RShape> shapeAfter;
@@ -835,28 +840,29 @@ RS::Orientation RPolyline::getOrientation(bool implicitelyClosed) const {
         previousShape = shape;
     }
 
-    double l;
-    RVector p;
-    QList<RVector> list;
-    QSharedPointer<RArc> arcBefore = shapeBefore.dynamicCast<RArc>();
-    if (!arcBefore.isNull()) {
-        l = arcBefore->getLength();
-        list = arcBefore->getPointsWithDistanceToEnd(l/10, RS::FromEnd);
-        if (!list.isEmpty()) {
-            p = list[0];
-            shapeBefore = QSharedPointer<RLine>(new RLine(p, arcBefore->getEndPoint()));
-        }
-    }
+    // TOOD: fails for large arc (>180d) at bottom left corner, creating round bottom left shape:
+//    double l;
+//    RVector p;
+//    QList<RVector> list;
+//    QSharedPointer<RArc> arcBefore = shapeBefore.dynamicCast<RArc>();
+//    if (!arcBefore.isNull()) {
+//        l = arcBefore->getLength();
+//        list = arcBefore->getPointsWithDistanceToEnd(l/10, RS::FromEnd);
+//        if (!list.isEmpty()) {
+//            p = list[0];
+//            shapeBefore = QSharedPointer<RLine>(new RLine(p, arcBefore->getEndPoint()));
+//        }
+//    }
 
-    QSharedPointer<RArc> arcAfter = shapeAfter.dynamicCast<RArc>();
-    if (!arcAfter.isNull()) {
-        l = arcAfter->getLength();
-        list = arcAfter->getPointsWithDistanceToEnd(l/10, RS::FromStart);
-        if (!list.isEmpty()) {
-            p = list[0];
-            shapeAfter = QSharedPointer<RLine>(new RLine(arcAfter->getStartPoint(), p));
-        }
-    }
+//    QSharedPointer<RArc> arcAfter = shapeAfter.dynamicCast<RArc>();
+//    if (!arcAfter.isNull()) {
+//        l = arcAfter->getLength();
+//        list = arcAfter->getPointsWithDistanceToEnd(l/10, RS::FromStart);
+//        if (!list.isEmpty()) {
+//            p = list[0];
+//            shapeAfter = QSharedPointer<RLine>(new RLine(arcAfter->getStartPoint(), p));
+//        }
+//    }
 
     if (shapeBefore.isNull() || shapeAfter.isNull()) {
         return RS::Any;
