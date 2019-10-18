@@ -5261,7 +5261,7 @@ Punto decimal:</translatorcomment>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+612"/>
         <source>&amp;FlexPainter</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -5269,148 +5269,148 @@ Punto decimal:</translatorcomment>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opciones de pintor</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Painters casting options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opciones de fundición para pintores</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Mirroring painters over baseline</source>
-        <translation type="unfinished"></translation>
+        <translation>Reflejando pintores sobre la línea de base</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Flip Painters</source>
-        <translation type="unfinished"></translation>
+        <translation>Refleja los pintores</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Group all castings to one operation</source>
-        <translation type="unfinished"></translation>
+        <translation>Agrupar todas las castings en una sola operación</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Cast in group</source>
-        <translation type="unfinished"></translation>
+        <translation>Cast en grupo</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Start with casting a begin apex on open forms</source>
-        <translation type="unfinished"></translation>
+        <translation>Comenzar con el casting de un ápice de inicio en formas abiertas</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add Begin Apex</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir ápice inicial</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>End with casting an end apex on open forms</source>
-        <translation type="unfinished"></translation>
+        <translation>Termine con la casting de un ápice de extremo en formas abiertas</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add End Apex</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir ápice final</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add insertions in between eg. spacers, knots</source>
-        <translation type="unfinished"></translation>
+        <translation>Agregar inserciones entre, por ejemplo espaciadores, nudos</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add Insertions</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir inserciones</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Deleted painted over base entity (persistent off)</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrado pintado sobre entidad base (persistente desactivado)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Delete Entities(*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar entidades (*)</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Preview</source>
-        <translation type="unfinished">Previsualización</translation>
+        <translation>Previsualización</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Select painter type</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar tipo de pintor</translation>
     </message>
     <message>
         <location line="+6"/>
         <location line="+4"/>
         <source>CurtainRope</source>
-        <translation type="unfinished"></translation>
+        <translation>CurtainRope</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>TelephoneCoil</source>
-        <translation type="unfinished"></translation>
+        <translation>TelephoneCoil</translation>
     </message>
     <message>
         <location line="+81"/>
         <source>Keep painters proportional</source>
-        <translation type="unfinished"></translation>
+        <translation>Mantener la proporcionalidad de los pintores</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Factor Y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Factor Y:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Factor X:</source>
-        <translation type="unfinished"></translation>
+        <translation>Factor X:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Open forms scaling options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opciones de escala de formularios abiertos</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form</source>
-        <translation type="unfinished"></translation>
+        <translation>Adaptar la escala f 1.00-0.90 para adaptarse a todo el formulario</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Dynamically scale to fit</source>
-        <translation type="unfinished"></translation>
+        <translation>Escalar dinámicamente para adaptarse</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Align with begin</source>
-        <translation type="unfinished"></translation>
+        <translation>Alinear con comenzar</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Centered</source>
-        <translation type="unfinished"></translation>
+        <translation>Centrado</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Align with End</source>
-        <translation type="unfinished"></translation>
+        <translation>Alinear con fin</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Verbose info (persistent on)</source>
-        <translation type="unfinished"></translation>
+        <translation>Información detallada (persistente)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Verbose(*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Verboso(*)</translation>
     </message>
 </context>
 <context>
@@ -5868,7 +5868,7 @@ Selecciona entidades solas</translatorcomment>
     <message>
         <location line="+181"/>
         <source>Use multithreading</source>
-        <translation type="unfinished"></translation>
+        <translation>Usar multihilo</translation>
     </message>
     <message>
         <location line="-263"/>
