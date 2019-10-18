@@ -4733,7 +4733,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+612"/>
         <source>&amp;FlexPainter</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;FlexPainter</translation>
     </message>
 </context>
 <context>
