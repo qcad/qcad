@@ -5270,158 +5270,421 @@ Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer?
 <context>
     <name>FlexPainter</name>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+612"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1795"/>
         <source>&amp;FlexPainter</source>
         <translation>&amp;FlexPainter</translation>
     </message>
 </context>
 <context>
-    <name>FlexPainterOptions</name>
+    <name>FlexPainterDialog</name>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation>Options de peintre</translation>
+        <translation type="unfinished">Options de peintre</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+25"/>
         <source>Painters casting options</source>
-        <translation>Options de coulée des peintres</translation>
+        <translation type="unfinished">Options de coulée des peintres</translation>
     </message>
     <message>
-        <location line="+12"/>
-        <source>Mirroring painters over baseline</source>
-        <translation>Refléter les peintres sur la base</translation>
+        <location line="+18"/>
+        <source>Mirror painters over baseline</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Flip Painters</source>
-        <translation>Refléter les peintres</translation>
+        <translation type="unfinished">Refléter les peintres</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Group all castings to one operation</source>
-        <translation>Regrouper toutes les castings en une seule opération</translation>
+        <translation type="unfinished">Regrouper toutes les castings en une seule opération</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Cast in group</source>
-        <translation>Cast en groupe</translation>
+        <translation type="unfinished">Cast en groupe</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
+        <source>Cast on newly sub-layer &apos;Painted&apos; if applicable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Cast on sub-layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Start with casting a begin apex on open forms</source>
-        <translation>Commencez par caster un apex de sommet sur des formulaires ouverts</translation>
+        <translation type="unfinished">Commencez par caster un apex de sommet sur des formulaires ouverts</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add Begin Apex</source>
-        <translation>Ajouter l&apos;apex de début</translation>
+        <translation type="unfinished">Ajouter l&apos;apex de début</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>End with casting an end apex on open forms</source>
-        <translation>Terminez avec un apex final sur les formes ouvertes</translation>
+        <translation type="unfinished">Terminez avec un apex final sur les formes ouvertes</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add End Apex</source>
-        <translation>Ajouter l&apos;apex de fin</translation>
+        <translation type="unfinished">Ajouter l&apos;apex de fin</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add insertions in between eg. spacers, knots</source>
-        <translation>Ajouter des insertions entre, par exemple. entretoises, noeuds</translation>
+        <translation type="unfinished">Ajouter des insertions entre, par exemple. entretoises, noeuds</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add Insertions</source>
-        <translation>Ajouter des insertions</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Deleted painted over base entity (persistent off)</source>
-        <translation>Suppression de l&apos;entité de base peinte (persistante désactivée)</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Delete Entities(*)</source>
-        <translation>Supprimer des entités (*)</translation>
-    </message>
-    <message>
-        <location line="+38"/>
-        <source>Preview</source>
-        <translation type="unfinished">Aperçu</translation>
-    </message>
-    <message>
-        <location line="+32"/>
-        <source>Select painter type</source>
-        <translation>Sélectionnez le type de peintre</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <location line="+4"/>
-        <source>CurtainRope</source>
-        <translation>CurtainRope</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>TelephoneCoil</source>
-        <translation>TelephoneCoil</translation>
-    </message>
-    <message>
-        <location line="+81"/>
-        <source>Keep painters proportional</source>
-        <translation>Garder les peintres proportionnels</translation>
-    </message>
-    <message>
-        <location line="+29"/>
-        <source>Factor Y:</source>
-        <translation>Facteur Y :</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Factor X:</source>
-        <translation>Facteur X :</translation>
+        <translation type="unfinished">Ajouter des insertions</translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>Open forms scaling options</source>
-        <translation>Options de mise à l&apos;échelle des formulaires ouverts</translation>
+        <source>Painter set</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+36"/>
+        <source>Preview of painters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Select painter set</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>CurtainRope</source>
+        <translation type="unfinished">CurtainRope</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>OrthogonalBar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>OrthogonalPointsGlobal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>SinusoidWave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>SinusoidWaveGlobal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>3PhaseWaveGlobal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>TriangleWave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>SawtoothWave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>SqaureWave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>SteppedWave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>SqauredShape</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>SqauredShapeFlexing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>AllPainterDataTypes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Insertion type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Preview of insertion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>Select Insertion or Enter void space</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>&lt;Enter space size&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Curtain Rope Knot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+301"/>
+        <source>Document Units</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>#Undefined#</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Enter painter width (+0)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Width : </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>0</source>
+        <translation type="unfinished">0</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Repetitive Painter options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+62"/>
+        <source>Enter main painter stepsize (+0)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Stepsize :</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Enter main painter length (+)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Length :</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Keep painters proportional</source>
+        <translation type="unfinished">Garder les peintres proportionnels</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Select percentage of Stepsize</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Closed Forms shifting % :</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+62"/>
+        <source>Open forms scaling options</source>
+        <translation type="unfinished">Options de mise à l&apos;échelle des formulaires ouverts</translation>
+    </message>
+    <message>
+        <location line="+21"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form</source>
-        <translation>Adapter la mise à l’échelle de 1,00 à 0,90 pour s’adapter à la forme</translation>
+        <translation type="unfinished">Adapter la mise à l’échelle de 1,00 à 0,90 pour s’adapter à la forme</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Dynamically scale to fit</source>
-        <translation>Dynamiquement échelle pour s&apos;adapter</translation>
+        <translation type="unfinished">Dynamiquement échelle pour s&apos;adapter</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Align with begin</source>
-        <translation>Aligner avec début</translation>
+        <translation type="unfinished">Aligner avec début</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Centered</source>
-        <translation>Centré</translation>
+        <translation type="unfinished">Centré</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Align with End</source>
-        <translation>Aligner avec la fin</translation>
+        <translation type="unfinished">Aligner avec la fin</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+36"/>
         <source>Verbose info (persistent on)</source>
-        <translation>Informations verbeuse (persistantes)</translation>
+        <translation type="unfinished">Informations verbeuse (persistantes)</translation>
     </message>
     <message>
         <location line="+3"/>
+        <source>Verbose *</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Deleted painted over base entities (persistent off)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Delete Base Entities *</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>FlexPainterOptions</name>
+    <message>
+        <source>Painter Options</source>
+        <translation type="vanished">Options de peintre</translation>
+    </message>
+    <message>
+        <source>Painters casting options</source>
+        <translation type="vanished">Options de coulée des peintres</translation>
+    </message>
+    <message>
+        <source>Mirroring painters over baseline</source>
+        <translation type="vanished">Refléter les peintres sur la base</translation>
+    </message>
+    <message>
+        <source>Flip Painters</source>
+        <translation type="vanished">Refléter les peintres</translation>
+    </message>
+    <message>
+        <source>Group all castings to one operation</source>
+        <translation type="vanished">Regrouper toutes les castings en une seule opération</translation>
+    </message>
+    <message>
+        <source>Cast in group</source>
+        <translation type="vanished">Cast en groupe</translation>
+    </message>
+    <message>
+        <source>Start with casting a begin apex on open forms</source>
+        <translation type="vanished">Commencez par caster un apex de sommet sur des formulaires ouverts</translation>
+    </message>
+    <message>
+        <source>Add Begin Apex</source>
+        <translation type="vanished">Ajouter l&apos;apex de début</translation>
+    </message>
+    <message>
+        <source>End with casting an end apex on open forms</source>
+        <translation type="vanished">Terminez avec un apex final sur les formes ouvertes</translation>
+    </message>
+    <message>
+        <source>Add End Apex</source>
+        <translation type="vanished">Ajouter l&apos;apex de fin</translation>
+    </message>
+    <message>
+        <source>Add insertions in between eg. spacers, knots</source>
+        <translation type="vanished">Ajouter des insertions entre, par exemple. entretoises, noeuds</translation>
+    </message>
+    <message>
+        <source>Add Insertions</source>
+        <translation type="vanished">Ajouter des insertions</translation>
+    </message>
+    <message>
+        <source>Deleted painted over base entity (persistent off)</source>
+        <translation type="vanished">Suppression de l&apos;entité de base peinte (persistante désactivée)</translation>
+    </message>
+    <message>
+        <source>Delete Entities(*)</source>
+        <translation type="vanished">Supprimer des entités (*)</translation>
+    </message>
+    <message>
+        <source>Preview</source>
+        <translation type="obsolete">Aperçu</translation>
+    </message>
+    <message>
+        <source>Select painter type</source>
+        <translation type="vanished">Sélectionnez le type de peintre</translation>
+    </message>
+    <message>
+        <source>CurtainRope</source>
+        <translation type="vanished">CurtainRope</translation>
+    </message>
+    <message>
+        <source>TelephoneCoil</source>
+        <translation type="vanished">TelephoneCoil</translation>
+    </message>
+    <message>
+        <source>Keep painters proportional</source>
+        <translation type="vanished">Garder les peintres proportionnels</translation>
+    </message>
+    <message>
+        <source>Factor Y:</source>
+        <translation type="vanished">Facteur Y :</translation>
+    </message>
+    <message>
+        <source>Factor X:</source>
+        <translation type="vanished">Facteur X :</translation>
+    </message>
+    <message>
+        <source>Open forms scaling options</source>
+        <translation type="vanished">Options de mise à l&apos;échelle des formulaires ouverts</translation>
+    </message>
+    <message>
+        <source>Adapt scaling f 1.00-0.90 to fit the whole form</source>
+        <translation type="vanished">Adapter la mise à l’échelle de 1,00 à 0,90 pour s’adapter à la forme</translation>
+    </message>
+    <message>
+        <source>Dynamically scale to fit</source>
+        <translation type="vanished">Dynamiquement échelle pour s&apos;adapter</translation>
+    </message>
+    <message>
+        <source>Align with begin</source>
+        <translation type="vanished">Aligner avec début</translation>
+    </message>
+    <message>
+        <source>Centered</source>
+        <translation type="vanished">Centré</translation>
+    </message>
+    <message>
+        <source>Align with End</source>
+        <translation type="vanished">Aligner avec la fin</translation>
+    </message>
+    <message>
+        <source>Verbose info (persistent on)</source>
+        <translation type="vanished">Informations verbeuse (persistantes)</translation>
+    </message>
+    <message>
         <source>Verbose(*)</source>
-        <translation>Verbeuse (*)</translation>
+        <translation type="vanished">Verbeuse (*)</translation>
     </message>
 </context>
 <context>
@@ -9458,6 +9721,24 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <location filename="../scripts/File/NewFile/MdiChildEmpty.ui" line="+20"/>
         <source>Untitled</source>
         <translation>Sans titre</translation>
+    </message>
+</context>
+<context>
+    <name>MenuBar</name>
+    <message>
+        <location filename="../scripts/Widgets/MenuBar/MenuBar.js" line="+24"/>
+        <source>Widgets</source>
+        <translation type="unfinished">Widgets</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Menu Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Widgets/MenuBar/PreferencesPage.ui" line="+17"/>
+        <source>Use native menu bar</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

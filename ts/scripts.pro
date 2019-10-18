@@ -621,7 +621,6 @@ SOURCES = \
 ../scripts/Misc/MiscSelect/SelectByColor/SelectByColorInit.js \
 ../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.js \
 ../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js \
-../scripts/Misc/MyCustomUI/MyCustomUI.js \
 ../scripts/Misc/Screencast/ScMirrored/ScMirrored.js \
 ../scripts/Misc/Screencast/ScMirrored/ScMirroredInit.js \
 ../scripts/Misc/Screencast/ScPrepare/ScPrepare.js \
@@ -967,6 +966,7 @@ SOURCES = \
 ../scripts/Widgets/LibraryBrowser/db/TagCategory.js \
 ../scripts/Widgets/LibraryBrowser/db/TagCategoryPeer.js \
 ../scripts/Widgets/LibraryBrowser/db/TagPeer.js \
+../scripts/Widgets/MenuBar/MenuBar.js \
 ../scripts/Widgets/MouseDisplay/MouseDisplay.js \
 ../scripts/Widgets/OptionsToolBar/OptionsToolBar.js \
 ../scripts/Widgets/PenToolBar/PenToolBar.js \
@@ -1173,6 +1173,7 @@ SOURCES = \
 ../scripts/Widgets/LayerList/PreferencesPage.ui \
 ../scripts/Widgets/LibraryBrowser/LibraryBrowser.ui \
 ../scripts/Widgets/LibraryBrowser/PreferencesPage.ui \
+../scripts/Widgets/MenuBar/PreferencesPage.ui \
 ../scripts/Widgets/MouseDisplay/MouseDisplay.ui \
 ../scripts/Widgets/PenToolBar/PenToolBar.ui \
 ../scripts/Widgets/ProgressBar/ProgressBar.ui \
