@@ -5281,7 +5281,7 @@ Punto decimale:</translatorcomment>
     <message>
         <location line="+3"/>
         <source>Add Insertions</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiungi inserzioni</translation>
     </message>
     <message>
         <location line="+10"/>
