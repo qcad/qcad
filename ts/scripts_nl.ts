@@ -4780,7 +4780,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1795"/>
         <source>&amp;FlexPainter</source>
-        <translation type="unfinished">&amp;FlexPainter</translation>
+        <translation>&amp;FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -4788,292 +4788,292 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation type="unfinished">Painter opties</translation>
+        <translation>Painter opties</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation type="unfinished">Painter opties voor het casten</translation>
+        <translation>Painter-casting opties</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Mirror painters over baseline</source>
-        <translation type="unfinished"></translation>
+        <translation>Spiegel de painters aan de basislijn</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Flip Painters</source>
-        <translation type="unfinished"></translation>
+        <translation>Keer de painters om</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Group all castings to one operation</source>
-        <translation type="unfinished"></translation>
+        <translation>Groepeer alle castings in één bewerking</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Cast in group</source>
-        <translation type="unfinished"></translation>
+        <translation>Casting in groep</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast on newly sub-layer &apos;Painted&apos; if applicable</source>
-        <translation type="unfinished"></translation>
+        <translation>Casting op de nieuwe onderlaag &apos;Painted&apos;, indien van toepassing</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Cast on sub-layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Casting op onderlaag</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Start with casting a begin apex on open forms</source>
-        <translation type="unfinished"></translation>
+        <translation>Beginnen met het casten van een beginpunt op open vormen</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add Begin Apex</source>
-        <translation type="unfinished"></translation>
+        <translation>Begin apex toevoegen</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>End with casting an end apex on open forms</source>
-        <translation type="unfinished"></translation>
+        <translation>Eindigen met het casten van een eindpunt op open vormen</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add End Apex</source>
-        <translation type="unfinished"></translation>
+        <translation>Eind apex toevoegen</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add insertions in between eg. spacers, knots</source>
-        <translation type="unfinished"></translation>
+        <translation>Voeg tussenvoegsels toe, bijv. afstandhouders, knopen</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add Insertions</source>
-        <translation type="unfinished"></translation>
+        <translation>Toevoegingen toevoegen</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation type="unfinished"></translation>
+        <translation>Patroon</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Preview of painters</source>
-        <translation type="unfinished"></translation>
+        <translation>Voorbeeld</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecteer patroon</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>CurtainRope</source>
-        <translation type="unfinished"></translation>
+        <translation>CurtainRope</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalBar</source>
-        <translation type="unfinished"></translation>
+        <translation>OrthogonalBar</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalPointsGlobal</source>
-        <translation type="unfinished"></translation>
+        <translation>OrthogonalPointsGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWave</source>
-        <translation type="unfinished"></translation>
+        <translation>SinusoidWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWaveGlobal</source>
-        <translation type="unfinished"></translation>
+        <translation>SinusoidWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>3PhaseWaveGlobal</source>
-        <translation type="unfinished"></translation>
+        <translation>3PhaseWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>TriangleWave</source>
-        <translation type="unfinished"></translation>
+        <translation>TriangleWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SawtoothWave</source>
-        <translation type="unfinished"></translation>
+        <translation>SawtoothWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqaureWave</source>
-        <translation type="unfinished"></translation>
+        <translation>SqaureWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SteppedWave</source>
-        <translation type="unfinished"></translation>
+        <translation>SteppedWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShape</source>
-        <translation type="unfinished"></translation>
+        <translation>SqauredShape</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShapeFlexing</source>
-        <translation type="unfinished"></translation>
+        <translation>SqauredShapeFlexing</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>AllPainterDataTypes</source>
-        <translation type="unfinished"></translation>
+        <translation>AllPainterDataTypes</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Insertion type</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoegingstype</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Preview of insertion</source>
-        <translation type="unfinished"></translation>
+        <translation>Voorbeeld van invoegen</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecteer toevoeging of voer een lege ruimte in</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&lt;Enter space size&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;Voer ruimtegrootte in&gt;</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Curtain Rope Knot</source>
-        <translation type="unfinished"></translation>
+        <translation>Gordijn touw knoop</translation>
     </message>
     <message>
         <location line="+301"/>
         <source>Document Units</source>
-        <translation type="unfinished"></translation>
+        <translation>Document eenheden</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>#Undefined#</source>
-        <translation type="unfinished"></translation>
+        <translation>#Onbepaald#</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Enter painter width (+0)</source>
-        <translation type="unfinished"></translation>
+        <translation>Painterbreedte invoeren (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Width : </source>
-        <translation type="unfinished"></translation>
+        <translation>Breedte:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>0</source>
-        <translation type="unfinished">0</translation>
+        <translation>0</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation type="unfinished"></translation>
+        <translation>Repetitieve painter opties</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Enter main painter stepsize (+0)</source>
-        <translation type="unfinished"></translation>
+        <translation>Voer de belangrijkste painter stapgrootte in (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Stepsize :</source>
-        <translation type="unfinished"></translation>
+        <translation>Stapgrootte:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Enter main painter length (+)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vul de lengte van de hoofdpainter in (+)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Length :</source>
-        <translation type="unfinished"></translation>
+        <translation>Lengte:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Keep painters proportional</source>
-        <translation type="unfinished"></translation>
+        <translation>Houd painters proportioneel</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Select percentage of Stepsize</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecteer percentage van stapgrootte</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Closed Forms shifting % :</source>
-        <translation type="unfinished"></translation>
+        <translation>Gesloten vormen verschuiven %:</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation type="unfinished"></translation>
+        <translation>Schaleringsopties voor open vormen</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form</source>
-        <translation type="unfinished"></translation>
+        <translation>Schaalverdeling f 1.00-0.90 aanpassen om aan de hele vorm aan te passen</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Dynamically scale to fit</source>
-        <translation type="unfinished"></translation>
+        <translation>Dynamische schaal om te passen</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Align with begin</source>
-        <translation type="unfinished"></translation>
+        <translation>Afstemmen met begin</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Centered</source>
-        <translation type="unfinished"></translation>
+        <translation>Gecentreerd</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Align with End</source>
-        <translation type="unfinished"></translation>
+        <translation>Afstemmen met einde</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Verbose info (persistent on)</source>
-        <translation type="unfinished"></translation>
+        <translation>Uitgebreide informatie (blijft aanhouden)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Verbose *</source>
-        <translation type="unfinished"></translation>
+        <translation>Uitgebreid *</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Deleted painted over base entities (persistent off)</source>
-        <translation type="unfinished"></translation>
+        <translation>Verwijder geschilderd over de basisobjecten (persistent uit)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Delete Base Entities *</source>
-        <translation type="unfinished"></translation>
+        <translation>Basisobjecten verwijderen *</translation>
     </message>
 </context>
 <context>
@@ -5481,7 +5481,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+77"/>
         <source>Use multithreading</source>
-        <translation type="unfinished"></translation>
+        <translation>Multithreading gebruiken</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -8302,17 +8302,17 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Widgets/MenuBar/MenuBar.js" line="+24"/>
         <source>Widgets</source>
-        <translation type="unfinished">Widgets</translation>
+        <translation>Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Menu Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Menubalk</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/MenuBar/PreferencesPage.ui" line="+17"/>
         <source>Use native menu bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Gebruik de native menubalk</translation>
     </message>
 </context>
 <context>
