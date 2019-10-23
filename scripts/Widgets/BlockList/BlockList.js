@@ -48,6 +48,7 @@ function RBlockListQt(parent, addListener, showHeader) {
 
     this.header().stretchLastSection = false;
     if (RSettings.isQt(5)) {
+        this.header().minimumSectionSize = 22;
         this.header().setSectionResizeMode(BlockList.colName, QHeaderView.Stretch);
         this.header().setSectionResizeMode(BlockList.colVisible, QHeaderView.Interactive);
         this.header().setSectionResizeMode(BlockList.colEdit, QHeaderView.Interactive);
