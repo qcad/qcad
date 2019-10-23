@@ -4701,7 +4701,7 @@
     
     
       void REcmaShellGraphicsViewImage::paintEntitiesMulti(
-                QList < QPainter * > painterThread, const RBox & queryBox
+                const RBox & queryBox
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::paintEntitiesMulti", engine);
@@ -4714,7 +4714,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=2*/
+                    || _q_function.property("length").toInt32()!=1*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RGraphicsViewImage::paintEntitiesMulti";
@@ -4727,7 +4727,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RGraphicsViewImage::paintEntitiesMulti(
-                            painterThread, queryBox
+                            queryBox
                         );
 
                         // block recursion again:
@@ -4747,15 +4747,6 @@
                             _q_function.call(__qtscript_self,
                                 QScriptValueList()
                                 
-
-
-
-    // type: QList < QPainter * >, copyable: false
-        // List of ...:
-        << REcmaHelper::listToScriptValue(engine, 
-          painterThread
-        )
-      
 
 
 
@@ -4780,7 +4771,7 @@
     
     
       void REcmaShellGraphicsViewImage::paintEntitiesThread(
-                QPainter * painter, QList < REntity::Id > & list, int start, int end
+                int threadId, QList < REntity::Id > & list, int start, int end
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::paintEntitiesThread", engine);
@@ -4806,7 +4797,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RGraphicsViewImage::paintEntitiesThread(
-                            painter, list, start, end
+                            threadId, list, start, end
                         );
 
                         // block recursion again:
@@ -4829,10 +4820,10 @@
 
 
 
-    // type: QPainter *, copyable: false
+    // type: int, copyable: true
         << qScriptValueFromValue(engine, 
 
-        painter
+        threadId
         )
       
 
@@ -4875,7 +4866,7 @@
     
     
       void REcmaShellGraphicsViewImage::paintEntityThread(
-                QPainter * painter, REntity::Id id, bool preview
+                int threadId, REntity::Id id, bool preview
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::paintEntityThread", engine);
@@ -4901,7 +4892,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RGraphicsViewImage::paintEntityThread(
-                            painter, id, preview
+                            threadId, id, preview
                         );
 
                         // block recursion again:
@@ -4924,10 +4915,10 @@
 
 
 
-    // type: QPainter *, copyable: false
+    // type: int, copyable: true
         << qScriptValueFromValue(engine, 
 
-        painter
+        threadId
         )
       
 

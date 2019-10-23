@@ -471,9 +471,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QList &lt; QPainter * &gt;"
-        typeName="QList &lt; QPainter * &gt;" name="painterThread"
-        isConst="false" />
         <arg type="RBox &amp;" typeName="RBox" name="queryBox"
         isConst="true" />
       </variant>
@@ -482,7 +479,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="paintEntitiesThread" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QPainter *" typeName="QPainter *" name="painter"
+        <arg type="int" typeName="int" name="threadId"
         isConst="false" />
         <arg type="QList &lt; REntity::Id &gt; &amp;"
         typeName="QList &lt; REntity::Id &gt;" name="list"
@@ -497,7 +494,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QPainter *" typeName="QPainter *" name="painter"
+        <arg type="int" typeName="int" name="threadId"
         isConst="false" />
         <arg type="REntity::Id" typeName="REntity::Id" name="id"
         isConst="false" />

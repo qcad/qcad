@@ -4433,53 +4433,39 @@
                 
     
     if( context->argumentCount() ==
-    2 && (
-            context->argument(0).isArray()
-        ) /* type: QList < QPainter * > */
-     && (
-            context->argument(1).isVariant() || 
-            context->argument(1).isQObject() || 
-            context->argument(1).isNull()
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
         ) /* type: RBox */
     
     ){
     // prepare arguments:
     
-                    // argument isArray
-                    QList < QPainter * >
-                    a0;
-                    REcmaHelper::fromScriptValue(
-                        engine,
-                        context->argument(0),
-                        a0
-                    );
-                
                     // argument isCopyable and has default constructor and isSimpleClass 
                     RBox*
-                    ap1 =
+                    ap0 =
                     qscriptvalue_cast<
                     RBox*
                         >(
                         context->argument(
-                        1
+                        0
                         )
                     );
-                    if (ap1 == NULL) {
-                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 1 is not of type RBox.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RBox.",
                                context);                    
                     }
                     RBox 
-                    a1 = 
-                    *ap1;
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
     // call C++ function:
     // return type 'void'
     
-               self->paintEntitiesMulti(a0
-        ,
-    a1);
+               self->paintEntitiesMulti(a0);
     } else
 
 
@@ -4515,10 +4501,8 @@
     
     if( context->argumentCount() ==
     4 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: QPainter * */
+            context->argument(0).isNumber()
+        ) /* type: int */
      && (
             context->argument(1).isArray()
         ) /* type: QList < REntity::Id > */
@@ -4532,18 +4516,13 @@
     ){
     // prepare arguments:
     
-                    // argument is pointer
-                    QPainter * a0 = NULL;
-
-                    a0 = 
-                        REcmaHelper::scriptValueTo<QPainter >(
-                            context->argument(0)
-                        );
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
                     
-                    if (a0==NULL && 
-                        !context->argument(0).isNull()) {
-                        return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type QPainter *QPainter *.", context);                    
-                    }
+                    context->argument( 0 ).
+                    toNumber();
                 
                     // argument isArray
                     QList < REntity::Id >
@@ -4617,10 +4596,8 @@
     
     if( context->argumentCount() ==
     2 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: QPainter * */
+            context->argument(0).isNumber()
+        ) /* type: int */
      && (
             context->argument(1).isNumber()
         ) /* type: REntity::Id */
@@ -4628,18 +4605,13 @@
     ){
     // prepare arguments:
     
-                    // argument is pointer
-                    QPainter * a0 = NULL;
-
-                    a0 = 
-                        REcmaHelper::scriptValueTo<QPainter >(
-                            context->argument(0)
-                        );
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
                     
-                    if (a0==NULL && 
-                        !context->argument(0).isNull()) {
-                        return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type QPainter *QPainter *.", context);                    
-                    }
+                    context->argument( 0 ).
+                    toNumber();
                 
                     // argument isStandardType
                     REntity::Id
@@ -4664,10 +4636,8 @@
     
     if( context->argumentCount() ==
     3 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: QPainter * */
+            context->argument(0).isNumber()
+        ) /* type: int */
      && (
             context->argument(1).isNumber()
         ) /* type: REntity::Id */
@@ -4678,18 +4648,13 @@
     ){
     // prepare arguments:
     
-                    // argument is pointer
-                    QPainter * a0 = NULL;
-
-                    a0 = 
-                        REcmaHelper::scriptValueTo<QPainter >(
-                            context->argument(0)
-                        );
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
                     
-                    if (a0==NULL && 
-                        !context->argument(0).isNull()) {
-                        return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type QPainter *QPainter *.", context);                    
-                    }
+                    context->argument( 0 ).
+                    toNumber();
                 
                     // argument isStandardType
                     REntity::Id

@@ -3150,6 +3150,77 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QSharedPointer < RShape > */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is SharedPointer
+                    QSharedPointer < RShape > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     RShape * o0 = 
+                    qscriptvalue_cast < RShape * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        
+                          // always clone shape if we expect a shared pointer (might be a simple object on stack):
+                          QSharedPointer < RShape >(o0->clone());
+                        
+                    }
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < RShape >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < RShape >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RHatchData: Argument 0 is not of type  RShape .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RHatchData: Argument 0 is not of type  RShape .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < RShape > 
+                    //a0 =
+                    //QSharedPointer < RShape >(o0->clone());
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->addBoundary(a0
+        ,
+    a1);
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.addBoundary().",
                    context);

@@ -263,6 +263,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QSharedPointer &lt; RShape &gt;"
         typeName="QSharedPointer &lt; RShape &gt;" name="shape"
         isConst="false" />
+        <arg type="bool" typeName="bool" name="addAutoLoops"
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getBoundaryPath" cppName="getBoundaryPath"
