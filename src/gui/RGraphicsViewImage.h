@@ -272,10 +272,10 @@ public:
     bool getPanOptimization();
 
     virtual void paintEntities(QPainter* painter, const RBox& queryBox);
-    void paintEntitiesMulti(QList<QPainter*> painterThread, const RBox& queryBox);
-    void paintEntitiesThread(QPainter* painter, QList<REntity::Id>& list, int start, int end);
+    void paintEntitiesMulti(const RBox& queryBox);
+    void paintEntitiesThread(int threadId, QList<REntity::Id>& list, int start, int end);
 
-    virtual void paintEntityThread(QPainter* painter, REntity::Id id, bool preview = false);
+    virtual void paintEntityThread(int threadId, REntity::Id id, bool preview = false);
 
     virtual void paintOverlay(QPainter* painter);
 
@@ -378,6 +378,7 @@ protected:
 
 protected:
     QList<QImage> graphicsBufferThread;
+    QList<QPainter*> painterThread;
     QImage graphicsBufferWithPreview;
     int numThreads;
 
@@ -422,7 +423,7 @@ protected:
     QMap<int, QMap<RObject::Id, QList<RGraphicsSceneDrawable> > > overlayDrawables;
 
     RBox clipBox;
-    QStack<QTransform> entityTransform;
+    QList<QStack<QTransform> > entityTransformThread;
     RVector paintOffset;
     bool alphaEnabled;
 

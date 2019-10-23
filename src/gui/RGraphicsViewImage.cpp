@@ -329,11 +329,17 @@ void RGraphicsViewImage::updateImage() {
     // highlighted entities are also part of the preview
     if (sceneQt->hasPreview()) {
         QPainter* painter = initPainter(graphicsBufferWithPreview, false);
+
+        painterThread.clear();
+        painterThread.append(painter);
+        entityTransformThread.clear();
+        entityTransformThread.append(QStack<QTransform>());
+
         bgColorLightness = getBackgroundColor().lightness();
         isSelected = false;
         QList<REntity::Id> ids = sceneQt->getPreviewEntityIds();
         for (int i=0; i<ids.length(); i++) {
-            paintEntityThread(painter, ids[i], true);
+            paintEntityThread(0, ids[i], true);
         }
         painter->end();
         delete painter;
@@ -747,9 +753,12 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
         graphicsBufferThread[i].fill(qRgba(0,0,0,0));
     }
 
-    QList<QPainter*> painterThread;
+    //QList<QPainter*> painterThread;
+    painterThread.clear();
+    entityTransformThread.clear();
     for (int i=0; i<graphicsBufferThread.length(); i++) {
         painterThread.append(initPainter(graphicsBufferThread[i], false, false, r));
+        entityTransformThread.append(QStack<QTransform>());
     }
 
     paintBackground(painterThread.first(), r);
@@ -758,7 +767,7 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
     RVector c2 = mapFromView(RVector(r.right()+1,r.top()-1), 1e300);
     RBox queryBox(c1, c2);
 
-    paintEntitiesMulti(painterThread, queryBox);
+    paintEntitiesMulti(queryBox);
 
     // paint selected entities on top:
     if (!selectedIds.isEmpty()) {
@@ -766,7 +775,7 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
         QList<REntity::Id> list = document->getStorage().orderBackToFront(selectedIds);
         QListIterator<RObject::Id> i(list);
         while (i.hasNext()) {
-            paintEntityThread(painterThread.last(), i.next());
+            paintEntityThread(painterThread.length()-1, i.next());
         }
     }
 
@@ -776,7 +785,11 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
     for (int i=0; i<painterThread.length(); i++) {
         painterThread[i]->end();
         delete painterThread[i];
+        painterThread[i] = NULL;
     }
+    painterThread.clear();
+    entityTransformThread.clear();
+
 //    painter->end();
 //    painter2->end();
 //    delete painter;
@@ -954,10 +967,15 @@ QPainter* RGraphicsViewImage::initPainter(QPaintDevice& device, bool erase, bool
 }
 
 void RGraphicsViewImage::paintEntities(QPainter* painter, const RBox& queryBox) {
-    paintEntitiesMulti(QList<QPainter*>() << painter, queryBox);
+    painterThread.clear();
+    painterThread.append(painter);
+    entityTransformThread.clear();
+    entityTransformThread.append(QStack<QTransform>());
+
+    paintEntitiesMulti(queryBox);
 }
 
-void RGraphicsViewImage::paintEntitiesMulti(QList<QPainter*> painterThread, const RBox& queryBox) {
+void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
     RDocument* document = getDocument();
     if (document==NULL) {
         return;
@@ -1057,18 +1075,20 @@ void RGraphicsViewImage::paintEntitiesMulti(QList<QPainter*> painterThread, cons
         }
     }
 
+    Q_ASSERT(painterThread.length()==entityTransformThread.length());
+
     //RDebug::startTimer(100);
     //qDebug() << "list.length():" << list.length();
     int slice = int(floor(double(list.length())/painterThread.length()));
     QList<QFuture<void> > futureThread;
-    for (int i=0; i<painterThread.length(); i++) {
-        int start = i*slice;
-        int end = (i+1)*slice;
-        if (i==painterThread.length()-1) {
+    for (int threadId=0; threadId<painterThread.length(); threadId++) {
+        int start = threadId*slice;
+        int end = (threadId+1)*slice;
+        if (threadId==painterThread.length()-1) {
             end = list.length();
         }
         //qDebug() << "slice:" << start << end;
-        futureThread.append(QtConcurrent::run(this, &RGraphicsViewImage::paintEntitiesThread, painterThread[i], list, start, end));
+        futureThread.append(QtConcurrent::run(this, &RGraphicsViewImage::paintEntitiesThread, threadId, list, start, end));
     }
     //RDebug::stopTimer(100, "launch threads");
 
@@ -1079,13 +1099,13 @@ void RGraphicsViewImage::paintEntitiesMulti(QList<QPainter*> painterThread, cons
     //RDebug::stopTimer(100, "waitForFinished");
 }
 
-void RGraphicsViewImage::paintEntitiesThread(QPainter* painter, QList<REntity::Id>& list, int start, int end) {
+void RGraphicsViewImage::paintEntitiesThread(int threadId, QList<REntity::Id>& list, int start, int end) {
     for (int i=start; i<end; i++) {
-        paintEntityThread(painter, list[i]);
+        paintEntityThread(threadId, list[i]);
     }
 }
 
-void RGraphicsViewImage::paintEntityThread(QPainter* painter, REntity::Id id, bool preview) {
+void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool preview) {
     if (!preview && !isPrintingOrExporting() && !isSelected && getDocument()->isSelected(id)) {
         static QMutex m;
         m.lock();
@@ -1093,6 +1113,11 @@ void RGraphicsViewImage::paintEntityThread(QPainter* painter, REntity::Id id, bo
         m.unlock();
         return;
     }
+
+    Q_ASSERT(threadId<painterThread.length());
+    Q_ASSERT(threadId<entityTransformThread.length());
+
+    QPainter* painter = painterThread[threadId];
 
     // clipping:
     RBox clipRectangle = sceneQt->getClipRectangle(id, preview);
@@ -1198,13 +1223,13 @@ void RGraphicsViewImage::paintEntityThread(QPainter* painter, REntity::Id id, bo
             RImageData image = drawable.getImage();
             image.move(drawable.getOffset());
 
-            if (entityTransform.isEmpty()) {
+            if (entityTransformThread[threadId].isEmpty()) {
                 image.move(paintOffset);
             }
             else {
                 // transform (image in block reference):
                 painter->save();
-                for (int k=0; k<entityTransform.size(); k++) {
+                for (int k=0; k<entityTransformThread[threadId].size(); k++) {
                     if (k==0) {
                         // paintOffset must be applied here to get the correct placement for
                         // texts with non-uniform scale:
@@ -1213,14 +1238,14 @@ void RGraphicsViewImage::paintEntityThread(QPainter* painter, REntity::Id id, bo
                         painter->setTransform(tt, true);
                     }
 
-                    QTransform t = entityTransform[k];
+                    QTransform t = entityTransformThread[threadId][k];
                     painter->setTransform(t, true);
                 }
             }
 
             paintImage(painter, image);
 
-            if (!entityTransform.isEmpty()) {
+            if (!entityTransformThread[threadId].isEmpty()) {
                 painter->restore();
             }
         }
@@ -1234,13 +1259,13 @@ void RGraphicsViewImage::paintEntityThread(QPainter* painter, REntity::Id id, bo
             }
 
             text.move(drawable.getOffset());
-            if (entityTransform.isEmpty()) {
+            if (entityTransformThread[threadId].isEmpty()) {
                 text.move(paintOffset);
             }
             else {
                 // transform (text in block reference):
                 painter->save();
-                for (int k=0; k<entityTransform.size(); k++) {
+                for (int k=0; k<entityTransformThread[threadId].size(); k++) {
                     if (k==0) {
                         // paintOffset must be applied here to get the correct placement for
                         // texts with non-uniform scale:
@@ -1249,14 +1274,14 @@ void RGraphicsViewImage::paintEntityThread(QPainter* painter, REntity::Id id, bo
                         painter->setTransform(tt, true);
                     }
 
-                    QTransform t = entityTransform[k];
+                    QTransform t = entityTransformThread[threadId][k];
                     painter->setTransform(t, true);
                 }
             }
 
             paintText(painter, text);
 
-            if (!entityTransform.isEmpty()) {
+            if (!entityTransformThread[threadId].isEmpty()) {
                 painter->restore();
             }
         }
@@ -1264,12 +1289,12 @@ void RGraphicsViewImage::paintEntityThread(QPainter* painter, REntity::Id id, bo
         // Transform:
         if (drawable.getType()==RGraphicsSceneDrawable::Transform) {
             QTransform transform = drawable.getTransform();
-            entityTransform.push(transform);
+            entityTransformThread[threadId].push(transform);
         }
 
         if (drawable.getType()==RGraphicsSceneDrawable::EndTransform) {
-            if (!entityTransform.isEmpty()) {
-                entityTransform.pop();
+            if (!entityTransformThread[threadId].isEmpty()) {
+                entityTransformThread[threadId].pop();
             }
             else {
                 qWarning() << "pop transform: stack empty";
@@ -1288,9 +1313,9 @@ void RGraphicsViewImage::paintEntityThread(QPainter* painter, REntity::Id id, bo
         }
 
         // local transform of entity (e.g. block reference transforms):
-        if (!entityTransform.isEmpty()) {
-            for (int k=entityTransform.size()-1; k>=0; k--) {
-                path.transform(entityTransform[k]);
+        if (!entityTransformThread[threadId].isEmpty()) {
+            for (int k=entityTransformThread[threadId].size()-1; k>=0; k--) {
+                path.transform(entityTransformThread[threadId][k]);
             }
         }
 
