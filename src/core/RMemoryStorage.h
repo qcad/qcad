@@ -238,6 +238,7 @@ protected:
     mutable bool selectedLayerMapDirty;
     mutable QHash<RBlock::Id, QHash<REntity::Id, QSharedPointer<REntity> > > blockEntityMap;
     QHash<RBlock::Id, QSharedPointer<RBlock> > blockMap;
+    QHash<RS::EntityType, QHash<RObject::Id, QSharedPointer<RObject> > > typeObjectMap;
     QHash<RLayer::Id, QSharedPointer<RLayer> > layerMap;
     QHash<QString, QSharedPointer<RLayer> > layerNameMap;
     QHash<RLayerState::Id, QSharedPointer<RLayerState> > layerStateMap;

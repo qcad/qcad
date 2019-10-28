@@ -630,8 +630,14 @@ bool RMemoryStorage::hasChildEntities(REntity::Id parentId) const {
 
 QSet<REntity::Id> RMemoryStorage::queryBlockReferences(RBlock::Id blockId) const {
     QSet<REntity::Id> result;
-    QHash<RObject::Id, QSharedPointer<REntity> >::const_iterator it;
-    for (it = entityMap.constBegin(); it != entityMap.constEnd(); ++it) {
+
+    if (!typeObjectMap.contains(RS::EntityBlockRef)) {
+        return result;
+    }
+
+    const QHash<RObject::Id, QSharedPointer<RObject> >& map = typeObjectMap[RS::EntityBlockRef];
+    QHash<RObject::Id, QSharedPointer<RObject> >::const_iterator it;
+    for (it = map.constBegin(); it != map.constEnd(); ++it) {
         QSharedPointer<RBlockReferenceEntity> e = it->dynamicCast<RBlockReferenceEntity>();
         if (!e.isNull() && e->getReferencedBlockId() == blockId && !e->isUndone()) {
             result.insert(e->getId());
@@ -1355,6 +1361,8 @@ bool RMemoryStorage::removeObject(QSharedPointer<RObject> object) {
         return false;
     }
 
+    bool ret = false;
+
     QSharedPointer<REntity> entity = object.dynamicCast<REntity> ();
     if (!entity.isNull()) {
         //blockEntityMap.remove(entity->getBlockId(), entity);
@@ -1365,7 +1373,7 @@ bool RMemoryStorage::removeObject(QSharedPointer<RObject> object) {
             //qDebug() << "blockEntityMap empty";
         }
         //qDebug() << "entities left for block:" << blockEntityMap[entity->getBlockId()].count();
-        return true;
+        ret = true;
     }
 
     if (object->getType()==RS::ObjectLayer) {
@@ -1373,10 +1381,34 @@ bool RMemoryStorage::removeObject(QSharedPointer<RObject> object) {
         if (!layer.isNull()) {
             layerNameMap.remove(layer->getName().toLower());
         }
-        return true;
+        ret = true;
     }
 
-    return false;
+    // update object type -> object ID -> object map:
+    if (typeObjectMap.contains(object->getType())) {
+        typeObjectMap[object->getType()].remove(object->getId());
+        ret = true;
+    }
+
+//    qDebug() << "objectTypeMap ============================";
+//    QHash<RS::EntityType, QHash<RObject::Id, QSharedPointer<RObject> > >::iterator it;
+//    for (it=typeObjectMap.begin(); it!=typeObjectMap.end(); it++) {
+//        qDebug() << "object type: " << it.key() << ":";
+//        QHash<RObject::Id, QSharedPointer<RObject> >::iterator it2;
+//        for (it2=it->begin(); it2!=it->end(); it2++) {
+//            qDebug() << "\t" << it2.key() << " : " << it2.value();
+//        }
+//    }
+
+//    if (object->getType()==RS::EntityBlockRef) {
+//        QSharedPointer<RBlockReferenceEntity> blockRef = object.dynamicCast<RBlockReferenceEntity>();
+//        if (!blockRef.isNull()) {
+//            blockRefMap.remove(blockRef->getId());
+//        }
+//        return true;
+//    }
+
+    return ret;
 }
 
 bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockRecursion, bool keepHandles) {
@@ -1559,6 +1591,22 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
     if (!linetype.isNull()) {
         linetypeMap[object->getId()] = linetype;
     }
+
+    // update object type -> object ID -> object map:
+    if (!typeObjectMap.contains(object->getType())) {
+        typeObjectMap.insert(object->getType(), QHash<RObject::Id, QSharedPointer<RObject> >());
+    }
+    typeObjectMap[object->getType()].insert(object->getId(), object);
+
+//    qDebug() << "objectTypeMap ============================";
+//    QHash<RS::EntityType, QHash<RObject::Id, QSharedPointer<RObject> > >::iterator it;
+//    for (it=typeObjectMap.begin(); it!=typeObjectMap.end(); it++) {
+//        qDebug() << "object type: " << it.key() << ":";
+//        QHash<RObject::Id, QSharedPointer<RObject> >::iterator it2;
+//        for (it2=it->begin(); it2!=it->end(); it2++) {
+//            qDebug() << "\t" << it2.key() << " : " << it2.value();
+//        }
+//    }
 
     QSharedPointer<RDocumentVariables> docVars = object.dynamicCast<RDocumentVariables> ();
     if (!docVars.isNull()) {
