@@ -241,8 +241,17 @@ Print.prototype.printCurrentBlock = function(printer, painter) {
     );
 
     // printer calibration:
-    printerFactor.x *= RSettings.getDoubleValue(printer.printerName() + "/FactorX", 1.0);
-    printerFactor.y *= RSettings.getDoubleValue(printer.printerName() + "/FactorY", 1.0);
+    var printerName = printer.printerName();
+    if (printerName.length===0) {
+        if (printer.outputFileName().length!==0) {
+            // PDF output:
+            printerName = "PDF";
+        }
+    }
+
+    qDebug("printer.printerName():", printerName);
+    printerFactor.x *= RSettings.getDoubleValue(printerName + "/FactorX", 1.0);
+    printerFactor.y *= RSettings.getDoubleValue(printerName + "/FactorY", 1.0);
 
     this.view.setPrintPointSize(new RVector(1.0/printerFactor.x, 1.0/printerFactor.y));
 
