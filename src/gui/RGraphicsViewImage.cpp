@@ -1534,6 +1534,23 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
 
         // draw points:
         if (path.hasPoints()) {
+            if (path.getSimplePointDisplay()) {
+                double ps = getScene()->getPixelSizeHint();
+                // simple point mode for hatch patterns:
+                // force point display as points:
+                QList<RVector> points = path.getPoints();
+                QList<RVector>::iterator it;
+                for (it=points.begin(); it<points.end(); it++) {
+                    RVector p = *it;
+
+                    // draws lines at higher zoom levels:
+                    //drawDot(painter, QPointF(p.x, p.y));
+
+                    painter->drawLine(QLineF(p.x, p.y, p.x + ps, p.y));
+                }
+                continue;
+            }
+
             double pSize = getDocument()->getKnownVariable(RS::PDSIZE, 0).toDouble();
             pSize = getPointSize(pSize);
             int pMode = getDocument()->getKnownVariable(RS::PDMODE, 0).toInt();
