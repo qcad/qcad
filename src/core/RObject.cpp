@@ -577,7 +577,8 @@ QMap<QString, QVariantMap> RObject::getCustomProperties() const {
 }
 
 /**
- * Copies all custom properties from the given object. Existing properties are overwritten.
+ * Copies all custom properties from the given object.
+ * Existing properties can be overwritten.
  */
 void RObject::copyCustomPropertiesFrom(RObject* other, const QString& title,
                                        bool overwrite, const QStringList& ignoreList,
