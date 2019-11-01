@@ -813,7 +813,8 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft, double pixelSizeHint
             QList<RLine> segments = getSegments(unclippedLine);
 
             RPainterPathExporter ppExporter;
-            ppExporter.setExportZeroLinesAsPoints(false);
+            //ppExporter.setExportZeroLinesAsPoints(false);
+            ppExporter.setExportZeroLinesAsPoints(true);
             // ignore zero lines if
             // line was split up into segments
             ppExporter.setIgnoreZeroLines(!hasDots);
@@ -835,6 +836,7 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft, double pixelSizeHint
                     }
                     ppExporter.exportLine(segments[si], offset);
                     RPainterPath path = ppExporter.getPainterPath();
+                    path.setSimplePointDisplay(true);
 
                     if (!path.isEmpty()) {
                         //clippedPattern.addPath(path);
