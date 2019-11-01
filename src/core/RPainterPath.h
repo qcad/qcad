@@ -47,19 +47,20 @@ class QCADCORE_EXPORT RPainterPath : public QPainterPath {
 
 public:
     enum Mode {
-        NoModes = 0x000,
-        Selected = 0x001,              //!< show as selected
-        Highlighted = 0x002,           //!< show as highlighted
-        Invalid = 0x004,
-        FixedPenColor = 0x008,
-        FixedBrushColor = 0x010,
-        AutoRegen = 0x020,             //!< arcs (regen on zoom change)
-        AlwaysRegen = 0x040,
-        InheritPen = 0x080,            //!< inherit pen from entity / context
-        PixelUnit = 0x100,             //!< path displayed in pixel (not drawing units)
-        NoClipping = 0x200,            //!< disable clipping for this path
-        PixelWidth = 0x400,            //!< interpret width in pixels
-        NoColorMode = 0x800            //!< disable color mode
+        NoModes = 0x0000,
+        Selected = 0x0001,              //!< show as selected
+        Highlighted = 0x0002,           //!< show as highlighted
+        Invalid = 0x0004,
+        FixedPenColor = 0x0008,
+        FixedBrushColor = 0x0010,
+        AutoRegen = 0x0020,             //!< arcs (regen on zoom change)
+        AlwaysRegen = 0x0040,
+        InheritPen = 0x0080,            //!< inherit pen from entity / context
+        PixelUnit = 0x0100,             //!< path displayed in pixel (not drawing units)
+        NoClipping = 0x0200,            //!< disable clipping for this path
+        PixelWidth = 0x0400,            //!< interpret width in pixels
+        NoColorMode = 0x0800,           //!< disable color mode
+        SimplePointDisplay = 0x1000     //!< simple point mode (for points in hatch patterns)
     };
     Q_DECLARE_FLAGS(Modes, Mode)
 
@@ -214,6 +215,9 @@ public:
 
     void setNoColorMode(bool on);
     bool getNoColorMode() const;
+
+    void setSimplePointDisplay(bool on);
+    bool getSimplePointDisplay() const;
 
     void setPixelWidth(bool on);
     bool getPixelWidth() const;

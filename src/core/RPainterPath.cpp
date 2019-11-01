@@ -250,6 +250,11 @@ QList<QSharedPointer<RShape> > RPainterPath::getShapes() const {
         cursor = el;
     }
 
+    QList<RVector> points = getPoints();
+    for (int i=0; i<points.length(); i++) {
+        ret.append(QSharedPointer<RPoint>(new RPoint(points[i])));
+    }
+
     return ret;
 }
 
@@ -416,6 +421,14 @@ void RPainterPath::setNoColorMode(bool on) {
 
 bool RPainterPath::getNoColorMode() const {
     return getMode(RPainterPath::NoColorMode);
+}
+
+void RPainterPath::setSimplePointDisplay(bool on) {
+    setMode(RPainterPath::SimplePointDisplay, on);
+}
+
+bool RPainterPath::getSimplePointDisplay() const {
+    return getMode(RPainterPath::SimplePointDisplay);
 }
 
 void RPainterPath::setPixelWidth(bool on) {
