@@ -152,7 +152,7 @@
     <message>
         <location line="+7"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
-        <translation>Tutti i nomi di marchio o di prodotto sono diritti registrati dai rispettivi proprietari.</translation>
+        <translation>Tutti i marchi di fabbrica depositati o registrati sono di proprietà dei rispettivi titolari.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -356,7 +356,7 @@ applicare le modifiche.</translation>
     <message>
         <location line="-1"/>
         <source>Changes will affect new drawings but NOT the current drawing.</source>
-        <translation>Le modifiche avranno effetto nuovi disegni, ma non il disegno corrente.</translation>
+        <translation>Le modifiche avranno effetto nei nuovi disegni, ma non nel disegno corrente.</translation>
     </message>
 </context>
 <context>
@@ -429,7 +429,7 @@ applicare le modifiche.</translation>
     <message>
         <location filename="../scripts/Apollonius.js" line="+1812"/>
         <source>Invalid radius</source>
-        <translation>Raggio valido</translation>
+        <translation>Raggio non valido</translation>
     </message>
     <message>
         <location line="+51"/>
@@ -538,7 +538,7 @@ applicare le modifiche.</translation>
     <message>
         <location line="+81"/>
         <source>Invalid height</source>
-        <translation>Altezza non valido</translation>
+        <translation>Altezza non valida</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -601,7 +601,7 @@ applicare le modifiche.</translation>
     <message>
         <location line="+10"/>
         <source>The distance between the two points must be less than the arc length</source>
-        <translation>La distanza entre les due elementi deve essere inferiore alla lunghezza d&apos;arco</translation>
+        <translation>La distanza tra i due punti deve essere inferiore alla lunghezza dell&apos;arco</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PL.ui" line="+17"/>
@@ -692,7 +692,7 @@ applicare le modifiche.</translation>
     <message>
         <location line="+81"/>
         <source>Invalid radius</source>
-        <translation>Raggio valido</translation>
+        <translation>Raggio non valido</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -707,7 +707,7 @@ applicare le modifiche.</translation>
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and radius</source>
-        <translation>Disegnare un arco da due punti e un raggio</translation>
+        <translation>Disegnare un arco da due punti e raggio</translation>
     </message>
 </context>
 <context>
@@ -777,7 +777,7 @@ applicare le modifiche.</translation>
     <message>
         <location line="+4"/>
         <source>Draw arc from center, point on arc and angles</source>
-        <translation>Disegna un arco dal centro, un punto l&apos;arco e gli angoli</translation>
+        <translation>Disegna un arco dal centro, un punto dell&apos;arco e gli angoli</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.ui" line="+17"/>
@@ -825,7 +825,7 @@ applicare le modifiche.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentric/ArcConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
-        <translation>&amp;Concentrico (distanza)</translation>
+        <translation>&amp;Concentrico (con distanza)</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -953,7 +953,7 @@ applicare le modifiche.</translation>
     </message>
     <message>
         <source>Load/Save</source>
-        <translation type="vanished">Carico/Salvare</translation>
+        <translation>Carica/Salva</translation>
     </message>
     <message>
         <location filename="../scripts/File/AutoSave/AutoSave.js" line="+35"/>
@@ -962,7 +962,7 @@ applicare le modifiche.</translation>
     </message>
     <message>
         <source>Open/Save</source>
-        <translation type="vanished">Carico/Salvare</translation>
+        <translation>Carica/Salva</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -977,7 +977,7 @@ applicare le modifiche.</translation>
     <message>
         <location line="+6"/>
         <source>Autosave complete.</source>
-        <translation>Salvataggio automatico è stato completato.</translation>
+        <translation>Salvataggio automatico completato.</translation>
     </message>
     <message>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
@@ -1045,7 +1045,7 @@ Vuoi recuperarlo?</translation>
     <message>
         <location line="-13"/>
         <source>Moved autosave backup file to:</source>
-        <translation>Ribattezzata file di salvataggio automatico:</translation>
+        <translation>Spostato archivio di salvataggio automatico in:</translation>
     </message>
     <message>
         <location line="+16"/>
