@@ -313,6 +313,11 @@ void RDocument::init(bool beforeLoad) {
         setVariable("PageSettings/ShowPaperBorders", RSettings::getBoolValue("PageSettings/ShowPaperBorders", true));
         //setVariable("PageSettings/ShowBoundingBox", RSettings::getBoolValue("PageSettings/ShowBoundingBox", false));
 
+        setVariable("PageTagSettings/EnablePageTags", RSettings::getBoolValue("PageTagSettings/EnablePageTags", false));
+        setVariable("PageTagSettings/TagAlignment", RSettings::getValue("PageTagSettings/TagAlignment", "Inside"));
+        setVariable("PageTagSettings/TagFont", RSettings::getValue("PageTagSettings/TagFont", QFont("Arial", 10)));
+        setVariable("PageTagSettings/TagPosition", RSettings::getValue("PageTagSettings/TagPosition", "TopLeft"));
+
         // grid settings:
         QString s;
         for (int i=0; i<4; i++) {
