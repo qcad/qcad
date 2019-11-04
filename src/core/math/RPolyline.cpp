@@ -206,6 +206,15 @@ bool RPolyline::appendShape(const RShape& shape, bool prepend) {
         }
     }
 
+    // append full circle arc as circle (two arc segments) to empty polyline:
+    else if (shape.getShapeType()==RShape::Arc) {
+        const RArc* arc = dynamic_cast<const RArc*>(&shape);
+        if (arc!=NULL && arc->isFullCircle()) {
+            appendShape(RCircle(arc->getCenter(), arc->getRadius()));
+            return true;
+        }
+    }
+
     // append polyline:
     else if (shape.getShapeType()==RShape::Polyline) {
         const RPolyline* pl = dynamic_cast<const RPolyline*>(&shape);
