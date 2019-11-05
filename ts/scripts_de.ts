@@ -1001,36 +1001,34 @@ um die Änderungen zu übernehmen.</translation>
     <message>
         <location line="+123"/>
         <source>Autosave failed:</source>
-        <translation>Autosave fehlgeschlagen:</translation>
+        <translation>Automatisches Speichern fehlgeschlagen:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Autosave complete.</source>
-        <translation>Autosave abgeschlossen.</translation>
+        <translation>Automatisches Speichern abgeschlossen.</translation>
     </message>
     <message>
         <source>An autosave backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
-        <translation type="vanished">Eine autosave Backup Datei für eine unbenannte Zeichnung wurde gefunden.
+        <translation>Eine automatisch gespeicherte Backup Datei für eine unbenannte Zeichnung wurde gefunden.
 Möchten Sie die Zeichnung wiederherstellen?</translation>
     </message>
     <message>
         <source>%1 autosave backup files for untitled drawings were found.
 Do you wish to recover them?</source>
-        <translation type="vanished">%1 autosave Backup Dateien für unbenannte Zeichnungen wurden gefunden.
+        <translation>%1 automatisch gespeicherte Backup Dateien für unbenannte Zeichnungen wurden gefunden.
 Möchten Sie die Zeichnungen wiederherstellen?</translation>
     </message>
     <message numerus="yes">
         <location line="+19"/>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation>
-            <numerusform>Eine autosave Backup Datei für eine unbenannte Zeichnung wurde gefunden.
+        <translation><numerusform>Eine automatisch gespeicherte Backup Datei für eine unbenannte Zeichnung wurde gefunden.
 Möchten Sie die Zeichnung wiederherstellen?</numerusform>
-            <numerusform>%n autosave Backup Dateien für unbenannte Zeichnungen wurden gefunden.
+        <numerusform>%n automatisch gespeicherte Backup Dateien für unbenannte Zeichnungen wurden gefunden.
 Möchten Sie die Zeichnungen wiederherstellen?</numerusform>
-        </translation>
-    </message>
+        </translation></message>
     <message>
         <location line="+21"/>
         <source>Recovered</source>
@@ -1044,7 +1042,7 @@ Möchten Sie die Zeichnungen wiederherstellen?</numerusform>
     <message>
         <source>An autosave backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
-        <translation type="vanished">Eine autosave Backup Datei für &apos;%1&apos; wurde gefunden.
+        <translation>Eine automatisch gespeicherte Backup Datei für &apos;%1&apos; wurde gefunden.
 Möchten Sie die Zeichnung wiederherstellen?</translation>
     </message>
     <message>
@@ -1064,7 +1062,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="-13"/>
         <source>Moved autosave backup file to:</source>
-        <translation>Autosave Datei umbenannt in:</translation>
+        <translation>Automatisch gespeicherte Datei umbenannt in:</translation>
     </message>
     <message>
         <location line="+16"/>
