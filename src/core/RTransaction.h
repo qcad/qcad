@@ -286,8 +286,10 @@ protected:
 
     /**
      * List of IDs of all objects that are affected by this transaction.
+     * Needs to be in order (not a set):
      */
     QList<RObject::Id> affectedObjectIds;
+    QSet<RObject::Id> affectedObjectIdsSet;
 
     /**
      * List of IDs of all block references that need to be updated.

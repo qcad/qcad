@@ -105,6 +105,7 @@ RTransaction::RTransaction(
 //        parent->appendChild(*this);
 //    }
 
+    affectedObjectIdsSet = affectedObjectIds.toSet();
 }
 
 
@@ -894,7 +895,8 @@ void RTransaction::addAffectedObject(RObject::Id objectId) {
         return;
     }
 
-    if (!affectedObjectIds.contains(objectId)) {
+    //if (!affectedObjectIds.contains(objectId)) {
+    if (!affectedObjectIdsSet.contains(objectId)) {
         addAffectedObject(storage->queryObjectDirect(objectId));
     }
 }
@@ -924,14 +926,16 @@ void RTransaction::addAffectedObject(QSharedPointer<RObject> object) {
         return;
     }
 
-    if (affectedObjectIds.contains(object->getId())) {
+    //if (affectedObjectIds.contains(object->getId())) {
+    if (affectedObjectIdsSet.contains(object->getId())) {
         return;
     }
 
     // first add block as affected object (needs to be handled before entities in it):
     QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
     if (!entity.isNull()) {
-        if (!affectedObjectIds.contains(entity->getBlockId())) {
+        //if (!affectedObjectIds.contains(entity->getBlockId())) {
+        if (!affectedObjectIdsSet.contains(entity->getBlockId())) {
             // if an entity has changed, the block definition it was in is affected:
             addAffectedObject(entity->getBlockId());
 
@@ -946,6 +950,7 @@ void RTransaction::addAffectedObject(QSharedPointer<RObject> object) {
 
     // add object after block:
     affectedObjectIds.append(object->getId());
+    affectedObjectIdsSet.insert(object->getId());
 }
 
 void RTransaction::deleteObject(RObject::Id objectId, bool force) {
