@@ -77,7 +77,7 @@ Mostra simbolo diametro
 Kilometro
 chilometro
 chilometri</translatorcomment>
-        <translation>Kilometro</translation>
+        <translation>Chilometro</translation>
     </message>
     <message>
         <location line="+3"/>
