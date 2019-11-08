@@ -38,6 +38,7 @@ HEADERS = RAddObjectOperation.h \
     RTransformation.h \
     RTranslation.h
 TEMPLATE = lib
+#QT += concurrent
 r_static_libs {
     CONFIG += staticlib
 }
