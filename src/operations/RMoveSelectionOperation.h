@@ -46,7 +46,11 @@ public:
     
     virtual RTransaction apply(RDocument& document, bool preview = false);
 
+//protected:
+//    void move(RDocument& document, RTransaction& transaction, REntity::Id entityId);
+
 private:
+
     RVector referencePoint;
     RVector targetPoint;
 };

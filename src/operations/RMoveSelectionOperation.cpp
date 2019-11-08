@@ -18,6 +18,12 @@
  */
 #include <QSet>
 
+//#if QT_VERSION >= 0x050000
+//#include <QtConcurrent>
+//#else
+//#include <qtconcurrentmap.h>
+//#endif
+
 #include "RDocument.h"
 #include "RExporter.h"
 #include "RMoveSelectionOperation.h"
@@ -38,25 +44,62 @@ RTransaction RMoveSelectionOperation::apply(RDocument& document, bool preview) {
     transaction.setGroup(transactionGroup);
 
     QSet<REntity::Id> selectedEntities = document.querySelectedEntities();
-    int counter = 0;
-    QSet<REntity::Id>::iterator it;
-    for (it=selectedEntities.begin(); it!=selectedEntities.end(); it++) {
-        if (preview && ++counter>RSettings::getPreviewEntities()) {
-            break;
-        }
 
-        QSharedPointer<REntity> entity = document.queryEntity(*it);
-        if (entity.isNull()) {
-            continue;
-        }
+//    if (preview) {
+        int counter = 0;
+        QSet<REntity::Id>::iterator it;
+        for (it=selectedEntities.begin(); it!=selectedEntities.end(); it++) {
+            if (preview && ++counter>RSettings::getPreviewEntities()) {
+                break;
+            }
 
-        // apply operation to entity:
-        if (entity->move(targetPoint - referencePoint)) {
-            QSet<RPropertyTypeId> props = entity->getPropertyTypeIds(RPropertyAttributes::Location);
-            transaction.addObject(entity, false, false, props);
+            QSharedPointer<REntity> entity = document.queryEntity(*it);
+            if (entity.isNull()) {
+                continue;
+            }
+
+            // apply operation to entity:
+//            RDebug::startTimer(7);
+            if (entity->move(targetPoint - referencePoint)) {
+//                RDebug::stopTimer(7, "move");
+//                RDebug::startTimer(8);
+                QSet<RPropertyTypeId> props = entity->getPropertyTypeIds(RPropertyAttributes::Location);
+//                RDebug::stopTimer(8, "props");
+//                RDebug::startTimer(9);
+                transaction.addObject(entity, false, false, props);
+//                RDebug::stopTimer(9, "add");
+            }
         }
-    }
+//    }
+//    else {
+//        QFutureWatcher<void> futureWatcher;
+//        std::function<void(REntity::Id)> mv = [&](REntity::Id entityId) {
+//            move(document, transaction, entityId);
+//        };
+//        futureWatcher.setFuture(QtConcurrent::map(selectedEntities, mv));
+//        futureWatcher.waitForFinished();
+
+//    }
 
     transaction.end();
     return transaction;
 }
+
+//void RMoveSelectionOperation::move(RDocument& document, RTransaction& transaction, REntity::Id entityId) {
+//    static QMutex m;
+
+//    //qDebug() << "move" << entityId;
+
+//    QSharedPointer<REntity> entity = document.queryEntity(entityId);
+//    if (entity.isNull()) {
+//        return;
+//    }
+
+//    // apply operation to entity:
+//    if (entity->move(targetPoint - referencePoint)) {
+//        QSet<RPropertyTypeId> props = entity->getPropertyTypeIds(RPropertyAttributes::Location);
+
+//        QMutexLocker ml(&m);
+//        transaction.addObject(entity, false, false, props);
+//    }
+//}
