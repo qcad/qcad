@@ -122,9 +122,9 @@ RLayer::Id RLayer::getParentLayerId() const {
 }
 
 void RLayer::setName(const QString& n) {
-    if (name == "0") {
-        return;
-    }
+//    if (name == "0") {
+//        return;
+//    }
     name = n.trimmed();
 }
 
