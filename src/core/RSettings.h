@@ -276,6 +276,7 @@ public:
     static bool getIgnoreAllReferencePoints();
     static int getReferencePointSize();
     static int getReferencePointShape();
+    static bool getPropertyEditorShowOnRequest();
     static QString getPolarCoordinateSeparator();
     static QString getCartesianCoordinateSeparator();
     static QString getRelativeCoordinatePrefix();
@@ -340,6 +341,7 @@ private:
     static int ignoreAllReferencePoints;
     static int referencePointSize;
     static int referencePointShape;
+    static int propertyEditorShowOnRequest;
     static QString polarCoordinateSeparator;
     static QString cartesianCoordinateSeparator;
     static QString relativeCoordinatePrefix;
