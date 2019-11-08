@@ -90,6 +90,7 @@ int RSettings::ignoreBlockReferencePoint = -1;
 int RSettings::ignoreAllReferencePoints = -1;
 int RSettings::referencePointSize = -1;
 int RSettings::referencePointShape = -1;
+int RSettings::propertyEditorShowOnRequest = -1;
 QString RSettings::polarCoordinateSeparator = QString::null;
 QString RSettings::cartesianCoordinateSeparator = QString::null;
 QString RSettings::relativeCoordinatePrefix = QString::null;
@@ -952,6 +953,16 @@ int RSettings::getReferencePointShape() {
         referencePointShape = getIntValue("GraphicsView/ReferencePointShape", 0);
     }
     return referencePointShape;
+}
+
+/**
+ * \return True to show slow properties availabe on request.
+ */
+bool RSettings::getPropertyEditorShowOnRequest() {
+    if (propertyEditorShowOnRequest==-1) {
+        propertyEditorShowOnRequest = getBoolValue("PropertyEditor/ShowOnRequest", false);
+    }
+    return propertyEditorShowOnRequest;
 }
 
 /**
