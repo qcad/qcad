@@ -61,7 +61,7 @@ void RPropertyEditor::updateProperty(const RPropertyTypeId& propertyTypeId,
     Q_UNUSED(document)
 
     // show on request properties:
-    showOnRequest = showOnRequest || RSettings::getBoolValue("PropertyEditor/ShowOnRequest", false)==true;
+    showOnRequest = showOnRequest || RSettings::getPropertyEditorShowOnRequest()==true;
 
     RPropertyTypeId pid = propertyTypeId;
 
