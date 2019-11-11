@@ -808,7 +808,7 @@ QList<RVector> RPolyline::getSelfIntersectionPoints() const {
 }
 
 RS::Orientation RPolyline::getOrientation(bool implicitelyClosed) const {
-    if (!implicitelyClosed && !isGeometricallyClosed()) {
+    if (!implicitelyClosed && !isGeometricallyClosed(0.00001)) {
         return RS::Any;
     }
 
