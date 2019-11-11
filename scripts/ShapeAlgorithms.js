@@ -2013,7 +2013,13 @@ ShapeAlgorithms.divideShape = function(shape, pos1, pos2) {
 
         shape1 = trimEndPoint(shape1, pos1, pos1);
 
-        cutPos1 = shape1.getEndPoint();
+        if (isRayShape(shape1)) {
+            // ray points in opposite direction:
+            cutPos1 = shape1.getStartPoint();
+        }
+        else {
+            cutPos1 = shape1.getEndPoint();
+        }
 
         shape2 = trimStartPoint(shape2, pos1, pos1);
 
