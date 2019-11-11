@@ -102,6 +102,9 @@ Explode.explodeSelection = function(di, toolTitle) {
         // these entity types are not explodable:
         if (isPointEntity(entity) ||
             isLineEntity(entity) ||
+            isXLineEntity(entity) ||
+            isRayEntity(entity) ||
+            isImageEntity(entity) ||
             isArcEntity(entity) ||
             isViewportEntity(entity)) {
             continue;
