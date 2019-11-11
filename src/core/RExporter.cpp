@@ -529,6 +529,7 @@ void RExporter::exportEntities(bool allBlocks, bool undone) {
     QSet<REntity::Id> ids = document->queryAllEntities(undone, allBlocks);
 
     // 20110815: ordered export (TODO: optional?):
+    // needed for order of block contents (DXF export tests)
     QList<REntity::Id> list = document->getStorage().orderBackToFront(ids);
 
     QList<REntity::Id>::iterator it;
