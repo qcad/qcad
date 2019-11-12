@@ -249,7 +249,6 @@ Print.prototype.printCurrentBlock = function(printer, painter) {
         }
     }
 
-    qDebug("printer.printerName():", printerName);
     printerFactor.x *= RSettings.getDoubleValue(printerName + "/FactorX", 1.0);
     printerFactor.y *= RSettings.getDoubleValue(printerName + "/FactorY", 1.0);
 
