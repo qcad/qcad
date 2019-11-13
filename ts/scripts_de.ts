@@ -1011,24 +1011,26 @@ um die Änderungen zu übernehmen.</translation>
     <message>
         <source>An autosave backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
-        <translation>Eine automatisch gespeicherte Backup Datei für eine unbenannte Zeichnung wurde gefunden.
+        <translation type="vanished">Eine automatisch gespeicherte Backup Datei für eine unbenannte Zeichnung wurde gefunden.
 Möchten Sie die Zeichnung wiederherstellen?</translation>
     </message>
     <message>
         <source>%1 autosave backup files for untitled drawings were found.
 Do you wish to recover them?</source>
-        <translation>%1 automatisch gespeicherte Backup Dateien für unbenannte Zeichnungen wurden gefunden.
+        <translation type="vanished">%1 automatisch gespeicherte Backup Dateien für unbenannte Zeichnungen wurden gefunden.
 Möchten Sie die Zeichnungen wiederherstellen?</translation>
     </message>
     <message numerus="yes">
         <location line="+19"/>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation><numerusform>Eine automatisch gespeicherte Backup Datei für eine unbenannte Zeichnung wurde gefunden.
+        <translation>
+            <numerusform>Eine automatisch gespeicherte Backup Datei für eine unbenannte Zeichnung wurde gefunden.
 Möchten Sie die Zeichnung wiederherstellen?</numerusform>
-        <numerusform>%n automatisch gespeicherte Backup Dateien für unbenannte Zeichnungen wurden gefunden.
+            <numerusform>%n automatisch gespeicherte Backup Dateien für unbenannte Zeichnungen wurden gefunden.
 Möchten Sie die Zeichnungen wiederherstellen?</numerusform>
-        </translation></message>
+        </translation>
+    </message>
     <message>
         <location line="+21"/>
         <source>Recovered</source>
@@ -1042,7 +1044,7 @@ Möchten Sie die Zeichnungen wiederherstellen?</numerusform>
     <message>
         <source>An autosave backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
-        <translation>Eine automatisch gespeicherte Backup Datei für &apos;%1&apos; wurde gefunden.
+        <translation type="vanished">Eine automatisch gespeicherte Backup Datei für &apos;%1&apos; wurde gefunden.
 Möchten Sie die Zeichnung wiederherstellen?</translation>
     </message>
     <message>
@@ -1493,7 +1495,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+491"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+492"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>

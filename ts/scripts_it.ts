@@ -953,7 +953,7 @@ applicare le modifiche.</translation>
     </message>
     <message>
         <source>Load/Save</source>
-        <translation>Carica/Salva</translation>
+        <translation type="vanished">Carica/Salva</translation>
     </message>
     <message>
         <location filename="../scripts/File/AutoSave/AutoSave.js" line="+35"/>
@@ -962,7 +962,7 @@ applicare le modifiche.</translation>
     </message>
     <message>
         <source>Open/Save</source>
-        <translation>Carica/Salva</translation>
+        <translation type="vanished">Carica/Salva</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1464,7 +1464,7 @@ Vuoi recuperarlo?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+491"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+492"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>

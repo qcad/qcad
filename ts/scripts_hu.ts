@@ -1266,7 +1266,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+491"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+492"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>

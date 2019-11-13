@@ -1366,7 +1366,7 @@ Wilt u het herstellen?</translation>
 <context>
     <name>BlockList</name>
     <message>
-        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+491"/>
+        <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+492"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
