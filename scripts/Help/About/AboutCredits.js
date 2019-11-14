@@ -53,8 +53,11 @@ var credits =
                               ],
     ],
     [
+        qsTr("Hatch Patterns"),
+        [ "John Hyslop",         "CELTIC-01, CELTIC-02, LATTICE-01, SPACE-INVADER" ],
+    ],
+    [
         qsTr("Translations"),
-        //[ "Wang Zhen Zhe",     "Chinese (zh_CN) translation." ],
         [ "Petr Zgraja, 'fialot'", "Czech (cs) translation" ],
         [ "Andrew Mustun",       "Dutch (nl) translation" ],
         [ "Timo Seppola, Jarmo", "Finnish (fi) translation" ],
