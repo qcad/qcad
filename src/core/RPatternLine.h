@@ -32,6 +32,7 @@
  *
  * \ingroup core
  * \scriptable
+ * \copyable
  * \hasStreamOperator
  */
 class QCADCORE_EXPORT RPatternLine {
@@ -43,8 +44,20 @@ public:
 
     RPainterPath getPainterPath() const;
     bool hasDots() const;
-    QList<RLine> getLines() const;
+    QList<RLine> getLines(bool includeDashes = false) const;
     double getLength() const;
+    double getAngle() const {
+        return angle;
+    }
+    RVector getOffset() const {
+        return offset;
+    }
+    RVector getBasePoint() const {
+        return basePoint;
+    }
+    QList<double> getDashes() const {
+        return dashes;
+    }
     void scale(double f);
     void rotate(double a);
 };

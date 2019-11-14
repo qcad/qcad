@@ -55,7 +55,10 @@ bool RPatternLine::hasDots() const {
     return false;
 }
 
-QList<RLine> RPatternLine::getLines() const {
+/**
+ * \returen Line shapes for this pattern line. No offset applied.
+ */
+QList<RLine> RPatternLine::getLines(bool includeDashes) const {
     QList<RLine> ret;
 
     RVector cursor(0,0);
@@ -72,6 +75,16 @@ QList<RLine> RPatternLine::getLines() const {
             RVector newCursor = cursor + RVector::createPolar(qAbs(dash), angle);
             if (dash>0) {
                 ret.append(RLine(cursor, newCursor));
+            }
+            else {
+                if (includeDashes) {
+                    // dashes as invalid lines:
+                    RVector sp = cursor;
+                    RVector ep = newCursor;
+                    sp.valid = false;
+                    ep.valid = false;
+                    ret.append(RLine(sp, ep));
+                }
             }
             cursor = newCursor;
         }
