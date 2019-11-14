@@ -808,6 +808,8 @@ bool RBlockReferenceData::mirror(const RLine& axis) {
 
 bool RBlockReferenceData::scale(const RVector& scaleFactors, const RVector& center) {
     position.scale(scaleFactors, center);
+    columnSpacing*=scaleFactors.x;
+    rowSpacing*=scaleFactors.x;
 
     if (!isPixelUnit()) {
         this->scaleFactors.scale(scaleFactors);
