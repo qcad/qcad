@@ -71,6 +71,11 @@ public:
         return name;
     }
 
+    /** \return the description of this pattern. */
+    const QString getDescription() const {
+        return description;
+    }
+
     /**
      * \return True if this pattern is already loaded.
      */
