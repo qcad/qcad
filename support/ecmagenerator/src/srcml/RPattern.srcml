@@ -72,6 +72,11 @@
         <return>return <expr><name>name</name></expr>;</return>
     }</block></function>
 
+    <comment type="block">/** \return the description of this pattern. */</comment>
+    <function><type><name>const</name> <name>QString</name></type> <name>getDescription</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>description</name></expr>;</return>
+    }</block></function>
+
     <comment type="block">/**
      * \return True if this pattern is already loaded.
      */</comment>

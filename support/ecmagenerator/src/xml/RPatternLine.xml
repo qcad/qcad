@@ -2,7 +2,7 @@
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
   <class name="RPatternLine"
-  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="true" isAbstract="false" isScriptable="true">
     <method name="getPainterPath" cppName="getPainterPath"
@@ -17,11 +17,32 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getLines" cppName="getLines" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QList &lt; RLine &gt;"
-      isPureVirtual="false" />
+      isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="includeDashes"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
     </method>
     <method name="getLength" cppName="getLength" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getAngle" cppName="getAngle" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getOffset" cppName="getOffset" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="getBasePoint" cppName="getBasePoint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="getDashes" cppName="getDashes" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; double &gt;"
+      isPureVirtual="false" />
     </method>
     <method name="scale" cppName="scale" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

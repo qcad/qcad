@@ -64,6 +64,9 @@
         getName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDescription
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isLoaded
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -57,6 +57,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getName, "getName");
             
+            REcmaHelper::registerFunction(&engine, proto, getDescription, "getDescription");
+            
             REcmaHelper::registerFunction(&engine, proto, isLoaded, "isLoaded");
             
             REcmaHelper::registerFunction(&engine, proto, load, "load");
@@ -517,6 +519,55 @@
             return result;
         }
          QScriptValue
+        REcmaPattern::getDescription
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPattern::getDescription", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPattern::getDescription";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPattern* self = 
+                        getSelf("getDescription", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'const QString'
+    const QString cppResult =
+        
+               self->getDescription();
+        // return type: const QString
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPattern.getDescription().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPattern::getDescription", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaPattern::isLoaded
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -690,7 +741,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPatternLine*
                     ap0 =
                     qscriptvalue_cast<
@@ -700,11 +751,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RPattern: Argument 0 is not of type RPatternLine*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPattern: Argument 0 is not of type RPatternLine.",
                                context);                    
                     }
-                    RPatternLine& a0 = *ap0;
+                    RPatternLine 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 

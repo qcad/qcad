@@ -887,6 +887,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false" />
     </method>
+    <method name="getPropertyEditorShowOnRequest"
+    cppName="getPropertyEditorShowOnRequest" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="getPolarCoordinateSeparator"
     cppName="getPolarCoordinateSeparator" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">

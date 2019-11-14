@@ -207,6 +207,12 @@
         getNoColorMode
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setSimplePointDisplay
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getSimplePointDisplay
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setPixelWidth
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

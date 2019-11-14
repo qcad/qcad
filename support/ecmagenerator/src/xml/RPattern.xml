@@ -44,6 +44,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="const QString" isPureVirtual="false" />
     </method>
+    <method name="getDescription" cppName="getDescription"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="const QString" isPureVirtual="false" />
+    </method>
     <method name="isLoaded" cppName="isLoaded" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />

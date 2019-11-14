@@ -23,6 +23,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="NoClipping" />
       <value name="PixelWidth" />
       <value name="NoColorMode" />
+      <value name="SimplePointDisplay" />
     </enum>
     <constructor>
       <variant />
@@ -430,6 +431,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getNoColorMode" cppName="getNoColorMode"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setSimplePointDisplay"
+    cppName="setSimplePointDisplay" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getSimplePointDisplay"
+    cppName="getSimplePointDisplay" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="setPixelWidth" cppName="setPixelWidth"

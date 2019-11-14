@@ -47,7 +47,11 @@
     
     <function_decl><type><name>virtual</name> <name>RTransaction</name></type> <name>apply</name><parameter_list>(<param><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
+<comment type="line">//protected:</comment>
+<comment type="line">//    void move(RDocument&amp; document, RTransaction&amp; transaction, REntity::Id entityId);</comment>
+
 </public><private>private:
+
     <decl_stmt><decl><type><name>RVector</name></type> <name>referencePoint</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RVector</name></type> <name>targetPoint</name></decl>;</decl_stmt>
 </private>}</block>;</class>
