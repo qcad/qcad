@@ -209,6 +209,7 @@
 #include "REcmaPainterPathDevice.h"
 #include "REcmaPasteOperation.h"
 #include "REcmaPattern.h"
+#include "REcmaPatternLine.h"
 #include "REcmaPatternListMetric.h"
 #include "REcmaPatternListImperial.h"
 #include "REcmaPenListener.h"
@@ -589,6 +590,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaRunner::initEcma(*engine);
     REcmaLinetypePattern::initEcma(*engine);
     REcmaPattern::initEcma(*engine);
+    REcmaPatternLine::initEcma(*engine);
     REcmaPatternListMetric::initEcma(*engine);
     REcmaPatternListImperial::initEcma(*engine);
     REcmaFont::initEcma(*engine);
