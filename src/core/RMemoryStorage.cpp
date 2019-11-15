@@ -59,6 +59,7 @@ void RMemoryStorage::clear() {
     selectedLayerMapDirty = true;
     blockEntityMap.clear();
     blockMap.clear();
+    typeObjectMap.clear();
     layerMap.clear();
     layerNameMap.clear();
     layerStateMap.clear();
