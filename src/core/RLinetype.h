@@ -45,7 +45,6 @@ class RTransaction;
  * \ingroup core
  * \scriptable
  * \sharedPointerSupport
- * \copyable
  */
 class QCADCORE_EXPORT RLinetype: public RObject {
 
@@ -60,6 +59,7 @@ public:
 public:
     RLinetype(RDocument* document=NULL);
     RLinetype(RDocument* document, const RLinetypePattern& pattern);
+    RLinetype(const RLinetype& other);
 
     virtual ~RLinetype();
 

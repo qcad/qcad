@@ -33,6 +33,10 @@ RLinetype::RLinetype(RDocument* document, const RLinetypePattern& pattern)
     : RObject(document), pattern(pattern) {
 }
 
+RLinetype::RLinetype(const RLinetype& other) : RObject(other) {
+    pattern = other.pattern;
+}
+
 RLinetype::~RLinetype() {
 }
 

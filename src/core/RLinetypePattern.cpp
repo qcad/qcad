@@ -30,7 +30,7 @@ QMap<QString, QString> RLinetypePattern::nameMap;
 
 
 RLinetypePattern::RLinetypePattern(bool metric, const QString& name, const QString& description, int num...)
-    : metric(metric), name(name), description(description), screenScale(1.0) {
+    : metric(metric), name(name), description(description), screenScale(1.0), noOffset(false) {
 
     QList<double> dashes;
 
@@ -45,17 +45,17 @@ RLinetypePattern::RLinetypePattern(bool metric, const QString& name, const QStri
 }
 
 RLinetypePattern::RLinetypePattern(bool metric, const QString& name, const QString& description, const QList<double>& dashes)
-    : metric(metric), name(name), description(description), screenScale(1.0) {
+    : metric(metric), name(name), description(description), screenScale(1.0), noOffset(false) {
 
     set(dashes);
 }
 
 RLinetypePattern::RLinetypePattern() :
-    metric(true) {
+    metric(true), screenScale(1.0), noOffset(false) {
 }
 
 RLinetypePattern::RLinetypePattern(bool metric, const QString& name, const QString& description) :
-    metric(metric), name(name), description(description) {
+    metric(metric), name(name), description(description), screenScale(1.0), noOffset(false) {
 }
 
 RLinetypePattern::RLinetypePattern(const RLinetypePattern& other) {
@@ -133,6 +133,7 @@ RLinetypePattern& RLinetypePattern::operator=(const RLinetypePattern& other) {
     name = other.name;
     description = other.description;
     screenScale = other.screenScale;
+    noOffset = other.noOffset;
     patternString = other.patternString;
     pattern = other.pattern;
     shapes = other.shapes;
@@ -241,6 +242,10 @@ QVector<qreal> RLinetypePattern::getScreenBasedLinetype() {
  *      given length that the pattern is symmetrical.
  */
 double RLinetypePattern::getPatternOffset(double length) {
+    if (noOffset) {
+        return 0.0;
+    }
+
     double optOffset = 0.0;
     double gap = 0.0;
     double maxGap = RMINDOUBLE;
@@ -347,6 +352,14 @@ double RLinetypePattern::getScreenScale() const {
 
 void RLinetypePattern::setScreenScale(double s) {
     screenScale = s;
+}
+
+bool RLinetypePattern::getNoOffset() const {
+    return noOffset;
+}
+
+void RLinetypePattern::setNoOffset(bool n) {
+    noOffset = n;
 }
 
 QString RLinetypePattern::getLabel() const {
