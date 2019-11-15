@@ -1030,38 +1030,43 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
                     );
     }
 
-    // regen arcs if necessary:
+    double ps = mapDistanceFromView(1.0);
+    // ideal pixel size for rendering arc at current zoom level:
+    if (isPrintingOrExporting()) {
+        ps = getScene()->getPixelSizeHint();
+    }
+
+    // regen arcs, xlines, rays if necessary:
     for (int i=0; i<list.length(); i++) {
         REntity::Id id = list[i];
 
         // get drawables of the given entity:
         QList<RGraphicsSceneDrawable> drawables = sceneQt->getDrawables(id);
 
-        // TODO: move to part before multi threading:
+        // before multi threading:
         // if at least one arc path is too detailed or not detailed enough,
         // or the path is an XLine or Ray, regen:
 
-        // ideal pixel size for rendering arc at current zoom level:
-        double ps = mapDistanceFromView(1.0);
-        if (isPrintingOrExporting()) {
-            ps = getScene()->getPixelSizeHint();
-        }
-
         // do we need to regen the path?
         bool regen = false;
-
-        for (int p=0; p<drawables.size(); p++) {
-            if (drawables.at(p).getType()==RGraphicsSceneDrawable::PainterPath) {
-                if (drawables.at(p).getPainterPath().getAlwaysRegen()==true) {
-                    regen = true;
-                    break;
-                }
-                if (drawables.at(p).getPainterPath().getAutoRegen()==true) {
-                    if (drawables.at(p).getPainterPath().getPixelSizeHint()>RS::PointTolerance &&
-                            (drawables.at(p).getPainterPath().getPixelSizeHint()<ps/5 || drawables.at(p).getPainterPath().getPixelSizeHint()>ps*5)) {
-
+        if (drawables.isEmpty()) {
+            // entity was last outside visible area, needs regen to reappear:
+            regen = true;
+        }
+        else {
+            for (int p=0; p<drawables.size(); p++) {
+                if (drawables.at(p).getType()==RGraphicsSceneDrawable::PainterPath) {
+                    if (drawables.at(p).getPainterPath().getAlwaysRegen()==true) {
                         regen = true;
                         break;
+                    }
+                    if (drawables.at(p).getPainterPath().getAutoRegen()==true) {
+                        if (drawables.at(p).getPainterPath().getPixelSizeHint()>RS::PointTolerance &&
+                           (drawables.at(p).getPainterPath().getPixelSizeHint()<ps/5 || drawables.at(p).getPainterPath().getPixelSizeHint()>ps*5)) {
+
+                            regen = true;
+                            break;
+                        }
                     }
                 }
             }
@@ -1069,7 +1074,6 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
 
         // regen:
         if (regen) {
-            // TODO: breaks multithreading:
             sceneQt->exportEntity(id, true);
             //drawables = sceneQt->getDrawables(id);
         }
