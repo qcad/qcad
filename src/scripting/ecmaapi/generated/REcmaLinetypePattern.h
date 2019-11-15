@@ -76,6 +76,12 @@
         setScreenScale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getNoOffset
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setNoOffset
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLabel
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

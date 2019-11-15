@@ -44,7 +44,7 @@
  * \copyable
  */</comment>
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RLinetypePattern</name> <block>{<private type="default">
-    <constructor_decl><name>Q_DECLARE_TR_FUNCTIONS</name><parameter_list>(<param><decl><type><name>RLinetypePattern</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    <macro><name>Q_DECLARE_TR_FUNCTIONS</name><argument_list>(<argument>RLinetypePattern</argument>)</argument_list></macro>
 
     <decl_stmt><decl><type><name>friend</name> class</type> <name>RLinetype</name></decl>;</decl_stmt>
 
@@ -73,6 +73,8 @@
     <function_decl><type><name>void</name></type> <name>setDescription</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>d</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>double</name></type> <name>getScreenScale</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setScreenScale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>s</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>getNoOffset</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setNoOffset</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>n</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>QString</name></type> <name>getLabel</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function><type><name>bool</name></type> <name>isMetric</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
@@ -148,6 +150,7 @@
     <decl_stmt><decl><type><name>QString</name></type> <name>name</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QString</name></type> <name>description</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>screenScale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>noOffset</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>mutable</name> <name>QString</name></type> <name>patternString</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name></type> <name>pattern</name></decl>;</decl_stmt>

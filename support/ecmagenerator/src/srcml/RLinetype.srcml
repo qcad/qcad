@@ -46,7 +46,6 @@
  * \ingroup core
  * \scriptable
  * \sharedPointerSupport
- * \copyable
  */</comment>
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RLinetype</name><super>: <specifier>public</specifier> <name>RObject</name></super> <block>{<private type="default">
 
@@ -61,6 +60,7 @@
 </public><public>public:
     <constructor_decl><name>RLinetype</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name>=<init><expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
     <constructor_decl><name>RLinetype</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>const</name> <name>RLinetypePattern</name>&amp;</type> <name>pattern</name></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RLinetype</name><parameter_list>(<param><decl><type><name>const</name> <name>RLinetype</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</constructor_decl>
 
     <destructor_decl><specifier>virtual</specifier> <name>~RLinetype</name><parameter_list>()</parameter_list>;</destructor_decl>
 

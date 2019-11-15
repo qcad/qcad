@@ -4245,10 +4245,10 @@
 
 
 
-    // type: RLinetype &, copyable: true
+    // type: RLinetype &, copyable: false
         << qScriptValueFromValue(engine, 
 
-        arg1
+        &arg1
         )
       
                             )

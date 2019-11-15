@@ -68,6 +68,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setScreenScale, "setScreenScale");
             
+            REcmaHelper::registerFunction(&engine, proto, getNoOffset, "getNoOffset");
+            
+            REcmaHelper::registerFunction(&engine, proto, setNoOffset, "setNoOffset");
+            
             REcmaHelper::registerFunction(&engine, proto, getLabel, "getLabel");
             
             REcmaHelper::registerFunction(&engine, proto, isMetric, "isMetric");
@@ -999,6 +1003,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLinetypePattern::setScreenScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::getNoOffset
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::getNoOffset", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::getNoOffset";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("getNoOffset", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getNoOffset();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.getNoOffset().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::getNoOffset", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinetypePattern::setNoOffset
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinetypePattern::setNoOffset", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinetypePattern::setNoOffset";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinetypePattern* self = 
+                        getSelf("setNoOffset", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setNoOffset(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypePattern.setNoOffset().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinetypePattern::setNoOffset", context, engine);
             return result;
         }
          QScriptValue
