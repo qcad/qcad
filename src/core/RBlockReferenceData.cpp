@@ -378,13 +378,14 @@ QSharedPointer<REntity> RBlockReferenceData::queryEntity(REntity::Id entityId, b
         return QSharedPointer<REntity>();
     }
 
-    if (!RMath::fuzzyCompare(visualPropertiesScale, 1.0)) {
-        entity->scaleVisualProperties(visualPropertiesScale);
-    }
-
     // transform entity into (new type of) entity:
     if (transform) {
         applyTransformationTo(entity);
+    }
+    else {
+        if (!RMath::fuzzyCompare(visualPropertiesScale, 1.0)) {
+            entity->scaleVisualProperties(visualPropertiesScale);
+        }
     }
 
     if (!transform) {
