@@ -200,7 +200,7 @@
     <message>
         <location line="+52"/>
         <source>Hatch Patterns</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Peittokuviot</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4800,7 +4800,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1795"/>
         <source>&amp;FlexPainter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Joustomaalari</translation>
     </message>
 </context>
 <context>
@@ -4808,87 +4808,87 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Maalausasetukset</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Maalauksen luontiasetukset</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Mirror painters over baseline</source>
-        <translation type="unfinished"></translation>
+        <translation>Maalaus peilikuvana perusviivan yli</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Flip Painters</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Käännä maalaus</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Group all castings to one operation</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ryhmitä kaikki luodut yhdeksi operaatioksi</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Cast in group</source>
-        <translation type="unfinished"></translation>
+        <translation>Luo ryhmään</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast on newly sub-layer &apos;Painted&apos; if applicable</source>
-        <translation type="unfinished"></translation>
+        <translation>Luo  uuteen alitasoon &apos;Maalattu&apos; tarvittaessa</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Cast on sub-layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Luo alitaso</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Start with casting a begin apex on open forms</source>
-        <translation type="unfinished"></translation>
+        <translation>Aloita luomalla aloituspiste avoimiin muotoihin</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add Begin Apex</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää aloituspiste</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>End with casting an end apex on open forms</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lopeta luominen kärjen loppuun avoimissa muodoissa</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add End Apex</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää loppupiste</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add insertions in between eg. spacers, knots</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää lisäyksiä väleihin esim. välikappaleet, solmut</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add Insertions</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää lisäyksiä</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation type="unfinished"></translation>
+        <translation>Maalaussarja</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Preview of painters</source>
-        <translation type="unfinished"></translation>
+        <translation>Maalauksien esikatselu</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse maalaussarja</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -4898,82 +4898,82 @@ on jo luettelossa.</translation>
     <message>
         <location line="+5"/>
         <source>OrthogonalBar</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohtisuora palkki</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalPointsGlobal</source>
-        <translation type="unfinished"></translation>
+        <translation>Yleiset kohtisuorat pisteet</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWave</source>
-        <translation type="unfinished"></translation>
+        <translation>Siniaalto</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWaveGlobal</source>
-        <translation type="unfinished"></translation>
+        <translation>Yleinen siniaalto</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>3PhaseWaveGlobal</source>
-        <translation type="unfinished"></translation>
+        <translation>Yleinen 3-vaiheaalto</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>TriangleWave</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolmioaalto</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SawtoothWave</source>
-        <translation type="unfinished"></translation>
+        <translation>Saha-aalto</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqaureWave</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanttiaalto</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SteppedWave</source>
-        <translation type="unfinished"></translation>
+        <translation>Porrasaalto</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShape</source>
-        <translation type="unfinished"></translation>
+        <translation>Ruudutettu muoto</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShapeFlexing</source>
-        <translation type="unfinished"></translation>
+        <translation>Ruudutettu muototaivutus</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>AllPainterDataTypes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kaikki maalaustietotyypit</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Insertion type</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisäyksen tyyppi</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Preview of insertion</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisäyksen esikatselu</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse lisäys tai syötä tyhjä tila</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&lt;Enter space size&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;Syötä tilan koko&gt;</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4983,117 +4983,117 @@ on jo luettelossa.</translation>
     <message>
         <location line="+301"/>
         <source>Document Units</source>
-        <translation type="unfinished"></translation>
+        <translation>Asiakirjan yksiköt</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>#Undefined#</source>
-        <translation type="unfinished"></translation>
+        <translation>#Määrittämätön#</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Enter painter width (+0)</source>
-        <translation type="unfinished"></translation>
+        <translation>Syötä maalauksen leveys (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Width : </source>
-        <translation type="unfinished"></translation>
+        <translation>Leveys: </translation>
     </message>
     <message>
         <location line="+16"/>
         <source>0</source>
-        <translation type="unfinished">0</translation>
+        <translation>0</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation type="unfinished"></translation>
+        <translation>Toistuvat maalausasetukset</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Enter main painter stepsize (+0)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Syötä maalauksen askelkoko (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Stepsize :</source>
-        <translation type="unfinished"></translation>
+        <translation>Askelkoko:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Enter main painter length (+)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Syötä maalauksen pituus (+)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Length :</source>
-        <translation type="unfinished"></translation>
+        <translation>Pituus:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Keep painters proportional</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Säilytä maalauksen suhteet</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Select percentage of Stepsize</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse askelkoon prosentti</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Closed Forms shifting % :</source>
-        <translation type="unfinished"></translation>
+        <translation>Suljettujen muotojen muutos %:</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation type="unfinished"></translation>
+        <translation>Avoiminen muotojen muutosvaihtoehdot</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sovita skaalaus f 1,00–0,90 koko muotoon</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Dynamically scale to fit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sovita dynaamisesti</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Align with begin</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohdista alkuun</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Centered</source>
-        <translation type="unfinished"></translation>
+        <translation>Keskitetty</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Align with End</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohdista loppuun</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Verbose info (persistent on)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sanalliset tiedot (pysyvä)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Verbose *</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verbose *</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Deleted painted over base entities (persistent off)</source>
-        <translation type="unfinished"></translation>
+        <translation>Poistettu peruskokonaisuuksien ylimaalaus (pysyvästi pois päältä)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Delete Base Entities *</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista peruskokonaisuudet *</translation>
     </message>
 </context>
 <context>
@@ -5485,7 +5485,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+77"/>
         <source>Use multithreading</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Käytä monisäkeistystä</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -8337,17 +8337,17 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location filename="../scripts/Widgets/MenuBar/MenuBar.js" line="+24"/>
         <source>Widgets</source>
-        <translation type="unfinished">Pienoisohjelmat</translation>
+        <translation>Pienoisohjelmat</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Menu Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Valikkopalkki</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/MenuBar/PreferencesPage.ui" line="+17"/>
         <source>Use native menu bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä alkuperäistä valikkopalkkia</translation>
     </message>
 </context>
 <context>
