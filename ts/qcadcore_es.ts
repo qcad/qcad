@@ -850,7 +850,7 @@ Colores
         <translation type="vanished">Márgenes de trazado</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+831"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+834"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Se detectó una referencia de bloque circular (recursiva):</translation>
     </message>
@@ -1060,7 +1060,7 @@ Borde
         <translation type="vanished">2 rayas 1 punto (grande)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+48"/>
+        <location filename="../src/core/RLinetype.cpp" line="+52"/>
         <source>Name</source>
         <translation>Nombre</translation>
     </message>
@@ -1083,7 +1083,7 @@ Borde
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+856"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+869"/>
         <source>By Layer</source>
         <translation>Por Capa</translation>
     </message>

@@ -227,11 +227,16 @@
     </message>
     <message>
         <location line="+52"/>
+        <source>Hatch Patterns</source>
+        <translation>Arceer patronen</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Translations</source>
         <translation>Vertalingen</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+15"/>
         <source>Templates</source>
         <translation>Sjablonen</translation>
     </message>

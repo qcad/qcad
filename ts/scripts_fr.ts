@@ -235,11 +235,16 @@
     </message>
     <message>
         <location line="+52"/>
+        <source>Hatch Patterns</source>
+        <translation>Motifs de hachures</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Translations</source>
         <translation>Traductions</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+15"/>
         <source>Templates</source>
         <translation>Modèles</translation>
     </message>

@@ -666,7 +666,7 @@
         <translation>Maks. razširitev</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+831"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+834"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Zaznano krožno (rekurzivno) sklicevanje zbirov:</translation>
     </message>
@@ -802,7 +802,7 @@
         <translation type="vanished">Rob (redko)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+48"/>
+        <location filename="../src/core/RLinetype.cpp" line="+52"/>
         <source>Name</source>
         <translation>Ime</translation>
     </message>
@@ -825,7 +825,7 @@
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+856"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+869"/>
         <source>By Layer</source>
         <translation>Po plasti</translation>
     </message>
