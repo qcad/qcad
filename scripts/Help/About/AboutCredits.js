@@ -54,7 +54,7 @@ var credits =
     ],
     [
         qsTr("Hatch Patterns"),
-        [ "John Hyslop",         "CELTIC-01, CELTIC-02, LATTICE-01, SPACE-INVADER" ],
+        [ "John Hyslop",         "CELTIC-01, CELTIC-02, LATTICE-01" ],
     ],
     [
         qsTr("Translations"),
