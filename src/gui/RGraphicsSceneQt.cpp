@@ -705,11 +705,12 @@ void RGraphicsSceneQt::deleteDrawables() {
  * TODO: return reference or pointer
  */
 QList<RGraphicsSceneDrawable> RGraphicsSceneQt::getDrawables(REntity::Id entityId) {
-    //if (drawables.contains(entityId)) {
+    // TODO: check should not be necessary:
+    if (drawables.contains(entityId)) {
         return drawables[entityId];
-    //}
+    }
 
-    //return QList<RGraphicsSceneDrawable>();
+    return QList<RGraphicsSceneDrawable>();
 }
 
 bool RGraphicsSceneQt::hasClipRectangleFor(REntity::Id entityId, bool preview) const {
@@ -848,7 +849,8 @@ void RGraphicsSceneQt::startEntity(bool topLevelEntity) {
 
     if (!exportToPreview) {
         if (topLevelEntity) {
-            // top level entity (i.e. not entity in block ref): remove previous graphical representations:
+            // top level entity (i.e. not entity in block ref):
+            // remove previous graphical representations:
             drawables.remove(getEntity()->getId());
         }
     }
