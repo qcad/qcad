@@ -42,6 +42,7 @@ class RDocument;
 class REntity;
 class RBlockReferenceEntity;
 class RExporter;
+class RViewportData;
 
 #ifndef RDEFAULT_QSET_INT
 #define RDEFAULT_QSET_INT QSet<int>()
@@ -558,6 +559,10 @@ public:
 
     virtual void scaleVisualProperties(double scaleFactor) {
         getData().scaleVisualProperties(scaleFactor);
+    }
+
+    virtual void setViewportContext(const RViewportData& vp) {
+        Q_UNUSED(vp);
     }
 
     /**

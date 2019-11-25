@@ -256,6 +256,10 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
             entity->setLinetypeScale(data.scaleFactor);
         }
 
+        if (entity->getType()==RS::EntityHatch) {
+            entity->setViewportContext(data);
+        }
+
         e.exportEntity(*entity, preview, true);
 
         i++;

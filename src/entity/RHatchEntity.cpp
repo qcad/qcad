@@ -385,3 +385,10 @@ void RHatchEntity::print(QDebug dbg) const {
     }
     dbg.nospace() << ")";
 }
+
+void RHatchEntity::setViewportContext(const RViewportData& vp) {
+    // apply viewport transforms:
+    RVector offs =  vp.getViewCenter()*vp.getScale() + vp.getViewTarget()*vp.getScale() - data.getOriginPoint()*vp.getScale();
+    offs.rotate(vp.getRotation());
+    data.setOriginPoint(vp.getCenter() - offs);
+}

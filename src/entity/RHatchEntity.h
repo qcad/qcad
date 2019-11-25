@@ -188,6 +188,8 @@ public:
         return data.getExploded();
     }
 
+    virtual void setViewportContext(const RViewportData& origin);
+
 protected:
     virtual void print(QDebug dbg) const;
 
