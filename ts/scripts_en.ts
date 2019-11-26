@@ -7370,7 +7370,7 @@ Library browser will not be available.</translation>
     <message>
         <location line="+44"/>
         <source>Dark icon background</source>
-        <translation type="unfinished"></translation>
+        <translation>Dark icon background</translation>
     </message>
     <message>
         <location line="+7"/>
