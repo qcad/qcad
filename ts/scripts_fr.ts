@@ -8376,7 +8376,7 @@ Library browser will not be available.</translation>
     <message>
         <location line="+44"/>
         <source>Dark icon background</source>
-        <translation type="unfinished"></translation>
+        <translation>Fond d&apos;icône sombre</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -11653,12 +11653,12 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location line="+27"/>
         <source>Store &quot;last saved by&quot; file information as:</source>
-        <translation type="unfinished"></translation>
+        <translation>Stocker les informations &quot;dernière sauvegarde par&quot; sous :</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>(empty for username)</source>
-        <translation type="unfinished"></translation>
+        <translation>(vide pour le nom d&apos;utilisateur)</translation>
     </message>
 </context>
 <context>
