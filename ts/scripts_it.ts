@@ -8403,7 +8403,7 @@ Library browser will not be available.</translation>
     <message>
         <location line="+44"/>
         <source>Dark icon background</source>
-        <translation type="unfinished"></translation>
+        <translation>Icona scura sullo sfondo</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -11698,12 +11698,12 @@ Seconda entità non può essere tagliata.</translatorcomment>
     <message>
         <location line="+27"/>
         <source>Store &quot;last saved by&quot; file information as:</source>
-        <translation type="unfinished"></translation>
+        <translation>Memorizza le informazioni sul file &quot;ultimo salvataggio di&quot; come:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>(empty for username)</source>
-        <translation type="unfinished"></translation>
+        <translation>(vuoto per nome utente)</translation>
     </message>
 </context>
 <context>
