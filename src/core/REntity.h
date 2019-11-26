@@ -562,7 +562,8 @@ public:
     }
 
     virtual void setViewportContext(const RViewportData& vp) {
-        Q_UNUSED(vp);
+        // MSVC does not compile this:
+        //Q_UNUSED(vp);
     }
 
     /**
