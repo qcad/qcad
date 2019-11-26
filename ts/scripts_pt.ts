@@ -8758,7 +8758,7 @@ Navegador de Biblioteca não estará disponível.</translation>
     <message>
         <location line="+44"/>
         <source>Dark icon background</source>
-        <translation type="unfinished"></translation>
+        <translation>Fundo escuro do ícone</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12035,12 +12035,12 @@ Salve &amp;Como...</translatorcomment>
     <message>
         <location line="+27"/>
         <source>Store &quot;last saved by&quot; file information as:</source>
-        <translation type="unfinished"></translation>
+        <translation>Armazene as informações do arquivo &quot;salvas pela última vez por&quot; como:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>(empty for username)</source>
-        <translation type="unfinished"></translation>
+        <translation>(vazio para nome de usuário)</translation>
     </message>
 </context>
 <context>
