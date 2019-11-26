@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>320</width>
-    <height>399</height>
+    <width>513</width>
+    <height>501</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -49,7 +49,7 @@
       <item row="0" column="1">
        <widget class="QComboBox" name="IconSize">
         <property name="currentIndex">
-         <number>2</number>
+         <number>3</number>
         </property>
         <item>
          <property name="text">
@@ -83,17 +83,24 @@
         </item>
        </widget>
       </item>
-      <item row="1" column="0">
+      <item row="1" column="1">
+       <widget class="QCheckBox" name="DarkIconBackground">
+        <property name="text">
+         <string>Dark icon background</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
        <widget class="QLabel" name="label_10">
         <property name="text">
          <string>View Mode:</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="1">
+      <item row="2" column="1">
        <widget class="QComboBox" name="ViewMode"/>
       </item>
-      <item row="2" column="0">
+      <item row="3" column="0">
        <widget class="QLabel" name="label_11">
         <property name="text">
          <string>Number of items
@@ -101,7 +108,7 @@ shown in search results:</string>
         </property>
        </widget>
       </item>
-      <item row="2" column="1">
+      <item row="3" column="1">
        <widget class="QLineEdit" name="ItemsPerPage">
         <property name="text">
          <string notr="true">60</string>

@@ -193,7 +193,8 @@ Item.prototype.getIcon = function(small, regenerate, noFavoritesMark) {
     var view = new RGraphicsViewImage();
     view.setAntialiasing(true);
     view.setPaintOrigin(false);
-    if (RSettings.hasDarkGuiBackground()) {
+    if (RSettings.hasDarkGuiBackground() ||
+        RSettings.getBoolValue("LibraryBrowser/DarkIconBackground", false)) {
         view.setBackgroundColor(new QColor(Qt.black));
     }
     else {
