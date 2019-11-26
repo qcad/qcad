@@ -239,7 +239,7 @@
         <translation>Motifs de hachures</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+8"/>
         <source>Translations</source>
         <translation>Traductions</translation>
     </message>
@@ -8375,6 +8375,11 @@ Library browser will not be available.</translation>
     </message>
     <message>
         <location line="+44"/>
+        <source>Dark icon background</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>View Mode:</source>
         <translation>Mode d&apos;affichage:</translation>
     </message>
@@ -11644,6 +11649,16 @@ Indiquer le point cible</translatorcomment>
         <location line="+37"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
         <translation>Afficher un avertissement lors de l&apos;enregistrement d&apos;un format de fichier qui ne prend pas en charge les couleurs 24 bits</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Store last saved file information as:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>(empty for username)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

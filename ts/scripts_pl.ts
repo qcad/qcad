@@ -222,7 +222,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+8"/>
         <source>Translations</source>
         <translation>Tłumaczenia</translation>
     </message>
@@ -9176,6 +9176,11 @@ Przeglądarka kolekcji nie będzie dostępna.</translation>
     </message>
     <message>
         <location line="+44"/>
+        <source>Dark icon background</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>View Mode:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Tryb wyświetlania:</translation>
@@ -12974,6 +12979,16 @@ Zapisz &amp;wszystko</translatorcomment>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Wyświetlanie ostrzeżenia podczas zapisywania pliku w formacie, który nie obsługuje 24-bitowej palety barw</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Store last saved file information as:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>(empty for username)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Load/Save</source>

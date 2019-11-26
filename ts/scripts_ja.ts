@@ -215,7 +215,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+8"/>
         <source>Translations</source>
         <translation>翻訳</translation>
     </message>
@@ -7651,6 +7651,11 @@ Database file: %3
     </message>
     <message>
         <location line="+44"/>
+        <source>Dark icon background</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>View Mode:</source>
         <translation>ビューモード:</translation>
     </message>
@@ -10570,6 +10575,16 @@ shown in search results:</source>
         <location line="+37"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
         <translation>２４ビットカラーをサポートしない形式の時警告を出す</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Store last saved file information as:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>(empty for username)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Load/Save</source>

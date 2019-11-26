@@ -235,7 +235,7 @@
         <translation>Padrões de hachuras</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+8"/>
         <source>Translations</source>
         <translation>Traduções</translation>
     </message>
@@ -8757,6 +8757,11 @@ Navegador de Biblioteca não estará disponível.</translation>
     </message>
     <message>
         <location line="+44"/>
+        <source>Dark icon background</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>View Mode:</source>
         <translation>Modo de Exibição:</translation>
     </message>
@@ -12026,6 +12031,16 @@ Salve &amp;Como...</translatorcomment>
         <location line="+37"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
         <translation>Exiba aviso ao salvar em um formato de arquivo que não suporte cores de 24bits</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Store last saved file information as:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>(empty for username)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

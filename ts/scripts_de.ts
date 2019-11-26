@@ -251,7 +251,7 @@
         <translation>Schraffurmuster</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+8"/>
         <source>Translations</source>
         <translation>Übersetzungen</translation>
     </message>
@@ -8767,6 +8767,11 @@ Library browser will not be available.</translation>
     </message>
     <message>
         <location line="+44"/>
+        <source>Dark icon background</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>View Mode:</source>
         <translation>Anzeigemodus:</translation>
     </message>
@@ -12369,6 +12374,16 @@ nicht öffnen.
         <location line="+37"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
         <translation>Warnung anzeigen beim Speichern in einem Dateiformat, welches keine 24bit Farben unterstützt</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Store last saved file information as:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>(empty for username)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -203,7 +203,7 @@
         <translation type="unfinished">Peittokuviot</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+8"/>
         <source>Translations</source>
         <translation>Käännökset</translation>
     </message>
@@ -7502,6 +7502,11 @@ Kirjastoselain ei ole käytettävissä.</translation>
     </message>
     <message>
         <location line="+44"/>
+        <source>Dark icon background</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>View Mode:</source>
         <translation>Näkymä:</translation>
     </message>
@@ -10246,6 +10251,16 @@ näkyy hakutuloksissa:</translation>
         <location line="+37"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
         <translation>Näytä varoitus, kun tallennetaan tiedostomuotoon, joka ei tue 24bittisiä värejä</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Store last saved file information as:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>(empty for username)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Load/Save</source>
