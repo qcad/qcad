@@ -399,7 +399,8 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
 
     QSharedPointer<RBlock> block = document->queryBlockDirect(data.referencedBlockId);
     if (block.isNull()) {
-        qWarning() << "block" << data.referencedBlockId << "is NULL";
+        recursionDepth--;
+        //qWarning() << "block" << data.referencedBlockId << "is NULL";
         return;
     }
 
