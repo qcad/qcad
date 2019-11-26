@@ -8376,7 +8376,7 @@ Library browser will not be available.</translation>
     <message>
         <location line="+44"/>
         <source>Dark icon background</source>
-        <translation type="unfinished"></translation>
+        <translation>Fondo oscuro del icono</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -11672,12 +11672,12 @@ Segunda entidad no se pueden recortar.</translatorcomment>
     <message>
         <location line="+27"/>
         <source>Store &quot;last saved by&quot; file information as:</source>
-        <translation type="unfinished"></translation>
+        <translation>Almacene la información del archivo &quot;último guardado por&quot; como:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>(empty for username)</source>
-        <translation type="unfinished"></translation>
+        <translation>(vacío para nombre de usuario)</translation>
     </message>
 </context>
 <context>
