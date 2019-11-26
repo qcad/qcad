@@ -10087,12 +10087,12 @@ shown in search results:</translation>
     <message>
         <location line="+27"/>
         <source>Store &quot;last saved by&quot; file information as:</source>
-        <translation type="unfinished"></translation>
+        <translation>Store &quot;last saved by&quot; file information as:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>(empty for username)</source>
-        <translation type="unfinished"></translation>
+        <translation>(empty for username)</translation>
     </message>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAs.js" line="+38"/>
