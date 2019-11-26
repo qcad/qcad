@@ -8768,7 +8768,7 @@ Library browser will not be available.</translation>
     <message>
         <location line="+44"/>
         <source>Dark icon background</source>
-        <translation type="unfinished"></translation>
+        <translation>Dunkler Iconhintergrund</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12378,12 +12378,12 @@ nicht öffnen.
     <message>
         <location line="+27"/>
         <source>Store &quot;last saved by&quot; file information as:</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Zuletzt gespeichert von&quot; Dateiinformationen speichern als:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>(empty for username)</source>
-        <translation type="unfinished"></translation>
+        <translation>(leer für Benutzername)</translation>
     </message>
 </context>
 <context>
