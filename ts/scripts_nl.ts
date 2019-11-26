@@ -7508,7 +7508,7 @@ Library browser will not be available.</translation>
     <message>
         <location line="+44"/>
         <source>Dark icon background</source>
-        <translation type="unfinished"></translation>
+        <translation>Donkere icon achtergrond</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -10245,12 +10245,12 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+27"/>
         <source>Store last saved file information as:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sla de laatst opgeslagen bestandsinformatie op als:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>(empty for username)</source>
-        <translation type="unfinished"></translation>
+        <translation>(leeg voor gebruikersnaam)</translation>
     </message>
     <message>
         <source>Load/Save</source>
