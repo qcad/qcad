@@ -12034,7 +12034,7 @@ Salve &amp;Como...</translatorcomment>
     </message>
     <message>
         <location line="+27"/>
-        <source>Store last saved file information as:</source>
+        <source>Store &quot;last saved by&quot; file information as:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
