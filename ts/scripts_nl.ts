@@ -416,11 +416,11 @@ de wijzigingen door te voeren.</translation>
     <message>
         <location filename="../scripts/Draw/Arc/Arc.js" line="+71"/>
         <source>Arc Tools</source>
-        <translation>Boog gereedschappen</translation>
+        <translation>Booggereedschappen</translation>
     </message>
     <message>
         <source>Show arc tools</source>
-        <translation type="vanished">Toon bogen gereedschappen</translation>
+        <translation>Toon booggereedschappen</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -1673,11 +1673,11 @@ Wilt u het herstellen?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle.js" line="+71"/>
         <source>Circle Tools</source>
-        <translation>Cirkel gereedschappen</translation>
+        <translation>Cirkelgereedschappen</translation>
     </message>
     <message>
         <source>Show circle tools</source>
-        <translation type="vanished">Toon cirkel gereedschappen</translation>
+        <translation>Toon cirkelgereedschappen</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -2331,7 +2331,7 @@ Wilt u het herstellen?</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/CommandLineTools/CommandLineTools.js" line="+50"/>
         <source>&amp;Command Line Tools</source>
-        <translation>&amp;Opdrachtregel gereedschappen</translation>
+        <translation>&amp;Opdrachtregelgereedschappen</translation>
     </message>
 </context>
 <context>
@@ -3098,11 +3098,11 @@ Wilt u het herstellen?</translation>
     <message>
         <location line="+79"/>
         <source>Dimension Tools</source>
-        <translation>Bemating gereedschappen</translation>
+        <translation>Bematinggereedschappen</translation>
     </message>
     <message>
         <source>Show dimension tools</source>
-        <translation type="vanished">Bematinggereedschap tonen</translation>
+        <translation>Bematinggereedschappen tonen</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -3459,7 +3459,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+15"/>
         <source>Drawing Tools</source>
-        <translation>Teken gereedschappen</translation>
+        <translation>Tekengereedschappen</translation>
     </message>
 </context>
 <context>
@@ -3741,12 +3741,12 @@ is al in de lijst.</translation>
     <message>
         <location line="+28"/>
         <source>Main Tools</source>
-        <translation>Hoofd gereedschappen</translation>
+        <translation>Hoofdgereedschappen</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>CAD Tools</source>
-        <translation>CAD gereedschappen</translation>
+        <translation>CAD-gereedschappen</translation>
     </message>
     <message>
         <location line="+710"/>
@@ -3867,11 +3867,11 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Edit/Edit.js" line="+65"/>
         <source>Edit Tools</source>
-        <translation>Bewerken gereedschappen</translation>
+        <translation>Bewerkgereedschappen</translation>
     </message>
     <message>
         <source>Show edit tools</source>
-        <translation type="vanished">Bewerken gereedschappen tonen</translation>
+        <translation>Bewerkgereedschappen tonen</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -3962,7 +3962,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Draw/Ellipse/Ellipse.js" line="+85"/>
         <source>Ellipse Tools</source>
-        <translation>Ellips gereedschappen</translation>
+        <translation>Ellipsgereedschappen</translation>
     </message>
     <message>
         <source>Show ellipse tools</source>
@@ -5623,7 +5623,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+33"/>
         <source>Info Tools</source>
-        <translation>Info gereedschappen</translation>
+        <translation>Infogereedschappen</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -5633,7 +5633,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+33"/>
         <source>Drawing Tools</source>
-        <translation>Teken gereedschappen</translation>
+        <translation>Tekengereedschappen</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -5643,12 +5643,12 @@ is al in de lijst.</translation>
     <message>
         <location line="+33"/>
         <source>Zoom Tools</source>
-        <translation>Zoom gereedschappen</translation>
+        <translation>Zoomgereedschappen</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Zoom box border:</source>
-        <translation>Zoom venster rand:</translation>
+        <translation>Zoomvensterrand:</translation>
     </message>
     <message>
         <location line="-643"/>
@@ -5797,11 +5797,11 @@ is al in de lijst.</translation>
     <message>
         <location line="-27"/>
         <source>Hatch Tools</source>
-        <translation>Arcering gereedschappen</translation>
+        <translation>Arceringgereedschappen</translation>
     </message>
     <message>
         <source>Show hatch tools</source>
-        <translation type="vanished">Toon arcering gereedschappen</translation>
+        <translation>Toon arceringgereedschappen</translation>
     </message>
 </context>
 <context>
@@ -6474,11 +6474,11 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Information/Information.js" line="+334"/>
         <source>Information Tools</source>
-        <translation>Informatie gereedschappen</translation>
+        <translation>Infogereedschappen</translation>
     </message>
     <message>
         <source>Show information tools</source>
-        <translation type="vanished">Informatie gereedschappen tonen</translation>
+        <translation>Infogereedschappen tonen</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -7008,11 +7008,11 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Layer/Layer.js" line="+97"/>
         <source>Layer Tools</source>
-        <translation>Laag gereedschappen</translation>
+        <translation>Laaggereedschappen</translation>
     </message>
     <message>
         <source>Show layer tools</source>
-        <translation type="vanished">Laag gereedschappen tonen</translation>
+        <translation>Laaggereedschappen tonen</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -7605,7 +7605,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Draw/Line/Line.js" line="+81"/>
         <source>Line Tools</source>
-        <translation>Lijn gereedschappen</translation>
+        <translation>Lijngereedschappen</translation>
     </message>
     <message>
         <source>Show line tools</source>
@@ -8485,7 +8485,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+9"/>
         <source>Misc Drawing Tools</source>
-        <translation>Diverse teken gereedschappen</translation>
+        <translation>Diverse tekengereedschappen</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -8534,11 +8534,11 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+10"/>
         <source>Misc Modification Tools</source>
-        <translation>Diverse modificeren gereedschappen</translation>
+        <translation>Diverse modificatiegereedschappen</translation>
     </message>
     <message>
         <source>Show misc modification tools</source>
-        <translation type="vanished">Diverse modificeren gereedschappen tonen</translation>
+        <translation>Diverse modificatiegereedschappen tonen</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -8556,11 +8556,11 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+9"/>
         <source>Misc Selection Tools</source>
-        <translation>Diverse selectie gereedschappen</translation>
+        <translation>Diverse selectiegereedschappen</translation>
     </message>
     <message>
         <source>Show misc selection tools</source>
-        <translation type="vanished">Diverse selectie gereedschappen tonen</translation>
+        <translation>Diverse selectiegereedschappen tonen</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -8573,11 +8573,11 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Modify/Modify.js" line="+99"/>
         <source>Modification Tools</source>
-        <translation>Modificatie gereedschappen</translation>
+        <translation>Modificatiegereedschappen</translation>
     </message>
     <message>
         <source>Show modification tools</source>
-        <translation type="vanished">Modificeren gereedschappen tonen</translation>
+        <translation>Modificatiegereedschappen tonen</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -9147,11 +9147,11 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Draw/Point/Point.js" line="+71"/>
         <source>Point Tools</source>
-        <translation>Punt gereedschappen</translation>
+        <translation>Puntgereedschappen</translation>
     </message>
     <message>
         <source>Show point tools</source>
-        <translation type="vanished">Punt gereedschappen tonen</translation>
+        <translation>Puntgereedschappen tonen</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -9242,11 +9242,11 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
         <source>Polyline Tools</source>
-        <translation>Polylijn gereedschappen</translation>
+        <translation>Polylijngereedschappen</translation>
     </message>
     <message>
         <source>Show polyline tools</source>
-        <translation type="vanished">Polylijn gereedschap tonen</translation>
+        <translation>Polylijngereedschappen tonen</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -9463,11 +9463,11 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Projection/Projection.js" line="+82"/>
         <source>Projection Tools</source>
-        <translation>Projectie gereedschappen</translation>
+        <translation>Projectiegereedschappen</translation>
     </message>
     <message>
         <source>Show projection tools</source>
-        <translation type="vanished">Projectie gereedschappen tonen</translation>
+        <translation>Projectiegereedschappen tonen</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -10447,16 +10447,16 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Select/Select.js" line="+216"/>
         <source>Selection Tools</source>
-        <translation>Selectie gereedschappen</translation>
+        <translation>Selectiegereedschappen</translation>
     </message>
     <message>
         <source>Show selection tools</source>
-        <translation type="vanished">Selectie gereedschappen tonen</translation>
+        <translation>Selectiegereedschappen tonen</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Selection Tools Panel</source>
-        <translation>Selectie gereedschappen</translation>
+        <translation>Selectiegereedschappen</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -10932,7 +10932,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.js" line="+78"/>
         <source>Shape Tools</source>
-        <translation>Vorm gereedschappen</translation>
+        <translation>Vormgereedschappen</translation>
     </message>
     <message>
         <source>Show shape tools</source>
@@ -11572,11 +11572,11 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Draw/Spline/Spline.js" line="+72"/>
         <source>Spline Tools</source>
-        <translation>Spline gereedschappen</translation>
+        <translation>Splinegereedschappen</translation>
     </message>
     <message>
         <source>Show spline tools</source>
-        <translation type="vanished">Spline gereedschappen tonen</translation>
+        <translation>Splinegereedschappen tonen</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -12881,11 +12881,11 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
         <source>View Tools</source>
-        <translation>Aanzicht gereedschappen</translation>
+        <translation>Aanzichtgereedschappen</translation>
     </message>
     <message>
         <source>Show view tools</source>
-        <translation type="vanished">Aanzicht gereedschappen tonen</translation>
+        <translation>Aanzichtgereedschappen tonen</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -13229,7 +13229,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+13"/>
         <source>Window Tools</source>
-        <translation>Venster gereedschappen</translation>
+        <translation>Venstergereedschappen</translation>
     </message>
 </context>
 <context>
@@ -13237,7 +13237,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/View/Zoom/WindowZoom/WindowZoomInit.js" line="+2"/>
         <source>&amp;Window Zoom</source>
-        <translation>&amp;Venster zoom</translation>
+        <translation>&amp;Vensterzoom</translation>
     </message>
 </context>
 <context>
@@ -13276,11 +13276,11 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+14"/>
         <source>Zoom Tools</source>
-        <translation>Zoom gereedschappen</translation>
+        <translation>Zoomgereedschappen</translation>
     </message>
     <message>
         <source>Show zoom tools</source>
-        <translation type="vanished">Zoom gereedschappen tonen</translation>
+        <translation>Zoomgereedschappen tonen</translation>
     </message>
     <message>
         <location line="+28"/>
