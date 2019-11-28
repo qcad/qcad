@@ -203,7 +203,7 @@
         <translation type="unfinished">Peittokuviot</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+15"/>
         <source>Translations</source>
         <translation>Käännökset</translation>
     </message>

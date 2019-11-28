@@ -231,7 +231,7 @@
         <translation>Arceer patronen</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+15"/>
         <source>Translations</source>
         <translation>Vertalingen</translation>
     </message>
@@ -420,7 +420,7 @@ de wijzigingen door te voeren.</translation>
     </message>
     <message>
         <source>Show arc tools</source>
-        <translation>Toon booggereedschappen</translation>
+        <translation type="vanished">Toon booggereedschappen</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -1677,7 +1677,7 @@ Wilt u het herstellen?</translation>
     </message>
     <message>
         <source>Show circle tools</source>
-        <translation>Toon cirkelgereedschappen</translation>
+        <translation type="vanished">Toon cirkelgereedschappen</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -3102,7 +3102,7 @@ Wilt u het herstellen?</translation>
     </message>
     <message>
         <source>Show dimension tools</source>
-        <translation>Bematinggereedschappen tonen</translation>
+        <translation type="vanished">Bematinggereedschappen tonen</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -3871,7 +3871,7 @@ is al in de lijst.</translation>
     </message>
     <message>
         <source>Show edit tools</source>
-        <translation>Bewerkgereedschappen tonen</translation>
+        <translation type="vanished">Bewerkgereedschappen tonen</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -5801,7 +5801,7 @@ is al in de lijst.</translation>
     </message>
     <message>
         <source>Show hatch tools</source>
-        <translation>Toon arceringgereedschappen</translation>
+        <translation type="vanished">Toon arceringgereedschappen</translation>
     </message>
 </context>
 <context>
@@ -6478,7 +6478,7 @@ is al in de lijst.</translation>
     </message>
     <message>
         <source>Show information tools</source>
-        <translation>Infogereedschappen tonen</translation>
+        <translation type="vanished">Infogereedschappen tonen</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -7012,7 +7012,7 @@ is al in de lijst.</translation>
     </message>
     <message>
         <source>Show layer tools</source>
-        <translation>Laaggereedschappen tonen</translation>
+        <translation type="vanished">Laaggereedschappen tonen</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -8538,7 +8538,7 @@ getoond in zoekresultaten:</translation>
     </message>
     <message>
         <source>Show misc modification tools</source>
-        <translation>Diverse modificatiegereedschappen tonen</translation>
+        <translation type="vanished">Diverse modificatiegereedschappen tonen</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -8560,7 +8560,7 @@ getoond in zoekresultaten:</translation>
     </message>
     <message>
         <source>Show misc selection tools</source>
-        <translation>Diverse selectiegereedschappen tonen</translation>
+        <translation type="vanished">Diverse selectiegereedschappen tonen</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -8577,7 +8577,7 @@ getoond in zoekresultaten:</translation>
     </message>
     <message>
         <source>Show modification tools</source>
-        <translation>Modificatiegereedschappen tonen</translation>
+        <translation type="vanished">Modificatiegereedschappen tonen</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -9151,7 +9151,7 @@ getoond in zoekresultaten:</translation>
     </message>
     <message>
         <source>Show point tools</source>
-        <translation>Puntgereedschappen tonen</translation>
+        <translation type="vanished">Puntgereedschappen tonen</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -9246,7 +9246,7 @@ getoond in zoekresultaten:</translation>
     </message>
     <message>
         <source>Show polyline tools</source>
-        <translation>Polylijngereedschappen tonen</translation>
+        <translation type="vanished">Polylijngereedschappen tonen</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -9467,7 +9467,7 @@ getoond in zoekresultaten:</translation>
     </message>
     <message>
         <source>Show projection tools</source>
-        <translation>Projectiegereedschappen tonen</translation>
+        <translation type="vanished">Projectiegereedschappen tonen</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -10451,7 +10451,7 @@ getoond in zoekresultaten:</translation>
     </message>
     <message>
         <source>Show selection tools</source>
-        <translation>Selectiegereedschappen tonen</translation>
+        <translation type="vanished">Selectiegereedschappen tonen</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11576,7 +11576,7 @@ getoond in zoekresultaten:</translation>
     </message>
     <message>
         <source>Show spline tools</source>
-        <translation>Splinegereedschappen tonen</translation>
+        <translation type="vanished">Splinegereedschappen tonen</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -12885,7 +12885,7 @@ getoond in zoekresultaten:</translation>
     </message>
     <message>
         <source>Show view tools</source>
-        <translation>Aanzichtgereedschappen tonen</translation>
+        <translation type="vanished">Aanzichtgereedschappen tonen</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -13280,7 +13280,7 @@ getoond in zoekresultaten:</translation>
     </message>
     <message>
         <source>Show zoom tools</source>
-        <translation>Zoomgereedschappen tonen</translation>
+        <translation type="vanished">Zoomgereedschappen tonen</translation>
     </message>
     <message>
         <location line="+28"/>

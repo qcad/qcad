@@ -219,7 +219,7 @@
         <translation>Hatch Patterns</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+15"/>
         <source>Translations</source>
         <translation>Translations</translation>
     </message>
