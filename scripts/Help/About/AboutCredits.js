@@ -54,10 +54,16 @@ var credits =
     ],
     [
         qsTr("Hatch Patterns"),
-        [ "John Hyslop",         "CELTIC-01, CELTIC-02, CIRCLES-02, CIRCLES, " +
-                                 "EXPLOSION, HEXAGONS, HOLLY, LATTICE-01, " +
-                                 "LATTICE-02, LATTICE-03, LATTICE-04, " +
-                                 "MAZE-01, MAZE-02, QCAD-LOGO, " +
+        [ "John Hyslop",         "BOXJOIN-01, BOXJOIN-02, " +
+                                 "CELTIC-01, CELTIC-02, " +
+                                 "CIRCLES, CIRCLES-02, " +
+                                 "EXPLOSION, " +
+                                 "HEXAGONS, " +
+                                 "HEXJOIN-01, HEXJOIN-02, " +
+                                 "HOLLY, " +
+                                 "LATTICE-01, LATTICE-02, LATTICE-03, LATTICE-04, " +
+                                 "MAZE-01, MAZE-02, " +
+                                 "QCAD-LOGO, " +
                                  "SQUIGGLE-01, SQUIGGLE-02" ],
     ],
     [
