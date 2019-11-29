@@ -3380,7 +3380,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegenInit.js" line="+2"/>
         <source>&amp;Reset Label Position</source>
-        <translation>Beschriftungsposition &amp;zurücksetzten</translation>
+        <translation>Beschriftungsposition &amp;zurücksetzen</translation>
     </message>
 </context>
 <context>
