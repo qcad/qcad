@@ -4638,17 +4638,17 @@ is al in de lijst.</translation>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation>Exploderen</translation>
+        <translation>Opbreken</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
-        <translation>&amp;Exploderen</translation>
+        <translation>&amp;Opbreken</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+197"/>
         <source>Explode text glyphs to polylines</source>
-        <translation>Tekstcontouren exploderen in polylines</translation>
+        <translation>Tekstcontouren opbreken in polylines</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -4663,7 +4663,7 @@ is al in de lijst.</translation>
     <message>
         <location line="-7"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation>Splines exploderen in polylijnen met lijnstukken</translation>
+        <translation>Splines opbreken in polylijnen met lijnstukken</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -8259,7 +8259,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
         <source>Global Linetype Scale:</source>
-        <translation>Globale lijntype schaal:</translation>
+        <translation>Globale lijntypeschaal:</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -9597,7 +9597,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+104"/>
         <source>Linetype Scale:</source>
-        <translation>Lijntype schaal:</translation>
+        <translation>Lijntypeschaal:</translation>
     </message>
     <message>
         <location line="+49"/>
