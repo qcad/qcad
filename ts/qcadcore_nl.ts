@@ -486,7 +486,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation>Tekst positie</translation>
+        <translation>Tekstpositie</translation>
     </message>
     <message>
         <location line="+1"/>
