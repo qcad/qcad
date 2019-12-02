@@ -11893,7 +11893,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+17"/>
         <source>Text height</source>
-        <translation>Tekst hoogte</translation>
+        <translation>Teksthoogte</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -13740,7 +13740,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+2"/>
         <source>Text based</source>
-        <translation>Tekst gebaseerd</translation>
+        <translation>Tekstgebaseerd</translation>
     </message>
     <message>
         <location line="+2"/>
