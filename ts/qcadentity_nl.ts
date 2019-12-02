@@ -845,7 +845,7 @@
     </message>
     <message>
         <source>Text Angle</source>
-        <translation type="vanished">Tekst hoek</translation>
+        <translation>Teksthoek</translation>
     </message>
     <message>
         <source>X Scale</source>

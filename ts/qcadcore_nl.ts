@@ -511,7 +511,7 @@
     <message>
         <location line="+1"/>
         <source>Text Angle</source>
-        <translation>Tekst hoek</translation>
+        <translation>Teksthoek</translation>
     </message>
     <message>
         <location line="+1"/>
