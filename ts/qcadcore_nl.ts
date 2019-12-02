@@ -227,7 +227,7 @@
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>Lijntype schaal</translation>
+        <translation>Lijntypeschaal</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -379,7 +379,7 @@
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation>Lijntype schaal</translation>
+        <translation>Lijntypeschaal</translation>
     </message>
     <message>
         <location line="+1"/>
