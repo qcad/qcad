@@ -812,12 +812,12 @@ asetuksien muutokset astuvat voimaan.</translation>
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+63"/>
+        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+64"/>
         <source>Choose base line or base arc</source>
         <translation>Valitse perusviiva tai peruskaari</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+7"/>
         <source>Choose end point of arc</source>
         <translation>Valitse kaaren päätepiste</translation>
     </message>
@@ -1399,7 +1399,7 @@ Haluatko palauttaa sen?</translation>
         <translation type="vanished">Valitse viiva, kaari, ympyrä, ellipsi tai käyrä segmentti</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/BreakOut/BreakOut.js" line="+58"/>
+        <location filename="../scripts/Modify/BreakOut/BreakOut.js" line="+59"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
         <translation>Valitse viiva, kaari, ympyrä, ellipsi, käyrä tai moniviiva segmentti</translation>
     </message>
@@ -1422,12 +1422,12 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>BreakOutGap</name>
     <message>
-        <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.js" line="+53"/>
+        <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.js" line="+54"/>
         <source>Choose line, arc or circle</source>
         <translation>Valitse viiva, kaari tai ympyrä</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Specify point</source>
         <translation>Määritä piste</translation>
     </message>
@@ -2584,7 +2584,7 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../scripts/DefaultAction.js" line="+89"/>
+        <location filename="../scripts/DefaultAction.js" line="+90"/>
         <source>Select entity or region</source>
         <translation>Valitse kohde tai alue</translation>
     </message>
@@ -2594,22 +2594,34 @@ Haluatko palauttaa sen?</translation>
         <translation>Siirrä kohde tai viite</translation>
     </message>
     <message>
-        <location line="+11"/>
         <source>Set second corner</source>
-        <translation>Aseta toinen kulma</translation>
+        <translation type="vanished">Aseta toinen kulma</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Specify target point of reference point</source>
-        <translation>Määritä vertailupisteen tavoitepiste</translation>
+        <translation type="vanished">Määritä vertailupisteen tavoitepiste</translation>
+    </message>
+    <message>
+        <source>Specify target point of selection</source>
+        <translation type="vanished">Määrittele valinnan kohdepiste</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Second corner</source>
+        <translation type="unfinished">Toinen kulma</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Specify target point of selection</source>
-        <translation>Määrittele valinnan kohdepiste</translation>
+        <source>Target point of reference point</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
+        <source>Target point of selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Move entity to desired location</source>
         <translation>Siirrä kohde haluttuun paikkaan</translation>
     </message>
@@ -2843,12 +2855,12 @@ Haluatko palauttaa sen?</translation>
         <translation>Kaari tai toinen kahdesta viivasta</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+14"/>
         <source>Second line</source>
         <translation>Toinen viiva</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Dimension arc location</source>
         <translation>Mittakaaren sijainti</translation>
     </message>
@@ -3389,7 +3401,7 @@ on jo luettelossa.</translation>
         <translation type="vanished">Valitse viiva, kaari, ympyrä, ellipsi tai käyrä</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Divide/Divide.js" line="+67"/>
+        <location filename="../scripts/Modify/Divide/Divide.js" line="+68"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
         <translation>Valitse viiva, kaari, ympyrä, ellipsi, käyrä tai murtoviiva</translation>
     </message>
@@ -3399,12 +3411,12 @@ on jo luettelossa.</translation>
         <translation>Valitse viiva, kaari, ympyrä tai ellipsi</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+12"/>
         <source>Specify point</source>
         <translation>Määrittele piste</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Specify second point</source>
         <translation>Määrittele toinen piste</translation>
     </message>
@@ -4565,7 +4577,7 @@ on jo luettelossa.</translation>
         <translation>Sijainti</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+46"/>
         <source>Three Points</source>
         <translation>Kolme pistettä</translation>
     </message>
@@ -7758,17 +7770,17 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>LineBisector</name>
     <message>
-        <location filename="../scripts/Draw/Line/LineBisector/LineBisector.js" line="+66"/>
+        <location filename="../scripts/Draw/Line/LineBisector/LineBisector.js" line="+67"/>
         <source>First line</source>
         <translation>Ensimmäinen viiva</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+6"/>
         <source>Second line</source>
         <translation>Toinen viiva</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+71"/>
         <source>Lines don&apos;t intersect.</source>
         <translation>Viivat eivät kohtaa.</translation>
     </message>
@@ -8004,17 +8016,17 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>LineOrthogonalTangent</name>
     <message>
-        <location filename="../scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangent.js" line="+70"/>
+        <location filename="../scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangent.js" line="+71"/>
         <source>Choose line</source>
         <translation>Valitse viiva</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+13"/>
         <source>Choose circle, arc or ellipse</source>
         <translation>Valitse viiva, kaari tai ellipsi</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+141"/>
         <source>No tangent possible</source>
         <translation>Tangetti ei mahdollinen</translation>
     </message>
@@ -8127,12 +8139,12 @@ näkyy hakutuloksissa:</translation>
         <translation type="vanished">Valitse peruskohde</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="+70"/>
+        <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="+71"/>
         <source>Choose base line, arc, circle, ellipse or polyline</source>
         <translation>Valitse perusviiva, kaari, ympyrä, ellipsi tai moniviiva</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Set position</source>
         <translation>Valitse sijainti</translation>
     </message>
@@ -8188,17 +8200,17 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>LineTangent1</name>
     <message>
-        <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1.js" line="+64"/>
+        <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1.js" line="+65"/>
         <source>Choose start point of tangent</source>
         <translation>Valitse tangentin aloituskohta</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+12"/>
         <source>Choose circle, arc or ellipse</source>
         <translation>Valitse ympyrä, kaari tai ellipsi</translation>
     </message>
     <message>
-        <location line="+83"/>
+        <location line="+85"/>
         <source>No tangent possible.</source>
         <translation>Tangetti ei mahdollinen.</translation>
     </message>
@@ -8222,17 +8234,17 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>LineTangent2</name>
     <message>
-        <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2.js" line="+70"/>
+        <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2.js" line="+71"/>
         <source>Choose first circle or arc</source>
         <translation>Valitse ensimmäinen ympyrä tai kaari</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+13"/>
         <source>Choose second circle or arc</source>
         <translation>Valitse toinen ympyrä tai kaari</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+142"/>
         <source>No tangent possible</source>
         <translation>Tangentti ei mahdollinen</translation>
     </message>
@@ -8829,7 +8841,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Poikkeama viivassa, kaaressa, ympyrässä tai ellipsissä</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Offset/Offset.js" line="+75"/>
+        <location filename="../scripts/Modify/Offset/Offset.js" line="+77"/>
         <source>Choose line, arc, circle or ellipse</source>
         <translation>Valitse viiva, kaari, ympyrä tai ellipsi</translation>
     </message>
@@ -8853,7 +8865,7 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+67"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
         <source>Specify point</source>
         <translation>Määrittele piste</translation>
     </message>
@@ -10611,12 +10623,12 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>SelectIntersectedEntities</name>
     <message>
-        <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.js" line="+89"/>
+        <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.js" line="+90"/>
         <source>First point</source>
         <translation>Ensimmäinen piste</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+7"/>
         <source>Second point</source>
         <translation>Toinen piste</translation>
     </message>
@@ -10732,12 +10744,12 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>SelectRectangle</name>
     <message>
-        <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="+73"/>
+        <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="+74"/>
         <source>First corner</source>
         <translation>Ensimmäinen kulma</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
         <source>Second corner</source>
         <translation>Toinen kulma</translation>
     </message>

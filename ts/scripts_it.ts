@@ -898,12 +898,12 @@ applicare le modifiche.</translation>
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+63"/>
+        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+64"/>
         <source>Choose base line or base arc</source>
         <translation>Scegli linea di base o arco di base</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+7"/>
         <source>Choose end point of arc</source>
         <translation>Scegli il punto finale dell&apos;arco</translation>
     </message>
@@ -1553,7 +1553,7 @@ Vuoi recuperarlo?</translation>
         <translation type="vanished">Scegli linea, arco, cerchio o ellisse</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/BreakOut/BreakOut.js" line="+58"/>
+        <location filename="../scripts/Modify/BreakOut/BreakOut.js" line="+59"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
         <translation>Scegli linea, arco, cerchio, ellisse, spline o segmento di polilinea</translation>
     </message>
@@ -1570,12 +1570,12 @@ Vuoi recuperarlo?</translation>
 <context>
     <name>BreakOutGap</name>
     <message>
-        <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.js" line="+53"/>
+        <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.js" line="+54"/>
         <source>Choose line, arc or circle</source>
         <translation>Scegliere una linea, un arco o un cerchio</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Specify point</source>
         <translation>Punto</translation>
     </message>
@@ -2855,7 +2855,7 @@ Coordinate polari relativo:</translatorcomment>
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../scripts/DefaultAction.js" line="+89"/>
+        <location filename="../scripts/DefaultAction.js" line="+90"/>
         <source>Select entity or region</source>
         <translation>Selezionare entità o regione</translation>
     </message>
@@ -2865,22 +2865,34 @@ Coordinate polari relativo:</translatorcomment>
         <translation>Spostare entità o riferimento</translation>
     </message>
     <message>
-        <location line="+11"/>
         <source>Set second corner</source>
-        <translation>Impostare secondo angolo</translation>
+        <translation type="vanished">Impostare secondo angolo</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Specify target point of reference point</source>
-        <translation>Specificare il punto finale di punto di riferimento</translation>
+        <translation type="vanished">Specificare il punto finale di punto di riferimento</translation>
+    </message>
+    <message>
+        <source>Specify target point of selection</source>
+        <translation type="vanished">Specificare il punto finale della selezione</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Second corner</source>
+        <translation type="unfinished">Secondo punto dell&apos;angolo</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Specify target point of selection</source>
-        <translation>Specificare il punto finale della selezione</translation>
+        <source>Target point of reference point</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
+        <source>Target point of selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Move entity to desired location</source>
         <translation>Spostare entità</translation>
     </message>
@@ -3126,12 +3138,12 @@ Layer ad alta risoluzione possono rallentare la navigazione in QGIS.</translator
         <translation>Arco o prima di due linee</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+14"/>
         <source>Second line</source>
         <translation>Seconda linea</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Dimension arc location</source>
         <translation>Posizione di arco di quota</translation>
     </message>
@@ -3696,7 +3708,7 @@ is already in the list.</source>
         <translation type="vanished">Scegliere linea, arco, cerchio, ellisse o spline</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Divide/Divide.js" line="+67"/>
+        <location filename="../scripts/Modify/Divide/Divide.js" line="+68"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
         <translation>Scegli linea, arco, cerchio, ellisse, spline o polilinea</translation>
     </message>
@@ -3706,12 +3718,12 @@ is already in the list.</source>
         <translation>Scegliere linea, arco, cerchio o ellisse</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+12"/>
         <source>Specify point</source>
         <translation>Punto</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Specify second point</source>
         <translation>Secondo punto</translation>
     </message>
@@ -4940,7 +4952,7 @@ is already in the list.</source>
         <translation>Posizione</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+46"/>
         <source>Three Points</source>
         <translation>Tre punti</translation>
     </message>
@@ -8681,17 +8693,17 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Numero:</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Line/LineBisector/LineBisector.js" line="+66"/>
+        <location filename="../scripts/Draw/Line/LineBisector/LineBisector.js" line="+67"/>
         <source>First line</source>
         <translation>Prima linea</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+6"/>
         <source>Second line</source>
         <translation>Seconda linea</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+71"/>
         <source>Lines don&apos;t intersect.</source>
         <translation>Le linee non si intersecano.</translation>
     </message>
@@ -8921,17 +8933,17 @@ mostrati nei risultati di ricerca:</translation>
 <context>
     <name>LineOrthogonalTangent</name>
     <message>
-        <location filename="../scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangent.js" line="+70"/>
+        <location filename="../scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangent.js" line="+71"/>
         <source>Choose line</source>
         <translation>Scegli linea</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+13"/>
         <source>Choose circle, arc or ellipse</source>
         <translation>Scegli un cerchio, un arco o un&apos;ellisse</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+141"/>
         <source>No tangent possible</source>
         <translation>Nessuna tangente è possibile</translation>
     </message>
@@ -9207,12 +9219,12 @@ mostrati nei risultati di ricerca:</translation>
         <translation type="vanished">Scegli entità di base</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="+70"/>
+        <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="+71"/>
         <source>Choose base line, arc, circle, ellipse or polyline</source>
         <translation>Scegli linea, arco, cerchio, ellisse o polilinea</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Set position</source>
         <translation>Stabilire la posizione</translation>
     </message>
@@ -9252,17 +9264,17 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Disegna tangente (punto, cerchio)</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1.js" line="+64"/>
+        <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1.js" line="+65"/>
         <source>Choose start point of tangent</source>
         <translation>Scelgano il punto di tangente</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+12"/>
         <source>Choose circle, arc or ellipse</source>
         <translation>Scegli un cerchio, un arco o un&apos;ellisse</translation>
     </message>
     <message>
-        <location line="+83"/>
+        <location line="+85"/>
         <source>No tangent possible.</source>
         <translation>Nessuna tangente è possibile.</translation>
     </message>
@@ -9290,17 +9302,17 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Disegna tangente (cerchio, cerchio)</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2.js" line="+70"/>
+        <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2.js" line="+71"/>
         <source>Choose first circle or arc</source>
         <translation>Scegli primo cerchio o arco</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+13"/>
         <source>Choose second circle or arc</source>
         <translation>Scegli secondo cerchio o arco</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+142"/>
         <source>No tangent possible</source>
         <translation>Nessuna tangente è possibile</translation>
     </message>
@@ -9989,7 +10001,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation type="vanished">Scegliere linea, arco, cerchio o ellisse</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Offset/Offset.js" line="+75"/>
+        <location filename="../scripts/Modify/Offset/Offset.js" line="+77"/>
         <source>Choose line, arc, circle or ellipse</source>
         <translation>Scegliere linea, arco, cerchio o ellisse</translation>
     </message>
@@ -10021,7 +10033,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+67"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
         <source>Specify point</source>
         <translation>Punto</translation>
     </message>
@@ -12081,12 +12093,12 @@ Modo colore:</translatorcomment>
 <context>
     <name>SelectIntersectedEntities</name>
     <message>
-        <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.js" line="+89"/>
+        <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.js" line="+90"/>
         <source>First point</source>
         <translation>Primo punto</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+7"/>
         <source>Second point</source>
         <translation>Secondo punto</translation>
     </message>
@@ -12226,7 +12238,7 @@ Interseca con la selezione corrente</translatorcomment>
 <context>
     <name>SelectRectangle</name>
     <message>
-        <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="+73"/>
+        <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="+74"/>
         <source>First corner</source>
         <translation>Primo punto dell&apos;angolo</translation>
     </message>
@@ -12249,7 +12261,7 @@ Interseca con la selezione corrente</translatorcomment>
         <translation>(De-)seleziona tutte le entità all&apos;interno di un rettangolo</translation>
     </message>
     <message>
-        <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="+7"/>
+        <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="+9"/>
         <source>Second corner</source>
         <translation>Secondo punto dell&apos;angolo</translation>
     </message>

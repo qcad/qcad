@@ -987,13 +987,13 @@ Liczba:</translatorcomment>
 <context>
     <name>ArcTangential</name>
     <message>
-        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+63"/>
+        <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+64"/>
         <source>Choose base line or base arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Proszę wskazać linię lub łuk odniesienia</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+7"/>
         <source>Choose end point of arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Proszę wskazać punkt końcowy łuku</translation>
@@ -1696,7 +1696,7 @@ Lista bloków</translatorcomment>
         <translation type="obsolete">Wybierz linię, łuk, okrąg lub elipsę do wykończenia auto</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/BreakOut/BreakOut.js" line="+58"/>
+        <location filename="../scripts/Modify/BreakOut/BreakOut.js" line="+59"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
         <translation>Proszę wskazać segment linii, łuku, elipsy, splajnu lub linii łamanej</translation>
     </message>
@@ -1727,12 +1727,12 @@ Podziel &amp;2</translatorcomment>
 <context>
     <name>BreakOutGap</name>
     <message>
-        <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.js" line="+53"/>
+        <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.js" line="+54"/>
         <source>Choose line, arc or circle</source>
         <translation>Proszę wskazać linię, łuk, lub okrąg</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Specify point</source>
         <translation>Proszę wskazać punkt</translation>
     </message>
@@ -3146,7 +3146,7 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../scripts/DefaultAction.js" line="+89"/>
+        <location filename="../scripts/DefaultAction.js" line="+90"/>
         <source>Select entity or region</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Proszę zaznaczyć obiekt lub obszar</translation>
@@ -3158,25 +3158,37 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
         <translation>Proszę przenieść obiekt lub odniesienie</translation>
     </message>
     <message>
-        <location line="+11"/>
         <source>Set second corner</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Proszę wskazać drugi narożnik</translation>
+        <translation type="vanished">Proszę wskazać drugi narożnik</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Specify target point of reference point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Proszę wskazać punkt docelowy punktu odniesienia</translation>
+        <translation type="vanished">Proszę wskazać punkt docelowy punktu odniesienia</translation>
+    </message>
+    <message>
+        <source>Specify target point of selection</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation type="vanished">Proszę wskazać punkt docelowy zaznaczenia</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Second corner</source>
+        <translation type="unfinished">Drugi narożnik</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Specify target point of selection</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation>Proszę wskazać punkt docelowy zaznaczenia</translation>
+        <source>Target point of reference point</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
+        <source>Target point of selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Move entity to desired location</source>
         <translation>Przenieś obiekt do określonego położenia</translation>
     </message>
@@ -3483,7 +3495,7 @@ Wskaż położenie linii wymiarowej</translatorcomment>
         <translation>Łuk lub pierwsza z dwóch linii</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+14"/>
         <source>Second line</source>
         <translatorcomment>--google--
 Zaznacz drugą linię
@@ -3492,7 +3504,7 @@ Wskaż drugą linie</translatorcomment>
         <translation>Druga linia</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Dimension arc location</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Położenie wymiaru łuku</translation>
@@ -4219,7 +4231,7 @@ jest już na liście.</translation>
         <translation type="obsolete">Wybierz linię, łuk lub okrąg</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Divide/Divide.js" line="+67"/>
+        <location filename="../scripts/Modify/Divide/Divide.js" line="+68"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
         <translation>Proszę wskazać linię, łuk, okrąg, elipsę, splajn lub linię łamaną</translation>
     </message>
@@ -4229,7 +4241,7 @@ jest już na liście.</translation>
         <translation>Proszę wskazać linię, łuk, okrąg lub elipsę</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+12"/>
         <source>Specify point</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
@@ -4237,7 +4249,7 @@ Wskaż punkt</translatorcomment>
         <translation>Proszę wskazać punkt</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Specify second point</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--
@@ -5497,7 +5509,7 @@ LTR</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+46"/>
         <source>Three Points</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9537,7 +9549,7 @@ Wskaż kąt końcowy lub [kąt/długość cięciwy]</translatorcomment>
 <context>
     <name>LineBisector</name>
     <message>
-        <location filename="../scripts/Draw/Line/LineBisector/LineBisector.js" line="+66"/>
+        <location filename="../scripts/Draw/Line/LineBisector/LineBisector.js" line="+67"/>
         <source>First line</source>
         <translatorcomment>--google--
 Zaznacz pierwszą linię
@@ -9546,7 +9558,7 @@ Wskaż pierwszą linie</translatorcomment>
         <translation>Pierwsza linia</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+6"/>
         <source>Second line</source>
         <translatorcomment>--google--
 Zaznacz drugą linię
@@ -9555,7 +9567,7 @@ Wskaż drugą linie</translatorcomment>
         <translation>Druga linia</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+71"/>
         <source>Lines don&apos;t intersect.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Linie nie przecinają się.</translation>
@@ -9837,17 +9849,17 @@ Ograniczaj &amp;prostopadle</translatorcomment>
 <context>
     <name>LineOrthogonalTangent</name>
     <message>
-        <location filename="../scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangent.js" line="+70"/>
+        <location filename="../scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangent.js" line="+71"/>
         <source>Choose line</source>
         <translation>Proszę wskazać linię</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+13"/>
         <source>Choose circle, arc or ellipse</source>
         <translation>Proszę wskazać okrąg, łuk lub elipsę</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+141"/>
         <source>No tangent possible</source>
         <translation>Niemożliwa styczność</translation>
     </message>
@@ -10172,12 +10184,12 @@ Minimalna &amp;szerokość:</translatorcomment>
         <translation type="obsolete">Wybierz jednostkę bazową</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="+70"/>
+        <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="+71"/>
         <source>Choose base line, arc, circle, ellipse or polyline</source>
         <translation>Proszę wskazać linię, łuk, okrąg, elipsę lub linię łamaną</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Set position</source>
         <translatorcomment>--google--
 Zmień pozycje punktu zera względnego
@@ -10246,19 +10258,19 @@ Kąt wz&amp;ględny</translatorcomment>
 <context>
     <name>LineTangent1</name>
     <message>
-        <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1.js" line="+64"/>
+        <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1.js" line="+65"/>
         <source>Choose start point of tangent</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Proszę wskazać punkt początkowy stycznej</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+12"/>
         <source>Choose circle, arc or ellipse</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Proszę wskazać okrąg, łuk lub elipsę</translation>
     </message>
     <message>
-        <location line="+83"/>
+        <location line="+85"/>
         <source>No tangent possible.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Brak możliwej stycznej.</translation>
@@ -10288,19 +10300,19 @@ Rysuj styczną (punkt, okrąg)</translatorcomment>
 <context>
     <name>LineTangent2</name>
     <message>
-        <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2.js" line="+70"/>
+        <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2.js" line="+71"/>
         <source>Choose first circle or arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Proszę wskazać pierwszy okrąg lub łuk</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+13"/>
         <source>Choose second circle or arc</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Proszę wskazać drugi okrąg lub łuk</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+142"/>
         <source>No tangent possible</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Brak możliwej stycznej</translation>
@@ -10983,7 +10995,7 @@ Nowy &amp;formularz</translatorcomment>
         <translation type="obsolete">Rysuj równolegle do istniejącej linii lub łuku, okręgu koncentrycznym</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Offset/Offset.js" line="+75"/>
+        <location filename="../scripts/Modify/Offset/Offset.js" line="+77"/>
         <source>Choose line, arc, circle or ellipse</source>
         <translation>Proszę wskazać linię, łuk, okrąg lub elipsę</translation>
     </message>
@@ -11019,7 +11031,7 @@ Nowy &amp;formularz</translatorcomment>
 <context>
     <name>OffsetThrough</name>
     <message>
-        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+67"/>
+        <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
         <source>Specify point</source>
         <translation>Proszę wskazać punkt</translation>
     </message>
@@ -13418,7 +13430,7 @@ Odznacz &amp;wszystko</translatorcomment>
 <context>
     <name>SelectIntersectedEntities</name>
     <message>
-        <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.js" line="+89"/>
+        <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.js" line="+90"/>
         <source>First point</source>
         <translatorcomment>--google--
 Wskaż pierwszy punkt
@@ -13427,7 +13439,7 @@ Wskaż pierwszy punkt odległości</translatorcomment>
         <translation>Pierwszy punkt</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+7"/>
         <source>Second point</source>
         <translatorcomment>--google--
 Wskaż drugi punkt
@@ -13604,14 +13616,14 @@ Wskaż drugi punkt linii odbicia</translatorcomment>
 <context>
     <name>SelectRectangle</name>
     <message>
-        <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="+73"/>
+        <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="+74"/>
         <source>First corner</source>
         <translatorcomment>--google--
 Wskaż pierwszy wierzchołek</translatorcomment>
         <translation>Pierwszy narożnik</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
         <source>Second corner</source>
         <translatorcomment>--google--
 Wskaż drugi wierzchołek</translatorcomment>
