@@ -6142,7 +6142,7 @@ is al in de lijst.</translation>
         <location line="-37"/>
         <location line="+24"/>
         <source>Ellipse arc area:</source>
-        <translation>Ellipsboog oppervlakte:</translation>
+        <translation>Ellipsboogoppervlakte:</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -6259,7 +6259,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleAreaInit.js" line="+2"/>
         <source>Arc/Circle/Ellipse Area</source>
-        <translation>Boog / cirkel / ellips oppervlakte</translation>
+        <translation>Boog- / cirkel- / ellipsoppervlakte</translation>
     </message>
 </context>
 <context>
@@ -6429,7 +6429,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Information/InfoPolylineArea/InfoPolylineAreaInit.js" line="+2"/>
         <source>Polyl&amp;ine Area</source>
-        <translation>Polylijn &amp;oppervlakte</translation>
+        <translation>Polylijn&amp;oppervlakte</translation>
     </message>
 </context>
 <context>
