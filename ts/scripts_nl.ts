@@ -284,17 +284,17 @@
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.js" line="+46"/>
         <source>Application Preferences</source>
-        <translation>Programma Voorkeursinstellingen</translation>
+        <translation>Toepassingsvoorkeuren</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing Preferences</source>
-        <translation>Tekenings Voorkeursinstellingen</translation>
+        <translation>Tekeningsvoorkeuren</translation>
     </message>
     <message>
         <location line="+300"/>
         <source>Apply preferences</source>
-        <translation>Voorkeursinstellingen toepassen</translation>
+        <translation>Voorkeuren toepassen</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -321,11 +321,11 @@ de wijzigingen door te voeren.</translation>
     <message>
         <location line="+2"/>
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
-        <translation>Voorkeuren van de huidige tekening kunnen worden gewijzigd onder&lt;br/&gt;&lt;i&gt;Bewerken &amp;gt; Tekening voorkeursinstellingen&lt;/i&gt;.</translation>
+        <translation>Voorkeuren van de huidige tekening kunnen worden gewijzigd onder&lt;br/&gt;&lt;i&gt;Bewerken &amp;gt; Tekeningsvoorkeuren&lt;/i&gt;.</translation>
     </message>
     <message>
         <source>You are changing default preferences for new drawings.</source>
-        <translation type="vanished">U bent het wijzigen van standaard voorkeuren voor nieuwe tekeningen.</translation>
+        <translation>U bent aan het wijzigen van standaardvoorkeuren voor nieuwe tekeningen.</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -408,7 +408,7 @@ de wijzigingen door te voeren.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/AppPreferences.js" line="+65"/>
         <source>Application &amp;Preferences</source>
-        <translation>&amp;Programma voorkeursinstellingen</translation>
+        <translation>&amp;Toepassingsvoorkeuren</translation>
     </message>
 </context>
 <context>
@@ -2252,7 +2252,7 @@ Wilt u het herstellen?</translation>
     <message>
         <location line="+8"/>
         <source>You may change the number / coordinate format in the application preferences.</source>
-        <translation>U kunt het formaat voor getallen en coördinaten in de programma voorkeursinstellingen wijzigen.</translation>
+        <translation>U kunt het formaat voor getallen en coördinaten in de toepassingsvoorkeuren wijzigen.</translation>
     </message>
     <message>
         <location line="+69"/>
@@ -2846,12 +2846,12 @@ Wilt u het herstellen?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAligned/DimAligned.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation>Startpunt eerste verlengingslijn</translation>
+        <translation>Startpunt eerste extensielijn</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
-        <translation>Startpunt tweede verlengingslijn</translation>
+        <translation>Startpunt tweede extensielijn</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3173,7 +3173,7 @@ Wilt u het herstellen?</translation>
         <location line="+0"/>
         <location line="+2"/>
         <source>Dimension Settings</source>
-        <translation>Dimensie instellingen</translation>
+        <translation>Bematingsvoorkeuren</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -3689,7 +3689,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation>&amp;Tekening voorkeursinstellingen</translation>
+        <translation>&amp;Tekeningsvoorkeuren</translation>
     </message>
 </context>
 <context>
@@ -4769,7 +4769,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+1"/>
         <source>Please choose the settings used for new drawings. All these settings can be changed later in the Preference Dialog.</source>
-        <translation>Kies de instellingen voor nieuwe tekeningen. Al deze instellingen kunnen later worden gewijzigd in de programmavoorkeuren.</translation>
+        <translation>Kies de instellingen voor nieuwe tekeningen. Al deze instellingen kunnen later worden gewijzigd in de toepassingsvoorkeuren.</translation>
     </message>
     <message>
         <location line="+14"/>

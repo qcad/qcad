@@ -440,12 +440,12 @@
     <message>
         <location line="+2"/>
         <source>Fixed Extension Line</source>
-        <translation>Vaste verlengingslijn</translation>
+        <translation>Vaste verlenglijn</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension Line Length</source>
-        <translation>Lengte verlengingslijn</translation>
+        <translation>Extensielijnlengte</translation>
     </message>
     <message>
         <location line="+8"/>
