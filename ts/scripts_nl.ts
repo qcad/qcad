@@ -325,7 +325,7 @@ de wijzigingen door te voeren.</translation>
     </message>
     <message>
         <source>You are changing default preferences for new drawings.</source>
-        <translation>U bent aan het wijzigen van standaardvoorkeuren voor nieuwe tekeningen.</translation>
+        <translation type="vanished">U bent aan het wijzigen van standaardvoorkeuren voor nieuwe tekeningen.</translation>
     </message>
     <message>
         <location line="-1"/>
