@@ -3269,37 +3269,37 @@ Wilt u het herstellen?</translation>
     <message>
         <location line="+10"/>
         <source>Extension line offset:</source>
-        <translation>Hulplijn afzet:</translation>
+        <translation>Extensielijnafzet:</translation>
     </message>
     <message>
         <location line="-74"/>
         <source>Extension line extension:</source>
-        <translation>Hulplijn extentie:</translation>
+        <translation>Extensielijnverlenging:</translation>
     </message>
     <message>
         <location line="-52"/>
         <source>Dimension line gap:</source>
-        <translation>Maat lijn uitsparing:</translation>
+        <translation>Maatlijnafzet:</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Arrow size:</source>
-        <translation>Pijl grootte:</translation>
+        <translation>Pijlgrootte:</translation>
     </message>
     <message>
         <location line="+108"/>
         <source>Dimension line increment:</source>
-        <translation>Afstand van maatlijnen:</translation>
+        <translation>Afstand tussen maatlijnen:</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Size scale factor:</source>
-        <translation>Groote schaal factor:</translation>
+        <translation>Schaalfactor voor grootte:</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Arrow Style</source>
-        <translation>Pijl stijl</translation>
+        <translation>Pijlstijl</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -3309,7 +3309,7 @@ Wilt u het herstellen?</translation>
     <message>
         <location line="+10"/>
         <source>Architectural Tick</source>
-        <translation>Bouwkunde Tick</translation>
+        <translation>Bouwkunde tick</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -3319,7 +3319,7 @@ Wilt u het herstellen?</translation>
     <message>
         <location line="+6"/>
         <source>Dimension label font:</source>
-        <translation>Bematingtekst lettertype:</translation>
+        <translation>Lettertype voor bematingtekst :</translation>
     </message>
     <message>
         <location line="+13"/>
