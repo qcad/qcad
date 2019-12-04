@@ -48,7 +48,9 @@ CreateBlock.prototype.setState = function(state) {
     this.setCrosshairCursor();
     this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
 
-    this.setLeftMouseTip(qsTr("Reference Point"));
+    var trRefPoint = qsTr("Reference Point");
+    this.setCommandPrompt(trRefPoint);
+    this.setLeftMouseTip(trRefPoint);
     this.setRightMouseTip(EAction.trCancel);
 
     EAction.showSnapTools();
