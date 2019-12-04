@@ -228,7 +228,7 @@
     <message>
         <location line="+52"/>
         <source>Hatch Patterns</source>
-        <translation>Arceer patronen</translation>
+        <translation>Arceerpatronen</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -351,7 +351,7 @@ de wijzigingen door te voeren.</translation>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
-        <translation>Gebruiker gedefinieerde eigenschap toevoegen</translation>
+        <translation>Gebruikergedefinieerde eigenschap toevoegen</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -443,7 +443,7 @@ de wijzigingen door te voeren.</translation>
     <message>
         <location line="+85"/>
         <source>Invalid angle</source>
-        <translation>Ongeldig hoek</translation>
+        <translation>Ongeldige hoek</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -611,7 +611,7 @@ de wijzigingen door te voeren.</translation>
     <message>
         <location line="+81"/>
         <source>Invalid radius</source>
-        <translation>Ongeldig straal</translation>
+        <translation>Ongeldige straal</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -927,7 +927,7 @@ Wilt u de tekening herstellen?</translation>
     <message>
         <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
 Do you wish to recover them?</source>
-        <translation type="vanished">%1 &apos;Auto-opslaan&apos; bestanden voor naamloose tekeningen gevonden.
+        <translation>%1 &apos;auto-opslaan&apos; bestanden voor naamloose tekeningen gevonden.
 Wilt u deze herstellen?</translation>
     </message>
     <message numerus="yes">
@@ -958,7 +958,7 @@ Wilt u deze herstellen?</numerusform>
     <message>
         <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
-        <translation type="vanished">Een &apos;Auto-opslaan&apos; bestand voor &apos;%1&apos; bestaat.
+        <translation>Een &apos;auto-opslaan&apos; bestand voor &apos;%1&apos; bestaat.
 Wilt u het herstellen?</translation>
     </message>
     <message>
@@ -1177,7 +1177,7 @@ Wilt u het herstellen?</translation>
     <message>
         <location line="+23"/>
         <source>Pixels per drawing unit:</source>
-        <translation>Pixels per tekening eenheid:</translation>
+        <translation>Pixels per tekeningseenheid:</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -3331,12 +3331,12 @@ Wilt u het herstellen?</translation>
     <message>
         <location line="+6"/>
         <source>Dimension label font:</source>
-        <translation>Lettertype voor bematingtekst :</translation>
+        <translation>Lettertype voor bematingstekst :</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Number Format</source>
-        <translation>Nummer formaat</translation>
+        <translation>Nummerformaat</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -3372,7 +3372,7 @@ Wilt u het herstellen?</translation>
     <message>
         <location line="-50"/>
         <source>Angular Dimensions</source>
-        <translation>Hoek bemating</translation>
+        <translation>Hoekbemating</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -13536,48 +13536,48 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+0"/>
         <source>Angular Dimension</source>
-        <translation>Hoek bemating</translation>
+        <translation>Hoekbemating</translation>
     </message>
     <message>
         <source>2 Line Angular Dimensions</source>
-        <translation type="vanished">2 lijnen hoek bematingen</translation>
+        <translation>2 lijnen hoekbematingen</translation>
     </message>
     <message>
         <source>2 Line Angular Dimension</source>
-        <translation type="vanished">2 lijnen hoek bemating</translation>
+        <translation>2 lijnen hoekbemating</translation>
     </message>
     <message>
         <source>3 Point Angular Dimensions</source>
-        <translation type="vanished">3 punt hoek bematingen</translation>
+        <translation>3 punt hoekbematingen</translation>
     </message>
     <message>
         <source>3 Point Angular Dimension</source>
-        <translation type="vanished">3 punt hoek bemating</translation>
+        <translation>3 punt hoekbemating</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Line)</source>
-        <translation>Hoek bematingen (2 lijnen)</translation>
+        <translation>Hoekbematingen (2 lijnen)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Line)</source>
-        <translation>Hoek bemating (2 lijnen)</translation>
+        <translation>Hoekbemating (2 lijnen)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Point)</source>
-        <translation>Hoek bematingen (3 punt)</translation>
+        <translation>Hoekbematingen (3 punt)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Point)</source>
-        <translation>Hoek bemating (3 punt)</translation>
+        <translation>Hoekbemating (3 punt)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Arc Dimension</source>
-        <translation>Boog bemating</translation>
+        <translation>Boogbemating</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -13587,12 +13587,12 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+0"/>
         <source>Diametric Dimension</source>
-        <translation>Diametrische Maat</translation>
+        <translation>Diametrische bemating</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ordinate Dimensions</source>
-        <translation>Ordinaat bematingen</translation>
+        <translation>Ordinaatbematingen</translation>
     </message>
     <message>
         <location line="+0"/>
