@@ -222,7 +222,7 @@
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation>Tekening eenheid</translation>
+        <translation>Tekeningseenheid</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -232,7 +232,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension Font</source>
-        <translation>Bemating lettertype</translation>
+        <translation>Bematingslettertype</translation>
     </message>
 </context>
 <context>
@@ -255,7 +255,7 @@
     <message>
         <location filename="../src/core/RBlock.cpp" line="+65"/>
         <source>Pixel Unit</source>
-        <translation>Pixel eenheid</translation>
+        <translation>Pixeleenheid</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -342,12 +342,12 @@
     <message>
         <location line="+1"/>
         <source>Column Spacing</source>
-        <translation>Kolom tussenafstand</translation>
+        <translation>Kolomafstand</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Row Spacing</source>
-        <translation>Rij tussenafstand</translation>
+        <translation>Rijafstand</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -396,7 +396,7 @@
     <message>
         <location line="+1"/>
         <source>Displayed Color</source>
-        <translation>Getoond kleur</translation>
+        <translation>Getoonde kleur</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -439,7 +439,7 @@
         <location filename="../src/core/RObject.cpp" line="-1"/>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+151"/>
         <source>Custom</source>
-        <translation>Gebruiker gedefinieerd</translation>
+        <translation>Gebruikergedefinieerd</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -563,14 +563,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation>Beeld centrum</translation>
+        <translation>Centrum van aanzicht</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation>Beeld doel</translation>
+        <translation>Doelpunt van aanzicht</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -649,30 +649,30 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Insertion Base</source>
-        <translation>Invoeging basis</translation>
+        <translation>Basis van invoeging</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Extents</source>
-        <translation>Min mate</translation>
+        <translation>Min afmetingen</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Extents</source>
-        <translation>Max mate</translation>
+        <translation>Max afmetingen</translation>
     </message>
     <message>
         <source>Plot Margins</source>
-        <translation type="vanished">Plot randen</translation>
+        <translation>Plotranden</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+834"/>
         <source>Circular (recursive) block referencing detected:</source>
-        <translation>Circular (recursieve) blok referencing gedetecteerd:</translation>
+        <translation>Circulaire (recursieve) blokverwijzingen gedetecteerd:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1082,7 +1082,7 @@
     <name>RObject</name>
     <message>
         <source>Custom</source>
-        <translation type="vanished">Gebruiker gedefinieerd</translation>
+        <translation>Gebruikergedefinieerd</translation>
     </message>
     <message>
         <source>Type</source>
