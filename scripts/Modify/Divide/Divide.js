@@ -56,6 +56,7 @@ Divide.prototype.setState = function(state) {
 
     this.setCrosshairCursor();
 
+    var tr;
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case Divide.State.ChoosingEntity:
@@ -64,11 +65,13 @@ Divide.prototype.setState = function(state) {
         this.cutPos = undefined;
         this.getDocumentInterface().setClickMode(RAction.PickEntity);
         if (RSpline.hasProxy() && RPolyline.hasProxy()) {
-            this.setLeftMouseTip(qsTr("Choose line, arc, circle, ellipse, spline or polyline"));
+            tr = qsTr("Choose line, arc, circle, ellipse, spline or polyline");
         }
         else {
-            this.setLeftMouseTip(qsTr("Choose line, arc, circle or ellipse"));
+            tr = qsTr("Choose line, arc, circle or ellipse")
         }
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         this.setRightMouseTip(EAction.trCancel);
         break;
     case Divide.State.SettingPos:
@@ -77,7 +80,9 @@ Divide.prototype.setState = function(state) {
         this.pos2 = undefined;
         this.cutPos2 = undefined;
         this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
-        this.setLeftMouseTip(qsTr("Specify point"));
+        tr = qsTr("Specify point");
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         this.setRightMouseTip(EAction.trBack);
         EAction.showSnapTools();
         break;
@@ -85,7 +90,9 @@ Divide.prototype.setState = function(state) {
         this.pos2 = undefined;
         this.cutPos2 = undefined;
         this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
-        this.setLeftMouseTip(qsTr("Specify second point"));
+        tr = qsTr("Specify second point");
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         this.setRightMouseTip(EAction.trBack);
         EAction.showSnapTools();
         break;

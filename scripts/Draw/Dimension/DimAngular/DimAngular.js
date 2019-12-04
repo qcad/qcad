@@ -79,6 +79,7 @@ DimAngular.prototype.setState = function(state) {
         this.dimArcPosition = RVector.invalid;
         var trFirstEntity = qsTr("Arc or first of two lines");
         this.setLeftMouseTip(trFirstEntity);
+        this.setCommandPrompt(trFirstEntity);
         this.setRightMouseTip(EAction.trCancel);
         break;
 
@@ -92,6 +93,7 @@ DimAngular.prototype.setState = function(state) {
         this.dimArcPosition = RVector.invalid;
         var trSecondEntity = qsTr("Second line");
         this.setLeftMouseTip(trSecondEntity);
+        this.setCommandPrompt(trSecondEntity);
         this.setRightMouseTip(EAction.trBack);
         break;
 

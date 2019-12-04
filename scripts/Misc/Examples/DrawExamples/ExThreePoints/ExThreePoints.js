@@ -55,7 +55,9 @@ ExThreePoints.prototype.setState = function(state) {
 
     // status bar user information:
     var appWin = RMainWindowQt.getMainWindow();
-    this.setLeftMouseTip(qsTr("Position"));
+    var tr = qsTr("Position");
+    this.setLeftMouseTip(tr);
+    this.setCommandPrompt(tr);
     this.setRightMouseTip(EAction.trCancel);
 
     // show the snap toolbar, so the user can choose an alternative 

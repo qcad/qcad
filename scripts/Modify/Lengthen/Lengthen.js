@@ -57,7 +57,9 @@ Lengthen.prototype.setState = function(state) {
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case Lengthen.State.ChoosingEntity:
-        this.setLeftMouseTip(qsTr("Choose line or arc"));
+        var tr = qsTr("Choose line or arc");
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         break;
     }
 

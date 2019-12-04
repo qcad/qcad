@@ -83,15 +83,20 @@ SelectIntersectedEntities.prototype.setState = function(state) {
     this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
     this.setCrosshairCursor();
 
+    var tr;
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case this.State.SettingPoint1:
-        this.setLeftMouseTip(qsTr("First point"));
+        tr = qsTr("First point");
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         this.setRightMouseTip(EAction.trCancel);
         break;
 
     case this.State.SettingPoint2:
-        this.setLeftMouseTip(qsTr("Second point"));
+        tr = qsTr("Second point");
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         this.setRightMouseTip(EAction.trCancel);
         break;
     }

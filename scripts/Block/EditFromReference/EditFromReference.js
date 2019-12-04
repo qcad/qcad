@@ -52,7 +52,9 @@ EditFromReference.prototype.setState = function(state) {
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case EditFromReference.State.ChoosingEntity:
-        this.setLeftMouseTip(qsTr("Choose block reference"));
+        var tr = qsTr("Choose block reference");
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         break;
     }
 

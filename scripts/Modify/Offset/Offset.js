@@ -64,7 +64,9 @@ Offset.prototype.initState = function() {
 
     switch (this.state) {
     case Offset.State.ChoosingEntity:
-        this.setLeftMouseTip(this.getLeftMouseTip());
+        var tr = this.getLeftMouseTip();
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         break;
     }
 

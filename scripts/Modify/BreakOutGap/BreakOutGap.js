@@ -42,6 +42,7 @@ BreakOutGap.prototype.setState = function(state) {
 
     this.setCrosshairCursor();
 
+    var tr;
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
         case BreakOutGap.State.ChoosingEntity:
@@ -50,7 +51,9 @@ BreakOutGap.prototype.setState = function(state) {
             this.pos = undefined;
             this.cutPos = undefined;
             this.getDocumentInterface().setClickMode(RAction.PickEntity);
-            this.setLeftMouseTip(qsTr("Choose line, arc or circle"));
+            tr = qsTr("Choose line, arc or circle");
+            this.setLeftMouseTip(tr);
+            this.setCommandPrompt(tr);
             this.setRightMouseTip(EAction.trCancel);
             EAction.showModificationTools();
             break;
@@ -58,7 +61,9 @@ BreakOutGap.prototype.setState = function(state) {
             this.pos = undefined;
             this.cutPos = undefined;
             this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
-            this.setLeftMouseTip(qsTr("Specify point"));
+            tr = qsTr("Specify point");
+            this.setLeftMouseTip(tr);
+            this.setCommandPrompt(tr);
             this.setRightMouseTip(EAction.trBack);
             EAction.showSnapTools();
             break;

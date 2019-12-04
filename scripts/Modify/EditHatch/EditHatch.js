@@ -58,7 +58,9 @@ EditHatch.prototype.setState = function(state) {
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case EditHatch.State.ChoosingEntity:
-        this.setLeftMouseTip(qsTr("Choose hatch"));
+        var tr = qsTr("Choose hatch");
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         break;
     }
 

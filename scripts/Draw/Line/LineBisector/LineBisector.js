@@ -56,6 +56,7 @@ LineBisector.prototype.setState = function(state) {
     this.getDocumentInterface().setClickMode(RAction.PickEntity);
     this.setCrosshairCursor();
 
+    var tr;
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case LineBisector.State.ChoosingLine1:
@@ -63,11 +64,15 @@ LineBisector.prototype.setState = function(state) {
         this.pos1 = undefined;
         this.line2 = undefined;
         this.pos2 = undefined;
-        this.setLeftMouseTip(qsTr("First line"));
+        tr = qsTr("First line");
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         break;
 
     case LineBisector.State.ChoosingLine2:
-        this.setLeftMouseTip(qsTr("Second line"));
+        tr = qsTr("Second line");
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         break;
     }
 

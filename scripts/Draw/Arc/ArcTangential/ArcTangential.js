@@ -53,6 +53,7 @@ ArcTangential.prototype.setState = function(state) {
 
     this.setCrosshairCursor();
 
+    var tr;
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case ArcTangential.State.ChoosingBaseEntity:
@@ -60,12 +61,16 @@ ArcTangential.prototype.setState = function(state) {
         this.entity = undefined;
         this.pos = undefined;
         this.appendToStartPoint = undefined;
-        this.setLeftMouseTip(qsTr("Choose base line or base arc"));
+        tr = qsTr("Choose base line or base arc");
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         this.setRightMouseTip(EAction.trCancel);
         break;
     case ArcTangential.State.SettingEndPoint:
         this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
-        this.setLeftMouseTip(qsTr("Choose end point of arc"));
+        tr = qsTr("Choose end point of arc");
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         this.setRightMouseTip(EAction.trCancel);
         EAction.showSnapTools();
         break;

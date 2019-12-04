@@ -67,17 +67,22 @@ SelectRectangle.prototype.setState = function(state) {
     this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
     this.setCrosshairCursor();
 
+    var tr;
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case SelectRectangle.State.SettingPoint1:
-        this.setLeftMouseTip(qsTr("First corner"));
+        tr = qsTr("First corner");
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         this.setRightMouseTip(EAction.trCancel);
         this.point1 = undefined;
         this.point2 = undefined;
         break;
 
     case SelectRectangle.State.SettingPoint2:
-        this.setLeftMouseTip(qsTr("Second corner"));
+        tr = qsTr("Second corner");
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         this.setRightMouseTip(EAction.trDone);
         break;
     }

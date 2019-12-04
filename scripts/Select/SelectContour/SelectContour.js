@@ -50,7 +50,9 @@ SelectContour.prototype.setState = function(state) {
     this.setCrosshairCursor();
 
     var appWin = RMainWindowQt.getMainWindow();
-    this.setLeftMouseTip(qsTr("Choose entity of contour"));
+    var tr = qsTr("Choose entity of contour");
+    this.setLeftMouseTip(tr);
+    this.setCommandPrompt(tr);
     this.setRightMouseTip(EAction.trCancel);
 };
 

@@ -57,11 +57,14 @@ LineTangent1.prototype.setState = function(state) {
 
     this.setCrosshairCursor();
 
+    var tr;
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case LineTangent1.State.SettingPos:
         this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
-        this.setLeftMouseTip(qsTr("Choose start point of tangent"));
+        tr = qsTr("Choose start point of tangent");
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         this.setRightMouseTip(EAction.trCancel);
         this.entity = undefined;
         this.shape = undefined;
@@ -71,7 +74,9 @@ LineTangent1.prototype.setState = function(state) {
         break;
     case LineTangent1.State.ChoosingEntity:
         this.getDocumentInterface().setClickMode(RAction.PickEntity);
-        this.setLeftMouseTip(qsTr("Choose circle, arc or ellipse"));
+        tr = qsTr("Choose circle, arc or ellipse");
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         this.setRightMouseTip(EAction.trBack);
         //EAction.showMainTools();
         break;

@@ -406,7 +406,7 @@ Print.autoFitDrawing = function(di) {
     var document = di.getDocument();
     // drawing bounding box in drawing units:
     var bBox = document.getBoundingBox(true, true);
-    qDebug("bb: ", bBox);
+    //qDebug("bb: ", bBox);
     Print.autoFitBox(di, bBox);
     Print.centerBox(di, bBox);
 };
@@ -452,7 +452,7 @@ Print.autoFitBox = function(di, bBox) {
         f = 1.0;
     }
 
-    qDebug("f:", f);
+    //qDebug("f:", f);
 
     Print.setScale(di, f);
     Print.centerBox(di, bBox);

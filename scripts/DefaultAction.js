@@ -80,6 +80,7 @@ DefaultAction.prototype.setState = function(state) {
         this.setArrowCursor();
     }
 
+    var tr;
     switch (this.state) {
     case DefaultAction.State.Neutral:
         this.d1Model = RVector.invalid;
@@ -99,21 +100,23 @@ DefaultAction.prototype.setState = function(state) {
         this.d2Screen = RVector.invalid;
         break;
     case DefaultAction.State.SettingCorner2:
-        this.setLeftMouseTip(qsTr("Set second corner"));
+        tr = qsTr("Second corner");
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         this.setRightMouseTip("");
         break;
     case DefaultAction.State.MovingReference:
     case DefaultAction.State.SettingReference:
-        this.setLeftMouseTip(
-                qsTr("Specify target point of reference point")
-        );
+        tr = qsTr("Target point of reference point");
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         this.setRightMouseTip("");
         break;
     case DefaultAction.State.MovingEntity:
     case DefaultAction.State.SettingEntity:
-        this.setLeftMouseTip(
-                qsTr("Specify target point of selection")
-        );
+        tr = qsTr("Target point of selection");
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         this.setRightMouseTip("");
         break;
     case DefaultAction.State.MovingEntityInBlock:

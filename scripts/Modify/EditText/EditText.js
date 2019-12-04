@@ -58,7 +58,9 @@ EditText.prototype.setState = function(state) {
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case EditText.State.ChoosingEntity:
-        this.setLeftMouseTip(qsTr("Choose text"));
+        var tr = qsTr("Choose text")
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         break;
     }
 

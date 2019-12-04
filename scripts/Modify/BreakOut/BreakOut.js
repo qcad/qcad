@@ -54,12 +54,15 @@ BreakOut.prototype.setState = function(state) {
         this.entity = undefined;
         this.shape = undefined;
         this.getDocumentInterface().setClickMode(RAction.PickEntity);
+        var tr;
         if (RSpline.hasProxy() && RPolyline.hasProxy()) {
-            this.setLeftMouseTip(qsTr("Choose line, arc, circle, ellipse, spline or polyline segment"));
+            tr = qsTr("Choose line, arc, circle, ellipse, spline or polyline segment");
         }
         else {
-            this.setLeftMouseTip(qsTr("Choose line, arc, circle or ellipse segment"));
+            tr = qsTr("Choose line, arc, circle or ellipse segment");
         }
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         this.setRightMouseTip(EAction.trCancel);
         break;
     }

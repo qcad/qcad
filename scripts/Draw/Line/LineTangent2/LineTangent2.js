@@ -64,10 +64,13 @@ LineTangent2.prototype.setState = function(state) {
     this.getDocumentInterface().setClickMode(RAction.PickEntity);
     this.setCrosshairCursor();
 
+    var tr;
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case LineTangent2.State.ChoosingEntity1:
-        this.setLeftMouseTip(qsTr("Choose first circle or arc"));
+        tr = qsTr("Choose first circle or arc");
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         this.setRightMouseTip(EAction.trCancel);
         this.entity1 = undefined;
         this.shape1 = undefined;
@@ -78,7 +81,9 @@ LineTangent2.prototype.setState = function(state) {
         break;
     case LineTangent2.State.ChoosingEntity2:
         this.getDocumentInterface().setClickMode(RAction.PickEntity);
-        this.setLeftMouseTip(qsTr("Choose second circle or arc"));
+        tr = qsTr("Choose second circle or arc");
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         this.setRightMouseTip(EAction.trBack);
         break;
     }

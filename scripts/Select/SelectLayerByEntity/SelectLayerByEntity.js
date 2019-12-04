@@ -65,7 +65,9 @@ SelectLayerByEntity.prototype.setState = function(state) {
     this.getDocumentInterface().setClickMode(RAction.PickEntity);
 
     var appWin = RMainWindowQt.getMainWindow();
-    this.setLeftMouseTip(qsTr("Choose entity on layer"));
+    var tr = qsTr("Choose entity on layer");
+    this.setLeftMouseTip(tr);
+    this.setCommandPrompt(tr);
     this.setRightMouseTip(EAction.trCancel);
 };
 

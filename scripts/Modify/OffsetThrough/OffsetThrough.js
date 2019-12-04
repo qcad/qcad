@@ -52,6 +52,7 @@ OffsetThrough.prototype.beginEvent = function() {
 OffsetThrough.prototype.initState = function() {
     this.setCrosshairCursor();
 
+    var tr;
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case OffsetThrough.State.ChoosingEntity:
@@ -59,12 +60,16 @@ OffsetThrough.prototype.initState = function() {
         this.shape = undefined;
         this.distance = undefined;
         this.getDocumentInterface().setClickMode(RAction.PickEntity);
-        this.setLeftMouseTip(this.getLeftMouseTip());
+        tr = this.getLeftMouseTip();
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         this.setRightMouseTip(EAction.trCancel);
         break;
     case OffsetThrough.State.SettingPos:
         this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
-        this.setLeftMouseTip(qsTr("Specify point"));
+        tr = qsTr("Specify point");
+        this.setLeftMouseTip(tr);
+        this.setCommandPrompt(tr);
         this.setRightMouseTip(EAction.trBack);
         EAction.showSnapTools();
         break;
