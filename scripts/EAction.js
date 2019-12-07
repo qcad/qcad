@@ -2063,7 +2063,7 @@ EAction.getEntityIdsUnderCursor = function(di, event, range, selectable) {
  * \return Entity ID under the mouse cursor. User may choose between multiple candidates if
  * result is ambiguous and Alt key is pressed.
  *
- * \param event RRInputEvent
+ * \param event RInputEvent
  * \param preview for previewing purposes
  * \param selectable Only return selectable (editable) entities
  */
