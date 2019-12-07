@@ -6134,7 +6134,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+26"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation>Linientypskalierung für Linienstärke 0.00mm:</translation>
+        <translation>Linientypskalierung für Linienbreite 0.00mm:</translation>
     </message>
     <message>
         <location line="+36"/>
