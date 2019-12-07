@@ -393,7 +393,7 @@
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
-        <translation>Linienstärke</translation>
+        <translation>Linienbreite</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -738,7 +738,7 @@
     </message>
     <message>
         <source>Lineweight</source>
-        <translation type="vanished">Linienstärke</translation>
+        <translation>Linienbreite</translation>
     </message>
 </context>
 <context>
