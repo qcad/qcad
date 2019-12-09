@@ -373,6 +373,11 @@ bool REntity::isVisible(RBlock::Id blockId) const {
         return true;
     }
 
+    if (isInvisible()) {
+        // entity is invisible (part of a dynamic block and turned off):
+        return false;
+    }
+
     return doc->isEntityVisible(*this, blockId);
 }
 

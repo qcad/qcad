@@ -73,6 +73,7 @@ public:
     static RPropertyTypeId PropertyHandle;
     static RPropertyTypeId PropertyProtected;
     static RPropertyTypeId PropertySelected;
+    static RPropertyTypeId PropertyInvisible;
 
     enum XYZ {
         X, Y, Z
@@ -83,7 +84,8 @@ public:
         NoFlags = 0x000,
         Undone = 0x001,           //!< object is undone
         Protect = 0x002,          //!< object is protected
-        Selected = 0x004          //!< object is selected
+        Selected = 0x004,         //!< object is selected
+        Invisible = 0x008         //!< object is invisible
     };
     Q_DECLARE_FLAGS(Flags, ObjectFlag)
 
@@ -158,6 +160,14 @@ public:
 
     void setProtected(bool on) {
         setFlag(RObject::Protect, on);
+    }
+
+    bool isInvisible() const {
+        return getFlag(RObject::Invisible);
+    }
+
+    void setInvisible(bool on) {
+        setFlag(RObject::Invisible, on);
     }
 
     virtual bool isSelected() const {

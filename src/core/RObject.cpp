@@ -34,6 +34,7 @@ RPropertyTypeId RObject::PropertyType;
 RPropertyTypeId RObject::PropertyHandle;
 RPropertyTypeId RObject::PropertyProtected;
 RPropertyTypeId RObject::PropertySelected;
+RPropertyTypeId RObject::PropertyInvisible;
 
 RObject::RObject(RDocument* document) :
     document(document),
@@ -68,6 +69,7 @@ void RObject::init() {
     RObject::PropertyHandle.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Handle"));
     RObject::PropertyProtected.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Protected"));
     RObject::PropertySelected.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Selected"));
+    RObject::PropertySelected.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Invisible"));
 }
 
 void RObject::setUndone(bool on) {
@@ -107,14 +109,17 @@ QPair<QVariant, RPropertyAttributes> RObject::getProperty(RPropertyTypeId& prope
     if (propertyTypeId==PropertyType) {
         return qMakePair(QVariant(getType()), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     }
-    if (propertyTypeId==PropertyHandle) {
+    else if (propertyTypeId==PropertyHandle) {
         return qMakePair(QVariant(handle), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     }
-    if (propertyTypeId==PropertyProtected) {
+    else if (propertyTypeId==PropertyProtected) {
         return qMakePair(QVariant(isProtected()), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     }
-    if (propertyTypeId==PropertySelected) {
+    else if (propertyTypeId==PropertySelected) {
         return qMakePair(QVariant(isSelected()), RPropertyAttributes(RPropertyAttributes::Invisible));
+    }
+    else if (propertyTypeId==PropertyInvisible) {
+        return qMakePair(QVariant(isInvisible()), RPropertyAttributes(RPropertyAttributes::Invisible));
     }
 
     if (propertyTypeId.isCustom()) {
@@ -145,6 +150,7 @@ bool RObject::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
 
     ret = ret || RObject::setMemberFlag(RObject::Protect, value, PropertyProtected == propertyTypeId);
     ret = ret || RObject::setMemberFlag(RObject::Selected, value, PropertySelected == propertyTypeId);
+    ret = ret || RObject::setMemberFlag(RObject::Invisible, value, PropertyInvisible == propertyTypeId);
 
     // set custom property:
     if (propertyTypeId.getId()==RPropertyTypeId::INVALID_ID) {
