@@ -369,7 +369,7 @@
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+91"/>
-        <location filename="../src/core/RObject.cpp" line="+67"/>
+        <location filename="../src/core/RObject.cpp" line="+68"/>
         <source>Type</source>
         <translation>類型</translation>
     </message>
@@ -522,6 +522,11 @@
     <message>
         <location line="+1"/>
         <source>Selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Invisible</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

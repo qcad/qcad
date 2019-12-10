@@ -506,7 +506,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+91"/>
-        <location filename="../src/core/RObject.cpp" line="+67"/>
+        <location filename="../src/core/RObject.cpp" line="+68"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -630,6 +630,11 @@ Abre diálogo de cores</translatorcomment>
         <location line="+1"/>
         <source>Selected</source>
         <translation>Selecionada</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Invisible</source>
+        <translation>Invisível</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>

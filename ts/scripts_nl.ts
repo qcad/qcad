@@ -927,7 +927,7 @@ Wilt u de tekening herstellen?</translation>
     <message>
         <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
 Do you wish to recover them?</source>
-        <translation>%1 &apos;auto-opslaan&apos; bestanden voor naamloose tekeningen gevonden.
+        <translation type="vanished">%1 &apos;auto-opslaan&apos; bestanden voor naamloose tekeningen gevonden.
 Wilt u deze herstellen?</translation>
     </message>
     <message numerus="yes">
@@ -958,7 +958,7 @@ Wilt u deze herstellen?</numerusform>
     <message>
         <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
-        <translation>Een &apos;auto-opslaan&apos; bestand voor &apos;%1&apos; bestaat.
+        <translation type="vanished">Een &apos;auto-opslaan&apos; bestand voor &apos;%1&apos; bestaat.
 Wilt u het herstellen?</translation>
     </message>
     <message>
@@ -13540,19 +13540,19 @@ getoond in zoekresultaten:</translation>
     </message>
     <message>
         <source>2 Line Angular Dimensions</source>
-        <translation>2 lijnen hoekbematingen</translation>
+        <translation type="vanished">2 lijnen hoekbematingen</translation>
     </message>
     <message>
         <source>2 Line Angular Dimension</source>
-        <translation>2 lijnen hoekbemating</translation>
+        <translation type="vanished">2 lijnen hoekbemating</translation>
     </message>
     <message>
         <source>3 Point Angular Dimensions</source>
-        <translation>3 punt hoekbematingen</translation>
+        <translation type="vanished">3 punt hoekbematingen</translation>
     </message>
     <message>
         <source>3 Point Angular Dimension</source>
-        <translation>3 punt hoekbemating</translation>
+        <translation type="vanished">3 punt hoekbemating</translation>
     </message>
     <message>
         <location line="+2"/>

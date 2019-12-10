@@ -356,7 +356,7 @@
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+91"/>
-        <location filename="../src/core/RObject.cpp" line="+67"/>
+        <location filename="../src/core/RObject.cpp" line="+68"/>
         <source>Type</source>
         <translation>Type</translation>
     </message>
@@ -455,6 +455,11 @@
         <location line="+1"/>
         <source>Selected</source>
         <translation>Geselecteerd</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Invisible</source>
+        <translation>Onzichtbaar</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
@@ -667,7 +672,7 @@
     </message>
     <message>
         <source>Plot Margins</source>
-        <translation>Plotranden</translation>
+        <translation type="vanished">Plotranden</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+834"/>
@@ -1082,7 +1087,7 @@
     <name>RObject</name>
     <message>
         <source>Custom</source>
-        <translation>Gebruikergedefinieerd</translation>
+        <translation type="vanished">Gebruikergedefinieerd</translation>
     </message>
     <message>
         <source>Type</source>

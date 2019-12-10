@@ -525,7 +525,7 @@ Inserisci l&apos;angolo della linea di quota:</translatorcomment>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+91"/>
-        <location filename="../src/core/RObject.cpp" line="+67"/>
+        <location filename="../src/core/RObject.cpp" line="+68"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: liferea-1.8-rc1.it.po--
@@ -644,6 +644,11 @@ Colore G&amp;riglia:</translatorcomment>
         <location line="+1"/>
         <source>Selected</source>
         <translation>Selezionato</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Invisible</source>
+        <translation>Invisibile</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>

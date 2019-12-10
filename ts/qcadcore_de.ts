@@ -364,7 +364,7 @@
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+91"/>
-        <location filename="../src/core/RObject.cpp" line="+67"/>
+        <location filename="../src/core/RObject.cpp" line="+68"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
@@ -463,6 +463,11 @@
         <location line="+1"/>
         <source>Selected</source>
         <translation>Ausgewählt</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Invisible</source>
+        <translation>Unsichtbar</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
@@ -738,7 +743,7 @@
     </message>
     <message>
         <source>Lineweight</source>
-        <translation>Linienbreite</translation>
+        <translation type="vanished">Linienbreite</translation>
     </message>
 </context>
 <context>
