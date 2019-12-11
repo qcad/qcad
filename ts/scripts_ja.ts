@@ -11481,7 +11481,7 @@ shown in search results:</source>
 <context>
     <name>ShapePolygonCP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+58"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+59"/>
         <source>Center</source>
         <translation>中心</translation>
     </message>

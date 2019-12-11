@@ -10837,7 +10837,7 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>ShapePolygonCP</name>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+58"/>
+        <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+59"/>
         <source>Center</source>
         <translation>Střed</translation>
     </message>
