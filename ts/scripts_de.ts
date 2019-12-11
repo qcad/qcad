@@ -3000,17 +3000,17 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+11"/>
         <source>Second corner</source>
-        <translation type="unfinished">Zweiter Eckpunkt</translation>
+        <translation>Zweiter Eckpunkt</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Zielpunkt des Referenzpunktes</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Zielpunkt der Auswahl</translation>
     </message>
     <message>
         <location line="+7"/>
