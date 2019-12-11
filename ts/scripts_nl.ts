@@ -2622,17 +2622,17 @@ Wilt u het herstellen?</translation>
     <message>
         <location line="+11"/>
         <source>Second corner</source>
-        <translation type="unfinished">Tweede hoekpunt</translation>
+        <translation>Tweede hoekpunt</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Doelpunt van referentiepunt</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Doelpunt van selectie</translation>
     </message>
     <message>
         <location line="+7"/>
