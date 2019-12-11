@@ -2839,17 +2839,17 @@ Coordonnées polaires relatives</translatorcomment>
     <message>
         <location line="+11"/>
         <source>Second corner</source>
-        <translation type="unfinished">Deuxième point d&apos;angle</translation>
+        <translation>Deuxième point d&apos;angle</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Point de référence cible</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Point de sélection cible</translation>
     </message>
     <message>
         <location line="+7"/>
