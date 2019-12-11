@@ -3074,17 +3074,17 @@ Corte entidades com ponto de referência ao clipboard</translatorcomment>
     <message>
         <location line="+11"/>
         <source>Second corner</source>
-        <translation type="unfinished">Segundo vértice</translation>
+        <translation>Segundo vértice</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Ponto alvo do ponto de referência</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Ponto alvo de seleção</translation>
     </message>
     <message>
         <location line="+7"/>
