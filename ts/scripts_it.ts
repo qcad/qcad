@@ -2879,17 +2879,17 @@ Coordinate polari relativo:</translatorcomment>
     <message>
         <location line="+11"/>
         <source>Second corner</source>
-        <translation type="unfinished">Secondo punto dell&apos;angolo</translation>
+        <translation>Secondo punto dell&apos;angolo</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Punto di destinazione del punto di riferimento</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Punto di destinazione della selezione</translation>
     </message>
     <message>
         <location line="+7"/>
