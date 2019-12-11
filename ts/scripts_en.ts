@@ -2580,17 +2580,17 @@ Do you wish to recover it?</translation>
     <message>
         <location line="+11"/>
         <source>Second corner</source>
-        <translation type="unfinished">Second corner</translation>
+        <translation>Second corner</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Target point of reference point</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Target point of selection</translation>
     </message>
     <message>
         <location line="+7"/>
