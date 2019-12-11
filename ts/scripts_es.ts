@@ -2849,17 +2849,17 @@ Coordenadas polares relativa:</translatorcomment>
     <message>
         <location line="+11"/>
         <source>Second corner</source>
-        <translation type="unfinished">Segunda punto de esquina</translation>
+        <translation>Segunda punto de esquina</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Punto objetivo del punto de referencia</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Punto objetivo de selección</translation>
     </message>
     <message>
         <location line="+7"/>
