@@ -27,6 +27,7 @@ include("../Shape.js");
 function ShapePolygonCP(guiAction) {
     Shape.call(this, guiAction);
 
+    this.numberOfCorners = undefined;
     this.center = undefined;
     this.corner = undefined;
 
