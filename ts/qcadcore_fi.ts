@@ -459,7 +459,7 @@
     <message>
         <location line="+1"/>
         <source>Invisible</source>
-        <translation type="unfinished"></translation>
+        <translation>Näkymätön</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
