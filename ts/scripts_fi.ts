@@ -200,7 +200,7 @@
     <message>
         <location line="+52"/>
         <source>Hatch Patterns</source>
-        <translation type="unfinished">Peittokuviot</translation>
+        <translation>Peittokuviot</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -2608,22 +2608,22 @@ Haluatko palauttaa sen?</translation>
     <message>
         <location line="+11"/>
         <source>Second corner</source>
-        <translation type="unfinished">Toinen kulma</translation>
+        <translation>Toinen kulma</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohteena oleva vertailupiste</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Valinnan tavoitepiste</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Move entity to desired location</source>
-        <translation>Siirrä kohde haluttuun paikkaan</translation>
+        <translation>Siirrä kokonaisuus haluttuun sijaintiin</translation>
     </message>
     <message>
         <location line="+384"/>
@@ -7515,7 +7515,7 @@ Kirjastoselain ei ole käytettävissä.</translation>
     <message>
         <location line="+44"/>
         <source>Dark icon background</source>
-        <translation type="unfinished"></translation>
+        <translation>Tumma kuvake tausta</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -10267,12 +10267,12 @@ näkyy hakutuloksissa:</translation>
     <message>
         <location line="+27"/>
         <source>Store &quot;last saved by&quot; file information as:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tallenna &quot;viimeksi tallennettu&quot; tiedoston tiedot muodossa:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>(empty for username)</source>
-        <translation type="unfinished"></translation>
+        <translation>(tyhjä käyttäjätunnukselle)</translation>
     </message>
     <message>
         <source>Load/Save</source>
