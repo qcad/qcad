@@ -141,7 +141,7 @@ HatchFromSelection.verifyBoundaryEntity = function(doc, entity) {
         var ids = doc.queryBlockEntities(blockReferenceData.getReferencedBlockId());
         var ret = true;
         for (var i=0; i<ids.length; i++) {
-            var bEntity = blockReferenceData.queryEntity(ids[i]);
+            var bEntity = blockReferenceData.queryEntity(ids[i], true);
             if (bEntity.isNull()) {
                 continue;
             }
@@ -255,7 +255,7 @@ HatchFromSelection.traverse = function(hatchData, docOrBlockRef, entity, candida
                 continue;
             }
 
-            var bEntity = blockReferenceData.queryEntity(ids[i]);
+            var bEntity = blockReferenceData.queryEntity(ids[i], true);
             if (bEntity.isNull()) {
                 continue;
             }
@@ -307,7 +307,7 @@ HatchFromSelection.traverse = function(hatchData, docOrBlockRef, entity, candida
             }
             else {
                 // query entity from block reference:
-                entity = docOrBlockRef.queryEntity(entityId);
+                entity = docOrBlockRef.queryEntity(entityId, true);
             }
 
             if (isBlockReferenceEntity(entity)) {
