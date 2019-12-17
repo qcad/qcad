@@ -203,7 +203,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+20"/>
         <source>Translations</source>
         <translation type="unfinished"></translation>
     </message>

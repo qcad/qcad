@@ -215,7 +215,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+20"/>
         <source>Translations</source>
         <translation>翻訳</translation>
     </message>

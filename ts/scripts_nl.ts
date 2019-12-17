@@ -231,7 +231,7 @@
         <translation>Arceerpatronen</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+20"/>
         <source>Translations</source>
         <translation>Vertalingen</translation>
     </message>

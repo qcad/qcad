@@ -239,7 +239,7 @@
         <translation>Motifs de hachures</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+20"/>
         <source>Translations</source>
         <translation>Traductions</translation>
     </message>
