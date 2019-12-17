@@ -1078,7 +1078,7 @@ FlexPainter.prototype.initWidgets = function(widget, postfix) {
     // Continuously: Adapt Preview icons
     //               Re-initiate painter set & Prefs
     //               Force base9 and parse MainWidth to MainPainterBox
-    widgets["PainterSelection"].currentTextChanged.connect(
+    widgets["PainterSelection"].editTextChanged.connect(
                 function(currentText) {
                     // # ToDo # Check set data named 'currentText' and report if none
                     // Adapt icons
