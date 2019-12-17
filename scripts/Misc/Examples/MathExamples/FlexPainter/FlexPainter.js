@@ -1185,22 +1185,37 @@ FlexPainter.prototype.getPainterSet = function(painterSet) {
 };
 
 FlexPainter.prototype.getBase9Length = function() {
+    if (isNull(this.mainData)) {
+        return 0.0;
+    }
     return this.mainData[0][2];
 };
 
 FlexPainter.prototype.getBase9Stepsize = function() {
+    if (isNull(this.mainData)) {
+        return 0.0;
+    }
     return this.mainData[0][3];
 };
 
 FlexPainter.prototype.getDoBeginApex = function() {
+    if (isNull(this.mainData)) {
+        return false;
+    }
     return (this.beginApexData[0][0] > 0);
 };
 
 FlexPainter.prototype.getDoEndApex = function() {
+    if (isNull(this.mainData)) {
+        return false;
+    }
     return (this.endApexData[0][0] > 0);
 };
 
 FlexPainter.prototype.getDoInserts = function() {
+    if (isNull(this.mainData)) {
+        return false;
+    }
     return (this.knotData[0][0] > 0);
 };
 
