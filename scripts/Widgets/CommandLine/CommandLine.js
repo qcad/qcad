@@ -478,8 +478,17 @@ CommandLine.init = function(basePath) {
     case "linux":
         system = "Linux";
         break;
+    case "freebsd":
+        system = "FreeBSD";
+        break;
+    case "netbsd":
+        system = "NetBSD";
+        break;
     case "openbsd":
         system = "OpenBSD";
+        break;
+    case "solaris":
+        system = "Solaris";
         break;
     }
     EAction.handleUserMessage(
