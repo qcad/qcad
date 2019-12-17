@@ -819,7 +819,7 @@ FlexPainter.prototype.showDialog = function() {
         //     widgets["PainterSelection"].setCurrentText("Default");
         // # Issue Solved # The Dialog starts with the non-existent set "Default"
         //          Solved with "CurtainRopeProto". Offcourse
-        widgets["PainterSelection"].setCurrentText("CurtainRopeProto");
+        widgets["PainterSelection"].currentText = "CurtainRopeProto";
 
         // Set an appropriate default painter width
         // The idee behind this is: Metric starts with 10 units
