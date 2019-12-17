@@ -36,6 +36,7 @@
 #pragma once
 #endif // _MSC_VER > 1000
 
+#include <cstring>
 #include <iostream>
 #include <algorithm>
 
