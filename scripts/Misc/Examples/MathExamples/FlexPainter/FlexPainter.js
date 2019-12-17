@@ -1073,6 +1073,7 @@ FlexPainter.prototype.initWidgets = function(widget, postfix) {
         // this.endApexData[0][0]
         // this.knotData[0][0]
 
+    var self = this;
 
     // On PainterSelection change:
     // Continuously: Adapt Preview icons
@@ -1088,13 +1089,13 @@ FlexPainter.prototype.initWidgets = function(widget, postfix) {
                     // Re-initiate painter set
                     // # Issue Fixed # FlexPainter.PainterSetInit() out of scope
                     // # Workaround # getPainterSet functions (calls PainterSetInit)
-                    getPainterSet(currentText);
+                    self.getPainterSet(currentText);
                     // Adapt for Apexes and Insertions
                     // # Issue Fixed # Painter data out of scope
                     // # Workaround # getDoBeginApex, getDoEndApex and getDoInserts functions (return boolean)
-                    widgets["DoBeginApex"].setEnabled(getDoBeginApex());
-                    widgets["DoEndApex"].setEnabled(getDoEndApex());
-                    widgets["DoInserts"].setEnabled(getDoInserts());
+                    widgets["DoBeginApex"].setEnabled(self.getDoBeginApex());
+                    widgets["DoEndApex"].setEnabled(self.getDoEndApex());
+                    widgets["DoInserts"].setEnabled(self.getDoInserts());
                     // Width remains: Force MainPainterBox to base9 by PreserveLook
                     // # Issue # Simple & Dirty! Toggle twice to get the correct state and actions
                     widgets["PreserveLook"].checked = false
@@ -1114,8 +1115,8 @@ FlexPainter.prototype.initWidgets = function(widget, postfix) {
                         var scaleW = widgets["MainWidth"].getValue() / 9;    // can be NaN
                         // # Issue Fixed # Painter data out of scope
                         // # Workaround # getBase9Length and getBase9Stepsize functions (return dimension)
-                        widgets["MainLengthX"].setValue(getBase9Length() * scaleW);
-                        widgets["MainStepX"].setValue(getBase9Stepsize() * scaleW);
+                        widgets["MainLengthX"].setValue(self.getBase9Length() * scaleW);
+                        widgets["MainStepX"].setValue(self.getBase9Stepsize() * scaleW);
                     }
                 });
 
@@ -1135,11 +1136,11 @@ FlexPainter.prototype.initWidgets = function(widget, postfix) {
                         var scaleW = widgets["MainWidth"].getValue() / 9;    // can be NaN
                         // # Issue Fixed # Painter data out of scope
                         // # Workaround # getBase9Length and getBase9Stepsize functions (return dimension)
-                        widgets["MainLengthX"].setValue(getBase9Length() * scaleW);
-                        widgets["MainStepX"].setValue(getBase9Stepsize() * scaleW);
+                        widgets["MainLengthX"].setValue(self.getBase9Length() * scaleW);
+                        widgets["MainStepX"].setValue(self.getBase9Stepsize() * scaleW);
                     }
                     // Adapt for Null-Length painter
-                    if (!checked && getBase9Length() == 0.00) {
+                    if (!checked && self.getBase9Length() == 0.00) {
                         widgets["LabelLength"].setEnabled(false);
                         widgets["MainLengthX"].setEnabled(false);
                     }
@@ -1155,7 +1156,7 @@ FlexPainter.prototype.initWidgets = function(widget, postfix) {
                     // Adapt for Null-Length painter
                     // # Issue Fixed # Painter data out of scope
                     // # Workaround # getBase9Length function (return dimension)
-                    if (getBase9Length() == 0.00) {
+                    if (self.getBase9Length() == 0.00) {
                         widgets["MainLengthX"].text = "0";
                         widgets["LabelLength"].setEnabled(false);
                         widgets["MainLengthX"].setEnabled(false);
@@ -1179,23 +1180,28 @@ FlexPainter.prototype.initWidgets = function(widget, postfix) {
 // Found FlexPainter under this but no painter data
 // Found painter data under this.FlexPainter.prototype.xyz
 // I was astonished that it worked...
-getPainterSet = function(painterSet) {
-    this.FlexPainter.prototype.PainterSetInit(painterSet);
+FlexPainter.prototype.getPainterSet = function(painterSet) {
+    this.PainterSetInit(painterSet);
 };
-getBase9Length = function() {
-    return this.FlexPainter.prototype.mainData[0][2];
+
+FlexPainter.prototype.getBase9Length = function() {
+    return this.mainData[0][2];
 };
-getBase9Stepsize = function() {
-    return this.FlexPainter.prototype.mainData[0][3];
+
+FlexPainter.prototype.getBase9Stepsize = function() {
+    return this.mainData[0][3];
 };
-getDoBeginApex = function() {
-    return (this.FlexPainter.prototype.beginApexData[0][0] > 0);
+
+FlexPainter.prototype.getDoBeginApex = function() {
+    return (this.beginApexData[0][0] > 0);
 };
-getDoEndApex = function() {
-    return (this.FlexPainter.prototype.endApexData[0][0] > 0);
+
+FlexPainter.prototype.getDoEndApex = function() {
+    return (this.endApexData[0][0] > 0);
 };
-getDoInserts = function() {
-    return (this.FlexPainter.prototype.knotData[0][0] > 0);
+
+FlexPainter.prototype.getDoInserts = function() {
+    return (this.knotData[0][0] > 0);
 };
 
 /**
