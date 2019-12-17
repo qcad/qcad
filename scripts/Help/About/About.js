@@ -451,8 +451,17 @@ About.prototype.initAboutSystem = function(textEdit) {
     if (RS.getSystemId()==="linux") {
         text += "Linux";
     }
+    if (RS.getSystemId()==="freebsd") {
+        text += "FreeBSD";
+    }
+    if (RS.getSystemId()==="netbsd") {
+        text += "NetBSD";
+    }
     if (RS.getSystemId()==="openbsd") {
         text += "OpenBSD";
+    }
+    if (RS.getSystemId()==="solaris") {
+        text += "Solaris";
     }
     text += "\nOS version: " + RSettings.getOSVersion();
 
