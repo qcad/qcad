@@ -40,7 +40,7 @@
  */
 class QCADCORE_EXPORT RLineweight {
 
-    Q_DECLARE_TR_FUNCTIONS(RLineweight);
+    Q_DECLARE_TR_FUNCTIONS(RLineweight)
 
 public:
     enum Lineweight {
