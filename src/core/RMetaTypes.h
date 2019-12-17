@@ -141,7 +141,9 @@
 #include "RSingleApplication.h"
 
 Q_DECLARE_METATYPE(int*)
+#ifdef _LP64
 Q_DECLARE_METATYPE(unsigned int*)
+#endif
 Q_DECLARE_METATYPE(qint64*)
 
 #if !defined Q_OS_WIN && !defined Q_OS_LINUX && !defined Q_OS_FREEBSD
