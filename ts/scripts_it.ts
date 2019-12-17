@@ -14650,21 +14650,21 @@ Obiettivo punto</translatorcomment>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
         <source>View Tools</source>
-        <translation>Strumenti di visualizzazione</translation>
+        <translation>Strumenti di vista</translation>
     </message>
     <message>
         <source>Show view tools</source>
-        <translation type="vanished">Mostra strumenti di visualizzazione</translation>
+        <translation>Mostra strumenti di vista</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>View</source>
-        <translation>Visualizza</translation>
+        <translation>Vista</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;View</source>
-        <translation>&amp;Visualizza</translation>
+        <translation>&amp;Vista</translation>
     </message>
 </context>
 <context>
@@ -15253,7 +15253,7 @@ Visita il &amp;sito web</translatorcomment>
     <message>
         <location line="+0"/>
         <source>View</source>
-        <translation>Visualizza</translation>
+        <translation>Vista</translation>
     </message>
     <message>
         <location line="+3"/>
