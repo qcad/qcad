@@ -237,10 +237,10 @@
              <bool>true</bool>
             </property>
             <property name="currentText">
-             <string>CurtainRope</string>
+             <string/>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>-1</number>
             </property>
             <property name="insertPolicy">
              <enum>QComboBox::NoInsert</enum>

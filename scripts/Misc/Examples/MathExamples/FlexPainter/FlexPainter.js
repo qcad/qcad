@@ -1817,8 +1817,8 @@ FlexPainter.init = function(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/FlexPainter.js");
     action.setIcon(basePath + "/FlexPainter.svg");
-//    action.setDefaultShortcut(new QKeySequence("xyz, xyz"));    // # ToDo #
-//    action.setDefaultCommands(["xyzxyz", "xyzxyz"]);    // # ToDo #
+    action.setDefaultShortcut(new QKeySequence("f,p"));
+    action.setDefaultCommands(["flexpainter"]);
     action.setGroupSortOrder(79700);
     action.setSortOrder(300);
     action.setWidgetNames(["MathExamplesMenu"]);
