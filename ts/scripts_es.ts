@@ -5195,7 +5195,7 @@ Punto decimal:</translatorcomment>
 <context>
     <name>FlexPainter</name>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1795"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1816"/>
         <source>&amp;FlexPainter</source>
         <translation>&amp;FlexPainter</translation>
     </message>
@@ -5378,7 +5378,7 @@ Punto decimal:</translatorcomment>
         <translation>Nudo de cuerda de cortina</translation>
     </message>
     <message>
-        <location line="+301"/>
+        <location line="+328"/>
         <source>Document Units</source>
         <translation>Unidades de documento</translation>
     </message>

@@ -124,7 +124,7 @@
     </message>
     <message>
         <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
-        <translation>Модули и сценарии-дополнения подпадают под действие соответствующих лицензий (см. вкладку «Плагины»).</translation>
+        <translation type="vanished">Модули и сценарии-дополнения подпадают под действие соответствующих лицензий (см. вкладку «Плагины»).</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -416,7 +416,7 @@ the preference changes to take effect.</source>
     </message>
     <message>
         <source>Show arc tools</source>
-        <translation>Показать инструменты для работы с дугами</translation>
+        <translation type="vanished">Показать инструменты для работы с дугами</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -915,13 +915,13 @@ Do you wish to recover it?</source>
     <message>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
-        <translation>Был найден «автосохранённый» файл резервного копирования
+        <translation type="vanished">Был найден «автосохранённый» файл резервного копирования
 для безымянного чертежа. Вы хотите восстановить его?</translation>
     </message>
     <message>
         <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
 Do you wish to recover them?</source>
-        <translation>Были найдены «автосохранённые» файлы резервного копирования
+        <translation type="vanished">Были найдены «автосохранённые» файлы резервного копирования
 для безымянного чертежа: %1. Вы хотите восстановить их?</translation>
     </message>
     <message>
@@ -942,7 +942,7 @@ Do you wish to recover them?</source>
     <message>
         <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
-        <translation>Существует «автосохранённый» файл резервного копирования
+        <translation type="vanished">Существует «автосохранённый» файл резервного копирования
 для «%1». Вы хотите восстановить его?</translation>
     </message>
     <message>
@@ -1132,11 +1132,11 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
-        <translation>Ошибка генерации файла растрового изображения «%1»: %2</translation>
+        <translation type="vanished">Ошибка генерации файла растрового изображения «%1»: %2</translation>
     </message>
     <message>
         <source>Bitmap file has been exported to &apos;%1&apos;</source>
-        <translation>Растровый файл был экспортирован в «%1»</translation>
+        <translation type="vanished">Растровый файл был экспортирован в «%1»</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportDialog.ui" line="+14"/>
@@ -1268,7 +1268,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <source>Show block tools</source>
-        <translation>Показать инструменты для работы с блоками</translation>
+        <translation type="vanished">Показать инструменты для работы с блоками</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -1306,7 +1306,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation>Блок «%1» уже существует&lt;br&gt;и будет перезаписан.</translation>
+        <translation type="vanished">Блок «%1» уже существует&lt;br&gt;и будет перезаписан.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1673,7 +1673,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <source>Show circle tools</source>
-        <translation>Показать инструменты для работы с окружностями</translation>
+        <translation type="vanished">Показать инструменты для работы с окружностями</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -2645,7 +2645,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation>При редактировании блока «%1»&lt;br&gt;выберите &lt;i&gt;Блок &gt; Вернуться к основному чертежу&lt;/i&gt;, когда закончите</translation>
+        <translation type="vanished">При редактировании блока «%1»&lt;br&gt;выберите &lt;i&gt;Блок &gt; Вернуться к основному чертежу&lt;/i&gt;, когда закончите</translation>
     </message>
 </context>
 <context>
@@ -2978,10 +2978,12 @@ Do you wish to recover it?</source>
     <message numerus="yes">
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
-        <translation><numerusform>Положение метки %n размерности было сброшено.</numerusform>
-        <numerusform>Положение метки %n размерностей было сброшено.</numerusform>
-        <numerusform>Положение метки %n размерностей было сброшено.</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Положение метки %n размерности было сброшено.</numerusform>
+            <numerusform>Положение метки %n размерностей было сброшено.</numerusform>
+            <numerusform>Положение метки %n размерностей было сброшено.</numerusform>
+        </translation>
+    </message>
     <message>
         <source>Reset label position of %1 dimension(s).</source>
         <translation type="vanished">Сбросить положение метки из %1 размера(ов).</translation>
@@ -3097,7 +3099,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <source>Show dimension tools</source>
-        <translation>Показать инструменты для работы с размерами</translation>
+        <translation type="vanished">Показать инструменты для работы с размерами</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -3958,7 +3960,7 @@ is already in the list.</source>
     </message>
     <message>
         <source>Show ellipse tools</source>
-        <translation>Показать инструменты для работы с эллипсами</translation>
+        <translation type="vanished">Показать инструменты для работы с эллипсами</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -4251,7 +4253,7 @@ is already in the list.</source>
     <name>ExAddLayer</name>
     <message>
         <source>Added layer &apos;MyLayer&apos;</source>
-        <translation>Добавлен слой «МойСлой»</translation>
+        <translation type="vanished">Добавлен слой «МойСлой»</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExAddLayer/ExAddLayer.js" line="+44"/>
@@ -4336,7 +4338,7 @@ is already in the list.</source>
     <name>ExLayerCustomProperty</name>
     <message>
         <source>Added custom property &apos;MyCustomProperty&apos; to layer &apos;0&apos;.</source>
-        <translation>Добавлено пользовательское свойство «МоёПользовательскоеСвойство» к слою «0».</translation>
+        <translation type="vanished">Добавлено пользовательское свойство «МоёПользовательскоеСвойство» к слою «0».</translation>
     </message>
     <message>
         <source>Add custom property to a layer</source>
@@ -4457,7 +4459,7 @@ is already in the list.</source>
     </message>
     <message>
         <source>Registered a file exporter for file type &apos;.example&apos;. Use File &gt; Save As to see the filter in action.</source>
-        <translation>Зарегистрирован экспортёр файлов для типа файла «.example». Используйте «Файл -&gt; Сохранить как», чтобы увидеть фильтр в действии.</translation>
+        <translation type="vanished">Зарегистрирован экспортёр файлов для типа файла «.example». Используйте «Файл -&gt; Сохранить как», чтобы увидеть фильтр в действии.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4484,7 +4486,7 @@ is already in the list.</source>
     </message>
     <message>
         <source>Read from file: &apos;%1&apos;</source>
-        <translation>Прочитать из файла: «%1»</translation>
+        <translation type="vanished">Прочитать из файла: «%1»</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -4493,7 +4495,7 @@ is already in the list.</source>
     </message>
     <message>
         <source>Registered a file importer for file type &apos;.example&apos;. Use File &gt; Open to see the filter in action.</source>
-        <translation>Зарегистрирован импортёр файлов для типа файла «.example». Используйте «Файл -&gt; Открыть», чтобы увидеть фильтр в действии.</translation>
+        <translation type="vanished">Зарегистрирован импортёр файлов для типа файла «.example». Используйте «Файл -&gt; Открыть», чтобы увидеть фильтр в действии.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -4784,7 +4786,7 @@ is already in the list.</source>
 <context>
     <name>FlexPainter</name>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1795"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1816"/>
         <source>&amp;FlexPainter</source>
         <translation>&amp;FlexPainter</translation>
     </message>
@@ -4967,7 +4969,7 @@ is already in the list.</source>
         <translation>Узел подхвата</translation>
     </message>
     <message>
-        <location line="+301"/>
+        <location line="+328"/>
         <source>Document Units</source>
         <translation>Единицы измерения документа</translation>
     </message>
@@ -5446,7 +5448,7 @@ is already in the list.</source>
     </message>
     <message>
         <source>Text height display threshold (px):</source>
-        <translation>Порог отображения высоты текста (пикс.):</translation>
+        <translation type="vanished">Порог отображения высоты текста (пикс.):</translation>
     </message>
     <message>
         <location line="+58"/>
@@ -6455,7 +6457,7 @@ is already in the list.</source>
     </message>
     <message>
         <source>Show information tools</source>
-        <translation>Показать инструменты для работы с информацией</translation>
+        <translation type="vanished">Показать инструменты для работы с информацией</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -6690,7 +6692,7 @@ is already in the list.</source>
     </message>
     <message>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
-        <translation>Неверное имя блока было скорректировано на «%1»</translation>
+        <translation type="vanished">Неверное имя блока было скорректировано на «%1»</translation>
     </message>
     <message>
         <location line="+62"/>
@@ -6822,7 +6824,7 @@ is already in the list.</source>
     </message>
     <message>
         <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
-        <translation>Масштабировать проекцию к исходному размеру («изометрической чертёж»)</translation>
+        <translation type="vanished">Масштабировать проекцию к исходному размеру («изометрической чертёж»)</translation>
     </message>
     <message>
         <source>True scale</source>
@@ -7566,7 +7568,7 @@ shown in search results:</source>
     </message>
     <message>
         <source>Show line tools</source>
-        <translation>Показать инструменты для работы с линиями</translation>
+        <translation type="vanished">Показать инструменты для работы с линиями</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -8803,17 +8805,21 @@ shown in search results:</source>
     <message numerus="yes">
         <location line="+89"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
-        <translation><numerusform>Радиус упал ниже 0,0 после %n концентрической окружности.</numerusform>
-        <numerusform>Радиус упал ниже 0,0 после %n концентрических окружностей.</numerusform>
-        <numerusform>Радиус упал ниже 0,0 после %n концентрических окружностей.</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Радиус упал ниже 0,0 после %n концентрической окружности.</numerusform>
+            <numerusform>Радиус упал ниже 0,0 после %n концентрических окружностей.</numerusform>
+            <numerusform>Радиус упал ниже 0,0 после %n концентрических окружностей.</numerusform>
+        </translation>
+    </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
-        <translation><numerusform>Радиус упал ниже 0,0 после %n концентрической дуги.</numerusform>
-        <numerusform>Радиус упал ниже 0,0 после %n концентрических дуг.</numerusform>
-        <numerusform>Радиус упал ниже 0,0 после %n концентрических дуг.</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Радиус упал ниже 0,0 после %n концентрической дуги.</numerusform>
+            <numerusform>Радиус упал ниже 0,0 после %n концентрических дуг.</numerusform>
+            <numerusform>Радиус упал ниже 0,0 после %n концентрических дуг.</numerusform>
+        </translation>
+    </message>
 </context>
 <context>
     <name>OffsetThrough</name>
@@ -9114,7 +9120,7 @@ shown in search results:</source>
     </message>
     <message>
         <source>Show point tools</source>
-        <translation>Показать инструменты для работы с точками</translation>
+        <translation type="vanished">Показать инструменты для работы с точками</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -9209,7 +9215,7 @@ shown in search results:</source>
     </message>
     <message>
         <source>Show polyline tools</source>
-        <translation>Показать инструменты для работы с ломаными</translation>
+        <translation type="vanished">Показать инструменты для работы с ломаными</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10080,7 +10086,7 @@ shown in search results:</source>
     </message>
     <message>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
-        <translation>Файл с именем «%1» уже существует. Вы хотите перезаписать его?</translation>
+        <translation type="vanished">Файл с именем «%1» уже существует. Вы хотите перезаписать его?</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -10089,7 +10095,7 @@ shown in search results:</source>
     </message>
     <message>
         <source>The file format version you are using is not recommended: &apos;%1&apos;.</source>
-        <translation>Используется нерекомендованная версия формата файла: «%1».</translation>
+        <translation type="vanished">Используется нерекомендованная версия формата файла: «%1».</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10098,7 +10104,7 @@ shown in search results:</source>
     </message>
     <message>
         <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
-        <translation>Все пользовательские цвета будут «округляться» до ближайшего фиксированного цвета.</translation>
+        <translation type="vanished">Все пользовательские цвета будут «округляться» до ближайшего фиксированного цвета.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10112,7 +10118,7 @@ shown in search results:</source>
     </message>
     <message>
         <source>Saving to file format version &apos;%1&apos;.</source>
-        <translation>Сохранение в формат файла версии «%1».</translation>
+        <translation type="vanished">Сохранение в формат файла версии «%1».</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -10121,7 +10127,7 @@ shown in search results:</source>
     </message>
     <message>
         <source>Custom colors are &apos;rounded&apos; to the nearest fixed color.</source>
-        <translation>Пользовательские цвета «округлены» до ближайшего фиксированного цвета.</translation>
+        <translation type="vanished">Пользовательские цвета «округлены» до ближайшего фиксированного цвета.</translation>
     </message>
     <message>
         <location line="-41"/>
@@ -10834,10 +10840,12 @@ shown in search results:</source>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
-        <translation><numerusform>%n объект на слое «%1»</numerusform>
-        <numerusform>%n объекта на слое «%1»</numerusform>
-        <numerusform>%n объектов на слое «%1»</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>%n объект на слое «%1»</numerusform>
+            <numerusform>%n объекта на слое «%1»</numerusform>
+            <numerusform>%n объектов на слое «%1»</numerusform>
+        </translation>
+    </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
@@ -10855,13 +10863,15 @@ shown in search results:</source>
     <message numerus="yes">
         <location line="+0"/>
         <source>%n Layers</source>
-        <translation><numerusform>%n слое</numerusform>
-        <numerusform>%n слоях</numerusform>
-        <numerusform>%n слоях</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>%n слое</numerusform>
+            <numerusform>%n слоях</numerusform>
+            <numerusform>%n слоях</numerusform>
+        </translation>
+    </message>
     <message>
         <source>%1 Entities on Layer &quot;%2&quot;</source>
-        <translation>%1 объектов на слое «%2»</translation>
+        <translation type="vanished">%1 объектов на слое «%2»</translation>
     </message>
     <message>
         <source>%1 Entities on %2 Layers</source>
@@ -10902,7 +10912,7 @@ shown in search results:</source>
     </message>
     <message>
         <source>Show shape tools</source>
-        <translation>Показать инструменты для работы с фигурами</translation>
+        <translation type="vanished">Показать инструменты для работы с фигурами</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -11191,7 +11201,7 @@ shown in search results:</source>
     <name>ShowReadme</name>
     <message>
         <source>File &apos;%1&apos; doesn&apos;t exist.</source>
-        <translation>Файл «%1» не существует.</translation>
+        <translation type="vanished">Файл «%1» не существует.</translation>
     </message>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadmeInit.js" line="+2"/>
@@ -11538,7 +11548,7 @@ shown in search results:</source>
     </message>
     <message>
         <source>Show spline tools</source>
-        <translation>Показать инструменты для работы со сплайнами</translation>
+        <translation type="vanished">Показать инструменты для работы со сплайнами</translation>
     </message>
     <message>
         <location line="+27"/>

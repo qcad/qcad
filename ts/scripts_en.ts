@@ -4748,7 +4748,7 @@ is already in the list.</translation>
 <context>
     <name>FlexPainter</name>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1795"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1816"/>
         <source>&amp;FlexPainter</source>
         <translation>&amp;FlexPainter</translation>
     </message>
@@ -4931,7 +4931,7 @@ is already in the list.</translation>
         <translation>Curtain Rope Knot</translation>
     </message>
     <message>
-        <location line="+301"/>
+        <location line="+328"/>
         <source>Document Units</source>
         <translation>Document Units</translation>
     </message>

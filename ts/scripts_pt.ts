@@ -5709,7 +5709,7 @@ Cor de plano de fundo</translatorcomment>
 <context>
     <name>FlexPainter</name>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1795"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1816"/>
         <source>&amp;FlexPainter</source>
         <translation>&amp;FlexPainter</translation>
     </message>
@@ -5892,7 +5892,7 @@ Cor de plano de fundo</translatorcomment>
         <translation>Nó da corda da cortina</translation>
     </message>
     <message>
-        <location line="+301"/>
+        <location line="+328"/>
         <source>Document Units</source>
         <translation>Unidades de documento</translation>
     </message>

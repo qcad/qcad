@@ -4855,7 +4855,7 @@ už existuje v zozname.</translation>
 <context>
     <name>FlexPainter</name>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1795"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1816"/>
         <source>&amp;FlexPainter</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5038,7 +5038,7 @@ už existuje v zozname.</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+301"/>
+        <location line="+328"/>
         <source>Document Units</source>
         <translation type="unfinished"></translation>
     </message>

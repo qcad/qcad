@@ -4810,7 +4810,7 @@ on jo luettelossa.</translation>
 <context>
     <name>FlexPainter</name>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1795"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1816"/>
         <source>&amp;FlexPainter</source>
         <translation type="unfinished">&amp;Joustomaalari</translation>
     </message>
@@ -4993,7 +4993,7 @@ on jo luettelossa.</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+301"/>
+        <location line="+328"/>
         <source>Document Units</source>
         <translation>Asiakirjan yksiköt</translation>
     </message>

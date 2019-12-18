@@ -5184,7 +5184,7 @@ Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer?
 <context>
     <name>FlexPainter</name>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1795"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1816"/>
         <source>&amp;FlexPainter</source>
         <translation>&amp;FlexPainter</translation>
     </message>
@@ -5367,7 +5367,7 @@ Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer?
         <translation>Nœud de rideau de corde de rideau</translation>
     </message>
     <message>
-        <location line="+301"/>
+        <location line="+328"/>
         <source>Document Units</source>
         <translation>Unités de document</translation>
     </message>
