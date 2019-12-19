@@ -560,6 +560,10 @@ void RHatchData::addBoundary(QSharedPointer<RShape> shape, bool addAutoLoops) {
 //        if (!arc.isNull() && fabs(arc->getSweep())<RMath::deg2rad(2)) {
 //            boundary.last().append(QSharedPointer<RShape>(new RLine(arc->getStartPoint(), arc->getEndPoint())));
 //        }
+//        QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
+//        if (!arc.isNull() && fabs(arc->getSweep())>M_PI*2-RS::AngleTolerance) {
+//            boundary.last().append(QSharedPointer<RShape>(new RCircle(arc->getCenter(), arc->getRadius())));
+//        }
 //        else {
             boundary.last().append(shape);
 //        }
