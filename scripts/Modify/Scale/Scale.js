@@ -367,11 +367,11 @@ Scale.prototype.transform = function(entity, k, op, preview, flags) {
     if (isHatchEntity(entity)) {
         //debugger;
         var data = entity.getData();
-        var newHatchData = data.copy();
+        var newHatchData = new RHatchData();
         newHatchData.setDocument(data.getDocument());
         newHatchData.copyAttributesFrom(data);
 
-        newHatchData.clearBoundary();
+        //newHatchData.clearBoundary();
 
         for (var i=0; i<entity.getLoopCount(); i++) {
             newHatchData.newLoop();
@@ -391,6 +391,12 @@ Scale.prototype.transform = function(entity, k, op, preview, flags) {
                 }
             }
         }
+        newHatchData.setSolid(entity.isSolid());
+        newHatchData.setPatternName(entity.getPatternName());
+        newHatchData.setScale(entity.getScale());
+        newHatchData.setAngle(entity.getAngle());
+        newHatchData.setOriginPoint(entity.getOriginPoint());
+
         entity.setData(newHatchData);
         op.addObject(entity, flags);
         return;
