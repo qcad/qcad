@@ -314,11 +314,16 @@ Scale.prototype.getOperation = function(preview) {
 };
 
 Scale.prototype.transformArc = function(shape, sv) {
-    if (isCircleShape(shape)) {
-        shape = ShapeAlgorithms.circleToArc(shape, 0.0);
+    var s = shape;
+    if (isFunction(shape.data)) {
+        s = shape.data();
     }
 
-    return RShape.scaleArc(shape, sv, this.focusPoint);
+    if (isCircleShape(s)) {
+        s = ShapeAlgorithms.circleToArc(s, 0.0);
+    }
+
+    return RShape.scaleArc(s, sv, this.focusPoint);
 };
 
 /**
