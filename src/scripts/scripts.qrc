@@ -1880,9 +1880,11 @@
     <file alias="scripts/Modify/Scale/Tests/ScaleTest06.js">../../scripts/Modify/Scale/Tests/ScaleTest06.js</file>
     <file alias="scripts/Modify/Scale/Tests/ScaleTest07.js">../../scripts/Modify/Scale/Tests/ScaleTest07.js</file>
     <file alias="scripts/Modify/Scale/Tests/ScaleTest08.js">../../scripts/Modify/Scale/Tests/ScaleTest08.js</file>
+    <file alias="scripts/Modify/Scale/Tests/ScaleTest09.js">../../scripts/Modify/Scale/Tests/ScaleTest09.js</file>
     <file alias="scripts/Modify/Scale/Tests/data/arcs.dxf">../../scripts/Modify/Scale/Tests/data/arcs.dxf</file>
     <file alias="scripts/Modify/Scale/Tests/data/circles.dxf">../../scripts/Modify/Scale/Tests/data/circles.dxf</file>
     <file alias="scripts/Modify/Scale/Tests/data/ellipses_ellipse_arcs.dxf">../../scripts/Modify/Scale/Tests/data/ellipses_ellipse_arcs.dxf</file>
+    <file alias="scripts/Modify/Scale/Tests/data/entities.dxf">../../scripts/Modify/Scale/Tests/data/entities.dxf</file>
     <file alias="scripts/Modify/Scale/Tests/data/lines.dxf">../../scripts/Modify/Scale/Tests/data/lines.dxf</file>
     <file alias="scripts/Modify/Scale/Tests/data/mtext.dxf">../../scripts/Modify/Scale/Tests/data/mtext.dxf</file>
     <file alias="scripts/Modify/Scale/Tests/data/points.dxf">../../scripts/Modify/Scale/Tests/data/points.dxf</file>
@@ -1898,6 +1900,7 @@
     <file alias="scripts/Modify/Scale/Tests/required/ScaleTest06_000.dxf">../../scripts/Modify/Scale/Tests/required/ScaleTest06_000.dxf</file>
     <file alias="scripts/Modify/Scale/Tests/required/ScaleTest07_000.dxf">../../scripts/Modify/Scale/Tests/required/ScaleTest07_000.dxf</file>
     <file alias="scripts/Modify/Scale/Tests/required/ScaleTest08_000.dxf">../../scripts/Modify/Scale/Tests/required/ScaleTest08_000.dxf</file>
+    <file alias="scripts/Modify/Scale/Tests/required/ScaleTest09_000.dxf">../../scripts/Modify/Scale/Tests/required/ScaleTest09_000.dxf</file>
     <file alias="scripts/Modify/Stretch/Stretch-inverse.svg">../../scripts/Modify/Stretch/Stretch-inverse.svg</file>
     <file alias="scripts/Modify/Stretch/Stretch.js">../../scripts/Modify/Stretch/Stretch.js</file>
     <file alias="scripts/Modify/Stretch/Stretch.svg">../../scripts/Modify/Stretch/Stretch.svg</file>
