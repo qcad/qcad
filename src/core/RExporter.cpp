@@ -1271,7 +1271,7 @@ void RExporter::exportArcSegment(const RArc& arc, bool allowForZeroLength) {
     double segmentLength;
     if (pixelSizeHint>0.0) {
         // approximate arc with segments with the length of 2 pixels:
-        segmentLength = pixelSizeHint * 2;
+        segmentLength = getCurrentPixelSizeHint() * 2;
     }
     else {
         segmentLength = arc.getRadius() / 40.0;
@@ -1620,10 +1620,12 @@ void RExporter::exportClipRectangle(const RBox& clipRectangle, bool forceSelecte
 }
 
 void RExporter::exportTransform(const QTransform& t) {
-    Q_UNUSED(t)
+    double s = qMax(t.m11(), t.m22());
+    blockScales.push(s);
 }
 
 void RExporter::exportEndTransform() {
+    blockScales.pop();
 }
 
 void RExporter::exportTranslation(const RVector& offset) {
@@ -1828,4 +1830,17 @@ void RExporter::exportShapeSegment(QSharedPointer<RShape> shape, double angle) {
     }
 
     // TODO: ellipse
+}
+
+/**
+ * \return pixel size hint in context of current block.
+ */
+double RExporter::getCurrentPixelSizeHint() const {
+    double ret = pixelSizeHint;
+    for (int i=0; i<blockScales.length(); i++) {
+        if (blockScales[i]>RS::PointTolerance) {
+            ret /= blockScales[i];
+        }
+    }
+    return ret;
 }

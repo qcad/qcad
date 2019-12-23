@@ -359,6 +359,8 @@ public:
         return pixelSizeHint;
     }
 
+    virtual double getCurrentPixelSizeHint() const;
+
     void setPixelSizeHint(double v) {
         pixelSizeHint = v;
     }
@@ -409,6 +411,7 @@ protected:
     bool pixelWidth;
     Qt::PenCapStyle penCapStyle;
     bool combineTransforms;
+    QStack<double> blockScales;
 
 private:
     RS::ProjectionRenderingHint projectionRenderingHint;
