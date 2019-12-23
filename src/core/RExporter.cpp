@@ -1837,7 +1837,7 @@ void RExporter::exportShapeSegment(QSharedPointer<RShape> shape, double angle) {
  */
 double RExporter::getCurrentPixelSizeHint() const {
     double ret = pixelSizeHint;
-    for (int i=0; i<blockScales.length(); i++) {
+    for (int i=0; i<blockScales.size(); i++) {
         if (blockScales[i]>RS::PointTolerance) {
             ret /= blockScales[i];
         }
