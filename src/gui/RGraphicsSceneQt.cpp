@@ -646,12 +646,16 @@ void RGraphicsSceneQt::exportClipRectangle(const RBox& clipRectangle, bool force
 }
 
 void RGraphicsSceneQt::exportTransform(const QTransform& t) {
+    RExporter::exportTransform(t);
+
     REntity::Id id = getBlockRefOrEntityId();
     RGraphicsSceneDrawable d(t);
     addDrawable(id, d, draftMode, exportToPreview);
 }
 
 void RGraphicsSceneQt::exportEndTransform() {
+    RExporter::exportEndTransform();
+
     REntity::Id id = getBlockRefOrEntityId();
     RGraphicsSceneDrawable d(RGraphicsSceneDrawable::EndTransform);
     addDrawable(id, d, draftMode, exportToPreview);
