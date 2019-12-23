@@ -1055,14 +1055,16 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
         }
         else {
             for (int p=0; p<drawables.size(); p++) {
-                if (drawables.at(p).getType()==RGraphicsSceneDrawable::PainterPath) {
-                    if (drawables.at(p).getPainterPath().getAlwaysRegen()==true) {
+                RGraphicsSceneDrawable& drawable = drawables[p];
+                if (drawable.getType()==RGraphicsSceneDrawable::PainterPath) {
+                    if (drawable.getPainterPath().getAlwaysRegen()==true) {
                         regen = true;
                         break;
                     }
-                    if (drawables.at(p).getPainterPath().getAutoRegen()==true) {
-                        if (drawables.at(p).getPainterPath().getPixelSizeHint()>RS::PointTolerance &&
-                           (drawables.at(p).getPainterPath().getPixelSizeHint()<ps/5 || drawables.at(p).getPainterPath().getPixelSizeHint()>ps*5)) {
+                    if (drawable.getPainterPath().getAutoRegen()==true) {
+                        if (drawable.getPainterPath().getPixelSizeHint()>RS::PointTolerance &&
+                           (drawable.getPainterPath().getPixelSizeHint()<ps/5 ||
+                            drawable.getPainterPath().getPixelSizeHint()>ps*5)) {
 
                             regen = true;
                             break;
