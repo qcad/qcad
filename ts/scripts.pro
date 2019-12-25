@@ -200,6 +200,7 @@ SOURCES = \
 ../scripts/Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest05.js \
 ../scripts/Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest06.js \
 ../scripts/Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest07.js \
+../scripts/Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest08.js \
 ../scripts/Draw/Image/Image.js \
 ../scripts/Draw/Image/ImageInit.js \
 ../scripts/Draw/Image/Tests/ImageTest00.js \
@@ -761,6 +762,7 @@ SOURCES = \
 ../scripts/Modify/Scale/Tests/ScaleTest06.js \
 ../scripts/Modify/Scale/Tests/ScaleTest07.js \
 ../scripts/Modify/Scale/Tests/ScaleTest08.js \
+../scripts/Modify/Scale/Tests/ScaleTest09.js \
 ../scripts/Modify/Stretch/Stretch.js \
 ../scripts/Modify/Stretch/StretchInit.js \
 ../scripts/Modify/Stretch/Tests/StretchTest00.js \

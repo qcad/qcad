@@ -3792,6 +3792,11 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+4"/>
+        <source>Entity is not an arc.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not an arc or circle.</source>
         <translation>Object is niet een boog of een cirkel.</translation>
     </message>

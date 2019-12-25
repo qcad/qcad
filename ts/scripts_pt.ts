@@ -4563,6 +4563,11 @@ Ferramentas CAD</translatorcomment>
     </message>
     <message>
         <location line="+4"/>
+        <source>Entity is not an arc.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not an arc or circle.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation></translation>

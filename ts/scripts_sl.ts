@@ -3881,6 +3881,11 @@ je že na seznamu.</translation>
     </message>
     <message>
         <location line="+4"/>
+        <source>Entity is not an arc.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not an arc or circle.</source>
         <translation>Entiteta ni lok ali krog.</translation>
     </message>
