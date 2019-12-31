@@ -37,8 +37,8 @@ class QCADGUI_EXPORT RMathComboBox: public QComboBox {
 Q_OBJECT
 
 // keep extra ';' in place for the benefit of ecmagenerator:
-Q_PROPERTY(bool angle READ isAngle WRITE setAngle);
-Q_PROPERTY(bool integer READ isInteger WRITE setInteger);
+Q_PROPERTY(bool angle READ isAngle WRITE setAngle)
+Q_PROPERTY(bool integer READ isInteger WRITE setInteger)
 
 public:
     RMathComboBox(QWidget* parent = NULL);
