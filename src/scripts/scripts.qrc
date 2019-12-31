@@ -482,7 +482,9 @@
     <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest05.js">../../scripts/Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest05.js</file>
     <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest06.js">../../scripts/Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest06.js</file>
     <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest07.js">../../scripts/Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest07.js</file>
+    <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest08.js">../../scripts/Draw/Hatch/HatchFromSelection/Tests/HatchFromSelectionTest08.js</file>
     <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/data/contour.dxf">../../scripts/Draw/Hatch/HatchFromSelection/Tests/data/contour.dxf</file>
+    <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/data/hatch_block_line.dxf">../../scripts/Draw/Hatch/HatchFromSelection/Tests/data/hatch_block_line.dxf</file>
     <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/data/hatch_block_lines.dxf">../../scripts/Draw/Hatch/HatchFromSelection/Tests/data/hatch_block_lines.dxf</file>
     <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/data/hatch_block_polyline.dxf">../../scripts/Draw/Hatch/HatchFromSelection/Tests/data/hatch_block_polyline.dxf</file>
     <file alias="scripts/Draw/Hatch/HatchFromSelection/Tests/data/hatch_blocks.dxf">../../scripts/Draw/Hatch/HatchFromSelection/Tests/data/hatch_blocks.dxf</file>
