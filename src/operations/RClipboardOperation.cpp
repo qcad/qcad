@@ -410,12 +410,18 @@ void RClipboardOperation::copyEntity(
         destEntity->flipVertical();
     }
     if (blockRef!=NULL) {
-        // don't scale block ref, scale block contents:
+        // don't scale block ref by unit scale,
+        // block contents is scaled by unit scale:
         destEntity->scale(scale);
 
-        // scale block ref position:
-        destEntity->move(-blockRef->getPosition());
-        destEntity->move(blockRef->getPosition() * unitScale);
+        // scale block ref position by unit scale:
+        QSharedPointer<RBlockReferenceEntity> destBlockRef = destEntity.dynamicCast<RBlockReferenceEntity>();
+        if (!destBlockRef.isNull()) {
+            destBlockRef->setPosition(destBlockRef->getPosition() * unitScale);
+        }
+
+        //destEntity->move(-blockRef->getPosition());
+        //destEntity->move(blockRef->getPosition() * unitScale);
     }
     else {
         destEntity->scale(scale * unitScale);
