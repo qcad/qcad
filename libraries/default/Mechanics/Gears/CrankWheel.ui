@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <author>Sandy Ganz</author>
+    <class>FormWidget</class>
+    <widget class="QWidget" name="FormWidget">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>216</width>
+                <height>501</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>Crank Trigger Wheel</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+            <item row="0" column="0">
+                <widget class="QScrollArea" name="scrollArea">
+                    <property name="widgetResizable">
+                        <bool>true</bool>
+                    </property>
+                    <widget class="QWidget" name="scrollAreaWidgetContents">
+                        <property name="geometry">
+                            <rect>
+                                <x>0</x>
+                                <y>0</y>
+                                <width>206</width>
+                                <height>491</height>
+                            </rect>
+                        </property>
+                        <layout class="QFormLayout" name="formLayout">
+                            <property name="fieldGrowthPolicy">
+                                <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                            </property>
+                            <property name="labelAlignment">
+                                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                            </property>
+                            <item row="0" column="0">
+                                <widget class="QLabel" name="lblWheelDiameter">
+                                    <property name="text">
+                                        <string>Wheel Diameter</string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="0" column="1">
+                                <widget class="RMathLineEdit" name="WheelDiameter">
+                                    <property name="text">
+                                        <string>7</string>
+                                    </property>
+                                    <property name="angle">
+                                        <bool>false</bool>
+                                    </property>
+                                    <property name="defaultValue" stdset="0">
+                                        <double>0.000000000000000</double>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="1" column="0">
+                                <widget class="QLabel" name="lblNumberOfTeeth">
+                                    <property name="text">
+                                        <string>Number of Teeth</string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="1" column="1">
+                                <widget class="QSpinBox" name="NumberOfTeeth">
+                                    <property name="toolTip">
+                                        <string>Total number of teeth the wheel has INCLUDING missing teeth in count</string>
+                                    </property>
+                                    <property name="minimum">
+                                        <number>1</number>
+                                    </property>
+                                    <property name="maximum">
+                                        <number>72</number>
+                                    </property>
+                                    <property name="value">
+                                        <number>36</number>
+                                    </property>
+                                </widget>
+                            </item>
+
+                            <item row="2" column="0">
+                                <widget class="QLabel" name="label">
+                                    <property name="text">
+                                        <string>Missing Teeth</string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="2" column="1">
+                                <widget class="QSpinBox" name="MissingTeeth">
+                                    <property name="toolTip">
+                                        <string>Count of teeth to remove from wheel</string>
+                                    </property>
+                                    <property name="maximum">
+                                        <number>10</number>
+                                    </property>
+                                    <property name="value">
+                                        <number>1</number>
+                                    </property>
+                                </widget>
+                            </item>
+
+                            <item row="3" column="0">
+                                <widget class="QLabel" name="lblToothHeight">
+                                    <property name="text">
+                                        <string>Tooth Height</string>
+                                    </property>
+                                </widget>
+                            </item>
+
+                            <item row="3" column="1">
+                                <widget class="RMathLineEdit" name="ToothHeight">
+                                    <property name="text">
+                                        <string>0.25</string>
+                                    </property>
+                                    <property name="angle">
+                                        <bool>false</bool>
+                                    </property>
+                                    <property name="defaultValue" stdset="0">
+                                        <double>0.000000000000000</double>
+                                    </property>
+                                </widget>
+                            </item>
+
+                            <item row="4" column="0">
+                                <widget class="QLabel" name="lblToothRatio">
+                                    <property name="text">
+                                        <string>Tooth Ratio</string>
+                                    </property>
+                                </widget>
+                            </item>
+
+                            <item row="4" column="1">
+                                <widget class="RMathLineEdit" name="ToothRatio">
+                                    <property name="text">
+                                        <string>0.3</string>
+                                    </property>
+                                    <property name="angle">
+                                        <bool>false</bool>
+                                    </property>
+                                    <property name="defaultValue" stdset="0">
+                                        <double>0.000000000000000</double>
+                                    </property>
+                                    <property name="statusTip">
+                                        <string>Tooth to space ratio, 0.5 give an even tooth to space ratio. Width of tooth depends on wheel diameter</string>
+                                    </property>
+                                </widget>
+                            </item>
+
+                            <item row="5" column="0">
+                                <widget class="QLabel" name="lblCenterHoleDiameter">
+                                    <property name="text">
+                                        <string>Center Hole Diameter</string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="5" column="1">
+                                <widget class="RMathLineEdit" name="CenterHoleDiameter">
+                                    <property name="text">
+                                        <string>1.5</string>
+                                    </property>
+                                    <property name="angle">
+                                        <bool>false</bool>
+                                    </property>
+                                    <property name="defaultValue" stdset="0">
+                                        <double>0.000000000000000</double>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="6" column="0">
+                                <widget class="QCheckBox" name="DrawRoundedRoot">
+                                    <property name="text">
+                                        <string>Draw Rounded Roots</string>
+                                    </property>
+                                    <property name="checked">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="tristate">
+                                        <bool>false</bool>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="8" column="0">
+                                <widget class="QLabel" name="lblNumberOfSpokes">
+                                    <property name="text">
+                                        <string>Number Of Spokes</string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="8" column="1">
+                                <widget class="QSpinBox" name="NumberOfSpokes">
+                                    <property name="toolTip">
+                                        <string>If non-zero, spokes will be drawn</string>
+                                    </property>
+                                    <property name="maximum">
+                                        <number>20</number>
+                                    </property>
+                                    <property name="value">
+                                        <number>8</number>
+                                    </property>
+                                </widget>
+                            </item>
+
+                            <item row="9" column="0">
+                                <widget class="QLabel" name="lblSpokeRatio">
+                                    <property name="text">
+                                        <string>Spoke Ratio</string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="9" column="1">
+                                <widget class="RMathLineEdit" name="SpokeRatio">
+                                    <property name="text">
+                                        <string>1.75</string>
+                                    </property>
+                                    <property name="angle">
+                                        <bool>false</bool>
+                                    </property>
+                                    <property name="defaultValue" stdset="0">
+                                        <double>0.000000000000000</double>
+                                    </property>
+                                </widget>s
+                            </item>
+
+                            <item row="10" column="0">
+                                <widget class="QLabel" name="lblSpokeInnerDiameter">
+                                    <property name="text">
+                                        <string>Spoke Inner Diameter</string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="10" column="1">
+                                <widget class="RMathLineEdit" name="SpokeInnerDiameter">
+                                    <property name="text">
+                                        <string>4.25</string>
+                                    </property>
+                                    <property name="angle">
+                                        <bool>false</bool>
+                                    </property>
+                                    <property name="defaultValue" stdset="0">
+                                        <double>0.000000000000000</double>
+                                    </property>
+                                </widget>
+                            </item>
+
+                            <item row="11" column="0">
+                                <widget class="QLabel" name="lblSpokeOuterDiameter">
+                                    <property name="text">
+                                        <string>Spoke Outer Diameter</string>
+                                    </property>
+                                </widget>
+                            </item>
+
+                            <item row="11" column="1">
+                                <widget class="RMathLineEdit" name="SpokeOuterDiameter">
+                                    <property name="text">
+                                        <string>5.5</string>
+                                    </property>
+                                    <property name="angle">
+                                        <bool>false</bool>
+                                    </property>
+                                    <property name="defaultValue" stdset="0">
+                                        <double>0.000000000000000</double>
+                                    </property>
+                                </widget>
+                            </item>
+
+                            <item row="12" column="0">
+                                <widget class="QLabel" name="lblSpokeRotation">
+                                    <property name="text">
+                                        <string>Spoke Rotation</string>
+                                    </property>
+                                </widget>
+                            </item>
+
+                            <item row="12" column="1">
+                                <widget class="RMathLineEdit" name="SpokeRotation">
+                                    <property name="text">
+                                        <string>15</string>
+                                    </property>
+                                    <property name="angle">
+                                        <bool>false</bool>
+                                    </property>
+                                    <property name="defaultValue" stdset="0">
+                                        <double>0.000000000000000</double>
+                                    </property>
+                                </widget>
+                            </item>
+
+                            <item row="14" column="0">
+                                <widget class="QLabel" name="lblBoltHoles">
+                                    <property name="text">
+                                        <string>Bolt Holes</string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="14" column="1">
+                                <widget class="QSpinBox" name="BoltHoleCount">
+                                    <property name="toolTip">
+                                        <string>Number of bolt holes set 1, 0 to omit</string>
+                                    </property>
+                                    <property name="value">
+                                        <number>9</number>
+                                    </property>
+                                    <property name="maximum">
+                                        <number>15</number>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="15" column="0">
+                                <widget class="QLabel" name="lblBoltHoleCircleDiameter">
+                                    <property name="text">
+                                        <string>Bolt Circle Diameter</string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="15" column="1">
+                                <widget class="RMathLineEdit" name="BoltHoleCircleDiameter">
+                                    <property name="text">
+                                        <string>3.3</string>
+                                    </property>
+                                    <property name="angle">
+                                        <bool>false</bool>
+                                    </property>
+                                    <property name="defaultValue" stdset="0">
+                                        <double>0.000000000000000</double>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="16" column="0">
+                                <widget class="QLabel" name="lblBoltHoleDiameter">
+                                    <property name="text">
+                                        <string>Bolt Hole Size</string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="16" column="1">
+                                <widget class="RMathLineEdit" name="BoltHoleDiameter">
+                                    <property name="text">
+                                        <string>0.3750</string>
+                                    </property>
+                                    <property name="angle">
+                                        <bool>false</bool>
+                                    </property>
+                                    <property name="defaultValue" stdset="0">
+                                        <double>0.000000000000000</double>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="17" column="0">
+                                <widget class="QLabel" name="lblBoltPatternRotate">
+                                    <property name="text">
+                                        <string>Rotate</string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="17" column="1">
+                                <widget class="RMathLineEdit" name="BoltPatternRotate">
+                                    <property name="text">
+                                        <string>0.0</string>
+                                    </property>
+                                    <property name="angle">
+                                        <bool>false</bool>
+                                    </property>
+                                    <property name="defaultValue" stdset="0">
+                                        <double>0.000000000000000</double>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="18" column="0">
+                                <widget class="QLabel" name="lblBoltHoles2">
+                                    <property name="text">
+                                        <string>Bolt Holes 2</string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="18" column="1">
+                                <widget class="QSpinBox" name="BoltHoleCount2">
+                                    <property name="toolTip">
+                                        <string>Number of bolt holes set 2, 0 to omit</string>
+                                    </property>
+                                    <property name="maximum">
+                                        <number>15</number>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="19" column="0">
+                                <widget class="QLabel" name="lblBoltHoleCircleDiameter2">
+                                    <property name="text">
+                                        <string>Bolt Circle Diameter 2</string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="19" column="1">
+                                <widget class="RMathLineEdit" name="BoltHoleCircleDiameter2">
+                                    <property name="text">
+                                        <string>3.0</string>
+                                    </property>
+                                    <property name="angle">
+                                        <bool>false</bool>
+                                    </property>
+                                    <property name="defaultValue" stdset="0">
+                                        <double>0.000000000000000</double>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="20" column="0">
+                                <widget class="QLabel" name="lblBoltHoleDiameter2">
+                                    <property name="text">
+                                        <string>Bolt Hole Size 2</string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="20" column="1">
+                                <widget class="RMathLineEdit" name="BoltHoleDiameter2">
+                                    <property name="text">
+                                        <string>0.3750</string>
+                                    </property>
+                                    <property name="angle">
+                                        <bool>false</bool>
+                                    </property>
+                                    <property name="defaultValue" stdset="0">
+                                        <double>0.000000000000000</double>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="21" column="0">
+                                <widget class="QLabel" name="lblBoltPatternRotate2">
+                                    <property name="text">
+                                        <string>Rotate 2</string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="21" column="1">
+                                <widget class="RMathLineEdit" name="BoltPatternRotate2">
+                                    <property name="text">
+                                        <string>0.0</string>
+                                    </property>
+                                    <property name="angle">
+                                        <bool>false</bool>
+                                    </property>
+                                    <property name="defaultValue" stdset="0">
+                                        <double>0.000000000000000</double>
+                                    </property>
+                                    <property name="statusTip">
+                                        <string>Rotate the pattern in degrees. Bolt 2 pattern starts with first bolt at top of wheel</string>
+                                    </property>
+                                </widget>
+                            </item>
+
+                            <item row="23" column="0">
+                                <widget class="QLabel" name="lblBalanceHolePositionDiameter">
+                                    <property name="text">
+                                        <string>Balance Hole Position Diameter</string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="23" column="1">
+                                <widget class="RMathLineEdit" name="BalanceHolePositionDiameter">
+                                    <property name="text">
+                                        <string>0.0</string>
+                                    </property>
+                                    <property name="angle">
+                                        <bool>false</bool>
+                                    </property>
+                                    <property name="defaultValue" stdset="0">
+                                        <double>0.000000000000000</double>
+                                    </property>
+                                    <property name="toolTip">
+                                        <string>Create a balance hole at this Diameter position. Size will be computed from this diameter.</string>
+                                    </property>
+                                    <property name="statusTip">
+                                        <string>Create a balance hole hole at this Diameter position. Size will be computed from this diameter.</string>
+                                    </property>
+                                </widget>
+                            </item>
+
+
+                            <item row="7" column="0" colspan="2">
+                                <widget class="Line" name="line">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>0</width>
+                                            <height>2</height>
+                                        </size>
+                                    </property>
+                                    <property name="baseSize">
+                                        <size>
+                                            <width>0</width>
+                                            <height>0</height>
+                                        </size>
+                                    </property>
+                                    <property name="autoFillBackground">
+                                        <bool>false</bool>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true"/>
+                                    </property>
+                                    <property name="lineWidth">
+                                        <number>2</number>
+                                    </property>
+                                    <property name="midLineWidth">
+                                        <number>0</number>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Qt::Horizontal</enum>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="13" column="0" colspan="2">
+                                <widget class="Line" name="line_2">
+                                    <property name="sizePolicy">
+                                        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                                            <horstretch>5</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>20</width>
+                                            <height>0</height>
+                                        </size>
+                                    </property>
+                                    <property name="lineWidth">
+                                        <number>2</number>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Qt::Horizontal</enum>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="22" column="0" colspan="2">
+                                <widget class="Line" name="line_3">
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>100</width>
+                                            <height>0</height>
+                                        </size>
+                                    </property>
+                                    <property name="lineWidth">
+                                        <number>2</number>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Qt::Horizontal</enum>
+                                    </property>
+                                </widget>
+                            </item>
+
+                            <item row="25" column="0" colspan="2">
+                                <widget class="Line" name="line_4">
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>100</width>
+                                            <height>0</height>
+                                        </size>
+                                    </property>
+                                    <property name="lineWidth">
+                                        <number>2</number>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Qt::Horizontal</enum>
+                                    </property>
+                                </widget>
+                            </item>
+
+                            <item row="26" column="0">
+                                <widget class="QCheckBox" name="ShowLegend">
+                                    <property name="text">
+                                        <string>Draw Text Legend</string>
+                                    </property>
+                                    <property name="checked">
+                                        <bool>false</bool>
+                                    </property>
+                                    <property name="tristate">
+                                        <bool>false</bool>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item row="26" column="1">
+                                <widget class="QCheckBox" name="ShowDebug">
+                                    <property name="text">
+                                        <string>Draw Debug</string>
+                                    </property>
+                                    <property name="checked">
+                                        <bool>false</bool>
+                                    </property>
+                                    <property name="tristate">
+                                        <bool>false</bool>
+                                    </property>
+                                </widget>
+                            </item>
+                        </layout>
+                    </widget>
+                </widget>
+            </item>
+        </layout>
+    </widget>
+    <customwidgets>
+        <customwidget>
+            <class>RMathLineEdit</class>
+            <extends></extends>
+            <header>RMathLineEdit.h</header>
+        </customwidget>
+    </customwidgets>
+    <resources/>
+    <connections/>
+</ui>
