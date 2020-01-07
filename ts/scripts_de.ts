@@ -251,7 +251,7 @@
         <translation>Schraffurmuster</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+22"/>
         <source>Translations</source>
         <translation>Übersetzungen</translation>
     </message>
@@ -4277,7 +4277,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc.</source>
-        <translation type="unfinished"></translation>
+        <translation>Element ist kein Bogen.</translation>
     </message>
     <message>
         <location line="+4"/>

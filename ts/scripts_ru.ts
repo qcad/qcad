@@ -227,7 +227,7 @@
         <translation>Стили штриховки</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+22"/>
         <source>Translations</source>
         <translation>Переводы</translation>
     </message>

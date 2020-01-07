@@ -231,7 +231,7 @@
         <translation>Arceerpatronen</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+22"/>
         <source>Translations</source>
         <translation>Vertalingen</translation>
     </message>
@@ -3793,7 +3793,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc.</source>
-        <translation type="unfinished"></translation>
+        <translation>Object is niet een boog.</translation>
     </message>
     <message>
         <location line="+4"/>

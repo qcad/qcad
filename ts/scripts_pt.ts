@@ -235,7 +235,7 @@
         <translation>Padrões de hachuras</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+22"/>
         <source>Translations</source>
         <translation>Traduções</translation>
     </message>
@@ -4564,7 +4564,7 @@ Ferramentas CAD</translatorcomment>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc.</source>
-        <translation type="unfinished"></translation>
+        <translation>O objecto não é um arco.</translation>
     </message>
     <message>
         <location line="+4"/>

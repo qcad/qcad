@@ -207,7 +207,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+22"/>
         <source>Translations</source>
         <translation>Çeviriler</translation>
     </message>

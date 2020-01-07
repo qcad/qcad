@@ -219,7 +219,7 @@
         <translation>Hatch Patterns</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+22"/>
         <source>Translations</source>
         <translation>Translations</translation>
     </message>
@@ -3742,7 +3742,7 @@ is already in the list.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc.</source>
-        <translation type="unfinished"></translation>
+        <translation>Entity is not an arc.</translation>
     </message>
     <message>
         <location line="+4"/>

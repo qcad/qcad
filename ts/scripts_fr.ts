@@ -239,7 +239,7 @@
         <translation>Motifs de hachures</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+22"/>
         <source>Translations</source>
         <translation>Traductions</translation>
     </message>
@@ -4121,7 +4121,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc.</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;objet n&apos;est pas un arc.</translation>
     </message>
     <message>
         <location line="+4"/>
