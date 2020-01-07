@@ -203,8 +203,8 @@ QPair<QVariant, RPropertyAttributes> RTraceEntity::getProperty(
 
 
 void RTraceEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
-    Q_UNUSED(preview);
-    Q_UNUSED(forceSelected);
+    Q_UNUSED(preview)
+    Q_UNUSED(forceSelected)
 
     // note that order of fourth and third vertex is swapped:
     RPolyline pl;

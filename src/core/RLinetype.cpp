@@ -58,7 +58,7 @@ void RLinetype::init() {
 bool RLinetype::setProperty(RPropertyTypeId propertyTypeId,
     const QVariant& value, RTransaction* transaction) {
 
-    Q_UNUSED(transaction);
+    Q_UNUSED(transaction)
 
     bool ret = false;
     ret = RObject::setMember(pattern.name, value, PropertyName == propertyTypeId);
