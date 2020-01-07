@@ -65,11 +65,13 @@ var credits =
                                  "HOLLY, " +
                                  "LATTICE-01, LATTICE-02, LATTICE-03, " +
                                  "LATTICE-04, LATTICE-05, LATTICE-06, " +
+                                 "LOOPLINKS, " +
                                  "MAZE-01, MAZE-02, " +
                                  "QCAD-LOGO, " +
                                  "SCAFFOLD, " +
                                  "SQUIGGLE-01, SQUIGGLE-02, " +
-                                 "TRI-OVERLAP"
+                                 "TRI-OVERLAP, " +
+                                 "WIRE-FENCE"
                                  ],
     ],
     [
