@@ -139,6 +139,7 @@ void RShapesExporter::exportShapesBetween(int i1, const RVector& p1, int i2, con
         if (i!=i1 && i!=i2) {
             // whole shape is between points:
             exporter.exportShapeSegment(shapes[i], angle);
+            continue;
         }
 
         QSharedPointer<RShape> shape = QSharedPointer<RShape>(shapes[i]->clone());
