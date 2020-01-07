@@ -134,7 +134,7 @@ QList<RSpline> RSpline::createSplinesFromArc(const RArc& arc) {
     QList<RSpline> curves;
 
     double piOverTwo = M_PI_2;
-    double segmentationAngle = piOverTwo/4;
+    double segmentationAngle = piOverTwo/8;
     //double segmentationAngle = M_PI/8;
     double sgn = (startAngle < endAngle) ? +1 : -1;
 
