@@ -1388,7 +1388,7 @@ void RExporter::exportEllipse(const REllipse& ellipse, double offset) {
         if (a1>a2-RS::AngleTolerance) {
             a2+=2*M_PI;
         }
-        for(a=a1+aStep; a<=a2; a+=aStep) {
+        for (a=a1+aStep; a<=a2; a+=aStep) {
             vp.set(cp.x+cos(a)*radius1,
                    cp.y+sin(a)*radius2);
             vp.rotate(angle, vc);
@@ -1399,7 +1399,7 @@ void RExporter::exportEllipse(const REllipse& ellipse, double offset) {
         if (a1<a2+RS::AngleTolerance) {
             a2-=2*M_PI;
         }
-        for(a=a1-aStep; a>=a2; a-=aStep) {
+        for (a=a1-aStep; a>=a2; a-=aStep) {
             vp.set(cp.x+cos(a)*radius1,
                    cp.y+sin(a)*radius2);
             vp.rotate(angle, vc);
