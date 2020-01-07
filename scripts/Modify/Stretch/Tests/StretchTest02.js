@@ -18,6 +18,11 @@ StretchTest02.prototype.test00 = function() {
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::LineToolsPanel::BackButton');
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ShapeToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ShapeToolsPanel::ShapeRectanglePPButton');
+    this.setToolOption('Shape/CreatePolyline', 'true');
+    this.setToolOption('Shape/Fill', 'false');
+    this.setToolOption('Shape/RoundCorners', 'false');
+    this.setToolOption('Shape/Radius', '1');
+    this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(9.8, 20.3);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
