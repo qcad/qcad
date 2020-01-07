@@ -286,8 +286,8 @@ RLinetypePattern REntityData::getLinetypePattern() const {
  *                    Zero to only return distances that are strictly orthogonal to the entity.
  */
 double REntityData::getDistanceTo(const RVector& point, bool limited, double range, bool draft, double strictRange) const {
-    Q_UNUSED(range);
-    Q_UNUSED(draft);
+    Q_UNUSED(range)
+    Q_UNUSED(draft)
 
     RVector v = getVectorTo(point, limited, strictRange);
     if (v.isValid()) {
