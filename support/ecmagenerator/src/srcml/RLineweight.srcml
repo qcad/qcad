@@ -41,7 +41,7 @@
  */</comment>
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RLineweight</name> <block>{<private type="default">
 
-    <constructor_decl><name>Q_DECLARE_TR_FUNCTIONS</name><parameter_list>(<param><decl><type><name>RLineweight</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    <macro><name>Q_DECLARE_TR_FUNCTIONS</name><argument_list>(<argument>RLineweight</argument>)</argument_list></macro>
 
 </private><public>public:
     <enum>enum <name>Lineweight</name> <block>{

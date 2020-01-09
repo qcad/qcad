@@ -651,6 +651,11 @@
             );
         
     
+      double getCurrentPixelSizeHint(
+                
+            );
+        
+    
       void setPixelSizeHint(
                 double v
             );

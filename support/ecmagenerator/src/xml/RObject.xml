@@ -17,6 +17,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="Undone" />
       <value name="Protect" />
       <value name="Selected" />
+      <value name="Invisible" />
     </enum>
     <constructor>
       <variant>
@@ -92,6 +93,19 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="setProtected" cppName="setProtected"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isInvisible" cppName="isInvisible"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setInvisible" cppName="setInvisible"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -375,6 +389,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyProtected" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertySelected" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyInvisible" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
   </class>
 </unit>

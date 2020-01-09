@@ -260,6 +260,9 @@
         scaleVisualProperties
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setViewportContext
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         mirror
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

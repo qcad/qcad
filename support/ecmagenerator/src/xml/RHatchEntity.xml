@@ -253,6 +253,14 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="setViewportContext" cppName="setViewportContext"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RViewportData &amp;" typeName="RViewportData"
+        name="origin" isConst="true" />
+      </variant>
+    </method>
     <method name="print" cppName="print" specifier="protected"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">

@@ -142,7 +142,9 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSingleApplication.h"</cpp:file></cpp:include>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>int*</argument>)</argument_list></macro>
+<cpp:ifdef>#<cpp:directive>ifdef</cpp:directive> <name>_LP64</name></cpp:ifdef>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>unsigned int*</argument>)</argument_list></macro>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>qint64*</argument>)</argument_list></macro>
 
 <cpp:if>#<cpp:directive>if</cpp:directive> <expr>!<name>defined</name> <name>Q_OS_WIN</name> &amp;&amp; !<name>defined</name> <name>Q_OS_LINUX</name> &amp;&amp; !<name>defined</name> <name>Q_OS_FREEBSD</name></expr></cpp:if>

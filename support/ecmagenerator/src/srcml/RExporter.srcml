@@ -360,6 +360,8 @@
         <return>return <expr><name>pixelSizeHint</name></expr>;</return>
     }</block></function>
 
+    <function_decl><type><name>virtual</name> <name>double</name></type> <name>getCurrentPixelSizeHint</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
     <function><type><name>void</name></type> <name>setPixelSizeHint</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>pixelSizeHint</name> = <name>v</name></expr>;</expr_stmt>
     }</block></function>
@@ -410,6 +412,7 @@
     <decl_stmt><decl><type><name>bool</name></type> <name>pixelWidth</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>Qt</name>::<name>PenCapStyle</name></name></type> <name>penCapStyle</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>combineTransforms</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name></type> <name>blockScales</name></decl>;</decl_stmt>
 
 </protected><private>private:
     <decl_stmt><decl><type><name><name>RS</name>::<name>ProjectionRenderingHint</name></name></type> <name>projectionRenderingHint</name></decl>;</decl_stmt>

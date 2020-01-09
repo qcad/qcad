@@ -358,6 +358,9 @@
         getPixelSizeHint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getCurrentPixelSizeHint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setPixelSizeHint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

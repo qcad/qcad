@@ -289,6 +289,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getPixelSizeHint, "getPixelSizeHint");
             
+            REcmaHelper::registerFunction(&engine, proto, getCurrentPixelSizeHint, "getCurrentPixelSizeHint");
+            
             REcmaHelper::registerFunction(&engine, proto, setPixelSizeHint, "setPixelSizeHint");
             
             REcmaHelper::registerFunction(&engine, proto, getPixelUnit, "getPixelUnit");
@@ -8203,6 +8205,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::getPixelSizeHint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::getCurrentPixelSizeHint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::getCurrentPixelSizeHint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::getCurrentPixelSizeHint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("getCurrentPixelSizeHint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getCurrentPixelSizeHint();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.getCurrentPixelSizeHint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::getCurrentPixelSizeHint", context, engine);
             return result;
         }
          QScriptValue

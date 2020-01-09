@@ -73,6 +73,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setProtected, "setProtected");
             
+            REcmaHelper::registerFunction(&engine, proto, isInvisible, "isInvisible");
+            
+            REcmaHelper::registerFunction(&engine, proto, setInvisible, "setInvisible");
+            
             REcmaHelper::registerFunction(&engine, proto, isSelected, "isSelected");
             
             REcmaHelper::registerFunction(&engine, proto, setSelected, "setSelected");
@@ -164,6 +168,10 @@
                 qScriptValueFromValue(&engine, RObject::PropertySelected),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyInvisible",
+                qScriptValueFromValue(&engine, RObject::PropertyInvisible),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
 
     // enum values:
     
@@ -200,6 +208,11 @@
 
     ctor.setProperty("Selected",
     QScriptValue(RObject::Selected),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Invisible",
+    QScriptValue(RObject::Invisible),
     QScriptValue::ReadOnly);
 
 
@@ -931,6 +944,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaObject::setProtected", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaObject::isInvisible
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaObject::isInvisible", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaObject::isInvisible";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("isInvisible", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isInvisible();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.isInvisible().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaObject::isInvisible", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaObject::setInvisible
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaObject::setInvisible", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaObject::setInvisible";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("setInvisible", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setInvisible(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.setInvisible().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaObject::setInvisible", context, engine);
             return result;
         }
          QScriptValue

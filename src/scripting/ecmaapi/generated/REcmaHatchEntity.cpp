@@ -132,6 +132,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getExploded, "getExploded");
             
+            REcmaHelper::registerFunction(&engine, proto, setViewportContext, "setViewportContext");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RHatchEntity*>(), *proto);
 
@@ -3012,6 +3014,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaHatchEntity::getExploded", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchEntity::setViewportContext
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchEntity::setViewportContext", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::setViewportContext";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchEntity* self = 
+                        getSelf("setViewportContext", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RViewportData */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RViewportData*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RViewportData*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RHatchEntity: Argument 0 is not of type RViewportData.",
+                               context);                    
+                    }
+                    RViewportData 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setViewportContext(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setViewportContext().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchEntity::setViewportContext", context, engine);
             return result;
         }
          QScriptValue REcmaHatchEntity::toString

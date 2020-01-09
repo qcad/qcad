@@ -145,6 +145,9 @@
         ;static  QScriptValue
         getExploded
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setViewportContext
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
