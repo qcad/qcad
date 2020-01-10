@@ -1115,6 +1115,7 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
     if (!preview && !isPrintingOrExporting() && !isSelected && getDocument()->isSelected(id)) {
         static QMutex m;
         m.lock();
+        // remember selected entities to overlay in the end:
         selectedIds.insert(id);
         m.unlock();
         return;
@@ -1307,7 +1308,7 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
             }
         }
 
-        // unknown drawable or already handled:
+        // unknown drawable or already handled (image, text, transform, end transform):
         if (drawable.getType()!=RGraphicsSceneDrawable::PainterPath) {
             continue;
         }
