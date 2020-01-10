@@ -3818,7 +3818,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohde ei ole kaari.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4817,7 +4817,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1816"/>
         <source>&amp;FlexPainter</source>
-        <translation type="unfinished">&amp;Joustomaalari</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -4830,7 +4830,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation type="unfinished">Maalauksen luontiasetukset</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+18"/>
@@ -4840,12 +4840,12 @@ on jo luettelossa.</translation>
     <message>
         <location line="+3"/>
         <source>Flip Painters</source>
-        <translation type="unfinished">Käännä maalaus</translation>
+        <translation>Käännä Painters</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Group all castings to one operation</source>
-        <translation type="unfinished">Ryhmitä kaikki luodut yhdeksi operaatioksi</translation>
+        <translation type="unfinished">Ryhmitä kaikki valetut yhdeksi operaatioksi</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4875,7 +4875,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+13"/>
         <source>End with casting an end apex on open forms</source>
-        <translation type="unfinished">Lopeta luominen kärjen loppuun avoimissa muodoissa</translation>
+        <translation>Lopeta luominen/valu kärjen loppuun avoimissa muodoissa</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5030,7 +5030,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+62"/>
         <source>Enter main painter stepsize (+0)</source>
-        <translation type="unfinished">Syötä maalauksen askelkoko (+0)</translation>
+        <translation type="unfinished">Syötä päämaalauksen askelkoko (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5040,7 +5040,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+13"/>
         <source>Enter main painter length (+)</source>
-        <translation type="unfinished">Syötä maalauksen pituus (+)</translation>
+        <translation>Syötä päämaalauksen pituus (+)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5065,17 +5065,17 @@ on jo luettelossa.</translation>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation>Avoiminen muotojen muutosvaihtoehdot</translation>
+        <translation>Avoimien muotojen suurennusvaihtoehdot</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form</source>
-        <translation type="unfinished">Sovita skaalaus f 1,00–0,90 koko muotoon</translation>
+        <translation>Sovita koonmuutos f 1,00–0,90 sopimaan koko muotoon</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Dynamically scale to fit</source>
-        <translation type="unfinished">Sovita dynaamisesti</translation>
+        <translation>Muuta sopimaan dynaamisesti</translation>
     </message>
     <message>
         <location line="+36"/>
