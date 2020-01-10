@@ -213,7 +213,8 @@ Print.prototype.printCurrentBlock = function(printer, painter) {
     // 20191007: avoid invisible lines in prints and PDF output:
     var minLineweightSet = false;
     if (this.view.getMinimumLineweight()<RS.PointTolerance) {
-        this.view.setMinimumLineweight(0.01);
+        // no minimum lineweight defined: force minimum lineweight of 0.01mm for printing:
+        this.view.setMinimumLineweight(RUnit.convert(0.01, RS.Millimeter, this.document.getUnit()));
         minLineweightSet = true;
     }
 
