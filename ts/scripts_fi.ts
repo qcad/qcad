@@ -4855,7 +4855,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+10"/>
         <source>Cast on newly sub-layer &apos;Painted&apos; if applicable</source>
-        <translation>Luo  uuteen alitasoon &apos;Maalattu&apos; tarvittaessa</translation>
+        <translation>Luo uuteen alitasoon &apos;Maalattu&apos; tarvittaessa</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5095,12 +5095,12 @@ on jo luettelossa.</translation>
     <message>
         <location line="+36"/>
         <source>Verbose info (persistent on)</source>
-        <translation type="unfinished">Sanalliset tiedot (pysyvä)</translation>
+        <translation>Sanallinen tieto (pysyvästi päällä)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Verbose *</source>
-        <translation type="unfinished">Verbose *</translation>
+        <translation>Sanallinen *</translation>
     </message>
     <message>
         <location line="+13"/>
