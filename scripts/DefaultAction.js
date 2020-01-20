@@ -434,7 +434,11 @@ DefaultAction.prototype.mousePressEvent = function(event) {
 };
 
 DefaultAction.prototype.mouseDoubleClickEvent = function(event) {
-    if (event.button() == Qt.LeftButton && this.state===DefaultAction.State.Neutral) {
+    if (event.button() == Qt.LeftButton && (this.state===DefaultAction.State.Neutral || this.state===DefaultAction.State.Dragging)) {
+        if (this.state===DefaultAction.State.Dragging) {
+            // cancel dragging (double-click):
+            this.setState(DefaultAction.State.Neutral);
+        }
         var view = event.getGraphicsView();
         var range = view.mapDistanceFromView(this.pickRangePixels);
         var strictRange = view.mapDistanceFromView(10);
