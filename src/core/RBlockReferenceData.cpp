@@ -682,14 +682,14 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
         if (isUniform) {
             // query box optimization only available for uniform scales:
             queryBoxBlockCoordinates = getQueryBoxInBlockCoordinates(queryBox);
-            //qDebug() << "queryBoxNeutral:" << queryBoxBlockCoordinates;
+            //qDebug() << "queryBoxBlockCoordinates:" << queryBoxBlockCoordinates;
         }
     }
 
     // query entities in query box that are part of the block definition:
     // ignore query box for block arrays:
     QSet<REntity::Id> ids;
-    if (queryBox.isValid() && !isArray) {
+    if (queryBoxBlockCoordinates.isValid() && !isArray) {
 //        QList<RVector> corners = queryBox.getCorners2d();
 //        RVector::moveList(corners, -position);
 //        RVector::rotateList(corners, -rotation);
