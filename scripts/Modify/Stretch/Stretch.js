@@ -251,6 +251,12 @@ Stretch.getStrechOperation = function(document, polygon, preview, offset, layerI
             gotIntersection = true;
         }
 
+        // ordinate dimension might be completely inside stretch area and
+        // still needs stretching (origin outside stretch area):
+        if (isDimOrdinateEntity(entity)) {
+            gotIntersection = true;
+        }
+
         if (gotIntersection) {
             // stretch:
             if (entity.stretch(polygon, offset)) {
