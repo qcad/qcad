@@ -2092,7 +2092,7 @@ EAction.getEntityId = function(di, action, event, preview, selectable) {
     }
 
     var altPressed = isAltPressed(event);
-    if (!altPressed || preview) {
+    if (!altPressed || preview || RSettings.getBoolValue("GraphicsView/DisableAltPicking")===true) {
         if (!isNull(action.idFromContextMenu)) {
             // user already chose an entity from the context menu:
             return action.idFromContextMenu;
