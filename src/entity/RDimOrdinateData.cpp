@@ -56,6 +56,14 @@ bool RDimOrdinateData::isSane() const {
             definingPoint.isSane();
 }
 
+RBox RDimOrdinateData::getBoundingBox(bool ignoreEmpty) const {
+    RBox ret = RDimensionData::getBoundingBox(ignoreEmpty);
+    if (!ignoreEmpty) {
+        ret.growToInclude(definitionPoint);
+    }
+    return ret;
+}
+
 QList<RRefPoint> RDimOrdinateData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     QList<RRefPoint> ret = RDimensionData::getReferencePoints(hint);
 
@@ -123,6 +131,10 @@ bool RDimOrdinateData::stretch(const RPolyline& area, const RVector& offset) {
     RDimensionData::stretch(area, offset);
     leaderEndPoint.stretch(area, offset);
     definingPoint.stretch(area, offset);
+    definitionPoint.stretch(area, offset);
+    if (!autoTextPos) {
+        textPositionCenter.stretch(area, offset);
+    }
     update();
     return true;
 }

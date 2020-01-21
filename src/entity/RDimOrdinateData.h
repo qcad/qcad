@@ -51,6 +51,8 @@ public:
     virtual bool isValid() const;
     virtual bool isSane() const;
 
+    virtual RBox getBoundingBox(bool ignoreEmpty) const;
+
     void setLeaderEndPoint(const RVector& p) {
         leaderEndPoint = p;
     }
