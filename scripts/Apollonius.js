@@ -1241,7 +1241,7 @@ Apollonius.getSolutionsPLC = function(point, line, circle) {
                 continue;
             }
             p = ps[0];
-            if (p.equalsFuzzy(a)) {
+            if (p.equalsFuzzy(a) && ps.length>1) {
                 p = ps[1];
             }
 

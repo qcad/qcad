@@ -268,7 +268,11 @@ Circle3T.prototype.getOperation = function(preview) {
     var op = new RAddObjectsOperation();
     op.setText(this.getToolTitle());
     for (var i=0; i<shapes.length; i++) {
-        var entity = new RCircleEntity(doc, new RCircleData(shapes[i]));
+        var s = shapes[i];
+        if  (isFunction(s.data)) {
+            s = s.data();
+        }
+        var entity = new RCircleEntity(doc, new RCircleData(s));
         op.addObject(entity);
     }
 
