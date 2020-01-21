@@ -39,6 +39,8 @@ RDimensionData::RDimensionData(RDocument* document) :
     extLineFixLength(0.0),
     dirty(true),
     dimLineLength(0.0),
+    arrow1Pos(RVector::invalid),
+    arrow2Pos(RVector::invalid),
     autoTextPos(true) {
 
 }
@@ -94,6 +96,8 @@ RDimensionData::RDimensionData(const RVector& definitionPoint,
       extLineFixLength(0.0),
       dirty(true),
       dimLineLength(0.0),
+      arrow1Pos(RVector::invalid),
+      arrow2Pos(RVector::invalid),
       autoTextPos(true) {
 
 }
