@@ -217,7 +217,10 @@ Stretch.getStrechOperation = function(document, polygon, preview, offset, layerI
 
     // only stretch selected if there is a selection,
     // otherwise stretch all:
-    var entities = document.queryIntersectedEntitiesXY(box, false, false, RObject.INVALID_ID, [], document.hasSelection());
+    // 20200121: only go by bounding box:
+    // allows stretching of ordinate dimension origin:
+    var entities = document.queryIntersectedEntitiesXY(box, true, false, RObject.INVALID_ID, [], document.hasSelection());
+    //var entities = document.queryIntersectedEntitiesXY(box, false, false, RObject.INVALID_ID, [], document.hasSelection());
 
     if (entities.length===0 && !preview) {
         if (document.hasSelection()) {
