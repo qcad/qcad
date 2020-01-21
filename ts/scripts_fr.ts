@@ -7810,8 +7810,7 @@ Métagrille :
     <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui" line="+20"/>
         <source>Language of User Interface:</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Langue de l'interface utilisateur</translation>
     </message>
 </context>
 <context>
