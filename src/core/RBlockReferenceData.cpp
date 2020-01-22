@@ -22,6 +22,7 @@
 #include "RExporter.h"
 #include "RMainWindow.h"
 #include "RMouseEvent.h"
+#include "RStorage.h"
 
 RBlockReferenceData::RBlockReferenceData() :
     referencedBlockId(RBlock::INVALID_ID),
@@ -331,7 +332,9 @@ RVector RBlockReferenceData::getPointOnEntity() const {
         return RVector::invalid;
     }
 
-    QSet<REntity::Id>::iterator it = ids.begin();
+    QList<REntity::Id> idsOrdered = document->getStorage().orderBackToFront(ids);
+
+    QList<REntity::Id>::iterator it = idsOrdered.begin();
     QSharedPointer<REntity> entity = queryEntity(*it, true);
     if (entity.isNull()) {
         return RVector::invalid;
