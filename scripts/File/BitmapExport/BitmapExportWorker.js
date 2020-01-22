@@ -39,6 +39,7 @@
  *  - properties["entityIds"]: Array: zoom to bounding box of given entities
  *  - properties["initView"]: Callback to initialize view
  *  - properties["zoomAll"]: Auto zoom to all entities, including those on invisible layers
+ *  - properties["metaData"]: Key / value pairs of meta data to write to image header
  *
  * \param view Optional graphics view to use.
  */
@@ -175,6 +176,13 @@ function exportBitmap(doc, scene, fileName, properties, view) {
         iw.setCompression(1);
     } else if (ext === "bmp") {
         iw.setCompression(1);
+    }
+
+    if (isArray(properties["metaData"])) {
+        for (var i=0; i<properties["metaData"].length; i++) {
+            // meta data:
+            iw.setText(properties["metaData"][0], properties["metaData"][1]);
+        }
     }
 
     if (!iw.write(buffer)) {
