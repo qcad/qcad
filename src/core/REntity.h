@@ -561,7 +561,7 @@ public:
         getData().scaleVisualProperties(scaleFactor);
     }
 
-    virtual void setViewportContext(const RViewportData& vp) {
+    virtual void setViewportContext(const RViewportData&) {
         // MSVC does not compile this:
         //Q_UNUSED(vp);
     }
