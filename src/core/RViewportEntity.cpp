@@ -253,7 +253,7 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
 
         if (doc->getKnownVariable(RS::PSLTSCALE, true).toBool()==false) {
             // scale line type pattern:
-            entity->setLinetypeScale(data.scaleFactor);
+            entity->setLinetypeScale(entity->getLinetypeScale() * data.scaleFactor);
         }
 
         if (entity->getType()==RS::EntityHatch) {
