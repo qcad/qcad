@@ -261,9 +261,35 @@ Projection.prototype.transform = function(entity, k, op, preview, flags) {
  * \param op RAddObjectsOperation Operation
  */
 Projection.prototype.addTransformedShapes = function(entity, shapes, op, preview, flags) {
-    for (var i=0; i<shapes.length; i++) {
-        var s = this.projectShape(shapes[i].data(), preview);
-        for (var n=0; n<s.length; n++) {
+    var i, s, n;
+
+    if (isHatchEntity(entity) && entity.isSolid()) {
+        var hd = entity.getData();
+        hd.clearBoundary();
+        hd.newLoop();
+
+        for (i=0; i<shapes.length; i++) {
+            s = this.projectShape(shapes[i].data(), preview);
+            for (n=0; n<s.length; n++) {
+                if (isNull(s[n])) {
+                    debugger;
+                }
+
+                hd.addBoundary(s[n], true);
+            }
+        }
+
+        var e = entity.clone();
+        e.setData(hd);
+
+        flags = flags | RAddObjectsOperation.UseAttributes;
+        op.addObject(e, flags);
+        return;
+    }
+
+    for (i=0; i<shapes.length; i++) {
+        s = this.projectShape(shapes[i].data(), preview);
+        for (n=0; n<s.length; n++) {
             if (isNull(s[n])) {
                 debugger;
             }
@@ -484,6 +510,9 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
             // iterate through projected shapes (trimming might lead to gaps):
             for (k=0; k<s.length; k++) {
                 var seg = s[k];
+                if (isFunction(seg.data)) {
+                    seg = seg.data();
+                }
 
                 var gotGap = pl.countVertices()>0 &&
                     !pl.getEndPoint().equalsFuzzy(seg.getStartPoint());
@@ -514,6 +543,7 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
                     }
                     else if (gotGap){
                         pl = new RPolyline();
+                        //qDebug("seg:", seg);
                         pl.appendShape(seg);
                         addPl = true;
                     }
