@@ -113,6 +113,7 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
     op.setText(this.getToolTitle());
     for (k=1; k<=num; k++) {
         for (i=0; i<ids.length; i++) {
+            //qDebug("%1 / %2".arg(i).arg(ids.length));
             if (!cache && preview && op.getPreviewCounter()>RSettings.getPreviewEntities()) {
                 break;
             }
