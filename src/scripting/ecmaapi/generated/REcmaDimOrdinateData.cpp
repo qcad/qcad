@@ -77,6 +77,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isSane, "isSane");
             
+            REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
+            
             REcmaHelper::registerFunction(&engine, proto, setLeaderEndPoint, "setLeaderEndPoint");
             
             REcmaHelper::registerFunction(&engine, proto, getLeaderEndPoint, "getLeaderEndPoint");
@@ -510,6 +512,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimOrdinateData::isSane", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimOrdinateData::getBoundingBox
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimOrdinateData::getBoundingBox", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::getBoundingBox";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimOrdinateData* self = 
+                        getSelf("getBoundingBox", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RBox'
+    RBox cppResult =
+        
+               self->getBoundingBox(a0);
+        // return type: RBox
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.getBoundingBox().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimOrdinateData::getBoundingBox", context, engine);
             return result;
         }
          QScriptValue

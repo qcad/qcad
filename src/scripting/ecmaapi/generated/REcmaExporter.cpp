@@ -301,10 +301,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, setPixelWidth, "setPixelWidth");
             
-            REcmaHelper::registerFunction(&engine, proto, getCombineTransforms, "getCombineTransforms");
-            
-            REcmaHelper::registerFunction(&engine, proto, setCombineTransforms, "setCombineTransforms");
-            
         engine.setDefaultPrototype(
             qMetaTypeId<RExporter*>(), *proto);
 
@@ -8517,110 +8513,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::setPixelWidth", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaExporter::getCombineTransforms
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaExporter::getCombineTransforms", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::getCombineTransforms";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RExporter* self = 
-                        getSelf("getCombineTransforms", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        
-               self->getCombineTransforms();
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.getCombineTransforms().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaExporter::getCombineTransforms", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaExporter::setCombineTransforms
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaExporter::setCombineTransforms", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::setCombineTransforms";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RExporter* self = 
-                        getSelf("setCombineTransforms", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isBool()
-        ) /* type: bool */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    bool
-                    a0 =
-                    (bool)
-                    
-                    context->argument( 0 ).
-                    toBool();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setCombineTransforms(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.setCombineTransforms().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaExporter::setCombineTransforms", context, engine);
             return result;
         }
          QScriptValue REcmaExporter::toString

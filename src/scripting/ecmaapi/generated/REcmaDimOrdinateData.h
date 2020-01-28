@@ -59,6 +59,9 @@
         isSane
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getBoundingBox
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setLeaderEndPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -636,7 +636,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RViewportData &amp;" typeName="RViewportData"
-        name="vp" isConst="true" />
+        name="" isConst="true" />
       </variant>
     </method>
     <method name="mirror" cppName="mirror" specifier="public"
