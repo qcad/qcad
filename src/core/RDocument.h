@@ -128,7 +128,7 @@ public:
     QSet<REntity::Id> queryInfiniteEntities() const;
 
     QSet<REntity::Id> queryIntersectedEntitiesXYFast(const RBox& box);
-    QSet<REntity::Id> queryIntersectedShapesXYFast(const RBox& box);
+    QSet<REntity::Id> queryIntersectedShapesXYFast(const RBox& box, bool noInfiniteEntities = false);
 
     QSet<REntity::Id> queryIntersectedEntitiesXY(
             const RBox& box,

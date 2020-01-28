@@ -1509,9 +1509,12 @@ QSet<REntity::Id> RDocument::queryIntersectedEntitiesXYFast(const RBox& box) {
     return queryIntersectedShapesXYFast(boxExpanded);
 }
 
-QSet<REntity::Id> RDocument::queryIntersectedShapesXYFast(const RBox& box) {
+QSet<REntity::Id> RDocument::queryIntersectedShapesXYFast(const RBox& box, bool noInfiniteEntities) {
     // always include construction lines (XLine):
-    QSet<REntity::Id> infinites = queryInfiniteEntities();
+    QSet<REntity::Id> infinites;
+    if (!noInfiniteEntities) {
+        infinites = queryInfiniteEntities();
+    }
 
     // box is completely outside the bounding box of this document:
     if (box.isOutside(getBoundingBox())) {
