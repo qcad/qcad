@@ -406,12 +406,12 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
 
     // transform for whole block reference:
     QTransform blockRefTransform;
-    if (e.getCombineTransforms()) {
+    //if (e.getCombineTransforms()) {
         blockRefTransform = data.getTransform();
-    }
-    else {
+    //}
+    //else {
         data.exportTransforms(e);
-    }
+    //}
 
     int i;
     QList<REntity::Id>::iterator it;
@@ -435,16 +435,16 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
                 offs.y /= data.scaleFactors.y;
             }
 
-            if (e.getCombineTransforms()) {
+            //if (e.getCombineTransforms()) {
                 QTransform t = blockRefTransform;
                 if (col!=0 || row!=0) {
                     t.translate(offs.x, offs.y);
                 }
                 e.exportTransform(t);
-            }
-            else {
+            //}
+            //else {
                 e.exportTranslation(offs);
-            }
+            //}
 
             for (it = entityList.begin(); it != entityList.end(); it++) {
                 i++;
@@ -493,12 +493,12 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
             }
 
             // clear transform:
-            if (e.getCombineTransforms()) {
+            //if (e.getCombineTransforms()) {
                 e.exportEndTransform();
-            }
-            else {
+            //}
+            //else {
                 e.exportEndTranslation();
-            }
+            //}
 
             /*
             TODO:
@@ -549,9 +549,9 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
 
 //    RDebug::stopTimer(4, "bb");
 
-    if (!e.getCombineTransforms()) {
+    //if (!e.getCombineTransforms()) {
         data.exportEndTransforms(e);
-    }
+    //}
 
     recursionDepth--;
 }
