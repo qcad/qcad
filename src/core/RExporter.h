@@ -381,13 +381,13 @@ public:
         pixelWidth = on;
     }
 
-    bool getCombineTransforms() const {
-        return combineTransforms;
-    }
+//    bool getCombineTransforms() const {
+//        return combineTransforms;
+//    }
 
-    void setCombineTransforms(bool on) {
-        combineTransforms = on;
-    }
+//    void setCombineTransforms(bool on) {
+//        combineTransforms = on;
+//    }
 
 protected:
     RDocument* document;
@@ -410,7 +410,7 @@ protected:
     bool clipping;
     bool pixelWidth;
     Qt::PenCapStyle penCapStyle;
-    bool combineTransforms;
+    //bool combineTransforms;
     QStack<double> blockScales;
 
 private:

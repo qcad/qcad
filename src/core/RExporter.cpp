@@ -59,7 +59,7 @@ RExporter::RExporter()
       clipping(false),
       pixelWidth(false),
       penCapStyle(Qt::RoundCap),
-      combineTransforms(true),
+      //combineTransforms(true),
       projectionRenderingHint(RS::RenderThreeD) {
 
     init();
@@ -79,7 +79,7 @@ RExporter::RExporter(RDocument& document, RMessageHandler *messageHandler, RProg
       clipping(false),
       pixelWidth(false),
       penCapStyle(Qt::RoundCap),
-      combineTransforms(true),
+      //combineTransforms(true),
       projectionRenderingHint(RS::RenderThreeD) {
 
     Q_UNUSED(messageHandler)
@@ -1620,12 +1620,10 @@ void RExporter::exportClipRectangle(const RBox& clipRectangle, bool forceSelecte
 }
 
 void RExporter::exportTransform(const QTransform& t) {
-    double s = qMax(t.m11(), t.m22());
-    blockScales.push(s);
+    Q_UNUSED(t)
 }
 
 void RExporter::exportEndTransform() {
-    blockScales.pop();
 }
 
 void RExporter::exportTranslation(const RVector& offset) {
@@ -1637,16 +1635,18 @@ void RExporter::exportEndTranslation() {
 
 void RExporter::exportRotation(double angle) {
     Q_UNUSED(angle)
+
 }
 
 void RExporter::exportEndRotation() {
 }
 
 void RExporter::exportScale(const RVector& factors) {
-    Q_UNUSED(factors)
+    blockScales.push(qMax(qAbs(factors.x), qAbs(factors.y)));
 }
 
 void RExporter::exportEndScale() {
+    blockScales.pop();
 }
 
 double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {
@@ -1837,10 +1837,22 @@ void RExporter::exportShapeSegment(QSharedPointer<RShape> shape, double angle) {
  */
 double RExporter::getCurrentPixelSizeHint() const {
     double ret = pixelSizeHint;
+
+    qDebug() << "---";
+    qDebug() << "pixelSizeHint:" << ret;
+    qDebug() << "blockScales.size():" << blockScales.size();
+    qDebug() << "blockScales:" << blockScales;
+
+    // adjust pixel size hint, based on block context:
     for (int i=0; i<blockScales.size(); i++) {
+        // blockScale array contains absolute values:
         if (blockScales[i]>RS::PointTolerance) {
             ret /= blockScales[i];
+            qDebug() << "  pixelSizeHint:" << ret;
         }
     }
+
+    qDebug() << "pixelSizeHint (final):" << ret;
+
     return ret;
 }
