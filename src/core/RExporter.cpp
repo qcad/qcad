@@ -1838,21 +1838,13 @@ void RExporter::exportShapeSegment(QSharedPointer<RShape> shape, double angle) {
 double RExporter::getCurrentPixelSizeHint() const {
     double ret = pixelSizeHint;
 
-    qDebug() << "---";
-    qDebug() << "pixelSizeHint:" << ret;
-    qDebug() << "blockScales.size():" << blockScales.size();
-    qDebug() << "blockScales:" << blockScales;
-
     // adjust pixel size hint, based on block context:
     for (int i=0; i<blockScales.size(); i++) {
         // blockScale array contains absolute values:
         if (blockScales[i]>RS::PointTolerance) {
             ret /= blockScales[i];
-            qDebug() << "  pixelSizeHint:" << ret;
         }
     }
-
-    qDebug() << "pixelSizeHint (final):" << ret;
 
     return ret;
 }
