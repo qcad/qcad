@@ -113,7 +113,6 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
     op.setText(this.getToolTitle());
     for (k=1; k<=num; k++) {
         for (i=0; i<ids.length; i++) {
-            qDebug("%1 / %2".arg(i).arg(ids.length));
             if (!cache && preview && op.getPreviewCounter()>RSettings.getPreviewEntities()) {
                 break;
             }
@@ -123,10 +122,11 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
             if (isNull(entityP)) {
                 continue;
             }
+            //qDebug("%1 / %2".arg(i).arg(ids.length-1));
 
             // entity is valid as long as entityP is valid:
-            //entity = entityP.data();
-            entity = entityP.clone();
+            entity = entityP.data();
+            //entity = entityP.clone();
 
             // copy: assign new IDs
             if (copies>0) {
