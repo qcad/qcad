@@ -380,6 +380,10 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
             if (!preview && this.segmentLength>RS.PointTolerance) {
                 numSegments = Math.ceil(l/this.segmentLength);
             }
+            if (numSegments>1000) {
+                // avoid huge number of segments / crash:
+                numSegments = 1000;
+            }
 
             var polyline = ShapeAlgorithms.lineOrArcToPolyline(shape, numSegments);
             var projectedPl = this.projectShape(polyline, preview, trim)[0];
