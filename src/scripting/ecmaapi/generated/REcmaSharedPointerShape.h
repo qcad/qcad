@@ -147,6 +147,9 @@
         getCenterPoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getArcReferencePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPointOnShape
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

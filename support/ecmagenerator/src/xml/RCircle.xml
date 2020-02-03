@@ -112,6 +112,12 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; RVector &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="getArcReferencePoints"
+    cppName="getArcReferencePoints" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="getPointsWithDistanceToEnd"
     cppName="getPointsWithDistanceToEnd" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">

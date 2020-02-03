@@ -115,6 +115,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getCenterPoints, "getCenterPoints");
             
+            REcmaHelper::registerFunction(&engine, proto, getArcReferencePoints, "getArcReferencePoints");
+            
             REcmaHelper::registerFunction(&engine, proto, getPointOnShape, "getPointOnShape");
             
             REcmaHelper::registerFunction(&engine, proto, getPointCloud, "getPointCloud");
@@ -3075,6 +3077,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerShape::getCenterPoints", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerShape::getArcReferencePoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerShape::getArcReferencePoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerShape::getArcReferencePoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RShape* self = 
+                        getSelf("getArcReferencePoints", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getArcReferencePoints();
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.getArcReferencePoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerShape::getArcReferencePoints", context, engine);
             return result;
         }
          QScriptValue
