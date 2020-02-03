@@ -318,6 +318,7 @@ public:
     virtual QList<RVector> getEndPoints(const RBox& queryBox = RDEFAULT_RBOX) const;
     virtual QList<RVector> getMiddlePoints(const RBox& queryBox = RDEFAULT_RBOX) const;
     virtual QList<RVector> getCenterPoints(const RBox& queryBox = RDEFAULT_RBOX) const;
+    virtual QList<RVector> getArcReferencePoints(const RBox& queryBox = RDEFAULT_RBOX) const;
     virtual QList<RVector> getPointsWithDistanceToEnd(
         double distance, int from = RS::FromAny, const RBox& queryBox = RDEFAULT_RBOX) const;
 

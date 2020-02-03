@@ -405,6 +405,19 @@ QList<RVector> REntityData::getCenterPoints(const RBox& queryBox) const {
 }
 
 /**
+ * \return Vector of reference points of this entity. Used for snap to
+ *        reference points.
+ */
+QList<RVector> REntityData::getArcReferencePoints(const RBox& queryBox) const {
+    QList<RVector> ret;
+    QList<QSharedPointer<RShape> > shapes = getShapes(queryBox, true);
+    for (int i=0; i<shapes.size(); i++) {
+        ret.append(shapes.at(i)->getArcReferencePoints());
+    }
+    return ret;
+}
+
+/**
  * \return Points on entity with given \c distance to either endpoint.
  * Used for snap to points with distance on entity.
  */

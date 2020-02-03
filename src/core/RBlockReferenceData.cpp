@@ -596,6 +596,21 @@ bool RBlockReferenceData::isPixelUnit() const {
 QList<RRefPoint> RBlockReferenceData::getInternalReferencePoints(RS::ProjectionRenderingHint hint) const {
     QList<RRefPoint> ret;
 
+    QList<QSharedPointer<RShape> > shapes = getShapes();
+    for (int i=0; i<shapes.size(); i++) {
+        QSharedPointer<RShape> shape = shapes[i];
+
+        QList<RVector> ps = shape->getArcReferencePoints();
+        for (int k=0; k<ps.length(); k++) {
+            ret.append(RRefPoint(ps[k], RRefPoint::Tertiary));
+        }
+    }
+
+    return ret;
+
+//    QList<RRefPoint> ret;
+
+
 //    if (document == NULL) {
 //        return ret;
 //    }
@@ -630,7 +645,7 @@ QList<RRefPoint> RBlockReferenceData::getInternalReferencePoints(RS::ProjectionR
 //    }
 
 //    recursionDepth--;
-    return ret;
+//    return ret;
 }
 
 QList<RRefPoint> RBlockReferenceData::getReferencePoints(RS::ProjectionRenderingHint hint) const {

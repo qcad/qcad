@@ -601,6 +601,24 @@ QList<RVector> RArc::getCenterPoints() const {
     return ret;
 }
 
+QList<RVector> RArc::getArcReferencePoints() const {
+    QList<RVector> ret;
+
+    QList<RVector> p;
+    p.append(center + RVector(radius, 0));
+    p.append(center + RVector(0, radius));
+    p.append(center - RVector(radius, 0));
+    p.append(center - RVector(0, radius));
+
+    for (int i=0; i<p.size(); i++) {
+        if (RMath::isAngleBetween(center.getAngleTo(p[i]), startAngle, endAngle, reversed)) {
+            ret.append(p[i]);
+        }
+    }
+
+    return ret;
+}
+
 QList<RVector> RArc::getPointsWithDistanceToEnd(double distance, int from) const {
     QList<RVector> ret;
 

@@ -205,6 +205,13 @@ public:
      */
     virtual QList<RVector> getCenterPoints() const = 0;
 
+    /**
+     * \return The reference point(s) of this shape.
+     */
+    virtual QList<RVector> getArcReferencePoints() const {
+        return QList<RVector>();
+    }
+
     virtual RVector getPointOnShape() const;
 
     virtual QList<RVector> getPointCloud(double segmentLength) const = 0;
