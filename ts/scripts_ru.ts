@@ -1254,7 +1254,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+119"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+120"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Неверный размер изображения (ширина х высота должно быть меньше, чем %1)</translation>
     </message>
@@ -1899,7 +1899,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+116"/>
-        <location line="+61"/>
+        <location line="+65"/>
         <source>No solution</source>
         <translation>Нет решения</translation>
     </message>
@@ -2624,7 +2624,7 @@ Do you wish to recover it?</source>
         <translation>Переместить объект в нужное место</translation>
     </message>
     <message>
-        <location line="+384"/>
+        <location line="+388"/>
         <source>Move Reference Point</source>
         <translation>Переместить точку привязки</translation>
     </message>
@@ -11713,7 +11713,7 @@ shown in search results:</source>
         <translation>Точка назначения</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>No selected entities in given range</source>
         <translation>Нет выбранных объектов в данном диапазоне</translation>
     </message>

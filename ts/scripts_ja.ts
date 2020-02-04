@@ -1256,7 +1256,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+119"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+120"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation> 無効な画像サイズ(幅x高さは%1よりも小さく)</translation>
     </message>
@@ -1905,7 +1905,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+116"/>
-        <location line="+61"/>
+        <location line="+65"/>
         <source>No solution</source>
         <translation>解がありません</translation>
     </message>
@@ -2670,7 +2670,7 @@ Do you wish to recover it?</source>
         <translation>希望の位置にエンティティを移動</translation>
     </message>
     <message>
-        <location line="+384"/>
+        <location line="+388"/>
         <source>Move Reference Point</source>
         <translation>参照点の移動</translation>
     </message>
@@ -12223,7 +12223,7 @@ shown in search results:</source>
         <translation>ターゲット点</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>No selected entities in given range</source>
         <translation type="unfinished"></translation>
     </message>

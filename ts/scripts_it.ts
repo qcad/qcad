@@ -1372,7 +1372,7 @@ Vuoi recuperarlo?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+119"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+120"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Dimensioni dell&apos;immagine non valido (larghezza x altezza deve essere inferiore a %1)</translation>
     </message>
@@ -2049,7 +2049,7 @@ Spaziatura Griglia minima (px):</translatorcomment>
     </message>
     <message>
         <location line="+116"/>
-        <location line="+61"/>
+        <location line="+65"/>
         <source>No solution</source>
         <translation>Nessuna soluzione</translation>
     </message>
@@ -2897,7 +2897,7 @@ Coordinate polari relativo:</translatorcomment>
         <translation>Spostare entità</translation>
     </message>
     <message>
-        <location line="+384"/>
+        <location line="+388"/>
         <source>Move Reference Point</source>
         <translation>Spostare riferimento</translation>
     </message>
@@ -13419,7 +13419,7 @@ Obiettivo punto</translatorcomment>
         <translation></translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>No selected entities in given range</source>
         <translation>Nessun oggetto selezionato in un determinato intervallo</translation>
     </message>
@@ -13434,7 +13434,7 @@ Obiettivo punto</translatorcomment>
         <translation>&amp;Stira</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Stretch/Stretch.js" line="-158"/>
+        <location filename="../scripts/Modify/Stretch/Stretch.js" line="-161"/>
         <source>Second corner</source>
         <translation>Secondo punto dell&apos;angolo</translation>
     </message>

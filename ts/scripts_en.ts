@@ -1240,7 +1240,7 @@ Do you wish to recover it?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+119"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+120"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Invalid image size (width x height must be less than %1)</translation>
     </message>
@@ -1865,7 +1865,7 @@ Do you wish to recover it?</translation>
     </message>
     <message>
         <location line="+116"/>
-        <location line="+61"/>
+        <location line="+65"/>
         <source>No solution</source>
         <translation>No solution</translation>
     </message>
@@ -2598,7 +2598,7 @@ Do you wish to recover it?</translation>
         <translation>Move entity to desired location</translation>
     </message>
     <message>
-        <location line="+384"/>
+        <location line="+388"/>
         <source>Move Reference Point</source>
         <translation>Move Reference Point</translation>
     </message>
@@ -11595,7 +11595,7 @@ shown in search results:</translation>
         <translation>Target point</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>No selected entities in given range</source>
         <translation>No selected entities in given range</translation>
     </message>

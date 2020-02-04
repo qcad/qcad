@@ -1367,7 +1367,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+119"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+120"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Tamaño de imagen no válido (anchura x altura debe ser menor que %1)</translation>
     </message>
@@ -2048,7 +2048,7 @@ Seleccionador de varios métodos de entrada que usa el menú contextual de los e
     </message>
     <message>
         <location line="+116"/>
-        <location line="+61"/>
+        <location line="+65"/>
         <source>No solution</source>
         <translation>Ninguna solución</translation>
     </message>
@@ -2867,7 +2867,7 @@ Coordenadas polares relativa:</translatorcomment>
         <translation>Mover entidad</translation>
     </message>
     <message>
-        <location line="+384"/>
+        <location line="+388"/>
         <source>Move Reference Point</source>
         <translation>Mover punto de referencia</translation>
     </message>
@@ -13337,7 +13337,7 @@ Punto objetivo</translatorcomment>
         <translation></translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>No selected entities in given range</source>
         <translation>Ningún objeto seleccionado en el rango dado</translation>
     </message>
@@ -13352,7 +13352,7 @@ Punto objetivo</translatorcomment>
         <translation>E&amp;stirar</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Stretch/Stretch.js" line="-158"/>
+        <location filename="../scripts/Modify/Stretch/Stretch.js" line="-161"/>
         <source>Second corner</source>
         <translation>Segunda punto de esquina</translation>
     </message>

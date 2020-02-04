@@ -1483,7 +1483,7 @@ Preto</translatorcomment>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+119"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+120"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Tamanho de imagem inválido (largura x altura deve ser menor que %1)</translation>
     </message>
@@ -2236,7 +2236,7 @@ Indique o terceiro ponto</translatorcomment>
     </message>
     <message>
         <location line="+116"/>
-        <location line="+61"/>
+        <location line="+65"/>
         <source>No solution</source>
         <translation>Nenhuma solução</translation>
     </message>
@@ -3092,7 +3092,7 @@ Corte entidades com ponto de referência ao clipboard</translatorcomment>
         <translation>Mova a entidade para a localização desejada</translation>
     </message>
     <message>
-        <location line="+384"/>
+        <location line="+388"/>
         <source>Move Reference Point</source>
         <translation>Mova o Ponto de Referência</translation>
     </message>
@@ -13774,7 +13774,7 @@ Ponto de destino</translatorcomment>
         <translation></translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>No selected entities in given range</source>
         <translation>Nenhum objeto selecionado no intervalo determinado</translation>
     </message>

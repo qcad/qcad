@@ -671,7 +671,7 @@
         <translation>Max utsträckning</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+834"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+852"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Detekterat cirkulärt beroende mellan block:</translation>
     </message>

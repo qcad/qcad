@@ -1216,7 +1216,7 @@ Onu kurtarmak ister misiniz?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+119"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+120"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Geçersiz resim boyutu (genişlik x yükseklik %1&apos;den az olmalıdır)</translation>
     </message>
@@ -1837,7 +1837,7 @@ Onu kurtarmak ister misiniz?</translation>
     </message>
     <message>
         <location line="+116"/>
-        <location line="+61"/>
+        <location line="+65"/>
         <source>No solution</source>
         <translation>Çözüm yok</translation>
     </message>
@@ -2562,7 +2562,7 @@ Onu kurtarmak ister misiniz?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+384"/>
+        <location line="+388"/>
         <source>Move Reference Point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11285,7 +11285,7 @@ shown in search results:</source>
         <translation type="unfinished">Hedef nokta</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>No selected entities in given range</source>
         <translation type="unfinished"></translation>
     </message>

@@ -1368,7 +1368,7 @@ Voulez-vous le récupérer?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+119"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+120"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Taille d&apos;image non valide (largeur x hauteur doit être inférieure à %1)</translation>
     </message>
@@ -2042,7 +2042,7 @@ Espacement de grille minimal (px)</translatorcomment>
     </message>
     <message>
         <location line="+116"/>
-        <location line="+61"/>
+        <location line="+65"/>
         <source>No solution</source>
         <translation>Aucune solution</translation>
     </message>
@@ -2857,7 +2857,7 @@ Coordonnées polaires relatives</translatorcomment>
         <translation>Déplacer entité</translation>
     </message>
     <message>
-        <location line="+384"/>
+        <location line="+388"/>
         <source>Move Reference Point</source>
         <translation>Déplacer référence</translation>
     </message>
@@ -7810,7 +7810,7 @@ Métagrille :
     <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui" line="+20"/>
         <source>Language of User Interface:</source>
-        <translation>Langue de l'interface utilisateur</translation>
+        <translation>Langue de l&apos;interface utilisateur</translation>
     </message>
 </context>
 <context>
@@ -13296,7 +13296,7 @@ Indiquer le point cible</translatorcomment>
         <translation></translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+141"/>
         <source>No selected entities in given range</source>
         <translation>Aucun objet sélectionné dans la plage donnée</translation>
     </message>
@@ -13311,7 +13311,7 @@ Indiquer le point cible</translatorcomment>
         <translation>E&amp;tirer</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Stretch/Stretch.js" line="-158"/>
+        <location filename="../scripts/Modify/Stretch/Stretch.js" line="-161"/>
         <source>Second corner</source>
         <translation>Deuxième point d&apos;angle</translation>
     </message>
