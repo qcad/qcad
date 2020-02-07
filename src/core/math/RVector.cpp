@@ -1219,7 +1219,7 @@ RVector operator*(double s, const RVector& v) {
  * Stream operator for QDebug
  */
 QDebug operator<<(QDebug dbg, const RVector& v) {
-    dbg.nospace() << "RVector(" << v.x << ", " << v.y << ", " << v.z << ", " << v.valid << ")";
+    dbg.nospace() << QString("RVector(%1, %2, %3, %4)").arg(v.x, 0, 'f').arg(v.y, 0, 'f').arg(v.z, 0, 'f').arg(v.valid);
     return dbg;
 }
 
