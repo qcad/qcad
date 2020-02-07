@@ -275,14 +275,24 @@ Projection.prototype.addTransformedShapes = function(entity, shapes, op, preview
                     debugger;
                 }
 
+                s[n].simplify(0.01);
+
                 hd.addBoundary(s[n], true);
             }
         }
 
         var e = entity.clone();
         e.setData(hd);
+        e.setSelected(false);
 
-        flags = flags | RAddObjectsOperation.UseAttributes;
+//        for (i=0; i<hd.getLoopCount(); i++) {
+//            s = hd.getLoopBoundary(i);
+//            qDebug("hatch boundary:", s);
+//        }
+
+        //e.getData().getDocument().getStorage().setObjectId(e, RObject.INVALID_ID);
+        flags = flags | RAddObjectsOperation.UseAttributes | RAddObjectsOperation.ForceNew;
+        //flags = flags | RAddObjectsOperation.UseAttributes;
         op.addObject(e, flags);
         return;
     }
