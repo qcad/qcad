@@ -106,9 +106,6 @@
    </item>
    <item>
     <widget class="QToolButton" name="Convert">
-     <property name="text">
-      <string>...</string>
-     </property>
      <property name="icon">
       <iconset>
        <normaloff>Tick.svg</normaloff>Tick.svg</iconset>
