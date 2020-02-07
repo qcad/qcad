@@ -2818,9 +2818,8 @@ Documento carregado: %1</translatorcomment>
         <translation>Capa:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="vanished">...</translation>
     </message>
 </context>
 <context>

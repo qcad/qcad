@@ -2272,11 +2272,6 @@ Do you wish to recover it?</source>
         <source>Convert:</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location line="+7"/>
-        <source>...</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>CoordinateDisplay</name>

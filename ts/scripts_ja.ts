@@ -2415,9 +2415,8 @@ Do you wish to recover it?</source>
         <translation>変換:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="vanished">...</translation>
     </message>
 </context>
 <context>

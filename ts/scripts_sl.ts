@@ -2407,9 +2407,8 @@ Do you wish to recover it?</source>
         <translation>Pretvori:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="vanished">...</translation>
     </message>
 </context>
 <context>

@@ -2715,9 +2715,8 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Konvertieren:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="vanished">...</translation>
     </message>
 </context>
 <context>

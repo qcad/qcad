@@ -2385,9 +2385,8 @@ Wilt u het herstellen?</translation>
         <translation>Converteren:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="vanished">...</translation>
     </message>
 </context>
 <context>

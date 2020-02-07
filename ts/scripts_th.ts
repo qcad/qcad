@@ -2211,11 +2211,6 @@ Do you wish to recover it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
         <source>Convert Drawing &amp;Unit</source>
         <translation type="unfinished"></translation>

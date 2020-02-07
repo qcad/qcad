@@ -2309,9 +2309,8 @@ Onu kurtarmak ister misiniz?</translation>
         <translation>Dönüştür:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>...</source>
-        <translation>...</translation>
+        <translation type="vanished">...</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
