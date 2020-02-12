@@ -89,7 +89,7 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
         this.diTrans = new RDocumentInterface(docTrans);
         this.diTrans.setNotifyListeners(false);
 
-        // copy seletion to cache document:
+        // copy selection to cache document:
         var copyOp = new RCopyOperation(new RVector(0,0), doc);
         copyOp.setClear(false);
         this.diTrans.applyOperation(copyOp);
