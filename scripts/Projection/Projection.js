@@ -44,6 +44,7 @@ function Projection(guiAction) {
     // segmented into line segments:
     this.segmentation = false;
     this.segmentLength = 1.0;
+    this.retainTexts = false;
 
     // force flat projection (for aux constructions):
     this.flat = false;
@@ -234,6 +235,22 @@ Projection.prototype.transform = function(entity, k, op, preview, flags) {
 
     this.preTransform(entity);
 
+    if (this.retainTexts && isTextBasedEntity(entity)) {
+        // don't explode text, only project position:
+        var e = entity.clone();
+        e.setSelected(false);
+        var p = e.getAlignmentPoint();
+        //qDebug("p before:", p);
+        //qDebug("ap:", e.getAlignmentPoint());
+        this.project(p);
+        //qDebug("p after:", p);
+        //e.setPosition(p);
+        e.setAlignmentPoint(p);
+        flags = flags | RAddObjectsOperation.UseAttributes;
+        op.addObject(e, flags);
+        return;
+    }
+
     // shapes that represent this entity:
     var shapes = entity.getShapes();
     this.addTransformedShapes(entity, shapes, op, preview, flags);
@@ -338,7 +355,7 @@ Projection.prototype.trimShape = function(shape) {
  * chosen reference point.
  */
 Projection.prototype.project = function(p) {
-    return p;
+    return;
 }
 
 /**
@@ -398,7 +415,7 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
             var polyline = ShapeAlgorithms.lineOrArcToPolyline(shape, numSegments);
             var projectedPl = this.projectShape(polyline, preview, trim)[0];
             if (!isNull(projectedPl)) {
-                projectedPl.simplify();
+                projectedPl.simplify(0.01);
                 ret.push(projectedPl);
             }
             this.segmentation = true;
@@ -589,6 +606,12 @@ Projection.prototype.slotRotateCW = function() {
 
 Projection.prototype.slotSegmentLengthChanged = function(l) {
     this.segmentLength = l;
+    this.clearCache();
+    this.updatePreview(true);
+};
+
+Projection.prototype.slotRetainTextsChanged = function(v) {
+    this.retainTexts = v;
     this.clearCache();
     this.updatePreview(true);
 };
