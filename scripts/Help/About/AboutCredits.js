@@ -54,24 +54,33 @@ var credits =
     ],
     [
         qsTr("Hatch Patterns"),
-        [ "John Hyslop",         "BLOCKS-01, BLOCKS-01, " +
+        [ "John Hyslop",         "AR-CONC-01, " +
+                                 "BARBWIRE, " +
+                                 "BLOCKS-01, BLOCKS-01, " +
                                  "BOXJOIN-01, BOXJOIN-02, " +
                                  "BOX-OVERLAP, " +
-                                 "CELTIC-01, CELTIC-02, " +
+                                 "BUBBLES-01, BUBBLES-02, BUBBLES-03, " +
+                                 "CELTIC-01, CELTIC-02, CELTIC-03, CELTIC-04, " +
                                  "CIRCLES, CIRCLES-02, " +
                                  "EXPLOSION, " +
+                                 "GRAVEL-01, " +
+                                 "HATCH-DOTS, HATCH-SQRS, " +
                                  "HEXAGONS, " +
                                  "HEXJOIN-01, HEXJOIN-02, " +
                                  "HOLLY, " +
                                  "LATTICE-01, LATTICE-02, LATTICE-03, " +
-                                 "LATTICE-04, LATTICE-05, LATTICE-06, " +
+                                 "LATTICE-04, LATTICE-05, LATTICE-06, LATTICE-07, " +
+                                 "LEAF-01, LEAF-02, LEAF-03, " +
                                  "LOOPLINKS, " +
                                  "MAZE-01, MAZE-02, " +
                                  "QCAD-LOGO, " +
+                                 "REDBACK, " +
                                  "SCAFFOLD, " +
                                  "SQUIGGLE-01, SQUIGGLE-02, " +
                                  "TRI-OVERLAP, " +
-                                 "WIRE-FENCE"
+                                 "WEATHERBOARD, WEAVING, " +
+                                 "WIRE-FENCE, " +
+                                 "XMASTREE-01, XMASTREE-02"
                                  ],
     ],
     [
