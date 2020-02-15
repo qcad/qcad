@@ -125,7 +125,7 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
             //qDebug("%1 / %2".arg(i).arg(ids.length-1));
 
             // entity is valid as long as entityP is valid:
-            entity = entityP.data();
+            //entity = entityP.data();
             entity = entityP.clone();
 
             // copy: assign new IDs
