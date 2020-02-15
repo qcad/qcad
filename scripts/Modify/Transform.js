@@ -126,7 +126,7 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
 
             // entity is valid as long as entityP is valid:
             entity = entityP.data();
-            //entity = entityP.clone();
+            entity = entityP.clone();
 
             // copy: assign new IDs
             if (copies>0) {
