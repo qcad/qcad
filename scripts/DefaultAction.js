@@ -703,7 +703,8 @@ DefaultAction.prototype.entityDoubleClicked = function(entityId, event) {
 
         if (RSettings.getBoolValue("GraphicsView/DoubleClickSelectContour", true)===true) {
             include("scripts/Select/SelectContour/SelectContour.js");
-            var matchingEntityIds = SelectContour.getConnectedEntities(this.document, entityId, 0.001);
+            var tol = RSettings.getDoubleValue("GraphicsView/DoubleClickSelectContourTolerance", 0.001);
+            var matchingEntityIds = SelectContour.getConnectedEntities(this.document, entityId, tol);
             var add = isShiftPressed(event);
             if (entity.isSelected()) {
                 this.di.selectEntities(matchingEntityIds, add);
