@@ -674,12 +674,14 @@ double RGraphicsSceneQt::getLineTypePatternScale(const RLinetypePattern& p) cons
 
     // see: FS#322 - Line type scaling with print scale factor
     if (view->isPrinting() || view->isPrintPreview()) {
-        QVariant scaleVariant = getDocument().getVariable("PageSettings/Scale", QVariant(), true);
-        if (!scaleVariant.isValid() || !scaleVariant.canConvert(QVariant::String)) {
-            return factor;
+        // 20200225: only apply global scale for model space, not for viewports or other blocks:
+        if (document->getCurrentBlockId()==document->getModelSpaceBlockId()) {
+            QVariant scaleVariant = getDocument().getVariable("PageSettings/Scale", QVariant(), true);
+            if (!scaleVariant.isValid() || !scaleVariant.canConvert(QVariant::String)) {
+                return factor;
+            }
+            factor /= RMath::parseScale(scaleVariant.toString());
         }
-
-        factor /= RMath::parseScale(scaleVariant.toString());
     }
 
     //qDebug() << "scene factor: " << factor;
