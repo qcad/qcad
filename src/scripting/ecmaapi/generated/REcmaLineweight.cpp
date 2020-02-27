@@ -347,6 +347,51 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QPair < QString , RLineweight::Lineweight > >'
+    QList < QPair < QString , RLineweight::Lineweight > > cppResult =
+        RLineweight::
+       getList(a0
+        ,
+    a1);
+        // return type: QList < QPair < QString , RLineweight::Lineweight > >
+                // List of Pairs of ...:
+                result = REcmaHelper::pairListToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RLineweight.getList().",
                    context);

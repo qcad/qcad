@@ -44,6 +44,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="bool" typeName="bool" name="onlyFixed"
         isConst="false" />
+        <arg type="bool" typeName="bool" name="noDefault"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getIcon" cppName="getIcon" specifier="public"

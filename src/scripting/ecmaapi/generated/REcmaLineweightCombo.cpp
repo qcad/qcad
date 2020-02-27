@@ -73,6 +73,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setOnlyFixed, "setOnlyFixed");
             
+            REcmaHelper::registerFunction(&engine, proto, getNoDefault, "getNoDefault");
+            
+            REcmaHelper::registerFunction(&engine, proto, setNoDefault, "setNoDefault");
+            
             REcmaHelper::registerFunction(&engine, proto, lineweightChanged, "lineweightChanged");
             
         engine.setDefaultPrototype(
@@ -484,6 +488,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLineweightCombo::setOnlyFixed", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLineweightCombo::getNoDefault
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLineweightCombo::getNoDefault", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLineweightCombo::getNoDefault";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLineweightCombo* self = 
+                        getSelf("getNoDefault", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getNoDefault();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLineweightCombo.getNoDefault().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLineweightCombo::getNoDefault", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLineweightCombo::setNoDefault
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLineweightCombo::setNoDefault", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLineweightCombo::setNoDefault";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLineweightCombo* self = 
+                        getSelf("setNoDefault", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setNoDefault(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLineweightCombo.setNoDefault().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLineweightCombo::setNoDefault", context, engine);
             return result;
         }
          QScriptValue

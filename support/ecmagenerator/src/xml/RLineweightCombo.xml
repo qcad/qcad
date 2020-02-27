@@ -44,6 +44,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getNoDefault" cppName="getNoDefault"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setNoDefault" cppName="setNoDefault"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="noDefault"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="lineweightChanged" cppName="lineweightChanged"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

@@ -36,6 +36,7 @@
 
 <function_decl><type><name>Q_OBJECT</name></type>
 <name>Q_PROPERTY</name><parameter_list>(<param><decl><type><name>bool</name> <name>onlyFixed</name> <name>READ</name> <name>getOnlyFixed</name> <name>WRITE</name></type> <name>setOnlyFixed</name></decl></param>)</parameter_list>;</function_decl>
+<constructor_decl><name>Q_PROPERTY</name><parameter_list>(<param><decl><type><name>bool</name> <name>noDefault</name> <name>READ</name> <name>getNoDefault</name> <name>WRITE</name></type> <name>setNoDefault</name></decl></param>)</parameter_list>;</constructor_decl>
 
 </private><public>public:
     <constructor_decl><name>RLineweightCombo</name><parameter_list>(<param><decl><type><name>QWidget</name> *</type><name>parent</name> =<init> <expr>0</expr></init></decl></param>)</parameter_list>;</constructor_decl>
@@ -48,6 +49,9 @@
     <function_decl><type><name>bool</name></type> <name>getOnlyFixed</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setOnlyFixed</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>onlyFixed</name></decl></param>)</parameter_list>;</function_decl>
 
+    <function_decl><type><name>bool</name></type> <name>getNoDefault</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setNoDefault</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>noDefault</name></decl></param>)</parameter_list>;</function_decl>
+
 <label><name>signals</name>:</label>
     <function_decl><type><name>void</name></type> <name>valueChanged</name><parameter_list>(<param><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>lw</name></decl></param>)</parameter_list>;</function_decl>
 
@@ -57,6 +61,7 @@
 </public><private>private:
     <decl_stmt><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>currentLineweight</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>onlyFixed</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>noDefault</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RLineweightCombo*</argument>)</argument_list></macro>

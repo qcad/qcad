@@ -63,6 +63,12 @@
         setOnlyFixed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getNoDefault
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setNoDefault
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         lineweightChanged
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
