@@ -132,41 +132,44 @@ void RDocumentVariables::setKnownVariable(RS::KnownVariable key, const RVector& 
 }
 
 void RDocumentVariables::setKnownVariable(RS::KnownVariable key, const QVariant& value) {
-    if (key==RS::INSUNITS) {
+    switch (key) {
+    case RS::INSUNITS:
         setUnit((RS::Unit)value.toInt());
-        return;
-    }
-    else if (key==RS::MEASUREMENT) {
+        break;
+    case RS::MEASUREMENT:
         setMeasurement((RS::Measurement)value.toInt());
-        return;
-    }
-    else if (key==RS::LTSCALE) {
+        break;
+    case RS::LTSCALE:
         setLinetypeScale(value.toDouble());
-        return;
+        break;
+    default:
+        break;
     }
 
     knownVariables.insert(key, value);
 }
 
 QVariant RDocumentVariables::getKnownVariable(RS::KnownVariable key) const {
-    if (key==RS::INSUNITS) {
+    switch (key) {
+    case RS::INSUNITS:
         return getUnit();
-    }
 
-    if (key==RS::LTSCALE) {
+    case RS::LTSCALE:
         return getLinetypeScale();
-    }
 
     // if DIMADEC is -1, DIMDEC is used:
-    if (key==RS::DIMADEC &&
-        hasKnownVariable(RS::DIMDEC) &&
-        getKnownVariable(RS::DIMDEC).toInt()==-1) {
+    case RS::DIMADEC:
+        if (hasKnownVariable(RS::DIMDEC) &&
+            getKnownVariable(RS::DIMADEC).toInt()==-1) {
+            return getKnownVariable(RS::DIMDEC);
+        }
+        break;
 
-        return getKnownVariable(RS::DIMDEC);
-    }
-
-    if (key==RS::DWGCODEPAGE) {
+    case RS::DWGCODEPAGE:
         return QVariant("ANSI_1252");
+
+    default:
+        break;
     }
 
     return knownVariables.value(key);
