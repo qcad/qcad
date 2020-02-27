@@ -76,7 +76,7 @@ public:
 
 public:
     RLineweight();
-    static QList<QPair<QString, RLineweight::Lineweight> > getList(bool onlyFixed);
+    static QList<QPair<QString, RLineweight::Lineweight> > getList(bool onlyFixed, bool noDefault = false);
     static QIcon getIcon(RLineweight::Lineweight color, const QSize& size = RDEFAULT_QSIZE_ICON);
     static QString getName(RLineweight::Lineweight lineweight);
 
