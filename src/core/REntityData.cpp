@@ -199,14 +199,10 @@ RLineweight::Lineweight REntityData::getLineweight(bool resolve, const QStack<RE
         lw = blockRefStack.top()->getLineweight(true, blockRefStack);
     }
 
-    if (lw==RLineweight::WeightByLwDefault) {
-        // TODO: return default line weight:
-        lw = RLineweight::Weight000;
-    }
-
-    if (lw==RLineweight::WeightInvalid) {
-        // TODO: return default line weight:
-        lw = RLineweight::Weight000;
+    if (lw==RLineweight::WeightByLwDefault || lw==RLineweight::WeightInvalid) {
+        // return configured default line weight:
+        //lw = RLineweight::Weight000;
+        lw = (RLineweight::Lineweight)RSettings::getIntValue("GraphicsView/DefaultLineweight", RLineweight::Weight025);
     }
 
     if (lw<0) {
