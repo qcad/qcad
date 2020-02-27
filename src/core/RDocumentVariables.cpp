@@ -160,7 +160,7 @@ QVariant RDocumentVariables::getKnownVariable(RS::KnownVariable key) const {
     // if DIMADEC is -1, DIMDEC is used:
     case RS::DIMADEC:
         if (hasKnownVariable(RS::DIMDEC) &&
-            getKnownVariable(RS::DIMADEC).toInt()==-1) {
+            knownVariables.value(RS::DIMADEC).toInt()==-1) {
             return getKnownVariable(RS::DIMDEC);
         }
         break;
