@@ -72,6 +72,9 @@ QString RLineweightComboPlugin::domXml() const {
             <property name=\"onlyFixed\" stdset=\"0\"> \
                 <bool>false</bool> \
             </property> \
+            <property name=\"noDefault\" stdset=\"0\"> \
+                <bool>false</bool> \
+            </property> \
         </widget> \
     </ui>\n";
 }

@@ -35,6 +35,7 @@ class QCADGUI_EXPORT RLineweightCombo: public QComboBox {
 
 Q_OBJECT
 Q_PROPERTY(bool onlyFixed READ getOnlyFixed WRITE setOnlyFixed);
+Q_PROPERTY(bool noDefault READ getNoDefault WRITE setNoDefault);
 
 public:
     RLineweightCombo(QWidget *parent = 0);
@@ -47,6 +48,9 @@ public:
     bool getOnlyFixed();
     void setOnlyFixed(bool onlyFixed);
 
+    bool getNoDefault();
+    void setNoDefault(bool noDefault);
+
 signals:
     void valueChanged(RLineweight::Lineweight lw);
 
@@ -56,6 +60,7 @@ public slots:
 private:
     RLineweight::Lineweight currentLineweight;
     bool onlyFixed;
+    bool noDefault;
 };
 
 Q_DECLARE_METATYPE(RLineweightCombo*)

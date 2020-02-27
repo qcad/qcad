@@ -24,7 +24,7 @@
 #include "RSettings.h"
 
 RLineweightCombo::RLineweightCombo(QWidget *parent) :
-    QComboBox(parent), onlyFixed(false) {
+    QComboBox(parent), onlyFixed(false), noDefault(false) {
 
     setIconSize(QSize(16, 16));
     init();
@@ -45,7 +45,7 @@ void RLineweightCombo::init() {
     setMaxVisibleItems(12);
     QVariant v;
     QListIterator<QPair<QString, RLineweight::Lineweight> > it(
-            RLineweight::getList(onlyFixed));
+            RLineweight::getList(onlyFixed, noDefault));
 
     while (it.hasNext()) {
         QPair<QString, RLineweight::Lineweight> p = it.next();
@@ -68,6 +68,15 @@ bool RLineweightCombo::getOnlyFixed() {
 
 void RLineweightCombo::setOnlyFixed(bool onlyFixed) {
     this->onlyFixed = onlyFixed;
+    init();
+}
+
+bool RLineweightCombo::getNoDefault() {
+    return noDefault;
+}
+
+void RLineweightCombo::setNoDefault(bool noDefault) {
+    this->noDefault = noDefault;
     init();
 }
 
