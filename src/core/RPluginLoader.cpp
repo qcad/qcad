@@ -90,6 +90,8 @@ QStringList RPluginLoader::getPluginFiles() {
  * Tries to loads all QCAD plugins located in ./plugins.
  */
 void RPluginLoader::loadPlugins(bool init) {
+    QString theme = RSettings::getStringValue("Theme/ThemeName", "");
+
     pluginFiles.clear();
     pluginsInfo.clear();
 
@@ -116,6 +118,18 @@ void RPluginLoader::loadPlugins(bool init) {
 //        if (disabledPluginsList.contains(fn, Qt::CaseInsensitive)) {
 //            continue;
 //        }
+
+        QString baseName = QFileInfo(fileName).baseName();
+        baseName = baseName.replace("_debug", "");
+        baseName = baseName.replace("lib", "");
+        if (baseName.startsWith("qcad") && baseName.endsWith("style")) {
+            // plugin is a theme / style:
+            QString styleName = baseName.mid(4, baseName.length()-4-5);
+            if (theme.toLower()!=styleName.toLower()) {
+                // only load style plugin if name matched theme:
+                continue;
+            }
+        }
         QPluginLoader loader(fileName);
         QObject* plugin = loader.instance();
         loadPlugin(plugin, init, fileName, loader.errorString());
