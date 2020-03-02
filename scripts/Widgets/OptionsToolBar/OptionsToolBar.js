@@ -91,7 +91,7 @@ OptionsToolBar.postInit = function(basePath) {
     iconLabel.alignment = Qt.AlignCenter;
     iconLabel.setContentsMargins(6, 0, 6, 0);
 
-    // style of laber with current tool icon:
+    // style of label with current tool icon:
     if (!RSettings.hasCustomStyleSheet()) {
         var w = optionsToolBar.iconSize.width() < 20 ? 1 : 2;
         if (RSettings.hasDarkGuiBackground()) {
