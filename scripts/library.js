@@ -2409,6 +2409,16 @@ function applyTheme() {
 
             if (new QFileInfo(fn).exists()) {
                 var css = readTextFile(fn);
+                if (css.contains("RequiresPlugin:true")) {
+                    // only load theme if plugin loaded:
+                    var pluginId = theme.toUpperCase() + "STYLE";
+                    if (!RPluginLoader.hasPlugin(pluginId)) {
+                        qWarning("Theme not loaded: ", theme);
+                        qWarning("Theme plugin not found:", pluginId);
+                        return;
+                    }
+                }
+
                 css = css.replace(/url\(/g, "url(" + path);
                 qApp.styleSheet = qApp.styleSheet + "\n" + css;
                 found = true;
