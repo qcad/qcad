@@ -11,7 +11,7 @@ On macOS, the system's dark mode can be used instead.
 */
 
 QToolTip { 
-    color: #ffffff; background-color: #2a82da; border: 1px solid white; 
+    color: #ffffff; background-color: #363636; border: 1px solid #070707; 
 }
 
 /* Current tool icon in options tool bar */
