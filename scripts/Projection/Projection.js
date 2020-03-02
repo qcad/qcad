@@ -24,7 +24,8 @@
  * \brief This module contains ECMAScript implementations of various projection (isometric, orthographic) tools.
  */
 
-include("../Modify/Transform.js");
+include("scripts/Modify/Explode/Explode.js");
+include("scripts/Modify/Transform.js");
 include("scripts/ShapeAlgorithms.js");
 
 /**
@@ -229,11 +230,18 @@ Projection.prototype.postTransform = function(entity) {
 /**
  * Callback function for Transform.getOperation. Generic for all projections.
  * \param k Ignored
+ * \param rec Recursive call (don't call preTransform to move / rotate)
  */
-Projection.prototype.transform = function(entity, k, op, preview, flags) {
-    var i;
+Projection.prototype.transform = function(entity, k, op, preview, flags, rec) {
+    if (isNull(rec)) {
+        rec = false;
+    }
 
-    this.preTransform(entity);
+    var i, shapes;
+
+    if (rec!==true) {
+        this.preTransform(entity);
+    }
 
     if (this.retainTexts && isTextBasedEntity(entity)) {
         // don't explode text, only project position:
@@ -251,8 +259,23 @@ Projection.prototype.transform = function(entity, k, op, preview, flags) {
         return;
     }
 
-    // shapes that represent this entity:
-    var shapes = entity.getShapes();
+    // explode block reference to keep attributes (colors, etc.):
+    if (isBlockReferenceEntity(entity)) {
+        var explodedEntities = Explode.explodeEntity(entity);
+        for (i=0; i<explodedEntities.length; i++) {
+            var explodedEntity = explodedEntities[i];
+
+            if (isEntity(explodedEntity)) {
+                this.transform(explodedEntity, k, op, preview, flags, true);
+            }
+            else {
+                qWarning("shape in exploded block");
+            }
+        }
+        return;
+    }
+
+    shapes = entity.getShapes();
     this.addTransformedShapes(entity, shapes, op, preview, flags);
 
     // text data that is part of this entity (dimension label):
