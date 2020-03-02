@@ -2406,18 +2406,12 @@ function applyTheme() {
             var postfix = postfixes[i];
             var fn = path + "stylesheet" + postfix + ".css";
             qDebug("trying to load theme stylesheet: ", fn);
+
             if (new QFileInfo(fn).exists()) {
-                var file = new QFile(fn);
-                var flags = new QIODevice.OpenMode(QIODevice.ReadOnly | QIODevice.Text);
-                if (file.open(flags)) {
-                    var textStream = new QTextStream(file);
-                    textStream.setCodec("UTF-8");
-                    var allLines = textStream.readAll();
-                    file.close();
-                    allLines = allLines.replace(/url\(/g, "url(" + path);
-                    qApp.styleSheet = qApp.styleSheet + "\n" + allLines;
-                    found = true;
-                }
+                var css = readTextFile(fn);
+                css = css.replace(/url\(/g, "url(" + path);
+                qApp.styleSheet = qApp.styleSheet + "\n" + css;
+                found = true;
             }
         }
 
