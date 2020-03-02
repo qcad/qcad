@@ -20,7 +20,16 @@
    <bool>true</bool>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <property name="margin">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
     <number>0</number>
    </property>
    <property name="spacing">
@@ -37,16 +46,10 @@
      <property name="autoFillBackground">
       <bool>true</bool>
      </property>
-     <property name="frameShape">
-      <enum>QFrame::Panel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Sunken</enum>
-     </property>
     </widget>
    </item>
    <item row="0" column="1">
-    <widget class="RRulerQt" name="HorizontalRuler">
+    <widget class="RRulerQt" name="HorizontalRuler" native="true">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
        <horstretch>0</horstretch>
@@ -66,7 +69,7 @@
     </widget>
    </item>
    <item row="1" column="0">
-    <widget class="RRulerQt" name="VerticalRuler">
+    <widget class="RRulerQt" name="VerticalRuler" native="true">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
        <horstretch>0</horstretch>
@@ -116,12 +119,6 @@
      <property name="autoFillBackground">
       <bool>true</bool>
      </property>
-     <property name="frameShape">
-      <enum>QFrame::Panel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Sunken</enum>
-     </property>
     </widget>
    </item>
    <item row="2" column="0">
@@ -129,16 +126,10 @@
      <property name="autoFillBackground">
       <bool>true</bool>
      </property>
-     <property name="frameShape">
-      <enum>QFrame::Panel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Sunken</enum>
-     </property>
     </widget>
    </item>
    <item row="1" column="1">
-    <widget class="RGraphicsViewQt" name="GraphicsView">
+    <widget class="RGraphicsViewQt" name="GraphicsView" native="true">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
        <horstretch>0</horstretch>
