@@ -110,7 +110,10 @@ bool RLeaderEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMemberY(data.vertices, value, PropertyVertexNY == propertyTypeId);
     ret = ret || RObject::setMemberZ(data.vertices, value, PropertyVertexNZ == propertyTypeId);
 
-    ret = ret || RObject::setMember(data.dimScaleOverride, value, PropertyDimScale == propertyTypeId);
+    if (PropertyDimScale == propertyTypeId) {
+        ret = ret || RObject::setMember(data.dimScaleOverride, value, PropertyDimScale == propertyTypeId);
+        data.updateArrowHead();
+    }
 
     return ret;
 }

@@ -65,7 +65,7 @@ public:
     }
 
     bool canHaveArrowHead() const;
-    bool updateArrowHead();
+    bool updateArrowHead() const;
 
 //    void setPolyline(const RPolyline& polyline) {
 //        *((RPolyline*)this) = polyline;
@@ -120,9 +120,11 @@ public:
     REntity::Id getDimLeaderBlockId() const;
     void setDimLeaderBlockId(REntity::Id id);
 
+    virtual void update() const;
+
 private:
     /** Arrow head on / off */
-    bool arrowHead;
+    mutable bool arrowHead;
     /** Arrow size */
     double dimaszOverride;
     /** Dimension scale */

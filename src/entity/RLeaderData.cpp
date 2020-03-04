@@ -60,6 +60,7 @@ double RLeaderData::getDimasz() const {
 
 void RLeaderData::setDimScaleOverride(double v) {
     dimScaleOverride = v;
+    updateArrowHead();
 }
 
 double RLeaderData::getDimScale(bool fromDocument) const {
@@ -151,7 +152,7 @@ RTriangle RLeaderData::getArrowShape() const {
     return RTriangle::createArrow(p, direction, dimasz);
 }
 
-bool RLeaderData::updateArrowHead() {
+bool RLeaderData::updateArrowHead() const {
     if (arrowHead && !canHaveArrowHead()) {
         arrowHead = false;
         return true;
@@ -166,4 +167,10 @@ REntity::Id RLeaderData::getDimLeaderBlockId() const {
 
 void RLeaderData::setDimLeaderBlockId(REntity::Id id) {
     dimLeaderBlockId = id;
+}
+
+void RLeaderData::update() const {
+    REntityData::update();
+
+    updateArrowHead();
 }
