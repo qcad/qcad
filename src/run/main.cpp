@@ -239,6 +239,8 @@ int main(int argc, char *argv[]) {
     }
     app->setLibraryPaths(pluginPaths);
 
+    RSettings::setApplicationNameOverride("QCAD3");
+
     RMath::init();
     RFontList::init();
     RPatternListMetric::init();
@@ -293,7 +295,6 @@ int main(int argc, char *argv[]) {
 
     // make sure plugins can find plugin related settings:
     // these are always stored in "QCAD3.ini/conf":
-    RSettings::setApplicationNameOverride("QCAD3");
     RPluginLoader::loadPlugins(true);
 
     RLinetypeListMetric::init();
