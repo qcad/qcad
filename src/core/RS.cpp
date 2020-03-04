@@ -178,9 +178,8 @@ QStringList RS::getDirectoryList(const QString& subDirectory) {
 #endif
     */
 
-    // TODO: add a path to users home to be used to extend pattern, etc.
-    //QString appDirName = QSettings.applicationName();
-    //dirList.append(RSettings::getHomeLocation() + "/." + appDirName + "/" + subDirectory);
+    // add a path to users home (config dir) to be used to extend pattern, linetypes, etc.
+    dirList.append(RSettings::getPath() + "/" + subDirectory);
 
     QStringList ret;
     for (int i=0; i<dirList.size(); i++) {
