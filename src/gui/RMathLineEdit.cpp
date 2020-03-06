@@ -243,14 +243,7 @@ QString RMathLineEdit::getError() {
 void RMathLineEdit::clearError() {
     error = "";
     QPalette p = palette();
-//    if (RSettings::hasDarkGuiBackground()) {
-//        p.setColor(QPalette::Text, QColor(Qt::white));
-//    }
-//    else {
-        //p.setColor(QPalette::Text, QColor(Qt::black));
-//    }
     p.setColor(QPalette::Active, QPalette::Text, getNormalTextColor());
-    //qDebug() << "windowText:" << oriPalette.windowText().color();
     setPalette(p);
 }
 
