@@ -159,7 +159,7 @@ Gigamètre</translatorcomment>
         <translatorcomment>--exact match--
 --file: UnitSettings_fr.ts--
 Astro</translatorcomment>
-        <translation>Astro</translation>
+        <translation>Astronomique</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -237,7 +237,7 @@ Cyan</translatorcomment>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
 Bleu
-Bleu&#xa0;: 
+Bleu : 
 Bluetooth</translatorcomment>
         <translation>Bleu</translation>
     </message>
@@ -754,7 +754,7 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Overall</source>
-        <translation>Overall</translation>
+        <translation>Global</translation>
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="-6"/>
@@ -1344,7 +1344,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 0.13mm (ISO)</translatorcomment>
-        <translation>0.13mm (ISO)</translation>
+        <translation>0,13 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1360,7 +1360,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 0.18mm (ISO)</translatorcomment>
-        <translation>0.18mm (ISO)</translation>
+        <translation>0,18 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1376,7 +1376,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 0.25mm (ISO)</translatorcomment>
-        <translation>0.25mm (ISO)</translation>
+        <translation>0,25 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1392,7 +1392,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 0.35mm (ISO)</translatorcomment>
-        <translation>0.35mm (ISO)</translation>
+        <translation>0,35 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1408,7 +1408,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 0.50mm (ISO)</translatorcomment>
-        <translation>0.50mm (ISO)</translation>
+        <translation>0,50 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1432,7 +1432,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 0.70mm (ISO)</translatorcomment>
-        <translation>0.70mm (ISO)</translation>
+        <translation>0,70 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1456,7 +1456,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 1.00mm (ISO)</translatorcomment>
-        <translation>1.00mm (ISO)</translation>
+        <translation>1,00 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1480,7 +1480,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 1.40mm (ISO)</translatorcomment>
-        <translation>1.40mm (ISO)</translation>
+        <translation>1,40 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1496,7 +1496,7 @@ Valeurs par &amp;défaut</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 2.00mm (ISO)</translatorcomment>
-        <translation>2.00mm (ISO)</translation>
+        <translation>2,00 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>

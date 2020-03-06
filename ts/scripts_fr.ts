@@ -25,7 +25,7 @@
     <message>
         <location line="+4"/>
         <source>This means that everyone can &lt;a href=&apos;%1&apos;&gt;get involved&lt;/a&gt;!</source>
-        <translation>Cela signifie que tout le monde &lt;a href=&apos;%1&apos;&gt;peut participer&lt;/a&gt;!</translation>
+        <translation>Cela signifie que tout le monde peut &lt;a href=&apos;%1&apos;&gt;s’impliquer&lt;/a&gt; !</translation>
     </message>
     <message>
         <source>Portions of this software © 2008-2016 The Qt Company Ltd.</source>
@@ -38,7 +38,7 @@
     </message>
     <message>
         <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website.&lt;/a&gt;</source>
-        <translation type="vanished">Qt est livré avec QCAD sous la licence Open Source &lt;a href=&apos;%1&apos;&gt;LGPL &lt;/a&gt; qui vous confère divers droits en tant qu&apos;utilisateur, dont le droit de recompiler les bibliothèques Qt pour votre plate-forme. Pour ce faire, suivez &lt;a href=&apos;%2&apos;&gt;la documentation affichée sur le site Web de Qt&lt;/a&gt;.</translation>
+        <translation>Qt est livré avec QCAD sous la &lt;a href=&apos;%1&apos;&gt;licence LGPL Open Source&lt;/a&gt; qui vous confère divers droits en tant qu’utilisateur, y compris le droit de recompiler les bibliothèques Qt pour votre plate-forme. Pour ce faire, suivez la &lt;a href=&apos;%2&apos;&gt;documentation affichée sur le site Web de Qt&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -203,7 +203,7 @@
     </message>
     <message>
         <source>Community Edition</source>
-        <translation type="vanished">Community Edition</translation>
+        <translation>Édition Communautaire</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -218,7 +218,7 @@
     <message>
         <location line="+45"/>
         <source>Credits</source>
-        <translation>Credits</translation>
+        <translation>Crédits</translation>
     </message>
     <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
@@ -272,7 +272,7 @@
     </message>
     <message>
         <source>about:blank</source>
-        <translation type="vanished">about:blank</translation>
+        <translation>À propos de:blank</translation>
     </message>
     <message>
         <location line="+134"/>
@@ -292,7 +292,7 @@
     <message>
         <location line="-201"/>
         <source>Credits</source>
-        <translation>Credits</translation>
+        <translation>Crédits</translation>
     </message>
     <message>
         <source>About Plugins</source>
@@ -342,7 +342,7 @@ pour appliquer les modifications.</translation>
     <message>
         <location line="+86"/>
         <source>Defaults for </source>
-        <translation>Valeurs par défaut pour</translation>
+        <translation>Valeurs par défaut pour </translation>
     </message>
     <message>
         <location line="+2"/>
@@ -387,7 +387,7 @@ pour appliquer les modifications.</translation>
         <location filename="../scripts/Widgets/PropertyEditor/AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Ajouter une propriété personnalisée</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -783,7 +783,7 @@ pour appliquer les modifications.</translation>
     <message>
         <location line="+4"/>
         <source>Draw arc from center, point on arc and angles</source>
-        <translation>Tracer un arc du centre, un point sur ​​l&apos;arc et les angles</translation>
+        <translation>Tracer un arc depuis le centre, un point sur l’arc et les angles</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.ui" line="+17"/>
@@ -988,25 +988,23 @@ pour appliquer les modifications.</translation>
     <message>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
-        <translation type="vanished">Un fichier de &apos;sauvegarde automatique&apos; pour un dessin sans titre a été trouvé.
-Voulez-vous le récupérer?</translation>
+        <translation>Un fichier de &apos;sauvegarde automatique&apos; pour un dessin sans titre a été trouvé.
+Voulez-vous le récupérer ?</translation>
     </message>
     <message>
         <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
 Do you wish to recover them?</source>
-        <translation type="vanished">%1 fichiers de &apos;sauvegarde automatique&apos; pour dessins sans titre ont été trouvés.
-Voulez-vous les récupérer?</translation>
+        <translation>%1 fichiers de &apos;sauvegarde automatique&apos; pour des dessins sans titre ont été trouvés.
+Voulez-vous les récupérer ?</translation>
     </message>
     <message numerus="yes">
         <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation type="vanished">
-            <numerusform>%n fichier de &apos;sauvegarde automatique&apos; pour un dessin sans titre a été trouvé.
-Voulez-vous le récupérer?</numerusform>
-            <numerusform>%n fichiers de &apos;sauvegarde automatique&apos; pour dessins sans titre ont été trouvés.
-Voulez-vous les récupérer?</numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>%n fichier de &apos;sauvegarde automatique&apos; pour un dessin sans titre a été trouvé.
+Voulez-vous le récupérer ?</numerusform>
+        <numerusform>%n fichiers de &apos;sauvegarde automatique&apos; pour dessins sans titre ont été trouvés.
+Voulez-vous les récupérer ?</numerusform>
+        </translation></message>
     <message>
         <location line="+40"/>
         <source>Recovered</source>
@@ -1015,31 +1013,29 @@ Voulez-vous les récupérer?</numerusform>
     <message>
         <location line="+47"/>
         <source>Recover File?</source>
-        <translation>Récupérer fichier?</translation>
+        <translation>Récupérer fichier ?</translation>
     </message>
     <message>
         <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
-        <translation type="vanished">Un fichier de &apos;sauvegarde automatique&apos; pour &apos;%1&apos; a été trouvé.
-Voulez-vous le récupérer?</translation>
+        <translation>Un fichier de &apos;sauvegarde automatique&apos; pour &apos;%1&apos; existe.
+Voulez-vous le récupérer ?</translation>
     </message>
     <message numerus="yes">
         <location line="-68"/>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation>
-            <numerusform>Un fichier de sauvegarde automatique pour un dessin sans titre a été trouvé.
-Voulez-vous le récupérer?</numerusform>
-            <numerusform>%n fichiers de sauvegarde automatique pour dessins sans titre ont été trouvés.
-Voulez-vous les récupérer?</numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Un fichier de sauvegarde automatique pour un dessin sans titre a été trouvé.
+Voulez-vous le récupérer ?</numerusform>
+        <numerusform>%n fichiers de sauvegarde automatique pour dessins sans titre ont été trouvés.
+Voulez-vous les récupérer ?</numerusform>
+        </translation></message>
     <message>
         <location line="+69"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation>Un fichier de sauvegarde automatique pour &quot;%1&quot; a été trouvé.
-Voulez-vous le récupérer?</translation>
+        <translation>Un fichier de sauvegarde automatique pour &quot;%1&quot; existe.
+Voulez-vous le récupérer ?</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -1078,7 +1074,7 @@ Voulez-vous le récupérer?</translation>
     <message>
         <location line="-124"/>
         <source>Recover Files?</source>
-        <translation>Récupérer des fichiers?</translation>
+        <translation>Récupérer les fichiers ?</translation>
     </message>
     <message>
         <source>Choose Autosave Directory</source>
@@ -1183,19 +1179,19 @@ Voulez-vous le récupérer?</translation>
         <location filename="../scripts/Modify/Bevel/Bevel.js" line="+55"/>
         <source>The two entities cannot be bevelled.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Les deux entités ne peuvent pas être biseautées.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>La première entité ne peut être coupée.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>La seconde entité ne peut être coupée.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -1779,7 +1775,7 @@ Espacement de grille minimal (px)</translatorcomment>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+14"/>
         <source>Checking for Updates...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Recherche des mises à jour...</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1800,7 +1796,7 @@ Espacement de grille minimal (px)</translatorcomment>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+53"/>
         <source>Automatically check for updates</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Rechercher automatiquement les mises à jour</translation>
     </message>
 </context>
 <context>
@@ -2135,7 +2131,7 @@ Espacement de grille minimal (px)</translatorcomment>
     <message>
         <location line="+5"/>
         <source>Draw circle from center and point on circle</source>
-        <translation>Dessinez un cercle à partir de son centre et un point sur ​​le cercle</translation>
+        <translation>Tracer un cercle depuis le centre et un point sur le cercle</translation>
     </message>
 </context>
 <context>
@@ -2235,12 +2231,12 @@ Espacement de grille minimal (px)</translatorcomment>
     <message>
         <location line="+12"/>
         <source>First point on circle line</source>
-        <translation>Premier point sur ​​le cercle</translation>
+        <translation>Premier point sur le cercle</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second point on circle line</source>
-        <translation>Deuxième point sur ​​le cercle</translation>
+        <translation>Deuxième point sur le cercle</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -2504,7 +2500,7 @@ Dessin enregistré : %1</translatorcomment>
         <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
         <source>History Size:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Taille de l’historique :</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -2603,28 +2599,28 @@ Dessin enregistré : %1</translatorcomment>
         <source>Absolute Cartesian Coordinate</source>
         <translatorcomment>--google--
 Coordonnées cartésiennes absolues</translatorcomment>
-        <translation></translation>
+        <translation>Coordonnées cartésiennes absolues</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Absolute Polar Coordinate</source>
         <translatorcomment>--google--
 Coordonnées polaires absolues</translatorcomment>
-        <translation></translation>
+        <translation>Coordonnées polaires absolues</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative Cartesian Coordinate</source>
         <translatorcomment>--google--
 Coordonnées cartésiennes relatives</translatorcomment>
-        <translation></translation>
+        <translation>Coordonnées cartésiennes relatives</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative Polar Coordinate</source>
         <translatorcomment>--google--
 Coordonnées polaires relatives</translatorcomment>
-        <translation></translation>
+        <translation>Cordonnées polaires relatives</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+28"/>
@@ -2827,13 +2823,13 @@ Coordonnées polaires relatives</translatorcomment>
         <location filename="../scripts/DefaultAction.js" line="+90"/>
         <source>Select entity or region</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Sélectionne une entité ou une région</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Move entity or reference</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Déplacer l’entité ou la référence</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -2900,13 +2896,13 @@ KeyNavigation est disponible uniquement via les propriétés attachées</transla
         <location line="+5"/>
         <source>Zoom (Wheel Mouse)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Zoom (Molette)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Scroll (Trackpad, Multi-Touch Mouse)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Défilement (Trackpad, Souris Multi-Touch)</translation>
     </message>
 </context>
 <context>
@@ -2928,7 +2924,7 @@ KeyNavigation est disponible uniquement via les propriétés attachées</transla
         <location line="+4"/>
         <source>Deselect all entities</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Désélectionne toutes les entités</translation>
     </message>
 </context>
 <context>
@@ -2975,7 +2971,7 @@ KeyNavigation est disponible uniquement via les propriétés attachées</transla
         <location line="+8"/>
         <source>Arcs and Circles</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Arcs et Cercles</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3716,7 +3712,7 @@ est déjà dans la liste.</translation>
         <location filename="../scripts/View/DraftMode/DraftMode.js" line="+86"/>
         <source>&amp;Draft Mode</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>&amp;Mode Brouillon</translation>
     </message>
 </context>
 <context>
@@ -5109,7 +5105,7 @@ Remplacer le fichier?
 Le fichier existe:
 &quot;%1&quot;
 Remplacer?</translatorcomment>
-        <translation></translation>
+        <translation>Écraser le fichier ?</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5122,7 +5118,7 @@ Remplacer?</translatorcomment>
         <translatorcomment>--exact match--
 --file: Save_fr.ts--
 Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer?</translatorcomment>
-        <translation></translation>
+        <translation>Le fichier &quot;%1&quot; existe déjà. Voulez-vous l’écraser ?</translation>
     </message>
 </context>
 <context>
@@ -5388,7 +5384,7 @@ Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer?
     <message>
         <location line="+3"/>
         <source>Width : </source>
-        <translation>Largeur :</translation>
+        <translation>Largeur : </translation>
     </message>
     <message>
         <location line="+16"/>
@@ -8676,7 +8672,7 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="+4"/>
         <source>Draw angle bisector, trisector, ...</source>
-        <translation>Bissectrice d&apos;un angle</translation>
+        <translation>Tracer bissectrice d’angle, trisectoriel, ...</translation>
     </message>
 </context>
 <context>
@@ -9887,7 +9883,7 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
     <message>
         <location line="+58"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
-        <translation>Voulez-vous enregistrer les modifications que vous avez faites&lt;br&gt;dans le document &apos;%1&apos;?</translation>
+        <translation>Voulez-vous enregistrer les modifications que vous avez faites&lt;br&gt;dans le document &apos;%1&apos; ?</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10420,7 +10416,7 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode: </source>
-        <translation>Mode :</translation>
+        <translation>Mode : </translation>
     </message>
     <message>
         <location line="+17"/>
@@ -10833,7 +10829,7 @@ Dessin enregistré : %1</translatorcomment>
         <location line="+151"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Pas de Sélection</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -11467,7 +11463,7 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptInit.js" line="+2"/>
         <source>R&amp;un Script</source>
-        <translation>Lancer s&amp;cript...</translation>
+        <translation>L&amp;ancer Script</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -11480,12 +11476,12 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location filename="../scripts/File/Save/Save.js" line="+78"/>
         <source>Overwrite File?</source>
-        <translation>Remplacer le fichier?</translation>
+        <translation>Écraser le fichier ?</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        <translation>Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer?</translation>
+        <translation>Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer ?</translation>
     </message>
     <message>
         <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
@@ -11518,7 +11514,7 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Proceed?</source>
-        <translation>Procéder?</translation>
+        <translation>Procéder ?</translation>
     </message>
     <message>
         <location line="+0"/>
