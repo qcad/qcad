@@ -46,8 +46,14 @@ RDimAlignedData::RDimAlignedData(const RDimensionData& dimData,
 
 RBox RDimAlignedData::getBoundingBox(bool ignoreEmpty) const {
     boundingBox = RDimensionData::getBoundingBox(ignoreEmpty);
-    boundingBox.growToInclude(extensionPoint1);
-    boundingBox.growToInclude(extensionPoint2);
+
+    // 20200306: this breaks area selection of dimensions
+    // if extension points are far away from dimension shapes:
+    //if (!hasDimensionBlockReference()) {
+    //    boundingBox.growToInclude(extensionPoint1);
+    //    boundingBox.growToInclude(extensionPoint2);
+    //}
+
     return boundingBox;
 }
 
