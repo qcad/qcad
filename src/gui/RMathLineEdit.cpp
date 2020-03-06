@@ -249,7 +249,7 @@ void RMathLineEdit::clearError() {
 //    else {
         //p.setColor(QPalette::Text, QColor(Qt::black));
 //    }
-    p.setColor(QPalette::Text, getNormalTextColor());
+    p.setColor(QPalette::Active, QPalette::Text, getNormalTextColor());
     //qDebug() << "windowText:" << oriPalette.windowText().color();
     setPalette(p);
 }
@@ -283,17 +283,12 @@ void RMathLineEdit::setToolTip(const QString& toolTip) {
 }
 
 QColor RMathLineEdit::getNormalTextColor() const {
-    if (isEnabled()) {
-        return oriPalette.color(QPalette::Normal, QPalette::WindowText);
-    }
-    else {
-        return oriPalette.color(QPalette::Disabled, QPalette::WindowText);
-    }
+    return oriPalette.color(QPalette::Normal, QPalette::WindowText);
 }
 
 void RMathLineEdit::setTextColor(bool error) {
     QPalette p = palette();
-    p.setColor(QPalette::Text, QColor(error ? Qt::red : getNormalTextColor()));
+    p.setColor(QPalette::Active, QPalette::Text, QColor(error ? Qt::red : getNormalTextColor()));
     setPalette(p);
 
     QWidget* parent = parentWidget();
