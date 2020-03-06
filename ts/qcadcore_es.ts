@@ -560,7 +560,7 @@ Tipo de línea</translatorcomment>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Grosor de línea</translation>
+        <translation>Grosor de la línea</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -902,7 +902,7 @@ Colores
     </message>
     <message>
         <source>Lineweight</source>
-        <translation type="vanished">Grosor de línea</translation>
+        <translation>Grosor de la línea</translation>
     </message>
 </context>
 <context>
