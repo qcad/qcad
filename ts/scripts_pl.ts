@@ -13,7 +13,7 @@
         <translation>O programie %1…</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+61"/>
         <source>Revision:</source>
         <translation>Wersja:</translation>
     </message>
@@ -43,11 +43,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <location line="+375"/>
         <source>Plugin:</source>
         <translation>Wtyczka:</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="-350"/>
         <source>ID:</source>
         <translation>Identyfikator:</translation>
     </message>
@@ -201,6 +202,11 @@
         <translation>Twórcy</translation>
     </message>
     <message>
+        <location line="+162"/>
+        <source>Licenses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
         <translatorcomment>--exact match--
@@ -222,7 +228,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+31"/>
         <source>Translations</source>
         <translation>Tłumaczenia</translation>
     </message>
@@ -265,7 +271,12 @@
         <translation>System</translation>
     </message>
     <message>
-        <location line="-201"/>
+        <location line="+23"/>
+        <source>Licenses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-224"/>
         <source>Credits</source>
         <translation>Twórcy</translation>
     </message>
@@ -6353,7 +6364,16 @@ Czy chcesz zamknąć rysunek?</translatorcomment>
         <translation>Otwieranie bloku kliknięciem na odniesieniu</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+25"/>
+        <source>Tolerance:</source>
+        <translation type="unfinished">Tolerancja:</translation>
+    </message>
+    <message>
+        <source>0.001</source>
+        <translation type="obsolete">0.001</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Right double-click to reset</source>
         <translation>Przywracanie stanu początkowego kliknięciem prawym przyciskiem</translation>
     </message>
@@ -6378,7 +6398,7 @@ Czy chcesz zamknąć rysunek?</translatorcomment>
         <translation>Zaznaczanie obiektów w zasięgu</translation>
     </message>
     <message>
-        <location line="-211"/>
+        <location line="-232"/>
         <source>Right-Click</source>
         <translation>Kliknięcie prawym przyciskiem</translation>
     </message>
@@ -6393,7 +6413,7 @@ Czy chcesz zamknąć rysunek?</translatorcomment>
         <translation>Zaznaczanie konturu</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+64"/>
         <source>Cursor Range</source>
         <translation>Zasięg kursora</translation>
     </message>
@@ -6534,12 +6554,11 @@ Autozoom
         <translation>Wyłączenie drukowania</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Linetypes</source>
-        <translation>Rodzaje linii</translation>
+        <translation type="vanished">Rodzaje linii</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+53"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Automatyczne przełączanie ekranowego rodzaju linii w widoku modelu</translation>
     </message>
@@ -6549,12 +6568,12 @@ Autozoom
         <translation>Skalowanie wzorów rodzajów linii wg grubości linii</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
         <translation>Skala wzoru dla grubości linii 0,00 mm:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+38"/>
         <source>Display and Performance</source>
         <translation>Wyświetlanie i wydajność</translation>
     </message>
@@ -6574,7 +6593,17 @@ Autozoom
         <translation>Minimalny krok kątowy dla renderowania łuków (stopnie):</translation>
     </message>
     <message>
-        <location line="-134"/>
+        <location line="-263"/>
+        <source>Linetypes and Lineweights</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Default lineweight:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+121"/>
         <source>Use full resolution for Retina display</source>
         <translation>Użycie pełnej rozdzielczości dla wyświetlaczy Retina</translation>
     </message>
@@ -6594,7 +6623,7 @@ Autozoom
         <translation>Czas renderowania kreskowania:</translation>
     </message>
     <message>
-        <location line="-343"/>
+        <location line="-347"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatyczne użycie linii ekranowych w widoku modelu</translation>
     </message>
@@ -6604,7 +6633,7 @@ Autozoom
         <translation type="obsolete">Wydajność</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+96"/>
         <source>Number of preview entities:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -8581,22 +8610,22 @@ Język komend:</translatorcomment>
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+33"/>
+        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+67"/>
         <source>Default color for new layers:</source>
         <translation>Domyślny kolor dla nowych warstw:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="-48"/>
         <source>Default color for layer 0:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-45"/>
+        <location line="+7"/>
         <source>Default lineweight for new layers:</source>
         <translation>Domyślna szerokość linii dla nowych warstw:</translation>
     </message>
@@ -11912,7 +11941,7 @@ Przełącz tryb czarno-biały</translatorcomment>
 <context>
     <name>Projection</name>
     <message>
-        <location filename="../scripts/Projection/Projection.js" line="+82"/>
+        <location filename="../scripts/Projection/Projection.js" line="+84"/>
         <source>Projection Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Narzędzia rzutowania</translation>
@@ -11961,13 +11990,13 @@ Wskaż punkt docelowy</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1457"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1466"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*RÓŻNE*</translation>
     </message>
     <message>
-        <location line="-1264"/>
+        <location line="-1273"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_pl.ts--
@@ -12045,7 +12074,7 @@ Czy chcesz zamknąć plik
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+650"/>
+        <location line="+659"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
@@ -12055,7 +12084,7 @@ Czy chcesz zamknąć plik
         <translation type="obsolete">Dodaj niestandardowy obiekt</translation>
     </message>
     <message>
-        <location line="-696"/>
+        <location line="-705"/>
         <source>Add custom property to selected objects</source>
         <translation>Dodaj dostosowaną właściwość do zaznaczonych obiektów</translation>
     </message>
@@ -12143,7 +12172,7 @@ Przyciąganie automatyczne</translatorcomment>
         <translation>Automatycznie</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+141"/>
         <source>Use auto measurement</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Użyj automatycznego pomiaru</translation>
@@ -16509,7 +16538,7 @@ Pokazuje podgląd wydruku</translatorcomment>
         <translation>Podgląd</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+102"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation type="unfinished">Odstępy siatki &amp;lt;odstęp siatki Meta</translation>
     </message>

@@ -9,7 +9,7 @@
         <translation>O %1</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+53"/>
         <location line="+123"/>
         <source>Version:</source>
         <translation>Verze:</translation>
@@ -123,11 +123,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <location line="+375"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="-350"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -189,6 +190,11 @@
         <translation>Titulky</translation>
     </message>
     <message>
+        <location line="+162"/>
+        <source>Licenses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
         <translation>&amp;O programu...</translation>
@@ -207,7 +213,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+31"/>
         <source>Translations</source>
         <translation>Překlady</translation>
     </message>
@@ -253,6 +259,11 @@
         <location line="+67"/>
         <source>System</source>
         <translation>Systém</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Licenses</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5181,7 +5192,16 @@ již v seznamu je.</translation>
         <translation>Dvojklikem vybrat obrys</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+15"/>
+        <source>Tolerance:</source>
+        <translation type="unfinished">Tolerance:</translation>
+    </message>
+    <message>
+        <source>0.001</source>
+        <translation type="obsolete">0.001</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Right double-click to reset</source>
         <translation>Pravým dvojklikem resetovat</translation>
     </message>
@@ -5316,12 +5336,11 @@ již v seznamu je.</translation>
         <translation>Zakázat pro tisk</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Linetypes</source>
-        <translation>Typy čar</translation>
+        <translation type="vanished">Typy čar</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+50"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>V zobrazení modelu automaticky použít typy čar v závislosti na obrazovce</translation>
     </message>
@@ -5336,12 +5355,12 @@ již v seznamu je.</translation>
         <translation>Měnit měřítko vzorů čar podle tloušťky čáry</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
         <translation>Měřítko vzoru pro tloušťku čáry 0.00mm:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+38"/>
         <source>Display and Performance</source>
         <translation>Displej a výkon</translation>
     </message>
@@ -5376,7 +5395,17 @@ již v seznamu je.</translation>
         <translation>Vyhlazování hran je standardně zapnuto</translation>
     </message>
     <message>
-        <location line="+265"/>
+        <location line="-122"/>
+        <source>Linetypes and Lineweights</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Default lineweight:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+379"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Časový limit pro vykreslení šrafování:</translation>
     </message>
@@ -6848,22 +6877,22 @@ již v seznamu je.</translation>
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+33"/>
+        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+67"/>
         <source>Default color for new layers:</source>
         <translation>Výchozí barva pro nové vrstvy:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
         <translation>Výchozí tloušťka čáry pro vrstvu 0:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="-48"/>
         <source>Default color for layer 0:</source>
         <translation>Výchozí barva pro vrstvu 0:</translation>
     </message>
     <message>
-        <location line="-45"/>
+        <location line="+7"/>
         <source>Default lineweight for new layers:</source>
         <translation>Výchozí tloušťka čáry pro nové vrstvy:</translation>
     </message>
@@ -9253,7 +9282,7 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>Projection</name>
     <message>
-        <location filename="../scripts/Projection/Projection.js" line="+82"/>
+        <location filename="../scripts/Projection/Projection.js" line="+84"/>
         <source>Projection Tools</source>
         <translation>Nástroje projekce</translation>
     </message>
@@ -9360,7 +9389,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+141"/>
         <source>Use auto measurement</source>
         <translation>Použít automatické měření</translation>
     </message>
@@ -12677,7 +12706,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Náhled</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+102"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation type="unfinished"></translation>
     </message>

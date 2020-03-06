@@ -9,7 +9,7 @@
         <translation>About %1</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+53"/>
         <location line="+123"/>
         <source>Version:</source>
         <translation>Version:</translation>
@@ -135,11 +135,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <location line="+375"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="-350"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -201,6 +202,11 @@
         <translation>Credits</translation>
     </message>
     <message>
+        <location line="+162"/>
+        <source>Licenses</source>
+        <translation>Licenses</translation>
+    </message>
+    <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
         <translation>&amp;About...</translation>
@@ -219,7 +225,7 @@
         <translation>Hatch Patterns</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+31"/>
         <source>Translations</source>
         <translation>Translations</translation>
     </message>
@@ -265,6 +271,11 @@
         <location line="+67"/>
         <source>System</source>
         <translation>System</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Licenses</source>
+        <translation>Licenses</translation>
     </message>
 </context>
 <context>
@@ -5224,7 +5235,16 @@ is already in the list.</translation>
         <translation>Double-click to select contour</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+15"/>
+        <source>Tolerance:</source>
+        <translation>Tolerance:</translation>
+    </message>
+    <message>
+        <source>0.001</source>
+        <translation type="obsolete">0.001</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Right double-click to reset</source>
         <translation>Right double-click to reset</translation>
     </message>
@@ -5360,11 +5380,20 @@ is already in the list.</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Linetypes</source>
-        <translation>Linetypes</translation>
+        <source>Linetypes and Lineweights</source>
+        <translation>Linetypes and Lineweights</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
+        <source>Default lineweight:</source>
+        <translation>Default lineweight:</translation>
+    </message>
+    <message>
+        <source>Linetypes</source>
+        <translation type="vanished">Linetypes</translation>
+    </message>
+    <message>
+        <location line="+32"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatically use screen based linetypes in model view</translation>
     </message>
@@ -5379,12 +5408,12 @@ is already in the list.</translation>
         <translation>Scale linetype patterns by line weight</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
         <translation>Pattern scale for lineweight 0.00mm:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+38"/>
         <source>Display and Performance</source>
         <translation>Display and Performance</translation>
     </message>
@@ -6903,22 +6932,22 @@ is already in the list.</translation>
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+33"/>
+        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+67"/>
         <source>Default color for new layers:</source>
         <translation>Default color for new layers:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
         <translation>Default lineweight for layer 0:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="-48"/>
         <source>Default color for layer 0:</source>
         <translation>Default color for layer 0:</translation>
     </message>
     <message>
-        <location line="-45"/>
+        <location line="+7"/>
         <source>Default lineweight for new layers:</source>
         <translation>Default lineweight for new layers:</translation>
     </message>
@@ -9331,7 +9360,7 @@ shown in search results:</translation>
 <context>
     <name>Projection</name>
     <message>
-        <location filename="../scripts/Projection/Projection.js" line="+82"/>
+        <location filename="../scripts/Projection/Projection.js" line="+84"/>
         <source>Projection Tools</source>
         <translation>Projection Tools</translation>
     </message>
@@ -9438,7 +9467,7 @@ shown in search results:</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+141"/>
         <source>Use auto measurement</source>
         <translation>Use auto measurement</translation>
     </message>
@@ -12791,7 +12820,7 @@ shown in search results:</translation>
         <translation>Preview</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+102"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation>Grid Spacing &lt; Meta Grid Spacing</translation>
     </message>

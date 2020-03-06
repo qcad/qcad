@@ -13,7 +13,7 @@
         <translation>Acerca de %1</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+61"/>
         <source>Revision:</source>
         <translation>Repaso:</translation>
     </message>
@@ -67,11 +67,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <location line="+375"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="-350"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -88,7 +89,12 @@
         <translation>Desconocido</translation>
     </message>
     <message>
-        <location line="-130"/>
+        <location line="+288"/>
+        <source>Licenses</source>
+        <translation>Licencias</translation>
+    </message>
+    <message>
+        <location line="-418"/>
         <location line="+123"/>
         <source>Version:</source>
         <translation>Versión:</translation>
@@ -239,7 +245,7 @@
         <translation>Patrón de rayado</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+31"/>
         <source>Translations</source>
         <translation>Traducciones</translation>
     </message>
@@ -290,7 +296,12 @@
         <translation>Sistema</translation>
     </message>
     <message>
-        <location line="-201"/>
+        <location line="+23"/>
+        <source>Licenses</source>
+        <translation>Licencias</translation>
+    </message>
+    <message>
+        <location line="-224"/>
         <source>Credits</source>
         <translation>Credits</translation>
     </message>
@@ -5783,7 +5794,16 @@ Punto decimal:</translatorcomment>
         <translation>Doble clic en una referencia a bloque para abrir el bloque</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+25"/>
+        <source>Tolerance:</source>
+        <translation>Tolerancia:</translation>
+    </message>
+    <message>
+        <source>0.001</source>
+        <translation type="obsolete">0.001</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Right double-click to reset</source>
         <translation>Haga doble clic para reinicializar</translation>
     </message>
@@ -5816,7 +5836,7 @@ Punto decimal:</translatorcomment>
         <translation type="vanished">Paso de ángulo para rotación:</translation>
     </message>
     <message>
-        <location line="-211"/>
+        <location line="-232"/>
         <source>Right-Click</source>
         <translation>Botão direito do mouse</translation>
     </message>
@@ -5843,7 +5863,7 @@ Punto decimal:</translatorcomment>
         <translation type="obsolete">Seleccione referencia a bloque con el atributo</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+64"/>
         <source>Cursor Range</source>
         <translation>Gama cursor del ratón</translation>
     </message>
@@ -5957,12 +5977,11 @@ Punto decimal:</translatorcomment>
         <translation>Desactivar al imprimir</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Linetypes</source>
-        <translation>Tipos de línea</translation>
+        <translation type="vanished">Tipos de línea</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+53"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Usar automáticamente los tipos de línea base de la pantalla de visualización del modelo</translation>
     </message>
@@ -5972,12 +5991,12 @@ Punto decimal:</translatorcomment>
         <translation>Escalar los patrones de línea basado en el grosor de línea</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
         <translation>Escala del patrón de grosor de 0.00mm:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+38"/>
         <source>Display and Performance</source>
         <translation>Visualización y rendimiento</translation>
     </message>
@@ -5997,7 +6016,17 @@ Punto decimal:</translatorcomment>
         <translation>Paso ángulo mínimo para la prestación de arcos (grados):</translation>
     </message>
     <message>
-        <location line="-134"/>
+        <location line="-263"/>
+        <source>Linetypes and Lineweights</source>
+        <translation>Tipos de línea y luces de línea</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Default lineweight:</source>
+        <translation>Peso de línea predeterminado:</translation>
+    </message>
+    <message>
+        <location line="+121"/>
         <source>Use full resolution for Retina display</source>
         <translation>Utilice la resolución completa de la pantalla Retina</translation>
     </message>
@@ -6025,7 +6054,7 @@ Punto decimal:</translatorcomment>
         <translation type="obsolete">Mostrar entidades con guiones N como contínua:</translation>
     </message>
     <message>
-        <location line="-343"/>
+        <location line="-347"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Usar automáticamente los tipos de línea base de la pantalla de visualización del modelo</translation>
     </message>
@@ -6038,7 +6067,7 @@ Punto decimal:</translatorcomment>
         <translation type="vanished">Rendimiento</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+96"/>
         <source>Number of preview entities:</source>
         <translation>Número de entidades previsualizadas:</translation>
     </message>
@@ -7829,22 +7858,22 @@ Proyección &amp;Isométrica</translatorcomment>
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+33"/>
+        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+67"/>
         <source>Default color for new layers:</source>
         <translation>Color por defecto para nuevas capas:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
         <translation>Grosor de línea por defecto para capa 0:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="-48"/>
         <source>Default color for layer 0:</source>
         <translation>Color por defecto para capa 0:</translation>
     </message>
     <message>
-        <location line="-45"/>
+        <location line="+7"/>
         <source>Default lineweight for new layers:</source>
         <translation>Grosor de línea por defecto para nuevas capas:</translation>
     </message>
@@ -10712,7 +10741,7 @@ en los resultados de búsqueda:</translation>
 <context>
     <name>Projection</name>
     <message>
-        <location filename="../scripts/Projection/Projection.js" line="+82"/>
+        <location filename="../scripts/Projection/Projection.js" line="+84"/>
         <source>Projection Tools</source>
         <translation>Herramientas de proyección</translation>
     </message>
@@ -10783,13 +10812,13 @@ en los resultados de búsqueda:</translation>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="+693"/>
+        <location line="+702"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation></translation>
     </message>
     <message>
-        <location line="-1264"/>
+        <location line="-1273"/>
         <source>:</source>
         <translatorcomment>--exact match--
 --file: artisan_es.ts--
@@ -10857,7 +10886,7 @@ Mosaico horizontal
         <translation>Mostrar todas las propiedades</translation>
     </message>
     <message>
-        <location line="+650"/>
+        <location line="+659"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -10866,12 +10895,12 @@ Mosaico horizontal
         <translation type="obsolete">Parte inferior</translation>
     </message>
     <message>
-        <location line="-533"/>
+        <location line="-542"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+141"/>
         <source>Use auto measurement</source>
         <translatorcomment>--google--</translatorcomment>
         <translation></translation>
@@ -14611,7 +14640,7 @@ Punto objetivo</translatorcomment>
         <translation>Previsualización</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+102"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation>Espaciado de la rejilla &lt; Meta espaciado de rejilla</translation>
     </message>

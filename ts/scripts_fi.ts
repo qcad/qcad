@@ -9,7 +9,7 @@
         <translation>Tietoja %1</translation>
     </message>
     <message>
-        <location line="+104"/>
+        <location line="+108"/>
         <source>Plugins</source>
         <translation>Laajennusosat</translation>
     </message>
@@ -20,11 +20,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <location line="+375"/>
         <source>Plugin:</source>
         <translation>Laajennusosa:</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="-350"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -185,6 +186,11 @@
         <translation>Tekijät</translation>
     </message>
     <message>
+        <location line="+162"/>
+        <source>Licenses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
         <translation>&amp;Tietoja ...</translation>
@@ -203,7 +209,7 @@
         <translation>Peittokuviot</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+31"/>
         <source>Translations</source>
         <translation>Käännökset</translation>
     </message>
@@ -253,6 +259,11 @@
         <location line="+67"/>
         <source>System</source>
         <translation>Järjestelmä</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Licenses</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5282,7 +5293,16 @@ on jo luettelossa.</translation>
         <translation>Kaksoisnapsauta valitaksesi ääriviivat</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+15"/>
+        <source>Tolerance:</source>
+        <translation type="unfinished">Toleranssi:</translation>
+    </message>
+    <message>
+        <source>0.001</source>
+        <translation type="obsolete">0.001</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Right double-click to reset</source>
         <translation>Kaksoisnapsauta oikealla palauttaaksesi</translation>
     </message>
@@ -5407,7 +5427,17 @@ on jo luettelossa.</translation>
         <translation>Estä valkoinen valkoisella / musta mustalla näytössä</translation>
     </message>
     <message>
-        <location line="+104"/>
+        <location line="+20"/>
+        <source>Linetypes and Lineweights</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Default lineweight:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+114"/>
         <source>Anti-aliasing on by default</source>
         <translation>Pehmennys päällä on oletuksena</translation>
     </message>
@@ -5417,7 +5447,7 @@ on jo luettelossa.</translation>
         <translation>Käytä täyttä tarkkuutta Retinanäytöissä</translation>
     </message>
     <message>
-        <location line="-140"/>
+        <location line="-178"/>
         <source>Color lightness threshold:</source>
         <translation>Värivaaleuden kynnys:</translation>
     </message>
@@ -5427,12 +5457,11 @@ on jo luettelossa.</translation>
         <translation>Poista käytöstä tulostusta varten</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Linetypes</source>
-        <translation>Viivatyypit</translation>
+        <translation type="vanished">Viivatyypit</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+53"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Automaattisesti vaihda kuvaruudun viivat muotoilunäkymässä</translation>
     </message>
@@ -5442,17 +5471,17 @@ on jo luettelossa.</translation>
         <translation>Venytä viivatyypin kuvioita viivan paksuuden mukaan</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
         <translation>Kuvion mitta viivapaksuudella 0.00 mm:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+38"/>
         <source>Display and Performance</source>
         <translation>Näyttötila ja suorituskyky</translation>
     </message>
     <message>
-        <location line="-72"/>
+        <location line="-76"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automaattisesti käytä kuvaruudun viivoja muotoilunäkymässä</translation>
     </message>
@@ -5465,7 +5494,7 @@ on jo luettelossa.</translation>
         <translation type="vanished">Suorituskyky</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+96"/>
         <source>Number of preview entities:</source>
         <translation>Esikatseltavien kohteiden määrä:</translation>
     </message>
@@ -7069,22 +7098,22 @@ on jo luettelossa.</translation>
         <translation>&amp;Taso</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+19"/>
+        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+33"/>
         <source>Default lineweight for new layers:</source>
         <translation>Uusien tasojen viivapaksuuden oletusarvo:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>Default color for new layers:</source>
         <translation>Uusien tasojen oletusväri:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
         <translation>Oletus viivapaksuus tasolle 0:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="-48"/>
         <source>Default color for layer 0:</source>
         <translation>Tason 0 oletusväri:</translation>
     </message>
@@ -9479,7 +9508,7 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>Projection</name>
     <message>
-        <location filename="../scripts/Projection/Projection.js" line="+82"/>
+        <location filename="../scripts/Projection/Projection.js" line="+84"/>
         <source>Projection Tools</source>
         <translation>Projektiotyökalut</translation>
     </message>
@@ -9526,12 +9555,12 @@ näkyy hakutuloksissa:</translation>
         <translation>Näytä aina kaikki ominaisuudet (tämä voi hidastaa kohteiden valintaa)</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1457"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1466"/>
         <source>*VARIES*</source>
         <translation>*VAIHTELEVA*</translation>
     </message>
     <message>
-        <location line="-1264"/>
+        <location line="-1273"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9595,7 +9624,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Automaattinen</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+141"/>
         <source>Use auto measurement</source>
         <translation>Käytä automaattista mittausta</translation>
     </message>
@@ -13020,7 +13049,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Esikatselu</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+102"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation>Ruudukon välit &lt; Aliruudukon välit</translation>
     </message>

@@ -9,7 +9,7 @@
         <translation>O %1</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+61"/>
         <source>Revision:</source>
         <translation>Revízia:</translation>
     </message>
@@ -44,11 +44,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <location line="+375"/>
         <source>Plugin:</source>
         <translation>Zásuvný modul:</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="-350"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -209,6 +210,11 @@
         <translation>Prispievatelia</translation>
     </message>
     <message>
+        <location line="+162"/>
+        <source>Licenses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
         <translation>O progr&amp;ame...</translation>
@@ -227,7 +233,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+31"/>
         <source>Translations</source>
         <translation>Preklady</translation>
     </message>
@@ -277,6 +283,11 @@
         <location line="+67"/>
         <source>System</source>
         <translation>Systém</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Licenses</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5312,7 +5323,16 @@ už existuje v zozname.</translation>
         <translation>Dvojklikom na blok otvoriť úpravu bloku</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+25"/>
+        <source>Tolerance:</source>
+        <translation type="unfinished">Tolerancia:</translation>
+    </message>
+    <message>
+        <source>0.001</source>
+        <translation type="obsolete">Rozostup medzi písmenami {0.001?}</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Right double-click to reset</source>
         <translation>Dvojklik pravým tlačítkom reset</translation>
     </message>
@@ -5337,7 +5357,7 @@ už existuje v zozname.</translation>
         <translation>Zvýrazniť prvok v rozsahu</translation>
     </message>
     <message>
-        <location line="-211"/>
+        <location line="-232"/>
         <source>Right-Click</source>
         <translation>Kliknutie pravým tlačidlom myši</translation>
     </message>
@@ -5360,7 +5380,7 @@ už existuje v zozname.</translation>
         <translation type="vanished">Výber bloku</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+64"/>
         <source>Cursor Range</source>
         <translation>Rozsah kurzoru</translation>
     </message>
@@ -5470,12 +5490,11 @@ už existuje v zozname.</translation>
         <translation>Zakázať tlač</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Linetypes</source>
-        <translation>Typy čiar</translation>
+        <translation type="vanished">Typy čiar</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+50"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automaticky použiť typy čiar na základnej obrazovke v zobrazení modelu</translation>
     </message>
@@ -5490,12 +5509,12 @@ už existuje v zozname.</translation>
         <translation>Rozsah vzoriek typov čiar podľa hrúbky čiary</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
         <translation>Vzor mierky pre hrúbku čiary 0,00 mm:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+38"/>
         <source>Display and Performance</source>
         <translation>Obraz a výkon</translation>
     </message>
@@ -5534,7 +5553,17 @@ už existuje v zozname.</translation>
         <translation>Predvolené vyhladenie prvkov</translation>
     </message>
     <message>
-        <location line="+265"/>
+        <location line="-122"/>
+        <source>Linetypes and Lineweights</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Default lineweight:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+379"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Časový limit pre zobrazenie šrafovania:</translation>
     </message>
@@ -7046,22 +7075,22 @@ už existuje v zozname.</translation>
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+33"/>
+        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+67"/>
         <source>Default color for new layers:</source>
         <translation>Predvolená farba pre nové vrstvy:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
         <translation>Predvolená hrúbka čiar pre vrstvu 0:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="-48"/>
         <source>Default color for layer 0:</source>
         <translation>Predvolená farba pre vrstvu 0:</translation>
     </message>
     <message>
-        <location line="-45"/>
+        <location line="+7"/>
         <source>Default lineweight for new layers:</source>
         <translation>Predvolená hrúbka čiary pre novú vrstvu:</translation>
     </message>
@@ -9539,7 +9568,7 @@ vo výsledku vyhľadania:</translation>
 <context>
     <name>Projection</name>
     <message>
-        <location filename="../scripts/Projection/Projection.js" line="+82"/>
+        <location filename="../scripts/Projection/Projection.js" line="+84"/>
         <source>Projection Tools</source>
         <translation>Nástroje Premietania</translation>
     </message>
@@ -9586,12 +9615,12 @@ vo výsledku vyhľadania:</translation>
         <translation>Vždy zobrazovať všetky vlastnosti (môže to spomaliť výber prvkov)</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1457"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1466"/>
         <source>*VARIES*</source>
         <translation>*Rôzne*</translation>
     </message>
     <message>
-        <location line="-1264"/>
+        <location line="-1273"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9655,7 +9684,7 @@ vo výsledku vyhľadania:</translation>
         <translation>automatický</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+141"/>
         <source>Use auto measurement</source>
         <translation>Použiť automatické meranie</translation>
     </message>
@@ -13022,7 +13051,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Náhľad</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+102"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation>Rozostup Siete &lt; Rozostup Mriežky</translation>
     </message>

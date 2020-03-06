@@ -9,7 +9,7 @@
         <translation>Sobre %1</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+61"/>
         <source>Revision:</source>
         <translation>Revisão:</translation>
     </message>
@@ -63,11 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <location line="+375"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="-350"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -84,7 +85,12 @@
         <translation>Desconhecido</translation>
     </message>
     <message>
-        <location line="-130"/>
+        <location line="+288"/>
+        <source>Licenses</source>
+        <translation>Licenças</translation>
+    </message>
+    <message>
+        <location line="-418"/>
         <location line="+123"/>
         <source>Version:</source>
         <translation>Versão:</translation>
@@ -235,7 +241,7 @@
         <translation>Padrões de hachuras</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+31"/>
         <source>Translations</source>
         <translation>Traduções</translation>
     </message>
@@ -282,7 +288,12 @@
         <translation>Sistema</translation>
     </message>
     <message>
-        <location line="-201"/>
+        <location line="+23"/>
+        <source>Licenses</source>
+        <translation>Licenças</translation>
+    </message>
+    <message>
+        <location line="-224"/>
         <source>Credits</source>
         <translation>Créditos</translation>
     </message>
@@ -6166,7 +6177,16 @@ Cor de plano de fundo</translatorcomment>
         <translation>Clique duplo na referência do bloco para abrir o bloco</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+25"/>
+        <source>Tolerance:</source>
+        <translation>Tolerância:</translation>
+    </message>
+    <message>
+        <source>0.001</source>
+        <translation type="obsolete">0.001</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Right double-click to reset</source>
         <translation>Clique duplo de direita para resetar</translation>
     </message>
@@ -6199,7 +6219,7 @@ Cor de plano de fundo</translatorcomment>
         <translation type="vanished">Passo angular para rotação:</translation>
     </message>
     <message>
-        <location line="-211"/>
+        <location line="-232"/>
         <source>Right-Click</source>
         <translation>Clique do Botão Direito</translation>
     </message>
@@ -6226,7 +6246,7 @@ Cor de plano de fundo</translatorcomment>
         <translation type="obsolete">Selecione referência de bloco com o atributo</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+64"/>
         <source>Cursor Range</source>
         <translation>Limites do Cursor</translation>
     </message>
@@ -6340,12 +6360,11 @@ Cor de plano de fundo</translatorcomment>
         <translation>Desativar durante a impressão</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Linetypes</source>
-        <translation>Tipos de Linha</translation>
+        <translation type="vanished">Tipos de Linha</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+53"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Comute automaticamente para tipos de linha baseados na tela, na visão de modelagem</translation>
     </message>
@@ -6355,12 +6374,12 @@ Cor de plano de fundo</translatorcomment>
         <translation>Escalone os padrões de tipos de linha, tendo como base a espessura da linha</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
         <translation>Escala padrão para a espessura de linha de 0,00mm:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+38"/>
         <source>Display and Performance</source>
         <translation>Visualização e Desempenho</translation>
     </message>
@@ -6380,7 +6399,17 @@ Cor de plano de fundo</translatorcomment>
         <translation>Passo mínimo de ângulo para renderização de arcos (graus):</translation>
     </message>
     <message>
-        <location line="-134"/>
+        <location line="-263"/>
+        <source>Linetypes and Lineweights</source>
+        <translation>Tipos de linha e pesos de linha</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Default lineweight:</source>
+        <translation type="unfinished">Peso da linha por defeito:</translation>
+    </message>
+    <message>
+        <location line="+121"/>
         <source>Use full resolution for Retina display</source>
         <translation>Use resolução total para a exposição Retina</translation>
     </message>
@@ -6404,7 +6433,7 @@ Cor de plano de fundo</translatorcomment>
         <translation type="vanished">Suavização ativada como padrão</translation>
     </message>
     <message>
-        <location line="-343"/>
+        <location line="-347"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Use automaticamente tipos de linha baseados em tela, na visão de modelagem</translation>
     </message>
@@ -6417,7 +6446,7 @@ Cor de plano de fundo</translatorcomment>
         <translation type="vanished">Desempenho</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+96"/>
         <source>Number of preview entities:</source>
         <translation>Número de entidades para a prévia:</translation>
     </message>
@@ -8202,22 +8231,22 @@ Esquerda ao meio</translatorcomment>
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+33"/>
+        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+67"/>
         <source>Default color for new layers:</source>
         <translation>Cor padrão para novas camadas:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
         <translation>Espessura de linha padrão para camada 0:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="-48"/>
         <source>Default color for layer 0:</source>
         <translation>Cor padrão para camada 0:</translation>
     </message>
     <message>
-        <location line="-45"/>
+        <location line="+7"/>
         <source>Default lineweight for new layers:</source>
         <translation>Espessura de linha padrão para novas camadas:</translation>
     </message>
@@ -11074,7 +11103,7 @@ Cultura marcas de impressão</translatorcomment>
 <context>
     <name>Projection</name>
     <message>
-        <location filename="../scripts/Projection/Projection.js" line="+82"/>
+        <location filename="../scripts/Projection/Projection.js" line="+84"/>
         <source>Projection Tools</source>
         <translation>Ferramentas de Projeção</translation>
     </message>
@@ -11112,13 +11141,13 @@ Cultura marcas de impressão</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1457"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1466"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation></translation>
     </message>
     <message>
-        <location line="-1264"/>
+        <location line="-1273"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: pt.po--
@@ -11186,12 +11215,12 @@ Fecha todas as janelas</translatorcomment>
         <translation>Mostrar todas as propriedades</translation>
     </message>
     <message>
-        <location line="+650"/>
+        <location line="+659"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="-696"/>
+        <location line="-705"/>
         <source>Add custom property to selected objects</source>
         <translation>Adicione uma propriedade personalizada aos objetos selecionados</translation>
     </message>
@@ -11206,7 +11235,7 @@ Salta automaticamente</translatorcomment>
         <translation></translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+141"/>
         <source>Use auto measurement</source>
         <translatorcomment>--google--</translatorcomment>
         <translation></translation>
@@ -15309,7 +15338,7 @@ Exibe uma prévia da impressão</translatorcomment>
         <translation></translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+102"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation>Espaçamento da grade &lt; Meta espaçamento da grade</translation>
     </message>

@@ -9,7 +9,7 @@
         <translation>O %1</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+61"/>
         <source>Revision:</source>
         <translation>Revizija:</translation>
     </message>
@@ -44,11 +44,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <location line="+375"/>
         <source>Plugin:</source>
         <translation>Vtičnik:</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="-350"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -209,6 +210,11 @@
         <translation>Zahvala</translation>
     </message>
     <message>
+        <location line="+162"/>
+        <source>Licenses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
         <translation>&amp;O ...</translation>
@@ -227,7 +233,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+31"/>
         <source>Translations</source>
         <translation>Prevodi</translation>
     </message>
@@ -277,6 +283,11 @@
         <location line="+67"/>
         <source>System</source>
         <translation>Sistem</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Licenses</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5373,7 +5384,16 @@ je že na seznamu.</translation>
         <translation>Dvoklik na blokovno referenco odpre blok</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+25"/>
+        <source>Tolerance:</source>
+        <translation type="unfinished">Toleranca:</translation>
+    </message>
+    <message>
+        <source>0.001</source>
+        <translation type="obsolete">0.001</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Right double-click to reset</source>
         <translation>Desni dvojni klik za reset</translation>
     </message>
@@ -5398,7 +5418,7 @@ je že na seznamu.</translation>
         <translation>Označi entiteto znotraj območja</translation>
     </message>
     <message>
-        <location line="-211"/>
+        <location line="-232"/>
         <source>Right-Click</source>
         <translation>Desni klik</translation>
     </message>
@@ -5421,7 +5441,7 @@ je že na seznamu.</translation>
         <translation type="vanished">Blokovni izbor</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+64"/>
         <source>Cursor Range</source>
         <translation>Območje kurzorja</translation>
     </message>
@@ -5521,12 +5541,22 @@ je že na seznamu.</translation>
         <translation>Prepreči belo na bel / črno na črn zaslon</translation>
     </message>
     <message>
-        <location line="+508"/>
+        <location line="+20"/>
+        <source>Linetypes and Lineweights</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Default lineweight:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+518"/>
         <source>Use multithreading</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-537"/>
+        <location line="-575"/>
         <source>Color lightness threshold:</source>
         <translation>Prag svetlosti barv:</translation>
     </message>
@@ -5536,12 +5566,11 @@ je že na seznamu.</translation>
         <translation>Onemogoči za tiskanje</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Linetypes</source>
-        <translation>Vrste črt</translation>
+        <translation type="vanished">Vrste črt</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+53"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Samodejno preklopi na zaslonske črte v prikazu modela</translation>
     </message>
@@ -5551,12 +5580,12 @@ je že na seznamu.</translation>
         <translation>Povečuj vzorce črt glede na debelino črte</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
         <translation>Povečava vzorca ko je debelina črte 0.00mm:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+38"/>
         <source>Display and Performance</source>
         <translation>Prikaz in optimizacija</translation>
     </message>
@@ -5591,7 +5620,7 @@ je že na seznamu.</translation>
         <translation>Iztek časa za izris šrafur:</translation>
     </message>
     <message>
-        <location line="-343"/>
+        <location line="-347"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Samodejno uporabi zaslonske črte v prikazu modela</translation>
     </message>
@@ -5604,7 +5633,7 @@ je že na seznamu.</translation>
         <translation type="vanished">Optimizacija</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+96"/>
         <source>Number of preview entities:</source>
         <translation>Število entitet v predogledu:</translation>
     </message>
@@ -7183,22 +7212,22 @@ je že na seznamu.</translation>
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+33"/>
+        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+67"/>
         <source>Default color for new layers:</source>
         <translation>Privzeta barva za nove plasti:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="-48"/>
         <source>Default color for layer 0:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-45"/>
+        <location line="+7"/>
         <source>Default lineweight for new layers:</source>
         <translation>Privzeta debelina črte za nove plasti:</translation>
     </message>
@@ -9865,7 +9894,7 @@ shown in search results:</source>
 <context>
     <name>Projection</name>
     <message>
-        <location filename="../scripts/Projection/Projection.js" line="+82"/>
+        <location filename="../scripts/Projection/Projection.js" line="+84"/>
         <source>Projection Tools</source>
         <translation>Orodja projekcij</translation>
     </message>
@@ -9892,12 +9921,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1457"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1466"/>
         <source>*VARIES*</source>
         <translation>*RAZLIČNO*</translation>
     </message>
     <message>
-        <location line="-1264"/>
+        <location line="-1273"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9956,7 +9985,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+650"/>
+        <location line="+659"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -9997,12 +10026,12 @@ shown in search results:</source>
         <translation type="obsolete">Dno</translation>
     </message>
     <message>
-        <location line="-533"/>
+        <location line="-542"/>
         <source>Auto</source>
         <translation>Samodejno</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+141"/>
         <source>Use auto measurement</source>
         <translation>Uporabi samodejne meritve</translation>
     </message>
@@ -13494,7 +13523,7 @@ shown in search results:</source>
         <translation>Predogled</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+102"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation type="unfinished">Razmak mreže &lt; Zarmak meta mreže</translation>
     </message>

@@ -9,7 +9,7 @@
         <translation>%1 Hakkında</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+53"/>
         <location line="+123"/>
         <source>Version:</source>
         <translation>Sürüm:</translation>
@@ -123,11 +123,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <location line="+375"/>
         <source>Plugin:</source>
         <translation>Eklenti:</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="-350"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -189,6 +190,11 @@
         <translation>Krediler</translation>
     </message>
     <message>
+        <location line="+162"/>
+        <source>Licenses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
         <translation>&amp;Hakkında...</translation>
@@ -207,7 +213,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+31"/>
         <source>Translations</source>
         <translation>Çeviriler</translation>
     </message>
@@ -253,6 +259,11 @@
         <location line="+67"/>
         <source>System</source>
         <translation>Sistem</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Licenses</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5112,7 +5123,12 @@ is already in the list.</source>
         <translation>Kontur seçmek için çift tıklayın</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+15"/>
+        <source>Tolerance:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Right double-click to reset</source>
         <translation>Sıfırlamak için sağ çift tıklayın</translation>
     </message>
@@ -5228,11 +5244,16 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+10"/>
-        <source>Linetypes</source>
+        <source>Linetypes and Lineweights</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
+        <source>Default lineweight:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+32"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5247,12 +5268,12 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+38"/>
         <source>Display and Performance</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6820,22 +6841,22 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+19"/>
+        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+33"/>
         <source>Default lineweight for new layers:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>Default color for new layers:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="-48"/>
         <source>Default color for layer 0:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9133,7 +9154,7 @@ shown in search results:</source>
 <context>
     <name>Projection</name>
     <message>
-        <location filename="../scripts/Projection/Projection.js" line="+82"/>
+        <location filename="../scripts/Projection/Projection.js" line="+84"/>
         <source>Projection Tools</source>
         <translation>Projeksiyon Araçları</translation>
     </message>
@@ -9240,7 +9261,7 @@ shown in search results:</source>
         <translation>Oto</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+141"/>
         <source>Use auto measurement</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12469,7 +12490,7 @@ shown in search results:</source>
         <translation type="unfinished">Önizleme</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+102"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation type="unfinished"></translation>
     </message>

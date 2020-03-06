@@ -13,7 +13,7 @@
         <translation>Über %1</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+61"/>
         <source>Revision:</source>
         <translation>Revision:</translation>
     </message>
@@ -85,11 +85,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <location line="+375"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="-350"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -106,7 +107,12 @@
         <translation>Unbekannt</translation>
     </message>
     <message>
-        <location line="-130"/>
+        <location line="+288"/>
+        <source>Licenses</source>
+        <translation>Lizenzen</translation>
+    </message>
+    <message>
+        <location line="-418"/>
         <location line="+123"/>
         <source>Version:</source>
         <translation>Version:</translation>
@@ -251,7 +257,7 @@
         <translation>Schraffurmuster</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+31"/>
         <source>Translations</source>
         <translation>Übersetzungen</translation>
     </message>
@@ -302,7 +308,12 @@
         <translation>System</translation>
     </message>
     <message>
-        <location line="-201"/>
+        <location line="+23"/>
+        <source>Licenses</source>
+        <translation>Lizenzen</translation>
+    </message>
+    <message>
+        <location line="-224"/>
         <source>Credits</source>
         <translation>Beitragende</translation>
     </message>
@@ -5947,7 +5958,16 @@ ist bereits in der Liste.</translation>
         <translation>Doppelklick auf Blockreferenz öffnet Block</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+25"/>
+        <source>Tolerance:</source>
+        <translation>Toleranz:</translation>
+    </message>
+    <message>
+        <source>0.001</source>
+        <translation type="obsolete">0.001</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Right double-click to reset</source>
         <translation>Rechts-Doppelklick zum Zurücksetzen</translation>
     </message>
@@ -5980,7 +6000,7 @@ ist bereits in der Liste.</translation>
         <translation type="vanished">Winkelschritt zum Drehen:</translation>
     </message>
     <message>
-        <location line="-211"/>
+        <location line="-232"/>
         <source>Right-Click</source>
         <translation>Rechtsklick</translation>
     </message>
@@ -6007,7 +6027,7 @@ ist bereits in der Liste.</translation>
         <translation type="obsolete">Wählen Sie die Blockreferenz mit Attribut</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+64"/>
         <source>Cursor Range</source>
         <translation>Zeigerreichweite</translation>
     </message>
@@ -6121,12 +6141,11 @@ ist bereits in der Liste.</translation>
         <translation>Beim Drucken deaktivieren</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Linetypes</source>
-        <translation>Linientypen</translation>
+        <translation type="vanished">Linientypen</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+53"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Automatisch Bildschirmbasierte Linientypen verwenden in Modellansicht</translation>
     </message>
@@ -6136,12 +6155,12 @@ ist bereits in der Liste.</translation>
         <translation>Linienmuster skalieren basierend auf Linienbreite</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
         <translation>Linientypskalierung für Linienbreite 0.00mm:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+38"/>
         <source>Display and Performance</source>
         <translation>Anzeige und Leistung</translation>
     </message>
@@ -6161,7 +6180,17 @@ ist bereits in der Liste.</translation>
         <translation>Minimaler Winkel für Bogensegmentierung in Anzeige (Grad):</translation>
     </message>
     <message>
-        <location line="-134"/>
+        <location line="-263"/>
+        <source>Linetypes and Lineweights</source>
+        <translation>Linientypen und Linienbreiten</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Default lineweight:</source>
+        <translation>Standard-Linienbreite:</translation>
+    </message>
+    <message>
+        <location line="+121"/>
         <source>Use full resolution for Retina display</source>
         <translation>Volle Auflösung benutzen für Retina-Display</translation>
     </message>
@@ -6189,7 +6218,7 @@ ist bereits in der Liste.</translation>
         <translation type="obsolete">Gestrichelte Objekte mit mehr als N Strichen ausgezogen darstellen:</translation>
     </message>
     <message>
-        <location line="-343"/>
+        <location line="-347"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatisch Bildschirmbasierte Linientypen verwenden in Modellansicht</translation>
     </message>
@@ -6202,7 +6231,7 @@ ist bereits in der Liste.</translation>
         <translation type="vanished">Leistung</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+96"/>
         <source>Number of preview entities:</source>
         <translation>Anzahl Vorschau Objekte:</translation>
     </message>
@@ -8231,22 +8260,22 @@ ist bereits in der Liste.</translation>
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+33"/>
+        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+67"/>
         <source>Default color for new layers:</source>
         <translation>Standard Farbe für neue Layer:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
         <translation>Standard Linienbreite für Layer 0:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="-48"/>
         <source>Default color for layer 0:</source>
         <translation>Standard Farbe für Layer 0:</translation>
     </message>
     <message>
-        <location line="-45"/>
+        <location line="+7"/>
         <source>Default lineweight for new layers:</source>
         <translation>Standard Linienbreite für neue Layer:</translation>
     </message>
@@ -11403,7 +11432,7 @@ nicht öffnen.
 <context>
     <name>Projection</name>
     <message>
-        <location filename="../scripts/Projection/Projection.js" line="+82"/>
+        <location filename="../scripts/Projection/Projection.js" line="+84"/>
         <source>Projection Tools</source>
         <translation>Projektionswerkzeuge</translation>
     </message>
@@ -11441,12 +11470,12 @@ nicht öffnen.
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1457"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1466"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="-1264"/>
+        <location line="-1273"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -11495,7 +11524,7 @@ nicht öffnen.
         <translation>Alle Eigenschaften anzeigen</translation>
     </message>
     <message>
-        <location line="+650"/>
+        <location line="+659"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -11532,7 +11561,7 @@ nicht öffnen.
         <translation type="obsolete">Mittelpunkt</translation>
     </message>
     <message>
-        <location line="-696"/>
+        <location line="-705"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
@@ -11550,7 +11579,7 @@ nicht öffnen.
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+141"/>
         <source>Use auto measurement</source>
         <translation>Automatisch</translation>
     </message>
@@ -11630,7 +11659,7 @@ nicht öffnen.
         <translation type="vanished">Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1133"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1142"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>
@@ -15516,7 +15545,7 @@ Kursiv
         <translation>Vorschau</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+102"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation>Rasterabstand &lt; Meta Rasterabstand</translation>
     </message>

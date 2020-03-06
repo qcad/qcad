@@ -13,7 +13,7 @@
         <translation>À propos de %1</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+61"/>
         <source>Revision:</source>
         <translation>Révision :</translation>
     </message>
@@ -38,7 +38,7 @@
     </message>
     <message>
         <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website.&lt;/a&gt;</source>
-        <translation>Qt est livré avec QCAD sous la &lt;a href=&apos;%1&apos;&gt;licence LGPL Open Source&lt;/a&gt; qui vous confère divers droits en tant qu’utilisateur, y compris le droit de recompiler les bibliothèques Qt pour votre plate-forme. Pour ce faire, suivez la &lt;a href=&apos;%2&apos;&gt;documentation affichée sur le site Web de Qt&lt;/a&gt;.</translation>
+        <translation type="vanished">Qt est livré avec QCAD sous la &lt;a href=&apos;%1&apos;&gt;licence LGPL Open Source&lt;/a&gt; qui vous confère divers droits en tant qu’utilisateur, y compris le droit de recompiler les bibliothèques Qt pour votre plate-forme. Pour ce faire, suivez la &lt;a href=&apos;%2&apos;&gt;documentation affichée sur le site Web de Qt&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -67,11 +67,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <location line="+375"/>
         <source>Plugin:</source>
         <translation>Plugin :</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="-350"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -88,7 +89,12 @@
         <translation>Inconnu</translation>
     </message>
     <message>
-        <location line="-130"/>
+        <location line="+288"/>
+        <source>Licenses</source>
+        <translation>Licences</translation>
+    </message>
+    <message>
+        <location line="-418"/>
         <location line="+123"/>
         <source>Version:</source>
         <translation>Version :</translation>
@@ -203,7 +209,7 @@
     </message>
     <message>
         <source>Community Edition</source>
-        <translation>Édition Communautaire</translation>
+        <translation type="vanished">Édition Communautaire</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -239,7 +245,7 @@
         <translation>Motifs de hachures</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+31"/>
         <source>Translations</source>
         <translation>Traductions</translation>
     </message>
@@ -272,7 +278,7 @@
     </message>
     <message>
         <source>about:blank</source>
-        <translation>À propos de:blank</translation>
+        <translation type="vanished">À propos de:blank</translation>
     </message>
     <message>
         <location line="+134"/>
@@ -290,7 +296,12 @@
         <translation>Système</translation>
     </message>
     <message>
-        <location line="-201"/>
+        <location line="+23"/>
+        <source>Licenses</source>
+        <translation>Licences</translation>
+    </message>
+    <message>
+        <location line="-224"/>
         <source>Credits</source>
         <translation>Crédits</translation>
     </message>
@@ -988,23 +999,25 @@ pour appliquer les modifications.</translation>
     <message>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
-        <translation>Un fichier de &apos;sauvegarde automatique&apos; pour un dessin sans titre a été trouvé.
+        <translation type="vanished">Un fichier de &apos;sauvegarde automatique&apos; pour un dessin sans titre a été trouvé.
 Voulez-vous le récupérer ?</translation>
     </message>
     <message>
         <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
 Do you wish to recover them?</source>
-        <translation>%1 fichiers de &apos;sauvegarde automatique&apos; pour des dessins sans titre ont été trouvés.
+        <translation type="vanished">%1 fichiers de &apos;sauvegarde automatique&apos; pour des dessins sans titre ont été trouvés.
 Voulez-vous les récupérer ?</translation>
     </message>
     <message numerus="yes">
         <source>%n &apos;autosave&apos; backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation><numerusform>%n fichier de &apos;sauvegarde automatique&apos; pour un dessin sans titre a été trouvé.
+        <translation type="vanished">
+            <numerusform>%n fichier de &apos;sauvegarde automatique&apos; pour un dessin sans titre a été trouvé.
 Voulez-vous le récupérer ?</numerusform>
-        <numerusform>%n fichiers de &apos;sauvegarde automatique&apos; pour dessins sans titre ont été trouvés.
+            <numerusform>%n fichiers de &apos;sauvegarde automatique&apos; pour dessins sans titre ont été trouvés.
 Voulez-vous les récupérer ?</numerusform>
-        </translation></message>
+        </translation>
+    </message>
     <message>
         <location line="+40"/>
         <source>Recovered</source>
@@ -1018,18 +1031,20 @@ Voulez-vous les récupérer ?</numerusform>
     <message>
         <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
-        <translation>Un fichier de &apos;sauvegarde automatique&apos; pour &apos;%1&apos; existe.
+        <translation type="vanished">Un fichier de &apos;sauvegarde automatique&apos; pour &apos;%1&apos; existe.
 Voulez-vous le récupérer ?</translation>
     </message>
     <message numerus="yes">
         <location line="-68"/>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation><numerusform>Un fichier de sauvegarde automatique pour un dessin sans titre a été trouvé.
+        <translation>
+            <numerusform>Un fichier de sauvegarde automatique pour un dessin sans titre a été trouvé.
 Voulez-vous le récupérer ?</numerusform>
-        <numerusform>%n fichiers de sauvegarde automatique pour dessins sans titre ont été trouvés.
+            <numerusform>%n fichiers de sauvegarde automatique pour dessins sans titre ont été trouvés.
 Voulez-vous les récupérer ?</numerusform>
-        </translation></message>
+        </translation>
+    </message>
     <message>
         <location line="+69"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
@@ -5774,7 +5789,16 @@ Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer?
         <translation>Double-cliquez sur une référence de bloc pour ouvrir le bloc</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+25"/>
+        <source>Tolerance:</source>
+        <translation>Tolérance :</translation>
+    </message>
+    <message>
+        <source>0.001</source>
+        <translation type="obsolete">0.001</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Right double-click to reset</source>
         <translation>Droit double-cliquez sur pour réinitialiser</translation>
     </message>
@@ -5807,7 +5831,7 @@ Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer?
         <translation type="vanished">Etape d&apos;angle pour la rotation :</translation>
     </message>
     <message>
-        <location line="-211"/>
+        <location line="-232"/>
         <source>Right-Click</source>
         <translation>Clic-droit</translation>
     </message>
@@ -5834,7 +5858,7 @@ Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer?
         <translation type="obsolete">Choisir référence de bloc avec l&apos;attribut</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+64"/>
         <source>Cursor Range</source>
         <translation>Gamme de curseur de souris</translation>
     </message>
@@ -5948,12 +5972,11 @@ Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer?
         <translation>Désactiver lors de l&apos;impression</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Linetypes</source>
-        <translation>Types de ligne</translation>
+        <translation type="vanished">Types de ligne</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+53"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Utiliser automatiquement les types de lignes sur écran en vue du modèle</translation>
     </message>
@@ -5963,12 +5986,12 @@ Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer?
         <translation>Escaladez les motifs de ligne basés sur l&apos;épaisseur de ligne</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
         <translation>Échelle du motif de l&apos;épaisseur de ligne 0.00mm:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+38"/>
         <source>Display and Performance</source>
         <translation>Affichage et performance</translation>
     </message>
@@ -5988,7 +6011,17 @@ Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer?
         <translation>Incrément angulaire minimum pour rendre arcs (degrés):</translation>
     </message>
     <message>
-        <location line="-134"/>
+        <location line="-263"/>
+        <source>Linetypes and Lineweights</source>
+        <translation>Types et poids des lignes</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Default lineweight:</source>
+        <translation>Poids de ligne par défaut :</translation>
+    </message>
+    <message>
+        <location line="+121"/>
         <source>Use full resolution for Retina display</source>
         <translation>Utilisez pleine résolution pour affichage Retina</translation>
     </message>
@@ -6016,7 +6049,7 @@ Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer?
         <translation type="obsolete">Afficher les entités avec N tirets que continu:</translation>
     </message>
     <message>
-        <location line="-343"/>
+        <location line="-347"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Utiliser automatiquement les types de lignes sur écran en vue du modèle</translation>
     </message>
@@ -6029,7 +6062,7 @@ Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer?
         <translation type="vanished">Performance</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+96"/>
         <source>Number of preview entities:</source>
         <translation>Nombre d&apos;entités en aperçu :</translation>
     </message>
@@ -7824,22 +7857,22 @@ Métagrille :
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+33"/>
+        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+67"/>
         <source>Default color for new layers:</source>
         <translation>Couleur par défaut pour nouveaux calques :</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
         <translation>Épaisseur de ligne par défaut pour calque 0 :</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="-48"/>
         <source>Default color for layer 0:</source>
         <translation>Couleur par défaut pour calque 0 :</translation>
     </message>
     <message>
-        <location line="-45"/>
+        <location line="+7"/>
         <source>Default lineweight for new layers:</source>
         <translation>Épaisseur de ligne par défaut pour nouveaux calques :</translation>
     </message>
@@ -10710,7 +10743,7 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
 <context>
     <name>Projection</name>
     <message>
-        <location filename="../scripts/Projection/Projection.js" line="+82"/>
+        <location filename="../scripts/Projection/Projection.js" line="+84"/>
         <source>Projection Tools</source>
         <translation>Outils de projection</translation>
     </message>
@@ -10782,7 +10815,7 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
         <translation>Afficher toutes les propriétés</translation>
     </message>
     <message>
-        <location line="+650"/>
+        <location line="+659"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -10817,7 +10850,7 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
         <translation></translation>
     </message>
     <message>
-        <location line="-1264"/>
+        <location line="-1273"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_fr.ts--
@@ -10860,7 +10893,7 @@ Renommer tous les Blocs et Objets Insérés</translatorcomment>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+141"/>
         <source>Use auto measurement</source>
         <translatorcomment>--google--</translatorcomment>
         <translation></translation>
@@ -14567,7 +14600,7 @@ Indiquer le point cible</translatorcomment>
         <translation>Prévisualisation</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+102"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation>Espacement de la grille &lt; espacement de la meta grille</translation>
     </message>

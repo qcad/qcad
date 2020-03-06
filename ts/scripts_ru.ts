@@ -9,7 +9,7 @@
         <translation>О %1</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+61"/>
         <source>Revision:</source>
         <translation>Версия:</translation>
     </message>
@@ -39,11 +39,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <location line="+375"/>
         <source>Plugin:</source>
         <translation>Модуль:</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="-350"/>
         <source>ID:</source>
         <translation>Идентификатор:</translation>
     </message>
@@ -209,6 +210,11 @@
         <translation>Об авторах</translation>
     </message>
     <message>
+        <location line="+162"/>
+        <source>Licenses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
         <translation>&amp;О программе...</translation>
@@ -227,7 +233,7 @@
         <translation>Стили штриховки</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+31"/>
         <source>Translations</source>
         <translation>Переводы</translation>
     </message>
@@ -277,6 +283,11 @@
         <location line="+67"/>
         <source>System</source>
         <translation>Система</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Licenses</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5243,7 +5254,16 @@ is already in the list.</source>
         <translation>Двойной щелчок по привязке блока для открытия блока</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+25"/>
+        <source>Tolerance:</source>
+        <translation type="unfinished">Допуск:</translation>
+    </message>
+    <message>
+        <source>0.001</source>
+        <translation type="obsolete">0.001</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Right double-click to reset</source>
         <translation>Двойной щелчок правой кнопкой мыши для сброса</translation>
     </message>
@@ -5268,7 +5288,7 @@ is already in the list.</source>
         <translation>Выделить объект в пределах диапазона</translation>
     </message>
     <message>
-        <location line="-211"/>
+        <location line="-232"/>
         <source>Right-Click</source>
         <translation>Щелчок правой кнопкой</translation>
     </message>
@@ -5291,7 +5311,7 @@ is already in the list.</source>
         <translation type="vanished">Блочное выделение</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+64"/>
         <source>Cursor Range</source>
         <translation>Диапазон курсора</translation>
     </message>
@@ -5401,12 +5421,11 @@ is already in the list.</source>
         <translation>Отключить для печати</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Linetypes</source>
-        <translation>Тип линии</translation>
+        <translation type="vanished">Тип линии</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+53"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Автоматически переключиться на типы линий, оптимизированные для экрана, в просмотре моделей</translation>
     </message>
@@ -5416,12 +5435,12 @@ is already in the list.</source>
         <translation>Масштабировать шаблоны типов линий по весу линии</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
         <translation>Шаблон масштаба для толщины линии в 0.00 мм:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+38"/>
         <source>Display and Performance</source>
         <translation>Отображение и производительность</translation>
     </message>
@@ -5441,12 +5460,22 @@ is already in the list.</source>
         <translation>Сглаживание по умолчанию</translation>
     </message>
     <message>
-        <location line="-78"/>
+        <location line="-122"/>
+        <source>Linetypes and Lineweights</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Default lineweight:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+32"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Автоматически использовать типы линий, оптимизированные для экрана, в просмотре моделей</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+96"/>
         <source>Number of preview entities:</source>
         <translation>Количество объектов при предпросмотре:</translation>
     </message>
@@ -6969,22 +6998,22 @@ is already in the list.</source>
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+33"/>
+        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+67"/>
         <source>Default color for new layers:</source>
         <translation>Цвет новых слоёв по умолчанию:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
         <translation>Вес линии по умолчанию для слоя 0:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="-48"/>
         <source>Default color for layer 0:</source>
         <translation>Цвет по умолчанию для слоя 0:</translation>
     </message>
     <message>
-        <location line="-45"/>
+        <location line="+7"/>
         <source>Default lineweight for new layers:</source>
         <translation>Вес линий для новых слоёв по умолчанию:</translation>
     </message>
@@ -9434,7 +9463,7 @@ shown in search results:</source>
 <context>
     <name>Projection</name>
     <message>
-        <location filename="../scripts/Projection/Projection.js" line="+82"/>
+        <location filename="../scripts/Projection/Projection.js" line="+84"/>
         <source>Projection Tools</source>
         <translation>Инструменты проекции</translation>
     </message>
@@ -9461,12 +9490,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1457"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1466"/>
         <source>*VARIES*</source>
         <translation>*ВАРЬИРОВАНИЕ*</translation>
     </message>
     <message>
-        <location line="-1264"/>
+        <location line="-1273"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9526,7 +9555,7 @@ shown in search results:</source>
         <translation>Автоматический</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+141"/>
         <source>Use auto measurement</source>
         <translation>Использовать автоматическое измерение</translation>
     </message>
@@ -12902,7 +12931,7 @@ shown in search results:</source>
         <translation>Предпросмотр</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+102"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation>Шаг сетки &lt; шага дополнительной сетки</translation>
     </message>

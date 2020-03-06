@@ -9,7 +9,7 @@
         <translation>Over %1</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+61"/>
         <source>Revision:</source>
         <translation>Revision:</translation>
     </message>
@@ -44,11 +44,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <location line="+375"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="-350"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -213,6 +214,11 @@
         <translation>Meewerkende</translation>
     </message>
     <message>
+        <location line="+162"/>
+        <source>Licenses</source>
+        <translation>Licenties</translation>
+    </message>
+    <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
         <translation>&amp;Over ...</translation>
@@ -231,7 +237,7 @@
         <translation>Arceerpatronen</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+31"/>
         <source>Translations</source>
         <translation>Vertalingen</translation>
     </message>
@@ -277,6 +283,11 @@
         <location line="+67"/>
         <source>System</source>
         <translation>Systeem</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Licenses</source>
+        <translation>Licenties</translation>
     </message>
 </context>
 <context>
@@ -5260,7 +5271,16 @@ is al in de lijst.</translation>
         <translation>Dubbelklik op blokreferentie opent blok</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+25"/>
+        <source>Tolerance:</source>
+        <translation>Tolerantie:</translation>
+    </message>
+    <message>
+        <source>0.001</source>
+        <translation type="obsolete">0.001</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Right double-click to reset</source>
         <translation>Rechts dubbelklikken om te resetten</translation>
     </message>
@@ -5293,7 +5313,7 @@ is al in de lijst.</translation>
         <translation type="vanished">Hoekstap bij rotatie:</translation>
     </message>
     <message>
-        <location line="-211"/>
+        <location line="-232"/>
         <source>Right-Click</source>
         <translation>Rechtsklik</translation>
     </message>
@@ -5316,7 +5336,7 @@ is al in de lijst.</translation>
         <translation type="vanished">Blok selectie</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+64"/>
         <source>Cursor Range</source>
         <translation>Cursor bereik</translation>
     </message>
@@ -5426,12 +5446,11 @@ is al in de lijst.</translation>
         <translation>Uitschakelen voor afdrukken</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Linetypes</source>
-        <translation>Lijntypen</translation>
+        <translation type="vanished">Lijntypen</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+53"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Automatisch scherm gebaseerde lijntypen gebruiken in model weergave</translation>
     </message>
@@ -5441,12 +5460,12 @@ is al in de lijst.</translation>
         <translation>Schaal lijntype patronen gebaseerd op lijndikte</translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
         <translation>Patroon schaal voor lijndikte 0.00mm:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+38"/>
         <source>Display and Performance</source>
         <translation>Weergave en prestatie</translation>
     </message>
@@ -5461,17 +5480,27 @@ is al in de lijst.</translation>
         <translation>Gebruik volledige resolutie voor Retina-display</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="-129"/>
+        <source>Linetypes and Lineweights</source>
+        <translation>Lijntypen en lijnbreedtes</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Default lineweight:</source>
+        <translation>Standaard lijnbreedte:</translation>
+    </message>
+    <message>
+        <location line="+114"/>
         <source>Anti-aliasing on by default</source>
         <translation>Anti-aliasing altijd aan</translation>
     </message>
     <message>
-        <location line="-78"/>
+        <location line="-82"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatisch scherm gebaseerde lijntypen gebruiken in model weergave</translation>
     </message>
     <message>
-        <location line="+92"/>
+        <location line="+96"/>
         <source>Number of preview entities:</source>
         <translation>Aantal voorbeeld objecten:</translation>
     </message>
@@ -7002,22 +7031,22 @@ is al in de lijst.</translation>
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+33"/>
+        <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+67"/>
         <source>Default color for new layers:</source>
         <translation>Standaard kleur voor nieuwe lagen:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
         <translation>Standaard lijndikte voor laag 0:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="-48"/>
         <source>Default color for layer 0:</source>
         <translation>Standaard kleur voor laag 0:</translation>
     </message>
     <message>
-        <location line="-45"/>
+        <location line="+7"/>
         <source>Default lineweight for new layers:</source>
         <translation>Standaard lijndikte voor nieuwe lagen:</translation>
     </message>
@@ -9477,7 +9506,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>Projection</name>
     <message>
-        <location filename="../scripts/Projection/Projection.js" line="+82"/>
+        <location filename="../scripts/Projection/Projection.js" line="+84"/>
         <source>Projection Tools</source>
         <translation>Projectiegereedschappen</translation>
     </message>
@@ -9504,12 +9533,12 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1457"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1466"/>
         <source>*VARIES*</source>
         <translation>*VARIEERT*</translation>
     </message>
     <message>
-        <location line="-1264"/>
+        <location line="-1273"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9569,7 +9598,7 @@ getoond in zoekresultaten:</translation>
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+141"/>
         <source>Use auto measurement</source>
         <translation>Automatisch</translation>
     </message>
@@ -12945,7 +12974,7 @@ getoond in zoekresultaten:</translation>
         <translation>Voorbeeld</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+102"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation>Raster tussenafstand &lt; Meta raster tussenafstand</translation>
     </message>
