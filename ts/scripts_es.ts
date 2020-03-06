@@ -6023,7 +6023,7 @@ Punto decimal:</translatorcomment>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation>Peso de línea predeterminado:</translation>
+        <translation>Grosor de la línea predeterminado:</translation>
     </message>
     <message>
         <location line="+121"/>
@@ -7989,14 +7989,14 @@ Proyección &amp;Isométrica</translatorcomment>
         <location line="+29"/>
         <source>Lineweight:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Grosor de la línea:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Linetype:</source>
         <translatorcomment>--ignored colon--
 --file: LinetypeSettings_es.ts--</translatorcomment>
-        <translation></translation>
+        <translation>Tipo de línea:</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
