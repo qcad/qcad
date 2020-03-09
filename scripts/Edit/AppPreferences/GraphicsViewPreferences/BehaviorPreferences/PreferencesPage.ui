@@ -103,7 +103,7 @@
          <item>
           <widget class="RMathLineEdit" name="DoubleClickSelectContourTolerance">
            <property name="text">
-            <string>0.001</string>
+            <string notr="true">0.001</string>
            </property>
           </widget>
          </item>
