@@ -902,7 +902,7 @@ Colores
     </message>
     <message>
         <source>Lineweight</source>
-        <translation>Grosor de la línea</translation>
+        <translation type="vanished">Grosor de la línea</translation>
     </message>
 </context>
 <context>
