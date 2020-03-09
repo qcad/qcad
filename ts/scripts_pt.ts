@@ -6406,7 +6406,7 @@ Cor de plano de fundo</translatorcomment>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation type="unfinished">Peso da linha por defeito:</translation>
+        <translation>Peso da linha por defeito:</translation>
     </message>
     <message>
         <location line="+121"/>
