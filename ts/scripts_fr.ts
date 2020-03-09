@@ -278,7 +278,7 @@
     </message>
     <message>
         <source>about:blank</source>
-        <translation type="vanished">À propos de:blank</translation>
+        <translation type="vanished">about:blank</translation>
     </message>
     <message>
         <location line="+134"/>
@@ -10862,7 +10862,7 @@ Dessin enregistré : %1</translatorcomment>
         <location line="+151"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Pas de Sélection</translation>
+        <translation>Pas de sélection</translation>
     </message>
     <message>
         <location line="+20"/>
