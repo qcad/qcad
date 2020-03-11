@@ -338,6 +338,10 @@ Projection.prototype.addTransformedShapes = function(entity, shapes, op, preview
     }
 
     for (i=0; i<shapes.length; i++) {
+        if (isNull(shapes[i])) {
+            continue;
+        }
+
         s = this.projectShape(shapes[i].data(), preview);
         for (n=0; n<s.length; n++) {
             if (isNull(s[n])) {
@@ -395,11 +399,14 @@ Projection.prototype.isFlip = function() {
  *
  * \return Array of new projected shapes.
  */
-Projection.prototype.projectShape = function(shape, preview, trim) {
+Projection.prototype.projectShape = function(shape, preview, trim, rec) {
     var p, p2, i, k, s, ret;
 
     if (isNull(trim)) {
         trim = true;
+    }
+    if (isNull(rec)) {
+        rec = false;
     }
 
     // trim shape and project resulting segments:
@@ -436,10 +443,13 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
             }
 
             var polyline = ShapeAlgorithms.lineOrArcToPolyline(shape, numSegments);
-            var projectedPl = this.projectShape(polyline, preview, trim)[0];
-            if (!isNull(projectedPl)) {
-                projectedPl.simplify(0.01);
-                ret.push(projectedPl);
+            var projectedPls = this.projectShape(polyline, preview, trim, true);
+            if (projectedPls.length>0) {
+                var projectedPl = projectedPls[0];
+                if (!isNull(projectedPl)) {
+                    projectedPl.simplify(0.01);
+                    ret.push(projectedPl);
+                }
             }
             this.segmentation = true;
 
@@ -549,6 +559,10 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
     }
 
     if (isPolylineShape(shape)) {
+        if (!rec) {
+            shape.simplify(RS.PointTolerance);
+        }
+
         // add polyline, split up at arcs that are projected into ellipses and
         // at gaps caused by trimming:
         ret = [];
@@ -559,7 +573,8 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
         // project each segment individually:
         for (i=0; i<segmentCount; i++) {
             s = shape.getSegmentAt(i).data();
-            s = this.projectShape(s, preview, trim);
+
+            s = this.projectShape(s, preview, trim, true);
 
             // iterate through projected shapes (trimming might lead to gaps):
             for (k=0; k<s.length; k++) {
@@ -581,6 +596,7 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
                 // s is an ellipse:
                 var gotEllipse = isEllipseShape(seg);
 
+                // reached last segment of current polyline:
                 if (i===segmentCount-1 || gotEllipse || gotGap) {
                     if (pl.countVertices()===1) {
                         // don't add polyline for one single shape:
