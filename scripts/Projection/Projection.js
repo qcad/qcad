@@ -560,7 +560,8 @@ Projection.prototype.projectShape = function(shape, preview, trim, rec) {
 
     if (isPolylineShape(shape)) {
         if (!rec) {
-            shape.simplify(RS.PointTolerance);
+            // remove duplicate vertices (zero length segments):
+            shape.normalize(RS.PointTolerance);
         }
 
         // add polyline, split up at arcs that are projected into ellipses and
