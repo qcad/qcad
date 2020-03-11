@@ -159,6 +159,16 @@ void RPolyline::normalize(double tolerance) {
         }
     }
 
+    // remove duplicate last vertex of closed polyline:
+    if (closed) {
+        if (newVertices.first().equalsFuzzy(newVertices.last(), tolerance)) {
+            newVertices.removeLast();
+            newBulges.removeLast();
+            newStartWidths.removeLast();
+            newEndWidths.removeLast();
+        }
+    }
+
     vertices = newVertices;
     bulges = newBulges;
     startWidths = newStartWidths;
