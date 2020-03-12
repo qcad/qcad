@@ -315,7 +315,9 @@ Projection.prototype.addTransformedShapes = function(entity, shapes, op, preview
                     debugger;
                 }
 
-                s[n].simplify(0.01);
+                if (isPolylineShape(s[n])) {
+                    s[n].simplify(0.001);
+                }
 
                 hd.addBoundary(s[n], true);
             }
