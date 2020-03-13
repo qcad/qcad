@@ -14713,7 +14713,7 @@ nicht öffnen.
         <location line="-261"/>
         <location line="+274"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Kursiv</translation>
     </message>
     <message>
         <location line="-236"/>
