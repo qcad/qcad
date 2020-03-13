@@ -2992,13 +2992,13 @@ KeyNavigation est disponible uniquement via les propriétés attachées</transla
         <location line="+8"/>
         <source>into line segments (fixed length)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>en segments de ligne (longueur fixe)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>into line segments (fixed angle)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>en segments de ligne (angle fixe)</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -3010,19 +3010,19 @@ KeyNavigation est disponible uniquement via les propriétés attachées</transla
         <location line="+8"/>
         <source>into polyline with arc segments</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>en polyligne avec des segments d’arc</translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+16"/>
         <source>into polyline with line segments</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>en polyligne avec des segments de ligne</translation>
     </message>
     <message>
         <location line="-8"/>
         <source>Splines</source>
-        <translation>Splines</translation>
+        <translation>Cannelures</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -3033,7 +3033,7 @@ KeyNavigation est disponible uniquement via les propriétés attachées</transla
         <location line="+8"/>
         <source>into lines, solids and texts</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>en lignes, solides et textes</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3042,13 +3042,13 @@ KeyNavigation est disponible uniquement via les propriétés attachées</transla
 Dessine des hachures et des remplissages unis
 &amp;Combiner hachures
 Combiner hachures</translatorcomment>
-        <translation></translation>
+        <translation>Hachures</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into lines</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>en lignes</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3059,7 +3059,7 @@ Combiner hachures</translatorcomment>
         <location line="+8"/>
         <source>into entities</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>en entités</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/Dialog.ui" line="+94"/>
@@ -3670,7 +3670,7 @@ est déjà dans la liste.</translation>
         <location line="+2"/>
         <source>Folder not added</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Dossier non ajouté</translation>
     </message>
 </context>
 <context>
@@ -3909,7 +3909,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+80"/>
         <source>Next vertex</source>
-        <translation>Suivant vertex</translation>
+        <translation>Vertex suivant</translation>
     </message>
     <message>
         <source>Done</source>
@@ -3918,17 +3918,17 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+421"/>
         <source>close</source>
-        <translation>close</translation>
+        <translation>fermer</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>undo</source>
-        <translation>undo</translation>
+        <translation>annuler</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>redo</source>
-        <translation>redo</translation>
+        <translation>refaire</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -3997,7 +3997,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation>Sweep</translation>
+        <translation>Balayage</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -4087,7 +4087,7 @@ est déjà dans la liste.</translation>
         <location line="+28"/>
         <source>Main Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Outils Principaux</translation>
     </message>
     <message>
         <location line="+25"/>
