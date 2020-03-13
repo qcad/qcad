@@ -2590,25 +2590,21 @@ Voulez-vous le récupérer ?</translation>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.ui" line="+72"/>
         <source>Absolute Cartesian Coordinate</source>
-        
         <translation>Coordonnées cartésiennes absolues</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Absolute Polar Coordinate</source>
-        
         <translation>Coordonnées polaires absolues</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative Cartesian Coordinate</source>
-        
         <translation>Coordonnées cartésiennes relatives</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative Polar Coordinate</source>
-        
         <translation>Cordonnées polaires relatives</translation>
     </message>
     <message>
@@ -2996,7 +2992,6 @@ Voulez-vous le récupérer ?</translation>
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        
         <translation>Hachures</translation>
     </message>
     <message>
@@ -5054,7 +5049,6 @@ est déjà dans la liste.</translation>
     <message>
         <location line="-33"/>
         <source>Overwrite File?</source>
-        
         <translation>Écraser le fichier ?</translation>
     </message>
     <message>
@@ -5065,7 +5059,6 @@ est déjà dans la liste.</translation>
     <message>
         <location line="-21"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        
         <translation>Le fichier &quot;%1&quot; existe déjà. Voulez-vous l’écraser ?</translation>
     </message>
 </context>
@@ -6028,7 +6021,6 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+12"/>
         <source>Background:</source>
-        
         <translation>Fond :</translation>
     </message>
     <message>
@@ -6190,7 +6182,6 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+81"/>
         <source>Grid:</source>
-        
         <translation>Grille :</translation>
     </message>
     <message>
@@ -7892,7 +7883,6 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+26"/>
         <source>Linetype:</source>
-        
         <translation>Type de ligne :</translation>
     </message>
     <message>
@@ -9280,7 +9270,6 @@ dans les résultats de recherche :</translation>
     <message>
         <location filename="../scripts/Snap/LockRelativeZero/LockRelativeZeroInit.js" line="+2"/>
         <source>&amp;Lock Relative Zero</source>
-        
         <translation>&amp;Verrouiller le zéro relatif</translation>
     </message>
 </context>
@@ -9346,13 +9335,11 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="+27"/>
         <source>First point of symmetry axis</source>
-        
         <translation>Premier point d&apos;axe de symétrie</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point of symmetry axis</source>
-        
         <translation>Deuxième point de l&apos;axe de symétrie</translation>
     </message>
     <message>
@@ -10739,7 +10726,6 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="-1273"/>
         <source>:</source>
-        
         <translation> :</translation>
     </message>
     <message>
@@ -10760,7 +10746,6 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="+362"/>
         <source>All</source>
-        
         <translation>Tous</translation>
     </message>
     <message>
@@ -10797,7 +10782,6 @@ dans les résultats de recherche :</translation>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40"/>
         <source>Selection:</source>
-        
         <translation>Sélection :</translation>
     </message>
     <message>
@@ -11090,8 +11074,7 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="+9"/>
         <source>Target point</source>
-        
-        <translation type="unfinished">Point cible</translation>
+        <translation>Point cible</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
@@ -11583,7 +11566,6 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="+10"/>
         <source>Target point</source>
-        
         <translation>Point cible</translation>
     </message>
     <message>
@@ -11751,7 +11733,6 @@ dans les résultats de recherche :</translation>
     <message>
         <location filename="../scripts/Select/Select.js" line="+216"/>
         <source>Selection Tools</source>
-        
         <translation>Outils de sélection</translation>
     </message>
     <message>
@@ -11875,7 +11856,6 @@ dans les résultats de recherche :</translation>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.ui" line="+17"/>
         <source>Mode:</source>
-        
         <translation>Mode :</translation>
     </message>
     <message>
@@ -11929,7 +11909,6 @@ dans les résultats de recherche :</translation>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.ui" line="+17"/>
         <source>Mode:</source>
-        
         <translation>Mode :</translation>
     </message>
     <message>
@@ -12055,7 +12034,6 @@ dans les résultats de recherche :</translation>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
         <source>Mode:</source>
-        
         <translation>Mode :</translation>
     </message>
     <message>
@@ -12774,7 +12752,6 @@ dans les résultats de recherche :</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistanceInit.js" line="+2"/>
         <source>&amp;Distance</source>
-        
         <translation>&amp;Distance</translation>
     </message>
     <message>
@@ -13143,7 +13120,6 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        
         <translation type="unfinished">Point cible</translation>
     </message>
     <message>
@@ -13948,7 +13924,6 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        
         <translation type="unfinished">Point cible</translation>
     </message>
     <message>
@@ -14963,7 +14938,6 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="+0"/>
         <source>Block Reference</source>
-        
         <translation>Référence de bloc</translation>
     </message>
     <message>
@@ -14984,7 +14958,6 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="+0"/>
         <source>Arcs</source>
-        
         <translation>Arcs</translation>
     </message>
     <message>
@@ -15015,7 +14988,6 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="+0"/>
         <source>Circles</source>
-        
         <translation>Cercles</translation>
     </message>
     <message>
@@ -15147,7 +15119,6 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="+0"/>
         <source>Hatches</source>
-        
         <translation>Hachures</translation>
     </message>
     <message>
@@ -15158,7 +15129,6 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="+0"/>
         <source>Images</source>
-        
         <translation>Images</translation>
     </message>
     <message>
@@ -15179,7 +15149,6 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="+0"/>
         <source>Lines</source>
-        
         <translation>Lignes</translation>
     </message>
     <message>
