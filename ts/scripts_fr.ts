@@ -2590,29 +2590,25 @@ Voulez-vous le récupérer ?</translation>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.ui" line="+72"/>
         <source>Absolute Cartesian Coordinate</source>
-        <translatorcomment>--google--
-Coordonnées cartésiennes absolues</translatorcomment>
+        
         <translation>Coordonnées cartésiennes absolues</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Absolute Polar Coordinate</source>
-        <translatorcomment>--google--
-Coordonnées polaires absolues</translatorcomment>
+        
         <translation>Coordonnées polaires absolues</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative Cartesian Coordinate</source>
-        <translatorcomment>--google--
-Coordonnées cartésiennes relatives</translatorcomment>
+        
         <translation>Coordonnées cartésiennes relatives</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative Polar Coordinate</source>
-        <translatorcomment>--google--
-Coordonnées polaires relatives</translatorcomment>
+        
         <translation>Cordonnées polaires relatives</translation>
     </message>
     <message>
@@ -3000,10 +2996,7 @@ Coordonnées polaires relatives</translatorcomment>
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        <translatorcomment>--google--
-Dessine des hachures et des remplissages unis
-&amp;Combiner hachures
-Combiner hachures</translatorcomment>
+        
         <translation>Hachures</translation>
     </message>
     <message>
@@ -5061,12 +5054,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="-33"/>
         <source>Overwrite File?</source>
-        <translatorcomment>--exact match--
---file: Save_fr.ts--
-Remplacer le fichier?
-Le fichier existe:
-&quot;%1&quot;
-Remplacer?</translatorcomment>
+        
         <translation>Écraser le fichier ?</translation>
     </message>
     <message>
@@ -5077,9 +5065,7 @@ Remplacer?</translatorcomment>
     <message>
         <location line="-21"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        <translatorcomment>--exact match--
---file: Save_fr.ts--
-Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer?</translatorcomment>
+        
         <translation>Le fichier &quot;%1&quot; existe déjà. Voulez-vous l’écraser ?</translation>
     </message>
 </context>
@@ -6042,9 +6028,7 @@ Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer?
     <message>
         <location line="+12"/>
         <source>Background:</source>
-        <translatorcomment>--ignored colon--
---file: BitmapExport_fr.ts--
-Arrière-plan du dessin :</translatorcomment>
+        
         <translation>Fond :</translation>
     </message>
     <message>
@@ -6206,10 +6190,7 @@ Arrière-plan du dessin :</translatorcomment>
     <message>
         <location line="+81"/>
         <source>Grid:</source>
-        <translatorcomment>--ignored colon--
---file: designer_fr.ts--
-Métagrille :
-&amp;Métagrille :</translatorcomment>
+        
         <translation>Grille :</translation>
     </message>
     <message>
@@ -7911,8 +7892,7 @@ Métagrille :
     <message>
         <location line="+26"/>
         <source>Linetype:</source>
-        <translatorcomment>--ignored colon--
---file: LinetypeSettings_fr.ts--</translatorcomment>
+        
         <translation>Type de ligne :</translation>
     </message>
     <message>
@@ -9300,8 +9280,7 @@ dans les résultats de recherche :</translation>
     <message>
         <location filename="../scripts/Snap/LockRelativeZero/LockRelativeZeroInit.js" line="+2"/>
         <source>&amp;Lock Relative Zero</source>
-        <translatorcomment>--google--
-(Dé)Verroui&amp;ller zéro relatif</translatorcomment>
+        
         <translation>&amp;Verrouiller le zéro relatif</translation>
     </message>
 </context>
@@ -9367,15 +9346,13 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="+27"/>
         <source>First point of symmetry axis</source>
-        <translatorcomment>--google--
-Indiquer le premier point de l&apos;axe de symétrie</translatorcomment>
+        
         <translation>Premier point d&apos;axe de symétrie</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point of symmetry axis</source>
-        <translatorcomment>--google--
-Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
+        
         <translation>Deuxième point de l&apos;axe de symétrie</translation>
     </message>
     <message>
@@ -10762,11 +10739,8 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
     <message>
         <location line="-1273"/>
         <source>:</source>
-        <translatorcomment>--ignored colon--
---file: qt_fr.ts--
-Document Chargé :
-Dessin enregistré : %1</translatorcomment>
-        <translation>:</translation>
+        
+        <translation> :</translation>
     </message>
     <message>
         <location line="+151"/>
@@ -10786,10 +10760,7 @@ Dessin enregistré : %1</translatorcomment>
     <message>
         <location line="+362"/>
         <source>All</source>
-        <translatorcomment>--google--
-Partage &amp;Horizontal
-Partage Horizontal
-Renommer tous les Blocs et Objets Insérés</translatorcomment>
+        
         <translation>Tous</translation>
     </message>
     <message>
@@ -10826,8 +10797,7 @@ Renommer tous les Blocs et Objets Insérés</translatorcomment>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40"/>
         <source>Selection:</source>
-        <translatorcomment>--ignored colon--
---file: qt_fr.ts--</translatorcomment>
+        
         <translation>Sélection :</translation>
     </message>
     <message>
@@ -11120,8 +11090,7 @@ Renommer tous les Blocs et Objets Insérés</translatorcomment>
     <message>
         <location line="+9"/>
         <source>Target point</source>
-        <translatorcomment>--google--
-Indiquer le point cible</translatorcomment>
+        
         <translation type="unfinished">Point cible</translation>
     </message>
     <message>
@@ -11614,8 +11583,7 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location line="+10"/>
         <source>Target point</source>
-        <translatorcomment>--google--
-Indiquer le point cible</translatorcomment>
+        
         <translation>Point cible</translation>
     </message>
     <message>
@@ -11783,8 +11751,7 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location filename="../scripts/Select/Select.js" line="+216"/>
         <source>Selection Tools</source>
-        <translatorcomment>--google--
-Afficher les outils de sélection</translatorcomment>
+        
         <translation>Outils de sélection</translation>
     </message>
     <message>
@@ -11908,8 +11875,7 @@ Afficher les outils de sélection</translatorcomment>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.ui" line="+17"/>
         <source>Mode:</source>
-        <translatorcomment>--google--
-Mode de couleur :</translatorcomment>
+        
         <translation>Mode :</translation>
     </message>
     <message>
@@ -11963,8 +11929,7 @@ Mode de couleur :</translatorcomment>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.ui" line="+17"/>
         <source>Mode:</source>
-        <translatorcomment>--google--
-Mode de couleur :</translatorcomment>
+        
         <translation>Mode :</translation>
     </message>
     <message>
@@ -12090,8 +12055,7 @@ Mode de couleur :</translatorcomment>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
         <source>Mode:</source>
-        <translatorcomment>--google--
-Mode de couleur :</translatorcomment>
+        
         <translation>Mode :</translation>
     </message>
     <message>
@@ -12810,10 +12774,7 @@ Mode de couleur :</translatorcomment>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistanceInit.js" line="+2"/>
         <source>&amp;Distance</source>
-        <translatorcomment>--google--
-&amp;Distance du point au point
-&amp;Distance de l&apos;entité au point
-&amp;Distance extrémité</translatorcomment>
+        
         <translation>&amp;Distance</translation>
     </message>
     <message>
@@ -13182,8 +13143,7 @@ Mode de couleur :</translatorcomment>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        <translatorcomment>--google--
-Indiquer le point cible</translatorcomment>
+        
         <translation type="unfinished">Point cible</translation>
     </message>
     <message>
@@ -13988,8 +13948,7 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        <translatorcomment>--google--
-Indiquer le point cible</translatorcomment>
+        
         <translation type="unfinished">Point cible</translation>
     </message>
     <message>
@@ -15004,9 +14963,7 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location line="+0"/>
         <source>Block Reference</source>
-        <translatorcomment>--google--
-Choisissez la référence de bloc
-Modifier un bloc basé sur une référence de bloc choisie</translatorcomment>
+        
         <translation>Référence de bloc</translation>
     </message>
     <message>
@@ -15027,10 +14984,7 @@ Modifier un bloc basé sur une référence de bloc choisie</translatorcomment>
     <message>
         <location line="+0"/>
         <source>Arcs</source>
-        <translatorcomment>--google--
-Dessine des arcs
-Dessine des arcs avec 3 points
-Dessine des parallèles aux cercles, arcs et lignes existants</translatorcomment>
+        
         <translation>Arcs</translation>
     </message>
     <message>
@@ -15061,10 +15015,7 @@ Dessine des parallèles aux cercles, arcs et lignes existants</translatorcomment
     <message>
         <location line="+0"/>
         <source>Circles</source>
-        <translatorcomment>--google--
-Dessine des parallèles aux cercles, arcs et lignes existants
-Dessine des cercles avec un centre et un point
-Dessine des cercles avec 2 points</translatorcomment>
+        
         <translation>Cercles</translation>
     </message>
     <message>
@@ -15196,10 +15147,7 @@ Dessine des cercles avec 2 points</translatorcomment>
     <message>
         <location line="+0"/>
         <source>Hatches</source>
-        <translatorcomment>--google--
-Dessine des hachures et des remplissages unis
-&amp;Combiner hachures
-Combiner hachures</translatorcomment>
+        
         <translation>Hachures</translation>
     </message>
     <message>
@@ -15210,10 +15158,7 @@ Combiner hachures</translatorcomment>
     <message>
         <location line="+0"/>
         <source>Images</source>
-        <translatorcomment>--google--
-&lt;img src=&quot;:/trolltech/assistant/images/wrap.png&quot;&gt;&amp;nbsp;Recherche à partir du début
-&lt;img src=&quot;:/trolltech/assistant/images/wrap.png&quot;&gt;nbsp;Recherche à partir du début
-&lt;img src=&quot;:/trolltech/shared/images/wrap.png&quot;&gt;&amp;nbsp;Recherche à partir du début</translatorcomment>
+        
         <translation>Images</translation>
     </message>
     <message>
@@ -15234,10 +15179,7 @@ Combiner hachures</translatorcomment>
     <message>
         <location line="+0"/>
         <source>Lines</source>
-        <translatorcomment>--google--
-Dessine des parallèles aux cercles, arcs et lignes existants
-Dessine des lignes
-Impossible de fermer la séquence de lignes : nombre d&apos;entités définies encore insuffisant.</translatorcomment>
+        
         <translation>Lignes</translation>
     </message>
     <message>
