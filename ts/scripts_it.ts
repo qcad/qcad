@@ -2318,7 +2318,7 @@ Spaziatura Griglia minima (px):</translatorcomment>
 --file: Translate_it.ts--
 Punto di riferimento
 Copia gli oggetti nel blocco note con un punto di riferimento</translatorcomment>
-        <translation type="unfinished">Punto di riferimento</translation>
+        <translation>Punto di riferimento</translation>
     </message>
 </context>
 <context>
@@ -2518,7 +2518,7 @@ Copia gli oggetti nel blocco note con un punto di riferimento</translatorcomment
 --file: CommandLine_it.ts--
 Vai alla Riga di Comando
 Vai alla &amp;Riga di Comando</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Comando</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -2532,7 +2532,7 @@ Vai alla &amp;Riga di Comando</translatorcomment>
 --file: Arduino_it_IT.po--
 Documento caricato:
 Versione:</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>: </translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
@@ -2638,7 +2638,7 @@ Versione:</translatorcomment>
 --file: Input_it.ts--
 Coordinate cartesiane assolute
 Coordinate cartesiane assolute:</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Coordinata cartesiana assoluta</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -2647,7 +2647,7 @@ Coordinate cartesiane assolute:</translatorcomment>
 --file: Input_it.ts--
 Coordinate polari assolute
 Coordinate polari assolute:</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Coordinata polare assoluta</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -2656,7 +2656,7 @@ Coordinate polari assolute:</translatorcomment>
 --file: Input_it.ts--
 Coordinate cartesiane relative
 Coordinate cartesiane relativo:</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Coordinata cartesiana relativa</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -2665,7 +2665,7 @@ Coordinate cartesiane relativo:</translatorcomment>
 --file: Input_it.ts--
 Coordinate polari relative
 Coordinate polari relativo:</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Coordinata polare relativa</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+28"/>
@@ -2945,7 +2945,7 @@ Coordinate polari relativo:</translatorcomment>
 Barra di navigazione
 Navigazione mappa
 Layer ad alta risoluzione possono rallentare la navigazione in QGIS.</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Navigazione</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5139,7 +5139,7 @@ Sovrascrivere il file?
 Il file esiste:
 &apos;%1&apos;
 Sovrascrivere?</translatorcomment>
-        <translation type="unfinished">Sovrascrivere il file?</translation>
+        <translation>Sovrascrivi file?</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5205,7 +5205,7 @@ Sovrascrivere?</translatorcomment>
         <translatorcomment>--exact match--
 --file: Input_it.ts--
 Punto decimale:</translatorcomment>
-        <translation type="unfinished">Punto decimale:</translation>
+        <translation>Punto decimale:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6237,7 +6237,7 @@ Punto decimale:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qgis_it.ts--
 Origine:</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Origine:</translation>
     </message>
     <message>
         <source>Relative Zero:</source>
@@ -6254,7 +6254,7 @@ Origine:</translatorcomment>
 --file: it.po--
 Meta griglia:
 &amp;Meta griglia:</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Griglia:</translation>
     </message>
     <message>
         <source>Meta Grid:</source>
@@ -6445,7 +6445,7 @@ Meta griglia:
         <translatorcomment>--exact match--
 --file: DefaultNavigation_it.ts--
 Visualizzazione grafica</translatorcomment>
-        <translation type="unfinished">Visualizzazione grafica</translation>
+        <translation>Vista grafica</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -6895,7 +6895,7 @@ Visualizzazione grafica</translatorcomment>
 --file: LineAngle_it.ts--
 &amp;Angolo
 &amp;Angolo fra due linee</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Angolo</translation>
     </message>
     <message>
         <source>Angle</source>
@@ -7068,7 +7068,7 @@ Visualizzazione grafica</translatorcomment>
         <source>Polygon area:</source>
         <translatorcomment>--ignored colon--
 --file: qgis_it.ts--</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Area poligonale:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7651,7 +7651,7 @@ Visualizzazione grafica</translatorcomment>
         <translatorcomment>--exact match--
 --file: Insert_it.ts--
 &amp;Inserisci Blocco</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Inserisci blocco</translation>
     </message>
 </context>
 <context>
@@ -7699,7 +7699,7 @@ Visualizzazione grafica</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_it.ts--
 Proiezione &amp;Isometrica</translatorcomment>
-        <translation type="unfinished">Proiezione &amp;isometrica</translation>
+        <translation>Proiezione &amp;isometrica</translation>
     </message>
     <message>
         <source>Isometric Projection</source>
@@ -9431,7 +9431,7 @@ mostrati nei risultati di ricerca:</translation>
         <source>&amp;Lock Relative Zero</source>
         <translatorcomment>--google--
 (S-)&amp;Blocca Zero Relativo</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bloccare lo zero relativo</translation>
     </message>
 </context>
 <context>
@@ -9498,7 +9498,7 @@ mostrati nei risultati di ricerca:</translation>
         <source>First point of symmetry axis</source>
         <translatorcomment>--google--
 Primo punto per l&apos;asse dello specchio</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Primo punto dell&apos;asse di simmetria</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -10867,7 +10867,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
 --file: Arduino_it_IT.po--
 Documento caricato:
 Versione:</translatorcomment>
-        <translation type="unfinished">:</translation>
+        <translation>:</translation>
     </message>
     <message>
         <location line="+151"/>
@@ -10875,7 +10875,7 @@ Versione:</translatorcomment>
         <translatorcomment>--ignored case--
 --file: photivo_it.ts--
 Nessuna selezione</translatorcomment>
-        <translation type="unfinished">Nessuna selezione</translation>
+        <translation>Nessuna selezione</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -10962,7 +10962,7 @@ Nessuna selezione</translatorcomment>
         <source>Selection:</source>
         <translatorcomment>--ignored colon--
 --file: it3.po--</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Selezione:</translation>
     </message>
     <message>
         <source>General</source>
@@ -11201,7 +11201,7 @@ Nessuna selezione</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Limitazione &amp;Orizzontale</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Limita e &amp;orizzontalmente</translation>
     </message>
 </context>
 <context>
@@ -11220,7 +11220,7 @@ Limitazione &amp;Orizzontale</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Limitazione &amp;Ortogonale</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Limitare e &amp;ortogonalmente</translation>
     </message>
 </context>
 <context>
@@ -11231,7 +11231,7 @@ Limitazione &amp;Ortogonale</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Limitazione &amp;Verticale</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Limita e &amp;verticalmente</translation>
     </message>
 </context>
 <context>
@@ -11261,7 +11261,7 @@ Limitazione &amp;Verticale</translatorcomment>
 Aggancia ai punti centrali
 Specificare il centro:
 Specificare il centro</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Punto centrale</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11275,7 +11275,7 @@ Specificare il centro</translatorcomment>
 --file: IsoProject_it.ts--
 Punto finale
 Obiettivo punto</translatorcomment>
-        <translation type="unfinished">Obiettivo punto</translation>
+        <translation>Punto obiettivo</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
@@ -11471,7 +11471,7 @@ Obiettivo punto</translatorcomment>
         <translatorcomment>--exact match--
 --file: Mirror_it.ts--
 Usa livello e gli &amp;attributi corrente</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Utilizzare il livello corrente e gli &amp;attributi</translation>
     </message>
 </context>
 <context>
@@ -11487,7 +11487,7 @@ Usa livello e gli &amp;attributi corrente</translatorcomment>
         <translatorcomment>--exact match--
 --file: Bevel_it.ts--
 Prima entità non può essere tagliato.</translatorcomment>
-        <translation type="unfinished">Prima entità non può essere tagliato.</translation>
+        <translation>Prima entità non può essere tagliato.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -11495,7 +11495,7 @@ Prima entità non può essere tagliato.</translatorcomment>
         <translatorcomment>--exact match--
 --file: Bevel_it.ts--
 Seconda entità non può essere tagliata.</translatorcomment>
-        <translation type="unfinished">Seconda entità non può essere tagliata.</translation>
+        <translation>Seconda entità non può essere tagliata.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
@@ -11780,7 +11780,7 @@ Seconda entità non può essere tagliata.</translatorcomment>
 --file: IsoProject_it.ts--
 Punto finale
 Obiettivo punto</translatorcomment>
-        <translation type="unfinished">Obiettivo punto</translation>
+        <translation>Punto obiettivo</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -11953,7 +11953,7 @@ Obiettivo punto</translatorcomment>
         <source>Selection Tools</source>
         <translatorcomment>--google--
 Mostra menù &quot;Seleziona&quot;</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Strumenti di selezione</translation>
     </message>
     <message>
         <source>Show selection tools</source>
@@ -12091,7 +12091,7 @@ Mostra menù &quot;Seleziona&quot;</translatorcomment>
         <translatorcomment>--ignored colon--
 --file: qgis_it.ts--
 Modo colore:</translatorcomment>
-        <translation type="unfinished">Modalità:</translation>
+        <translation>Modalità:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12152,7 +12152,7 @@ Modo colore:</translatorcomment>
 --file: SelectContour_it.ts--
 Modo colore:
 Modalità:</translatorcomment>
-        <translation type="unfinished">Modalità:</translation>
+        <translation>Modalità:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12160,7 +12160,7 @@ Modalità:</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
 Sostituire la selezione corrente</translatorcomment>
-        <translation type="unfinished">Sostituire la selezione corrente</translation>
+        <translation>Sostituire la selezione corrente</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -12168,7 +12168,7 @@ Sostituire la selezione corrente</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
 Aggiungere alla selezione corrente</translatorcomment>
-        <translation type="unfinished">Aggiungere alla selezione corrente</translation>
+        <translation>Aggiungere alla selezione corrente</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -12176,7 +12176,7 @@ Aggiungere alla selezione corrente</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
 Sottrai dalla selezione corrente</translatorcomment>
-        <translation type="unfinished">Sottrai dalla selezione corrente</translation>
+        <translation>Sottrai dalla selezione corrente</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -12184,7 +12184,7 @@ Sottrai dalla selezione corrente</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
 Interseca con la selezione corrente</translatorcomment>
-        <translation type="unfinished">Interseca con la selezione corrente</translation>
+        <translation>Interseca con la selezione corrente</translation>
     </message>
 </context>
 <context>
@@ -12305,7 +12305,7 @@ Interseca con la selezione corrente</translatorcomment>
 --file: SelectContour_it.ts--
 Modo colore:
 Modalità:</translatorcomment>
-        <translation type="unfinished">Modalità:</translation>
+        <translation>Modalità:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12313,7 +12313,7 @@ Modalità:</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
 Sostituire la selezione corrente</translatorcomment>
-        <translation type="unfinished">Sostituire la selezione corrente</translation>
+        <translation>Sostituire la selezione corrente</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -12321,7 +12321,7 @@ Sostituire la selezione corrente</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
 Aggiungere alla selezione corrente</translatorcomment>
-        <translation type="unfinished">Aggiungere alla selezione corrente</translation>
+        <translation>Aggiungere alla selezione corrente</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -12329,7 +12329,7 @@ Aggiungere alla selezione corrente</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
 Sottrai dalla selezione corrente</translatorcomment>
-        <translation type="unfinished">Sottrai dalla selezione corrente</translation>
+        <translation>Sottrai dalla selezione corrente</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -12337,7 +12337,7 @@ Sottrai dalla selezione corrente</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
 Interseca con la selezione corrente</translatorcomment>
-        <translation type="unfinished">Interseca con la selezione corrente</translation>
+        <translation>Interseca con la selezione corrente</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -13067,7 +13067,7 @@ Interseca con la selezione corrente</translatorcomment>
 &amp;Distanza da Punto a Punto
 &amp;Distanza da Oggetto a Punto
 &amp;Distanza dalla Fine</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Distanza</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
@@ -13444,7 +13444,7 @@ Interseca con la selezione corrente</translatorcomment>
 --file: IsoProject_it.ts--
 Punto finale
 Obiettivo punto</translatorcomment>
-        <translation type="unfinished">Obiettivo punto</translation>
+        <translation>Punto obiettivo</translation>
     </message>
     <message>
         <location line="+141"/>
@@ -13486,7 +13486,7 @@ Obiettivo punto</translatorcomment>
 --file: SvgExportAs_it.ts--
 File SVG (*.svg)
 File SVG</translatorcomment>
-        <translation type="unfinished">File SVG</translation>
+        <translation>File SVG</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13496,7 +13496,7 @@ File SVG</translatorcomment>
 Tutti i file(*.*)
 File locale
 Tutti i file</translatorcomment>
-        <translation type="unfinished">Tutti i file</translation>
+        <translation>Tutti i file</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportInit.js" line="+2"/>
@@ -13873,7 +13873,8 @@ Tutti i file</translatorcomment>
         <location line="-257"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation type="unfinished"></translation>
+        <translation>Testo semplice
+(una riga, nessuna formattazione)</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -14260,7 +14261,7 @@ Tutti i file</translatorcomment>
 --file: IsoProject_it.ts--
 Punto finale
 Obiettivo punto</translatorcomment>
-        <translation type="unfinished">Obiettivo punto</translation>
+        <translation>Punto obiettivo</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateInit.js" line="+2"/>
@@ -14859,7 +14860,7 @@ Obiettivo punto</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcad_it.ts--
 Visita il &amp;sito web</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Visita il sito &amp;web</translation>
     </message>
 </context>
 <context>
@@ -15319,7 +15320,7 @@ Visita il &amp;sito web</translatorcomment>
         <translatorcomment>--google--
 Scegliere il riferimento di blocco
 Modificare un blocco sulla base di un riferimento di blocco scelto</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Riferimento di blocco</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15582,7 +15583,7 @@ Modificare un blocco sulla base di un riferimento di blocco scelto</translatorco
         <source>Solids</source>
         <translatorcomment>--google--
 in linee, solidi e testi</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Solidi</translation>
     </message>
     <message>
         <location line="+2"/>
