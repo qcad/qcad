@@ -323,7 +323,7 @@
 Preferências do &amp;Aplicativo
 Preferências do aplicativo
 Preferências Gerais do Aplicativo</translatorcomment>
-        <translation></translation>
+        <translation>Preferências do aplicativo</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -333,7 +333,7 @@ Preferências Gerais do Aplicativo</translatorcomment>
 &amp;Preferências do Desenho Atual...
 &amp;Preferências do Desenho Atual
 Preferências do Desenho Atual...</translatorcomment>
-        <translation></translation>
+        <translation>Preferências do Desenho</translation>
     </message>
     <message>
         <location line="+300"/>
@@ -344,7 +344,7 @@ Preferências do Desenho Atual...</translatorcomment>
         <location line="+45"/>
         <source>Restart required</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Reinício necessário</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -390,7 +390,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
         <location line="+6"/>
         <source>Add new empty block</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Adicionar novo bloco vazio</translation>
     </message>
 </context>
 <context>
@@ -399,7 +399,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
         <location filename="../scripts/Widgets/PropertyEditor/AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Adicionar Propriedade Personalizada</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -409,7 +409,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
 Nome do Carimbo:
 Nome do bloco:
 Nome da Camada:</translatorcomment>
-        <translation></translation>
+        <translation>Nome:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -425,7 +425,7 @@ Nome da Camada:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Adicione Camada</translatorcomment>
-        <translation></translation>
+        <translation>&amp;Adicione uma Camada</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+35"/>
@@ -465,7 +465,7 @@ Nome da Camada:</translatorcomment>
         <location filename="../scripts/Edit/AppPreferences/AppPreferences.js" line="+65"/>
         <source>Application &amp;Preferences</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>&amp;Preferências do Aplicativo</translation>
     </message>
 </context>
 <context>
@@ -475,7 +475,7 @@ Nome da Camada:</translatorcomment>
         <source>Arc Tools</source>
         <translatorcomment>--google--
 Exibe o menu &quot;Arco&quot;</translatorcomment>
-        <translation></translation>
+        <translation>Ferramentas em Arco</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -483,7 +483,7 @@ Exibe o menu &quot;Arco&quot;</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--
 &amp;Arco</translatorcomment>
-        <translation></translation>
+        <translation>&amp;Arco</translation>
     </message>
 </context>
 <context>
@@ -495,7 +495,7 @@ Exibe o menu &quot;Arco&quot;</translatorcomment>
 Ponto inicial (x):
 Ponto inicial (x)
 Ponto inicial (y):</translatorcomment>
-        <translation></translation>
+        <translation>Ponto de início</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -504,31 +504,31 @@ Ponto inicial (y):</translatorcomment>
 Ponto final (y):
 Ponto final (y)
 Ponto final (x):</translatorcomment>
-        <translation></translation>
+        <translation>Ponto final</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>Invalid angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Ângulo inválido</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Os dois pontos são idênticos</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PAInit.js" line="+2"/>
         <source>&amp;2 Points and Angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>&amp;2 Pontos e Ângulo</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Desenhe um arco a partir de 2 pontos e ângulo</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PA.ui" line="+17"/>
@@ -537,7 +537,7 @@ Ponto final (x):</translatorcomment>
 --file: pt.po--
 Entre o ângulo:
 Insira o ângulo da linha de dimensão:</translatorcomment>
-        <translation></translation>
+        <translation>Ângulo:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -546,19 +546,19 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
 --file: pt.po--
 Direção de Visualização:
 Descrição:</translatorcomment>
-        <translation></translation>
+        <translation>Direção:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Anti-horário (positivo)</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Horário (negativo)</translation>
     </message>
 </context>
 <context>
@@ -681,7 +681,7 @@ Descrição:</translatorcomment>
 Ponto inicial (x):
 Ponto inicial (x)
 Ponto inicial (y):</translatorcomment>
-        <translation></translation>
+        <translation>Ponto de início</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -690,31 +690,31 @@ Ponto inicial (y):</translatorcomment>
 Ponto final (y):
 Ponto final (y)
 Ponto final (x):</translatorcomment>
-        <translation></translation>
+        <translation>Ponto final</translation>
     </message>
     <message>
         <location line="+81"/>
         <source>Invalid radius</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Raio inválido</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Os dois pontos são idênticos</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PRInit.js" line="+2"/>
         <source>&amp;2 Points and Radius</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>&amp;2 Pontos e Raio</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and radius</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Traçar arco a partir de 2 pontos e raio</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PR.ui" line="+17"/>
@@ -723,7 +723,7 @@ Ponto final (x):</translatorcomment>
 --file: pt.po--
 Entre o raio:
 Raio</translatorcomment>
-        <translation></translation>
+        <translation>Raio:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -732,19 +732,19 @@ Raio</translatorcomment>
 --file: pt.po--
 Direção de Visualização:
 Descrição:</translatorcomment>
-        <translation></translation>
+        <translation>Direção:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Anti-horário (positivo)</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Horário (negativo)</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -752,19 +752,19 @@ Descrição:</translatorcomment>
         <translatorcomment>--google--
 Relação:
 Resolução padrão de exportação</translatorcomment>
-        <translation></translation>
+        <translation>Solução:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Shorter Arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Arco mais curto</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Longer Arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Arco mais longo</translation>
     </message>
 </context>
 <context>
@@ -776,13 +776,13 @@ Resolução padrão de exportação</translatorcomment>
 Ponto inicial (x):
 Ponto inicial (x)
 Ponto inicial (y):</translatorcomment>
-        <translation></translation>
+        <translation>Ponto de início</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Point on arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation>Ponto no arco</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -791,7 +791,7 @@ Ponto inicial (y):</translatorcomment>
 Ponto final (y):
 Ponto final (y)
 Ponto final (x):</translatorcomment>
-        <translation></translation>
+        <translation>Ponto final</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc3P/Arc3PInit.js" line="+2"/>
@@ -799,13 +799,13 @@ Ponto final (x):</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;3 Pontos</translatorcomment>
-        <translation></translation>
+        <translation>&amp;3 Pontos</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from 3 points</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -818,19 +818,19 @@ Ponto final (x):</translatorcomment>
 &amp;Centro, Ponto, Ângulos
 Centro, Ponto, Ângulos
 Arco com Centro, Ponto, Ângulos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Centro</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Point on arc or radius</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Point on arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ponto no arco</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -839,7 +839,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Indique o ângulo de início:
 Indique o ângulo de início</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
@@ -848,7 +848,7 @@ Indique o ângulo de início</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Indique o ângulo de fim ou [Ângulo/Comprimento da corda]
 Indique o ângulo de término</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPAInit.js" line="+2"/>
@@ -856,13 +856,13 @@ Indique o ângulo de término</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Centro, Ponto, Ângulos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from center, point on arc and angles</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.ui" line="+17"/>
@@ -871,19 +871,19 @@ Indique o ângulo de término</translatorcomment>
 --file: pt.po--
 Direção de Visualização:
 Descrição:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Direção:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Horário (negativo)</translation>
     </message>
 </context>
 <context>
@@ -897,7 +897,7 @@ Descrição:</translatorcomment>
         <location line="+5"/>
         <source>Draw concentric arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentric/ArcConcentric.ui" line="+17"/>
@@ -906,7 +906,7 @@ Descrição:</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Distância: %1
 Selecione a entidade a ser aparada ou entre a distância:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Distância:</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -915,7 +915,7 @@ Selecione a entidade a ser aparada ou entre a distância:</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Entre o número:
 Número:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Número:</translation>
     </message>
 </context>
 <context>
@@ -924,13 +924,13 @@ Número:</translatorcomment>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThroughInit.js" line="+2"/>
         <source>Concentric (&amp;through Point)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw concentric arc through point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcConcentricThrough/ArcConcentricThrough.ui" line="+17"/>
@@ -939,7 +939,7 @@ Número:</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Entre o número:
 Número:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Número:</translation>
     </message>
 </context>
 <context>
@@ -987,13 +987,13 @@ Número:</translatorcomment>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.js" line="+64"/>
         <source>Choose base line or base arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Choose end point of arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&amp;Tangentially connected</source>
@@ -1008,7 +1008,7 @@ Número:</translatorcomment>
         <location line="+4"/>
         <source>Draw arc tangential to base entity</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTangential/ArcTangential.ui" line="+17"/>
@@ -1145,20 +1145,20 @@ Você deseja recuperá-lo?</translation>
         <location line="-53"/>
         <source>Autosaving to:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/File/AutoSave/PreferencesPage.ui" line="+17"/>
         <source>Enable Autosave</source>
         <translatorcomment>--google--
 Caixa de diálogo de comportamento (requer reinício):</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Autosave Interval:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+54"/>
@@ -1167,7 +1167,7 @@ Caixa de diálogo de comportamento (requer reinício):</translatorcomment>
 Indique o ponto de término do eixo menor:
 Indique o ponto de término do eixo menor
 Termine</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1244,7 +1244,7 @@ Termine</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Close Automático</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1266,25 +1266,25 @@ Termine</translatorcomment>
         <location filename="../scripts/Modify/Bevel/Bevel.js" line="+55"/>
         <source>The two entities cannot be bevelled.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">A primeira entidade não pode ser aparada.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">A segunda entidade não pode ser aparada.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
         <source>&amp;Chamfer / Bevel</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.ui" line="+17"/>
@@ -1294,7 +1294,7 @@ Termine</translatorcomment>
 &amp;Apare
 Apare
 Apare ou estique entidades para encontrar outras entidades</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Apare</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -1303,7 +1303,7 @@ Apare ou estique entidades para encontrar outras entidades</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Entre comprimento 1:
 Distância 1:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17"/>
@@ -1312,7 +1312,7 @@ Distância 1:</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Entre comprimento 2:
 Distância 2:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1334,19 +1334,19 @@ Distância 2:</translatorcomment>
 --file: Image_pt.ts--
 Todos os Arquivos de imagem (%1)
 Todos os Ficheiros (*.*)</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Arquivos</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Export as Bitmap</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Exporte como Bitmap</translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportInit.js" line="+2"/>
         <source>Bit&amp;map Export...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportDialog.ui" line="+14"/>
@@ -1354,7 +1354,7 @@ Todos os Ficheiros (*.*)</translatorcomment>
         <translatorcomment>--google--
 Exporte como Bitmap...
 Cor e transparência do fundo da página (também usada para exportar bitmaps</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1363,7 +1363,7 @@ Cor e transparência do fundo da página (também usada para exportar bitmaps</t
 --file: pt_PT.po--
 Tamanho de Bitmap
 Tamanho da seta:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1372,7 +1372,7 @@ Tamanho da seta:</translatorcomment>
 --file: pt.po--
 Largura:
 &amp;Largura do Papel:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -1381,13 +1381,13 @@ Largura:
 --file: pt.po--
 Altura:
 &amp;Altura do Papel:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Altura:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Pixels per drawing unit:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+72"/>
@@ -1453,7 +1453,7 @@ Altura:
 Fundo
 Pano de Fundo:
 Pano de Fundo do Desenho:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1463,7 +1463,7 @@ Pano de Fundo do Desenho:</translatorcomment>
 Branco / Preto
 Branco / preto
 Branco</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1473,7 +1473,7 @@ Branco</translatorcomment>
 Branco / Preto
 Branco / preto
 Preto</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1516,7 +1516,7 @@ Preto</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--
 &amp;Bloco</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">&amp;Bloco</translation>
     </message>
 </context>
 <context>
@@ -1536,7 +1536,7 @@ Preto</translatorcomment>
         <location line="+5"/>
         <source>Block name is empty.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1556,7 +1556,7 @@ Preto</translatorcomment>
         <location line="+5"/>
         <source>Block already exists.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
@@ -1569,7 +1569,7 @@ Preto</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Nome do Bloco:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1598,7 +1598,7 @@ Nome do Bloco:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--
 Lista de Blocos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-92"/>
@@ -1669,7 +1669,7 @@ Lista de Blocos</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Divida 2</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.ui" line="+17"/>
@@ -1678,7 +1678,7 @@ Lista de Blocos</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Marque para remover segmentos, desmarque para os manter
 Remove Segmento</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Elimine o Segmento</translation>
     </message>
     <message>
         <source>Choose line, arc, circle or ellipse to auto trim</source>
@@ -1789,7 +1789,7 @@ Remove Segmento</translatorcomment>
 --file: pt_PT.po--
 Seleccionador de método de entrada que utiliza o menu de contexto dos elementos de texto
 O seu tema não suporta menus de navegação ou de widgets.</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1812,7 +1812,7 @@ O seu tema não suporta menus de navegação ou de widgets.</translatorcomment>
 --file: LibraryBrowser_pt.ts--
 Tamanho ícone:
 Fazer ferramentas principais menores</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Tamanho do Ícone:</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -1821,7 +1821,7 @@ Fazer ferramentas principais menores</translatorcomment>
 --file: pt.po--
 PPM
 XPM</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Pixel</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1830,7 +1830,7 @@ XPM</translatorcomment>
 --file: pt.po--
 Espaçamento Mínimo da Grade (px)
 Espaçamento Mínimo da Grade (px):</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">px</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1839,7 +1839,7 @@ Espaçamento Mínimo da Grade (px):</translatorcomment>
 --file: pt.po--
 Entre as colunas:
 Colunas:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Colunas:</translation>
     </message>
 </context>
 <context>
@@ -1928,7 +1928,7 @@ Colunas:</translatorcomment>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+14"/>
         <source>Checking for Updates...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1944,13 +1944,13 @@ Colunas:</translatorcomment>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesInit.js" line="+6"/>
         <source>Check for &amp;Updates...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+53"/>
         <source>Automatically check for updates</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1960,7 +1960,7 @@ Colunas:</translatorcomment>
         <source>Circle Tools</source>
         <translatorcomment>--google--
 Exibe o menu &quot;Círculo&quot;</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -1968,7 +1968,7 @@ Exibe o menu &quot;Círculo&quot;</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--
 &amp;Círculo</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1980,7 +1980,7 @@ Exibe o menu &quot;Círculo&quot;</translatorcomment>
 Especifique o ponto inicial
 Especifique o primeiro ponto do polígono
 Especifique o primeiro ponto de distância</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Primeiro ponto</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1989,7 +1989,7 @@ Especifique o primeiro ponto de distância</translatorcomment>
 Indique o segundo ponto
 Especifique o segundo ponto de distância
 Indique o segundo ponto da linha de espelhamento</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Segundo ponto</translation>
     </message>
     <message>
         <location line="+83"/>
@@ -1997,7 +1997,7 @@ Indique o segundo ponto da linha de espelhamento</translatorcomment>
         <translatorcomment>--exact match--
 --file: Arc2PR_pt.ts--
 Os dois pontos são idênticos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Os dois pontos são idênticos</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2P/Circle2PInit.js" line="+2"/>
@@ -2006,13 +2006,13 @@ Os dois pontos são idênticos</translatorcomment>
 --file: qcadactions_pt.ts--
 &amp;2 Pontos
 &amp;2 Pontos e Ângulo</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">&amp;3 Pontos {2 ?}</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2024,7 +2024,7 @@ Os dois pontos são idênticos</translatorcomment>
 Especifique o ponto inicial
 Especifique o primeiro ponto do polígono
 Especifique o primeiro ponto de distância</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Primeiro ponto</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2033,7 +2033,7 @@ Especifique o primeiro ponto de distância</translatorcomment>
 Indique o segundo ponto
 Especifique o segundo ponto de distância
 Indique o segundo ponto da linha de espelhamento</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Segundo ponto</translation>
     </message>
     <message>
         <location line="+107"/>
@@ -2041,7 +2041,7 @@ Indique o segundo ponto da linha de espelhamento</translatorcomment>
         <translatorcomment>--exact match--
 --file: Arc2PR_pt.ts--
 Inválido raio</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Raio inválido</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2049,7 +2049,7 @@ Inválido raio</translatorcomment>
         <translatorcomment>--exact match--
 --file: Arc2PR_pt.ts--
 Os dois pontos são idênticos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Os dois pontos são idênticos</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PRInit.js" line="+2"/>
@@ -2057,13 +2057,13 @@ Os dois pontos são idênticos</translatorcomment>
         <translatorcomment>--exact match--
 --file: Arc2PR_pt.ts--
 &amp;2 Pontos e raio</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">&amp;2 Pontos e Raio</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle from 2 points and radius</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2PR/Circle2PR.ui" line="+17"/>
@@ -2072,7 +2072,7 @@ Os dois pontos são idênticos</translatorcomment>
 --file: pt.po--
 Entre o raio:
 Raio</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Raio:</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -2081,19 +2081,19 @@ Raio</translatorcomment>
 --file: Arc2PR_pt.ts--
 Relação:
 Solução:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Solução:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Center Left of Line P1 - P2</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Center Right of Line P1 - P2</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2190,7 +2190,7 @@ Solução:</translatorcomment>
 Especifique o ponto inicial
 Especifique o primeiro ponto do polígono
 Especifique o primeiro ponto de distância</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Primeiro ponto</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -2199,14 +2199,14 @@ Especifique o primeiro ponto de distância</translatorcomment>
 Indique o segundo ponto
 Especifique o segundo ponto de distância
 Indique o segundo ponto da linha de espelhamento</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Segundo ponto</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Third point</source>
         <translatorcomment>--google--
 Indique o terceiro ponto</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3P/Circle3PInit.js" line="+2"/>
@@ -2214,13 +2214,13 @@ Indique o terceiro ponto</translatorcomment>
         <translatorcomment>--exact match--
 --file: Arc3P_pt.ts--
 &amp;3 Pontos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">&amp;3 Pontos</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle from 3 points</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2306,13 +2306,13 @@ Indique o terceiro ponto</translatorcomment>
 &amp;Centro, ponto, ângulos
 Centro, ponto, ângulos
 Arco com Centro, Ponto, Ângulos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Centro</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Point on circle or radius</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCP/CircleCPInit.js" line="+2"/>
@@ -2323,7 +2323,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location line="+5"/>
         <source>Draw circle from center and point on circle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2337,7 +2337,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location line="+4"/>
         <source>Draw circle from center and radius</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCR.ui" line="+17"/>
@@ -2347,7 +2347,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
 --file: pt.po--
 Entre o raio:
 Raio</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Raio:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -2372,7 +2372,7 @@ Raio</translatorcomment>
         <location line="+5"/>
         <source>Draw concentric circle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentric/CircleConcentric.ui" line="+17"/>
@@ -2381,7 +2381,7 @@ Raio</translatorcomment>
 --file: ArcConcentric_pt.ts--
 Distância: %1
 Selecione a entidade a ser aparada ou entre a distância:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Distância:</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -2390,7 +2390,7 @@ Selecione a entidade a ser aparada ou entre a distância:</translatorcomment>
 --file: ArcConcentricThrough_pt.ts--
 Entre o número:
 Número:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Número:</translation>
     </message>
 </context>
 <context>
@@ -2401,13 +2401,13 @@ Número:</translatorcomment>
         <translatorcomment>--exact match--
 --file: ArcConcentricThrough_pt.ts--
 Concêntricos (&amp;através ponto)</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw concentric circle through point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleConcentricThrough/CircleConcentricThrough.ui" line="+17"/>
@@ -2416,7 +2416,7 @@ Concêntricos (&amp;através ponto)</translatorcomment>
 --file: ArcConcentricThrough_pt.ts--
 Entre o número:
 Número:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Número:</translation>
     </message>
 </context>
 <context>
@@ -2494,7 +2494,7 @@ Número:</translatorcomment>
 --file: CreateBlock_pt.ts--
 Indique o ponto de referência
 Copie entidade com ponto de referência  para o clipboard</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ponto de referência</translation>
     </message>
 </context>
 <context>
@@ -2503,7 +2503,7 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
         <location filename="../scripts/Window/CloseAll/CloseAllInit.js" line="+2"/>
         <source>&amp;Close All</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2513,7 +2513,7 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
         <source>Closing Drawing...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pt.ts--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2524,7 +2524,7 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
 &amp;Fechar</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2560,7 +2560,7 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
 Imprimindo...
 Imprimindo
 Impressão completa</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2569,7 +2569,7 @@ Impressão completa</translatorcomment>
 --file: pt_PT.po--
 Cores
 Cores &amp;básicas</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Cores</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ColorSettings/PreferencesPage.ui" line="+19"/>
@@ -2577,20 +2577,20 @@ Cores &amp;básicas</translatorcomment>
         <translatorcomment>--exact match--
 --file: pt.po--
 Cor de plano de fundo</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+44"/>
         <source>Color Mode</source>
         <translatorcomment>--google--
 Em modo de cor, agir na matiz do objecto</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Full color</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+20"/>
@@ -2599,7 +2599,7 @@ Em modo de cor, agir na matiz do objecto</translatorcomment>
 --file: pt.po--
 Escala de cinzas
 Cores iguais, mas converter o resultado para escala de cinza</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Escala de cinzas</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2608,7 +2608,7 @@ Cores iguais, mas converter o resultado para escala de cinza</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Branco / Preto
 Comute modos Branco / Preto</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2623,7 +2623,7 @@ Comute modos Branco / Preto</translatorcomment>
 Foca na &amp;Linha de Comando
 Foca na Linha de Comando
 Linha de Comando</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-30"/>
@@ -2686,7 +2686,7 @@ Linha de Comando</translatorcomment>
 Aviso
 Atenção
 Aviso:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+12"/>
@@ -2706,7 +2706,7 @@ Aviso:</translatorcomment>
 &amp;Coordenadas
 Coordenadas
 Salta a uma coordenada dada</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2716,7 +2716,7 @@ Salta a uma coordenada dada</translatorcomment>
 Foca na &amp;Linha de Comando
 Foca na Linha de Comando
 Linha de Comando</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+12"/>
@@ -2725,7 +2725,7 @@ Linha de Comando</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Comando:
 Impossível executar o comando: %s</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2734,13 +2734,13 @@ Impossível executar o comando: %s</translatorcomment>
 --file: LibraryBrowser_pt.ts--
 Desenho guardado: %1
 Documento carregado: %1</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
         <source>History Size:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
@@ -2767,7 +2767,7 @@ Documento carregado: %1</translatorcomment>
         <location filename="../scripts/View/CommandLineFocus/CommandLineFocusInit.js" line="+2"/>
         <source>&amp;Focus on Command Line</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2842,7 +2842,7 @@ Documento carregado: %1</translatorcomment>
 --file: Input_pt.ts--
 Coordenadas absolutas cartesianas
 Coordenadas cartesianas absolutas:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -2851,7 +2851,7 @@ Coordenadas cartesianas absolutas:</translatorcomment>
 --file: Input_pt.ts--
 Coordenadas polares absolutas
 Coordenadas polares absoluta:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -2860,7 +2860,7 @@ Coordenadas polares absoluta:</translatorcomment>
 --file: Input_pt.ts--
 Coordenadas cartesianas relativas
 Coordenadas cartesianas relativo:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -2869,7 +2869,7 @@ Coordenadas cartesianas relativo:</translatorcomment>
 --file: Input_pt.ts--
 Coordenadas polares relativas
 Coordenada polares relativa:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+28"/>
@@ -2896,7 +2896,7 @@ Coordenada polares relativa:</translatorcomment>
 --file: qt_pt.ts--
 &amp;Copiar
 &amp;Copie com referência</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2907,7 +2907,7 @@ Coordenada polares relativa:</translatorcomment>
         <translatorcomment>--ignored case--
 --file: qcadactions_pt.ts--
 &amp;Copie com referência</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2967,7 +2967,7 @@ Coordenada polares relativa:</translatorcomment>
 Indique o ponto de referência
 Copie entidade com ponto de referência  para o clipboard
 Corte entidades com ponto de referência ao clipboard</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ponto de Referência</translation>
     </message>
     <message>
         <location filename="../scripts/Block/CreateBlock/CreateBlockInit.js" line="+2"/>
@@ -3055,7 +3055,7 @@ Corte entidades com ponto de referência ao clipboard</translatorcomment>
         <location filename="../scripts/Edit/Cut/CutInit.js" line="+2"/>
         <source>&amp;Cut</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3064,7 +3064,7 @@ Corte entidades com ponto de referência ao clipboard</translatorcomment>
         <location filename="../scripts/Edit/CutWithReference/CutWithReferenceInit.js" line="+2"/>
         <source>&amp;Cut with Reference</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3073,13 +3073,13 @@ Corte entidades com ponto de referência ao clipboard</translatorcomment>
         <location filename="../scripts/DefaultAction.js" line="+90"/>
         <source>Select entity or region</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Move entity or reference</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11"/>
@@ -3132,7 +3132,7 @@ Corte entidades com ponto de referência ao clipboard</translatorcomment>
         <location filename="../scripts/Navigation/DefaultNavigation/DefaultNavigation.js" line="+47"/>
         <source>Graphics View</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -3141,19 +3141,19 @@ Corte entidades com ponto de referência ao clipboard</translatorcomment>
 O seu tema não suporta menus de navegação ou de widgets.
 O seu tema não suporta menus de navegação ou de widgets
 Texto a mostrar</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Zoom (Wheel Mouse)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Scroll (Trackpad, Multi-Touch Mouse)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3165,7 +3165,7 @@ Texto a mostrar</translatorcomment>
 --file: qt_pt.ts--
 &amp;Apagar
 &amp;Apague à Mão Livre</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3176,13 +3176,13 @@ Texto a mostrar</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 De&amp;sseleciona Tudo</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Deselect all entities</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3219,7 +3219,7 @@ De&amp;sseleciona Tudo</translatorcomment>
         <location filename="../scripts/Draw/Text/TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Mapa de Caracteres</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeDialog.ui" line="+14"/>
@@ -3228,25 +3228,25 @@ De&amp;sseleciona Tudo</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Diálogo
 Abre diálogo de cores</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Arcs and Circles</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into line segments (fixed length)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
         <source>into line segments (fixed angle)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11"/>
@@ -3255,20 +3255,20 @@ Abre diálogo de cores</translatorcomment>
 --file: pt.po--
 Desenha Elipses
 Exibe o menu &quot;Elipse&quot;</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into polyline with arc segments</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+16"/>
         <source>into polyline with line segments</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-8"/>
@@ -3277,7 +3277,7 @@ Exibe o menu &quot;Elipse&quot;</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Desenhe chavetas (NURBS)
 Desenha chavetas</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Splines</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -3286,13 +3286,13 @@ Desenha chavetas</translatorcomment>
 --file: pt_PT.po--
 Exibe o menu &quot;Dimensão&quot;
 &amp;Dimensões</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Dimensões</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into lines, solids and texts</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3301,13 +3301,13 @@ Exibe o menu &quot;Dimensão&quot;
 Desenhe hachurados e preenchimentos sólidos
 Hachuras / preenchimentos sólidos
 &amp;Combine Hachuras</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into lines</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3316,13 +3316,13 @@ Hachuras / preenchimentos sólidos
 --file: BlockExamples_pt.ts--
 Fragmente carimbos e outros agrupamentos de entidades
 Oculte (congele) todos os carimbos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Blocos</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into entities</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/Dialog.ui" line="+94"/>
@@ -3331,7 +3331,7 @@ Oculte (congele) todos os carimbos</translatorcomment>
 --file: pt_PT.po--
 OK
 &amp;OK</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3340,7 +3340,7 @@ OK
 --file: pt_PT.po--
 Cancelar
 &amp;Cancelar</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>0.01</source>
@@ -3362,21 +3362,21 @@ Cancelar
         <source>First extension line origin</source>
         <translatorcomment>--google--
 Indique a primeira extensão da linha de origem</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
         <translatorcomment>--google--
 Indique a segunda extensão da linha de origem</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location</source>
         <translatorcomment>--google--
 Indique a dimensão da linha de localização</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAligned/DimAlignedInit.js" line="+2"/>
@@ -3384,13 +3384,13 @@ Indique a dimensão da linha de localização</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Alinhado</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw aligned dimension</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3399,7 +3399,7 @@ Indique a dimensão da linha de localização</translatorcomment>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.js" line="+80"/>
         <source>Arc or first of two lines</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
@@ -3408,13 +3408,13 @@ Indique a dimensão da linha de localização</translatorcomment>
 Selecione a segunda linha
 Selecione a segunda linha [comprimento/número]
 Especifique a segunda linha</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Segunda linha</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Dimension arc location</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngularInit.js" line="+2"/>
@@ -3422,13 +3422,13 @@ Especifique a segunda linha</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 A&amp;ngular</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw angular dimension</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
@@ -3442,13 +3442,13 @@ A&amp;ngular</translatorcomment>
         <location filename="../scripts/Draw/Dimension/DimDiametric/DimDiametric.js" line="+57"/>
         <source>Choose arc or circle entity</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimDiametric/DimDiametricInit.js" line="+2"/>
@@ -3456,13 +3456,13 @@ A&amp;ngular</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Diamétrico</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw diametric dimension</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3476,7 +3476,7 @@ A&amp;ngular</translatorcomment>
         <location line="+5"/>
         <source>Draw horizontal dimension</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3486,26 +3486,26 @@ A&amp;ngular</translatorcomment>
         <source>Feature location</source>
         <translatorcomment>--google--
 Indique a localização da feição</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
         <translatorcomment>--google--
 Indique o ponto de término do guia</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
         <source>&amp;Ordinate (X/Y)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ordinate dimension</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3514,13 +3514,13 @@ Indique o ponto de término do guia</translatorcomment>
         <location filename="../scripts/Draw/Dimension/DimRadial/DimRadial.js" line="+57"/>
         <source>Choose arc or circle entity</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRadial/DimRadialInit.js" line="+2"/>
@@ -3528,13 +3528,13 @@ Indique o ponto de término do guia</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Radial</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw radial dimension</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3543,7 +3543,7 @@ Indique o ponto de término do guia</translatorcomment>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
@@ -3557,7 +3557,7 @@ Indique o ponto de término do guia</translatorcomment>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegenInit.js" line="+2"/>
         <source>&amp;Reset Label Position</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3567,33 +3567,33 @@ Indique o ponto de término do guia</translatorcomment>
         <source>First extension line origin</source>
         <translatorcomment>--google--
 Indique a primeira extensão da linha de origem</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
         <translatorcomment>--google--
 Indique a segunda extensão da linha de origem</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location</source>
         <translatorcomment>--google--
 Indique a dimensão da linha de localização</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotatedInit.js" line="+2"/>
         <source>&amp;Rotated (Linear)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw linear dimension at a fixed angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotated.ui" line="+17"/>
@@ -3602,7 +3602,7 @@ Indique a dimensão da linha de localização</translatorcomment>
 --file: pt.po--
 Entre o ângulo:
 Insira o ângulo da linha de dimensão:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ângulo:</translation>
     </message>
 </context>
 <context>
@@ -3616,7 +3616,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <location line="+5"/>
         <source>Draw vertical dimension</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3625,7 +3625,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <location filename="../scripts/Draw/Dimension/Dimension.js" line="+63"/>
         <source>No prefix</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3648,7 +3648,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Comute o símbolo de diâmetro
 Diâmetro (ø)</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3659,7 +3659,7 @@ Diâmetro (ø)</translatorcomment>
         <location line="+1"/>
         <source>Plus/Minus</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3677,7 +3677,7 @@ Diâmetro (ø)</translatorcomment>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Quadras Em</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3685,19 +3685,19 @@ Quadras Em</translatorcomment>
         <translatorcomment>--google--
 Delta X
 Delta Y</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+79"/>
         <source>Dimension Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+27"/>
         <source>D&amp;imension</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Dimension.ui" line="+29"/>
@@ -3705,7 +3705,7 @@ Delta Y</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Rótulo:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
@@ -3714,7 +3714,7 @@ Rótulo:</translatorcomment>
 &lt;strong&gt;ERRO&lt;/strong&gt;: O prefixo das tabelas só pode conter números, letras e underscores.
 &lt;strong&gt;ERRO&lt;/strong&gt;: O prefixo das tabelas só pode conter números, letras e underscores
 Prefixo de base de dados inválido</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+19"/>
@@ -3722,7 +3722,7 @@ Prefixo de base de dados inválido</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Entre o rótulo fixo ou deixe-o vazio para rotulação automática</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+61"/>
@@ -3730,7 +3730,7 @@ Entre o rótulo fixo ou deixe-o vazio para rotulação automática</translatorco
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Tolerância superior</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+54"/>
@@ -3738,7 +3738,7 @@ Tolerância superior</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Tolerância Inferior</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+20"/>
@@ -3766,14 +3766,14 @@ Tolerância Inferior</translatorcomment>
 &amp;Dimensão
 Dimensão
 Dimensão Alinhada</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Dimensão</translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+2"/>
         <source>Dimension Settings</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-2"/>
@@ -3801,7 +3801,7 @@ Dimensão Alinhada</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Científico</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3810,7 +3810,7 @@ Científico</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Decimal
 Graus Decimais</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3819,7 +3819,7 @@ Graus Decimais</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Engenharia
 Para comprimentos formatados como &apos;Engenharia&apos; ou &apos;Arquitetura&apos;, a unidade deve ser polegada.</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3828,7 +3828,7 @@ Para comprimentos formatados como &apos;Engenharia&apos; ou &apos;Arquitetura&ap
 --file: qcadguiqt_pt.ts--
 Arquitetura
 Para comprimentos formatados como &apos;Engenharia&apos; ou &apos;Arquitetura&apos;, a unidade deve ser polegada.</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3836,7 +3836,7 @@ Para comprimentos formatados como &apos;Engenharia&apos; ou &apos;Arquitetura&ap
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Fracionais</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+32"/>
@@ -3844,7 +3844,7 @@ Fracionais</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Graus Decimais</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3852,7 +3852,7 @@ Graus Decimais</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Grau/min/seg</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3860,7 +3860,7 @@ Grau/min/seg</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Gradianos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3869,7 +3869,7 @@ Gradianos</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Gradianos
 Radianos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3877,13 +3877,13 @@ Radianos</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Unidades de topógrafo</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+209"/>
         <source>Unit / Format</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3901,7 +3901,7 @@ Unidades de topógrafo</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Tamanhos
 Tamanhos das imagens</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
@@ -3909,7 +3909,7 @@ Tamanhos das imagens</translatorcomment>
         <translatorcomment>--exact match--
 --file: Image_pt.ts--
 Mantenha proporções</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+147"/>
@@ -3917,7 +3917,7 @@ Mantenha proporções</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Altura do Texto:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Altura do texto:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3925,7 +3925,7 @@ Altura do Texto:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Extensão da linha de deslocamento:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-74"/>
@@ -3933,7 +3933,7 @@ Extensão da linha de deslocamento:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Extensão da linha de extensionamento:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-52"/>
@@ -3941,7 +3941,7 @@ Extensão da linha de extensionamento:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Dimensione a linha de brecha:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+42"/>
@@ -3949,7 +3949,7 @@ Dimensione a linha de brecha:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Tamanho da seta:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+108"/>
@@ -3967,7 +3967,7 @@ Tamanho da seta:</translatorcomment>
         <translatorcomment>--google--
 Estilo da Seta:
 Estilo da Seta</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+12"/>
@@ -3976,7 +3976,7 @@ Estilo da Seta</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Conduza (seqüência linear com seta)
 Tamanho da seta:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3984,7 +3984,7 @@ Tamanho da seta:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Espessura Arquitetônica</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -4010,13 +4010,13 @@ Espessura Arquitetônica</translatorcomment>
         <location line="+26"/>
         <source>Label Format</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Linear Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
@@ -4024,7 +4024,7 @@ Espessura Arquitetônica</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 &amp;Formato:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4032,7 +4032,7 @@ Espessura Arquitetônica</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 &amp;Precisão:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+32"/>
@@ -4041,13 +4041,13 @@ Espessura Arquitetônica</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Exibe zeros à esquerda</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-50"/>
         <source>Angular Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
@@ -4055,7 +4055,7 @@ Exibe zeros à esquerda</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 &amp;Formato:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+20"/>
@@ -4063,7 +4063,7 @@ Exibe zeros à esquerda</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Pre&amp;cisão:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+32"/>
@@ -4074,7 +4074,7 @@ Pre&amp;cisão:</translatorcomment>
 Prévia de impressão para %1
 Prévia de Impressão
 Exibe uma prévia da impressão</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4093,7 +4093,7 @@ já se encontra na lista.</translation>
         <location line="+2"/>
         <source>Folder not added</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4130,7 +4130,7 @@ já se encontra na lista.</translation>
         <translatorcomment>--exact match--
 --file: InfoDistanceEP_pt.ts--
 Especifique o ponto</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Indique o ponto</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4143,7 +4143,7 @@ Especifique o ponto</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Divida</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4152,7 +4152,7 @@ Especifique o ponto</translatorcomment>
         <location filename="../scripts/View/DraftMode/DraftMode.js" line="+86"/>
         <source>&amp;Draft Mode</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4169,7 +4169,7 @@ Especifique o ponto</translatorcomment>
 --file: qcadactions_pt.ts--
 &amp;Desenho
 &amp;Preferências do Desenho Atual...</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">&amp;Desenhar</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -4339,7 +4339,7 @@ Especifique o ponto</translatorcomment>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+70"/>
         <source>First vertex</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4347,7 +4347,7 @@ Especifique o ponto</translatorcomment>
         <translatorcomment>--exact match--
 --file: Leader_pt.ts--
 Próximo vértice</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+421"/>
@@ -4373,13 +4373,13 @@ Próximo vértice</translatorcomment>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolylineInit.js" line="+2"/>
         <source>&amp;Draw Polyline</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw polyline with line and arc segments</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.ui" line="+23"/>
@@ -4397,7 +4397,7 @@ Próximo vértice</translatorcomment>
         <translatorcomment>--exact match--
 --file: Line2P_pt.ts--
 Desfazer segmento anterior</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
@@ -4445,7 +4445,7 @@ Desfazer segmento anterior</translatorcomment>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4481,7 +4481,7 @@ Desfazer segmento anterior</translatorcomment>
 --file: qt_pt.ts--
 Anterior
 Retorna ao último menu</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Retorne</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4491,7 +4491,7 @@ Retorna ao último menu</translatorcomment>
 --file: pt_PT.po--
 Cancelar
 &amp;Cancelar</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-2096"/>
@@ -4512,7 +4512,7 @@ Cancelar
 Nenhum
 nenhum
 Nenhuma das entidades selecionadas pode ser dividida.</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Nenhum</translation>
     </message>
     <message>
         <location line="+687"/>
@@ -4521,13 +4521,13 @@ Nenhuma das entidades selecionadas pode ser dividida.</translatorcomment>
 --file: pt_PT.po--
 Opções de Ferramentas
 Opções de Biselamento</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Main Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+25"/>
@@ -4535,13 +4535,13 @@ Opções de Biselamento</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--
 Ferramentas CAD</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ferramentas CAD</translation>
     </message>
     <message>
         <location line="+710"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+224"/>
@@ -4552,13 +4552,13 @@ Ferramentas CAD</translatorcomment>
         <location line="+42"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4569,7 +4569,7 @@ Ferramentas CAD</translatorcomment>
         <location line="+4"/>
         <source>Entity is not a line.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4580,19 +4580,19 @@ Ferramentas CAD</translatorcomment>
         <location line="+4"/>
         <source>Entity is not an arc or circle.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc, circle or ellipse.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4623,7 +4623,7 @@ Ferramentas CAD</translatorcomment>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4682,7 +4682,7 @@ Ferramentas CAD</translatorcomment>
 --file: qcad_pt.ts--
 &amp;Edição
 &amp;Edite bloco</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4694,13 +4694,13 @@ Ferramentas CAD</translatorcomment>
 --file: qcadactions_pt.ts--
 &amp;Edite Bloco
 &amp;Edite Bloco a partir da Inserção</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Edit contents of selected block</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4709,19 +4709,19 @@ Ferramentas CAD</translatorcomment>
         <location filename="../scripts/Block/EditFromReference/EditFromReference.js" line="+55"/>
         <source>Choose block reference</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReferenceInit.js" line="+2"/>
         <source>E&amp;dit Block from Reference</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Edit block based on chosen block reference</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4745,7 +4745,7 @@ Ferramentas CAD</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Edite Camada</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4754,7 +4754,7 @@ Ferramentas CAD</translatorcomment>
         <location filename="../scripts/Block/EditMainDrawing/EditMainDrawingInit.js" line="+2"/>
         <source>&amp;Return to Main Drawing</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4763,13 +4763,13 @@ Ferramentas CAD</translatorcomment>
         <location filename="../scripts/Modify/EditText/EditText.js" line="+61"/>
         <source>Choose text</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditText/EditTextInit.js" line="+2"/>
         <source>Edit Te&amp;xt</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4778,7 +4778,7 @@ Ferramentas CAD</translatorcomment>
 Entre com o texto; Pressione &lt;b&gt;Enter&lt;/b&gt; para iniciar uma nova linha.
 Entre com o texto; Pressione &lt;b&gt;Enter&lt;/b&gt; para iniciar uma nova linha
 Criar e alterar objectos texto</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4808,31 +4808,31 @@ Criar e alterar objectos texto</translatorcomment>
 &amp;Centro, Ponto, Ângulos
 Centro, Ponto, Ângulos
 Arco com Centro, Ponto, Ângulos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Centro</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Major point of ellipse or major radius</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Major point of ellipse</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Minor point of ellipse or minor radius</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Minor point of ellipse</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4842,31 +4842,31 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
 Entre o ângulo de rotação:
 Entre o ângulo de rotação
 Ângulo de rotação</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Start parameter</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End parameter</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+267"/>
         <source>Invalid major radius.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Major radius:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
@@ -4875,13 +4875,13 @@ Entre o ângulo de rotação
 --file: pt.po--
 Entre o ângulo:
 Insira o ângulo da linha de dimensão:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ângulo:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Minor radius:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+25"/>
@@ -4890,7 +4890,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Indique o ângulo de início:
 Ângulo de Início:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
@@ -4898,7 +4898,7 @@ Indique o ângulo de início:
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Ângulo de Término:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPAInit.js" line="+2"/>
@@ -4906,13 +4906,13 @@ Indique o ângulo de início:
         <translatorcomment>--ignored ...--
 --file: qcad_pt.ts--
 &amp;Arco de Elipse (Eixo)</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.ui" line="+17"/>
@@ -4921,19 +4921,19 @@ Indique o ângulo de início:
 --file: pt.po--
 Direção de Visualização:
 Descrição:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Direção:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Horário (negativo)</translation>
     </message>
 </context>
 <context>
@@ -5143,7 +5143,7 @@ Descrição:</translatorcomment>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5532,7 +5532,7 @@ Descrição:</translatorcomment>
 --file: qcadactions_pt.ts--
 &amp;Fragmente
 &amp;Fragmente Texto em Letras</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/Explode.js" line="+30"/>
@@ -5581,7 +5581,7 @@ Descrição:</translatorcomment>
         <location filename="../scripts/Help/FAQ/FAQInit.js" line="+2"/>
         <source>FA&amp;Qs (online)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5608,7 +5608,7 @@ Descrição:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--
 &amp;Arquivo</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+92"/>
@@ -5618,7 +5618,7 @@ Descrição:</translatorcomment>
 --file: pt.po--
 &amp;Formato:
 Formato:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Formato:</translation>
     </message>
     <message>
         <location line="-33"/>
@@ -5629,7 +5629,7 @@ Substituir arquivo?
 Arquivo existe:
 &apos;%1&apos;
 Substituir arquivo?</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5651,7 +5651,7 @@ Substituir arquivo?</translatorcomment>
 --file: pt_PT.po--
 Branco / preto
 Preto</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5660,7 +5660,7 @@ Preto</translatorcomment>
 --file: pt_PT.po--
 Branco / preto
 Branco</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5670,7 +5670,7 @@ Branco</translatorcomment>
 Idioma para Comando:
 Idioma para os Comandos:
 Idioma GUI:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-226"/>
@@ -5687,7 +5687,7 @@ Idioma GUI:</translatorcomment>
         <location line="+1"/>
         <source>Please choose the settings used for new drawings. All these settings can be changed later in the Preference Dialog.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
@@ -5696,13 +5696,13 @@ Idioma GUI:</translatorcomment>
 --file: pt.po--
 Unidade Padrão:
 &amp;Principal unidade do desenho:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Default Paper Size:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5710,7 +5710,7 @@ Unidade Padrão:
         <translatorcomment>--exact match--
 --file: Input_pt.ts--
 Ponto decimal:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5718,7 +5718,7 @@ Ponto decimal:</translatorcomment>
         <translatorcomment>--ignored case--
 --file: pt.po--
 Cor de plano de fundo</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6087,19 +6087,19 @@ Cor de plano de fundo</translatorcomment>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
         <source>Three: Right</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/21_ThreeLeft.ui" line="+14"/>
         <source>Three: Left</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/22_ThreeAbove.ui" line="+14"/>
         <source>Three: Above</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.ui" line="+14"/>
@@ -6127,7 +6127,7 @@ Cor de plano de fundo</translatorcomment>
         <location filename="../scripts/Help/Forum/ForumInit.js" line="+2"/>
         <source>&amp;Forum</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6488,7 +6488,7 @@ Cor de plano de fundo</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Pano de Fundo:
 Pano de Fundo do Desenho:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6499,7 +6499,7 @@ Pano de Fundo do Desenho:</translatorcomment>
         <location line="+18"/>
         <source>Crosshairs:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+36"/>
@@ -6640,7 +6640,7 @@ Pano de Fundo do Desenho:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qgis_pt.ts--
 Origem:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+81"/>
@@ -6649,7 +6649,7 @@ Origem:</translatorcomment>
 --file: pt.po--
 &amp;Meta-grade:
 Meta-grade:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6658,19 +6658,19 @@ Meta-grade:</translatorcomment>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
         <source>Ruler Font:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Snap Label Font:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Info Label Font:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6679,13 +6679,13 @@ Meta-grade:</translatorcomment>
         <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+332"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-231"/>
         <source>Enable pan gesture</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6721,7 +6721,7 @@ Meta-grade:</translatorcomment>
         <translatorcomment>--exact match--
 --file: DefaultNavigation_pt.ts--
 Ver gráficos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -6802,7 +6802,7 @@ Ver gráficos</translatorcomment>
 --file: pt_PT.po--
 Preferências Gerais do Aplicativo
 [2000-206F] Pontuação Geral</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Geral</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -6813,7 +6813,7 @@ Preferências Gerais do Aplicativo
 &amp;Grade
 Grelha
 Posicionamento na grade</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Grade</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -6832,7 +6832,7 @@ Posicionamento na grade</translatorcomment>
 &amp;Automático
 Automático
 Salta automaticamente</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6844,7 +6844,7 @@ Salta automaticamente</translatorcomment>
 --file: qcadactions_pt.ts--
 &amp;Hachura
 Padrões de &amp;Hachura:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-27"/>
@@ -6866,7 +6866,7 @@ Padrões de &amp;Hachura:</translatorcomment>
 &amp;Hachura
 Hachura
 Desenhe hachurados e preenchimentos sólidos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
@@ -6876,7 +6876,7 @@ Desenhe hachurados e preenchimentos sólidos</translatorcomment>
 Tipo de linha:
 Tipo de linha
 Tipo Ordinal</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
@@ -6885,7 +6885,7 @@ Tipo Ordinal</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Desenhe hachurados e preenchimentos sólidos
 Hachuras / preenchimentos sólidos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -6893,7 +6893,7 @@ Hachuras / preenchimentos sólidos</translatorcomment>
         <translatorcomment>--google--
 Padrões de Hachura:
 Padrões de Hachura</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6903,7 +6903,7 @@ Padrões de Hachura</translatorcomment>
 Prévia de impressão para %1
 Prévia de Impressão
 Exibe uma prévia da impressão</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
@@ -6912,7 +6912,7 @@ Exibe uma prévia da impressão</translatorcomment>
 --file: pt.po--
 Padrão
 Padrões de Hachura:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
@@ -6921,7 +6921,7 @@ Padrões de Hachura:</translatorcomment>
 --file: pt.po--
 Entre o ângulo:
 Insira o ângulo da linha de dimensão:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ângulo:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6930,7 +6930,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
 --file: pt.po--
 Ampliar
 Escala da Superfície</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Escala:</translation>
     </message>
 </context>
 <context>
@@ -6969,7 +6969,7 @@ Escala da Superfície</translatorcomment>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
 &amp;Ajuda</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7005,7 +7005,7 @@ Escala da Superfície</translatorcomment>
 Todos os Arquivos de Imagem (%1)
 Todos os Ficheiros (*.*)
 Todos os Ficheiros (*)</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Arquivos</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -7013,7 +7013,7 @@ Todos os Ficheiros (*)</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Todos os Arquivos de Imagem (%1)</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -7022,13 +7022,13 @@ Todos os Arquivos de Imagem (%1)</translatorcomment>
 --file: pt.po--
 Todos os Ficheiros (*.*)
 Todos os Ficheiros (*)</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Import Bitmap</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
@@ -7043,7 +7043,7 @@ Todos os Ficheiros (*)</translatorcomment>
 Indique a dimensão da linha de posicionamento ou insira o ângulo:
 Indique a dimensão da linha de posicionamento ou insira o ângulo
 Indique a posição [ângulo/comprimento]</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Posição</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Image/Image.ui" line="+17"/>
@@ -7052,7 +7052,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
 --file: pt.po--
 Largura:
 &amp;Largura do Papel:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+20"/>
@@ -7060,7 +7060,7 @@ Largura:
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Mantenha proporções</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17"/>
@@ -7069,7 +7069,7 @@ Mantenha proporções</translatorcomment>
 --file: pt.po--
 Altura:
 &amp;Altura do Papel:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Altura:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -7078,7 +7078,7 @@ Altura:
 --file: pt.po--
 Entre o ângulo:
 Insira o ângulo da linha de dimensão:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ângulo:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
@@ -7214,7 +7214,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 Especifique a primeira linha</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>
@@ -7222,7 +7222,7 @@ Especifique a primeira linha</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 Especifique a segunda linha</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+91"/>
@@ -7231,7 +7231,7 @@ Especifique a segunda linha</translatorcomment>
 --file: pt.po--
 Entre o ângulo:
 Insira o ângulo da linha de dimensão:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ângulo:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngleInit.js" line="+2"/>
@@ -7240,7 +7240,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
 --file: LineAngle_pt.ts--
 Â&amp;ngulo
 Ângulo entre duas &amp;linhas</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7399,13 +7399,13 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <location filename="../scripts/Information/InfoArea/InfoArea.js" line="+70"/>
         <source>Set next polygon corner</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+144"/>
         <source>Polygon area:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7416,19 +7416,19 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <location filename="../scripts/Information/InfoArea/InfoAreaInit.js" line="+2"/>
         <source>Pol&amp;ygonal Area</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoArea.ui" line="+17"/>
         <source>Calculate length and close tool.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Close Tool.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7467,7 +7467,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
 --file: qcadactions_pt.ts--
 Especifique a entidade
 Especifique a entidade a ser cortada</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
@@ -7475,7 +7475,7 @@ Especifique a entidade a ser cortada</translatorcomment>
         <translatorcomment>--exact match--
 --file: LineParallelThrough_pt.ts--
 Especifique o ponto</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Indique o ponto</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -7484,13 +7484,13 @@ Especifique o ponto</translatorcomment>
 --file: PolylineEquidistant_pt.ts--
 Distância: %1
 Selecione a entidade a ser aparada ou entre a distância:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Distância:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEPInit.js" line="+2"/>
         <source>Distance &amp;Entity to Point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7502,7 +7502,7 @@ Selecione a entidade a ser aparada ou entre a distância:</translatorcomment>
 --file: Line2P_pt.ts--
 Especifique o ponto inicial
 Especifique o primeiro ponto do polígono</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Primeiro ponto</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7511,7 +7511,7 @@ Especifique o primeiro ponto do polígono</translatorcomment>
 --file: Circle3P_pt.ts--
 Indique o segundo ponto
 Especifique o segundo ponto de distância</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Segundo ponto</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -7520,7 +7520,7 @@ Especifique o segundo ponto de distância</translatorcomment>
 --file: InfoDistanceEP_pt.ts--
 Distância: %1
 Selecione a entidade a ser aparada ou entre a distância:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Distância:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -7528,7 +7528,7 @@ Selecione a entidade a ser aparada ou entre a distância:</translatorcomment>
         <translatorcomment>--exact match--
 --file: pt.po--
 Delta X</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7536,7 +7536,7 @@ Delta X</translatorcomment>
         <translatorcomment>--exact match--
 --file: pt.po--
 Delta Y</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7545,13 +7545,13 @@ Delta Y</translatorcomment>
 --file: pt.po--
 Entre o ângulo:
 Insira o ângulo da linha de dimensão:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ângulo:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePPInit.js" line="+2"/>
         <source>Distance &amp;Point to Point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7638,7 +7638,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <location filename="../scripts/Information/Information.js" line="+334"/>
         <source>Information Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+27"/>
@@ -7646,7 +7646,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--
 &amp;Informação</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
@@ -7669,25 +7669,25 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/PreferencesPage.ui" line="+19"/>
         <source>Decimal Point:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cartesian Coordinate Separator:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Polar Coordinate Separator:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Relative Coordinate Prefix:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+12"/>
@@ -7696,31 +7696,31 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
 --file: Examples_pt.ts--
 &amp;Exemplos
 Exemplos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Absolute Cartesian Coordinate:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Absolute Polar Coordinate:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Relative Cartesian Coordinate:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative Polar Coordinate:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7898,13 +7898,13 @@ Exemplos</translatorcomment>
         <translatorcomment>--exact match--
 --file: pt.po--
 _Rotação</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Rotação:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Rotacione as entidades coladas&lt;br&gt;por este ângulo</translation>
     </message>
     <message>
         <location line="+103"/>
@@ -7913,49 +7913,49 @@ _Rotação</translatorcomment>
 --file: pt.po--
 Ampliar
 Escala da Superfície</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Escala:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Escalone as entidades coladas&lt;br&gt;por este fator</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Inverta as entidades coladas&lt;br&gt;horizontalmente</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Inverta as entidades coladas&lt;br&gt;verticalmente</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Substitua camadas existentes&lt;br&gt;no desenho por&lt;br&gt;camadas da área de transferência</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Substitua camadas</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Substitua blocos existentes&lt;br&gt;no desenho por blocos&lt;br&gt;da área de transferência</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite blocks</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Substitua blocos</translation>
     </message>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.js" line="+102"/>
@@ -7982,7 +7982,7 @@ Escala da Superfície</translatorcomment>
         <translatorcomment>--exact match--
 --file: Insert_pt.ts--
 &amp;Insira bloco</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">&amp;Insira um Bloco</translation>
     </message>
 </context>
 <context>
@@ -7995,7 +7995,7 @@ Escala da Superfície</translatorcomment>
         <location filename="../scripts/Block/InsertScriptItem/InsertScriptItemInit.js" line="+2"/>
         <source>Insert &amp;Script</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8006,13 +8006,13 @@ Escala da Superfície</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Inverte Seleção</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Invert the current selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8023,7 +8023,7 @@ Escala da Superfície</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 Projeção &amp;Isométrica</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Projeção &amp;isométrica</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.ui" line="+17"/>
@@ -8032,7 +8032,7 @@ Projeção &amp;Isométrica</translatorcomment>
 --file: pt_PT.po--
 Deposita ao fim da garimpagem
 Centro acima</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Superior</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -8042,7 +8042,7 @@ Centro acima</translatorcomment>
 Direita abaixo
 Em baixo à direita
 Centro abaixo</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Inferior</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -8057,7 +8057,7 @@ Centro abaixo</translatorcomment>
 Direita ao meio
 Direita abaixo
 Em baixo à direita</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Direita</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -8098,7 +8098,7 @@ Em baixo à direita</translatorcomment>
 Esquerda acima
 Em cima à esquerda
 Esquerda ao meio</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Esquerda</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.js" line="+50"/>
@@ -8212,7 +8212,7 @@ Esquerda ao meio</translatorcomment>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui" line="+20"/>
         <source>Language of User Interface:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8266,7 +8266,7 @@ Esquerda ao meio</translatorcomment>
 --file: qcad_pt.ts--
 &amp;Camada
 Utilize a &amp;camada atual</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">&amp;Camada</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -8353,13 +8353,13 @@ Utilize a &amp;camada atual</translatorcomment>
         <location line="+7"/>
         <source>Layer name is empty.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Layer already exists.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Layer/LayerDialog.ui" line="+25"/>
@@ -8368,7 +8368,7 @@ Utilize a &amp;camada atual</translatorcomment>
 --file: pt.po--
 Nome da Camada:
 Nome da camada:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-8"/>
@@ -8388,20 +8388,20 @@ Nome da camada:</translatorcomment>
 Cor da &amp;Grade:
 Cor da Grade:
 Cor da &amp;Meta Grade:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Cor:</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Lineweight:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Linetype:</source>
         <translatorcomment>--ignored colon--
 --file: LinetypeSettings_pt.ts--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -8435,7 +8435,7 @@ Cor da &amp;Meta Grade:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--
 Lista de Camadas</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/LayerList/PreferencesPage.ui" line="+19"/>
@@ -8484,13 +8484,13 @@ Lista de Camadas</translatorcomment>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+60"/>
         <source>Arrow position</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Next vertex</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/LeaderInit.js" line="+2"/>
@@ -8498,13 +8498,13 @@ Lista de Camadas</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Conduza</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
@@ -8523,7 +8523,7 @@ Lista de Camadas</translatorcomment>
         <location filename="../scripts/Modify/Lengthen/Lengthen.js" line="+60"/>
         <source>Choose line or arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.ui" line="+17"/>
@@ -8531,13 +8531,13 @@ Lista de Camadas</translatorcomment>
         <translatorcomment>--exact match--
 --file: pt.po--
 Quantidade</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
@@ -8905,7 +8905,7 @@ nos resultados de busca:</translation>
         <translatorcomment>--google--
 Exibe o menu &quot;Multilinha&quot;
 Exibe o menu &quot;Linha&quot;</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -8914,7 +8914,7 @@ Exibe o menu &quot;Linha&quot;</translatorcomment>
 --file: qcad_pt.ts--
 &amp;Linha
 &amp;Linear</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line.ui" line="+17"/>
@@ -8946,7 +8946,7 @@ Exibe o menu &quot;Linha&quot;</translatorcomment>
 --file: Circle3P_pt.ts--
 Especifique o ponto inicial
 Especifique o primeiro ponto do polígono</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Primeiro ponto</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -8955,19 +8955,19 @@ Especifique o primeiro ponto do polígono</translatorcomment>
 Indique o próximo ponto
 Indique o próximo ponto ou [%1]
 Especifique o próximo ponto do polígono</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2PInit.js" line="+2"/>
         <source>Line from &amp;2 Points</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw single line or sequence of lines</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
@@ -8975,7 +8975,7 @@ Especifique o próximo ponto do polígono</translatorcomment>
         <translatorcomment>--google--
 Não é possível fechar a seqüência de linhas: Ainda não há suficientes entidades definidas.
 Não é possível fechar a seqüência de linhas: Ainda não há suficientes entidades definidas</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
@@ -8986,7 +8986,7 @@ Não é possível fechar a seqüência de linhas: Ainda não há suficientes ent
         <location line="+20"/>
         <source>Undo Previous Segment</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
@@ -9019,7 +9019,7 @@ Não é possível fechar a seqüência de linhas: Ainda não há suficientes ent
 Indique a dimensão da linha de posicionamento ou insira o ângulo:
 Indique a dimensão da linha de posicionamento ou insira o ângulo
 Indique a posição [ângulo/comprimento]</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Posição</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9027,38 +9027,38 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <translatorcomment>--google--
 Indique a posição [ângulo/comprimento]
 Indique a posição [%1]</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngleInit.js" line="+2"/>
         <source>Line from &amp;Angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw line at a given absolute angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngle.ui" line="+17"/>
         <source>&amp;Angle:</source>
         <translatorcomment>--ignored colon--
 --file: qcadactions_pt.ts--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Length:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">&amp;Comprimento:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Reference Point:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ponto de &amp;referência:</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -9068,7 +9068,7 @@ Indique a posição [%1]</translatorcomment>
 Indique o ângulo de início:
 Indique o ângulo de início
 Indique o ponto de início ou [Centro]</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Início</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -9078,7 +9078,7 @@ Indique o ponto de início ou [Centro]</translatorcomment>
 &amp;Meio
 Meio
 Salta aos pontos de meio</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Meio</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -9087,7 +9087,7 @@ Salta aos pontos de meio</translatorcomment>
 --file: pt.po--
 Indique o ponto de término do guia
 Indique o ângulo de fim ou [Ângulo/Comprimento da corda]</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Final</translation>
     </message>
 </context>
 <context>
@@ -9099,7 +9099,7 @@ Indique o ângulo de fim ou [Ângulo/Comprimento da corda]</translatorcomment>
 Selecione a primeira linha ou arco
 Selecione a primeira linha
 Especifique a primeira linha</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Primeira linha</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -9108,25 +9108,25 @@ Especifique a primeira linha</translatorcomment>
 --file: DimAngular_pt.ts--
 Selecione a segunda linha
 Selecione a segunda linha [comprimento/número]</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Segunda linha</translation>
     </message>
     <message>
         <location line="+71"/>
         <source>Lines don&apos;t intersect.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisectorInit.js" line="+2"/>
         <source>Angle &amp;Bisector</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw angle bisector, trisector, ...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisector.ui" line="+17"/>
@@ -9135,7 +9135,7 @@ Selecione a segunda linha [comprimento/número]</translatorcomment>
 --file: pt.po--
 Indique o comprimento da corda:
 Entre o Comprimento:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Comprimento:</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -9144,7 +9144,7 @@ Entre o Comprimento:</translatorcomment>
 --file: CircleConcentricThrough_pt.ts--
 Entre o número:
 Número:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Número:</translation>
     </message>
 </context>
 <context>
@@ -9262,13 +9262,13 @@ Número:</translatorcomment>
         <location filename="../scripts/Draw/Line/LineFreehand/LineFreehand.js" line="+55"/>
         <source>Press to start drawing</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Release to stop drawing</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineFreehand/LineFreehandInit.js" line="+2"/>
@@ -9276,14 +9276,14 @@ Número:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 À &amp;Mão Livre</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw freehand line</source>
         <translatorcomment>--google--
 Desenhar linhas a mão-livre</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9292,14 +9292,14 @@ Desenhar linhas a mão-livre</translatorcomment>
         <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Line</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw horizontal line</source>
         <translatorcomment>--google--
 Desenhe linhas horizontais</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontal.ui" line="+17"/>
@@ -9336,13 +9336,13 @@ Desenhe linhas horizontais</translatorcomment>
 --file: qcadactions_pt.ts--
 &amp;Ortogonal
 Restrinja &amp;Ortogonal</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw line orthogonal to base entity</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonal.ui" line="+17"/>
@@ -9404,13 +9404,13 @@ Restrinja &amp;Ortogonal</translatorcomment>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallelInit.js" line="+2"/>
         <source>Para&amp;llel (with Distance)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
@@ -9429,13 +9429,13 @@ Restrinja &amp;Ortogonal</translatorcomment>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThroughInit.js" line="+2"/>
         <source>Par&amp;allel (through Point)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThrough.ui" line="+17"/>
@@ -9444,7 +9444,7 @@ Restrinja &amp;Ortogonal</translatorcomment>
 --file: CircleConcentricThrough_pt.ts--
 Entre o número:
 Número:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Número:</translation>
     </message>
 </context>
 <context>
@@ -9498,7 +9498,7 @@ Número:</translatorcomment>
         <translatorcomment>--google--
 Especifique a posição do ponto de Zero Relativo
 Indique a posição do ponto de Zero Relativo</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngleInit.js" line="+2"/>
@@ -9506,20 +9506,20 @@ Indique a posição do ponto de Zero Relativo</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 Ângulo Re&amp;lativo</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw line with relative angle to base entity</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.ui" line="+17"/>
         <source>Relative Angle:</source>
         <translatorcomment>--ignored colon--
 --file: qcadactions_pt.ts--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+20"/>
@@ -9528,7 +9528,7 @@ Indique a posição do ponto de Zero Relativo</translatorcomment>
 --file: pt.po--
 Indique o comprimento da corda:
 Entre o Comprimento:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Comprimento:</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -9565,26 +9565,26 @@ Entre o Comprimento:</translatorcomment>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1.js" line="+65"/>
         <source>Choose start point of tangent</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Choose circle, arc or ellipse</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Escolha um círculo, arco ou elipse</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>No tangent possible.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+25"/>
         <location line="+33"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1Init.js" line="+2"/>
@@ -9597,7 +9597,7 @@ Entre o Comprimento:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 Desenhe tangente (ponto,círculo)</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9606,19 +9606,19 @@ Desenhe tangente (ponto,círculo)</translatorcomment>
         <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2.js" line="+71"/>
         <source>Choose first circle or arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose second circle or arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+142"/>
         <source>No tangent possible</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Nenhuma tangente é viável</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2Init.js" line="+2"/>
@@ -9631,7 +9631,7 @@ Desenhe tangente (ponto,círculo)</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 Desenhe tangente (círculo,círculo)</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9640,14 +9640,14 @@ Desenhe tangente (círculo,círculo)</translatorcomment>
         <location filename="../scripts/Draw/Line/LineVertical/LineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Line</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw vertical line</source>
         <translatorcomment>--google--
 Desenhe linhas verticais</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9672,20 +9672,20 @@ Desenhe linhas verticais</translatorcomment>
 --file: pt_PT.po--
 Preferências Gerais do Aplicativo
 [2000-206F] Pontuação Geral</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Geral</translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+2"/>
         <source>Linetype</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Tipo de Linha</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
         <source>Global Linetype Scale:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+35"/>
@@ -9716,7 +9716,7 @@ Preferências Gerais do Aplicativo
         <source>&amp;Lock Relative Zero</source>
         <translatorcomment>--google--
 &amp;(Des)Trave Zero Relativo</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -9783,14 +9783,14 @@ Preferências Gerais do Aplicativo
         <source>First point of symmetry axis</source>
         <translatorcomment>--google--
 Indique o primeiro ponto ou linha de espelhamento</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point of symmetry axis</source>
         <translatorcomment>--google--
 Indique o segundo ponto da linha de espelhamento</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
@@ -9798,7 +9798,7 @@ Indique o segundo ponto da linha de espelhamento</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Espelhe</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
@@ -10009,7 +10009,7 @@ Indique o segundo ponto da linha de espelhamento</translatorcomment>
         <location filename="../scripts/Modify/Modify.js" line="+99"/>
         <source>Modification Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10017,7 +10017,7 @@ Indique o segundo ponto da linha de espelhamento</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--
 &amp;Modifique</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">&amp;Modificar</translation>
     </message>
 </context>
 <context>
@@ -10031,13 +10031,13 @@ Indique o segundo ponto da linha de espelhamento</translatorcomment>
         <location line="+17"/>
         <source>Choose first entity</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose second entity</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10225,13 +10225,13 @@ Indique o segundo ponto da linha de espelhamento</translatorcomment>
         <location line="+58"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Your changes will be lost if you don&apos;t save them.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/File/NewFile/NewFileInit.js" line="+2"/>
@@ -10239,7 +10239,7 @@ Indique o segundo ponto da linha de espelhamento</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Novo</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10346,7 +10346,7 @@ Indique o segundo ponto da linha de espelhamento</translatorcomment>
         <translatorcomment>--exact match--
 --file: Compare_pt.ts--
 Abra desenho</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -10355,7 +10355,7 @@ Abra desenho</translatorcomment>
 --file: pt.po--
 Todos os Ficheiros (*.*)
 Todos os tipos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Cannot open file
@@ -10377,13 +10377,13 @@ Todos os tipos</translatorcomment>
 --file: qt_pt.ts--
 &amp;Abra IDE
 &amp;Abra...</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Open an existing drawing</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10404,7 +10404,7 @@ Todos os tipos</translatorcomment>
 Imprimindo...
 Imprimindo
 Impressão completa</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-2"/>
@@ -10424,7 +10424,7 @@ Impressão completa</translatorcomment>
 Página:
 Página
 Centralize à página</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
@@ -10434,13 +10434,13 @@ Centralize à página</translatorcomment>
 Customize..
 Personalizado
 Não entidades de dimensão com posições etiqueta personalizada selecionada.</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Personalizado</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+19"/>
         <source>Page Orientation</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
@@ -10449,7 +10449,7 @@ Não entidades de dimensão com posições etiqueta personalizada selecionada.</
 --file: qt_pt.ts--
 Retrato
 _Retrato</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10458,7 +10458,7 @@ _Retrato</translatorcomment>
 --file: qt_pt.ts--
 &amp;Paisagem
 Paisagem</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -10468,13 +10468,13 @@ Paisagem</translatorcomment>
 &amp;Papel
 Papel
 Formato do Papel</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Paper size:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10482,7 +10482,7 @@ Formato do Papel</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Largura do Papel:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
@@ -10490,38 +10490,38 @@ Largura do Papel:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Altura do Papel:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+74"/>
         <source>Viewport</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Âncora de Visão</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Scale:</source>
         <translatorcomment>--ignored colon--
 --file: qcadactions_pt.ts--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Offset X:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Offset Y:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Zero-Point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+25"/>
@@ -10530,7 +10530,7 @@ Altura do Papel:</translatorcomment>
 --file: pt.po--
 [2300-23FF] Miscelânea Técnica
 [2600-26FF] Miscelânea de Símbolos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
@@ -10551,7 +10551,7 @@ Altura do Papel:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 Close com &amp;Garimpagem</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10562,7 +10562,7 @@ Close com &amp;Garimpagem</translatorcomment>
         <translatorcomment>--exact match--
 --file: pt.po--
 _Rotação</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Rotação:</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.js" line="+52"/>
@@ -10582,7 +10582,7 @@ _Rotação</translatorcomment>
 Indique a dimensão da linha de posicionamento ou insira o ângulo:
 Indique a dimensão da linha de posicionamento ou insira o ângulo
 Indique a posição [ângulo/comprimento]</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Posição</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PasteInit.js" line="+2"/>
@@ -10590,7 +10590,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
 Co&amp;lar</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.ui" line="+126"/>
@@ -10599,7 +10599,7 @@ Co&amp;lar</translatorcomment>
 --file: pt.po--
 Ampliar
 Escala de tipo de linha global:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Escala:</translation>
     </message>
     <message>
         <location line="+88"/>
@@ -10607,7 +10607,7 @@ Escala de tipo de linha global:</translatorcomment>
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--
 Inverter entidades colada&lt;br&gt;horizontalmente</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Inverta as entidades coladas&lt;br&gt;horizontalmente</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10615,7 +10615,7 @@ Inverter entidades colada&lt;br&gt;horizontalmente</translatorcomment>
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--
 Inverter entidades colada&lt;br&gt;verticalmente</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Inverta as entidades coladas&lt;br&gt;verticalmente</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -10623,7 +10623,7 @@ Inverter entidades colada&lt;br&gt;verticalmente</translatorcomment>
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--
 Colar todas as entidades&lt;br&gt;para a camada atual,&lt;br&gt;em vez da camada original</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Colar todas as entidades&lt;br&gt;para a camada atual,&lt;br&gt;em vez da camada original</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10634,7 +10634,7 @@ Para Camada Atual
 Para camada atual
 Utilize a camada atual
 Colar todas as entidades&lt;br&gt;para a camada atual,&lt;br&gt;em vez da camada original</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Para camada atual</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -10642,7 +10642,7 @@ Colar todas as entidades&lt;br&gt;para a camada atual,&lt;br&gt;em vez da camada
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--
 Substituir camadas&lt;br&gt;existentes no desenho com&lt;br&gt;camadas da área de transferência</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Substitua camadas existentes&lt;br&gt;no desenho por&lt;br&gt;camadas da área de transferência</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10650,7 +10650,7 @@ Substituir camadas&lt;br&gt;existentes no desenho com&lt;br&gt;camadas da área 
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--
 Substituir camadas</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Substitua camadas</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -10658,7 +10658,7 @@ Substituir camadas</translatorcomment>
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--
 Sobrescrever blocos existentes&lt;br&gt;no desenho com blocos&lt;br&gt;da área de transferência</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Substitua blocos existentes&lt;br&gt;no desenho por blocos&lt;br&gt;da área de transferência</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10666,7 +10666,7 @@ Sobrescrever blocos existentes&lt;br&gt;no desenho com blocos&lt;br&gt;da área 
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--
 Sobrescrever blocos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Substitua blocos</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PreferencesPage.ui" line="+17"/>
@@ -10697,13 +10697,13 @@ Sobrescrever blocos</translatorcomment>
 Abrindo o arquivo recente...
 Abrindo o arquivo recente
 Abertura abortada</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+64"/>
         <source>Reset to Defaults</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10720,7 +10720,7 @@ Abertura abortada</translatorcomment>
         <location filename="../scripts/Draw/Point/Point.js" line="+71"/>
         <source>Point Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10729,7 +10729,7 @@ Abertura abortada</translatorcomment>
 --file: qcad_pt.ts--
 &amp;Ponto
 Centro, &amp;Ponto</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10742,19 +10742,19 @@ Centro, &amp;Ponto</translatorcomment>
 Indique a dimensão da linha de posicionamento ou insira o ângulo:
 Indique a dimensão da linha de posicionamento ou insira o ângulo
 Indique a posição [ângulo/comprimento]</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Posição</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Point/Point1P/Point1PInit.js" line="+2"/>
         <source>Single &amp;Point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw single point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10824,7 +10824,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <source>Polyline Tools</source>
         <translatorcomment>--google--
 Exibe o menu &quot;Multilinha&quot;</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10832,7 +10832,7 @@ Exibe o menu &quot;Multilinha&quot;</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--
 &amp;Multilinha</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10847,7 +10847,7 @@ Exibe o menu &quot;Multilinha&quot;</translatorcomment>
 &amp;Preferências
 Preferências
 Preferências do &amp;Aplicativo</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Preferências</translation>
     </message>
     <message>
         <location line="-74"/>
@@ -10857,25 +10857,25 @@ Preferências do &amp;Aplicativo</translatorcomment>
 Reduz o ruído em no(s) bitmap(s) seleccionado(s) usando um filtro de
 eliminação de picos de ruído
 Administrar efeitos de filtro SVG</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Filtro</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Expand Tree</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Restore to Default Values</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10886,7 +10886,7 @@ Administrar efeitos de filtro SVG</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Visão Prévia</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10906,13 +10906,13 @@ Administrar efeitos de filtro SVG</translatorcomment>
 --file: qcadguiqt_pt.ts--
 &amp;Imprima...
 &amp;Imprima</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Print current drawing</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10934,7 +10934,7 @@ Administrar efeitos de filtro SVG</translatorcomment>
         <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+242"/>
         <source>Drag to move paper</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10944,25 +10944,25 @@ Administrar efeitos de filtro SVG</translatorcomment>
 Concluído
 Cópias de segurança de desenhos não salvos foram feitas para os seguintes
 lugares:\</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Concluído</translation>
     </message>
     <message>
         <location line="+431"/>
         <source>Export to PDF</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Exporting to %1...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Export complete: %1</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
@@ -10975,19 +10975,19 @@ lugares:\</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Prévia de Impressão</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Preview how current drawing would be printed</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreview.ui" line="+17"/>
         <source>Close Print Preview</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17"/>
@@ -10997,7 +10997,7 @@ lugares:\</translatorcomment>
 &amp;Imprima...
 Imprima...
 Im_primir...</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17"/>
@@ -11011,25 +11011,25 @@ Im_primir...</translatorcomment>
 --file: pt.po--
 Ampliar
 Escala de tipo de linha global:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Escala:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Drawing Scale</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Escala de Desenho</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Move Paper Position</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Auto fit drawing to page(s)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+76"/>
@@ -11040,7 +11040,7 @@ Escala de tipo de linha global:</translatorcomment>
         <location line="-65"/>
         <source>Auto Center</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+18"/>
@@ -11049,7 +11049,7 @@ Escala de tipo de linha global:</translatorcomment>
 --file: qt_pt.ts--
 Retrato
 _Retrato</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+20"/>
@@ -11058,32 +11058,32 @@ _Retrato</translatorcomment>
 --file: qt_pt.ts--
 &amp;Paisagem
 Paisagem</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Full Color Mode</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Grayscale Mode</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Black / White Mode</source>
         <translatorcomment>--google--
 Comute modos Branco / Preto</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Show Paper Borders</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+20"/>
@@ -11091,13 +11091,13 @@ Comute modos Branco / Preto</translatorcomment>
         <translatorcomment>--ignored case--
 --file: MultiPageSettings_pt.ts--
 Cultura marcas de impressão</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Show More Options</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11144,7 +11144,7 @@ Cultura marcas de impressão</translatorcomment>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1466"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">*VARIA*</translation>
     </message>
     <message>
         <location line="-1273"/>
@@ -11153,13 +11153,13 @@ Cultura marcas de impressão</translatorcomment>
 --file: pt.po--
 Desenho guardado: %1
 Documento carregado: %1</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">:</translation>
     </message>
     <message>
         <location line="+151"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Nenhuma Seleção</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -11179,7 +11179,7 @@ Documento carregado: %1</translatorcomment>
 Customize..
 Personalizado
 Não entidades de dimensão com posições etiqueta personalizada selecionada.</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Personalizado</translation>
     </message>
     <message>
         <location line="+197"/>
@@ -11187,7 +11187,7 @@ Não entidades de dimensão com posições etiqueta personalizada selecionada.</
         <translatorcomment>--google--
 Indentar nó
 Trocar para a próxima camada</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+79"/>
@@ -11202,7 +11202,7 @@ Trocar para a próxima camada</translatorcomment>
 Fecha &amp;Todos
 Fecha Todos
 Fecha todas as janelas</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Todos</translation>
     </message>
     <message>
         <location line="+69"/>
@@ -11232,13 +11232,13 @@ Fecha todas as janelas</translatorcomment>
 &amp;Auto
 Auto
 Salta automaticamente</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Auto</translation>
     </message>
     <message>
         <location line="+141"/>
         <source>Use auto measurement</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+39"/>
@@ -11247,7 +11247,7 @@ Salta automaticamente</translatorcomment>
 --file: pt_PT.po--
 Sim
 Ontem</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Sim</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -11263,7 +11263,7 @@ Por favor verifique as permissões
 Não pôde salvar o arquivo
 %1
 Por favor verifique as permissões.</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Não</translation>
     </message>
     <message>
         <location line="+361"/>
@@ -11273,7 +11273,7 @@ Por favor verifique as permissões.</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--
 Editor de Propriedades</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40"/>
@@ -11281,7 +11281,7 @@ Editor de Propriedades</translatorcomment>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Selecção:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+31"/>
@@ -11308,7 +11308,7 @@ Selecção:</translatorcomment>
         <source>Handle:</source>
         <translatorcomment>--ignored colon--
 --file: pt.po--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+17"/>
@@ -11347,7 +11347,7 @@ Selecção:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 &amp;Encerre</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11369,13 +11369,13 @@ Selecção:</translatorcomment>
         <location filename="../scripts/File/RecentFiles/RecentFilesInit.js" line="+59"/>
         <source>&amp;Clear List</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFiles.js" line="+35"/>
         <source>Recent Files</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -11390,7 +11390,7 @@ Selecção:</translatorcomment>
         <location filename="../scripts/File/RecentFiles/RecentFilesInit.js" line="+10"/>
         <source>Open &amp;Recent</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/File/RecentFiles/PreferencesPage.ui" line="+17"/>
@@ -11406,7 +11406,7 @@ Selecção:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
 &amp;Refazer</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11425,13 +11425,13 @@ Selecção:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Remova Bloco</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delete selected block</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11448,7 +11448,7 @@ Selecção:</translatorcomment>
         <location filename="../scripts/Block/RenameBlock/RenameBlockInit.js" line="+2"/>
         <source>Re&amp;name Block</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11457,7 +11457,7 @@ Selecção:</translatorcomment>
         <location filename="../scripts/Help/ReportBug/ReportBugInit.js" line="+2"/>
         <source>Report &amp;Bug</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11477,7 +11477,7 @@ Selecção:</translatorcomment>
 --file: pt_PT.po--
 Repor
 Redefinir posição do rótulo de %1 dimensão(s).</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -11547,7 +11547,7 @@ Redefinir posição do rótulo de %1 dimensão(s).</translatorcomment>
         <location filename="../scripts/Modify/Reverse/ReverseInit.js" line="+2"/>
         <source>&amp;Reverse</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11568,7 +11568,7 @@ Redefinir posição do rótulo de %1 dimensão(s).</translatorcomment>
         <translatorcomment>--google--
 Salta aos pontos de centro
 Fazer espiral com bitmap(s) seleccionado(s) em redor de um ponto central</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11577,7 +11577,7 @@ Fazer espiral com bitmap(s) seleccionado(s) em redor de um ponto central</transl
 --file: IsoProject_pt.ts--
 Indique o ponto de referência
 Copie entidade com ponto de referência  para o clipboard</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ponto de referência</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -11586,7 +11586,7 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
 --file: IsoProject_pt.ts--
 Indique o ponto de destino
 Ponto de destino</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ponto de destino</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
@@ -11595,7 +11595,7 @@ Ponto de destino</translatorcomment>
 --file: qcadactions_pt.ts--
 &amp;Rotacione
 &amp;Girado (linear)</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/PreferencesPage.ui" line="+17"/>
@@ -11634,13 +11634,13 @@ Ponto de destino</translatorcomment>
         <location filename="../scripts/Modify/Rotate2/Rotate2.js" line="+67"/>
         <source>Center of primary rotation</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Center of secondary rotation</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Init.js" line="+2"/>
@@ -11648,7 +11648,7 @@ Ponto de destino</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 Rotacione &amp;Duas</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2.ui" line="+17"/>
@@ -11726,7 +11726,7 @@ Rotacione &amp;Duas</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Opções Mova e Rotacione
 Opções de Rotacione</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11735,7 +11735,7 @@ Opções de Rotacione</translatorcomment>
 --file: Mirror_pt.ts--
 Número de cópias
 Entre o número de cópias</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Número de Cópias</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -11744,7 +11744,7 @@ Entre o número de cópias</translatorcomment>
 --file: Mirror_pt.ts--
 &amp;Apague o Original
 &amp;Apague o original</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">&amp;Elimine o original</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11753,7 +11753,7 @@ Entre o número de cópias</translatorcomment>
 --file: Mirror_pt.ts--
 &amp;Mantenha o Original
 &amp;Mantenha o original</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">&amp;Mantenha o original</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -11761,7 +11761,7 @@ Entre o número de cópias</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Cópias &amp;Múltiplas</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Cópias &amp;múltiplas</translation>
     </message>
     <message>
         <location line="+94"/>
@@ -11769,7 +11769,7 @@ Cópias &amp;Múltiplas</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 &amp;Ângulo (a):</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ângulo (&amp;a):</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -11782,7 +11782,7 @@ Cópias &amp;Múltiplas</translatorcomment>
         <translatorcomment>--exact match--
 --file: Mirror_pt.ts--
 Use camada e &amp;atributos atual</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11791,7 +11791,7 @@ Use camada e &amp;atributos atual</translatorcomment>
         <location filename="../scripts/Modify/Round/Round.js" line="+58"/>
         <source>The two entities cannot be rounded.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+43"/>
@@ -11799,7 +11799,7 @@ Use camada e &amp;atributos atual</translatorcomment>
         <translatorcomment>--exact match--
 --file: Bevel_pt.ts--
 Primeira entidade não pode ser aparada.</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">A primeira entidade não pode ser aparada.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -11807,7 +11807,7 @@ Primeira entidade não pode ser aparada.</translatorcomment>
         <translatorcomment>--exact match--
 --file: Bevel_pt.ts--
 Segunda entidade não pode ser aparada.</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">A segunda entidade não pode ser aparada.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
@@ -11815,7 +11815,7 @@ Segunda entidade não pode ser aparada.</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 A&amp;rredonde</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
@@ -11882,7 +11882,7 @@ A&amp;rredonde</translatorcomment>
         <location filename="../scripts/File/Save/Save.js" line="+78"/>
         <source>Overwrite File?</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
@@ -11961,7 +11961,7 @@ A&amp;rredonde</translatorcomment>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 A guardar...</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Saving to file format version &apos;%1&apos;.</source>
@@ -11980,7 +11980,7 @@ A guardar...</translatorcomment>
         <location line="+7"/>
         <source>File %1 has not been saved.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/File/Save/SaveInit.js" line="+2"/>
@@ -11988,7 +11988,7 @@ A guardar...</translatorcomment>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
 &amp;Gravar</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12027,7 +12027,7 @@ A guardar...</translatorcomment>
 --file: pt.po--
 &amp;Formato:
 Formato:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Formato:</translation>
     </message>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAsInit.js" line="+2"/>
@@ -12035,7 +12035,7 @@ Formato:</translatorcomment>
         <translatorcomment>--ignored case--
 --file: qcadactions_pt.ts--
 Salve &amp;Como...</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/File/SaveAs/PreferencesPage.ui" line="+17"/>
@@ -12089,7 +12089,7 @@ Salve &amp;Como...</translatorcomment>
         <location line="+32"/>
         <source>Focus point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+11"/>
@@ -12098,7 +12098,7 @@ Salve &amp;Como...</translatorcomment>
 --file: IsoProject_pt.ts--
 Indique o ponto de referência
 Copie entidade com ponto de referência  para o clipboard</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ponto de referência</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -12107,7 +12107,7 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
 --file: IsoProject_pt.ts--
 Indique o ponto de destino
 Ponto de destino</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ponto de destino</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -12117,7 +12117,7 @@ Ponto de destino</translatorcomment>
 &amp;Escala
 &amp;Escalone
 &amp;Escala:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
@@ -12250,7 +12250,7 @@ Ponto de destino</translatorcomment>
         <source>Selection Tools</source>
         <translatorcomment>--google--
 Exibe o menu &quot;Seleção&quot;</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
@@ -12264,7 +12264,7 @@ Exibe o menu &quot;Seleção&quot;</translatorcomment>
 --file: qcad_pt.ts--
 &amp;Selecione
 &amp;Ponteiro de Seleção</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">&amp;Selecione</translation>
     </message>
 </context>
 <context>
@@ -12359,7 +12359,7 @@ Exibe o menu &quot;Seleção&quot;</translatorcomment>
         <location filename="../scripts/Select/SelectContour/SelectContour.js" line="+53"/>
         <source>Choose entity of contour</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
@@ -12367,13 +12367,13 @@ Exibe o menu &quot;Seleção&quot;</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 (Des)Selecione &amp;Contorno</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select connected entities</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.ui" line="+17"/>
@@ -12382,31 +12382,31 @@ Exibe o menu &quot;Seleção&quot;</translatorcomment>
 --file: pt.po--
 Modo de cor:
 Modo:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Modo:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Substitua a seleção atual</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Adicione à seleção atual</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Subtraia da seleção atual</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Interseção com a seleção atual</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -12415,7 +12415,7 @@ Modo:</translatorcomment>
 --file: pt.po--
 Tolerância:
 Tolerância à distância:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Tolerância:</translation>
     </message>
 </context>
 <context>
@@ -12427,7 +12427,7 @@ Tolerância à distância:</translatorcomment>
 --file: InfoDistancePP_pt.ts--
 Especifique o ponto inicial
 Especifique o primeiro ponto do polígono</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Primeiro ponto</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12436,19 +12436,19 @@ Especifique o primeiro ponto do polígono</translatorcomment>
 --file: InfoDistancePP_pt.ts--
 Indique o segundo ponto
 Especifique o segundo ponto de distância</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Segundo ponto</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.ui" line="+17"/>
@@ -12457,7 +12457,7 @@ Especifique o segundo ponto de distância</translatorcomment>
 --file: pt.po--
 Modo de cor:
 Modo:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Modo:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12465,7 +12465,7 @@ Modo:</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_pt.ts--
 Substituir a seleção atual</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Substitua a seleção atual</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -12473,7 +12473,7 @@ Substituir a seleção atual</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_pt.ts--
 Adicionar à seleção atual</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Adicione à seleção atual</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -12481,7 +12481,7 @@ Adicionar à seleção atual</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_pt.ts--
 Subtrair da seleção atual</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Subtraia da seleção atual</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -12489,7 +12489,7 @@ Subtrair da seleção atual</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_pt.ts--
 Interseção com a seleção atual</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Interseção com a seleção atual</translation>
     </message>
 </context>
 <context>
@@ -12570,7 +12570,7 @@ Interseção com a seleção atual</translatorcomment>
 --file: Stretch_pt.ts--
 Indique o primeiro vértice
 Primeira ponto de canto</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Primeiro vértice</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -12579,7 +12579,7 @@ Primeira ponto de canto</translatorcomment>
 --file: Stretch_pt.ts--
 Indique o segundo vértice
 Segundo ponto de canto</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Segundo vértice</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
@@ -12590,7 +12590,7 @@ Segundo ponto de canto</translatorcomment>
         <location line="+4"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
@@ -12599,7 +12599,7 @@ Segundo ponto de canto</translatorcomment>
 --file: pt.po--
 Modo de cor:
 Modo:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Modo:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12607,7 +12607,7 @@ Modo:</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_pt.ts--
 Substituir a seleção atual</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Substitua a seleção atual</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -12615,7 +12615,7 @@ Substituir a seleção atual</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_pt.ts--
 Adicionar à seleção atual</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Adicione à seleção atual</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -12623,7 +12623,7 @@ Adicionar à seleção atual</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_pt.ts--
 Subtrair da seleção atual</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Subtraia da seleção atual</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -12631,13 +12631,13 @@ Subtrair da seleção atual</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_pt.ts--
 Interseção com a seleção atual</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Interseção com a seleção atual</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Cross Selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12785,13 +12785,13 @@ Interseção com a seleção atual</translatorcomment>
 Indique a dimensão da linha de posicionamento ou insira o ângulo:
 Indique a dimensão da linha de posicionamento ou insira o ângulo
 Indique a posição [ângulo/comprimento]</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Posição</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SetRelativeZero/SetRelativeZeroInit.js" line="+2"/>
         <source>Set &amp;Relative Zero</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12841,13 +12841,13 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-22"/>
         <source>No circle possible.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+29"/>
@@ -12858,13 +12858,13 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <location line="+19"/>
         <source>Invalid number of segments: %1.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Invalid ellipse major / minor: %1 / %2.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13153,7 +13153,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <location filename="../scripts/Layer/ShowActiveLayer/ShowActiveLayerInit.js" line="+2"/>
         <source>Show &amp;Only Active</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13178,7 +13178,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <location filename="../scripts/Help/ShowReadme/ShowReadmeInit.js" line="+2"/>
         <source>Show &amp;Readme</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadme.js" line="+46"/>
@@ -13200,7 +13200,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <location filename="../scripts/Snap/Snap.js" line="+57"/>
         <source>Snap Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ferramentas de Salto</translation>
     </message>
     <message>
         <source>Show snap tools</source>
@@ -13212,7 +13212,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--
 &amp;Salto</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13224,7 +13224,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
 --file: qcadactions_pt.ts--
 &amp;Automático
 &amp;Close Automático</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAuto.js" line="+34"/>
@@ -13246,7 +13246,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
 --file: qcadguiqt_pt.ts--
 &amp;Centro, ponto, ângulos
 &amp;Centro</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13255,7 +13255,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.js" line="+87"/>
         <source>Set coordinate</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
@@ -13263,14 +13263,14 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 &amp;Coordenadas</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+17"/>
         <source>&amp;x:</source>
         <translatorcomment>--google--
 Fator &amp;x:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
@@ -13280,14 +13280,14 @@ Fator &amp;x:</translatorcomment>
 X Coordenada
 Coordenada X:
 Coordenada X da origem da grelha</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;y:</source>
         <translatorcomment>--google--
 Fator &amp;y:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
@@ -13297,19 +13297,19 @@ Fator &amp;y:</translatorcomment>
 Y Coordenada
 Coordenada Y:
 Coordenada Y da origem da grelha</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Tick for Relative Coordinate</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Relati&amp;ve</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13318,13 +13318,13 @@ Coordenada Y da origem da grelha</translatorcomment>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
         <source>&amp;Polar Coordinate</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+17"/>
         <source>&amp;r:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
@@ -13332,13 +13332,13 @@ Coordenada Y da origem da grelha</translatorcomment>
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pt.ts--
 Raio (distância)</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;&lt;:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
@@ -13348,19 +13348,19 @@ Raio (distância)</translatorcomment>
 Entre o ângulo:
 Entre o ângulo
 Insira o ângulo da linha de dimensão:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Tick for Relative Coordinate</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Relati&amp;ve</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13372,13 +13372,13 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
 Distância de &amp;Ponto a Ponto
 Distância de &amp;Entidade a Ponto
 &amp;Distância à Extremidade</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap distance:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Distância do salto:</translation>
     </message>
     <message>
         <source>Distance</source>
@@ -13443,7 +13443,7 @@ Distância de &amp;Entidade a Ponto
         <source>&amp;End</source>
         <translatorcomment>--google--
 &amp;Extremidades</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13455,7 +13455,7 @@ Distância de &amp;Entidade a Ponto
 --file: qcadguiqt_pt.ts--
 &amp;Linha à mão livre
 &amp;Livre</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13467,7 +13467,7 @@ Distância de &amp;Entidade a Ponto
 --file: qcadguiqt_pt.ts--
 &amp;Grade
 Linhas de &amp;grade sólidas</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13478,7 +13478,7 @@ Linhas de &amp;grade sólidas</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 &amp;Intersecção</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13487,7 +13487,7 @@ Linhas de &amp;grade sólidas</translatorcomment>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js" line="+47"/>
@@ -13523,7 +13523,7 @@ Linhas de &amp;grade sólidas</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 &amp;Meio</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13532,7 +13532,7 @@ Linhas de &amp;grade sólidas</translatorcomment>
         <location filename="../scripts/Snap/SnapMiddleManual/SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13543,7 +13543,7 @@ Linhas de &amp;grade sólidas</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 &amp;Na Entidade</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13552,7 +13552,7 @@ Linhas de &amp;grade sólidas</translatorcomment>
         <location filename="../scripts/Snap/SnapPerpendicular/SnapPerpendicularInit.js" line="+2"/>
         <source>&amp;Perpendicular</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13564,7 +13564,7 @@ Linhas de &amp;grade sólidas</translatorcomment>
 --file: qcadactions_pt.ts--
 &amp;Referência
 Ponto de &amp;referência:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13605,7 +13605,7 @@ Ponto de &amp;referência:</translatorcomment>
         <location filename="../scripts/Draw/Spline/Spline.js" line="+72"/>
         <source>Spline Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+27"/>
@@ -13614,7 +13614,7 @@ Ponto de &amp;referência:</translatorcomment>
 --file: qcadactions_pt.ts--
 C&amp;haveta
 &amp;Chaveta</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13624,7 +13624,7 @@ C&amp;haveta
         <source>First control point</source>
         <translatorcomment>--google--
 Indique o primeiro ponto de controle</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>
@@ -13632,19 +13632,19 @@ Indique o primeiro ponto de controle</translatorcomment>
         <translatorcomment>--google--
 Especifique o próximo ponto de controle ou [%1]
 Especifique o próximo ponto de controle</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
         <source>&amp;Spline (Control Points)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw spline from control points</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui" line="+23"/>
@@ -13652,7 +13652,7 @@ Especifique o próximo ponto de controle</translatorcomment>
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pt.ts--
 Desfaça o último ponto de controle</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -13660,20 +13660,20 @@ Desfaça o último ponto de controle</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Grau:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Choose Spline Degree</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Tick for Closed Spline</source>
         <translatorcomment>--google--
 Assinale em chavetas fechadas</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
@@ -13683,7 +13683,7 @@ Assinale em chavetas fechadas</translatorcomment>
 Não é possível apensar a uma multilinha fechada.
 Não é possível apensar a uma multilinha fechada
 Fe_char</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13772,7 +13772,7 @@ Fe_char</translatorcomment>
 --file: LineRectangle_pt.ts--
 Indique o primeiro vértice
 Primeira ponto de canto</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Primeiro vértice</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -13781,7 +13781,7 @@ Primeira ponto de canto</translatorcomment>
 --file: LineRectangle_pt.ts--
 Indique o segundo vértice
 Segundo ponto de canto</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Segundo vértice</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -13790,7 +13790,7 @@ Segundo ponto de canto</translatorcomment>
 --file: IsoProject_pt.ts--
 Indique o ponto de referência
 Copie entidade com ponto de referência  para o clipboard</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ponto de referência</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -13799,7 +13799,7 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
 --file: IsoProject_pt.ts--
 Indique o ponto de destino
 Ponto de destino</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ponto de destino</translation>
     </message>
     <message>
         <location line="+141"/>
@@ -13817,7 +13817,7 @@ Ponto de destino</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 Es&amp;tique</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13831,7 +13831,7 @@ Es&amp;tique</translatorcomment>
         <location line="+33"/>
         <source>Import SVG</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13840,7 +13840,7 @@ Es&amp;tique</translatorcomment>
 --file: SvgExport_pt.ts--
 Arquivos SVG (*.svg)
 Arquivos SVG</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Arquivos SVG</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13849,13 +13849,13 @@ Arquivos SVG</translatorcomment>
 --file: pt.po--
 Todos os Ficheiros (*.*)
 Todos os tipos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportInit.js" line="+2"/>
         <source>SVG &amp;Import...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="-34"/>
@@ -13924,7 +13924,7 @@ Todos os tipos</translatorcomment>
 Indique a dimensão da linha de posicionamento ou insira o ângulo:
 Indique a dimensão da linha de posicionamento ou insira o ângulo
 Indique a posição [ângulo/comprimento]</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Posição</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextInit.js" line="+2"/>
@@ -13932,21 +13932,21 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Texto</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw text</source>
         <translatorcomment>--google--
 Desenhe entidades de texto</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Desenhe um texto</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/Text.ui" line="+17"/>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="+17"/>
         <source>Contents:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+20"/>
@@ -13956,7 +13956,7 @@ Desenhe entidades de texto</translatorcomment>
 --file: pt.po--
 Altura:
 &amp;Altura do Papel:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Altura:</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -13965,7 +13965,7 @@ Altura:
 --file: pt.po--
 Entre o ângulo:
 Insira o ângulo da linha de dimensão:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ângulo:</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+17"/>
@@ -14076,7 +14076,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
 &amp;Desfazer</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -14084,7 +14084,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
 &amp;Refazer</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -14093,7 +14093,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
 --file: qt_pt.ts--
 Cor&amp;tar
 Cor&amp;te com referência </translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -14102,7 +14102,7 @@ Cor&amp;te com referência </translatorcomment>
 --file: qt_pt.ts--
 &amp;Copiar
 &amp;Copie com referência</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -14110,19 +14110,19 @@ Cor&amp;te com referência </translatorcomment>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
 Co&amp;lar</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Bold</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Italic</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>
@@ -14133,32 +14133,32 @@ Co&amp;lar</translatorcomment>
         <location line="+9"/>
         <source>&amp;Subscript</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Superscript</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+18"/>
         <source>&amp;Color...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Special Characters...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+303"/>
         <source>Others...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pt.ts--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+135"/>
@@ -14167,13 +14167,13 @@ Co&amp;lar</translatorcomment>
 --file: SplineControlPoints_pt.ts--
 Graus Decimais
 Grau:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus-Minus</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14182,19 +14182,19 @@ Grau:</translatorcomment>
 --file: Dimension_pt.ts--
 Comute o símbolo de diâmetro
 Diâmetro (ø)</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Multiplication</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14203,7 +14203,7 @@ Diâmetro (ø)</translatorcomment>
 --file: pt.po--
 Divisão (÷)
 Divisão</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14212,7 +14212,7 @@ Divisão</translatorcomment>
 --file: Dimension_pt.ts--
 Delta
 Delta X</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14221,7 +14221,7 @@ Delta X</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Copie entidades para a área de transferência
 Copie entidade com ponto de referência  para o clipboard</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14230,37 +14230,37 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
 --file: pt.po--
 Identidade
 identidade</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Not equal</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Ohm</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ohm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Omega</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Squared</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14275,13 +14275,13 @@ identidade</translatorcomment>
 Insira o texto de dimensão:
 Insira o texto de dimensão
 &amp;Texto</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Texto</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Main Font</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+24"/>
@@ -14290,13 +14290,13 @@ Insira o texto de dimensão
 --file: pt.po--
 Altura:
 &amp;Altura do Papel:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Altura:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Text Height in Drawing Units</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+18"/>
@@ -14306,7 +14306,7 @@ Altura:
 --file: pt_PT.po--
 Tornar negrito
 Al_ternar</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-261"/>
@@ -14316,7 +14316,7 @@ Al_ternar</translatorcomment>
 --file: pt_PT.po--
 [10300-1032F] Itálico Antigo
 Itálico</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-257"/>
@@ -14330,13 +14330,13 @@ Itálico</translatorcomment>
         <source>Rich Text</source>
         <translatorcomment>--google--
 Área de texto rico</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-24"/>
         <source>Text fits on one line and has no formatting</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+60"/>
@@ -14346,7 +14346,7 @@ Itálico</translatorcomment>
 Cortar
 Corte entidades para a área de transferência
 Corte com referência </translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -14356,7 +14356,7 @@ Corte com referência </translatorcomment>
 &amp;Copiar
 Copiar
 &amp;Copie com referência</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Copie</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -14366,26 +14366,26 @@ Copiar
 Co&amp;lar
 Colar
 Cole o conteúdo da área de transferência</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Colar</translation>
     </message>
     <message>
         <location line="+170"/>
         <source>Ctrl+B</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Ctrl+I</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+50"/>
         <source>Insert Symbol...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pt.ts--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+43"/>
@@ -14394,7 +14394,7 @@ Cole o conteúdo da área de transferência</translatorcomment>
 --file: pt_PT.po--
 Sem recursos
 Fonte papel:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -14420,13 +14420,13 @@ Fonte papel:</translatorcomment>
         <location line="+42"/>
         <source>Text Geometry</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Line spacing factor:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
@@ -14434,7 +14434,7 @@ Fonte papel:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
 Fator de Espaçamento de Linhas</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
@@ -14443,7 +14443,7 @@ Fator de Espaçamento de Linhas</translatorcomment>
 --file: pt.po--
 Entre o ângulo:
 Insira o ângulo da linha de dimensão:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ângulo:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -14453,7 +14453,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
 Entre o ângulo de rotação:
 Entre o ângulo de rotação
 Ângulo de rotação</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+25"/>
@@ -14462,7 +14462,7 @@ Entre o ângulo de rotação
 --file: pt_PT.po--
 Alinhamento
 Alinhamento|Vertical</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+79"/>
@@ -14470,7 +14470,7 @@ Alinhamento|Vertical</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Centro Acima</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+145"/>
@@ -14485,7 +14485,7 @@ Centro Acima</translatorcomment>
 Esquerda acima
 Em cima à esquerda
 Cada objecto seleccionado tem um marca de diamante no canto esquerdo superio</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Esquerda Superior</translation>
     </message>
     <message>
         <location line="+206"/>
@@ -14504,7 +14504,7 @@ Cada objecto seleccionado tem um marca de diamante no canto esquerdo superio</tr
 --file: LineRectangleSize_pt.ts--
 Direita acima
 Em cima à direita</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Direita Superior</translation>
     </message>
     <message>
         <location line="+203"/>
@@ -14512,7 +14512,7 @@ Em cima à direita</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Centro Abaixo</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-145"/>
@@ -14520,7 +14520,7 @@ Centro Abaixo</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Esquerda ao Meio</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-29"/>
@@ -14528,7 +14528,7 @@ Esquerda ao Meio</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Centro ao Meio</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-58"/>
@@ -14536,7 +14536,7 @@ Centro ao Meio</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Direita ao Meio</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+203"/>
@@ -14545,7 +14545,7 @@ Direita ao Meio</translatorcomment>
 --file: LineRectangleSize_pt.ts--
 Esquerda abaixo
 Em baixo à esquerda</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Esquerda Inferior</translation>
     </message>
     <message>
         <location line="+58"/>
@@ -14554,7 +14554,7 @@ Em baixo à esquerda</translatorcomment>
 --file: LineRectangleSize_pt.ts--
 Direita abaixo
 Em baixo à direita</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Direita Inferior</translation>
     </message>
     <message>
         <location line="+59"/>
@@ -14563,7 +14563,7 @@ Em baixo à direita</translatorcomment>
 --file: pt_PT.po--
 Cancelar
 &amp;Cancelar</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
@@ -14572,7 +14572,7 @@ Cancelar
 --file: pt_PT.po--
 OK
 &amp;OK</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -14641,7 +14641,7 @@ OK
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 E&amp;nvie para Trás</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -14653,7 +14653,7 @@ E&amp;nvie para Trás</translatorcomment>
 --file: qcadactions_pt.ts--
 Envie para &amp;frente
 Traga para &amp;frente</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -14664,7 +14664,7 @@ Traga para &amp;frente</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 Comute &amp;Visibilidade</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -14676,7 +14676,7 @@ Comute &amp;Visibilidade</translatorcomment>
 --file: SnapGrid_pt.ts--
 &amp;Grade
 Linhas de &amp;grade sólidas</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -14702,7 +14702,7 @@ Linhas de &amp;grade sólidas</translatorcomment>
         <translatorcomment>--exact match--
 --file: ToggleBlockVisibility_pt.ts--
 Comute &amp;visibilidade</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -14781,7 +14781,7 @@ Comute &amp;visibilidade</translatorcomment>
         <location filename="../scripts/Modify/Transform.js" line="+47"/>
         <source>This tool requires a selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -14803,7 +14803,7 @@ Comute &amp;visibilidade</translatorcomment>
 --file: IsoProject_pt.ts--
 Indique o ponto de referência
 Copie entidade com ponto de referência  para o clipboard</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ponto de referência</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -14812,7 +14812,7 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
 --file: IsoProject_pt.ts--
 Indique o ponto de destino
 Ponto de destino</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ponto de destino</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateInit.js" line="+2"/>
@@ -14820,13 +14820,13 @@ Ponto de destino</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Mova / Copie</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Move or copy entities once or multiple times</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/PreferencesPage.ui" line="+17"/>
@@ -14890,7 +14890,7 @@ Ponto de destino</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 M&amp;ova e Rotacione</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17"/>
@@ -14899,7 +14899,7 @@ M&amp;ova e Rotacione</translatorcomment>
 --file: pt.po--
 Entre o ângulo:
 Insira o ângulo da linha de dimensão:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ângulo:</translation>
     </message>
 </context>
 <context>
@@ -14946,19 +14946,19 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <location filename="../scripts/Modify/Trim/Trim.js" line="+77"/>
         <source>Choose limiting entity</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose entity to trim</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+169"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+68"/>
@@ -14982,7 +14982,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
 --file: qcadactions_pt.ts--
 &amp;Apare
 Apare &amp;Duas</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -14991,7 +14991,7 @@ Apare &amp;Duas</translatorcomment>
         <location filename="../scripts/Modify/TrimBoth/TrimBothInit.js" line="+2"/>
         <source>Trim &amp;Both</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -15026,7 +15026,7 @@ Apare &amp;Duas</translatorcomment>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
 &amp;Desfazer</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -15037,13 +15037,13 @@ Apare &amp;Duas</translatorcomment>
         <translatorcomment>--google--
 &amp;Principal unidade do desenho:
 Principal unidade do desenho:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Paper Unit:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
@@ -15057,7 +15057,7 @@ Principal unidade do desenho:</translatorcomment>
 --file: pt_PT.po--
 Preferências Gerais do Aplicativo
 [2000-206F] Pontuação Geral</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Geral</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -15068,7 +15068,7 @@ Preferências Gerais do Aplicativo
 &amp;Principal unidade do desenho
 Principal unidade do desenho:
 Altura texto em unidades de desenho</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-2"/>
@@ -15083,7 +15083,7 @@ Altura texto em unidades de desenho</translatorcomment>
 Nenhum
 nenhum
 Remover</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Nenhum</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15093,7 +15093,7 @@ Remover</translatorcomment>
 Para comprimentos formatados como &apos;Engenharia&apos; ou &apos;Arquitetura&apos;, a unidade deve ser polegada.
 Para comprimentos formatados como &apos;Engenharia&apos; ou &apos;Arquitetura&apos;, a unidade deve ser polegada
 Polegada</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15102,7 +15102,7 @@ Polegada</translatorcomment>
 --file: pt.po--
 Fonte
 Rodapé</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15110,7 +15110,7 @@ Rodapé</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
 Milha</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15119,7 +15119,7 @@ Milha</translatorcomment>
 --file: pt.po--
 Milímetro
 Milímetros</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15128,7 +15128,7 @@ Milímetros</translatorcomment>
 --file: pt.po--
 Centímetro
 Centímetros</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15137,7 +15137,7 @@ Centímetros</translatorcomment>
 --file: pt.po--
 Comute o símbolo de diâmetro
 Diâmetro (ø)</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15145,7 +15145,7 @@ Diâmetro (ø)</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
 Quilômetro</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15153,7 +15153,7 @@ Quilômetro</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
 Polegada Milimétrica</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15162,7 +15162,7 @@ Polegada Milimétrica</translatorcomment>
 --file: qcadlib_pt.ts--
 [0B80-0BFF] Tamês
 Ladrilhado</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15170,7 +15170,7 @@ Ladrilhado</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
 Jarda</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15178,7 +15178,7 @@ Jarda</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
 Ângstrom</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15186,7 +15186,7 @@ Jarda</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
 Nanômetro</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15194,7 +15194,7 @@ Nanômetro</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
 Mícron</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15202,7 +15202,7 @@ Mícron</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
 Decímetro</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15210,7 +15210,7 @@ Decímetro</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
 Decâmetro</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15218,7 +15218,7 @@ Decâmetro</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
 Hectômetro</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15226,7 +15226,7 @@ Hectômetro</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
 Gigâmetro</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15234,7 +15234,7 @@ Gigâmetro</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
 Astro</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15242,7 +15242,7 @@ Astro</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
 Anos-Luz</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15250,7 +15250,7 @@ Anos-Luz</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
 Parsec</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
@@ -15294,7 +15294,7 @@ Parsec</translatorcomment>
 --file: qcad_pt.ts--
 &amp;Exiba
 &amp;Prévia de impressão</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -15325,7 +15325,7 @@ Parsec</translatorcomment>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/PreferencesPage.ui" line="+21"/>
         <source>Viewports</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Âncoras de Visão</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -15335,7 +15335,7 @@ Parsec</translatorcomment>
 Prévia de impressão para %1
 Prévia de Impressão
 Exibe uma prévia da impressão</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
@@ -15362,13 +15362,13 @@ Exibe uma prévia da impressão</translatorcomment>
 --file: pt.po--
 LTR
 Arranjo</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Layout</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewports</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Âncoras de Visão</translation>
     </message>
 </context>
 <context>
@@ -15412,7 +15412,7 @@ Arranjo</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--
 Visite &amp;Websítio</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -15424,7 +15424,7 @@ Visite &amp;Websítio</translatorcomment>
 --file: qt_pt.ts--
 Restaurar os padrões do sistema ou ferramenta
 Restaurar Predefinições</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+50"/>
@@ -15434,7 +15434,7 @@ Restaurar Predefinições</translatorcomment>
 Insira um símbolo no rótulo
 Insere símbolo
 Insere Símbolo</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -15443,7 +15443,7 @@ Insere Símbolo</translatorcomment>
 --file: Text_pt.ts--
 Comute o símbolo de diâmetro
 Diâmetro (ø)</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15457,7 +15457,7 @@ Diâmetro (ø)</translatorcomment>
 --file: Text_pt.ts--
 Graus decimais
 Grau:</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15465,7 +15465,7 @@ Grau:</translatorcomment>
         <translatorcomment>--exact match--
 --file: Dimension_pt.ts--
 Plus / Minus</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15484,7 +15484,7 @@ Plus / Minus</translatorcomment>
 --file: Text_pt.ts--
 Copie entidades para a área de transferência
 Copie entidade com ponto de referência  para o clipboard</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15522,7 +15522,7 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
         <translatorcomment>--exact match--
 --file: Text_pt.ts--
 Multiplicação</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15531,7 +15531,7 @@ Multiplicação</translatorcomment>
 --file: pt.po--
 Divisão (÷)
 Divisão</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15539,7 +15539,7 @@ Divisão</translatorcomment>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Quadrado</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15548,19 +15548,19 @@ Quadrado</translatorcomment>
 --file: Text_pt.ts--
 Delta
 Delta X</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Stacked text</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Measured value</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+116"/>
@@ -15669,7 +15669,7 @@ Delta X</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Janela de Close</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -15728,7 +15728,7 @@ Delta X</translatorcomment>
         <translatorcomment>--exact match--
 --file: qgis_pt.ts--
 M&amp;ais Zoom</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -15740,7 +15740,7 @@ M&amp;ais Zoom</translatorcomment>
 --file: qcadactions_pt.ts--
 Close A&amp;fasta
 M&amp;enos Zoom</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -15749,7 +15749,7 @@ M&amp;enos Zoom</translatorcomment>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelection.js" line="+31"/>
         <source>No selection found.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelectionInit.js" line="+2"/>
@@ -15757,7 +15757,7 @@ M&amp;enos Zoom</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 Close à &amp;Seleção</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -15897,19 +15897,19 @@ Close à &amp;Seleção</translatorcomment>
         <location line="+2"/>
         <source>3dFaces</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
         <source>3dFace</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -15917,7 +15917,7 @@ Close à &amp;Seleção</translatorcomment>
         <translatorcomment>--google--
 Escolha referência de bloco
 Editar bloco baseado em referência de bloco</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15936,7 +15936,7 @@ Editar bloco baseado em referência de bloco</translatorcomment>
 Desenhe arcos
 Desenhe arcos com 3 pontos
 Desenhe linhas paralelas a linhas, arcos ou círculos existentes</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -15946,7 +15946,7 @@ Desenhe linhas paralelas a linhas, arcos ou círculos existentes</translatorcomm
 &amp;Arco
 Arco
 Selecione a primeira linha ou arco</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Arco</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15975,7 +15975,7 @@ Selecione a primeira linha ou arco</translatorcomment>
 Desenhe linhas paralelas a linhas, arcos ou círculos existentes
 Desenhe círculos com centro e ponto
 Desenhe círculos com 2 pontos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -15985,7 +15985,7 @@ Desenhe círculos com 2 pontos</translatorcomment>
 &amp;Círculo
 Círculo
 Não é uma entidade de círculo ou arco</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -16001,7 +16001,7 @@ Não é uma entidade de círculo ou arco</translatorcomment>
         <location line="+2"/>
         <source>Aligned Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -16010,7 +16010,7 @@ Não é uma entidade de círculo ou arco</translatorcomment>
 --file: qcadlib_pt.ts--
 Dimensão Alinhada
 Desenhe dimensão alinhados</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -16018,7 +16018,7 @@ Desenhe dimensão alinhados</translatorcomment>
         <translatorcomment>--exact match--
 --file: DimensionSettings_pt.ts--
 Dimensões angulares</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -16027,7 +16027,7 @@ Dimensões angulares</translatorcomment>
 --file: qcadlib_pt.ts--
 Dimensão angular
 Desenhe dimensão angular</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>2 Line Angular Dimensions</source>
@@ -16074,7 +16074,7 @@ Desenhe dimensão angular</translatorcomment>
         <location line="+2"/>
         <source>Diametric Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -16083,13 +16083,13 @@ Desenhe dimensão angular</translatorcomment>
 --file: qcadlib_pt.ts--
 Dimensão do diâmetro
 Desenhe dimensão diametral</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ordinate Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -16099,25 +16099,25 @@ Desenhe dimensão diametral</translatorcomment>
 Ordene dimensão
 Dimenção Ordinal
 Desenhe dimensão ordenada</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rotated Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotated Dimension</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Radial Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -16126,7 +16126,7 @@ Desenhe dimensão ordenada</translatorcomment>
 --file: qcadactions_pt.ts--
 Dimensão radial
 Desenhe dimensão radial</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -16135,7 +16135,7 @@ Desenhe dimensão radial</translatorcomment>
 --file: pt.po--
 Desenha Elipses
 Exibe o menu &quot;Elipse&quot;</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -16145,7 +16145,7 @@ Exibe o menu &quot;Elipse&quot;</translatorcomment>
 &amp;Elipse
 Elipse
 &amp;Arco de Elipse (Eixo)</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -16154,7 +16154,7 @@ Elipse
 --file: Explode_pt.ts--
 Desenhe hachurados e preenchimentos sólidos
 Hachuras / preenchimentos sólidos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -16164,7 +16164,7 @@ Hachuras / preenchimentos sólidos</translatorcomment>
 &amp;Hachura
 Hachura
 Desenhe hachurados e preenchimentos sólidos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -16173,7 +16173,7 @@ Desenhe hachurados e preenchimentos sólidos</translatorcomment>
 --file: pt_PT.po--
 Embutir imagens
 Embutir somente a imagem selecionada</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -16182,14 +16182,14 @@ Embutir somente a imagem selecionada</translatorcomment>
 --file: pt_PT.po--
 Exporte Imagem
 &amp;Imagem</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Leaders</source>
         <translatorcomment>--google--
 Chefes de projecto</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -16199,7 +16199,7 @@ Chefes de projecto</translatorcomment>
 &amp;Conduza
 Conduza
 Conduza (seqüência linear com seta)</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -16208,7 +16208,7 @@ Conduza (seqüência linear com seta)</translatorcomment>
 --file: pt.po--
 Desenhe linhas paralelas a linhas, arcos ou círculos existentes
 Desenhe linhas</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -16218,7 +16218,7 @@ Desenhe linhas</translatorcomment>
 Foca na &amp;Linha de Comando
 Foca na Linha de Comando
 &amp;Linha</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Linha</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -16248,7 +16248,7 @@ Foca na Linha de Comando
 &amp;3 Pontos
 3 Pontos
 Desenhe arcos com 3 pontos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -16258,7 +16258,7 @@ Desenhe arcos com 3 pontos</translatorcomment>
 &amp;Ponto
 Ponto
 Indique o ponto de referência</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Ponto</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -16267,7 +16267,7 @@ Indique o ponto de referência</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Desenhe Multilinhas
 Adicione nós a multilinhas existentes</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -16277,14 +16277,14 @@ Adicione nós a multilinhas existentes</translatorcomment>
 &amp;Polilinha
 &lt;b&gt;Multilinha&lt;/b&gt;
 Desenhe Multilinhas</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Solids</source>
         <translatorcomment>--google--
 em linhas, sólidos e textos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -16293,7 +16293,7 @@ em linhas, sólidos e textos</translatorcomment>
 --file: qcadlib_pt.ts--
 Desenhe hachurados e preenchimentos sólidos
 Hachuras / preenchimentos sólidos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -16322,7 +16322,7 @@ Hachuras / preenchimentos sólidos</translatorcomment>
 --file: Explode_pt.ts--
 Desenhe chavetas (NURBS)
 Desenha chavetas</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Splines</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -16332,7 +16332,7 @@ Desenha chavetas</translatorcomment>
 &amp;Spline
 Spline
 Desenhe chavetas (NURBS)</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -16347,7 +16347,7 @@ Desenhe chavetas (NURBS)</translatorcomment>
 em linhas, sólidos e textos
 Remover traço
 Textos</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -16357,7 +16357,7 @@ Textos</translatorcomment>
 Insira o texto de dimensão:
 Insira o texto de dimensão
 &amp;Texto</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Texto</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -16373,13 +16373,13 @@ Insira o texto de dimensão
         <location line="+3"/>
         <source>Unknown Entities</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Entity</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>

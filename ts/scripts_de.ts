@@ -14713,11 +14713,7 @@ nicht öffnen.
         <location line="-261"/>
         <location line="+274"/>
         <source>Italic</source>
-        <translatorcomment>--exact match--
---file: qt_de.ts--
-Kursiv
-&amp;Kursiv</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="-236"/>

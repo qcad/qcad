@@ -4827,7 +4827,7 @@ on jo luettelossa.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1816"/>
         <source>&amp;FlexPainter</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4840,7 +4840,7 @@ on jo luettelossa.</translation>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+18"/>
@@ -10406,7 +10406,7 @@ näkyy hakutuloksissa:</translation>
         <location line="+7"/>
         <location line="+14"/>
         <source>1</source>
-        <translation></translation>
+        <translation type="unfinished">1</translation>
     </message>
     <message>
         <location line="-7"/>
