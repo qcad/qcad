@@ -2907,7 +2907,7 @@ Coordenadas polares relativa:</translatorcomment>
         <location filename="../scripts/Navigation/DefaultNavigation/DefaultNavigation.js" line="+47"/>
         <source>Graphics View</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Vista de gráficos</translation>
+        <translation>Vista de gráficos</translation>
     </message>
     <message>
         <location line="+0"/>
