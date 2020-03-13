@@ -4128,7 +4128,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;entité n&apos;est pas une polyligne.</translation>
     </message>
 </context>
 <context>
@@ -4251,7 +4251,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Modify/EditText/EditText.js" line="+61"/>
         <source>Choose text</source>
-        <translation type="unfinished"></translation>
+        <translation>Choisissez le texte</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditText/EditTextInit.js" line="+2"/>
@@ -5128,12 +5128,12 @@ Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer?
     <message>
         <location line="+1"/>
         <source>Default Paper Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Format de papier par défaut :</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Point décimal :</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5629,17 +5629,17 @@ Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer?
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
         <source>Three: Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Trois: à droite</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/21_ThreeLeft.ui" line="+14"/>
         <source>Three: Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Trois: à gauche</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/22_ThreeAbove.ui" line="+14"/>
         <source>Three: Above</source>
-        <translation type="unfinished"></translation>
+        <translation>Trois: au-dessus</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.ui" line="+14"/>
@@ -6045,7 +6045,7 @@ Le fichier &quot;%1&quot; existe déjà. Est-ce que vous souhaitez le remplacer?
         <translatorcomment>--ignored colon--
 --file: BitmapExport_fr.ts--
 Arrière-plan du dessin :</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Fond :</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6197,7 +6197,7 @@ Arrière-plan du dessin :</translatorcomment>
     <message>
         <location line="+81"/>
         <source>Origin:</source>
-        <translation type="unfinished"></translation>
+        <translation>Origine :</translation>
     </message>
     <message>
         <source>Reference Point:</source>
@@ -6210,7 +6210,7 @@ Arrière-plan du dessin :</translatorcomment>
 --file: designer_fr.ts--
 Métagrille :
 &amp;Métagrille :</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Grille :</translation>
     </message>
     <message>
         <source>Meta Grid:</source>
@@ -6222,17 +6222,17 @@ Métagrille :
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
         <source>Ruler Font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Police de la règle :</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Snap Label Font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Police d&apos;étiquettes accrocheuses :</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Info Label Font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Police d&apos;étiquette de l&apos;information :</translation>
     </message>
 </context>
 <context>
@@ -6240,12 +6240,12 @@ Métagrille :
     <message>
         <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+332"/>
         <source>Mouse wheel / two finger swipe:</source>
-        <translation type="unfinished"></translation>
+        <translation>Molette de la souris / balayage à deux doigts :</translation>
     </message>
     <message>
         <location line="-231"/>
         <source>Enable pan gesture</source>
-        <translation type="unfinished"></translation>
+        <translation>Permettre le geste de pan</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6350,7 +6350,7 @@ Métagrille :
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GraphicsViewPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished">Vue graphique</translation>
+        <translation>Vue graphique</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -6954,7 +6954,7 @@ Métagrille :
     <message>
         <location filename="../scripts/Information/InfoArea/InfoArea.js" line="+70"/>
         <source>Set next polygon corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Définir le prochain coin du polygone</translation>
     </message>
     <message>
         <source>Done</source>
@@ -6963,7 +6963,7 @@ Métagrille :
     <message>
         <location line="+144"/>
         <source>Polygon area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Zone de polygone :</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6982,12 +6982,12 @@ Métagrille :
     <message>
         <location filename="../scripts/Information/InfoArea/InfoArea.ui" line="+17"/>
         <source>Calculate length and close tool.</source>
-        <translation type="unfinished"></translation>
+        <translation>Calculez la longueur et fermez l&apos;outil.</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Close Tool.</source>
-        <translation type="unfinished"></translation>
+        <translation>Fermer l&apos;outil.</translation>
     </message>
 </context>
 <context>
@@ -7072,12 +7072,12 @@ Métagrille :
     <message>
         <location line="+4"/>
         <source>Delta X:</source>
-        <translation type="unfinished"></translation>
+        <translation>Distance X :</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta Y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Distance Y :</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7177,7 +7177,7 @@ Métagrille :
     <message>
         <location filename="../scripts/Information/Information.js" line="+334"/>
         <source>Information Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Outils d&apos;information</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -7224,22 +7224,22 @@ Métagrille :
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/PreferencesPage.ui" line="+19"/>
         <source>Decimal Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Point décimal :</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cartesian Coordinate Separator:</source>
-        <translation type="unfinished"></translation>
+        <translation>Séparateur de coordonnées cartésiennes :</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Polar Coordinate Separator:</source>
-        <translation type="unfinished"></translation>
+        <translation>Séparateur de coordonnées polaires :</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Relative Coordinate Prefix:</source>
-        <translation type="unfinished"></translation>
+        <translation>Préfixe des coordonnées relatives :</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -7249,22 +7249,22 @@ Métagrille :
     <message>
         <location line="+6"/>
         <source>Absolute Cartesian Coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Coordonnées cartésiennes absolues :</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Absolute Polar Coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Coordonnées polaires absolues :</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Relative Cartesian Coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Coordonnées cartésiennes relatives :</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative Polar Coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Coordonnées polaires relatives :</translation>
     </message>
 </context>
 <context>
@@ -7560,7 +7560,7 @@ Métagrille :
     <message>
         <location line="+4"/>
         <source>Invert the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Inverser la sélection actuelle</translation>
     </message>
 </context>
 <context>
@@ -7906,14 +7906,14 @@ Métagrille :
     <message>
         <location line="+29"/>
         <source>Lineweight:</source>
-        <translation type="unfinished"></translation>
+        <translation>Epaisseur de ligne :</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Linetype:</source>
         <translatorcomment>--ignored colon--
 --file: LinetypeSettings_fr.ts--</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Type de ligne :</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
@@ -7929,12 +7929,12 @@ Métagrille :
     <message>
         <location line="+7"/>
         <source>Layer name is empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le nom du calque est vide.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Layer already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le calque existe déjà.</translation>
     </message>
 </context>
 <context>
@@ -8054,7 +8054,7 @@ Métagrille :
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.js" line="+60"/>
         <source>Choose line or arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Choisissez une ligne ou un arc</translation>
     </message>
     <message>
         <source>&amp;Lengthen</source>
@@ -8068,7 +8068,7 @@ Métagrille :
     <message>
         <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>Montant à allonger ou à raccourcir (négatif)</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
@@ -9302,7 +9302,7 @@ dans les résultats de recherche :</translation>
         <source>&amp;Lock Relative Zero</source>
         <translatorcomment>--google--
 (Dé)Verroui&amp;ller zéro relatif</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Verrouiller le zéro relatif</translation>
     </message>
 </context>
 <context>
@@ -9369,14 +9369,14 @@ dans les résultats de recherche :</translation>
         <source>First point of symmetry axis</source>
         <translatorcomment>--google--
 Indiquer le premier point de l&apos;axe de symétrie</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Premier point d&apos;axe de symétrie</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point of symmetry axis</source>
         <translatorcomment>--google--
 Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Deuxième point de l&apos;axe de symétrie</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
@@ -9632,12 +9632,12 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
     <message>
         <location line="+17"/>
         <source>Choose first entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Choisissez la première entité</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose second entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Choisissez la deuxième entité</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10293,7 +10293,7 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
     <message>
         <location line="+64"/>
         <source>Reset to Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Réinitialiser les paramètres par défaut</translation>
     </message>
 </context>
 <context>
@@ -10757,7 +10757,7 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
     <message>
         <location line="-3"/>
         <source>*VARIES*</source>
-        <translation type="unfinished">*VARIABLE*</translation>
+        <translation>*VARIABLE*</translation>
     </message>
     <message>
         <location line="-1273"/>
@@ -10766,7 +10766,7 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
 --file: qt_fr.ts--
 Document Chargé :
 Dessin enregistré : %1</translatorcomment>
-        <translation type="unfinished"> :</translation>
+        <translation>:</translation>
     </message>
     <message>
         <location line="+151"/>
@@ -10790,7 +10790,7 @@ Dessin enregistré : %1</translatorcomment>
 Partage &amp;Horizontal
 Partage Horizontal
 Renommer tous les Blocs et Objets Insérés</translatorcomment>
-        <translation type="unfinished">Tous</translation>
+        <translation>Tous</translation>
     </message>
     <message>
         <source>Bottom</source>
@@ -10804,7 +10804,7 @@ Renommer tous les Blocs et Objets Insérés</translatorcomment>
     <message>
         <location line="+141"/>
         <source>Use auto measurement</source>
-        <translation type="unfinished"></translation>
+        <translation>Utiliser la mesure automatique</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -10828,7 +10828,7 @@ Renommer tous les Blocs et Objets Insérés</translatorcomment>
         <source>Selection:</source>
         <translatorcomment>--ignored colon--
 --file: qt_fr.ts--</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Sélection :</translation>
     </message>
     <message>
         <source>General</source>
@@ -10857,7 +10857,7 @@ Renommer tous les Blocs et Objets Insérés</translatorcomment>
     <message>
         <location line="-143"/>
         <source>Handle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Handle :</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+17"/>
@@ -11003,7 +11003,7 @@ Renommer tous les Blocs et Objets Insérés</translatorcomment>
     <message>
         <location filename="../scripts/Help/ReportBug/ReportBugInit.js" line="+2"/>
         <source>Report &amp;Bug</source>
-        <translation type="unfinished"></translation>
+        <translation>Rapportez une &amp;erreur</translation>
     </message>
 </context>
 <context>
@@ -11110,7 +11110,7 @@ Renommer tous les Blocs et Objets Insérés</translatorcomment>
     <message>
         <location line="+30"/>
         <source>Center point</source>
-        <translation type="unfinished"></translation>
+        <translation>Point central</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11165,12 +11165,12 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2.js" line="+67"/>
         <source>Center of primary rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>Centre de rotation primaire</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Center of secondary rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>Centre de rotation secondaire</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Init.js" line="+2"/>
@@ -11319,7 +11319,7 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location line="+16"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Utiliser calque et &amp;attributs actuel</translation>
+        <translation>Utiliser calque et &amp;attributs actuel</translation>
     </message>
 </context>
 <context>
@@ -11327,17 +11327,17 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location filename="../scripts/Modify/Round/Round.js" line="+58"/>
         <source>The two entities cannot be rounded.</source>
-        <translation type="unfinished"></translation>
+        <translation>Les deux entités ne peuvent pas être arrondies.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>La première entité ne peut pas être coupée.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>La seconde entité ne peut pas être coupée.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
@@ -11604,7 +11604,7 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location line="+32"/>
         <source>Focus point</source>
-        <translation type="unfinished"></translation>
+        <translation>Point central</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -11616,7 +11616,7 @@ Indiquer le point cible</translatorcomment>
         <source>Target point</source>
         <translatorcomment>--google--
 Indiquer le point cible</translatorcomment>
-        <translation type="unfinished">Point cible</translation>
+        <translation>Point cible</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -11785,7 +11785,7 @@ Indiquer le point cible</translatorcomment>
         <source>Selection Tools</source>
         <translatorcomment>--google--
 Afficher les outils de sélection</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Outils de sélection</translation>
     </message>
     <message>
         <source>Show selection tools</source>
@@ -11812,7 +11812,7 @@ Afficher les outils de sélection</translatorcomment>
     <message>
         <location line="+4"/>
         <source>Select all visible entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionnez toutes les entités visibles</translation>
     </message>
 </context>
 <context>
@@ -11893,7 +11893,7 @@ Afficher les outils de sélection</translatorcomment>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.js" line="+53"/>
         <source>Choose entity of contour</source>
-        <translation type="unfinished"></translation>
+        <translation>Choisissez une entité du contour</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
@@ -11903,34 +11903,34 @@ Afficher les outils de sélection</translatorcomment>
     <message>
         <location line="+4"/>
         <source>(De-)Select connected entities</source>
-        <translation type="unfinished"></translation>
+        <translation>(Dé)sélectionner des entités connectées</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.ui" line="+17"/>
         <source>Mode:</source>
         <translatorcomment>--google--
 Mode de couleur :</translatorcomment>
-        <translation type="unfinished">Mode :</translation>
+        <translation>Mode :</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished">Remplacer la sélection courante</translation>
+        <translation>Remplacer la sélection courante</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished">Ajouter à la sélection courante</translation>
+        <translation>Ajouter à la sélection courante</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished">Soustraire de la sélection courante</translation>
+        <translation>Soustraire de la sélection courante</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished">Intersection avec la sélection courante</translation>
+        <translation>Intersection avec la sélection courante</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -11953,39 +11953,39 @@ Mode de couleur :</translatorcomment>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
-        <translation type="unfinished"></translation>
+        <translation>(Dé)sélectionner des entités intersectées</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities intersected by a line</source>
-        <translation type="unfinished"></translation>
+        <translation>(Dé)sélectionner toutes les entités qui sont coupées par une ligne</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.ui" line="+17"/>
         <source>Mode:</source>
         <translatorcomment>--google--
 Mode de couleur :</translatorcomment>
-        <translation type="unfinished">Mode :</translation>
+        <translation>Mode :</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished">Remplacer la sélection courante</translation>
+        <translation>Remplacer la sélection courante</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished">Ajouter à la sélection courante</translation>
+        <translation>Ajouter à la sélection courante</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished">Soustraire de la sélection courante</translation>
+        <translation>Soustraire de la sélection courante</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished">Intersection avec la sélection courante</translation>
+        <translation>Intersection avec la sélection courante</translation>
     </message>
 </context>
 <context>
@@ -12080,7 +12080,7 @@ Mode de couleur :</translatorcomment>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities inside a rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>(De-)sélectionnez toutes les entités à l&apos;intérieur d&apos;un rectangle</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="+9"/>
@@ -12092,32 +12092,32 @@ Mode de couleur :</translatorcomment>
         <source>Mode:</source>
         <translatorcomment>--google--
 Mode de couleur :</translatorcomment>
-        <translation type="unfinished">Mode :</translation>
+        <translation>Mode :</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished">Remplacer la sélection courante</translation>
+        <translation>Remplacer la sélection courante</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished">Ajouter à la sélection courante</translation>
+        <translation>Ajouter à la sélection courante</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished">Soustraire de la sélection courante</translation>
+        <translation>Soustraire de la sélection courante</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished">Intersection avec la sélection courante</translation>
+        <translation>Intersection avec la sélection courante</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Cross Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélection croisée</translation>
     </message>
 </context>
 <context>
@@ -12272,7 +12272,7 @@ Mode de couleur :</translatorcomment>
     <message>
         <location filename="../scripts/Snap/SetRelativeZero/SetRelativeZeroInit.js" line="+2"/>
         <source>Set &amp;Relative Zero</source>
-        <translation type="unfinished"></translation>
+        <translation>Définir le point zéro &amp;relatif</translation>
     </message>
     <message>
         <source>Set Relative Zero</source>
@@ -12325,12 +12325,12 @@ Mode de couleur :</translatorcomment>
         <location filename="../scripts/ShapeAlgorithms.js" line="+1423"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
-        <translation type="unfinished"></translation>
+        <translation>Au moins deux points sont identiques.</translation>
     </message>
     <message>
         <location line="-22"/>
         <source>No circle possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucun cercle possible.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -12340,12 +12340,12 @@ Mode de couleur :</translatorcomment>
     <message>
         <location line="+19"/>
         <source>Invalid number of segments: %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre de segments non valide: %1.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Invalid ellipse major / minor: %1 / %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ellipse majeure / mineure non valide : %1 / %2.</translation>
     </message>
 </context>
 <context>
@@ -12633,7 +12633,7 @@ Mode de couleur :</translatorcomment>
     <message>
         <location filename="../scripts/Layer/ShowActiveLayer/ShowActiveLayerInit.js" line="+2"/>
         <source>Show &amp;Only Active</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher &amp;uniquement de l&apos;actif</translation>
     </message>
 </context>
 <context>
@@ -12661,7 +12661,7 @@ Mode de couleur :</translatorcomment>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadmeInit.js" line="+2"/>
         <source>Show &amp;Readme</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher le &amp;readme</translation>
     </message>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadme.js" line="+46"/>
@@ -12682,7 +12682,7 @@ Mode de couleur :</translatorcomment>
     <message>
         <location filename="../scripts/Snap/Snap.js" line="+57"/>
         <source>Snap Tools</source>
-        <translation type="unfinished">Outils de accrochage</translation>
+        <translation type="unfinished">Outils d&apos;accrochage</translation>
     </message>
     <message>
         <source>Show snap tools</source>
@@ -12745,7 +12745,7 @@ Mode de couleur :</translatorcomment>
     <message>
         <location line="+13"/>
         <source>Tick for Relative Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>Cochez pour une coordonnée relative</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12759,7 +12759,7 @@ Mode de couleur :</translatorcomment>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.js" line="+87"/>
         <source>Set coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>Définir les coordonnées</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
@@ -12792,7 +12792,7 @@ Mode de couleur :</translatorcomment>
     <message>
         <location line="+13"/>
         <source>Tick for Relative Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>Cochez pour une coordonnée relative</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12814,12 +12814,12 @@ Mode de couleur :</translatorcomment>
 &amp;Distance du point au point
 &amp;Distance de l&apos;entité au point
 &amp;Distance extrémité</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Distance</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap distance:</source>
-        <translation type="unfinished">Distance:</translation>
+        <translation>Distance d&apos;accrochage :</translation>
     </message>
     <message>
         <source>Distance</source>
@@ -12914,7 +12914,7 @@ Mode de couleur :</translatorcomment>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Intersection manuelle</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js" line="+47"/>
@@ -12955,7 +12955,7 @@ Mode de couleur :</translatorcomment>
     <message>
         <location filename="../scripts/Snap/SnapMiddleManual/SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Milieu manuelle</translation>
     </message>
 </context>
 <context>
@@ -12971,7 +12971,7 @@ Mode de couleur :</translatorcomment>
     <message>
         <location filename="../scripts/Snap/SnapPerpendicular/SnapPerpendicularInit.js" line="+2"/>
         <source>&amp;Perpendicular</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Perpendiculaire</translation>
     </message>
 </context>
 <context>
@@ -13217,7 +13217,7 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location line="+33"/>
         <source>Import SVG</source>
-        <translation type="unfinished"></translation>
+        <translation>Importer SVG</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13232,7 +13232,7 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportInit.js" line="+2"/>
         <source>SVG &amp;Import...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Importer SVG...</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="-34"/>
@@ -13604,7 +13604,8 @@ Indiquer le point cible</translatorcomment>
         <location line="-257"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation type="unfinished"></translation>
+        <translation>Texte simple
+(une ligne, pas de formatage)</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -13964,7 +13965,7 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location filename="../scripts/Modify/Transform.js" line="+47"/>
         <source>This tool requires a selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Cet outil nécessite une sélection</translation>
     </message>
 </context>
 <context>
@@ -13999,7 +14000,7 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location line="+10"/>
         <source>Move or copy entities once or multiple times</source>
-        <translation type="unfinished"></translation>
+        <translation>Déplacer ou copier des entités une ou plusieurs fois</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/PreferencesPage.ui" line="+17"/>
@@ -14165,17 +14166,17 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location filename="../scripts/Modify/Trim/Trim.js" line="+77"/>
         <source>Choose limiting entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Choisissez l&apos;entité limitante</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose entity to trim</source>
-        <translation type="unfinished"></translation>
+        <translation>Choisissez l&apos;entité à couper</translation>
     </message>
     <message>
         <location line="+169"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
-        <translation type="unfinished"></translation>
+        <translation>Les deux entités ne se coupent pas ou ne sont actuellement pas prises en charge pour le découpage.</translation>
     </message>
     <message>
         <location line="+68"/>
@@ -14661,12 +14662,12 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Stacked text</source>
-        <translation type="unfinished"></translation>
+        <translation>Texte empilé</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Measured value</source>
-        <translation type="unfinished"></translation>
+        <translation>Valeur mesurée</translation>
     </message>
     <message>
         <location line="+116"/>
@@ -14844,7 +14845,7 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelection.js" line="+31"/>
         <source>No selection found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucune sélection trouvée.</translation>
     </message>
     <message>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelectionInit.js" line="+2"/>
@@ -14988,17 +14989,17 @@ Indiquer le point cible</translatorcomment>
     <message>
         <location line="+2"/>
         <source>3dFaces</source>
-        <translation type="unfinished"></translation>
+        <translation>3DFaces</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>3dFace</source>
-        <translation type="unfinished"></translation>
+        <translation>3dFace</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References</source>
-        <translation type="unfinished"></translation>
+        <translation>Références de bloc</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -15006,7 +15007,7 @@ Indiquer le point cible</translatorcomment>
         <translatorcomment>--google--
 Choisissez la référence de bloc
 Modifier un bloc basé sur une référence de bloc choisie</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Référence de bloc</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15030,7 +15031,7 @@ Modifier un bloc basé sur une référence de bloc choisie</translatorcomment>
 Dessine des arcs
 Dessine des arcs avec 3 points
 Dessine des parallèles aux cercles, arcs et lignes existants</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Arcs</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15064,7 +15065,7 @@ Dessine des parallèles aux cercles, arcs et lignes existants</translatorcomment
 Dessine des parallèles aux cercles, arcs et lignes existants
 Dessine des cercles avec un centre et un point
 Dessine des cercles avec 2 points</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Cercles</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15084,7 +15085,7 @@ Dessine des cercles avec 2 points</translatorcomment>
     <message>
         <location line="+0"/>
         <source>Aligned Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensions alignées</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15145,7 +15146,7 @@ Dessine des cercles avec 2 points</translatorcomment>
     <message>
         <location line="+0"/>
         <source>Diametric Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensions diamétriques</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15155,17 +15156,17 @@ Dessine des cercles avec 2 points</translatorcomment>
     <message>
         <location line="+0"/>
         <source>Ordinate Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensions ordonnées</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rotated Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensions tournées</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotated Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimension tournée</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15175,7 +15176,7 @@ Dessine des cercles avec 2 points</translatorcomment>
     <message>
         <location line="+0"/>
         <source>Radial Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensions radiales</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15185,7 +15186,7 @@ Dessine des cercles avec 2 points</translatorcomment>
     <message>
         <location line="+0"/>
         <source>Ellipses</source>
-        <translation type="unfinished">Ellipses</translation>
+        <translation>Ellipses</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15199,7 +15200,7 @@ Dessine des cercles avec 2 points</translatorcomment>
 Dessine des hachures et des remplissages unis
 &amp;Combiner hachures
 Combiner hachures</translatorcomment>
-        <translation type="unfinished">Hachures</translation>
+        <translation>Hachures</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15213,7 +15214,7 @@ Combiner hachures</translatorcomment>
 &lt;img src=&quot;:/trolltech/assistant/images/wrap.png&quot;&gt;&amp;nbsp;Recherche à partir du début
 &lt;img src=&quot;:/trolltech/assistant/images/wrap.png&quot;&gt;nbsp;Recherche à partir du début
 &lt;img src=&quot;:/trolltech/shared/images/wrap.png&quot;&gt;&amp;nbsp;Recherche à partir du début</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Images</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15223,7 +15224,7 @@ Combiner hachures</translatorcomment>
     <message>
         <location line="+0"/>
         <source>Leaders</source>
-        <translation type="unfinished"></translation>
+        <translation>Lignes de repère</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15237,7 +15238,7 @@ Combiner hachures</translatorcomment>
 Dessine des parallèles aux cercles, arcs et lignes existants
 Dessine des lignes
 Impossible de fermer la séquence de lignes : nombre d&apos;entités définies encore insuffisant.</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>Lignes</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15287,7 +15288,7 @@ Impossible de fermer la séquence de lignes : nombre d&apos;entités définies e
     <message>
         <location line="+0"/>
         <source>Solids</source>
-        <translation type="unfinished"></translation>
+        <translation>Solides</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15332,7 +15333,7 @@ Impossible de fermer la séquence de lignes : nombre d&apos;entités définies e
     <message>
         <location line="+0"/>
         <source>Texts</source>
-        <translation type="unfinished"></translation>
+        <translation>Textes</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15347,12 +15348,12 @@ Impossible de fermer la séquence de lignes : nombre d&apos;entités définies e
     <message>
         <location line="+3"/>
         <source>Unknown Entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Entités inconnues</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Entité inconnue</translation>
     </message>
     <message>
         <location line="+6"/>
