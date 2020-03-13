@@ -715,7 +715,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
     <message>
         <location line="+4"/>
         <source>Draw arc from 3 points</source>
-        <translation type="unfinished">Traçar arco a partir de 3 pontos</translation>
+        <translation>Traçar arco a partir de 3 pontos</translation>
     </message>
 </context>
 <context>
@@ -9005,7 +9005,7 @@ nos resultados de busca:</translation>
     <message>
         <location line="+58"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
-        <translation type="unfinished">Você quer salvar as alterações que fez no documento '%1'?</translation>
+        <translation type="unfinished">Você quer salvar as alterações que fez no documento &apos;%1&apos;?</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -14213,4 +14213,3 @@ nos resultados de busca:</translation>
     </message>
 </context>
 </TS>
-
