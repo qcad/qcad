@@ -5223,7 +5223,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+5"/>
         <source>OrthogonalBar</source>
-        <translation>OrthogonalBar</translation>
+        <translation>Barre orthogonale</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5233,12 +5233,12 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+5"/>
         <source>SinusoidWave</source>
-        <translation>SinusoidWave</translation>
+        <translation>Onde sinusoïdale</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWaveGlobal</source>
-        <translation>SinusoidWaveGlobal</translation>
+        <translation>Onde sinusoïdale globale</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -9777,7 +9777,7 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="+4"/>
         <source>Format:</source>
-        <translation>Format:</translation>
+        <translation>Format :</translation>
     </message>
     <message>
         <location line="+137"/>
