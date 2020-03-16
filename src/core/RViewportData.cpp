@@ -57,7 +57,7 @@ RBox RViewportData::getBoundingBox(bool ignoreEmpty) const {
 }
 
 void RViewportData::to2D() {
-    REntityData::to2D();
+    RPoint::to2D();
 
     viewCenter = viewCenter.get2D();
     viewTarget = viewTarget.get2D();
