@@ -3078,7 +3078,7 @@ Layer ad alta risoluzione possono rallentare la navigazione in QGIS.</translator
     <message>
         <location line="+8"/>
         <source>Blocks</source>
-        <translation>&amp;Blocchi</translation>
+        <translation>Blocchi</translation>
     </message>
     <message>
         <location line="+8"/>
