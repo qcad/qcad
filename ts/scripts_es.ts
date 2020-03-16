@@ -3063,7 +3063,7 @@ Sombreado/Relleno</translatorcomment>
     <message>
         <location line="+8"/>
         <source>Blocks</source>
-        <translation>&amp;Bloques</translation>
+        <translation>Bloques</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -12796,7 +12796,7 @@ Se cruzan con la selección actual</translatorcomment>
         <location filename="../scripts/Layer/ShowActiveLayer/ShowActiveLayerInit.js" line="+2"/>
         <source>Show &amp;Only Active</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Mostrar solo activo</translation>
+        <translation>Mostrar &amp;solo activo</translation>
     </message>
 </context>
 <context>
