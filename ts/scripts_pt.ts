@@ -13020,12 +13020,12 @@ nos resultados de busca:</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
         <source>Drawing Unit:</source>
-        <translation type="unfinished">Unidade de Desenho:</translation>
+        <translation>Unidade de Desenho:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Paper Unit:</source>
-        <translation type="unfinished">Unidade de Papel:</translation>
+        <translation>Unidade de Papel:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -13035,13 +13035,13 @@ nos resultados de busca:</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js" line="+29"/>
         <source>General</source>
-        <translation type="unfinished">Geral</translation>
+        <translation>Geral</translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+2"/>
         <source>Drawing Unit</source>
-        <translation type="unfinished">Unidade de Desenho</translation>
+        <translation>Unidade de Desenho</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -13051,107 +13051,107 @@ nos resultados de busca:</translation>
     <message>
         <location line="+73"/>
         <source>None</source>
-        <translation type="unfinished">Nenhum</translation>
+        <translation>Nenhum</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Inch</source>
-        <translation type="unfinished">Inch</translation>
+        <translation>Inch</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foot</source>
-        <translation type="unfinished">Pé</translation>
+        <translation>Pé</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Mile</source>
-        <translation type="unfinished">Milha</translation>
+        <translation>Milha</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Millimeter</source>
-        <translation type="unfinished">Milímetro</translation>
+        <translation>Milímetro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Centimeter</source>
-        <translation type="unfinished">Centimetro</translation>
+        <translation>Centimetro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Meter</source>
-        <translation type="unfinished">Medidor</translation>
+        <translation>Medidor</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Kilometer</source>
-        <translation type="unfinished">Kilômetro</translation>
+        <translation>Kilômetro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Microinch</source>
-        <translation type="unfinished">Microinch</translation>
+        <translation>Microinch</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Mil</source>
-        <translation type="unfinished">Mil</translation>
+        <translation>Mil</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Yard</source>
-        <translation type="unfinished">Jarda</translation>
+        <translation>Jarda</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angstrom</source>
-        <translation type="unfinished">Angstrom</translation>
+        <translation>Angstrom</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Nanometer</source>
-        <translation type="unfinished">Nanômetro</translation>
+        <translation>Nanômetro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Micron</source>
-        <translation type="unfinished">Micron</translation>
+        <translation>Micron</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimeter</source>
-        <translation type="unfinished">Decimetro</translation>
+        <translation>Decimetro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decameter</source>
-        <translation type="unfinished">Decamímetro</translation>
+        <translation>Decamímetro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hectometer</source>
-        <translation type="unfinished">Hectômetro</translation>
+        <translation>Hectômetro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gigameter</source>
-        <translation type="unfinished">Gigametro</translation>
+        <translation>Gigametro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Astro</source>
-        <translation type="unfinished">Astro</translation>
+        <translation>Astro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lightyear</source>
-        <translation type="unfinished">Lightyear</translation>
+        <translation>Lightyear</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Parsec</source>
-        <translation type="unfinished">Parsec</translation>
+        <translation>Parsec</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -13191,7 +13191,7 @@ nos resultados de busca:</translation>
     <message>
         <location line="+4"/>
         <source>&amp;View</source>
-        <translation type="unfinished">&amp;Ver</translation>
+        <translation>&amp;Ver</translation>
     </message>
 </context>
 <context>
@@ -13221,12 +13221,12 @@ nos resultados de busca:</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/PreferencesPage.ui" line="+21"/>
         <source>Viewports</source>
-        <translation type="unfinished">Viewports</translation>
+        <translation>Viewports</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Preview</source>
-        <translation type="unfinished">Pré-visualização</translation>
+        <translation>Pré-visualização</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
@@ -13249,12 +13249,12 @@ nos resultados de busca:</translation>
     <message>
         <location line="+2"/>
         <source>Layout</source>
-        <translation type="unfinished">Layout</translation>
+        <translation>Layout</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewports</source>
-        <translation type="unfinished">Viewports</translation>
+        <translation>Viewports</translation>
     </message>
 </context>
 <context>
@@ -13295,7 +13295,7 @@ nos resultados de busca:</translation>
     <message>
         <location filename="../scripts/Help/Website/WebsiteInit.js" line="+2"/>
         <source>Visit &amp;Website</source>
-        <translation type="unfinished">Visite &amp;Website</translation>
+        <translation>Visite nosso &amp;site</translation>
     </message>
 </context>
 <context>
@@ -13303,17 +13303,17 @@ nos resultados de busca:</translation>
     <message>
         <location filename="../scripts/WidgetFactory.js" line="+1038"/>
         <source>Restore defaults</source>
-        <translation type="unfinished">Restaurar inadimplências</translation>
+        <translation>Restaurar inadimplências</translation>
     </message>
     <message>
         <location line="+50"/>
         <source>Insert Symbol</source>
-        <translation type="unfinished">Inserir Símbolo</translation>
+        <translation>Inserir Símbolo</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Diameter</source>
-        <translation type="unfinished">Diâmetro</translation>
+        <translation>Diâmetro</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13323,12 +13323,12 @@ nos resultados de busca:</translation>
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation type="unfinished">Grau</translation>
+        <translation>Grau</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus/Minus</source>
-        <translation type="unfinished">Plus/Minus</translation>
+        <translation>Plus/Minus</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13343,7 +13343,7 @@ nos resultados de busca:</translation>
     <message>
         <location line="+1"/>
         <source>Pi</source>
-        <translation type="unfinished">Pi</translation>
+        <translation>Pi</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13378,32 +13378,32 @@ nos resultados de busca:</translation>
     <message>
         <location line="+1"/>
         <source>Multiplication</source>
-        <translation type="unfinished">Multiplicação</translation>
+        <translation>Multiplicação</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation type="unfinished">Divisão</translation>
+        <translation>Divisão</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square</source>
-        <translation type="unfinished">Praça</translation>
+        <translation>Praça</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation type="unfinished">Delta</translation>
+        <translation>Delta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Stacked text</source>
-        <translation type="unfinished">Texto empilhado</translation>
+        <translation>Texto empilhado</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Measured value</source>
-        <translation type="unfinished">Valor medido</translation>
+        <translation>Valor medido</translation>
     </message>
     <message>
         <location line="+116"/>
@@ -13509,7 +13509,7 @@ nos resultados de busca:</translation>
     <message>
         <location filename="../scripts/View/Zoom/WindowZoom/WindowZoomInit.js" line="+2"/>
         <source>&amp;Window Zoom</source>
-        <translation type="unfinished">&amp; Zoom da janela</translation>
+        <translation>&amp;Zoom da janela</translation>
     </message>
 </context>
 <context>
@@ -13565,7 +13565,7 @@ nos resultados de busca:</translation>
     <message>
         <location filename="../scripts/View/Zoom/ZoomIn/ZoomInInit.js" line="+2"/>
         <source>Zoom &amp;In</source>
-        <translation type="unfinished">Zoom &amp;In</translation>
+        <translation>&amp;Aumentar o zoom</translation>
     </message>
 </context>
 <context>
@@ -13573,7 +13573,7 @@ nos resultados de busca:</translation>
     <message>
         <location filename="../scripts/View/Zoom/ZoomOut/ZoomOutInit.js" line="+2"/>
         <source>Zoom &amp;Out</source>
-        <translation type="unfinished">Zoom &amp;Out</translation>
+        <translation>&amp;Diminuir o zoom</translation>
     </message>
 </context>
 <context>
@@ -13581,12 +13581,12 @@ nos resultados de busca:</translation>
     <message>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelection.js" line="+31"/>
         <source>No selection found.</source>
-        <translation type="unfinished">Não foi encontrada nenhuma selecção.</translation>
+        <translation>Não foi encontrada nenhuma selecção.</translation>
     </message>
     <message>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelectionInit.js" line="+2"/>
         <source>Zoom to &amp;Selection</source>
-        <translation type="unfinished">Zoom para &amp;Selecção</translation>
+        <translation>Zoom para &amp;Selecção</translation>
     </message>
 </context>
 <context>
@@ -13725,22 +13725,22 @@ nos resultados de busca:</translation>
     <message>
         <location line="+2"/>
         <source>3dFaces</source>
-        <translation type="unfinished">3dFaces</translation>
+        <translation>3dFaces</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>3dFace</source>
-        <translation type="unfinished">3dFace</translation>
+        <translation>3dFace</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References</source>
-        <translation type="unfinished">Referências de blocos</translation>
+        <translation>Referências de blocos</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference</source>
-        <translation type="unfinished">Referência de bloco</translation>
+        <translation>Referência de bloco</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -13755,12 +13755,12 @@ nos resultados de busca:</translation>
     <message>
         <location line="+2"/>
         <source>Arcs</source>
-        <translation type="unfinished">Arcos</translation>
+        <translation>Arcos</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Arc</source>
-        <translation type="unfinished">Arco</translation>
+        <translation>Arco</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -13785,12 +13785,12 @@ nos resultados de busca:</translation>
     <message>
         <location line="+2"/>
         <source>Circles</source>
-        <translation type="unfinished">Círculos</translation>
+        <translation>Círculos</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Circle</source>
-        <translation type="unfinished">Círculo</translation>
+        <translation>Círculo</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -13805,22 +13805,22 @@ nos resultados de busca:</translation>
     <message>
         <location line="+2"/>
         <source>Aligned Dimensions</source>
-        <translation type="unfinished">Dimensões Alinhadas</translation>
+        <translation>Dimensões alinhadas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Aligned Dimension</source>
-        <translation type="unfinished">Dimensão Alinhada</translation>
+        <translation>Dimensão alinhada</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions</source>
-        <translation type="unfinished">Dimensões Angulares</translation>
+        <translation>Dimensões angulares</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension</source>
-        <translation type="unfinished">Dimensão Angular</translation>
+        <translation>Dimensão angular</translation>
     </message>
     <message>
         <source>2 Line Angular Dimensions</source>
@@ -13866,92 +13866,92 @@ nos resultados de busca:</translation>
     <message>
         <location line="+2"/>
         <source>Diametric Dimensions</source>
-        <translation type="unfinished">Dimensões Diamétricas</translation>
+        <translation>Dimensões Diamétricas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Diametric Dimension</source>
-        <translation type="unfinished">Dimensão Diamétrica</translation>
+        <translation>Dimensão diamétrica</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ordinate Dimensions</source>
-        <translation type="unfinished">Dimensões do ordenado</translation>
+        <translation>Dimensões do ordenado</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ordinate Dimension</source>
-        <translation type="unfinished">Dimensão do ordenado</translation>
+        <translation>Dimensão do ordenado</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rotated Dimensions</source>
-        <translation type="unfinished">Dimensões Rotacionadas</translation>
+        <translation>Dimensões rotacionadas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotated Dimension</source>
-        <translation type="unfinished">Dimensão Rotacionada</translation>
+        <translation>Dimensão rotacionada</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Radial Dimensions</source>
-        <translation type="unfinished">Dimensões radiais</translation>
+        <translation>Dimensões radiais</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Radial Dimension</source>
-        <translation type="unfinished">Dimensão Radial</translation>
+        <translation>Dimensão radial</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ellipses</source>
-        <translation type="unfinished">Elipses</translation>
+        <translation>Elipses</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ellipse</source>
-        <translation type="unfinished">Ellipse</translation>
+        <translation>Ellipse</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Hatches</source>
-        <translation type="unfinished">Escotilhas</translation>
+        <translation>Escotilhas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Hatch</source>
-        <translation type="unfinished">Escotilha</translation>
+        <translation>Escotilha</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Images</source>
-        <translation type="unfinished">Imagens</translation>
+        <translation>Imagens</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Image</source>
-        <translation type="unfinished">Imagem</translation>
+        <translation>Imagem</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Leaders</source>
-        <translation type="unfinished">Líderes</translation>
+        <translation>Linhas de chamadas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation type="unfinished">Líder</translation>
+        <translation>Linha de chamada</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Lines</source>
-        <translation type="unfinished">Linhas</translation>
+        <translation>Linhas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Line</source>
-        <translation type="unfinished">Linha</translation>
+        <translation>Linha</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -13976,32 +13976,32 @@ nos resultados de busca:</translation>
     <message>
         <location line="+2"/>
         <source>Points</source>
-        <translation type="unfinished">Pontos</translation>
+        <translation>Pontos</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Point</source>
-        <translation type="unfinished">Ponto</translation>
+        <translation>Ponto</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Polylines</source>
-        <translation type="unfinished">Polilinhas</translation>
+        <translation>Polilinhas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Polyline</source>
-        <translation type="unfinished">Polilinha</translation>
+        <translation>Polilinha</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Solids</source>
-        <translation type="unfinished">Sólidos</translation>
+        <translation>Sólidos</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Solid</source>
-        <translation type="unfinished">Sólido</translation>
+        <translation>Sólido</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14026,12 +14026,12 @@ nos resultados de busca:</translation>
     <message>
         <location line="+2"/>
         <source>Splines</source>
-        <translation type="unfinished">Estrias</translation>
+        <translation>Splines</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Spline</source>
-        <translation type="unfinished">Spline</translation>
+        <translation>Spline</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14041,12 +14041,12 @@ nos resultados de busca:</translation>
     <message>
         <location line="+2"/>
         <source>Texts</source>
-        <translation type="unfinished">Textos</translation>
+        <translation>Textos</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Text</source>
-        <translation type="unfinished">Texto</translation>
+        <translation>Texto</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14061,12 +14061,12 @@ nos resultados de busca:</translation>
     <message>
         <location line="+3"/>
         <source>Unknown Entities</source>
-        <translation type="unfinished">Entidades Desconhecidas</translation>
+        <translation>Entidades desconhecidas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Entity</source>
-        <translation type="unfinished">Entidade Desconhecida</translation>
+        <translation>Entidade desconhecida</translation>
     </message>
     <message>
         <location line="+6"/>
