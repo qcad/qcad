@@ -12624,7 +12624,7 @@ dans les résultats de recherche :</translation>
     <message>
         <location filename="../scripts/Snap/Snap.js" line="+57"/>
         <source>Snap Tools</source>
-        <translation type="unfinished">Outils d&apos;accrochage</translation>
+        <translation>Outils d&apos;accrochage</translation>
     </message>
     <message>
         <source>Show snap tools</source>
@@ -13120,7 +13120,7 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        <translation type="unfinished">Point cible</translation>
+        <translation>Point cible</translation>
     </message>
     <message>
         <location line="+141"/>
@@ -13924,7 +13924,7 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        <translation type="unfinished">Point cible</translation>
+        <translation>Point cible</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateInit.js" line="+2"/>
