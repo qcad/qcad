@@ -23,3 +23,8 @@ QToolBar#Options QLabel#Icon {
     border-right: 1px solid #797B7E;
     margin: 3px 3px 3px 3px;
 }
+
+/* Background of text field in text editor */
+QDialog#TextDialog QTextEdit#Text {
+    background-color: white;
+}
