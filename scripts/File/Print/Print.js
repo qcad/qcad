@@ -207,6 +207,7 @@ Print.prototype.printCurrentBlock = function(printer, painter) {
 
     // set background color of view to match printing preference:
     var bgColor = this.view.getBackgroundColor();
+    var scale = Print.getScale(this.document);
 
     this.view.setBackgroundColor(Print.getBackgroundColor(this.document));
     this.view.setPrinting(true);
@@ -214,7 +215,7 @@ Print.prototype.printCurrentBlock = function(printer, painter) {
     var minLineweightSet = false;
     if (this.view.getMinimumLineweight()<RS.PointTolerance) {
         // no minimum lineweight defined: force minimum lineweight of 0.01mm for printing:
-        this.view.setMinimumLineweight(RUnit.convert(0.01, RS.Millimeter, this.document.getUnit()));
+        this.view.setMinimumLineweight(RUnit.convert(0.01/scale, RS.Millimeter, this.document.getUnit()));
         minLineweightSet = true;
     }
 
@@ -255,7 +256,6 @@ Print.prototype.printCurrentBlock = function(printer, painter) {
 
     this.view.setPrintPointSize(new RVector(1.0/printerFactor.x, 1.0/printerFactor.y));
 
-    var scale = Print.getScale(this.document);
     var offset = Print.getOffset(this.document);
 
     var previousPixelSizeHint = this.scene.getPixelSizeHint();
