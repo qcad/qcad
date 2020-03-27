@@ -212,7 +212,7 @@
     <message>
         <location line="+162"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation>Licencií</translation>
     </message>
     <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
@@ -230,7 +230,7 @@
     <message>
         <location line="+52"/>
         <source>Hatch Patterns</source>
-        <translation type="unfinished"></translation>
+        <translation>Vzory šrafovania</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -287,7 +287,7 @@
     <message>
         <location line="+23"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation>Licencií</translation>
     </message>
 </context>
 <context>
@@ -2654,17 +2654,17 @@ Prajete si ho obnoviť?</translation>
     <message>
         <location line="+11"/>
         <source>Second corner</source>
-        <translation type="unfinished">Druhý roh</translation>
+        <translation>Druhý roh</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Cieľový referenčný bod</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Cieľový bod výberu</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3854,7 +3854,7 @@ už existuje v zozname.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prvok nie je oblúk.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4872,7 +4872,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1816"/>
         <source>&amp;FlexPainter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -4880,7 +4880,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Možnosti Painter</translation>
     </message>
     <message>
         <location line="+25"/>
