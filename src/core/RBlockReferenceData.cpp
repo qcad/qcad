@@ -499,19 +499,21 @@ bool RBlockReferenceData::applyTransformationTo(QSharedPointer<REntity>& entity)
     }
 
     entity->move(-block->getOrigin());
-    if (!RMath::fuzzyCompare(scaleFactors.x, scaleFactors.y)) {
+    if (RMath::fuzzyCompare(scaleFactors.x, scaleFactors.y)) {
+        // uniform scale:
+        entity->scale(scaleFactors.x, RVector());
+    }
+    else if (RMath::fuzzyCompare(scaleFactors.x, -scaleFactors.y)) {
+        entity->scale(scaleFactors.x, RVector());
+        entity->mirror(RVector(0,0), RVector::createPolar(1.0, 0.0));
+    }
+    else {
         // non-uniform scale:
         QSharedPointer<REntity> e = entity->scaleNonUniform(scaleFactors, RVector());
         if (!e.isNull() && e.data()!=entity.data()) {
             entity.swap(e);
         }
     }
-    else {
-        // uniform scale:
-        entity->scale(scaleFactors.x, RVector());
-    }
-    //entity->scale(scaleFactors, RVector());
-    //entity.scale(scaleFactors, RVector(), newShapes);
     entity->rotate(rotation);
     entity->move(position);
 
