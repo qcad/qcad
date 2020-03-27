@@ -79,10 +79,11 @@ void RModifyObjectsOperation::transformSelection(RTransformation* transformation
 
             //QSet<RPropertyTypeId> props = entity->getPropertyTypeIds(RPropertyAttributes::Location);
 
-            RAddObjectsOperation::Flags flags = RAddObjectsOperation::GeometryOnly;
+            RAddObjectsOperation::Flags flags = RAddObjectsOperation::NoFlags;
             if (!useCurrentAttributes) {
-                flags = flags | RAddObjectsOperation::UseAttributes;
+                flags = flags | RAddObjectsOperation::UseAttributes | RAddObjectsOperation::GeometryOnly;
             }
+
             if (!move) {
                 flags = flags | RAddObjectsOperation::ForceNew;
             }

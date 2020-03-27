@@ -135,9 +135,9 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
                 }
             }
 
-            var f = RAddObjectsOperation.GeometryOnly;
+            var f = RAddObjectsOperation.NoFlags;
             if (!this.useCurrentAttributes) {
-                f = f | RAddObjectsOperation.UseAttributes;
+                f = RAddObjectsOperation.UseAttributes | RAddObjectsOperation.GeometryOnly;
             }
 
             if (cache) {
