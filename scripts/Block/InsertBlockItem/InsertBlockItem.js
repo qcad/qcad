@@ -221,6 +221,7 @@ InsertBlockItem.prototype.pickCoordinate = function(event, preview) {
                 var t = di.applyOperation(op);
                 prev = t.isPreview();
                 di.clearPreview();
+                di.setRelativeZero(this.offset);
                 di.repaintViews();
             }
 
