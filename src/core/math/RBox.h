@@ -120,6 +120,8 @@ public:
         return !operator==(other);
     }
 
+    void transform(QTransform& t);
+
 public:
     /**
      * \getter{getCorner1}

@@ -610,6 +610,20 @@ QRectF RBox::toQRectF() const {
     return QRectF(c1.x, c1.y, c2.x - c1.x, c2.y - c1.y);
 }
 
+void RBox::transform(QTransform& t) {
+    RBox res;
+
+    QList<RVector> corners = getCorners2d();
+    for (int i=0; i<corners.length(); i++) {
+        QPointF qp(corners[i].x, corners[i].y);
+        QPointF qpTransformed = t.map(qp);
+        res.growToIncludePoint(RVector(qpTransformed.x(), qpTransformed.y()));
+    }
+
+    c1 = res.c1;
+    c2 = res.c2;
+}
+
 /**
  * == operator
  */
