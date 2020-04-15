@@ -35,6 +35,7 @@ public:
     enum Type {
         Invalid,
         PainterPath,
+        PainterPathRay,
         PainterPathXLine,
         Image,
         Text,
@@ -93,7 +94,7 @@ public:
     }
 
     bool isPainterPath() {
-        return type==PainterPath || type==PainterPathXLine;
+        return type==PainterPath || type==PainterPathRay || type==PainterPathXLine;
     }
 
     void setMode(RGraphicsSceneDrawable::Mode mode, bool on = true) {

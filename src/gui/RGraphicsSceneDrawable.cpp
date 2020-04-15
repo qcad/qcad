@@ -10,14 +10,6 @@ RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RPainterPath& pp, const RVe
     type(PainterPath), offset(os), modes(NoMode), painterPath(NULL), image(NULL), text(NULL), transform(NULL) {
 
     painterPath = new RPainterPath(pp);
-
-    // detect XLine drawables:
-    if (pp.hasOriginalShapes()) {
-        QSharedPointer<RShape> s = pp.getOriginalShape(0);
-        if (!s.isNull() && RShape::isXLineShape(*s)) {
-            type = PainterPathXLine;
-        }
-    }
 }
 
 RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RImageData& img, const RVector& os) :
@@ -69,6 +61,7 @@ RGraphicsSceneDrawable RGraphicsSceneDrawable::createEndTransform(const RVector&
 void RGraphicsSceneDrawable::uninit() {
     switch (type) {
     case PainterPath:
+    case PainterPathRay:
     case PainterPathXLine:
         delete painterPath;
         break;
@@ -107,6 +100,7 @@ RDocument* RGraphicsSceneDrawable::getDocument() const {
 void RGraphicsSceneDrawable::setSelected(bool on) {
     switch (type) {
     case PainterPath:
+    case PainterPathRay:
     case PainterPathXLine:
         painterPath->setSelected(on);
         break;
@@ -126,6 +120,7 @@ void RGraphicsSceneDrawable::setSelected(bool on) {
 void RGraphicsSceneDrawable::setHighlighted(bool on) {
     switch (type) {
     case PainterPath:
+    case PainterPathRay:
     case PainterPathXLine:
         painterPath->setHighlighted(on);
         break;
@@ -146,6 +141,7 @@ RGraphicsSceneDrawable& RGraphicsSceneDrawable::operator=(const RGraphicsSceneDr
 
     switch (other.type) {
     case PainterPath:
+    case PainterPathRay:
     case PainterPathXLine:
         Q_ASSERT(other.painterPath!=NULL);
         painterPath = new RPainterPath(*other.painterPath);
@@ -178,6 +174,7 @@ QDebug operator<<(QDebug dbg, const RGraphicsSceneDrawable& d) {
 
     switch (d.getType()) {
     case RGraphicsSceneDrawable::PainterPath:
+    case RGraphicsSceneDrawable::PainterPathRay:
     case RGraphicsSceneDrawable::PainterPathXLine:
         dbg.nospace() << d.getPainterPath();
         break;

@@ -475,6 +475,18 @@ void RGraphicsSceneQt::exportRay(const RRay& ray) {
         box.growToIncludeBox(b);
     }
 
+    // transform view box in inverted way as entities:
+    if (!transformStack.isEmpty()) {
+        for (int k=0; k<transformStack.size(); k++) {
+            bool ok;
+            QTransform t = transformStack[k].inverted(&ok);
+            if (!ok) {
+                qDebug() << "transform not invertable";
+            }
+            box.transform(t);
+        }
+    }
+
     // trim line to view box:
     RLine clippedLine = ray.getClippedLine(box);
 
