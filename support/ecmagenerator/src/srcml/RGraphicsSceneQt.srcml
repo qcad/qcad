@@ -89,6 +89,12 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportArcSegment</name><parameter_list>(<param><decl><type><name>const</name> <name>RArc</name>&amp;</type> <name>arc</name></decl></param>, <param><decl><type><name>bool</name></type> <name>allowForZeroLength</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportLineSegment</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>line</name></decl></param>, <param><decl><type><name>double</name></type> <name>angle</name> =<init> <expr><name>RNANDOUBLE</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportXLine</name><parameter_list>(<param><decl><type><name>const</name> <name>RXLine</name>&amp;</type> <name>xLine</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \ nonscriptable
+     */</comment>
+    <comment type="line">//virtual void exportXLine(const RXLine&amp; xLine, REntity::Id id, RPainterPath&amp; pp, QStack&lt;QTransform&gt;&amp; transformStack);</comment>
+
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportRay</name><parameter_list>(<param><decl><type><name>const</name> <name>RRay</name>&amp;</type> <name>ray</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportTriangle</name><parameter_list>(<param><decl><type><name>const</name> <name>RTriangle</name>&amp;</type> <name>triangle</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportRectangle</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p2</name></decl></param>)</parameter_list>;</function_decl>
@@ -105,11 +111,20 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>highlightEntity</name><parameter_list>(<param><decl><type><name>REntity</name>&amp;</type> <name>entity</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>deleteDrawables</name><parameter_list>()</parameter_list>;</function_decl>
-    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RGraphicsSceneDrawable</name></argument>&gt;</argument_list></name></type> <name>getDrawables</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RGraphicsSceneDrawable</name></argument>&gt;</argument_list></name>*</type> <name>getDrawables</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>bool</name></type> <name>hasPreview</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QList<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>getPreviewEntityIds</name><parameter_list>()</parameter_list>;</function_decl>
-    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RGraphicsSceneDrawable</name></argument>&gt;</argument_list></name></type> <name>getPreviewDrawables</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RGraphicsSceneDrawable</name></argument>&gt;</argument_list></name>*</type> <name>getPreviewDrawables</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
+
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>addToPreview</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>QList<argument_list>&lt;<argument><name>RGraphicsSceneDrawable</name></argument>&gt;</argument_list></name>&amp;</type> <name>drawables</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>addToPreview</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>RGraphicsSceneDrawable</name>&amp;</type> <name>drawable</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>addTextToPreview</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>text</name></decl></param>)</parameter_list>;</function_decl>
@@ -137,6 +152,13 @@
      */</comment>
     <function_decl><type><name>friend</name> <name>QDebug</name></type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>, <param><decl><type><name>RGraphicsSceneQt</name>&amp;</type> <name>gs</name></decl></param>)</parameter_list>;</function_decl>
 
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function><type><name>void</name></type> <name>setTransformStack</name><parameter_list>(<param><decl><type><name>QStack<argument_list>&lt;<argument><name>QTransform</name></argument>&gt;</argument_list></name>&amp;</type> <name>s</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>transformStack</name> = <name>s</name></expr>;</expr_stmt>
+    }</block></function>
+
 </public><private>private:
     <decl_stmt><decl><type><name>RPainterPath</name></type> <name>currentPainterPath</name></decl>;</decl_stmt>
 
@@ -148,6 +170,8 @@
 
     <decl_stmt><decl><type><name>bool</name></type> <name>decorating</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>screenBasedLinetypesOverride</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>QTransform</name></argument>&gt;</argument_list></name></type> <name>transformStack</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RGraphicsSceneQt*</argument>)</argument_list></macro>

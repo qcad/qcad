@@ -36,6 +36,7 @@
     <enum>enum <name>Type</name> <block>{
         <expr><name>Invalid</name></expr>,
         <expr><name>PainterPath</name></expr>,
+        <expr><name>PainterPathXLine</name></expr>,
         <expr><name>Image</name></expr>,
         <expr><name>Text</name></expr>,
         <expr><name>Transform</name></expr>,
@@ -90,6 +91,10 @@
 
     <function><type><name><name>RGraphicsSceneDrawable</name>::<name>Type</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>type</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isPainterPath</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>type</name>==<name>PainterPath</name> || <name>type</name>==<name>PainterPathXLine</name></expr>;</return>
     }</block></function>
 
     <function><type><name>void</name></type> <name>setMode</name><parameter_list>(<param><decl><type><name><name>RGraphicsSceneDrawable</name>::<name>Mode</name></name></type> <name>mode</name></decl></param>, <param><decl><type><name>bool</name></type> <name>on</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <block>{

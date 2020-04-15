@@ -8,6 +8,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <enum name="Type">
       <value name="Invalid" />
       <value name="PainterPath" />
+      <value name="PainterPathXLine" />
       <value name="Image" />
       <value name="Text" />
       <value name="Transform" />
@@ -91,6 +92,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RGraphicsSceneDrawable::Type"
       isPureVirtual="false" />
+    </method>
+    <method name="isPainterPath" cppName="isPainterPath"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="setMode" cppName="setMode" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

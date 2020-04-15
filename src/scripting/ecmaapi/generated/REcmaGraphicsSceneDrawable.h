@@ -67,6 +67,9 @@
         getType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isPainterPath
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setMode
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -54,6 +54,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getType, "getType");
             
+            REcmaHelper::registerFunction(&engine, proto, isPainterPath, "isPainterPath");
+            
             REcmaHelper::registerFunction(&engine, proto, setMode, "setMode");
             
             REcmaHelper::registerFunction(&engine, proto, getMode, "getMode");
@@ -124,6 +126,11 @@
 
     ctor.setProperty("PainterPath",
     QScriptValue(RGraphicsSceneDrawable::PainterPath),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("PainterPathXLine",
+    QScriptValue(RGraphicsSceneDrawable::PainterPathXLine),
     QScriptValue::ReadOnly);
 
 
@@ -984,6 +991,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsSceneDrawable::getType", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsSceneDrawable::isPainterPath
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsSceneDrawable::isPainterPath", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneDrawable::isPainterPath";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsSceneDrawable* self = 
+                        getSelf("isPainterPath", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isPainterPath();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneDrawable.isPainterPath().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsSceneDrawable::isPainterPath", context, engine);
             return result;
         }
          QScriptValue

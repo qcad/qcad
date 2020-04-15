@@ -137,16 +137,10 @@
         deleteDrawables
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getDrawables
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         hasPreview
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getPreviewEntityIds
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getPreviewDrawables
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         addToPreview
