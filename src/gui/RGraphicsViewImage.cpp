@@ -767,7 +767,9 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
     RVector c2 = mapFromView(RVector(r.right()+1,r.top()-1), 1e300);
     RBox queryBox(c1, c2);
 
+    //RDebug::startTimer();
     paintEntitiesMulti(queryBox);
+    //RDebug::stopTimer("paint");
 
     // paint selected entities on top:
     if (!selectedIds.isEmpty()) {
@@ -1036,12 +1038,12 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
         ps = getScene()->getPixelSizeHint();
     }
 
-    // regen arcs, xlines, rays if necessary:
+    // regen arcs, xlines, rays, block references if necessary:
     for (int i=0; i<list.length(); i++) {
         REntity::Id id = list[i];
 
         // get drawables of the given entity:
-        QList<RGraphicsSceneDrawable> drawables = sceneQt->getDrawables(id);
+        QList<RGraphicsSceneDrawable>* drawables = sceneQt->getDrawables(id);
 
         // before multi threading:
         // if at least one arc path is too detailed or not detailed enough,
@@ -1049,35 +1051,33 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
 
         // do we need to regen the path?
         bool regen = false;
-        if (drawables.isEmpty()) {
+        if (drawables==NULL || drawables->isEmpty()) {
             // entity was last outside visible area, needs regen to reappear:
             regen = true;
         }
         else {
-            for (int p=0; p<drawables.size(); p++) {
-                RGraphicsSceneDrawable& drawable = drawables[p];
-                if (drawable.getType()==RGraphicsSceneDrawable::PainterPath) {
+            for (int p=0; p<drawables->size() && !regen; p++) {
+                RGraphicsSceneDrawable& drawable = drawables->operator[](p);
+
+                if (drawable.isPainterPath()) {
                     if (drawable.getPainterPath().getAlwaysRegen()==true) {
                         regen = true;
-                        break;
                     }
-                    if (drawable.getPainterPath().getAutoRegen()==true) {
+                    else if (drawable.getPainterPath().getAutoRegen()==true) {
                         if (drawable.getPainterPath().getPixelSizeHint()>RS::PointTolerance &&
                            (drawable.getPainterPath().getPixelSizeHint()<ps/5 ||
                             drawable.getPainterPath().getPixelSizeHint()>ps*5)) {
 
                             regen = true;
-                            break;
                         }
                     }
                 }
             }
         }
 
-        // regen:
+        // regenerate arc, xline, block reference, etc.:
         if (regen) {
             sceneQt->exportEntity(id, true);
-            //drawables = sceneQt->getDrawables(id);
         }
     }
 
@@ -1165,7 +1165,7 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
 //    }
 
     // get drawables for vector graphics entity:
-    QList<RGraphicsSceneDrawable> drawables;
+    QList<RGraphicsSceneDrawable>* drawables;
     if (preview) {
         // get drawables of the current preview:
         drawables = sceneQt->getPreviewDrawables(id);
@@ -1211,8 +1211,12 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
 //        }
     }
 
+    if (drawables==NULL) {
+        return;
+    }
+
     // paint drawables (painter paths, texts, images):
-    QListIterator<RGraphicsSceneDrawable> i(drawables);
+    QListIterator<RGraphicsSceneDrawable> i(*drawables);
     while (i.hasNext()) {
         RGraphicsSceneDrawable drawable = i.next();
 
@@ -1309,7 +1313,7 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
         }
 
         // unknown drawable or already handled (image, text, transform, end transform):
-        if (drawable.getType()!=RGraphicsSceneDrawable::PainterPath) {
+        if (!drawable.isPainterPath()) {
             continue;
         }
 
