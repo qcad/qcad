@@ -247,6 +247,8 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
         entity->rotate(data.rotation, data.position);
 
         RBox bb = entity->getBoundingBox();
+        bb.c1.z = 0;
+        bb.c2.z = 0;
         if (!viewportBox.intersects(bb)) {
             continue;
         }
