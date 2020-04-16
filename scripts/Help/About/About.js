@@ -21,6 +21,11 @@ include("scripts/Help/Help.js");
 include("AboutCredits.js");
  
 
+/**
+ * \class About
+ * \brief Shows about dialog.
+ * \ingroup ecma_help
+ */
 function About(guiAction) {
     Help.call(this, guiAction);
 }
