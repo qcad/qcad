@@ -562,7 +562,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="-191"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+2"/>
         <source>Scale</source>
-        <translation>Razmerje</translation>
+        <translation>Merilo</translation>
     </message>
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="+5"/>
@@ -601,13 +601,13 @@
         <location line="+2"/>
         <location line="+1"/>
         <source>U</source>
-        <translation type="unfinished"></translation>
+        <translation>U</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation>V</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -689,22 +689,22 @@
     <message>
         <location line="-2"/>
         <source>Base Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Osnovni kot</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Size 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Velikost 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Size 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Velikost 2</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Global Z</source>
-        <translation type="unfinished"></translation>
+        <translation>Obči Z</translation>
     </message>
     <message>
         <location filename="../src/entity/RFaceEntity.cpp" line="-14"/>
@@ -830,7 +830,7 @@
     </message>
     <message>
         <source>Plain Text</source>
-        <translation type="vanished">Preprosto besedilo</translation>
+        <translation>Golo besedilo</translation>
     </message>
     <message>
         <source>Font Name</source>
@@ -854,7 +854,7 @@
     </message>
     <message>
         <source>Italic</source>
-        <translation type="vanished">Poševno</translation>
+        <translation>Ležeče</translation>
     </message>
     <message>
         <source>Line Spacing</source>
