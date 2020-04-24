@@ -8,7 +8,7 @@
         <translation type="obsolete">&amp;Acerca de</translation>
     </message>
     <message>
-        <location filename="../scripts/Help/About/About.js" line="+63"/>
+        <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
         <translation>Acerca de %1</translation>
     </message>
@@ -9842,7 +9842,7 @@ en los resultados de búsqueda:</translation>
         <translation type="obsolete">Sin título %1 [*]</translation>
     </message>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+141"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
         <source>Opening drawing:</source>
         <translation>Abriendo el dibujo:</translation>
     </message>
@@ -9851,12 +9851,12 @@ en los resultados de búsqueda:</translation>
         <translation type="vanished">Cargando...</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+26"/>
         <source>Import Error</source>
         <translation>Error de importación</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Cannot open file</source>
         <translation>No se puede abrir el archivo</translation>
     </message>
@@ -9886,7 +9886,7 @@ en los resultados de búsqueda:</translation>
         <translation>El archivo está vacío.</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Drawing loaded successfully:</source>
         <translation>Dibujo cargó correctamente:</translation>
     </message>
@@ -13277,17 +13277,15 @@ Se cruzan con la selección actual</translatorcomment>
 <context>
     <name>Startup</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/PreferencesPage.ui" line="+17"/>
         <source>Enable Splash Screen</source>
-        <translation>Activar pantalla de bienvenida</translation>
+        <translation type="vanished">Activar pantalla de bienvenida</translation>
     </message>
 </context>
 <context>
     <name>StartupPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/StartupPreferences.js" line="+24"/>
         <source>Startup</source>
-        <translation>Inicial</translation>
+        <translation type="vanished">Inicial</translation>
     </message>
 </context>
 <context>
@@ -15054,7 +15052,7 @@ Visita el sitio &amp;Web</translatorcomment>
         <translation type="obsolete">Inicialización de plugins...</translation>
     </message>
     <message>
-        <location filename="../scripts/autostart.js" line="+352"/>
+        <location filename="../scripts/autostart.js" line="+361"/>
         <source>Loading add-on translations...</source>
         <translation>Cargando complemento traducciones...</translation>
     </message>

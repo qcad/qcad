@@ -4,7 +4,7 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../scripts/Help/About/About.js" line="+63"/>
+        <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
         <translation>O %1</translation>
     </message>
@@ -8544,17 +8544,17 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+141"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
         <source>Opening drawing:</source>
         <translation>Otevírání výkresu:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+26"/>
         <source>Import Error</source>
         <translation>Chyba importu</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Cannot open file</source>
         <translation>Soubor nelze otevřít</translation>
     </message>
@@ -8584,7 +8584,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Soubor je prázdný.</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Drawing loaded successfully:</source>
         <translation>Výkres byl úspěšně načten:</translation>
     </message>
@@ -11431,17 +11431,15 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>Startup</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/PreferencesPage.ui" line="+17"/>
         <source>Enable Splash Screen</source>
-        <translation>Povolit úvodní obrazovku</translation>
+        <translation type="vanished">Povolit úvodní obrazovku</translation>
     </message>
 </context>
 <context>
     <name>StartupPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/StartupPreferences.js" line="+24"/>
         <source>Startup</source>
-        <translation>Spuštění</translation>
+        <translation type="vanished">Spuštění</translation>
     </message>
 </context>
 <context>
@@ -13050,7 +13048,7 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+352"/>
+        <location filename="../scripts/autostart.js" line="+361"/>
         <source>Loading add-on translations...</source>
         <translation>Načítání překladů doplňků...</translation>
     </message>

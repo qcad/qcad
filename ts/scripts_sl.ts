@@ -4,7 +4,7 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../scripts/Help/About/About.js" line="+63"/>
+        <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
         <translation>O %1</translation>
     </message>
@@ -911,11 +911,13 @@ da bodo spremembe začele delovat.</translation>
         <location line="+19"/>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation><numerusform>Najdena je bila samodejno shanjena varnostna kopija nenaslovljene risbe. Jo želite obnovit?</numerusform>
-        <numerusform>Najdeni sta bili samodejno shanjeni varnostni kopiji nenaslovljenih risb. Ju želite obnovit?</numerusform>
-        <numerusform>Najdene so bile %n samodejno shanjene varnostne kopije nenaslovljenih risb. Jih želite obnovit?</numerusform>
-        <numerusform>Najdenih je bilo %n samodejno shanjenih varnostnih kopij nenaslovljenih risb. Jih želite obnovit?</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Najdena je bila samodejno shanjena varnostna kopija nenaslovljene risbe. Jo želite obnovit?</numerusform>
+            <numerusform>Najdeni sta bili samodejno shanjeni varnostni kopiji nenaslovljenih risb. Ju želite obnovit?</numerusform>
+            <numerusform>Najdene so bile %n samodejno shanjene varnostne kopije nenaslovljenih risb. Jih želite obnovit?</numerusform>
+            <numerusform>Najdenih je bilo %n samodejno shanjenih varnostnih kopij nenaslovljenih risb. Jih želite obnovit?</numerusform>
+        </translation>
+    </message>
     <message>
         <location line="+69"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
@@ -3033,11 +3035,13 @@ Do you wish to recover it?</source>
     <message numerus="yes">
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
-        <translation><numerusform>Mesto napisa kote je bilo ponastavljeno.</numerusform>
-        <numerusform>Mesto napisa dveh kot je bilo ponastavljeno.</numerusform>
-        <numerusform>Mesto napisa %n kot je bilo ponastavljeno.</numerusform>
-        <numerusform>Mesto napisa %n kot je bilo ponastavljeno.</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Mesto napisa kote je bilo ponastavljeno.</numerusform>
+            <numerusform>Mesto napisa dveh kot je bilo ponastavljeno.</numerusform>
+            <numerusform>Mesto napisa %n kot je bilo ponastavljeno.</numerusform>
+            <numerusform>Mesto napisa %n kot je bilo ponastavljeno.</numerusform>
+        </translation>
+    </message>
     <message>
         <source>Reset label position of %1 dimension(s).</source>
         <translation type="vanished">Razveljavi lokacijo napisa za %1 kotiranj.</translation>
@@ -3800,11 +3804,13 @@ je že na seznamu.</translation>
     <message numerus="yes">
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+54"/>
         <source>%n entity/ies duplicated</source>
-        <translation><numerusform>1 predmet podvojen</numerusform>
-        <numerusform>Predmeta podvojena</numerusform>
-        <numerusform>%n predmeti podvojeni</numerusform>
-        <numerusform>%n predmetov podvojenih</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>1 predmet podvojen</numerusform>
+            <numerusform>Predmeta podvojena</numerusform>
+            <numerusform>%n predmeti podvojeni</numerusform>
+            <numerusform>%n predmetov podvojenih</numerusform>
+        </translation>
+    </message>
 </context>
 <context>
     <name>EAction</name>
@@ -4706,11 +4712,13 @@ je že na seznamu.</translation>
     <message numerus="yes">
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
-        <translation><numerusform>Transakcija je vplivala na en predmet.</numerusform>
-        <numerusform>Transakcija je vplivala na dva predmeta.</numerusform>
-        <numerusform>Transakcija je vplivala na %n predmete.</numerusform>
-        <numerusform>Transakcija je vplivala na %n predmetov.</numerusform>
-        </translation></message>
+        <translation>
+            <numerusform>Transakcija je vplivala na en predmet.</numerusform>
+            <numerusform>Transakcija je vplivala na dva predmeta.</numerusform>
+            <numerusform>Transakcija je vplivala na %n predmete.</numerusform>
+            <numerusform>Transakcija je vplivala na %n predmetov.</numerusform>
+        </translation>
+    </message>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
@@ -9111,7 +9119,7 @@ shown in search results:</source>
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+141"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
         <source>Opening drawing:</source>
         <translation>Odpiram risbo:</translation>
     </message>
@@ -9120,12 +9128,12 @@ shown in search results:</source>
         <translation type="vanished">Odpiram...</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+26"/>
         <source>Import Error</source>
         <translation>Napaka pri uvozu</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Cannot open file</source>
         <translation>Ne morem odpret datoteke</translation>
     </message>
@@ -9155,7 +9163,7 @@ shown in search results:</source>
         <translation>Datoteka je prazna.</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Drawing loaded successfully:</source>
         <translation>Risba naložena uspešno:</translation>
     </message>
@@ -12221,17 +12229,15 @@ shown in search results:</source>
 <context>
     <name>Startup</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/PreferencesPage.ui" line="+17"/>
         <source>Enable Splash Screen</source>
-        <translation>Omogoči pojavno okno</translation>
+        <translation type="vanished">Omogoči pojavno okno</translation>
     </message>
 </context>
 <context>
     <name>StartupPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/StartupPreferences.js" line="+24"/>
         <source>Startup</source>
-        <translation>Zagon</translation>
+        <translation type="vanished">Zagon</translation>
     </message>
 </context>
 <context>
@@ -13907,7 +13913,7 @@ shown in search results:</source>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+352"/>
+        <location filename="../scripts/autostart.js" line="+361"/>
         <source>Loading add-on translations...</source>
         <translation>Nalagam prevode dodatkov...</translation>
     </message>

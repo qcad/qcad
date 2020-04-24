@@ -671,7 +671,7 @@
         <translation>Najv. podaljšanja</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+852"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+854"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Zaznano krožno (rekurzivno) sklicevanje zbirov:</translation>
     </message>
@@ -1171,7 +1171,7 @@
     </message>
     <message>
         <source>Handle</source>
-        <translation>Ročica</translation>
+        <translation type="vanished">Ročica</translation>
     </message>
     <message>
         <source>Protected</source>

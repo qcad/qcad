@@ -8,7 +8,7 @@
         <translation type="obsolete">&amp;Informazioni su...</translation>
     </message>
     <message>
-        <location filename="../scripts/Help/About/About.js" line="+63"/>
+        <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
         <translation>Informazioni su %1</translation>
     </message>
@@ -9889,7 +9889,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation type="obsolete">Senza titolo %1 [*]</translation>
     </message>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+141"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
         <source>Opening drawing:</source>
         <translation>Aprendo il disegno:</translation>
     </message>
@@ -9898,12 +9898,12 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation type="vanished">Caricamento…</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+26"/>
         <source>Import Error</source>
         <translation>Errore di importazione</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Cannot open file</source>
         <translation>Impossibile aprire il file</translation>
     </message>
@@ -9933,7 +9933,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation>Il file è vuoto.</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Drawing loaded successfully:</source>
         <translation>Disegno caricato correttamente:</translation>
     </message>
@@ -13359,17 +13359,15 @@ Interseca con la selezione corrente</translatorcomment>
 <context>
     <name>Startup</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/PreferencesPage.ui" line="+17"/>
         <source>Enable Splash Screen</source>
-        <translation>Abilita splash screen</translation>
+        <translation type="vanished">Abilita splash screen</translation>
     </message>
 </context>
 <context>
     <name>StartupPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/StartupPreferences.js" line="+24"/>
         <source>Startup</source>
-        <translation>Inizio</translation>
+        <translation type="vanished">Inizio</translation>
     </message>
 </context>
 <context>
@@ -15177,7 +15175,7 @@ Visita il &amp;sito web</translatorcomment>
         <translation type="obsolete">Post-inizializzazione...</translation>
     </message>
     <message>
-        <location filename="../scripts/autostart.js" line="+352"/>
+        <location filename="../scripts/autostart.js" line="+361"/>
         <source>Loading add-on translations...</source>
         <translation>Caricamento aggiuntivo traduzioni...</translation>
     </message>

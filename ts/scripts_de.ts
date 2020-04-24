@@ -8,7 +8,7 @@
         <translation type="obsolete">Ü&amp;ber</translation>
     </message>
     <message>
-        <location filename="../scripts/Help/About/About.js" line="+63"/>
+        <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
         <translation>Über %1</translation>
     </message>
@@ -10409,7 +10409,7 @@ im Suchresultat:</translation>
         <translation type="vanished">Lade...</translation>
     </message>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+164"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+170"/>
         <source>Import Error</source>
         <translation>Import Fehler</translation>
     </message>
@@ -10426,12 +10426,12 @@ im Suchresultat:</translation>
 </translation>
     </message>
     <message>
-        <location line="-23"/>
+        <location line="-26"/>
         <source>Opening drawing:</source>
         <translation>Zeichnung öffnen:</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+32"/>
         <source>Cannot open file</source>
         <translation>Kann Datei nicht öffnen</translation>
     </message>
@@ -10461,7 +10461,7 @@ im Suchresultat:</translation>
         <translation>Datei ist leer.</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Drawing loaded successfully:</source>
         <translation>Zeichnung erfolgreich geladen:</translation>
     </message>
@@ -14054,17 +14054,15 @@ nicht öffnen.
 <context>
     <name>Startup</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/PreferencesPage.ui" line="+17"/>
         <source>Enable Splash Screen</source>
-        <translation>Startbild anzeigen</translation>
+        <translation type="vanished">Startbild anzeigen</translation>
     </message>
 </context>
 <context>
     <name>StartupPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/StartupPreferences.js" line="+24"/>
         <source>Startup</source>
-        <translation>Start</translation>
+        <translation type="vanished">Start</translation>
     </message>
 </context>
 <context>
@@ -15980,7 +15978,7 @@ nicht öffnen.
         <translation type="obsolete">Suche Plugins...</translation>
     </message>
     <message>
-        <location filename="../scripts/autostart.js" line="+352"/>
+        <location filename="../scripts/autostart.js" line="+361"/>
         <source>Loading add-on translations...</source>
         <translation>Lade Add-on Übersetzungen...</translation>
     </message>

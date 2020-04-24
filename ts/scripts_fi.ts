@@ -4,7 +4,7 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../scripts/Help/About/About.js" line="+63"/>
+        <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
         <translation>Tietoja %1</translation>
     </message>
@@ -8764,17 +8764,17 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+141"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
         <source>Opening drawing:</source>
         <translation>Avataan piirrosta:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+26"/>
         <source>Import Error</source>
         <translation>Tuontivirhe</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Cannot open file</source>
         <translation>Tiedostoa ei voida avata</translation>
     </message>
@@ -8804,7 +8804,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Tiedosto on tyhjä.</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Drawing loaded successfully:</source>
         <translation>Piirros ladattu onnistuneesti:</translation>
     </message>
@@ -11758,17 +11758,15 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>Startup</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/PreferencesPage.ui" line="+17"/>
         <source>Enable Splash Screen</source>
-        <translation>Näytä aloitusikkuna</translation>
+        <translation type="vanished">Näytä aloitusikkuna</translation>
     </message>
 </context>
 <context>
     <name>StartupPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/StartupPreferences.js" line="+24"/>
         <source>Startup</source>
-        <translation>Käynnistys</translation>
+        <translation type="vanished">Käynnistys</translation>
     </message>
 </context>
 <context>
@@ -13432,7 +13430,7 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+352"/>
+        <location filename="../scripts/autostart.js" line="+361"/>
         <source>Loading add-on translations...</source>
         <translation>Ladataan lisäosia käännökseen ...</translation>
     </message>

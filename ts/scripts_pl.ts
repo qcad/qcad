@@ -4,7 +4,7 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../scripts/Help/About/About.js" line="+63"/>
+        <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -10879,7 +10879,7 @@ Wprowadź liczbę kopii</translatorcomment>
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+141"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
         <source>Opening drawing:</source>
         <translation>Otwieranie rysunku:</translation>
     </message>
@@ -10891,13 +10891,13 @@ Wprowadź liczbę kopii</translatorcomment>
         <translation type="obsolete">Ładowanie...</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+26"/>
         <source>Import Error</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Błąd importowania</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Cannot open file</source>
         <translatorcomment>--google--
 Nie można otworzyć pliku &apos;%1&apos;
@@ -10933,7 +10933,7 @@ Nie można otworzyć pliku %1! Zostaje on opuszczony</translatorcomment>
         <translation>Plik jest pusty.</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Drawing loaded successfully:</source>
         <translation>Wczytano rysunek:</translation>
     </message>
@@ -14819,20 +14819,18 @@ Zamknięta</translatorcomment>
 <context>
     <name>Startup</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/PreferencesPage.ui" line="+17"/>
         <source>Enable Splash Screen</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ekran powitalny</translation>
+        <translation type="vanished">Ekran powitalny</translation>
     </message>
 </context>
 <context>
     <name>StartupPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/StartupPreferences.js" line="+24"/>
         <source>Startup</source>
         <translatorcomment>--google--
 Pokazuj to okno przy uruchamianiu</translatorcomment>
-        <translation>Uruchamianie</translation>
+        <translation type="vanished">Uruchamianie</translation>
     </message>
 </context>
 <context>
@@ -17035,7 +17033,7 @@ Zoom wg &amp;wyboru</translatorcomment>
         <translation type="obsolete">Po inicjalizacji wtyczki ...</translation>
     </message>
     <message>
-        <location filename="../scripts/autostart.js" line="+352"/>
+        <location filename="../scripts/autostart.js" line="+361"/>
         <source>Loading add-on translations...</source>
         <translation>Wczytywanie tłumaczeń dodatków...</translation>
     </message>

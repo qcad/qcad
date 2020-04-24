@@ -830,7 +830,7 @@
     </message>
     <message>
         <source>Plain Text</source>
-        <translation>Golo besedilo</translation>
+        <translation type="vanished">Golo besedilo</translation>
     </message>
     <message>
         <source>Font Name</source>
@@ -854,7 +854,7 @@
     </message>
     <message>
         <source>Italic</source>
-        <translation>Ležeče</translation>
+        <translation type="vanished">Ležeče</translation>
     </message>
     <message>
         <source>Line Spacing</source>

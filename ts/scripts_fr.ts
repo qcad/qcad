@@ -8,7 +8,7 @@
         <translation type="obsolete">À &amp;propos</translation>
     </message>
     <message>
-        <location filename="../scripts/Help/About/About.js" line="+63"/>
+        <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
         <translation>À propos de %1</translation>
     </message>
@@ -9722,7 +9722,7 @@ dans les résultats de recherche :</translation>
         <translation type="obsolete">Sans titre %1 [*]</translation>
     </message>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+141"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
         <source>Opening drawing:</source>
         <translation>Ouverture du dessin :</translation>
     </message>
@@ -9731,12 +9731,12 @@ dans les résultats de recherche :</translation>
         <translation type="vanished">Chargement...</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+26"/>
         <source>Import Error</source>
         <translation>Erreur d&apos;importation</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Cannot open file</source>
         <translation>Impossible d&apos;ouvrir le fichier</translation>
     </message>
@@ -9766,7 +9766,7 @@ dans les résultats de recherche :</translation>
         <translation>Le fichier est vide.</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Drawing loaded successfully:</source>
         <translation>Dessin chargé avec succès :</translation>
     </message>
@@ -13039,17 +13039,15 @@ dans les résultats de recherche :</translation>
 <context>
     <name>Startup</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/PreferencesPage.ui" line="+17"/>
         <source>Enable Splash Screen</source>
-        <translation>Activer Splash Screen</translation>
+        <translation type="vanished">Activer Splash Screen</translation>
     </message>
 </context>
 <context>
     <name>StartupPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/StartupPreferences.js" line="+24"/>
         <source>Startup</source>
-        <translation>Départ</translation>
+        <translation type="vanished">Départ</translation>
     </message>
 </context>
 <context>
@@ -14798,7 +14796,7 @@ dans les résultats de recherche :</translation>
         <translation type="obsolete">Initialisation des plugins...</translation>
     </message>
     <message>
-        <location filename="../scripts/autostart.js" line="+352"/>
+        <location filename="../scripts/autostart.js" line="+361"/>
         <source>Loading add-on translations...</source>
         <translation>Chargement add-on traductions...</translation>
     </message>

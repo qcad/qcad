@@ -675,7 +675,7 @@
         <translation type="vanished">Plotranden</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+852"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+854"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Circulaire (recursieve) blokverwijzingen gedetecteerd:</translation>
     </message>

@@ -349,8 +349,6 @@ SOURCES = \
 ../scripts/Edit/AppPreferences/LayerCompatibility/LayerCompatibilityInit.js \
 ../scripts/Edit/AppPreferences/ScriptingPreferences/ScriptingPreferences.js \
 ../scripts/Edit/AppPreferences/ScriptingPreferences/ScriptingPreferencesInit.js \
-../scripts/Edit/AppPreferences/StartupPreferences/StartupPreferences.js \
-../scripts/Edit/AppPreferences/StartupPreferences/StartupPreferencesInit.js \
 ../scripts/Edit/AppPreferences/TextPreferences/TextPreferences.js \
 ../scripts/Edit/AppPreferences/TextPreferences/TextPreferencesInit.js \
 ../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js \
@@ -1075,7 +1073,6 @@ SOURCES = \
 ../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui \
 ../scripts/Edit/AppPreferences/LayerCompatibility/PreferencesPage.ui \
 ../scripts/Edit/AppPreferences/ScriptingPreferences/PreferencesPage.ui \
-../scripts/Edit/AppPreferences/StartupPreferences/PreferencesPage.ui \
 ../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui \
 ../scripts/Edit/AppPreferences/ThemePreferences/PreferencesPage.ui \
 ../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui \
