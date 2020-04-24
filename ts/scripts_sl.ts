@@ -111,7 +111,7 @@
     <message>
         <location line="+3"/>
         <source>License Key:</source>
-        <translation type="unfinished"></translation>
+        <translation>Licenčni ključ:</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -147,22 +147,22 @@
     <message>
         <location line="-5"/>
         <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Do dodatnih orodij, zmožnosti in zapisov datotek, vključno z DWG, lahko dostopate na &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; ali na &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
-        <translation type="unfinished"></translation>
+        <translation>Za vtičnike in skriptne dodatke veljajo njim pripadajoče licence (glejte zavihek &quot;Vtičniki&quot;).</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Portions of this software © %1 The Qt Company Ltd.</source>
-        <translation type="unfinished"></translation>
+        <translation>Del tega programja © %1 The Qt Company Ltd.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt dobite z QCAD-om pod&lt;a href=&apos;%1&apos;&gt; Manj splošnim dovoljenjem (LGPL) Open Source&lt;/a&gt;, ki dodeljuje različne pravice vam, kot uporabniku, vključno s pravico do prevajanja Qt knižnjic za vaše računalniško okolje. Če to želiti narediti, sledite gradivu &lt;a href=&apos;%2&apos;&gt;, prikazanem na spletni strani Qt: &lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -212,7 +212,7 @@
     <message>
         <location line="+162"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation>Dovoljenja</translation>
     </message>
     <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
@@ -230,7 +230,7 @@
     <message>
         <location line="+52"/>
         <source>Hatch Patterns</source>
-        <translation type="unfinished"></translation>
+        <translation>Vzorec črtkanja</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -287,7 +287,7 @@
     <message>
         <location line="+23"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation>Dovoljenja</translation>
     </message>
 </context>
 <context>
@@ -911,18 +911,17 @@ da bodo spremembe začele delovat.</translation>
         <location line="+19"/>
         <source>%n autosave backup file(s) for (an) untitled drawing(s) was/were found.
 Do you wish to recover it/them?</source>
-        <translation type="unfinished">
-            <numerusform>Najdena je bila samodejno shanjena varnostna kopija neznanege risanja. Jo želite obnovit?</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Najdena je bila samodejno shanjena varnostna kopija nenaslovljene risbe. Jo želite obnovit?</numerusform>
+        <numerusform>Najdeni sta bili samodejno shanjeni varnostni kopiji nenaslovljenih risb. Ju želite obnovit?</numerusform>
+        <numerusform>Najdene so bile %n samodejno shanjene varnostne kopije nenaslovljenih risb. Jih želite obnovit?</numerusform>
+        <numerusform>Najdenih je bilo %n samodejno shanjenih varnostnih kopij nenaslovljenih risb. Jih želite obnovit?</numerusform>
+        </translation></message>
     <message>
         <location line="+69"/>
         <source>An autosave backup file for &quot;%1&quot; exists.
 Do you wish to recover it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Obstaja samodejna varnostna kopija datoteke &quot;%1&quot;.
+Ali jo želite obnoviti?</translation>
     </message>
     <message>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
@@ -1122,12 +1121,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExport.js" line="+78"/>
         <source>Error while generating bitmap file &quot;%1&quot;: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Napaka pri ustvarjanju točkovnoslikovne datoteke &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Bitmap file has been exported to &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Točkovnoslikovna datoteka izvožena v &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -1175,12 +1174,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+72"/>
         <source>Export bounding box of selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Izvozi kletko izbora</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Transparent</source>
-        <translation type="unfinished"></translation>
+        <translation>Prozorno</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1291,7 +1290,7 @@ Do you wish to recover it?</source>
         <location filename="../scripts/Block/BlockDialog.js" line="+82"/>
         <source>block</source>
         <comment>default block name prefix</comment>
-        <translation type="unfinished"></translation>
+        <translation>zbir</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -1329,7 +1328,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block</source>
-        <translation type="unfinished">Blok</translation>
+        <translation>Zbir</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2452,12 +2451,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+0"/>
         <source>Coordinate Display</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaz sorednic</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/PreferencesPage.ui" line="+17"/>
         <source>Forced update every N mouse moves:</source>
-        <translation type="unfinished"></translation>
+        <translation>Prisilno posodobi vsakih N miškinih potez:</translation>
     </message>
 </context>
 <context>
@@ -2495,7 +2494,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+14"/>
         <source>Increment:</source>
-        <translation type="unfinished"></translation>
+        <translation>Korak:</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -2666,17 +2665,17 @@ Do you wish to recover it?</source>
     <message>
         <location line="+11"/>
         <source>Second corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Drugi vogal</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Tarčno mesto sklicne točke</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Tarčno mesto izbora</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2769,7 +2768,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer Entities</source>
-        <translation type="unfinished"></translation>
+        <translation>O&amp;dizberi prvine plasti</translation>
     </message>
 </context>
 <context>
@@ -2939,7 +2938,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use maximum angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Upoštevaj največji kot</translation>
     </message>
 </context>
 <context>
@@ -3034,13 +3033,11 @@ Do you wish to recover it?</source>
     <message numerus="yes">
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Mesto napisa kote je bilo ponastavljeno.</numerusform>
+        <numerusform>Mesto napisa dveh kot je bilo ponastavljeno.</numerusform>
+        <numerusform>Mesto napisa %n kot je bilo ponastavljeno.</numerusform>
+        <numerusform>Mesto napisa %n kot je bilo ponastavljeno.</numerusform>
+        </translation></message>
     <message>
         <source>Reset label position of %1 dimension(s).</source>
         <translation type="vanished">Razveljavi lokacijo napisa za %1 kotiranj.</translation>
@@ -3343,7 +3340,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+108"/>
         <source>Dimension line increment:</source>
-        <translation type="unfinished"></translation>
+        <translation>Razmik med kotnicami:</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -3668,12 +3665,12 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
         <source>&amp;Draw Order</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zaporedje</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Draw Order</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaporedje</translation>
     </message>
 </context>
 <context>
@@ -3803,13 +3800,11 @@ je že na seznamu.</translation>
     <message numerus="yes">
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+54"/>
         <source>%n entity/ies duplicated</source>
-        <translation type="unfinished">
-            <numerusform>1 entiteta podvojena</numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>1 predmet podvojen</numerusform>
+        <numerusform>Predmeta podvojena</numerusform>
+        <numerusform>%n predmeti podvojeni</numerusform>
+        <numerusform>%n predmetov podvojenih</numerusform>
+        </translation></message>
 </context>
 <context>
     <name>EAction</name>
@@ -3827,7 +3822,7 @@ je že na seznamu.</translation>
     <message>
         <location line="-2096"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Končano</translation>
     </message>
     <message>
         <location line="+277"/>
@@ -3892,7 +3887,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc.</source>
-        <translation type="unfinished"></translation>
+        <translation>Predmet ni lok.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -3927,7 +3922,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Predmet ni daljica, lok, krožnica, zlepek ali črtovje.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4419,17 +4414,17 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js" line="+59"/>
         <source>Deleted line with ID %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Izbrisana črta z določilnikom %1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>You can use &lt;i&gt;Edit &gt; Undo&lt;/i&gt; to restore the line entity.</source>
-        <translation type="unfinished"></translation>
+        <translation>Za povrnitev črtnega predmeta lahko uporabite &lt;i&gt;Uredi&gt;Razveljavi&lt;/i&gt;.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Add and Delete Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj in Izbriši daljico</translation>
     </message>
 </context>
 <context>
@@ -4453,7 +4448,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawFonts/ExDrawFonts.js" line="+85"/>
         <source>Draw &amp;Fonts</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši &amp;Pisave</translation>
     </message>
 </context>
 <context>
@@ -4465,12 +4460,12 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExDumpPolyline/ExDumpPolyline.js" line="+48"/>
         <source>Clockwise polyline:</source>
-        <translation type="unfinished"></translation>
+        <translation>Črtovje v smeri urinega kazalca:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Counterclockwise polyline:</source>
-        <translation type="unfinished"></translation>
+        <translation>Črtovje v nasprotni smeri urinega kazalca:</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -4535,7 +4530,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js" line="+48"/>
         <source>&amp;Mandelbrot Example</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Mandelbrotov primer</translation>
     </message>
 </context>
 <context>
@@ -4551,12 +4546,12 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal/ExMinimal.js" line="+12"/>
         <source>Hello World.</source>
-        <translation type="unfinished"></translation>
+        <translation>Živjo svet.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Minimal Example</source>
-        <translation type="unfinished"></translation>
+        <translation>Naj&amp;manjši primer</translation>
     </message>
 </context>
 <context>
@@ -4564,12 +4559,12 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.js" line="+51"/>
         <source>&amp;Minimal Example 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Naj&amp;manjši primer 2</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+9"/>
         <source>&amp;Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Polme&amp;r:</translation>
     </message>
 </context>
 <context>
@@ -4711,13 +4706,11 @@ je že na seznamu.</translation>
     <message numerus="yes">
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
+        <translation><numerusform>Transakcija je vplivala na en predmet.</numerusform>
+        <numerusform>Transakcija je vplivala na dva predmeta.</numerusform>
+        <numerusform>Transakcija je vplivala na %n predmete.</numerusform>
+        <numerusform>Transakcija je vplivala na %n predmetov.</numerusform>
+        </translation></message>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
@@ -4729,7 +4722,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/ExWidget.js" line="+28"/>
         <source>&amp;Widget</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Gradnik</translation>
     </message>
 </context>
 <context>
@@ -4941,12 +4934,12 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Možnosti slikarja</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation type="unfinished"></translation>
+        <translation>Možnosti odlivanja slikarja</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -4971,7 +4964,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+10"/>
         <source>Cast on newly sub-layer &apos;Painted&apos; if applicable</source>
-        <translation type="unfinished"></translation>
+        <translation>Odlivanje v novo podplast &quot;Painted&quot;, če se da</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5001,12 +4994,12 @@ je že na seznamu.</translation>
     <message>
         <location line="+13"/>
         <source>Add insertions in between eg. spacers, knots</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj vmesne vstavke, npr. razmičnike, vozlišča</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Add Insertions</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaj vstavke</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -5041,7 +5034,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+5"/>
         <source>SinusoidWave</source>
-        <translation type="unfinished"></translation>
+        <translation>Sinusna krivulja</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5056,27 +5049,27 @@ je že na seznamu.</translation>
     <message>
         <location line="+5"/>
         <source>TriangleWave</source>
-        <translation type="unfinished"></translation>
+        <translation>Trikotno valovanje</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SawtoothWave</source>
-        <translation type="unfinished"></translation>
+        <translation>Žagasto valovanje</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqaureWave</source>
-        <translation type="unfinished"></translation>
+        <translation>Kvadratno valovanje</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SteppedWave</source>
-        <translation type="unfinished"></translation>
+        <translation>Stopničasto valovanje</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShape</source>
-        <translation type="unfinished"></translation>
+        <translation>Kvadratasto</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5091,12 +5084,12 @@ je že na seznamu.</translation>
     <message>
         <location line="+16"/>
         <source>Insertion type</source>
-        <translation type="unfinished"></translation>
+        <translation>Vrsta vstavka</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Preview of insertion</source>
-        <translation type="unfinished"></translation>
+        <translation>Predogled vstavka</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -5116,22 +5109,22 @@ je že na seznamu.</translation>
     <message>
         <location line="+328"/>
         <source>Document Units</source>
-        <translation type="unfinished"></translation>
+        <translation>Enote dokumenta</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>#Undefined#</source>
-        <translation type="unfinished"></translation>
+        <translation>#Nedoločeno#</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Enter painter width (+0)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vnesite širino slikarja (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Width : </source>
-        <translation type="unfinished"></translation>
+        <translation>Širina: </translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5141,17 +5134,17 @@ je že na seznamu.</translation>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation type="unfinished"></translation>
+        <translation>Možnosti ponavljujočega slikarja</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Enter main painter stepsize (+0)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vnesite velikost koraka glavnega slikarja (+0)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Stepsize :</source>
-        <translation type="unfinished"></translation>
+        <translation>Velikost koraka:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5161,17 +5154,17 @@ je že na seznamu.</translation>
     <message>
         <location line="+3"/>
         <source>Length :</source>
-        <translation type="unfinished"></translation>
+        <translation>Dolžina:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Keep painters proportional</source>
-        <translation type="unfinished"></translation>
+        <translation>Ohrani razmerje slikarjev</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Select percentage of Stepsize</source>
-        <translation type="unfinished"></translation>
+        <translation>Izberite odstotek velikosti koraka</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5181,7 +5174,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation type="unfinished"></translation>
+        <translation>Možnosti preveličinjenja odprtih oblik</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -5191,42 +5184,42 @@ je že na seznamu.</translation>
     <message>
         <location line="+3"/>
         <source>Dynamically scale to fit</source>
-        <translation type="unfinished"></translation>
+        <translation>Prilagodljivo preveličinjenje za prileganje</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Align with begin</source>
-        <translation type="unfinished"></translation>
+        <translation>Poravnaj z začetkom</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Centered</source>
-        <translation type="unfinished"></translation>
+        <translation>Usredinjeno</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Align with End</source>
-        <translation type="unfinished"></translation>
+        <translation>Poravnano s koncem</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Verbose info (persistent on)</source>
-        <translation type="unfinished"></translation>
+        <translation>Obširni podatki (neprestano)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Verbose *</source>
-        <translation type="unfinished"></translation>
+        <translation>Obširno *</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Deleted painted over base entities (persistent off)</source>
-        <translation type="unfinished"></translation>
+        <translation>Izbrisani prebarvani izhodiščni predmeti (stalno izključeno)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Delete Base Entities *</source>
-        <translation type="unfinished"></translation>
+        <translation>Izbriši izhodiščne predmete *</translation>
     </message>
 </context>
 <context>
@@ -5317,7 +5310,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+6"/>
         <source>Cube size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Velikost kocke:</translation>
     </message>
     <message>
         <source>10</source>
@@ -5326,7 +5319,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+14"/>
         <source>Draw glue lap</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši lepilni preklop</translation>
     </message>
 </context>
 <context>
@@ -5386,7 +5379,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+25"/>
         <source>Tolerance:</source>
-        <translation type="unfinished">Toleranca:</translation>
+        <translation>Dopustno odstopanje:</translation>
     </message>
     <message>
         <source>0.001</source>
@@ -5543,17 +5536,17 @@ je že na seznamu.</translation>
     <message>
         <location line="+20"/>
         <source>Linetypes and Lineweights</source>
-        <translation type="unfinished"></translation>
+        <translation>Vrsta in debelina črt</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation type="unfinished"></translation>
+        <translation>Privzeta debelina črte:</translation>
     </message>
     <message>
         <location line="+518"/>
         <source>Use multithreading</source>
-        <translation type="unfinished"></translation>
+        <translation>Uporabi večnitnost</translation>
     </message>
     <message>
         <location line="-575"/>
@@ -5735,7 +5728,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+36"/>
         <source>Primary reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Osnovne sklicne točke:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5770,7 +5763,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+47"/>
         <source>Tertiary reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tretjestopenjske sklicne točke:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -5913,12 +5906,12 @@ je že na seznamu.</translation>
     <message>
         <location line="+217"/>
         <source>Panning threshold (px):</source>
-        <translation type="unfinished"></translation>
+        <translation>Prag preokvirjanja (px):</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Middle mouse button zoom factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Količnik preodmičevanja s srednjim miškim gumbom:</translation>
     </message>
     <message>
         <location line="-255"/>
@@ -6192,7 +6185,7 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
         <source>&amp;Insert Bitmap</source>
-        <translation type="unfinished"></translation>
+        <translation>Vstav&amp;i točkovno sliko</translation>
     </message>
 </context>
 <context>
@@ -6234,42 +6227,42 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As block:</source>
-        <translation type="unfinished"></translation>
+        <translation>Po zbiru:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished">Rotacija:</translation>
+        <translation>Sukanje:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="unfinished">Rotiraj prilepljene entitete&lt;br&gt;za ta kot</translation>
+        <translation>Zasukaj prilepljene predmete&lt;br&gt;za ta kot</translation>
     </message>
     <message>
         <location line="+110"/>
         <source>Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Merilo:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Preveličini prilepljene predmete&lt;br&gt;z naslednjim količnikom</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="unfinished">Zrcali prilepljene entitete&lt;br&gt;po vodoravni osi</translation>
+        <translation>Zrcali prilepljene predmete&lt;br&gt;skozi vodoravnico</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="unfinished">Zrcali prilepljene entitete&lt;br&gt;po navpični osi</translation>
+        <translation>Zrcali prilepljene predmete&lt;br&gt;čez navpičnico</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation type="unfinished">Prilepti vse entitete&lt;br&gt;na trenutno plast&lt;br&gt;namesto na izvorno</translation>
+        <translation>Prilepti vse vse predmete&lt;br&gt;na trenutno plast&lt;br&gt;namesto na izvorno</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -6279,22 +6272,22 @@ je že na seznamu.</translation>
     <message>
         <location line="+7"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Prepiši obstoječe plasti&lt;br&gt;risbe s&lt;br&gt;plastmi iz odložišča</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Prepiši plasti</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Prepiši obstoječe zbire&lt;br&gt; v risbi z&lt;br&gt;zbiri iz odložišča</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Prepiši zbire</translation>
     </message>
 </context>
 <context>
@@ -7167,12 +7160,12 @@ je že na seznamu.</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/PreferencesPage.ui" line="+17"/>
         <source>Shortcut timeout:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bližnjica premora:</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Enable keyboard navigation in list widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Omogoči krmiljenje s tipkovnico po seznamu gradnikov</translation>
     </message>
 </context>
 <context>
@@ -7185,7 +7178,7 @@ je že na seznamu.</translation>
     <message>
         <location line="+0"/>
         <source>Keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipkovnica</translation>
     </message>
 </context>
 <context>
@@ -7219,12 +7212,12 @@ je že na seznamu.</translation>
     <message>
         <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
-        <translation type="unfinished"></translation>
+        <translation>Privzeta debelina črte za plast 0:</translation>
     </message>
     <message>
         <location line="-48"/>
         <source>Default color for layer 0:</source>
-        <translation type="unfinished"></translation>
+        <translation>Privzeta barva plasti 0:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7319,7 +7312,7 @@ je že na seznamu.</translation>
         <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
         <source>layer</source>
         <comment>default layer name prefix</comment>
-        <translation type="unfinished"></translation>
+        <translation>plast</translation>
     </message>
     <message>
         <location line="+150"/>
@@ -7710,7 +7703,7 @@ Vtičnik LibraryBrowser ne bo navoljo.</translation>
     <message>
         <location line="+44"/>
         <source>Dark icon background</source>
-        <translation type="unfinished"></translation>
+        <translation>Temno ozadje ikone</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -8111,22 +8104,22 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+18"/>
         <source>Number of Dovetails:</source>
-        <translation type="unfinished"></translation>
+        <translation>Število lastovičjih repov:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Dovetail Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Višina lastovičjega repa:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Dovetail Gradient:</source>
-        <translation type="unfinished"></translation>
+        <translation>Naklon lastovičjega repa:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Dovetail/Pin Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation>Razmerje utor/rogelj:</translation>
     </message>
 </context>
 <context>
@@ -8665,7 +8658,7 @@ shown in search results:</source>
     <message>
         <location line="+35"/>
         <source>Scale of linetypes matches the scale of each viewport</source>
-        <translation type="unfinished"></translation>
+        <translation>Merilo vrste črt je skladno z merilom vsakega vpogleda</translation>
     </message>
 </context>
 <context>
@@ -8718,12 +8711,12 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Menu Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Menijska vrstica</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/MenuBar/PreferencesPage.ui" line="+17"/>
         <source>Use native menu bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Uporabi lastno menijsko vrstico</translation>
     </message>
 </context>
 <context>
@@ -8744,12 +8737,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.js" line="+44"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>Spremeni</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Mirror</source>
-        <translation type="unfinished"></translation>
+        <translation>Zrcaljenje</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -8769,17 +8762,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished">Kopiraj</translation>
+        <translation>Kopiraj</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Uporabi trenutno plast in l&amp;astnosti</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished">Uporabi dialog za opcije orodja</translation>
+        <translation>Uporabi pogovorno okno z možnostmi orodja</translation>
     </message>
 </context>
 <context>
