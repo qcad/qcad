@@ -308,24 +308,51 @@ void RMainWindowQt::closeEvent(QCloseEvent* e) {
         return;
     }
 
+    QStringList openFiles;
+    QString activeFile;
+
+    QMdiSubWindow* activeWindow = mdiArea->activeSubWindow();
+
     QList<QMdiSubWindow*> mdiChildren = mdiArea->subWindowList();
     for (int i=0; i<mdiChildren.size(); ++i) {
         QMdiSubWindow* mdiChild = mdiChildren.at(i);
+        bool active = mdiChild==activeWindow;
         mdiArea->setActiveSubWindow(mdiChild);
         mdiChild->showMaximized();
+
+        QString fileName;
+        RMdiChildQt* rMdiChild = dynamic_cast<RMdiChildQt*>(mdiChild);
+        if (rMdiChild!=NULL) {
+            RDocument* doc = rMdiChild->getDocument();
+            if (doc!=NULL) {
+                fileName = doc->getFileName();
+            }
+        }
 
         QCloseEvent closeEvent;
         QApplication::sendEvent(mdiChild, &closeEvent);
 
         if (!closeEvent.isAccepted()) {
             e->ignore();
+            // closing of app canceled:
             return;
+        }
+
+        if (!fileName.isEmpty()) {
+            openFiles.append(fileName);
+            if (active) {
+                activeFile = fileName;
+            }
         }
 
         delete mdiChild;
     }
 
     e->accept();
+
+    RSettings::setValue("OpenFile/OpenFiles", openFiles);
+    RSettings::setValue("OpenFile/ActiveFile", activeFile);
+
     writeSettings();
 
     QApplication::quit();
