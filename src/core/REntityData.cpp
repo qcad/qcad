@@ -128,16 +128,20 @@ RColor REntityData::getColor(bool resolve, const QStack<REntity*>& blockRefStack
         return getColor();
     }
 
-    if (getType()==RS::EntityAttribute && document!=NULL) {
-        if (getLayerId()==document->getLayer0Id() && RSettings::isLayer0CompatibilityOn()) {
-            REntity::Id blockRefId = getParentId();
-            QSharedPointer<REntity> parentEntity = document->queryEntityDirect(blockRefId);
-            QSharedPointer<RBlockReferenceEntity> blockRef = parentEntity.dynamicCast<RBlockReferenceEntity>();
-            if (!blockRef.isNull()) {
-                // delegate color of block attribute to block reference:
-                //qDebug() << "delegate color to block ref:";
-                //qDebug() << "color of block ref: " << blockRef->getColor(true, blockRefStack);
-                return blockRef->getColor(true, blockRefStack);
+    // this only only applies for color by layer (?):
+    RColor entityColor = getColor();
+    if (entityColor.isByLayer()) {
+        if (getType()==RS::EntityAttribute && document!=NULL) {
+            if (getLayerId()==document->getLayer0Id() && RSettings::isLayer0CompatibilityOn()) {
+                REntity::Id blockRefId = getParentId();
+                QSharedPointer<REntity> parentEntity = document->queryEntityDirect(blockRefId);
+                QSharedPointer<RBlockReferenceEntity> blockRef = parentEntity.dynamicCast<RBlockReferenceEntity>();
+                if (!blockRef.isNull()) {
+                    // delegate color of block attribute to block reference:
+                    //qDebug() << "delegate color to block ref:";
+                    //qDebug() << "color of block ref: " << blockRef->getColor(true, blockRefStack);
+                    return blockRef->getColor(true, blockRefStack);
+                }
             }
         }
     }
