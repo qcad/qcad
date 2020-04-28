@@ -4872,7 +4872,7 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1816"/>
         <source>&amp;FlexPainter</source>
-        <translation type="unfinished">&amp;FlexPainter</translation>
+        <translation>&amp;FlexMaliar</translation>
     </message>
 </context>
 <context>
@@ -4880,12 +4880,12 @@ už existuje v zozname.</translation>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation type="unfinished">Možnosti Painter</translation>
+        <translation>Možnosti Maliara</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Možnosti odlievania maliara</translation>
     </message>
     <message>
         <location line="+18"/>
