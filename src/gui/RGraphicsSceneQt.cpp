@@ -874,18 +874,22 @@ void RGraphicsSceneQt::highlightEntity(REntity& entity) {
         return;
     }
 
+    // avoid changing the original painter paths
+    // (avoid entities that keep being highlighted):
+    QList<RGraphicsSceneDrawable> drawablesCopy = *drawables;
+
     beginPreview();
     RBox clipRectangle = getClipRectangle(entity.getId());
-    for (int i = 0; i < drawables->size(); ++i) {
-        drawables->operator[](i).setSelected(entity.isSelected());
-        drawables->operator[](i).setHighlighted(true);
+    for (int i = 0; i < drawablesCopy.size(); ++i) {
+        drawablesCopy[i].setSelected(entity.isSelected());
+        drawablesCopy[i].setHighlighted(true);
     }
     if (clipRectangle.isValid()) {
         previewClipRectangles.insert(entity.getId(), clipRectangle);
         //exportClipRectangle(clipRect);
     }
     // highlighted entities are previews on top of original entities:
-    addToPreview(entity.getId(), *drawables);
+    addToPreview(entity.getId(), drawablesCopy);
     endPreview();
 }
 
