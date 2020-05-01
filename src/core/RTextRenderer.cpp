@@ -1503,7 +1503,11 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
 
     RPainterPathDevice ppd;
     QPainter ppPainter(&ppd);
-    layout->draw(&ppPainter, QPoint(0,0));
+    {
+        static QMutex m;
+        QMutexLocker ml(&m);
+        layout->draw(&ppPainter, QPoint(0,0));
+    }
     ppPainter.end();
 
     QColor currentColor = Qt::white;
@@ -1782,7 +1786,11 @@ QRectF RTextRenderer::getCharacterRect(const QFont& font, const QChar& ch) const
 
     RPainterPathDevice ppd;
     QPainter ppPainter(&ppd);
-    layout.draw(&ppPainter, QPoint(0,0));
+    {
+        static QMutex m;
+        QMutexLocker ml(&m);
+        layout.draw(&ppPainter, QPoint(0,0));
+    }
     ppPainter.end();
 
     QPainterPath p;
