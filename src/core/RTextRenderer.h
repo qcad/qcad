@@ -82,6 +82,14 @@ public:
         return richText;
     }
 
+    static void lockForDrawing() {
+        m.lock();
+    }
+
+    static void unlockForDrawing() {
+        m.unlock();
+    }
+
 private:
     QList<RPainterPath> getPainterPathsForBlock(
         const QString& blockText,
@@ -285,6 +293,8 @@ public:
     static QChar chDiameter;
 
 private:
+    static QMutex m;
+
     const RTextBasedData& textData;
 
     Target target;

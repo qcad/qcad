@@ -137,6 +137,7 @@ QString RTextRenderer::rxAll = "("
     + RTextRenderer::rxUnicode
     + ")";
 
+QMutex RTextRenderer::m;
 
 
 RTextRenderer::RTextRenderer(const RTextBasedData& textData, bool draft, Target target, double fontHeightFactor)
@@ -1505,9 +1506,9 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
     RPainterPathDevice ppd;
     QPainter ppPainter(&ppd);
     {
-        static QMutex m;
-        QMutexLocker ml(&m);
+        RTextRenderer::lockForDrawing();
         layout->draw(&ppPainter, QPoint(0,0));
+        RTextRenderer::unlockForDrawing();
     }
     ppPainter.end();
 
@@ -1788,9 +1789,9 @@ QRectF RTextRenderer::getCharacterRect(const QFont& font, const QChar& ch) const
     RPainterPathDevice ppd;
     QPainter ppPainter(&ppd);
     {
-        static QMutex m;
-        QMutexLocker ml(&m);
+        RTextRenderer::lockForDrawing();
         layout.draw(&ppPainter, QPoint(0,0));
+        RTextRenderer::unlockForDrawing();
     }
     ppPainter.end();
 

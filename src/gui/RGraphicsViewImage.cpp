@@ -1962,11 +1962,11 @@ void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text) {
             }
             textLayout.layout->setTextOption(o);
 
-            // TODO:
+            // TODO: should be reentrant but crashes if not locked:
             {
-                static QMutex m;
-                QMutexLocker ml(&m);
+                RTextRenderer::lockForDrawing();
                 textLayout.layout->draw(painter, QPoint(0,0));
+                RTextRenderer::unlockForDrawing();
             }
 
             painter->restore();
