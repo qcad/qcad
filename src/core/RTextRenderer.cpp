@@ -20,6 +20,7 @@
 #include <QFontMetricsF>
 //#include <QTextBlock>
 #include <QTextDocument>
+#include <QMutex>
 
 #include "RColor.h"
 #include "RDxfServices.h"
