@@ -23,6 +23,7 @@
 #include "core_global.h"
 
 #include <QTextLayout>
+#include <QMutex>
 
 #include "RDocument.h"
 #include "REntityData.h"
