@@ -40,6 +40,7 @@ RHatchData::RHatchData() :
     scaleFactor(1.0),
     angle(0.0),
     patternName("SOLID"),
+    transparency(255),
     dirty(true), gotDraft(false), gotPixelSizeHint(0.0) {
 }
 
@@ -67,6 +68,7 @@ RHatchData::RHatchData(bool solid, double scaleFactor, double angle, const QStri
     scaleFactor(scaleFactor),
     angle(angle),
     patternName(patternName),
+    transparency(255),
     dirty(true), gotDraft(false) {
 }
 
@@ -76,6 +78,7 @@ RHatchData& RHatchData::operator =(const RHatchData& other) {
     solid = other.solid;
     scaleFactor = other.scaleFactor;
     angle = other.angle;
+    transparency = other.transparency;
     patternName = other.patternName;
     originPoint = other.originPoint;
     other.getPainterPaths(false);

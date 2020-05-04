@@ -143,6 +143,14 @@ public:
         clearCustomPattern();
     }
 
+    int getTransparency() const {
+        return transparency;
+    }
+
+    void setTransparency(int t) {
+        transparency = t;
+    }
+
     void clearCustomPattern() {
         pattern.clear();
         update();
@@ -180,6 +188,23 @@ public:
         pattern = p;
     }
 
+    virtual RColor getColor() const {
+        RColor c = REntityData::getColor();
+        c.setAlpha(transparency);
+        return c;
+    }
+
+    virtual RColor getColor(const RColor& unresolvedColor, const QStack<REntity *>& blockRefStack) const {
+        RColor c = REntityData::getColor(unresolvedColor, blockRefStack);
+        c.setAlpha(transparency);
+        return c;
+    }
+    virtual RColor getColor(bool resolve, const QStack<REntity *>& blockRefStack) const {
+        RColor c = REntityData::getColor(resolve, blockRefStack);
+        c.setAlpha(transparency);
+        return c;
+    }
+
     static bool hasProxy() {
         return hatchProxy!=NULL;
     }
@@ -210,6 +235,7 @@ private:
     double angle;
     QString patternName;
     RVector originPoint;
+    int transparency;
 
     /**
      * Hatch boundary, ordered by loops, in strictly defined order.
