@@ -291,7 +291,7 @@ QBrush RExporter::getBrush(const RPainterPath& path) {
                 //Q_ASSERT(false);
             }
         }
-        REntity* e=getEntity();
+        REntity* e = getEntity();
         if (e!=NULL && e->isSelected()) {
             brush.setColor(RSettings::getSelectionColor());
         }
