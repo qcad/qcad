@@ -5718,7 +5718,7 @@ Punto decimale:</translatorcomment>
     <message>
         <location filename="../scripts/Help/Forum/ForumInit.js" line="+2"/>
         <source>&amp;Forum</source>
-        <translation>&amp;Foro</translation>
+        <translation>&amp;Forum</translation>
     </message>
 </context>
 <context>
