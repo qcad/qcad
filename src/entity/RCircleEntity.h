@@ -58,6 +58,7 @@ public:
     static RPropertyTypeId PropertyDiameter;
     static RPropertyTypeId PropertyCircumference;
     static RPropertyTypeId PropertyArea;
+    static RPropertyTypeId PropertyTotalArea;
 
 public:
     RCircleEntity(RDocument* document, const RCircleData& data);

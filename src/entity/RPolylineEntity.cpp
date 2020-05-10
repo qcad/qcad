@@ -260,23 +260,23 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
             if (showOnRequest) {
                 QVariant v;
                 v.setValue(data.getArea());
-                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::ReadOnly));
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::ReadOnly|RPropertyAttributes::Area));
             }
             else {
                 QVariant v;
                 v.setValue(0.0);
-                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::OnRequest));
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::OnRequest|RPropertyAttributes::Area));
             }
         } else if (propertyTypeId == PropertyTotalArea) {
             if (showOnRequest) {
                 QVariant v;
                 v.setValue(data.getArea());
-                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Sum));
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Sum|RPropertyAttributes::Area));
             }
             else {
                 QVariant v;
                 v.setValue(0.0);
-                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::OnRequest));
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::OnRequest|RPropertyAttributes::Area));
             }
         }
     }

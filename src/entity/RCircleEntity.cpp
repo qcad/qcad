@@ -42,7 +42,7 @@ RPropertyTypeId RCircleEntity::PropertyRadius;
 RPropertyTypeId RCircleEntity::PropertyDiameter;
 RPropertyTypeId RCircleEntity::PropertyCircumference;
 RPropertyTypeId RCircleEntity::PropertyArea;
-
+RPropertyTypeId RCircleEntity::PropertyTotalArea;
 
 
 RCircleEntity::RCircleEntity(RDocument* document, const RCircleData& data) :
@@ -82,6 +82,7 @@ void RCircleEntity::init() {
     RCircleEntity::PropertyDiameter.generateId(typeid(RCircleEntity), "", QT_TRANSLATE_NOOP("REntity", "Diameter"));
     RCircleEntity::PropertyCircumference.generateId(typeid(RCircleEntity), "", QT_TRANSLATE_NOOP("REntity", "Circumference"));
     RCircleEntity::PropertyArea.generateId(typeid(RCircleEntity), "", QT_TRANSLATE_NOOP("REntity", "Area"));
+    RCircleEntity::PropertyTotalArea.generateId(typeid(RCircleEntity), "", QT_TRANSLATE_NOOP("REntity", "Total Area"));
 }
 
 bool RCircleEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -125,7 +126,18 @@ QPair<QVariant, RPropertyAttributes> RCircleEntity::getProperty(
     } else if (propertyTypeId == PropertyCircumference) {
         return qMakePair(QVariant(data.getCircumference()), RPropertyAttributes(RPropertyAttributes::Redundant));
     } else if (propertyTypeId == PropertyArea) {
-        return qMakePair(QVariant(data.getArea()), RPropertyAttributes(RPropertyAttributes::Redundant));
+        return qMakePair(QVariant(data.getArea()), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::Area));
+    } else if (propertyTypeId == PropertyTotalArea) {
+        if (showOnRequest) {
+            QVariant v;
+            v.setValue(data.getArea());
+            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Sum|RPropertyAttributes::Area));
+        }
+        else {
+            QVariant v;
+            v.setValue(0.0);
+            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::OnRequest|RPropertyAttributes::Area));
+        }
     }
 
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);

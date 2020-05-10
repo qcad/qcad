@@ -167,9 +167,18 @@ QPair<QVariant, RPropertyAttributes> RArcEntity::getProperty(
     } else if (propertyTypeId == PropertySweepAngle) {
         return qMakePair(QVariant(data.getSweep()), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::Angle));
     } else if (propertyTypeId == PropertyArea) {
-        return qMakePair(QVariant(data.getArea()), RPropertyAttributes(RPropertyAttributes::Redundant));
+        return qMakePair(QVariant(data.getArea()), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::Area));
     } else if (propertyTypeId == PropertyTotalArea) {
-        return qMakePair(QVariant(data.getArea()), RPropertyAttributes(RPropertyAttributes::Sum));
+        if (showOnRequest) {
+            QVariant v;
+            v.setValue(data.getArea());
+            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Sum|RPropertyAttributes::Area));
+        }
+        else {
+            QVariant v;
+            v.setValue(0.0);
+            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::OnRequest|RPropertyAttributes::Area));
+        }
     }
 
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
