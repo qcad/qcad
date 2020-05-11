@@ -423,7 +423,7 @@ protected:
     QMap<int, QMap<RObject::Id, QList<RGraphicsSceneDrawable> > > overlayDrawables;
 
     RBox clipBox;
-    QList<QStack<QTransform> > entityTransformThread;
+    QList<QStack<RTransform> > entityTransformThread;
     RVector paintOffset;
     bool alphaEnabled;
 

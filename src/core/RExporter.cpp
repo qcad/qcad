@@ -1619,34 +1619,11 @@ void RExporter::exportClipRectangle(const RBox& clipRectangle, bool forceSelecte
     Q_UNUSED(forceSelected)
 }
 
-void RExporter::exportTransform(const QTransform& t) {
+void RExporter::exportTransform(const RTransform& t) {
     Q_UNUSED(t)
 }
 
 void RExporter::exportEndTransform() {
-}
-
-void RExporter::exportTranslation(const RVector& offset) {
-    Q_UNUSED(offset)
-}
-
-void RExporter::exportEndTranslation() {
-}
-
-void RExporter::exportRotation(double angle) {
-    Q_UNUSED(angle)
-
-}
-
-void RExporter::exportEndRotation() {
-}
-
-void RExporter::exportScale(const RVector& factors) {
-    blockScales.push(qMax(qAbs(factors.x), qAbs(factors.y)));
-}
-
-void RExporter::exportEndScale() {
-    blockScales.pop();
 }
 
 double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {

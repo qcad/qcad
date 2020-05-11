@@ -333,7 +333,7 @@ void RGraphicsViewImage::updateImage() {
         painterThread.clear();
         painterThread.append(painter);
         entityTransformThread.clear();
-        entityTransformThread.append(QStack<QTransform>());
+        entityTransformThread.append(QStack<RTransform>());
 
         bgColorLightness = getBackgroundColor().lightness();
         isSelected = false;
@@ -758,7 +758,7 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
     entityTransformThread.clear();
     for (int i=0; i<graphicsBufferThread.length(); i++) {
         painterThread.append(initPainter(graphicsBufferThread[i], false, false, r));
-        entityTransformThread.append(QStack<QTransform>());
+        entityTransformThread.append(QStack<RTransform>());
     }
 
     paintBackground(painterThread.first(), r);
@@ -972,7 +972,7 @@ void RGraphicsViewImage::paintEntities(QPainter* painter, const RBox& queryBox) 
     painterThread.clear();
     painterThread.append(painter);
     entityTransformThread.clear();
-    entityTransformThread.append(QStack<QTransform>());
+    entityTransformThread.append(QStack<RTransform>());
 
     paintEntitiesMulti(queryBox);
 }
@@ -1249,7 +1249,7 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
                         painter->setTransform(tt, true);
                     }
 
-                    QTransform t = entityTransformThread[threadId][k];
+                    RTransform t = entityTransformThread[threadId][k];
                     painter->setTransform(t, true);
                 }
             }
@@ -1270,24 +1270,97 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
             }
 
             text.move(drawable.getOffset());
+
             if (entityTransformThread[threadId].isEmpty()) {
                 text.move(paintOffset);
             }
             else {
+//                RVector p = text.getPosition();
+//                RVector ap = text.getAlignmentPoint();
+//                RVector anglePoint = ap + RVector::createPolar(1.0, text.getAngle());
+//                bool readable = RMath::isAngleReadable(text.getAngle());
+//                text.update();
+//                RVector centerPoint = text.getBoundingBox().getCenter();
+//                qDebug() << "centerPoint before:" << centerPoint;
+
                 // transform (text in block reference):
                 painter->save();
                 for (int k=0; k<entityTransformThread[threadId].size(); k++) {
                     if (k==0) {
                         // paintOffset must be applied here to get the correct placement for
                         // texts with non-uniform scale:
+
                         QTransform tt;
                         tt.translate(paintOffset.x, paintOffset.y);
+
+                        //text.move(paintOffset);
                         painter->setTransform(tt, true);
+//                        p.transform2D(tt);
+//                        ap.transform2D(tt);
+//                        anglePoint.transform2D(tt);
+//                        centerPoint.transform2D(tt);
                     }
 
-                    QTransform t = entityTransformThread[threadId][k];
+                    RTransform t = entityTransformThread[threadId][k];
+//                    QList<RTransformOp> ops = t.getOps();
+//                    for (int n=ops.length()-1; n>=0; n--) {
+//                        RTransformOp op = ops[n];
+//                        if (op.type==RTransformOp::Translation) {
+//                            text.move(RVector(op.d1, op.d2));
+//                        }
+//                        else if (op.type==RTransformOp::Scale) {
+//                            text.scale(RVector(op.d1, op.d2), RVector(0,0));
+//                        }
+//                        else if (op.type==RTransformOp::Rotation) {
+//                            text.rotate(op.d1, RVector(0,0));
+//                        }
+//                    }
+
+//                    p.transform2D(t);
+//                    ap.transform2D(t);
+//                    anglePoint.transform2D(t);
+//                    centerPoint.transform2D(t);
                     painter->setTransform(t, true);
+
+                    //qDebug() << "m11:" << t.m11();
+                    //qDebug() << "m22:" << t.m22();
                 }
+
+//                text.setPosition(p);
+//                text.setAlignmentPoint(ap);
+
+//                text.update();
+
+//                qDebug() << "centerPoint after:" << centerPoint;
+//                qDebug() << "text center after:" << text.getBoundingBox().getCenter();
+//                qDebug() << "d:" << text.getBoundingBox().getCenter().getDistanceTo(centerPoint);
+
+//                bool corr = false;
+//                double angle = RMath::makeAngleReadable(ap.getAngleTo(anglePoint), readable, &corr);
+//                text.setAngle(angle);
+
+                // TODO: fix alignment and angle of text to make readable:
+
+//                if (text.getBoundingBox().getCenter().getDistanceTo(centerPoint)>0.1) {
+//                    bool corr = false;
+//                    double angle = RMath::makeAngleReadable(ap.getAngleTo(anglePoint), readable, &corr);
+//                    text.setAngle(angle);
+
+//                    if (corr) {
+//                        if (text.getHAlign()==RS::HAlignLeft) {
+//                            text.setHAlign(RS::HAlignRight);
+//                        } else if (text.getHAlign()==RS::HAlignRight) {
+//                            text.setHAlign(RS::HAlignLeft);
+//                        }
+//                    }
+//                    else {
+//                        if (text.getVAlign()==RS::VAlignTop) {
+//                            text.setVAlign(RS::VAlignBase);
+//                        } else if (text.getVAlign()==RS::VAlignBase) {
+//                            text.setVAlign(RS::VAlignTop);
+//                        }
+//                    }
+//                }
             }
 
             paintText(painter, text);
@@ -1299,7 +1372,7 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
 
         // Transform:
         if (drawable.getType()==RGraphicsSceneDrawable::Transform) {
-            QTransform transform = drawable.getTransform();
+            RTransform transform = drawable.getTransform();
             entityTransformThread[threadId].push(transform);
         }
 

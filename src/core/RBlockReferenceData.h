@@ -22,10 +22,11 @@
 
 #include "core_global.h"
 
+#include "RBlock.h"
 #include "RBox.h"
 #include "REntity.h"
+#include "RTransform.h"
 #include "RVector.h"
-#include "RBlock.h"
 
 class RDocument;
 class RExporter;
@@ -150,9 +151,7 @@ public:
      */
     bool applyTransformationTo(QSharedPointer<REntity>& entity) const;
 
-    QTransform getTransform() const;
-    void exportTransforms(RExporter& e) const;
-    void exportEndTransforms(RExporter& e) const;
+    RTransform getTransform() const;
 
     RVector getColumnRowOffset(int col, int row, bool rotated = false) const;
     void applyColumnRowOffsetTo(REntity& entity, int col, int row, bool rotated = false) const;

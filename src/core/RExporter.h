@@ -242,24 +242,8 @@ public:
     virtual void exportImage(const RImageData& image, bool forceSelected = false);
     virtual QList<RPainterPath> exportText(const RTextBasedData& text, bool forceSelected = false);
     virtual void exportClipRectangle(const RBox& clipRectangle, bool forceSelected = false);
-    virtual void exportTransform(const QTransform& t);
+    virtual void exportTransform(const RTransform& t);
     virtual void exportEndTransform();
-
-    virtual void exportTranslation(const RVector& offset);
-    virtual void exportEndTranslation();
-
-    virtual void exportRotation(double angle);
-    virtual void exportEndRotation();
-
-    virtual void exportScale(const RVector& factors);
-    virtual void exportEndScale();
-
-//    virtual void clearTransform() {
-//        transform = QTransform();
-//    }
-//    virtual QTransform getTransform() const {
-//        return transform;
-//    }
 
     virtual void exportThickPolyline(const RPolyline& polyline) {
         RPolyline pl = polyline;

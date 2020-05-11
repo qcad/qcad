@@ -673,7 +673,7 @@ void RGraphicsSceneQt::exportClipRectangle(const RBox& clipRectangle, bool force
     }
 }
 
-void RGraphicsSceneQt::exportTransform(const QTransform& t) {
+void RGraphicsSceneQt::exportTransform(const RTransform& t) {
     RExporter::exportTransform(t);
 
     REntity::Id id = getBlockRefOrEntityId();

@@ -24,10 +24,10 @@ RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RTextBasedData& txt, const 
     text = new RTextBasedData(txt);
 }
 
-RGraphicsSceneDrawable::RGraphicsSceneDrawable(const QTransform& tf, const RVector& os) :
+RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RTransform& tf, const RVector& os) :
     type(Transform), offset(os), modes(NoMode), painterPath(NULL), image(NULL), text(NULL), transform(NULL) {
 
-    transform = new QTransform(tf);
+    transform = new RTransform(tf);
 }
 
 RGraphicsSceneDrawable::RGraphicsSceneDrawable(const Type& t, const RVector& os) :
@@ -50,7 +50,7 @@ RGraphicsSceneDrawable RGraphicsSceneDrawable::createFromText(const RTextBasedDa
     return RGraphicsSceneDrawable(txt, offset);
 }
 
-RGraphicsSceneDrawable RGraphicsSceneDrawable::createFromTransform(const QTransform& transform, const RVector& offset) {
+RGraphicsSceneDrawable RGraphicsSceneDrawable::createFromTransform(const RTransform& transform, const RVector& offset) {
     return RGraphicsSceneDrawable(transform, offset);
 }
 
@@ -156,7 +156,7 @@ RGraphicsSceneDrawable& RGraphicsSceneDrawable::operator=(const RGraphicsSceneDr
         break;
     case Transform:
         Q_ASSERT(other.transform!=NULL);
-        transform = new QTransform(*other.transform);
+        transform = new RTransform(*other.transform);
         break;
     default:
         break;
