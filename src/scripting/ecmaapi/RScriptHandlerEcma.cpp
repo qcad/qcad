@@ -352,6 +352,8 @@
 #include "REcmaTraceData.h"
 #include "REcmaTraceEntity.h"
 #include "REcmaTransformation.h"
+#include "REcmaTransform.h"
+#include "REcmaTransformOp.h"
 #include "REcmaTranslation.h"
 #include "REcmaTransaction.h"
 #include "REcmaTransactionListener.h"
@@ -917,6 +919,9 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaTransformation::initEcma(*engine);
 
     REcmaTranslation::initEcma(*engine);
+
+    REcmaTransform::initEcma(*engine);
+    REcmaTransformOp::initEcma(*engine);
 
     REcmaCommandLine::initEcma(*engine);
     REcmaTextEdit::initEcma(*engine);

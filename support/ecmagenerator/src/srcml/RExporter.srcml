@@ -243,17 +243,17 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportImage</name><parameter_list>(<param><decl><type><name>const</name> <name>RImageData</name>&amp;</type> <name>image</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>exportText</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>text</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportClipRectangle</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>clipRectangle</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportTransform</name><parameter_list>(<param><decl><type><name>const</name> <name>QTransform</name>&amp;</type> <name>t</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportTransform</name><parameter_list>(<param><decl><type><name>const</name> <name>RTransform</name>&amp;</type> <name>t</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportEndTransform</name><parameter_list>()</parameter_list>;</function_decl>
 
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportTranslation</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportEndTranslation</name><parameter_list>()</parameter_list>;</function_decl>
+<comment type="line">//    virtual void exportTranslation(const RVector&amp; offset);</comment>
+<comment type="line">//    virtual void exportEndTranslation();</comment>
 
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportRotation</name><parameter_list>(<param><decl><type><name>double</name></type> <name>angle</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportEndRotation</name><parameter_list>()</parameter_list>;</function_decl>
+<comment type="line">//    virtual void exportRotation(double angle);</comment>
+<comment type="line">//    virtual void exportEndRotation();</comment>
 
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportScale</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>factors</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportEndScale</name><parameter_list>()</parameter_list>;</function_decl>
+<comment type="line">//    virtual void exportScale(const RVector&amp; factors);</comment>
+<comment type="line">//    virtual void exportEndScale();</comment>
 
 <comment type="line">//    virtual void clearTransform() {</comment>
 <comment type="line">//        transform = QTransform();</comment>

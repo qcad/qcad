@@ -24,6 +24,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTextLayout&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMutex&gt;</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocument.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntityData.h"</cpp:file></cpp:include>
@@ -81,6 +82,14 @@
 
     <function><type><name>QString</name></type> <name>getRichText</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>richText</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>static</name> <name>void</name></type> <name>lockForDrawing</name><parameter_list>()</parameter_list> <block>{
+        <expr_stmt><expr><name>m</name>.<call><name>lock</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>static</name> <name>void</name></type> <name>unlockForDrawing</name><parameter_list>()</parameter_list> <block>{
+        <expr_stmt><expr><name>m</name>.<call><name>unlock</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
 </public><private>private:
@@ -286,6 +295,8 @@
     <decl_stmt><decl><type><name>static</name> <name>QChar</name></type> <name>chDiameter</name></decl>;</decl_stmt>
 
 </public><private>private:
+    <decl_stmt><decl><type><name>static</name> <name>QMutex</name></type> <name>m</name></decl>;</decl_stmt>
+
     <decl_stmt><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>textData</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>Target</name></type> <name>target</name></decl>;</decl_stmt>

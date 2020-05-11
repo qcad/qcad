@@ -340,23 +340,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getTransform" cppName="getTransform"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="QTransform" isPureVirtual="false" />
-    </method>
-    <method name="exportTransforms" cppName="exportTransforms"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="RExporter &amp;" typeName="RExporter" name="e"
-        isConst="false" />
-      </variant>
-    </method>
-    <method name="exportEndTransforms"
-    cppName="exportEndTransforms" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="RExporter &amp;" typeName="RExporter" name="e"
-        isConst="false" />
-      </variant>
+      <variant returnType="RTransform" isPureVirtual="false" />
     </method>
     <method name="getColumnRowOffset" cppName="getColumnRowOffset"
     specifier="public" isStatic="false" isVirtual="false"

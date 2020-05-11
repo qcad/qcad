@@ -512,41 +512,11 @@
         
     
       void exportTransform(
-                const QTransform & t
+                const RTransform & t
             );
         
     
       void exportEndTransform(
-                
-            );
-        
-    
-      void exportTranslation(
-                const RVector & offset
-            );
-        
-    
-      void exportEndTranslation(
-                
-            );
-        
-    
-      void exportRotation(
-                double angle
-            );
-        
-    
-      void exportEndRotation(
-                
-            );
-        
-    
-      void exportScale(
-                const RVector & factors
-            );
-        
-    
-      void exportEndScale(
                 
             );
         

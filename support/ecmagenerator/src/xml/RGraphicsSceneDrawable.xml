@@ -8,6 +8,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <enum name="Type">
       <value name="Invalid" />
       <value name="PainterPath" />
+      <value name="PainterPathRay" />
       <value name="PainterPathXLine" />
       <value name="Image" />
       <value name="Text" />
@@ -68,7 +69,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RGraphicsSceneDrawable"
       isPureVirtual="false">
-        <arg type="QTransform &amp;" typeName="QTransform"
+        <arg type="RTransform &amp;" typeName="RTransform"
         name="transfrom" isConst="true" />
         <arg type="RVector &amp;" typeName="RVector" name="offset"
         hasDefault="true" default="RVector :: nullVector"
@@ -159,7 +160,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getTransform" cppName="getTransform"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="QTransform &amp;"
+      <variant returnType="RTransform &amp;"
       isPureVirtual="false" />
     </method>
     <method name="getOffset" cppName="getOffset" specifier="public"

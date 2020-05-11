@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core/math" filename="RTransform.h"><comment type="block">/**
+ * Copyright (c) 2011-2020 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RTRANSFORM_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RTRANSFORM_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"../core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTransform&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGlobal.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTransformOp.h"</cpp:file></cpp:include>
+
+
+<comment type="block">/**
+ * Represents a transform with recorded operations (reproducable).
+ *
+ * \ingroup math
+ * \scriptable
+ * \copyable
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RTransform</name> <super>: <specifier>public</specifier> <name>QTransform</name></super> <block>{<private type="default">
+</private><public>public:
+    <constructor><name>RTransform</name><parameter_list>()</parameter_list> <block>{
+    }</block></constructor>
+
+    <function_decl><type><name>RTransform</name>&amp;</type> <name>translate</name><parameter_list>(<param><decl><type><name>qreal</name></type> <name>dx</name></decl></param>, <param><decl><type><name>qreal</name></type> <name>dy</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RTransform</name>&amp;</type> <name>scale</name><parameter_list>(<param><decl><type><name>qreal</name></type> <name>sx</name></decl></param>, <param><decl><type><name>qreal</name></type> <name>sy</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RTransform</name>&amp;</type> <name>rotateRadians</name><parameter_list>(<param><decl><type><name>qreal</name></type> <name>angle</name></decl></param>, <param><decl><type><name><name>Qt</name>::<name>Axis</name></name></type> <name>axis</name> =<init> <expr><name><name>Qt</name>::<name>ZAxis</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RTransform</name>&amp;</type> <name>rotate</name><parameter_list>(<param><decl><type><name>qreal</name></type> <name>angle</name></decl></param>, <param><decl><type><name><name>Qt</name>::<name>Axis</name></name></type> <name>axis</name> =<init> <expr><name><name>Qt</name>::<name>ZAxis</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>QList<argument_list>&lt;<argument><name>RTransformOp</name></argument>&gt;</argument_list></name></type> <name>getOps</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>ops</name></expr>;</return>
+    }</block></function>
+
+</public><private>private:
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RTransformOp</name></argument>&gt;</argument_list></name></type> <name>ops</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTransform</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTransform*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

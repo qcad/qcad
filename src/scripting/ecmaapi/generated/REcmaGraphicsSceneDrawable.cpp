@@ -129,6 +129,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("PainterPathRay",
+    QScriptValue(RGraphicsSceneDrawable::PainterPathRay),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("PainterPathXLine",
     QScriptValue(RGraphicsSceneDrawable::PainterPathXLine),
     QScriptValue::ReadOnly);
@@ -728,26 +733,28 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: QTransform */
+        ) /* type: RTransform */
     
     ){
     // prepare arguments:
     
-                    // argument is reference
-                    QTransform*
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTransform*
                     ap0 =
                     qscriptvalue_cast<
-                    QTransform*
+                    RTransform*
                         >(
                         context->argument(
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsSceneDrawable: Argument 0 is not of type QTransform*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsSceneDrawable: Argument 0 is not of type RTransform.",
                                context);                    
                     }
-                    QTransform& a0 = *ap0;
+                    RTransform 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -770,7 +777,7 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: QTransform */
+        ) /* type: RTransform */
      && (
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
@@ -780,21 +787,23 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
-                    QTransform*
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTransform*
                     ap0 =
                     qscriptvalue_cast<
-                    QTransform*
+                    RTransform*
                         >(
                         context->argument(
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsSceneDrawable: Argument 0 is not of type QTransform*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsSceneDrawable: Argument 0 is not of type RTransform.",
                                context);                    
                     }
-                    QTransform& a0 = *ap0;
+                    RTransform 
+                    a0 = 
+                    *ap0;
                 
                     // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
@@ -1615,11 +1624,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QTransform &'
-    QTransform & cppResult =
+    // return type 'RTransform &'
+    RTransform & cppResult =
         
                self->getTransform();
-        // return type: QTransform &
+        // return type: RTransform &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));

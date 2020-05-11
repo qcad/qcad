@@ -220,7 +220,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QTransform &amp;" typeName="QTransform" name="t"
+        <arg type="RTransform &amp;" typeName="RTransform" name="t"
         isConst="true" />
       </variant>
     </method>

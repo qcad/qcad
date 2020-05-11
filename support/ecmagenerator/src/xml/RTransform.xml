@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RTransform"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QTransform" specifier="public" />
+    <constructor>
+      <variant />
+    </constructor>
+    <method name="translate" cppName="translate" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RTransform &amp;" isPureVirtual="false">
+        <arg type="qreal" typeName="qreal" name="dx"
+        isConst="false" />
+        <arg type="qreal" typeName="qreal" name="dy"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="scale" cppName="scale" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RTransform &amp;" isPureVirtual="false">
+        <arg type="qreal" typeName="qreal" name="sx"
+        isConst="false" />
+        <arg type="qreal" typeName="qreal" name="sy"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="rotateRadians" cppName="rotateRadians"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RTransform &amp;" isPureVirtual="false">
+        <arg type="qreal" typeName="qreal" name="angle"
+        isConst="false" />
+        <arg type="Qt::Axis" typeName="Qt::Axis" name="axis"
+        hasDefault="true" default="Qt :: ZAxis" isConst="false" />
+      </variant>
+    </method>
+    <method name="rotate" cppName="rotate" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RTransform &amp;" isPureVirtual="false">
+        <arg type="qreal" typeName="qreal" name="angle"
+        isConst="false" />
+        <arg type="Qt::Axis" typeName="Qt::Axis" name="axis"
+        hasDefault="true" default="Qt :: ZAxis" isConst="false" />
+      </variant>
+    </method>
+    <method name="getOps" cppName="getOps" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RTransformOp &gt;"
+      isPureVirtual="false" />
+    </method>
+  </class>
+</unit>

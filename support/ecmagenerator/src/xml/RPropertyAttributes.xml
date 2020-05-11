@@ -34,6 +34,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="RefPoint" />
       <value name="Geometry" />
       <value name="Scale" />
+      <value name="Area" />
     </enum>
     <constructor>
       <variant />
@@ -296,6 +297,19 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="setScaleType" cppName="setScaleType"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="v"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isAreaType" cppName="isAreaType"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setAreaType" cppName="setAreaType"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">

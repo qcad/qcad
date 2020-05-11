@@ -353,6 +353,8 @@ HEADERS += \
     $$PWD/REcmaTransactionEvent.h \
     $$PWD/REcmaTransactionListener.h \
     $$PWD/REcmaTransactionListenerAdapter.h \
+    $$PWD/REcmaTransform.h \
+    $$PWD/REcmaTransformOp.h \
     $$PWD/REcmaTransformation.h \
     $$PWD/REcmaTranslation.h \
     $$PWD/REcmaTreeWidget.h \
@@ -727,6 +729,8 @@ SOURCES += \
     $$PWD/REcmaTransactionEvent.cpp \
     $$PWD/REcmaTransactionListener.cpp \
     $$PWD/REcmaTransactionListenerAdapter.cpp \
+    $$PWD/REcmaTransform.cpp \
+    $$PWD/REcmaTransformOp.cpp \
     $$PWD/REcmaTransformation.cpp \
     $$PWD/REcmaTranslation.cpp \
     $$PWD/REcmaTreeWidget.cpp \

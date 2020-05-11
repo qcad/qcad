@@ -134,6 +134,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setScaleType, "setScaleType");
             
+            REcmaHelper::registerFunction(&engine, proto, isAreaType, "isAreaType");
+            
+            REcmaHelper::registerFunction(&engine, proto, setAreaType, "setAreaType");
+            
             REcmaHelper::registerFunction(&engine, proto, getLabel, "getLabel");
             
             REcmaHelper::registerFunction(&engine, proto, setLabel, "setLabel");
@@ -300,6 +304,11 @@
 
     ctor.setProperty("Scale",
     QScriptValue(RPropertyAttributes::Scale),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Area",
+    QScriptValue(RPropertyAttributes::Area),
     QScriptValue::ReadOnly);
 
 
@@ -2650,6 +2659,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPropertyAttributes::setScaleType", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyAttributes::isAreaType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyAttributes::isAreaType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::isAreaType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyAttributes* self = 
+                        getSelf("isAreaType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isAreaType();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.isAreaType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyAttributes::isAreaType", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyAttributes::setAreaType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyAttributes::setAreaType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::setAreaType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyAttributes* self = 
+                        getSelf("setAreaType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setAreaType(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.setAreaType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyAttributes::setAreaType", context, engine);
             return result;
         }
          QScriptValue
