@@ -322,7 +322,7 @@ de wijzigingen door te voeren.</translation>
     <message>
         <location line="+86"/>
         <source>Defaults for </source>
-        <translation>Standaardinstellingen voor</translation>
+        <translation>Standaardinstellingen voor </translation>
     </message>
     <message>
         <location line="+2"/>
@@ -5010,7 +5010,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+3"/>
         <source>Width : </source>
-        <translation>Breedte:</translation>
+        <translation>Breedte: </translation>
     </message>
     <message>
         <location line="+16"/>
@@ -9243,7 +9243,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode: </source>
-        <translation>Modus:</translation>
+        <translation>Modus: </translation>
     </message>
     <message>
         <location line="+17"/>
