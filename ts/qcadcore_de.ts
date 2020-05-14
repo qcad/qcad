@@ -6,7 +6,7 @@
     <message>
         <location filename="../src/core/RUnit.cpp" line="+273"/>
         <source>None</source>
-        <translation>Keine</translation>
+        <translation>Keine2</translation>
     </message>
     <message>
         <location line="+3"/>
