@@ -683,7 +683,7 @@ um die Änderungen zu übernehmen.</translation>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation>Die zwei  Punkte sind identisch</translation>
+        <translation>Die zwei Punkte sind identisch</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PRInit.js" line="+2"/>
