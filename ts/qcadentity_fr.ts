@@ -57,7 +57,7 @@ Indiquer la position [angle/longueur]</translatorcomment>
         <source>Width</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
-Largeur&#xa0;: 
+Largeur : 
 Largeur
 &amp;Largeur de page :</translatorcomment>
         <translation>Largeur</translation>
@@ -67,7 +67,7 @@ Largeur
         <source>Height</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
-Hauteur&#xa0;: 
+Hauteur : 
 Hauteur
 &amp;Hauteur de page :</translatorcomment>
         <translation>Hauteur</translation>
@@ -448,7 +448,7 @@ Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
 &amp;Echelle
 Echelle
 Met les entités à l&apos;échelle</translatorcomment>
-        <translation>Echelle</translation>
+        <translation>Échelle</translation>
     </message>
     <message>
         <source>Simple</source>
