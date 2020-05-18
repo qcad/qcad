@@ -57,7 +57,7 @@ Indiquer la position [angle/longueur]</translatorcomment>
         <source>Width</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
-Largeur&#xa0;: 
+Largeur : 
 Largeur
 &amp;Largeur de page :</translatorcomment>
         <translation>Largeur</translation>
@@ -67,7 +67,7 @@ Largeur
         <source>Height</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
-Hauteur&#xa0;: 
+Hauteur : 
 Hauteur
 &amp;Hauteur de page :</translatorcomment>
         <translation>Hauteur</translation>
@@ -390,7 +390,7 @@ Remplissage uni</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Transparency</source>
-        <translation type="unfinished"></translation>
+        <translation>Transparence</translation>
     </message>
     <message>
         <location line="+2"/>
