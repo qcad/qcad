@@ -124,10 +124,6 @@ RBox RTextBasedData::getBoundingBox(bool ignoreEmpty) const {
         getPainterPaths(gotDraft);
     }
 
-//    if (!ignoreEmpty && boundingBox.getWidth()<RS::PointTolerance && boundingBox.getHeight()<RS::PointTolerance) {
-//        RDebug::printBacktrace();
-//    }
-
     if (ignoreEmpty && boundingBox.getWidth()<RS::PointTolerance && boundingBox.getHeight()<RS::PointTolerance) {
         return RBox();
     }
@@ -331,6 +327,40 @@ bool RTextBasedData::scale(const RVector& scaleFactors, const RVector& center) {
     alignmentPoint.scale(scaleFactors, center);
     textWidth*=scaleFactors.x;
     textHeight*=scaleFactors.x;
+
+
+
+    // handle mirroring:
+//    if (scaleFactors.x<0 && scaleFactors.y>0 ||
+//        scaleFactors.x>0 && scaleFactors.y<0) {
+
+//        bool readable = RMath::isAngleReadable(angle);
+//        qDebug() << "angle: " << angle;
+
+//        RVector vec = RVector::createPolar(1.0, angle);
+//        vec.scale(scaleFactors, RVector(0,0));
+//        //vec.mirror(RVector(0.0,0.0), axis.getEndPoint()-axis.getStartPoint());
+//        angle = vec.getAngle();
+
+//        bool corr;
+//        angle = RMath::makeAngleReadable(angle, readable, &corr);
+
+//        if (corr) {
+//            if (horizontalAlignment==RS::HAlignLeft) {
+//                horizontalAlignment=RS::HAlignRight;
+//            } else if (horizontalAlignment==RS::HAlignRight) {
+//                horizontalAlignment=RS::HAlignLeft;
+//            }
+//        } else {
+//            if (verticalAlignment==RS::VAlignTop) {
+//                verticalAlignment=RS::VAlignBase;
+//            } else if (verticalAlignment==RS::VAlignBase) {
+//                verticalAlignment=RS::VAlignTop;
+//            }
+//        }
+//    }
+
+
 
     if (!isSimple()) {
         // change height in height tags inside MText entities:
