@@ -587,7 +587,7 @@
     <message>
         <location line="+1"/>
         <source>Transparency</source>
-        <translation type="unfinished"></translation>
+        <translation>Transparency</translation>
     </message>
     <message>
         <location line="+2"/>
