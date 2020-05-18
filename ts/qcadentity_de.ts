@@ -32,7 +32,7 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+89"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+91"/>
         <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+92"/>
         <location line="+4"/>
@@ -305,6 +305,7 @@
     </message>
     <message>
         <location line="+2"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="+5"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+2"/>
         <source>Total Area</source>
         <translation>Gesamtfläche</translation>
@@ -314,9 +315,14 @@
         <translation type="obsolete">Inhalt</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-12"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-13"/>
         <source>Solid</source>
         <translation>Gefüllt</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Transparency</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -347,7 +353,7 @@
         <translation>Winkel</translation>
     </message>
     <message>
-        <location line="+192"/>
+        <location line="+197"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
@@ -358,7 +364,7 @@
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="+17"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-191"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-196"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+2"/>
         <source>Scale</source>
         <translation>Skalierung</translation>
@@ -417,7 +423,7 @@
     </message>
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="-5"/>
-        <location filename="../src/entity/RCircleEntity.cpp" line="+2"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="-3"/>
         <source>Diameter</source>
         <translation>Durchmesser</translation>
     </message>

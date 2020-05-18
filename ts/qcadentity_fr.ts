@@ -57,7 +57,7 @@ Indiquer la position [angle/longueur]</translatorcomment>
         <source>Width</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
-Largeur : 
+Largeur&#xa0;: 
 Largeur
 &amp;Largeur de page :</translatorcomment>
         <translation>Largeur</translation>
@@ -67,7 +67,7 @@ Largeur
         <source>Height</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
-Hauteur : 
+Hauteur&#xa0;: 
 Hauteur
 &amp;Hauteur de page :</translatorcomment>
         <translation>Hauteur</translation>
@@ -106,7 +106,7 @@ Hauteur
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+89"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+91"/>
         <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="-18"/>
         <location line="+4"/>
@@ -365,6 +365,7 @@ Indiquer l&apos;angle de fin ou [Longueur de corde/Angle]</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="+5"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+2"/>
         <source>Total Area</source>
         <translation>Superficie totale</translation>
@@ -378,13 +379,18 @@ Modifier le contenu du bloc sélectionné</translatorcomment>
         <translation type="obsolete">Sommaire</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-12"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-13"/>
         <source>Solid</source>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
 Dessine des hachures et des remplissages unis
 Remplissage uni</translatorcomment>
         <translation>Trait continu</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Transparency</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -429,7 +435,7 @@ Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
         <translation>Angle</translation>
     </message>
     <message>
-        <location line="+192"/>
+        <location line="+197"/>
         <source>Yes</source>
         <translation>Oui</translation>
     </message>
@@ -440,7 +446,7 @@ Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="+17"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-191"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-196"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+2"/>
         <source>Scale</source>
         <translatorcomment>--exact match--
@@ -534,7 +540,7 @@ Cotation verticale</translatorcomment>
     </message>
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="-5"/>
-        <location filename="../src/entity/RCircleEntity.cpp" line="+2"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="-3"/>
         <source>Diameter</source>
         <translatorcomment>--exact match--
 --file: Scripts_fr.ts--

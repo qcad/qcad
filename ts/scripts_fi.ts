@@ -297,8 +297,12 @@ asetuksien muutokset astuvat voimaan.</translation>
     </message>
     <message>
         <location line="+86"/>
+        <source>Defaults for</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Defaults for </source>
-        <translation>Oletusarvot </translation>
+        <translation type="vanished">Oletusarvot </translation>
     </message>
     <message>
         <location line="+2"/>
@@ -9555,12 +9559,12 @@ näkyy hakutuloksissa:</translation>
         <translation>Näytä aina kaikki ominaisuudet (tämä voi hidastaa kohteiden valintaa)</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1466"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1467"/>
         <source>*VARIES*</source>
         <translation>*VAIHTELEVA*</translation>
     </message>
     <message>
-        <location line="-1273"/>
+        <location line="-1274"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9624,7 +9628,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Automaattinen</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+142"/>
         <source>Use auto measurement</source>
         <translation>Käytä automaattista mittausta</translation>
     </message>

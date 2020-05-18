@@ -352,8 +352,12 @@ applicare le modifiche.</translation>
     </message>
     <message>
         <location line="+86"/>
+        <source>Defaults for</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Defaults for </source>
-        <translation>Predefiniti per </translation>
+        <translation type="vanished">Predefiniti per </translation>
     </message>
     <message>
         <location line="+2"/>
@@ -10856,12 +10860,12 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="+702"/>
+        <location line="+703"/>
         <source>*VARIES*</source>
         <translation>*VARIE*</translation>
     </message>
     <message>
-        <location line="-1273"/>
+        <location line="-1274"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: Arduino_it_IT.po--
@@ -10918,7 +10922,7 @@ Nessuna selezione</translatorcomment>
         <translation>Mostra tutte le proprietà</translation>
     </message>
     <message>
-        <location line="+659"/>
+        <location line="+660"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -10931,12 +10935,12 @@ Nessuna selezione</translatorcomment>
         <translation type="obsolete">Sotto</translation>
     </message>
     <message>
-        <location line="-542"/>
+        <location line="-543"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+142"/>
         <source>Use auto measurement</source>
         <translation>Utilizzare la misurazione automatica</translation>
     </message>

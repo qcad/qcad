@@ -321,8 +321,12 @@ the preference changes to take effect.</source>
     </message>
     <message>
         <location line="+86"/>
+        <source>Defaults for</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Defaults for </source>
-        <translation>Значения по умолчанию для </translation>
+        <translation type="vanished">Значения по умолчанию для </translation>
     </message>
     <message>
         <location line="+2"/>
@@ -9490,12 +9494,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1466"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1467"/>
         <source>*VARIES*</source>
         <translation>*ВАРЬИРОВАНИЕ*</translation>
     </message>
     <message>
-        <location line="-1273"/>
+        <location line="-1274"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9555,7 +9559,7 @@ shown in search results:</source>
         <translation>Автоматический</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+142"/>
         <source>Use auto measurement</source>
         <translation>Использовать автоматическое измерение</translation>
     </message>

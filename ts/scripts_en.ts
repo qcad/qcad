@@ -309,8 +309,12 @@ the preference changes to take effect.</translation>
     </message>
     <message>
         <location line="+86"/>
+        <source>Defaults for</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Defaults for </source>
-        <translation>Defaults for </translation>
+        <translation type="vanished">Defaults for </translation>
     </message>
     <message>
         <location line="+2"/>
@@ -9467,7 +9471,7 @@ shown in search results:</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+142"/>
         <source>Use auto measurement</source>
         <translation>Use auto measurement</translation>
     </message>

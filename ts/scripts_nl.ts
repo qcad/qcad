@@ -321,8 +321,12 @@ de wijzigingen door te voeren.</translation>
     </message>
     <message>
         <location line="+86"/>
+        <source>Defaults for</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Defaults for </source>
-        <translation>Standaardinstellingen voor </translation>
+        <translation type="vanished">Standaardinstellingen voor </translation>
     </message>
     <message>
         <location line="+2"/>
@@ -9533,12 +9537,12 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1466"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1467"/>
         <source>*VARIES*</source>
         <translation>*VARIEERT*</translation>
     </message>
     <message>
-        <location line="-1273"/>
+        <location line="-1274"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9598,7 +9602,7 @@ getoond in zoekresultaten:</translation>
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+142"/>
         <source>Use auto measurement</source>
         <translation>Automatisch</translation>
     </message>

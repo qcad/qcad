@@ -352,8 +352,12 @@ pour appliquer les modifications.</translation>
     </message>
     <message>
         <location line="+86"/>
+        <source>Defaults for</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Defaults for </source>
-        <translation>Valeurs par défaut pour </translation>
+        <translation type="vanished">Valeurs par défaut pour </translation>
     </message>
     <message>
         <location line="+2"/>
@@ -10690,7 +10694,7 @@ dans les résultats de recherche :</translation>
         <translation>Afficher toutes les propriétés</translation>
     </message>
     <message>
-        <location line="+659"/>
+        <location line="+660"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -10724,7 +10728,7 @@ dans les résultats de recherche :</translation>
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1273"/>
+        <location line="-1274"/>
         <source>:</source>
         <translation> :</translation>
     </message>
@@ -10758,7 +10762,7 @@ dans les résultats de recherche :</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+142"/>
         <source>Use auto measurement</source>
         <translation>Utiliser la mesure automatique</translation>
     </message>

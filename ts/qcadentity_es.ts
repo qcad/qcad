@@ -96,7 +96,7 @@ Altura del Texto:</translatorcomment>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+89"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+91"/>
         <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="-18"/>
         <location line="+4"/>
@@ -355,6 +355,7 @@ Especifique ángulo final o ángulo acorde a la longitud</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="+5"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+2"/>
         <source>Total Area</source>
         <translation>Área total</translation>
@@ -368,7 +369,7 @@ Editar el contenido del bloque seleccionado</translatorcomment>
         <translation type="obsolete">Contenidos</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-12"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-13"/>
         <source>Solid</source>
         <translatorcomment>--exact match--
 --file: Scripts_es.ts--
@@ -376,6 +377,11 @@ Dibujar sombreados y rellenos
 Dibuja texturas y rellenos sólidos
 Sombreado/Relleno</translatorcomment>
         <translation>Sólido</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Transparency</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -420,7 +426,7 @@ Introduzca ángulo en línea de cota:</translatorcomment>
         <translation>Ángulo</translation>
     </message>
     <message>
-        <location line="+192"/>
+        <location line="+197"/>
         <source>Yes</source>
         <translation>Sí</translation>
     </message>
@@ -431,7 +437,7 @@ Introduzca ángulo en línea de cota:</translatorcomment>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="+17"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-191"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-196"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+2"/>
         <source>Scale</source>
         <translatorcomment>--exact match--
@@ -525,7 +531,7 @@ Vertical
     </message>
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="-5"/>
-        <location filename="../src/entity/RCircleEntity.cpp" line="+2"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="-3"/>
         <source>Diameter</source>
         <translatorcomment>--exact match--
 --file: Scripts_es.ts--

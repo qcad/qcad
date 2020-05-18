@@ -352,8 +352,12 @@ para aplicar los cambios.</translation>
     </message>
     <message>
         <location line="+86"/>
+        <source>Defaults for</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Defaults for </source>
-        <translation>Unidad en</translation>
+        <translation type="vanished">Unidad en</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -10812,13 +10816,13 @@ en los resultados de búsqueda:</translation>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="+702"/>
+        <location line="+703"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1273"/>
+        <location line="-1274"/>
         <source>:</source>
         <translatorcomment>--exact match--
 --file: artisan_es.ts--
@@ -10886,7 +10890,7 @@ Mosaico horizontal
         <translation>Mostrar todas las propiedades</translation>
     </message>
     <message>
-        <location line="+659"/>
+        <location line="+660"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -10895,12 +10899,12 @@ Mosaico horizontal
         <translation type="obsolete">Parte inferior</translation>
     </message>
     <message>
-        <location line="-542"/>
+        <location line="-543"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+142"/>
         <source>Use auto measurement</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Usar medición automática</translation>

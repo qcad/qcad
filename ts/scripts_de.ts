@@ -357,8 +357,12 @@ um die Änderungen zu übernehmen.</translation>
     </message>
     <message>
         <location line="+86"/>
+        <source>Defaults for</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Defaults for </source>
-        <translation>Standards für</translation>
+        <translation type="vanished">Standards für</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -11470,12 +11474,12 @@ nicht öffnen.
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1466"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1467"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="-1273"/>
+        <location line="-1274"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -11524,7 +11528,7 @@ nicht öffnen.
         <translation>Alle Eigenschaften anzeigen</translation>
     </message>
     <message>
-        <location line="+659"/>
+        <location line="+660"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -11561,7 +11565,7 @@ nicht öffnen.
         <translation type="obsolete">Mittelpunkt</translation>
     </message>
     <message>
-        <location line="-705"/>
+        <location line="-706"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
@@ -11579,7 +11583,7 @@ nicht öffnen.
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+142"/>
         <source>Use auto measurement</source>
         <translation>Automatisch</translation>
     </message>
@@ -11659,7 +11663,7 @@ nicht öffnen.
         <translation type="vanished">Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1142"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1143"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>

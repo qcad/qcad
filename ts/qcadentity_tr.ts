@@ -51,7 +51,7 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+89"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+91"/>
         <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+92"/>
         <location line="+4"/>
@@ -266,6 +266,7 @@
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Total Area</source>
         <translation type="unfinished"></translation>
@@ -287,7 +288,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/entity/RCircleEntity.cpp" line="-1"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
         <source>Circumference</source>
         <translation type="unfinished"></translation>
     </message>
@@ -584,8 +585,13 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-5"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-6"/>
         <source>Solid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Transparency</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -634,7 +640,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+184"/>
+        <location line="+189"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>

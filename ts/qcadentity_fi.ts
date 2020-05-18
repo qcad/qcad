@@ -51,7 +51,7 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+89"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+91"/>
         <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+92"/>
         <location line="+4"/>
@@ -266,6 +266,7 @@
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Total Area</source>
         <translation>Kokonaisalue</translation>
@@ -282,7 +283,7 @@
         <translation>Kehote</translation>
     </message>
     <message>
-        <location filename="../src/entity/RCircleEntity.cpp" line="-1"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
         <source>Circumference</source>
         <translation>Ympärysmitta</translation>
     </message>
@@ -515,9 +516,14 @@
         <translation>Päätepiste</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-8"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-9"/>
         <source>Solid</source>
         <translation>Kiinteä</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Transparency</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -548,7 +554,7 @@
         <translation>Kulma</translation>
     </message>
     <message>
-        <location line="+192"/>
+        <location line="+197"/>
         <source>Yes</source>
         <translation>Kyllä</translation>
     </message>
@@ -559,7 +565,7 @@
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-2"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-191"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-196"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+2"/>
         <source>Scale</source>
         <translation>Mittakaava</translation>

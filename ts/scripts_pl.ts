@@ -323,8 +323,12 @@ aby wprowadzić zmiany preferencji.</translation>
     </message>
     <message>
         <location line="+86"/>
+        <source>Defaults for</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Defaults for </source>
-        <translation>Domyślne dla</translation>
+        <translation type="vanished">Domyślne dla</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -11990,13 +11994,13 @@ Wskaż punkt docelowy</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1466"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1467"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*RÓŻNE*</translation>
     </message>
     <message>
-        <location line="-1273"/>
+        <location line="-1274"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_pl.ts--
@@ -12074,7 +12078,7 @@ Czy chcesz zamknąć plik
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+659"/>
+        <location line="+660"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
@@ -12084,7 +12088,7 @@ Czy chcesz zamknąć plik
         <translation type="obsolete">Dodaj niestandardowy obiekt</translation>
     </message>
     <message>
-        <location line="-705"/>
+        <location line="-706"/>
         <source>Add custom property to selected objects</source>
         <translation>Dodaj dostosowaną właściwość do zaznaczonych obiektów</translation>
     </message>
@@ -12172,7 +12176,7 @@ Przyciąganie automatyczne</translatorcomment>
         <translation>Automatycznie</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+142"/>
         <source>Use auto measurement</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Użyj automatycznego pomiaru</translation>

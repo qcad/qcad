@@ -671,7 +671,7 @@
         <translation>Celkově</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+854"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+827"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Detekováno kruhové (rekurzivní) odkazování bloku</translation>
     </message>

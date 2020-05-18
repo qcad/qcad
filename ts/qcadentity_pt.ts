@@ -55,7 +55,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+89"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+91"/>
         <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+92"/>
         <location line="+4"/>
@@ -310,12 +310,13 @@ Meça a área e a circunferência de um polígono</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Total Area</source>
         <translation>Área total</translation>
     </message>
     <message>
-        <location filename="../src/entity/RCircleEntity.cpp" line="-1"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
         <source>Circumference</source>
         <translatorcomment>--google--
 Meça a área e a circunferência de um polígono
@@ -619,13 +620,18 @@ Ponto final (x):</translatorcomment>
         <translation>Ponto Final</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-8"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-9"/>
         <source>Solid</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
 Desenhe hachurados e preenchimentos sólidos
 Hachuras / preenchimentos sólidos</translatorcomment>
         <translation>Sólido</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Transparency</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -669,7 +675,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>Ângulo</translation>
     </message>
     <message>
-        <location line="+192"/>
+        <location line="+197"/>
         <source>Yes</source>
         <translation>Sim</translation>
     </message>
@@ -680,7 +686,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="+2"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-191"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-196"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+2"/>
         <source>Scale</source>
         <translatorcomment>--exact match--

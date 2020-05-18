@@ -296,8 +296,12 @@ the preference changes to take effect.</source>
     </message>
     <message>
         <location line="+86"/>
+        <source>Defaults for</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Defaults for </source>
-        <translation>Výchozí pro </translation>
+        <translation type="vanished">Výchozí pro </translation>
     </message>
     <message>
         <location line="+2"/>
@@ -9389,7 +9393,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+142"/>
         <source>Use auto measurement</source>
         <translation>Použít automatické měření</translation>
     </message>
