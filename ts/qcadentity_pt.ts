@@ -631,7 +631,7 @@ Hachuras / preenchimentos sólidos</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Transparency</source>
-        <translation type="unfinished"></translation>
+        <translation>Transparência</translation>
     </message>
     <message>
         <location line="+2"/>
