@@ -310,7 +310,7 @@ the preference changes to take effect.</translation>
     <message>
         <location line="+86"/>
         <source>Defaults for</source>
-        <translation type="unfinished"></translation>
+        <translation>Defaults for</translation>
     </message>
     <message>
         <source>Defaults for </source>
