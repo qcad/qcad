@@ -358,7 +358,7 @@ um die Änderungen zu übernehmen.</translation>
     <message>
         <location line="+86"/>
         <source>Defaults for</source>
-        <translation type="unfinished"></translation>
+        <translation>Standards für</translation>
     </message>
     <message>
         <source>Defaults for </source>
