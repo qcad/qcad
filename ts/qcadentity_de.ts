@@ -322,7 +322,7 @@
     <message>
         <location line="+1"/>
         <source>Transparency</source>
-        <translation type="unfinished"></translation>
+        <translation>Transparenz</translation>
     </message>
     <message>
         <location line="+2"/>
