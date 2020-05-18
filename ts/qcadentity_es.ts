@@ -381,7 +381,7 @@ Sombreado/Relleno</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Transparency</source>
-        <translation type="unfinished"></translation>
+        <translation>Transparencia</translation>
     </message>
     <message>
         <location line="+2"/>
