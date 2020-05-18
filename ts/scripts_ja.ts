@@ -322,7 +322,7 @@ QCADを再起動してください。</translation>
     <message>
         <location line="+86"/>
         <source>Defaults for</source>
-        <translation type="unfinished"></translation>
+        <translation>デフォルト</translation>
     </message>
     <message>
         <source>Defaults for </source>

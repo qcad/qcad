@@ -298,7 +298,7 @@ asetuksien muutokset astuvat voimaan.</translation>
     <message>
         <location line="+86"/>
         <source>Defaults for</source>
-        <translation type="unfinished"></translation>
+        <translation>Oletusarvot</translation>
     </message>
     <message>
         <source>Defaults for </source>

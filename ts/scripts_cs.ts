@@ -297,7 +297,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+86"/>
         <source>Defaults for</source>
-        <translation type="unfinished"></translation>
+        <translation>Výchozí pro</translation>
     </message>
     <message>
         <source>Defaults for </source>

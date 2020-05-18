@@ -324,7 +324,7 @@ aby wprowadzić zmiany preferencji.</translation>
     <message>
         <location line="+86"/>
         <source>Defaults for</source>
-        <translation type="unfinished"></translation>
+        <translation>Domyślne dla</translation>
     </message>
     <message>
         <source>Defaults for </source>

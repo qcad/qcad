@@ -345,7 +345,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
     <message>
         <location line="+86"/>
         <source>Defaults for</source>
-        <translation type="unfinished"></translation>
+        <translation>Padrões para</translation>
     </message>
     <message>
         <source>Defaults for </source>
