@@ -353,7 +353,7 @@ pour appliquer les modifications.</translation>
     <message>
         <location line="+86"/>
         <source>Defaults for</source>
-        <translation type="unfinished"></translation>
+        <translation>Valeurs par défaut pour</translation>
     </message>
     <message>
         <source>Defaults for </source>
