@@ -246,22 +246,6 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportTransform</name><parameter_list>(<param><decl><type><name>const</name> <name>RTransform</name>&amp;</type> <name>t</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportEndTransform</name><parameter_list>()</parameter_list>;</function_decl>
 
-<comment type="line">//    virtual void exportTranslation(const RVector&amp; offset);</comment>
-<comment type="line">//    virtual void exportEndTranslation();</comment>
-
-<comment type="line">//    virtual void exportRotation(double angle);</comment>
-<comment type="line">//    virtual void exportEndRotation();</comment>
-
-<comment type="line">//    virtual void exportScale(const RVector&amp; factors);</comment>
-<comment type="line">//    virtual void exportEndScale();</comment>
-
-<comment type="line">//    virtual void clearTransform() {</comment>
-<comment type="line">//        transform = QTransform();</comment>
-<comment type="line">//    }</comment>
-<comment type="line">//    virtual QTransform getTransform() const {</comment>
-<comment type="line">//        return transform;</comment>
-<comment type="line">//    }</comment>
-
     <function><type><name>virtual</name> <name>void</name></type> <name>exportThickPolyline</name><parameter_list>(<param><decl><type><name>const</name> <name>RPolyline</name>&amp;</type> <name>polyline</name></decl></param>)</parameter_list> <block>{
         <decl_stmt><decl><type><name>RPolyline</name></type> <name>pl</name> =<init> <expr><name>polyline</name></expr></init></decl>;</decl_stmt>
         <expr_stmt><expr><name>pl</name>.<call><name>stripWidths</name><argument_list>()</argument_list></call></expr>;</expr_stmt>

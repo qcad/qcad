@@ -69,6 +69,7 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDimBlockName</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyAutoTextPos</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyFontName</name></decl>;</decl_stmt>
+    <comment type="line">//static RPropertyTypeId PropertyTextColor;</comment>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyArrow1Flipped</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyArrow2Flipped</name></decl>;</decl_stmt>
 
@@ -144,6 +145,14 @@
     <function><type><name>QString</name></type> <name>getFontName</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getFontName</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
+
+<comment type="line">//    void setTextColor(const QString&amp; tc) {</comment>
+<comment type="line">//        getData().setTextColor(RColor(tc));</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    RColor getTextColor() const {</comment>
+<comment type="line">//        return getData().getTextColor();</comment>
+<comment type="line">//    }</comment>
 
     <function><type><name>bool</name></type> <name>hasCustomTextPosition</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>hasCustomTextPosition</name><argument_list>()</argument_list></call></expr>;</return>
