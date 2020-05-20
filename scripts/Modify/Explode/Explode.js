@@ -328,6 +328,8 @@ Explode.explodeEntity = function(entity, options) {
         e = new RTextEntity(entity.getDocument(), textData);
         e.setSelected(true);
         e.copyAttributesFrom(entity.data());
+        var textColor = document.getKnownVariable(RS.DIMCLRT, new RColor(RColor.ByBlock));
+        e.setColor(textColor);
         ret.push(e);
     }
 
