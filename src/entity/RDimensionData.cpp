@@ -569,6 +569,11 @@ void RDimensionData::initTextData() const {
     textData.setSelected(isSelected());
     textData.setDimensionLabel(true);
 
+    // override text color from dimension settings:
+    QVariant v = document->getKnownVariable(RS::DIMCLRT, RColor(RColor::ByBlock));
+    RColor textColor = v.value<RColor>();
+    textData.setColor(textColor);
+
     //qDebug() << "label color: " << textData.getColor();
     //qDebug() << "textData: " << textData;
 
