@@ -655,6 +655,14 @@ QList<RPainterPath> RGraphicsSceneQt::exportText(const RTextBasedData& text, boo
                 pp.setSelected(true);
                 pp.setPen(RSettings::getSelectionColor());
             }
+            else {
+                // use fixed color from given text data instead of current entity
+                // used for dimension text labels if dimension text color is configured:
+                if (!col.isByBlock() && !col.isByLayer()) {
+                    pp.setPen(col);
+                    pp.setFixedPenColor(true);
+                }
+            }
             ret.append(pp);
         }
     }
