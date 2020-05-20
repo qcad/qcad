@@ -1467,7 +1467,9 @@ bool RSettings::getBoolValue(const QString& key, bool defaultValue) {
  * \return Value of the given setting as color or defaultValue.
  */
 RColor RSettings::getColorValue(const QString& key, const RColor& defaultValue) {
-    QVariant ret = getValue(key, defaultValue);
+    QVariant vd;
+    vd.setValue(defaultValue);
+    QVariant ret = getValue(key, vd);
     if (ret.canConvert<RColor>()) {
         return ret.value<RColor>();
     }
