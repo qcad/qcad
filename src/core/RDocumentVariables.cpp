@@ -131,6 +131,12 @@ void RDocumentVariables::setKnownVariable(RS::KnownVariable key, const RVector& 
     knownVariables.insert(key, v);
 }
 
+void RDocumentVariables::setKnownVariable(RS::KnownVariable key, const RColor& value) {
+    QVariant v;
+    v.setValue(value);
+    knownVariables.insert(key, v);
+}
+
 void RDocumentVariables::setKnownVariable(RS::KnownVariable key, const QVariant& value) {
     switch (key) {
     case RS::INSUNITS:
@@ -212,5 +218,6 @@ void RDocumentVariables::print(QDebug dbg) const {
         << "\ncurrentLayerId: " << getCurrentLayerId()
         << "\npoint mode: " << getKnownVariable(RS::PDMODE)
         << "\ndimension font: " << getDimensionFont()
+        << "\ndimension text color: " << getKnownVariable(RS::DIMCLRT)
         << ")";
 }
