@@ -68,6 +68,7 @@ public:
     static RPropertyTypeId PropertyDimBlockName;
     static RPropertyTypeId PropertyAutoTextPos;
     static RPropertyTypeId PropertyFontName;
+    //static RPropertyTypeId PropertyTextColor;
     static RPropertyTypeId PropertyArrow1Flipped;
     static RPropertyTypeId PropertyArrow2Flipped;
 
@@ -143,6 +144,14 @@ public:
     QString getFontName() const {
         return getData().getFontName();
     }
+
+//    void setTextColor(const QString& tc) {
+//        getData().setTextColor(RColor(tc));
+//    }
+
+//    RColor getTextColor() const {
+//        return getData().getTextColor();
+//    }
 
     bool hasCustomTextPosition() const {
         return getData().hasCustomTextPosition();
