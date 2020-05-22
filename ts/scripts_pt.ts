@@ -3363,17 +3363,17 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+23"/>
         <source>Label</source>
-        <translation type="unfinished"></translation>
+        <translation>Rótulo</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Label font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fonte do rótulo:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Label color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cor do rótulo:</translation>
     </message>
     <message>
         <location line="+13"/>
