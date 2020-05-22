@@ -81,7 +81,7 @@ void RHatchEntity::init() {
     RHatchEntity::PropertyDrawOrder.generateId(typeid(RHatchEntity), REntity::PropertyDrawOrder);
 
     RHatchEntity::PropertySolid.generateId(typeid(RHatchEntity), "", QT_TRANSLATE_NOOP("REntity", "Solid"));
-    RHatchEntity::PropertyTransparency.generateId(typeid(RHatchEntity), "", QT_TRANSLATE_NOOP("REntity", "Transparency"));
+    RHatchEntity::PropertyTransparency.generateId(typeid(RHatchEntity), "", QT_TRANSLATE_NOOP("REntity", "Alpha"));
 
     RHatchEntity::PropertyPatternName.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Pattern"), QT_TRANSLATE_NOOP("REntity", "Name"));
     RHatchEntity::PropertyEntityPattern.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Pattern"), QT_TRANSLATE_NOOP("REntity", "From Entity"));
