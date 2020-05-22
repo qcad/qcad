@@ -3737,17 +3737,17 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+23"/>
         <source>Label</source>
-        <translation type="unfinished"></translation>
+        <translation>Beschriftung</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Label font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Beschriftungsschrift:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Label color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Beschriftungsfarbe:</translation>
     </message>
     <message>
         <location line="+13"/>
