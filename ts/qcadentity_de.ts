@@ -326,7 +326,7 @@
     <message>
         <location line="+1"/>
         <source>Alpha</source>
-        <translation type="unfinished"></translation>
+        <translation>Alpha</translation>
     </message>
     <message>
         <location line="+2"/>
