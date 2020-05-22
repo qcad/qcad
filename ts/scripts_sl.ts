@@ -3228,7 +3228,7 @@ Do you wish to recover it?</source>
         <translation>Dimenzija</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+110"/>
         <source>point</source>
         <translation>pika</translation>
     </message>
@@ -3293,7 +3293,7 @@ Do you wish to recover it?</source>
         <translation>Geodetske enote</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+226"/>
         <source>Unit / Format</source>
         <translation>Enota / Zapis</translation>
     </message>
@@ -3371,14 +3371,27 @@ Do you wish to recover it?</source>
         <translation>Arhitekturna poševnica</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Font</source>
-        <translation>Pisava</translation>
+        <translation type="vanished">Pisava</translation>
+    </message>
+    <message>
+        <source>Dimension label font:</source>
+        <translation type="vanished">Pisava kotiranj:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Label</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Dimension label font:</source>
-        <translation>Pisava kotiranj:</translation>
+        <source>Label font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Label color:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>

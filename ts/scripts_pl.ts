@@ -3909,7 +3909,7 @@ Wskaż położenie linii wymiarowej</translatorcomment>
         <translation>Wymiar</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+110"/>
         <source>point</source>
         <translation>kropka</translation>
     </message>
@@ -4008,7 +4008,7 @@ Jednostki geometryczne</translatorcomment>
         <translation>Jednostki geometryczne</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+226"/>
         <source>Unit / Format</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Jednostka / format</translation>
@@ -4120,14 +4120,27 @@ Strzałka architektoniczna</translatorcomment>
         <translation>Zasieczka</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Font</source>
-        <translation>Czcionka</translation>
+        <translation type="vanished">Czcionka</translation>
+    </message>
+    <message>
+        <source>Dimension label font:</source>
+        <translation type="vanished">Czcionka etykiet wymiarów</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Label</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Dimension label font:</source>
-        <translation>Czcionka etykiet wymiarów</translation>
+        <source>Label font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Label color:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>

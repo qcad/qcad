@@ -3224,7 +3224,7 @@ Do you wish to recover it?</source>
         <translation>寸法</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+110"/>
         <source>point</source>
         <translation>点</translation>
     </message>
@@ -3289,7 +3289,7 @@ Do you wish to recover it?</source>
         <translation>測量</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+226"/>
         <source>Unit / Format</source>
         <translation>ユニット/フォーマット</translation>
     </message>
@@ -3367,14 +3367,27 @@ Do you wish to recover it?</source>
         <translation>建築チェック</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Font</source>
-        <translation>フォント</translation>
+        <translation type="vanished">フォント</translation>
+    </message>
+    <message>
+        <source>Dimension label font:</source>
+        <translation type="vanished">フォント:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Label</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Dimension label font:</source>
-        <translation>フォント:</translation>
+        <source>Label font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Label color:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>

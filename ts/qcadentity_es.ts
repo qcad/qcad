@@ -86,7 +86,7 @@ Altura del Texto:</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="+103"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+91"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+92"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+80"/>
         <location line="+3"/>
@@ -379,9 +379,13 @@ Sombreado/Relleno</translatorcomment>
         <translation>Sólido</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Transparency</source>
-        <translation>Transparencia</translation>
+        <translation type="vanished">Transparencia</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Alpha</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -436,7 +440,7 @@ Introduzca ángulo en línea de cota:</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+17"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+18"/>
         <location filename="../src/entity/RHatchEntity.cpp" line="-196"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+2"/>
         <source>Scale</source>
@@ -929,7 +933,7 @@ Cota ordinal</translatorcomment>
         <translation>Ángulo cota</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="-25"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="-26"/>
         <source>Label</source>
         <translatorcomment>--exact match--
 --file: qtiplot_es.ts--
@@ -981,7 +985,7 @@ Límite inferior</translatorcomment>
         <translation>Posición del texto</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Flip First Arrow</source>
         <translation>Refleja la primera flecha</translation>
     </message>

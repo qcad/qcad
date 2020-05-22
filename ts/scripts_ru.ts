@@ -3180,7 +3180,7 @@ Do you wish to recover it?</source>
         <translation>Размер</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+110"/>
         <source>point</source>
         <translation>точка</translation>
     </message>
@@ -3245,7 +3245,7 @@ Do you wish to recover it?</source>
         <translation>Геодезические единицы</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+226"/>
         <source>Unit / Format</source>
         <translation>Единица измерения/Формат</translation>
     </message>
@@ -3319,14 +3319,27 @@ Do you wish to recover it?</source>
         <translation>Архитектурная засечка</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Font</source>
-        <translation>Шрифт</translation>
+        <translation type="vanished">Шрифт</translation>
+    </message>
+    <message>
+        <source>Dimension label font:</source>
+        <translation type="vanished">Шрифт размерной метки:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Label</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Dimension label font:</source>
-        <translation>Шрифт размерной метки:</translation>
+        <source>Label font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Label color:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>

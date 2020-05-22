@@ -3038,7 +3038,7 @@ Vill du återställa den?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+110"/>
         <source>point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3103,7 +3103,7 @@ Vill du återställa den?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+226"/>
         <source>Unit / Format</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3174,12 +3174,17 @@ Vill du återställa den?</translation>
     </message>
     <message>
         <location line="+23"/>
-        <source>Font</source>
+        <source>Label</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Dimension label font:</source>
+        <source>Label font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Label color:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

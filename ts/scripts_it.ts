@@ -3472,7 +3472,7 @@ Layer ad alta risoluzione possono rallentare la navigazione in QGIS.</translator
         <translation>Predefiniti per nuovi disegni</translation>
     </message>
     <message>
-        <location line="+111"/>
+        <location line="+112"/>
         <source>point</source>
         <translation>Punto</translation>
     </message>
@@ -3537,7 +3537,7 @@ Layer ad alta risoluzione possono rallentare la navigazione in QGIS.</translator
         <translation>Unità topografiche</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+226"/>
         <source>Unit / Format</source>
         <translation>Unità / formato</translation>
     </message>
@@ -3615,14 +3615,27 @@ Layer ad alta risoluzione possono rallentare la navigazione in QGIS.</translator
         <translation>Contrassegni architettonici</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Font</source>
-        <translation>Carattere</translation>
+        <translation type="vanished">Carattere</translation>
+    </message>
+    <message>
+        <source>Dimension label font:</source>
+        <translation type="vanished">Carattere:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Label</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Dimension label font:</source>
-        <translation>Carattere:</translation>
+        <source>Label font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Label color:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>

@@ -3092,7 +3092,7 @@ Onu kurtarmak ister misiniz?</translation>
         <translation>Boyut</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+110"/>
         <source>point</source>
         <translation>nokta</translation>
     </message>
@@ -3157,7 +3157,7 @@ Onu kurtarmak ister misiniz?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+226"/>
         <source>Unit / Format</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3231,14 +3231,27 @@ Onu kurtarmak ister misiniz?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Font</source>
-        <translation>Font</translation>
+        <translation type="vanished">Font</translation>
+    </message>
+    <message>
+        <source>Dimension label font:</source>
+        <translation type="vanished">Boyut etiketi yazı tipi:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Label</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Dimension label font:</source>
-        <translation>Boyut etiketi yazı tipi:</translation>
+        <source>Label font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Label color:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>

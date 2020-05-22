@@ -96,7 +96,7 @@ Altezza Testo:</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="+103"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+91"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+92"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+80"/>
         <location line="+3"/>
@@ -390,9 +390,13 @@ Tratteggi / Riempimenti</translatorcomment>
         <translation>Solido</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Transparency</source>
-        <translation>Trasparenza</translation>
+        <translation type="vanished">Trasparenza</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Alpha</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -447,7 +451,7 @@ Inserisci l&apos;angolo della linea di quota:</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+17"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+18"/>
         <location filename="../src/entity/RHatchEntity.cpp" line="-196"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+2"/>
         <source>Scale</source>
@@ -943,7 +947,7 @@ Valore dell&apos;ordinata</translatorcomment>
         <translation>Angolo di quota</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="-25"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="-26"/>
         <source>Label</source>
         <translatorcomment>--exact match--
 --file: dia.master.it.po--
@@ -995,7 +999,7 @@ Limite inferiore</translatorcomment>
         <translation>Posizione del testo</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Flip First Arrow</source>
         <translation>Specchio la prima freccia</translation>
     </message>

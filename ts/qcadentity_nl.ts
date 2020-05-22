@@ -41,7 +41,7 @@
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="-2"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+91"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+92"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-2"/>
         <location line="+3"/>
@@ -429,7 +429,7 @@
         <translation>Tekstpositie</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Flip First Arrow</source>
         <translation>Eerste pijl spiegelen</translation>
     </message>
@@ -521,9 +521,13 @@
         <translation>Gevuld</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Transparency</source>
-        <translation>Transparantie</translation>
+        <translation type="vanished">Transparantie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Alpha</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

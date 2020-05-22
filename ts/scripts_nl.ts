@@ -3195,7 +3195,7 @@ Wilt u het herstellen?</translation>
         <translation>Bemating</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+110"/>
         <source>point</source>
         <translation>Punt</translation>
     </message>
@@ -3260,7 +3260,7 @@ Wilt u het herstellen?</translation>
         <translation>Te meten eenheid</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+226"/>
         <source>Unit / Format</source>
         <translation>Eenheid / Formaat</translation>
     </message>
@@ -3338,14 +3338,27 @@ Wilt u het herstellen?</translation>
         <translation>Bouwkunde tick</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Font</source>
-        <translation>Lettertype</translation>
+        <translation type="vanished">Lettertype</translation>
+    </message>
+    <message>
+        <source>Dimension label font:</source>
+        <translation type="vanished">Lettertype voor bematingstekst :</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Label</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Dimension label font:</source>
-        <translation>Lettertype voor bematingstekst :</translation>
+        <source>Label font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Label color:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>

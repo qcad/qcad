@@ -3458,7 +3458,7 @@ Sombreado/Relleno</translatorcomment>
         <translation>Unidad en dibujos nuevos</translation>
     </message>
     <message>
-        <location line="+111"/>
+        <location line="+112"/>
         <source>point</source>
         <translation>Punto</translation>
     </message>
@@ -3523,7 +3523,7 @@ Sombreado/Relleno</translatorcomment>
         <translation>Unidades de medición</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+226"/>
         <source>Unit / Format</source>
         <translation>Unidades / formato</translation>
     </message>
@@ -3601,14 +3601,27 @@ Sombreado/Relleno</translatorcomment>
         <translation>Marca arquitectónica</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Font</source>
-        <translation>Fuente</translation>
+        <translation type="vanished">Fuente</translation>
+    </message>
+    <message>
+        <source>Dimension label font:</source>
+        <translation type="vanished">Fuente:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Label</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Dimension label font:</source>
-        <translation>Fuente:</translation>
+        <source>Label font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Label color:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>

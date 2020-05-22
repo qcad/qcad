@@ -3153,7 +3153,7 @@ Do you wish to recover it?</translation>
         <translation>Dimension</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+110"/>
         <source>point</source>
         <translation>point</translation>
     </message>
@@ -3218,7 +3218,7 @@ Do you wish to recover it?</translation>
         <translation>Surveyor&apos;s units</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+226"/>
         <source>Unit / Format</source>
         <translation>Unit / Format</translation>
     </message>
@@ -3292,14 +3292,27 @@ Do you wish to recover it?</translation>
         <translation>Architectural Tick</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Font</source>
-        <translation>Font</translation>
+        <translation type="vanished">Font</translation>
+    </message>
+    <message>
+        <source>Dimension label font:</source>
+        <translation type="vanished">Dimension label font:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Label</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Dimension label font:</source>
-        <translation>Dimension label font:</translation>
+        <source>Label font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Label color:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>

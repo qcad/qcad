@@ -3214,7 +3214,7 @@ Você deseja recuperá-lo?</translation>
         <translation>Padrões para Novos Desenhos</translation>
     </message>
     <message>
-        <location line="+111"/>
+        <location line="+112"/>
         <source>point</source>
         <translation>Ponto</translation>
     </message>
@@ -3279,7 +3279,7 @@ Você deseja recuperá-lo?</translation>
         <translation>Unidades do Surveyor</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+226"/>
         <source>Unit / Format</source>
         <translation>Unidade / Formato</translation>
     </message>
@@ -3353,14 +3353,27 @@ Você deseja recuperá-lo?</translation>
         <translation>Carrapato Arquitetônico</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Font</source>
-        <translation>Fonte</translation>
+        <translation type="vanished">Fonte</translation>
+    </message>
+    <message>
+        <source>Dimension label font:</source>
+        <translation type="vanished">Fonte do rótulo de dimensões:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Label</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Dimension label font:</source>
-        <translation>Fonte do rótulo de dimensões:</translation>
+        <source>Label font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Label color:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>

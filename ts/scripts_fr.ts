@@ -3396,7 +3396,7 @@ Voulez-vous le récupérer ?</translation>
         <translation>Valeurs par défaut pour les nouveaux dessins</translation>
     </message>
     <message>
-        <location line="+111"/>
+        <location line="+112"/>
         <source>point</source>
         <translation>Point</translation>
     </message>
@@ -3461,7 +3461,7 @@ Voulez-vous le récupérer ?</translation>
         <translation>Unités de géomètre</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+226"/>
         <source>Unit / Format</source>
         <translation>Unité / format</translation>
     </message>
@@ -3539,14 +3539,27 @@ Voulez-vous le récupérer ?</translation>
         <translation>Graduation architecturale</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Font</source>
-        <translation>Police</translation>
+        <translation type="vanished">Police</translation>
+    </message>
+    <message>
+        <source>Dimension label font:</source>
+        <translation type="vanished">Police:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Label</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Dimension label font:</source>
-        <translation>Police:</translation>
+        <source>Label font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Label color:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>

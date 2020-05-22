@@ -3593,7 +3593,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Standards für neue Zeichnungen</translation>
     </message>
     <message>
-        <location line="+111"/>
+        <location line="+112"/>
         <source>point</source>
         <translation>Punkt</translation>
     </message>
@@ -3658,7 +3658,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Vermessung</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+227"/>
         <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
         <translation>Die Zeichnungseinheit muss &quot;Inch&quot; sein, damit Bemassungsbeschriftungen in den Formaten &quot;Architektur&quot; oder &quot;Technisch&quot; angezeigt werden können. Format zurückgesetzt auf &quot;Dezimal&quot;.</translation>
     </message>
@@ -3727,14 +3727,27 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Architektur Tick</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Font</source>
-        <translation>Schriftart</translation>
+        <translation type="vanished">Schriftart</translation>
+    </message>
+    <message>
+        <source>Dimension label font:</source>
+        <translation type="vanished">Bemassungstext Schriftart:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Label</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Dimension label font:</source>
-        <translation>Bemassungstext Schriftart:</translation>
+        <source>Label font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Label color:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>

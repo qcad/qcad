@@ -3218,7 +3218,7 @@ Prajete si ho obnoviť?</translation>
         <translation>Kótovanie</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+110"/>
         <source>point</source>
         <translation>bodka</translation>
     </message>
@@ -3283,7 +3283,7 @@ Prajete si ho obnoviť?</translation>
         <translation>Prehľad</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+226"/>
         <source>Unit / Format</source>
         <translation>Jednotka / Formát</translation>
     </message>
@@ -3361,14 +3361,27 @@ Prajete si ho obnoviť?</translation>
         <translation>Architektonický</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Font</source>
-        <translation>Písmo</translation>
+        <translation type="vanished">Písmo</translation>
+    </message>
+    <message>
+        <source>Dimension label font:</source>
+        <translation type="vanished">Typ písma pre kóty:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Label</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Dimension label font:</source>
-        <translation>Typ písma pre kóty:</translation>
+        <source>Label font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Label color:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>

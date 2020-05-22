@@ -57,7 +57,7 @@ Indiquer la position [angle/longueur]</translatorcomment>
         <source>Width</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
-Largeur : 
+Largeur&#xa0;: 
 Largeur
 &amp;Largeur de page :</translatorcomment>
         <translation>Largeur</translation>
@@ -67,7 +67,7 @@ Largeur
         <source>Height</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
-Hauteur : 
+Hauteur&#xa0;: 
 Hauteur
 &amp;Hauteur de page :</translatorcomment>
         <translation>Hauteur</translation>
@@ -96,7 +96,7 @@ Hauteur
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="+103"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+91"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+92"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+80"/>
         <location line="+3"/>
@@ -388,9 +388,13 @@ Remplissage uni</translatorcomment>
         <translation>Trait continu</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Transparency</source>
-        <translation>Transparence</translation>
+        <translation type="vanished">Transparence</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Alpha</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -445,7 +449,7 @@ Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
         <translation>Non</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+17"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+18"/>
         <location filename="../src/entity/RHatchEntity.cpp" line="-196"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+2"/>
         <source>Scale</source>
@@ -936,7 +940,7 @@ Cotation ordonnée</translatorcomment>
         <translation>Angle de cotation</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="-25"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="-26"/>
         <source>Label</source>
         <translatorcomment>--exact match--
 --file: Dimension_fr.ts--
@@ -984,7 +988,7 @@ Tolérance inférieure</translatorcomment>
         <translation>Position du texte</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Flip First Arrow</source>
         <translation>Miroir la première flèche</translation>
     </message>

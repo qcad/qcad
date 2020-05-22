@@ -3173,7 +3173,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Mitta</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+110"/>
         <source>point</source>
         <translation>piste</translation>
     </message>
@@ -3238,7 +3238,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Maanmittausyksiköt</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+226"/>
         <source>Unit / Format</source>
         <translation>Yksikkö/muoto</translation>
     </message>
@@ -3312,14 +3312,27 @@ Haluatko palauttaa sen?</translation>
         <translation>Arkkitehtien rasti</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Font</source>
-        <translation>Kirjasin</translation>
+        <translation type="vanished">Kirjasin</translation>
+    </message>
+    <message>
+        <source>Dimension label font:</source>
+        <translation type="vanished">Mittaselitteen kirjasin:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Label</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Dimension label font:</source>
-        <translation>Mittaselitteen kirjasin:</translation>
+        <source>Label font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Label color:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>

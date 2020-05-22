@@ -45,7 +45,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="-2"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+91"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+92"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-2"/>
         <location line="+3"/>
@@ -502,7 +502,7 @@ Tolerância Inferior</translatorcomment>
         <translation>Ponto de Definição</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Flip First Arrow</source>
         <translation>Virar a primeira seta</translation>
     </message>
@@ -547,7 +547,7 @@ Tolerância Inferior</translatorcomment>
         <translation type="obsolete">Definitionpoint</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="-22"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
@@ -555,7 +555,7 @@ Tolerância Inferior</translatorcomment>
         <translation>Posição do Texto</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Measured Value</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Valor Medido</translation>
@@ -629,9 +629,13 @@ Hachuras / preenchimentos sólidos</translatorcomment>
         <translation>Sólido</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Transparency</source>
-        <translation>Transparência</translation>
+        <translation type="vanished">Transparência</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Alpha</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

@@ -22,7 +22,7 @@
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="+103"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+91"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+92"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+80"/>
         <location line="+3"/>
@@ -320,9 +320,13 @@
         <translation>Gefüllt</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Transparency</source>
-        <translation>Transparenz</translation>
+        <translation type="vanished">Transparenz</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Alpha</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -363,7 +367,7 @@
         <translation>Nein</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+17"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+18"/>
         <location filename="../src/entity/RHatchEntity.cpp" line="-196"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+2"/>
         <source>Scale</source>
@@ -737,7 +741,7 @@
         <translation>Bemassungswinkel</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="-25"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="-26"/>
         <source>Label</source>
         <translation>Beschriftung</translation>
     </message>
@@ -765,7 +769,7 @@
         <translation>Definitionspunkt</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Flip First Arrow</source>
         <translation>Ersten Pfeil umdrehen</translation>
     </message>
@@ -809,14 +813,14 @@
         <translation type="obsolete">Definitionspunkt</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="-22"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
         <translation>Text Position</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Measured Value</source>
         <translation>Gemessener Wert</translation>
     </message>
