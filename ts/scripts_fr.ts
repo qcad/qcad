@@ -3549,17 +3549,17 @@ Voulez-vous le récupérer ?</translation>
     <message>
         <location line="+23"/>
         <source>Label</source>
-        <translation type="unfinished"></translation>
+        <translation>Étiquette</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Label font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Police de l&apos;étiquette :</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Label color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Couleur de l&apos;étiquette :</translation>
     </message>
     <message>
         <location line="+13"/>
