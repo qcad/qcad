@@ -551,6 +551,12 @@ void RHatchData::addBoundary(QSharedPointer<RShape> shape, bool addAutoLoops) {
                         }
                     }
                 }
+
+                if (!ep.equalsFuzzy(sp, 0.0001)) {
+                    // enforce tolerance accepted by DXF/DWG format:
+                    // insert bridge elemenent on the fly:
+                    boundary.last().append(QSharedPointer<RLine>(new RLine(ep, sp)));
+                }
             }
             else {
                 qWarning() << "RHatchData::addBoundary: unexpected boundary type";
