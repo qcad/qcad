@@ -534,6 +534,8 @@ void RHatchData::addBoundary(QSharedPointer<RShape> shape, bool addAutoLoops) {
                 RVector ep = prev->getEndPoint();
                 RVector sp = next->getStartPoint();
 
+                // gap of more than 0.001:
+                // new loop:
                 if (!ep.equalsFuzzy(sp, 0.001)) {
                     if (addAutoLoops) {
                         // inserting loop on the fly:
@@ -552,7 +554,8 @@ void RHatchData::addBoundary(QSharedPointer<RShape> shape, bool addAutoLoops) {
                     }
                 }
 
-                if (!ep.equalsFuzzy(sp, 0.0001)) {
+                // gap of more than 0.0001:
+                else if (!ep.equalsFuzzy(sp, 0.0001)) {
                     // enforce tolerance accepted by DXF/DWG format:
                     // insert bridge elemenent on the fly:
                     boundary.last().append(QSharedPointer<RLine>(new RLine(ep, sp)));
