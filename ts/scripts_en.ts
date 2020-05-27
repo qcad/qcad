@@ -13660,7 +13660,7 @@ shown in search results:</translation>
     <message>
         <location line="+1"/>
         <source>PDF/A-1B File</source>
-        <translation type="unfinished"></translation>
+        <translation>PDF/A-1B File</translation>
     </message>
 </context>
 <context>
