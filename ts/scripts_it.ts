@@ -15698,7 +15698,7 @@ in linee, solidi e testi</translatorcomment>
     <message>
         <location line="+1"/>
         <source>PDF/A-1B File</source>
-        <translation type="unfinished"></translation>
+        <translation>File PDF/A-1B</translation>
     </message>
 </context>
 <context>
