@@ -13865,7 +13865,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+1"/>
         <source>PDF/A-1B File</source>
-        <translation type="unfinished"></translation>
+        <translation>PDF/A-1B Bestand</translation>
     </message>
 </context>
 <context>
