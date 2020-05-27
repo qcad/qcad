@@ -16511,7 +16511,7 @@ nicht öffnen.
     <message>
         <location line="+1"/>
         <source>PDF/A-1B File</source>
-        <translation type="unfinished"></translation>
+        <translation>PDF/A-1B Datei</translation>
     </message>
 </context>
 <context>
