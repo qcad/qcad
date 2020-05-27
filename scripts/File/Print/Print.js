@@ -86,6 +86,10 @@ Print.prototype.createPrinter = function(pdfFile, printerName, pdfVersion) {
         }
     }
 
+    if (isNull(pdfVersion)) {
+        pdfVersion = "1.4";
+    }
+
     if (isNull(printer)) {
         // create printer on the fly:
         printer = new QPrinter(QPrinter.HighResolution);
