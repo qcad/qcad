@@ -11779,7 +11779,7 @@ Wyeksportuj do PDF</translatorcomment>
         <translation>Wyeksportuj PDF</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Exporting to %1...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Eksportowanie do %1...</translation>
@@ -17636,6 +17636,11 @@ Wprowadź tekst</translatorcomment>
         <location line="+1"/>
         <source>PDF File</source>
         <translation>Plik PDF</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF/A-1B File</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

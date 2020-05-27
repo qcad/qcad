@@ -9472,7 +9472,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Exportovať do PDF</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Exporting to %1...</source>
         <translation>Exportovanie do %1...</translation>
     </message>
@@ -13922,6 +13922,11 @@ vo výsledku vyhľadania:</translation>
         <location line="+1"/>
         <source>PDF File</source>
         <translation>Súbor PDF</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF/A-1B File</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -9058,7 +9058,7 @@ shown in search results:</source>
         <translation>PDF Olarak Dışa Aktar</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Exporting to %1...</source>
         <translation>%1 dışa aktarılıyor...</translation>
     </message>
@@ -13325,6 +13325,11 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>PDF File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF/A-1B File</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

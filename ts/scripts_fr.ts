@@ -10498,7 +10498,7 @@ dans les résultats de recherche :</translation>
         <translation>Exporter vers PDF</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Exporting to %1...</source>
         <translation>Exportation vers %1...</translation>
     </message>
@@ -15310,6 +15310,11 @@ dans les résultats de recherche :</translation>
         <location line="+1"/>
         <source>PDF File</source>
         <translation>Fichier PDF</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF/A-1B File</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

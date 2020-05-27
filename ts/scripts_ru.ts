@@ -9367,7 +9367,7 @@ shown in search results:</source>
         <translation>Экспортировать в PDF</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Exporting to %1...</source>
         <translation>Экспорт в %1...</translation>
     </message>
@@ -13802,6 +13802,11 @@ shown in search results:</source>
         <location line="+1"/>
         <source>PDF File</source>
         <translation>Файл PDF</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF/A-1B File</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

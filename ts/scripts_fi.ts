@@ -9412,7 +9412,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Vie PDF:ksi</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Exporting to %1...</source>
         <translation>Viedään %1:een...</translation>
     </message>
@@ -13912,6 +13912,11 @@ näkyy hakutuloksissa:</translation>
         <location line="+1"/>
         <source>PDF File</source>
         <translation>PDF -tiedosto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF/A-1B File</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

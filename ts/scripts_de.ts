@@ -11337,7 +11337,7 @@ nicht öffnen.
         <translation>Ziehen zum Verschieben des Papiers</translation>
     </message>
     <message>
-        <location line="+441"/>
+        <location line="+445"/>
         <source>Exporting to %1...</source>
         <translation>Exportiere nach %1...</translation>
     </message>
@@ -16507,6 +16507,11 @@ nicht öffnen.
         <location line="+1"/>
         <source>PDF File</source>
         <translation>PDF Datei</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF/A-1B File</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

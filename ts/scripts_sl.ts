@@ -9799,7 +9799,7 @@ shown in search results:</source>
         <translation>Izvozi v PDF</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Exporting to %1...</source>
         <translation>Izvažam v %1...</translation>
     </message>
@@ -14394,6 +14394,11 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>PDF File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF/A-1B File</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

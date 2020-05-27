@@ -9410,7 +9410,7 @@ getoond in zoekresultaten:</translation>
         <translation>PDF exporteren</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Exporting to %1...</source>
         <translation>Bezig met exporteren naar %1...</translation>
     </message>
@@ -13861,6 +13861,11 @@ getoond in zoekresultaten:</translation>
         <location line="+1"/>
         <source>PDF File</source>
         <translation>PDF bestand</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF/A-1B File</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

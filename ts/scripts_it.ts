@@ -10665,7 +10665,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation>Esporta PDF</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Exporting to %1...</source>
         <translation>Esportazione in %1...</translation>
     </message>
@@ -15694,6 +15694,11 @@ in linee, solidi e testi</translatorcomment>
         <location line="+1"/>
         <source>PDF File</source>
         <translation>File PDF</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF/A-1B File</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
