@@ -922,6 +922,7 @@ function translateFilterStrings(filterStrings) {
         filterStrings[i] = filterStrings[i].replace("DXF Drawing", qsTr("DXF Drawing"));
         filterStrings[i] = filterStrings[i].replace("DWG Drawing", qsTr("DWG Drawing"));
         filterStrings[i] = filterStrings[i].replace("PDF File", qsTr("PDF File"));
+        filterStrings[i] = filterStrings[i].replace("PDF/A-1B File", qsTr("PDF/A-1B File"));
     }
     return filterStrings;
 }

@@ -668,7 +668,7 @@ PrintPreviewImpl.prototype.slotPdfExport = function() {
         initialFileName = fileInfo.absoluteFilePath();
     }
 
-    var filterStrings = [ "PDF File (*.pdf)" ];
+    var filterStrings = [ "PDF File (*.pdf)",  "PDF/A-1B File (*.pdf)"];
     filterStrings = translateFilterStrings(filterStrings);
 
     var ret = File.getSaveFileName(appWin, qsTr("Export to PDF"),
@@ -679,10 +679,14 @@ PrintPreviewImpl.prototype.slotPdfExport = function() {
     }
 
     var pdfFile = ret[0];
+    var pdfVersion = undefined;
+    if (ret[1].indexOf("PDF/A")!==-1) {
+        pdfVersion = "A-1B";
+    }
 
     appWin.handleUserMessage(qsTr("Exporting to %1...").arg(pdfFile));
 
-    var success = this.slotPrint(pdfFile);
+    var success = this.slotPrint(pdfFile, pdfVersion);
 
     if (success) {
         appWin.handleUserMessage(qsTr("Export complete: %1").arg(pdfFile));
@@ -700,18 +704,18 @@ PrintPreviewImpl.slotPdfExport = function() {
     pp.slotPdfExport();
 };
 
-PrintPreviewImpl.prototype.slotPrint = function(pdfFile) {
-    return PrintPreviewImpl.slotPrint(pdfFile);
+PrintPreviewImpl.prototype.slotPrint = function(pdfFile, pdfVersion) {
+    return PrintPreviewImpl.slotPrint(pdfFile, pdfVersion);
 };
 
 /**
  * Prints the drawing or exports it to the given PDF file.
  */
-PrintPreviewImpl.slotPrint = function(pdfFile) {
+PrintPreviewImpl.slotPrint = function(pdfFile, pdfVersion) {
     var mdiChild = EAction.getMdiChild();
     var view = mdiChild.getLastKnownViewWithFocus();
     var print = new Print(undefined, EAction.getDocument(), view);
-    return print.print(pdfFile);
+    return print.print(pdfFile, undefined, pdfVersion);
 };
 
 /**

@@ -492,6 +492,8 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     QScriptValue classQPrinter = globalObject.property("QPrinter");
     classQPrinter.property("prototype").setProperty("destroy",
             engine->newFunction(ecmaObjectDestroy<QPrinter>));
+    classQPrinter.property("prototype").setProperty("setPdfVersion",
+            engine->newFunction(ecmaQPrinterSetPdfVersion));
 
     QScriptValue classQPrintDialog = globalObject.property("QPrintDialog");
     classQPrintDialog.property("prototype").setProperty("destroy",
@@ -1653,6 +1655,18 @@ QScriptValue RScriptHandlerEcma::ecmaQDomNodeRemoveChild(QScriptContext* context
                 "Wrong number/types of arguments for QDomNode.removeChild().",
                 context);
     }
+    return result;
+}
+
+QScriptValue RScriptHandlerEcma::ecmaQPrinterSetPdfVersion(QScriptContext* context, QScriptEngine* engine) {
+    QScriptValue result = engine->undefinedValue();
+    QPrinter* self = qscriptvalue_cast<QPrinter*> (context->thisObject());
+
+    if (context->argumentCount() == 1 && context->argument(0).isNumber()) {
+        int v = context->argument(0).toInt32();
+        self->setPdfVersion((QPagedPaintDevice::PdfVersion)v);
+    }
+
     return result;
 }
 

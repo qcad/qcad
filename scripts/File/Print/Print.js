@@ -71,7 +71,7 @@ Print.prototype.beginEvent = function() {
     this.terminate();
 };
 
-Print.prototype.createPrinter = function(pdfFile, printerName) {
+Print.prototype.createPrinter = function(pdfFile, printerName, pdfVersion) {
     var printer = undefined;
 
     // print directly to given printer or default printer:
@@ -92,6 +92,16 @@ Print.prototype.createPrinter = function(pdfFile, printerName) {
 
         if (isString(pdfFile)) {
             printer.setOutputFormat(QPrinter.PdfFormat);
+            if (pdfVersion.toLowerCase()==="a-1b" || pdfVersion.toLowerCase()==="a1b" || pdfVersion.toLowerCase()==="a") {
+                printer.setPdfVersion(1 /*QPagedPaintDevice.PdfVersion_A1b*/);
+            }
+            else if (pdfVersion.toLowerCase()==="1.6") {
+                printer.setPdfVersion(2 /*QPagedPaintDevice.PdfVersion_1_6*/);
+            }
+            else {
+                printer.setPdfVersion(0 /*QPagedPaintDevice.PdfVersion_1_4*/);
+            }
+
             printer.setOutputFileName(pdfFile);
         }
     }
@@ -179,8 +189,8 @@ Print.prototype.createPrinter = function(pdfFile, printerName) {
  * \param printerName Name of printer to print to or "" for default printer.
  * \param printer QPrinter object or undefined to create on the fly.
  */
-Print.prototype.print = function(pdfFile, printerName) {
-    var printer = this.createPrinter(pdfFile, printerName);
+Print.prototype.print = function(pdfFile, printerName, pdfVersion) {
+    var printer = this.createPrinter(pdfFile, printerName, pdfVersion);
     if (isNull(printer)) {
         qWarning("Print.prototype.print: no printer created");
         return false;

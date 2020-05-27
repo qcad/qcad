@@ -93,6 +93,7 @@ public:
     static QScriptValue ecmaQObjectGetChildren(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQDomNodeAppendChild(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQDomNodeRemoveChild(QScriptContext* context, QScriptEngine* engine);
+    static QScriptValue ecmaQPrinterSetPdfVersion(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaGetAvailablePrinterNames(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaGetDefaultPrinterName(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaCreatePrinter(QScriptContext* context, QScriptEngine* engine);
