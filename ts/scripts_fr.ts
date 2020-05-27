@@ -15314,7 +15314,7 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="+1"/>
         <source>PDF/A-1B File</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichier PDF/A-1B</translation>
     </message>
 </context>
 <context>
