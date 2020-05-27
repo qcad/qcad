@@ -1664,7 +1664,12 @@ QScriptValue RScriptHandlerEcma::ecmaQPrinterSetPdfVersion(QScriptContext* conte
 
     if (context->argumentCount() == 1 && context->argument(0).isNumber()) {
         int v = context->argument(0).toInt32();
+#if QT_VERSION >= 0x050A00
+        // only Qt >= 5.10:
         self->setPdfVersion((QPagedPaintDevice::PdfVersion)v);
+#else
+        qWarning() << "Setting the PDF version is not supported in this Qt version";
+#endif
     }
 
     return result;
