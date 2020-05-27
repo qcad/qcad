@@ -669,6 +669,10 @@ PrintPreviewImpl.prototype.slotPdfExport = function() {
     }
 
     var filterStrings = [ "PDF File (*.pdf)",  "PDF/A-1B File (*.pdf)"];
+    if (RSettings.getQtVersion()<0x050A00) {
+        filterStrings = [ "PDF File (*.pdf)" ];
+    }
+
     filterStrings = translateFilterStrings(filterStrings);
 
     var ret = File.getSaveFileName(appWin, qsTr("Export to PDF"),
