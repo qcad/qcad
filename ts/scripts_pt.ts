@@ -14116,7 +14116,7 @@ nos resultados de busca:</translation>
     <message>
         <location line="+1"/>
         <source>PDF/A-1B File</source>
-        <translation type="unfinished"></translation>
+        <translation>Ficheiro PDF/A-1B</translation>
     </message>
 </context>
 <context>
