@@ -1913,6 +1913,7 @@
     <file alias="scripts/Modify/Stretch/Tests/StretchTest07.js">../../scripts/Modify/Stretch/Tests/StretchTest07.js</file>
     <file alias="scripts/Modify/Stretch/Tests/StretchTest08.js">../../scripts/Modify/Stretch/Tests/StretchTest08.js</file>
     <file alias="scripts/Modify/Stretch/Tests/StretchTest09.js">../../scripts/Modify/Stretch/Tests/StretchTest09.js</file>
+    <file alias="scripts/Modify/Stretch/Tests/StretchTest10.js">../../scripts/Modify/Stretch/Tests/StretchTest10.js</file>
     <file alias="scripts/Modify/Stretch/Tests/data/entities0.dxf">../../scripts/Modify/Stretch/Tests/data/entities0.dxf</file>
     <file alias="scripts/Modify/Stretch/Tests/data/entities1.dxf">../../scripts/Modify/Stretch/Tests/data/entities1.dxf</file>
     <file alias="scripts/Modify/Stretch/Tests/data/entities2.dxf">../../scripts/Modify/Stretch/Tests/data/entities2.dxf</file>
@@ -1925,6 +1926,7 @@
     <file alias="scripts/Modify/Stretch/Tests/required/StretchTest07_000.dxf">../../scripts/Modify/Stretch/Tests/required/StretchTest07_000.dxf</file>
     <file alias="scripts/Modify/Stretch/Tests/required/StretchTest08_000.dxf">../../scripts/Modify/Stretch/Tests/required/StretchTest08_000.dxf</file>
     <file alias="scripts/Modify/Stretch/Tests/required/StretchTest09_000.dxf">../../scripts/Modify/Stretch/Tests/required/StretchTest09_000.dxf</file>
+    <file alias="scripts/Modify/Stretch/Tests/required/StretchTest10_000.dxf">../../scripts/Modify/Stretch/Tests/required/StretchTest10_000.dxf</file>
     <file alias="scripts/Modify/Transform.js">../../scripts/Modify/Transform.js</file>
     <file alias="scripts/Modify/Translate/PreferencesPage.ui">../../scripts/Modify/Translate/PreferencesPage.ui</file>
     <file alias="scripts/Modify/Translate/Tests/TranslateTest00.js">../../scripts/Modify/Translate/Tests/TranslateTest00.js</file>
