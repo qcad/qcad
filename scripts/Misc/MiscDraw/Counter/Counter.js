@@ -25,7 +25,8 @@
  * \brief Implementation of the auto increment number text tool.
  */
 include("scripts/EAction.js");
-include("scripts/sprintf.js");
+//include("scripts/sprintf.js");
+include("numeral.js");
 
 /**
  * \class Counter
@@ -35,6 +36,7 @@ include("scripts/sprintf.js");
 function Counter(guiAction) {
     EAction.call(this, guiAction);
 
+    this.position = undefined;
     this.start = 1;
     this.increment = 1;
     this.precision = 0;
@@ -73,19 +75,43 @@ Counter.prototype.setState = function(state) {
 
 Counter.prototype.pickCoordinate = function(event, preview) {
     var di = this.getDocumentInterface();
-    var doc = di.getDocument();
 
-    var pos = event.getModelPosition();
-    var str;
-    var startnum = EAction.getMainWindow().findChild("Start");
-    var value = this.start.toFixed(this.precision);
+    this.position = event.getModelPosition();
 
-    if (this.width>0) {
-        // padding:
-        str = sprintf("%0" + this.width + "d", value);
+    var op = this.getOperation();
+    if (preview) {
+        di.previewOperation(op);
     }
     else {
-        str = value;
+        di.applyOperation(op);
+        di.setRelativeZero(this.position);
+        // set start number to start number + increment
+        this.start = this.start + this.increment;
+        var optionsToolBar = EAction.getOptionsToolBar();
+        if (!isNull(optionsToolBar)) {
+            var leStart = optionsToolBar.findChild("Start");
+            leStart.text = Number((this.start).toFixed(4));
+        }
+    }
+};
+
+Counter.prototype.getOperation = function() {
+    if (!isVector(this.position)) {
+        return undefined;
+    }
+
+    var di = this.getDocumentInterface();
+    var doc = di.getDocument();
+
+    var pos = this.position;
+    var str;
+
+    if (this.width>0) {
+        var num = numeral(this.start);
+        str = num.format(new Array(this.width + 1).join("0") + "." + new Array(this.precision+1).join("0"));
+    }
+    else {
+        str = this.start.toFixed(this.precision);
     }
 
     str = this.prefix + str + this.suffix;
@@ -114,20 +140,13 @@ Counter.prototype.pickCoordinate = function(event, preview) {
     td.setLineSpacingFactor(fontLineSpacingFactor);
     var text = new RTextEntity(doc, td);
     var op = new RAddObjectOperation(text, this.getToolTitle());
-    if (preview) {
-        di.previewOperation(op);
-    }
-    else {
-        di.applyOperation(op);
-        di.setRelativeZero(pos);
-        // set start number to start number + increment
-        this.start = this.start + this.increment;
-        startnum.text = this.start.toFixed(this.precision);
-    }
+
+    return op;
 };
 
 Counter.prototype.slotStartChanged = function(value) {
     this.start = value;
+    this.updatePreview(true);
 };
 
 Counter.prototype.slotIncrementChanged = function(value) {
@@ -136,18 +155,22 @@ Counter.prototype.slotIncrementChanged = function(value) {
 
 Counter.prototype.slotPrecisionChanged = function(value) {
     this.precision = value;
-    var startnum = EAction.getMainWindow().findChild("Start");
-    startnum.text = this.start.toFixed(this.precision);
+    //var startnum = EAction.getMainWindow().findChild("Start");
+    //startnum.text = this.start.toFixed(this.precision);
+    this.updatePreview(true);
 };
 
 Counter.prototype.slotWidthChanged = function(value) {
     this.width = value;
+    this.updatePreview(true);
 };
 
 Counter.prototype.slotPrefixChanged = function(value) {
     this.prefix = value;
+    this.updatePreview(true);
 };
 
 Counter.prototype.slotSuffixChanged = function(value) {
     this.suffix = value;
+    this.updatePreview(true);
 };
