@@ -40,34 +40,82 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="PrecisionLabel">
-     <property name="text">
-      <string>Precision:</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QSpinBox" name="Precision">
-     <property name="toolTip">
-      <string>Number of decimal digits</string>
-     </property>
-     <property name="maximum">
-      <number>17</number>
-     </property>
-    </widget>
-   </item>
-   <item>
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>Width:</string>
+      <string>Number Format:</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QSpinBox" name="Width">
-     <property name="maximum">
-      <number>32</number>
+    <widget class="QComboBox" name="NumberFormat">
+     <property name="editable">
+      <bool>true</bool>
      </property>
+     <item>
+      <property name="text">
+       <string notr="true">0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">00</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">000</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">0000</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">0.0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">0.00</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">0.000</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">00.00</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">0[.]0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">0[.]00</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">0[.]000</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">0.0[00]</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">00:00:00</string>
+      </property>
+     </item>
     </widget>
    </item>
    <item>

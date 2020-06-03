@@ -39,10 +39,11 @@ function Counter(guiAction) {
     this.position = undefined;
     this.start = 1;
     this.increment = 1;
-    this.precision = 0;
+    //this.precision = 0;
+    this.numberFormat = "0";
     this.prefix = "";
     this.suffix = "";
-    this.width = 0;
+    //this.width = 0;
 
     this.setUiOptions("Counter.ui");
 }
@@ -106,12 +107,13 @@ Counter.prototype.getOperation = function() {
     var pos = this.position;
     var str;
 
-    if (this.width>0) {
+    if (this.numberFormat.length>0) {
         var num = numeral(this.start);
-        str = num.format(new Array(this.width + 1).join("0") + "." + new Array(this.precision+1).join("0"));
+        //str = num.format(new Array(this.width + 1).join("0") + "." + new Array(this.precision+1).join("0"));
+        str = num.format(this.numberFormat);
     }
     else {
-        str = this.start.toFixed(this.precision);
+        str = this.start.toFixed(0);
     }
 
     str = this.prefix + str + this.suffix;
@@ -153,17 +155,24 @@ Counter.prototype.slotIncrementChanged = function(value) {
     this.increment = value;
 };
 
-Counter.prototype.slotPrecisionChanged = function(value) {
-    this.precision = value;
-    //var startnum = EAction.getMainWindow().findChild("Start");
-    //startnum.text = this.start.toFixed(this.precision);
+
+Counter.prototype.slotNumberFormatChanged = function(value) {
+    this.numberFormat = value;
+    qDebug("num format:", this.numberFormat);
     this.updatePreview(true);
 };
 
-Counter.prototype.slotWidthChanged = function(value) {
-    this.width = value;
-    this.updatePreview(true);
-};
+//Counter.prototype.slotPrecisionChanged = function(value) {
+//    this.precision = value;
+//    //var startnum = EAction.getMainWindow().findChild("Start");
+//    //startnum.text = this.start.toFixed(this.precision);
+//    this.updatePreview(true);
+//};
+
+//Counter.prototype.slotWidthChanged = function(value) {
+//    this.width = value;
+//    this.updatePreview(true);
+//};
 
 Counter.prototype.slotPrefixChanged = function(value) {
     this.prefix = value;
