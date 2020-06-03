@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>677</width>
+    <width>929</width>
     <height>50</height>
    </rect>
   </property>
@@ -51,14 +51,22 @@
      <property name="toolTip">
       <string>Number of decimal digits</string>
      </property>
-     <property name="wrapping">
-      <bool>true</bool>
-     </property>
-     <property name="prefix">
-      <string/>
-     </property>
      <property name="maximum">
       <number>17</number>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Width:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSpinBox" name="Width">
+     <property name="maximum">
+      <number>32</number>
      </property>
     </widget>
    </item>

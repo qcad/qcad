@@ -24,6 +24,7 @@
  * \brief Implementation of the auto increment number text tool.
  */
 include("scripts/EAction.js");
+include("scripts/sprintf.js");
 
 /**
  * \class Counter
@@ -38,6 +39,7 @@ function Counter(guiAction) {
     this.precision = 0;
     this.prefix = "";
     this.suffix = "";
+    this.width = 0;
 
     this.setUiOptions("Counter.ui");
 }
@@ -76,7 +78,16 @@ Counter.prototype.pickCoordinate = function(event, preview) {
     var str;
     var startnum = EAction.getMainWindow().findChild("Start");
     var value = this.start.toFixed(this.precision);
-    str = this.prefix + value + this.suffix;
+
+    if (this.width>0) {
+        // padding:
+        str = sprintf("%0" + this.width + "d", value);
+    }
+    else {
+        str = value;
+    }
+
+    str = this.prefix + str + this.suffix;
 
     var fontName = RSettings.getStringValue("TextDialog/Font", "Arial");
     var fontHeight = RSettings.getDoubleValue("TextDialog/Height", 1.0);
@@ -126,6 +137,10 @@ Counter.prototype.slotPrecisionChanged = function(value) {
     this.precision = value;
     var startnum = EAction.getMainWindow().findChild("Start");
     startnum.text = this.start.toFixed(this.precision);
+};
+
+Counter.prototype.slotWidthChanged = function(value) {
+    this.width = value;
 };
 
 Counter.prototype.slotPrefixChanged = function(value) {
