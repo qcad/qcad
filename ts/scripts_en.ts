@@ -2446,7 +2446,7 @@ Do you wish to recover it?</translation>
     <message>
         <location line="+10"/>
         <source>Width:</source>
-        <translation type="unfinished">Width:</translation>
+        <translation>Width:</translation>
     </message>
     <message>
         <location line="+14"/>
