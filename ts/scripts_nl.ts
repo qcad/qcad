@@ -44,12 +44,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+375"/>
+        <location line="+407"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-350"/>
+        <location line="-382"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -2461,7 +2461,7 @@ Wilt u het herstellen?</translation>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+70"/>
         <source>Position</source>
         <translation>Positie</translation>
     </message>
@@ -2477,21 +2477,23 @@ Wilt u het herstellen?</translation>
     </message>
     <message>
         <location line="+14"/>
+        <source>Number Format:</source>
+        <translation>Nummerweergave:</translation>
+    </message>
+    <message>
         <source>Precision:</source>
-        <translation>Precisie:</translation>
+        <translation type="vanished">Precisie:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Number of decimal digits</source>
-        <translation>Aantal decimale cijfers</translation>
+        <translation type="vanished">Aantal decimale cijfers</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Width:</source>
-        <translation>Breedte:</translation>
+        <translation type="vanished">Breedte:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+79"/>
         <source>Prefix:</source>
         <translation>Prefix:</translation>
     </message>

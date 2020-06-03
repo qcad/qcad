@@ -123,12 +123,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+375"/>
+        <location line="+407"/>
         <source>Plugin:</source>
         <translation>Eklenti:</translation>
     </message>
     <message>
-        <location line="-350"/>
+        <location line="-382"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -2395,7 +2395,7 @@ Onu kurtarmak ister misiniz?</translation>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+70"/>
         <source>Position</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2421,21 +2421,11 @@ Onu kurtarmak ister misiniz?</translation>
     </message>
     <message>
         <location line="+14"/>
-        <source>Precision:</source>
+        <source>Number Format:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Number of decimal digits</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Width:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+79"/>
         <source>Prefix:</source>
         <translation type="unfinished"></translation>
     </message>

@@ -67,12 +67,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+375"/>
+        <location line="+407"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-350"/>
+        <location line="-382"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -2690,7 +2690,7 @@ Coordenadas polares relativa:</translatorcomment>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+70"/>
         <source>Position</source>
         <translation>Posición</translation>
     </message>
@@ -2706,21 +2706,23 @@ Coordenadas polares relativa:</translatorcomment>
     </message>
     <message>
         <location line="+14"/>
+        <source>Number Format:</source>
+        <translation>Formato de número:</translation>
+    </message>
+    <message>
         <source>Precision:</source>
-        <translation>Precisión:</translation>
+        <translation type="vanished">Precisión:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Number of decimal digits</source>
-        <translation>Número de dígitos decimales</translation>
+        <translation type="vanished">Número de dígitos decimales</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Width:</source>
-        <translation>Anchura:</translation>
+        <translation type="vanished">Anchura:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+79"/>
         <source>Prefix:</source>
         <translation>Prefijo:</translation>
     </message>

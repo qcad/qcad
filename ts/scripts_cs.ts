@@ -123,12 +123,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+375"/>
+        <location line="+407"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-350"/>
+        <location line="-382"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -2412,7 +2412,7 @@ Přejete si ho obnovit?</translation>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+70"/>
         <source>Position</source>
         <translation>Pozice</translation>
     </message>
@@ -2428,21 +2428,23 @@ Přejete si ho obnovit?</translation>
     </message>
     <message>
         <location line="+14"/>
+        <source>Number Format:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Precision:</source>
-        <translation>Přesnost:</translation>
+        <translation type="vanished">Přesnost:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Number of decimal digits</source>
-        <translation>Počet desetinných míst</translation>
+        <translation type="vanished">Počet desetinných míst</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Width:</source>
-        <translation type="unfinished">Šířka:</translation>
+        <translation type="obsolete">Šířka:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+79"/>
         <source>Prefix:</source>
         <translation>Předpona:</translation>
     </message>

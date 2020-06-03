@@ -583,6 +583,7 @@ SOURCES = \
 ../scripts/Misc/MiscDevelopment/RunScript/RunScriptInit.js \
 ../scripts/Misc/MiscDraw/Counter/Counter.js \
 ../scripts/Misc/MiscDraw/Counter/CounterInit.js \
+../scripts/Misc/MiscDraw/Counter/numeral.js \
 ../scripts/Misc/MiscDraw/Cross/Cross.js \
 ../scripts/Misc/MiscDraw/Cross/CrossInit.js \
 ../scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js \

@@ -44,12 +44,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+375"/>
+        <location line="+407"/>
         <source>Plugin:</source>
         <translation>Vtičnik:</translation>
     </message>
     <message>
-        <location line="-350"/>
+        <location line="-382"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -2484,7 +2484,7 @@ Do you wish to recover it?</source>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+70"/>
         <source>Position</source>
         <translation>Pozicija</translation>
     </message>
@@ -2503,22 +2503,24 @@ Do you wish to recover it?</source>
         <translation>Korak:</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Precision:</source>
-        <translation>Natančnost:</translation>
+        <translation type="vanished">Natančnost:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Number of decimal digits</source>
-        <translation>Število decimalnih mest</translation>
+        <translation type="vanished">Število decimalnih mest</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Width:</source>
-        <translation type="unfinished">Širina:</translation>
+        <translation type="obsolete">Širina:</translation>
     </message>
     <message>
         <location line="+14"/>
+        <source>Number Format:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+79"/>
         <source>Prefix:</source>
         <translation>Predpona:</translation>
     </message>

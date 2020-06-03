@@ -63,12 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+375"/>
+        <location line="+407"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-350"/>
+        <location line="-382"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -2500,7 +2500,7 @@ Você deseja recuperá-lo?</translation>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+70"/>
         <source>Position</source>
         <translation>Posição</translation>
     </message>
@@ -2516,21 +2516,23 @@ Você deseja recuperá-lo?</translation>
     </message>
     <message>
         <location line="+14"/>
+        <source>Number Format:</source>
+        <translation>Formato dos números:</translation>
+    </message>
+    <message>
         <source>Precision:</source>
-        <translation>Precisão:</translation>
+        <translation type="vanished">Precisão:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Number of decimal digits</source>
-        <translation>Número de dígitos decimais</translation>
+        <translation type="vanished">Número de dígitos decimais</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Width:</source>
-        <translation>Largura:</translation>
+        <translation type="vanished">Largura:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+79"/>
         <source>Prefix:</source>
         <translation>Prefixo:</translation>
     </message>
