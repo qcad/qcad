@@ -58,7 +58,7 @@ RGraphicsViewImage::RGraphicsViewImage()
       doPaintOrigin(true),
       isSelected(false),
       bgColorLightness(0),
-      colorCorrectionOverride(false),
+      colorCorrectionOverride(-1),
       colorCorrection(false),
       colorThreshold(10),
       minimumLineweight(0.0),
@@ -1718,7 +1718,12 @@ void RGraphicsViewImage::applyColorCorrection(QPen& pen) {
         return;
     }
 
-    if (colorCorrection || colorCorrectionOverride) {
+    bool colCorr = colorCorrection;
+    if (colorCorrectionOverride!=-1) {
+        colCorr = (colorCorrectionOverride!=0);
+    }
+
+    if (colCorr) {
         if (pen.color().lightness() <= colorThreshold && bgColorLightness <= colorThreshold) {
             pen.setColor(Qt::white);
         } else if (pen.color().lightness() >= 255-colorThreshold && bgColorLightness >= 255-colorThreshold) {
@@ -1732,7 +1737,12 @@ void RGraphicsViewImage::applyColorCorrection(QBrush& brush) {
         return;
     }
 
-    if (colorCorrection || colorCorrectionOverride) {
+    bool colCorr = colorCorrection;
+    if (colorCorrectionOverride!=-1) {
+        colCorr = (colorCorrectionOverride!=0);
+    }
+
+    if (colCorr) {
         if (brush.color().lightness() <= colorThreshold && bgColorLightness <= colorThreshold) {
             brush.setColor(Qt::white);
         } else if (brush.color().lightness() >= 255-colorThreshold && bgColorLightness >= 255-colorThreshold) {

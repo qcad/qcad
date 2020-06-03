@@ -301,11 +301,11 @@ public:
     void addToOverlay(int overlayId, RObject::Id objectId, const RGraphicsSceneDrawable& drawable);
 
     void setColorCorrectionOverride(bool on) {
-        colorCorrectionOverride = on;
+        colorCorrectionOverride = (int)on;
     }
 
     bool getColorCorrectionOverride() const {
-        return colorCorrectionOverride;
+        return (colorCorrectionOverride!=0);
     }
 
     void setMinimumLineweight(double lw) {
@@ -402,7 +402,7 @@ protected:
     QSet<RObject::Id> selectedIds;
     int bgColorLightness;
 
-    bool colorCorrectionOverride;
+    int colorCorrectionOverride;
     bool colorCorrection;
     bool colorCorrectionDisableForPrinting;
     int colorThreshold;
