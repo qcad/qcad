@@ -25,7 +25,6 @@
  * \brief Implementation of the auto increment number text tool.
  */
 include("scripts/EAction.js");
-//include("scripts/sprintf.js");
 include("numeral.js");
 
 /**
@@ -39,11 +38,9 @@ function Counter(guiAction) {
     this.position = undefined;
     this.start = 1;
     this.increment = 1;
-    //this.precision = 0;
     this.numberFormat = "0";
     this.prefix = "";
     this.suffix = "";
-    //this.width = 0;
 
     this.setUiOptions("Counter.ui");
 }
@@ -109,7 +106,6 @@ Counter.prototype.getOperation = function() {
 
     if (this.numberFormat.length>0) {
         var num = numeral(this.start);
-        //str = num.format(new Array(this.width + 1).join("0") + "." + new Array(this.precision+1).join("0"));
         str = num.format(this.numberFormat);
     }
     else {
@@ -160,18 +156,6 @@ Counter.prototype.slotNumberFormatChanged = function(value) {
     this.numberFormat = value;
     this.updatePreview(true);
 };
-
-//Counter.prototype.slotPrecisionChanged = function(value) {
-//    this.precision = value;
-//    //var startnum = EAction.getMainWindow().findChild("Start");
-//    //startnum.text = this.start.toFixed(this.precision);
-//    this.updatePreview(true);
-//};
-
-//Counter.prototype.slotWidthChanged = function(value) {
-//    this.width = value;
-//    this.updatePreview(true);
-//};
 
 Counter.prototype.slotPrefixChanged = function(value) {
     this.prefix = value;
