@@ -1387,7 +1387,7 @@ Vuoi recuperarlo?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+120"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Dimensioni dell&apos;immagine non valido (larghezza x altezza deve essere inferiore a %1)</translation>
     </message>
@@ -2316,7 +2316,7 @@ Spaziatura Griglia minima (px):</translatorcomment>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../scripts/Edit/ClipboardOperation.js" line="+52"/>
+        <location filename="../scripts/Edit/ClipboardOperation.js" line="+54"/>
         <source>Reference point</source>
         <translatorcomment>--exact match--
 --file: Translate_it.ts--
@@ -2706,7 +2706,7 @@ Coordinate polari relativo:</translatorcomment>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+64"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
         <translation>Posizione</translation>
     </message>
@@ -2735,7 +2735,12 @@ Coordinate polari relativo:</translatorcomment>
         <translation>Numero di cifre decimali</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+10"/>
+        <source>Width:</source>
+        <translation type="unfinished">Larghezza:</translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Prefix:</source>
         <translation>Prefisso:</translation>
     </message>
@@ -10660,7 +10665,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation>Fatto</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+435"/>
         <source>Export to PDF</source>
         <translation>Esporta PDF</translation>
     </message>

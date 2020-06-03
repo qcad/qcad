@@ -1255,7 +1255,7 @@ Do you wish to recover it?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+120"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Invalid image size (width x height must be less than %1)</translation>
     </message>
@@ -2084,7 +2084,7 @@ Do you wish to recover it?</translation>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../scripts/Edit/ClipboardOperation.js" line="+52"/>
+        <location filename="../scripts/Edit/ClipboardOperation.js" line="+54"/>
         <source>Reference point</source>
         <translation>Reference point</translation>
     </message>
@@ -2415,7 +2415,7 @@ Do you wish to recover it?</translation>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+64"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>
@@ -2444,7 +2444,12 @@ Do you wish to recover it?</translation>
         <translation>Number of decimal digits</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+10"/>
+        <source>Width:</source>
+        <translation type="unfinished">Width:</translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Prefix:</source>
         <translation>Prefix:</translation>
     </message>
@@ -9259,7 +9264,7 @@ shown in search results:</translation>
         <translation>Done</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+435"/>
         <source>Export to PDF</source>
         <translation>Export to PDF</translation>
     </message>

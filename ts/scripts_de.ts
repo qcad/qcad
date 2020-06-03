@@ -1414,7 +1414,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+120"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Ungültige Bildgrösse (Breite x Höhe muss kleiner sein als %1)</translation>
     </message>
@@ -2410,7 +2410,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../scripts/Edit/ClipboardOperation.js" line="+52"/>
+        <location filename="../scripts/Edit/ClipboardOperation.js" line="+54"/>
         <source>Reference point</source>
         <translation>Referenzpunkt</translation>
     </message>
@@ -2799,7 +2799,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+64"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>
@@ -2828,7 +2828,12 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Anzahl Nachkommastellen</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+10"/>
+        <source>Width:</source>
+        <translation type="unfinished">Breite:</translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Prefix:</source>
         <translation>Präfix:</translation>
     </message>
@@ -11322,7 +11327,7 @@ nicht öffnen.
         <translation>Querformat</translation>
     </message>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+431"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+435"/>
         <source>Export to PDF</source>
         <translation>PDF exportieren</translation>
     </message>
@@ -11332,12 +11337,12 @@ nicht öffnen.
         <translation>Drucken ...</translation>
     </message>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-432"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-436"/>
         <source>Drag to move paper</source>
         <translation>Ziehen zum Verschieben des Papiers</translation>
     </message>
     <message>
-        <location line="+445"/>
+        <location line="+449"/>
         <source>Exporting to %1...</source>
         <translation>Exportiere nach %1...</translation>
     </message>

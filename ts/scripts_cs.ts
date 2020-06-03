@@ -1240,7 +1240,7 @@ Přejete si ho obnovit?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+120"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Vadná velikost obrázku (šířka x výška musí být menší než %1)</translation>
     </message>
@@ -2069,7 +2069,7 @@ Přejete si ho obnovit?</translation>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../scripts/Edit/ClipboardOperation.js" line="+52"/>
+        <location filename="../scripts/Edit/ClipboardOperation.js" line="+54"/>
         <source>Reference point</source>
         <translation>Referenční bod</translation>
     </message>
@@ -2412,7 +2412,7 @@ Přejete si ho obnovit?</translation>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+64"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
         <translation>Pozice</translation>
     </message>
@@ -2437,7 +2437,12 @@ Přejete si ho obnovit?</translation>
         <translation>Počet desetinných míst</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+10"/>
+        <source>Width:</source>
+        <translation type="unfinished">Šířka:</translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Prefix:</source>
         <translation>Předpona:</translation>
     </message>
@@ -9181,7 +9186,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Dokončit</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+435"/>
         <source>Export to PDF</source>
         <translation>Export do PDF</translation>
     </message>

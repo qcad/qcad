@@ -1269,7 +1269,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+120"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Неверный размер изображения (ширина х высота должно быть меньше, чем %1)</translation>
     </message>
@@ -2118,7 +2118,7 @@ Do you wish to recover it?</source>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../scripts/Edit/ClipboardOperation.js" line="+52"/>
+        <location filename="../scripts/Edit/ClipboardOperation.js" line="+54"/>
         <source>Reference point</source>
         <translation>Точка привязки</translation>
     </message>
@@ -2441,7 +2441,7 @@ Do you wish to recover it?</source>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+64"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
         <translation>Положение</translation>
     </message>
@@ -2470,7 +2470,12 @@ Do you wish to recover it?</source>
         <translation>Количество десятичных цифр</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+10"/>
+        <source>Width:</source>
+        <translation type="unfinished">Ширина:</translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Prefix:</source>
         <translation>Префикс:</translation>
     </message>
@@ -9362,7 +9367,7 @@ shown in search results:</source>
         <translation>Завершено</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+435"/>
         <source>Export to PDF</source>
         <translation>Экспортировать в PDF</translation>
     </message>

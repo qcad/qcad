@@ -1382,7 +1382,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+120"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Tamaño de imagen no válido (anchura x altura debe ser menor que %1)</translation>
     </message>
@@ -2315,7 +2315,7 @@ Seleccionador de varios métodos de entrada que usa el menú contextual de los e
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../scripts/Edit/ClipboardOperation.js" line="+52"/>
+        <location filename="../scripts/Edit/ClipboardOperation.js" line="+54"/>
         <source>Reference point</source>
         <translation>Punto de referencia</translation>
     </message>
@@ -2690,7 +2690,7 @@ Coordenadas polares relativa:</translatorcomment>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+64"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
         <translation>Posición</translation>
     </message>
@@ -2715,7 +2715,12 @@ Coordenadas polares relativa:</translatorcomment>
         <translation>Número de dígitos decimales</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+10"/>
+        <source>Width:</source>
+        <translation type="unfinished">Anchura:</translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Prefix:</source>
         <translation>Prefijo:</translation>
     </message>
@@ -10616,7 +10621,7 @@ en los resultados de búsqueda:</translation>
         <translation>Terminar</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+435"/>
         <source>Export to PDF</source>
         <translation>Exportar a PDF</translation>
     </message>

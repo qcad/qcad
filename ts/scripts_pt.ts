@@ -1300,7 +1300,7 @@ Você deseja recuperá-lo?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+120"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Tamanho de imagem inválido (largura x altura deve ser menor que %1)</translation>
     </message>
@@ -2161,7 +2161,7 @@ Você deseja recuperá-lo?</translation>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../scripts/Edit/ClipboardOperation.js" line="+52"/>
+        <location filename="../scripts/Edit/ClipboardOperation.js" line="+54"/>
         <source>Reference point</source>
         <translation>Ponto de referência</translation>
     </message>
@@ -2500,7 +2500,7 @@ Você deseja recuperá-lo?</translation>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+64"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
         <translation>Posição</translation>
     </message>
@@ -2525,7 +2525,12 @@ Você deseja recuperá-lo?</translation>
         <translation>Número de dígitos decimais</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+10"/>
+        <source>Width:</source>
+        <translation type="unfinished">Largura:</translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Prefix:</source>
         <translation>Prefixo:</translation>
     </message>
@@ -9586,7 +9591,7 @@ nos resultados de busca:</translation>
         <translation>Feito</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+435"/>
         <source>Export to PDF</source>
         <translation>Exportar para PDF</translation>
     </message>
