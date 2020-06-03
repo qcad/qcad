@@ -2717,7 +2717,7 @@ Coordenadas polares relativa:</translatorcomment>
     <message>
         <location line="+10"/>
         <source>Width:</source>
-        <translation type="unfinished">Anchura:</translation>
+        <translation>Anchura:</translation>
     </message>
     <message>
         <location line="+14"/>

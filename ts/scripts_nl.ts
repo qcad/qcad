@@ -2488,7 +2488,7 @@ Wilt u het herstellen?</translation>
     <message>
         <location line="+10"/>
         <source>Width:</source>
-        <translation type="unfinished">Breedte:</translation>
+        <translation>Breedte:</translation>
     </message>
     <message>
         <location line="+14"/>

@@ -2527,7 +2527,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+10"/>
         <source>Width:</source>
-        <translation type="unfinished">Largura:</translation>
+        <translation>Largura:</translation>
     </message>
     <message>
         <location line="+14"/>

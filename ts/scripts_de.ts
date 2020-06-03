@@ -2830,7 +2830,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+10"/>
         <source>Width:</source>
-        <translation type="unfinished">Breite:</translation>
+        <translation>Breite:</translation>
     </message>
     <message>
         <location line="+14"/>

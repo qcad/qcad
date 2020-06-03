@@ -2737,7 +2737,7 @@ Coordinate polari relativo:</translatorcomment>
     <message>
         <location line="+10"/>
         <source>Width:</source>
-        <translation type="unfinished">Larghezza:</translation>
+        <translation>Larghezza:</translation>
     </message>
     <message>
         <location line="+14"/>
