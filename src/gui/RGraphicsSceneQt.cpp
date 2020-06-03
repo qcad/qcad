@@ -809,7 +809,7 @@ void RGraphicsSceneQt::addDrawable(REntity::Id entityId, RGraphicsSceneDrawable&
 
     // check block ref stack for non-plottable layer:
     if (drawable.getNoPlot()==false) {
-        for (int i=blockRefViewportStack.length()-1; i>=0; i--) {
+        for (int i=blockRefViewportStack.size()-1; i>=0; i--) {
             REntity* e = blockRefViewportStack[i];
             if (e==NULL) {
                 continue;
