@@ -1371,12 +1371,12 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
         }
 
         // Transform:
-        if (drawable.getType()==RGraphicsSceneDrawable::Transform) {
+        else if (drawable.getType()==RGraphicsSceneDrawable::Transform) {
             RTransform transform = drawable.getTransform();
             entityTransformThread[threadId].push(transform);
         }
 
-        if (drawable.getType()==RGraphicsSceneDrawable::EndTransform) {
+        else if (drawable.getType()==RGraphicsSceneDrawable::EndTransform) {
             if (!entityTransformThread[threadId].isEmpty()) {
                 entityTransformThread[threadId].pop();
             }
