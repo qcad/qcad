@@ -1,5 +1,6 @@
 /**
  * Copyright (c) 2015 by Robert S. All rights reserved.
+ *               2020 by Andrew Mustun (add width for zero padding)
  * 
  * This file is part of the QCAD project.
  *
