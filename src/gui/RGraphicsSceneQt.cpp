@@ -793,12 +793,37 @@ RBox RGraphicsSceneQt::getClipRectangle(REntity::Id entityId, bool preview) cons
 void RGraphicsSceneQt::addDrawable(REntity::Id entityId, RGraphicsSceneDrawable& drawable, bool draft, bool preview) {
     Q_UNUSED(draft)
 
+    // entityId: ID of entity for which the drawbale represents a part (e.g. line, block reference, viewport, etc)
+
+    // this is the current entity being exported:
+    // this might be in the context of the block reference or viewport indicated by entityId:
     REntity* entity = getEntity();
     if (entity!=NULL) {
         QSharedPointer<RLayer> layer = getEntityLayer(*entity);
         if (!layer.isNull()) {
             if (!layer->isPlottable()) {
                 drawable.setNoPlot(true);
+            }
+        }
+    }
+
+    // check block ref stack for non-plottable layer:
+    if (drawable.getNoPlot()==false) {
+        for (int i=blockRefViewportStack.length()-1; i>=0; i--) {
+            REntity* e = blockRefViewportStack[i];
+            if (e==NULL) {
+                continue;
+            }
+            if (e->getType()==RS::EntityViewport) {
+                // entities in non-plottable viewports are plottable:
+                continue;
+            }
+            QSharedPointer<RLayer> layer = getEntityLayer(*e);
+            if (!layer.isNull()) {
+                if (!layer->isPlottable()) {
+                    drawable.setNoPlot(true);
+                    break;
+                }
             }
         }
     }
