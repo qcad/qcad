@@ -1457,6 +1457,7 @@
     <file alias="scripts/Misc/MiscDraw/Counter/Counter.svg">../../scripts/Misc/MiscDraw/Counter/Counter.svg</file>
     <file alias="scripts/Misc/MiscDraw/Counter/Counter.ui">../../scripts/Misc/MiscDraw/Counter/Counter.ui</file>
     <file alias="scripts/Misc/MiscDraw/Counter/CounterInit.js">../../scripts/Misc/MiscDraw/Counter/CounterInit.js</file>
+    <file alias="scripts/Misc/MiscDraw/Counter/numeral.js">../../scripts/Misc/MiscDraw/Counter/numeral.js</file>
     <file alias="scripts/Misc/MiscDraw/Cross/Cross-inverse.svg">../../scripts/Misc/MiscDraw/Cross/Cross-inverse.svg</file>
     <file alias="scripts/Misc/MiscDraw/Cross/Cross.js">../../scripts/Misc/MiscDraw/Cross/Cross.js</file>
     <file alias="scripts/Misc/MiscDraw/Cross/Cross.svg">../../scripts/Misc/MiscDraw/Cross/Cross.svg</file>
