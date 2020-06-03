@@ -158,7 +158,6 @@ Counter.prototype.slotIncrementChanged = function(value) {
 
 Counter.prototype.slotNumberFormatChanged = function(value) {
     this.numberFormat = value;
-    qDebug("num format:", this.numberFormat);
     this.updatePreview(true);
 };
 
