@@ -75,7 +75,7 @@ function exportBitmap(doc, scene, fileName, properties, view) {
         view.setBackgroundColor(properties["backgroundColor"]);
     }
 
-    if (properties["colorCorrection"]) {
+    if (typeof(properties["colorCorrection"])!=="undefined") {
         view.setColorCorrectionOverride(properties["colorCorrection"]);
     }
 
