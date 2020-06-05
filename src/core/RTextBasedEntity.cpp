@@ -97,7 +97,20 @@ bool RTextBasedEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(getData().fontName, value, PropertyFontName == propertyTypeId);
     ret = ret || RObject::setMember(getData().textHeight, value, PropertyHeight == propertyTypeId);
     ret = ret || RObject::setMember(getData().angle, value, PropertyAngle == propertyTypeId);
-    ret = ret || RObject::setMember(getData().xScale, value, PropertyXScale == propertyTypeId);
+    if (PropertyXScale == propertyTypeId) {
+        if (!isSimple()) {
+            // no negative x-scale for non-simple text:
+            bool ok;
+            double d = value.toDouble(&ok);
+            if (ok) {
+                setXScale(d);
+                ret = true;
+            }
+        }
+        else {
+            ret = ret || RObject::setMember(getData().xScale, value, PropertyXScale == propertyTypeId);
+        }
+    }
     ret = ret || RObject::setMember(getData().bold, value, PropertyBold == propertyTypeId);
     ret = ret || RObject::setMember(getData().italic, value, PropertyItalic == propertyTypeId);
     ret = ret || RObject::setMember((int&)getData().horizontalAlignment, value.value<int>(), PropertyHAlign == propertyTypeId);
@@ -156,18 +169,31 @@ QPair<QVariant, RPropertyAttributes> RTextBasedEntity::getProperty(
 
 
 void RTextBasedEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
-    Q_UNUSED(preview);
+    Q_UNUSED(preview)
+
+    RTextBasedData data = getData();
+    data.move(-getAlignmentPoint());
+    data.rotate(-getAngle(), RVector(0,0));
+    data.setXScale(1.0);
+
+    RTransform t;
+    t.translate(getAlignmentPoint().x, getAlignmentPoint().y);
+    t.rotate(RMath::rad2deg(getAngle()));
+    t.scale(getXScale(), 1);
+    e.exportTransform(t);
 
     if (e.isTextRenderedAsText()) {
         // export text as text and return part that cannot be rendered as text as paths:
-        QList<RPainterPath> paths = e.exportText(getData(), forceSelected);
+        QList<RPainterPath> paths = e.exportText(data, forceSelected);
 
         // export part of text that can only be rendered as painter paths (CAD fonts):
         e.exportPainterPaths(paths, getPosition().z);
     }
     else {
-        e.exportPainterPathSource(getData(), getPosition().z);
+        e.exportPainterPathSource(data, getPosition().z);
     }
+
+    e.exportEndTransform();
 }
 
 QSharedPointer<REntity> RTextBasedEntity::scaleNonUniform(const RVector& scaleFactors, const RVector& center) {
