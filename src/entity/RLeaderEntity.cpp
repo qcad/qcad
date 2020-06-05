@@ -198,6 +198,7 @@ void RLeaderEntity::exportEntity(RExporter& e, bool preview, bool forceSelected)
                     getDirection1() + M_PI
                 )
             );
+            arrowBlock.setSelected(isSelected());
             arrowBlock.update();
             arrowBlock.exportEntity(e, preview, forceSelected);
         }
