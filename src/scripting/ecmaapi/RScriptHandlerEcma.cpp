@@ -24,6 +24,7 @@
 #include <QScriptEngine>
 #include <QScriptValueIterator>
 #include <QStringList>
+#include <QTextCharFormat>
 #include <QTextStream>
 #include <QFontDatabase>
 #include <QNetworkAccessManager>
@@ -484,6 +485,10 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
             engine->newFunction(ecmaQDomNodeAppendChild));
     classQDomNode.property("prototype").setProperty("removeChild",
             engine->newFunction(ecmaQDomNodeRemoveChild));
+
+    QScriptValue classQTextCharFormat = globalObject.property("QTextCharFormat");
+    classQTextCharFormat.property("prototype").setProperty("setFontFamilies",
+            engine->newFunction(ecmaQTextCharFormatSetFontFamilies));
 
     QScriptValue classQFontMetrics = globalObject.property("QFontMetrics");
     classQFontMetrics.property("prototype").setProperty("destroy",
@@ -1655,6 +1660,27 @@ QScriptValue RScriptHandlerEcma::ecmaQDomNodeRemoveChild(QScriptContext* context
                 "Wrong number/types of arguments for QDomNode.removeChild().",
                 context);
     }
+    return result;
+}
+
+QScriptValue RScriptHandlerEcma::ecmaQTextCharFormatSetFontFamilies(QScriptContext* context, QScriptEngine* engine) {
+    QScriptValue result = engine->undefinedValue();
+    QTextCharFormat* self = qscriptvalue_cast<QTextCharFormat*> (context->thisObject());
+    if (self == NULL) {
+        return throwError("QTextCharFormat.setFontFamilies(): This object is not a QTextCharFormat", context);
+    }
+
+    if (context->argumentCount() == 1 && context->argument(0).isArray()) {
+        QStringList v;
+        REcmaHelper::fromScriptValue(engine, context->argument(0), v);
+
+#if QT_VERSION >= 0x050D00
+        self->setFontFamilies(v);
+#else
+        self->setFontFamily(v[0]);
+#endif
+    }
+
     return result;
 }
 
