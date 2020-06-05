@@ -143,6 +143,12 @@
         getExploded
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDimLeaderBlockId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimLeaderBlockId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         exportEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
