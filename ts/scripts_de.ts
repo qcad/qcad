@@ -2799,7 +2799,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+70"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>
@@ -8521,7 +8521,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>Leader</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+60"/>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+61"/>
         <source>Arrow position</source>
         <translation>Pfeilposition</translation>
     </message>
@@ -14452,7 +14452,7 @@ nicht öffnen.
         <translation>&amp;Unterstreichen</translation>
     </message>
     <message>
-        <location line="+475"/>
+        <location line="+477"/>
         <source>Degree</source>
         <translation>Grad</translation>
     </message>
@@ -14638,7 +14638,7 @@ nicht öffnen.
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="-508"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="-510"/>
         <source>&amp;Bold</source>
         <translation>&amp;Fett</translation>
     </message>
@@ -14668,7 +14668,7 @@ nicht öffnen.
         <translation>&amp;Sonderzeichen...</translation>
     </message>
     <message>
-        <location line="+303"/>
+        <location line="+305"/>
         <source>Others...</source>
         <translation>Andere...</translation>
     </message>

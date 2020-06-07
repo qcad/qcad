@@ -2500,7 +2500,7 @@ Você deseja recuperá-lo?</translation>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+70"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
         <translation>Posição</translation>
     </message>
@@ -7438,7 +7438,7 @@ já se encontra na lista.</translation>
 <context>
     <name>Leader</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+60"/>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+61"/>
         <source>Arrow position</source>
         <translation>Posição das setas</translation>
     </message>
@@ -12347,7 +12347,7 @@ nos resultados de busca:</translation>
         <translation>&amp;Caracteres Especiais...</translation>
     </message>
     <message>
-        <location line="+303"/>
+        <location line="+305"/>
         <source>Others...</source>
         <translation>Outros...</translation>
     </message>

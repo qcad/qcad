@@ -2479,7 +2479,7 @@ Prajete si ho obnoviť?</translation>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+70"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
         <translation>Poloha</translation>
     </message>
@@ -7300,7 +7300,7 @@ už existuje v zozname.</translation>
 <context>
     <name>Leader</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+60"/>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+61"/>
         <source>Arrow position</source>
         <translation>Pozícia šípky</translation>
     </message>
@@ -12169,7 +12169,7 @@ vo výsledku vyhľadania:</translation>
         <translation>&amp;Špeciálne Znaky...</translation>
     </message>
     <message>
-        <location line="+303"/>
+        <location line="+305"/>
         <source>Others...</source>
         <translation>Ďalšie...</translation>
     </message>
