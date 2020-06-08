@@ -275,6 +275,9 @@ void RDimensionData::scaleVisualProperties(double scaleFactor) {
         double s = getDimScale();
         setDimScale(scaleFactor * s);
     }
+
+    extLineFixLength *= scaleFactor;
+
     if (!RMath::fuzzyCompare(scaleFactor, 0.0) && !RMath::fuzzyCompare(scaleFactor, 1.0)) {
         setLinearFactor(linearFactor / scaleFactor);
     }
