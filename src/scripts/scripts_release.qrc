@@ -1812,6 +1812,7 @@
     <file alias="scripts/splashscreen@2x.png">../../scripts/splashscreen@2x.png</file>
     <file alias="scripts/sprintf.js">../../scripts/sprintf.js</file>
     <file alias="ts/scripts_cs.qm">../../ts/scripts_cs.qm</file>
+    <file alias="ts/scripts_da.qm">../../ts/scripts_da.qm</file>
     <file alias="ts/scripts_de.qm">../../ts/scripts_de.qm</file>
     <file alias="ts/scripts_en.qm">../../ts/scripts_en.qm</file>
     <file alias="ts/scripts_es.qm">../../ts/scripts_es.qm</file>
