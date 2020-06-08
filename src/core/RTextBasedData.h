@@ -243,11 +243,9 @@ public:
     }
 
     void setXScale(double xScale) {
-        if (!isSimple()) {
-            // only positive xScale for MText:
-            if (xScale<=0) {
-                xScale = 1;
-            }
+        // only positive xScale for MText:
+        if (xScale<=0) {
+            xScale = 1;
         }
         this->xScale = xScale;
         update();
@@ -259,10 +257,6 @@ public:
 
     void setSimple(bool on) {
         simple = on;
-        if (!simple) {
-            // only positive xScale for MText:
-            setXScale(xScale);
-        }
         update();
     }
 
