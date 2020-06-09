@@ -96,6 +96,10 @@ bool RPolylineData::moveReferencePoint(const RVector& referencePoint, const RVec
         }
     }
 
+    if (ret) {
+        return ret;
+    }
+
     for (int i=0; i<countSegments(); i++) {
         QSharedPointer<RShape> segment = getSegmentAt(i);
         if (segment.isNull()) {
