@@ -237,7 +237,7 @@ Cyan</translatorcomment>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
 Bleu
-Bleu&#xa0;: 
+Bleu : 
 Bluetooth</translatorcomment>
         <translation>Bleu</translation>
     </message>
@@ -731,12 +731,12 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation type="unfinished"></translation>
+        <translation>En arrière</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Upside Down</source>
-        <translation type="unfinished"></translation>
+        <translation>À l&apos;envers</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
