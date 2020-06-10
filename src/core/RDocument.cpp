@@ -257,6 +257,9 @@ void RDocument::init(bool beforeLoad) {
         // max number of active viewports:
         docVars->setKnownVariable(RS::MAXACTVP, 64);
 
+        // mirror text:
+        docVars->setKnownVariable(RS::MIRRTEXT, RSettings::getIntValue("TextSettings/MirrorText", 0));
+
         //  multi page printing settings:
         setVariable("MultiPageSettings/Columns", RSettings::getIntValue("MultiPageSettings/Columns", 1));
         setVariable("MultiPageSettings/Rows", RSettings::getIntValue("MultiPageSettings/Rows", 1));
