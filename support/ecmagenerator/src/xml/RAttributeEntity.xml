@@ -173,5 +173,9 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyInvisible" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyBackward" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyUpsideDown" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
   </class>
 </unit>

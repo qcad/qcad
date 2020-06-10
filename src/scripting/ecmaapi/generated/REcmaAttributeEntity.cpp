@@ -224,6 +224,14 @@
                 qScriptValueFromValue(&engine, RAttributeEntity::PropertyInvisible),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyBackward",
+                qScriptValueFromValue(&engine, RAttributeEntity::PropertyBackward),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyUpsideDown",
+                qScriptValueFromValue(&engine, RAttributeEntity::PropertyUpsideDown),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
 
     // enum values:
     
