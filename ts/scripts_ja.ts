@@ -8761,7 +8761,7 @@ shown in search results:</source>
         <translation>&amp;K オリジナルを維持</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>&amp;a 現在の画層と属性を利用</translation>
     </message>

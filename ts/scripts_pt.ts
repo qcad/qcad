@@ -8650,7 +8650,7 @@ nos resultados de busca:</translation>
         <translation>&amp;Mantenha o original</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Use a camada e os &amp;atributos atuais</translation>
     </message>

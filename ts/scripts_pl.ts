@@ -10602,7 +10602,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translation>&amp;Zachowanie oryginału</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Use current layer and &amp;attributes</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Użycie bieżącej warstwy i &amp;atrybutów</translation>

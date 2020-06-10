@@ -9429,7 +9429,7 @@ dans les résultats de recherche :</translation>
         <translation>&amp;Garder original</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Utiliser calque et &amp;attributs actuel</translation>
     </message>

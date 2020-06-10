@@ -8335,7 +8335,7 @@ shown in search results:</translation>
         <translation>&amp;Keep original</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Use current layer and &amp;attributes</translation>
     </message>

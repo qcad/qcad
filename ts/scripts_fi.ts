@@ -8503,7 +8503,7 @@ näkyy hakutuloksissa:</translation>
         <translation>&amp;Säilytä alkuperäinen</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Käytä nykyistä tasoa ja &amp;ominaisuuksia</translation>
     </message>

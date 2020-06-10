@@ -8521,7 +8521,7 @@ vo výsledku vyhľadania:</translation>
         <translation>P&amp;onechať originál</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Použiť aktuálnu vrstvu a vl&amp;astnosti</translation>
     </message>

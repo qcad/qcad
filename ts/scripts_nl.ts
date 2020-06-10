@@ -8473,7 +8473,7 @@ getoond in zoekresultaten:</translation>
         <translation>Origineel &amp;bewaren</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Huidige laag en &amp;attributen gebruiken</translation>
     </message>

@@ -8283,7 +8283,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>&amp;Zachovat originál</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Použít aktuální vrstvu a &amp;vlastnosti</translation>
     </message>

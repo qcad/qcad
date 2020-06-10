@@ -8436,7 +8436,7 @@ shown in search results:</source>
         <translation>С&amp;охранить оригинал</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Использовать текущий с&amp;лой и атрибуты</translation>
     </message>

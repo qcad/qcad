@@ -8830,7 +8830,7 @@ shown in search results:</source>
         <translation>&amp;Ohrani original</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Uporabi trenutno plast in &amp;atribute</translation>
     </message>

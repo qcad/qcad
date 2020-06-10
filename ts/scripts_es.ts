@@ -9550,7 +9550,7 @@ en los resultados de búsqueda:</translation>
         <translation>&amp;Conservar original</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Usar capa y los &amp;atributos actual</translation>
     </message>

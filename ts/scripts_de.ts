@@ -10064,7 +10064,7 @@ im Suchresultat:</translation>
         <translation>Original &amp;beibehalten</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Aktueller Layer / &amp;Attribute</translation>
     </message>
