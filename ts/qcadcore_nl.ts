@@ -557,12 +557,12 @@
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation type="unfinished"></translation>
+        <translation>Achteruit</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Upside Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Ondersteboven</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>

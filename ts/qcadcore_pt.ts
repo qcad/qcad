@@ -732,12 +732,12 @@ Abre diálogo de cores</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation type="unfinished"></translation>
+        <translation>Para trás</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Upside Down</source>
-        <translation type="unfinished"></translation>
+        <translation>De cabeça para baixo</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>

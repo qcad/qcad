@@ -737,12 +737,12 @@ Colores
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation type="unfinished"></translation>
+        <translation>Atrás</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Upside Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Al revés</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
