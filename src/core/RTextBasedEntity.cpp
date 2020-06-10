@@ -46,6 +46,8 @@ RPropertyTypeId RTextBasedEntity::PropertyItalic;
 RPropertyTypeId RTextBasedEntity::PropertyLineSpacingFactor;
 RPropertyTypeId RTextBasedEntity::PropertyHAlign;
 RPropertyTypeId RTextBasedEntity::PropertyVAlign;
+RPropertyTypeId RTextBasedEntity::PropertyBackward;
+RPropertyTypeId RTextBasedEntity::PropertyUpsideDown;
 
 
 RTextBasedEntity::RTextBasedEntity(RDocument* document) :
@@ -83,13 +85,15 @@ void RTextBasedEntity::init() {
     RTextBasedEntity::PropertyLineSpacingFactor.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Line Spacing"));
     RTextBasedEntity::PropertyHAlign.generateId(typeid(RTextBasedEntity), QT_TRANSLATE_NOOP("REntity", "Alignment"), QT_TRANSLATE_NOOP("REntity", "Horizontal"));
     RTextBasedEntity::PropertyVAlign.generateId(typeid(RTextBasedEntity), QT_TRANSLATE_NOOP("REntity", "Alignment"), QT_TRANSLATE_NOOP("REntity", "Vertical"));
+    RTextBasedEntity::PropertyBackward.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Backward"));
+    RTextBasedEntity::PropertyUpsideDown.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Upside Down"));
 }
 
 bool RTextBasedEntity::setProperty(RPropertyTypeId propertyTypeId,
         const QVariant& value, RTransaction* transaction) {
     bool ret = REntity::setProperty(propertyTypeId, value, transaction);
 
-    ret = ret || RObject::setMember(getData().simple, value, PropertySimple == propertyTypeId);
+    //ret = ret || RObject::setMember(getData().simple, value, PropertySimple == propertyTypeId);
     ret = ret || RObject::setMember(getData().alignmentPoint.x, value, PropertyPositionX == propertyTypeId);
     ret = ret || RObject::setMember(getData().alignmentPoint.y, value, PropertyPositionY == propertyTypeId);
     ret = ret || RObject::setMember(getData().alignmentPoint.z, value, PropertyPositionZ == propertyTypeId);
@@ -98,21 +102,36 @@ bool RTextBasedEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(getData().textHeight, value, PropertyHeight == propertyTypeId);
     ret = ret || RObject::setMember(getData().angle, value, PropertyAngle == propertyTypeId);
     if (PropertyXScale == propertyTypeId) {
-        if (!isSimple()) {
-            // no negative x-scale for non-simple text:
-            bool ok;
-            double d = value.toDouble(&ok);
-            if (ok) {
-                setXScale(d);
-                ret = true;
-            }
-        }
-        else {
-            ret = ret || RObject::setMember(getData().xScale, value, PropertyXScale == propertyTypeId);
+        // no negative x-scale:
+        bool ok;
+        double d = value.toDouble(&ok);
+        if (ok) {
+            setXScale(d);
+            ret = true;
         }
     }
-    ret = ret || RObject::setMember(getData().bold, value, PropertyBold == propertyTypeId);
-    ret = ret || RObject::setMember(getData().italic, value, PropertyItalic == propertyTypeId);
+    else if (PropertyBold == propertyTypeId) {
+        setBold(value.toBool());
+        ret = true;
+    }
+    else if (PropertyItalic == propertyTypeId) {
+        setItalic(value.toBool());
+        ret = true;
+    }
+    else if (PropertySimple == propertyTypeId) {
+        setSimple(value.toBool());
+        ret = true;
+    }
+    else if (PropertyBackward == propertyTypeId) {
+        setBackward(value.toBool());
+        ret = true;
+    }
+    else if (PropertyUpsideDown == propertyTypeId) {
+        setUpsideDown(value.toBool());
+        ret = true;
+    }
+    //ret = ret || RObject::setMember(getData().bold, value, PropertyBold == propertyTypeId);
+    //ret = ret || RObject::setMember(getData().italic, value, PropertyItalic == propertyTypeId);
     ret = ret || RObject::setMember((int&)getData().horizontalAlignment, value.value<int>(), PropertyHAlign == propertyTypeId);
     ret = ret || RObject::setMember((int&)getData().verticalAlignment, value.value<int>(), PropertyVAlign == propertyTypeId);
 
@@ -132,7 +151,7 @@ QPair<QVariant, RPropertyAttributes> RTextBasedEntity::getProperty(
         RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes, bool showOnRequest) {
 
     if (propertyTypeId == PropertySimple) {
-        return qMakePair(QVariant(getData().simple), RPropertyAttributes());
+        return qMakePair(QVariant(getData().isSimple()), RPropertyAttributes(RPropertyAttributes::AffectsOtherProperties));
     } else if (propertyTypeId == PropertyPositionX) {
         return qMakePair(QVariant(getData().alignmentPoint.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyPositionY) {
@@ -152,9 +171,9 @@ QPair<QVariant, RPropertyAttributes> RTextBasedEntity::getProperty(
     } else if (propertyTypeId == PropertyXScale) {
         return qMakePair(QVariant(getData().xScale), RPropertyAttributes());
     } else if (propertyTypeId == PropertyBold) {
-        return qMakePair(QVariant(getData().bold), RPropertyAttributes());
+        return qMakePair(QVariant(getData().isBold()), RPropertyAttributes());
     } else if (propertyTypeId == PropertyItalic) {
-        return qMakePair(QVariant(getData().italic), RPropertyAttributes());
+        return qMakePair(QVariant(getData().isItalic()), RPropertyAttributes());
     } else if (propertyTypeId == PropertyLineSpacingFactor) {
         return qMakePair(QVariant(getData().lineSpacingFactor), RPropertyAttributes());
     } else if (propertyTypeId == PropertyHAlign) {
@@ -163,7 +182,12 @@ QPair<QVariant, RPropertyAttributes> RTextBasedEntity::getProperty(
     } else if (propertyTypeId == PropertyVAlign) {
 //        return qMakePair(QVariant(getData().verticalAlignment), RPropertyAttributes(RPropertyAttributes::AffectsOtherProperties));
         return qMakePair(QVariant(getData().verticalAlignment), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyBackward) {
+        return qMakePair(QVariant(getData().isBackward()), RPropertyAttributes(isSimple() ? RPropertyAttributes::NoOptions : RPropertyAttributes::Invisible));
+    } else if (propertyTypeId == PropertyUpsideDown) {
+        return qMakePair(QVariant(getData().isUpsideDown()), RPropertyAttributes(isSimple() ? RPropertyAttributes::NoOptions : RPropertyAttributes::Invisible));
     }
+
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
@@ -171,16 +195,17 @@ QPair<QVariant, RPropertyAttributes> RTextBasedEntity::getProperty(
 void RTextBasedEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
     Q_UNUSED(preview)
 
+    // TODO: use transforms:
     RTextBasedData data = getData();
-    data.move(-getAlignmentPoint());
-    data.rotate(-getAngle(), RVector(0,0));
-    data.setXScale(1.0);
+//    data.move(-getAlignmentPoint());
+//    data.rotate(-getAngle(), RVector(0,0));
+//    data.setXScale(1.0);
 
-    RTransform t;
-    t.translate(getAlignmentPoint().x, getAlignmentPoint().y);
-    t.rotate(RMath::rad2deg(getAngle()));
-    t.scale(getXScale(), 1);
-    e.exportTransform(t);
+//    RTransform t;
+//    t.translate(getAlignmentPoint().x, getAlignmentPoint().y);
+//    t.rotate(RMath::rad2deg(getAngle()));
+//    t.scale(getXScale(), 1);
+//    e.exportTransform(t);
 
     if (e.isTextRenderedAsText()) {
         // export text as text and return part that cannot be rendered as text as paths:
@@ -193,7 +218,7 @@ void RTextBasedEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
         e.exportPainterPathSource(data, getPosition().z);
     }
 
-    e.exportEndTransform();
+//    e.exportEndTransform();
 }
 
 QSharedPointer<REntity> RTextBasedEntity::scaleNonUniform(const RVector& scaleFactors, const RVector& center) {

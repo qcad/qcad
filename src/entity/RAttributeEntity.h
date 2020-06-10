@@ -70,6 +70,8 @@ public:
     static RPropertyTypeId PropertyPlainText;
     static RPropertyTypeId PropertyVAlign;
     static RPropertyTypeId PropertyInvisible;
+    static RPropertyTypeId PropertyBackward;
+    static RPropertyTypeId PropertyUpsideDown;
 
 public:
     RAttributeEntity(RDocument* document, const RAttributeData& data);

@@ -403,6 +403,18 @@ void RTextRenderer::renderSimple() {
     QTransform globalTransform;
     globalTransform.translate(pos.x, pos.y);
     globalTransform.rotate(RMath::rad2deg(angle));
+
+    // TODO: mirror in X / Y:
+    if (textData.isBackward() && textData.isUpsideDown()) {
+        globalTransform.scale(-1, -1);
+    }
+    else if (textData.isBackward()) {
+        globalTransform.scale(-1, 1);
+    }
+    else if (textData.isUpsideDown()) {
+        globalTransform.scale(1, -1);
+    }
+
     globalTransform.translate(xOffset, yOffset);
 
     // apply global transform for position, angle and vertical alignment:

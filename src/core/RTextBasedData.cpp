@@ -44,13 +44,8 @@ RTextBasedData::RTextBasedData(RDocument *document)
    lineSpacingStyle(RS::Exact),
    lineSpacingFactor(1.0),
    fontName("standard"),
-   bold(false),
-   italic(false),
    angle(0.0),
    xScale(1.0),
-   simple(false),
-   dimensionLabel(false),
-   highlighted(false),
    height(RNANDOUBLE), width(RNANDOUBLE), dirty(true), gotDraft(false) {
 }
 
@@ -102,17 +97,15 @@ RTextBasedData::RTextBasedData(const RVector& position,
       lineSpacingStyle(lineSpacingStyle),
       lineSpacingFactor(lineSpacingFactor),
       fontName(fontName),
-      bold(bold),
-      italic(italic),
       angle(angle),
       xScale(1.0),
-      simple(simple),
-      dimensionLabel(false),
-      highlighted(false),
       height(RNANDOUBLE), width(RNANDOUBLE),
       dirty(true), gotDraft(false) {
 
     setText(text);
+    setBold(bold);
+    setItalic(italic);
+    setSimple(simple);
 }
 
 bool RTextBasedData::isSane() const {
@@ -418,22 +411,28 @@ bool RTextBasedData::mirror(const RLine& axis) {
     vec.mirror(RVector(0.0,0.0), axis.getEndPoint()-axis.getStartPoint());
     angle = vec.getAngle();
 
-    bool corr;
-    angle = RMath::makeAngleReadable(angle, readable, &corr);
+    if (isSimple() && document->getKnownVariable(RS::MIRRTEXT, 0)!=0) {
+        setUpsideDown(!isUpsideDown());
+    }
+    else {
+        bool corr;
+        angle = RMath::makeAngleReadable(angle, readable, &corr);
 
-    if (corr) {
-        if (horizontalAlignment==RS::HAlignLeft) {
-            horizontalAlignment=RS::HAlignRight;
-        } else if (horizontalAlignment==RS::HAlignRight) {
-            horizontalAlignment=RS::HAlignLeft;
-        }
-    } else {
-        if (verticalAlignment==RS::VAlignTop) {
-            verticalAlignment=RS::VAlignBase;
-        } else if (verticalAlignment==RS::VAlignBase) {
-            verticalAlignment=RS::VAlignTop;
+        if (corr) {
+            if (horizontalAlignment==RS::HAlignLeft) {
+                horizontalAlignment=RS::HAlignRight;
+            } else if (horizontalAlignment==RS::HAlignRight) {
+                horizontalAlignment=RS::HAlignLeft;
+            }
+        } else {
+            if (verticalAlignment==RS::VAlignTop) {
+                verticalAlignment=RS::VAlignBase;
+            } else if (verticalAlignment==RS::VAlignBase) {
+                verticalAlignment=RS::VAlignTop;
+            }
         }
     }
+
     update(false);
     return true;
 }

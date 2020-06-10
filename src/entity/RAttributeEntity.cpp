@@ -48,6 +48,8 @@ RPropertyTypeId RAttributeEntity::PropertyLineSpacingFactor;
 RPropertyTypeId RAttributeEntity::PropertyHAlign;
 RPropertyTypeId RAttributeEntity::PropertyVAlign;
 RPropertyTypeId RAttributeEntity::PropertyInvisible;
+RPropertyTypeId RAttributeEntity::PropertyBackward;
+RPropertyTypeId RAttributeEntity::PropertyUpsideDown;
 
 
 RAttributeEntity::RAttributeEntity(RDocument* document, const RAttributeData& data) :
@@ -85,6 +87,8 @@ void RAttributeEntity::init() {
     RAttributeEntity::PropertyLineSpacingFactor.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyLineSpacingFactor);
     RAttributeEntity::PropertyHAlign.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyHAlign);
     RAttributeEntity::PropertyVAlign.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyVAlign);
+    RAttributeEntity::PropertyBackward.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyBackward);
+    RAttributeEntity::PropertyUpsideDown.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyUpsideDown);
 
     RAttributeEntity::PropertyTag.generateId(typeid(RAttributeEntity), "", QT_TRANSLATE_NOOP("REntity", "Tag"));
     RAttributeEntity::PropertyInvisible.generateId(typeid(RAttributeEntity), "", QT_TRANSLATE_NOOP("REntity", "Invisible"));

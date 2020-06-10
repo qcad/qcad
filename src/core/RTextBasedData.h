@@ -44,6 +44,19 @@ class QTextDocument;
 class QCADCORE_EXPORT RTextBasedData: public REntityData, public RPainterPathSource {
     friend class RTextBasedEntity;
 
+public:
+    enum TextFlag {
+        NoFlags = 0x000,
+        Bold = 0x001,
+        Italic = 0x002,
+        Simple = 0x004,
+        DimensionLabel = 0x008,
+        Highlighted = 0x010,
+        Backward = 0x020,
+        UpsideDown = 0x040
+    };
+    Q_DECLARE_FLAGS(TextFlags, TextFlag)
+
 protected:
     RTextBasedData(RDocument* document, const RTextBasedData& data);
 
@@ -68,6 +81,17 @@ public:
 
     virtual RS::EntityType getType() const {
         return RS::EntityTextBased;
+    }
+
+    void setFlag(RTextBasedData::TextFlag flag, bool on = true) {
+        if (on) {
+            flags |= flag;
+        } else {
+            flags &= ~flag;
+        }
+    }
+    bool getFlag(RTextBasedData::TextFlag flag) const {
+        return (flags & flag) == flag;
     }
 
     virtual bool isValid() const {
@@ -147,20 +171,20 @@ public:
     }
 
     bool isBold() const {
-        return bold;
+        return getFlag(Bold);
     }
 
     void setBold(bool on) {
-        bold = on;
+        setFlag(Bold, on);
         update();
     }
 
     bool isItalic() const {
-        return italic;
+        return getFlag(Italic);
     }
 
     void setItalic(bool on) {
-        italic = on;
+        setFlag(Italic, on);
         update();
     }
 
@@ -256,21 +280,39 @@ public:
     }
 
     void setSimple(bool on) {
-        simple = on;
+        setFlag(Simple, on);
         update();
     }
 
     bool isSimple() const {
-        return simple;
+        return getFlag(Simple);
+    }
+
+    void setBackward(bool on) {
+        setFlag(Backward, isSimple() && on);
+        update();
+    }
+
+    bool isBackward() const {
+        return isSimple() && getFlag(Backward);
+    }
+
+    void setUpsideDown(bool on) {
+        setFlag(UpsideDown, isSimple() && on);
+        update();
+    }
+
+    bool isUpsideDown() const {
+        return isSimple() && getFlag(UpsideDown);
     }
 
     void setDimensionLabel(bool on) {
-        dimensionLabel = on;
+        setFlag(DimensionLabel, on);
         update();
     }
 
     bool isDimensionLabel() const {
-        return dimensionLabel;
+        return getFlag(DimensionLabel);
     }
 
     void setSelected(bool on) {
@@ -279,11 +321,11 @@ public:
     }
 
     void setHighlighted(bool on) {
-        highlighted = on;
+        setFlag(Highlighted, on);
     }
 
     bool isHighlighted() const {
-        return highlighted;
+        return getFlag(Highlighted);
     }
 
     virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;
@@ -370,13 +412,9 @@ protected:
     double lineSpacingFactor;
     QString fontName;
     QString fontFile;
-    bool bold;
-    bool italic;
     double angle;
     double xScale;
-    bool simple;
-    bool dimensionLabel;
-    bool highlighted;
+    TextFlags flags;
 
     mutable double height;
     mutable double width;
@@ -397,5 +435,7 @@ Q_DECLARE_METATYPE(RTextBasedData*)
 Q_DECLARE_METATYPE(const RTextBasedData*)
 Q_DECLARE_METATYPE(QSharedPointer<RTextBasedData>)
 Q_DECLARE_METATYPE(QSharedPointer<RTextBasedData>*)
+Q_DECLARE_METATYPE(RTextBasedData::TextFlag)
+Q_DECLARE_METATYPE(RTextBasedData::TextFlag*)
 
 #endif
