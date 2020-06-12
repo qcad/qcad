@@ -179,7 +179,7 @@
     <message>
         <location line="+1"/>
         <source>Dark Magenta</source>
-        <translation>Temno škrlatna</translation>
+        <translation>Temno magenta</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -557,12 +557,12 @@
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation type="unfinished"></translation>
+        <translation>Vzvratno</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Upside Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Od zgoraj navzdol</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
@@ -638,7 +638,7 @@
     <message>
         <location line="+1"/>
         <source>Off is Freeze</source>
-        <translation type="unfinished"></translation>
+        <translation>Izklop je zamrznjeno</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
