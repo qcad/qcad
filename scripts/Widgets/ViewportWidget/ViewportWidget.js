@@ -169,11 +169,8 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
 
     // enable multithreaded graphics view:
     //if (RSettings.getBoolValue("GraphicsView/Multithreading", true)) {
-    var numThreads = RSettings.getIntValue("GraphicsView/Threads", -1);
+    var numThreads = RSettings.getIntValue("GraphicsView/Threads", RS.getIdealThreadCount());
     if (numThreads!==1) {
-        if (numThreads<0) {
-            numThreads = RS.getIdealThreadCount();
-        }
         this.graphicsView.setNumThreads(numThreads);
         EAction.handleUserMessage(qsTr("Threads:") + " " + numThreads);
     }

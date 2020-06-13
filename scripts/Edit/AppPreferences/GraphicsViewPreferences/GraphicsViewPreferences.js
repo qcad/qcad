@@ -47,7 +47,8 @@ GraphicsViewPreferences.applyPreferences = function(doc, mdiChild) {
         return;
     }
 
-    var numThreads = RSettings.getIntValue("GraphicsView/Threads", -1);
+    var numThreads = RSettings.getIntValue("GraphicsView/Threads", RS.getIdealThreadCount());
+    EAction.handleUserMessage(qsTr("Threads:") + " " + numThreads);
 
     var di = mdiChild.getDocumentInterface();
     var scenes = di.getGraphicsScenes();
@@ -62,12 +63,8 @@ GraphicsViewPreferences.applyPreferences = function(doc, mdiChild) {
                 view.setBackgroundColor(new QColor());
             }
 
-            if (numThreads>0) {
-                view.setNumThreads(numThreads);
-            }
-            else {
-                view.setNumThreads(RS.getIdealThreadCount());
-            }
+            view.setNumThreads(numThreads);
+
             view.regenerate(false);
         }
     }
