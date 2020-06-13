@@ -168,9 +168,16 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
     this.graphicsView.setAntialiasing(RSettings.getBoolValue("GraphicsView/Antialiasing", false));
 
     // enable multithreaded graphics view:
-    if (RSettings.getBoolValue("GraphicsView/Multithreading", true)) {
-        this.graphicsView.setNumThreads(RS.getIdealThreadCount());
+    //if (RSettings.getBoolValue("GraphicsView/Multithreading", true)) {
+    var numThreads = RSettings.getIntValue("GraphicsView/Threads", -1);
+    if (numThreads!==1) {
+        if (numThreads<0) {
+            numThreads = RS.getIdealThreadCount();
+        }
+        this.graphicsView.setNumThreads(numThreads);
+        EAction.handleUserMessage(qsTr("Threads:") + " " + numThreads);
     }
+    //}
 
     // create custom graphics scene (e.g. OpenGL, ...):
     var scene = undefined;

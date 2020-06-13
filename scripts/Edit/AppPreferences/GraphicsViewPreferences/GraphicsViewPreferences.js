@@ -38,6 +38,8 @@ GraphicsViewPreferences.initPreferences = function(pageWidget, calledByPrefDialo
 //    cbCapStyle.addItem(qsTr("Round Cap"), Qt.RoundCap.valueOf());
 //    cbCapStyle.addItem(qsTr("Flat Cap"), Qt.FlatCap.valueOf());
 //    cbCapStyle.addItem(qsTr("Square Cap"), Qt.SquareCap.valueOf());
+
+    widgets["Threads"].setItemText(0, widgets["Threads"].itemText(0) + " (" + RS.getIdealThreadCount() + ")");
 };
 
 GraphicsViewPreferences.applyPreferences = function(doc, mdiChild) {
@@ -45,7 +47,7 @@ GraphicsViewPreferences.applyPreferences = function(doc, mdiChild) {
         return;
     }
 
-    var mt = RSettings.getBoolValue("GraphicsView/Multithreading", true);
+    var numThreads = RSettings.getIntValue("GraphicsView/Threads", -1);
 
     var di = mdiChild.getDocumentInterface();
     var scenes = di.getGraphicsScenes();
@@ -59,11 +61,12 @@ GraphicsViewPreferences.applyPreferences = function(doc, mdiChild) {
             if (!view.isPrintPreview()) {
                 view.setBackgroundColor(new QColor());
             }
-            if (mt) {
-                view.setNumThreads(RS.getIdealThreadCount());
+
+            if (numThreads>0) {
+                view.setNumThreads(numThreads);
             }
             else {
-                view.setNumThreads(1);
+                view.setNumThreads(RS.getIdealThreadCount());
             }
             view.regenerate(false);
         }
