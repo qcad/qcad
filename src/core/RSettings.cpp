@@ -1528,8 +1528,13 @@ double RSettings::getDoubleValue(const QString& key, double defaultValue) {
  * \return Value of the given setting as int or defaultValue.
  */
 int RSettings::getIntValue(const QString& key, int defaultValue) {
-    QVariant ret = getValue(key, defaultValue);
-    return ret.toInt();
+    QVariant retVar = getValue(key, defaultValue);
+    bool ok;
+    int ret = retVar.toInt(&ok);
+    if (!ok) {
+        return defaultValue;
+    }
+    return ret;
 }
 
 /**
