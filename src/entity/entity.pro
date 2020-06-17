@@ -54,6 +54,8 @@ SOURCES = \
     RSplineEntity.cpp \
     RTextData.cpp \
     RTextEntity.cpp \
+    RToleranceData.cpp \
+    RToleranceEntity.cpp \
     RTraceData.cpp \
     RTraceEntity.cpp \
     RXLineData.cpp \
@@ -115,6 +117,8 @@ HEADERS = \
     RSplineEntity.h \
     RTextData.h \
     RTextEntity.h \
+    RToleranceData.h \
+    RToleranceEntity.h \
     RTraceData.h \
     RTraceEntity.h \
     RXLineData.h \

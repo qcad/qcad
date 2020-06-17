@@ -884,6 +884,8 @@ function entityTypeToString(type, plural) {
         return plural ? qsTr("Images") : qsTr("Image");
     case RS.EntityLeader:
         return plural ? qsTr("Leaders") : qsTr("Leader");
+    case RS.EntityTolerance:
+        return plural ? qsTr("Tolerances") : qsTr("Tolerance");
     case RS.EntityLine:
         return plural ? qsTr("Lines") : qsTr("Line");
     case RS.EntityXLine:
