@@ -984,7 +984,8 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
             }
             var document = EAction.getDocument();
             if (!attributes.isAngleType() &&
-                !attributes.isAreaType() /*&&
+                !attributes.isAreaType() &&
+                !attributes.isUnitLess() /*&&
                 (document.getLinearFormat()===RS.Fractional ||
                  document.getLinearFormat()===RS.FractionalStacked)*/) {
 
