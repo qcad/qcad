@@ -172,7 +172,7 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
     var numThreads = RSettings.getIntValue("GraphicsView/Threads", RS.getIdealThreadCount());
     if (numThreads!==1) {
         this.graphicsView.setNumThreads(numThreads);
-        EAction.handleUserMessage(qsTr("Threads:") + " " + numThreads);
+        //EAction.handleUserMessage(qsTr("Threads:") + " " + numThreads);
     }
     //}
 

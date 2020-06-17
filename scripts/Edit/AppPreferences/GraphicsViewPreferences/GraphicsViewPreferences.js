@@ -48,7 +48,7 @@ GraphicsViewPreferences.applyPreferences = function(doc, mdiChild) {
     }
 
     var numThreads = RSettings.getIntValue("GraphicsView/Threads", RS.getIdealThreadCount());
-    EAction.handleUserMessage(qsTr("Threads:") + " " + numThreads);
+    //EAction.handleUserMessage(qsTr("Threads:") + " " + numThreads);
 
     var di = mdiChild.getDocumentInterface();
     var scenes = di.getGraphicsScenes();
