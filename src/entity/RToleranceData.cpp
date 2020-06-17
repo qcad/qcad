@@ -22,7 +22,8 @@
 RToleranceData::RToleranceData()
     :
       dimScaleOverride(0.0),
-      dimToleranceBlockId(REntity::INVALID_ID) {
+      dimToleranceBlockId(REntity::INVALID_ID),
+      joinFirstField(false) {
 }
 
 RToleranceData::RToleranceData(RDocument* document, const RToleranceData& data)
@@ -84,11 +85,14 @@ QList<RVector> RToleranceData::getCorners() const {
         double dimtxt = getDimtxt();
 
         QList<RVector> points;
-        if (!divisions.last().isEmpty()) {
-            points.append(RVector(0, -dimtxt));
-            points.append(RVector(0, dimtxt));
-            points.append(RVector(divisions.last().last(), -dimtxt));
-            points.append(RVector(divisions.last().last(), dimtxt));
+
+        for (int i=0; i<divisions.length(); i++) {
+            if (!divisions[i].isEmpty()) {
+                points.append(RVector(0, -dimtxt - i*dimtxt*2));
+                points.append(RVector(0, dimtxt - i*dimtxt*2));
+                points.append(RVector(divisions[i].last(), -dimtxt - i*dimtxt*2));
+                points.append(RVector(divisions[i].last(), dimtxt - i*dimtxt*2));
+            }
         }
 
         for (int i=0; i<points.length(); i++) {
@@ -212,43 +216,84 @@ void RToleranceData::update() const {
 QList<RTextData> RToleranceData::getTextLabels() const {
     QList<RTextData> ret;
 
-    QStringList subs = text.split("%%v", QString::SkipEmptyParts);
+    divisions.clear();
 
     double dimtxt = getDimtxt();
-    //RVector cursor = location + RVector(dimtxt/2.0, 0);
-    double cursor = dimtxt/2.0;
+    qDebug() << "text:" << text;
 
-    divisions.clear();
-    divisions.append(QList<double>());
-    divisions[0].append(0);
+    // create list of string lists with field texts:
+    QList<QStringList> fields;
+    QStringList lines = text.split("\n");
+    for (int k=0; k<lines.length(); k++) {
+        QString line = lines[k];
+        qDebug() << "line:" << line;
 
-    // render text strings with distance of h:
-    for (int i=0; i<subs.length(); i++) {
-        QString sub = subs[i];
+        QStringList lineFields = line.split("%%v", QString::SkipEmptyParts);
+        fields.append(lineFields);
+    }
 
-        RTextData textData(RVector(cursor, 0),
-                     RVector(cursor, 0),
-                     dimtxt,
-                     100.0,
-                     RS::VAlignMiddle,
-                     RS::HAlignLeft,
-                     RS::LeftToRight,
-                     RS::AtLeast,
-                     1.0,
-                     sub,
-                     "Arial",
-                     false,
-                     false,
-                     0,
-                     false);
+    // find out if we need to join the first fields of the first two lines:
+    if (fields.length()>1 && fields[0].length()>0 && fields[1].length()>0) {
+        QString field1 = fields[0][0];
+        QString field2 = fields[1][0];
+        joinFirstField = (field1==field2);
+    }
 
-        cursor += textData.getBoundingBox().getWidth();
-        cursor += dimtxt;
-        divisions[0].append(cursor - dimtxt/2);
+    double cursorY = 0;
+    //QString firstField1;
+    //QString firstField2;
 
-        textData.rotate(direction.getAngle(), RVector(0,0));
-        textData.move(location);
-        ret.append(textData);
+    for (int k=0; k<fields.length(); k++) {
+        QStringList fieldsOfLine = fields[k];
+        qDebug() << "fieldsOfLine:" << fieldsOfLine;
+
+        //RVector cursor = location + RVector(dimtxt/2.0, 0);
+        double cursorX = dimtxt/2.0;
+
+        divisions.append(QList<double>());
+        divisions.last().append(0);
+
+        // render text strings with distance of dimtxt:
+        for (int i=0; i<fieldsOfLine.length(); i++) {
+            QString field = fieldsOfLine[i];
+            qDebug() << "field:" << field;
+
+            RTextData textData(RVector(cursorX, cursorY),
+                         RVector(cursorX, cursorY),
+                         dimtxt,
+                         100.0,
+                         RS::VAlignMiddle,
+                         RS::HAlignLeft,
+                         RS::LeftToRight,
+                         RS::AtLeast,
+                         1.0,
+                         field,
+                         //"Arial", // TODO
+                         (document==NULL || document->getDimensionFont().isEmpty()) ? "Standard" : document->getDimensionFont(),
+                         false,
+                         false,
+                         0,
+                         false);
+
+            // move first symbol of first line down if fields are joined:
+            if (k==0 && i==0 && joinFirstField) {
+                textData.move(RVector(0, -dimtxt));
+            }
+
+            cursorX += textData.getBoundingBox().getWidth();
+            cursorX += dimtxt;
+            divisions.last().append(cursorX - dimtxt/2);
+
+            if (k==1 && i==0 && joinFirstField) {
+                // skip first symbol of second line if fields are joined:
+                continue;
+            }
+            textData.rotate(direction.getAngle(), RVector(0,0));
+            textData.move(location);
+            ret.append(textData);
+        }
+
+        cursorY -= dimtxt * 2;
     }
 
     return ret;
@@ -258,31 +303,45 @@ QList<RLine> RToleranceData::getFrame() const {
     QList<RLine> ret;
 
     double dimtxt = getDimtxt();
+    double offsetY = 0.0;
 
     for (int i=0; i<divisions.length(); i++) {
+        qDebug() << "divisions:" << divisions[i];
+
         for (int k=0; k<divisions[i].length(); k++) {
             double division = divisions[i][k];
-            RLine line(division, -dimtxt, division, dimtxt);
+            RLine line(division, -dimtxt + offsetY, division, dimtxt + offsetY);
 
-            line.rotate(direction.getAngle());
-            line.move(location);
-            ret.append(line);
-        }
-
-        // top / bottom:
-        {
-            RLine line(divisions[i].first(), dimtxt, divisions[i].last(), dimtxt);
             line.rotate(direction.getAngle());
             line.move(location);
             ret.append(line);
         }
 
         {
-            RLine line(divisions[i].first(), -dimtxt, divisions[i].last(), -dimtxt);
+            // top line of current line:
+            double startX = divisions[i].first();
+            if (joinFirstField && i==1 && divisions[i].length()>1) {
+                startX = divisions[i][1];
+            }
+            RLine line(startX, dimtxt + offsetY, divisions[i].last(), dimtxt + offsetY);
             line.rotate(direction.getAngle());
             line.move(location);
             ret.append(line);
         }
+
+        {
+            // bottom line of current line:
+            double startX = divisions[i].first();
+            if (joinFirstField && i==0 && divisions[i].length()>1) {
+                startX = divisions[i][1];
+            }
+            RLine line(startX, -dimtxt + offsetY, divisions[i].last(), -dimtxt + offsetY);
+            line.rotate(direction.getAngle());
+            line.move(location);
+            ret.append(line);
+        }
+
+        offsetY -= dimtxt*2;
     }
 
     return ret;

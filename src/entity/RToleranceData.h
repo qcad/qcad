@@ -123,6 +123,7 @@ private:
     RBlock::Id dimToleranceBlockId;
 
     mutable QList<QList<double> > divisions;
+    mutable bool joinFirstField;
 };
 
 Q_DECLARE_METATYPE(RToleranceData)
