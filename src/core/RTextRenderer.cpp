@@ -67,14 +67,16 @@ QString RTextRenderer::rxWidthChange = "\\\\W(\\d*\\.?\\d*)x?;";
 QString RTextRenderer::rxObliqueAngleChange = "\\\\Q(\\d*\\.?\\d*);";
 QString RTextRenderer::rxTrackChange = "\\\\T(\\d*\\.?\\d*);";
 QString RTextRenderer::rxAlignmentChange = "\\\\A(\\d+);";
-QString RTextRenderer::rxFontChangeCad = "(?:\\\\F([^|]*)\\|+c(\\d+);|\\\\F([^|;]*);)";
-//QString RTextRenderer::rxFontChangeTtf = "\\\\f([^|]*)\\|b(\\d+)\\|i(\\d+)\\|c(\\d+)\\|p(\\d+);";
+QString RTextRenderer::rxFontChangeCad = "\\\\F([^|;]*)"    // \Ffont
+                                         "[^;]*"            // ignore anything except ";"
+                                         ";";               // require ";"
 QString RTextRenderer::rxFontChangeTtf = "\\\\f([^|]*)"
                                          "(?:\\|+([bicp])(\\d+))?"
                                          "(?:\\|+([bicp])(\\d+))?"
                                          "(?:\\|+([bicp])(\\d+))?"
                                          "(?:\\|+([bicp])(\\d+))?"
-                                         "\\|*" // optional "|" at end, see FS#1882
+                                         //"\\|*" // optional "|" at end, see FS#1882
+                                         "[^;]*"            // ignore anything except ";"
                                          ";";
 QString RTextRenderer::rxBeginBlock = "\\{";
 QString RTextRenderer::rxEndBlock = "\\}";
