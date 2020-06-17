@@ -72,14 +72,14 @@ void RToleranceEntity::init() {
     RToleranceEntity::PropertyDisplayedColor.generateId(typeid(RToleranceEntity), REntity::PropertyDisplayedColor);
     RToleranceEntity::PropertyDrawOrder.generateId(typeid(RToleranceEntity), REntity::PropertyDrawOrder);
 
-    RToleranceEntity::PropertyLocationX.generateId(typeid(RToleranceEntity), QT_TRANSLATE_NOOP("REntity", "Location"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RToleranceEntity::PropertyLocationY.generateId(typeid(RToleranceEntity), QT_TRANSLATE_NOOP("REntity", "Location"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RToleranceEntity::PropertyLocationZ.generateId(typeid(RToleranceEntity), QT_TRANSLATE_NOOP("REntity", "Location"), QT_TRANSLATE_NOOP("REntity", "Z"));
-    RToleranceEntity::PropertyDirectionX.generateId(typeid(RToleranceEntity), QT_TRANSLATE_NOOP("REntity", "Direction"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RToleranceEntity::PropertyDirectionY.generateId(typeid(RToleranceEntity), QT_TRANSLATE_NOOP("REntity", "Direction"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RToleranceEntity::PropertyDirectionZ.generateId(typeid(RToleranceEntity), QT_TRANSLATE_NOOP("REntity", "Direction"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RToleranceEntity::PropertyLocationX.generateId(typeid(RToleranceEntity), QT_TRANSLATE_NOOP("REntity", "Location"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
+    RToleranceEntity::PropertyLocationY.generateId(typeid(RToleranceEntity), QT_TRANSLATE_NOOP("REntity", "Location"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
+    RToleranceEntity::PropertyLocationZ.generateId(typeid(RToleranceEntity), QT_TRANSLATE_NOOP("REntity", "Location"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
+    RToleranceEntity::PropertyDirectionX.generateId(typeid(RToleranceEntity), QT_TRANSLATE_NOOP("REntity", "Direction"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
+    RToleranceEntity::PropertyDirectionY.generateId(typeid(RToleranceEntity), QT_TRANSLATE_NOOP("REntity", "Direction"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
+    RToleranceEntity::PropertyDirectionZ.generateId(typeid(RToleranceEntity), QT_TRANSLATE_NOOP("REntity", "Direction"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
     RToleranceEntity::PropertyText.generateId(typeid(RToleranceEntity), "", QT_TRANSLATE_NOOP("REntity", "Text"));
-    RToleranceEntity::PropertyDimScale.generateId(typeid(RToleranceEntity), "", QT_TRANSLATE_NOOP("REntity", "Scale"));
+    RToleranceEntity::PropertyDimScale.generateId(typeid(RToleranceEntity), "", QT_TRANSLATE_NOOP("REntity", "Scale"), false, RPropertyAttributes::Geometry);
 }
 
 bool RToleranceEntity::setProperty(RPropertyTypeId propertyTypeId,

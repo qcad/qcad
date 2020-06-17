@@ -144,6 +144,45 @@ bool RToleranceData::moveReferencePoint(const RVector& referencePoint, const RVe
     return ret;
 }
 
+bool RToleranceData::move(const RVector& offset) {
+    location.move(offset);
+    update();
+    return true;
+}
+
+bool RToleranceData::rotate(double rotation, const RVector& center) {
+    location.rotate(rotation, center);
+    direction.rotate(rotation);
+    update();
+    return true;
+}
+
+bool RToleranceData::scale(const RVector& scaleFactors, const RVector& center) {
+    location.scale(scaleFactors, center);
+    update();
+    return true;
+}
+
+bool RToleranceData::mirror(const RLine& axis) {
+    RVector p = location + direction;
+    p.mirror(axis);
+
+    location.mirror(axis);
+
+    direction = p-location;
+
+    update();
+    return true;
+}
+
+bool RToleranceData::flipHorizontal() {
+    return mirror(RLine(RVector(0,0), RVector(0,1)));
+}
+
+bool RToleranceData::flipVertical() {
+    return mirror(RLine(RVector(0,0), RVector(1,0)));
+}
+
 QList<QSharedPointer<RShape> > RToleranceData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment) const {
     Q_UNUSED(queryBox)
     //Q_UNUSED(ignoreComplex)

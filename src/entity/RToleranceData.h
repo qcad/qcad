@@ -90,6 +90,13 @@ public:
 
     virtual bool moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers = Qt::NoModifier);
 
+    virtual bool move(const RVector& offset);
+    virtual bool rotate(double rotation, const RVector& center);
+    virtual bool scale(const RVector& scaleFactors, const RVector& center);
+    virtual bool mirror(const RLine& axis);
+    virtual bool flipHorizontal();
+    virtual bool flipVertical();
+
     QList<QSharedPointer<RShape> > getExploded(int segments = RDEFAULT_MIN1) const {
         //return RPolyline::getExploded(segments);
         return QList<QSharedPointer<RShape> >();
