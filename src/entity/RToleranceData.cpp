@@ -77,16 +77,69 @@ void RToleranceData::scaleVisualProperties(double scaleFactor) {
     }
 }
 
+QList<RVector> RToleranceData::getCorners() const {
+    QList<RVector> ret;
+
+    if (!divisions.isEmpty()) {
+        double dimtxt = getDimtxt();
+
+        QList<RVector> points;
+        if (!divisions.last().isEmpty()) {
+            points.append(RVector(0, -dimtxt));
+            points.append(RVector(0, dimtxt));
+            points.append(RVector(divisions.last().last(), -dimtxt));
+            points.append(RVector(divisions.last().last(), dimtxt));
+        }
+
+        for (int i=0; i<points.length(); i++) {
+            RVector p = points[i];
+            p.rotate(direction.getAngle(), RVector(0,0));
+            p.move(location);
+
+            ret.append(p);
+        }
+    }
+
+    return ret;
+}
+
 QList<RRefPoint> RToleranceData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 
-    return QList<RRefPoint>();
+    QList<RRefPoint> ret;
+
+    ret.append(RRefPoint(location));
+
+    if (!divisions.isEmpty()) {
+        QList<RVector> corners = getCorners();
+
+        for (int i=0; i<corners.length(); i++) {
+            ret.append(RRefPoint(corners[i]));
+        }
+    }
+
+    return ret;
 }
 
 bool RToleranceData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers) {
     Q_UNUSED(modifiers)
 
     bool ret = false;
+
+    if (referencePoint.equalsFuzzy(location)) {
+        location = targetPoint;
+        ret = true;
+        update();
+    }
+
+    QList<RVector> corners = getCorners();
+    for (int i=0; i<corners.length(); i++) {
+        if (referencePoint.equalsFuzzy(corners[i])) {
+            location += targetPoint-corners[i];
+            ret = true;
+            update();
+        }
+    }
 
     return ret;
 }
@@ -123,7 +176,7 @@ QList<RTextData> RToleranceData::getTextLabels() const {
     QStringList subs = text.split("%%v", QString::SkipEmptyParts);
 
     double dimtxt = getDimtxt();
-    //RVector cursor = getLocation() + RVector(dimtxt/2.0, 0);
+    //RVector cursor = location + RVector(dimtxt/2.0, 0);
     double cursor = dimtxt/2.0;
 
     divisions.clear();
@@ -133,8 +186,6 @@ QList<RTextData> RToleranceData::getTextLabels() const {
     // render text strings with distance of h:
     for (int i=0; i<subs.length(); i++) {
         QString sub = subs[i];
-
-        qDebug() << "sub:" << sub;
 
         RTextData textData(RVector(cursor, 0),
                      RVector(cursor, 0),
@@ -156,8 +207,8 @@ QList<RTextData> RToleranceData::getTextLabels() const {
         cursor += dimtxt;
         divisions[0].append(cursor - dimtxt/2);
 
-        textData.rotate(getDirection().getAngle(), RVector(0,0));
-        textData.move(getLocation());
+        textData.rotate(direction.getAngle(), RVector(0,0));
+        textData.move(location);
         ret.append(textData);
     }
 
@@ -174,23 +225,23 @@ QList<RLine> RToleranceData::getFrame() const {
             double division = divisions[i][k];
             RLine line(division, -dimtxt, division, dimtxt);
 
-            line.rotate(getDirection().getAngle());
-            line.move(getLocation());
+            line.rotate(direction.getAngle());
+            line.move(location);
             ret.append(line);
         }
 
         // top / bottom:
         {
             RLine line(divisions[i].first(), dimtxt, divisions[i].last(), dimtxt);
-            line.rotate(getDirection().getAngle());
-            line.move(getLocation());
+            line.rotate(direction.getAngle());
+            line.move(location);
             ret.append(line);
         }
 
         {
             RLine line(divisions[i].first(), -dimtxt, divisions[i].last(), -dimtxt);
-            line.rotate(getDirection().getAngle());
-            line.move(getLocation());
+            line.rotate(direction.getAngle());
+            line.move(location);
             ret.append(line);
         }
     }
