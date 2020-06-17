@@ -178,6 +178,12 @@
         setAreaType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isUnitLess
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setUnitLess
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLabel
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

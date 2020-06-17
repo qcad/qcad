@@ -177,7 +177,6 @@
 
     <function><type><name>void</name></type> <name>setBold</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
         <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name>Bold</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
-        <comment type="line">//bold = on;</comment>
         <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
@@ -291,30 +290,30 @@
     }</block></function>
 
     <function><type><name>void</name></type> <name>setBackward</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name>Backward</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        <expr_stmt><expr><call><name>setFlag</name><argument_list>(<argument><expr><name>Backward</name></expr></argument>, <argument><expr><call><name>isSimple</name><argument_list>()</argument_list></call> &amp;&amp; <name>on</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
         <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>bool</name></type> <name>isBackward</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name>Backward</name></expr></argument>)</argument_list></call></expr>;</return>
+        <return>return <expr><call><name>isSimple</name><argument_list>()</argument_list></call> &amp;&amp; <call><name>getFlag</name><argument_list>(<argument><expr><name>Backward</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>void</name></type> <name>setUpsideDown</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name>UpsideDown</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        <expr_stmt><expr><call><name>setFlag</name><argument_list>(<argument><expr><name>UpsideDown</name></expr></argument>, <argument><expr><call><name>isSimple</name><argument_list>()</argument_list></call> &amp;&amp; <name>on</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
         <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>bool</name></type> <name>isUpsideDown</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name>UpsideDown</name></expr></argument>)</argument_list></call></expr>;</return>
+        <return>return <expr><call><name>isSimple</name><argument_list>()</argument_list></call> &amp;&amp; <call><name>getFlag</name><argument_list>(<argument><expr><name>UpsideDown</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>void</name></type> <name>setDimensionLabel</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>dimensionLabel</name> = <name>on</name></expr>;</expr_stmt>
+        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name>DimensionLabel</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
         <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>bool</name></type> <name>isDimensionLabel</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>dimensionLabel</name></expr>;</return>
+        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name>DimensionLabel</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>void</name></type> <name>setSelected</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
@@ -323,11 +322,11 @@
     }</block></function>
 
     <function><type><name>void</name></type> <name>setHighlighted</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>highlighted</name> = <name>on</name></expr>;</expr_stmt>
+        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name>Highlighted</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>bool</name></type> <name>isHighlighted</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>highlighted</name></expr>;</return>
+        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name>Highlighted</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RRefPoint</name></argument>&gt;</argument_list></name></type> <name>getReferencePoints</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>ProjectionRenderingHint</name></name></type> <name>hint</name> =<init> <expr><name><name>RS</name>::<name>RenderTop</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
@@ -414,15 +413,8 @@
     <decl_stmt><decl><type><name>double</name></type> <name>lineSpacingFactor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QString</name></type> <name>fontName</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QString</name></type> <name>fontFile</name></decl>;</decl_stmt>
-    <comment type="line">//bool bold;</comment>
-    <comment type="line">//bool italic;</comment>
     <decl_stmt><decl><type><name>double</name></type> <name>angle</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>xScale</name></decl>;</decl_stmt>
-    <comment type="line">//bool simple;</comment>
-    <decl_stmt><decl><type><name>bool</name></type> <name>dimensionLabel</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>bool</name></type> <name>highlighted</name></decl>;</decl_stmt>
-    <comment type="line">//bool backward;</comment>
-    <comment type="line">//bool upsideDown;</comment>
     <decl_stmt><decl><type><name>TextFlags</name></type> <name>flags</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>mutable</name> <name>double</name></type> <name>height</name></decl>;</decl_stmt>
@@ -444,6 +436,8 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>const RTextBasedData*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;RTextBasedData&gt;</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;RTextBasedData&gt;*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTextBasedData::TextFlag</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTextBasedData::TextFlag*</argument>)</argument_list></macro>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

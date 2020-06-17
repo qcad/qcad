@@ -35,6 +35,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="Geometry" />
       <value name="Scale" />
       <value name="Area" />
+      <value name="UnitLess" />
     </enum>
     <constructor>
       <variant />
@@ -310,6 +311,19 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="setAreaType" cppName="setAreaType"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="v"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isUnitLess" cppName="isUnitLess"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setUnitLess" cppName="setUnitLess"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">

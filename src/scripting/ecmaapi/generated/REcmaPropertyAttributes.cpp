@@ -138,6 +138,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setAreaType, "setAreaType");
             
+            REcmaHelper::registerFunction(&engine, proto, isUnitLess, "isUnitLess");
+            
+            REcmaHelper::registerFunction(&engine, proto, setUnitLess, "setUnitLess");
+            
             REcmaHelper::registerFunction(&engine, proto, getLabel, "getLabel");
             
             REcmaHelper::registerFunction(&engine, proto, setLabel, "setLabel");
@@ -309,6 +313,11 @@
 
     ctor.setProperty("Area",
     QScriptValue(RPropertyAttributes::Area),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("UnitLess",
+    QScriptValue(RPropertyAttributes::UnitLess),
     QScriptValue::ReadOnly);
 
 
@@ -2763,6 +2772,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPropertyAttributes::setAreaType", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyAttributes::isUnitLess
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyAttributes::isUnitLess", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::isUnitLess";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyAttributes* self = 
+                        getSelf("isUnitLess", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isUnitLess();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.isUnitLess().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyAttributes::isUnitLess", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyAttributes::setUnitLess
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyAttributes::setUnitLess", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::setUnitLess";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyAttributes* self = 
+                        getSelf("setUnitLess", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setUnitLess(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.setUnitLess().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyAttributes::setUnitLess", context, engine);
             return result;
         }
          QScriptValue
