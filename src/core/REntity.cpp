@@ -201,9 +201,11 @@ QList<RVector> REntity::getIntersectionPoints(
             same = true;
         }
 
-        const RPolyline* pl = dynamic_cast<const RPolyline*>(shape);
-        if (pl!=NULL) {
-            same = true;
+        if (shape!=NULL && shape->getShapeType()==RShape::Polyline) {
+            const RPolyline* pl = dynamic_cast<const RPolyline*>(shape);
+            if (pl!=NULL) {
+                same = true;
+            }
         }
 
         if (getType()==RS::EntityBlockRef || getType()==RS::EntityViewport) {
