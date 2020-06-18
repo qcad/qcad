@@ -302,6 +302,7 @@
 #include "REcmaSharedPointerTextData.h"
 #include "REcmaSharedPointerTextEntity.h"
 #include "REcmaSharedPointerTextLabel.h"
+#include "REcmaSharedPointerToleranceEntity.h"
 #include "REcmaSharedPointerTraceEntity.h"
 #include "REcmaSharedPointerTriangle.h"
 #include "REcmaSharedPointerUcs.h"
@@ -348,6 +349,8 @@
 #include "REcmaTextLayout.h"
 #include "REcmaTextRenderer.h"
 #include "REcmaThread.h"
+#include "REcmaToleranceData.h"
+#include "REcmaToleranceEntity.h"
 #include "REcmaToolButton.h"
 #include "REcmaToolMatrixItemDelegate.h"
 #include "REcmaTraceData.h"
@@ -886,6 +889,10 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaDimOrdinateData::initEcma(*engine);
     REcmaDimOrdinateEntity::initEcma(*engine);
     REcmaSharedPointerDimOrdinateEntity::initEcma(*engine);
+
+    REcmaToleranceData::initEcma(*engine);
+    REcmaToleranceEntity::initEcma(*engine);
+    REcmaSharedPointerToleranceEntity::initEcma(*engine);
 
     REcmaTransaction::initEcma(*engine);
 
