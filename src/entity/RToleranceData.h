@@ -66,12 +66,20 @@ public:
         direction = d;
     }
 
+    QList<QStringList> getFields() const;
+
     QString getText() const {
         return text;
     }
     void setText(const QString& t) {
         text = t;
     }
+//    void addField(const QString& t) {
+//        text += "%%v" + t;
+//    }
+//    void addLineBreak() {
+//        text += "^J";
+//    }
 
     double getDimtxt() const;
 

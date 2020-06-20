@@ -16,6 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RTextData.h"
 #include "RToleranceData.h"
 #include "RUnit.h"
 
@@ -213,29 +214,39 @@ void RToleranceData::update() const {
     REntityData::update();
 }
 
+QList<QStringList> RToleranceData::getFields() const {
+    // create list of string lists with field texts:
+    QList<QStringList> ret;
+
+    QStringList lines = text.split("^J");
+    for (int k=0; k<lines.length(); k++) {
+        QString line = lines[k];
+        //qDebug() << "line:" << line;
+
+        QStringList lineFields = line.split("%%v", QString::SkipEmptyParts);
+        ret.append(lineFields);
+    }
+
+    return ret;
+}
+
 QList<RTextData> RToleranceData::getTextLabels() const {
     QList<RTextData> ret;
 
     divisions.clear();
 
     double dimtxt = getDimtxt();
-    qDebug() << "text:" << text;
+    //qDebug() << "text:" << text;
 
-    // create list of string lists with field texts:
-    QList<QStringList> fields;
-    QStringList lines = text.split("\n");
-    for (int k=0; k<lines.length(); k++) {
-        QString line = lines[k];
-        qDebug() << "line:" << line;
-
-        QStringList lineFields = line.split("%%v", QString::SkipEmptyParts);
-        fields.append(lineFields);
-    }
+    QList<QStringList> fields = getFields();
 
     // find out if we need to join the first fields of the first two lines:
     if (fields.length()>1 && fields[0].length()>0 && fields[1].length()>0) {
         QString field1 = fields[0][0];
         QString field2 = fields[1][0];
+        QRegExp reg("\\F[gG][dD][tT];", Qt::CaseInsensitive);
+        field1.replace(reg, "\\Fgdt;");
+        field2.replace(reg, "\\Fgdt;");
         joinFirstField = (field1==field2);
     }
 
@@ -245,7 +256,7 @@ QList<RTextData> RToleranceData::getTextLabels() const {
 
     for (int k=0; k<fields.length(); k++) {
         QStringList fieldsOfLine = fields[k];
-        qDebug() << "fieldsOfLine:" << fieldsOfLine;
+        //qDebug() << "fieldsOfLine:" << fieldsOfLine;
 
         //RVector cursor = location + RVector(dimtxt/2.0, 0);
         double cursorX = dimtxt/2.0;
@@ -256,7 +267,7 @@ QList<RTextData> RToleranceData::getTextLabels() const {
         // render text strings with distance of dimtxt:
         for (int i=0; i<fieldsOfLine.length(); i++) {
             QString field = fieldsOfLine[i];
-            qDebug() << "field:" << field;
+            //qDebug() << "field:" << field;
 
             RTextData textData(RVector(cursorX, cursorY),
                          RVector(cursorX, cursorY),
@@ -306,7 +317,7 @@ QList<RLine> RToleranceData::getFrame() const {
     double offsetY = 0.0;
 
     for (int i=0; i<divisions.length(); i++) {
-        qDebug() << "divisions:" << divisions[i];
+        //qDebug() << "divisions:" << divisions[i];
 
         for (int k=0; k<divisions[i].length(); k++) {
             double division = divisions[i][k];
