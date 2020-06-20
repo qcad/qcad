@@ -3162,7 +3162,7 @@ Do you wish to recover it?</source>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Dimension Tools</source>
         <translation>Orodja dimenzij</translation>
     </message>
@@ -5576,12 +5576,21 @@ je že na seznamu.</translation>
         <translation>Privzeta debelina črte:</translation>
     </message>
     <message>
-        <location line="+518"/>
-        <source>Use multithreading</source>
-        <translation>Uporabi večnitnost</translation>
+        <location line="+519"/>
+        <source>auto</source>
+        <translation type="unfinished">samodejno</translation>
     </message>
     <message>
-        <location line="-575"/>
+        <location line="+98"/>
+        <source>Number of threads:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use multithreading</source>
+        <translation type="vanished">Uporabi večnitnost</translation>
+    </message>
+    <message>
+        <location line="-674"/>
         <source>Color lightness threshold:</source>
         <translation>Prag svetlosti barv:</translation>
     </message>
@@ -5676,7 +5685,7 @@ je že na seznamu.</translation>
         <translation type="obsolete">Prag prikaza višine besedila:</translation>
     </message>
     <message>
-        <location line="+345"/>
+        <location line="+441"/>
         <source>Selection</source>
         <translation>Izbor</translation>
     </message>
@@ -9946,12 +9955,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1467"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1468"/>
         <source>*VARIES*</source>
         <translation>*RAZLIČNO*</translation>
     </message>
     <message>
-        <location line="-1274"/>
+        <location line="-1275"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10010,7 +10019,7 @@ shown in search results:</source>
         <translation>Prikaži vse lasnosti</translation>
     </message>
     <message>
-        <location line="+660"/>
+        <location line="+661"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -10051,12 +10060,12 @@ shown in search results:</source>
         <translation type="obsolete">Dno</translation>
     </message>
     <message>
-        <location line="-543"/>
+        <location line="-544"/>
         <source>Auto</source>
         <translation>Samodejno</translation>
     </message>
     <message>
-        <location line="+142"/>
+        <location line="+143"/>
         <source>Use auto measurement</source>
         <translation>Uporabi samodejne meritve</translation>
     </message>
@@ -13577,7 +13586,7 @@ shown in search results:</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+286"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+290"/>
         <source>Dropped data not supported</source>
         <translation>Odvrženi podatki niso podprti</translation>
     </message>
@@ -14247,6 +14256,16 @@ shown in search results:</source>
         <location line="+0"/>
         <source>Leader</source>
         <translation>Nosilka</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Tolerances</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tolerance</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

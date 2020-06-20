@@ -3326,7 +3326,7 @@ Voulez-vous le récupérer ?</translation>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Dimension Tools</source>
         <translation>Outils dimension</translation>
     </message>
@@ -5907,7 +5907,17 @@ est déjà dans la liste.</translation>
         <translation>Correction automatique des couleurs en noir et blanc</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="+547"/>
+        <source>auto</source>
+        <translation type="unfinished">auto</translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>Number of threads:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-674"/>
         <source>Color lightness threshold:</source>
         <translation>Seuil de couleur :</translation>
     </message>
@@ -5946,12 +5956,11 @@ est déjà dans la liste.</translation>
         <translation>Afficher les entités de plus de N tirets que continu:</translation>
     </message>
     <message>
-        <location line="+181"/>
         <source>Use multithreading</source>
-        <translation>Utilisez multithreading</translation>
+        <translation type="vanished">Utilisez multithreading</translation>
     </message>
     <message>
-        <location line="-263"/>
+        <location line="-82"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Incrément angulaire minimum pour rendre arcs (degrés):</translation>
     </message>
@@ -6025,7 +6034,7 @@ est déjà dans la liste.</translation>
         <translation type="obsolete">Afficher limite pour le texte:</translation>
     </message>
     <message>
-        <location line="+345"/>
+        <location line="+441"/>
         <source>Selection</source>
         <translation>Sélection</translation>
     </message>
@@ -10714,7 +10723,7 @@ dans les résultats de recherche :</translation>
         <translation>Afficher toutes les propriétés</translation>
     </message>
     <message>
-        <location line="+660"/>
+        <location line="+661"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -10748,7 +10757,7 @@ dans les résultats de recherche :</translation>
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1274"/>
+        <location line="-1275"/>
         <source>:</source>
         <translation> :</translation>
     </message>
@@ -10782,7 +10791,7 @@ dans les résultats de recherche :</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+142"/>
+        <location line="+143"/>
         <source>Use auto measurement</source>
         <translation>Utiliser la mesure automatique</translation>
     </message>
@@ -14448,7 +14457,7 @@ dans les résultats de recherche :</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+286"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+290"/>
         <source>Dropped data not supported</source>
         <translation>Données insérées pas pris en charge</translation>
     </message>
@@ -15162,6 +15171,16 @@ dans les résultats de recherche :</translation>
         <location line="+0"/>
         <source>Leaders</source>
         <translation>Lignes de repère</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Tolerances</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tolerance</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

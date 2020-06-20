@@ -3077,7 +3077,7 @@ Přejete si ho obnovit?</translation>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Dimension Tools</source>
         <translation>Nástroje kót</translation>
     </message>
@@ -5350,7 +5350,17 @@ již v seznamu je.</translation>
         <translation>Zabránit bílé barvě na bílém / černé barvě na černém displeji</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="+547"/>
+        <source>auto</source>
+        <translation type="unfinished">auto</translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>Number of threads:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-674"/>
         <source>Color lightness threshold:</source>
         <translation>Prahová hodnota světla barvy:</translation>
     </message>
@@ -5439,12 +5449,7 @@ již v seznamu je.</translation>
         <translation>Zobrazit maximální počet referenčních bodů:</translation>
     </message>
     <message>
-        <location line="+77"/>
-        <source>Use multithreading</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+186"/>
         <source>Selection</source>
         <translation>Výběr</translation>
     </message>
@@ -9413,7 +9418,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+142"/>
+        <location line="+143"/>
         <source>Use auto measurement</source>
         <translation>Použít automatické měření</translation>
     </message>
@@ -12759,7 +12764,7 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+286"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+290"/>
         <source>Dropped data not supported</source>
         <translation>Vložené údaje nejsou podporované</translation>
     </message>
@@ -13394,6 +13399,16 @@ ve výsledcích vyhledávání:</translation>
         <location line="+0"/>
         <source>Leader</source>
         <translation>Odkazová kóta</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Tolerances</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tolerance</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

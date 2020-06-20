@@ -3152,7 +3152,7 @@ Prajete si ho obnoviť?</translation>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Dimension Tools</source>
         <translation>Kótovacie Nástroje</translation>
     </message>
@@ -5504,7 +5504,17 @@ už existuje v zozname.</translation>
         <translation>Zamedziť zobrazeniu čierne na čiernom / biele na bielom</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="+547"/>
+        <source>auto</source>
+        <translation type="unfinished">auto</translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>Number of threads:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-674"/>
         <source>Color lightness threshold:</source>
         <translation>Hranica svetlosti farby:</translation>
     </message>
@@ -5597,12 +5607,7 @@ už existuje v zozname.</translation>
         <translation>Maximálny počet zobrazených bodov :</translation>
     </message>
     <message>
-        <location line="+77"/>
-        <source>Use multithreading</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+186"/>
         <source>Selection</source>
         <translation>Výber</translation>
     </message>
@@ -9639,12 +9644,12 @@ vo výsledku vyhľadania:</translation>
         <translation>Vždy zobrazovať všetky vlastnosti (môže to spomaliť výber prvkov)</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1467"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1468"/>
         <source>*VARIES*</source>
         <translation>*Rôzne*</translation>
     </message>
     <message>
-        <location line="-1274"/>
+        <location line="-1275"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9708,7 +9713,7 @@ vo výsledku vyhľadania:</translation>
         <translation>automatický</translation>
     </message>
     <message>
-        <location line="+142"/>
+        <location line="+143"/>
         <source>Use auto measurement</source>
         <translation>Použiť automatické meranie</translation>
     </message>
@@ -13104,7 +13109,7 @@ vo výsledku vyhľadania:</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+286"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+290"/>
         <source>Dropped data not supported</source>
         <translation>Vložené údaje nie sú podporované</translation>
     </message>
@@ -13774,6 +13779,16 @@ vo výsledku vyhľadania:</translation>
         <location line="+0"/>
         <source>Leader</source>
         <translation>Odkazová čiara</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Tolerances</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tolerance</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

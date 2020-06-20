@@ -2979,7 +2979,7 @@ Do you wish to recover it?</source>
         <translation>Δ</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Dimension Tools</source>
         <translation>标注工具</translation>
     </message>
@@ -5305,12 +5305,17 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+77"/>
-        <source>Use multithreading</source>
+        <location line="+78"/>
+        <source>auto</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+98"/>
+        <source>Number of threads:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Selection</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9222,7 +9227,7 @@ shown in search results:</source>
         <translation type="unfinished">自动</translation>
     </message>
     <message>
-        <location line="+142"/>
+        <location line="+143"/>
         <source>Use auto measurement</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12426,7 +12431,7 @@ shown in search results:</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+286"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+290"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13040,6 +13045,16 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Leader</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Tolerances</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tolerance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

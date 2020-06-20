@@ -3150,7 +3150,7 @@ Do you wish to recover it?</source>
         <translation>デルタ</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Dimension Tools</source>
         <translation>寸法ツール</translation>
     </message>
@@ -5548,7 +5548,17 @@ is already in the list.</source>
         <translation>白に白/黒に黒の表示を防ぐ</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="+547"/>
+        <source>auto</source>
+        <translation type="unfinished">自動</translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>Number of threads:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-674"/>
         <source>Color lightness threshold:</source>
         <translation>色の明るさ閾値:</translation>
     </message>
@@ -5587,12 +5597,7 @@ is already in the list.</source>
         <translation>エンティティをこの数以上の連続点として表示する</translation>
     </message>
     <message>
-        <location line="+181"/>
-        <source>Use multithreading</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-263"/>
+        <location line="-82"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>弧を描く時に分割する最小角度（度）</translation>
     </message>
@@ -5658,7 +5663,7 @@ is already in the list.</source>
         <translation type="obsolete">テキスト高さの表示閾値:</translation>
     </message>
     <message>
-        <location line="+345"/>
+        <location line="+441"/>
         <source>Selection</source>
         <translation>選択</translation>
     </message>
@@ -9871,12 +9876,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1467"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1468"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
     <message>
-        <location line="-1274"/>
+        <location line="-1275"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9930,7 +9935,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+660"/>
+        <location line="+661"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -9939,7 +9944,7 @@ shown in search results:</source>
         <translation type="obsolete">カスタムプロパティを追加</translation>
     </message>
     <message>
-        <location line="-706"/>
+        <location line="-707"/>
         <source>Add custom property to selected objects</source>
         <translation>選択したオブジェクトにカスタムプロパティを追加</translation>
     </message>
@@ -9949,7 +9954,7 @@ shown in search results:</source>
         <translation>自動</translation>
     </message>
     <message>
-        <location line="+142"/>
+        <location line="+143"/>
         <source>Use auto measurement</source>
         <translation>自動計測を使用</translation>
     </message>
@@ -13505,7 +13510,7 @@ shown in search results:</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+286"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+290"/>
         <source>Dropped data not supported</source>
         <translation>ドロップされたデータはサポートされていません</translation>
     </message>
@@ -14171,6 +14176,16 @@ shown in search results:</source>
         <location line="+0"/>
         <source>Leader</source>
         <translation>引出線</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Tolerances</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tolerance</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

@@ -3402,7 +3402,7 @@ Layer ad alta risoluzione possono rallentare la navigazione in QGIS.</translator
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Dimension Tools</source>
         <translation>Strumenti dimensione</translation>
     </message>
@@ -5976,7 +5976,17 @@ Punto decimale:</translatorcomment>
         <translation>Auto corretti colori bianco e nero</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="+547"/>
+        <source>auto</source>
+        <translation type="unfinished">auto</translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>Number of threads:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-674"/>
         <source>Color lightness threshold:</source>
         <translation>Soglia per la leggerezza del colore:</translation>
     </message>
@@ -6015,12 +6025,11 @@ Punto decimale:</translatorcomment>
         <translation>Visualizza entità con più di N trattini come continuo:</translation>
     </message>
     <message>
-        <location line="+181"/>
         <source>Use multithreading</source>
-        <translation>Utilizzare il multithreading</translation>
+        <translation type="vanished">Utilizzare il multithreading</translation>
     </message>
     <message>
-        <location line="-263"/>
+        <location line="-82"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Passo angolo minimo per rendere archi (gradi):</translation>
     </message>
@@ -6090,7 +6099,7 @@ Punto decimale:</translatorcomment>
         <translation type="obsolete">Visualizzare limite per il testo:</translation>
     </message>
     <message>
-        <location line="+345"/>
+        <location line="+441"/>
         <source>Selection</source>
         <translation>Selezione</translation>
     </message>
@@ -10880,12 +10889,12 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="+703"/>
+        <location line="+704"/>
         <source>*VARIES*</source>
         <translation>*VARIE*</translation>
     </message>
     <message>
-        <location line="-1274"/>
+        <location line="-1275"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: Arduino_it_IT.po--
@@ -10942,7 +10951,7 @@ Nessuna selezione</translatorcomment>
         <translation>Mostra tutte le proprietà</translation>
     </message>
     <message>
-        <location line="+660"/>
+        <location line="+661"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -10955,12 +10964,12 @@ Nessuna selezione</translatorcomment>
         <translation type="obsolete">Sotto</translation>
     </message>
     <message>
-        <location line="-543"/>
+        <location line="-544"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+142"/>
+        <location line="+143"/>
         <source>Use auto measurement</source>
         <translation>Utilizzare la misurazione automatica</translation>
     </message>
@@ -14812,7 +14821,7 @@ Obiettivo punto</translatorcomment>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+286"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+290"/>
         <source>Dropped data not supported</source>
         <translation>I dati inseriti non sono supportati</translation>
     </message>
@@ -15544,6 +15553,16 @@ Modificare un blocco sulla base di un riferimento di blocco scelto</translatorco
         <location line="+0"/>
         <source>Leaders</source>
         <translation>Direttrici</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Tolerances</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tolerance</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

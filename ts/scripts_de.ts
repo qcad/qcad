@@ -3523,7 +3523,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Dimension Tools</source>
         <translation>Bemassungswerkzeuge</translation>
     </message>
@@ -6155,7 +6155,17 @@ ist bereits in der Liste.</translation>
         <translation>Schwarz / weiss automatisch anpassen</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="+547"/>
+        <source>auto</source>
+        <translation type="unfinished">auto</translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>Number of threads:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-674"/>
         <source>Color lightness threshold:</source>
         <translation>Farbgrenzwert:</translation>
     </message>
@@ -6194,12 +6204,11 @@ ist bereits in der Liste.</translation>
         <translation>Gestrichelte Objekte mit mehr als N Strichen ausgezogen darstellen:</translation>
     </message>
     <message>
-        <location line="+181"/>
         <source>Use multithreading</source>
-        <translation>Multithreading verwenden</translation>
+        <translation type="vanished">Multithreading verwenden</translation>
     </message>
     <message>
-        <location line="-263"/>
+        <location line="-82"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Minimaler Winkel für Bogensegmentierung in Anzeige (Grad):</translation>
     </message>
@@ -6273,7 +6282,7 @@ ist bereits in der Liste.</translation>
         <translation type="obsolete">Anzeigegrenzwert für Texte:</translation>
     </message>
     <message>
-        <location line="+345"/>
+        <location line="+441"/>
         <source>Selection</source>
         <translation>Selektion</translation>
     </message>
@@ -11494,12 +11503,12 @@ nicht öffnen.
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1467"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1468"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="-1274"/>
+        <location line="-1275"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -11548,7 +11557,7 @@ nicht öffnen.
         <translation>Alle Eigenschaften anzeigen</translation>
     </message>
     <message>
-        <location line="+660"/>
+        <location line="+661"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -11585,7 +11594,7 @@ nicht öffnen.
         <translation type="obsolete">Mittelpunkt</translation>
     </message>
     <message>
-        <location line="-706"/>
+        <location line="-707"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
@@ -11603,7 +11612,7 @@ nicht öffnen.
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+142"/>
+        <location line="+143"/>
         <source>Use auto measurement</source>
         <translation>Automatisch</translation>
     </message>
@@ -11683,7 +11692,7 @@ nicht öffnen.
         <translation type="vanished">Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1143"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1144"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>
@@ -15602,7 +15611,7 @@ nicht öffnen.
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+286"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+290"/>
         <source>Dropped data not supported</source>
         <translation>Eingefügte Daten nicht unterstützt</translation>
     </message>
@@ -16359,6 +16368,16 @@ nicht öffnen.
         <location line="+0"/>
         <source>Leader</source>
         <translation>Führungslinie</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Tolerances</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tolerance</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

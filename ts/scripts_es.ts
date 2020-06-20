@@ -3388,7 +3388,7 @@ Sombreado/Relleno</translatorcomment>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Dimension Tools</source>
         <translation>Herramientas de dimensión</translation>
     </message>
@@ -5991,7 +5991,17 @@ Punto decimal:</translatorcomment>
         <translation>Auto corregir los colores blanco y negro</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="+547"/>
+        <source>auto</source>
+        <translation type="unfinished">auto</translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>Number of threads:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-674"/>
         <source>Color lightness threshold:</source>
         <translation>Umbral para la claridad del color:</translation>
     </message>
@@ -6030,12 +6040,11 @@ Punto decimal:</translatorcomment>
         <translation>Mostrar las entidades con más de N guiones como contínua:</translation>
     </message>
     <message>
-        <location line="+181"/>
         <source>Use multithreading</source>
-        <translation>Usar multihilo</translation>
+        <translation type="vanished">Usar multihilo</translation>
     </message>
     <message>
-        <location line="-263"/>
+        <location line="-82"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Paso ángulo mínimo para la prestación de arcos (grados):</translation>
     </message>
@@ -6109,7 +6118,7 @@ Punto decimal:</translatorcomment>
         <translation type="obsolete">Mostrar límite para el texto:</translation>
     </message>
     <message>
-        <location line="+345"/>
+        <location line="+441"/>
         <source>Selection</source>
         <translation>Selección</translation>
     </message>
@@ -10836,13 +10845,13 @@ en los resultados de búsqueda:</translation>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="+703"/>
+        <location line="+704"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1274"/>
+        <location line="-1275"/>
         <source>:</source>
         <translatorcomment>--exact match--
 --file: artisan_es.ts--
@@ -10910,7 +10919,7 @@ Mosaico horizontal
         <translation>Mostrar todas las propiedades</translation>
     </message>
     <message>
-        <location line="+660"/>
+        <location line="+661"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -10919,12 +10928,12 @@ Mosaico horizontal
         <translation type="obsolete">Parte inferior</translation>
     </message>
     <message>
-        <location line="-543"/>
+        <location line="-544"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+142"/>
+        <location line="+143"/>
         <source>Use auto measurement</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Usar medición automática</translation>
@@ -14698,7 +14707,7 @@ Punto objetivo</translatorcomment>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+286"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+290"/>
         <source>Dropped data not supported</source>
         <translation>Datos insertados no compatibles</translation>
     </message>
@@ -15440,6 +15449,16 @@ Imgenes</translatorcomment>
         <source>Leaders</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Directriz</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Tolerances</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tolerance</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

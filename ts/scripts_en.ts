@@ -3087,7 +3087,7 @@ Do you wish to recover it?</translation>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Dimension Tools</source>
         <translation>Dimension Tools</translation>
     </message>
@@ -5413,11 +5413,21 @@ is already in the list.</translation>
         <translation>Default lineweight:</translation>
     </message>
     <message>
+        <location line="+519"/>
+        <source>auto</source>
+        <translation type="unfinished">auto</translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>Number of threads:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Linetypes</source>
         <translation type="vanished">Linetypes</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-585"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatically use screen based linetypes in model view</translation>
     </message>
@@ -5482,16 +5492,15 @@ is already in the list.</translation>
         <translation>Maximum number of reference points displayed:</translation>
     </message>
     <message>
-        <location line="+77"/>
         <source>Use multithreading</source>
-        <translation>Use multithreading</translation>
+        <translation type="vanished">Use multithreading</translation>
     </message>
     <message>
         <source>Pen cap style:</source>
         <translation type="obsolete">Pen cap style:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+186"/>
         <source>Selection</source>
         <translation>Selection</translation>
     </message>
@@ -9491,7 +9500,7 @@ shown in search results:</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+142"/>
+        <location line="+143"/>
         <source>Use auto measurement</source>
         <translation>Use auto measurement</translation>
     </message>
@@ -12873,7 +12882,7 @@ shown in search results:</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+286"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+290"/>
         <source>Dropped data not supported</source>
         <translation>Dropped data not supported</translation>
     </message>
@@ -13508,6 +13517,16 @@ shown in search results:</translation>
         <location line="+0"/>
         <source>Leader</source>
         <translation>Leader</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Tolerances</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tolerance</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

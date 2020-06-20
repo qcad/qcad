@@ -3107,7 +3107,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Dimension Tools</source>
         <translation>Mittatyökalut</translation>
     </message>
@@ -5471,7 +5471,17 @@ on jo luettelossa.</translation>
         <translation>Käytä täyttä tarkkuutta Retinanäytöissä</translation>
     </message>
     <message>
-        <location line="-178"/>
+        <location line="+398"/>
+        <source>auto</source>
+        <translation type="unfinished">automaattinen</translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>Number of threads:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-674"/>
         <source>Color lightness threshold:</source>
         <translation>Värivaaleuden kynnys:</translation>
     </message>
@@ -5552,12 +5562,11 @@ on jo luettelossa.</translation>
         <translation>Näytettävien viitepisteiden enimmäismäärä:</translation>
     </message>
     <message>
-        <location line="+77"/>
         <source>Use multithreading</source>
-        <translation type="unfinished">Käytä monisäkeistystä</translation>
+        <translation type="obsolete">Käytä monisäkeistystä</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+186"/>
         <source>Selection</source>
         <translation>Valinta</translation>
     </message>
@@ -9579,12 +9588,12 @@ näkyy hakutuloksissa:</translation>
         <translation>Näytä aina kaikki ominaisuudet (tämä voi hidastaa kohteiden valintaa)</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1467"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1468"/>
         <source>*VARIES*</source>
         <translation>*VAIHTELEVA*</translation>
     </message>
     <message>
-        <location line="-1274"/>
+        <location line="-1275"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9648,7 +9657,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Automaattinen</translation>
     </message>
     <message>
-        <location line="+142"/>
+        <location line="+143"/>
         <source>Use auto measurement</source>
         <translation>Käytä automaattista mittausta</translation>
     </message>
@@ -13138,7 +13147,7 @@ näkyy hakutuloksissa:</translation>
         <translation type="vanished">Ruudukon välit &lt; Aliruudukon välit</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+286"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+290"/>
         <source>Dropped data not supported</source>
         <translation>Poistettuja tietoja ei tueta</translation>
     </message>
@@ -13764,6 +13773,16 @@ näkyy hakutuloksissa:</translation>
         <location line="+0"/>
         <source>Leader</source>
         <translation>Perusviiva</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Tolerances</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tolerance</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
