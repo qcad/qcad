@@ -66,6 +66,9 @@
         setDirection
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getFields
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getText
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -84,10 +87,31 @@
         scaleVisualProperties
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getCorners
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getReferencePoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         moveReferencePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        move
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        rotate
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        scale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        mirror
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        flipHorizontal
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        flipVertical
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getExploded
@@ -97,6 +121,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         update
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTextLabels
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getFrame
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

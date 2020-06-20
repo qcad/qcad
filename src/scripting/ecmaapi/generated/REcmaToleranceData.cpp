@@ -80,6 +80,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setDirection, "setDirection");
             
+            REcmaHelper::registerFunction(&engine, proto, getFields, "getFields");
+            
             REcmaHelper::registerFunction(&engine, proto, getText, "getText");
             
             REcmaHelper::registerFunction(&engine, proto, setText, "setText");
@@ -92,15 +94,33 @@
             
             REcmaHelper::registerFunction(&engine, proto, scaleVisualProperties, "scaleVisualProperties");
             
+            REcmaHelper::registerFunction(&engine, proto, getCorners, "getCorners");
+            
             REcmaHelper::registerFunction(&engine, proto, getReferencePoints, "getReferencePoints");
             
             REcmaHelper::registerFunction(&engine, proto, moveReferencePoint, "moveReferencePoint");
+            
+            REcmaHelper::registerFunction(&engine, proto, move, "move");
+            
+            REcmaHelper::registerFunction(&engine, proto, rotate, "rotate");
+            
+            REcmaHelper::registerFunction(&engine, proto, scale, "scale");
+            
+            REcmaHelper::registerFunction(&engine, proto, mirror, "mirror");
+            
+            REcmaHelper::registerFunction(&engine, proto, flipHorizontal, "flipHorizontal");
+            
+            REcmaHelper::registerFunction(&engine, proto, flipVertical, "flipVertical");
             
             REcmaHelper::registerFunction(&engine, proto, getExploded, "getExploded");
             
             REcmaHelper::registerFunction(&engine, proto, getShapes, "getShapes");
             
             REcmaHelper::registerFunction(&engine, proto, update, "update");
+            
+            REcmaHelper::registerFunction(&engine, proto, getTextLabels, "getTextLabels");
+            
+            REcmaHelper::registerFunction(&engine, proto, getFrame, "getFrame");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RToleranceData*>(), *proto);
@@ -617,6 +637,55 @@
             return result;
         }
          QScriptValue
+        REcmaToleranceData::getFields
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaToleranceData::getFields", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaToleranceData::getFields";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RToleranceData* self = 
+                        getSelf("getFields", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QStringList >'
+    QList < QStringList > cppResult =
+        
+               self->getFields();
+        // return type: QList < QStringList >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RToleranceData.getFields().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaToleranceData::getFields", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaToleranceData::getText
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -961,6 +1030,55 @@
             return result;
         }
          QScriptValue
+        REcmaToleranceData::getCorners
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaToleranceData::getCorners", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaToleranceData::getCorners";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RToleranceData* self = 
+                        getSelf("getCorners", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getCorners();
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RToleranceData.getCorners().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaToleranceData::getCorners", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaToleranceData::getReferencePoints
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1218,6 +1336,430 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaToleranceData::moveReferencePoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaToleranceData::move
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaToleranceData::move", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaToleranceData::move";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RToleranceData* self = 
+                        getSelf("move", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RToleranceData: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->move(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RToleranceData.move().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaToleranceData::move", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaToleranceData::rotate
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaToleranceData::rotate", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaToleranceData::rotate";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RToleranceData* self = 
+                        getSelf("rotate", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RToleranceData: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->rotate(a0
+        ,
+    a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RToleranceData.rotate().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaToleranceData::rotate", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaToleranceData::scale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaToleranceData::scale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaToleranceData::scale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RToleranceData* self = 
+                        getSelf("scale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RToleranceData: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RToleranceData: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->scale(a0
+        ,
+    a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RToleranceData.scale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaToleranceData::scale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaToleranceData::mirror
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaToleranceData::mirror", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaToleranceData::mirror";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RToleranceData* self = 
+                        getSelf("mirror", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RLine */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RLine*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RLine*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RToleranceData: Argument 0 is not of type RLine.",
+                               context);                    
+                    }
+                    RLine 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->mirror(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RToleranceData.mirror().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaToleranceData::mirror", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaToleranceData::flipHorizontal
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaToleranceData::flipHorizontal", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaToleranceData::flipHorizontal";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RToleranceData* self = 
+                        getSelf("flipHorizontal", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->flipHorizontal();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RToleranceData.flipHorizontal().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaToleranceData::flipHorizontal", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaToleranceData::flipVertical
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaToleranceData::flipVertical", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaToleranceData::flipVertical";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RToleranceData* self = 
+                        getSelf("flipVertical", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->flipVertical();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RToleranceData.flipVertical().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaToleranceData::flipVertical", context, engine);
             return result;
         }
          QScriptValue
@@ -1563,6 +2105,104 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaToleranceData::update", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaToleranceData::getTextLabels
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaToleranceData::getTextLabels", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaToleranceData::getTextLabels";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RToleranceData* self = 
+                        getSelf("getTextLabels", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RTextData >'
+    QList < RTextData > cppResult =
+        
+               self->getTextLabels();
+        // return type: QList < RTextData >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RToleranceData.getTextLabels().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaToleranceData::getTextLabels", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaToleranceData::getFrame
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaToleranceData::getFrame", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaToleranceData::getFrame";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RToleranceData* self = 
+                        getSelf("getFrame", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RLine >'
+    QList < RLine > cppResult =
+        
+               self->getFrame();
+        // return type: QList < RLine >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RToleranceData.getFrame().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaToleranceData::getFrame", context, engine);
             return result;
         }
          QScriptValue REcmaToleranceData::toString

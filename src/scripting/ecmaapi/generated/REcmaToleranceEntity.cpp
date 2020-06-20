@@ -102,6 +102,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, exportEntity, "exportEntity");
             
+            REcmaHelper::registerFunction(&engine, proto, getTextLabels, "getTextLabels");
+            
+            REcmaHelper::registerFunction(&engine, proto, getFrame, "getFrame");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RToleranceEntity*>(), *proto);
 
@@ -1914,6 +1918,104 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaToleranceEntity::exportEntity", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaToleranceEntity::getTextLabels
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaToleranceEntity::getTextLabels", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaToleranceEntity::getTextLabels";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RToleranceEntity* self = 
+                        getSelf("getTextLabels", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RTextData >'
+    QList < RTextData > cppResult =
+        
+               self->getTextLabels();
+        // return type: QList < RTextData >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RToleranceEntity.getTextLabels().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaToleranceEntity::getTextLabels", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaToleranceEntity::getFrame
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaToleranceEntity::getFrame", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaToleranceEntity::getFrame";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RToleranceEntity* self = 
+                        getSelf("getFrame", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RLine >'
+    QList < RLine > cppResult =
+        
+               self->getFrame();
+        // return type: QList < RLine >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RToleranceEntity.getFrame().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaToleranceEntity::getFrame", context, engine);
             return result;
         }
          QScriptValue REcmaToleranceEntity::toString

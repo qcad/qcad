@@ -102,6 +102,12 @@
         ;static  QScriptValue
         exportEntity
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTextLabels
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getFrame
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
