@@ -626,6 +626,15 @@ function isLeaderEntity(obj) {
 }
 
 /**
+ * Checks if the given object is a tolerance entity.
+ *
+ * \return true if the given object is a tolerance entity (RToleranceEntity).
+ */
+function isToleranceEntity(obj) {
+    return isOfType(obj, RToleranceEntity) || isOfType(obj, RToleranceEntityPointer);
+}
+
+/**
  * Checks if the given object is an entity of the given type.
  */
 function isEntityType(obj, type) {
