@@ -57,7 +57,7 @@ Indiquer la position [angle/longueur]</translatorcomment>
         <source>Width</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
-Largeur&#xa0;: 
+Largeur : 
 Largeur
 &amp;Largeur de page :</translatorcomment>
         <translation>Largeur</translation>
@@ -67,7 +67,7 @@ Largeur
         <source>Height</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
-Hauteur&#xa0;: 
+Hauteur : 
 Hauteur
 &amp;Hauteur de page :</translatorcomment>
         <translation>Hauteur</translation>
@@ -478,14 +478,14 @@ Texte simple</translatorcomment>
         <location line="+1"/>
         <location line="+1"/>
         <source>Location</source>
-        <translation type="unfinished"></translation>
+        <translation>Position</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction</source>
-        <translation type="unfinished"></translation>
+        <translation>Direction</translation>
     </message>
     <message>
         <location line="+1"/>
