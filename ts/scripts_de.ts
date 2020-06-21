@@ -6157,12 +6157,12 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+547"/>
         <source>auto</source>
-        <translation type="unfinished">auto</translation>
+        <translation>auto</translation>
     </message>
     <message>
         <location line="+98"/>
         <source>Number of threads:</source>
-        <translation type="unfinished"></translation>
+        <translation>Anzahl Threads:</translation>
     </message>
     <message>
         <location line="-674"/>
@@ -16372,12 +16372,12 @@ nicht öffnen.
     <message>
         <location line="+2"/>
         <source>Tolerances</source>
-        <translation type="unfinished"></translation>
+        <translation>Toleranzen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Tolerance</source>
-        <translation type="unfinished"></translation>
+        <translation>Toleranz</translation>
     </message>
     <message>
         <location line="+2"/>
