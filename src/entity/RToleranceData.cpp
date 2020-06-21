@@ -87,12 +87,13 @@ QList<RVector> RToleranceData::getCorners() const {
 
         QList<RVector> points;
 
-        for (int i=0; i<divisions.length(); i++) {
+        for (int i=0, lineNumber = 0; i<divisions.length(); i++) {
             if (!divisions[i].isEmpty()) {
-                points.append(RVector(0, -dimtxt - i*dimtxt*2));
-                points.append(RVector(0, dimtxt - i*dimtxt*2));
-                points.append(RVector(divisions[i].last(), -dimtxt - i*dimtxt*2));
-                points.append(RVector(divisions[i].last(), dimtxt - i*dimtxt*2));
+                points.append(RVector(0, -dimtxt - lineNumber*dimtxt*2));
+                points.append(RVector(0, dimtxt - lineNumber*dimtxt*2));
+                points.append(RVector(divisions[i].last(), -dimtxt - lineNumber*dimtxt*2));
+                points.append(RVector(divisions[i].last(), dimtxt - lineNumber*dimtxt*2));
+                lineNumber++;
             }
         }
 
@@ -314,8 +315,9 @@ QList<RTextData> RToleranceData::getTextLabels() const {
             // remove single division line:
             divisions.last().clear();
         }
-
-        cursorY -= dimtxt * 2;
+        else {
+            cursorY -= dimtxt * 2;
+        }
     }
 
     return ret;
@@ -363,7 +365,9 @@ QList<RLine> RToleranceData::getFrame() const {
             ret.append(line);
         }
 
-        offsetY -= dimtxt*2;
+        if (!divisions[i].isEmpty()) {
+            offsetY -= dimtxt*2;
+        }
     }
 
     return ret;
