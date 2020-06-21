@@ -223,7 +223,7 @@ QList<QStringList> RToleranceData::getFields() const {
         QString line = lines[k];
         //qDebug() << "line:" << line;
 
-        QStringList lineFields = line.split("%%v", QString::SkipEmptyParts);
+        QStringList lineFields = line.split("%%v");
         ret.append(lineFields);
     }
 
@@ -239,6 +239,7 @@ QList<RTextData> RToleranceData::getTextLabels() const {
     //qDebug() << "text:" << text;
 
     QList<QStringList> fields = getFields();
+    joinFirstField = false;
 
     // find out if we need to join the first fields of the first two lines:
     if (fields.length()>1 && fields[0].length()>0 && fields[1].length()>0) {
@@ -247,7 +248,9 @@ QList<RTextData> RToleranceData::getTextLabels() const {
         QRegExp reg("\\F[gG][dD][tT];", Qt::CaseInsensitive);
         field1.replace(reg, "\\Fgdt;");
         field2.replace(reg, "\\Fgdt;");
-        joinFirstField = (field1==field2);
+        if (!field1.isEmpty()) {
+            joinFirstField = (field1==field2);
+        }
     }
 
     double cursorY = 0;
@@ -268,6 +271,9 @@ QList<RTextData> RToleranceData::getTextLabels() const {
         for (int i=0; i<fieldsOfLine.length(); i++) {
             QString field = fieldsOfLine[i];
             //qDebug() << "field:" << field;
+            if (field.isEmpty()) {
+                continue;
+            }
 
             RTextData textData(RVector(cursorX, cursorY),
                          RVector(cursorX, cursorY),
