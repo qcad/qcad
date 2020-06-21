@@ -310,6 +310,11 @@ QList<RTextData> RToleranceData::getTextLabels() const {
             ret.append(textData);
         }
 
+        if (!divisions.isEmpty() && divisions.last().length()==1) {
+            // remove single division line:
+            divisions.last().clear();
+        }
+
         cursorY -= dimtxt * 2;
     }
 
@@ -334,8 +339,8 @@ QList<RLine> RToleranceData::getFrame() const {
             ret.append(line);
         }
 
-        {
-            // top line of current line:
+        // top line of current line:
+        if (!divisions[i].isEmpty()) {
             double startX = divisions[i].first();
             if (joinFirstField && i==1 && divisions[i].length()>1) {
                 startX = divisions[i][1];
@@ -346,8 +351,8 @@ QList<RLine> RToleranceData::getFrame() const {
             ret.append(line);
         }
 
-        {
-            // bottom line of current line:
+        // bottom line of current line:
+        if (!divisions[i].isEmpty()) {
             double startX = divisions[i].first();
             if (joinFirstField && i==0 && divisions[i].length()>1) {
                 startX = divisions[i][1];
