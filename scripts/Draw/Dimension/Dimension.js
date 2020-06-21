@@ -129,6 +129,9 @@ Dimension.prototype.initScaleCombo = function() {
     }
     scaleCombo.setEditText(prev);
     scaleCombo.blockSignals(false);
+
+    // TODO: show warning if scale is not 1:
+    
 };
 
 
