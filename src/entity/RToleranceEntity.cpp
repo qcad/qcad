@@ -173,7 +173,9 @@ void RToleranceEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
                 // set brush explicitely:
                 QVariant v = getDocument()->getKnownVariable(RS::DIMCLRT, RColor(RColor::ByBlock));
                 RColor textColor = v.value<RColor>();
-                brush.setColor(textColor);
+                if (!textColor.isByBlock()) {
+                    brush.setColor(textColor);
+                }
                 e.setBrush(brush);
                 e.exportPainterPathSource(label);
             }
