@@ -341,7 +341,13 @@ QList<RTextData> RToleranceData::getTextLabels() const {
             ret.append(textData);
         }
 
-        cursorY -= dimtxt * 2;
+        if (!divisions.isEmpty() && divisions.last().length()==1) {
+            // remove single division line:
+            divisions.last().clear();
+        }
+        else {
+            cursorY -= dimtxt * 2;
+        }
     }
 
     return ret;
@@ -392,7 +398,9 @@ QList<RLine> RToleranceData::getFrame() const {
             }
         }
 
-        offsetY -= dimtxt*2;
+        if (!divisions[i].isEmpty()) {
+            offsetY -= dimtxt*2;
+        }
     }
 
     return ret;

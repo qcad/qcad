@@ -342,6 +342,27 @@ Explode.explodeEntity = function(entity, options) {
         }
     }
 
+    // explode tolerances into lines and texts:
+    else if (isToleranceEntity(entity)) {
+        shapes = entity.getFrame();
+        for (k=0; k<shapes.length; k++) {
+            shape = shapes[k];
+            ret.push(shape.clone());
+        }
+
+        var textDatas = entity.getTextLabels();
+        for (k=0; k<textDatas.length; k++) {
+            var d = textDatas[k];
+            e = new RTextEntity(document, new RTextData(d))
+            e.setSelected(true);
+            e.copyAttributesFrom(entity.data());
+            if (e.getColor()!==d.getColor()) {
+                e.setColor(d.getColor());
+            }
+            ret.push(e);
+        }
+    }
+
     // explode solids into polylines:
     else if (isSolidEntity(entity)) {
         shapes = entity.getShapes();
