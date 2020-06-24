@@ -87,13 +87,15 @@ QList<RVector> RToleranceData::getCorners() const {
 
         QList<RVector> points;
 
+        int iLine = 0;
         for (int i=0; i<divisions.length(); i++) {
-            if (!divisions[i].isEmpty()) {
-                points.append(RVector(0, -dimtxt - i*dimtxt*2));
-                points.append(RVector(0, dimtxt - i*dimtxt*2));
-                points.append(RVector(divisions[i].last(), -dimtxt - i*dimtxt*2));
-                points.append(RVector(divisions[i].last(), dimtxt - i*dimtxt*2));
+            if (divisions[i].length()>1) {
+                points.append(RVector(0, -dimtxt - iLine*dimtxt*2));
+                points.append(RVector(0, dimtxt - iLine*dimtxt*2));
+                points.append(RVector(divisions[i].last(), -dimtxt - iLine*dimtxt*2));
+                points.append(RVector(divisions[i].last(), dimtxt - iLine*dimtxt*2));
             }
+            iLine++;
         }
 
         for (int i=0; i<points.length(); i++) {
@@ -257,6 +259,12 @@ QList<RTextData> RToleranceData::getTextLabels() const {
     //QString firstField1;
     //QString firstField2;
 
+    RColor textColor;
+    if (document!=NULL) {
+        QVariant v = document->getKnownVariable(RS::DIMCLRT, RColor(RColor::ByBlock));
+        textColor = v.value<RColor>();
+    }
+
     for (int k=0; k<fields.length(); k++) {
         QStringList fieldsOfLine = fields[k];
         //qDebug() << "fieldsOfLine:" << fieldsOfLine;
@@ -292,6 +300,29 @@ QList<RTextData> RToleranceData::getTextLabels() const {
                          0,
                          false);
 
+            textData.setDocument(document);
+            textData.setLayerId(getLayerId());
+            textData.setBlockId(getBlockId());
+            textData.setColor(getColor());
+            textData.setLineweight(getLineweight());
+            textData.setSelected(isSelected());
+            textData.setDimensionLabel(true);
+
+            if (textColor!=RColor::ByBlock) {
+                textData.setColor(textColor);
+            }
+
+            //if (!textColor.isByBlock()) {
+                //textData.setColor(textColor);
+            //}
+
+//            if (textColor.isByBlock()) {
+//                textData.setColor(getColor());
+//            }
+//            else {
+//                textData.setColor(textColor);
+//            }
+
             // move first symbol of first line down if fields are joined:
             if (k==0 && i==0 && joinFirstField) {
                 textData.move(RVector(0, -dimtxt));
@@ -325,37 +356,40 @@ QList<RLine> RToleranceData::getFrame() const {
     for (int i=0; i<divisions.length(); i++) {
         //qDebug() << "divisions:" << divisions[i];
 
-        for (int k=0; k<divisions[i].length(); k++) {
-            double division = divisions[i][k];
-            RLine line(division, -dimtxt + offsetY, division, dimtxt + offsetY);
+        // never show vertical lines for empty rows:
+        if (divisions[i].length()>1) {
+            for (int k=0; k<divisions[i].length(); k++) {
+                double division = divisions[i][k];
+                RLine line(division, -dimtxt + offsetY, division, dimtxt + offsetY);
 
-            line.rotate(direction.getAngle());
-            line.move(location);
-            ret.append(line);
-        }
-
-        {
-            // top line of current line:
-            double startX = divisions[i].first();
-            if (joinFirstField && i==1 && divisions[i].length()>1) {
-                startX = divisions[i][1];
+                line.rotate(direction.getAngle());
+                line.move(location);
+                ret.append(line);
             }
-            RLine line(startX, dimtxt + offsetY, divisions[i].last(), dimtxt + offsetY);
-            line.rotate(direction.getAngle());
-            line.move(location);
-            ret.append(line);
-        }
 
-        {
-            // bottom line of current line:
-            double startX = divisions[i].first();
-            if (joinFirstField && i==0 && divisions[i].length()>1) {
-                startX = divisions[i][1];
+            {
+                // top line of current line:
+                double startX = divisions[i].first();
+                if (joinFirstField && i==1 && divisions[i].length()>1) {
+                    startX = divisions[i][1];
+                }
+                RLine line(startX, dimtxt + offsetY, divisions[i].last(), dimtxt + offsetY);
+                line.rotate(direction.getAngle());
+                line.move(location);
+                ret.append(line);
             }
-            RLine line(startX, -dimtxt + offsetY, divisions[i].last(), -dimtxt + offsetY);
-            line.rotate(direction.getAngle());
-            line.move(location);
-            ret.append(line);
+
+            {
+                // bottom line of current line:
+                double startX = divisions[i].first();
+                if (joinFirstField && i==0 && divisions[i].length()>1) {
+                    startX = divisions[i][1];
+                }
+                RLine line(startX, -dimtxt + offsetY, divisions[i].last(), -dimtxt + offsetY);
+                line.rotate(direction.getAngle());
+                line.move(location);
+                ret.append(line);
+            }
         }
 
         offsetY -= dimtxt*2;
