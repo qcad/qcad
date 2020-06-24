@@ -17077,7 +17077,7 @@ Zoom wg &amp;wyboru</translatorcomment>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+829"/>
+        <location filename="../scripts/library.js" line="+838"/>
         <source>Objects</source>
         <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Obiekty</translation>

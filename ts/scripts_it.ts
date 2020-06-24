@@ -5978,12 +5978,12 @@ Punto decimale:</translatorcomment>
     <message>
         <location line="+547"/>
         <source>auto</source>
-        <translation type="unfinished">auto</translation>
+        <translation>auto</translation>
     </message>
     <message>
         <location line="+98"/>
         <source>Number of threads:</source>
-        <translation type="unfinished"></translation>
+        <translation>Numero di thread:</translation>
     </message>
     <message>
         <location line="-674"/>
@@ -15251,7 +15251,7 @@ Visita il &amp;sito web</translatorcomment>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+829"/>
+        <location filename="../scripts/library.js" line="+838"/>
         <source>Objects</source>
         <translation>Oggetti</translation>
     </message>
@@ -15557,12 +15557,12 @@ Modificare un blocco sulla base di un riferimento di blocco scelto</translatorco
     <message>
         <location line="+2"/>
         <source>Tolerances</source>
-        <translation type="unfinished"></translation>
+        <translation>Tolleranze</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Tolerance</source>
-        <translation type="unfinished"></translation>
+        <translation>Tolleranza</translation>
     </message>
     <message>
         <location line="+2"/>

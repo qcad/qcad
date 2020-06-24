@@ -5462,12 +5462,12 @@ is al in de lijst.</translation>
     <message>
         <location line="+547"/>
         <source>auto</source>
-        <translation type="unfinished">auto</translation>
+        <translation>auto</translation>
     </message>
     <message>
         <location line="+98"/>
         <source>Number of threads:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aantal threads:</translation>
     </message>
     <message>
         <location line="-674"/>
@@ -13423,7 +13423,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+829"/>
+        <location filename="../scripts/library.js" line="+838"/>
         <source>Objects</source>
         <translation>Objecten</translation>
     </message>
@@ -13726,12 +13726,12 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+2"/>
         <source>Tolerances</source>
-        <translation type="unfinished"></translation>
+        <translation>Toleranties</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Tolerance</source>
-        <translation type="unfinished"></translation>
+        <translation>Tolerantie</translation>
     </message>
     <message>
         <location line="+2"/>

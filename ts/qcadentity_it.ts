@@ -480,14 +480,14 @@ Esplode gli oggetti selezionati in oggetti piú semplice, o sottrae le facce</tr
         <location line="+1"/>
         <location line="+1"/>
         <source>Location</source>
-        <translation type="unfinished"></translation>
+        <translation>Posizione</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction</source>
-        <translation type="unfinished"></translation>
+        <translation>Direzione</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -470,14 +470,14 @@ El plugin no implementa un método %1 necesario para el ajuste simplex.</transla
         <location line="+1"/>
         <location line="+1"/>
         <source>Location</source>
-        <translation type="unfinished"></translation>
+        <translation>Posición</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction</source>
-        <translation type="unfinished"></translation>
+        <translation>Dirección</translation>
     </message>
     <message>
         <location line="+1"/>

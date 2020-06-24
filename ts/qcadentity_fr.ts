@@ -478,14 +478,14 @@ Texte simple</translatorcomment>
         <location line="+1"/>
         <location line="+1"/>
         <source>Location</source>
-        <translation type="unfinished"></translation>
+        <translation>Position</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction</source>
-        <translation type="unfinished"></translation>
+        <translation>Direction</translation>
     </message>
     <message>
         <location line="+1"/>

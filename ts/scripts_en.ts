@@ -5415,12 +5415,12 @@ is already in the list.</translation>
     <message>
         <location line="+519"/>
         <source>auto</source>
-        <translation type="unfinished">auto</translation>
+        <translation>auto</translation>
     </message>
     <message>
         <location line="+98"/>
         <source>Number of threads:</source>
-        <translation type="unfinished"></translation>
+        <translation>Number of threads:</translation>
     </message>
     <message>
         <source>Linetypes</source>
@@ -13218,7 +13218,7 @@ shown in search results:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+829"/>
+        <location filename="../scripts/library.js" line="+838"/>
         <source>Objects</source>
         <translation>Objects</translation>
     </message>
@@ -13521,12 +13521,12 @@ shown in search results:</translation>
     <message>
         <location line="+2"/>
         <source>Tolerances</source>
-        <translation type="unfinished"></translation>
+        <translation>Tolerances</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Tolerance</source>
-        <translation type="unfinished"></translation>
+        <translation>Tolerance</translation>
     </message>
     <message>
         <location line="+2"/>
