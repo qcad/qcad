@@ -32,8 +32,6 @@ function WindowZoom(guiAction) {
     if (RSettings.getDevicePixelRatio()===2 && RS.getSystemId()!=="osx") {
         bitmap = new QBitmap(WindowZoom.includeBasePath + "/WindowZoomCursor@2x.png", "PNG");
         mask = new QBitmap(WindowZoom.includeBasePath + "/WindowZoomCursorMask@2x.png", "PNG");
-        //bitmap.setDevicePixelRatio(2);
-        //mask.setDevicePixelRatio(2);
         this.cursor = new QCursor(bitmap, mask, 24, 24);
     }
     else {
