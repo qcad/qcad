@@ -39,7 +39,7 @@ GraphicsViewPreferences.initPreferences = function(pageWidget, calledByPrefDialo
 //    cbCapStyle.addItem(qsTr("Flat Cap"), Qt.FlatCap.valueOf());
 //    cbCapStyle.addItem(qsTr("Square Cap"), Qt.SquareCap.valueOf());
 
-    widgets["Threads"].setItemText(0, widgets["Threads"].itemText(0) + " (" + RS.getIdealThreadCount() + ")");
+    widgets["Threads"].setItemText(0, widgets["Threads"].itemText(0) + " (" + Math.min(RS.getIdealThreadCount(), 6) + ")");
 };
 
 GraphicsViewPreferences.applyPreferences = function(doc, mdiChild) {
@@ -47,7 +47,7 @@ GraphicsViewPreferences.applyPreferences = function(doc, mdiChild) {
         return;
     }
 
-    var numThreads = RSettings.getIntValue("GraphicsView/Threads", RS.getIdealThreadCount());
+    var numThreads = RSettings.getIntValue("GraphicsView/Threads", Math.min(RS.getIdealThreadCount(), 6));
     //EAction.handleUserMessage(qsTr("Threads:") + " " + numThreads);
 
     var di = mdiChild.getDocumentInterface();
