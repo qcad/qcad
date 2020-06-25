@@ -528,17 +528,17 @@ void RMainWindowQt::setGraphicsViewCursor(const QCursor& cursor) {
         if (list.at(i)==NULL) {
             continue;
         }
-        RMdiChildQt* mdiOther = dynamic_cast<RMdiChildQt*>(list.at(i));
-        if (mdiOther==NULL) {
+        RMdiChildQt* mdi = dynamic_cast<RMdiChildQt*>(list.at(i));
+        if (mdi==NULL) {
             continue;
         }
-        RDocumentInterface* diOther = mdiOther->getDocumentInterface();
-        if (diOther==NULL) {
+        RDocumentInterface* di = mdi->getDocumentInterface();
+        if (di==NULL) {
             continue;
         }
 
         // false here prevents recursion:
-        diOther->setCursor(cursor, false);
+        di->setCursor(cursor, false);
     }
 }
 
