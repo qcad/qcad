@@ -8163,7 +8163,7 @@ Proyección &amp;Isométrica</translatorcomment>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segment</source>
-        <translation type="unfinished">Deshacer segmento anterior</translation>
+        <translation>Deshacer segmento anterior</translation>
     </message>
     <message>
         <location line="+14"/>
