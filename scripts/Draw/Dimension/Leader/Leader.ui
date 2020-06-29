@@ -20,7 +20,7 @@
       </sizepolicy>
      </property>
      <property name="toolTip">
-      <string>Undo Last Segement</string>
+      <string>Undo Last Segment</string>
      </property>
      <property name="text">
       <string/>
