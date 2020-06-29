@@ -7473,7 +7473,7 @@ já se encontra na lista.</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Desfazer último segmento</translation>
     </message>
     <message>
         <location line="+14"/>
