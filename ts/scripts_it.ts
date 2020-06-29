@@ -6478,7 +6478,7 @@ Meta griglia:
         <translatorcomment>--exact match--
 --file: DefaultNavigation_it.ts--
 Visualizzazione grafica</translatorcomment>
-        <translation>Vista grafica</translation>
+        <translation>Visualizzazione grafica</translation>
     </message>
     <message>
         <location line="+0"/>
