@@ -7175,7 +7175,7 @@ is already in the list.</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Undo Last Segment</translation>
     </message>
     <message>
         <location line="+14"/>
