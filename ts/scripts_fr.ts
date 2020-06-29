@@ -8048,7 +8048,7 @@ est déjà dans la liste.</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segment</source>
-        <translation type="unfinished">Annuler dernier segment</translation>
+        <translation>Annuler dernier segment</translation>
     </message>
     <message>
         <location line="+14"/>
