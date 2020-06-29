@@ -7323,7 +7323,7 @@ is al in de lijst.</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Laatste segment ongedaan maken</translation>
     </message>
     <message>
         <location line="+14"/>
