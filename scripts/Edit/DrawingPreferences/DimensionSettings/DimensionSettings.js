@@ -380,7 +380,9 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
         if (!isNull(wdtc)) {
             wdtc.setProperty("Loaded", true);
             var dimTextColor = document.getKnownVariable(RS.DIMCLRT, new RColor(RColor.ByBlock));
-            wdtc.setColor(dimTextColor);
+            if (isValidColor(dimTextColor)) {
+                wdtc.setColor(dimTextColor);
+            }
         }
     }
     else {
