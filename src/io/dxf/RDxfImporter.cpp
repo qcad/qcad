@@ -143,6 +143,11 @@ bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter
     // the only dimension font supported by the QCAD CE:
     document->setDimensionFont("Standard");
 
+    // dimension text color always by block:
+    QVariant v;
+    v.setValue(RColor(RColor::ByBlock));
+    document->setKnownVariable(RS::DIMCLRT, v);
+
     // lock locked layers now. they are unlocked during import to load
     // the entities on them:
     for (int i=0; i<lockedLayers.size(); i++) {
