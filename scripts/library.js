@@ -180,6 +180,24 @@ function isValidVector(obj) {
 }
 
 /**
+ * Checks if the given object is a color.
+ *
+ * \return true if the given object is an RColor object.
+ */
+function isColor(obj) {
+    return (typeof(obj)==="object" && isOfType(obj, RColor));
+}
+
+/**
+ * Checks if the given object is a valid color.
+ *
+ * \return true if the given object is a valid RColor object.
+ */
+function isValidColor(obj) {
+    return (isColor(obj) && obj.isValid());
+}
+
+/**
  * Checks if the given object is a valid boolean value.
  *
  * \return true if the given object is a boolean and not NULL or undefined.
