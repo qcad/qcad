@@ -3288,7 +3288,7 @@ Do you wish to recover it?</source>
         <translation>測量</translation>
     </message>
     <message>
-        <location line="+226"/>
+        <location line="+228"/>
         <source>Unit / Format</source>
         <translation>ユニット/フォーマット</translation>
     </message>
@@ -13897,7 +13897,7 @@ shown in search results:</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+838"/>
+        <location filename="../scripts/library.js" line="+856"/>
         <source>Objects</source>
         <translation>オブジェクト</translation>
     </message>

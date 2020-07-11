@@ -4007,7 +4007,7 @@ Jednostki geometryczne</translatorcomment>
         <translation>Jednostki geometryczne</translation>
     </message>
     <message>
-        <location line="+226"/>
+        <location line="+228"/>
         <source>Unit / Format</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Jednostka / format</translation>
@@ -17081,7 +17081,7 @@ Zoom wg &amp;wyboru</translatorcomment>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+838"/>
+        <location filename="../scripts/library.js" line="+856"/>
         <source>Objects</source>
         <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Obiekty</translation>

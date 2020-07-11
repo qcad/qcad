@@ -3211,7 +3211,7 @@ Přejete si ho obnovit?</translation>
         <translation>Geometrické jednotky</translation>
     </message>
     <message>
-        <location line="+226"/>
+        <location line="+228"/>
         <source>Unit / Format</source>
         <translation>Jednotka/Formát</translation>
     </message>
@@ -13104,7 +13104,7 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+838"/>
+        <location filename="../scripts/library.js" line="+856"/>
         <source>Objects</source>
         <translation>Objektů</translation>
     </message>

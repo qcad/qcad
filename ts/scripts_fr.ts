@@ -3468,7 +3468,7 @@ Voulez-vous le récupérer ?</translation>
         <translation>Unités de géomètre</translation>
     </message>
     <message>
-        <location line="+226"/>
+        <location line="+228"/>
         <source>Unit / Format</source>
         <translation>Unité / format</translation>
     </message>
@@ -14876,7 +14876,7 @@ dans les résultats de recherche :</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+838"/>
+        <location filename="../scripts/library.js" line="+856"/>
         <source>Objects</source>
         <translation>Objets</translation>
     </message>

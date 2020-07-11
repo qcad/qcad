@@ -3267,7 +3267,7 @@ Wilt u het herstellen?</translation>
         <translation>Te meten eenheid</translation>
     </message>
     <message>
-        <location line="+226"/>
+        <location line="+228"/>
         <source>Unit / Format</source>
         <translation>Eenheid / Formaat</translation>
     </message>
@@ -13427,7 +13427,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+838"/>
+        <location filename="../scripts/library.js" line="+856"/>
         <source>Objects</source>
         <translation>Objecten</translation>
     </message>

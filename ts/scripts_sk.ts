@@ -3290,7 +3290,7 @@ Prajete si ho obnoviť?</translation>
         <translation>Prehľad</translation>
     </message>
     <message>
-        <location line="+226"/>
+        <location line="+228"/>
         <source>Unit / Format</source>
         <translation>Jednotka / Formát</translation>
     </message>
@@ -13500,7 +13500,7 @@ vo výsledku vyhľadania:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+838"/>
+        <location filename="../scripts/library.js" line="+856"/>
         <source>Objects</source>
         <translation>Objekty</translation>
     </message>
