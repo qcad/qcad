@@ -115,6 +115,25 @@ Dimension.prototype.initUiOptions = function(resume, optionsToolBar) {
         upperToleranceLineEdit.setProperty("Loaded", true);
         lowerToleranceLineEdit.setProperty("Loaded", true);
     }
+
+};
+
+Dimension.prototype.showUiOptions = function(resume, restoreFromSettings) {
+    EAction.prototype.showUiOptions.call(this, resume, restoreFromSettings);
+
+    if (!resume) {
+        var scale = this.parseScale(this.getScaleString());
+        if (!RMath.fuzzyCompare(scale, 1) && RSettings.getBoolValue("DimensionScaleDialog/DontShowDialog", false)!==true) {
+            // warning if scale is not 1:
+            var appWin = RMainWindowQt.getMainWindow();
+
+            var dialog = WidgetFactory.createDialog(Dimension.includeBasePath, "DimensionScaleDialog.ui", appWin);
+            dialog.exec();
+            WidgetFactory.saveState(dialog);
+            dialog.destroy();
+            EAction.activateMainWindow();
+        }
+    }
 };
 
 Dimension.prototype.initScaleCombo = function() {
@@ -129,9 +148,6 @@ Dimension.prototype.initScaleCombo = function() {
     }
     scaleCombo.setEditText(prev);
     scaleCombo.blockSignals(false);
-
-    // TODO: show warning if scale is not 1:
-    
 };
 
 
