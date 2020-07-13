@@ -1033,6 +1033,7 @@ SOURCES = \
 ../scripts/Draw/Dimension/DimAngular/DimAngular.ui \
 ../scripts/Draw/Dimension/DimRotated/DimRotated.ui \
 ../scripts/Draw/Dimension/Dimension.ui \
+../scripts/Draw/Dimension/DimensionScaleDialog.ui \
 ../scripts/Draw/Dimension/Leader/Leader.ui \
 ../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.ui \
 ../scripts/Draw/Ellipse/EllipseDD/EllipseDD.ui \

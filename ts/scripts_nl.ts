@@ -3129,7 +3129,7 @@ Wilt u het herstellen?</translation>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+98"/>
         <source>Dimension Tools</source>
         <translation>Bematinggereedschappen</translation>
     </message>
@@ -3181,6 +3181,24 @@ Wilt u het herstellen?</translation>
         <location line="+18"/>
         <source>Auto</source>
         <translation>Auto</translation>
+    </message>
+</context>
+<context>
+    <name>DimensionScaleDialog</name>
+    <message>
+        <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
+        <source>Dimension Scale</source>
+        <translation>Schaal van bematingen</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
+        <translation>De schaal voor nieuwe bematingen is niet 1:1. Maatlabels tonen waarden die afwijken van de gemeten waarde in de tekening. U kunt de schaalfactor corrigeren in de optiebalk bovenaan.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Don&apos;t show this warning again</source>
+        <translation>Laat deze waarschuwingsdialoog niet meer zien</translation>
     </message>
 </context>
 <context>

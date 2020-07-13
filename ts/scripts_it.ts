@@ -3402,7 +3402,7 @@ Layer ad alta risoluzione possono rallentare la navigazione in QGIS.</translator
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+98"/>
         <source>Dimension Tools</source>
         <translation>Strumenti dimensione</translation>
     </message>
@@ -3454,6 +3454,24 @@ Layer ad alta risoluzione possono rallentare la navigazione in QGIS.</translator
         <location line="+18"/>
         <source>Auto</source>
         <translation>Auto</translation>
+    </message>
+</context>
+<context>
+    <name>DimensionScaleDialog</name>
+    <message>
+        <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
+        <source>Dimension Scale</source>
+        <translation>Scala delle quote</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
+        <translation>La scala per le nuove quote non è 1:1. Le etichette delle quote mostreranno i valori che differiscono dal valore misurato nel disegno. È possibile correggere il fattore di scala nella barra delle opzioni in alto.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Don&apos;t show this warning again</source>
+        <translation>Non mostrare più questo dialogo di avviso</translation>
     </message>
 </context>
 <context>

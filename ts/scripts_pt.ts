@@ -3152,7 +3152,7 @@ Você deseja recuperá-lo?</translation>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+98"/>
         <source>Dimension Tools</source>
         <translation>Ferramentas de dimensão</translation>
     </message>
@@ -3200,6 +3200,24 @@ Você deseja recuperá-lo?</translation>
         <location line="+18"/>
         <source>Auto</source>
         <translation>Auto</translation>
+    </message>
+</context>
+<context>
+    <name>DimensionScaleDialog</name>
+    <message>
+        <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
+        <source>Dimension Scale</source>
+        <translation>Escala de cotas</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
+        <translation>A escala para novas cotas não é de 1:1. As etiquetas das cotas mostrarão valores que diferem do valor medido no desenho. É possível corrigir o factor da escala na barra de ferramentas de opções no topo.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Don&apos;t show this warning again</source>
+        <translation>Não mostre este diálogo de advertência novamente</translation>
     </message>
 </context>
 <context>

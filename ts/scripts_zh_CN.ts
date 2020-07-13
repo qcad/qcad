@@ -2979,7 +2979,7 @@ Do you wish to recover it?</source>
         <translation>Δ</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+98"/>
         <source>Dimension Tools</source>
         <translation>标注工具</translation>
     </message>
@@ -3031,6 +3031,24 @@ Do you wish to recover it?</source>
         <location line="+18"/>
         <source>Auto</source>
         <translation>自动</translation>
+    </message>
+</context>
+<context>
+    <name>DimensionScaleDialog</name>
+    <message>
+        <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
+        <source>Dimension Scale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Don&apos;t show this warning again</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

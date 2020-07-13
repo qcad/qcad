@@ -3388,7 +3388,7 @@ Sombreado/Relleno</translatorcomment>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+98"/>
         <source>Dimension Tools</source>
         <translation>Herramientas de dimensión</translation>
     </message>
@@ -3440,6 +3440,24 @@ Sombreado/Relleno</translatorcomment>
         <location line="+18"/>
         <source>Auto</source>
         <translation>Auto</translation>
+    </message>
+</context>
+<context>
+    <name>DimensionScaleDialog</name>
+    <message>
+        <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
+        <source>Dimension Scale</source>
+        <translation>Escala de cotas</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
+        <translation>La escala para las nuevas cotas no es de 1:1. Las etiquetas de las cotas mostrarán valores que difieren del valor medido en el dibujo. Puede corregir el factor de escala en la barra de opciones de la parte superior.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Don&apos;t show this warning again</source>
+        <translation>No vuelvas a mostrar este diálogo de advertencia</translation>
     </message>
 </context>
 <context>
