@@ -3587,7 +3587,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+9"/>
         <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
-        <translation>Der Massstab für neue Bemassungen ist nicht 1:1. Bemassungsbeschriftungen zeigen Werte an, die vom gemessenen Wert in der Zeichnung abweichen. Sie können den Skalierungsfaktor in der Optionenwerkzeugleiste oben korrigieren.</translation>
+        <translation>Die Skalierung für neue Bemassungen ist nicht 1:1. Bemassungsbeschriftungen zeigen deshalb Werte an, die vom gemessenen Wert in der Zeichnung abweichen. Sie können den Skalierungsfaktor in der Optionenwerkzeugleiste oben anpassen.</translation>
     </message>
     <message>
         <location line="+10"/>
