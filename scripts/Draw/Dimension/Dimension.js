@@ -115,7 +115,6 @@ Dimension.prototype.initUiOptions = function(resume, optionsToolBar) {
         upperToleranceLineEdit.setProperty("Loaded", true);
         lowerToleranceLineEdit.setProperty("Loaded", true);
     }
-
 };
 
 Dimension.prototype.showUiOptions = function(resume, restoreFromSettings) {
