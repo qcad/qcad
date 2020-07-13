@@ -386,6 +386,7 @@
     <file alias="scripts/Draw/Dimension/Dimension.js">../../scripts/Draw/Dimension/Dimension.js</file>
     <file alias="scripts/Draw/Dimension/Dimension.svg">../../scripts/Draw/Dimension/Dimension.svg</file>
     <file alias="scripts/Draw/Dimension/Dimension.ui">../../scripts/Draw/Dimension/Dimension.ui</file>
+    <file alias="scripts/Draw/Dimension/DimensionScaleDialog.ui">../../scripts/Draw/Dimension/DimensionScaleDialog.ui</file>
     <file alias="scripts/Draw/Dimension/Leader/Leader-inverse.svg">../../scripts/Draw/Dimension/Leader/Leader-inverse.svg</file>
     <file alias="scripts/Draw/Dimension/Leader/Leader.js">../../scripts/Draw/Dimension/Leader/Leader.js</file>
     <file alias="scripts/Draw/Dimension/Leader/Leader.svg">../../scripts/Draw/Dimension/Leader/Leader.svg</file>
