@@ -220,8 +220,8 @@ QList<QSharedPointer<RShape> > RDimAngularData::getShapes(const RBox& queryBox, 
         dimArc.trimEndPoint(ip2);
 
         // extension line:
-        RLine extLine1 = RLine(ip1 + dir*dimexe, arc.getStartPoint() + dir*dimexo);
-        RLine extLine2 = RLine(ip2 + dir*dimexe, arc.getEndPoint() + dir*dimexo);
+        RLine extLine1 = RLine(arc.getStartPoint() + dir*dimexo, ip1 + dir*dimexe);
+        RLine extLine2 = RLine(arc.getEndPoint() + dir*dimexo, ip2 + dir*dimexe);
 
         adjustExtensionLineFixLength(extLine1, extLine2);
 
