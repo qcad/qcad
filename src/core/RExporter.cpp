@@ -481,11 +481,17 @@ bool RExporter::exportDocument() {
     if (!exportDocumentSettings()) {
         return false;
     }
+    //qDebug() << "exporting linetypes";
     exportLinetypes();
+    //qDebug() << "exporting layers";
     exportLayers();
+    //qDebug() << "exporting layer states";
     exportLayerStates();
+    //qDebug() << "exporting blocks";
     exportBlocks();
+    //qDebug() << "exporting views";
     exportViews();
+    //qDebug() << "exporting entities";
     if (isVisualExporter()) {
         exportEntities(false);
     }
