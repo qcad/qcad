@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2011-2018 by Andrew Mustun. All rights reserved.
- * 
+ *
  * This file is part of the QCAD project.
  *
  * QCAD is free software: you can redistribute it and/or modify
@@ -24,6 +24,7 @@
 
 #include <QFrame>
 #include <QMetaType>
+#include <QPainterPath>
 
 #include "RCoordinateListener.h"
 #include "RRuler.h"
