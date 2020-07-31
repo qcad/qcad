@@ -3402,7 +3402,7 @@ Layer ad alta risoluzione possono rallentare la navigazione in QGIS.</translator
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+98"/>
+        <location line="+97"/>
         <source>Dimension Tools</source>
         <translation>Strumenti dimensione</translation>
     </message>

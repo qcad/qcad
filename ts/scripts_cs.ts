@@ -3077,7 +3077,7 @@ Přejete si ho obnovit?</translation>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+98"/>
+        <location line="+97"/>
         <source>Dimension Tools</source>
         <translation>Nástroje kót</translation>
     </message>

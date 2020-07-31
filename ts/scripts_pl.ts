@@ -3806,7 +3806,7 @@ Przełącz znak średnicy
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+98"/>
+        <location line="+97"/>
         <source>Dimension Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Narzędzia wymiarów</translation>

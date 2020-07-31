@@ -3388,7 +3388,7 @@ Sombreado/Relleno</translatorcomment>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+98"/>
+        <location line="+97"/>
         <source>Dimension Tools</source>
         <translation>Herramientas de dimensión</translation>
     </message>

@@ -3087,7 +3087,7 @@ Do you wish to recover it?</translation>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+98"/>
+        <location line="+97"/>
         <source>Dimension Tools</source>
         <translation>Dimension Tools</translation>
     </message>

@@ -3162,7 +3162,7 @@ Do you wish to recover it?</source>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+98"/>
+        <location line="+97"/>
         <source>Dimension Tools</source>
         <translation>Orodja dimenzij</translation>
     </message>

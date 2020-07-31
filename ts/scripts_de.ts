@@ -3523,7 +3523,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+98"/>
+        <location line="+97"/>
         <source>Dimension Tools</source>
         <translation>Bemassungswerkzeuge</translation>
     </message>
