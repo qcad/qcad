@@ -339,6 +339,9 @@ function lengthen(entity, start, amount) {
     if (isNumber(entity)) {
         entity = doc.queryEntity(entity);
     }
+    else {
+        entity = entity.clone();
+    }
 
     var from = RS.FromStart;
     if (!start) {
