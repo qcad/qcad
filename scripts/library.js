@@ -1067,20 +1067,6 @@ function getWidgets(widget, ca, allowDuplicates) {
 }
 
 /**
- * Sleeps for the given milliseconds.
- * \param msec the time to sleep
- */
-function sleep(msec) {
-    var date = new Date();
-    var curDate = null;
-    var c = 0;
-    do {
-        curDate = new Date();
-        ++c;
-    } while (curDate - date < msec);
-}
-
-/**
  * Converts radiant to degrees.
  * \param val the value in radiant
  * \return the value in degrees
