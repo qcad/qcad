@@ -212,6 +212,18 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="getTransparency" cppName="getTransparency"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="setTransparency" cppName="setTransparency"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="t" isConst="false" />
+      </variant>
+    </method>
     <method name="clearCustomPattern" cppName="clearCustomPattern"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -293,6 +305,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyDrawOrder" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertySolid" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyTransparency" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyPatternName" type="RPropertyTypeId"
     isConst="false" isStatic="true" />

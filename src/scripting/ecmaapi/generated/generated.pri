@@ -273,6 +273,7 @@ HEADERS += \
     $$PWD/REcmaSharedPointerTextData.h \
     $$PWD/REcmaSharedPointerTextEntity.h \
     $$PWD/REcmaSharedPointerTextLabel.h \
+    $$PWD/REcmaSharedPointerToleranceEntity.h \
     $$PWD/REcmaSharedPointerTraceEntity.h \
     $$PWD/REcmaSharedPointerTriangle.h \
     $$PWD/REcmaSharedPointerUcs.h \
@@ -345,6 +346,8 @@ HEADERS += \
     $$PWD/REcmaTextLayout.h \
     $$PWD/REcmaTextRenderer.h \
     $$PWD/REcmaThread.h \
+    $$PWD/REcmaToleranceData.h \
+    $$PWD/REcmaToleranceEntity.h \
     $$PWD/REcmaToolButton.h \
     $$PWD/REcmaToolMatrixItemDelegate.h \
     $$PWD/REcmaTraceData.h \
@@ -353,6 +356,8 @@ HEADERS += \
     $$PWD/REcmaTransactionEvent.h \
     $$PWD/REcmaTransactionListener.h \
     $$PWD/REcmaTransactionListenerAdapter.h \
+    $$PWD/REcmaTransform.h \
+    $$PWD/REcmaTransformOp.h \
     $$PWD/REcmaTransformation.h \
     $$PWD/REcmaTranslation.h \
     $$PWD/REcmaTreeWidget.h \
@@ -647,6 +652,7 @@ SOURCES += \
     $$PWD/REcmaSharedPointerTextData.cpp \
     $$PWD/REcmaSharedPointerTextEntity.cpp \
     $$PWD/REcmaSharedPointerTextLabel.cpp \
+    $$PWD/REcmaSharedPointerToleranceEntity.cpp \
     $$PWD/REcmaSharedPointerTraceEntity.cpp \
     $$PWD/REcmaSharedPointerTriangle.cpp \
     $$PWD/REcmaSharedPointerUcs.cpp \
@@ -719,6 +725,8 @@ SOURCES += \
     $$PWD/REcmaTextLayout.cpp \
     $$PWD/REcmaTextRenderer.cpp \
     $$PWD/REcmaThread.cpp \
+    $$PWD/REcmaToleranceData.cpp \
+    $$PWD/REcmaToleranceEntity.cpp \
     $$PWD/REcmaToolButton.cpp \
     $$PWD/REcmaToolMatrixItemDelegate.cpp \
     $$PWD/REcmaTraceData.cpp \
@@ -727,6 +735,8 @@ SOURCES += \
     $$PWD/REcmaTransactionEvent.cpp \
     $$PWD/REcmaTransactionListener.cpp \
     $$PWD/REcmaTransactionListenerAdapter.cpp \
+    $$PWD/REcmaTransform.cpp \
+    $$PWD/REcmaTransformOp.cpp \
     $$PWD/REcmaTransformation.cpp \
     $$PWD/REcmaTranslation.cpp \
     $$PWD/REcmaTreeWidget.cpp \

@@ -260,6 +260,13 @@ Stretch.getStrechOperation = function(document, polygon, preview, offset, layerI
             gotIntersection = true;
         }
 
+        // hatch entities might be partially inside stretch area but not
+        // intersect with stretch area as pattern might not intersect even
+        // if boundary intersects or pattern might only contain points:
+        if (isHatchEntity(entity)) {
+            gotIntersection = true;
+        }
+
         if (gotIntersection) {
             // stretch:
             if (entity.stretch(polygon, offset)) {

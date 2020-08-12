@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>665</width>
-    <height>740</height>
+    <width>656</width>
+    <height>870</height>
    </rect>
   </property>
   <property name="widgetResizable">
@@ -18,8 +18,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>648</width>
-     <height>764</height>
+     <width>654</width>
+     <height>868</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -324,18 +324,28 @@
     <item>
      <widget class="QGroupBox" name="FontGroup">
       <property name="title">
-       <string>Font</string>
+       <string>Label</string>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
-       <item>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0">
         <widget class="QLabel" name="label_11">
          <property name="text">
-          <string>Dimension label font:</string>
+          <string>Label font:</string>
          </property>
         </widget>
        </item>
-       <item>
+       <item row="0" column="1">
         <widget class="QFontComboBox" name="DimensionFont"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Label color:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="RColorCombo" name="DimensionTextColor"/>
        </item>
       </layout>
      </widget>
@@ -560,6 +570,11 @@
    <class>RMathLineEdit</class>
    <extends>QLineEdit</extends>
    <header>RMathLineEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>RColorCombo</class>
+   <extends>QComboBox</extends>
+   <header>RColorCombo.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

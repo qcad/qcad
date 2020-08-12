@@ -117,6 +117,24 @@ Dimension.prototype.initUiOptions = function(resume, optionsToolBar) {
     }
 };
 
+Dimension.prototype.showUiOptions = function(resume, restoreFromSettings) {
+    EAction.prototype.showUiOptions.call(this, resume, restoreFromSettings);
+
+    if (!resume) {
+        var scale = this.parseScale(this.getScaleString());
+        if (!RMath.fuzzyCompare(scale, 1) && RSettings.getBoolValue("DimensionScaleDialog/DontShowDialog", false)!==true) {
+            // warning if scale is not 1:
+            var appWin = RMainWindowQt.getMainWindow();
+
+            var dialog = WidgetFactory.createDialog(Dimension.includeBasePath, "DimensionScaleDialog.ui", appWin);
+            dialog.exec();
+            WidgetFactory.saveState(dialog);
+            dialog.destroy();
+            EAction.activateMainWindow();
+        }
+    }
+};
+
 Dimension.prototype.initScaleCombo = function() {
     var optionsToolBar = EAction.getOptionsToolBar();
     var scaleCombo = optionsToolBar.findChild("Scale");

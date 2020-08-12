@@ -4,7 +4,7 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../scripts/Help/About/About.js" line="+63"/>
+        <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
         <translation>Tietoja %1</translation>
     </message>
@@ -20,12 +20,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+375"/>
+        <location line="+408"/>
         <source>Plugin:</source>
         <translation>Laajennusosa:</translation>
     </message>
     <message>
-        <location line="-350"/>
+        <location line="-383"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>Tekijät</translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+163"/>
         <source>Licenses</source>
         <translation type="unfinished"></translation>
     </message>
@@ -297,8 +297,12 @@ asetuksien muutokset astuvat voimaan.</translation>
     </message>
     <message>
         <location line="+86"/>
+        <source>Defaults for</source>
+        <translation>Oletusarvot</translation>
+    </message>
+    <message>
         <source>Defaults for </source>
-        <translation>Oletusarvot </translation>
+        <translation type="vanished">Oletusarvot </translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1243,7 +1247,7 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+120"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Väärä kuvan koko (leveys x korkeus on oltava pienempi kuin %1)</translation>
     </message>
@@ -2120,7 +2124,7 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../scripts/Edit/ClipboardOperation.js" line="+52"/>
+        <location filename="../scripts/Edit/ClipboardOperation.js" line="+54"/>
         <source>Reference point</source>
         <translation>Viitepiste</translation>
     </message>
@@ -2443,7 +2447,7 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+64"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
         <translation>Sijainti</translation>
     </message>
@@ -2469,16 +2473,23 @@ Haluatko palauttaa sen?</translation>
     </message>
     <message>
         <location line="+14"/>
+        <source>Number Format:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Precision:</source>
-        <translation>Tarkkuus:</translation>
+        <translation type="vanished">Tarkkuus:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Number of decimal digits</source>
-        <translation>Desimaalien määrä</translation>
+        <translation type="vanished">Desimaalien määrä</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <source>Width:</source>
+        <translation type="obsolete">Leveys:</translation>
+    </message>
+    <message>
+        <location line="+79"/>
         <source>Prefix:</source>
         <translation>Etuliite:</translation>
     </message>
@@ -3096,7 +3107,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+97"/>
         <source>Dimension Tools</source>
         <translation>Mittatyökalut</translation>
     </message>
@@ -3151,6 +3162,24 @@ Haluatko palauttaa sen?</translation>
     </message>
 </context>
 <context>
+    <name>DimensionScaleDialog</name>
+    <message>
+        <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
+        <source>Dimension Scale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Don&apos;t show this warning again</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DimensionSettings</name>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js" line="+27"/>
@@ -3169,7 +3198,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Mitta</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+110"/>
         <source>point</source>
         <translation>piste</translation>
     </message>
@@ -3234,7 +3263,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Maanmittausyksiköt</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+228"/>
         <source>Unit / Format</source>
         <translation>Yksikkö/muoto</translation>
     </message>
@@ -3308,14 +3337,27 @@ Haluatko palauttaa sen?</translation>
         <translation>Arkkitehtien rasti</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Font</source>
-        <translation>Kirjasin</translation>
+        <translation type="vanished">Kirjasin</translation>
+    </message>
+    <message>
+        <source>Dimension label font:</source>
+        <translation type="vanished">Mittaselitteen kirjasin:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Label</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Dimension label font:</source>
-        <translation>Mittaselitteen kirjasin:</translation>
+        <source>Label font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Label color:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5447,7 +5489,17 @@ on jo luettelossa.</translation>
         <translation>Käytä täyttä tarkkuutta Retinanäytöissä</translation>
     </message>
     <message>
-        <location line="-178"/>
+        <location line="+398"/>
+        <source>auto</source>
+        <translation type="unfinished">automaattinen</translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>Number of threads:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-674"/>
         <source>Color lightness threshold:</source>
         <translation>Värivaaleuden kynnys:</translation>
     </message>
@@ -5528,12 +5580,11 @@ on jo luettelossa.</translation>
         <translation>Näytettävien viitepisteiden enimmäismäärä:</translation>
     </message>
     <message>
-        <location line="+77"/>
         <source>Use multithreading</source>
-        <translation type="unfinished">Käytä monisäkeistystä</translation>
+        <translation type="obsolete">Käytä monisäkeistystä</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+186"/>
         <source>Selection</source>
         <translation>Valinta</translation>
     </message>
@@ -7255,7 +7306,7 @@ on jo luettelossa.</translation>
 <context>
     <name>Leader</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+60"/>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+61"/>
         <source>Arrow position</source>
         <translation>Nuolen sijainti</translation>
     </message>
@@ -7269,9 +7320,13 @@ on jo luettelossa.</translation>
         <translation type="vanished">Valmis</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segement</source>
-        <translation>Peru edellinen segmentti</translation>
+        <translation type="vanished">Peru edellinen segmentti</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
+        <source>Undo Last Segment</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
@@ -8479,7 +8534,7 @@ näkyy hakutuloksissa:</translation>
         <translation>&amp;Säilytä alkuperäinen</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Käytä nykyistä tasoa ja &amp;ominaisuuksia</translation>
     </message>
@@ -8764,17 +8819,17 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+141"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
         <source>Opening drawing:</source>
         <translation>Avataan piirrosta:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+26"/>
         <source>Import Error</source>
         <translation>Tuontivirhe</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Cannot open file</source>
         <translation>Tiedostoa ei voida avata</translation>
     </message>
@@ -8804,7 +8859,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Tiedosto on tyhjä.</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Drawing loaded successfully:</source>
         <translation>Piirros ladattu onnistuneesti:</translation>
     </message>
@@ -9390,12 +9445,12 @@ näkyy hakutuloksissa:</translation>
         <translation>Valmis</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+435"/>
         <source>Export to PDF</source>
         <translation>Vie PDF:ksi</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Exporting to %1...</source>
         <translation>Viedään %1:een...</translation>
     </message>
@@ -9555,12 +9610,12 @@ näkyy hakutuloksissa:</translation>
         <translation>Näytä aina kaikki ominaisuudet (tämä voi hidastaa kohteiden valintaa)</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1466"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1468"/>
         <source>*VARIES*</source>
         <translation>*VAIHTELEVA*</translation>
     </message>
     <message>
-        <location line="-1273"/>
+        <location line="-1275"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9624,7 +9679,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Automaattinen</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Use auto measurement</source>
         <translation>Käytä automaattista mittausta</translation>
     </message>
@@ -11758,17 +11813,15 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>Startup</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/PreferencesPage.ui" line="+17"/>
         <source>Enable Splash Screen</source>
-        <translation>Näytä aloitusikkuna</translation>
+        <translation type="vanished">Näytä aloitusikkuna</translation>
     </message>
 </context>
 <context>
     <name>StartupPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/StartupPreferences.js" line="+24"/>
         <source>Startup</source>
-        <translation>Käynnistys</translation>
+        <translation type="vanished">Käynnistys</translation>
     </message>
 </context>
 <context>
@@ -12140,7 +12193,7 @@ näkyy hakutuloksissa:</translation>
         <translation>&amp;Erikoismerkit ...</translation>
     </message>
     <message>
-        <location line="+303"/>
+        <location line="+305"/>
         <source>Others...</source>
         <translation>Muut ...</translation>
     </message>
@@ -13116,7 +13169,7 @@ näkyy hakutuloksissa:</translation>
         <translation type="vanished">Ruudukon välit &lt; Aliruudukon välit</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+286"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+290"/>
         <source>Dropped data not supported</source>
         <translation>Poistettuja tietoja ei tueta</translation>
     </message>
@@ -13432,7 +13485,7 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+352"/>
+        <location filename="../scripts/autostart.js" line="+361"/>
         <source>Loading add-on translations...</source>
         <translation>Ladataan lisäosia käännökseen ...</translation>
     </message>
@@ -13459,7 +13512,7 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+829"/>
+        <location filename="../scripts/library.js" line="+856"/>
         <source>Objects</source>
         <translation>Esineet</translation>
     </message>
@@ -13745,6 +13798,16 @@ näkyy hakutuloksissa:</translation>
     </message>
     <message>
         <location line="+2"/>
+        <source>Tolerances</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tolerance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Lines</source>
         <translation>Viivat</translation>
     </message>
@@ -13897,6 +13960,11 @@ näkyy hakutuloksissa:</translation>
         <location line="+1"/>
         <source>PDF File</source>
         <translation>PDF -tiedosto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF/A-1B File</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

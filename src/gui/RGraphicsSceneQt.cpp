@@ -433,6 +433,18 @@ void RGraphicsSceneQt::exportXLine(const RXLine& xLine) {
         box.growToIncludeBox(b);
     }
 
+    // transform view box in inverted way as entities:
+    if (!transformStack.isEmpty()) {
+        for (int k=0; k<transformStack.size(); k++) {
+            bool ok;
+            QTransform t = transformStack[k].inverted(&ok);
+            if (!ok) {
+                qDebug() << "transform not invertable";
+            }
+            box.transform(t);
+        }
+    }
+
     // trim line to view box:
     RLine clippedLine = xLine.getClippedLine(box);
 
@@ -461,6 +473,18 @@ void RGraphicsSceneQt::exportRay(const RRay& ray) {
     for (it=views.begin(); it!=views.end(); it++) {
         RBox b = (*it)->getBox();
         box.growToIncludeBox(b);
+    }
+
+    // transform view box in inverted way as entities:
+    if (!transformStack.isEmpty()) {
+        for (int k=0; k<transformStack.size(); k++) {
+            bool ok;
+            QTransform t = transformStack[k].inverted(&ok);
+            if (!ok) {
+                qDebug() << "transform not invertable";
+            }
+            box.transform(t);
+        }
     }
 
     // trim line to view box:
@@ -631,6 +655,14 @@ QList<RPainterPath> RGraphicsSceneQt::exportText(const RTextBasedData& text, boo
                 pp.setSelected(true);
                 pp.setPen(RSettings::getSelectionColor());
             }
+            else {
+                // use fixed color from given text data instead of current entity
+                // used for dimension text labels if dimension text color is configured:
+                if (!col.isByBlock() && !col.isByLayer()) {
+                    pp.setPen(col);
+                    pp.setFixedPenColor(true);
+                }
+            }
             ret.append(pp);
         }
     }
@@ -649,12 +681,15 @@ void RGraphicsSceneQt::exportClipRectangle(const RBox& clipRectangle, bool force
     }
 }
 
-void RGraphicsSceneQt::exportTransform(const QTransform& t) {
+void RGraphicsSceneQt::exportTransform(const RTransform& t) {
     RExporter::exportTransform(t);
 
     REntity::Id id = getBlockRefOrEntityId();
     RGraphicsSceneDrawable d(t);
     addDrawable(id, d, draftMode, exportToPreview);
+
+    // remember transformation stack for XLine / Ray transforms:
+    transformStack.push(t);
 }
 
 void RGraphicsSceneQt::exportEndTransform() {
@@ -663,6 +698,14 @@ void RGraphicsSceneQt::exportEndTransform() {
     REntity::Id id = getBlockRefOrEntityId();
     RGraphicsSceneDrawable d(RGraphicsSceneDrawable::EndTransform);
     addDrawable(id, d, draftMode, exportToPreview);
+
+    // remember transformation stack for XLine / Ray transforms:
+    if (!transformStack.isEmpty()) {
+        transformStack.pop();
+    }
+    else {
+        qWarning() << "transformStack empty";
+    }
 }
 
 /**
@@ -714,13 +757,13 @@ void RGraphicsSceneQt::deleteDrawables() {
  * given ID.
  * TODO: return reference or pointer
  */
-QList<RGraphicsSceneDrawable> RGraphicsSceneQt::getDrawables(REntity::Id entityId) {
+QList<RGraphicsSceneDrawable>* RGraphicsSceneQt::getDrawables(REntity::Id entityId) {
     // TODO: check should not be necessary:
     if (drawables.contains(entityId)) {
-        return drawables[entityId];
+        return &drawables[entityId];
     }
 
-    return QList<RGraphicsSceneDrawable>();
+    return NULL;
 }
 
 bool RGraphicsSceneQt::hasClipRectangleFor(REntity::Id entityId, bool preview) const {
@@ -750,12 +793,37 @@ RBox RGraphicsSceneQt::getClipRectangle(REntity::Id entityId, bool preview) cons
 void RGraphicsSceneQt::addDrawable(REntity::Id entityId, RGraphicsSceneDrawable& drawable, bool draft, bool preview) {
     Q_UNUSED(draft)
 
+    // entityId: ID of entity for which the drawbale represents a part (e.g. line, block reference, viewport, etc)
+
+    // this is the current entity being exported:
+    // this might be in the context of the block reference or viewport indicated by entityId:
     REntity* entity = getEntity();
     if (entity!=NULL) {
         QSharedPointer<RLayer> layer = getEntityLayer(*entity);
         if (!layer.isNull()) {
             if (!layer->isPlottable()) {
                 drawable.setNoPlot(true);
+            }
+        }
+    }
+
+    // check block ref stack for non-plottable layer:
+    if (drawable.getNoPlot()==false) {
+        for (int i=blockRefViewportStack.size()-1; i>=0; i--) {
+            REntity* e = blockRefViewportStack[i];
+            if (e==NULL) {
+                continue;
+            }
+            if (e->getType()==RS::EntityViewport) {
+                // entities in non-plottable viewports are plottable:
+                continue;
+            }
+            QSharedPointer<RLayer> layer = getEntityLayer(*e);
+            if (!layer.isNull()) {
+                if (!layer->isPlottable()) {
+                    drawable.setNoPlot(true);
+                    break;
+                }
             }
         }
     }
@@ -804,11 +872,11 @@ QList<REntity::Id> RGraphicsSceneQt::getPreviewEntityIds() {
     return ret;
 }
 
-QList<RGraphicsSceneDrawable> RGraphicsSceneQt::getPreviewDrawables(RObject::Id entityId) {
+QList<RGraphicsSceneDrawable>* RGraphicsSceneQt::getPreviewDrawables(RObject::Id entityId) {
     if (previewDrawables.contains(entityId)) {
-        return previewDrawables[entityId];
+        return &previewDrawables[entityId];
     }
-    return QList<RGraphicsSceneDrawable>();
+    return NULL;
 }
 
 void RGraphicsSceneQt::clearPreview() {
@@ -833,20 +901,28 @@ void RGraphicsSceneQt::addTextToPreview(const RTextBasedData& text) {
 }
 
 void RGraphicsSceneQt::highlightEntity(REntity& entity) {
-    beginPreview();
     // get painter paths for closest entity:
-    QList<RGraphicsSceneDrawable> drawables = getDrawables(entity.getId());
+    QList<RGraphicsSceneDrawable>* drawables = getDrawables(entity.getId());
+    if (drawables==NULL) {
+        return;
+    }
+
+    // avoid changing the original painter paths
+    // (avoid entities that keep being highlighted):
+    QList<RGraphicsSceneDrawable> drawablesCopy = *drawables;
+
+    beginPreview();
     RBox clipRectangle = getClipRectangle(entity.getId());
-    for (int i = 0; i < drawables.size(); ++i) {
-        drawables[i].setSelected(entity.isSelected());
-        drawables[i].setHighlighted(true);
+    for (int i = 0; i < drawablesCopy.size(); ++i) {
+        drawablesCopy[i].setSelected(entity.isSelected());
+        drawablesCopy[i].setHighlighted(true);
     }
     if (clipRectangle.isValid()) {
         previewClipRectangles.insert(entity.getId(), clipRectangle);
         //exportClipRectangle(clipRect);
     }
     // highlighted entities are previews on top of original entities:
-    addToPreview(entity.getId(), drawables);
+    addToPreview(entity.getId(), drawablesCopy);
     endPreview();
 }
 

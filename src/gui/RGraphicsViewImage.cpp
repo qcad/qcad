@@ -58,7 +58,7 @@ RGraphicsViewImage::RGraphicsViewImage()
       doPaintOrigin(true),
       isSelected(false),
       bgColorLightness(0),
-      colorCorrectionOverride(false),
+      colorCorrectionOverride(-1),
       colorCorrection(false),
       colorThreshold(10),
       minimumLineweight(0.0),
@@ -333,7 +333,7 @@ void RGraphicsViewImage::updateImage() {
         painterThread.clear();
         painterThread.append(painter);
         entityTransformThread.clear();
-        entityTransformThread.append(QStack<QTransform>());
+        entityTransformThread.append(QStack<RTransform>());
 
         bgColorLightness = getBackgroundColor().lightness();
         isSelected = false;
@@ -758,7 +758,7 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
     entityTransformThread.clear();
     for (int i=0; i<graphicsBufferThread.length(); i++) {
         painterThread.append(initPainter(graphicsBufferThread[i], false, false, r));
-        entityTransformThread.append(QStack<QTransform>());
+        entityTransformThread.append(QStack<RTransform>());
     }
 
     paintBackground(painterThread.first(), r);
@@ -767,7 +767,9 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
     RVector c2 = mapFromView(RVector(r.right()+1,r.top()-1), 1e300);
     RBox queryBox(c1, c2);
 
+    //RDebug::startTimer();
     paintEntitiesMulti(queryBox);
+    //RDebug::stopTimer("paint");
 
     // paint selected entities on top:
     if (!selectedIds.isEmpty()) {
@@ -970,7 +972,7 @@ void RGraphicsViewImage::paintEntities(QPainter* painter, const RBox& queryBox) 
     painterThread.clear();
     painterThread.append(painter);
     entityTransformThread.clear();
-    entityTransformThread.append(QStack<QTransform>());
+    entityTransformThread.append(QStack<RTransform>());
 
     paintEntitiesMulti(queryBox);
 }
@@ -1036,12 +1038,12 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
         ps = getScene()->getPixelSizeHint();
     }
 
-    // regen arcs, xlines, rays if necessary:
+    // regen arcs, xlines, rays, block references if necessary:
     for (int i=0; i<list.length(); i++) {
         REntity::Id id = list[i];
 
         // get drawables of the given entity:
-        QList<RGraphicsSceneDrawable> drawables = sceneQt->getDrawables(id);
+        QList<RGraphicsSceneDrawable>* drawables = sceneQt->getDrawables(id);
 
         // before multi threading:
         // if at least one arc path is too detailed or not detailed enough,
@@ -1049,35 +1051,33 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
 
         // do we need to regen the path?
         bool regen = false;
-        if (drawables.isEmpty()) {
+        if (drawables==NULL || drawables->isEmpty()) {
             // entity was last outside visible area, needs regen to reappear:
             regen = true;
         }
         else {
-            for (int p=0; p<drawables.size(); p++) {
-                RGraphicsSceneDrawable& drawable = drawables[p];
-                if (drawable.getType()==RGraphicsSceneDrawable::PainterPath) {
+            for (int p=0; p<drawables->size() && !regen; p++) {
+                RGraphicsSceneDrawable& drawable = drawables->operator[](p);
+
+                if (drawable.isPainterPath()) {
                     if (drawable.getPainterPath().getAlwaysRegen()==true) {
                         regen = true;
-                        break;
                     }
-                    if (drawable.getPainterPath().getAutoRegen()==true) {
+                    else if (drawable.getPainterPath().getAutoRegen()==true) {
                         if (drawable.getPainterPath().getPixelSizeHint()>RS::PointTolerance &&
                            (drawable.getPainterPath().getPixelSizeHint()<ps/5 ||
                             drawable.getPainterPath().getPixelSizeHint()>ps*5)) {
 
                             regen = true;
-                            break;
                         }
                     }
                 }
             }
         }
 
-        // regen:
+        // regenerate arc, xline, block reference, etc.:
         if (regen) {
             sceneQt->exportEntity(id, true);
-            //drawables = sceneQt->getDrawables(id);
         }
     }
 
@@ -1165,7 +1165,7 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
 //    }
 
     // get drawables for vector graphics entity:
-    QList<RGraphicsSceneDrawable> drawables;
+    QList<RGraphicsSceneDrawable>* drawables;
     if (preview) {
         // get drawables of the current preview:
         drawables = sceneQt->getPreviewDrawables(id);
@@ -1211,8 +1211,12 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
 //        }
     }
 
+    if (drawables==NULL) {
+        return;
+    }
+
     // paint drawables (painter paths, texts, images):
-    QListIterator<RGraphicsSceneDrawable> i(drawables);
+    QListIterator<RGraphicsSceneDrawable> i(*drawables);
     while (i.hasNext()) {
         RGraphicsSceneDrawable drawable = i.next();
 
@@ -1245,7 +1249,7 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
                         painter->setTransform(tt, true);
                     }
 
-                    QTransform t = entityTransformThread[threadId][k];
+                    RTransform t = entityTransformThread[threadId][k];
                     painter->setTransform(t, true);
                 }
             }
@@ -1266,24 +1270,97 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
             }
 
             text.move(drawable.getOffset());
+
             if (entityTransformThread[threadId].isEmpty()) {
                 text.move(paintOffset);
             }
             else {
+//                RVector p = text.getPosition();
+//                RVector ap = text.getAlignmentPoint();
+//                RVector anglePoint = ap + RVector::createPolar(1.0, text.getAngle());
+//                bool readable = RMath::isAngleReadable(text.getAngle());
+//                text.update();
+//                RVector centerPoint = text.getBoundingBox().getCenter();
+//                qDebug() << "centerPoint before:" << centerPoint;
+
                 // transform (text in block reference):
                 painter->save();
                 for (int k=0; k<entityTransformThread[threadId].size(); k++) {
                     if (k==0) {
                         // paintOffset must be applied here to get the correct placement for
                         // texts with non-uniform scale:
+
                         QTransform tt;
                         tt.translate(paintOffset.x, paintOffset.y);
+
+                        //text.move(paintOffset);
                         painter->setTransform(tt, true);
+//                        p.transform2D(tt);
+//                        ap.transform2D(tt);
+//                        anglePoint.transform2D(tt);
+//                        centerPoint.transform2D(tt);
                     }
 
-                    QTransform t = entityTransformThread[threadId][k];
+                    RTransform t = entityTransformThread[threadId][k];
+//                    QList<RTransformOp> ops = t.getOps();
+//                    for (int n=ops.length()-1; n>=0; n--) {
+//                        RTransformOp op = ops[n];
+//                        if (op.type==RTransformOp::Translation) {
+//                            text.move(RVector(op.d1, op.d2));
+//                        }
+//                        else if (op.type==RTransformOp::Scale) {
+//                            text.scale(RVector(op.d1, op.d2), RVector(0,0));
+//                        }
+//                        else if (op.type==RTransformOp::Rotation) {
+//                            text.rotate(op.d1, RVector(0,0));
+//                        }
+//                    }
+
+//                    p.transform2D(t);
+//                    ap.transform2D(t);
+//                    anglePoint.transform2D(t);
+//                    centerPoint.transform2D(t);
                     painter->setTransform(t, true);
+
+                    //qDebug() << "m11:" << t.m11();
+                    //qDebug() << "m22:" << t.m22();
                 }
+
+//                text.setPosition(p);
+//                text.setAlignmentPoint(ap);
+
+//                text.update();
+
+//                qDebug() << "centerPoint after:" << centerPoint;
+//                qDebug() << "text center after:" << text.getBoundingBox().getCenter();
+//                qDebug() << "d:" << text.getBoundingBox().getCenter().getDistanceTo(centerPoint);
+
+//                bool corr = false;
+//                double angle = RMath::makeAngleReadable(ap.getAngleTo(anglePoint), readable, &corr);
+//                text.setAngle(angle);
+
+                // TODO: fix alignment and angle of text to make readable:
+
+//                if (text.getBoundingBox().getCenter().getDistanceTo(centerPoint)>0.1) {
+//                    bool corr = false;
+//                    double angle = RMath::makeAngleReadable(ap.getAngleTo(anglePoint), readable, &corr);
+//                    text.setAngle(angle);
+
+//                    if (corr) {
+//                        if (text.getHAlign()==RS::HAlignLeft) {
+//                            text.setHAlign(RS::HAlignRight);
+//                        } else if (text.getHAlign()==RS::HAlignRight) {
+//                            text.setHAlign(RS::HAlignLeft);
+//                        }
+//                    }
+//                    else {
+//                        if (text.getVAlign()==RS::VAlignTop) {
+//                            text.setVAlign(RS::VAlignBase);
+//                        } else if (text.getVAlign()==RS::VAlignBase) {
+//                            text.setVAlign(RS::VAlignTop);
+//                        }
+//                    }
+//                }
             }
 
             paintText(painter, text);
@@ -1294,12 +1371,12 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
         }
 
         // Transform:
-        if (drawable.getType()==RGraphicsSceneDrawable::Transform) {
-            QTransform transform = drawable.getTransform();
+        else if (drawable.getType()==RGraphicsSceneDrawable::Transform) {
+            RTransform transform = drawable.getTransform();
             entityTransformThread[threadId].push(transform);
         }
 
-        if (drawable.getType()==RGraphicsSceneDrawable::EndTransform) {
+        else if (drawable.getType()==RGraphicsSceneDrawable::EndTransform) {
             if (!entityTransformThread[threadId].isEmpty()) {
                 entityTransformThread[threadId].pop();
             }
@@ -1309,7 +1386,7 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
         }
 
         // unknown drawable or already handled (image, text, transform, end transform):
-        if (drawable.getType()!=RGraphicsSceneDrawable::PainterPath) {
+        if (!drawable.isPainterPath()) {
             continue;
         }
 
@@ -1641,7 +1718,12 @@ void RGraphicsViewImage::applyColorCorrection(QPen& pen) {
         return;
     }
 
-    if (colorCorrection || colorCorrectionOverride) {
+    bool colCorr = colorCorrection;
+    if (colorCorrectionOverride!=-1) {
+        colCorr = (colorCorrectionOverride!=0);
+    }
+
+    if (colCorr) {
         if (pen.color().lightness() <= colorThreshold && bgColorLightness <= colorThreshold) {
             pen.setColor(Qt::white);
         } else if (pen.color().lightness() >= 255-colorThreshold && bgColorLightness >= 255-colorThreshold) {
@@ -1655,7 +1737,12 @@ void RGraphicsViewImage::applyColorCorrection(QBrush& brush) {
         return;
     }
 
-    if (colorCorrection || colorCorrectionOverride) {
+    bool colCorr = colorCorrection;
+    if (colorCorrectionOverride!=-1) {
+        colCorr = (colorCorrectionOverride!=0);
+    }
+
+    if (colCorr) {
         if (brush.color().lightness() <= colorThreshold && bgColorLightness <= colorThreshold) {
             brush.setColor(Qt::white);
         } else if (brush.color().lightness() >= 255-colorThreshold && bgColorLightness >= 255-colorThreshold) {
@@ -1958,11 +2045,11 @@ void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text) {
             }
             textLayout.layout->setTextOption(o);
 
-            // TODO:
+            // TODO: should be reentrant but crashes if not locked:
             {
-                static QMutex m;
-                QMutexLocker ml(&m);
+                RTextRenderer::lockForDrawing();
                 textLayout.layout->draw(painter, QPoint(0,0));
+                RTextRenderer::unlockForDrawing();
             }
 
             painter->restore();

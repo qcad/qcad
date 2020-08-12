@@ -23,6 +23,15 @@ include("scripts/File/OpenFile/OpenFile.js");
 include("scripts/File/AutoSave/AutoSave.js");
 include("scripts/Tools/arguments.js");
 
+// allow plugins to extend autostart through autostart1.js, autostart2.js, ...:
+for (var i=1; i<10; i++) {
+    var fn = "scripts/autostart" + i + ".js";
+    if (new QFileInfo(fn).exists() || new QFileInfo(":/" + fn).exists()) {
+        include(fn);
+    }
+}
+
+
 /**
  * Prints version information.
  */
@@ -798,7 +807,11 @@ function main() {
     var clickedFilesAndArgs = filesToOpen.concat(args.slice(1));
     QCoreApplication.processEvents();
     appWin.setProperty("starting", true);
-    openFiles(clickedFilesAndArgs, !recovered);
+    var restored = false;
+    if (typeof(restoreFiles)=="function") {
+        restored = restoreFiles();
+    }
+    openFiles(clickedFilesAndArgs, !recovered && !restored);
     appWin.setProperty("starting", false);
 
     RPluginLoader.postInitPlugins(RPluginInterface.LoadedFiles);

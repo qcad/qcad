@@ -8,7 +8,7 @@
         <translation type="obsolete">&amp;Informazioni su...</translation>
     </message>
     <message>
-        <location filename="../scripts/Help/About/About.js" line="+63"/>
+        <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
         <translation>Informazioni su %1</translation>
     </message>
@@ -67,12 +67,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+375"/>
+        <location line="+408"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-350"/>
+        <location line="-383"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -89,12 +89,12 @@
         <translation>Sconosciuto</translation>
     </message>
     <message>
-        <location line="+288"/>
+        <location line="+289"/>
         <source>Licenses</source>
         <translation>Licenze</translation>
     </message>
     <message>
-        <location line="-418"/>
+        <location line="-419"/>
         <location line="+123"/>
         <source>Version:</source>
         <translation>Versione:</translation>
@@ -352,8 +352,12 @@ applicare le modifiche.</translation>
     </message>
     <message>
         <location line="+86"/>
+        <source>Defaults for</source>
+        <translation>Predefiniti per</translation>
+    </message>
+    <message>
         <source>Defaults for </source>
-        <translation>Predefiniti per </translation>
+        <translation type="vanished">Predefiniti per </translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1383,7 +1387,7 @@ Vuoi recuperarlo?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+120"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Dimensioni dell&apos;immagine non valido (larghezza x altezza deve essere inferiore a %1)</translation>
     </message>
@@ -2312,7 +2316,7 @@ Spaziatura Griglia minima (px):</translatorcomment>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../scripts/Edit/ClipboardOperation.js" line="+52"/>
+        <location filename="../scripts/Edit/ClipboardOperation.js" line="+54"/>
         <source>Reference point</source>
         <translatorcomment>--exact match--
 --file: Translate_it.ts--
@@ -2702,7 +2706,7 @@ Coordinate polari relativo:</translatorcomment>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+64"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
         <translation>Posizione</translation>
     </message>
@@ -2721,17 +2725,24 @@ Coordinate polari relativo:</translatorcomment>
         <translation>Incremento:</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Precision:</source>
-        <translation>Precisione:</translation>
+        <translation type="vanished">Precisione:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Number of decimal digits</source>
-        <translation>Numero di cifre decimali</translation>
+        <translation type="vanished">Numero di cifre decimali</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <source>Width:</source>
+        <translation type="vanished">Larghezza:</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Number Format:</source>
+        <translation>Formato numero:</translation>
+    </message>
+    <message>
+        <location line="+79"/>
         <source>Prefix:</source>
         <translation>Prefisso:</translation>
     </message>
@@ -3391,7 +3402,7 @@ Layer ad alta risoluzione possono rallentare la navigazione in QGIS.</translator
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+97"/>
         <source>Dimension Tools</source>
         <translation>Strumenti dimensione</translation>
     </message>
@@ -3446,6 +3457,24 @@ Layer ad alta risoluzione possono rallentare la navigazione in QGIS.</translator
     </message>
 </context>
 <context>
+    <name>DimensionScaleDialog</name>
+    <message>
+        <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
+        <source>Dimension Scale</source>
+        <translation>Scala delle quote</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
+        <translation>La scala per le nuove quote non è 1:1. Le etichette delle quote mostreranno i valori che differiscono dal valore misurato nel disegno. È possibile correggere il fattore di scala nella barra delle opzioni in alto.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Don&apos;t show this warning again</source>
+        <translation>Non mostrare più questo dialogo di avviso</translation>
+    </message>
+</context>
+<context>
     <name>DimensionSettings</name>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js" line="+29"/>
@@ -3468,7 +3497,7 @@ Layer ad alta risoluzione possono rallentare la navigazione in QGIS.</translator
         <translation>Predefiniti per nuovi disegni</translation>
     </message>
     <message>
-        <location line="+111"/>
+        <location line="+112"/>
         <source>point</source>
         <translation>Punto</translation>
     </message>
@@ -3533,7 +3562,7 @@ Layer ad alta risoluzione possono rallentare la navigazione in QGIS.</translator
         <translation>Unità topografiche</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+228"/>
         <source>Unit / Format</source>
         <translation>Unità / formato</translation>
     </message>
@@ -3611,14 +3640,27 @@ Layer ad alta risoluzione possono rallentare la navigazione in QGIS.</translator
         <translation>Contrassegni architettonici</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Font</source>
-        <translation>Carattere</translation>
+        <translation type="vanished">Carattere</translation>
+    </message>
+    <message>
+        <source>Dimension label font:</source>
+        <translation type="vanished">Carattere:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Label</source>
+        <translation>Etichetta</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Dimension label font:</source>
-        <translation>Carattere:</translation>
+        <source>Label font:</source>
+        <translation>Carattere etichetta:</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Label color:</source>
+        <translation>Colore etichetta:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5718,7 +5760,7 @@ Punto decimale:</translatorcomment>
     <message>
         <location filename="../scripts/Help/Forum/ForumInit.js" line="+2"/>
         <source>&amp;Forum</source>
-        <translation>&amp;Foro</translation>
+        <translation>&amp;Forum</translation>
     </message>
 </context>
 <context>
@@ -5952,7 +5994,17 @@ Punto decimale:</translatorcomment>
         <translation>Auto corretti colori bianco e nero</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="+547"/>
+        <source>auto</source>
+        <translation>auto</translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>Number of threads:</source>
+        <translation>Numero di thread:</translation>
+    </message>
+    <message>
+        <location line="-674"/>
         <source>Color lightness threshold:</source>
         <translation>Soglia per la leggerezza del colore:</translation>
     </message>
@@ -5991,12 +6043,11 @@ Punto decimale:</translatorcomment>
         <translation>Visualizza entità con più di N trattini come continuo:</translation>
     </message>
     <message>
-        <location line="+181"/>
         <source>Use multithreading</source>
-        <translation>Utilizzare il multithreading</translation>
+        <translation type="vanished">Utilizzare il multithreading</translation>
     </message>
     <message>
-        <location line="-263"/>
+        <location line="-82"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Passo angolo minimo per rendere archi (gradi):</translation>
     </message>
@@ -6066,7 +6117,7 @@ Punto decimale:</translatorcomment>
         <translation type="obsolete">Visualizzare limite per il testo:</translation>
     </message>
     <message>
-        <location line="+345"/>
+        <location line="+441"/>
         <source>Selection</source>
         <translation>Selezione</translation>
     </message>
@@ -6445,7 +6496,7 @@ Meta griglia:
         <translatorcomment>--exact match--
 --file: DefaultNavigation_it.ts--
 Visualizzazione grafica</translatorcomment>
-        <translation>Vista grafica</translation>
+        <translation>Visualizzazione grafica</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -8140,7 +8191,7 @@ Proiezione &amp;Isometrica</translatorcomment>
 <context>
     <name>Leader</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+60"/>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+61"/>
         <source>Arrow position</source>
         <translation>Posizione della freccia</translation>
     </message>
@@ -8168,9 +8219,13 @@ Proiezione &amp;Isometrica</translatorcomment>
         <translation type="obsolete">Principale</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segement</source>
-        <translation>Annulla</translation>
+        <translation type="vanished">Annulla</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
+        <source>Undo Last Segment</source>
+        <translation>Annulla segmento precedente</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -9572,7 +9627,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation>&amp;Tieni originali</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Usa livello e gli &amp;attributi corrente</translation>
     </message>
@@ -9889,7 +9944,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation type="obsolete">Senza titolo %1 [*]</translation>
     </message>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+141"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
         <source>Opening drawing:</source>
         <translation>Aprendo il disegno:</translation>
     </message>
@@ -9898,12 +9953,12 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation type="vanished">Caricamento…</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+26"/>
         <source>Import Error</source>
         <translation>Errore di importazione</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Cannot open file</source>
         <translation>Impossibile aprire il file</translation>
     </message>
@@ -9933,7 +9988,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation>Il file è vuoto.</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Drawing loaded successfully:</source>
         <translation>Disegno caricato correttamente:</translation>
     </message>
@@ -10643,12 +10698,12 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation>Fatto</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+435"/>
         <source>Export to PDF</source>
         <translation>Esporta PDF</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Exporting to %1...</source>
         <translation>Esportazione in %1...</translation>
     </message>
@@ -10856,12 +10911,12 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="+702"/>
+        <location line="+704"/>
         <source>*VARIES*</source>
         <translation>*VARIE*</translation>
     </message>
     <message>
-        <location line="-1273"/>
+        <location line="-1275"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: Arduino_it_IT.po--
@@ -10918,7 +10973,7 @@ Nessuna selezione</translatorcomment>
         <translation>Mostra tutte le proprietà</translation>
     </message>
     <message>
-        <location line="+659"/>
+        <location line="+661"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -10931,12 +10986,12 @@ Nessuna selezione</translatorcomment>
         <translation type="obsolete">Sotto</translation>
     </message>
     <message>
-        <location line="-542"/>
+        <location line="-544"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Use auto measurement</source>
         <translation>Utilizzare la misurazione automatica</translation>
     </message>
@@ -13359,17 +13414,15 @@ Interseca con la selezione corrente</translatorcomment>
 <context>
     <name>Startup</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/PreferencesPage.ui" line="+17"/>
         <source>Enable Splash Screen</source>
-        <translation>Abilita splash screen</translation>
+        <translation type="vanished">Abilita splash screen</translation>
     </message>
 </context>
 <context>
     <name>StartupPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/StartupPreferences.js" line="+24"/>
         <source>Startup</source>
-        <translation>Inizio</translation>
+        <translation type="vanished">Inizio</translation>
     </message>
 </context>
 <context>
@@ -13758,7 +13811,7 @@ Tutti i file</translatorcomment>
         <translation>&amp;Carattere speciale...</translation>
     </message>
     <message>
-        <location line="+303"/>
+        <location line="+305"/>
         <source>Others...</source>
         <translation>Altri...</translation>
     </message>
@@ -14790,7 +14843,7 @@ Obiettivo punto</translatorcomment>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+286"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+290"/>
         <source>Dropped data not supported</source>
         <translation>I dati inseriti non sono supportati</translation>
     </message>
@@ -15177,7 +15230,7 @@ Visita il &amp;sito web</translatorcomment>
         <translation type="obsolete">Post-inizializzazione...</translation>
     </message>
     <message>
-        <location filename="../scripts/autostart.js" line="+352"/>
+        <location filename="../scripts/autostart.js" line="+361"/>
         <source>Loading add-on translations...</source>
         <translation>Caricamento aggiuntivo traduzioni...</translation>
     </message>
@@ -15220,7 +15273,7 @@ Visita il &amp;sito web</translatorcomment>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+829"/>
+        <location filename="../scripts/library.js" line="+856"/>
         <source>Objects</source>
         <translation>Oggetti</translation>
     </message>
@@ -15525,6 +15578,16 @@ Modificare un blocco sulla base di un riferimento di blocco scelto</translatorco
     </message>
     <message>
         <location line="+2"/>
+        <source>Tolerances</source>
+        <translation>Tolleranze</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tolerance</source>
+        <translation>Tolleranza</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Lines</source>
         <translation>Linee</translation>
     </message>
@@ -15679,6 +15742,11 @@ in linee, solidi e testi</translatorcomment>
         <location line="+1"/>
         <source>PDF File</source>
         <translation>File PDF</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF/A-1B File</source>
+        <translation>File PDF/A-1B</translation>
     </message>
 </context>
 <context>

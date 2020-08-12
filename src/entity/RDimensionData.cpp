@@ -275,6 +275,9 @@ void RDimensionData::scaleVisualProperties(double scaleFactor) {
         double s = getDimScale();
         setDimScale(scaleFactor * s);
     }
+
+    extLineFixLength *= scaleFactor;
+
     if (!RMath::fuzzyCompare(scaleFactor, 0.0) && !RMath::fuzzyCompare(scaleFactor, 1.0)) {
         setLinearFactor(linearFactor / scaleFactor);
     }
@@ -568,6 +571,13 @@ void RDimensionData::initTextData() const {
     textData.setLineweight(getLineweight());
     textData.setSelected(isSelected());
     textData.setDimensionLabel(true);
+
+    // override text color from dimension settings:
+    QVariant v = document->getKnownVariable(RS::DIMCLRT, RColor(RColor::ByBlock));
+    RColor textColor = v.value<RColor>();
+    if (textColor!=RColor::ByBlock) {
+        textData.setColor(textColor);
+    }
 
     //qDebug() << "label color: " << textData.getColor();
     //qDebug() << "textData: " << textData;

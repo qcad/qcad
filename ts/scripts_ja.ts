@@ -4,7 +4,7 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../scripts/Help/About/About.js" line="+63"/>
+        <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
         <translation>%1について</translation>
     </message>
@@ -39,12 +39,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+375"/>
+        <location line="+408"/>
         <source>Plugin:</source>
         <translation>プラグイン:</translation>
     </message>
     <message>
-        <location line="-350"/>
+        <location line="-383"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -198,7 +198,7 @@
         <translation>クレジット</translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+163"/>
         <source>Licenses</source>
         <translation type="unfinished"></translation>
     </message>
@@ -321,8 +321,12 @@ QCADを再起動してください。</translation>
     </message>
     <message>
         <location line="+86"/>
-        <source>Defaults for </source>
+        <source>Defaults for</source>
         <translation>デフォルト</translation>
+    </message>
+    <message>
+        <source>Defaults for </source>
+        <translation type="vanished">デフォルト</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1267,7 +1271,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+120"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation> 無効な画像サイズ(幅x高さは%1よりも小さく)</translation>
     </message>
@@ -2152,7 +2156,7 @@ Do you wish to recover it?</source>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../scripts/Edit/ClipboardOperation.js" line="+52"/>
+        <location filename="../scripts/Edit/ClipboardOperation.js" line="+54"/>
         <source>Reference point</source>
         <translation>基準点</translation>
     </message>
@@ -2487,7 +2491,7 @@ Do you wish to recover it?</source>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+64"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
         <translation type="unfinished">位置</translation>
     </message>
@@ -2513,16 +2517,15 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+14"/>
-        <source>Precision:</source>
+        <source>Number Format:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Number of decimal digits</source>
-        <translation type="unfinished"></translation>
+        <source>Width:</source>
+        <translation type="obsolete">幅:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+79"/>
         <source>Prefix:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3147,7 +3150,7 @@ Do you wish to recover it?</source>
         <translation>デルタ</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+97"/>
         <source>Dimension Tools</source>
         <translation>寸法ツール</translation>
     </message>
@@ -3202,6 +3205,24 @@ Do you wish to recover it?</source>
     </message>
 </context>
 <context>
+    <name>DimensionScaleDialog</name>
+    <message>
+        <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
+        <source>Dimension Scale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Don&apos;t show this warning again</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DimensionSettings</name>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js" line="+27"/>
@@ -3220,7 +3241,7 @@ Do you wish to recover it?</source>
         <translation>寸法</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+110"/>
         <source>point</source>
         <translation>点</translation>
     </message>
@@ -3285,7 +3306,7 @@ Do you wish to recover it?</source>
         <translation>測量</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+228"/>
         <source>Unit / Format</source>
         <translation>ユニット/フォーマット</translation>
     </message>
@@ -3363,14 +3384,27 @@ Do you wish to recover it?</source>
         <translation>建築チェック</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Font</source>
-        <translation>フォント</translation>
+        <translation type="vanished">フォント</translation>
+    </message>
+    <message>
+        <source>Dimension label font:</source>
+        <translation type="vanished">フォント:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Label</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Dimension label font:</source>
-        <translation>フォント:</translation>
+        <source>Label font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Label color:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5532,7 +5566,17 @@ is already in the list.</source>
         <translation>白に白/黒に黒の表示を防ぐ</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="+547"/>
+        <source>auto</source>
+        <translation type="unfinished">自動</translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>Number of threads:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-674"/>
         <source>Color lightness threshold:</source>
         <translation>色の明るさ閾値:</translation>
     </message>
@@ -5571,12 +5615,7 @@ is already in the list.</source>
         <translation>エンティティをこの数以上の連続点として表示する</translation>
     </message>
     <message>
-        <location line="+181"/>
-        <source>Use multithreading</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-263"/>
+        <location line="-82"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>弧を描く時に分割する最小角度（度）</translation>
     </message>
@@ -5642,7 +5681,7 @@ is already in the list.</source>
         <translation type="obsolete">テキスト高さの表示閾値:</translation>
     </message>
     <message>
-        <location line="+345"/>
+        <location line="+441"/>
         <source>Selection</source>
         <translation>選択</translation>
     </message>
@@ -7404,7 +7443,7 @@ is already in the list.</source>
 <context>
     <name>Leader</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+60"/>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+61"/>
         <source>Arrow position</source>
         <translation>矢の位置</translation>
     </message>
@@ -7428,9 +7467,13 @@ is already in the list.</source>
         <translation>引出線（矢つきの連続線分）</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segement</source>
-        <translation>最後の処理をアンドゥ</translation>
+        <translation type="vanished">最後の処理をアンドゥ</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
+        <source>Undo Last Segment</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
@@ -8745,7 +8788,7 @@ shown in search results:</source>
         <translation>&amp;K オリジナルを維持</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>&amp;a 現在の画層と属性を利用</translation>
     </message>
@@ -9030,7 +9073,7 @@ shown in search results:</source>
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+141"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
         <source>Opening drawing:</source>
         <translation>オープンされた図面:</translation>
     </message>
@@ -9039,12 +9082,12 @@ shown in search results:</source>
         <translation type="vanished">読込中...</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+26"/>
         <source>Import Error</source>
         <translation>インポートエラー</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Cannot open file</source>
         <translation>ファイルを開けません</translation>
     </message>
@@ -9074,7 +9117,7 @@ shown in search results:</source>
         <translation>ファイルは空です。</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Drawing loaded successfully:</source>
         <translation>ロード済み:</translation>
     </message>
@@ -9710,12 +9753,12 @@ shown in search results:</source>
         <translation>完了</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+435"/>
         <source>Export to PDF</source>
         <translation>PDFにエクスポート</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Exporting to %1...</source>
         <translation>エクスポート中 %1...</translation>
     </message>
@@ -9855,12 +9898,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1466"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1468"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
     <message>
-        <location line="-1273"/>
+        <location line="-1275"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9914,7 +9957,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+659"/>
+        <location line="+661"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -9923,7 +9966,7 @@ shown in search results:</source>
         <translation type="obsolete">カスタムプロパティを追加</translation>
     </message>
     <message>
-        <location line="-705"/>
+        <location line="-707"/>
         <source>Add custom property to selected objects</source>
         <translation>選択したオブジェクトにカスタムプロパティを追加</translation>
     </message>
@@ -9933,7 +9976,7 @@ shown in search results:</source>
         <translation>自動</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Use auto measurement</source>
         <translation>自動計測を使用</translation>
     </message>
@@ -12162,17 +12205,15 @@ shown in search results:</source>
 <context>
     <name>Startup</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/PreferencesPage.ui" line="+17"/>
         <source>Enable Splash Screen</source>
-        <translation>スプラッシュスクリーンを表示</translation>
+        <translation type="vanished">スプラッシュスクリーンを表示</translation>
     </message>
 </context>
 <context>
     <name>StartupPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/StartupPreferences.js" line="+24"/>
         <source>Startup</source>
-        <translation>スタートアップ</translation>
+        <translation type="vanished">スタートアップ</translation>
     </message>
 </context>
 <context>
@@ -12544,7 +12585,7 @@ shown in search results:</source>
         <translation>&amp;S 特殊文字...</translation>
     </message>
     <message>
-        <location line="+303"/>
+        <location line="+305"/>
         <source>Others...</source>
         <translation>その他...</translation>
     </message>
@@ -13491,7 +13532,7 @@ shown in search results:</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+286"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+290"/>
         <source>Dropped data not supported</source>
         <translation>ドロップされたデータはサポートされていません</translation>
     </message>
@@ -13847,7 +13888,7 @@ shown in search results:</source>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+352"/>
+        <location filename="../scripts/autostart.js" line="+361"/>
         <source>Loading add-on translations...</source>
         <translation>アドオンの翻訳をロード中...</translation>
     </message>
@@ -13874,7 +13915,7 @@ shown in search results:</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+829"/>
+        <location filename="../scripts/library.js" line="+856"/>
         <source>Objects</source>
         <translation>オブジェクト</translation>
     </message>
@@ -14160,6 +14201,16 @@ shown in search results:</source>
     </message>
     <message>
         <location line="+2"/>
+        <source>Tolerances</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tolerance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Lines</source>
         <translation>線分</translation>
     </message>
@@ -14311,6 +14362,11 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>PDF File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF/A-1B File</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

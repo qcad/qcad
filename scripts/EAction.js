@@ -755,7 +755,7 @@ EAction.prototype.setCrosshairCursor = function() {
             mask = new QBitmap(EAction.includeBasePath + "/CrosshairCursorMask@2x.png", "PNG");
             //bitmap.setDevicePixelRatio(2);
             //mask.setDevicePixelRatio(2);
-            EAction.crossCursor = new QCursor(bitmap, mask, 15, 15);
+            EAction.crossCursor = new QCursor(bitmap, mask, 30, 30);
         }
         else {
             bitmap = new QBitmap(EAction.includeBasePath + "/CrosshairCursor.png", "PNG");

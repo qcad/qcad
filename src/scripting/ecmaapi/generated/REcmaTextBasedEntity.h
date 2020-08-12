@@ -95,6 +95,18 @@
         setItalic
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isBackward
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setBackward
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isUpsideDown
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setUpsideDown
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPosition
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

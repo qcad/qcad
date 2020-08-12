@@ -266,7 +266,7 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/core/RTextBasedEntity.cpp" line="+72"/>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="+74"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <location line="+8"/>
         <location line="+2"/>
@@ -555,6 +555,16 @@
         <translation>Вертикальный</translation>
     </message>
     <message>
+        <location line="+1"/>
+        <source>Backward</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Upside Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
         <source>Rotation</source>
         <translation>Вращение</translation>
@@ -671,7 +681,7 @@
         <translation>Максимальные степени</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+852"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+827"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Обнаружена круговая (рекурсивная) ссылка на блок:</translation>
     </message>

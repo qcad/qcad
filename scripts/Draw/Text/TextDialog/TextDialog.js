@@ -810,7 +810,9 @@ TextDialog.prototype.textSuperscript = function() {
  */
 TextDialog.prototype.textFamily = function(f) {
     var fmt = new QTextCharFormat();
-    fmt.setFontFamily(f);
+    // Qt 5.13, 5.14, 5.15 bug: appends the font as fall-back instead of setting the font:
+    //fmt.setFontFamily(f);
+    fmt.setFontFamilies([f]);
     this.mergeFormatOnWordOrSelection(fmt);
 };
 

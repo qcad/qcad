@@ -47,6 +47,8 @@ RPropertyTypeId RTextEntity::PropertyItalic;
 RPropertyTypeId RTextEntity::PropertyLineSpacingFactor;
 RPropertyTypeId RTextEntity::PropertyHAlign;
 RPropertyTypeId RTextEntity::PropertyVAlign;
+RPropertyTypeId RTextEntity::PropertyBackward;
+RPropertyTypeId RTextEntity::PropertyUpsideDown;
 
 
 RTextEntity::RTextEntity(RDocument* document, const RTextData& data) :
@@ -85,6 +87,8 @@ void RTextEntity::init() {
     RTextEntity::PropertyLineSpacingFactor.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyLineSpacingFactor);
     RTextEntity::PropertyHAlign.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyHAlign);
     RTextEntity::PropertyVAlign.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyVAlign);
+    RTextEntity::PropertyBackward.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyBackward);
+    RTextEntity::PropertyUpsideDown.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyUpsideDown);
 }
 
 void RTextEntity::print(QDebug dbg) const {

@@ -121,6 +121,8 @@
         <return>return <expr>!operator==(<name>other</name>)</expr>;</return>
     }</block></function>
 
+    <function_decl><type><name>void</name></type> <name>transform</name><parameter_list>(<param><decl><type><name>QTransform</name>&amp;</type> <name>t</name></decl></param>)</parameter_list>;</function_decl>
+
 </public><public>public:
     <comment type="block">/**
      * \getter{getCorner1}

@@ -1,0 +1,87 @@
+<div xml:space="preserve">
+  
+<p>Author: Robert S.</p>
+  
+<p>This command calculates the area of arcs, circles, ellipses and elliptical
+arcs, and optionally adds the information to the current layer of a drawing.
+If you select any other type of entity a warning is shown in the command
+line.</p>
+  
+<p>For arcs, there are two options for calculating areas, namely Segment or
+Sector. The area of a segment (or slice) is the area bound by the arc and two
+lines drawn from the arc's startpoint and endpoint to the arc's centre. The
+area of a sector is the area bound by the arc and a chord drawn from the
+arc's startpoint to the endpoint.</p>
+  
+<p><img alt="Segment or Sector" src="ArcCircle01.png" />
+<br />Figure 1: a segment (slice) and sector.</p>
+  
+<p><b>Options</b></p>
+  
+<p>This command has the standard "<i>Add measurement to drawing</i>" and 
+"<i>Text Height</i>" options.</p>
+  
+<p><img alt="Standard options" src="ArcCircle02a.png" />
+<br />Figure 2: Standard Info options</p>
+  
+<p>Whether this is off or not, when you click on an arc, circle, ellipse or
+  elliptical arc, the information is displayed in the command line widget.</p>
+  
+<p><img alt="Info is displayed in command line widget" src="ArcCircle03.png" />
+<br />Figure 3: Info displayed in command line</p>
+  
+<p>(Note: Every time you start an info command the "<i>Add measurement to drawing</i>"
+checkbox is always unchecked. You must remember to switch it on if you want the info 
+added to the drawing).</p>
+  
+<p>It also adds the following options.</p>
+  
+<p><img alt="Options toolbar" src="ArcCircle02.png" />
+<br />Figure 4: Added options</p>
+  
+<p><b>Mode:</b></p>
+  
+<p>The mode only applies to arcs.</p>
+  
+<p><img alt="Sector" src="InfoSector.png" height="24" width="24" />
+<br /><i>Sector:</i> This mode returns the area of the sector. This is useful when
+used in conjunction with the "<i>Polygonal Area</i>" command.</p>
+  
+<p><img alt="Segment" src="InfoSlice.png" height="24" width="24" />
+<i>Segment:</i> This mode returns the area of the segment.</p>
+  
+<p><b>Add:</b></p>
+  
+<p><i>Entity:</i> This selects whether you want to add a copy of the measured
+entity to the current layer of the drawing.</p>
+  
+<p><i>Chord:</i> This selects if you want the chord (sector), or radius lines
+(segment), added to the drawing.</p>
+  
+<p><i>Length:</i> By default the area is always printed on the drawing. This
+option selects whether you want extra information added to the drawing.</p>
+  
+<p>For circles and full ellipses the extra information is the circumference.
+This uses the centre point as the lower left corner for the added text.</p>
+  
+<p><img alt="Extra info for circles and ellipses" src="ArcCircle04.png" /></p>
+  
+<p>For circular arcs the extra information is the length of the arc and the
+length of the chord (in sector mode), or the radius (in segment mode).</p>
+  
+<p>For ellipses the extra information is the length of the arc and the length
+of the chord (in sector mode), or the distance from the centre point to the
+startpoint of the arc, followed by the distance from the centre point to the
+endpoint of the arc (in segment mode).</p>
+  
+<p>The lower left corner for the added text is the endpoint of the arc.</p>
+  
+<p><img alt="Extra info for arcs" src="ArcCircle06.png" /></p> 
+
+<p><img alt="Extra info for arcs" src="ArcCircle05.png" /></p>
+  
+<p><img alt="Extra info for arcs" src="ArcCircle08.png" /></p>
+  
+<p><img alt="Extra info for arcs" src="ArcCircle07.png" /></p>
+
+</div>

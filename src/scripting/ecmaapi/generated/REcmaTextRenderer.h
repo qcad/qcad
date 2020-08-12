@@ -69,6 +69,12 @@
         ;static  QScriptValue
         getRichText
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        lockForDrawing
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        unlockForDrawing
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

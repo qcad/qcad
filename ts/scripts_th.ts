@@ -4,7 +4,7 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../scripts/Help/About/About.js" line="+63"/>
+        <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+375"/>
+        <location line="+408"/>
         <source>Plugin:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-350"/>
+        <location line="-383"/>
         <source>ID:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -186,7 +186,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+163"/>
         <source>Licenses</source>
         <translation type="unfinished"></translation>
     </message>
@@ -292,7 +292,7 @@ the preference changes to take effect.</source>
     </message>
     <message>
         <location line="+86"/>
-        <source>Defaults for </source>
+        <source>Defaults for</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1169,7 +1169,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+120"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1970,7 +1970,7 @@ Do you wish to recover it?</source>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../scripts/Edit/ClipboardOperation.js" line="+52"/>
+        <location filename="../scripts/Edit/ClipboardOperation.js" line="+54"/>
         <source>Reference point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2289,7 +2289,7 @@ Do you wish to recover it?</source>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+64"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2305,16 +2305,11 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+14"/>
-        <source>Precision:</source>
+        <source>Number Format:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Number of decimal digits</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+79"/>
         <source>Prefix:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2909,7 +2904,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+97"/>
         <source>Dimension Tools</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2960,6 +2955,24 @@ Do you wish to recover it?</source>
     </message>
 </context>
 <context>
+    <name>DimensionScaleDialog</name>
+    <message>
+        <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
+        <source>Dimension Scale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Don&apos;t show this warning again</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DimensionSettings</name>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js" line="+27"/>
@@ -2978,7 +2991,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+110"/>
         <source>point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3043,7 +3056,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+228"/>
         <source>Unit / Format</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3114,12 +3127,17 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+23"/>
-        <source>Font</source>
+        <source>Label</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Dimension label font:</source>
+        <source>Label font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Label color:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5181,12 +5199,17 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+77"/>
-        <source>Use multithreading</source>
+        <location line="+78"/>
+        <source>auto</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+98"/>
+        <source>Number of threads:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Selection</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6781,7 +6804,7 @@ is already in the list.</source>
 <context>
     <name>Leader</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+60"/>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+61"/>
         <source>Arrow position</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6792,7 +6815,7 @@ is already in the list.</source>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
-        <source>Undo Last Segement</source>
+        <source>Undo Last Segment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7937,7 +7960,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Use current layer and &amp;attributes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8214,17 +8237,17 @@ shown in search results:</source>
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+141"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
         <source>Opening drawing:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+26"/>
         <source>Import Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Cannot open file</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8254,7 +8277,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Drawing loaded successfully:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8810,12 +8833,12 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+435"/>
         <source>Export to PDF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Exporting to %1...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9031,7 +9054,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Use auto measurement</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10885,22 +10908,6 @@ shown in search results:</source>
     </message>
 </context>
 <context>
-    <name>Startup</name>
-    <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/PreferencesPage.ui" line="+17"/>
-        <source>Enable Splash Screen</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>StartupPreferences</name>
-    <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/StartupPreferences.js" line="+24"/>
-        <source>Startup</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>StatusBar</name>
     <message>
         <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
@@ -11269,7 +11276,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+303"/>
+        <location line="+305"/>
         <source>Others...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12188,7 +12195,7 @@ shown in search results:</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+286"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+290"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12497,7 +12504,7 @@ shown in search results:</source>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+352"/>
+        <location filename="../scripts/autostart.js" line="+361"/>
         <source>Loading add-on translations...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12520,7 +12527,7 @@ shown in search results:</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+829"/>
+        <location filename="../scripts/library.js" line="+856"/>
         <source>Objects</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12806,6 +12813,16 @@ shown in search results:</source>
     </message>
     <message>
         <location line="+2"/>
+        <source>Tolerances</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tolerance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Lines</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12957,6 +12974,11 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>PDF File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF/A-1B File</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

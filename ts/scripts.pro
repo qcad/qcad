@@ -349,8 +349,6 @@ SOURCES = \
 ../scripts/Edit/AppPreferences/LayerCompatibility/LayerCompatibilityInit.js \
 ../scripts/Edit/AppPreferences/ScriptingPreferences/ScriptingPreferences.js \
 ../scripts/Edit/AppPreferences/ScriptingPreferences/ScriptingPreferencesInit.js \
-../scripts/Edit/AppPreferences/StartupPreferences/StartupPreferences.js \
-../scripts/Edit/AppPreferences/StartupPreferences/StartupPreferencesInit.js \
 ../scripts/Edit/AppPreferences/TextPreferences/TextPreferences.js \
 ../scripts/Edit/AppPreferences/TextPreferences/TextPreferencesInit.js \
 ../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js \
@@ -585,6 +583,7 @@ SOURCES = \
 ../scripts/Misc/MiscDevelopment/RunScript/RunScriptInit.js \
 ../scripts/Misc/MiscDraw/Counter/Counter.js \
 ../scripts/Misc/MiscDraw/Counter/CounterInit.js \
+../scripts/Misc/MiscDraw/Counter/numeral.js \
 ../scripts/Misc/MiscDraw/Cross/Cross.js \
 ../scripts/Misc/MiscDraw/Cross/CrossInit.js \
 ../scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js \
@@ -774,6 +773,7 @@ SOURCES = \
 ../scripts/Modify/Stretch/Tests/StretchTest07.js \
 ../scripts/Modify/Stretch/Tests/StretchTest08.js \
 ../scripts/Modify/Stretch/Tests/StretchTest09.js \
+../scripts/Modify/Stretch/Tests/StretchTest10.js \
 ../scripts/Modify/Transform.js \
 ../scripts/Modify/Translate/Tests/TranslateTest00.js \
 ../scripts/Modify/Translate/Tests/TranslateTest01.js \
@@ -1033,6 +1033,7 @@ SOURCES = \
 ../scripts/Draw/Dimension/DimAngular/DimAngular.ui \
 ../scripts/Draw/Dimension/DimRotated/DimRotated.ui \
 ../scripts/Draw/Dimension/Dimension.ui \
+../scripts/Draw/Dimension/DimensionScaleDialog.ui \
 ../scripts/Draw/Dimension/Leader/Leader.ui \
 ../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.ui \
 ../scripts/Draw/Ellipse/EllipseDD/EllipseDD.ui \
@@ -1075,7 +1076,6 @@ SOURCES = \
 ../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui \
 ../scripts/Edit/AppPreferences/LayerCompatibility/PreferencesPage.ui \
 ../scripts/Edit/AppPreferences/ScriptingPreferences/PreferencesPage.ui \
-../scripts/Edit/AppPreferences/StartupPreferences/PreferencesPage.ui \
 ../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui \
 ../scripts/Edit/AppPreferences/ThemePreferences/PreferencesPage.ui \
 ../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui \

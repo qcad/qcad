@@ -73,6 +73,10 @@
     
     // static methods:
     
+            REcmaHelper::registerFunction(&engine, &ctor, lockForDrawing, "lockForDrawing");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, unlockForDrawing, "unlockForDrawing");
+            
 
     // static properties:
     
@@ -944,6 +948,74 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTextRenderer::getRichText", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextRenderer::lockForDrawing
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextRenderer::lockForDrawing", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextRenderer::lockForDrawing";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RTextRenderer::
+       lockForDrawing();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextRenderer.lockForDrawing().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextRenderer::lockForDrawing", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextRenderer::unlockForDrawing
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextRenderer::unlockForDrawing", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextRenderer::unlockForDrawing";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RTextRenderer::
+       unlockForDrawing();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextRenderer.unlockForDrawing().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextRenderer::unlockForDrawing", context, engine);
             return result;
         }
          QScriptValue REcmaTextRenderer::toString

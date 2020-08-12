@@ -116,6 +116,15 @@
         <return>return <expr><name>fontName</name></expr>;</return>
     }</block></function>
 
+<comment type="line">//    void setTextColor(const RColor&amp; tc) {</comment>
+<comment type="line">//        textColor = tc;</comment>
+<comment type="line">//        update();</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    RColor getTextColor() const {</comment>
+<comment type="line">//        return textColor;</comment>
+<comment type="line">//    }</comment>
+
     <function><type><name>void</name></type> <name>setDimBlockName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>bn</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>dimBlockName</name> = <name>bn</name></expr>;</expr_stmt>
         <comment type="line">//update();</comment>
@@ -256,6 +265,8 @@
     <decl_stmt><decl><type><name>QString</name></type> <name>lowerTolerance</name></decl>;</decl_stmt>
     <comment type="block">/** Dimension font name */</comment>
     <decl_stmt><decl><type><name>QString</name></type> <name>fontName</name></decl>;</decl_stmt>
+    <comment type="block">/** Dimension text color */</comment>
+    <comment type="line">//RColor textColor;</comment>
     <comment type="block">/** Dimension appearance is defined in this block */</comment>
     <decl_stmt><decl><type><name>mutable</name> <name>QString</name></type> <name>dimBlockName</name></decl>;</decl_stmt>
 

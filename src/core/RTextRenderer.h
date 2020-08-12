@@ -23,6 +23,7 @@
 #include "core_global.h"
 
 #include <QTextLayout>
+#include <QMutex>
 
 #include "RDocument.h"
 #include "REntityData.h"
@@ -80,6 +81,14 @@ public:
 
     QString getRichText() const {
         return richText;
+    }
+
+    static void lockForDrawing() {
+        m.lock();
+    }
+
+    static void unlockForDrawing() {
+        m.unlock();
     }
 
 private:
@@ -285,6 +294,8 @@ public:
     static QChar chDiameter;
 
 private:
+    static QMutex m;
+
     const RTextBasedData& textData;
 
     Target target;

@@ -8,7 +8,7 @@
         <translation type="obsolete">Ü&amp;ber</translation>
     </message>
     <message>
-        <location filename="../scripts/Help/About/About.js" line="+63"/>
+        <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
         <translation>Über %1</translation>
     </message>
@@ -85,12 +85,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+375"/>
+        <location line="+408"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-350"/>
+        <location line="-383"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -107,12 +107,12 @@
         <translation>Unbekannt</translation>
     </message>
     <message>
-        <location line="+288"/>
+        <location line="+289"/>
         <source>Licenses</source>
         <translation>Lizenzen</translation>
     </message>
     <message>
-        <location line="-418"/>
+        <location line="-419"/>
         <location line="+123"/>
         <source>Version:</source>
         <translation>Version:</translation>
@@ -357,8 +357,12 @@ um die Änderungen zu übernehmen.</translation>
     </message>
     <message>
         <location line="+86"/>
-        <source>Defaults for </source>
+        <source>Defaults for</source>
         <translation>Standards für</translation>
+    </message>
+    <message>
+        <source>Defaults for </source>
+        <translation type="vanished">Standards für</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -683,7 +687,7 @@ um die Änderungen zu übernehmen.</translation>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation>Die zwei  Punkte sind identisch</translation>
+        <translation>Die zwei Punkte sind identisch</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PRInit.js" line="+2"/>
@@ -1410,7 +1414,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+120"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Ungültige Bildgrösse (Breite x Höhe muss kleiner sein als %1)</translation>
     </message>
@@ -2406,7 +2410,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../scripts/Edit/ClipboardOperation.js" line="+52"/>
+        <location filename="../scripts/Edit/ClipboardOperation.js" line="+54"/>
         <source>Reference point</source>
         <translation>Referenzpunkt</translation>
     </message>
@@ -2795,7 +2799,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+64"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>
@@ -2814,17 +2818,24 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Schrittweite:</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Precision:</source>
-        <translation>Präzision:</translation>
+        <translation type="vanished">Präzision:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Number of decimal digits</source>
-        <translation>Anzahl Nachkommastellen</translation>
+        <translation type="vanished">Anzahl Nachkommastellen</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <source>Width:</source>
+        <translation type="vanished">Breite:</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Number Format:</source>
+        <translation>Zahlenformat:</translation>
+    </message>
+    <message>
+        <location line="+79"/>
         <source>Prefix:</source>
         <translation>Präfix:</translation>
     </message>
@@ -3512,7 +3523,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+97"/>
         <source>Dimension Tools</source>
         <translation>Bemassungswerkzeuge</translation>
     </message>
@@ -3567,6 +3578,24 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     </message>
 </context>
 <context>
+    <name>DimensionScaleDialog</name>
+    <message>
+        <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
+        <source>Dimension Scale</source>
+        <translation>Skalierung von Bemassungen</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
+        <translation>Die Skalierung für neue Bemassungen ist nicht 1:1. Bemassungsbeschriftungen zeigen deshalb Werte an, die vom gemessenen Wert in der Zeichnung abweichen. Sie können den Skalierungsfaktor in der Optionenwerkzeugleiste oben anpassen.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Don&apos;t show this warning again</source>
+        <translation>Diese Warnung nicht mehr anzeigen</translation>
+    </message>
+</context>
+<context>
     <name>DimensionSettings</name>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js" line="+29"/>
@@ -3589,7 +3618,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Standards für neue Zeichnungen</translation>
     </message>
     <message>
-        <location line="+111"/>
+        <location line="+112"/>
         <source>point</source>
         <translation>Punkt</translation>
     </message>
@@ -3654,7 +3683,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Vermessung</translation>
     </message>
     <message>
-        <location line="+210"/>
+        <location line="+229"/>
         <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
         <translation>Die Zeichnungseinheit muss &quot;Inch&quot; sein, damit Bemassungsbeschriftungen in den Formaten &quot;Architektur&quot; oder &quot;Technisch&quot; angezeigt werden können. Format zurückgesetzt auf &quot;Dezimal&quot;.</translation>
     </message>
@@ -3723,14 +3752,27 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Architektur Tick</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Font</source>
-        <translation>Schriftart</translation>
+        <translation type="vanished">Schriftart</translation>
+    </message>
+    <message>
+        <source>Dimension label font:</source>
+        <translation type="vanished">Bemassungstext Schriftart:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Label</source>
+        <translation>Beschriftung</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Dimension label font:</source>
-        <translation>Bemassungstext Schriftart:</translation>
+        <source>Label font:</source>
+        <translation>Beschriftungsschrift:</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Label color:</source>
+        <translation>Beschriftungsfarbe:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -6131,7 +6173,17 @@ ist bereits in der Liste.</translation>
         <translation>Schwarz / weiss automatisch anpassen</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="+547"/>
+        <source>auto</source>
+        <translation>auto</translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>Number of threads:</source>
+        <translation>Anzahl Threads:</translation>
+    </message>
+    <message>
+        <location line="-674"/>
         <source>Color lightness threshold:</source>
         <translation>Farbgrenzwert:</translation>
     </message>
@@ -6170,12 +6222,11 @@ ist bereits in der Liste.</translation>
         <translation>Gestrichelte Objekte mit mehr als N Strichen ausgezogen darstellen:</translation>
     </message>
     <message>
-        <location line="+181"/>
         <source>Use multithreading</source>
-        <translation>Multithreading verwenden</translation>
+        <translation type="vanished">Multithreading verwenden</translation>
     </message>
     <message>
-        <location line="-263"/>
+        <location line="-82"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Minimaler Winkel für Bogensegmentierung in Anzeige (Grad):</translation>
     </message>
@@ -6249,7 +6300,7 @@ ist bereits in der Liste.</translation>
         <translation type="obsolete">Anzeigegrenzwert für Texte:</translation>
     </message>
     <message>
-        <location line="+345"/>
+        <location line="+441"/>
         <source>Selection</source>
         <translation>Selektion</translation>
     </message>
@@ -8497,7 +8548,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>Leader</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+60"/>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+61"/>
         <source>Arrow position</source>
         <translation>Pfeilposition</translation>
     </message>
@@ -8525,8 +8576,12 @@ ist bereits in der Liste.</translation>
         <translation type="obsolete">Führung (Sequenz von Linien mit Pfeil)</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segement</source>
+        <translation type="vanished">Letztes Segment rückgängig</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
+        <source>Undo Last Segment</source>
         <translation>Letztes Segment rückgängig</translation>
     </message>
     <message>
@@ -10040,7 +10095,7 @@ im Suchresultat:</translation>
         <translation>Original &amp;beibehalten</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Aktueller Layer / &amp;Attribute</translation>
     </message>
@@ -10409,7 +10464,7 @@ im Suchresultat:</translation>
         <translation type="vanished">Lade...</translation>
     </message>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+164"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+170"/>
         <source>Import Error</source>
         <translation>Import Fehler</translation>
     </message>
@@ -10426,12 +10481,12 @@ im Suchresultat:</translation>
 </translation>
     </message>
     <message>
-        <location line="-23"/>
+        <location line="-26"/>
         <source>Opening drawing:</source>
         <translation>Zeichnung öffnen:</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+32"/>
         <source>Cannot open file</source>
         <translation>Kann Datei nicht öffnen</translation>
     </message>
@@ -10461,7 +10516,7 @@ im Suchresultat:</translation>
         <translation>Datei ist leer.</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Drawing loaded successfully:</source>
         <translation>Zeichnung erfolgreich geladen:</translation>
     </message>
@@ -11305,7 +11360,7 @@ nicht öffnen.
         <translation>Querformat</translation>
     </message>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+431"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+435"/>
         <source>Export to PDF</source>
         <translation>PDF exportieren</translation>
     </message>
@@ -11315,12 +11370,12 @@ nicht öffnen.
         <translation>Drucken ...</translation>
     </message>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-432"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-436"/>
         <source>Drag to move paper</source>
         <translation>Ziehen zum Verschieben des Papiers</translation>
     </message>
     <message>
-        <location line="+441"/>
+        <location line="+449"/>
         <source>Exporting to %1...</source>
         <translation>Exportiere nach %1...</translation>
     </message>
@@ -11470,12 +11525,12 @@ nicht öffnen.
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1466"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1468"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="-1273"/>
+        <location line="-1275"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -11524,7 +11579,7 @@ nicht öffnen.
         <translation>Alle Eigenschaften anzeigen</translation>
     </message>
     <message>
-        <location line="+659"/>
+        <location line="+661"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -11561,7 +11616,7 @@ nicht öffnen.
         <translation type="obsolete">Mittelpunkt</translation>
     </message>
     <message>
-        <location line="-705"/>
+        <location line="-707"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
@@ -11579,7 +11634,7 @@ nicht öffnen.
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Use auto measurement</source>
         <translation>Automatisch</translation>
     </message>
@@ -11659,7 +11714,7 @@ nicht öffnen.
         <translation type="vanished">Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1142"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1144"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>
@@ -14054,17 +14109,15 @@ nicht öffnen.
 <context>
     <name>Startup</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/PreferencesPage.ui" line="+17"/>
         <source>Enable Splash Screen</source>
-        <translation>Startbild anzeigen</translation>
+        <translation type="vanished">Startbild anzeigen</translation>
     </message>
 </context>
 <context>
     <name>StartupPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/StartupPreferences.js" line="+24"/>
         <source>Startup</source>
-        <translation>Start</translation>
+        <translation type="vanished">Start</translation>
     </message>
 </context>
 <context>
@@ -14430,7 +14483,7 @@ nicht öffnen.
         <translation>&amp;Unterstreichen</translation>
     </message>
     <message>
-        <location line="+475"/>
+        <location line="+477"/>
         <source>Degree</source>
         <translation>Grad</translation>
     </message>
@@ -14616,7 +14669,7 @@ nicht öffnen.
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="-508"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="-510"/>
         <source>&amp;Bold</source>
         <translation>&amp;Fett</translation>
     </message>
@@ -14646,7 +14699,7 @@ nicht öffnen.
         <translation>&amp;Sonderzeichen...</translation>
     </message>
     <message>
-        <location line="+303"/>
+        <location line="+305"/>
         <source>Others...</source>
         <translation>Andere...</translation>
     </message>
@@ -15580,7 +15633,7 @@ nicht öffnen.
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+286"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+290"/>
         <source>Dropped data not supported</source>
         <translation>Eingefügte Daten nicht unterstützt</translation>
     </message>
@@ -15980,7 +16033,7 @@ nicht öffnen.
         <translation type="obsolete">Suche Plugins...</translation>
     </message>
     <message>
-        <location filename="../scripts/autostart.js" line="+352"/>
+        <location filename="../scripts/autostart.js" line="+361"/>
         <source>Loading add-on translations...</source>
         <translation>Lade Add-on Übersetzungen...</translation>
     </message>
@@ -16038,7 +16091,7 @@ nicht öffnen.
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+829"/>
+        <location filename="../scripts/library.js" line="+856"/>
         <source>Objects</source>
         <translation>Objekte</translation>
     </message>
@@ -16340,6 +16393,16 @@ nicht öffnen.
     </message>
     <message>
         <location line="+2"/>
+        <source>Tolerances</source>
+        <translation>Toleranzen</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tolerance</source>
+        <translation>Toleranz</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Lines</source>
         <translation>Linen</translation>
     </message>
@@ -16492,6 +16555,11 @@ nicht öffnen.
         <location line="+1"/>
         <source>PDF File</source>
         <translation>PDF Datei</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF/A-1B File</source>
+        <translation>PDF/A-1B Datei</translation>
     </message>
 </context>
 <context>

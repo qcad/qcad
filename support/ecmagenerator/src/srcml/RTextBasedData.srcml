@@ -45,7 +45,20 @@
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RTextBasedData</name><super>: <specifier>public</specifier> <name>REntityData</name>, <specifier>public</specifier> <name>RPainterPathSource</name></super> <block>{<private type="default">
     <decl_stmt><decl><type><name>friend</name> class</type> <name>RTextBasedEntity</name></decl>;</decl_stmt>
 
-</private><protected>protected:
+</private><public>public:
+    <enum>enum <name>TextFlag</name> <block>{
+        <expr><name>NoFlags</name> = 0x000</expr>,
+        <expr><name>Bold</name> = 0x001</expr>,
+        <expr><name>Italic</name> = 0x002</expr>,
+        <expr><name>Simple</name> = 0x004</expr>,
+        <expr><name>DimensionLabel</name> = 0x008</expr>,
+        <expr><name>Highlighted</name> = 0x010</expr>,
+        <expr><name>Backward</name> = 0x020</expr>,
+        <expr><name>UpsideDown</name> = 0x040</expr>
+    }</block>;</enum>
+    <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>TextFlags</argument>, <argument>TextFlag</argument>)</argument_list></macro>
+
+</public><protected>protected:
     <constructor_decl><name>RTextBasedData</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>data</name></decl></param>)</parameter_list>;</constructor_decl>
 
 </protected><public>public:
@@ -69,6 +82,17 @@
 
     <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name><name>RS</name>::<name>EntityTextBased</name></name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setFlag</name><parameter_list>(<param><decl><type><name><name>RTextBasedData</name>::<name>TextFlag</name></name></type> <name>flag</name></decl></param>, <param><decl><type><name>bool</name></type> <name>on</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr><name>on</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>flags</name> |= <name>flag</name></expr>;</expr_stmt>
+        }</block></then> <else>else <block>{
+            <expr_stmt><expr><name>flags</name> &amp;= ~<name>flag</name></expr>;</expr_stmt>
+        }</block></else></if>
+    }</block></function>
+    <function><type><name>bool</name></type> <name>getFlag</name><parameter_list>(<param><decl><type><name><name>RTextBasedData</name>::<name>TextFlag</name></name></type> <name>flag</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr>(<name>flags</name> &amp; <name>flag</name>) == <name>flag</name></expr>;</return>
     }</block></function>
 
     <function><type><name>virtual</name> <name>bool</name></type> <name>isValid</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
@@ -148,20 +172,20 @@
     }</block></function>
 
     <function><type><name>bool</name></type> <name>isBold</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>bold</name></expr>;</return>
+        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name>Bold</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>void</name></type> <name>setBold</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>bold</name> = <name>on</name></expr>;</expr_stmt>
+        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name>Bold</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
         <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>bool</name></type> <name>isItalic</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>italic</name></expr>;</return>
+        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name>Italic</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>void</name></type> <name>setItalic</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>italic</name> = <name>on</name></expr>;</expr_stmt>
+        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name>Italic</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
         <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
@@ -244,6 +268,10 @@
     }</block></function>
 
     <function><type><name>void</name></type> <name>setXScale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>xScale</name></decl></param>)</parameter_list> <block>{
+        <comment type="line">// only positive xScale for MText:</comment>
+        <if>if <condition>(<expr><name>xScale</name>&lt;=0</expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>xScale</name> = 1</expr>;</expr_stmt>
+        }</block></then></if>
         <expr_stmt><expr><name>this</name>-&gt;<name>xScale</name> = <name>xScale</name></expr>;</expr_stmt>
         <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
@@ -253,21 +281,39 @@
     }</block></function>
 
     <function><type><name>void</name></type> <name>setSimple</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>simple</name> = <name>on</name></expr>;</expr_stmt>
+        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name>Simple</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
         <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>bool</name></type> <name>isSimple</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>simple</name></expr>;</return>
+        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name>Simple</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setBackward</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>setFlag</name><argument_list>(<argument><expr><name>Backward</name></expr></argument>, <argument><expr><call><name>isSimple</name><argument_list>()</argument_list></call> &amp;&amp; <name>on</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isBackward</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>isSimple</name><argument_list>()</argument_list></call> &amp;&amp; <call><name>getFlag</name><argument_list>(<argument><expr><name>Backward</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setUpsideDown</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>setFlag</name><argument_list>(<argument><expr><name>UpsideDown</name></expr></argument>, <argument><expr><call><name>isSimple</name><argument_list>()</argument_list></call> &amp;&amp; <name>on</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isUpsideDown</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>isSimple</name><argument_list>()</argument_list></call> &amp;&amp; <call><name>getFlag</name><argument_list>(<argument><expr><name>UpsideDown</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>void</name></type> <name>setDimensionLabel</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>dimensionLabel</name> = <name>on</name></expr>;</expr_stmt>
+        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name>DimensionLabel</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
         <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>bool</name></type> <name>isDimensionLabel</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>dimensionLabel</name></expr>;</return>
+        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name>DimensionLabel</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>void</name></type> <name>setSelected</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
@@ -276,11 +322,11 @@
     }</block></function>
 
     <function><type><name>void</name></type> <name>setHighlighted</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>highlighted</name> = <name>on</name></expr>;</expr_stmt>
+        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name>Highlighted</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>bool</name></type> <name>isHighlighted</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>highlighted</name></expr>;</return>
+        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name>Highlighted</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RRefPoint</name></argument>&gt;</argument_list></name></type> <name>getReferencePoints</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>ProjectionRenderingHint</name></name></type> <name>hint</name> =<init> <expr><name><name>RS</name>::<name>RenderTop</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
@@ -367,13 +413,9 @@
     <decl_stmt><decl><type><name>double</name></type> <name>lineSpacingFactor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QString</name></type> <name>fontName</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QString</name></type> <name>fontFile</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>bool</name></type> <name>bold</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>bool</name></type> <name>italic</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>angle</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>xScale</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>bool</name></type> <name>simple</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>bool</name></type> <name>dimensionLabel</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>bool</name></type> <name>highlighted</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>TextFlags</name></type> <name>flags</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>mutable</name> <name>double</name></type> <name>height</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>mutable</name> <name>double</name></type> <name>width</name></decl>;</decl_stmt>
@@ -394,6 +436,8 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>const RTextBasedData*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;RTextBasedData&gt;</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;RTextBasedData&gt;*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTextBasedData::TextFlag</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTextBasedData::TextFlag*</argument>)</argument_list></macro>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

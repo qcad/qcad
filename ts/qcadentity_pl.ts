@@ -41,7 +41,7 @@
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="-2"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+91"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+92"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-2"/>
         <location line="+3"/>
@@ -51,7 +51,7 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+89"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+91"/>
         <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+92"/>
         <location line="+4"/>
@@ -72,6 +72,8 @@
         <location line="+3"/>
         <location line="+10"/>
         <location line="+4"/>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="+75"/>
+        <location line="+3"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+74"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -132,6 +134,8 @@
         <location line="+3"/>
         <location line="+10"/>
         <location line="+4"/>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="-2"/>
+        <location line="+3"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -189,6 +193,8 @@
         <location line="+3"/>
         <location line="+10"/>
         <location line="+4"/>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="-2"/>
+        <location line="+3"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -270,12 +276,13 @@ Mierzy obszar wieloboku</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Total Area</source>
         <translation>Łączne pole powierzchni</translation>
     </message>
     <message>
-        <location filename="../src/entity/RCircleEntity.cpp" line="-1"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
         <source>Circumference</source>
         <translation>Obwód</translation>
     </message>
@@ -445,7 +452,7 @@ Wskaż początek drugiej linii rozszerzenia
         <translation>Położenie tekstu</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Flip First Arrow</source>
         <translation type="unfinished"></translation>
     </message>
@@ -535,9 +542,14 @@ Punkt główny|Y</translatorcomment>
         <translation>Punkt końcowy</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-8"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-9"/>
         <source>Solid</source>
         <translation>Jednolity</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Alpha</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -568,7 +580,7 @@ Punkt główny|Y</translatorcomment>
         <translation>Kąt</translation>
     </message>
     <message>
-        <location line="+192"/>
+        <location line="+197"/>
         <source>Yes</source>
         <translation>Tak</translation>
     </message>
@@ -579,8 +591,9 @@ Punkt główny|Y</translatorcomment>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-2"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-191"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-196"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+2"/>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="+2"/>
         <source>Scale</source>
         <translation>Skala</translation>
     </message>
@@ -860,8 +873,23 @@ Wskaż następny punkt kontrolny</translatorcomment>
         <translation type="obsolete">Spis treści</translation>
     </message>
     <message>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="-7"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Direction</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Text</source>
-        <translation type="vanished">Tekst</translation>
+        <translation>Tekst</translation>
     </message>
     <message>
         <source>Plain Text</source>
@@ -910,7 +938,7 @@ Wskaż następny punkt kontrolny</translatorcomment>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+89"/>
-        <location filename="../src/entity/RAttributeEntity.cpp" line="+89"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+93"/>
         <source>Tag</source>
         <translation>Etykieta</translation>
     </message>

@@ -121,6 +121,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setDimLeaderBlockId, "setDimLeaderBlockId");
             
+            REcmaHelper::registerFunction(&engine, proto, update, "update");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RLeaderData*>(), *proto);
 
@@ -2069,6 +2071,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLeaderData::setDimLeaderBlockId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLeaderData::update
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLeaderData::update", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLeaderData::update";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLeaderData* self = 
+                        getSelf("update", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->update();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderData.update().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLeaderData::update", context, engine);
             return result;
         }
          QScriptValue REcmaLeaderData::toString

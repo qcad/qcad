@@ -57,6 +57,7 @@
 #include "RSolidEntity.h"
 #include "RSplineEntity.h"
 #include "RTextEntity.h"
+#include "RToleranceEntity.h"
 #include "RTraceEntity.h"
 #include "RViewportEntity.h"
 #include "RXLineEntity.h"
@@ -303,6 +304,10 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, QSharedPointer<RE
         v = tryCast<RSplineEntity>(engine, cppValue);
         if (v.isValid()) return v;
         break;
+    case RS::EntityTolerance:
+        v = tryCast<RToleranceEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
     }
 
     return qScriptValueFromValue(engine, cppValue);
@@ -422,6 +427,10 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, REntity* cppValue
         break;
     case RS::EntityText:
         v = tryCast<RTextEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntityTolerance:
+        v = tryCast<RToleranceEntity>(engine, cppValue);
         if (v.isValid()) return v;
         break;
     }

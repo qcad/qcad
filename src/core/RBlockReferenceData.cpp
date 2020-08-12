@@ -23,6 +23,7 @@
 #include "RMainWindow.h"
 #include "RMouseEvent.h"
 #include "RStorage.h"
+#include "RTransform.h"
 
 RBlockReferenceData::RBlockReferenceData() :
     referencedBlockId(RBlock::INVALID_ID),
@@ -520,48 +521,20 @@ bool RBlockReferenceData::applyTransformationTo(QSharedPointer<REntity>& entity)
     return true;
 }
 
-QTransform RBlockReferenceData::getTransform() const {
+RTransform RBlockReferenceData::getTransform() const {
     QSharedPointer<RBlock> block = document->queryBlockDirect(referencedBlockId);
     if (block.isNull()) {
         qWarning("RBlockReferenceData::getTransform: "
                  "block %d is NULL", referencedBlockId);
-        return QTransform();
+        return RTransform();
     }
 
-    QTransform ret;
+    RTransform ret;
     ret.translate(position.x, position.y);
     ret.rotateRadians(rotation);
     ret.scale(scaleFactors.x, scaleFactors.y);
     ret.translate(-block->getOrigin().x, -block->getOrigin().y);
     return ret;
-}
-
-void RBlockReferenceData::exportTransforms(RExporter& e) const {
-    QSharedPointer<RBlock> block = document->queryBlockDirect(referencedBlockId);
-    if (block.isNull()) {
-        qWarning("RBlockReferenceData::exportTransforms: "
-                 "block %d is NULL", referencedBlockId);
-        return;
-    }
-
-    e.exportTranslation(position);
-    e.exportRotation(rotation);
-    e.exportScale(scaleFactors);
-    e.exportTranslation(-block->getOrigin());
-}
-
-void RBlockReferenceData::exportEndTransforms(RExporter& e) const {
-    QSharedPointer<RBlock> block = document->queryBlockDirect(referencedBlockId);
-    if (block.isNull()) {
-        qWarning("RBlockReferenceData::exportEndTransforms: "
-                 "block %d is NULL", referencedBlockId);
-        return;
-    }
-
-    e.exportEndTranslation();
-    e.exportEndScale();
-    e.exportEndRotation();
-    e.exportEndTranslation();
 }
 
 RVector RBlockReferenceData::mapToBlock(const RVector& v) const {

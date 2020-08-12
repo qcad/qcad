@@ -40,6 +40,8 @@ ClipboardOperation.prototype.beginEvent = function() {
     }
     else {
         this.applyOperation();
+        var di = this.getDocumentInterface();
+        di.setRelativeZero(di.getDocument().getSelectionBox().getCenter());
         this.terminate();
     }
 };

@@ -40,6 +40,7 @@ RHatchData::RHatchData() :
     scaleFactor(1.0),
     angle(0.0),
     patternName("SOLID"),
+    transparency(255),
     dirty(true), gotDraft(false), gotPixelSizeHint(0.0) {
 }
 
@@ -67,6 +68,7 @@ RHatchData::RHatchData(bool solid, double scaleFactor, double angle, const QStri
     scaleFactor(scaleFactor),
     angle(angle),
     patternName(patternName),
+    transparency(255),
     dirty(true), gotDraft(false) {
 }
 
@@ -76,6 +78,7 @@ RHatchData& RHatchData::operator =(const RHatchData& other) {
     solid = other.solid;
     scaleFactor = other.scaleFactor;
     angle = other.angle;
+    transparency = other.transparency;
     patternName = other.patternName;
     originPoint = other.originPoint;
     other.getPainterPaths(false);
@@ -531,6 +534,8 @@ void RHatchData::addBoundary(QSharedPointer<RShape> shape, bool addAutoLoops) {
                 RVector ep = prev->getEndPoint();
                 RVector sp = next->getStartPoint();
 
+                // gap of more than 0.001:
+                // new loop:
                 if (!ep.equalsFuzzy(sp, 0.001)) {
                     if (addAutoLoops) {
                         // inserting loop on the fly:
@@ -547,6 +552,13 @@ void RHatchData::addBoundary(QSharedPointer<RShape> shape, bool addAutoLoops) {
                             shape->reverse();
                         }
                     }
+                }
+
+                // gap of more than 0.0001:
+                else if (!ep.equalsFuzzy(sp, 0.0001)) {
+                    // enforce tolerance accepted by DXF/DWG format:
+                    // insert bridge elemenent on the fly:
+                    boundary.last().append(QSharedPointer<RLine>(new RLine(ep, sp)));
                 }
             }
             else {

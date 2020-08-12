@@ -54,6 +54,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getType, "getType");
             
+            REcmaHelper::registerFunction(&engine, proto, isPainterPath, "isPainterPath");
+            
             REcmaHelper::registerFunction(&engine, proto, setMode, "setMode");
             
             REcmaHelper::registerFunction(&engine, proto, getMode, "getMode");
@@ -124,6 +126,16 @@
 
     ctor.setProperty("PainterPath",
     QScriptValue(RGraphicsSceneDrawable::PainterPath),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("PainterPathRay",
+    QScriptValue(RGraphicsSceneDrawable::PainterPathRay),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("PainterPathXLine",
+    QScriptValue(RGraphicsSceneDrawable::PainterPathXLine),
     QScriptValue::ReadOnly);
 
 
@@ -721,26 +733,28 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: QTransform */
+        ) /* type: RTransform */
     
     ){
     // prepare arguments:
     
-                    // argument is reference
-                    QTransform*
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTransform*
                     ap0 =
                     qscriptvalue_cast<
-                    QTransform*
+                    RTransform*
                         >(
                         context->argument(
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsSceneDrawable: Argument 0 is not of type QTransform*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsSceneDrawable: Argument 0 is not of type RTransform.",
                                context);                    
                     }
-                    QTransform& a0 = *ap0;
+                    RTransform 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 
@@ -763,7 +777,7 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: QTransform */
+        ) /* type: RTransform */
      && (
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
@@ -773,21 +787,23 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
-                    QTransform*
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTransform*
                     ap0 =
                     qscriptvalue_cast<
-                    QTransform*
+                    RTransform*
                         >(
                         context->argument(
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RGraphicsSceneDrawable: Argument 0 is not of type QTransform*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsSceneDrawable: Argument 0 is not of type RTransform.",
                                context);                    
                     }
-                    QTransform& a0 = *ap0;
+                    RTransform 
+                    a0 = 
+                    *ap0;
                 
                     // argument isCopyable and has default constructor and isSimpleClass 
                     RVector*
@@ -984,6 +1000,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsSceneDrawable::getType", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsSceneDrawable::isPainterPath
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsSceneDrawable::isPainterPath", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneDrawable::isPainterPath";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsSceneDrawable* self = 
+                        getSelf("isPainterPath", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isPainterPath();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneDrawable.isPainterPath().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsSceneDrawable::isPainterPath", context, engine);
             return result;
         }
          QScriptValue
@@ -1559,11 +1624,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QTransform &'
-    QTransform & cppResult =
+    // return type 'RTransform &'
+    RTransform & cppResult =
         
                self->getTransform();
-        // return type: QTransform &
+        // return type: RTransform &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));

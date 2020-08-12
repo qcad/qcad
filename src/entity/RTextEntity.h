@@ -68,6 +68,8 @@ public:
     static RPropertyTypeId PropertyLineSpacingFactor;
     static RPropertyTypeId PropertyHAlign;
     static RPropertyTypeId PropertyVAlign;
+    static RPropertyTypeId PropertyBackward;
+    static RPropertyTypeId PropertyUpsideDown;
 
 public:
     RTextEntity(RDocument* document, const RTextData& data);

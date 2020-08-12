@@ -4,7 +4,7 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../scripts/Help/About/About.js" line="+63"/>
+        <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
         <translation>О %1</translation>
     </message>
@@ -39,12 +39,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+375"/>
+        <location line="+408"/>
         <source>Plugin:</source>
         <translation>Модуль:</translation>
     </message>
     <message>
-        <location line="-350"/>
+        <location line="-383"/>
         <source>ID:</source>
         <translation>Идентификатор:</translation>
     </message>
@@ -210,7 +210,7 @@
         <translation>Об авторах</translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+163"/>
         <source>Licenses</source>
         <translation type="unfinished"></translation>
     </message>
@@ -321,8 +321,12 @@ the preference changes to take effect.</source>
     </message>
     <message>
         <location line="+86"/>
+        <source>Defaults for</source>
+        <translation>Значения по умолчанию для</translation>
+    </message>
+    <message>
         <source>Defaults for </source>
-        <translation>Значения по умолчанию для </translation>
+        <translation type="vanished">Значения по умолчанию для </translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1265,7 +1269,7 @@ Do you wish to recover it?</source>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+120"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Неверный размер изображения (ширина х высота должно быть меньше, чем %1)</translation>
     </message>
@@ -2114,7 +2118,7 @@ Do you wish to recover it?</source>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../scripts/Edit/ClipboardOperation.js" line="+52"/>
+        <location filename="../scripts/Edit/ClipboardOperation.js" line="+54"/>
         <source>Reference point</source>
         <translation>Точка привязки</translation>
     </message>
@@ -2437,7 +2441,7 @@ Do you wish to recover it?</source>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+64"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
         <translation>Положение</translation>
     </message>
@@ -2456,17 +2460,24 @@ Do you wish to recover it?</source>
         <translation>Прирост:</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Precision:</source>
-        <translation>Точность:</translation>
+        <translation type="vanished">Точность:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Number of decimal digits</source>
-        <translation>Количество десятичных цифр</translation>
+        <translation type="vanished">Количество десятичных цифр</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <source>Width:</source>
+        <translation type="obsolete">Ширина:</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Number Format:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+79"/>
         <source>Prefix:</source>
         <translation>Префикс:</translation>
     </message>
@@ -3103,7 +3114,7 @@ Do you wish to recover it?</source>
         <translation>Дельта</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+97"/>
         <source>Dimension Tools</source>
         <translation>Инструменты для работы с размерами</translation>
     </message>
@@ -3158,6 +3169,24 @@ Do you wish to recover it?</source>
     </message>
 </context>
 <context>
+    <name>DimensionScaleDialog</name>
+    <message>
+        <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
+        <source>Dimension Scale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Don&apos;t show this warning again</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DimensionSettings</name>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js" line="+27"/>
@@ -3176,7 +3205,7 @@ Do you wish to recover it?</source>
         <translation>Размер</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+110"/>
         <source>point</source>
         <translation>точка</translation>
     </message>
@@ -3241,7 +3270,7 @@ Do you wish to recover it?</source>
         <translation>Геодезические единицы</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+228"/>
         <source>Unit / Format</source>
         <translation>Единица измерения/Формат</translation>
     </message>
@@ -3315,14 +3344,27 @@ Do you wish to recover it?</source>
         <translation>Архитектурная засечка</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Font</source>
-        <translation>Шрифт</translation>
+        <translation type="vanished">Шрифт</translation>
+    </message>
+    <message>
+        <source>Dimension label font:</source>
+        <translation type="vanished">Шрифт размерной метки:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Label</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Dimension label font:</source>
-        <translation>Шрифт размерной метки:</translation>
+        <source>Label font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Label color:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5411,7 +5453,17 @@ is already in the list.</source>
         <translation>Предотвратить белый на белом/чёрный на чёрном дисплее</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="+547"/>
+        <source>auto</source>
+        <translation type="unfinished">авто</translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>Number of threads:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-674"/>
         <source>Color lightness threshold:</source>
         <translation>Порог светлоты цвета:</translation>
     </message>
@@ -5504,12 +5556,11 @@ is already in the list.</source>
         <translation>Максимальное количество отображаемых точек привязки:</translation>
     </message>
     <message>
-        <location line="+77"/>
         <source>Use multithreading</source>
-        <translation>Использовать многопоточность</translation>
+        <translation type="vanished">Использовать многопоточность</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+186"/>
         <source>Selection</source>
         <translation>Выделение</translation>
     </message>
@@ -7199,7 +7250,7 @@ is already in the list.</source>
 <context>
     <name>Leader</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+60"/>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+61"/>
         <source>Arrow position</source>
         <translation>Положение стрелки</translation>
     </message>
@@ -7223,9 +7274,13 @@ is already in the list.</source>
         <translation>Начертить полку-выноску (линию, чередующаяся стрелкой)</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segement</source>
-        <translation>Отменить последний сегмент</translation>
+        <translation type="vanished">Отменить последний сегмент</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
+        <source>Undo Last Segment</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
@@ -8412,7 +8467,7 @@ shown in search results:</source>
         <translation>С&amp;охранить оригинал</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Использовать текущий с&amp;лой и атрибуты</translation>
     </message>
@@ -8725,17 +8780,17 @@ shown in search results:</source>
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+141"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
         <source>Opening drawing:</source>
         <translation>Открытие чертежа:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+26"/>
         <source>Import Error</source>
         <translation>Ошибка импорта</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Cannot open file</source>
         <translation>Не удалось открыть файл</translation>
     </message>
@@ -8765,7 +8820,7 @@ shown in search results:</source>
         <translation>Файл пустой.</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Drawing loaded successfully:</source>
         <translation>Чертёж успешно загружен:</translation>
     </message>
@@ -9345,12 +9400,12 @@ shown in search results:</source>
         <translation>Завершено</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+435"/>
         <source>Export to PDF</source>
         <translation>Экспортировать в PDF</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Exporting to %1...</source>
         <translation>Экспорт в %1...</translation>
     </message>
@@ -9490,12 +9545,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1466"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1468"/>
         <source>*VARIES*</source>
         <translation>*ВАРЬИРОВАНИЕ*</translation>
     </message>
     <message>
-        <location line="-1273"/>
+        <location line="-1275"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9555,7 +9610,7 @@ shown in search results:</source>
         <translation>Автоматический</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Use auto measurement</source>
         <translation>Использовать автоматическое измерение</translation>
     </message>
@@ -11652,17 +11707,15 @@ shown in search results:</source>
 <context>
     <name>Startup</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/PreferencesPage.ui" line="+17"/>
         <source>Enable Splash Screen</source>
-        <translation>Включить начальную заставку</translation>
+        <translation type="vanished">Включить начальную заставку</translation>
     </message>
 </context>
 <context>
     <name>StartupPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/StartupPreferences.js" line="+24"/>
         <source>Startup</source>
-        <translation>При запуске</translation>
+        <translation type="vanished">При запуске</translation>
     </message>
 </context>
 <context>
@@ -12034,7 +12087,7 @@ shown in search results:</source>
         <translation>&amp;Специальные символы...</translation>
     </message>
     <message>
-        <location line="+303"/>
+        <location line="+305"/>
         <source>Others...</source>
         <translation>Другие...</translation>
     </message>
@@ -12962,7 +13015,7 @@ shown in search results:</source>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+286"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+290"/>
         <source>Dropped data not supported</source>
         <translation>Удалённые данные не поддерживаются</translation>
     </message>
@@ -13322,7 +13375,7 @@ shown in search results:</source>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+352"/>
+        <location filename="../scripts/autostart.js" line="+361"/>
         <source>Loading add-on translations...</source>
         <translation>Загрузка переводов для дополнения...</translation>
     </message>
@@ -13349,7 +13402,7 @@ shown in search results:</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+829"/>
+        <location filename="../scripts/library.js" line="+856"/>
         <source>Objects</source>
         <translation>Объекты</translation>
     </message>
@@ -13635,6 +13688,16 @@ shown in search results:</source>
     </message>
     <message>
         <location line="+2"/>
+        <source>Tolerances</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tolerance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Lines</source>
         <translation>Линии</translation>
     </message>
@@ -13787,6 +13850,11 @@ shown in search results:</source>
         <location line="+1"/>
         <source>PDF File</source>
         <translation>Файл PDF</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF/A-1B File</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

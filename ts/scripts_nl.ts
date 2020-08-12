@@ -4,7 +4,7 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../scripts/Help/About/About.js" line="+63"/>
+        <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
         <translation>Over %1</translation>
     </message>
@@ -44,12 +44,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+375"/>
+        <location line="+408"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-350"/>
+        <location line="-383"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -214,7 +214,7 @@
         <translation>Meewerkende</translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+163"/>
         <source>Licenses</source>
         <translation>Licenties</translation>
     </message>
@@ -321,8 +321,12 @@ de wijzigingen door te voeren.</translation>
     </message>
     <message>
         <location line="+86"/>
-        <source>Defaults for </source>
+        <source>Defaults for</source>
         <translation>Standaardinstellingen voor</translation>
+    </message>
+    <message>
+        <source>Defaults for </source>
+        <translation type="vanished">Standaardinstellingen voor </translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1285,7 +1289,7 @@ Wilt u het herstellen?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+120"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Ongeldige beeldformaat (breedte x hoogte moet kleiner zijn dan %1)</translation>
     </message>
@@ -2126,7 +2130,7 @@ Wilt u het herstellen?</translation>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../scripts/Edit/ClipboardOperation.js" line="+52"/>
+        <location filename="../scripts/Edit/ClipboardOperation.js" line="+54"/>
         <source>Reference point</source>
         <translation>Referentiepunt</translation>
     </message>
@@ -2457,7 +2461,7 @@ Wilt u het herstellen?</translation>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+64"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
         <translation>Positie</translation>
     </message>
@@ -2473,16 +2477,23 @@ Wilt u het herstellen?</translation>
     </message>
     <message>
         <location line="+14"/>
+        <source>Number Format:</source>
+        <translation>Nummerweergave:</translation>
+    </message>
+    <message>
         <source>Precision:</source>
-        <translation>Precisie:</translation>
+        <translation type="vanished">Precisie:</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Number of decimal digits</source>
-        <translation>Aantal decimale cijfers</translation>
+        <translation type="vanished">Aantal decimale cijfers</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <source>Width:</source>
+        <translation type="vanished">Breedte:</translation>
+    </message>
+    <message>
+        <location line="+79"/>
         <source>Prefix:</source>
         <translation>Prefix:</translation>
     </message>
@@ -3118,7 +3129,7 @@ Wilt u het herstellen?</translation>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+97"/>
         <source>Dimension Tools</source>
         <translation>Bematinggereedschappen</translation>
     </message>
@@ -3173,6 +3184,24 @@ Wilt u het herstellen?</translation>
     </message>
 </context>
 <context>
+    <name>DimensionScaleDialog</name>
+    <message>
+        <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
+        <source>Dimension Scale</source>
+        <translation>Schaal van bematingen</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
+        <translation>De schaal voor nieuwe bematingen is niet 1:1. Maatlabels tonen waarden die afwijken van de gemeten waarde in de tekening. U kunt de schaalfactor corrigeren in de optiebalk bovenaan.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Don&apos;t show this warning again</source>
+        <translation>Laat deze waarschuwingsdialoog niet meer zien</translation>
+    </message>
+</context>
+<context>
     <name>DimensionSettings</name>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js" line="+27"/>
@@ -3191,7 +3220,7 @@ Wilt u het herstellen?</translation>
         <translation>Bemating</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+110"/>
         <source>point</source>
         <translation>Punt</translation>
     </message>
@@ -3256,7 +3285,7 @@ Wilt u het herstellen?</translation>
         <translation>Te meten eenheid</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+228"/>
         <source>Unit / Format</source>
         <translation>Eenheid / Formaat</translation>
     </message>
@@ -3334,14 +3363,27 @@ Wilt u het herstellen?</translation>
         <translation>Bouwkunde tick</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Font</source>
-        <translation>Lettertype</translation>
+        <translation type="vanished">Lettertype</translation>
+    </message>
+    <message>
+        <source>Dimension label font:</source>
+        <translation type="vanished">Lettertype voor bematingstekst :</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Label</source>
+        <translation>Tekst</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Dimension label font:</source>
-        <translation>Lettertype voor bematingstekst :</translation>
+        <source>Label font:</source>
+        <translation>Tekst lettertype:</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Label color:</source>
+        <translation>Tekst kleur:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5010,7 +5052,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+3"/>
         <source>Width : </source>
-        <translation>Breedte:</translation>
+        <translation>Breedte: </translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5436,7 +5478,17 @@ is al in de lijst.</translation>
         <translation>Voorkom wit op wit / zwart op zwart weergave</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="+547"/>
+        <source>auto</source>
+        <translation>auto</translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>Number of threads:</source>
+        <translation>Aantal threads:</translation>
+    </message>
+    <message>
+        <location line="-674"/>
         <source>Color lightness threshold:</source>
         <translation>Kleur lichtheid drempel:</translation>
     </message>
@@ -5529,12 +5581,11 @@ is al in de lijst.</translation>
         <translation>Maximum aantal weergeven referentiepunten:</translation>
     </message>
     <message>
-        <location line="+77"/>
         <source>Use multithreading</source>
-        <translation>Multithreading gebruiken</translation>
+        <translation type="vanished">Multithreading gebruiken</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+186"/>
         <source>Selection</source>
         <translation>Selectie</translation>
     </message>
@@ -7260,7 +7311,7 @@ is al in de lijst.</translation>
 <context>
     <name>Leader</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+60"/>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+61"/>
         <source>Arrow position</source>
         <translation>Pijlpositie</translation>
     </message>
@@ -7284,9 +7335,13 @@ is al in de lijst.</translation>
         <translation>Verwijslijn (polylijn met pijl)</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segement</source>
-        <translation>Laatste hoekpunt ongedaan maaken</translation>
+        <translation type="vanished">Laatste hoekpunt ongedaan maaken</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
+        <source>Undo Last Segment</source>
+        <translation>Laatste segment ongedaan maken</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -8449,7 +8504,7 @@ getoond in zoekresultaten:</translation>
         <translation>Origineel &amp;bewaren</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Huidige laag en &amp;attributen gebruiken</translation>
     </message>
@@ -8762,17 +8817,17 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+141"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
         <source>Opening drawing:</source>
         <translation>Tekening openen:</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+26"/>
         <source>Import Error</source>
         <translation>Import fout</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Cannot open file</source>
         <translation>Kan bestand niet openen</translation>
     </message>
@@ -8802,7 +8857,7 @@ getoond in zoekresultaten:</translation>
         <translation>Bestand is leeg.</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Drawing loaded successfully:</source>
         <translation>Tekening geladen:</translation>
     </message>
@@ -9243,7 +9298,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode: </source>
-        <translation>Modus:</translation>
+        <translation>Modus: </translation>
     </message>
     <message>
         <location line="+17"/>
@@ -9388,12 +9443,12 @@ getoond in zoekresultaten:</translation>
         <translation>Klaar</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+435"/>
         <source>Export to PDF</source>
         <translation>PDF exporteren</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Exporting to %1...</source>
         <translation>Bezig met exporteren naar %1...</translation>
     </message>
@@ -9533,12 +9588,12 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1466"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1468"/>
         <source>*VARIES*</source>
         <translation>*VARIEERT*</translation>
     </message>
     <message>
-        <location line="-1273"/>
+        <location line="-1275"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9598,7 +9653,7 @@ getoond in zoekresultaten:</translation>
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Use auto measurement</source>
         <translation>Automatisch</translation>
     </message>
@@ -11692,17 +11747,15 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>Startup</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/PreferencesPage.ui" line="+17"/>
         <source>Enable Splash Screen</source>
-        <translation>Splash Screen toonen</translation>
+        <translation type="vanished">Splash Screen toonen</translation>
     </message>
 </context>
 <context>
     <name>StartupPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/StartupPreferences.js" line="+24"/>
         <source>Startup</source>
-        <translation>Start</translation>
+        <translation type="vanished">Start</translation>
     </message>
 </context>
 <context>
@@ -12074,7 +12127,7 @@ getoond in zoekresultaten:</translation>
         <translation>&amp;Speciale tekens...</translation>
     </message>
     <message>
-        <location line="+303"/>
+        <location line="+305"/>
         <source>Others...</source>
         <translation>Andere...</translation>
     </message>
@@ -13005,7 +13058,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+286"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+290"/>
         <source>Dropped data not supported</source>
         <translation>Ingevoegd bestand niet ondersteund</translation>
     </message>
@@ -13365,7 +13418,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../scripts/autostart.js" line="+352"/>
+        <location filename="../scripts/autostart.js" line="+361"/>
         <source>Loading add-on translations...</source>
         <translation>Laden van add-on vertalingen...</translation>
     </message>
@@ -13392,7 +13445,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+829"/>
+        <location filename="../scripts/library.js" line="+856"/>
         <source>Objects</source>
         <translation>Objecten</translation>
     </message>
@@ -13694,6 +13747,16 @@ getoond in zoekresultaten:</translation>
     </message>
     <message>
         <location line="+2"/>
+        <source>Tolerances</source>
+        <translation>Toleranties</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tolerance</source>
+        <translation>Tolerantie</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Lines</source>
         <translation>Lijnen</translation>
     </message>
@@ -13846,6 +13909,11 @@ getoond in zoekresultaten:</translation>
         <location line="+1"/>
         <source>PDF File</source>
         <translation>PDF bestand</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF/A-1B File</source>
+        <translation>PDF/A-1B Bestand</translation>
     </message>
 </context>
 <context>

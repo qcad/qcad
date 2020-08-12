@@ -110,6 +110,7 @@
 #include <QSwipeGesture>
 #include <QTabBar>
 #include <QTemporaryFile>
+#include <QTextCharFormat>
 #include <QTextBrowser>
 #include <QTextCodec>
 #include <QTextEdit>
@@ -273,6 +274,7 @@ Q_DECLARE_METATYPE(QTextDocument*)
 Q_DECLARE_METATYPE(QTabBar*)
 Q_DECLARE_METATYPE(QTabletEvent*)
 Q_DECLARE_METATYPE(QTemporaryFile*)
+Q_DECLARE_METATYPE(QTextCharFormat*)
 Q_DECLARE_METATYPE(QTextBrowser*)
 Q_DECLARE_METATYPE(QTextCodec*)
 Q_DECLARE_METATYPE(QTextEdit*)
@@ -343,6 +345,8 @@ Q_DECLARE_METATYPE(QVector<uint>*)
 Q_DECLARE_METATYPE(QEvent::Type)
 Q_DECLARE_METATYPE(QKeySequence::SequenceFormat)
 Q_DECLARE_METATYPE(QKeySequence::SequenceFormat*)
+Q_DECLARE_METATYPE(Qt::Axis)
+Q_DECLARE_METATYPE(Qt::Axis*)
 Q_DECLARE_METATYPE(Qt::DropActions)
 Q_DECLARE_METATYPE(Qt::CursorShape)
 Q_DECLARE_METATYPE(Qt::GlobalColor)

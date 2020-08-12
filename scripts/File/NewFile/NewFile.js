@@ -118,11 +118,14 @@ NewFile.prototype.beginEvent = function() {
  * \param uiFile UI file to use for view port (defaults to ViewportWidgetQt.ui).
  * \param graphicsSceneClass Class to use for graphics scene (defaults to "RGraphicsSceneQt")
  */
-NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneClass) {
+NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneClass, silent) {
     var isOpen = !isNull(fileName);
 
     if (isNull(nameFilter)) {
         nameFilter = "";
+    }
+    if (isNull(silent)) {
+        silent = false;
     }
 
     if (isOpen && !isUrl(fileName)) {
@@ -159,13 +162,17 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
             errorCode = documentInterface.importFile(fileName, nameFilter);
         }
         if (errorCode !== RDocumentInterface.IoErrorNoError) {
-            var dialog = new QMessageBox(
-                QMessageBox.Warning,
-                qsTr("Import Error"),
-                "",
-                QMessageBox.OK
-            );
-            var path = fileName.elidedText(dialog.font, 500);
+            var dialog = undefined;
+            var path = fileName;
+            if (!silent) {
+                dialog = new QMessageBox(
+                    QMessageBox.Warning,
+                    qsTr("Import Error"),
+                    "",
+                    QMessageBox.OK
+                );
+                path = fileName.elidedText(dialog.font, 500);
+            }
             var text = qsTr("Cannot open file") + "\n\n'%1'.\n\n".arg(path);
             switch (errorCode) {
             case RDocumentInterface.IoErrorNoImporterFound:
@@ -186,11 +193,15 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
                 text += qsTr("File is empty.");
                 break;
             }
-            dialog.text = text;
             appWin.handleUserWarning(text);
-            dialog.exec();
-            dialog.destroy();
-            EAction.activateMainWindow();
+
+            if (!isNull(dialog)) {
+                dialog.text = text;
+                dialog.exec();
+                dialog.destroy();
+                EAction.activateMainWindow();
+            }
+
             RSettings.removeRecentFile(fileName);
             return undefined;
         }

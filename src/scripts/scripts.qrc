@@ -386,6 +386,7 @@
     <file alias="scripts/Draw/Dimension/Dimension.js">../../scripts/Draw/Dimension/Dimension.js</file>
     <file alias="scripts/Draw/Dimension/Dimension.svg">../../scripts/Draw/Dimension/Dimension.svg</file>
     <file alias="scripts/Draw/Dimension/Dimension.ui">../../scripts/Draw/Dimension/Dimension.ui</file>
+    <file alias="scripts/Draw/Dimension/DimensionScaleDialog.ui">../../scripts/Draw/Dimension/DimensionScaleDialog.ui</file>
     <file alias="scripts/Draw/Dimension/Leader/Leader-inverse.svg">../../scripts/Draw/Dimension/Leader/Leader-inverse.svg</file>
     <file alias="scripts/Draw/Dimension/Leader/Leader.js">../../scripts/Draw/Dimension/Leader/Leader.js</file>
     <file alias="scripts/Draw/Dimension/Leader/Leader.svg">../../scripts/Draw/Dimension/Leader/Leader.svg</file>
@@ -931,9 +932,6 @@
     <file alias="scripts/Edit/AppPreferences/ScriptingPreferences/PreferencesPage.ui">../../scripts/Edit/AppPreferences/ScriptingPreferences/PreferencesPage.ui</file>
     <file alias="scripts/Edit/AppPreferences/ScriptingPreferences/ScriptingPreferences.js">../../scripts/Edit/AppPreferences/ScriptingPreferences/ScriptingPreferences.js</file>
     <file alias="scripts/Edit/AppPreferences/ScriptingPreferences/ScriptingPreferencesInit.js">../../scripts/Edit/AppPreferences/ScriptingPreferences/ScriptingPreferencesInit.js</file>
-    <file alias="scripts/Edit/AppPreferences/StartupPreferences/PreferencesPage.ui">../../scripts/Edit/AppPreferences/StartupPreferences/PreferencesPage.ui</file>
-    <file alias="scripts/Edit/AppPreferences/StartupPreferences/StartupPreferences.js">../../scripts/Edit/AppPreferences/StartupPreferences/StartupPreferences.js</file>
-    <file alias="scripts/Edit/AppPreferences/StartupPreferences/StartupPreferencesInit.js">../../scripts/Edit/AppPreferences/StartupPreferences/StartupPreferencesInit.js</file>
     <file alias="scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui">../../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui</file>
     <file alias="scripts/Edit/AppPreferences/TextPreferences/TextPreferences.js">../../scripts/Edit/AppPreferences/TextPreferences/TextPreferences.js</file>
     <file alias="scripts/Edit/AppPreferences/TextPreferences/TextPreferencesInit.js">../../scripts/Edit/AppPreferences/TextPreferences/TextPreferencesInit.js</file>
@@ -1460,6 +1458,7 @@
     <file alias="scripts/Misc/MiscDraw/Counter/Counter.svg">../../scripts/Misc/MiscDraw/Counter/Counter.svg</file>
     <file alias="scripts/Misc/MiscDraw/Counter/Counter.ui">../../scripts/Misc/MiscDraw/Counter/Counter.ui</file>
     <file alias="scripts/Misc/MiscDraw/Counter/CounterInit.js">../../scripts/Misc/MiscDraw/Counter/CounterInit.js</file>
+    <file alias="scripts/Misc/MiscDraw/Counter/numeral.js">../../scripts/Misc/MiscDraw/Counter/numeral.js</file>
     <file alias="scripts/Misc/MiscDraw/Cross/Cross-inverse.svg">../../scripts/Misc/MiscDraw/Cross/Cross-inverse.svg</file>
     <file alias="scripts/Misc/MiscDraw/Cross/Cross.js">../../scripts/Misc/MiscDraw/Cross/Cross.js</file>
     <file alias="scripts/Misc/MiscDraw/Cross/Cross.svg">../../scripts/Misc/MiscDraw/Cross/Cross.svg</file>
@@ -1916,6 +1915,7 @@
     <file alias="scripts/Modify/Stretch/Tests/StretchTest07.js">../../scripts/Modify/Stretch/Tests/StretchTest07.js</file>
     <file alias="scripts/Modify/Stretch/Tests/StretchTest08.js">../../scripts/Modify/Stretch/Tests/StretchTest08.js</file>
     <file alias="scripts/Modify/Stretch/Tests/StretchTest09.js">../../scripts/Modify/Stretch/Tests/StretchTest09.js</file>
+    <file alias="scripts/Modify/Stretch/Tests/StretchTest10.js">../../scripts/Modify/Stretch/Tests/StretchTest10.js</file>
     <file alias="scripts/Modify/Stretch/Tests/data/entities0.dxf">../../scripts/Modify/Stretch/Tests/data/entities0.dxf</file>
     <file alias="scripts/Modify/Stretch/Tests/data/entities1.dxf">../../scripts/Modify/Stretch/Tests/data/entities1.dxf</file>
     <file alias="scripts/Modify/Stretch/Tests/data/entities2.dxf">../../scripts/Modify/Stretch/Tests/data/entities2.dxf</file>
@@ -1928,6 +1928,7 @@
     <file alias="scripts/Modify/Stretch/Tests/required/StretchTest07_000.dxf">../../scripts/Modify/Stretch/Tests/required/StretchTest07_000.dxf</file>
     <file alias="scripts/Modify/Stretch/Tests/required/StretchTest08_000.dxf">../../scripts/Modify/Stretch/Tests/required/StretchTest08_000.dxf</file>
     <file alias="scripts/Modify/Stretch/Tests/required/StretchTest09_000.dxf">../../scripts/Modify/Stretch/Tests/required/StretchTest09_000.dxf</file>
+    <file alias="scripts/Modify/Stretch/Tests/required/StretchTest10_000.dxf">../../scripts/Modify/Stretch/Tests/required/StretchTest10_000.dxf</file>
     <file alias="scripts/Modify/Transform.js">../../scripts/Modify/Transform.js</file>
     <file alias="scripts/Modify/Translate/PreferencesPage.ui">../../scripts/Modify/Translate/PreferencesPage.ui</file>
     <file alias="scripts/Modify/Translate/Tests/TranslateTest00.js">../../scripts/Modify/Translate/Tests/TranslateTest00.js</file>
@@ -2535,6 +2536,7 @@
     <file alias="scripts/splashscreen@2x.png">../../scripts/splashscreen@2x.png</file>
     <file alias="scripts/sprintf.js">../../scripts/sprintf.js</file>
     <file alias="ts/scripts_cs.qm">../../ts/scripts_cs.qm</file>
+    <file alias="ts/scripts_da.qm">../../ts/scripts_da.qm</file>
     <file alias="ts/scripts_de.qm">../../ts/scripts_de.qm</file>
     <file alias="ts/scripts_en.qm">../../ts/scripts_en.qm</file>
     <file alias="ts/scripts_es.qm">../../ts/scripts_es.qm</file>

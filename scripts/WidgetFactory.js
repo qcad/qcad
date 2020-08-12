@@ -1043,10 +1043,6 @@ WidgetFactory.moveChildren = function(sourceWidget, targetWidget, settingsGroup)
 };
 
 WidgetFactory.adjustIcons = function(includeBasePath, widget) {
-    if (!RSettings.hasDarkGuiBackground()) {
-        return;
-    }
-
     if (!isFunction(widget.children)) {
         return;
     }
@@ -1055,17 +1051,16 @@ WidgetFactory.adjustIcons = function(includeBasePath, widget) {
     for(var i=0;i<children.length;++i) {
         var w=children[i];
 
-        // adjust icon for dark themes:
+        // adjust icon for theme / dark mode:
         if (isOfType(w, QToolButton)) {
-            var iconFile = includeBasePath + "/" + w.objectName + "-inverse.svg";
-            if (new QFileInfo(iconFile).exists()) {
+            var iconFile = autoIconPath(includeBasePath + "/" + w.objectName + ".svg");
+            if (!isNull(iconFile)) {
                 w.icon = new QIcon(iconFile);
             }
         }
         else {
             WidgetFactory.adjustIcons(includeBasePath, w);
         }
-
     }
 };
 

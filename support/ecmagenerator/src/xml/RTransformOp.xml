@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RTransformOp"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <enum name="Type">
+      <value name="Translation" />
+      <value name="Scale" />
+      <value name="Rotation" />
+    </enum>
+    <method name="createTranslation" cppName="createTranslation"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RTransformOp" isPureVirtual="false">
+        <arg type="qreal" typeName="qreal" name="dx"
+        isConst="false" />
+        <arg type="qreal" typeName="qreal" name="dy"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="createScale" cppName="createScale"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RTransformOp" isPureVirtual="false">
+        <arg type="qreal" typeName="qreal" name="sx"
+        isConst="false" />
+        <arg type="qreal" typeName="qreal" name="sy"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="createRotation" cppName="createRotation"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RTransformOp" isPureVirtual="false">
+        <arg type="qreal" typeName="qreal" name="a"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getType" cppName="getType" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RTransformOp::Type"
+      isPureVirtual="false" />
+    </method>
+    <method name="getD1" cppName="getD1" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="qreal" isPureVirtual="false" />
+    </method>
+    <method name="getD2" cppName="getD2" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="qreal" isPureVirtual="false" />
+    </method>
+    <property name="type" type="RTransformOp :: Type"
+    cppGetter="getType" />
+    <property name="d1" type="qreal" cppGetter="getD1" />
+    <property name="d2" type="qreal" cppGetter="getD2" />
+  </class>
+</unit>

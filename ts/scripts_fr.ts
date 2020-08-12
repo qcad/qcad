@@ -8,7 +8,7 @@
         <translation type="obsolete">À &amp;propos</translation>
     </message>
     <message>
-        <location filename="../scripts/Help/About/About.js" line="+63"/>
+        <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
         <translation>À propos de %1</translation>
     </message>
@@ -67,12 +67,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+375"/>
+        <location line="+408"/>
         <source>Plugin:</source>
         <translation>Plugin :</translation>
     </message>
     <message>
-        <location line="-350"/>
+        <location line="-383"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -89,12 +89,12 @@
         <translation>Inconnu</translation>
     </message>
     <message>
-        <location line="+288"/>
+        <location line="+289"/>
         <source>Licenses</source>
         <translation>Licences</translation>
     </message>
     <message>
-        <location line="-418"/>
+        <location line="-419"/>
         <location line="+123"/>
         <source>Version:</source>
         <translation>Version :</translation>
@@ -352,8 +352,12 @@ pour appliquer les modifications.</translation>
     </message>
     <message>
         <location line="+86"/>
+        <source>Defaults for</source>
+        <translation>Valeurs par défaut pour</translation>
+    </message>
+    <message>
         <source>Defaults for </source>
-        <translation>Valeurs par défaut pour </translation>
+        <translation type="vanished">Valeurs par défaut pour </translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1375,7 +1379,7 @@ Voulez-vous le récupérer ?</translation>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+120"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Taille d&apos;image non valide (largeur x hauteur doit être inférieure à %1)</translation>
     </message>
@@ -2292,7 +2296,7 @@ Voulez-vous le récupérer ?</translation>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../scripts/Edit/ClipboardOperation.js" line="+52"/>
+        <location filename="../scripts/Edit/ClipboardOperation.js" line="+54"/>
         <source>Reference point</source>
         <translation>Point de référence</translation>
     </message>
@@ -2646,7 +2650,7 @@ Voulez-vous le récupérer ?</translation>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+64"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>
@@ -2662,16 +2666,23 @@ Voulez-vous le récupérer ?</translation>
     </message>
     <message>
         <location line="+14"/>
+        <source>Number Format:</source>
+        <translation>Format des numéros :</translation>
+    </message>
+    <message>
         <source>Precision:</source>
-        <translation>Précision :</translation>
+        <translation type="vanished">Précision :</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Number of decimal digits</source>
-        <translation>Nombre de chiffres décimaux</translation>
+        <translation type="vanished">Nombre de chiffres décimaux</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <source>Width:</source>
+        <translation type="vanished">Largeur :</translation>
+    </message>
+    <message>
+        <location line="+79"/>
         <source>Prefix:</source>
         <translation>Préfixe :</translation>
     </message>
@@ -3315,7 +3326,7 @@ Voulez-vous le récupérer ?</translation>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+97"/>
         <source>Dimension Tools</source>
         <translation>Outils dimension</translation>
     </message>
@@ -3370,6 +3381,24 @@ Voulez-vous le récupérer ?</translation>
     </message>
 </context>
 <context>
+    <name>DimensionScaleDialog</name>
+    <message>
+        <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
+        <source>Dimension Scale</source>
+        <translation>Échelle des objets de cote</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
+        <translation>L&apos;échelle pour les nouvelles cotes n&apos;est pas 1 : 1. Les étiquettes des dimensions indiqueront des valeurs qui diffèrent de la valeur mesurée dans le dessin. Vous pouvez corriger le facteur d&apos;échelle dans la barre d&apos;outils des options en haut.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Don&apos;t show this warning again</source>
+        <translation>Ne montrez plus cet avertissement</translation>
+    </message>
+</context>
+<context>
     <name>DimensionSettings</name>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js" line="+29"/>
@@ -3392,7 +3421,7 @@ Voulez-vous le récupérer ?</translation>
         <translation>Valeurs par défaut pour les nouveaux dessins</translation>
     </message>
     <message>
-        <location line="+111"/>
+        <location line="+112"/>
         <source>point</source>
         <translation>Point</translation>
     </message>
@@ -3457,7 +3486,7 @@ Voulez-vous le récupérer ?</translation>
         <translation>Unités de géomètre</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+228"/>
         <source>Unit / Format</source>
         <translation>Unité / format</translation>
     </message>
@@ -3535,14 +3564,27 @@ Voulez-vous le récupérer ?</translation>
         <translation>Graduation architecturale</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Font</source>
-        <translation>Police</translation>
+        <translation type="vanished">Police</translation>
+    </message>
+    <message>
+        <source>Dimension label font:</source>
+        <translation type="vanished">Police:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Label</source>
+        <translation>Étiquette</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Dimension label font:</source>
-        <translation>Police:</translation>
+        <source>Label font:</source>
+        <translation>Police de l&apos;étiquette :</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Label color:</source>
+        <translation>Couleur de l&apos;étiquette :</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5883,7 +5925,17 @@ est déjà dans la liste.</translation>
         <translation>Correction automatique des couleurs en noir et blanc</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="+547"/>
+        <source>auto</source>
+        <translation>auto</translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>Number of threads:</source>
+        <translation>Le nombre de fils :</translation>
+    </message>
+    <message>
+        <location line="-674"/>
         <source>Color lightness threshold:</source>
         <translation>Seuil de couleur :</translation>
     </message>
@@ -5922,12 +5974,11 @@ est déjà dans la liste.</translation>
         <translation>Afficher les entités de plus de N tirets que continu:</translation>
     </message>
     <message>
-        <location line="+181"/>
         <source>Use multithreading</source>
-        <translation>Utilisez multithreading</translation>
+        <translation type="vanished">Utilisez multithreading</translation>
     </message>
     <message>
-        <location line="-263"/>
+        <location line="-82"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Incrément angulaire minimum pour rendre arcs (degrés):</translation>
     </message>
@@ -6001,7 +6052,7 @@ est déjà dans la liste.</translation>
         <translation type="obsolete">Afficher limite pour le texte:</translation>
     </message>
     <message>
-        <location line="+345"/>
+        <location line="+441"/>
         <source>Selection</source>
         <translation>Sélection</translation>
     </message>
@@ -7981,7 +8032,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>Leader</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+60"/>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+61"/>
         <source>Arrow position</source>
         <translation>Position de la flèche</translation>
     </message>
@@ -8009,9 +8060,13 @@ est déjà dans la liste.</translation>
         <translation type="obsolete">Repère</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segement</source>
-        <translation>Annuler</translation>
+        <translation type="vanished">Annuler</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
+        <source>Undo Last Segment</source>
+        <translation>Annuler dernier segment</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -9405,7 +9460,7 @@ dans les résultats de recherche :</translation>
         <translation>&amp;Garder original</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Utiliser calque et &amp;attributs actuel</translation>
     </message>
@@ -9722,7 +9777,7 @@ dans les résultats de recherche :</translation>
         <translation type="obsolete">Sans titre %1 [*]</translation>
     </message>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+141"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
         <source>Opening drawing:</source>
         <translation>Ouverture du dessin :</translation>
     </message>
@@ -9731,12 +9786,12 @@ dans les résultats de recherche :</translation>
         <translation type="vanished">Chargement...</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+26"/>
         <source>Import Error</source>
         <translation>Erreur d&apos;importation</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Cannot open file</source>
         <translation>Impossible d&apos;ouvrir le fichier</translation>
     </message>
@@ -9766,7 +9821,7 @@ dans les résultats de recherche :</translation>
         <translation>Le fichier est vide.</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Drawing loaded successfully:</source>
         <translation>Dessin chargé avec succès :</translation>
     </message>
@@ -10476,12 +10531,12 @@ dans les résultats de recherche :</translation>
         <translation>Terminer</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+435"/>
         <source>Export to PDF</source>
         <translation>Exporter vers PDF</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Exporting to %1...</source>
         <translation>Exportation vers %1...</translation>
     </message>
@@ -10690,7 +10745,7 @@ dans les résultats de recherche :</translation>
         <translation>Afficher toutes les propriétés</translation>
     </message>
     <message>
-        <location line="+659"/>
+        <location line="+661"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -10724,7 +10779,7 @@ dans les résultats de recherche :</translation>
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1273"/>
+        <location line="-1275"/>
         <source>:</source>
         <translation> :</translation>
     </message>
@@ -10758,7 +10813,7 @@ dans les résultats de recherche :</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Use auto measurement</source>
         <translation>Utiliser la mesure automatique</translation>
     </message>
@@ -13039,17 +13094,15 @@ dans les résultats de recherche :</translation>
 <context>
     <name>Startup</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/PreferencesPage.ui" line="+17"/>
         <source>Enable Splash Screen</source>
-        <translation>Activer Splash Screen</translation>
+        <translation type="vanished">Activer Splash Screen</translation>
     </message>
 </context>
 <context>
     <name>StartupPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/StartupPreferences.js" line="+24"/>
         <source>Startup</source>
-        <translation>Départ</translation>
+        <translation type="vanished">Départ</translation>
     </message>
 </context>
 <context>
@@ -13425,7 +13478,7 @@ dans les résultats de recherche :</translation>
         <translation>&amp;Caractère spécial...</translation>
     </message>
     <message>
-        <location line="+303"/>
+        <location line="+305"/>
         <source>Others...</source>
         <translation>Autres...</translation>
     </message>
@@ -14426,7 +14479,7 @@ dans les résultats de recherche :</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+286"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+290"/>
         <source>Dropped data not supported</source>
         <translation>Données insérées pas pris en charge</translation>
     </message>
@@ -14798,7 +14851,7 @@ dans les résultats de recherche :</translation>
         <translation type="obsolete">Initialisation des plugins...</translation>
     </message>
     <message>
-        <location filename="../scripts/autostart.js" line="+352"/>
+        <location filename="../scripts/autostart.js" line="+361"/>
         <source>Loading add-on translations...</source>
         <translation>Chargement add-on traductions...</translation>
     </message>
@@ -14841,7 +14894,7 @@ dans les résultats de recherche :</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+829"/>
+        <location filename="../scripts/library.js" line="+856"/>
         <source>Objects</source>
         <translation>Objets</translation>
     </message>
@@ -15143,6 +15196,16 @@ dans les résultats de recherche :</translation>
     </message>
     <message>
         <location line="+2"/>
+        <source>Tolerances</source>
+        <translation>Tolérances</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tolerance</source>
+        <translation>Tolérance</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Line</source>
         <translation>Ligne</translation>
     </message>
@@ -15295,6 +15358,11 @@ dans les résultats de recherche :</translation>
         <location line="+1"/>
         <source>PDF File</source>
         <translation>Fichier PDF</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF/A-1B File</source>
+        <translation>Fichier PDF/A-1B</translation>
     </message>
 </context>
 <context>

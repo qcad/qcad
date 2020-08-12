@@ -48,6 +48,7 @@ RPropertyTypeId RDimensionEntity::PropertyDimScale;
 RPropertyTypeId RDimensionEntity::PropertyDimBlockName;
 RPropertyTypeId RDimensionEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimensionEntity::PropertyFontName;
+//RPropertyTypeId RDimensionEntity::PropertyTextColor;
 RPropertyTypeId RDimensionEntity::PropertyArrow1Flipped;
 RPropertyTypeId RDimensionEntity::PropertyArrow2Flipped;
 
@@ -95,6 +96,7 @@ void RDimensionEntity::init() {
     RDimensionEntity::PropertyMiddleOfTextY.generateId(typeid(RDimensionEntity), QT_TRANSLATE_NOOP("REntity", "Text Position"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
     RDimensionEntity::PropertyMiddleOfTextZ.generateId(typeid(RDimensionEntity), QT_TRANSLATE_NOOP("REntity", "Text Position"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
 //    RDimensionEntity::PropertyFontName.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Font"));
+//    RDimensionEntity::PropertyTextColor.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Text Color"));
     RDimensionEntity::PropertyArrow1Flipped.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Flip First Arrow"));
     RDimensionEntity::PropertyArrow2Flipped.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Flip Second Arrow"));
 
@@ -149,6 +151,7 @@ bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(getData().autoTextPos, value, PropertyAutoTextPos == propertyTypeId);
     if (RPluginLoader::hasPlugin("DWG")) {
 //        ret = ret || RObject::setMember(getData().fontName, value, PropertyFontName == propertyTypeId);
+//        ret = ret || RObject::setMember(getData().textColor, value, PropertyTextColor == propertyTypeId);
         ret = ret || RObject::setMember(getData().arrow1Flipped, value, PropertyArrow1Flipped == propertyTypeId);
         ret = ret || RObject::setMember(getData().arrow2Flipped, value, PropertyArrow2Flipped == propertyTypeId);
 
@@ -239,6 +242,10 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
 //            RPropertyAttributes(RPropertyAttributes::Style));
 //    }
 
+//    else if (propertyTypeId == PropertyTextColor) {
+//        return qMakePair(QVariant(getData().textColor), RPropertyAttributes());
+//    }
+
     else if (propertyTypeId == PropertyArrow1Flipped) {
         return qMakePair(QVariant(getData().arrow1Flipped), RPropertyAttributes());
     }
@@ -315,11 +322,21 @@ void RDimensionEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
     // export text label:
     RTextData& textData = data.getTextData();
     if (textData.isSane()) {
+        //QVariant v = getDocument()->getKnownVariable(RS::DIMCLRT, RColor(RColor::ByBlock));
+        //RColor textColor = v.value<RColor>();
         if (e.isTextRenderedAsText()) {
+            //textData.setColor(textColor);
             QList<RPainterPath> paths = e.exportText(textData, forceSelected);
             e.exportPainterPaths(paths);
         }
         else {
+            // render text as paths:
+            // set brush explicitely:
+            QVariant v = getDocument()->getKnownVariable(RS::DIMCLRT, RColor(RColor::ByBlock));
+            RColor textColor = v.value<RColor>();
+            if (!textColor.isByBlock()) {
+                brush.setColor(textColor);
+            }
             e.setBrush(brush);
             e.exportPainterPathSource(textData);
         }

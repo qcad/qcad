@@ -186,6 +186,10 @@
                 qScriptValueFromValue(&engine, RCircleEntity::PropertyArea),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyTotalArea",
+                qScriptValueFromValue(&engine, RCircleEntity::PropertyTotalArea),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
 
     // enum values:
     

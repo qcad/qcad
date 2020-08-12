@@ -396,7 +396,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/core/RTextBasedEntity.cpp" line="+72"/>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="+74"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <location line="+8"/>
         <location line="+2"/>
@@ -730,6 +730,16 @@ Abre diálogo de cores</translatorcomment>
         <translation>Vertical</translation>
     </message>
     <message>
+        <location line="+1"/>
+        <source>Backward</source>
+        <translation>Para trás</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Upside Down</source>
+        <translation>De cabeça para baixo</translation>
+    </message>
+    <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
         <source>Rotation</source>
         <translation>Rotação</translation>
@@ -850,7 +860,7 @@ Abre diálogo de cores</translatorcomment>
         <translation type="vanished">Margens de trama</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+852"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+827"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Foi detectada uma referência de bloco circular (recursiva):</translation>
     </message>

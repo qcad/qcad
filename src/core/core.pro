@@ -105,6 +105,7 @@ SOURCES += \
     math/RShape.cpp \
     math/RSpline.cpp \
     math/RTextLabel.cpp \
+    math/RTransform.cpp \
     math/RTriangle.cpp \
     math/RVector.cpp \
     math/RXLine.cpp
@@ -270,6 +271,8 @@ HEADERS = \
     math/RSpline.h \
     math/RSplineProxy.h \
     math/RTextLabel.h \
+    math/RTransform.h \
+    math/RTransformOp.h \
     math/RTriangle.h \
     math/RVector.h \
     math/RXLine.h

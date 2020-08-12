@@ -1144,8 +1144,8 @@ bool RStorage::isEntityVisible(const REntity& entity, RObject::Id blockId) const
 //    qDebug() << "entity: ";
 //    dump();
 //    qDebug() << "layer: " << layer->getName();
-//    qDebug() << "model space: " << doc->getModelSpaceBlockId();
-//    qDebug() << "block ID: " << getBlockId();
+//    qDebug() << "model space: " << getModelSpaceBlockId();
+//    qDebug() << "block ID: " << entity.getBlockId();
 //    qDebug() << "layer 0 compat: " << RSettings::isLayer0CompatibilityOn();
 
     if (isLayer0 &&

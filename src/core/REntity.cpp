@@ -201,9 +201,11 @@ QList<RVector> REntity::getIntersectionPoints(
             same = true;
         }
 
-        const RPolyline* pl = dynamic_cast<const RPolyline*>(shape);
-        if (pl!=NULL) {
-            same = true;
+        if (shape!=NULL && shape->getShapeType()==RShape::Polyline) {
+            const RPolyline* pl = dynamic_cast<const RPolyline*>(shape);
+            if (pl!=NULL) {
+                same = true;
+            }
         }
 
         if (getType()==RS::EntityBlockRef || getType()==RS::EntityViewport) {
@@ -270,7 +272,7 @@ QPair<QVariant, RPropertyAttributes> REntity::getProperty(
         }
     }
     else if (propertyTypeId == PropertyLinetypeScale) {
-        return qMakePair(QVariant(getData().getLinetypeScale()), RPropertyAttributes());
+        return qMakePair(QVariant(getData().getLinetypeScale()), RPropertyAttributes(RPropertyAttributes::UnitLess));
     }
     else if (propertyTypeId == PropertyLineweight) {
         QVariant v;
@@ -283,7 +285,7 @@ QPair<QVariant, RPropertyAttributes> REntity::getProperty(
         return qMakePair(var, RPropertyAttributes());
     }
     else if (propertyTypeId == PropertyDrawOrder) {
-        return qMakePair(QVariant(getData().getDrawOrder()), RPropertyAttributes());
+        return qMakePair(QVariant(getData().getDrawOrder()), RPropertyAttributes(RPropertyAttributes::UnitLess));
     }
 
     // human readable properties (not relevant for transactions):

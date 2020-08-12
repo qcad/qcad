@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core/math" filename="RTransformOp.h"><comment type="block">/**
+ * Copyright (c) 2011-2020 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RTRANSFORMOP_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RTRANSFORMOP_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"../core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMath.h"</cpp:file></cpp:include>
+
+<comment type="block">/**
+ * Represents a transform operation within an RTransform object.
+ *
+ * \ingroup math
+ * \scriptable
+ * \copyable
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RTransformOp</name> <block>{<private type="default">
+</private><public>public:
+    <enum>enum <name>Type</name> <block>{
+        <expr><name>Translation</name></expr>,
+        <expr><name>Scale</name></expr>,
+        <expr><name>Rotation</name></expr>
+    }</block>;</enum>
+
+    <function><type><name>static</name> <name>RTransformOp</name></type> <name>createTranslation</name><parameter_list>(<param><decl><type><name>qreal</name></type> <name>dx</name></decl></param>, <param><decl><type><name>qreal</name></type> <name>dy</name></decl></param>)</parameter_list> <block>{
+        <decl_stmt><decl><type><name>RTransformOp</name></type> <name>t</name></decl>;</decl_stmt>
+        <expr_stmt><expr><name>t</name>.<name>type</name> = <name>Translation</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>t</name>.<name>d1</name> = <name>dx</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>t</name>.<name>d2</name> = <name>dy</name></expr>;</expr_stmt>
+        <return>return <expr><name>t</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>static</name> <name>RTransformOp</name></type> <name>createScale</name><parameter_list>(<param><decl><type><name>qreal</name></type> <name>sx</name></decl></param>, <param><decl><type><name>qreal</name></type> <name>sy</name></decl></param>)</parameter_list> <block>{
+        <decl_stmt><decl><type><name>RTransformOp</name></type> <name>t</name></decl>;</decl_stmt>
+        <expr_stmt><expr><name>t</name>.<name>type</name> = <name>Scale</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>t</name>.<name>d1</name> = <name>sx</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>t</name>.<name>d2</name> = <name>sy</name></expr>;</expr_stmt>
+        <return>return <expr><name>t</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>static</name> <name>RTransformOp</name></type> <name>createRotation</name><parameter_list>(<param><decl><type><name>qreal</name></type> <name>a</name></decl></param>)</parameter_list> <block>{
+        <decl_stmt><decl><type><name>RTransformOp</name></type> <name>t</name></decl>;</decl_stmt>
+        <expr_stmt><expr><name>t</name>.<name>type</name> = <name>Rotation</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>t</name>.<name>d1</name> = <name>a</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>t</name>.<name>d2</name> = <name>RNANDOUBLE</name></expr>;</expr_stmt>
+        <return>return <expr><name>t</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name><name>RTransformOp</name>::<name>Type</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>type</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>qreal</name></type> <name>getD1</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>d1</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>qreal</name></type> <name>getD2</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>d2</name></expr>;</return>
+    }</block></function>
+
+</public><public>public:
+    <comment type="block">/**
+     * \getter{getType}
+     */</comment>
+    <decl_stmt><decl><type><name><name>RTransformOp</name>::<name>Type</name></name></type> <name>type</name></decl>;</decl_stmt>
+    <comment type="block">/**
+     * \getter{getD1}
+     */</comment>
+    <decl_stmt><decl><type><name>qreal</name></type> <name>d1</name></decl>;</decl_stmt>
+    <comment type="block">/**
+     * \getter{getD2}
+     */</comment>
+    <decl_stmt><decl><type><name>qreal</name></type> <name>d2</name></decl>;</decl_stmt>
+</public>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTransformOp</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTransformOp::Type</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTransformOp*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

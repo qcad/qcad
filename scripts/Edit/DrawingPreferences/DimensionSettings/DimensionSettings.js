@@ -92,6 +92,7 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
     var wastz = widgets["AngularShowTrailingZeros"];
     var wap = widgets["AngularPrecision"];
     var wdf = widgets["DimensionFont"];
+    var wdtc = widgets["DimensionTextColor"];
     var wdp = widgets["DecimalPoint"];
     var wfg = widgets["FontGroup"];
     var wkp = widgets["KeepProportions"];
@@ -217,12 +218,14 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
     }
 
     if (isNull(document)) {
+        // defaults for new drawings:
         // update unit labels, preview:
         //DimensionSettings.updateUnit(unit);
         //DimensionSettings.updateLinearPrecision(widgets);
         //DimensionSettings.updateAngularPrecision(widgets);
 
         if (hasPlugin("DWG")) {
+            // font:
             if (!isNull(wdf)) {
                 wdf.setProperty("Loaded", true);
                 wdf.editable = false;
@@ -230,6 +233,13 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
                 var dimFont = RSettings.getStringValue(settingsName + "/DimensionFont", "Standard");
                 activateFont(wdf, dimFont.isEmpty() ? "Standard" : dimFont);
             }
+
+            // text color:
+//            if (!isNull(wdtc)) {
+//                wdtc.setProperty("Loaded", true);
+//                var dimTextColor = RSettings.getStringValue(settingsName + "/DimensionTextColor", new RColor(RColor.ByLayer));
+//                wdtc.setColor(dimTextColor);
+//            }
         }
         else {
             if (!isNull(wfg)) {
@@ -356,6 +366,7 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
     DimensionSettings.updateUnit(unit);
 
     if (hasPlugin("DWG")) {
+        // font:
         if (!isNull(wdf)) {
             wdf.setProperty("Loaded", true);
             wdf.editable = false;
@@ -363,6 +374,15 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
             initFontComboBox(wdf);
             var dimFont = document.getDimensionFont();
             activateFont(wdf, dimFont.isEmpty() ? "Standard" : dimFont);
+        }
+
+        // text color:
+        if (!isNull(wdtc)) {
+            wdtc.setProperty("Loaded", true);
+            var dimTextColor = document.getKnownVariable(RS.DIMCLRT, new RColor(RColor.ByBlock));
+            if (isValidColor(dimTextColor)) {
+                wdtc.setColor(dimTextColor);
+            }
         }
     }
     else {
@@ -668,6 +688,7 @@ DimensionSettings.savePreferences = function(pageWidget, calledByPrefDialog, doc
     document.setKnownVariable(RS.DIMDEC, widgets["LinearPrecision"].currentIndex, transaction);
     document.setKnownVariable(RS.DIMAUNIT, widgets["AngularFormat"].currentIndex, transaction);
     document.setKnownVariable(RS.DIMADEC, widgets["AngularPrecision"].currentIndex, transaction);
+    document.setKnownVariable(RS.DIMCLRT, widgets["DimensionTextColor"].getColor(), transaction);
     document.setDimensionFont(widgets["DimensionFont"].currentText, transaction);
 
     // show leading / trailing zeroes:

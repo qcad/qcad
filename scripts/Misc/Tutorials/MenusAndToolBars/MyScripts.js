@@ -42,8 +42,8 @@ MyScripts.getMenu = function() {
 MyScripts.getToolBar = function() {
     // EAction.getToolBar is a helper function that returns an existing 
     // or new QToolBar object with the given title and object name.
-    // The object name (here "MyScriptToolBar") must be unique. 
-    return EAction.getToolBar(MyScripts.getTitle(), "MyScriptToolBar");
+    // The object name (here "MyScriptsToolBar") must be unique.
+    return EAction.getToolBar(MyScripts.getTitle(), "MyScriptsToolBar");
 };
 
 // This static function defines and returns the title of the menu 

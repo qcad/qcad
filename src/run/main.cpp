@@ -79,6 +79,7 @@
 #include "RSolidEntity.h"
 #include "RSplineEntity.h"
 #include "RTextEntity.h"
+#include "RToleranceEntity.h"
 #include "RTraceEntity.h"
 #include "RViewportEntity.h"
 #include "RVersion.h"
@@ -269,6 +270,7 @@ int main(int argc, char *argv[]) {
     RImageEntity::init();
     RHatchEntity::init();
     RLeaderEntity::init();
+    RToleranceEntity::init();
     RLineEntity::init();
     RPointEntity::init();
     RPolylineEntity::init();

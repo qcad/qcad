@@ -51,7 +51,7 @@
     <message>
         <location line="+3"/>
         <source>Mil</source>
-        <translation>Mil</translation>
+        <translation>Tisočinka palca</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -106,7 +106,7 @@
     <message>
         <location line="+3"/>
         <source>Parsec</source>
-        <translation>Parsec</translation>
+        <translation>Parsek</translation>
     </message>
 </context>
 <context>
@@ -144,7 +144,7 @@
     <message>
         <location line="+1"/>
         <source>Magenta</source>
-        <translation>Mangenta</translation>
+        <translation>Magenta</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -179,7 +179,7 @@
     <message>
         <location line="+1"/>
         <source>Dark Magenta</source>
-        <translation>Temno škrlatna</translation>
+        <translation>Temno magenta</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -255,7 +255,7 @@
     <message>
         <location filename="../src/core/RBlock.cpp" line="+65"/>
         <source>Pixel Unit</source>
-        <translation>Enota kot slikovna točka</translation>
+        <translation>Enota kot slikovna pika</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -266,7 +266,7 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/core/RTextBasedEntity.cpp" line="+72"/>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="+74"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <location line="+8"/>
         <location line="+2"/>
@@ -322,7 +322,7 @@
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
         <source>Scale</source>
-        <translation>Razmerje</translation>
+        <translation>Merilo</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -444,7 +444,7 @@
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation>Identifikator</translation>
+        <translation>Ročica</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -454,12 +454,12 @@
     <message>
         <location line="+1"/>
         <source>Selected</source>
-        <translation type="unfinished"></translation>
+        <translation>Izbrano</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Invisible</source>
-        <translation type="unfinished"></translation>
+        <translation>Nevidno</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
@@ -501,7 +501,7 @@
     <message>
         <location line="+1"/>
         <source>Plain Text</source>
-        <translation>Preprosto besedilo</translation>
+        <translation>Golo besedilo</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -531,7 +531,7 @@
     <message>
         <location line="+1"/>
         <source>Italic</source>
-        <translation>Poševno</translation>
+        <translation>Ležeče</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -553,6 +553,16 @@
         <location line="+1"/>
         <source>Vertical</source>
         <translation>Navpično</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Backward</source>
+        <translation>Vzvratno</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Upside Down</source>
+        <translation>Od zgoraj navzdol</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
@@ -623,12 +633,12 @@
     <message>
         <location line="+1"/>
         <source>Snappable</source>
-        <translation>Možnost pripenjanja</translation>
+        <translation>Pripenljivo</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Off is Freeze</source>
-        <translation type="unfinished"></translation>
+        <translation>Izklop je zamrznjeno</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
@@ -640,14 +650,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Limits</source>
-        <translation>Min. meje</translation>
+        <translation>Najm. meje</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Limits</source>
-        <translation>Maks. meje</translation>
+        <translation>Najv. meje</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -661,17 +671,17 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Extents</source>
-        <translation>Min. razširitev</translation>
+        <translation>Najm. podaljšanja</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Extents</source>
-        <translation>Maks. razširitev</translation>
+        <translation>Najv. podaljšanja</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+852"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+827"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Zaznano krožno (rekurzivno) sklicevanje zbirov:</translation>
     </message>
@@ -918,12 +928,12 @@
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-dot</source>
-        <translation>ISO doga črtica dvojna pika</translation>
+        <translation>ISO dolga črtica-dvojna pika</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash triple-dot</source>
-        <translation>ISO dolga črtica tri pike </translation>
+        <translation>ISO dolga črtica-tropičje</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -933,12 +943,12 @@
     <message>
         <location line="+1"/>
         <source>ISO long-dash short-dash</source>
-        <translation>ISO dolga črtica kratka črtica</translation>
+        <translation>ISO dolga črtica-kratka črtica</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO long-dash double-short-dash</source>
-        <translation>ISO dolga črtica dve kratki črtici</translation>
+        <translation>ISO dolga črtica-dve kratki črtici</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -963,12 +973,12 @@
     <message>
         <location line="+1"/>
         <source>ISO dash triple-dot</source>
-        <translation>ISO črtica trojna pika</translation>
+        <translation>ISO črtica-tropičje</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>ISO double-dash triple-dot</source>
-        <translation>ISO dvojna črtica tri pike</translation>
+        <translation>ISO dvojna črtica-tropičje</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1171,7 +1181,7 @@
     </message>
     <message>
         <source>Handle</source>
-        <translation type="vanished">Identifikator</translation>
+        <translation type="vanished">Ročica</translation>
     </message>
     <message>
         <source>Protected</source>

@@ -237,6 +237,19 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="getDimLeaderBlockId"
+    cppName="getDimLeaderBlockId" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="REntity::Id" isPureVirtual="false" />
+    </method>
+    <method name="setDimLeaderBlockId"
+    cppName="setDimLeaderBlockId" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="REntity::Id" typeName="REntity::Id" name="id"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="exportEntity" cppName="exportEntity"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

@@ -191,6 +191,13 @@ public:
         return data.getExploded();
     }
 
+    REntity::Id getDimLeaderBlockId() const {
+        return data.getDimLeaderBlockId();
+    }
+    void setDimLeaderBlockId(REntity::Id id) {
+        data.setDimLeaderBlockId(id);
+    }
+
     virtual void exportEntity(RExporter& e, bool preview=false, bool forceSelected=false) const;
 
 protected:

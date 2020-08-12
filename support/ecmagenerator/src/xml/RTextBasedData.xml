@@ -8,6 +8,16 @@ xmlns:rs="http://www.ribbonsoft.com">
   hasStreamOperator="true" isAbstract="false" isScriptable="true">
     <baseClass name="REntityData" specifier="public" />
     <baseClass name="RPainterPathSource" specifier="public" />
+    <enum name="TextFlag">
+      <value name="NoFlags" />
+      <value name="Bold" />
+      <value name="Italic" />
+      <value name="Simple" />
+      <value name="DimensionLabel" />
+      <value name="Highlighted" />
+      <value name="Backward" />
+      <value name="UpsideDown" />
+    </enum>
     <constructor>
       <variant>
         <arg type="RDocument *" typeName="RDocument *"
@@ -52,6 +62,24 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getType" cppName="getType" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RS::EntityType" isPureVirtual="false" />
+    </method>
+    <method name="setFlag" cppName="setFlag" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RTextBasedData::TextFlag"
+        typeName="RTextBasedData::TextFlag" name="flag"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="on"
+        hasDefault="true" default="true" isConst="false" />
+      </variant>
+    </method>
+    <method name="getFlag" cppName="getFlag" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RTextBasedData::TextFlag"
+        typeName="RTextBasedData::TextFlag" name="flag"
+        isConst="false" />
+      </variant>
     </method>
     <method name="isValid" cppName="isValid" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
@@ -357,6 +385,32 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="isSimple" cppName="isSimple" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setBackward" cppName="setBackward"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isBackward" cppName="isBackward"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setUpsideDown" cppName="setUpsideDown"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isUpsideDown" cppName="isUpsideDown"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="setDimensionLabel" cppName="setDimensionLabel"

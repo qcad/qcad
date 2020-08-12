@@ -180,6 +180,24 @@ function isValidVector(obj) {
 }
 
 /**
+ * Checks if the given object is a color.
+ *
+ * \return true if the given object is an RColor object.
+ */
+function isColor(obj) {
+    return (typeof(obj)==="object" && isOfType(obj, RColor));
+}
+
+/**
+ * Checks if the given object is a valid color.
+ *
+ * \return true if the given object is a valid RColor object.
+ */
+function isValidColor(obj) {
+    return (isColor(obj) && obj.isValid());
+}
+
+/**
  * Checks if the given object is a valid boolean value.
  *
  * \return true if the given object is a boolean and not NULL or undefined.
@@ -626,6 +644,15 @@ function isLeaderEntity(obj) {
 }
 
 /**
+ * Checks if the given object is a tolerance entity.
+ *
+ * \return true if the given object is a tolerance entity (RToleranceEntity).
+ */
+function isToleranceEntity(obj) {
+    return isOfType(obj, RToleranceEntity) || isOfType(obj, RToleranceEntityPointer);
+}
+
+/**
  * Checks if the given object is an entity of the given type.
  */
 function isEntityType(obj, type) {
@@ -884,6 +911,8 @@ function entityTypeToString(type, plural) {
         return plural ? qsTr("Images") : qsTr("Image");
     case RS.EntityLeader:
         return plural ? qsTr("Leaders") : qsTr("Leader");
+    case RS.EntityTolerance:
+        return plural ? qsTr("Tolerances") : qsTr("Tolerance");
     case RS.EntityLine:
         return plural ? qsTr("Lines") : qsTr("Line");
     case RS.EntityXLine:
@@ -922,6 +951,7 @@ function translateFilterStrings(filterStrings) {
         filterStrings[i] = filterStrings[i].replace("DXF Drawing", qsTr("DXF Drawing"));
         filterStrings[i] = filterStrings[i].replace("DWG Drawing", qsTr("DWG Drawing"));
         filterStrings[i] = filterStrings[i].replace("PDF File", qsTr("PDF File"));
+        filterStrings[i] = filterStrings[i].replace("PDF/A-1B File", qsTr("PDF/A-1B File"));
     }
     return filterStrings;
 }
@@ -1034,20 +1064,6 @@ function getWidgets(widget, ca, allowDuplicates) {
     }
 
     return ca;
-}
-
-/**
- * Sleeps for the given milliseconds.
- * \param msec the time to sleep
- */
-function sleep(msec) {
-    var date = new Date();
-    var curDate = null;
-    var c = 0;
-    do {
-        curDate = new Date();
-        ++c;
-    } while (curDate - date < msec);
 }
 
 /**
@@ -2378,12 +2394,53 @@ function neutralPath(path) {
     return path;
 }
 
+/**
+ * \return Mapped icon path for the given icon for the current theme or
+ * mapped icon path for a dark theme (-inverse) or the same path or undefined if no such
+ * icon can be found.
+ */
 function autoIconPath(path) {
-    if (RSettings.hasDarkGuiBackground()) {
-        var pathDark = path.replace(/\.svg$/, "-inverse.svg");
-        if (new QFileInfo(pathDark).exists()) {
-            return pathDark;
+    // set theme specific icon:
+    var themePath = RSettings.getThemePath();
+    var themeIconFile = undefined;
+    if (themePath.length>0) {
+        var fi = new QFileInfo(path);
+        var iconFileName = fi.fileName();
+        themeIconFile = themePath + "/icons/" + iconFileName;
+        if (!new QFileInfo(themeIconFile).exists()) {
+            // no SVG found, look up PNG:
+            var iconBaseName = fi.baseName();
+            themeIconFile = themePath + "/icons/" + iconBaseName + ".png";
+            if (!new QFileInfo(themeIconFile).exists()) {
+                // no PNG found, use default icon:
+                themeIconFile = undefined;
+            }
         }
+    }
+
+    if (!isNull(themeIconFile)) {
+        // got icon from theme:
+        return themeIconFile;
+    }
+
+    // no theme icon, try dark mode icon:
+    var darkModeIconFile = undefined;
+    if (RSettings.hasDarkGuiBackground()) {
+        darkModeIconFile = path.replace(/\.svg$/, "-inverse.svg");
+        darkModeIconFile = darkModeIconFile.replace(/\.png$/, "-inverse.png");
+        if (!new QFileInfo(darkModeIconFile).exists()) {
+            darkModeIconFile = undefined;
+        }
+    }
+
+    if (!isNull(darkModeIconFile)) {
+        // got dark mode icon:
+        return darkModeIconFile;
+    }
+
+    if (!new QFileInfo(path).exists()) {
+        // given icon does not exist (for icons based on object names, e.g. in options toolbar):
+        return undefined;
     }
 
     return path;

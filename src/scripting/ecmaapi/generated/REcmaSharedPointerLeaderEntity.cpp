@@ -132,6 +132,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getExploded, "getExploded");
             
+            REcmaHelper::registerFunction(&engine, proto, getDimLeaderBlockId, "getDimLeaderBlockId");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDimLeaderBlockId, "setDimLeaderBlockId");
+            
             REcmaHelper::registerFunction(&engine, proto, exportEntity, "exportEntity");
             
         engine.setDefaultPrototype(
@@ -2709,6 +2713,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerLeaderEntity::getExploded", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerLeaderEntity::getDimLeaderBlockId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerLeaderEntity::getDimLeaderBlockId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLeaderEntity::getDimLeaderBlockId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLeaderEntity* self = 
+                        getSelf("getDimLeaderBlockId", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'REntity::Id'
+    REntity::Id cppResult =
+        
+               self->getDimLeaderBlockId();
+        // return type: REntity::Id
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderEntity.getDimLeaderBlockId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerLeaderEntity::getDimLeaderBlockId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerLeaderEntity::setDimLeaderBlockId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerLeaderEntity::setDimLeaderBlockId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLeaderEntity::setDimLeaderBlockId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLeaderEntity* self = 
+                        getSelf("setDimLeaderBlockId", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: REntity::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    REntity::Id
+                    a0 =
+                    (REntity::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimLeaderBlockId(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderEntity.setDimLeaderBlockId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerLeaderEntity::setDimLeaderBlockId", context, engine);
             return result;
         }
          QScriptValue

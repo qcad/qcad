@@ -96,6 +96,10 @@ bool RPolylineData::moveReferencePoint(const RVector& referencePoint, const RVec
         }
     }
 
+    if (ret) {
+        return ret;
+    }
+
     for (int i=0; i<countSegments(); i++) {
         QSharedPointer<RShape> segment = getSegmentAt(i);
         if (segment.isNull()) {
@@ -141,14 +145,8 @@ QList<RVector> RPolylineData::getIntersectionPoints(
         shapes2 = shapes1;
     }
     else {
-        const RPolylineData* otherPl = dynamic_cast<const RPolylineData*>(&other);
-        if (otherPl!=NULL) {
-            //shapes2All = otherPl->getExploded();
-            shapes2 = other.getShapes(queryBox, true);
-        }
-        else {
-            shapes2 = other.getShapes(queryBox);
-        }
+        bool ignoreComplexLocal = (other.getType()==RS::EntityHatch || other.getType()==RS::EntityPolyline);
+        shapes2 = other.getShapes(queryBox, ignoreComplexLocal);
     }
 
     for (int i1=0; i1<shapes1.size(); i1++) {

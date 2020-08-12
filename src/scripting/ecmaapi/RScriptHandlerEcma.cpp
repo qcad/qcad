@@ -24,6 +24,7 @@
 #include <QScriptEngine>
 #include <QScriptValueIterator>
 #include <QStringList>
+#include <QTextCharFormat>
 #include <QTextStream>
 #include <QFontDatabase>
 #include <QNetworkAccessManager>
@@ -301,6 +302,7 @@
 #include "REcmaSharedPointerTextData.h"
 #include "REcmaSharedPointerTextEntity.h"
 #include "REcmaSharedPointerTextLabel.h"
+#include "REcmaSharedPointerToleranceEntity.h"
 #include "REcmaSharedPointerTraceEntity.h"
 #include "REcmaSharedPointerTriangle.h"
 #include "REcmaSharedPointerUcs.h"
@@ -347,11 +349,15 @@
 #include "REcmaTextLayout.h"
 #include "REcmaTextRenderer.h"
 #include "REcmaThread.h"
+#include "REcmaToleranceData.h"
+#include "REcmaToleranceEntity.h"
 #include "REcmaToolButton.h"
 #include "REcmaToolMatrixItemDelegate.h"
 #include "REcmaTraceData.h"
 #include "REcmaTraceEntity.h"
 #include "REcmaTransformation.h"
+#include "REcmaTransform.h"
+#include "REcmaTransformOp.h"
 #include "REcmaTranslation.h"
 #include "REcmaTransaction.h"
 #include "REcmaTransactionListener.h"
@@ -483,6 +489,10 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     classQDomNode.property("prototype").setProperty("removeChild",
             engine->newFunction(ecmaQDomNodeRemoveChild));
 
+    QScriptValue classQTextCharFormat = globalObject.property("QTextCharFormat");
+    classQTextCharFormat.property("prototype").setProperty("setFontFamilies",
+            engine->newFunction(ecmaQTextCharFormatSetFontFamilies));
+
     QScriptValue classQFontMetrics = globalObject.property("QFontMetrics");
     classQFontMetrics.property("prototype").setProperty("destroy",
             engine->newFunction(ecmaObjectDestroy<QFontMetrics>));
@@ -490,6 +500,8 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     QScriptValue classQPrinter = globalObject.property("QPrinter");
     classQPrinter.property("prototype").setProperty("destroy",
             engine->newFunction(ecmaObjectDestroy<QPrinter>));
+    classQPrinter.property("prototype").setProperty("setPdfVersion",
+            engine->newFunction(ecmaQPrinterSetPdfVersion));
 
     QScriptValue classQPrintDialog = globalObject.property("QPrintDialog");
     classQPrintDialog.property("prototype").setProperty("destroy",
@@ -878,6 +890,10 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaDimOrdinateEntity::initEcma(*engine);
     REcmaSharedPointerDimOrdinateEntity::initEcma(*engine);
 
+    REcmaToleranceData::initEcma(*engine);
+    REcmaToleranceEntity::initEcma(*engine);
+    REcmaSharedPointerToleranceEntity::initEcma(*engine);
+
     REcmaTransaction::initEcma(*engine);
 
     REcmaFileImporter::initEcma(*engine);
@@ -917,6 +933,9 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaTransformation::initEcma(*engine);
 
     REcmaTranslation::initEcma(*engine);
+
+    REcmaTransform::initEcma(*engine);
+    REcmaTransformOp::initEcma(*engine);
 
     REcmaCommandLine::initEcma(*engine);
     REcmaTextEdit::initEcma(*engine);
@@ -1648,6 +1667,44 @@ QScriptValue RScriptHandlerEcma::ecmaQDomNodeRemoveChild(QScriptContext* context
                 "Wrong number/types of arguments for QDomNode.removeChild().",
                 context);
     }
+    return result;
+}
+
+QScriptValue RScriptHandlerEcma::ecmaQTextCharFormatSetFontFamilies(QScriptContext* context, QScriptEngine* engine) {
+    QScriptValue result = engine->undefinedValue();
+    QTextCharFormat* self = qscriptvalue_cast<QTextCharFormat*> (context->thisObject());
+    if (self == NULL) {
+        return throwError("QTextCharFormat.setFontFamilies(): This object is not a QTextCharFormat", context);
+    }
+
+    if (context->argumentCount() == 1 && context->argument(0).isArray()) {
+        QStringList v;
+        REcmaHelper::fromScriptValue(engine, context->argument(0), v);
+
+#if QT_VERSION >= 0x050D00
+        self->setFontFamilies(v);
+#else
+        self->setFontFamily(v[0]);
+#endif
+    }
+
+    return result;
+}
+
+QScriptValue RScriptHandlerEcma::ecmaQPrinterSetPdfVersion(QScriptContext* context, QScriptEngine* engine) {
+    QScriptValue result = engine->undefinedValue();
+    QPrinter* self = qscriptvalue_cast<QPrinter*> (context->thisObject());
+
+    if (context->argumentCount() == 1 && context->argument(0).isNumber()) {
+        int v = context->argument(0).toInt32();
+#if QT_VERSION >= 0x050A00
+        // only Qt >= 5.10:
+        self->setPdfVersion((QPagedPaintDevice::PdfVersion)v);
+#else
+        qWarning() << "Setting the PDF version is not supported in this Qt version";
+#endif
+    }
+
     return result;
 }
 

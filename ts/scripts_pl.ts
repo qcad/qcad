@@ -4,7 +4,7 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../scripts/Help/About/About.js" line="+63"/>
+        <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -43,12 +43,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+375"/>
+        <location line="+408"/>
         <source>Plugin:</source>
         <translation>Wtyczka:</translation>
     </message>
     <message>
-        <location line="-350"/>
+        <location line="-383"/>
         <source>ID:</source>
         <translation>Identyfikator:</translation>
     </message>
@@ -202,7 +202,7 @@
         <translation>Twórcy</translation>
     </message>
     <message>
-        <location line="+162"/>
+        <location line="+163"/>
         <source>Licenses</source>
         <translation type="unfinished"></translation>
     </message>
@@ -323,8 +323,12 @@ aby wprowadzić zmiany preferencji.</translation>
     </message>
     <message>
         <location line="+86"/>
-        <source>Defaults for </source>
+        <source>Defaults for</source>
         <translation>Domyślne dla</translation>
+    </message>
+    <message>
+        <source>Defaults for </source>
+        <translation type="vanished">Domyślne dla</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1526,7 +1530,7 @@ Bardzo gruby</translatorcomment>
 <context>
     <name>BitmapExportWorker</name>
     <message>
-        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+120"/>
+        <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
         <source>Invalid image size (width x height must be less than %1)</source>
         <translation>Nieprawidłowy rozmiar obrazu (szerokość x wysokość musi być mniejsze niż %1)</translation>
     </message>
@@ -2552,7 +2556,7 @@ Liczba:</translatorcomment>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../scripts/Edit/ClipboardOperation.js" line="+52"/>
+        <location filename="../scripts/Edit/ClipboardOperation.js" line="+54"/>
         <source>Reference point</source>
         <translatorcomment>--google--
 Wskaż punkt odniesienia
@@ -2989,7 +2993,7 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+64"/>
+        <location filename="../scripts/Misc/MiscDraw/Counter/Counter.js" line="+67"/>
         <source>Position</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3015,16 +3019,15 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
     </message>
     <message>
         <location line="+14"/>
-        <source>Precision:</source>
+        <source>Number Format:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Number of decimal digits</source>
-        <translation type="unfinished"></translation>
+        <source>Width:</source>
+        <translation type="obsolete">Szerokość:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+79"/>
         <source>Prefix:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3803,7 +3806,7 @@ Przełącz znak średnicy
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+97"/>
         <source>Dimension Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Narzędzia wymiarów</translation>
@@ -3878,6 +3881,24 @@ Dolna tolerancja</translatorcomment>
     </message>
 </context>
 <context>
+    <name>DimensionScaleDialog</name>
+    <message>
+        <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
+        <source>Dimension Scale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Don&apos;t show this warning again</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DimensionSettings</name>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js" line="+27"/>
@@ -3905,7 +3926,7 @@ Wskaż położenie linii wymiarowej</translatorcomment>
         <translation>Wymiar</translation>
     </message>
     <message>
-        <location line="+109"/>
+        <location line="+110"/>
         <source>point</source>
         <translation>kropka</translation>
     </message>
@@ -4004,7 +4025,7 @@ Jednostki geometryczne</translatorcomment>
         <translation>Jednostki geometryczne</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+228"/>
         <source>Unit / Format</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Jednostka / format</translation>
@@ -4116,14 +4137,27 @@ Strzałka architektoniczna</translatorcomment>
         <translation>Zasieczka</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Font</source>
-        <translation>Czcionka</translation>
+        <translation type="vanished">Czcionka</translation>
+    </message>
+    <message>
+        <source>Dimension label font:</source>
+        <translation type="vanished">Czcionka etykiet wymiarów</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Label</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Dimension label font:</source>
-        <translation>Czcionka etykiet wymiarów</translation>
+        <source>Label font:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Label color:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
@@ -6543,7 +6577,17 @@ Autozoom
         <translation>Zapobieganie wyświetlania białego na białym tle / czarnego na czarnym tle</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="+547"/>
+        <source>auto</source>
+        <translation type="unfinished">Automatycznie</translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>Number of threads:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-674"/>
         <source>Color lightness threshold:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Próg jasności koloru:</translation>
@@ -6583,12 +6627,7 @@ Autozoom
         <translation>Liczba kresek obiektu powyżej, której obiekt wyświetlany będzie linią ciągłą:</translation>
     </message>
     <message>
-        <location line="+181"/>
-        <source>Use multithreading</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-263"/>
+        <location line="-82"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Minimalny krok kątowy dla renderowania łuków (stopnie):</translation>
     </message>
@@ -6651,7 +6690,7 @@ Liczba obiektów w podglądzie:</translatorcomment>
         <translation type="obsolete">Wysokość progu Text display:</translation>
     </message>
     <message>
-        <location line="+345"/>
+        <location line="+441"/>
         <source>Selection</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -8830,7 +8869,7 @@ Lista warstw</translatorcomment>
 <context>
     <name>Leader</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+60"/>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+61"/>
         <source>Arrow position</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Położenie strzałki</translation>
@@ -8865,9 +8904,13 @@ Zrobione
         <translation>Rysuje odnośnik (linię łamaną ze strzałką)</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segement</source>
-        <translation>Cofnij ostatni segment</translation>
+        <translation type="vanished">Cofnij ostatni segment</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
+        <source>Undo Last Segment</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10586,7 +10629,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translation>&amp;Zachowanie oryginału</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+82"/>
         <source>Use current layer and &amp;attributes</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Użycie bieżącej warstwy i &amp;atrybutów</translation>
@@ -10879,7 +10922,7 @@ Wprowadź liczbę kopii</translatorcomment>
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../scripts/File/NewFile/NewFile.js" line="+141"/>
+        <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
         <source>Opening drawing:</source>
         <translation>Otwieranie rysunku:</translation>
     </message>
@@ -10891,13 +10934,13 @@ Wprowadź liczbę kopii</translatorcomment>
         <translation type="obsolete">Ładowanie...</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+26"/>
         <source>Import Error</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Błąd importowania</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Cannot open file</source>
         <translatorcomment>--google--
 Nie można otworzyć pliku &apos;%1&apos;
@@ -10933,7 +10976,7 @@ Nie można otworzyć pliku %1! Zostaje on opuszczony</translatorcomment>
         <translation>Plik jest pusty.</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Drawing loaded successfully:</source>
         <translation>Wczytano rysunek:</translation>
     </message>
@@ -11754,7 +11797,7 @@ Zrobione
         <translation>Zrobione</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+435"/>
         <source>Export to PDF</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -11762,7 +11805,7 @@ Wyeksportuj do PDF</translatorcomment>
         <translation>Wyeksportuj PDF</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Exporting to %1...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Eksportowanie do %1...</translation>
@@ -11990,13 +12033,13 @@ Wskaż punkt docelowy</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1466"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1468"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*RÓŻNE*</translation>
     </message>
     <message>
-        <location line="-1273"/>
+        <location line="-1275"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_pl.ts--
@@ -12074,7 +12117,7 @@ Czy chcesz zamknąć plik
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+659"/>
+        <location line="+661"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
@@ -12084,7 +12127,7 @@ Czy chcesz zamknąć plik
         <translation type="obsolete">Dodaj niestandardowy obiekt</translation>
     </message>
     <message>
-        <location line="-705"/>
+        <location line="-707"/>
         <source>Add custom property to selected objects</source>
         <translation>Dodaj dostosowaną właściwość do zaznaczonych obiektów</translation>
     </message>
@@ -12172,7 +12215,7 @@ Przyciąganie automatyczne</translatorcomment>
         <translation>Automatycznie</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+143"/>
         <source>Use auto measurement</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Użyj automatycznego pomiaru</translation>
@@ -14819,20 +14862,18 @@ Zamknięta</translatorcomment>
 <context>
     <name>Startup</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/PreferencesPage.ui" line="+17"/>
         <source>Enable Splash Screen</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ekran powitalny</translation>
+        <translation type="vanished">Ekran powitalny</translation>
     </message>
 </context>
 <context>
     <name>StartupPreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/StartupPreferences/StartupPreferences.js" line="+24"/>
         <source>Startup</source>
         <translatorcomment>--google--
 Pokazuj to okno przy uruchamianiu</translatorcomment>
-        <translation>Uruchamianie</translation>
+        <translation type="vanished">Uruchamianie</translation>
     </message>
 </context>
 <context>
@@ -15279,7 +15320,7 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
         <translation>Znaki &amp;specjalne...</translation>
     </message>
     <message>
-        <location line="+303"/>
+        <location line="+305"/>
         <source>Others...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pl.ts--</translatorcomment>
@@ -16578,7 +16619,7 @@ Zmień geometrię elementu w rozmieszczeniu</translatorcomment>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+286"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+290"/>
         <source>Dropped data not supported</source>
         <translation>Nie obsługiwane przeciągnięte dane </translation>
     </message>
@@ -17035,7 +17076,7 @@ Zoom wg &amp;wyboru</translatorcomment>
         <translation type="obsolete">Po inicjalizacji wtyczki ...</translation>
     </message>
     <message>
-        <location filename="../scripts/autostart.js" line="+352"/>
+        <location filename="../scripts/autostart.js" line="+361"/>
         <source>Loading add-on translations...</source>
         <translation>Wczytywanie tłumaczeń dodatków...</translation>
     </message>
@@ -17058,7 +17099,7 @@ Zoom wg &amp;wyboru</translatorcomment>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+829"/>
+        <location filename="../scripts/library.js" line="+856"/>
         <source>Objects</source>
         <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Obiekty</translation>
@@ -17429,6 +17470,16 @@ Odnośnik
     </message>
     <message>
         <location line="+2"/>
+        <source>Tolerances</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tolerance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Lines</source>
         <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Linie</translation>
@@ -17621,6 +17672,11 @@ Wprowadź tekst</translatorcomment>
         <location line="+1"/>
         <source>PDF File</source>
         <translation>Plik PDF</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PDF/A-1B File</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

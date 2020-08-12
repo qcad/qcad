@@ -172,6 +172,18 @@
         setScaleType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isAreaType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setAreaType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isUnitLess
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setUnitLess
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLabel
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -382,7 +382,7 @@ Lista de bloques</translatorcomment>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/core/RTextBasedEntity.cpp" line="+72"/>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="+74"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+73"/>
         <location line="+8"/>
         <location line="+2"/>
@@ -735,6 +735,16 @@ Colores
         <translation>Vertical</translation>
     </message>
     <message>
+        <location line="+1"/>
+        <source>Backward</source>
+        <translation>Atrás</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Upside Down</source>
+        <translation>Al revés</translation>
+    </message>
+    <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
         <source>Rotation</source>
         <translation>Rotación</translation>
@@ -855,7 +865,7 @@ Colores
         <translation type="vanished">Márgenes de trazado</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+852"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+827"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Se detectó una referencia de bloque circular (recursiva):</translation>
     </message>

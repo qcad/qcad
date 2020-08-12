@@ -312,6 +312,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="transform" cppName="transform" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QTransform &amp;" typeName="QTransform" name="t"
+        isConst="false" />
+      </variant>
+    </method>
     <property name="c1" type="RVector" cppGetter="getCorner1"
     cppSetter="setCorner1" />
     <property name="c2" type="RVector" cppGetter="getCorner2"

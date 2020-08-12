@@ -363,6 +363,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("EntityTolerance",
+    QScriptValue(RS::EntityTolerance),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("EntityUser",
     QScriptValue(RS::EntityUser),
     QScriptValue::ReadOnly);

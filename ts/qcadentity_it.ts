@@ -96,7 +96,7 @@ Altezza Testo:</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="+103"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+91"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+92"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+80"/>
         <location line="+3"/>
@@ -106,7 +106,7 @@ Altezza Testo:</translatorcomment>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+89"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+91"/>
         <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="-18"/>
         <location line="+4"/>
@@ -127,6 +127,8 @@ Altezza Testo:</translatorcomment>
         <location line="+3"/>
         <location line="+10"/>
         <location line="+4"/>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="+75"/>
+        <location line="+3"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+74"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -216,6 +218,8 @@ Arco: Centro, Punto, Angoli
         <location line="+3"/>
         <location line="+10"/>
         <location line="+4"/>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="-2"/>
+        <location line="+3"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -278,6 +282,8 @@ Caricamento indirizzi delle librerie
         <location line="+3"/>
         <location line="+10"/>
         <location line="+4"/>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="-2"/>
+        <location line="+3"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -366,6 +372,7 @@ Angolo finale o [Angolo/Lunghezza corda]</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="+5"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+2"/>
         <source>Total Area</source>
         <translation>Area totale</translation>
@@ -379,7 +386,7 @@ Modificare il contenuto del blocco selezionato</translatorcomment>
         <translation type="obsolete">Contenuti</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-12"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-13"/>
         <source>Solid</source>
         <translatorcomment>--exact match--
 --file: it.po--
@@ -387,6 +394,15 @@ Disegna Tratteggi e Riempimenti Pieni
 Disegna Tratteggi e Riempimenti
 Tratteggi / Riempimenti</translatorcomment>
         <translation>Solido</translation>
+    </message>
+    <message>
+        <source>Transparency</source>
+        <translation type="vanished">Trasparenza</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Alpha</source>
+        <translation>Alpha</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -431,7 +447,7 @@ Inserisci l&apos;angolo della linea di quota:</translatorcomment>
         <translation>Angolo</translation>
     </message>
     <message>
-        <location line="+192"/>
+        <location line="+197"/>
         <source>Yes</source>
         <translation>Si</translation>
     </message>
@@ -441,9 +457,10 @@ Inserisci l&apos;angolo della linea di quota:</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+17"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-191"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+18"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-196"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+2"/>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="+2"/>
         <source>Scale</source>
         <translatorcomment>--exact match--
 --file: locale_it_BKChem.po--
@@ -459,8 +476,23 @@ Esplode gli oggetti selezionati in oggetti piú semplice, o sottrae le facce</tr
         <translation type="vanished">Semplice</translation>
     </message>
     <message>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="-7"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Location</source>
+        <translation>Posizione</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Direction</source>
+        <translation>Direzione</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Text</source>
-        <translation type="vanished">Testo</translation>
+        <translation>Testo</translation>
     </message>
     <message>
         <source>Plain Text</source>
@@ -536,7 +568,7 @@ Verticale
     </message>
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="-5"/>
-        <location filename="../src/entity/RCircleEntity.cpp" line="+2"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="-3"/>
         <source>Diameter</source>
         <translatorcomment>--exact match--
 --file: Scripts_it.ts--
@@ -937,7 +969,7 @@ Valore dell&apos;ordinata</translatorcomment>
         <translation>Angolo di quota</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="-25"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="-26"/>
         <source>Label</source>
         <translatorcomment>--exact match--
 --file: dia.master.it.po--
@@ -989,7 +1021,7 @@ Limite inferiore</translatorcomment>
         <translation>Posizione del testo</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Flip First Arrow</source>
         <translation>Specchio la prima freccia</translation>
     </message>
@@ -1116,7 +1148,7 @@ Punto 4|Y</translatorcomment>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+89"/>
-        <location filename="../src/entity/RAttributeEntity.cpp" line="+89"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+93"/>
         <source>Tag</source>
         <translation>Etichetta</translation>
     </message>

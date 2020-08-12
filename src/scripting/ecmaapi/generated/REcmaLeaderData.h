@@ -122,6 +122,9 @@
         ;static  QScriptValue
         setDimLeaderBlockId
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        update
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

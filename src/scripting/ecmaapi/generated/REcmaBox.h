@@ -166,6 +166,9 @@
         ;static  QScriptValue
         operator_not_assign
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        transform
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

@@ -24,10 +24,10 @@ RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RTextBasedData& txt, const 
     text = new RTextBasedData(txt);
 }
 
-RGraphicsSceneDrawable::RGraphicsSceneDrawable(const QTransform& tf, const RVector& os) :
+RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RTransform& tf, const RVector& os) :
     type(Transform), offset(os), modes(NoMode), painterPath(NULL), image(NULL), text(NULL), transform(NULL) {
 
-    transform = new QTransform(tf);
+    transform = new RTransform(tf);
 }
 
 RGraphicsSceneDrawable::RGraphicsSceneDrawable(const Type& t, const RVector& os) :
@@ -50,7 +50,7 @@ RGraphicsSceneDrawable RGraphicsSceneDrawable::createFromText(const RTextBasedDa
     return RGraphicsSceneDrawable(txt, offset);
 }
 
-RGraphicsSceneDrawable RGraphicsSceneDrawable::createFromTransform(const QTransform& transform, const RVector& offset) {
+RGraphicsSceneDrawable RGraphicsSceneDrawable::createFromTransform(const RTransform& transform, const RVector& offset) {
     return RGraphicsSceneDrawable(transform, offset);
 }
 
@@ -61,6 +61,8 @@ RGraphicsSceneDrawable RGraphicsSceneDrawable::createEndTransform(const RVector&
 void RGraphicsSceneDrawable::uninit() {
     switch (type) {
     case PainterPath:
+    case PainterPathRay:
+    case PainterPathXLine:
         delete painterPath;
         break;
     case Image:
@@ -98,6 +100,8 @@ RDocument* RGraphicsSceneDrawable::getDocument() const {
 void RGraphicsSceneDrawable::setSelected(bool on) {
     switch (type) {
     case PainterPath:
+    case PainterPathRay:
+    case PainterPathXLine:
         painterPath->setSelected(on);
         break;
     case Image:
@@ -116,6 +120,8 @@ void RGraphicsSceneDrawable::setSelected(bool on) {
 void RGraphicsSceneDrawable::setHighlighted(bool on) {
     switch (type) {
     case PainterPath:
+    case PainterPathRay:
+    case PainterPathXLine:
         painterPath->setHighlighted(on);
         break;
     case Image:
@@ -135,6 +141,8 @@ RGraphicsSceneDrawable& RGraphicsSceneDrawable::operator=(const RGraphicsSceneDr
 
     switch (other.type) {
     case PainterPath:
+    case PainterPathRay:
+    case PainterPathXLine:
         Q_ASSERT(other.painterPath!=NULL);
         painterPath = new RPainterPath(*other.painterPath);
         break;
@@ -148,7 +156,7 @@ RGraphicsSceneDrawable& RGraphicsSceneDrawable::operator=(const RGraphicsSceneDr
         break;
     case Transform:
         Q_ASSERT(other.transform!=NULL);
-        transform = new QTransform(*other.transform);
+        transform = new RTransform(*other.transform);
         break;
     default:
         break;
@@ -163,20 +171,27 @@ RGraphicsSceneDrawable& RGraphicsSceneDrawable::operator=(const RGraphicsSceneDr
 
 QDebug operator<<(QDebug dbg, const RGraphicsSceneDrawable& d) {
     dbg.nospace() << "RGraphicsSceneDrawable(";
-    if (d.getType()==RGraphicsSceneDrawable::PainterPath) {
+
+    switch (d.getType()) {
+    case RGraphicsSceneDrawable::PainterPath:
+    case RGraphicsSceneDrawable::PainterPathRay:
+    case RGraphicsSceneDrawable::PainterPathXLine:
         dbg.nospace() << d.getPainterPath();
-    }
-    else if (d.getType()==RGraphicsSceneDrawable::Image) {
+        break;
+    case RGraphicsSceneDrawable::Image:
         dbg.nospace() << "Image";
-    }
-    else if (d.getType()==RGraphicsSceneDrawable::Text) {
+        break;
+    case RGraphicsSceneDrawable::Text:
         dbg.nospace() << d.getText();
-    }
-    else if (d.getType()==RGraphicsSceneDrawable::Transform) {
+        break;
+    case RGraphicsSceneDrawable::Transform:
         dbg.nospace() << d.getTransform();
-    }
-    else if (d.getType()==RGraphicsSceneDrawable::EndTransform) {
+        break;
+    case RGraphicsSceneDrawable::EndTransform:
         dbg.nospace() << "end transform";
+        break;
+    default:
+        break;
     }
     dbg.nospace() << ")";
     return dbg.space();

@@ -328,6 +328,8 @@ Explode.explodeEntity = function(entity, options) {
         e = new RTextEntity(entity.getDocument(), textData);
         e.setSelected(true);
         e.copyAttributesFrom(entity.data());
+        var textColor = document.getKnownVariable(RS.DIMCLRT, new RColor(RColor.ByBlock));
+        e.setColor(textColor);
         ret.push(e);
     }
 
@@ -337,6 +339,27 @@ Explode.explodeEntity = function(entity, options) {
         for (k=0; k<shapes.length; k++) {
             shape = shapes[k].data();
             ret.push(shape.clone());
+        }
+    }
+
+    // explode tolerances into lines and texts:
+    else if (isToleranceEntity(entity)) {
+        shapes = entity.getFrame();
+        for (k=0; k<shapes.length; k++) {
+            shape = shapes[k];
+            ret.push(shape.clone());
+        }
+
+        var textDatas = entity.getTextLabels();
+        for (k=0; k<textDatas.length; k++) {
+            var d = textDatas[k];
+            e = new RTextEntity(document, new RTextData(d))
+            e.setSelected(true);
+            e.copyAttributesFrom(entity.data());
+            if (e.getColor()!==d.getColor()) {
+                e.setColor(d.getColor());
+            }
+            ret.push(e);
         }
     }
 

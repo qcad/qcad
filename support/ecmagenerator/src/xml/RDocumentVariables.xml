@@ -77,6 +77,12 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
         name="key" isConst="false" />
+        <arg type="RColor &amp;" typeName="RColor" name="value"
+        isConst="true" />
+      </variant>
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
+        name="key" isConst="false" />
         <arg type="QVariant &amp;" typeName="QVariant" name="value"
         isConst="true" />
       </variant>

@@ -45,7 +45,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="-2"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+91"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+92"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-2"/>
         <location line="+3"/>
@@ -55,7 +55,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+89"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+91"/>
         <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+92"/>
         <location line="+4"/>
@@ -76,6 +76,8 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location line="+3"/>
         <location line="+10"/>
         <location line="+4"/>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="+75"/>
+        <location line="+3"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+74"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -140,6 +142,8 @@ Exportando o desenho...</translatorcomment>
         <location line="+3"/>
         <location line="+10"/>
         <location line="+4"/>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="-2"/>
+        <location line="+3"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -202,6 +206,8 @@ Modifique
         <location line="+3"/>
         <location line="+10"/>
         <location line="+4"/>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="-2"/>
+        <location line="+3"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -310,12 +316,13 @@ Meça a área e a circunferência de um polígono</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Total Area</source>
         <translation>Área total</translation>
     </message>
     <message>
-        <location filename="../src/entity/RCircleEntity.cpp" line="-1"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
         <source>Circumference</source>
         <translatorcomment>--google--
 Meça a área e a circunferência de um polígono
@@ -501,7 +508,7 @@ Tolerância Inferior</translatorcomment>
         <translation>Ponto de Definição</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Flip First Arrow</source>
         <translation>Virar a primeira seta</translation>
     </message>
@@ -546,7 +553,7 @@ Tolerância Inferior</translatorcomment>
         <translation type="obsolete">Definitionpoint</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="-22"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
@@ -554,7 +561,7 @@ Tolerância Inferior</translatorcomment>
         <translation>Posição do Texto</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Measured Value</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Valor Medido</translation>
@@ -619,13 +626,22 @@ Ponto final (x):</translatorcomment>
         <translation>Ponto Final</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-8"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-9"/>
         <source>Solid</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pt.ts--
 Desenhe hachurados e preenchimentos sólidos
 Hachuras / preenchimentos sólidos</translatorcomment>
         <translation>Sólido</translation>
+    </message>
+    <message>
+        <source>Transparency</source>
+        <translation type="vanished">Transparência</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Alpha</source>
+        <translation>Alpha</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -669,7 +685,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>Ângulo</translation>
     </message>
     <message>
-        <location line="+192"/>
+        <location line="+197"/>
         <source>Yes</source>
         <translation>Sim</translation>
     </message>
@@ -680,8 +696,9 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="+2"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-191"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-196"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+2"/>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="+2"/>
         <source>Scale</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -1018,8 +1035,23 @@ Tem a certeza que quer eliminar todo o conteúdo?</translatorcomment>
         <translation type="obsolete">Conteúdo</translation>
     </message>
     <message>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="-7"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Location</source>
+        <translation>Posição</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Direction</source>
+        <translation>Direção</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Text</source>
-        <translation type="vanished">Texto</translation>
+        <translation>Texto</translation>
     </message>
     <message>
         <source>Plain Text</source>
@@ -1096,7 +1128,7 @@ Dimensão vertical</translatorcomment>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+89"/>
-        <location filename="../src/entity/RAttributeEntity.cpp" line="+89"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+93"/>
         <source>Tag</source>
         <translation>Rótulo</translation>
     </message>

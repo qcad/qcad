@@ -131,6 +131,12 @@
         setPatternName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getTransparency
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setTransparency
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clearCustomPattern
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

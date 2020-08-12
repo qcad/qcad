@@ -74,7 +74,9 @@ public:
         Location = 0x800000,             //!< Property affected when transforming
         RefPoint = 0x1000000,            //!< Property affected when moving reference point
         Geometry = Location | RefPoint,  //!< Property affected when chaning geometry (Location | RefPoint)
-        Scale = 0x2000000                //!< Property is scale (1:2, 5"=1", ...)
+        Scale = 0x2000000,               //!< Property is scale (1:2, 5"=1", ...)
+        Area = 0x4000000,                //!< Property is area (relevant for formatting of value)
+        UnitLess = 0x8000000             //!< Property has no unit (linetype scale, draw order, ...)
     };
     Q_DECLARE_FLAGS(Options, Option)
 
@@ -259,6 +261,22 @@ public:
 
     void setScaleType(bool v) {
         setOption(Scale, v);
+    }
+
+    bool isAreaType() const {
+        return options.testFlag(Area);
+    }
+
+    void setAreaType(bool v) {
+        setOption(Area, v);
+    }
+
+    bool isUnitLess() const {
+        return options.testFlag(UnitLess);
+    }
+
+    void setUnitLess(bool v) {
+        setOption(UnitLess, v);
     }
 
     QString getLabel() const {

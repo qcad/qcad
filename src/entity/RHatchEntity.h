@@ -52,6 +52,7 @@ public:
     static RPropertyTypeId PropertyDrawOrder;
 
     static RPropertyTypeId PropertySolid;
+    static RPropertyTypeId PropertyTransparency;
 
     static RPropertyTypeId PropertyPatternName;
     static RPropertyTypeId PropertyEntityPattern;
@@ -166,6 +167,14 @@ public:
 
     void setPatternName(const QString& n) {
         data.setPatternName(n);
+    }
+
+    int getTransparency() const {
+        return data.getTransparency();
+    }
+
+    void setTransparency(int t) {
+        data.setTransparency(t);
     }
 
     void clearCustomPattern() {

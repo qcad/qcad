@@ -41,7 +41,7 @@
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="-2"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+91"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+92"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-2"/>
         <location line="+3"/>
@@ -51,7 +51,7 @@
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+89"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+91"/>
         <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+92"/>
         <location line="+4"/>
@@ -72,6 +72,8 @@
         <location line="+3"/>
         <location line="+10"/>
         <location line="+4"/>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="+75"/>
+        <location line="+3"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+74"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -132,6 +134,8 @@
         <location line="+3"/>
         <location line="+10"/>
         <location line="+4"/>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="-2"/>
+        <location line="+3"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -189,6 +193,8 @@
         <location line="+3"/>
         <location line="+10"/>
         <location line="+4"/>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="-2"/>
+        <location line="+3"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="-8"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -266,13 +272,14 @@
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Total Area</source>
         <translation>總面積</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+89"/>
-        <location filename="../src/entity/RAttributeEntity.cpp" line="+89"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+93"/>
         <source>Tag</source>
         <translation>標籤</translation>
     </message>
@@ -287,7 +294,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/entity/RCircleEntity.cpp" line="-1"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
         <source>Circumference</source>
         <translation type="unfinished"></translation>
     </message>
@@ -433,7 +440,7 @@
         <translation>文字位置</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Flip First Arrow</source>
         <translation type="unfinished"></translation>
     </message>
@@ -471,6 +478,7 @@
         <location line="+1"/>
         <location filename="../src/entity/RHatchEntity.cpp" line="-3"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+2"/>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="+2"/>
         <source>Scale</source>
         <translation>比例</translation>
     </message>
@@ -527,9 +535,14 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-5"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-6"/>
         <source>Solid</source>
         <translation>黑框</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Alpha</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -577,7 +590,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+184"/>
+        <location line="+189"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -859,6 +872,25 @@
     <message>
         <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+141"/>
         <source>Arc Symbol Type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="-7"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Direction</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -54,13 +54,15 @@ function exportBitmap(doc, scene, fileName, properties, view) {
     }
     var numThreadsOri = view.getNumThreads();
 
+    var antialiasing = (properties["antialiasing"]==null ? true : properties["antialiasing"]);
+
     // crashes with multiple threads:
     view.setNumThreads(1);
     view.setAlphaEnabled(true);
 
     view.setPaintOrigin(properties["origin"]==null ? false : properties["origin"]);
     view.setTextHeightThresholdOverride(0);
-    view.setAntialiasing(properties["antialiasing"]==null ? true : properties["antialiasing"]);
+    view.setAntialiasing(antialiasing);
 
     if (properties["monochrome"]===true) {
         view.setColorMode(RGraphicsView.BlackWhite);
@@ -73,7 +75,7 @@ function exportBitmap(doc, scene, fileName, properties, view) {
         view.setBackgroundColor(properties["backgroundColor"]);
     }
 
-    if (properties["colorCorrection"]) {
+    if (typeof(properties["colorCorrection"])!=="undefined") {
         view.setColorCorrectionOverride(properties["colorCorrection"]);
     }
 
@@ -159,6 +161,10 @@ function exportBitmap(doc, scene, fileName, properties, view) {
 
     // export file
     var buffer = view.getBuffer();
+
+    if (properties["monochrome"]===true && !antialiasing) {
+        buffer = buffer.convertToFormat(QImage.Format_Mono);
+    }
 
     view.setNumThreads(numThreadsOri);
     if (viewCreated) {

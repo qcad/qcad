@@ -115,6 +115,15 @@ public:
         return fontName;
     }
 
+//    void setTextColor(const RColor& tc) {
+//        textColor = tc;
+//        update();
+//    }
+
+//    RColor getTextColor() const {
+//        return textColor;
+//    }
+
     void setDimBlockName(const QString& bn) {
         dimBlockName = bn;
         //update();
@@ -255,6 +264,8 @@ protected:
     QString lowerTolerance;
     /** Dimension font name */
     QString fontName;
+    /** Dimension text color */
+    //RColor textColor;
     /** Dimension appearance is defined in this block */
     mutable QString dimBlockName;
 

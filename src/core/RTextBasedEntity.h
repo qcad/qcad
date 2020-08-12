@@ -67,6 +67,8 @@ public:
     static RPropertyTypeId PropertyLineSpacingFactor;
     static RPropertyTypeId PropertyHAlign;
     static RPropertyTypeId PropertyVAlign;
+    static RPropertyTypeId PropertyBackward;
+    static RPropertyTypeId PropertyUpsideDown;
 
 public:
     RTextBasedEntity(RDocument* document);
@@ -122,6 +124,22 @@ public:
 
     void setItalic(bool on) {
         getData().setItalic(on);
+    }
+
+    bool isBackward() const {
+        return getData().isBackward();
+    }
+
+    void setBackward(bool on) {
+        getData().setBackward(on);
+    }
+
+    bool isUpsideDown() const {
+        return getData().isUpsideDown();
+    }
+
+    void setUpsideDown(bool on) {
+        getData().setUpsideDown(on);
     }
 
     RVector getPosition() const {

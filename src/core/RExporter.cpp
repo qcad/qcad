@@ -291,7 +291,7 @@ QBrush RExporter::getBrush(const RPainterPath& path) {
                 //Q_ASSERT(false);
             }
         }
-        REntity* e=getEntity();
+        REntity* e = getEntity();
         if (e!=NULL && e->isSelected()) {
             brush.setColor(RSettings::getSelectionColor());
         }
@@ -481,11 +481,17 @@ bool RExporter::exportDocument() {
     if (!exportDocumentSettings()) {
         return false;
     }
+    //qDebug() << "exporting linetypes";
     exportLinetypes();
+    //qDebug() << "exporting layers";
     exportLayers();
+    //qDebug() << "exporting layer states";
     exportLayerStates();
+    //qDebug() << "exporting blocks";
     exportBlocks();
+    //qDebug() << "exporting views";
     exportViews();
+    //qDebug() << "exporting entities";
     if (isVisualExporter()) {
         exportEntities(false);
     }
@@ -1619,34 +1625,11 @@ void RExporter::exportClipRectangle(const RBox& clipRectangle, bool forceSelecte
     Q_UNUSED(forceSelected)
 }
 
-void RExporter::exportTransform(const QTransform& t) {
+void RExporter::exportTransform(const RTransform& t) {
     Q_UNUSED(t)
 }
 
 void RExporter::exportEndTransform() {
-}
-
-void RExporter::exportTranslation(const RVector& offset) {
-    Q_UNUSED(offset)
-}
-
-void RExporter::exportEndTranslation() {
-}
-
-void RExporter::exportRotation(double angle) {
-    Q_UNUSED(angle)
-
-}
-
-void RExporter::exportEndRotation() {
-}
-
-void RExporter::exportScale(const RVector& factors) {
-    blockScales.push(qMax(qAbs(factors.x), qAbs(factors.y)));
-}
-
-void RExporter::exportEndScale() {
-    blockScales.pop();
 }
 
 double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {

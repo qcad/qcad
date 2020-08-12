@@ -21,6 +21,11 @@ include("scripts/Help/Help.js");
 include("AboutCredits.js");
  
 
+/**
+ * \class About
+ * \brief Shows about dialog.
+ * \ingroup ecma_help
+ */
 function About(guiAction) {
     Help.call(this, guiAction);
 }
@@ -154,7 +159,7 @@ About.prototype.initAboutApp = function(textBrowser) {
             + "<p>" + qsTr("All brand or product names are trademarks or registered trademarks of their respective holders.") + "</p>"
             + "<p/>"
             + "<p>© 2011-2020 RibbonSoft, GmbH.</p>"
-            + "<p>" + qsTr("Portions of this software © %1 The Qt Company Ltd.").arg("2008-2019") + "</p>"
+            + "<p>" + qsTr("Portions of this software © %1 The Qt Company Ltd.").arg("2008-2020") + "</p>"
             + "<p>" + qsTr("Qt ships with QCAD under the <a href='%1'>LGPL Open Source license</a> which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the <a href='%2'>documentation shown on the Qt website</a>.").arg("http://www.gnu.org/licenses/lgpl-3.0.html").arg("http://doc.qt.io/qt-5/build-sources.html") + "</p>"
             + "<p>" + qsTr("The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.") + "</p>"
             + "<p/>"
@@ -441,9 +446,10 @@ About.prototype.initAboutSystem = function(textEdit) {
     text += "\nDate: " + RSettings.getReleaseDate();
     text += "\nQt version: " + RSettings.getQtVersionString();
     text += "\nCompiler version: " + RSettings.getCompilerVersion();
-    text += "\nBuild Date: " + RSettings.getReleaseDate();
+    text += "\nBuild date: " + RSettings.getReleaseDate();
     text += "\nRevision: " + RSettings.getRevisionString();
     text += "\nArchitecture: " + RS.getBuildCpuArchitecture();
+    text += "\nDevice pixel ratio: " + RSettings.getDevicePixelRatio();
 
     text += "\nOS: ";
     if (RS.getSystemId()==="win") {
@@ -565,7 +571,39 @@ About.prototype.initAboutLicenses = function(textBrowser) {
           + "<br/> - Redistributions in binary form must reproduce the above copyright notice, "
           + "   this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution."
           + "<br/><br/>"
-          + "THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>"
+          + "THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" "
+          + "AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED "
+          + "WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. "
+          + "IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, "
+          + "INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT "
+          + "NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR "
+          + "PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, "
+          + "WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) "
+          + "ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY "
+          + "OF SUCH DAMAGE.</p>"
+
+    html += "<h2>numeraljs</h2>"
+    html += "<p>Copyright (c) 2016, Adam Draper."
+          + "<br/><br/>"
+          + "Permission is hereby granted, free of charge, to any person "
+          + "obtaining a copy of this software and associated documentation "
+          + "files (the \"Software\"), to deal in the Software without "
+          + "restriction, including without limitation the rights to use, "
+          + "copy, modify, merge, publish, distribute, sublicense, and/or sell "
+          + "copies of the Software, and to permit persons to whom the "
+          + "Software is furnished to do so, subject to the following "
+          + "conditions:"
+          + "<br/><br/>"
+          + " - The above copyright notice and this permission notice shall be "
+          + "included in all copies or substantial portions of the Software."
+          + "<br/> - Redistributions in binary form must reproduce the above copyright notice, "
+          + "   this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution."
+          + "<br/><br/>"
+          + "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, "
+          + "INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR "
+          + "PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE "
+          + "FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, "
+          + "ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>"
 
     var numPlugins = RPluginLoader.countPlugins();
 

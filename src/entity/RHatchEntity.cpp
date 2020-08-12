@@ -40,6 +40,7 @@ RPropertyTypeId RHatchEntity::PropertyDisplayedColor;
 RPropertyTypeId RHatchEntity::PropertyDrawOrder;
 
 RPropertyTypeId RHatchEntity::PropertySolid;
+RPropertyTypeId RHatchEntity::PropertyTransparency;
 
 RPropertyTypeId RHatchEntity::PropertyPatternName;
 RPropertyTypeId RHatchEntity::PropertyEntityPattern;
@@ -80,6 +81,7 @@ void RHatchEntity::init() {
     RHatchEntity::PropertyDrawOrder.generateId(typeid(RHatchEntity), REntity::PropertyDrawOrder);
 
     RHatchEntity::PropertySolid.generateId(typeid(RHatchEntity), "", QT_TRANSLATE_NOOP("REntity", "Solid"));
+    RHatchEntity::PropertyTransparency.generateId(typeid(RHatchEntity), "", QT_TRANSLATE_NOOP("REntity", "Alpha"));
 
     RHatchEntity::PropertyPatternName.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Pattern"), QT_TRANSLATE_NOOP("REntity", "Name"));
     RHatchEntity::PropertyEntityPattern.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Pattern"), QT_TRANSLATE_NOOP("REntity", "From Entity"));
@@ -100,6 +102,7 @@ bool RHatchEntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& v
     bool ret = REntity::setProperty(propertyTypeId, value, transaction);
 
     ret = ret || RObject::setMember(data.solid, value, PropertySolid == propertyTypeId);
+    ret = ret || RObject::setMember(data.transparency, value, PropertyTransparency == propertyTypeId);
 
     ret = ret || RObject::setMember(data.patternName, value, PropertyPatternName == propertyTypeId);
     ret = ret || RObject::setMember(data.scaleFactor, value, PropertyScaleFactor == propertyTypeId);
@@ -270,6 +273,10 @@ QPair<QVariant, RPropertyAttributes> RHatchEntity::getProperty(
     if (data.isSolid()) {
         op = RPropertyAttributes::ReadOnly;
         name = "SOLID";
+    }
+
+    if (propertyTypeId == PropertyTransparency) {
+        return qMakePair(QVariant(data.transparency), RPropertyAttributes());
     }
 
     if (propertyTypeId == PropertyPatternName) {

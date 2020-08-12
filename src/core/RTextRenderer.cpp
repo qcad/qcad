@@ -20,6 +20,7 @@
 #include <QFontMetricsF>
 //#include <QTextBlock>
 #include <QTextDocument>
+#include <QMutex>
 
 #include "RColor.h"
 #include "RDxfServices.h"
@@ -66,14 +67,16 @@ QString RTextRenderer::rxWidthChange = "\\\\W(\\d*\\.?\\d*)x?;";
 QString RTextRenderer::rxObliqueAngleChange = "\\\\Q(\\d*\\.?\\d*);";
 QString RTextRenderer::rxTrackChange = "\\\\T(\\d*\\.?\\d*);";
 QString RTextRenderer::rxAlignmentChange = "\\\\A(\\d+);";
-QString RTextRenderer::rxFontChangeCad = "(?:\\\\F([^|]*)\\|+c(\\d+);|\\\\F([^|;]*);)";
-//QString RTextRenderer::rxFontChangeTtf = "\\\\f([^|]*)\\|b(\\d+)\\|i(\\d+)\\|c(\\d+)\\|p(\\d+);";
+QString RTextRenderer::rxFontChangeCad = "\\\\F([^|;]*)"    // \Ffont
+                                         "[^;]*"            // ignore anything except ";"
+                                         ";";               // require ";"
 QString RTextRenderer::rxFontChangeTtf = "\\\\f([^|]*)"
                                          "(?:\\|+([bicp])(\\d+))?"
                                          "(?:\\|+([bicp])(\\d+))?"
                                          "(?:\\|+([bicp])(\\d+))?"
                                          "(?:\\|+([bicp])(\\d+))?"
-                                         "\\|*" // optional "|" at end, see FS#1882
+                                         //"\\|*" // optional "|" at end, see FS#1882
+                                         "[^;]*"            // ignore anything except ";"
                                          ";";
 QString RTextRenderer::rxBeginBlock = "\\{";
 QString RTextRenderer::rxEndBlock = "\\}";
@@ -136,6 +139,7 @@ QString RTextRenderer::rxAll = "("
     + RTextRenderer::rxUnicode
     + ")";
 
+QMutex RTextRenderer::m;
 
 
 RTextRenderer::RTextRenderer(const RTextBasedData& textData, bool draft, Target target, double fontHeightFactor)
@@ -401,6 +405,18 @@ void RTextRenderer::renderSimple() {
     QTransform globalTransform;
     globalTransform.translate(pos.x, pos.y);
     globalTransform.rotate(RMath::rad2deg(angle));
+
+    // TODO: mirror in X / Y:
+    if (textData.isBackward() && textData.isUpsideDown()) {
+        globalTransform.scale(-1, -1);
+    }
+    else if (textData.isBackward()) {
+        globalTransform.scale(-1, 1);
+    }
+    else if (textData.isUpsideDown()) {
+        globalTransform.scale(1, -1);
+    }
+
     globalTransform.translate(xOffset, yOffset);
 
     // apply global transform for position, angle and vertical alignment:
@@ -1503,7 +1519,11 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
 
     RPainterPathDevice ppd;
     QPainter ppPainter(&ppd);
-    layout->draw(&ppPainter, QPoint(0,0));
+    {
+        RTextRenderer::lockForDrawing();
+        layout->draw(&ppPainter, QPoint(0,0));
+        RTextRenderer::unlockForDrawing();
+    }
     ppPainter.end();
 
     QColor currentColor = Qt::white;
@@ -1586,7 +1606,7 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
     // cxf fonts define glyphs at a scale of 9:1:
     double cxfScale = 1.0/9.0;
     // invalid color, default, means use color of entity:
-    QColor currentColor = currentFormat.top().foreground().color();;
+    QColor currentColor = currentFormat.top().foreground().color();
     bool gotLetterSpacing = false;
     QMap<int, double> indexToCursorStart;
     QMap<int, double> indexToCursorEnd;
@@ -1782,7 +1802,11 @@ QRectF RTextRenderer::getCharacterRect(const QFont& font, const QChar& ch) const
 
     RPainterPathDevice ppd;
     QPainter ppPainter(&ppd);
-    layout.draw(&ppPainter, QPoint(0,0));
+    {
+        RTextRenderer::lockForDrawing();
+        layout.draw(&ppPainter, QPoint(0,0));
+        RTextRenderer::unlockForDrawing();
+    }
     ppPainter.end();
 
     QPainterPath p;

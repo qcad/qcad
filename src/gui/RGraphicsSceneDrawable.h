@@ -35,6 +35,8 @@ public:
     enum Type {
         Invalid,
         PainterPath,
+        PainterPathRay,
+        PainterPathXLine,
         Image,
         Text,
         Transform,
@@ -70,7 +72,7 @@ public:
     /**
      * \nonscriptable
      */
-    RGraphicsSceneDrawable(const QTransform& tf, const RVector& os = RVector::nullVector);
+    RGraphicsSceneDrawable(const RTransform& tf, const RVector& os = RVector::nullVector);
 
     /**
      * \nonscriptable
@@ -82,13 +84,17 @@ public:
     static RGraphicsSceneDrawable createFromPainterPath(const RPainterPath& pp, const RVector& offset = RVector::nullVector);
     static RGraphicsSceneDrawable createFromImage(const RImageData& img, const RVector& offset = RVector::nullVector);
     static RGraphicsSceneDrawable createFromText(const RTextBasedData& txt, const RVector& offset = RVector::nullVector);
-    static RGraphicsSceneDrawable createFromTransform(const QTransform& transfrom, const RVector& offset = RVector::nullVector);
+    static RGraphicsSceneDrawable createFromTransform(const RTransform& transfrom, const RVector& offset = RVector::nullVector);
     static RGraphicsSceneDrawable createEndTransform(const RVector& offset);
 
     void uninit();
 
     RGraphicsSceneDrawable::Type getType() const {
         return type;
+    }
+
+    bool isPainterPath() {
+        return type==PainterPath || type==PainterPathRay || type==PainterPathXLine;
     }
 
     void setMode(RGraphicsSceneDrawable::Mode mode, bool on = true) {
@@ -131,7 +137,7 @@ public:
         return *text;
     }
 
-    QTransform& getTransform() const {
+    RTransform& getTransform() const {
         Q_ASSERT(transform!=NULL);
         return *transform;
     }
@@ -160,7 +166,7 @@ protected:
         RPainterPath* painterPath;
         RImageData* image;
         RTextBasedData* text;
-        QTransform* transform;
+        RTransform* transform;
     //};
 };
 
