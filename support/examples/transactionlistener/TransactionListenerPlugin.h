@@ -22,4 +22,6 @@ public:
     virtual RPluginInfo getPluginInfo();
 
     virtual void updateTransactionListener(RDocument* document, RTransaction* transaction=NULL);
+    virtual bool checkLicense() { return true; }
+    virtual void initTranslations(){}
 };
