@@ -5,6 +5,6 @@ include(../../../shared.pri)
 TEMPLATE    = lib
 HEADERS     = RExamplePlugin.h
 SOURCES     = RExamplePlugin.cpp
-DESTDIR     = ../../../plugins
+DESTDIR     = $$PWD/../../../plugins
 LIBS += -lqcadcore -lqcadgui -lqcadecmaapi
 RESOURCES   = scripts.qrc

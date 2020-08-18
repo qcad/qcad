@@ -18,5 +18,6 @@ public:
     virtual void initScriptExtensions(QScriptEngine&) {}
     virtual RPluginInfo getPluginInfo();
     virtual bool checkLicense() { return true; }
+    virtual void initTranslations(){}
 };
 

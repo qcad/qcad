@@ -23,7 +23,7 @@ r_static_libs {
     CONFIG += staticlib
 }
 else {
-    DESTDIR = ../../../plugins
+    DESTDIR = $$PWD/../../../plugins
 }
 
-POST_TARGETDEPS += ../../../$$ROUTDIR/$${RLIBPRE}dxflib$${RLIBPOST}
+POST_TARGETDEPS +=  $$PWD/../../../$$ROUTDIR/$${RLIBPRE}dxflib$${RLIBPOST}
