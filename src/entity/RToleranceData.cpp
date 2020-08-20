@@ -405,3 +405,7 @@ QList<RLine> RToleranceData::getFrame() const {
 
     return ret;
 }
+
+RVector RToleranceData::getPointOnEntity() const {
+    return location;
+}
