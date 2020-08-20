@@ -120,6 +120,8 @@ public:
     QList<RTextData> getTextLabels() const;
     QList<RLine> getFrame() const;
 
+    RVector getPointOnEntity() const;
+
 private:
     RVector location;
     RVector direction;
