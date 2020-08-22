@@ -8,7 +8,7 @@ win32 {
     dirs = $$system("dir /B ..\* | findstr qcad..*")
     for (dir, $$list($$dirs)) {
         message(..\\$$dir)
-        SUBDIRS += ..\\$$dir
+#        SUBDIRS += ..\\$$dir
     }
 }
 else {
@@ -17,7 +17,7 @@ else {
 
 !r_mobile {
     exists(support) {
-        #SUBDIRS += support
+        SUBDIRS += support
     }
 }
 

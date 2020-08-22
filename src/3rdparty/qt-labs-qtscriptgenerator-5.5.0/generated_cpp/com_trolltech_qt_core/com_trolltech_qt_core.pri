@@ -17,8 +17,8 @@ HEADERS += \
            $$PWD/qtscriptshell_QFile.h \
            $$PWD/qtscriptshell_QFileSystemWatcher.h \
            $$PWD/qtscriptshell_QFinalState.h \
-           #$$PWD/qtscriptshell_QFutureSynchronizer.h \
-           #$$PWD/qtscriptshell_QFutureSynchronizerVoid.h \
+#           $$PWD/qtscriptshell_QFutureSynchronizer.h \
+#           $$PWD/qtscriptshell_QFutureSynchronizerVoid.h \
            $$PWD/qtscriptshell_QHistoryState.h \
            $$PWD/qtscriptshell_QIODevice.h \
            $$PWD/qtscriptshell_QMimeData.h \
@@ -79,13 +79,13 @@ SOURCES += \
            $$PWD/qtscript_QFileInfo.cpp \
            $$PWD/qtscript_QFileSystemWatcher.cpp \
            $$PWD/qtscript_QFinalState.cpp \
-           #$$PWD/qtscript_QFuture.cpp \
-           #$$PWD/qtscript_QFutureIterator.cpp \
-           #$$PWD/qtscript_QFutureSynchronizer.cpp \
-           #$$PWD/qtscript_QFutureSynchronizerVoid.cpp \
-           #$$PWD/qtscript_QFutureVoid.cpp \
-           #$$PWD/qtscript_QFutureWatcher.cpp \
-           #$$PWD/qtscript_QFutureWatcherVoid.cpp \
+#           $$PWD/qtscript_QFuture.cpp \
+#           $$PWD/qtscript_QFutureIterator.cpp \
+#           $$PWD/qtscript_QFutureSynchronizer.cpp \
+#           $$PWD/qtscript_QFutureSynchronizerVoid.cpp \
+#           $$PWD/qtscript_QFutureVoid.cpp \
+#           $$PWD/qtscript_QFutureWatcher.cpp \
+#           $$PWD/qtscript_QFutureWatcherVoid.cpp \
            $$PWD/qtscript_QHistoryState.cpp \
            $$PWD/qtscript_QIODevice.cpp \
            $$PWD/qtscript_QLibraryInfo.cpp \
@@ -115,7 +115,7 @@ SOURCES += \
            $$PWD/qtscript_QSignalTransition.cpp \
            $$PWD/qtscript_QSize.cpp \
            $$PWD/qtscript_QSizeF.cpp \
-           #$$PWD/qtscript_QSocketNotifier.cpp \
+           $$PWD/qtscript_QSocketNotifier.cpp \
            $$PWD/qtscript_QState.cpp \
            $$PWD/qtscript_QStateMachine.cpp \
            $$PWD/qtscript_QStateMachine_SignalEvent.cpp \
@@ -167,8 +167,8 @@ SOURCES += \
            $$PWD/qtscriptshell_QFile.cpp \
            $$PWD/qtscriptshell_QFileSystemWatcher.cpp \
            $$PWD/qtscriptshell_QFinalState.cpp \
-           #$$PWD/qtscriptshell_QFutureSynchronizer.cpp \
-           #$$PWD/qtscriptshell_QFutureSynchronizerVoid.cpp \
+#           $$PWD/qtscriptshell_QFutureSynchronizer.cpp \
+#           $$PWD/qtscriptshell_QFutureSynchronizerVoid.cpp \
            $$PWD/qtscriptshell_QHistoryState.cpp \
            $$PWD/qtscriptshell_QIODevice.cpp \
            $$PWD/qtscriptshell_QMimeData.cpp \

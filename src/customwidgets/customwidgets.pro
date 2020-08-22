@@ -39,6 +39,6 @@ HEADERS = RShortcutLineEditPlugin.h \
 #}
 TEMPLATE = lib
 LIBS += -l$${RLIBNAME}gui -l$${RLIBNAME}core
-DESTDIR = ../../plugins/designer
+DESTDIR = $$PWD/../../plugins/designer
 OTHER_FILES += customwidgets.dox
 RC_FILE = customwidgets.rc

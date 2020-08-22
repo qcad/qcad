@@ -5,7 +5,7 @@ include(../../shared.pri)
 TEMPLATE    = lib
 HEADERS     = RScriptsPlugin.h
 SOURCES     = RScriptsPlugin.cpp
-DESTDIR     = ../../plugins
+DESTDIR     = $$PWD/../../plugins
 RC_FILE     = scripts.rc
 LIBS        += -l$${RLIBNAME}core
 
