@@ -194,6 +194,12 @@ Print.prototype.createPrinter = function(pdfFile, printerName, pdfVersion) {
  * \param printer QPrinter object or undefined to create on the fly.
  */
 Print.prototype.print = function(pdfFile, printerName, pdfVersion) {
+    // make sure selected entities are not printed with selection color:
+    var di = EAction.getDocumentInterface();
+    if (!isNull(di)) {
+        di.deselectAll();
+    }
+
     var printer = this.createPrinter(pdfFile, printerName, pdfVersion);
     if (isNull(printer)) {
         qWarning("Print.prototype.print: no printer created");
