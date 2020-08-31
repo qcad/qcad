@@ -18,6 +18,12 @@ CONFIG(debug, debug|release) {
 }
 else {
     # release:
-    build_pass:message("Using release qrc")
-    RESOURCES   = scripts_release.qrc
+    rtest {
+        build_pass:message("Using development qrc")
+        RESOURCES   = scripts.qrc
+    }
+    else {
+        build_pass:message("Using release qrc")
+        RESOURCES   = scripts_release.qrc
+    }
 }
