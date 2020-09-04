@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2018 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2020 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *

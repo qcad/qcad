@@ -127,8 +127,7 @@ bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter
     wchar_t* winfn = new wchar_t[2000];
     int len = fileName.toWCharArray(winfn);
     winfn[len] = '\0';
-   // bool success = dxflib.in(std::ifstream(winfn, std::ifstream::in), this);
-    bool success = dxflib.in((const char*)fileName.toUtf8(), this);
+    bool success = dxflib.in((std::istream&)std::ifstream(winfn, std::ifstream::in), this);
 #else
     bool success = dxflib.in((const char*)fileName.toUtf8(), this);
 #endif

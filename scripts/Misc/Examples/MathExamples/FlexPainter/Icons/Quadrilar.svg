@@ -16,7 +16,7 @@
    style="fill:none;stroke-linecap:round;stroke-linejoin:round"
    id="svg2"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="SteppedWaveGlobal.svg">
+   sodipodi:docname="Quadrilar.svg">
   <metadata
      id="metadata138">
     <rdf:RDF>
@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -43,19 +43,38 @@
      inkscape:window-width="1920"
      inkscape:window-height="1018"
      id="namedview134"
-     showgrid="false"
-     inkscape:zoom="0.85324218"
-     inkscape:cx="600"
-     inkscape:cy="320"
+     showgrid="true"
+     inkscape:zoom="2.005612"
+     inkscape:cx="272.00501"
+     inkscape:cy="337.08603"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer10"
      fit-margin-top="10"
      fit-margin-left="10"
      fit-margin-right="10"
      fit-margin-bottom="10"
-     borderlayer="false" />
+     borderlayer="false"
+     inkscape:snap-grids="true"
+     inkscape:snap-nodes="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid28087" />
+  </sodipodi:namedview>
+  <g
+     inkscape:groupmode="layer"
+     id="layer10"
+     inkscape:label="REF"
+     style="display:none">
+    <path
+       style="fill:none;stroke:#ff00ff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M -6.1063391e-8,0.79359891 73.792938,357.79187 2.3283026e-7,640.00001"
+       id="path28085"
+       inkscape:connector-curvature="0"
+       transform="matrix(0.28222222,0,0,0.28222222,-53.9875,-30.073002)"
+       sodipodi:nodetypes="ccc" />
+  </g>
   <g
      inkscape:groupmode="layer"
      id="layer1"

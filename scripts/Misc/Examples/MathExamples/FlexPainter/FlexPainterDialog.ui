@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>447</width>
-    <height>490</height>
+    <width>451</width>
+    <height>497</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -54,7 +54,7 @@
           <item>
            <widget class="QCheckBox" name="FlipPainter">
             <property name="toolTip">
-             <string>Mirror painters over baseline</string>
+             <string>Mirror painters over baseline.</string>
             </property>
             <property name="text">
              <string>Flip Painters</string>
@@ -64,20 +64,24 @@
           <item>
            <widget class="QCheckBox" name="GroupCasts">
             <property name="toolTip">
-             <string>Group all castings to one operation</string>
+             <string>Group all castings to one operation.</string>
             </property>
             <property name="text">
              <string>Cast in group</string>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QCheckBox" name="SubLayerCasts">
             <property name="enabled">
-             <bool>false</bool>
+             <bool>true</bool>
             </property>
             <property name="toolTip">
-             <string>Cast on newly sub-layer 'Painted' if applicable</string>
+             <string>Cast on newly sub-layer 'Painted'.
+BUG: Interferes with group castings.</string>
             </property>
             <property name="text">
              <string>Cast on sub-layer</string>
@@ -90,7 +94,7 @@
              <bool>true</bool>
             </property>
             <property name="toolTip">
-             <string>Start with casting a begin apex on open forms</string>
+             <string>Start with casting a begin apex on open forms.</string>
             </property>
             <property name="text">
              <string>Add Begin Apex</string>
@@ -106,7 +110,7 @@
              <bool>true</bool>
             </property>
             <property name="toolTip">
-             <string>End with casting an end apex on open forms</string>
+             <string>End with casting an end apex on open forms.</string>
             </property>
             <property name="text">
              <string>Add End Apex</string>
@@ -122,7 +126,7 @@
              <bool>false</bool>
             </property>
             <property name="toolTip">
-             <string>Add insertions in between eg. spacers, knots</string>
+             <string>Add insertions in between eg. spacers, knots. (Not implemented)</string>
             </property>
             <property name="text">
              <string>Add Insertions</string>
@@ -179,15 +183,15 @@
             </property>
             <property name="minimumSize">
              <size>
-              <width>150</width>
-              <height>80</height>
+              <width>188</width>
+              <height>100</height>
              </size>
             </property>
             <property name="focusPolicy">
              <enum>Qt::NoFocus</enum>
             </property>
             <property name="toolTip">
-             <string>Preview of painters</string>
+             <string>Preview of painters.</string>
             </property>
             <property name="styleSheet">
              <string notr="true">border: 1px inset; background-color: rgb(255, 255, 255);</string>
@@ -197,12 +201,12 @@
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>Icons/CurtainRope.svg</normaloff>Icons/CurtainRope.svg</iconset>
+              <normaloff>Icons/CurtainRopeProto.svg</normaloff>Icons/CurtainRopeProto.svg</iconset>
             </property>
             <property name="iconSize">
              <size>
-              <width>150</width>
-              <height>80</height>
+              <width>188</width>
+              <height>100</height>
              </size>
             </property>
             <property name="autoRaise">
@@ -228,7 +232,7 @@
              </size>
             </property>
             <property name="toolTip">
-             <string>Select painter set</string>
+             <string>Select painter set.</string>
             </property>
             <property name="inputMethodHints">
              <set>Qt::ImhNone</set>
@@ -362,14 +366,14 @@
              <enum>Qt::NoFocus</enum>
             </property>
             <property name="toolTip">
-             <string>Preview of insertion</string>
+             <string>Preview of insertion.</string>
             </property>
             <property name="styleSheet">
              <string notr="true">border: 1px inset; background-color: rgb(255, 255, 255);</string>
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>Icons/CurtainRopeKnot.svg</normaloff>Icons/CurtainRopeKnot.svg</iconset>
+              <normaloff>Icons/CurtainRopeProtoKnot.svg</normaloff>Icons/CurtainRopeProtoKnot.svg</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -400,7 +404,7 @@
              <enum>Qt::WheelFocus</enum>
             </property>
             <property name="toolTip">
-             <string>Select Insertion or Enter void space</string>
+             <string>Select Insertion or Enter void space. (Not implemented)</string>
             </property>
             <property name="insertPolicy">
              <enum>QComboBox::InsertAtTop</enum>
@@ -468,7 +472,8 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>FlexPainterDialog.svg</normaloff>FlexPainterDialog.svg</iconset>
+           <normalon>FlexPainterDialog.svg</normalon>
+          </iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -478,6 +483,187 @@
          </property>
          <property name="autoRaise">
           <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>133</width>
+           <height>15</height>
+          </size>
+         </property>
+         <property name="palette">
+          <palette>
+           <active>
+            <colorrole role="WindowText">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Midlight">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>227</red>
+               <green>227</green>
+               <blue>227</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Text">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="ButtonText">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Shadow">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>105</red>
+               <green>105</green>
+               <blue>105</blue>
+              </color>
+             </brush>
+            </colorrole>
+           </active>
+           <inactive>
+            <colorrole role="WindowText">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Midlight">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>227</red>
+               <green>227</green>
+               <blue>227</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Text">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="ButtonText">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Shadow">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>105</red>
+               <green>105</green>
+               <blue>105</blue>
+              </color>
+             </brush>
+            </colorrole>
+           </inactive>
+           <disabled>
+            <colorrole role="WindowText">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Midlight">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>227</red>
+               <green>227</green>
+               <blue>227</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Text">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="ButtonText">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>0</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Shadow">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>105</red>
+               <green>105</green>
+               <blue>105</blue>
+              </color>
+             </brush>
+            </colorrole>
+           </disabled>
+          </palette>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="acceptDrops">
+          <bool>false</bool>
+         </property>
+         <property name="toolTip">
+          <string>Version</string>
+         </property>
+         <property name="text">
+          <string>FlexPainter Beta 0.42e © CVH 2020 </string>
+         </property>
+         <property name="frame">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </item>
@@ -571,15 +757,6 @@
               </color>
              </brush>
             </colorrole>
-            <colorrole role="PlaceholderText">
-             <brush brushstyle="NoBrush">
-              <color alpha="128">
-               <red>0</red>
-               <green>0</green>
-               <blue>0</blue>
-              </color>
-             </brush>
-            </colorrole>
            </active>
            <inactive>
             <colorrole role="WindowText">
@@ -639,15 +816,6 @@
             <colorrole role="HighlightedText">
              <brush brushstyle="SolidPattern">
               <color alpha="255">
-               <red>0</red>
-               <green>0</green>
-               <blue>0</blue>
-              </color>
-             </brush>
-            </colorrole>
-            <colorrole role="PlaceholderText">
-             <brush brushstyle="NoBrush">
-              <color alpha="128">
                <red>0</red>
                <green>0</green>
                <blue>0</blue>
@@ -719,15 +887,6 @@
               </color>
              </brush>
             </colorrole>
-            <colorrole role="PlaceholderText">
-             <brush brushstyle="NoBrush">
-              <color alpha="128">
-               <red>0</red>
-               <green>0</green>
-               <blue>0</blue>
-              </color>
-             </brush>
-            </colorrole>
            </disabled>
           </palette>
          </property>
@@ -743,7 +902,7 @@
           <bool>false</bool>
          </property>
          <property name="toolTip">
-          <string>Document Units</string>
+          <string>Document Units.</string>
          </property>
          <property name="statusTip">
           <string/>
@@ -782,7 +941,7 @@
          <item>
           <widget class="QLabel" name="labelWidth">
            <property name="toolTip">
-            <string>Enter painter width (+0)</string>
+            <string>Enter painter width. (+0)</string>
            </property>
            <property name="text">
             <string>Width : </string>
@@ -872,7 +1031,7 @@
              <bool>true</bool>
             </property>
             <property name="toolTip">
-             <string>Enter main painter stepsize (+0)</string>
+             <string>Enter main painter stepsize. (+0)</string>
             </property>
             <property name="text">
              <string>Stepsize :</string>
@@ -888,7 +1047,7 @@
              <bool>true</bool>
             </property>
             <property name="toolTip">
-             <string>Enter main painter length (+)</string>
+             <string>Enter main painter length. (+)</string>
             </property>
             <property name="text">
              <string>Length :</string>
@@ -910,11 +1069,12 @@
              <enum>Qt::ClickFocus</enum>
             </property>
             <property name="toolTip">
-             <string>Keep painters proportional</string>
+             <string>Keep painters proportional.</string>
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>PreserveLookOn.svg</normaloff>PreserveLookOn.svg</iconset>
+              <normalon>PreserveLookOn.svg</normalon>
+             </iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -939,7 +1099,7 @@
              <bool>true</bool>
             </property>
             <property name="toolTip">
-             <string>Select percentage of Stepsize</string>
+             <string>Select percentage of Stepsize.</string>
             </property>
             <property name="text">
              <string>Closed Forms shifting % :</string>
@@ -1025,7 +1185,7 @@
              <bool>true</bool>
             </property>
             <property name="toolTip">
-             <string>Adapt scaling f 1.00-0.90 to fit the whole form</string>
+             <string>Adapt scaling f 1.00-0.90 to fit the whole form.</string>
             </property>
             <property name="text">
              <string>Dynamically scale to fit</string>
@@ -1117,7 +1277,7 @@
         <enum>Qt::NoFocus</enum>
        </property>
        <property name="toolTip">
-        <string>Verbose info (persistent on)</string>
+        <string>Verbose info. (persistent on)</string>
        </property>
        <property name="text">
         <string>Verbose *</string>
@@ -1133,7 +1293,7 @@
         <enum>Qt::NoFocus</enum>
        </property>
        <property name="toolTip">
-        <string>Deleted painted over base entities (persistent off)</string>
+        <string>Deleted painted over base entities. (persistent off)</string>
        </property>
        <property name="text">
         <string>Delete Base Entities *</string>
@@ -1168,24 +1328,22 @@
   </customwidget>
  </customwidgets>
  <tabstops>
-  <tabstop>BeVerbose</tabstop>
-  <tabstop>PreserveLook</tabstop>
-  <tabstop>MainLengthX</tabstop>
-  <tabstop>MainStepX</tabstop>
-  <tabstop>ForcedDyn</tabstop>
-  <tabstop>AlignBegin</tabstop>
-  <tabstop>AlignCenter</tabstop>
-  <tabstop>AlignEnd</tabstop>
   <tabstop>FlipPainter</tabstop>
   <tabstop>GroupCasts</tabstop>
+  <tabstop>SubLayerCasts</tabstop>
   <tabstop>DoBeginApex</tabstop>
   <tabstop>DoEndApex</tabstop>
   <tabstop>DoInserts</tabstop>
   <tabstop>PainterSelection</tabstop>
   <tabstop>KnotSelection</tabstop>
   <tabstop>MainWidth</tabstop>
-  <tabstop>DelEntity</tabstop>
-  <tabstop>buttonBox</tabstop>
+  <tabstop>MainLengthX</tabstop>
+  <tabstop>MainStepX</tabstop>
+  <tabstop>CloseShift</tabstop>
+  <tabstop>ForcedDyn</tabstop>
+  <tabstop>AlignBegin</tabstop>
+  <tabstop>AlignCenter</tabstop>
+  <tabstop>AlignEnd</tabstop>
  </tabstops>
  <resources/>
  <connections>

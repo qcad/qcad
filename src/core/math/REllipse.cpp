@@ -198,7 +198,7 @@ REllipse REllipse::createInscribed(const RVector& p1, const RVector& p2, const R
 }
 
 bool REllipse::isValid() {
-    return center.isValid();
+    return center.isValid() && majorPoint.isValid() && !RMath::isNaN(ratio) && !RMath::isNaN(startParam) && !RMath::isNaN(endParam);
 }
 
 QList<RVector> REllipse::getFoci() const {

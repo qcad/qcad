@@ -3083,7 +3083,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+1"/>
         <source>Scroll (Trackpad, Multi-Touch Mouse)</source>
-        <translation>Anischt verschieben (Trackpad, Multi-Touch Maus)</translation>
+        <translation>Ansicht verschieben (Trackpad, Multi-Touch Maus)</translation>
     </message>
 </context>
 <context>
