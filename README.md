@@ -20,3 +20,24 @@ Compilation
 Detailed compilation instructions for Windows, macOS and Linux can be found on our web site at:
 
 http://www.qcad.org/en/component/content/article/78-qcad/111-qcad-compilation-from-sources
+
+Window
+-------
+
+- 编译qcad
+```
+cd c:\Users\me\qcad\qcad
+c:\Qt\Qt5.10.1\5.10.1\msvc2017_64\bin\qmake -r CONFIG+=ractivated 
+nmake release //vs2017 命令行工具运行
+```
+- 编译Qt Scripts 插件
+```
+cd c:\Users\me\qcd\qcd\src\3rdparty\qt-labs-qtscriptgenerator-5.10.1
+c:\Qt\Qt5.10.1\5.10.1\msvc2017_64\bin\qmake -r CONFIG+=ractivated 
+nmake release //vs2017 命令行工具运行
+```
+- 运行
+
+```
+release\qcad.exe
+```
