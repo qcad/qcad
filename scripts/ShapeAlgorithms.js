@@ -1830,17 +1830,20 @@ ShapeAlgorithms.transformArc = function(arc, fun) {
         r2 = new RVector(0, arc.getRadius());
     }
 
+    // get vertices at extremities:
     var v1 = arc.getCenter().operator_add(r1).operator_add(r2);
     var v2 = arc.getCenter().operator_add(r1).operator_subtract(r2);
     var v3 = arc.getCenter().operator_subtract(r1).operator_subtract(r2);
     var v4 = arc.getCenter().operator_subtract(r1).operator_add(r2);
 
+    // project those vertices:
     fun(v1);
     fun(v2);
     fun(v3);
     fun(v4);
 
     //var ret = [];
+    // inscribe ellipse into vertices:
     var ellipse = ShapeAlgorithms.createEllipseInscribedFromVertices(v1, v2, v3, v4);
     //ret.push(ellipse.copy());
 

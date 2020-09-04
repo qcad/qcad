@@ -72,20 +72,30 @@ WidgetFactory.createWidget = function(basePath, uiFile, parent) {
         parent = RMainWindowQt.getMainWindow();
     }
 
-    var fileInfo = new QFileInfo(uiFile);
-    if (!fileInfo.exists() && !fileInfo.isAbsolute()) {
-        if (basePath.length>0) {
-            uiFile = basePath + "/" + uiFile;
-        }
+    var candidates;
+    if (!new QFileInfo(uiFile).isAbsolute()) {
+        candidates = [
+            uiFile,
+            basePath + "/" + uiFile,
+            ":" + uiFile,
+            ":" + basePath + "/" + uiFile
+        ];
+    }
+    else {
+        candidates = [
+            uiFile
+        ];
+    }
 
-        fileInfo = new QFileInfo(uiFile);
-        if (!fileInfo.exists()) {
-            uiFile = ":" + uiFile;
-            fileInfo = new QFileInfo(uiFile);
+    for (var i=0; i<candidates.length; i++) {
+        var candidate = candidates[i];
+        var fileInfo = new QFileInfo(candidate);
+        if (fileInfo.exists()) {
+            uiFile = candidate;
         }
     }
 
-    //fileInfo = new QFileInfo(uiFile);
+    var fileInfo = new QFileInfo(uiFile);
     if (!fileInfo.exists()) {
         qWarning("WidgetFactory: File %1 does not exist".arg(uiFile));
         return undefined;

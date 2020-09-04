@@ -494,12 +494,20 @@ Projection.prototype.projectShape = function(shape, preview, trim, rec) {
 
     if (isArcShape(shape)) {
         var self=this;
+        // TODO: use RShape::transformArc
+        // make RShapeTransformation scriptable
+        // override RShapeTransformation::transform
         var ellipse = ShapeAlgorithms.transformArc(shape,
             function(p) {
                 self.project(p);
             }
         );
-        return [ ellipse ];
+        if (ellipse.isValid()) {
+            return [ ellipse ];
+        }
+        else {
+            return [];
+        }
     }
 
     if (isCircleShape(shape)) {
@@ -525,6 +533,7 @@ Projection.prototype.projectShape = function(shape, preview, trim, rec) {
             }
         }
 
+        // create polyline from ellipse:
         var ple = ShapeAlgorithms.approximateEllipse(shape, 16);
         return this.projectShape(ple, preview, trim);
     }
@@ -611,7 +620,10 @@ Projection.prototype.projectShape = function(shape, preview, trim, rec) {
                     }
 
                     if (gotEllipse) {
-                        ret.push(seg);
+                        if (seg.isValid()) {
+                            ret.push(seg);
+                        }
+
                         pl = new RPolyline();
                     }
                     else if (gotGap){
