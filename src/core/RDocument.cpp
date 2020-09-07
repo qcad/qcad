@@ -2729,7 +2729,9 @@ void RDocument::updateAllEntities() {
     QSet<REntity::Id>::iterator it;
     for (it=ids.begin(); it!=ids.end(); it++) {
         QSharedPointer<REntity> entity = queryEntityDirect(*it);
+        entity->setAutoUpdatesBlocked(true);
         entity->update();
+        entity->setAutoUpdatesBlocked(false);
     }
 }
 
