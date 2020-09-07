@@ -651,38 +651,44 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
     // if object is a block definition,
     // look up existing block based on case insensitive name comparison:
     bool objectIsBlock = false;
-    QSharedPointer<RBlock> block = object.dynamicCast<RBlock>();
-    if (!block.isNull()) {
-        objectIsBlock = true;
+    if (object->getType()==RS::ObjectBlock) {
+        QSharedPointer<RBlock> block = object.dynamicCast<RBlock>();
+        if (!block.isNull()) {
+            objectIsBlock = true;
 
-        if (!existingBlockDetectionDisabled) {
-            QSharedPointer<RBlock> existingBlock = block->getDocument()->queryBlock(block->getName());
-            if (!existingBlock.isNull()) {
-                storage->setObjectId(*block, existingBlock->getId());
+            if (!existingBlockDetectionDisabled) {
+                QSharedPointer<RBlock> existingBlock = block->getDocument()->queryBlock(block->getName());
+                if (!existingBlock.isNull()) {
+                    storage->setObjectId(*block, existingBlock->getId());
+                }
             }
         }
     }
 
     // if object is a layer,
     // look up existing layer based on case insensitive name comparison:
-    if (!existingLayerDetectionDisabled && object->getId()==RObject::INVALID_ID) {
-        QSharedPointer<RLayer> layer = object.dynamicCast<RLayer>();
-        if (!layer.isNull()) {
-            QSharedPointer<RLayer> existingLayer = layer->getDocument()->queryLayer(layer->getName());
-            if (!existingLayer.isNull()) {
-                storage->setObjectId(*layer, existingLayer->getId());
+    if (object->getType()==RS::ObjectLayer) {
+        if (!existingLayerDetectionDisabled && object->getId()==RObject::INVALID_ID) {
+            QSharedPointer<RLayer> layer = object.dynamicCast<RLayer>();
+            if (!layer.isNull()) {
+                QSharedPointer<RLayer> existingLayer = layer->getDocument()->queryLayer(layer->getName());
+                if (!existingLayer.isNull()) {
+                    storage->setObjectId(*layer, existingLayer->getId());
+                }
             }
         }
     }
 
     // if object is a linetype,
     // look up existing linetype based on case insensitive name comparison:
-    if (!existingLinetypeDetectionDisabled && object->getId()==RObject::INVALID_ID) {
-        QSharedPointer<RLinetype> linetype = object.dynamicCast<RLinetype>();
-        if (!linetype.isNull()) {
-            QSharedPointer<RLinetype> existingLinetype = linetype->getDocument()->queryLinetype(linetype->getName());
-            if (!existingLinetype.isNull()) {
-                storage->setObjectId(*linetype, existingLinetype->getId());
+    if (object->getType()==RS::ObjectLinetype) {
+        if (!existingLinetypeDetectionDisabled && object->getId()==RObject::INVALID_ID) {
+            QSharedPointer<RLinetype> linetype = object.dynamicCast<RLinetype>();
+            if (!linetype.isNull()) {
+                QSharedPointer<RLinetype> existingLinetype = linetype->getDocument()->queryLinetype(linetype->getName());
+                if (!existingLinetype.isNull()) {
+                    storage->setObjectId(*linetype, existingLinetype->getId());
+                }
             }
         }
     }
@@ -759,6 +765,8 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
 
         propertyTypeIds.unite(object->getCustomPropertyTypeIds());
         propertyTypeIds.unite(oldObject->getCustomPropertyTypeIds());
+
+        //qDebug() << "num props:" << propertyTypeIds.size();
 
         QSet<RPropertyTypeId>::iterator it;
         for (it=propertyTypeIds.begin(); it!=propertyTypeIds.end(); ++it) {
