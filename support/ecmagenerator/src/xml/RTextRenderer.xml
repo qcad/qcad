@@ -72,101 +72,197 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
-    <property name="rxLineFeed" type="QString" isConst="false"
+    <property name="rxLineFeedStr" type="QString" isConst="false"
     isStatic="true" />
-    <property name="rxAlignmentLeft" type="QString" isConst="false"
+    <property name="rxLineFeed" type="QRegExp" isConst="false"
     isStatic="true" />
-    <property name="rxAlignmentCenter" type="QString"
+    <property name="rxAlignmentLeftStr" type="QString"
     isConst="false" isStatic="true" />
-    <property name="rxAlignmentRight" type="QString"
+    <property name="rxAlignmentLeft" type="QRegExp" isConst="false"
+    isStatic="true" />
+    <property name="rxAlignmentCenterStr" type="QString"
     isConst="false" isStatic="true" />
-    <property name="rxXAlignmentLeft" type="QString"
+    <property name="rxAlignmentCenter" type="QRegExp"
     isConst="false" isStatic="true" />
-    <property name="rxXAlignmentCenter" type="QString"
+    <property name="rxAlignmentRightStr" type="QString"
     isConst="false" isStatic="true" />
-    <property name="rxXAlignmentRight" type="QString"
+    <property name="rxAlignmentRight" type="QRegExp"
     isConst="false" isStatic="true" />
-    <property name="rxXSpaceMText" type="QString" isConst="false"
-    isStatic="true" />
-    <property name="rxTabMM" type="QString" isConst="false"
-    isStatic="true" />
-    <property name="rxTabIN" type="QString" isConst="false"
-    isStatic="true" />
-    <property name="rxParagraphFeed" type="QString" isConst="false"
-    isStatic="true" />
-    <property name="rxXFeed" type="QString" isConst="false"
-    isStatic="true" />
-    <property name="rxHeightChange" type="QString" isConst="false"
-    isStatic="true" />
-    <property name="rxUnderlineChange" type="QString"
+    <property name="rxXAlignmentLeftStr" type="QString"
     isConst="false" isStatic="true" />
-    <property name="rxStackedText" type="QString" isConst="false"
-    isStatic="true" />
-    <property name="rxColorChangeIndex" type="QString"
+    <property name="rxXAlignmentLeft" type="QRegExp"
     isConst="false" isStatic="true" />
-    <property name="rxColorChangeCustom" type="QString"
+    <property name="rxXAlignmentCenterStr" type="QString"
     isConst="false" isStatic="true" />
-    <property name="rxNonBreakingSpace" type="QString"
+    <property name="rxXAlignmentCenter" type="QRegExp"
     isConst="false" isStatic="true" />
-    <property name="rxOverlineOn" type="QString" isConst="false"
-    isStatic="true" />
-    <property name="rxOverlineOff" type="QString" isConst="false"
-    isStatic="true" />
-    <property name="rxUnderlineOn" type="QString" isConst="false"
-    isStatic="true" />
-    <property name="rxUnderlineOff" type="QString" isConst="false"
-    isStatic="true" />
-    <property name="rxStrikethroughOn" type="QString"
+    <property name="rxXAlignmentRightStr" type="QString"
     isConst="false" isStatic="true" />
-    <property name="rxStrikethroughOff" type="QString"
+    <property name="rxXAlignmentRight" type="QRegExp"
     isConst="false" isStatic="true" />
-    <property name="rxWidthChange" type="QString" isConst="false"
-    isStatic="true" />
-    <property name="rxObliqueAngleChange" type="QString"
+    <property name="rxXSpaceMTextStr" type="QString"
     isConst="false" isStatic="true" />
-    <property name="rxTrackChange" type="QString" isConst="false"
+    <property name="rxXSpaceMText" type="QRegExp" isConst="false"
     isStatic="true" />
-    <property name="rxAlignmentChange" type="QString"
+    <property name="rxTabMMStr" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxTabMM" type="QRegExp" isConst="false"
+    isStatic="true" />
+    <property name="rxTabINStr" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxTabIN" type="QRegExp" isConst="false"
+    isStatic="true" />
+    <property name="rxParagraphFeedStr" type="QString"
     isConst="false" isStatic="true" />
-    <property name="rxFontChangeCad" type="QString" isConst="false"
+    <property name="rxParagraphFeed" type="QRegExp" isConst="false"
     isStatic="true" />
-    <property name="rxFontChangeTtf" type="QString" isConst="false"
+    <property name="rxXFeedStr" type="QString" isConst="false"
     isStatic="true" />
-    <property name="rxBeginBlock" type="QString" isConst="false"
+    <property name="rxXFeed" type="QRegExp" isConst="false"
     isStatic="true" />
-    <property name="rxEndBlock" type="QString" isConst="false"
+    <property name="rxHeightChangeStr" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxHeightChange" type="QRegExp" isConst="false"
     isStatic="true" />
-    <property name="rxBackslash" type="QString" isConst="false"
+    <property name="rxUnderlineChangeStr" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxUnderlineChange" type="QRegExp"
+    isConst="false" isStatic="true" />
+    <property name="rxStackedTextStr" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxStackedText" type="QRegExp" isConst="false"
     isStatic="true" />
-    <property name="rxCurlyOpen" type="QString" isConst="false"
+    <property name="rxColorChangeIndexStr" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxColorChangeIndex" type="QRegExp"
+    isConst="false" isStatic="true" />
+    <property name="rxColorChangeCustomStr" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxColorChangeCustom" type="QRegExp"
+    isConst="false" isStatic="true" />
+    <property name="rxNonBreakingSpaceStr" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxNonBreakingSpace" type="QRegExp"
+    isConst="false" isStatic="true" />
+    <property name="rxOverlineOnStr" type="QString" isConst="false"
     isStatic="true" />
-    <property name="rxCurlyClose" type="QString" isConst="false"
+    <property name="rxOverlineOn" type="QRegExp" isConst="false"
     isStatic="true" />
-    <property name="rxDegree" type="QString" isConst="false"
+    <property name="rxOverlineOffStr" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxOverlineOff" type="QRegExp" isConst="false"
     isStatic="true" />
-    <property name="escDegree" type="QString" isConst="false"
+    <property name="rxUnderlineOnStr" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxUnderlineOn" type="QRegExp" isConst="false"
     isStatic="true" />
-    <property name="rxPlusMinus" type="QString" isConst="false"
+    <property name="rxUnderlineOffStr" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxUnderlineOff" type="QRegExp" isConst="false"
     isStatic="true" />
-    <property name="escPlusMinus" type="QString" isConst="false"
+    <property name="rxStrikethroughOnStr" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxStrikethroughOn" type="QRegExp"
+    isConst="false" isStatic="true" />
+    <property name="rxStrikethroughOffStr" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxStrikethroughOff" type="QRegExp"
+    isConst="false" isStatic="true" />
+    <property name="rxWidthChangeStr" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxWidthChange" type="QRegExp" isConst="false"
     isStatic="true" />
-    <property name="rxDiameter" type="QString" isConst="false"
+    <property name="rxObliqueAngleChangeStr" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxObliqueAngleChange" type="QRegExp"
+    isConst="false" isStatic="true" />
+    <property name="rxTrackChangeStr" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxTrackChange" type="QRegExp" isConst="false"
     isStatic="true" />
-    <property name="escDiameter" type="QString" isConst="false"
+    <property name="rxAlignmentChangeStr" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxAlignmentChange" type="QRegExp"
+    isConst="false" isStatic="true" />
+    <property name="rxFontChangeCadStr" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxFontChangeCad" type="QRegExp" isConst="false"
     isStatic="true" />
-    <property name="rxUnderline" type="QString" isConst="false"
+    <property name="rxFontChangeTtfStr" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxFontChangeTtf" type="QRegExp" isConst="false"
     isStatic="true" />
-    <property name="escUnderline" type="QString" isConst="false"
+    <property name="rxBeginBlockStr" type="QString" isConst="false"
     isStatic="true" />
-    <property name="rxNoOp" type="QString" isConst="false"
+    <property name="rxBeginBlock" type="QRegExp" isConst="false"
     isStatic="true" />
-    <property name="rxNoOpEnd" type="QString" isConst="false"
+    <property name="rxEndBlockStr" type="QString" isConst="false"
     isStatic="true" />
-    <property name="escNoOp" type="QString" isConst="false"
+    <property name="rxEndBlock" type="QRegExp" isConst="false"
     isStatic="true" />
-    <property name="rxUnicode" type="QString" isConst="false"
+    <property name="rxBackslashStr" type="QString" isConst="false"
     isStatic="true" />
-    <property name="rxAll" type="QString" isConst="false"
+    <property name="rxBackslash" type="QRegExp" isConst="false"
+    isStatic="true" />
+    <property name="rxCurlyOpenStr" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxCurlyOpen" type="QRegExp" isConst="false"
+    isStatic="true" />
+    <property name="rxCurlyCloseStr" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxCurlyClose" type="QRegExp" isConst="false"
+    isStatic="true" />
+    <property name="rxDegreeStr" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxDegree" type="QRegExp" isConst="false"
+    isStatic="true" />
+    <property name="escDegreeStr" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="escDegree" type="QRegExp" isConst="false"
+    isStatic="true" />
+    <property name="rxPlusMinusStr" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxPlusMinus" type="QRegExp" isConst="false"
+    isStatic="true" />
+    <property name="escPlusMinusStr" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="escPlusMinus" type="QRegExp" isConst="false"
+    isStatic="true" />
+    <property name="rxDiameterStr" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxDiameter" type="QRegExp" isConst="false"
+    isStatic="true" />
+    <property name="escDiameterStr" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="escDiameter" type="QRegExp" isConst="false"
+    isStatic="true" />
+    <property name="rxUnderlineStr" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxUnderline" type="QRegExp" isConst="false"
+    isStatic="true" />
+    <property name="escUnderlineStr" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="escUnderline" type="QRegExp" isConst="false"
+    isStatic="true" />
+    <property name="rxNoOpStr" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxNoOp" type="QRegExp" isConst="false"
+    isStatic="true" />
+    <property name="rxNoOpEndStr" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxNoOpEnd" type="QRegExp" isConst="false"
+    isStatic="true" />
+    <property name="escNoOpStr" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="escNoOp" type="QRegExp" isConst="false"
+    isStatic="true" />
+    <property name="rxUnicodeStr" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxUnicode" type="QRegExp" isConst="false"
+    isStatic="true" />
+    <property name="rxAllStr" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxAll" type="QRegExp" isConst="false"
     isStatic="true" />
     <property name="chDegree" type="QChar" isConst="false"
     isStatic="true" />

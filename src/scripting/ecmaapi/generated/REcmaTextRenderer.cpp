@@ -80,192 +80,384 @@
 
     // static properties:
     
+            ctor.setProperty("rxLineFeedStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxLineFeedStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxLineFeed",
                 qScriptValueFromValue(&engine, RTextRenderer::rxLineFeed),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxAlignmentLeftStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxAlignmentLeftStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("rxAlignmentLeft",
                 qScriptValueFromValue(&engine, RTextRenderer::rxAlignmentLeft),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxAlignmentCenterStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxAlignmentCenterStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxAlignmentCenter",
                 qScriptValueFromValue(&engine, RTextRenderer::rxAlignmentCenter),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxAlignmentRightStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxAlignmentRightStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("rxAlignmentRight",
                 qScriptValueFromValue(&engine, RTextRenderer::rxAlignmentRight),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxXAlignmentLeftStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxXAlignmentLeftStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxXAlignmentLeft",
                 qScriptValueFromValue(&engine, RTextRenderer::rxXAlignmentLeft),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxXAlignmentCenterStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxXAlignmentCenterStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("rxXAlignmentCenter",
                 qScriptValueFromValue(&engine, RTextRenderer::rxXAlignmentCenter),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxXAlignmentRightStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxXAlignmentRightStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxXAlignmentRight",
                 qScriptValueFromValue(&engine, RTextRenderer::rxXAlignmentRight),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxXSpaceMTextStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxXSpaceMTextStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("rxXSpaceMText",
                 qScriptValueFromValue(&engine, RTextRenderer::rxXSpaceMText),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxTabMMStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxTabMMStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxTabMM",
                 qScriptValueFromValue(&engine, RTextRenderer::rxTabMM),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxTabINStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxTabINStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("rxTabIN",
                 qScriptValueFromValue(&engine, RTextRenderer::rxTabIN),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxParagraphFeedStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxParagraphFeedStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxParagraphFeed",
                 qScriptValueFromValue(&engine, RTextRenderer::rxParagraphFeed),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxXFeedStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxXFeedStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("rxXFeed",
                 qScriptValueFromValue(&engine, RTextRenderer::rxXFeed),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxHeightChangeStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxHeightChangeStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxHeightChange",
                 qScriptValueFromValue(&engine, RTextRenderer::rxHeightChange),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxUnderlineChangeStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxUnderlineChangeStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("rxUnderlineChange",
                 qScriptValueFromValue(&engine, RTextRenderer::rxUnderlineChange),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxStackedTextStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxStackedTextStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxStackedText",
                 qScriptValueFromValue(&engine, RTextRenderer::rxStackedText),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxColorChangeIndexStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxColorChangeIndexStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("rxColorChangeIndex",
                 qScriptValueFromValue(&engine, RTextRenderer::rxColorChangeIndex),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxColorChangeCustomStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxColorChangeCustomStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxColorChangeCustom",
                 qScriptValueFromValue(&engine, RTextRenderer::rxColorChangeCustom),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxNonBreakingSpaceStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxNonBreakingSpaceStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("rxNonBreakingSpace",
                 qScriptValueFromValue(&engine, RTextRenderer::rxNonBreakingSpace),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxOverlineOnStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxOverlineOnStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxOverlineOn",
                 qScriptValueFromValue(&engine, RTextRenderer::rxOverlineOn),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxOverlineOffStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxOverlineOffStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("rxOverlineOff",
                 qScriptValueFromValue(&engine, RTextRenderer::rxOverlineOff),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxUnderlineOnStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxUnderlineOnStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxUnderlineOn",
                 qScriptValueFromValue(&engine, RTextRenderer::rxUnderlineOn),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxUnderlineOffStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxUnderlineOffStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("rxUnderlineOff",
                 qScriptValueFromValue(&engine, RTextRenderer::rxUnderlineOff),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxStrikethroughOnStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxStrikethroughOnStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxStrikethroughOn",
                 qScriptValueFromValue(&engine, RTextRenderer::rxStrikethroughOn),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxStrikethroughOffStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxStrikethroughOffStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("rxStrikethroughOff",
                 qScriptValueFromValue(&engine, RTextRenderer::rxStrikethroughOff),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxWidthChangeStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxWidthChangeStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxWidthChange",
                 qScriptValueFromValue(&engine, RTextRenderer::rxWidthChange),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxObliqueAngleChangeStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxObliqueAngleChangeStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("rxObliqueAngleChange",
                 qScriptValueFromValue(&engine, RTextRenderer::rxObliqueAngleChange),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxTrackChangeStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxTrackChangeStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxTrackChange",
                 qScriptValueFromValue(&engine, RTextRenderer::rxTrackChange),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxAlignmentChangeStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxAlignmentChangeStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("rxAlignmentChange",
                 qScriptValueFromValue(&engine, RTextRenderer::rxAlignmentChange),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxFontChangeCadStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxFontChangeCadStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxFontChangeCad",
                 qScriptValueFromValue(&engine, RTextRenderer::rxFontChangeCad),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxFontChangeTtfStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxFontChangeTtfStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("rxFontChangeTtf",
                 qScriptValueFromValue(&engine, RTextRenderer::rxFontChangeTtf),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxBeginBlockStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxBeginBlockStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxBeginBlock",
                 qScriptValueFromValue(&engine, RTextRenderer::rxBeginBlock),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxEndBlockStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxEndBlockStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("rxEndBlock",
                 qScriptValueFromValue(&engine, RTextRenderer::rxEndBlock),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxBackslashStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxBackslashStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxBackslash",
                 qScriptValueFromValue(&engine, RTextRenderer::rxBackslash),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxCurlyOpenStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxCurlyOpenStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("rxCurlyOpen",
                 qScriptValueFromValue(&engine, RTextRenderer::rxCurlyOpen),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxCurlyCloseStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxCurlyCloseStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxCurlyClose",
                 qScriptValueFromValue(&engine, RTextRenderer::rxCurlyClose),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxDegreeStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxDegreeStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("rxDegree",
                 qScriptValueFromValue(&engine, RTextRenderer::rxDegree),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("escDegreeStr",
+                qScriptValueFromValue(&engine, RTextRenderer::escDegreeStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("escDegree",
                 qScriptValueFromValue(&engine, RTextRenderer::escDegree),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxPlusMinusStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxPlusMinusStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("rxPlusMinus",
                 qScriptValueFromValue(&engine, RTextRenderer::rxPlusMinus),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("escPlusMinusStr",
+                qScriptValueFromValue(&engine, RTextRenderer::escPlusMinusStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("escPlusMinus",
                 qScriptValueFromValue(&engine, RTextRenderer::escPlusMinus),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxDiameterStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxDiameterStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("rxDiameter",
                 qScriptValueFromValue(&engine, RTextRenderer::rxDiameter),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("escDiameterStr",
+                qScriptValueFromValue(&engine, RTextRenderer::escDiameterStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("escDiameter",
                 qScriptValueFromValue(&engine, RTextRenderer::escDiameter),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxUnderlineStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxUnderlineStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("rxUnderline",
                 qScriptValueFromValue(&engine, RTextRenderer::rxUnderline),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("escUnderlineStr",
+                qScriptValueFromValue(&engine, RTextRenderer::escUnderlineStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("escUnderline",
                 qScriptValueFromValue(&engine, RTextRenderer::escUnderline),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxNoOpStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxNoOpStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("rxNoOp",
                 qScriptValueFromValue(&engine, RTextRenderer::rxNoOp),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxNoOpEndStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxNoOpEndStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxNoOpEnd",
                 qScriptValueFromValue(&engine, RTextRenderer::rxNoOpEnd),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("escNoOpStr",
+                qScriptValueFromValue(&engine, RTextRenderer::escNoOpStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("escNoOp",
                 qScriptValueFromValue(&engine, RTextRenderer::escNoOp),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxUnicodeStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxUnicodeStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxUnicode",
                 qScriptValueFromValue(&engine, RTextRenderer::rxUnicode),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxAllStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxAllStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("rxAll",

@@ -122,6 +122,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getFrame, "getFrame");
             
+            REcmaHelper::registerFunction(&engine, proto, getPointOnEntity, "getPointOnEntity");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RToleranceData*>(), *proto);
 
@@ -2203,6 +2205,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaToleranceData::getFrame", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaToleranceData::getPointOnEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaToleranceData::getPointOnEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaToleranceData::getPointOnEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RToleranceData* self = 
+                        getSelf("getPointOnEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getPointOnEntity();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RToleranceData.getPointOnEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaToleranceData::getPointOnEntity", context, engine);
             return result;
         }
          QScriptValue REcmaToleranceData::toString
