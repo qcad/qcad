@@ -107,6 +107,7 @@ RBox RDimensionData::getBoundingBox(bool ignoreEmpty) const {
         boundingBox = REntityData::getBoundingBox(ignoreEmpty);
         getTextData();
         boundingBox.growToInclude(textData.getBoundingBox(ignoreEmpty));
+        dirty = false;
     }
 
     return boundingBox;
