@@ -128,6 +128,9 @@
         ;static  QScriptValue
         getFrame
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPointOnEntity
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

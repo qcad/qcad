@@ -798,11 +798,11 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
             text.replace("&nbsp;", "\\~");
             //text.replace(QChar(QChar::Nbsp), "\\~");
             // degree (%%d):
-            text.replace(RTextRenderer::chDegree, RTextRenderer::escDegree);
+            text.replace(RTextRenderer::chDegree, RTextRenderer::escDegreeStr);
             // plus minus (%%p):
-            text.replace(RTextRenderer::chPlusMinus, RTextRenderer::escPlusMinus);
+            text.replace(RTextRenderer::chPlusMinus, RTextRenderer::escPlusMinusStr);
             // diameter (%%d):
-            text.replace(RTextRenderer::chDiameter, RTextRenderer::escDiameter);
+            text.replace(RTextRenderer::chDiameter, RTextRenderer::escDiameterStr);
 
             /*
             // unicode:

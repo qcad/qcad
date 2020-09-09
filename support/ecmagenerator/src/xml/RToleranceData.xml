@@ -204,5 +204,10 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; RLine &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="getPointOnEntity" cppName="getPointOnEntity"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
   </class>
 </unit>
