@@ -24,6 +24,12 @@ http://www.qcad.org/en/component/content/article/78-qcad/111-qcad-compilation-fr
 Window
 -------
 
+- Clone
+
+```
+git clone https://github.com/wblong/qcad.git
+```
+
 - 编译qcad
 ```
 cd c:\Users\me\qcad\qcad
