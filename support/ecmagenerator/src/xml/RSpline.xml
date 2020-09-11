@@ -201,6 +201,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="removeFirstFitPoint"
+    cppName="removeFirstFitPoint" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="removeLastFitPoint" cppName="removeLastFitPoint"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

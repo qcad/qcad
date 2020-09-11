@@ -274,6 +274,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, reverse, "reverse");
             
+            REcmaHelper::registerFunction(&engine, proto, getReversed, "getReversed");
+            
             REcmaHelper::registerFunction(&engine, proto, stretch, "stretch");
             
             REcmaHelper::registerFunction(&engine, proto, getTransformed, "getTransformed");
@@ -287,6 +289,8 @@
             REcmaHelper::registerFunction(&engine, proto, getExploded, "getExploded");
             
             REcmaHelper::registerFunction(&engine, proto, getOutline, "getOutline");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLeftRightOutline, "getLeftRightOutline");
             
             REcmaHelper::registerFunction(&engine, proto, isInterpolated, "isInterpolated");
             
@@ -7920,6 +7924,55 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerPolyline::getReversed
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getReversed", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getReversed";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getReversed", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RPolyline'
+    RPolyline cppResult =
+        
+               self->getReversed();
+        // return type: RPolyline
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getReversed().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getReversed", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerPolyline::stretch
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -8821,6 +8874,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getOutline", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::getLeftRightOutline
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getLeftRightOutline", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getLeftRightOutline";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getLeftRightOutline", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QPair < RPolyline , RPolyline > >'
+    QList < QPair < RPolyline , RPolyline > > cppResult =
+        
+               self->getLeftRightOutline();
+        // return type: QList < QPair < RPolyline , RPolyline > >
+                // List of Pairs of ...:
+                result = REcmaHelper::pairListToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getLeftRightOutline().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getLeftRightOutline", context, engine);
             return result;
         }
          QScriptValue
