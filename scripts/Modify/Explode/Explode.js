@@ -252,10 +252,80 @@ Explode.explodeEntity = function(entity, options) {
     // explode polyline into line and arc segments:
     else if (isPolylineEntity(entity)) {
         polyline = entity.getData().castToShape();
+
+        // explode polyline with segment widths:
         if (RPolyline.hasProxy() && polyline.hasWidths()) {
-            var pls = polyline.getOutline();
+
+            // list of polyline pairs (left / right):
+            var pls = polyline.getLeftRightOutline();
+
+            var first = true;
+            var lastSegment = undefined;
+            var prevLeftPl = undefined;
+            var prevRightPl = undefined;
+
             for (k=0; k<pls.length; k++) {
-                ret.push(pls[k]);
+                if (pls[k].length!==2) {
+                    qWarning("invalid result from RPolyline::getLeftRightOutline");
+                    continue;
+                }
+
+                var leftPl = pls[k][0];
+                var rightPl = pls[k][1];
+
+                if (leftPl.countSegments()===1 && rightPl.countSegments()===1) {
+                    if (first) {
+                        // add orthogonal segment at start of this sequence:
+                        //ret.push(pls[k].getSegmentAt(3));
+                        if (isNull(prevLeftPl) || isNull(prevRightPl)) {
+                            ret.push(new RLine(leftPl.getStartPoint(), rightPl.getStartPoint()));
+                        }
+                        else {
+                            var dirLeft = prevLeftPl.getDirection2() + Math.PI;
+                            var dirRight = prevRightPl.getDirection2() + Math.PI;
+                            //qDebug("dirLeft:", dirLeft);
+                            //qDebug("new dir:", leftPl.getDirection1());
+                            if (!RMath.fuzzyAngleCompare(dirLeft, leftPl.getDirection1(), 0.01) ||
+                                !RMath.fuzzyAngleCompare(dirRight, rightPl.getDirection1(), 0.01)) {
+                                ret.push(new RLine(leftPl.getStartPoint(), rightPl.getStartPoint()));
+                            }
+                        }
+                    }
+
+                    // add left segment:
+                    ret.push(leftPl);
+                    // add right segment:
+                    ret.push(rightPl);
+
+                    lastSegment = new RLine(leftPl.getEndPoint(), rightPl.getEndPoint());
+                    prevLeftPl = leftPl;
+                    prevRightPl = rightPl;
+                }
+                //else if (leftPl.countSegments()>1 || rightPl.countSegments()>1) {
+                else if (!leftPl.isEmpty()) {
+                    //ret.push(pls[k]);
+                    if (!rightPl.isEmpty()) {
+                        ret.push(new RLine(leftPl.getStartPoint(), rightPl.getStartPoint()));
+                    }
+
+                    ret.push(leftPl);
+                    if (!rightPl.isEmpty()) {
+                        ret.push(rightPl);
+                        ret.push(new RLine(leftPl.getEndPoint(), rightPl.getEndPoint()));
+                    }
+                    first = true;
+                    if (!isNull(lastSegment)) {
+                        ret.push(lastSegment);
+                        lastSegment = undefined;
+                        prevLeftPl = undefined;
+                        prevRightPl = undefined;
+                    }
+
+                    continue;
+                }
+            }
+            if (!isNull(lastSegment)) {
+                ret.push(lastSegment);
             }
         }
         else {
