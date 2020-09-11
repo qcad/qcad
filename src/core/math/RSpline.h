@@ -104,6 +104,7 @@ public:
     void insertFitPointAt(const RVector& point);
     void insertFitPointAt(double t, const RVector& point);
     void removeFitPointAt(const RVector& point);
+    void removeFirstFitPoint();
     void removeLastFitPoint();
     void setFitPoints(const QList<RVector>& points);
     QList<RVector> getFitPoints() const;
