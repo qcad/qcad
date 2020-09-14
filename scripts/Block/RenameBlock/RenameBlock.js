@@ -66,5 +66,5 @@ RenameBlock.prototype.beginEvent = function() {
 };
 
 RenameBlock.prototype.createDialog = function(doc, block) {
-    return new BlockDialog(doc, block);
+    return new BlockDialog(doc, block, true, true);
 };
