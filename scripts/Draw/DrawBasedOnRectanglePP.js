@@ -34,6 +34,7 @@ function DrawBasedOnRectanglePP(guiAction) {
 
     this.corner1 = undefined;
     this.corner2 = undefined;
+    this.rotate = true;
     this.rotation = 0.0;
     this.previewRectangle = false;
 }
@@ -66,6 +67,8 @@ DrawBasedOnRectanglePP.prototype.setState = function(state) {
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case DrawBasedOnRectanglePP.State.SettingCorner1:
+        this.corner1 = undefined;
+        this.corner2 = undefined;
         var trFirstCorner = qsTr("First corner");
         this.setCommandPrompt(trFirstCorner);
         this.setLeftMouseTip(trFirstCorner);
@@ -73,6 +76,7 @@ DrawBasedOnRectanglePP.prototype.setState = function(state) {
         break;
 
     case DrawBasedOnRectanglePP.State.SettingCorner2:
+        this.corner2 = undefined;
         var trSecondCorner = qsTr("Second corner");
         this.setCommandPrompt(trSecondCorner);
         this.setLeftMouseTip(trSecondCorner);
@@ -129,7 +133,7 @@ DrawBasedOnRectanglePP.prototype.getCorners = function() {
         return [];
     }
 
-    if (RMath.fuzzyCompare(this.rotation, 0.0)) {
+    if (this.rotate===false || RMath.fuzzyCompare(this.rotation, 0.0)) {
         return [
             new RVector(this.corner1.x, this.corner1.y),
             new RVector(this.corner2.x, this.corner1.y),
