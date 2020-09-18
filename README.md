@@ -47,3 +47,8 @@ nmake release //vs2017 命令行工具运行
 ```
 release\qcad.exe
 ```
+
+Extensions Help
+-------
+
+[help](./help/help.md)
