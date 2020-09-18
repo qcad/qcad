@@ -393,6 +393,10 @@ QSet<RLinetype::Id> RMemoryStorage::queryAllLinetypes() {
 QSet<REntity::Id> RMemoryStorage::queryInfiniteEntities() const {
     QSet<REntity::Id> result;
 
+    if (!typeObjectMap.contains(RS::EntityXLine) && !typeObjectMap.contains(RS::EntityRay)) {
+        return result;
+    }
+
     RBlock::Id currentBlockId = getCurrentBlockId();
     const QHash<REntity::Id, QSharedPointer<REntity> >* map;
     if (blockEntityMap.contains(currentBlockId)) {
