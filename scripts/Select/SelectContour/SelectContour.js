@@ -28,6 +28,7 @@ function SelectContour(guiAction) {
     Select.call(this, guiAction);
 
     this.tolerance = 0.0;
+    this.sameLayer = false;
 
     this.setUiOptions("SelectContour.ui");
 }
@@ -61,7 +62,16 @@ SelectContour.prototype.entityPickEvent = function(event) {
 };
 
 SelectContour.prototype.selectEntities = function(entityId) {
-    var matchingEntities = SelectContour.getConnectedEntities(this.getDocument(), entityId, this.tolerance);
+    var doc = this.getDocument();
+    var layerId = RObject.INVALID_ID;
+    if (this.sameLayer) {
+        var e = doc.queryEntityDirect(entityId);
+        if (!isNull(e)) {
+            layerId = e.getLayerId();
+        }
+    }
+
+    var matchingEntities = SelectContour.getConnectedEntities(doc, entityId, this.tolerance, layerId);
     this.selectWithMode(matchingEntities);
 };
 
@@ -75,10 +85,18 @@ SelectContour.prototype.slotToleranceChanged = function(value) {
     this.tolerance = value;
 };
 
+SelectContour.prototype.slotSameLayerChanged = function(value) {
+    this.sameLayer = value;
+};
+
 /**
  * \return Array of entity IDs of entities which are directly or indirectly
  * connected to the given entity, including the given entityId.
  */
-SelectContour.getConnectedEntities = function(doc, entityId, tolerance) {
-    return doc.queryConnectedEntities(entityId, tolerance);
+SelectContour.getConnectedEntities = function(doc, entityId, tolerance, layerId) {
+    if (isNull(layerId)) {
+        layerId = RObject.INVALID_ID;
+    }
+
+    return doc.queryConnectedEntities(entityId, tolerance, layerId);
 };

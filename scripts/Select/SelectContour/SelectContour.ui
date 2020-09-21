@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>446</width>
+    <width>616</width>
     <height>50</height>
    </rect>
   </property>
@@ -125,6 +125,20 @@
      </property>
      <property name="defaultUnit" stdset="0">
       <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="SameLayer">
+     <property name="text">
+      <string>Same Layer</string>
      </property>
     </widget>
    </item>
