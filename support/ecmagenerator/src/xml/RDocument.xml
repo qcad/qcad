@@ -335,6 +335,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="bool" typeName="bool" name="selectedOnly"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
+        hasDefault="true" default="RLayer :: INVALID_ID"
+        isConst="false" />
       </variant>
     </method>
     <method name="queryIntersectedShapesXY"
@@ -358,6 +361,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="bool" typeName="bool" name="selectedOnly"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
+        hasDefault="true" default="RLayer :: INVALID_ID"
+        isConst="false" />
       </variant>
     </method>
     <method name="queryContainedEntitiesXY"
@@ -384,6 +390,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="entityId" isConst="false" />
         <arg type="double" typeName="double" name="tolerance"
         hasDefault="true" default="RS :: PointTolerance"
+        isConst="false" />
+        <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
+        hasDefault="true" default="RLayer :: INVALID_ID"
         isConst="false" />
       </variant>
     </method>
