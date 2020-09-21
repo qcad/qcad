@@ -128,7 +128,7 @@ RHatchData& RHatchData::operator =(const RHatchData& other) {
         }
     }
 
-    dirty = false;
+    dirty = other.dirty;
     return *this;
 }
 
@@ -1228,6 +1228,7 @@ void RHatchData::update() const {
 }
 
 bool RHatchData::order() {
+    update();
     return RShape::order(boundary);
 }
 
