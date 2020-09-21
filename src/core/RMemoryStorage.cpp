@@ -1330,7 +1330,7 @@ RBox RMemoryStorage::getBoundingBox(bool ignoreHiddenLayers, bool ignoreEmpty) c
 //    qDebug() << "bb ignoreHiddenLayers: " << boundingBox[1][0];
 //    qDebug() << "bb ignoreHiddenLayers, ignoreEmpty: " << boundingBox[1][1];
 
-    return boundingBox[ignoreHiddenLayers][ignoreEmpty];
+    return boundingBox[(int)ignoreHiddenLayers][(int)ignoreEmpty];
 }
 
 RBox RMemoryStorage::getSelectionBox() const {
