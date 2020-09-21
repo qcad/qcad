@@ -545,6 +545,10 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     classQLocale.setProperty("scriptToString",
             engine->newFunction(ecmaQLocaleScriptToString));
 
+    QScriptValue classQFile = globalObject.property("QFile");
+    classQFile.property("prototype").setProperty("write",
+            engine->newFunction(ecmaQFileWrite));
+
 #if QT_VERSION >= 0x050000
     QScriptValue classQLineEdit = globalObject.property("QLineEdit");
     classQLineEdit.property("prototype").setProperty("validator",
@@ -561,7 +565,6 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 //    classQWebPage.property("prototype").setProperty("setLinkDelegationPolicy",
 //            engine->newFunction(ecmaQWebPageSetLinkDelegationPolicy));
 
-    QScriptValue classQFile = globalObject.property("QFile");
 # if QT_VERSION < 0x050301
     classQFile.property("prototype").setProperty("close",
             engine->newFunction(ecmaQFileClose));
@@ -2349,6 +2352,22 @@ QScriptValue RScriptHandlerEcma::ecmaQFileFileName(QScriptContext* context, QScr
     }
 
     QString ret = self->fileName();
+
+    return qScriptValueFromValue(engine, ret);
+}
+
+QScriptValue RScriptHandlerEcma::ecmaQFileWrite(QScriptContext* context, QScriptEngine* engine) {
+    QFile* self = qscriptvalue_cast<QFile*>(context->thisObject());
+    if (self == NULL) {
+        return throwError("QFile.write: Object is NULL", context);
+    }
+
+    if (context->argumentCount() != 1) {
+        return throwError("Wrong number/types of arguments for QFile.fileName.", context);
+    }
+
+    QByteArray* ap0 = qscriptvalue_cast<QByteArray*>(context->argument(0));
+    qint64 ret = self->write(*ap0);
 
     return qScriptValueFromValue(engine, ret);
 }
