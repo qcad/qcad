@@ -16,6 +16,9 @@
      <property name="text">
       <string>Auto Screen Scale Factor</string>
      </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
     </widget>
    </item>
    <item>
@@ -29,6 +32,9 @@
      </item>
      <item>
       <widget class="QComboBox" name="QT_SCALE_FACTOR">
+       <property name="editable">
+        <bool>true</bool>
+       </property>
        <item>
         <property name="text">
          <string notr="true">1</string>
@@ -36,7 +42,27 @@
        </item>
        <item>
         <property name="text">
+         <string notr="true">1.2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">1.4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
          <string notr="true">1.5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">1.6</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">1.8</string>
         </property>
        </item>
        <item>
