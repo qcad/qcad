@@ -22,6 +22,13 @@
     </widget>
    </item>
    <item>
+    <widget class="QCheckBox" name="EnableHighDpiScaling">
+     <property name="text">
+      <string>Enable High DPI Scaling</string>
+     </property>
+    </widget>
+   </item>
+   <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QLabel" name="label">
