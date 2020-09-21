@@ -486,6 +486,7 @@
     <file alias="scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP-inverse.svg">../../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP-inverse.svg</file>
     <file alias="scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.js">../../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.js</file>
     <file alias="scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.svg">../../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.svg</file>
+    <file alias="scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui">../../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui</file>
     <file alias="scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePPInit.js">../../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePPInit.js</file>
     <file alias="scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize-inverse.svg">../../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize-inverse.svg</file>
     <file alias="scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.js">../../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.js</file>
@@ -614,6 +615,9 @@
     <file alias="scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui">../../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui</file>
     <file alias="scripts/Edit/AppPreferences/ToolBarPreferences/ToolBarPreferences.js">../../scripts/Edit/AppPreferences/ToolBarPreferences/ToolBarPreferences.js</file>
     <file alias="scripts/Edit/AppPreferences/ToolBarPreferences/ToolBarPreferencesInit.js">../../scripts/Edit/AppPreferences/ToolBarPreferences/ToolBarPreferencesInit.js</file>
+    <file alias="scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui">../../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui</file>
+    <file alias="scripts/Edit/AppPreferences/UiPreferences/UiPreferences.js">../../scripts/Edit/AppPreferences/UiPreferences/UiPreferences.js</file>
+    <file alias="scripts/Edit/AppPreferences/UiPreferences/UiPreferencesInit.js">../../scripts/Edit/AppPreferences/UiPreferences/UiPreferencesInit.js</file>
     <file alias="scripts/Edit/Clear-inverse.svg">../../scripts/Edit/Clear-inverse.svg</file>
     <file alias="scripts/Edit/Clear.svg">../../scripts/Edit/Clear.svg</file>
     <file alias="scripts/Edit/ClipboardOperation.js">../../scripts/Edit/ClipboardOperation.js</file>
