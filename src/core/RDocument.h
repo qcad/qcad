@@ -130,29 +130,27 @@ public:
     QSet<REntity::Id> queryIntersectedEntitiesXYFast(const RBox& box);
     QSet<REntity::Id> queryIntersectedShapesXYFast(const RBox& box, bool noInfiniteEntities = false);
 
-    QSet<REntity::Id> queryIntersectedEntitiesXY(
-            const RBox& box,
-            bool checkBoundingBoxOnly=false,
-            bool includeLockedLayers=true,
-            RBlock::Id blockId = RBlock::INVALID_ID,
-            const QList<RS::EntityType>& filter = RDEFAULT_QLIST_RS_ENTITYTYPE,
-            bool selectedOnly = false
-    ) const;
-
-    QMap<REntity::Id, QSet<int> > queryIntersectedShapesXY(
-        const RBox& box,
+    QSet<REntity::Id> queryIntersectedEntitiesXY(const RBox& box,
         bool checkBoundingBoxOnly=false,
         bool includeLockedLayers=true,
         RBlock::Id blockId = RBlock::INVALID_ID,
         const QList<RS::EntityType>& filter = RDEFAULT_QLIST_RS_ENTITYTYPE,
-        bool selectedOnly = false
-    ) const;
+        bool selectedOnly = false,
+        RLayer::Id layerId = RLayer::INVALID_ID) const;
+
+    QMap<REntity::Id, QSet<int> > queryIntersectedShapesXY(const RBox& box,
+        bool checkBoundingBoxOnly=false,
+        bool includeLockedLayers=true,
+        RBlock::Id blockId = RBlock::INVALID_ID,
+        const QList<RS::EntityType>& filter = RDEFAULT_QLIST_RS_ENTITYTYPE,
+        bool selectedOnly = false,
+        RLayer::Id layerId = RLayer::INVALID_ID) const;
 
     QSet<REntity::Id> queryContainedEntitiesXY(const RBox& box) const;
 
     QSet<REntity::Id> querySelectedEntities() const;
 
-    QSet<REntity::Id> queryConnectedEntities(REntity::Id entityId, double tolerance = RS::PointTolerance);
+    QSet<REntity::Id> queryConnectedEntities(REntity::Id entityId, double tolerance = RS::PointTolerance, RLayer::Id layerId = RLayer::INVALID_ID);
 
     QSet<RObject::Id> queryPropertyEditorObjects();
 
