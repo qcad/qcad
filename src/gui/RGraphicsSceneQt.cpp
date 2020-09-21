@@ -270,7 +270,11 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
         currentPainterPath.addPath(pp);
         currentPainterPath.setFillRule(Qt::WindingFill);
         currentPainterPath.setBrush(currentPen.color());
-        currentPainterPath.setPen(QPen(Qt::NoPen));
+        //currentPainterPath.setPen(QPen(Qt::NoPen));
+        QPen p(Qt::SolidLine);
+        p.setCosmetic(true);
+        p.setColor(currentPen.color());
+        currentPainterPath.setPen(p);
         endPath();
     }
     else {
