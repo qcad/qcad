@@ -304,6 +304,10 @@ void RMainWindowQt::closeEvent(QCloseEvent* e) {
     }
 
     if (mdiArea->subWindowList().isEmpty()) {
+        RSettings::setValue("OpenFile/OpenFiles", QStringList());
+        RSettings::setValue("OpenFile/ActiveFile", QString());
+        writeSettings();
+
         e->accept();
         return;
     }
