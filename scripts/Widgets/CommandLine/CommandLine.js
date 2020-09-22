@@ -54,6 +54,23 @@ CommandLine.prototype.finishEvent = function() {
     this.getGuiAction().setChecked(dock.visible);
 };
 
+//CommandLine.initStyle = function() {
+//    var appWin = RMainWindowQt.getMainWindow();
+//    var formWidget = appWin.findChild("CommandLine");
+//    var frame = formWidget.findChild("Frame");
+//    var p = frame.palette;
+//    if (!RSettings.hasDarkGuiBackground()) {
+//        // white background of command line label:
+//        p.setColor(QPalette.Active, QPalette.Window, new QColor(Qt.white));
+//    }
+//    else {
+//        p.setColor(QPalette.Active, QPalette.Window, new QColor("#1e1e1e"));
+//    }
+//    frame.palette = p;
+//    frame.autoFillBackground = true;
+//    frame.repaint();
+//}
+
 CommandLine.init = function(basePath) {
     var appWin = EAction.getMainWindow();
 
@@ -71,16 +88,7 @@ CommandLine.init = function(basePath) {
     var formWidget = WidgetFactory.createWidget(basePath, "CommandLine.ui");
     var frame = formWidget.findChild("Frame");
 
-    var p = frame.palette;
-    if (!RSettings.hasDarkGuiBackground()) {
-        // white background of command line label:
-        p.setColor(QPalette.Active, QPalette.Window, new QColor(Qt.white));
-    }
-    else {
-        p.setColor(QPalette.Active, QPalette.Window, new QColor("#1e1e1e"));
-    }
-    frame.palette = p;
-    frame.autoFillBackground = true;
+    //CommandLine.initStyle();
 
     var teHistory = formWidget.findChild("History");
     var leCommand = formWidget.findChild("CommandEdit");
@@ -498,4 +506,8 @@ CommandLine.init = function(basePath) {
                 .arg(system)
                 .arg(RS.getBuildCpuArchitecture())
                 );
+
+//    var pl = new RPaletteListenerAdapter();
+//    appWin.addPaletteListener(pl);
+//    pl.paletteChanged.connect(CommandLine.initStyle);
 };

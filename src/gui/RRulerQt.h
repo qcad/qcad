@@ -27,6 +27,7 @@
 #include <QPainterPath>
 
 #include "RCoordinateListener.h"
+#include "RPaletteListener.h"
 #include "RRuler.h"
 #include "RVector.h"
 
@@ -40,7 +41,7 @@ class RDocumentInterface;
  * \ingroup gui
  * \scriptable
  */
-class QCADGUI_EXPORT RRulerQt: public QFrame, public RRuler, public RCoordinateListener {
+class QCADGUI_EXPORT RRulerQt: public QFrame, public RRuler, public RCoordinateListener, public RPaletteListener {
 
 Q_OBJECT
 Q_PROPERTY(Qt::Orientation orientation READ getOrientation WRITE setOrientation);
@@ -60,6 +61,10 @@ public:
     virtual void updateViewport();
 
     virtual void updateCoordinate(RDocumentInterface* documentInterface);
+
+    virtual void updatePalette() {
+        lastSize = QSize(0,0);
+    }
 
 protected:
     void paintEvent(QPaintEvent *);

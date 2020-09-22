@@ -1746,6 +1746,8 @@ void RSettings::resetCache() {
     mouseThreshold = -1;
     themePath = QString();
     cache.clear();
+    darkMode = -1;
+    darkGuiBackground = -1;
 }
 
 void RSettings::uninit() {

@@ -217,7 +217,24 @@ QString RGuiAction::getShortcutsString(const QString& separator, QKeySequence::S
     return ret;
 }
 
+void RGuiAction::updateIcons() {
+    QList<RGuiAction*> actions = getActions();
+    for (int i=0; i<actions.length(); i++) {
+        RGuiAction* action = actions[i];
+        if (action==NULL) {
+            continue;
+        }
+        action->updateIcon();
+    }
+}
+
+void RGuiAction::updateIcon() {
+    setIcon(iconFile);
+}
+
 void RGuiAction::setIcon(const QString& iconFile) {
+    this->iconFile = iconFile;
+
     // look up theme specific icon:
     QFileInfo fi(iconFile);
     QString iconFileName = fi.fileName();

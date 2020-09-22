@@ -23,6 +23,8 @@
 function OptionsToolBar() {
 }
 
+OptionsToolBar.includeBasePath = includeBasePath;
+
 OptionsToolBar.normalizeSeparators = function(action) {
     // remove double separators:
     var optionsToolBar = EAction.getOptionsToolBar();
@@ -71,25 +73,10 @@ OptionsToolBar.init = function(basePath) {
     var optionsToolBar = EAction.getOptionsToolBar();
 };
 
-OptionsToolBar.postInit = function(basePath) {
+OptionsToolBar.initStyle = function() {
     var optionsToolBar = EAction.getOptionsToolBar();
 
-    // fixed height to prevent FS#652 (can happen at least on Windows and Linux):
-    var ftb = EAction.getMainWindow().findChild("FileToolBar");
-    if (!isNull(ftb)) {
-        optionsToolBar.setFixedHeight(Math.min(ftb.sizeHint.height(), ftb.sizeHint.width()));
-    }
-
-    var flags = new Qt.ToolBarAreas(Qt.TopToolBarArea | Qt.BottomToolBarArea);
-    optionsToolBar.setAllowedAreas(flags);
-
-    // floatable tool bar does not resize properly: prevent floating of tool bar here:
-    //optionsToolBar.floatable = false;
-
-    var iconLabel = new QLabel(optionsToolBar);
-    iconLabel.objectName = "Icon";
-    iconLabel.alignment = Qt.AlignCenter;
-    iconLabel.setContentsMargins(6, 0, 6, 0);
+    var iconLabel = optionsToolBar.findChild("Icon");
 
     // style of label with current tool icon:
     if (!RSettings.hasCustomStyleSheet()) {
@@ -127,11 +114,42 @@ OptionsToolBar.postInit = function(basePath) {
                 + "}";
         }
     }
+};
+
+OptionsToolBar.postInit = function(basePath) {
+    var optionsToolBar = EAction.getOptionsToolBar();
+
+    // fixed height to prevent FS#652 (can happen at least on Windows and Linux):
+    var ftb = EAction.getMainWindow().findChild("FileToolBar");
+    if (!isNull(ftb)) {
+        optionsToolBar.setFixedHeight(Math.min(ftb.sizeHint.height(), ftb.sizeHint.width()));
+    }
+
+    var flags = new Qt.ToolBarAreas(Qt.TopToolBarArea | Qt.BottomToolBarArea);
+    optionsToolBar.setAllowedAreas(flags);
+
+    // floatable tool bar does not resize properly: prevent floating of tool bar here:
+    //optionsToolBar.floatable = false;
+
+    var iconLabel = new QLabel(optionsToolBar);
+    //var iconLabel = new QToolButton(optionsToolBar);
+    iconLabel.objectName = "Icon";
+    iconLabel.alignment = Qt.AlignCenter;
+    iconLabel.setContentsMargins(6, 0, 6, 0);
+    //iconLabel.setFrameStyle(QFrame.Panel | QFrame.Sunken);
+
+    OptionsToolBar.initStyle();
 
     // avoid empty label after startup, before initializing new document:
     OptionsToolBar.setIcon("scripts/Reset/Reset.svg");
+
     optionsToolBar.addWidget(iconLabel);
     optionsToolBar.addSeparator();
+
+    var appWin = RMainWindowQt.getMainWindow();
+    var pl = new RPaletteListenerAdapter();
+    appWin.addPaletteListener(pl);
+    pl.paletteChanged.connect(OptionsToolBar.initStyle);
 };
 
 /**
@@ -153,10 +171,33 @@ OptionsToolBar.setIcon = function(fileNameOrIcon) {
     var w = optionsToolBar.iconSize.width()*f;
     var h = optionsToolBar.iconSize.height()*f;
 
+
+//    var iconSize = RSettings.getIntValue("CadToolBar/IconSize", 32);
+//    iconSize = Math.max(iconSize, RSettings.getIntValue("ToolBar/IconSize", 32));
+//    iconSize = Math.max(iconSize, RSettings.getIntValue("CadToolMatrix/IconSize", 24));
+
+//    // retina icons:
+//    if (RSettings.getDevicePixelRatio()>1) {
+//        iconSize*=RSettings.getDevicePixelRatio();
+//    }
+
+//    var pm = new QPixmap(iconSize,iconSize);
+//    //pm.fill(Qt.transparent);
+//    var p = new QPainter();
+//    p.begin(pm);
+//    var renderer = new QSvgRenderer(OptionsToolBar.includeBasePath + "/IconBackground.svg");
+//    renderer.render(p, new QRectF(0, 0, iconSize, iconSize));
+
     if (isOfType(fileNameOrIcon, QIcon)) {
         iconLabel.pixmap = fileNameOrIcon.pixmap(new QSize(w, h));
+        //iconLabel.icon = fileNameOrIcon;
     }
     else {
         iconLabel.pixmap = new QIcon(autoPath(fileNameOrIcon)).pixmap(new QSize(w, h));
+        //iconLabel.icon = new QIcon(autoPath(fileNameOrIcon));
     }
+
+//    p.end();
+
+
 };

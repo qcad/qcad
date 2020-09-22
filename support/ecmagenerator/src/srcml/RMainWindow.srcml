@@ -46,6 +46,7 @@
 <class_decl>class <name>RKeyListener</name>;</class_decl>
 <class_decl>class <name>RLayerListener</name>;</class_decl>
 <class_decl>class <name>RNewDocumentListener</name>;</class_decl>
+<class_decl>class <name>RPaletteListener</name>;</class_decl>
 <class_decl>class <name>RPenListener</name>;</class_decl>
 <class_decl>class <name>RPropertyListener</name>;</class_decl>
 <class_decl>class <name>RPreferencesListener</name>;</class_decl>
@@ -199,6 +200,10 @@
     <function_decl><type><name>void</name></type> <name>removePenListener</name><parameter_list>(<param><decl><type><name>RPenListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>notifyPenListeners</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>)</parameter_list>;</function_decl>
 
+    <function_decl><type><name>void</name></type> <name>addPaletteListener</name><parameter_list>(<param><decl><type><name>RPaletteListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>removePaletteListener</name><parameter_list>(<param><decl><type><name>RPaletteListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>notifyPaletteListeners</name><parameter_list>()</parameter_list>;</function_decl>
+
     <function_decl><type><name>void</name></type> <name>ucsSetEvent</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>ucsName</name></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="line">//void commandEvent(const QString&amp; command);</comment>
@@ -304,6 +309,7 @@
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RBlockListener</name>*</argument>&gt;</argument_list></name></type> <name>blockListeners</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RViewListener</name>*</argument>&gt;</argument_list></name></type> <name>viewListeners</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RPenListener</name>*</argument>&gt;</argument_list></name></type> <name>penListeners</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RPaletteListener</name>*</argument>&gt;</argument_list></name></type> <name>paletteListeners</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>REntityExportListener</name>*</argument>&gt;</argument_list></name></type> <name>entityExportListeners</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RExportListener</name>*</argument>&gt;</argument_list></name></type> <name>exportListeners</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RImportListener</name>*</argument>&gt;</argument_list></name></type> <name>importListeners</name></decl>;</decl_stmt>

@@ -213,6 +213,8 @@
 #include "REcmaPatternLine.h"
 #include "REcmaPatternListMetric.h"
 #include "REcmaPatternListImperial.h"
+#include "REcmaPaletteListener.h"
+#include "REcmaPaletteListenerAdapter.h"
 #include "REcmaPenListener.h"
 #include "REcmaPenListenerAdapter.h"
 #include "REcmaPluginLoader.h"
@@ -964,6 +966,8 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaViewListenerAdapter::initEcma(*engine);
     REcmaPenListener::initEcma(*engine);
     REcmaPenListenerAdapter::initEcma(*engine);
+    REcmaPaletteListener::initEcma(*engine);
+    REcmaPaletteListenerAdapter::initEcma(*engine);
     REcmaColorCombo::initEcma(*engine);
     REcmaLineweightCombo::initEcma(*engine);
     REcmaLinetypeCombo::initEcma(*engine);

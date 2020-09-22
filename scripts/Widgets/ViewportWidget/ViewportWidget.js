@@ -222,23 +222,28 @@ ViewportWidget.prototype.init = function(uiFile, graphicsSceneClass) {
         }
     }
 
+    var hruler = this.vpWidget.findChild("HorizontalRuler");
+    var vruler = this.vpWidget.findChild("VerticalRuler");
+
+    var appWin = RMainWindowQt.getMainWindow();
+    appWin.addPaletteListener(hruler);
+    appWin.addPaletteListener(vruler);
+
     if (RSettings.getBoolValue("GraphicsView/ShowRulers", true)) {
-        this.hruler = this.vpWidget.findChild("HorizontalRuler");
+        this.hruler = hruler;
         if (!isNull(this.hruler)) {
             this.hruler.setGraphicsView(this.graphicsView);
             this.documentInterface.addCoordinateListener(this.hruler);
         }
-        this.vruler = this.vpWidget.findChild("VerticalRuler");
+        this.vruler = vruler;
         if (!isNull(this.vruler)) {
             this.vruler.setGraphicsView(this.graphicsView);
             this.documentInterface.addCoordinateListener(this.vruler);
         }
     } else {
-        var hruler = this.vpWidget.findChild("HorizontalRuler");
         if (!isNull(hruler)) {
             hruler.hide();
         }
-        var vruler = this.vpWidget.findChild("VerticalRuler");
         if (!isNull(vruler)) {
             vruler.hide();
         }

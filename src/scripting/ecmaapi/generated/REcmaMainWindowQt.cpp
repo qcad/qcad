@@ -33,6 +33,8 @@
             
                 #include "RNewDocumentListener.h"
             
+                #include "RPaletteListener.h"
+            
                 #include "RPenListener.h"
             
                 #include "RPreferencesListener.h"
@@ -244,6 +246,12 @@
             REcmaHelper::registerFunction(&engine, proto, removePenListener, "removePenListener");
             
             REcmaHelper::registerFunction(&engine, proto, notifyPenListeners, "notifyPenListeners");
+            
+            REcmaHelper::registerFunction(&engine, proto, addPaletteListener, "addPaletteListener");
+            
+            REcmaHelper::registerFunction(&engine, proto, removePaletteListener, "removePaletteListener");
+            
+            REcmaHelper::registerFunction(&engine, proto, notifyPaletteListeners, "notifyPaletteListeners");
             
             REcmaHelper::registerFunction(&engine, proto, ucsSetEvent, "ucsSetEvent");
             
@@ -5055,6 +5063,174 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindowQt::notifyPenListeners", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::addPaletteListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::addPaletteListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::addPaletteListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("addPaletteListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RPaletteListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RPaletteListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RPaletteListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RPaletteListener *RPaletteListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->addPaletteListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.addPaletteListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::addPaletteListener", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::removePaletteListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::removePaletteListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::removePaletteListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("removePaletteListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RPaletteListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RPaletteListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RPaletteListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RPaletteListener *RPaletteListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removePaletteListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.removePaletteListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::removePaletteListener", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::notifyPaletteListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::notifyPaletteListeners", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::notifyPaletteListeners";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("notifyPaletteListeners", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->notifyPaletteListeners();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.notifyPaletteListeners().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::notifyPaletteListeners", context, engine);
             return result;
         }
          QScriptValue

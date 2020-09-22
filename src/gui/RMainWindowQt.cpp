@@ -634,6 +634,14 @@ bool RMainWindowQt::event(QEvent* e) {
         return false;
     }
 
+    if (e->type()==QEvent::PaletteChange) {
+        qDebug() << "QEvent::PaletteChange";
+        RSettings::resetCache();
+        RGuiAction::updateIcons();
+        notifyPaletteListeners();
+        update();
+    }
+
     if (e->type()==QEvent::KeyPress) {
         QKeyEvent* ke = dynamic_cast<QKeyEvent*>(e);
         if (ke!=NULL) {

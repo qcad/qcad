@@ -191,6 +191,7 @@ HEADERS = \
     RPainterPathDevice.h \
     RPainterPathEngine.h \
     RPainterPathExporter.h \
+    RPaletteListener.h \
     RPattern.h \
     RPatternLine.h \
     RPatternList.h \
