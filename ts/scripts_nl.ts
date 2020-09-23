@@ -4975,12 +4975,12 @@ is al in de lijst.</translation>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Spiegel painters door de basislijn.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Groepeer alles in één operatie.</translation>
     </message>
     <message>
         <location line="+16"/>
