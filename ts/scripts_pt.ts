@@ -5070,12 +5070,12 @@ já se encontra na lista.</translation>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Espelhar os painters sobre a linha de base.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Agrupe todas em uma operação.</translation>
     </message>
     <message>
         <location line="+16"/>
