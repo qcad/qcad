@@ -31,7 +31,7 @@
    <item>
     <widget class="QCheckBox" name="QT_AUTO_SCREEN_SCALE_FACTOR">
      <property name="text">
-      <string>Auto Screen Scale Factor</string>
+      <string>Auto screen scale factor</string>
      </property>
      <property name="checked">
       <bool>true</bool>
@@ -41,7 +41,7 @@
    <item>
     <widget class="QCheckBox" name="EnableHighDpiScaling">
      <property name="text">
-      <string>Enable High DPI Scaling</string>
+      <string>Enable high DPI scaling</string>
      </property>
     </widget>
    </item>
@@ -50,7 +50,7 @@
      <item>
       <widget class="QLabel" name="label">
        <property name="text">
-        <string>Scale Factor:</string>
+        <string>Scale factor:</string>
        </property>
       </widget>
      </item>

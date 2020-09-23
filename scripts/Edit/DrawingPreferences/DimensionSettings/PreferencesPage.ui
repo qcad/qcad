@@ -301,7 +301,7 @@
        <item>
         <widget class="QRadioButton" name="ArchitecturalTick">
          <property name="text">
-          <string>Architectural Tick</string>
+          <string>Architectural tick</string>
          </property>
         </widget>
        </item>

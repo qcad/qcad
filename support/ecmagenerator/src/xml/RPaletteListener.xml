@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RPaletteListener"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="true" isScriptable="true">
+    <method name="updatePalette" cppName="updatePalette"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true" />
+    </method>
+  </class>
+</unit>

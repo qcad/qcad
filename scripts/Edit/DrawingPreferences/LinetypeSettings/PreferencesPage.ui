@@ -16,7 +16,7 @@
      <item>
       <widget class="QLabel" name="label">
        <property name="text">
-        <string>Global Linetype Scale:</string>
+        <string>Global linetype scale:</string>
        </property>
       </widget>
      </item>
