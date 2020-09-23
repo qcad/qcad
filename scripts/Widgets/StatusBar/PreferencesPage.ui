@@ -50,7 +50,7 @@
        </font>
       </property>
       <property name="label" stdset="0">
-       <string>Status Bar Font:</string>
+       <string>Status bar font:</string>
       </property>
      </widget>
     </item>

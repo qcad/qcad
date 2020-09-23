@@ -5603,32 +5603,57 @@ ist bereits in der Liste.</translation>
         <location line="+16"/>
         <source>Cast on newly sub-layer &apos;Painted&apos;.
 BUG: Interferes with group castings.</source>
+<<<<<<< HEAD
         <translation></translation>
+=======
+        <translation>Cast on newly sub-layer &apos;Painted&apos;.
+BUG: Interferes with group castings.</translation>
+>>>>>>> 3065eccdfc232bc15498ff691e75c75de444879a
     </message>
     <message>
         <location line="+14"/>
         <source>Start with casting a begin apex on open forms.</source>
+<<<<<<< HEAD
         <translation></translation>
+=======
+        <translation>Start with casting a begin apex on open forms.</translation>
+>>>>>>> 3065eccdfc232bc15498ff691e75c75de444879a
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
+<<<<<<< HEAD
         <translation></translation>
+=======
+        <translation>End with casting an end apex on open forms.</translation>
+>>>>>>> 3065eccdfc232bc15498ff691e75c75de444879a
     </message>
     <message>
         <location line="+16"/>
         <source>Add insertions in between eg. spacers, knots. (Not implemented)</source>
+<<<<<<< HEAD
         <translation></translation>
+=======
+        <translation>Add insertions in between eg. spacers, knots. (Not implemented)</translation>
+>>>>>>> 3065eccdfc232bc15498ff691e75c75de444879a
     </message>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
+<<<<<<< HEAD
         <translation></translation>
+=======
+        <translation>Preview of painters.</translation>
+>>>>>>> 3065eccdfc232bc15498ff691e75c75de444879a
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
+<<<<<<< HEAD
         <translation></translation>
+=======
+        <translation>Select painter set.</translation>
+>>>>>>> 3065eccdfc232bc15498ff691e75c75de444879a
     </message>
     <message>
         <location line="+22"/>
@@ -5703,12 +5728,20 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+36"/>
         <source>Preview of insertion.</source>
+<<<<<<< HEAD
         <translation></translation>
+=======
+        <translation>Preview of insertion.</translation>
+>>>>>>> 3065eccdfc232bc15498ff691e75c75de444879a
     </message>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
+<<<<<<< HEAD
         <translation></translation>
+=======
+        <translation>Select Insertion or Enter void space. (Not implemented)</translation>
+>>>>>>> 3065eccdfc232bc15498ff691e75c75de444879a
     </message>
     <message>
         <location line="+250"/>

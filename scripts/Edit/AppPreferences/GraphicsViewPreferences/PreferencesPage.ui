@@ -20,7 +20,7 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>0</y>
+     <y>-140</y>
      <width>635</width>
      <height>1067</height>
     </rect>
@@ -403,7 +403,7 @@
        <item row="1" column="0" colspan="2">
         <widget class="QCheckBox" name="HighResolutionGraphicsView">
          <property name="text">
-          <string>Use full resolution for Retina display</string>
+          <string>Use full resolution for Retina / high resolution display</string>
          </property>
         </widget>
        </item>
@@ -915,7 +915,7 @@
        <item>
         <widget class="QCheckBox" name="PersistentSelection">
          <property name="text">
-          <string>Persistent Selection</string>
+          <string>Persistent selection</string>
          </property>
         </widget>
        </item>
