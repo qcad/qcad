@@ -5592,12 +5592,12 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Painter über die Grundlinie spiegeln.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gruppieren zu einer Operation.</translation>
     </message>
     <message>
         <location line="+16"/>
