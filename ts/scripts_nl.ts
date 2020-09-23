@@ -1314,13 +1314,13 @@ Wilt u het herstellen?</translation>
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../scripts/Block/BlockDialog.js" line="+82"/>
+        <location filename="../scripts/Block/BlockDialog.js" line="+81"/>
         <source>block</source>
         <comment>default block name prefix</comment>
         <translation>blok</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+53"/>
         <source>Leading or trailing spaces.</source>
         <translation>Spaties voor of na.</translation>
     </message>
@@ -1563,8 +1563,12 @@ Wilt u het herstellen?</translation>
         <translation>Verticaal / horizontaal</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+17"/>
         <source>Icon Size:</source>
+        <translation type="vanished">Pictogramgrootte:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+17"/>
+        <source>Icon size:</source>
         <translation>Pictogramgrootte:</translation>
     </message>
     <message>
@@ -1626,8 +1630,12 @@ Wilt u het herstellen?</translation>
         <translation>Gereedschap matrix</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CadToolMatrix/PreferencesPage.ui" line="+17"/>
         <source>Icon Size:</source>
+        <translation type="vanished">Pictogramgrootte:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Widgets/CadToolMatrix/PreferencesPage.ui" line="+17"/>
+        <source>Icon size:</source>
         <translation>Pictogramgrootte:</translation>
     </message>
     <message>
@@ -2229,18 +2237,18 @@ Wilt u het herstellen?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+60"/>
+        <location line="+68"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Opdrachtregel</translation>
     </message>
     <message>
-        <location line="-30"/>
+        <location line="-21"/>
         <source>&amp;Command Line</source>
         <translation>&amp;Opdrachtregel</translation>
     </message>
     <message>
-        <location line="+217"/>
+        <location line="+208"/>
         <source>Invalid value:</source>
         <translation>Ongeldig waarde:</translation>
     </message>
@@ -2310,8 +2318,12 @@ Wilt u het herstellen?</translation>
         <translation>: </translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
         <source>History Size:</source>
+        <translation type="vanished">Geschiedenis grootte:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
+        <source>History size:</source>
         <translation>Geschiedenis grootte:</translation>
     </message>
     <message>
@@ -3358,9 +3370,8 @@ Wilt u het herstellen?</translation>
         <translation>Pijl</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Architectural Tick</source>
-        <translation>Bouwkunde tick</translation>
+        <translation type="vanished">Bouwkunde tick</translation>
     </message>
     <message>
         <source>Font</source>
@@ -3369,6 +3380,11 @@ Wilt u het herstellen?</translation>
     <message>
         <source>Dimension label font:</source>
         <translation type="vanished">Lettertype voor bematingstekst :</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Architectural tick</source>
+        <translation>Bouwkunde tick</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -3529,12 +3545,12 @@ is al in de lijst.</translation>
 <context>
     <name>DrawBasedOnRectanglePP</name>
     <message>
-        <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+69"/>
+        <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+72"/>
         <source>First corner</source>
         <translation>Eerste hoekpunt</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+8"/>
         <source>Second corner</source>
         <translation>Tweede hoekpunt</translation>
     </message>
@@ -3892,6 +3908,11 @@ is al in de lijst.</translation>
         <source>Entity is not a polyline.</source>
         <translation>Object is niet een polylijn.</translation>
     </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a spline with fit points.</source>
+        <translation>Object is geen spline met paspunten.</translation>
+    </message>
 </context>
 <context>
     <name>EcmaScriptShell</name>
@@ -3901,12 +3922,12 @@ is al in de lijst.</translation>
         <translation>ECMAScript Shell tonen</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+55"/>
         <source>&amp;Script Shell</source>
         <translation>&amp;Script Shell</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+35"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation>Script Shell</translation>
@@ -4852,9 +4873,24 @@ is al in de lijst.</translation>
 <context>
     <name>FlexPainter</name>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1816"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1115"/>
+        <source>Add Active SubLayer</source>
+        <translation>Actieve sublaag toevoegen</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>FP added layer:</source>
+        <translation>FP toegevoegde laag:</translation>
+    </message>
+    <message>
+        <location line="+1196"/>
         <source>&amp;FlexPainter</source>
         <translation>&amp;FlexPainter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Paints over selection mimicking a roller stamp</source>
+        <translation>Verven over de selectie, nabootsen van een rolstempel</translation>
     </message>
 </context>
 <context>
@@ -4870,62 +4906,56 @@ is al in de lijst.</translation>
         <translation>Painter-casting opties</translation>
     </message>
     <message>
-        <location line="+18"/>
         <source>Mirror painters over baseline</source>
-        <translation>Spiegel de painters aan de basislijn</translation>
+        <translation type="vanished">Spiegel de painters aan de basislijn</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+21"/>
         <source>Flip Painters</source>
         <translation>Keer de painters om</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Group all castings to one operation</source>
-        <translation>Groepeer alle castings in één bewerking</translation>
+        <translation type="vanished">Groepeer alle castings in één bewerking</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+10"/>
         <source>Cast in group</source>
         <translation>Casting in groep</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Cast on newly sub-layer &apos;Painted&apos; if applicable</source>
-        <translation>Casting op de nieuwe onderlaag &apos;Painted&apos;, indien van toepassing</translation>
+        <translation type="vanished">Casting op de nieuwe onderlaag &apos;Painted&apos;, indien van toepassing</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+17"/>
         <source>Cast on sub-layer</source>
         <translation>Casting op onderlaag</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Start with casting a begin apex on open forms</source>
-        <translation>Beginnen met het casten van een beginpunt op open vormen</translation>
+        <translation type="vanished">Beginnen met het casten van een beginpunt op open vormen</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+13"/>
         <source>Add Begin Apex</source>
         <translation>Begin apex toevoegen</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>End with casting an end apex on open forms</source>
-        <translation>Eindigen met het casten van een eindpunt op open vormen</translation>
+        <translation type="vanished">Eindigen met het casten van een eindpunt op open vormen</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+16"/>
         <source>Add End Apex</source>
         <translation>Eind apex toevoegen</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Add insertions in between eg. spacers, knots</source>
-        <translation>Voeg tussenvoegsels toe, bijv. afstandhouders, knopen</translation>
+        <translation type="vanished">Voeg tussenvoegsels toe, bijv. afstandhouders, knopen</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+16"/>
         <source>Add Insertions</source>
         <translation>Toevoegingen toevoegen</translation>
     </message>
@@ -4935,14 +4965,53 @@ is al in de lijst.</translation>
         <translation>Patroon</translation>
     </message>
     <message>
-        <location line="+36"/>
         <source>Preview of painters</source>
-        <translation>Voorbeeld</translation>
+        <translation type="vanished">Voorbeeld</translation>
+    </message>
+    <message>
+        <source>Select painter set</source>
+        <translation type="vanished">Selecteer patroon</translation>
+    </message>
+    <message>
+        <location line="-101"/>
+        <source>Mirror painters over baseline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Group all castings to one operation.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Cast on newly sub-layer &apos;Painted&apos;.
+BUG: Interferes with group castings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Start with casting a begin apex on open forms.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>End with casting an end apex on open forms.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Add insertions in between eg. spacers, knots. (Not implemented)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+65"/>
+        <source>Preview of painters.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+41"/>
-        <source>Select painter set</source>
-        <translation>Selecteer patroon</translation>
+        <source>Select painter set.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5016,16 +5085,79 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+36"/>
-        <source>Preview of insertion</source>
-        <translation>Voorbeeld van invoegen</translation>
+        <source>Preview of insertion.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+38"/>
-        <source>Select Insertion or Enter void space</source>
-        <translation>Selecteer toevoeging of voer een lege ruimte in</translation>
+        <source>Select Insertion or Enter void space. (Not implemented)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+250"/>
+        <source>Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>FlexPainter Beta 0.42e © CVH 2020 </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+245"/>
+        <source>Document Units.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>Enter painter width. (+0)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+90"/>
+        <source>Enter main painter stepsize. (+0)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Enter main painter length. (+)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Keep painters proportional.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Select percentage of Stepsize.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+86"/>
+        <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+92"/>
+        <source>Verbose info. (persistent on)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Deleted painted over base entities. (persistent off)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Preview of insertion</source>
+        <translation type="vanished">Voorbeeld van invoegen</translation>
+    </message>
+    <message>
+        <source>Select Insertion or Enter void space</source>
+        <translation type="vanished">Selecteer toevoeging of voer een lege ruimte in</translation>
+    </message>
+    <message>
+        <location line="-879"/>
         <source>&lt;Enter space size&gt;</source>
         <translation>&lt;Voer ruimtegrootte in&gt;</translation>
     </message>
@@ -5035,22 +5167,20 @@ is al in de lijst.</translation>
         <translation>Gordijn touw knoop</translation>
     </message>
     <message>
-        <location line="+328"/>
         <source>Document Units</source>
-        <translation>Document eenheden</translation>
+        <translation type="vanished">Document eenheden</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+489"/>
         <source>#Undefined#</source>
         <translation>#Onbepaald#</translation>
     </message>
     <message>
-        <location line="+33"/>
         <source>Enter painter width (+0)</source>
-        <translation>Painterbreedte invoeren (+0)</translation>
+        <translation type="vanished">Painterbreedte invoeren (+0)</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+36"/>
         <source>Width : </source>
         <translation>Breedte: </translation>
     </message>
@@ -5065,37 +5195,33 @@ is al in de lijst.</translation>
         <translation>Repetitieve painter opties</translation>
     </message>
     <message>
-        <location line="+62"/>
         <source>Enter main painter stepsize (+0)</source>
-        <translation>Voer de belangrijkste painter stapgrootte in (+0)</translation>
+        <translation type="vanished">Voer de belangrijkste painter stapgrootte in (+0)</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+65"/>
         <source>Stepsize :</source>
         <translation>Stapgrootte:</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Enter main painter length (+)</source>
-        <translation>Vul de lengte van de hoofdpainter in (+)</translation>
+        <translation type="vanished">Vul de lengte van de hoofdpainter in (+)</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+16"/>
         <source>Length :</source>
         <translation>Lengte:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Keep painters proportional</source>
-        <translation>Houd painters proportioneel</translation>
+        <translation type="vanished">Houd painters proportioneel</translation>
     </message>
     <message>
-        <location line="+29"/>
         <source>Select percentage of Stepsize</source>
-        <translation>Selecteer percentage van stapgrootte</translation>
+        <translation type="vanished">Selecteer percentage van stapgrootte</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+52"/>
         <source>Closed Forms shifting % :</source>
         <translation>Gesloten vormen verschuiven %:</translation>
     </message>
@@ -5105,12 +5231,11 @@ is al in de lijst.</translation>
         <translation>Schaleringsopties voor open vormen</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form</source>
-        <translation>Schaalverdeling f 1.00-0.90 aanpassen om aan de hele vorm aan te passen</translation>
+        <translation type="vanished">Schaalverdeling f 1.00-0.90 aanpassen om aan de hele vorm aan te passen</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+24"/>
         <source>Dynamically scale to fit</source>
         <translation>Dynamische schaal om te passen</translation>
     </message>
@@ -5130,22 +5255,20 @@ is al in de lijst.</translation>
         <translation>Afstemmen met einde</translation>
     </message>
     <message>
-        <location line="+36"/>
         <source>Verbose info (persistent on)</source>
-        <translation>Uitgebreide informatie (blijft aanhouden)</translation>
+        <translation type="vanished">Uitgebreide informatie (blijft aanhouden)</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+39"/>
         <source>Verbose *</source>
         <translation>Uitgebreid *</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Deleted painted over base entities (persistent off)</source>
-        <translation>Verwijder geschilderd over de basisobjecten (persistent uit)</translation>
+        <translation type="vanished">Verwijder geschilderd over de basisobjecten (persistent uit)</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+16"/>
         <source>Delete Base Entities *</source>
         <translation>Basisobjecten verwijderen *</translation>
     </message>
@@ -5478,7 +5601,12 @@ is al in de lijst.</translation>
         <translation>Voorkom wit op wit / zwart op zwart weergave</translation>
     </message>
     <message>
-        <location line="+547"/>
+        <location line="+149"/>
+        <source>Use full resolution for Retina / high resolution display</source>
+        <translation>Gebruik volledige resolutie voor Retina-display (hoge resolutie)</translation>
+    </message>
+    <message>
+        <location line="+398"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
@@ -5488,7 +5616,12 @@ is al in de lijst.</translation>
         <translation>Aantal threads:</translation>
     </message>
     <message>
-        <location line="-674"/>
+        <location line="+16"/>
+        <source>Persistent selection</source>
+        <translation>Blijvende selectie</translation>
+    </message>
+    <message>
+        <location line="-690"/>
         <source>Color lightness threshold:</source>
         <translation>Kleur lichtheid drempel:</translation>
     </message>
@@ -5527,12 +5660,11 @@ is al in de lijst.</translation>
         <translation>Objecten met meer dan N streepjes als doorlopend weergeven:</translation>
     </message>
     <message>
-        <location line="-216"/>
         <source>Use full resolution for Retina display</source>
-        <translation>Gebruik volledige resolutie voor Retina-display</translation>
+        <translation type="vanished">Gebruik volledige resolutie voor Retina-display</translation>
     </message>
     <message>
-        <location line="-129"/>
+        <location line="-345"/>
         <source>Linetypes and Lineweights</source>
         <translation>Lijntypen en lijnbreedtes</translation>
     </message>
@@ -5590,9 +5722,8 @@ is al in de lijst.</translation>
         <translation>Selectie</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Persistent Selection</source>
-        <translation>Blijvende selectie</translation>
+        <translation type="vanished">Blijvende selectie</translation>
     </message>
 </context>
 <context>
@@ -5760,18 +5891,30 @@ is al in de lijst.</translation>
 <context>
     <name>GraphicsViewFonts</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
         <source>Ruler Font:</source>
+        <translation type="vanished">Liniaal:</translation>
+    </message>
+    <message>
+        <source>Snap Label Font:</source>
+        <translation type="vanished">Vang label:</translation>
+    </message>
+    <message>
+        <source>Info Label Font:</source>
+        <translation type="vanished">Info label:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
+        <source>Ruler font:</source>
         <translation>Liniaal:</translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>Snap Label Font:</source>
+        <source>Snap label font:</source>
         <translation>Vang label:</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Info Label Font:</source>
+        <source>Info label font:</source>
         <translation>Info label:</translation>
     </message>
 </context>
@@ -6599,23 +6742,39 @@ is al in de lijst.</translation>
 <context>
     <name>Input</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/InputPreferences/PreferencesPage.ui" line="+19"/>
         <source>Decimal Point:</source>
+        <translation type="vanished">Decimale punt:</translation>
+    </message>
+    <message>
+        <source>Cartesian Coordinate Separator:</source>
+        <translation type="vanished">Scheidingsteken voor Cartesiaanse coördinaten:</translation>
+    </message>
+    <message>
+        <source>Polar Coordinate Separator:</source>
+        <translation type="vanished">Scheidingsteken voor polaire coördinaten:</translation>
+    </message>
+    <message>
+        <source>Relative Coordinate Prefix:</source>
+        <translation type="vanished">Prefix voor relatieve coördinaten:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Edit/AppPreferences/InputPreferences/PreferencesPage.ui" line="+19"/>
+        <source>Decimal point:</source>
         <translation>Decimale punt:</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Cartesian Coordinate Separator:</source>
+        <source>Cartesian coordinate separator:</source>
         <translation>Scheidingsteken voor Cartesiaanse coördinaten:</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Polar Coordinate Separator:</source>
+        <source>Polar coordinate separator:</source>
         <translation>Scheidingsteken voor polaire coördinaten:</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Relative Coordinate Prefix:</source>
+        <source>Relative coordinate prefix:</source>
         <translation>Prefix voor relatieve coördinaten:</translation>
     </message>
     <message>
@@ -6625,23 +6784,39 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Absolute Cartesian Coordinate:</source>
+        <source>Absolute Cartesian coordinate:</source>
         <translation>Absolute Cartesische coördinaat:</translation>
     </message>
     <message>
         <location line="+14"/>
-        <source>Absolute Polar Coordinate:</source>
+        <source>Absolute polar coordinate:</source>
         <translation>Absolute polaire coördinaat:</translation>
     </message>
     <message>
         <location line="+14"/>
-        <source>Relative Cartesian Coordinate:</source>
+        <source>Relative Cartesian coordinate:</source>
         <translation>Relatief Cartesische coördinaat:</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Relative Polar Coordinate:</source>
+        <source>Relative polar coordinate:</source>
         <translation>Relatief polaire coördinaat:</translation>
+    </message>
+    <message>
+        <source>Absolute Cartesian Coordinate:</source>
+        <translation type="vanished">Absolute Cartesische coördinaat:</translation>
+    </message>
+    <message>
+        <source>Absolute Polar Coordinate:</source>
+        <translation type="vanished">Absolute polaire coördinaat:</translation>
+    </message>
+    <message>
+        <source>Relative Cartesian Coordinate:</source>
+        <translation type="vanished">Relatief Cartesische coördinaat:</translation>
+    </message>
+    <message>
+        <source>Relative Polar Coordinate:</source>
+        <translation type="vanished">Relatief polaire coördinaat:</translation>
     </message>
 </context>
 <context>
@@ -7061,8 +7236,12 @@ is al in de lijst.</translation>
 <context>
     <name>Language</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui" line="+20"/>
         <source>Language of User Interface:</source>
+        <translation type="vanished">Taal van de gebruikersinterface:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui" line="+20"/>
+        <source>Language of user interface:</source>
         <translation>Taal van de gebruikersinterface:</translation>
     </message>
 </context>
@@ -7601,18 +7780,26 @@ Library browser will not be available.</translation>
         <translation>Weergaveopties</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Icon Size:</source>
-        <translation>Pictogramgrootte:</translation>
+        <translation type="vanished">Pictogramgrootte:</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+53"/>
         <source>Dark icon background</source>
         <translation>Donkere icon achtergrond</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>View Mode:</source>
+        <translation type="vanished">Weergave:</translation>
+    </message>
+    <message>
+        <location line="-44"/>
+        <source>Icon size:</source>
+        <translation>Pictogramgrootte:</translation>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>View mode:</source>
         <translation>Weergave:</translation>
     </message>
     <message>
@@ -8357,8 +8544,12 @@ getoond in zoekresultaten:</translation>
         <translation>Algemeen</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
         <source>Global Linetype Scale:</source>
+        <translation type="vanished">Globale lijntypeschaal:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
+        <source>Global linetype scale:</source>
         <translation>Globale lijntypeschaal:</translation>
     </message>
     <message>
@@ -10653,7 +10844,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>SelectContour</name>
     <message>
-        <location filename="../scripts/Select/SelectContour/SelectContour.js" line="+53"/>
+        <location filename="../scripts/Select/SelectContour/SelectContour.js" line="+54"/>
         <source>Choose entity of contour</source>
         <translation>Kies object van contour</translation>
     </message>
@@ -10690,6 +10881,11 @@ getoond in zoekresultaten:</translation>
         <location line="+27"/>
         <source>Tolerance:</source>
         <translation>Tolerantie:</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Same Layer</source>
+        <translation>Dezelfde laag</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
@@ -11061,6 +11257,11 @@ getoond in zoekresultaten:</translation>
     <message>
         <source>1</source>
         <translation type="vanished">1</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
+        <source>Rotate:</source>
+        <translation>Roteren:</translation>
     </message>
 </context>
 <context>
@@ -11761,8 +11962,12 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>StatusBar</name>
     <message>
-        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
         <source>Status Bar Font:</source>
+        <translation type="vanished">Lettertype van de statusbalk:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
+        <source>Status bar font:</source>
         <translation>Lettertype van de statusbalk:</translation>
     </message>
     <message>
@@ -12427,8 +12632,12 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>Theme</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/PreferencesPage.ui" line="+20"/>
         <source>User Interface Theme:</source>
+        <translation type="vanished">Gebruikersinterface theme:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/PreferencesPage.ui" line="+20"/>
+        <source>User interface theme:</source>
         <translation>Gebruikersinterface theme:</translation>
     </message>
 </context>
@@ -12527,8 +12736,12 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>ToolBar</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui" line="+19"/>
         <source>Icon Size:</source>
+        <translation type="vanished">Pictogramgrootte:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui" line="+19"/>
+        <source>Icon size:</source>
         <translation>Pictogramgrootte:</translation>
     </message>
     <message>
@@ -12548,8 +12761,12 @@ getoond in zoekresultaten:</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Shortcut Prefix Character:</source>
+        <source>Shortcut prefix character:</source>
         <translation>Sneltoets prefix karakter:</translation>
+    </message>
+    <message>
+        <source>Shortcut Prefix Character:</source>
+        <translation type="vanished">Sneltoets prefix karakter:</translation>
     </message>
 </context>
 <context>
@@ -12810,6 +13027,42 @@ getoond in zoekresultaten:</translation>
     </message>
 </context>
 <context>
+    <name>Ui</name>
+    <message>
+        <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
+        <source>These settings affect the resolution and scale of the QCAD user interface. These preferences can be adjusted if there are problems with the user interface of QCAD, such as very large or very small icons or text labels.</source>
+        <translation>Deze instellingen hebben invloed op de resolutie en de grootte van de QCAD-gebruikersinterface. Deze voorkeuren kunnen worden aangepast als er problemen zijn met de gebruikersinterface van QCAD, zoals zeer grote of zeer kleine symbolen of tekstlabels.</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Auto screen scale factor</source>
+        <translation>Schaalfactor voor grootte:</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Enable high DPI scaling</source>
+        <translation>Splash Screen toonen</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Scale factor:</source>
+        <translation>Schaalfactor voor grootte:</translation>
+    </message>
+</context>
+<context>
+    <name>UiPreferences</name>
+    <message>
+        <location filename="../scripts/Edit/AppPreferences/UiPreferences/UiPreferences.js" line="+29"/>
+        <source>General</source>
+        <translation>Algemeen</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>User Interface</source>
+        <translation>Gebruikersinterface</translation>
+    </message>
+</context>
+<context>
     <name>Undo</name>
     <message>
         <location filename="../scripts/Edit/Undo/UndoInit.js" line="+2"/>
@@ -12820,19 +13073,16 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>UnitSettings</name>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
         <source>Drawing Unit:</source>
-        <translation>Tekening eenheid:</translation>
+        <translation type="vanished">Tekening eenheid:</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Paper Unit:</source>
-        <translation>Papier eenheid:</translation>
+        <translation type="vanished">Papier eenheid:</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Measurement System (for line types and hatch patterns):</source>
-        <translation>Meetsysteem (voor lijn types en arceerpatronen):</translation>
+        <translation type="vanished">Meetsysteem (voor lijn types en arceerpatronen):</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js" line="+27"/>
@@ -12965,6 +13215,21 @@ getoond in zoekresultaten:</translation>
         <source>Metric</source>
         <translation>Metrisch</translation>
     </message>
+    <message>
+        <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
+        <source>Drawing unit:</source>
+        <translation>Tekening eenheid:</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Paper unit:</source>
+        <translation>Papier eenheid:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Measurement system (for line types and hatch patterns):</source>
+        <translation>Meetsysteem (voor lijn types en arceerpatronen):</translation>
+    </message>
 </context>
 <context>
     <name>UnlockAllLayers</name>
@@ -13058,7 +13323,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>ViewportWidget</name>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+290"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+295"/>
         <source>Dropped data not supported</source>
         <translation>Ingevoegd bestand niet ondersteund</translation>
     </message>
@@ -13131,12 +13396,12 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1038"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1069"/>
         <source>Restore defaults</source>
         <translation>Standaardinstellingen herstellen</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+45"/>
         <source>Insert Symbol</source>
         <translation>Symbool invoegen</translation>
     </message>
@@ -13445,7 +13710,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+856"/>
+        <location filename="../scripts/library.js" line="+865"/>
         <source>Objects</source>
         <translation>Objecten</translation>
     </message>
