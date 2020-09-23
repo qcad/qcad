@@ -5375,12 +5375,12 @@ Punto decimal:</translatorcomment>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Refleja a los painters sobre la línea de base.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Agrupe todas en una sola operación.</translation>
     </message>
     <message>
         <location line="+16"/>
