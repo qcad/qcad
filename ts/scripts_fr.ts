@@ -5288,12 +5288,12 @@ est déjà dans la liste.</translation>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Miroir painters sur la ligne de base.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Regroupez tous en une seule opération.</translation>
     </message>
     <message>
         <location line="+16"/>
