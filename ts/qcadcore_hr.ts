@@ -227,7 +227,7 @@
     <message>
         <location line="+1"/>
         <source>Linetype Scale</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mjerilo crte</translation>
     </message>
     <message>
         <location line="+1"/>
