@@ -243,7 +243,7 @@
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
         <location filename="../src/core/RLayout.cpp" line="+80"/>
         <source>Name</source>
-        <translation>Naziv</translation>
+        <translation>Ime</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -577,7 +577,7 @@
     <message>
         <location line="+1"/>
         <source>Invisible</source>
-        <translation>Nevidjljivo</translation>
+        <translation>Nevidljiv</translation>
     </message>
     <message>
         <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>
