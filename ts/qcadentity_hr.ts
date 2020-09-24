@@ -20,7 +20,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Središte</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -209,31 +209,31 @@
         <location line="+1"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
         <source>Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Polumjer</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-9"/>
         <source>Start Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Početni kut</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+1"/>
         <source>End Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Krajnji kut</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+1"/>
         <source>Reversed</source>
-        <translation type="unfinished"></translation>
+        <translation>Obrnut</translation>
     </message>
     <message>
         <location line="+2"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+2"/>
         <source>Diameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Promjer</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -245,7 +245,7 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="-11"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
         <source>Length</source>
-        <translation type="unfinished"></translation>
+        <translation>Duljina</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -256,7 +256,7 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
         <source>Total Length</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukupna duljina</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -268,20 +268,20 @@
         <location filename="../src/entity/RCircleEntity.cpp" line="+2"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Površina</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Total Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukupna površina</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+89"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+93"/>
         <source>Tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Oznaka</translation>
     </message>
     <message>
         <location line="+1"/>
