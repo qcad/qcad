@@ -200,6 +200,7 @@ public:
     virtual bool scale(const RVector& scaleFactors, const RVector& center = RDEFAULT_RVECTOR);
     virtual bool mirror(const RLine& axis);
     virtual bool reverse();
+    virtual RPolyline getReversed() const;
     virtual bool stretch(const RPolyline& area, const RVector& offset);
 
     virtual QSharedPointer<RShape> getTransformed(const QTransform& transform) const;
@@ -212,6 +213,7 @@ public:
 
     virtual QList<QSharedPointer<RShape> > getExploded(int segments = RDEFAULT_MIN1) const;
     QList<RPolyline> getOutline() const;
+    QList<QPair<RPolyline, RPolyline> > getLeftRightOutline() const;
     virtual bool isInterpolated() const {
         return false;
     }

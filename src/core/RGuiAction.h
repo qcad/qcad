@@ -129,6 +129,9 @@ public:
     static void addToWidget(QAction* a, QWidget* w);
     static void removeFromWidget(QAction* a, QWidget* w);
 
+    static void updateIcons();
+    void updateIcon();
+
     /**
      * Sets the action icon to the given icon file.
      */
@@ -381,6 +384,7 @@ protected:
     FactoryFunction factory;
     QString oriText;
     QString scriptFile;
+    QString iconFile;
     QString mainCommand;
     QStringList commandList;
     QStringList defaultCommandList;

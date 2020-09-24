@@ -1272,13 +1272,13 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../scripts/Block/BlockDialog.js" line="+82"/>
+        <location filename="../scripts/Block/BlockDialog.js" line="+81"/>
         <source>block</source>
         <comment>default block name prefix</comment>
         <translation>lohko</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+53"/>
         <source>Leading or trailing spaces.</source>
         <translation>Välit alussa tai lopussa.</translation>
     </message>
@@ -1525,9 +1525,13 @@ Haluatko palauttaa sen?</translation>
         <translation>Pystysuora/vaakasuora</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+17"/>
         <source>Icon Size:</source>
-        <translation>Kuvakkeen koko:</translation>
+        <translation type="vanished">Kuvakkeen koko:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+17"/>
+        <source>Icon size:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+71"/>
@@ -1588,9 +1592,13 @@ Haluatko palauttaa sen?</translation>
         <translation>Työkalumatriisi</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CadToolMatrix/PreferencesPage.ui" line="+17"/>
         <source>Icon Size:</source>
-        <translation>Kuvakkeen koko:</translation>
+        <translation type="vanished">Kuvakkeen koko:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Widgets/CadToolMatrix/PreferencesPage.ui" line="+17"/>
+        <source>Icon size:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+96"/>
@@ -2223,18 +2231,18 @@ Haluatko palauttaa sen?</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+60"/>
+        <location line="+68"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Komentorivi</translation>
     </message>
     <message>
-        <location line="-30"/>
+        <location line="-21"/>
         <source>&amp;Command Line</source>
         <translation>&amp;Komentorivi</translation>
     </message>
     <message>
-        <location line="+217"/>
+        <location line="+208"/>
         <source>Invalid value:</source>
         <translation>Virheellinen arvo:</translation>
     </message>
@@ -2304,9 +2312,13 @@ Haluatko palauttaa sen?</translation>
         <translation>: </translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
         <source>History Size:</source>
-        <translation>Historian koko:</translation>
+        <translation type="vanished">Historian koko:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
+        <source>History size:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
@@ -3332,9 +3344,8 @@ Haluatko palauttaa sen?</translation>
         <translation>Nuoli</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Architectural Tick</source>
-        <translation>Arkkitehtien rasti</translation>
+        <translation type="vanished">Arkkitehtien rasti</translation>
     </message>
     <message>
         <source>Font</source>
@@ -3343,6 +3354,11 @@ Haluatko palauttaa sen?</translation>
     <message>
         <source>Dimension label font:</source>
         <translation type="vanished">Mittaselitteen kirjasin:</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Architectural tick</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -3550,12 +3566,12 @@ on jo luettelossa.</translation>
 <context>
     <name>DrawBasedOnRectanglePP</name>
     <message>
-        <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+69"/>
+        <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+72"/>
         <source>First corner</source>
         <translation>Ensimmäinen kulma</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+8"/>
         <source>Second corner</source>
         <translation>Toinen kulma</translation>
     </message>
@@ -3917,6 +3933,11 @@ on jo luettelossa.</translation>
         <source>Entity is not a polyline.</source>
         <translation>Kohde ei ole murtoviiva.</translation>
     </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a spline with fit points.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>EcmaScriptShell</name>
@@ -3926,12 +3947,12 @@ on jo luettelossa.</translation>
         <translation>Näytä ECMASkripin shell</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+55"/>
         <source>&amp;Script Shell</source>
         <translation>&amp;Skripti shell</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+35"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation>Skripti Shell</translation>
@@ -4867,8 +4888,23 @@ on jo luettelossa.</translation>
 <context>
     <name>FlexPainter</name>
     <message>
-        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1816"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1115"/>
+        <source>Add Active SubLayer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>FP added layer:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1196"/>
         <source>&amp;FlexPainter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Paints over selection mimicking a roller stamp</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4885,62 +4921,56 @@ on jo luettelossa.</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+18"/>
         <source>Mirror painters over baseline</source>
-        <translation>Maalaus peilikuvana perusviivan yli</translation>
+        <translation type="vanished">Maalaus peilikuvana perusviivan yli</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+21"/>
         <source>Flip Painters</source>
         <translation>Käännä Painters</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Group all castings to one operation</source>
-        <translation type="unfinished">Ryhmitä kaikki valetut yhdeksi operaatioksi</translation>
+        <translation type="obsolete">Ryhmitä kaikki valetut yhdeksi operaatioksi</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+10"/>
         <source>Cast in group</source>
         <translation>Luo ryhmään</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Cast on newly sub-layer &apos;Painted&apos; if applicable</source>
-        <translation>Luo uuteen alitasoon &apos;Maalattu&apos; tarvittaessa</translation>
+        <translation type="vanished">Luo uuteen alitasoon &apos;Maalattu&apos; tarvittaessa</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+17"/>
         <source>Cast on sub-layer</source>
         <translation>Luo alitaso</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Start with casting a begin apex on open forms</source>
-        <translation>Aloita luomalla aloituspiste avoimiin muotoihin</translation>
+        <translation type="vanished">Aloita luomalla aloituspiste avoimiin muotoihin</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+13"/>
         <source>Add Begin Apex</source>
         <translation>Lisää aloituspiste</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>End with casting an end apex on open forms</source>
-        <translation>Lopeta luominen/valu kärjen loppuun avoimissa muodoissa</translation>
+        <translation type="vanished">Lopeta luominen/valu kärjen loppuun avoimissa muodoissa</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+16"/>
         <source>Add End Apex</source>
         <translation>Lisää loppupiste</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Add insertions in between eg. spacers, knots</source>
-        <translation>Lisää lisäyksiä väleihin esim. välikappaleet, solmut</translation>
+        <translation type="vanished">Lisää lisäyksiä väleihin esim. välikappaleet, solmut</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+16"/>
         <source>Add Insertions</source>
         <translation>Lisää lisäyksiä</translation>
     </message>
@@ -4950,14 +4980,53 @@ on jo luettelossa.</translation>
         <translation>Maalaussarja</translation>
     </message>
     <message>
-        <location line="+36"/>
         <source>Preview of painters</source>
-        <translation>Maalauksien esikatselu</translation>
+        <translation type="vanished">Maalauksien esikatselu</translation>
+    </message>
+    <message>
+        <source>Select painter set</source>
+        <translation type="vanished">Valitse maalaussarja</translation>
+    </message>
+    <message>
+        <location line="-101"/>
+        <source>Mirror painters over baseline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Group all castings to one operation.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Cast on newly sub-layer &apos;Painted&apos;.
+BUG: Interferes with group castings.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Start with casting a begin apex on open forms.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>End with casting an end apex on open forms.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Add insertions in between eg. spacers, knots. (Not implemented)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+65"/>
+        <source>Preview of painters.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+41"/>
-        <source>Select painter set</source>
-        <translation>Valitse maalaussarja</translation>
+        <source>Select painter set.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5031,16 +5100,79 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location line="+36"/>
-        <source>Preview of insertion</source>
-        <translation>Lisäyksen esikatselu</translation>
+        <source>Preview of insertion.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+38"/>
-        <source>Select Insertion or Enter void space</source>
-        <translation>Valitse lisäys tai syötä tyhjä tila</translation>
+        <source>Select Insertion or Enter void space. (Not implemented)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+250"/>
+        <source>Version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>FlexPainter Beta 0.42e © CVH 2020 </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+245"/>
+        <source>Document Units.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>Enter painter width. (+0)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+90"/>
+        <source>Enter main painter stepsize. (+0)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Enter main painter length. (+)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Keep painters proportional.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Select percentage of Stepsize.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+86"/>
+        <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+92"/>
+        <source>Verbose info. (persistent on)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Deleted painted over base entities. (persistent off)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Preview of insertion</source>
+        <translation type="vanished">Lisäyksen esikatselu</translation>
+    </message>
+    <message>
+        <source>Select Insertion or Enter void space</source>
+        <translation type="vanished">Valitse lisäys tai syötä tyhjä tila</translation>
+    </message>
+    <message>
+        <location line="-879"/>
         <source>&lt;Enter space size&gt;</source>
         <translation>&lt;Syötä tilan koko&gt;</translation>
     </message>
@@ -5050,22 +5182,20 @@ on jo luettelossa.</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+328"/>
         <source>Document Units</source>
-        <translation>Asiakirjan yksiköt</translation>
+        <translation type="vanished">Asiakirjan yksiköt</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+489"/>
         <source>#Undefined#</source>
         <translation>#Määrittämätön#</translation>
     </message>
     <message>
-        <location line="+33"/>
         <source>Enter painter width (+0)</source>
-        <translation>Syötä maalauksen leveys (+0)</translation>
+        <translation type="vanished">Syötä maalauksen leveys (+0)</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+36"/>
         <source>Width : </source>
         <translation>Leveys: </translation>
     </message>
@@ -5080,37 +5210,33 @@ on jo luettelossa.</translation>
         <translation>Toistuvat maalausasetukset</translation>
     </message>
     <message>
-        <location line="+62"/>
         <source>Enter main painter stepsize (+0)</source>
-        <translation type="unfinished">Syötä päämaalauksen askelkoko (+0)</translation>
+        <translation type="obsolete">Syötä päämaalauksen askelkoko (+0)</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+65"/>
         <source>Stepsize :</source>
         <translation>Askelkoko:</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Enter main painter length (+)</source>
-        <translation>Syötä päämaalauksen pituus (+)</translation>
+        <translation type="vanished">Syötä päämaalauksen pituus (+)</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+16"/>
         <source>Length :</source>
         <translation>Pituus:</translation>
     </message>
     <message>
-        <location line="+19"/>
         <source>Keep painters proportional</source>
-        <translation type="unfinished">Säilytä maalauksen suhteet</translation>
+        <translation type="obsolete">Säilytä maalauksen suhteet</translation>
     </message>
     <message>
-        <location line="+29"/>
         <source>Select percentage of Stepsize</source>
-        <translation>Valitse askelkoon prosentti</translation>
+        <translation type="vanished">Valitse askelkoon prosentti</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+52"/>
         <source>Closed Forms shifting % :</source>
         <translation>Suljettujen muotojen muutos %:</translation>
     </message>
@@ -5120,12 +5246,11 @@ on jo luettelossa.</translation>
         <translation>Avoimien muotojen suurennusvaihtoehdot</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form</source>
-        <translation>Sovita koonmuutos f 1,00–0,90 sopimaan koko muotoon</translation>
+        <translation type="vanished">Sovita koonmuutos f 1,00–0,90 sopimaan koko muotoon</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+24"/>
         <source>Dynamically scale to fit</source>
         <translation>Muuta sopimaan dynaamisesti</translation>
     </message>
@@ -5145,22 +5270,20 @@ on jo luettelossa.</translation>
         <translation>Kohdista loppuun</translation>
     </message>
     <message>
-        <location line="+36"/>
         <source>Verbose info (persistent on)</source>
-        <translation>Sanallinen tieto (pysyvästi päällä)</translation>
+        <translation type="vanished">Sanallinen tieto (pysyvästi päällä)</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+39"/>
         <source>Verbose *</source>
         <translation>Sanallinen *</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Deleted painted over base entities (persistent off)</source>
-        <translation>Poistettu peruskokonaisuuksien ylimaalaus (pysyvästi pois päältä)</translation>
+        <translation type="vanished">Poistettu peruskokonaisuuksien ylimaalaus (pysyvästi pois päältä)</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+16"/>
         <source>Delete Base Entities *</source>
         <translation>Poista peruskokonaisuudet *</translation>
     </message>
@@ -5485,11 +5608,20 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Use full resolution for Retina display</source>
-        <translation>Käytä täyttä tarkkuutta Retinanäytöissä</translation>
+        <source>Use full resolution for Retina / high resolution display</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+398"/>
+        <location line="+512"/>
+        <source>Persistent selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use full resolution for Retina display</source>
+        <translation type="vanished">Käytä täyttä tarkkuutta Retinanäytöissä</translation>
+    </message>
+    <message>
+        <location line="-114"/>
         <source>auto</source>
         <translation type="unfinished">automaattinen</translation>
     </message>
@@ -5589,9 +5721,8 @@ on jo luettelossa.</translation>
         <translation>Valinta</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Persistent Selection</source>
-        <translation>Pysyvä valinta</translation>
+        <translation type="vanished">Pysyvä valinta</translation>
     </message>
 </context>
 <context>
@@ -5783,19 +5914,31 @@ on jo luettelossa.</translation>
 <context>
     <name>GraphicsViewFonts</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
         <source>Ruler Font:</source>
-        <translation>Viivaimen kirjasin:</translation>
+        <translation type="vanished">Viivaimen kirjasin:</translation>
+    </message>
+    <message>
+        <source>Snap Label Font:</source>
+        <translation type="vanished">Tartunnan selitteen kirjasin:</translation>
+    </message>
+    <message>
+        <source>Info Label Font:</source>
+        <translation type="vanished">Tieto selitteen kirjasin:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
+        <source>Ruler font:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+16"/>
-        <source>Snap Label Font:</source>
-        <translation>Tartunnan selitteen kirjasin:</translation>
+        <source>Snap label font:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Info Label Font:</source>
-        <translation>Tieto selitteen kirjasin:</translation>
+        <source>Info label font:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6622,24 +6765,40 @@ on jo luettelossa.</translation>
 <context>
     <name>Input</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/InputPreferences/PreferencesPage.ui" line="+19"/>
         <source>Decimal Point:</source>
-        <translation>Desimaalipilkku:</translation>
+        <translation type="vanished">Desimaalipilkku:</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Cartesian Coordinate Separator:</source>
-        <translation>Suorakulmaisen koordinaatiston erotin:</translation>
+        <translation type="vanished">Suorakulmaisen koordinaatiston erotin:</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Polar Coordinate Separator:</source>
-        <translation>Napakoordinaatiston erotin:</translation>
+        <translation type="vanished">Napakoordinaatiston erotin:</translation>
+    </message>
+    <message>
+        <source>Relative Coordinate Prefix:</source>
+        <translation type="vanished">Suhteellisen koordinaatiston etuliite:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Edit/AppPreferences/InputPreferences/PreferencesPage.ui" line="+19"/>
+        <source>Decimal point:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Relative Coordinate Prefix:</source>
-        <translation>Suhteellisen koordinaatiston etuliite:</translation>
+        <source>Cartesian coordinate separator:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Polar coordinate separator:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Relative coordinate prefix:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+12"/>
@@ -6648,23 +6807,39 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Absolute Cartesian Coordinate:</source>
-        <translation>Absoluuttinen suorakulmainen koordinaatisto:</translation>
+        <source>Absolute Cartesian coordinate:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
-        <source>Absolute Polar Coordinate:</source>
-        <translation>Absoluuttinen napakoordinaatisto:</translation>
+        <source>Absolute polar coordinate:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
-        <source>Relative Cartesian Coordinate:</source>
-        <translation>Suhteellinen suorakulmainen koordinaatisto:</translation>
+        <source>Relative Cartesian coordinate:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+21"/>
+        <source>Relative polar coordinate:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Absolute Cartesian Coordinate:</source>
+        <translation type="vanished">Absoluuttinen suorakulmainen koordinaatisto:</translation>
+    </message>
+    <message>
+        <source>Absolute Polar Coordinate:</source>
+        <translation type="vanished">Absoluuttinen napakoordinaatisto:</translation>
+    </message>
+    <message>
+        <source>Relative Cartesian Coordinate:</source>
+        <translation type="vanished">Suhteellinen suorakulmainen koordinaatisto:</translation>
+    </message>
+    <message>
         <source>Relative Polar Coordinate:</source>
-        <translation>Suhteellinen napakoordinaatisto:</translation>
+        <translation type="vanished">Suhteellinen napakoordinaatisto:</translation>
     </message>
 </context>
 <context>
@@ -7084,9 +7259,13 @@ on jo luettelossa.</translation>
 <context>
     <name>Language</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui" line="+20"/>
         <source>Language of User Interface:</source>
-        <translation>Käyttöliittymän kieli:</translation>
+        <translation type="vanished">Käyttöliittymän kieli:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui" line="+20"/>
+        <source>Language of user interface:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7596,19 +7775,27 @@ Kirjastoselain ei ole käytettävissä.</translation>
         <translation>Näyttöasetukset</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Icon Size:</source>
-        <translation>Kuvakkeen koko:</translation>
+        <translation type="vanished">Kuvakkeen koko:</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+53"/>
         <source>Dark icon background</source>
         <translation>Tumma kuvake tausta</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>View Mode:</source>
-        <translation>Näkymä:</translation>
+        <translation type="vanished">Näkymä:</translation>
+    </message>
+    <message>
+        <location line="-44"/>
+        <source>Icon size:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>View mode:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -8387,9 +8574,13 @@ näkyy hakutuloksissa:</translation>
         <translation>Yleistä</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
         <source>Global Linetype Scale:</source>
-        <translation>Yleinen viivatyypin mittakaava:</translation>
+        <translation type="vanished">Yleinen viivatyypin mittakaava:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
+        <source>Global linetype scale:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+35"/>
@@ -10659,7 +10850,7 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>SelectContour</name>
     <message>
-        <location filename="../scripts/Select/SelectContour/SelectContour.js" line="+53"/>
+        <location filename="../scripts/Select/SelectContour/SelectContour.js" line="+54"/>
         <source>Choose entity of contour</source>
         <translation>Valitse kohteen ääriviiva</translation>
     </message>
@@ -10696,6 +10887,11 @@ näkyy hakutuloksissa:</translation>
         <location line="+27"/>
         <source>Tolerance:</source>
         <translation>Toleranssi:</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Same Layer</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
@@ -11067,6 +11263,11 @@ näkyy hakutuloksissa:</translation>
     <message>
         <source>1</source>
         <translation type="obsolete">1</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
+        <source>Rotate:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11827,9 +12028,13 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>StatusBar</name>
     <message>
-        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
         <source>Status Bar Font:</source>
-        <translation>Tilarivin kirjasin:</translation>
+        <translation type="vanished">Tilarivin kirjasin:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
+        <source>Status bar font:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12493,9 +12698,13 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>Theme</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/PreferencesPage.ui" line="+20"/>
         <source>User Interface Theme:</source>
-        <translation>Käyttäjän teema:</translation>
+        <translation type="vanished">Käyttäjän teema:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/PreferencesPage.ui" line="+20"/>
+        <source>User interface theme:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12586,9 +12795,13 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>ToolBar</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui" line="+19"/>
         <source>Icon Size:</source>
-        <translation>Kuvakkeen koko:</translation>
+        <translation type="vanished">Kuvakkeen koko:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui" line="+19"/>
+        <source>Icon size:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+72"/>
@@ -12607,8 +12820,12 @@ näkyy hakutuloksissa:</translation>
     </message>
     <message>
         <location line="+6"/>
+        <source>Shortcut prefix character:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Shortcut Prefix Character:</source>
-        <translation>Pikavalinta etuliiteen merkille:</translation>
+        <translation type="vanished">Pikavalinta etuliiteen merkille:</translation>
     </message>
 </context>
 <context>
@@ -12881,6 +13098,42 @@ näkyy hakutuloksissa:</translation>
     </message>
 </context>
 <context>
+    <name>Ui</name>
+    <message>
+        <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
+        <source>These settings affect the resolution and scale of the QCAD user interface. These preferences can be adjusted if there are problems with the user interface of QCAD, such as very large or very small icons or text labels.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Auto screen scale factor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Enable high DPI scaling</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Scale factor:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>UiPreferences</name>
+    <message>
+        <location filename="../scripts/Edit/AppPreferences/UiPreferences/UiPreferences.js" line="+29"/>
+        <source>General</source>
+        <translation type="unfinished">Yleistä</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>User Interface</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Undo</name>
     <message>
         <location filename="../scripts/Edit/Undo/UndoInit.js" line="+2"/>
@@ -12891,19 +13144,16 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>UnitSettings</name>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
         <source>Drawing Unit:</source>
-        <translation>Piirtoyksikkö:</translation>
+        <translation type="vanished">Piirtoyksikkö:</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Paper Unit:</source>
-        <translation>Paperiyksikkö:</translation>
+        <translation type="vanished">Paperiyksikkö:</translation>
     </message>
     <message>
-        <location line="+13"/>
         <source>Measurement System (for line types and hatch patterns):</source>
-        <translation>Mittausjärjestelmä (viivatyypeille ja kuvioinnin pinnoille):</translation>
+        <translation type="vanished">Mittausjärjestelmä (viivatyypeille ja kuvioinnin pinnoille):</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js" line="+27"/>
@@ -13035,6 +13285,21 @@ näkyy hakutuloksissa:</translation>
         <location line="+1"/>
         <source>Metric</source>
         <translation>Metrinen</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
+        <source>Drawing unit:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Paper unit:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Measurement system (for line types and hatch patterns):</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -13169,7 +13434,7 @@ näkyy hakutuloksissa:</translation>
         <translation type="vanished">Ruudukon välit &lt; Aliruudukon välit</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+290"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+295"/>
         <source>Dropped data not supported</source>
         <translation>Poistettuja tietoja ei tueta</translation>
     </message>
@@ -13202,12 +13467,12 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1038"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1069"/>
         <source>Restore defaults</source>
         <translation>Palauta oletusarvot</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+45"/>
         <source>Insert Symbol</source>
         <translation>Lisää symboli</translation>
     </message>
@@ -13512,7 +13777,7 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+856"/>
+        <location filename="../scripts/library.js" line="+865"/>
         <source>Objects</source>
         <translation>Esineet</translation>
     </message>

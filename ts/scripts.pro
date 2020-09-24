@@ -355,6 +355,8 @@ SOURCES = \
 ../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferencesInit.js \
 ../scripts/Edit/AppPreferences/ToolBarPreferences/ToolBarPreferences.js \
 ../scripts/Edit/AppPreferences/ToolBarPreferences/ToolBarPreferencesInit.js \
+../scripts/Edit/AppPreferences/UiPreferences/UiPreferences.js \
+../scripts/Edit/AppPreferences/UiPreferences/UiPreferencesInit.js \
 ../scripts/Edit/ClipboardOperation.js \
 ../scripts/Edit/ConvertUnit/ConvertUnit.js \
 ../scripts/Edit/ConvertUnit/ConvertUnitInit.js \
@@ -1059,6 +1061,7 @@ SOURCES = \
 ../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.ui \
 ../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.ui \
 ../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPP.ui \
+../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui \
 ../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui \
 ../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui \
 ../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui \
@@ -1079,6 +1082,7 @@ SOURCES = \
 ../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui \
 ../scripts/Edit/AppPreferences/ThemePreferences/PreferencesPage.ui \
 ../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui \
+../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui \
 ../scripts/Edit/ConvertUnit/ConvertUnit.ui \
 ../scripts/Edit/DrawingPreferences/ColorSettings/PreferencesPage.ui \
 ../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui \

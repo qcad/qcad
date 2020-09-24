@@ -70,6 +70,7 @@ void RGraphicsSceneQt::clear() {
 
 void RGraphicsSceneQt::updateSelectionStatus(QSet<REntity::Id>& affectedEntities, bool updateViews) {
     RGraphicsScene::updateSelectionStatus(affectedEntities, updateViews);
+
     /*
     // Change painter paths directly when selecting an entity (faster).
     // Generally good idea, needs refining (blue handles not added when selecting entity):
@@ -83,10 +84,10 @@ void RGraphicsSceneQt::updateSelectionStatus(QSet<REntity::Id>& affectedEntities
         }
         bool on = entity->isSelected();
 
-        QList<RPainterPath> pps = getPainterPaths(*it);
-        QList<RPainterPath>::iterator it2;
-        for (it2 = pps.begin(); it2 != pps.end(); it2++) {
-            RPainterPath& pp = *it2;
+        QList<RGraphicsSceneDrawable>* pps = getDrawables(*it);
+        QList<RGraphicsSceneDrawable>::iterator it2;
+        for (it2 = pps->begin(); it2 != pps->end(); it2++) {
+            RGraphicsSceneDrawable& pp = *it2;
             pp.setSelected(on);
         }
     }
@@ -269,7 +270,11 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
         currentPainterPath.addPath(pp);
         currentPainterPath.setFillRule(Qt::WindingFill);
         currentPainterPath.setBrush(currentPen.color());
-        currentPainterPath.setPen(QPen(Qt::NoPen));
+        //currentPainterPath.setPen(QPen(Qt::NoPen));
+        QPen p(Qt::SolidLine);
+        p.setCosmetic(true);
+        p.setColor(currentPen.color());
+        currentPainterPath.setPen(p);
         endPath();
     }
     else {

@@ -36,7 +36,7 @@ RRulerQt::RRulerQt(QWidget* parent) :
     lastSize(0,0),
     viewportChanged(false),
     darkGuiBackground(-1) {
-    
+
     qreal dpr = 1.0;
 #if QT_VERSION >= 0x050000
     dpr = devicePixelRatio();
@@ -152,9 +152,7 @@ void RRulerQt::paintEvent(QPaintEvent* e) {
     dpr = devicePixelRatio();
 #endif
 
-    if (darkGuiBackground<0) {
-        darkGuiBackground = RSettings::hasDarkGuiBackground();
-    }
+    darkGuiBackground = RSettings::hasDarkGuiBackground();
 
     if (orientation == Qt::Horizontal) {
         if (sizeHint().height()*dpr != lastSize.height()) {

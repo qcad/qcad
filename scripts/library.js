@@ -570,6 +570,15 @@ function isSplineEntity(obj) {
     return isOfType(obj, RSplineEntity) || isOfType(obj, RSplineEntityPointer);
 }
 
+/**
+ * Checks if the given object is a spline entity with fit points.
+ *
+ * \return true if the given object is a spline entity (RSplineEntity) with fit points.
+ */
+function isSplineEntityWithFitPoints(obj) {
+    return isSplineEntity(obj) && obj.hasFitPoints();
+}
+
 function isClosedSplineEntity(obj, tolerance) {
     if (isNull(tolerance)) {
         return isSplineEntity(obj) && obj.isGeometricallyClosed();

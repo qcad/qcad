@@ -131,29 +131,27 @@
     <function_decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryIntersectedEntitiesXYFast</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryIntersectedShapesXYFast</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>, <param><decl><type><name>bool</name></type> <name>noInfiniteEntities</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
-    <function_decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryIntersectedEntitiesXY</name><parameter_list>(
-            <param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>,
-            <param><decl><type><name>bool</name></type> <name>checkBoundingBoxOnly</name>=<init><expr><name>false</name></expr></init></decl></param>,
-            <param><decl><type><name>bool</name></type> <name>includeLockedLayers</name>=<init><expr><name>true</name></expr></init></decl></param>,
-            <param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name> =<init> <expr><name><name>RBlock</name>::<name>INVALID_ID</name></name></expr></init></decl></param>,
-            <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name><name>RS</name>::<name>EntityType</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>filter</name> =<init> <expr><name>RDEFAULT_QLIST_RS_ENTITYTYPE</name></expr></init></decl></param>,
-            <param><decl><type><name>bool</name></type> <name>selectedOnly</name> =<init> <expr><name>false</name></expr></init></decl></param>
-    )</parameter_list> <specifier>const</specifier>;</function_decl>
-
-    <function_decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QSet<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>queryIntersectedShapesXY</name><parameter_list>(
-        <param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>,
+    <function_decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryIntersectedEntitiesXY</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>,
         <param><decl><type><name>bool</name></type> <name>checkBoundingBoxOnly</name>=<init><expr><name>false</name></expr></init></decl></param>,
         <param><decl><type><name>bool</name></type> <name>includeLockedLayers</name>=<init><expr><name>true</name></expr></init></decl></param>,
         <param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name> =<init> <expr><name><name>RBlock</name>::<name>INVALID_ID</name></name></expr></init></decl></param>,
         <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name><name>RS</name>::<name>EntityType</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>filter</name> =<init> <expr><name>RDEFAULT_QLIST_RS_ENTITYTYPE</name></expr></init></decl></param>,
-        <param><decl><type><name>bool</name></type> <name>selectedOnly</name> =<init> <expr><name>false</name></expr></init></decl></param>
-    )</parameter_list> <specifier>const</specifier>;</function_decl>
+        <param><decl><type><name>bool</name></type> <name>selectedOnly</name> =<init> <expr><name>false</name></expr></init></decl></param>,
+        <param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name> =<init> <expr><name><name>RLayer</name>::<name>INVALID_ID</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QSet<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>queryIntersectedShapesXY</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>checkBoundingBoxOnly</name>=<init><expr><name>false</name></expr></init></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>includeLockedLayers</name>=<init><expr><name>true</name></expr></init></decl></param>,
+        <param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name> =<init> <expr><name><name>RBlock</name>::<name>INVALID_ID</name></name></expr></init></decl></param>,
+        <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name><name>RS</name>::<name>EntityType</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>filter</name> =<init> <expr><name>RDEFAULT_QLIST_RS_ENTITYTYPE</name></expr></init></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>selectedOnly</name> =<init> <expr><name>false</name></expr></init></decl></param>,
+        <param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name> =<init> <expr><name><name>RLayer</name>::<name>INVALID_ID</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryContainedEntitiesXY</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>querySelectedEntities</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
-    <function_decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryConnectedEntities</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>double</name></type> <name>tolerance</name> =<init> <expr><name><name>RS</name>::<name>PointTolerance</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryConnectedEntities</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>double</name></type> <name>tolerance</name> =<init> <expr><name><name>RS</name>::<name>PointTolerance</name></name></expr></init></decl></param>, <param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name> =<init> <expr><name><name>RLayer</name>::<name>INVALID_ID</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>QSet<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryPropertyEditorObjects</name><parameter_list>()</parameter_list>;</function_decl>
 

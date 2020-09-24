@@ -437,6 +437,14 @@ void RSpline::removeLastFitPoint() {
 }
 
 /**
+ * Removes the first fit point.
+ */
+void RSpline::removeFirstFitPoint() {
+    fitPoints.removeFirst();
+    update();
+}
+
+/**
  * Sets the fit points.
  */
 void RSpline::setFitPoints(const QList<RVector>& fitPoints) {

@@ -142,6 +142,9 @@
         removeFitPointAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        removeFirstFitPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         removeLastFitPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

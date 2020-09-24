@@ -9,4 +9,5 @@ SUBDIRS = \
     TextPreferences \
     ThemePreferences \
     ToolBarPreferences \
+    UiPreferences \
     dir

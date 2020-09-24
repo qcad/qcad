@@ -208,10 +208,10 @@ bool RBlockReferenceData::isPointType() const {
 QList<RBox> RBlockReferenceData::getBoundingBoxes(bool ignoreEmpty) const {
     QList<RBox>* bbs;
     if (ignoreEmpty) {
-        bbs = &boundingBoxes;
+        bbs = &boundingBoxesIgnoreEmpty;
     }
     else {
-        bbs = &boundingBoxesIgnoreEmpty;
+        bbs = &boundingBoxes;
     }
 
     if (!bbs->isEmpty()) {

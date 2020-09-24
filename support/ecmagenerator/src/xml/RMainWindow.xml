@@ -12,6 +12,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RKeyListener" />
   <class_decl name="RLayerListener" />
   <class_decl name="RNewDocumentListener" />
+  <class_decl name="RPaletteListener" />
   <class_decl name="RPenListener" />
   <class_decl name="RPropertyListener" />
   <class_decl name="RPreferencesListener" />
@@ -675,6 +676,27 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="RDocumentInterface *" name="documentInterface"
         isConst="false" />
       </variant>
+    </method>
+    <method name="addPaletteListener" cppName="addPaletteListener"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPaletteListener *"
+        typeName="RPaletteListener *" name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="removePaletteListener"
+    cppName="removePaletteListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPaletteListener *"
+        typeName="RPaletteListener *" name="l" isConst="false" />
+      </variant>
+    </method>
+    <method name="notifyPaletteListeners"
+    cppName="notifyPaletteListeners" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
     </method>
     <method name="ucsSetEvent" cppName="ucsSetEvent"
     specifier="public" isStatic="false" isVirtual="false"

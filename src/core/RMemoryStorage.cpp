@@ -393,6 +393,10 @@ QSet<RLinetype::Id> RMemoryStorage::queryAllLinetypes() {
 QSet<REntity::Id> RMemoryStorage::queryInfiniteEntities() const {
     QSet<REntity::Id> result;
 
+    if (!typeObjectMap.contains(RS::EntityXLine) && !typeObjectMap.contains(RS::EntityRay)) {
+        return result;
+    }
+
     RBlock::Id currentBlockId = getCurrentBlockId();
     const QHash<REntity::Id, QSharedPointer<REntity> >* map;
     if (blockEntityMap.contains(currentBlockId)) {
@@ -1326,7 +1330,7 @@ RBox RMemoryStorage::getBoundingBox(bool ignoreHiddenLayers, bool ignoreEmpty) c
 //    qDebug() << "bb ignoreHiddenLayers: " << boundingBox[1][0];
 //    qDebug() << "bb ignoreHiddenLayers, ignoreEmpty: " << boundingBox[1][1];
 
-    return boundingBox[ignoreHiddenLayers][ignoreEmpty];
+    return boundingBox[(int)ignoreHiddenLayers][(int)ignoreEmpty];
 }
 
 RBox RMemoryStorage::getSelectionBox() const {

@@ -52,7 +52,6 @@ BlockDialog.prototype.show = function() {
 
     var widgets = getWidgets(this.dialog);
     var leBlockName = widgets["BlockName"];
-    leBlockName.selectAll();
     var rx = new RegExp("[^<>/\\\\\":;\?\*|,=`]{1,255}");
     this.validator = new QRegExpValidator(rx, leBlockName);
     leBlockName.setValidator(this.validator);
@@ -81,6 +80,7 @@ BlockDialog.prototype.show = function() {
             ++c;
             leBlockName.text = qsTr("block", "default block name prefix") + " " + c;
         }
+        leBlockName.selectAll();
     }
 
     if (!this.dialog.exec()) {

@@ -340,6 +340,9 @@
         reverse
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getReversed
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         stretch
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -359,6 +362,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getOutline
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLeftRightOutline
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isInterpolated

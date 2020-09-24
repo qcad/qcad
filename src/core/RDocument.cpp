@@ -1556,7 +1556,7 @@ QSet<REntity::Id> RDocument::queryIntersectedShapesXYFast(const RBox& box, bool 
 
 QSet<REntity::Id> RDocument::queryIntersectedEntitiesXY(
         const RBox& box, bool checkBoundingBoxOnly, bool includeLockedLayers, RBlock::Id blockId,
-        const QList<RS::EntityType>& filter, bool selectedOnly) const {
+        const QList<RS::EntityType>& filter, bool selectedOnly, RLayer::Id layerId) const {
 
     bool onlyVisible = false;
 
@@ -1587,12 +1587,12 @@ QSet<REntity::Id> RDocument::queryIntersectedEntitiesXY(
         return ids;
     }
 
-    return queryIntersectedShapesXY(box, checkBoundingBoxOnly, includeLockedLayers, blockId, filter, selectedOnly).keys().toSet();
+    return queryIntersectedShapesXY(box, checkBoundingBoxOnly, includeLockedLayers, blockId, filter, selectedOnly, layerId).keys().toSet();
 }
 
 QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
         const RBox& box, bool checkBoundingBoxOnly, bool includeLockedLayers, RBlock::Id blockId,
-        const QList<RS::EntityType>& filter, bool selectedOnly) const {
+        const QList<RS::EntityType>& filter, bool selectedOnly, RLayer::Id layerId) const {
 
     bool onlyVisible = false;
 
@@ -1729,6 +1729,13 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
         // layer is locked:
         if (!includeLockedLayers) {
             if (isLayerLocked(entity->getLayerId())) {
+                continue;
+            }
+        }
+
+        // restrict to a specific layer:
+        if (layerId!=RLayer::INVALID_ID) {
+            if (entity->getLayerId()!=layerId) {
                 continue;
             }
         }
@@ -1884,7 +1891,7 @@ QSet<RObject::Id> RDocument::querySelectedLayers() const {
     return storage.querySelectedLayers();
 }
 
-QSet<REntity::Id> RDocument::queryConnectedEntities(REntity::Id entityId, double tolerance) {
+QSet<REntity::Id> RDocument::queryConnectedEntities(REntity::Id entityId, double tolerance, RObject::Id layerId) {
     QSet<REntity::Id> ret;
 
     QSharedPointer<REntity> entity = queryEntityDirect(entityId);
@@ -1909,7 +1916,7 @@ QSet<REntity::Id> RDocument::queryConnectedEntities(REntity::Id entityId, double
 
             // find connected entities:
             // candidates intersect with small box around end point:
-            QSet<REntity::Id> candidates = queryIntersectedEntitiesXY(box, true, false, RBlock::INVALID_ID);
+            QSet<REntity::Id> candidates = queryIntersectedEntitiesXY(box, true, false, RBlock::INVALID_ID, QList<RS::EntityType>(), false, layerId);
                       //QList<RS::EntityType>() << RS::EntityLine << RS::EntityArc << RS::EntityEllipse << RS::EntityPolyline << RS::EntitySpline);
 
             candidates.remove(entityId);

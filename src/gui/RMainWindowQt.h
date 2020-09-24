@@ -45,6 +45,7 @@ class RLayerListener;
 class RMdiArea;
 class RMdiChildQt;
 class RNewDocumentListener;
+class RPaletteListener;
 class RPenListener;
 class RPreferencesListener;
 class RPropertyListener;

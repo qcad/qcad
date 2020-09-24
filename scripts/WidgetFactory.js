@@ -316,6 +316,9 @@ WidgetFactory.saveState = function(widget, group, document, map) {
         else if (isOfType(c, QSpinBox) || isOfType(c, QDoubleSpinBox)) {
             value = c.value;
         }
+        else if (isOfType(c, QSlider)) {
+            value = c.value;
+        }
         else if (isOfType(c, QListWidget)) {
             var items = [];
             if (c.count != 0) {
@@ -818,6 +821,24 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
                 WidgetFactory.connect(c["valueChanged(double)"], signalReceiver, c.objectName);
                 c["valueChanged(double)"].connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
             }
+
+            if (isNull(c.defaultValue)) {
+                c.defaultValue = c.value;
+                if (signalReceiver!=undefined) {
+                    f = signalReceiver["slot" + c.objectName + "Changed"];
+                    if (isFunction(f)) {
+                        f.call(signalReceiver, c.value);
+                    }
+                }
+            }
+            if (!isNull(value)) {
+                c.value = value;
+            }
+            continue;
+        }
+        if (isOfType(c, QSlider)) {
+            WidgetFactory.connect(c["valueChanged(int)"], signalReceiver, c.objectName);
+            c["valueChanged(int)"].connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
 
             if (isNull(c.defaultValue)) {
                 c.defaultValue = c.value;

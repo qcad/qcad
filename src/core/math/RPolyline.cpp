@@ -1100,6 +1100,15 @@ QList<QSharedPointer<RShape> > RPolyline::getExploded(int segments) const {
     return ret;
 }
 
+QList<QPair<RPolyline, RPolyline> > RPolyline::getLeftRightOutline() const {
+    if (RPolyline::hasProxy()) {
+        return RPolyline::getPolylineProxy()->getLeftRightOutline(*this);
+    }
+    else {
+        return QList<QPair<RPolyline, RPolyline> >();
+    }
+}
+
 QList<RPolyline> RPolyline::getOutline() const {
     if (RPolyline::hasProxy()) {
         return RPolyline::getPolylineProxy()->renderThickPolyline(*this);
@@ -1884,6 +1893,12 @@ bool RPolyline::reverse() {
     Q_ASSERT(vertices.length()==endWidths.length());
 
     return true;
+}
+
+RPolyline RPolyline::getReversed() const {
+    RPolyline ret = *this;
+    ret.reverse();
+    return ret;
 }
 
 bool RPolyline::stretch(const RPolyline& area, const RVector& offset) {

@@ -304,6 +304,10 @@ void RMainWindowQt::closeEvent(QCloseEvent* e) {
     }
 
     if (mdiArea->subWindowList().isEmpty()) {
+        RSettings::setValue("OpenFile/OpenFiles", QStringList());
+        RSettings::setValue("OpenFile/ActiveFile", QString());
+        writeSettings();
+
         e->accept();
         return;
     }
@@ -628,6 +632,14 @@ void RMainWindowQt::clearKeyLog() {
 bool RMainWindowQt::event(QEvent* e) {
     if (e==NULL) {
         return false;
+    }
+
+    if (e->type()==QEvent::PaletteChange) {
+        qDebug() << "QEvent::PaletteChange";
+        RSettings::resetCache();
+        RGuiAction::updateIcons();
+        notifyPaletteListeners();
+        update();
     }
 
     if (e->type()==QEvent::KeyPress) {

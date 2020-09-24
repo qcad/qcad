@@ -254,6 +254,15 @@
         notifyPenListeners
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        addPaletteListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removePaletteListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        notifyPaletteListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         ucsSetEvent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

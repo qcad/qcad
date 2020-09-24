@@ -217,7 +217,8 @@ CadToolBar.prototype.updateIconSize = function() {
     }
 };
 
-CadToolBar.init = function() {
+CadToolBar.initStyle = function() {
+    qDebug("CadToolBar.initStyle");
     var appWin = EAction.getMainWindow();
 
     var toolBar = appWin.findChild("CadQToolBar");
@@ -267,6 +268,17 @@ CadToolBar.init = function() {
             }
         }
     }
+};
+
+CadToolBar.init = function() {
+    CadToolBar.initStyle();
+
+    var appWin = EAction.getMainWindow();
+
+    var toolBar = appWin.findChild("CadQToolBar");
+    if (isNull(toolBar)) {
+        return;
+    }
 
     if (RSettings.getStringValue("CadToolBar/Location", "left")==="top") {
         appWin.addToolBarBreak();
@@ -286,6 +298,10 @@ CadToolBar.postInit = function() {
     if (isNull(toolBar)) {
         return;
     }
+
+    var pl = new RPaletteListenerAdapter();
+    appWin.addPaletteListener(pl);
+    pl.paletteChanged.connect(CadToolBar.initStyle);
 
     RSettings.setValue("CadToolBar/VerticalWhenFloating", toolBar.size.width() < toolBar.size.height());
 };

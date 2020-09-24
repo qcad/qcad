@@ -45,6 +45,7 @@ class RGraphicsView;
 class RKeyListener;
 class RLayerListener;
 class RNewDocumentListener;
+class RPaletteListener;
 class RPenListener;
 class RPropertyListener;
 class RPreferencesListener;
@@ -198,6 +199,10 @@ public:
     void removePenListener(RPenListener* l);
     void notifyPenListeners(RDocumentInterface* documentInterface);
 
+    void addPaletteListener(RPaletteListener* l);
+    void removePaletteListener(RPaletteListener* l);
+    void notifyPaletteListeners();
+
     void ucsSetEvent(const QString& ucsName);
 
     //void commandEvent(const QString& command);
@@ -303,6 +308,7 @@ protected:
     QList<RBlockListener*> blockListeners;
     QList<RViewListener*> viewListeners;
     QList<RPenListener*> penListeners;
+    QList<RPaletteListener*> paletteListeners;
     QList<REntityExportListener*> entityExportListeners;
     QList<RExportListener*> exportListeners;
     QList<RImportListener*> importListeners;

@@ -35,6 +35,7 @@
 #include "RLayerListener.h"
 #include "RMainWindow.h"
 #include "RNewDocumentListener.h"
+#include "RPaletteListener.h"
 #include "RPenListener.h"
 #include "RPreferencesListener.h"
 #include "RPropertyListener.h"
@@ -727,6 +728,28 @@ void RMainWindow::notifyPenListeners(RDocumentInterface* documentInterface) {
     QList<RPenListener*>::iterator it;
     for (it = penListeners.begin(); it != penListeners.end(); ++it) {
         (*it)->updatePen(documentInterface);
+    }
+}
+
+/**
+ * Adds a listener for palette change events.
+ */
+void RMainWindow::addPaletteListener(RPaletteListener* l) {
+    paletteListeners.push_back(l);
+}
+
+void RMainWindow::removePaletteListener(RPaletteListener* l) {
+    paletteListeners.removeAll(l);
+}
+
+/**
+ * Notifies all palette listeners that the current palette has changed.
+ */
+void RMainWindow::notifyPaletteListeners() {
+    QList<RPaletteListener*>::iterator it;
+    for (it = paletteListeners.begin(); it != paletteListeners.end(); ++it) {
+        qDebug() << "notifyPaletteListener";
+        (*it)->updatePalette();
     }
 }
 

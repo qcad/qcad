@@ -17,7 +17,7 @@
    <item row="0" column="0">
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>User Interface Theme:</string>
+      <string>User interface theme:</string>
      </property>
     </widget>
    </item>

@@ -170,6 +170,8 @@ HEADERS += \
     $$PWD/REcmaPainterPath.h \
     $$PWD/REcmaPainterPathDevice.h \
     $$PWD/REcmaPainterPathSource.h \
+    $$PWD/REcmaPaletteListener.h \
+    $$PWD/REcmaPaletteListenerAdapter.h \
     $$PWD/REcmaPasteOperation.h \
     $$PWD/REcmaPattern.h \
     $$PWD/REcmaPatternLine.h \
@@ -549,6 +551,8 @@ SOURCES += \
     $$PWD/REcmaPainterPath.cpp \
     $$PWD/REcmaPainterPathDevice.cpp \
     $$PWD/REcmaPainterPathSource.cpp \
+    $$PWD/REcmaPaletteListener.cpp \
+    $$PWD/REcmaPaletteListenerAdapter.cpp \
     $$PWD/REcmaPasteOperation.cpp \
     $$PWD/REcmaPattern.cpp \
     $$PWD/REcmaPatternLine.cpp \

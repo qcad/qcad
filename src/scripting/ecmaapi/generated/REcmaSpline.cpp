@@ -162,6 +162,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, removeFitPointAt, "removeFitPointAt");
             
+            REcmaHelper::registerFunction(&engine, proto, removeFirstFitPoint, "removeFirstFitPoint");
+            
             REcmaHelper::registerFunction(&engine, proto, removeLastFitPoint, "removeLastFitPoint");
             
             REcmaHelper::registerFunction(&engine, proto, setFitPoints, "setFitPoints");
@@ -2186,6 +2188,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSpline::removeFitPointAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpline::removeFirstFitPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpline::removeFirstFitPoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpline::removeFirstFitPoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("removeFirstFitPoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeFirstFitPoint();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.removeFirstFitPoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpline::removeFirstFitPoint", context, engine);
             return result;
         }
          QScriptValue

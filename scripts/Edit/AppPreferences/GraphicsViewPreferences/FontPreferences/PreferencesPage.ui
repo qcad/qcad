@@ -38,7 +38,7 @@
     <item>
      <widget class="RFontChooserWidget" name="Ruler">
       <property name="label">
-       <string>Ruler Font:</string>
+       <string>Ruler font:</string>
       </property>
       <property name="font">
        <font>
@@ -54,7 +54,7 @@
     <item>
      <widget class="RFontChooserWidget" name="SnapLabel">
       <property name="label">
-       <string>Snap Label Font:</string>
+       <string>Snap label font:</string>
       </property>
       <property name="font">
        <font>
@@ -67,7 +67,7 @@
     <item>
      <widget class="RFontChooserWidget" name="InfoLabel">
       <property name="label">
-       <string>Info Label Font:</string>
+       <string>Info label font:</string>
       </property>
       <property name="font">
        <font>

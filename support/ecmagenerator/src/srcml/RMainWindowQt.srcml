@@ -46,6 +46,7 @@
 <class_decl>class <name>RMdiArea</name>;</class_decl>
 <class_decl>class <name>RMdiChildQt</name>;</class_decl>
 <class_decl>class <name>RNewDocumentListener</name>;</class_decl>
+<class_decl>class <name>RPaletteListener</name>;</class_decl>
 <class_decl>class <name>RPenListener</name>;</class_decl>
 <class_decl>class <name>RPreferencesListener</name>;</class_decl>
 <class_decl>class <name>RPropertyListener</name>;</class_decl>
