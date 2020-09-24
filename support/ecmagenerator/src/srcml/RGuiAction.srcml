@@ -130,6 +130,9 @@
     <function_decl><type><name>static</name> <name>void</name></type> <name>addToWidget</name><parameter_list>(<param><decl><type><name>QAction</name>*</type> <name>a</name></decl></param>, <param><decl><type><name>QWidget</name>*</type> <name>w</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>void</name></type> <name>removeFromWidget</name><parameter_list>(<param><decl><type><name>QAction</name>*</type> <name>a</name></decl></param>, <param><decl><type><name>QWidget</name>*</type> <name>w</name></decl></param>)</parameter_list>;</function_decl>
 
+    <function_decl><type><name>static</name> <name>void</name></type> <name>updateIcons</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>updateIcon</name><parameter_list>()</parameter_list>;</function_decl>
+
     <comment type="block">/**
      * Sets the action icon to the given icon file.
      */</comment>
@@ -382,6 +385,7 @@
     <decl_stmt><decl><type><name>FactoryFunction</name></type> <name>factory</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QString</name></type> <name>oriText</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QString</name></type> <name>scriptFile</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QString</name></type> <name>iconFile</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QString</name></type> <name>mainCommand</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QStringList</name></type> <name>commandList</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QStringList</name></type> <name>defaultCommandList</name></decl>;</decl_stmt>

@@ -28,6 +28,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPainterPath&gt;</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RCoordinateListener.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPaletteListener.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RRuler.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 
@@ -41,7 +42,7 @@
  * \ingroup gui
  * \scriptable
  */</comment>
-<class>class <macro><name>QCADGUI_EXPORT</name></macro> <name>RRulerQt</name><super>: <specifier>public</specifier> <name>QFrame</name>, <specifier>public</specifier> <name>RRuler</name>, <specifier>public</specifier> <name>RCoordinateListener</name></super> <block>{<private type="default">
+<class>class <macro><name>QCADGUI_EXPORT</name></macro> <name>RRulerQt</name><super>: <specifier>public</specifier> <name>QFrame</name>, <specifier>public</specifier> <name>RRuler</name>, <specifier>public</specifier> <name>RCoordinateListener</name>, <specifier>public</specifier> <name>RPaletteListener</name></super> <block>{<private type="default">
 
 <function_decl><type><name>Q_OBJECT</name></type>
 <name>Q_PROPERTY</name><parameter_list>(<param><decl><type><name><name>Qt</name>::<name>Orientation</name></name> <name>orientation</name> <name>READ</name> <name>getOrientation</name> <name>WRITE</name></type> <name>setOrientation</name></decl></param>)</parameter_list>;</function_decl>
@@ -61,6 +62,10 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateViewport</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateCoordinate</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>updatePalette</name><parameter_list>()</parameter_list> <block>{
+        <expr_stmt><expr><name>lastSize</name> = <call><name>QSize</name><argument_list>(<argument><expr>0</expr></argument>,<argument><expr>0</expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
 
 </public><protected>protected:
     <function_decl><type><name>void</name></type> <name>paintEvent</name><parameter_list>(<param><decl><type><name>QPaintEvent</name> *</type></decl></param>)</parameter_list>;</function_decl>

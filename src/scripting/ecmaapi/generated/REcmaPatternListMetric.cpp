@@ -327,8 +327,8 @@
         RPatternListMetric::
        get(a0);
         // return type: RPattern *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+                // pointer, copyable 
+                result = qScriptValueFromValue(engine, *cppResult);
             
     } else
 
