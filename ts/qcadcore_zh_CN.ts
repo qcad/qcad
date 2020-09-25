@@ -154,7 +154,7 @@
     <message>
         <location line="+1"/>
         <source>Orange</source>
-        <translation type="unfinished"></translation>
+        <translation>橙色</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -255,7 +255,7 @@
     <message>
         <location filename="../src/core/RBlock.cpp" line="+65"/>
         <source>Pixel Unit</source>
-        <translation type="unfinished"></translation>
+        <translation>像素单位</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -278,7 +278,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>原点</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -314,7 +314,7 @@
     <message>
         <location line="+1"/>
         <source>Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>布局</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
@@ -598,12 +598,12 @@
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
         <location filename="../src/core/RLayout.cpp" line="-24"/>
         <source>Name</source>
-        <translation type="unfinished">名字</translation>
+        <translation>名称</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished">隐藏</translation>
+        <translation>隐藏</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
@@ -683,12 +683,12 @@
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+827"/>
         <source>Circular (recursive) block referencing detected:</source>
-        <translation type="unfinished"></translation>
+        <translation>检测到循环（递归）块引用：</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block name:</source>
-        <translation type="unfinished"></translation>
+        <translation>块名称</translation>
     </message>
 </context>
 <context>

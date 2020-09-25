@@ -373,7 +373,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="-5"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation>起源</translation>
+        <translation>原点</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -542,7 +542,7 @@
     <message>
         <location line="-3"/>
         <source>Name</source>
-        <translation>名字</translation>
+        <translation>名称</translation>
     </message>
     <message>
         <location line="+1"/>
