@@ -322,7 +322,7 @@
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
         <source>Scale</source>
-        <translation>缩放比例</translation>
+        <translation>比例</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -459,7 +459,7 @@
     <message>
         <location line="+1"/>
         <source>Invisible</source>
-        <translation type="unfinished"></translation>
+        <translation>不可见</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
@@ -688,7 +688,7 @@
     <message>
         <location line="+2"/>
         <source>Block name:</source>
-        <translation>块名称</translation>
+        <translation>块名称：</translation>
     </message>
 </context>
 <context>
