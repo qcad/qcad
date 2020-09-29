@@ -105,16 +105,21 @@ double RImageData::getDistanceTo(const RVector& point, bool limited, double rang
     for (int i=0; i<edges.size(); i++) {
         //ret.growToInclude(edges.at(i).getBoundingBox());
         double dist = edges.at(i).getDistanceTo(point, limited);
-        if (dist < minDist) {
+        if (dist < minDist || RMath::isNaN(minDist)) {
             minDist = dist;
         }
     }
 
-    RPolyline pl(getCorners(), true);
-    if (pl.contains(point)) {
-        if (RMath::isNaN(minDist) || strictRange<minDist) {
+    // point not close to image border:
+    if (RMath::isNaN(minDist) || strictRange<minDist) {
+        RPolyline pl(getCorners(), true);
+        if (pl.contains(point)) {
             minDist = strictRange;
         }
+    }
+
+    if (RMath::isNaN(minDist)) {
+        return RMAXDOUBLE;
     }
 
     return minDist;
