@@ -9495,6 +9495,11 @@ ve výsledcích vyhledávání:</translation>
         <translation>Zobrazovat vždy všechny vlastnosti (může se tím zpomalit výběr prvků)</translation>
     </message>
     <message>
+        <location line="+7"/>
+        <source>Always format property values as decimal numbers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+193"/>
         <source>:</source>
         <translation>:</translation>
@@ -9555,7 +9560,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+144"/>
         <source>Use auto measurement</source>
         <translation>Použít automatické měření</translation>
     </message>

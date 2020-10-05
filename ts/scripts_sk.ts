@@ -9781,12 +9781,17 @@ vo výsledku vyhľadania:</translation>
         <translation>Vždy zobrazovať všetky vlastnosti (môže to spomaliť výber prvkov)</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1468"/>
+        <location line="+7"/>
+        <source>Always format property values as decimal numbers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1469"/>
         <source>*VARIES*</source>
         <translation>*Rôzne*</translation>
     </message>
     <message>
-        <location line="-1275"/>
+        <location line="-1276"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9850,7 +9855,7 @@ vo výsledku vyhľadania:</translation>
         <translation>automatický</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+144"/>
         <source>Use auto measurement</source>
         <translation>Použiť automatické meranie</translation>
     </message>

@@ -9779,12 +9779,12 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1468"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1469"/>
         <source>*VARIES*</source>
         <translation>*VARIEERT*</translation>
     </message>
     <message>
-        <location line="-1275"/>
+        <location line="-1276"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9844,7 +9844,7 @@ getoond in zoekresultaten:</translation>
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+144"/>
         <source>Use auto measurement</source>
         <translation>Automatisch</translation>
     </message>
@@ -9919,6 +9919,11 @@ getoond in zoekresultaten:</translation>
         <location line="+10"/>
         <source>Always show all properties (this may slow down selection of entities)</source>
         <translation>Toon altijd alle eigenschappen (dit kan de selectie van objecten vertragen)</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Always format property values as decimal numbers</source>
+        <translation>Waarden van eigenschappen altijd als decimale getallen formatteren</translation>
     </message>
 </context>
 <context>

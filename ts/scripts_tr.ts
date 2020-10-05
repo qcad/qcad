@@ -9299,6 +9299,11 @@ shown in search results:</source>
         <translation>Her zaman tüm özellikleri göster (bu, varlıkların seçimini yavaşlatabilir)</translation>
     </message>
     <message>
+        <location line="+7"/>
+        <source>Always format property values as decimal numbers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+193"/>
         <source>:</source>
         <translation>:</translation>
@@ -9359,7 +9364,7 @@ shown in search results:</source>
         <translation>Oto</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+144"/>
         <source>Use auto measurement</source>
         <translation type="unfinished"></translation>
     </message>

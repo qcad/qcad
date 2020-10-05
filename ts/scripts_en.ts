@@ -9654,6 +9654,11 @@ shown in search results:</translation>
         <translation>Always show all properties (this may slow down selection of entities)</translation>
     </message>
     <message>
+        <location line="+7"/>
+        <source>Always format property values as decimal numbers</source>
+        <translation>Always format property values as decimal numbers</translation>
+    </message>
+    <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+193"/>
         <source>:</source>
         <translation>:</translation>
@@ -9714,7 +9719,7 @@ shown in search results:</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+144"/>
         <source>Use auto measurement</source>
         <translation>Use auto measurement</translation>
     </message>
