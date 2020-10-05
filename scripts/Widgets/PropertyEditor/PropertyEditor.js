@@ -983,7 +983,8 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
                 value = RMath.rad2deg(value);
             }
             var document = EAction.getDocument();
-            if (!attributes.isAngleType() &&
+            if (RSettings.getBoolValue("PropertyEditor/FormatAsDecimal", false)!==true &&
+                !attributes.isAngleType() &&
                 !attributes.isAreaType() &&
                 !attributes.isUnitLess() /*&&
                 (document.getLinearFormat()===RS.Fractional ||
@@ -996,7 +997,7 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
                     document.getLinearFormat()===RS.Engineering) {
 
                     // show 3'-4" as 3' 4" to avoid ambiguous expressions:
-                    newText = newText.replace("-", " ");
+                    newText = newText.replace("'-", "' ");
                 }
 
             }
