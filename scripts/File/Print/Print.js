@@ -521,6 +521,9 @@ Print.centerBox = function(di, bBox) {
  * \param painter QPainter object if we are printing, RPainterPath for print preview.
  */
 Print.drawCropMarks = function(document, painter, border, printing) {
+    var clipping = painter.hasClipping();
+    painter.setClipping(false);
+
     var scale = Print.getScale(document);
     var offset = Print.getOffset(document);
     var unitScale = Print.getUnitScale(document);
@@ -563,6 +566,7 @@ Print.drawCropMarks = function(document, painter, border, printing) {
         }
     }
 
+    painter.setClipping(clipping);
 };
 
 /**
