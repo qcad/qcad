@@ -1332,6 +1332,8 @@ void RScriptHandlerEcma::initGlobalVariables(const QString& scriptFile) {
     globalObject.setProperty("scriptFile", QScriptValue(engine, scriptFile));
     globalObject.setProperty("includeBasePath", QScriptValue(engine,
             QFileInfo(scriptFile).absolutePath()));
+    globalObject.setProperty("scriptFileBasePath", QScriptValue(engine,
+            QFileInfo(scriptFile).absolutePath()));
 }
 
 QScriptValue RScriptHandlerEcma::ecmaInclude(QScriptContext* context, QScriptEngine* engine) {
@@ -1410,12 +1412,24 @@ QScriptValue RScriptHandlerEcma::doInclude(QScriptEngine* engine, const QString&
     }
 
     QStringList list;
+
+    // Search based on the includeBasePath which changes depending on the plugin
     list << engine->globalObject().property("includeBasePath").toString();
+
+    // ... then search based on the initial script path (does not change)
+    list << engine->globalObject().property("scriptFileBasePath").toString();
+
+    // ... then search based on the local data storage location path (does not change)
+    list << RSettings::getDataLocation();
+
+    // ... then search based on the program path (does not change)
     list << QDir::currentPath();
+
+    // ... then search based on the built in plugin values (does not change)
     list << ":";
 
-    // remove duplicate paths:
-    list = list.toSet().toList();
+    // Remove the duplicates and preserve the order
+    list.removeDuplicates();
 
     QStringListIterator i(list);
     while (i.hasNext()) {
