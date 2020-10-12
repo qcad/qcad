@@ -49,7 +49,8 @@ var credits =
         [ "Tamas Tevesz",     "Port to FreeBSD<br>" +
                               "Various improvements and fixes<br>"
                               ],
-        [ "Weston Schmidt",   "Draw > Dimension > Per-dimension scaling<br>"
+        [ "Weston Schmidt",   "Draw > Dimension > Per-dimension scaling<br>" +
+                              "Script inclusion path improvements<br>"
                               ],
     ],
     [
