@@ -64,6 +64,7 @@ SnapDistanceManual.prototype.coordinateEvent = function(event) {
     if (this.state===this.State.PickingPoint1) {
         this.point1 = event.getModelPosition();
         this.state = this.State.PickingPoint2;
+        this.di.setRelativeZero(this.point1);
         this.setCommandPrompt(qsTr("Second point"));
     }
     else {
