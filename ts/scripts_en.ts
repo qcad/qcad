@@ -220,7 +220,7 @@
         <translation>Programming</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+53"/>
         <source>Hatch Patterns</source>
         <translation>Hatch Patterns</translation>
     </message>
@@ -11544,7 +11544,7 @@ shown in search results:</translation>
         <translation>Specify first point to measure distance from</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+32"/>
         <source>Second point</source>
         <translation>Second point</translation>
     </message>

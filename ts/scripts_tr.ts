@@ -208,7 +208,7 @@
         <translation>Programlama</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+53"/>
         <source>Hatch Patterns</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11085,7 +11085,7 @@ shown in search results:</source>
         <translation>Mesafeyi ölçmek için ilk noktayı belirtin</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+32"/>
         <source>Second point</source>
         <translation>İkinci nokta</translation>
     </message>

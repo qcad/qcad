@@ -223,7 +223,7 @@
         <translation>Programowanie</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+53"/>
         <source>Hatch Patterns</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14682,7 +14682,7 @@ Odstęp od punktów &amp;końcowych</translatorcomment>
         <translation>Proszę wskazać pierwszy punkt, od którego zostanie zmierzona odległość</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+32"/>
         <source>Second point</source>
         <translation>Drugi punkt</translation>
     </message>

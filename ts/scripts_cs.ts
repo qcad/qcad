@@ -208,7 +208,7 @@
         <translation>Programování</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+53"/>
         <source>Hatch Patterns</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11360,7 +11360,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Určete první bod pro měření vzdálenosti od</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+32"/>
         <source>Second point</source>
         <translation>Druhý bod</translation>
     </message>

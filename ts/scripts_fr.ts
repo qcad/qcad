@@ -240,7 +240,7 @@
         <translation>Programmation</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+53"/>
         <source>Hatch Patterns</source>
         <translation>Motifs de hachures</translation>
     </message>
@@ -13041,7 +13041,7 @@ dans les résultats de recherche :</translation>
         <translation>Indiquer le premier point</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+32"/>
         <source>Second point</source>
         <translation>Deuxième point</translation>
     </message>

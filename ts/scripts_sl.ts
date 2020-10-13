@@ -228,7 +228,7 @@
         <translation>Programiranje</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+53"/>
         <source>Hatch Patterns</source>
         <translation>Vzorec črtkanja</translation>
     </message>
@@ -12238,7 +12238,7 @@ shown in search results:</source>
         <translation>Določi začetno točko za merjenje razdalje</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+32"/>
         <source>Second point</source>
         <translation>Druga točka</translation>
     </message>

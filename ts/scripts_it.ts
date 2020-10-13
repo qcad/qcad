@@ -240,7 +240,7 @@
         <translation>Programmazione</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+53"/>
         <source>Hatch Patterns</source>
         <translation>Modelli di tratteggio</translation>
     </message>
@@ -13356,7 +13356,7 @@ Interseca con la selezione corrente</translatorcomment>
         <translation>Primo punto</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+32"/>
         <source>Second point</source>
         <translation>Secondo punto</translation>
     </message>

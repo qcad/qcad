@@ -236,7 +236,7 @@
         <translation>Programação</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+53"/>
         <source>Hatch Patterns</source>
         <translation>Padrões de hachuras</translation>
     </message>
@@ -11956,7 +11956,7 @@ nos resultados de busca:</translation>
         <translation>Especifique o primeiro ponto para medir a distância a partir dele</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+32"/>
         <source>Second point</source>
         <translation>Segundo ponto</translation>
     </message>

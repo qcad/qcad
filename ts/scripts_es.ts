@@ -240,7 +240,7 @@
         <translation>Programación</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+53"/>
         <source>Hatch Patterns</source>
         <translation>Patrón de rayado</translation>
     </message>
@@ -13276,7 +13276,7 @@ Se cruzan con la selección actual</translatorcomment>
         <translation>Especifique primer punto</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+32"/>
         <source>Second point</source>
         <translation>Segundo punto</translation>
     </message>

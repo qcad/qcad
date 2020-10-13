@@ -232,7 +232,7 @@
         <translation>Programmering</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+53"/>
         <source>Hatch Patterns</source>
         <translation>Arceerpatronen</translation>
     </message>
@@ -11701,7 +11701,7 @@ getoond in zoekresultaten:</translation>
         <translation>Eerste punt kiezen om afstand te meten</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+32"/>
         <source>Second point</source>
         <translation>Tweede punt</translation>
     </message>

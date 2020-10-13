@@ -252,7 +252,7 @@
         <translation>Programmierung</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+53"/>
         <source>Hatch Patterns</source>
         <translation>Schraffurmuster</translation>
     </message>
@@ -14041,7 +14041,7 @@ nicht öffnen.
         <translation>Erster Punkt, von dem Abstand gemessen wird</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+32"/>
         <source>Second point</source>
         <translation>Zweiter Punkt</translation>
     </message>

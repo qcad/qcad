@@ -204,7 +204,7 @@
         <translation>Ohjelmointi</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+53"/>
         <source>Hatch Patterns</source>
         <translation>Peittokuviot</translation>
     </message>
@@ -11767,7 +11767,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Määrittele ensimmäinen piste etäisyyden mittaukseen</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+32"/>
         <source>Second point</source>
         <translation>Toinen piste</translation>
     </message>

@@ -228,7 +228,7 @@
         <translation>Programovanie</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+53"/>
         <source>Hatch Patterns</source>
         <translation>Vzory šrafovania</translation>
     </message>
@@ -11690,7 +11690,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Určite prvý bod od ktorého bude meraný odstup</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+32"/>
         <source>Second point</source>
         <translation>Druhý bod</translation>
     </message>

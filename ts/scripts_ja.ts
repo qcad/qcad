@@ -216,7 +216,7 @@
         <translation>プログラミング</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+53"/>
         <source>Hatch Patterns</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12083,7 +12083,7 @@ shown in search results:</source>
         <translation>距離計測のための最初の点を指定してください</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+32"/>
         <source>Second point</source>
         <translation>第2の点</translation>
     </message>
