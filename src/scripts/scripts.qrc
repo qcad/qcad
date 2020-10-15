@@ -797,6 +797,7 @@
     <file alias="scripts/Draw/Text/Tests/data/text17.dxf">../../scripts/Draw/Text/Tests/data/text17.dxf</file>
     <file alias="scripts/Draw/Text/Tests/data/text18.dxf">../../scripts/Draw/Text/Tests/data/text18.dxf</file>
     <file alias="scripts/Draw/Text/Tests/data/text19.dxf">../../scripts/Draw/Text/Tests/data/text19.dxf</file>
+    <file alias="scripts/Draw/Text/Tests/data/text20.dxf">../../scripts/Draw/Text/Tests/data/text20.dxf</file>
     <file alias="scripts/Draw/Text/Tests/required/Text01_000.dxf">../../scripts/Draw/Text/Tests/required/Text01_000.dxf</file>
     <file alias="scripts/Draw/Text/Tests/required/Text02_000.dxf">../../scripts/Draw/Text/Tests/required/Text02_000.dxf</file>
     <file alias="scripts/Draw/Text/Tests/required/Text03_000.dxf">../../scripts/Draw/Text/Tests/required/Text03_000.dxf</file>
