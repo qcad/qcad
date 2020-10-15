@@ -2145,6 +2145,7 @@ RTransaction RDocumentInterface::applyOperation(ROperation* operation) {
     }
 
     RTransaction transaction = operation->apply(document, false);
+    transaction.setType(operation->getTransactionType());
     if (transaction.isFailed()) {
         qWarning() << "RDocumentInterface::applyOperation: "
                 "transaction failed";
@@ -2153,7 +2154,7 @@ RTransaction RDocumentInterface::applyOperation(ROperation* operation) {
         }
     }
 
-    QList<RObject::Id> objectIds = transaction.getAffectedObjects();
+    //QList<RObject::Id> objectIds = transaction.getAffectedObjects();
 
     clearPreview();
 
@@ -2175,6 +2176,13 @@ RTransaction RDocumentInterface::applyOperation(ROperation* operation) {
  * Triggers an objectChangeEvent for every object in the given set.
  */
 void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
+    if (transaction.getType()==RTransaction::CurrentLayerChange ||
+        transaction.getType()==RTransaction::CurrentLayerSelectionChange) {
+
+        // optimization for layer change / layer selection change:
+        return;
+    }
+
     bool ucsHasChanged = false;
     bool linetypeHasChanged = false;
     bool layerHasChanged = false;
