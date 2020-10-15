@@ -123,6 +123,7 @@ void RStorage::setCurrentLayer(RLayer::Id layerId, RTransaction* transaction) {
     QSharedPointer<RDocumentVariables> docVars = startDocumentVariablesTransaction(transaction, useLocalTransaction);
     Q_ASSERT(!docVars.isNull());
     docVars->setCurrentLayerId(layerId);
+    transaction->setType(RTransaction::CurrentLayerChange);
     endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
 }
 
@@ -136,6 +137,7 @@ void RStorage::setCurrentLayer(const QString& layerName, RTransaction* transacti
     }
 
     docVars->setCurrentLayerId(layerId);
+    transaction->setType(RTransaction::CurrentLayerChange);
     endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
 }
 
