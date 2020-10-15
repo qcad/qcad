@@ -74,6 +74,16 @@
  */</comment>
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RTransaction</name> <block>{<private type="default">
 </private><public>public:
+    <comment type="block">/**
+     * Transaction type for optimizations.
+     */</comment>
+    <enum>enum <name>Type</name> <block>{
+        <expr><name>Generic</name></expr>,
+        <expr><name>CurrentLayerChange</name></expr>,
+        <expr><name>CurrentLayerSelectionChange</name></expr>
+    }</block>;</enum>
+
+</public><public>public:
     <constructor_decl><name>RTransaction</name><parameter_list>()</parameter_list>;</constructor_decl>
 
     <constructor_decl><name>RTransaction</name><parameter_list>(<param><decl><type><name>RStorage</name>&amp;</type> <name>storage</name></decl></param>)</parameter_list>;</constructor_decl>
@@ -257,6 +267,14 @@
 
     <function_decl><type><name>bool</name></type> <name>isPreview</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function><type><name><name>RTransaction</name>::<name>Type</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>type</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setType</name><parameter_list>(<param><decl><type><name><name>RTransaction</name>::<name>Type</name></name></type> <name>t</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>type</name> = <name>t</name></expr>;</expr_stmt>
+    }</block></function>
+
 </public><protected>protected:
     <function_decl><type><name>bool</name></type> <name>addPropertyChange</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>objectId</name></decl></param>, <param><decl><type><name>const</name> <name>RPropertyChange</name>&amp;</type> <name>propertyChange</name></decl></param>)</parameter_list>;</function_decl>
     <comment type="line">//void appendChild(RTransaction&amp; t);</comment>
@@ -265,6 +283,8 @@
     <function_decl><type><name>void</name></type> <name>rollback</name><parameter_list>()</parameter_list>;</function_decl>
 
 </protected><protected>protected:
+    <decl_stmt><decl><type><name><name>RTransaction</name>::<name>Type</name></name></type> <name>type</name></decl>;</decl_stmt>
+
     <comment type="block">/**
      * A transaction always belongs to the storage of a document.
      */</comment>
@@ -390,6 +410,8 @@
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTransaction</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTransaction*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTransaction::Type</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTransaction::Type*</argument>)</argument_list></macro>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

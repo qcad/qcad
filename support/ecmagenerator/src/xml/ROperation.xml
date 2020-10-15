@@ -87,5 +87,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="setTransactionType" cppName="setTransactionType"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RTransaction::Type"
+        typeName="RTransaction::Type" name="t" isConst="false" />
+      </variant>
+    </method>
+    <method name="getTransactionType" cppName="getTransactionType"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RTransaction::Type"
+      isPureVirtual="false" />
+    </method>
   </class>
 </unit>

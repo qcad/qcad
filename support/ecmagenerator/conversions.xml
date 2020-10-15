@@ -39,6 +39,7 @@
 	<entry key="RUcs::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RUcs::Handle" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RSnap::Status" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RTransaction::Type" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RPluginInterface::InitStatus" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RRefPoint::Flags" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RNester::Alignment" value="toNumber()" testFunction="isNumber()" cast="int" />

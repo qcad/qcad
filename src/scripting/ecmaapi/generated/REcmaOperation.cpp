@@ -91,6 +91,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getText, "getText");
             
+            REcmaHelper::registerFunction(&engine, proto, setTransactionType, "setTransactionType");
+            
+            REcmaHelper::registerFunction(&engine, proto, getTransactionType, "getTransactionType");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<ROperation*>(), *proto);
 
@@ -765,6 +769,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaOperation::getText", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaOperation::setTransactionType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaOperation::setTransactionType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaOperation::setTransactionType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    ROperation* self = 
+                        getSelf("setTransactionType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RTransaction::Type */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RTransaction::Type
+                    a0 =
+                    (RTransaction::Type)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setTransactionType(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for ROperation.setTransactionType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaOperation::setTransactionType", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaOperation::getTransactionType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaOperation::getTransactionType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaOperation::getTransactionType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    ROperation* self = 
+                        getSelf("getTransactionType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RTransaction::Type'
+    RTransaction::Type cppResult =
+        
+               self->getTransactionType();
+        // return type: RTransaction::Type
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for ROperation.getTransactionType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaOperation::getTransactionType", context, engine);
             return result;
         }
          QScriptValue REcmaOperation::toString

@@ -106,7 +106,16 @@
         <return>return <expr><name>text</name></expr>;</return>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>setTransactionType</name><parameter_list>(<param><decl><type><name><name>RTransaction</name>::<name>Type</name></name></type> <name>t</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>transactionType</name> = <name>t</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name><name>RTransaction</name>::<name>Type</name></name></type> <name>getTransactionType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>transactionType</name></expr>;</return>
+    }</block></function>
+
 </public><protected>protected:
+    <decl_stmt><decl><type><name><name>RTransaction</name>::<name>Type</name></name></type> <name>transactionType</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>undoable</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>recordAffectedObjects</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>spatialIndexDisabled</name></decl>;</decl_stmt>
