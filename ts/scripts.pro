@@ -323,6 +323,7 @@ SOURCES = \
 ../scripts/Draw/Text/Tests/Text17.js \
 ../scripts/Draw/Text/Tests/Text18.js \
 ../scripts/Draw/Text/Tests/Text19.js \
+../scripts/Draw/Text/Tests/Text20.js \
 ../scripts/Draw/Text/Text.js \
 ../scripts/Draw/Text/TextDialog/CharacterMapDialog.js \
 ../scripts/Draw/Text/TextDialog/TextDialog.js \
