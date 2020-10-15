@@ -2377,7 +2377,7 @@ function isUrl(urlString) {
 
 function getDontUseNativeDialog() {
     // don't use KDE file dialog (workaround for file type filter bug):
-    return RS.getWindowManagerId()==="kde" || RSettings.getBoolValue("SaveAs/UseSystemFileDialog", true)===false;
+    return RS.getWindowManagerId()==="unknown" || RSettings.getBoolValue("SaveAs/UseSystemFileDialog", true)===false;
 };
 
 function autoPath(path) {

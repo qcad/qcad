@@ -166,9 +166,7 @@ QString RS::getWindowManagerId() {
                 if (wmname) {
                     memcpy(wmname, data, nitems);
                     wmname[nitems] = '\0';
-                    if (strncasecmp(wmname, "KWin", 4) == 0) {
-                        wm = "kde";
-                    } else if ((strncasecmp(wmname, "GNOME Shell", 11) == 0) ||
+                    if ((strncasecmp(wmname, "GNOME Shell", 11) == 0) ||
                                (strncasecmp(wmname, "Compiz", 6) == 0) ||
                                (strncasecmp(wmname, "Metacity", 8) == 0) ||
                                (strncasecmp(wmname, "Mutter", 6) == 0) ||
