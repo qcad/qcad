@@ -153,11 +153,16 @@
             <param><decl><type><name>RTransaction</name>&amp;</type> <name>transaction</name></decl></param>
             )</parameter_list>;</function_decl>
 
+    <function><type><name>void</name></type> <name>setCopyEmptyBlocks</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>copyEmptyBlocks</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
 </public><private>private:
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QSharedPointer<argument_list>&lt;<argument><name>RLayer</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>copiedLayers</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QSharedPointer<argument_list>&lt;<argument><name>RLinetype</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>copiedLinetypes</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QSharedPointer<argument_list>&lt;<argument><name>RBlock</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>copiedBlocks</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QSet<argument_list>&lt;<argument><name><name>RBlock</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>copiedBlockContents</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>copyEmptyBlocks</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RClipboardOperation*</argument>)</argument_list></macro>

@@ -5355,7 +5355,7 @@
     
     
       void REcmaShellGraphicsViewImage::addToBackground(
-                const RPainterPath & path
+                const RGraphicsSceneDrawable & drawable
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::addToBackground", engine);
@@ -5381,7 +5381,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RGraphicsViewImage::addToBackground(
-                            path
+                            drawable
                         );
 
                         // block recursion again:
@@ -5404,12 +5404,12 @@
 
 
 
-    // type: RPainterPath &, copyable: true
+    // type: RGraphicsSceneDrawable &, copyable: true
         << qScriptValueFromValue(engine, 
 
         
             // const reference argument - make a new object:
-            new RPainterPath(path)
+            new RGraphicsSceneDrawable(drawable)
         )
       
                             )

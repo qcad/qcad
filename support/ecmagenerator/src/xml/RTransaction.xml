@@ -11,6 +11,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="Generic" />
       <value name="CurrentLayerChange" />
       <value name="CurrentLayerSelectionChange" />
+      <value name="LayerLockStatusChange" />
     </enum>
     <constructor>
       <variant />

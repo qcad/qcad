@@ -164,6 +164,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("LayerLockStatusChange",
+    QScriptValue(RTransaction::LayerLockStatusChange),
+    QScriptValue::ReadOnly);
+
+
     // enum conversions:
     
     qScriptRegisterMetaType<RTransaction::Type>(

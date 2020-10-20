@@ -547,8 +547,9 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RPainterPath &amp;" typeName="RPainterPath"
-        name="path" isConst="true" />
+        <arg type="RGraphicsSceneDrawable &amp;"
+        typeName="RGraphicsSceneDrawable" name="drawable"
+        isConst="true" />
       </variant>
     </method>
     <method name="setBackgroundTransform"

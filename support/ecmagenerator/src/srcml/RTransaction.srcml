@@ -80,7 +80,8 @@
     <enum>enum <name>Type</name> <block>{
         <expr><name>Generic</name></expr>,
         <expr><name>CurrentLayerChange</name></expr>,
-        <expr><name>CurrentLayerSelectionChange</name></expr>
+        <expr><name>CurrentLayerSelectionChange</name></expr>,
+        <expr><name>LayerLockStatusChange</name></expr>
     }</block>;</enum>
 
 </public><public>public:
