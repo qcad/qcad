@@ -152,11 +152,16 @@ public:
             RTransaction& transaction
             );
 
+    void setCopyEmptyBlocks(bool on) {
+        copyEmptyBlocks = on;
+    }
+
 private:
     QMap<QString, QSharedPointer<RLayer> > copiedLayers;
     QMap<QString, QSharedPointer<RLinetype> > copiedLinetypes;
     QMap<QString, QSharedPointer<RBlock> > copiedBlocks;
     QSet<RBlock::Id> copiedBlockContents;
+    bool copyEmptyBlocks;
 };
 
 Q_DECLARE_METATYPE(RClipboardOperation*)
