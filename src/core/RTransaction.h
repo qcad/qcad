@@ -79,7 +79,8 @@ public:
     enum Type {
         Generic,
         CurrentLayerChange,
-        CurrentLayerSelectionChange
+        CurrentLayerSelectionChange,
+        LayerLockStatusChange
     };
 
 public:

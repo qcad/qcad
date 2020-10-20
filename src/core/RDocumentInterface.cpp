@@ -2314,6 +2314,11 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
         }
     }
 
+    if (transaction.getType()==RTransaction::LayerLockStatusChange) {
+        // only lock status has changed, no regen:
+        return;
+    }
+
     if (layerHasChanged || !changedLayerIds.isEmpty() || blockHasChanged || linetypeHasChanged) {
         if (allowRegeneration) {
             regenerateScenes(true);
