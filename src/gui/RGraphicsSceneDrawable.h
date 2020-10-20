@@ -97,6 +97,14 @@ public:
         return type==PainterPath || type==PainterPathRay || type==PainterPathXLine;
     }
 
+    bool isText() {
+        return type==Text;
+    }
+
+    bool isImage() {
+        return type==Image;
+    }
+
     void setMode(RGraphicsSceneDrawable::Mode mode, bool on = true) {
         if (on) {
             modes |= mode;
