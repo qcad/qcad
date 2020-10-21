@@ -332,17 +332,17 @@
     <message>
         <location line="+1"/>
         <source>Columns</source>
-        <translation type="unfinished"></translation>
+        <translation>列</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Rows</source>
-        <translation type="unfinished"></translation>
+        <translation>行</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Column Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>行间距</translation>
     </message>
     <message>
         <location line="+1"/>
