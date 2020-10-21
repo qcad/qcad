@@ -6,91 +6,91 @@
     <message>
         <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
-        <translation type="unfinished"></translation>
+        <translation>关于 %1</translation>
     </message>
     <message>
         <location line="+53"/>
         <location line="+123"/>
         <source>Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>版本：</translation>
     </message>
     <message>
         <location line="-119"/>
         <location line="+136"/>
         <location line="+11"/>
         <source>Internet:</source>
-        <translation type="unfinished"></translation>
+        <translation>网络：</translation>
     </message>
     <message>
         <location line="-145"/>
         <source>Build Date:</source>
-        <translation type="unfinished"></translation>
+        <translation>生成日期：</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Revision:</source>
-        <translation type="unfinished"></translation>
+        <translation>修订版本：</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+117"/>
         <source>Qt Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt 版本：</translation>
     </message>
     <message>
         <location line="-113"/>
         <source>Architecture:</source>
-        <translation type="unfinished"></translation>
+        <translation>架构：</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Compiler:</source>
-        <translation type="unfinished"></translation>
+        <translation>编译器：</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>License Key:</source>
-        <translation type="unfinished"></translation>
+        <translation>授权码：</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>%1 is an application for computer-aided design (CAD).</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 是一个计算机辅助设计应用 (CAD)。</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 is based on QCAD, a free (open source) software.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 基于 QCAD，一款免费开源软件。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>%1 is free (open source) software.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 是免费开源软件。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This means that everyone can &lt;a href=&apos;%1&apos;&gt;get involved&lt;/a&gt;!</source>
-        <translation type="unfinished"></translation>
+        <translation>这意味着每个人都可以 &lt;a href=&apos;%1&apos;&gt; 参与 &lt;/a&gt; ！</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;a href=&apos;%1&apos;&gt; QCAD Professional &lt;/a&gt;或&lt;a href=&apos;%2&apos;&gt; QCAD / CAM &lt;/a&gt;中提供了包括DWG在内的其他工具，功能和文件格式。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Plugins and script add-ons are subject to their respective license (see &quot;Plugins&quot; tab).</source>
-        <translation type="unfinished"></translation>
+        <translation>插件和脚本附件受各自许可的约束（请参见“插件”标签）。</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
-        <translation type="unfinished"></translation>
+        <translation>所有品牌或产品名称均为其各自所有者的商标或注册商标。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Portions of this software © %1 The Qt Company Ltd.</source>
-        <translation type="unfinished"></translation>
+        <translation>本软件的部分版权©％1 The Qt Company Ltd.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -105,7 +105,7 @@
     <message>
         <location line="+12"/>
         <source>Plugins</source>
-        <translation type="unfinished"></translation>
+        <translation>插件</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -115,85 +115,85 @@
     <message>
         <location line="+25"/>
         <source>No information available</source>
-        <translation type="unfinished"></translation>
+        <translation>没有提示信息</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+408"/>
         <source>Plugin:</source>
-        <translation type="unfinished"></translation>
+        <translation>插件：</translation>
     </message>
     <message>
         <location line="-383"/>
         <source>ID:</source>
-        <translation type="unfinished"></translation>
+        <translation>ID:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Description:</source>
-        <translation type="unfinished"></translation>
+        <translation>描述：</translation>
     </message>
     <message>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
         <source>Unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>未知</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>License:</source>
-        <translation type="unfinished"></translation>
+        <translation>授权：</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Active</source>
-        <translation type="unfinished"></translation>
+        <translation>激活</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inactive (restart)</source>
-        <translation type="unfinished"></translation>
+        <translation>无效（重启）</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Trial Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>试用版本：</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>File:</source>
-        <translation type="unfinished"></translation>
+        <translation>文件：</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Error:</source>
-        <translation type="unfinished"></translation>
+        <translation>错误：</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Script Add-Ons</source>
-        <translation type="unfinished"></translation>
+        <translation>脚本附加组件</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>No script add-ons found.</source>
-        <translation type="unfinished"></translation>
+        <translation>找不到脚本加载项。</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>信誉</translation>
     </message>
     <message>
         <location line="+163"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation>授权</translation>
     </message>
     <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
-        <translation type="unfinished"></translation>
+        <translation>关于(&amp;A)...</translation>
     </message>
 </context>
 <context>
@@ -201,32 +201,32 @@
     <message>
         <location filename="../scripts/Help/About/AboutCredits.js" line="+4"/>
         <source>Programming</source>
-        <translation type="unfinished"></translation>
+        <translation>程序编码</translation>
     </message>
     <message>
         <location line="+53"/>
         <source>Hatch Patterns</source>
-        <translation type="unfinished"></translation>
+        <translation>填充图案</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation>翻译</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Templates</source>
-        <translation type="unfinished"></translation>
+        <translation>模板</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Icons</source>
-        <translation type="unfinished"></translation>
+        <translation>图标</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Testing, Feedback and Minor Fixes</source>
-        <translation type="unfinished"></translation>
+        <translation>测试，反馈和小版本修复</translation>
     </message>
 </context>
 <context>
@@ -234,32 +234,32 @@
     <message>
         <location filename="../scripts/Help/About/AboutDialog.ui" line="+101"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>关于</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>信誉</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Plugins</source>
-        <translation type="unfinished"></translation>
+        <translation>插件</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Scripts</source>
-        <translation type="unfinished"></translation>
+        <translation>脚本</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>System</source>
-        <translation type="unfinished"></translation>
+        <translation>系统</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation>授权</translation>
     </message>
 </context>
 <context>
@@ -267,48 +267,48 @@
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.js" line="+46"/>
         <source>Application Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>首选项</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>绘图选项</translation>
     </message>
     <message>
         <location line="+300"/>
         <source>Apply preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>应用设置</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Restart required</source>
-        <translation type="unfinished"></translation>
+        <translation>需要重启</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>为使设置生效，请重新启动 QCAD。</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Defaults for</source>
-        <translation type="unfinished"></translation>
+        <translation>默认</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>These are default preferences for new drawings.</source>
-        <translation type="unfinished"></translation>
+        <translation>新图形的默认设置。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Changes will affect new drawings but NOT the current drawing.</source>
-        <translation type="unfinished"></translation>
+        <translation>更改将影响新工程图，但不会影响当前工程图。</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Preferences of the current drawing can be changed under&lt;br/&gt;&lt;i&gt;Edit &amp;gt; Drawing Preferences&lt;/i&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation>当前图形的设置可以在 &lt;br/&gt;&lt;i&gt;编辑 &amp;gt; 图形设置&lt;/i&gt; 中更改。</translation>
     </message>
 </context>
 <context>
@@ -329,17 +329,17 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
-        <translation type="unfinished"></translation>
+        <translation>添加自定义属性</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>名称：</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Value:</source>
-        <translation type="unfinished"></translation>
+        <translation>值：</translation>
     </message>
 </context>
 <context>
@@ -347,17 +347,17 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Layer/AddLayer/AddLayer.js" line="+35"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>图层</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Add Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>添加图层</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/AddLayer/AddLayerInit.js" line="+2"/>
         <source>&amp;Add Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>添加图层(&amp;A)</translation>
     </message>
 </context>
 <context>
@@ -365,7 +365,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/View/AntialiasingMode/AntialiasingMode.js" line="+74"/>
         <source>&amp;Anti-aliasing</source>
-        <translation type="unfinished"></translation>
+        <translation>抗锯齿(&amp;A)</translation>
     </message>
 </context>
 <context>
@@ -373,12 +373,12 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Apollonius.js" line="+1812"/>
         <source>Invalid radius</source>
-        <translation type="unfinished"></translation>
+        <translation>无效的半径</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>No solution</source>
-        <translation>无方案</translation>
+        <translation>没有解决方案</translation>
     </message>
 </context>
 <context>
@@ -386,7 +386,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/AppPreferences.js" line="+65"/>
         <source>Application &amp;Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>应用程序首选项(&amp;P)</translation>
     </message>
 </context>
 <context>
@@ -2423,7 +2423,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+32"/>
         <source>Save library item as...</source>
-        <translation>将库中的项目保存为</translation>
+        <translation>将库中的项目另存为...</translation>
     </message>
     <message>
         <location filename="../scripts/Block/CreateLibraryItem/CreateLibraryItemInit.js" line="+2"/>
@@ -6559,7 +6559,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.js" line="+102"/>
         <source>Cannot import file from URL: </source>
-        <translation>不能从 URL 链接插入文件：</translation>
+        <translation>不能从 URL 插入文件： </translation>
     </message>
     <message>
         <location line="+26"/>
@@ -13416,7 +13416,7 @@ shown in search results:</source>
     <message>
         <location line="+10"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>第二个实体不能修剪。</translation>
     </message>
 </context>
 </TS>
