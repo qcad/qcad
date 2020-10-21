@@ -819,8 +819,8 @@ void RGraphicsViewImage::clearBackground() {
     backgroundDecoration.clear();
 }
 
-void RGraphicsViewImage::addToBackground(const RPainterPath& path) {
-    backgroundDecoration.append(path);
+void RGraphicsViewImage::addToBackground(const RGraphicsSceneDrawable& drawable) {
+    backgroundDecoration.append(drawable);
 }
 
 void RGraphicsViewImage::setBackgroundTransform(double bgFactor, const RVector& bgOffset) {
@@ -829,21 +829,71 @@ void RGraphicsViewImage::setBackgroundTransform(double bgFactor, const RVector& 
 }
 
 void RGraphicsViewImage::paintBackground(QPainter* painter, const QRect& rect) {
-    Q_UNUSED(rect);
+    Q_UNUSED(rect)
 
     if (backgroundDecoration.isEmpty()) {
         return;
     }
+
+    int boxWidth = 1000;
+    int boxHeight = 30;
 
     QTransform savedTransform = painter->transform();
     painter->translate(backgroundOffset.x, backgroundOffset.y);
     painter->scale(backgroundFactor, backgroundFactor);
 
     for (int i=0; i<backgroundDecoration.size(); i++) {
-        RPainterPath path = backgroundDecoration.at(i);
-        painter->setPen(path.getPen());
-        painter->setBrush(path.getBrush());
-        painter->drawPath(path);
+        RGraphicsSceneDrawable d = backgroundDecoration[i];
+        if (d.isPainterPath()) {
+            RPainterPath& path = d.getPainterPath();
+            painter->setPen(path.getPen());
+            painter->setBrush(path.getBrush());
+            painter->drawPath(path);
+        }
+        else if (d.isText()) {
+            RTextBasedData& text = d.getText();
+            RVector pos = text.getPosition();
+            painter->setFont(QFont(text.getFontName(), text.getTextHeight()));
+            painter->setPen(QPen(Qt::black));
+            QTransform t;
+            t.scale(1,-1);
+            QTransform savedTransform2 = painter->transform();
+            painter->setTransform(t, true);
+            int flags = 0;
+            double boxLeft;
+            double boxTop;
+
+            switch (text.getVAlign()) {
+            case RS::VAlignTop:
+                flags|=Qt::AlignTop;
+                boxTop = -pos.y;
+                break;
+            case RS::VAlignBottom:
+                flags|=Qt::AlignBottom;
+                boxTop = -pos.y-boxHeight;
+                break;
+            }
+
+            switch (text.getHAlign()) {
+            case RS::HAlignLeft:
+                flags|=Qt::AlignLeft;
+                boxLeft = pos.x;
+                break;
+            case RS::HAlignCenter:
+                flags|=Qt::AlignHCenter;
+                boxLeft = pos.x-boxWidth/2;
+                break;
+            case RS::HAlignRight:
+                flags|=Qt::AlignRight;
+                boxLeft = pos.x-boxWidth;
+                break;
+            }
+
+            QRectF box(boxLeft, boxTop, boxWidth,boxHeight);
+
+            painter->drawText(box, flags, text.getText());
+            painter->setTransform(savedTransform2);
+        }
     }
 
     painter->setTransform(savedTransform);

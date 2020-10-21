@@ -293,7 +293,7 @@ public:
     //virtual void emitDecorateForeground(QPainter* painter) { Q_UNUSED(painter) }
 
     void clearBackground();
-    void addToBackground(const RPainterPath& path);
+    void addToBackground(const RGraphicsSceneDrawable& drawable);
     void setBackgroundTransform(double bgFactor, const RVector& bgOffset);
 
     void clearOverlay(int overlayId);
@@ -415,7 +415,7 @@ protected:
 
     double drawingScale;
 
-    QList<RPainterPath> backgroundDecoration;
+    QList<RGraphicsSceneDrawable> backgroundDecoration;
     //QTransform backgroundTransform;
     double backgroundFactor;
     RVector backgroundOffset;
