@@ -855,10 +855,7 @@ void RGraphicsViewImage::paintBackground(QPainter* painter, const QRect& rect) {
             RVector pos = text.getPosition();
             painter->setFont(QFont(text.getFontName(), text.getTextHeight()));
             painter->setPen(QPen(Qt::black));
-            QTransform t;
-            t.scale(1,-1);
-            QTransform savedTransform2 = painter->transform();
-            painter->setTransform(t, true);
+
             int flags = 0;
             double boxLeft;
             double boxTop;
@@ -891,6 +888,10 @@ void RGraphicsViewImage::paintBackground(QPainter* painter, const QRect& rect) {
 
             QRectF box(boxLeft, boxTop, boxWidth,boxHeight);
 
+            QTransform t;
+            t.scale(1,-1);
+            QTransform savedTransform2 = painter->transform();
+            painter->setTransform(t, true);
             painter->drawText(box, flags, text.getText());
             painter->setTransform(savedTransform2);
         }
