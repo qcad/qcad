@@ -1043,7 +1043,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">第二个实体不能修剪。</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -4172,7 +4172,7 @@ is already in the list.</source>
     <message>
         <location line="+13"/>
         <source>Add Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">添加图层</translation>
     </message>
 </context>
 <context>
@@ -6898,7 +6898,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/LayerCompatibility.js" line="+30"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">图层</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -6952,7 +6952,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">图层</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -7181,7 +7181,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="-27"/>
         <source>File:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">文件：</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7191,7 +7191,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+3"/>
         <source>License:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">授权：</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9759,7 +9759,7 @@ shown in search results:</source>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">第二个实体不能修剪。</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
@@ -11760,7 +11760,7 @@ shown in search results:</source>
     <message>
         <location line="+17"/>
         <source>Value:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">值：</translation>
     </message>
     <message>
         <location line="+42"/>
@@ -12214,7 +12214,7 @@ shown in search results:</source>
     <message>
         <location line="+13"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">第二个实体不能修剪。</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Trim/TrimInit.js" line="+2"/>
@@ -12904,7 +12904,7 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">图层</translation>
     </message>
     <message>
         <location line="+2"/>
