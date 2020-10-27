@@ -124,6 +124,11 @@ Trim.prototype.pickEntity = function(event, preview) {
     var entity = doc.queryEntity(entityId);
     var pos = event.getModelPosition();
 
+    if (!this.isEntitySnappable(entity)) {
+        // entity not on a snappable layer:
+        return;
+    }
+
     switch (this.state) {
     case Trim.State.ChoosingLimitingEntity:
         if (isNull(entity) || (this.trimBoth && !EAction.assertEditable(entity, preview))) {
