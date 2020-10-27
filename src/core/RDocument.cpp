@@ -2397,6 +2397,20 @@ bool RDocument::isParentLayerSnappable(const RLayer& layer) const {
 }
 
 /**
+ * \copydoc RStorage::isLayerSnappable
+ */
+bool RDocument::isLayerSnappable(RLayer::Id layerId) const {
+    return storage.isLayerSnappable(layerId);
+}
+
+/**
+ * \copydoc RStorage::isLayerSnappable
+ */
+bool RDocument::isLayerSnappable(const RLayer& layer) const {
+    return storage.isLayerSnappable(layer);
+}
+
+/**
  * \copydoc RStorage::isLayerPlottable
  */
 bool RDocument::isLayerPlottable(RLayer::Id layerId) const {

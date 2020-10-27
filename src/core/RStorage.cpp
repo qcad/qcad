@@ -1053,6 +1053,27 @@ bool RStorage::isParentLayerSnappable(const RLayer& layer) const {
 }
 
 /**
+ * \return True if this layer and its parent layers are snappable.
+ */
+bool RStorage::isLayerSnappable(RLayer::Id layerId) const {
+    QSharedPointer<RLayer> l = queryLayerDirect(layerId);
+    if (l.isNull()) {
+        return false;
+    }
+    return isLayerSnappable(*l);
+}
+
+/**
+ * \return True if this layer and its parent layers are snappable.
+ */
+bool RStorage::isLayerSnappable(const RLayer& layer) const {
+    if (!layer.isSnappable()) {
+        return false;
+    }
+    return isParentLayerSnappable(layer);
+}
+
+/**
  * \return True if this layer and its parent layers are plottable.
  */
 bool RStorage::isLayerPlottable(RLayer::Id layerId) const {
