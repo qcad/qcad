@@ -47,7 +47,8 @@
     <constructor><name>ROperation</name><parameter_list>(
         <param><decl><type><name>bool</name></type> <name>undoable</name>=<init><expr><name>true</name></expr></init></decl></param>,
         <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>entityTypeFilter</name> =<init> <expr><name><name>RS</name>::<name>EntityAll</name></name></expr></init></decl></param>
-    )</parameter_list> <member_list>: <call><name>undoable</name><argument_list>(<argument><expr><name>undoable</name></expr></argument>)</argument_list></call>, 
+    )</parameter_list> <member_list>: <call><name>transactionType</name><argument_list>(<argument><expr><name><name>RTransaction</name>::<name>Generic</name></name></expr></argument>)</argument_list></call>,
+        <call><name>undoable</name><argument_list>(<argument><expr><name>undoable</name></expr></argument>)</argument_list></call>,
         <call><name>recordAffectedObjects</name><argument_list>(<argument><expr><name>true</name></expr></argument>)</argument_list></call>,
         <call><name>spatialIndexDisabled</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call>,
         <call><name>allowInvisible</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call>,

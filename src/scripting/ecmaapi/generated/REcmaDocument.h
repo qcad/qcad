@@ -270,6 +270,9 @@
         isLayerPlottable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isLayerSnappable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isParentLayerFrozen
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
