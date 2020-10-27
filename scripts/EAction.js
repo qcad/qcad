@@ -2192,6 +2192,21 @@ EAction.getEntityId = function(di, action, event, preview, selectable) {
     return ret;
 };
 
+EAction.prototype.isEntitySnappable = function(e) {
+    if (!isEntity(e)) {
+        return false;
+    }
+
+    var layerId = e.getLayerId();
+    var data = e.getData();
+    var doc = data.getDocument();
+    if (isNull(doc)) {
+        return false;
+    }
+
+    return doc.isLayerSnappable(layerId);
+};
+
 /**
  * Some common, shared translated warnings:
  */
