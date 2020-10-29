@@ -72,6 +72,9 @@
         sortBlocks
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        sortLayers
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryAllObjects
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -341,6 +341,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, sortBlocks, "sortBlocks");
             
+            REcmaHelper::registerFunction(&engine, proto, sortLayers, "sortLayers");
+            
             REcmaHelper::registerFunction(&engine, proto, getLayerName, "getLayerName");
             
             REcmaHelper::registerFunction(&engine, proto, getLayerNames, "getLayerNames");
@@ -11909,6 +11911,67 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::sortBlocks", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::sortLayers
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::sortLayers", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::sortLayers";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("sortLayers", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RLayer::Id > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RLayer::Id >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RLayer::Id >'
+    QList < RLayer::Id > cppResult =
+        
+               self->sortLayers(a0);
+        // return type: QList < RLayer::Id >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.sortLayers().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::sortLayers", context, engine);
             return result;
         }
          QScriptValue

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RStorageLayerSort.h"><cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLayer.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RStorage</name>;</class_decl>
+
+<class>class <name>RStorageLayerSort</name> <block>{<private type="default">
+</private><public>public:
+    <constructor><name>RStorageLayerSort</name><parameter_list>(<param><decl><type><name>const</name> <name>RStorage</name>*</type> <name>storage</name></decl></param>)</parameter_list> <member_list>: <call><name>storage</name><argument_list>(<argument><expr><name>storage</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
+    <function_decl><type><name>bool</name></type> <name>operator()</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>a</name></decl></param>, <param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>b</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <decl_stmt><decl><type><name>const</name> <name>RStorage</name>*</type> <name>storage</name></decl>;</decl_stmt>
+</public>}</block>;</class>
+
+</unit>

@@ -453,6 +453,9 @@
         sortBlocks
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        sortLayers
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLayerName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
