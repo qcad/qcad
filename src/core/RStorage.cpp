@@ -21,6 +21,7 @@
 #include "RSettings.h"
 #include "RStorage.h"
 #include "RStorageBlockSort.h"
+#include "RStorageLayerSort.h"
 #include "RMainWindow.h"
 
 RStorage::RStorage() :
@@ -275,6 +276,13 @@ QList<REntity::Id> RStorage::orderBackToFront(const QSet<REntity::Id>& entityIds
 QList<RBlock::Id> RStorage::sortBlocks(const QList<RBlock::Id>& blockIds) const {
     QList<RBlock::Id> ret = blockIds;
     RStorageBlockSort s(this);
+    qSort(ret.begin(), ret.end(), s);
+    return ret;
+}
+
+QList<RLayer::Id> RStorage::sortLayers(const QList<RLayer::Id>& layerIds) const {
+    QList<RLayer::Id> ret = layerIds;
+    RStorageLayerSort s(this);
     qSort(ret.begin(), ret.end(), s);
     return ret;
 }

@@ -911,6 +911,10 @@ QList<RBlock::Id> RDocument::sortBlocks(const QList<RBlock::Id>& blockIds) const
     return storage.sortBlocks(blockIds);
 }
 
+QList<RLayer::Id> RDocument::sortLayers(const QList<RLayer::Id>& layerIds) const {
+    return storage.sortLayers(layerIds);
+}
+
 /**
  * \copydoc RStorage::setCurrentView
  */

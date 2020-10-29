@@ -106,6 +106,8 @@ public:
 
     QList<RBlock::Id> sortBlocks(const QList<RBlock::Id>& blockIds) const;
 
+    QList<RLayer::Id> sortLayers(const QList<RLayer::Id>& layerIds) const;
+
     /**
      * \nonscriptable
      */
