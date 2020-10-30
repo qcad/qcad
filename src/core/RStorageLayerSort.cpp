@@ -13,8 +13,11 @@ bool RStorageLayerSort::operator()(RLayer::Id a, RLayer::Id b) const {
     }
 
     // layers with sort order always first:
-    bool aSort = layerA->hasCustomProperty("QCAD", "SortOrder");
-    bool bSort = layerB->hasCustomProperty("QCAD", "SortOrder");
+    int aSortOrder = layerA->getCustomIntProperty("QCAD", "SortOrder", -1);
+    int bSortOrder = layerB->getCustomIntProperty("QCAD", "SortOrder", -1);
+    bool aSort = (aSortOrder!=-1);
+    bool bSort = (bSortOrder!=-1);
+
     if (aSort && !bSort) {
         return true;
     }
@@ -22,8 +25,6 @@ bool RStorageLayerSort::operator()(RLayer::Id a, RLayer::Id b) const {
         return false;
     }
     if (aSort && bSort) {
-        int aSortOrder = layerA->getCustomIntProperty("QCAD", "SortOrder", 0);
-        int bSortOrder = layerB->getCustomIntProperty("QCAD", "SortOrder", 0);
         return aSortOrder<bSortOrder;
     }
 
