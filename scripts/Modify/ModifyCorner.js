@@ -159,6 +159,11 @@ ModifyCorner.prototype.pickEntity = function(event, preview) {
     var pos = event.getModelPosition();
     var op;
 
+    if (!this.isEntitySnappable(entity)) {
+        // entity not on a snappable layer:
+        return;
+    }
+
     switch (this.state) {
     case ModifyCorner.State.ChoosingEntity1:
         if (isNull(entity)) {
