@@ -107,8 +107,20 @@ InfoPolylineArea.prototype.getOperation = function(preview) {
     var c = this.shape.getLastVertex();
     if (c.isValid()) {
         this.addTextLabel(op, view, c, label2, preview);
-        var v = new RVector(0, this.textHeight * 1.4);
-        c = c.operator_add(v);
+        var v;
+        if (preview) {
+            var font = RSettings.getInfoLabelFont();
+            font.setPointSizeF(font.pointSizeF()*view.getDevicePixelRatio());
+            var fm = new QFontMetrics(font);
+            var h = fm.height()+10;
+            v = new RVector(0, view.mapDistanceFromView(h));
+            c = c.operator_add(v);
+        }
+        else {
+            v = new RVector(0, this.textHeight * 1.4);
+            c = c.operator_add(v);
+        }
+
         this.addTextLabel(op, view, c, label1, preview);
     }
 
