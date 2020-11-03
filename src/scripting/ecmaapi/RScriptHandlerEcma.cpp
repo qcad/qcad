@@ -2410,7 +2410,13 @@ QScriptValue RScriptHandlerEcma::ecmaQImagePixelColor(QScriptContext* context, Q
 
     int a0 = qscriptvalue_cast<int>(context->argument(0));
     int a1 = qscriptvalue_cast<int>(context->argument(1));
+#if QT_VERSION >= 0x050600
     QColor ret = self->pixelColor(a0, a1);
+#else
+    // TODO:
+    QColor ret = QColor("white");
+    Q_ASSERT(false)
+#endif
 
     return qScriptValueFromValue(engine, ret);
 }
@@ -2428,7 +2434,12 @@ QScriptValue RScriptHandlerEcma::ecmaQImageSetPixelColor(QScriptContext* context
     int a0 = qscriptvalue_cast<int>(context->argument(0));
     int a1 = qscriptvalue_cast<int>(context->argument(1));
     QColor a2 = qscriptvalue_cast<QColor>(context->argument(2));
+#if QT_VERSION >= 0x050600
     self->setPixelColor(a0, a1, a2);
+#else
+    // TODO:
+    Q_ASSERT(false)
+#endif
 
     return engine->undefinedValue();
 }
