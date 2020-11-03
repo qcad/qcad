@@ -171,6 +171,12 @@
         removeFromWidget
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        updateIcons
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateIcon
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setIcon
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

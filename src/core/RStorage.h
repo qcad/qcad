@@ -106,6 +106,8 @@ public:
 
     QList<RBlock::Id> sortBlocks(const QList<RBlock::Id>& blockIds) const;
 
+    QList<RLayer::Id> sortLayers(const QList<RLayer::Id>& layerIds) const;
+
     /**
      * \nonscriptable
      */
@@ -646,6 +648,8 @@ public:
     virtual bool isParentLayerFrozen(RLayer::Id layerId) const;
     virtual bool isParentLayerFrozen(const RLayer& layer) const;
 
+    virtual bool isLayerSnappable(RLayer::Id layerId) const;
+    virtual bool isLayerSnappable(const RLayer& layer) const;
     virtual bool isParentLayerSnappable(RLayer::Id layerId) const;
     virtual bool isParentLayerSnappable(const RLayer& layer) const;
 

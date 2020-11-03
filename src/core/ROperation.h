@@ -46,7 +46,8 @@ public:
     ROperation(
         bool undoable=true,
         RS::EntityType entityTypeFilter = RS::EntityAll
-    ) : undoable(undoable), 
+    ) : transactionType(RTransaction::Generic),
+        undoable(undoable),
         recordAffectedObjects(true),
         spatialIndexDisabled(false),
         allowInvisible(false),
@@ -105,7 +106,16 @@ public:
         return text;
     }
 
+    void setTransactionType(RTransaction::Type t) {
+        transactionType = t;
+    }
+
+    RTransaction::Type getTransactionType() const {
+        return transactionType;
+    }
+
 protected:
+    RTransaction::Type transactionType;
     bool undoable;
     bool recordAffectedObjects;
     bool spatialIndexDisabled;

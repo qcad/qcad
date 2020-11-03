@@ -39,6 +39,7 @@
  *
  * \ingroup core
  * \scriptable
+ * \copyable
  * \hasStreamOperator
  */</comment>
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RPattern</name> <block>{<private type="default">

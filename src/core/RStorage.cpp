@@ -21,6 +21,7 @@
 #include "RSettings.h"
 #include "RStorage.h"
 #include "RStorageBlockSort.h"
+#include "RStorageLayerSort.h"
 #include "RMainWindow.h"
 
 RStorage::RStorage() :
@@ -123,6 +124,7 @@ void RStorage::setCurrentLayer(RLayer::Id layerId, RTransaction* transaction) {
     QSharedPointer<RDocumentVariables> docVars = startDocumentVariablesTransaction(transaction, useLocalTransaction);
     Q_ASSERT(!docVars.isNull());
     docVars->setCurrentLayerId(layerId);
+    transaction->setType(RTransaction::CurrentLayerChange);
     endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
 }
 
@@ -136,6 +138,7 @@ void RStorage::setCurrentLayer(const QString& layerName, RTransaction* transacti
     }
 
     docVars->setCurrentLayerId(layerId);
+    transaction->setType(RTransaction::CurrentLayerChange);
     endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
 }
 
@@ -273,6 +276,13 @@ QList<REntity::Id> RStorage::orderBackToFront(const QSet<REntity::Id>& entityIds
 QList<RBlock::Id> RStorage::sortBlocks(const QList<RBlock::Id>& blockIds) const {
     QList<RBlock::Id> ret = blockIds;
     RStorageBlockSort s(this);
+    qSort(ret.begin(), ret.end(), s);
+    return ret;
+}
+
+QList<RLayer::Id> RStorage::sortLayers(const QList<RLayer::Id>& layerIds) const {
+    QList<RLayer::Id> ret = layerIds;
+    RStorageLayerSort s(this);
     qSort(ret.begin(), ret.end(), s);
     return ret;
 }
@@ -1048,6 +1058,27 @@ bool RStorage::isParentLayerSnappable(const RLayer& layer) const {
         return false;
     }
     return isParentLayerSnappable(*pl);
+}
+
+/**
+ * \return True if this layer and its parent layers are snappable.
+ */
+bool RStorage::isLayerSnappable(RLayer::Id layerId) const {
+    QSharedPointer<RLayer> l = queryLayerDirect(layerId);
+    if (l.isNull()) {
+        return false;
+    }
+    return isLayerSnappable(*l);
+}
+
+/**
+ * \return True if this layer and its parent layers are snappable.
+ */
+bool RStorage::isLayerSnappable(const RLayer& layer) const {
+    if (!layer.isSnappable()) {
+        return false;
+    }
+    return isParentLayerSnappable(layer);
 }
 
 /**

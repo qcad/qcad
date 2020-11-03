@@ -98,6 +98,14 @@
         <return>return <expr><name>type</name>==<name>PainterPath</name> || <name>type</name>==<name>PainterPathRay</name> || <name>type</name>==<name>PainterPathXLine</name></expr>;</return>
     }</block></function>
 
+    <function><type><name>bool</name></type> <name>isText</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>type</name>==<name>Text</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isImage</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>type</name>==<name>Image</name></expr>;</return>
+    }</block></function>
+
     <function><type><name>void</name></type> <name>setMode</name><parameter_list>(<param><decl><type><name><name>RGraphicsSceneDrawable</name>::<name>Mode</name></name></type> <name>mode</name></decl></param>, <param><decl><type><name>bool</name></type> <name>on</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <block>{
         <if>if <condition>(<expr><name>on</name></expr>)</condition><then> <block>{
             <expr_stmt><expr><name>modes</name> |= <name>mode</name></expr>;</expr_stmt>

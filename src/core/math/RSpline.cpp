@@ -380,7 +380,7 @@ void RSpline::insertFitPointAt(double t, const RVector& p) {
     int index = -1;
     for (int i=0; i<fitPoints.length(); i++) {
         double tc = getTAtPoint(fitPoints[i]);
-        if (i==0 && isClosed()) {
+        if (i==0 && (isClosed() || getStartPoint().equalsFuzzy(getEndPoint()))) {
             // closed spline: two t's for first fit point:
             tc = 0.0;
         }
@@ -393,14 +393,13 @@ void RSpline::insertFitPointAt(double t, const RVector& p) {
         }
     }
 
-
     // point not on spline:
     if (index<0 || index>=fitPoints.length()) {
         if (isClosed()) {
             index = 0;
         }
         else {
-            qWarning() << "no point on spline found. t: " << t;
+            qWarning() << "no point on spline found. t: " << t << ", index: " << index;
             return;
         }
     }
@@ -1092,7 +1091,7 @@ QList<RVector> RSpline::getCenterPoints() const {
 QList<RVector> RSpline::getPointsWithDistanceToEnd(double distance, int from) const {
     QList<RVector> ret;
 
-    if (splineProxy!=NULL) {
+    if (hasProxy()) {
         double t;
         if (from&RS::FromStart) {
             t = splineProxy->getTAtDistance(*this, distance);
@@ -1130,7 +1129,7 @@ QList<RVector> RSpline::getPointCloud(double segmentLength) const {
 }
 
 RVector RSpline::getVectorTo(const RVector& point, bool limited, double strictRange) const {
-    if (splineProxy!=NULL) {
+    if (hasProxy()) {
         return splineProxy->getVectorTo(*this, point, limited, strictRange);
     }
     else {
@@ -1392,21 +1391,23 @@ double RSpline::getTMax() const {
 }
 
 double RSpline::getTAtPoint(const RVector& point) const {
-    if (splineProxy!=NULL) {
+    if (hasProxy()) {
+        // TODO: fails for splines with clamped control points in the middle (multiple control points at the same location):
         return splineProxy->getTAtPoint(*this, point);
     }
+
     return 0.0;
 }
 
 double RSpline::getTAtDistance(double distance) const {
-    if (splineProxy!=NULL) {
+    if (hasProxy()) {
         return splineProxy->getTAtDistance(*this, distance);
     }
     return 0.0;
 }
 
 double RSpline::getDistanceAtT(double t) const {
-    if (splineProxy!=NULL) {
+    if (hasProxy()) {
         return splineProxy->getDistanceAtT(*this, t);
     }
     return 0.0;
@@ -1443,7 +1444,7 @@ QList<RVector> RSpline::getDiscontinuities() const {
 }
 
 RSpline RSpline::simplify(double tolerance) {
-    if (splineProxy!=NULL) {
+    if (hasProxy()) {
         return splineProxy->simplify(*this, tolerance);
     }
     return *this;
@@ -1648,7 +1649,7 @@ void RSpline::updateFromFitPoints() const {
     }
 
     // call into plugin
-    if (splineProxy!=NULL) {
+    if (hasProxy()) {
         RSpline spline = splineProxy->updateFromFitPoints(*this);
 //        qDebug() << "tan start before:" << this->tangentStart;
 //        qDebug() << "tan start:" << spline.tangentStart;
@@ -1795,7 +1796,7 @@ QList<RSpline> RSpline::splitAtPoints(const QList<RVector>& points) const {
 }
 
 QList<RSpline> RSpline::splitAtParams(const QList<double>& params) const {
-    if (splineProxy!=NULL) {
+    if (hasProxy()) {
         return splineProxy->split(*this, params);
     }
     return QList<RSpline>();

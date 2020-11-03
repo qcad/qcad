@@ -37,6 +37,8 @@
             QScriptEngine *engine)
         ;static  QScriptValue getRCoordinateListener(QScriptContext *context,
             QScriptEngine *engine)
+        ;static  QScriptValue getRPaletteListener(QScriptContext *context,
+            QScriptEngine *engine)
         ;
 
     // returns class name:
@@ -62,6 +64,11 @@
 
         // methods of secondary base class RCoordinateListener:
         
+        // properties of secondary base class RPaletteListener:
+        
+
+        // methods of secondary base class RPaletteListener:
+        
 
     // properties:
     
@@ -84,6 +91,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         updateCoordinate
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updatePalette
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

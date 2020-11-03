@@ -4924,26 +4924,26 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: RPainterPath */
+        ) /* type: RGraphicsSceneDrawable */
     
     ){
     // prepare arguments:
     
                     // argument isCopyable and has default constructor and isSimpleClass 
-                    RPainterPath*
+                    RGraphicsSceneDrawable*
                     ap0 =
                     qscriptvalue_cast<
-                    RPainterPath*
+                    RGraphicsSceneDrawable*
                         >(
                         context->argument(
                         0
                         )
                     );
                     if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RPainterPath.",
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RGraphicsSceneDrawable.",
                                context);                    
                     }
-                    RPainterPath 
+                    RGraphicsSceneDrawable 
                     a0 = 
                     *ap0;
                 

@@ -526,7 +526,7 @@ PrintPreviewImpl.prototype.updateBackgroundDecoration = function() {
     path.setPen(new QPen(Qt.NoPen));
     path.setBrush(new QBrush(new QColor(colBg)));
     path.addRect(new QRectF(-1.0e8, -1.0e8, 2.0e8, 2.0e8));
-    this.view.addToBackground(path);
+    this.view.addToBackground(RGraphicsSceneDrawable.createFromPainterPath(path));
 
     // page border with shadow
     if (Print.getShowPaperBorders(document)) {
@@ -536,7 +536,7 @@ PrintPreviewImpl.prototype.updateBackgroundDecoration = function() {
             path.setPen(new QPen(Qt.NoPen));
             path.setBrush(new QBrush(new QColor(colShadow)));
             this.drawShadow(path, pages[i]);
-            this.view.addToBackground(path);
+            this.view.addToBackground(RGraphicsSceneDrawable.createFromPainterPath(path));
         }
 
         // paper background
@@ -547,7 +547,7 @@ PrintPreviewImpl.prototype.updateBackgroundDecoration = function() {
                     backgroundColor.blue());
             path.setBrush(new QBrush(color));
             this.drawPaper(path, pages[i]);
-            this.view.addToBackground(path);
+            this.view.addToBackground(RGraphicsSceneDrawable.createFromPainterPath(path));
         }
 
         // paper border
@@ -556,7 +556,7 @@ PrintPreviewImpl.prototype.updateBackgroundDecoration = function() {
             path.setPen(new QPen(new QColor(colBorder)));
             path.setBrush(new QBrush(Qt.NoBrush));
             this.drawPaper(path, pages[i]);
-            this.view.addToBackground(path);
+            this.view.addToBackground(RGraphicsSceneDrawable.createFromPainterPath(path));
         }
     }
 
@@ -578,17 +578,17 @@ PrintPreviewImpl.prototype.updateBackgroundDecoration = function() {
     for (i = 0; i < pages.length; ++i) {
         this.drawGlueMargins(path, pages[i]);
     }
-    this.view.addToBackground(path);
+    this.view.addToBackground(RGraphicsSceneDrawable.createFromPainterPath(path));
 
-    // TODO: hook for page tags
+    // hook for page tags, footer, etc.:
     this.addDecorations(pages);
 
-    // crop marks
+    // crop marks:
     if (Print.getPrintCropMarks(document)) {
         for ( i = 0; i < pages.length; ++i) {
             path = new RPainterPath();
             Print.drawCropMarks(document, path, pages[i], false);
-            this.view.addToBackground(path);
+            this.view.addToBackground(RGraphicsSceneDrawable.createFromPainterPath(path));
         }
     }
 

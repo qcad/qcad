@@ -82,6 +82,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, copyLinetype, "copyLinetype");
             
+            REcmaHelper::registerFunction(&engine, proto, setCopyEmptyBlocks, "setCopyEmptyBlocks");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RClipboardOperation*>(), *proto);
 
@@ -1273,6 +1275,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaClipboardOperation::copyLinetype", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaClipboardOperation::setCopyEmptyBlocks
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaClipboardOperation::setCopyEmptyBlocks", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaClipboardOperation::setCopyEmptyBlocks";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RClipboardOperation* self = 
+                        getSelf("setCopyEmptyBlocks", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCopyEmptyBlocks(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RClipboardOperation.setCopyEmptyBlocks().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaClipboardOperation::setCopyEmptyBlocks", context, engine);
             return result;
         }
          QScriptValue REcmaClipboardOperation::toString

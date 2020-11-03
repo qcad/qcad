@@ -117,6 +117,10 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
                 break;
             }
 
+//            if (i%1000===0) {
+//                qDebug("progress: %1%".arg(i/ids.length*100));
+//            }
+
             id = ids[i];
             entityP = document.queryEntity(id);
             if (isNull(entityP)) {

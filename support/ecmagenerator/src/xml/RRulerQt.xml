@@ -10,6 +10,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <baseClass name="QFrame" specifier="public" />
     <baseClass name="RRuler" specifier="public" />
     <baseClass name="RCoordinateListener" specifier="public" />
+    <baseClass name="RPaletteListener" specifier="public" />
     <constructor>
       <variant>
         <arg type="QWidget *" typeName="QWidget *" name="parent"
@@ -56,6 +57,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="RDocumentInterface *" name="documentInterface"
         isConst="false" />
       </variant>
+    </method>
+    <method name="updatePalette" cppName="updatePalette"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
     </method>
     <method name="paintEvent" cppName="paintEvent"
     specifier="protected" isStatic="false" isVirtual="false"

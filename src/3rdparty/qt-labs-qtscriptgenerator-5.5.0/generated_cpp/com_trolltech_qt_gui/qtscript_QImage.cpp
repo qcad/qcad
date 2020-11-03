@@ -338,6 +338,7 @@ static const QImage::Format qtscript_QImage_Format_values[] = {
     , QImage::Format_RGBX8888
     , QImage::Format_RGBA8888
     , QImage::Format_RGBA8888_Premultiplied
+    , QImage::Format_Grayscale8
     , QImage::NImageFormats
 };
 
@@ -361,6 +362,7 @@ static const char * const qtscript_QImage_Format_keys[] = {
     , "Format_RGBX8888"
     , "Format_RGBA8888"
     , "Format_RGBA8888_Premultiplied"
+    , "Format_Grayscale8"
     , "NImageFormats"
 };
 

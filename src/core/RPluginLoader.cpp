@@ -95,6 +95,13 @@ void RPluginLoader::loadPlugins(bool init) {
     pluginFiles.clear();
     pluginsInfo.clear();
 
+
+#ifndef Q_OS_MAC
+    // disable OpenGL plugin if not explicitely enabled:
+    //bool loadOpenGL = RSettings::getBoolValue("PluginLoader/qcadgles3d", false);
+    //RSettings::setValue("PluginLoader/qcadgles3d", loadOpenGL);
+#endif
+
     // plugin settings are always stored in a file with base name "QCAD3":
     // this happens before RSettings is initialized:
 //    QSettings settings(
@@ -130,6 +137,12 @@ void RPluginLoader::loadPlugins(bool init) {
                 continue;
             }
         }
+
+        if (RSettings::getBoolValue("PluginLoader/" + baseName, true)!=true) {
+            // plugin disabled in configuration file:
+            continue;
+        }
+
         QPluginLoader loader(fileName);
         QObject* plugin = loader.instance();
         loadPlugin(plugin, init, fileName, loader.errorString());

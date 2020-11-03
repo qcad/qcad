@@ -72,6 +72,9 @@
         sortBlocks
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        sortLayers
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryAllObjects
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -460,6 +463,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isParentLayerFrozen
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isLayerSnappable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isParentLayerSnappable

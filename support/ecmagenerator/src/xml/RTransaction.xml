@@ -7,6 +7,12 @@ xmlns:rs="http://www.ribbonsoft.com">
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="true" isAbstract="false" isScriptable="true">
+    <enum name="Type">
+      <value name="Generic" />
+      <value name="CurrentLayerChange" />
+      <value name="CurrentLayerSelectionChange" />
+      <value name="LayerLockStatusChange" />
+    </enum>
     <constructor>
       <variant />
       <variant>
@@ -280,6 +286,18 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="isPreview" cppName="isPreview" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getType" cppName="getType" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RTransaction::Type"
+      isPureVirtual="false" />
+    </method>
+    <method name="setType" cppName="setType" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RTransaction::Type"
+        typeName="RTransaction::Type" name="t" isConst="false" />
+      </variant>
     </method>
     <method name="addPropertyChange" cppName="addPropertyChange"
     specifier="protected" isStatic="false" isVirtual="false"

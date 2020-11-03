@@ -151,6 +151,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, addToToolBar, "addToToolBar");
             
+            REcmaHelper::registerFunction(&engine, proto, updateIcon, "updateIcon");
+            
             REcmaHelper::registerFunction(&engine, proto, setIcon, "setIcon");
             
             REcmaHelper::registerFunction(&engine, proto, disableIcon, "disableIcon");
@@ -286,6 +288,8 @@
             REcmaHelper::registerFunction(&engine, &ctor, addToWidget, "addToWidget");
             
             REcmaHelper::registerFunction(&engine, &ctor, removeFromWidget, "removeFromWidget");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, updateIcons, "updateIcons");
             
             REcmaHelper::registerFunction(&engine, &ctor, triggerGroupDefault, "triggerGroupDefault");
             
@@ -2769,6 +2773,84 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGuiAction::removeFromWidget", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::updateIcons
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::updateIcons", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::updateIcons";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RGuiAction::
+       updateIcons();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.updateIcons().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::updateIcons", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::updateIcon
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::updateIcon", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::updateIcon";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGuiAction* self = 
+                        getSelf("updateIcon", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->updateIcon();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.updateIcon().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::updateIcon", context, engine);
             return result;
         }
          QScriptValue

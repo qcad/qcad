@@ -911,6 +911,10 @@ QList<RBlock::Id> RDocument::sortBlocks(const QList<RBlock::Id>& blockIds) const
     return storage.sortBlocks(blockIds);
 }
 
+QList<RLayer::Id> RDocument::sortLayers(const QList<RLayer::Id>& layerIds) const {
+    return storage.sortLayers(layerIds);
+}
+
 /**
  * \copydoc RStorage::setCurrentView
  */
@@ -2394,6 +2398,20 @@ bool RDocument::isParentLayerSnappable(RLayer::Id layerId) const {
  */
 bool RDocument::isParentLayerSnappable(const RLayer& layer) const {
     return storage.isParentLayerSnappable(layer);
+}
+
+/**
+ * \copydoc RStorage::isLayerSnappable
+ */
+bool RDocument::isLayerSnappable(RLayer::Id layerId) const {
+    return storage.isLayerSnappable(layerId);
+}
+
+/**
+ * \copydoc RStorage::isLayerSnappable
+ */
+bool RDocument::isLayerSnappable(const RLayer& layer) const {
+    return storage.isLayerSnappable(layer);
 }
 
 /**

@@ -109,6 +109,11 @@ Offset.prototype.pickEntity = function(event, preview) {
         return;
     }
 
+    if (!this.isEntitySnappable(entity)) {
+        // entity not on a snappable layer:
+        return;
+    }
+
     switch (this.state) {
     case Offset.State.ChoosingEntity:
         var shape;
@@ -223,7 +228,8 @@ Offset.prototype.getOffsetShapes = function(preview) {
 
 Offset.prototype.getHighlightedEntities = function() {
     var ret = [];
-    if (isEntity(this.entity)) {
+    // don't highlight hatches:
+    if (this.isShapeSupported(this.shape) && isEntity(this.entity) && !isHatchEntity(this.entity)) {
         ret.push(this.entity.getId());
     }
     return ret;

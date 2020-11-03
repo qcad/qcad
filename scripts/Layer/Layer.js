@@ -256,6 +256,7 @@ Layer.lockUnlock = function(lock, di, showProgress) {
     }
 
     var operation = new RModifyObjectsOperation();
+    operation.setTransactionType(RTransaction.LayerLockStatusChange);
     var layers = di.getDocument().queryAllLayers();
     for (var l = 0; l < layers.length; ++l) {
         if (showProgress===true) {

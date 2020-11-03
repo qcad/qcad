@@ -91,6 +91,11 @@ InfoAngle.prototype.pickEntity = function(event, preview) {
     var entity = doc.queryEntity(entityId);
     var op;
 
+    if (!this.isEntitySnappable(entity)) {
+        // entity not on a snappable layer:
+        return;
+    }
+
     // keep showing preview after 2nd entity has been set:
     if (!this.addToDrawing) {
         op = this.getOperation(preview);

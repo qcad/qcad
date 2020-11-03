@@ -85,7 +85,7 @@ void RImporter::endImport() {
 
     // ground all directly recursive block references:
     int counter = 0;
-    QStringList blockNames;
+    QList<QPair<QString, QString> >  blockNames;
     QSet<RBlock::Id> blockIds = document->queryAllBlocks();
     QSet<RBlock::Id>::const_iterator it;
     for (it=blockIds.constBegin(); it!=blockIds.constEnd(); it++) {
@@ -106,7 +106,7 @@ void RImporter::endImport() {
             RBlock::Id refBlockId = blockRef->getReferencedBlockId();
 
             if (refBlockId==blockId) {
-                blockNames.append(document->getBlockName(refBlockId));
+                blockNames.append(QPair<QString, QString>(document->getBlockName(refBlockId), document->getBlockName(refBlockId)));
                 blockRef->setReferencedBlockId(RBlock::INVALID_ID);
                 counter++;
             }
@@ -114,12 +114,20 @@ void RImporter::endImport() {
     }
 
     if (RMainWindow::hasMainWindow() && counter>0) {
-        blockNames = blockNames.toSet().toList();
+        //blockNames = blockNames.toSet().toList();
         RMainWindow::getMainWindow()->handleUserWarning(
-            QString("Grounded %1 recursive block reference(s) in blocks: %2")
-                .arg(counter)
-                .arg(blockNames.join(", "))
+            QString("Grounded %1 recursive block references:")
+                    .arg(counter)
         );
+
+        QList<QPair<QString, QString> >::iterator it;
+        for (it=blockNames.begin(); it!=blockNames.end(); it++) {
+            RMainWindow::getMainWindow()->handleUserWarning(
+                QString("Grounded recursive block reference to block %1 in block %2")
+                    .arg(it->first)
+                    .arg(it->second)
+            );
+        }
     }
 
     //qDebug() << "rebuilding spatial index";

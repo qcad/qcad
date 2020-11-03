@@ -3937,7 +3937,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPattern*
                     ap0 =
                     qscriptvalue_cast<
@@ -3947,11 +3947,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RHatchData: Argument 0 is not of type RPattern*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RHatchData: Argument 0 is not of type RPattern.",
                                context);                    
                     }
-                    RPattern& a0 = *ap0;
+                    RPattern 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 

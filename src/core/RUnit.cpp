@@ -510,9 +510,11 @@ QString RUnit::formatEngineering(double length, RS::Unit unit,
     }
 
     if (feet!=0) {
-        ret.sprintf("%d'-%s\"", feet, (const char*)sInches.toLatin1());
+        QTextStream(&ret) << feet << "'-" << sInches << "\"";
+        //ret.sprintf("%d'-%s\"", feet, (const char*)sInches.toLatin1());
     } else {
-        ret.sprintf("%s\"", (const char*)sInches.toLatin1());
+        QTextStream(&ret) << sInches << "\"";
+        //ret.sprintf("%s\"", (const char*)sInches.toLatin1());
     }
 
     if (sign) {
@@ -571,16 +573,22 @@ QString RUnit::formatArchitectural(double length, RS::Unit unit,
     // suppress 0 feet:
     if (feet==0) {
         if (neg) {
-            ret.sprintf("-%s\"", (const char*)sInches.toLatin1());
+            QTextStream(&ret) << "-" << sInches << "\"";
+            //ret.sprintf("-%s\"", (const char*)sInches.toLatin1());
+            //qDebug() << "neg ret no feet:" << ret;
         } else {
-            ret.sprintf("%s\"", (const char*)sInches.toLatin1());
+            QTextStream(&ret) << sInches << "\"";
+            //ret.sprintf("%s\"", (const char*)sInches.toLatin1());
         }
     }
     else {
         if (neg) {
-            ret.sprintf("-%d'-%s\"", feet, (const char*)sInches.toLatin1());
+            QTextStream(&ret) << "-" << feet << "'-" << sInches << "\"";
+            //ret.sprintf("-%d'-%s\"", feet, (const char*)sInches.toLatin1());
+            //qDebug() << "neg ret:" << ret;
         } else {
-            ret.sprintf("%d'-%s\"", feet, (const char*)sInches.toLatin1());
+            QTextStream(&ret) << feet << "'-" << sInches << "\"";
+            //ret.asprintf("%d'-%s\"", feet, (const char*)sInches.toLatin1());
         }
     }
 

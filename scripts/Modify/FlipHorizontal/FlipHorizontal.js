@@ -28,7 +28,7 @@ FlipHorizontal.prototype = new EAction();
 FlipHorizontal.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    FlipHorizontal.flip(this.getDocumentInterface(), true);
+    FlipHorizontal.flip(this.getDocumentInterface(), true, this.getToolTitle());
 
     this.terminate();
 };
@@ -36,7 +36,7 @@ FlipHorizontal.prototype.beginEvent = function() {
 /**
  * \param horizontally True: flip horizontally, false: flip vertically
  */
-FlipHorizontal.flip = function(di, horizontally) {
+FlipHorizontal.flip = function(di, horizontally, toolTitle) {
     var document = di.getDocument();
     var box = document.getSelectionBox();
     var center = box.getCenter();
@@ -52,6 +52,7 @@ FlipHorizontal.flip = function(di, horizontally) {
     var i;
 
     var op = new RModifyObjectsOperation();
+    op.setText(toolTitle);
 
     for (i=0; i<ids.length; i++) {
         var id = ids[i];

@@ -38,6 +38,7 @@
  *
  * \ingroup core
  * \scriptable
+ * \copyable
  * \hasStreamOperator
  */
 class QCADCORE_EXPORT RPattern {

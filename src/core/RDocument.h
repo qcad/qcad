@@ -227,6 +227,8 @@ public:
     bool isLayerFrozen(const RLayer& layer) const;
     bool isLayerPlottable(RLayer::Id layerId) const;
     bool isLayerPlottable(const RLayer& layer) const;
+    bool isLayerSnappable(RLayer::Id layerId) const;
+    bool isLayerSnappable(const RLayer& layer) const;
     bool isParentLayerFrozen(RLayer::Id layerId) const;
     bool isParentLayerFrozen(const RLayer& layer) const;
     bool isBlockFrozen(RBlock::Id blockId) const;
@@ -336,6 +338,7 @@ public:
     QString getBlockNameFromLayout(RLayout::Id layoutId) const;
     QSet<QString> getBlockNames(const QString& rxStr = RDEFAULT_QSTRING) const;
     QList<RBlock::Id> sortBlocks(const QList<RBlock::Id>& blockIds) const;
+    QList<RLayer::Id> sortLayers(const QList<RLayer::Id>& layerIds) const;
     QString getLayerName(RLayer::Id layerId) const;
     QSet<QString> getLayerNames(const QString& rxStr = RDEFAULT_QSTRING) const;
     QString getLayerStateName(RLayerState::Id layerStateId) const;

@@ -29,7 +29,7 @@ FlipVertical.prototype = new EAction();
 FlipVertical.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    FlipHorizontal.flip(this.getDocumentInterface(), false);
+    FlipHorizontal.flip(this.getDocumentInterface(), false, this.getToolTitle());
 
     this.terminate();
 };

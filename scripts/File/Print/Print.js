@@ -43,6 +43,7 @@ function Print(guiAction, document, view) {
 
 Print.prototype = new File();
 
+
 Print.defaultPrinter = undefined;
 
 Print.getDefaultPrinter = function() {
@@ -50,6 +51,10 @@ Print.getDefaultPrinter = function() {
         Print.defaultPrinter = new QPrinter();
     }
     return Print.defaultPrinter;
+};
+
+Print.setProxy = function(p) {
+    Print.proxy = p;
 };
 
 Print.prototype.beginEvent = function() {
@@ -361,6 +366,10 @@ Print.prototype.printCurrentBlock = function(printer, painter) {
         if (Print.getEnablePageTags(this.document)) {
             Print.drawPageTags(this.document, painter, i, pageBorderTransformed, true, printerFactor);
         }
+
+        if (Print.hasFooter(this.document)) {
+            Print.drawPageFooter(this.document, painter, i, pageBorderTransformed, true, printerFactor);
+        }
     }
 
     this.scene.setPixelSizeHint(previousPixelSizeHint);
@@ -521,6 +530,14 @@ Print.centerBox = function(di, bBox) {
  * \param painter QPainter object if we are printing, RPainterPath for print preview.
  */
 Print.drawCropMarks = function(document, painter, border, printing) {
+    var isPainter = isFunction(painter.drawLinesF);
+
+    var clipping = false;
+    if (isPainter) {
+        clipping = painter.hasClipping();
+        painter.setClipping(false);
+    }
+
     var scale = Print.getScale(document);
     var offset = Print.getOffset(document);
     var unitScale = Print.getUnitScale(document);
@@ -548,7 +565,7 @@ Print.drawCropMarks = function(document, painter, border, printing) {
 
 
     // printing:
-    if (isFunction(painter.drawLinesF)) {
+    if (isPainter) {
         for (var k=0; k<lines.length; ++k) {
             lines[k].translate(-offset.x, -offset.y);
         }
@@ -563,6 +580,9 @@ Print.drawCropMarks = function(document, painter, border, printing) {
         }
     }
 
+    if (isPainter) {
+        painter.setClipping(clipping);
+    }
 };
 
 /**
@@ -726,7 +746,20 @@ Print.drawPageTags = function(document, painter, index, border, printing, printe
     else {
         painter.addPath(new RPainterPath(path));
     }
+};
 
+
+/**
+ * Draws the page footer for printing (black, small, border area).
+ * \param index page index
+ * \param border page border geometry of the page
+ * \param painter QPainter object if we are printing, RTextData for print preview.
+ * \param printerFactor Factor from Millimeter to printer unit.
+ */
+Print.drawPageFooter = function(document, painterOrText, index, border, printing, printerFactor) {
+    if (!isNull(Print.proxy)) {
+        Print.proxy.drawPageFooter(document, painterOrText, index, border, printing, printerFactor);
+    }
 };
 
 /**
@@ -1419,6 +1452,10 @@ Print.getEnablePageTags = function(document) {
     return Print.getBoolValue("PageTagSettings/EnablePageTags", false, document);
 };
 
+Print.hasFooter = function(document) {
+    return Print.getIntValue("FooterSettings/Footer", 0, document) > 0;
+};
+
 //Print.getIdentifyPageTags = function(document) {
 //    return Print.getBoolValue("PageTagSettings/IdentifyPageTags", false, document);
 //};
@@ -1446,6 +1483,27 @@ Print.getTagPosition = function(document) {
 Print.getTagAlignment = function(document) {
     return Print.getValue("PageTagSettings/TagAlignment", "Inside", document);
 };
+
+Print.getFooterPosition = function(document) {
+    return Print.getValue("FooterSettings/FooterPosition", "TopLeft", document);
+};
+
+Print.getFooterFont = function(document) {
+    var ret = Print.getValue("FooterSettings/FooterFont", new QFont(), document);
+    if (isOfType(ret, QFont)) {
+        return ret;
+    }
+
+    if (isString(ret)) {
+        var f = new QFont();
+        f.fromString(ret);
+        return f;
+    }
+
+    qWarning("FooterFont is not a valid font");
+    return new QFont();
+};
+
 
 /**
  * Parses the given scale string (e.g. "1:2") and returns the scale as number (e.g. 0.5).

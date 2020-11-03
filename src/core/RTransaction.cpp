@@ -27,7 +27,8 @@
 #include "RTransaction.h"
 
 RTransaction::RTransaction()
-    : storage(NULL),
+    : type(Generic),
+      storage(NULL),
       transactionId(-1),
       transactionGroup(-1),
       undoable(true),
@@ -50,7 +51,8 @@ RTransaction::RTransaction()
  * Constructs an empty, invalid transaction.
  */
 RTransaction::RTransaction(RStorage& storage)
-    : storage(&storage),
+    : type(Generic),
+      storage(&storage),
       transactionId(-1),
       transactionGroup(-1),
       undoable(true),
@@ -81,7 +83,8 @@ RTransaction::RTransaction(
     const QList<RObject::Id>& affectedObjectIds,
     const QMap<RObject::Id, QList<RPropertyChange> >& propertyChanges)
     //RTransaction* parent)
-    : storage(&storage),
+    : type(Generic),
+      storage(&storage),
       transactionId(transactionId),
       transactionGroup(-1),
       text(text),
@@ -118,7 +121,8 @@ RTransaction::RTransaction(
     const QString& text,
     bool undoable)
     //RTransaction* parent)
-    : storage(&storage),
+    : type(Generic),
+      storage(&storage),
       transactionId(-1),
       transactionGroup(-1),
       text(text),

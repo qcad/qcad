@@ -618,7 +618,7 @@
         
     
       void addToBackground(
-                const RPainterPath & path
+                const RGraphicsSceneDrawable & drawable
             );
         
     

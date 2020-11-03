@@ -17,6 +17,8 @@
                   #include "REcmaRuler.h"
                 
                   #include "REcmaCoordinateListener.h"
+                
+                  #include "REcmaPaletteListener.h"
                  void REcmaRulerQt::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
@@ -43,6 +45,7 @@
         /*
         REcmaRuler::initEcma(engine, proto);
           REcmaCoordinateListener::initEcma(engine, proto);
+          REcmaPaletteListener::initEcma(engine, proto);
           
         */
     
@@ -64,6 +67,9 @@
         
         // conversion for base class RCoordinateListener
         REcmaHelper::registerFunction(&engine, proto, getRCoordinateListener, "getRCoordinateListener");
+        
+        // conversion for base class RPaletteListener
+        REcmaHelper::registerFunction(&engine, proto, getRPaletteListener, "getRPaletteListener");
         
 
     // get class name
@@ -90,6 +96,12 @@
         // methods of secondary base class RCoordinateListener:
         
 
+        // properties of secondary base class RPaletteListener:
+        
+
+        // methods of secondary base class RPaletteListener:
+        
+
     // properties:
     
 
@@ -106,6 +118,8 @@
             REcmaHelper::registerFunction(&engine, proto, updateViewport, "updateViewport");
             
             REcmaHelper::registerFunction(&engine, proto, updateCoordinate, "updateCoordinate");
+            
+            REcmaHelper::registerFunction(&engine, proto, updatePalette, "updatePalette");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RRulerQt*>(), *proto);
@@ -257,6 +271,15 @@
                 QScriptValue result = qScriptValueFromValue(engine, cppResult);
                 return result;
             }
+             QScriptValue REcmaRulerQt::getRPaletteListener(QScriptContext *context,
+            QScriptEngine *engine)
+        
+            {
+                RPaletteListener* cppResult =
+                    qscriptvalue_cast<RRulerQt*> (context->thisObject());
+                QScriptValue result = qScriptValueFromValue(engine, cppResult);
+                return result;
+            }
             
 
     // returns class name:
@@ -278,6 +301,8 @@
         list.append("RRuler");
     
         list.append("RCoordinateListener");
+    
+        list.append("RPaletteListener");
     
 
         return qScriptValueFromSequence(engine, list);
@@ -403,6 +428,11 @@
         
 
         // methods of secondary base class RCoordinateListener:
+        
+        // properties of secondary base class RPaletteListener:
+        
+
+        // methods of secondary base class RPaletteListener:
         
 
     // properties:
@@ -747,6 +777,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaRulerQt::updateCoordinate", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRulerQt::updatePalette
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRulerQt::updatePalette", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRulerQt::updatePalette";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRulerQt* self = 
+                        getSelf("updatePalette", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->updatePalette();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRulerQt.updatePalette().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRulerQt::updatePalette", context, engine);
             return result;
         }
          QScriptValue REcmaRulerQt::toString
