@@ -2415,7 +2415,7 @@ QScriptValue RScriptHandlerEcma::ecmaQImagePixelColor(QScriptContext* context, Q
 #else
     // TODO:
     QColor ret = QColor("white");
-    Q_ASSERT(false)
+    Q_ASSERT(false);
 #endif
 
     return qScriptValueFromValue(engine, ret);
@@ -2438,7 +2438,7 @@ QScriptValue RScriptHandlerEcma::ecmaQImageSetPixelColor(QScriptContext* context
     self->setPixelColor(a0, a1, a2);
 #else
     // TODO:
-    Q_ASSERT(false)
+    Q_ASSERT(false);
 #endif
 
     return engine->undefinedValue();
