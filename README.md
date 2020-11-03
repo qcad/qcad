@@ -34,6 +34,7 @@ git clone https://github.com/wblong/qcad.git
 ```
 cd c:\Users\me\qcad\qcad
 c:\Qt\Qt5.10.1\5.10.1\msvc2017_64\bin\qmake -r CONFIG+=ractivated 
+"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"
 nmake release //vs2017 命令行工具运行
 ```
 - 编译Qt Scripts 插件
