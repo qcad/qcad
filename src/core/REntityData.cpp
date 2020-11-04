@@ -206,7 +206,7 @@ RLineweight::Lineweight REntityData::getLineweight(bool resolve, const QStack<RE
     if (lw==RLineweight::WeightByLwDefault || lw==RLineweight::WeightInvalid) {
         // return configured default line weight:
         //lw = RLineweight::Weight000;
-        lw = (RLineweight::Lineweight)RSettings::getIntValue("GraphicsView/DefaultLineweight", RLineweight::Weight025);
+        lw = (RLineweight::Lineweight)RSettings::getIntValue("GraphicsView/DefaultLineweight", RLineweight::Weight000);
     }
 
     if (lw<0) {
