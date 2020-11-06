@@ -403,12 +403,24 @@ bool REntity::isEditable(bool allowInvisible) const {
     }
 
     // entity not in the current working set:
+    if (!isInWorkingSet()) {
+        return false;
+    }
+
+    return true;
+}
+
+bool REntity::isInWorkingSet() const {
+    const RDocument* doc = getDocument();
+    if (doc==NULL) {
+        return false;
+    }
+    // entity not in the current working set:
     if (doc->getWorkingSetBlockReferenceId()!=RObject::INVALID_ID) {
         if (!isWorkingSet()) {
             return false;
         }
     }
-
     return true;
 }
 
@@ -416,7 +428,9 @@ bool REntity::isEditable(bool allowInvisible) const {
  * \copydoc REntityData::setSelected
  */
 void REntity::setSelected(bool on) {
-    getData().setSelected(on);
+    if (isEditable()) {
+        getData().setSelected(on);
+    }
 }
 
 QSharedPointer<REntity> REntity::scaleNonUniform(const RVector& scaleFactors, const RVector& center) {

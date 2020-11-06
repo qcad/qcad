@@ -642,6 +642,7 @@ public:
 
     virtual bool isVisible(RBlock::Id blockId = RBlock::INVALID_ID) const;
     virtual bool isEditable(bool allowInvisible = false) const;
+    virtual bool isInWorkingSet() const;
 
     virtual int getComplexity() const {
         return 1;
