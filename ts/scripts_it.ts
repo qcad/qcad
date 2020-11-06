@@ -4187,7 +4187,7 @@ is already in the list.</source>
         <translation>Lunghezza:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translation>Entità non è un riferimento di blocco.</translation>
     </message>
@@ -6117,7 +6117,7 @@ BUG: Interferes with group castings.</source>
         <translation>Auto corretti colori bianco e nero</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation>Utilizzare piena risoluzione per il display Retina / alta risoluzione</translation>
     </message>
@@ -6137,7 +6137,7 @@ BUG: Interferes with group castings.</source>
         <translation>Selezione permanente</translation>
     </message>
     <message>
-        <location line="-690"/>
+        <location line="-693"/>
         <source>Color lightness threshold:</source>
         <translation>Soglia per la leggerezza del colore:</translation>
     </message>
@@ -6151,7 +6151,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Tipi di linea</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+56"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Utilizzare automaticamente i tipi di linea a base di schermo in vista del modello</translation>
     </message>
@@ -6185,7 +6185,7 @@ BUG: Interferes with group castings.</source>
         <translation>Passo angolo minimo per rendere archi (gradi):</translation>
     </message>
     <message>
-        <location line="-263"/>
+        <location line="-266"/>
         <source>Linetypes and Lineweights</source>
         <translation>Tipi di linee e pesi di linee</translation>
     </message>
@@ -6199,7 +6199,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Utilizzare piena risoluzione per il display Retina</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+117"/>
         <source>Anti-aliasing on by default</source>
         <translation>Antialiasing di default</translation>
     </message>
@@ -7078,7 +7078,7 @@ Visualizzazione grafica</translatorcomment>
         <translation type="vanished">Fatto</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translation>Angolo:</translation>
     </message>
@@ -7415,7 +7415,7 @@ Visualizzazione grafica</translatorcomment>
         <translation>Circonferenza</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation>Area:</translation>
     </message>
@@ -10285,7 +10285,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation>Scegliere linea, arco, cerchio o ellisse</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
             <numerusform>Raggio è sceso sotto 0,0 dopo %n cerchio concentrico.</numerusform>
@@ -13961,7 +13961,7 @@ Tutti i file</translatorcomment>
         <translation>Predefinito:</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;Annulla</translation>
     </message>
@@ -14026,7 +14026,7 @@ Tutti i file</translatorcomment>
         <translation>Altri...</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation>Gradi</translation>
     </message>
@@ -14728,7 +14728,7 @@ Obiettivo punto</translatorcomment>
         <translation>Scegli entità per tagliare</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>Le due entità non si intersecano, o non sono attualmente supportati per il taglio.</translation>
     </message>

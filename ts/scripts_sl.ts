@@ -3929,7 +3929,7 @@ je že na seznamu.</translation>
         <translation>Dolžina:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translation>Entiteta ni blokovna referenca.</translation>
     </message>
@@ -5717,7 +5717,7 @@ BUG: Interferes with group castings.</source>
         <translation>Privzeta debelina črte:</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+124"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5741,7 +5741,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Uporabi večnitnost</translation>
     </message>
     <message>
-        <location line="-690"/>
+        <location line="-693"/>
         <source>Color lightness threshold:</source>
         <translation>Prag svetlosti barv:</translation>
     </message>
@@ -5755,7 +5755,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Vrste črt</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+56"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Samodejno preklopi na zaslonske črte v prikazu modela</translation>
     </message>
@@ -6527,7 +6527,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Končano</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translation>Kot:</translation>
     </message>
@@ -6838,7 +6838,7 @@ BUG: Interferes with group castings.</source>
         <translation>Obseg</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation>Površina območja:</translation>
     </message>
@@ -9496,7 +9496,7 @@ shown in search results:</source>
         <translation>Izberi črto, lok, krog ali elipso</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
             <numerusform>Polmer je padel pod 0.0 po %n kocentričnem krogu.</numerusform>
@@ -12818,7 +12818,7 @@ shown in search results:</source>
         <translation>Privzeta vrednost:</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>Ra&amp;zveljavi</translation>
     </message>
@@ -12883,7 +12883,7 @@ shown in search results:</source>
         <translation>Drugo...</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation>Stopinje</translation>
     </message>
@@ -13520,7 +13520,7 @@ shown in search results:</source>
         <translation>Izberi entiteto za krajšanje</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>Izbrani entiteti se ne sekata, ali pa trenutno nista podprti za krajšanje.</translation>
     </message>

@@ -3890,7 +3890,7 @@ už existuje v zozname.</translation>
         <translation>Dĺžka:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translation>Prvok nie je blok.</translation>
     </message>
@@ -5569,7 +5569,7 @@ BUG: Interferes with group castings.</source>
         <translation>Zamedziť zobrazeniu čierne na čiernom / biele na bielom</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5589,7 +5589,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-690"/>
+        <location line="-693"/>
         <source>Color lightness threshold:</source>
         <translation>Hranica svetlosti farby:</translation>
     </message>
@@ -5603,7 +5603,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Typy čiar</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+53"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automaticky použiť typy čiar na základnej obrazovke v zobrazení modelu</translation>
     </message>
@@ -5661,7 +5661,7 @@ BUG: Interferes with group castings.</source>
         <translation>Predvolené vyhladenie prvkov</translation>
     </message>
     <message>
-        <location line="-122"/>
+        <location line="-125"/>
         <source>Linetypes and Lineweights</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5671,7 +5671,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+379"/>
+        <location line="+382"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Časový limit pre zobrazenie šrafovania:</translation>
     </message>
@@ -6309,7 +6309,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Hotovo</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translation>Uhol:</translation>
     </message>
@@ -6620,7 +6620,7 @@ BUG: Interferes with group castings.</source>
         <translation>Obvod</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation>Plocha krivky:</translation>
     </message>
@@ -9075,7 +9075,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Vyberte čiaru, oblúk, kružnicu alebo elipsu</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
             <numerusform>Polomer klesol pod hodnotu 0.0 za %n paralelnú kružnicu(-e).</numerusform>
@@ -12270,7 +12270,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Prednastavené:</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;Späť</translation>
     </message>
@@ -12335,7 +12335,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Ďalšie...</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation>Stupne</translation>
     </message>
@@ -12967,7 +12967,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Vyberte prvok ktorý chcete predĺžiť</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>Tieto dva prvky sa nepretínajú alebo nie sú podporované pre orezanie.</translation>
     </message>

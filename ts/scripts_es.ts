@@ -4178,7 +4178,7 @@ ya está en la lista.</translation>
         <translation>Longitud:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>La entidad no es una referencia de bloque.</translation>
@@ -6132,7 +6132,7 @@ BUG: Interferes with group castings.</source>
         <translation>Auto corregir los colores blanco y negro</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation>Utilice la resolución completa de la pantalla Retina / alta resolución</translation>
     </message>
@@ -6152,7 +6152,7 @@ BUG: Interferes with group castings.</source>
         <translation>Selección persistente</translation>
     </message>
     <message>
-        <location line="-690"/>
+        <location line="-693"/>
         <source>Color lightness threshold:</source>
         <translation>Umbral para la claridad del color:</translation>
     </message>
@@ -6166,7 +6166,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Tipos de línea</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+56"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Usar automáticamente los tipos de línea base de la pantalla de visualización del modelo</translation>
     </message>
@@ -6200,7 +6200,7 @@ BUG: Interferes with group castings.</source>
         <translation>Paso ángulo mínimo para la prestación de arcos (grados):</translation>
     </message>
     <message>
-        <location line="-263"/>
+        <location line="-266"/>
         <source>Linetypes and Lineweights</source>
         <translation>Tipos de línea y luces de línea</translation>
     </message>
@@ -6214,7 +6214,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Utilice la resolución completa de la pantalla Retina</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+117"/>
         <source>Anti-aliasing on by default</source>
         <translation>Antialiasing activado por defecto</translation>
     </message>
@@ -7044,7 +7044,7 @@ Ver gráficos</translatorcomment>
         <translation type="vanished">Terminar</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translation>Ángulo:</translation>
     </message>
@@ -7382,7 +7382,7 @@ Delta Y:</translatorcomment>
         <translation>Circunferencia</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation>Área:</translation>
     </message>
@@ -10238,7 +10238,7 @@ en los resultados de búsqueda:</translation>
         <translation>Elija línea, arco, círculo o elipse</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
             <numerusform>Radio caído por debajo de 0,0 después %n de círculo concéntrico.</numerusform>
@@ -13872,7 +13872,7 @@ Punto objetivo</translatorcomment>
         <translation>Por defecto:</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;Deshacer</translation>
     </message>
@@ -13938,7 +13938,7 @@ Punto objetivo</translatorcomment>
         <translation>Otros...</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation>Grados</translation>
     </message>
@@ -14632,7 +14632,7 @@ Punto objetivo</translatorcomment>
         <translation>Elegir entidad para recortar</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Las dos entidades no se cruzan, o actualmente no son compatibles con el recorte.</translation>

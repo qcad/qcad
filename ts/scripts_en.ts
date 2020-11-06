@@ -3788,7 +3788,7 @@ is already in the list.</translation>
         <translation>Length:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translation>Entity is not a block reference.</translation>
     </message>
@@ -5555,7 +5555,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Default lineweight:</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+124"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation>Use full resolution for Retina / high resolution display</translation>
     </message>
@@ -6263,7 +6263,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Done</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translation>Angle:</translation>
     </message>
@@ -6574,7 +6574,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Circumference</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation>Polyline area:</translation>
     </message>
@@ -8958,7 +8958,7 @@ shown in search results:</translation>
         <translation>Choose line, arc, circle or ellipse</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
             <numerusform>Radius dropped below 0.0 after one concentric circle.</numerusform>
@@ -12124,7 +12124,7 @@ shown in search results:</translation>
         <translation>Default value:</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;Undo</translation>
     </message>
@@ -12189,7 +12189,7 @@ shown in search results:</translation>
         <translation>Others...</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation>Degree</translation>
     </message>
@@ -12821,7 +12821,7 @@ shown in search results:</translation>
         <translation>Choose entity to trim</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>The two entities don&apos;t intersect, or are currently not supported for trimming.</translation>
     </message>

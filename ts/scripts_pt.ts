@@ -3901,7 +3901,7 @@ já se encontra na lista.</translation>
         <translation>Comprimento:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translation>A entidade não é uma referência de bloco.</translation>
     </message>
@@ -5692,7 +5692,7 @@ BUG: Interferes with group castings.</source>
         <translation>Auto corrigir cores preto-no-preto e branco-no-branco</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation>Use resolução total para a exposição Retina / alta resolução</translation>
     </message>
@@ -5712,7 +5712,7 @@ BUG: Interferes with group castings.</source>
         <translation>Seleção Persistente</translation>
     </message>
     <message>
-        <location line="-690"/>
+        <location line="-693"/>
         <source>Color lightness threshold:</source>
         <translation>Limites para a luminosidade da cor:</translation>
     </message>
@@ -5726,7 +5726,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Tipos de Linha</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+56"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Comute automaticamente para tipos de linha baseados na tela, na visão de modelagem</translation>
     </message>
@@ -5760,7 +5760,7 @@ BUG: Interferes with group castings.</source>
         <translation>Passo mínimo de ângulo para renderização de arcos (graus):</translation>
     </message>
     <message>
-        <location line="-263"/>
+        <location line="-266"/>
         <source>Linetypes and Lineweights</source>
         <translation>Tipos de linha e pesos de linha</translation>
     </message>
@@ -5774,7 +5774,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Use resolução total para a exposição Retina</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+117"/>
         <source>Anti-aliasing on by default</source>
         <translation>Suavização ativada como padrão</translation>
     </message>
@@ -6483,7 +6483,7 @@ BUG: Interferes with group castings.</source>
         <translation>Especifique a segunda linha</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translation>Ângulo:</translation>
     </message>
@@ -6786,7 +6786,7 @@ BUG: Interferes with group castings.</source>
         <translation>Circunferência</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation>Área:</translation>
     </message>
@@ -9304,7 +9304,7 @@ nos resultados de busca:</translation>
         <translation>Escolha uma linha, arco, círculo ou elipse</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
             <numerusform>O Raio ficou abaixo de 0,0, após %n círculo concêntrico.</numerusform>
@@ -12528,7 +12528,7 @@ nos resultados de busca:</translation>
         <translation>Valor padrão:</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;Desfazer</translation>
     </message>
@@ -12593,7 +12593,7 @@ nos resultados de busca:</translation>
         <translation>Outros...</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation>Grau</translation>
     </message>
@@ -13225,7 +13225,7 @@ nos resultados de busca:</translation>
         <translation>Escolha a entidade a aparar</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>As duas entidades não se cruzam, ou não são actualmente suportadas para o corte.</translation>
     </message>

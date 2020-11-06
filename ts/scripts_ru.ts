@@ -3825,7 +3825,7 @@ is already in the list.</source>
         <translation>Длина:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translation>Объект не является привязкой блока.</translation>
     </message>
@@ -5576,7 +5576,7 @@ BUG: Interferes with group castings.</source>
         <translation>Предотвратить белый на белом/чёрный на чёрном дисплее</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5596,7 +5596,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-690"/>
+        <location line="-693"/>
         <source>Color lightness threshold:</source>
         <translation>Порог светлоты цвета:</translation>
     </message>
@@ -5610,7 +5610,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Тип линии</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+56"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Автоматически переключиться на типы линий, оптимизированные для экрана, в просмотре моделей</translation>
     </message>
@@ -5644,7 +5644,7 @@ BUG: Interferes with group castings.</source>
         <translation>Сглаживание по умолчанию</translation>
     </message>
     <message>
-        <location line="-122"/>
+        <location line="-125"/>
         <source>Linetypes and Lineweights</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5654,7 +5654,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+35"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Автоматически использовать типы линий, оптимизированные для экрана, в просмотре моделей</translation>
     </message>
@@ -6312,7 +6312,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Завершено</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translation>Угол:</translation>
     </message>
@@ -6623,7 +6623,7 @@ BUG: Interferes with group castings.</source>
         <translation>Периметр</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation>Площадь ломаной:</translation>
     </message>
@@ -9082,7 +9082,7 @@ shown in search results:</source>
         <translation>Выбрать линию, дугу, окружность или эллипс</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
             <numerusform>Радиус упал ниже 0,0 после %n концентрической окружности.</numerusform>
@@ -12237,7 +12237,7 @@ shown in search results:</source>
         <translation>Значение по умолчанию:</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;Отменить</translation>
     </message>
@@ -12302,7 +12302,7 @@ shown in search results:</source>
         <translation>Другие...</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation>Градусы</translation>
     </message>
@@ -12927,7 +12927,7 @@ shown in search results:</source>
         <translation>Выбрать объект для усечения</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>Два объекта не пересекаются, или в настоящее время нет поддержки для усечения.</translation>
     </message>

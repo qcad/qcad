@@ -219,7 +219,7 @@
 <context>
     <name>RDocumentVariables</name>
     <message>
-        <location filename="../src/core/RDocumentVariables.cpp" line="+45"/>
+        <location filename="../src/core/RDocumentVariables.cpp" line="+49"/>
         <source>Current Layer ID</source>
         <translation>ID des aktuellen Layers</translation>
     </message>
@@ -237,6 +237,16 @@
         <location line="+1"/>
         <source>Dimension Font</source>
         <translation>Bemassungsschriftart</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Working Set Block Reference Id</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Working Set Block Id</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -364,7 +374,7 @@
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+91"/>
-        <location filename="../src/core/RObject.cpp" line="+68"/>
+        <location filename="../src/core/RObject.cpp" line="+69"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
@@ -468,6 +478,11 @@
         <location line="+1"/>
         <source>Invisible</source>
         <translation>Unsichtbar</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Working Set</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>

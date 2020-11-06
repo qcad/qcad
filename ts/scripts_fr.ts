@@ -4107,7 +4107,7 @@ est déjà dans la liste.</translation>
         <translation>Longueur :</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translation>L&apos;entité n&apos;est pas une référence de bloc.</translation>
     </message>
@@ -6048,7 +6048,7 @@ BUG: Interferes with group castings.</source>
         <translation>Correction automatique des couleurs en noir et blanc</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation>Utilisez pleine résolution pour affichage Retina / haute résolution</translation>
     </message>
@@ -6068,7 +6068,7 @@ BUG: Interferes with group castings.</source>
         <translation>Sélection persistante</translation>
     </message>
     <message>
-        <location line="-690"/>
+        <location line="-693"/>
         <source>Color lightness threshold:</source>
         <translation>Seuil de couleur :</translation>
     </message>
@@ -6082,7 +6082,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Types de ligne</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+56"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Utiliser automatiquement les types de lignes sur écran en vue du modèle</translation>
     </message>
@@ -6116,7 +6116,7 @@ BUG: Interferes with group castings.</source>
         <translation>Incrément angulaire minimum pour rendre arcs (degrés):</translation>
     </message>
     <message>
-        <location line="-263"/>
+        <location line="-266"/>
         <source>Linetypes and Lineweights</source>
         <translation>Types et poids des lignes</translation>
     </message>
@@ -6130,7 +6130,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Utilisez pleine résolution pour affichage Retina</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+117"/>
         <source>Anti-aliasing on by default</source>
         <translation>Antialiasing activé par défaut</translation>
     </message>
@@ -6951,7 +6951,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Terminer</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translation>Angle :</translation>
     </message>
@@ -7282,7 +7282,7 @@ BUG: Interferes with group castings.</source>
         <translation>Circonférence</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation>Aire :</translation>
     </message>
@@ -10118,7 +10118,7 @@ dans les résultats de recherche :</translation>
         <translation>Choisissez ligne, arc, cercle ou ellipse</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
             <numerusform>Rayon chuté en dessous de zéro après %n cercle concentrique.</numerusform>
@@ -13628,7 +13628,7 @@ dans les résultats de recherche :</translation>
         <translation>Valeur par défaut :</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;Annuler</translation>
     </message>
@@ -13693,7 +13693,7 @@ dans les résultats de recherche :</translation>
         <translation>Autres...</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation>Degré</translation>
     </message>
@@ -14383,7 +14383,7 @@ dans les résultats de recherche :</translation>
         <translation>Choisissez l&apos;entité à couper</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>Les deux entités ne se coupent pas ou ne sont actuellement pas prises en charge pour le découpage.</translation>
     </message>

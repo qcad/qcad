@@ -4709,7 +4709,7 @@ Narzędzia CAD</translatorcomment>
         <translation>Długość:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Obiekt nie jest odniesieniem bloku.</translation>
@@ -6624,7 +6624,7 @@ Autozoom
         <translation>Zapobieganie wyświetlania białego na białym tle / czarnego na czarnym tle</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6644,7 +6644,7 @@ Autozoom
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-690"/>
+        <location line="-693"/>
         <source>Color lightness threshold:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Próg jasności koloru:</translation>
@@ -6659,7 +6659,7 @@ Autozoom
         <translation type="vanished">Rodzaje linii</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+56"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Automatyczne przełączanie ekranowego rodzaju linii w widoku modelu</translation>
     </message>
@@ -6689,7 +6689,7 @@ Autozoom
         <translation>Minimalny krok kątowy dla renderowania łuków (stopnie):</translation>
     </message>
     <message>
-        <location line="-263"/>
+        <location line="-266"/>
         <source>Linetypes and Lineweights</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6703,7 +6703,7 @@ Autozoom
         <translation type="vanished">Użycie pełnej rozdzielczości dla wyświetlaczy Retina</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+117"/>
         <source>Anti-aliasing on by default</source>
         <translation>Domyślnie włączony antyaliasing</translation>
     </message>
@@ -7651,7 +7651,7 @@ Zrobione
         <translation type="vanished">Zrobione</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -8023,7 +8023,7 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
         <translation>Obwód</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation>Pole powierzchni linii łamanej:</translation>
     </message>
@@ -11191,7 +11191,7 @@ Nowy &amp;formularz</translatorcomment>
         <translation>Proszę wskazać linię, łuk, okrąg lub elipsę</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
             <numerusform>Promień osiągnął wartość mniejszą niż 0.0 po narysowaniu %n koncentrycznego okręgu.</numerusform>
@@ -15371,7 +15371,7 @@ Rysuj obiekty tekstowe</translatorcomment>
         <translation>Domyślna wartość:</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -15461,7 +15461,7 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
         <translation>Inne...</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -16323,7 +16323,7 @@ Kopie &amp;wielokrotne:</translatorcomment>
         <translation>Proszę wskazać obiekt przycinany</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Te dwa obiekty nie przecinają się lub aktualnie ich przycinanie nie jest obsługiwane.</translation>

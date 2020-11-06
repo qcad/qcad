@@ -3918,7 +3918,7 @@ is already in the list.</source>
         <translation>長さ:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translation>エンティティはブロック参照ではありません。</translation>
     </message>
@@ -5613,7 +5613,7 @@ BUG: Interferes with group castings.</source>
         <translation>白に白/黒に黒の表示を防ぐ</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5633,7 +5633,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-690"/>
+        <location line="-693"/>
         <source>Color lightness threshold:</source>
         <translation>色の明るさ閾値:</translation>
     </message>
@@ -5647,7 +5647,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">ラインタイプ</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+56"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>自動的にモデルビューの基本線種を使用</translation>
     </message>
@@ -5677,7 +5677,7 @@ BUG: Interferes with group castings.</source>
         <translation>弧を描く時に分割する最小角度（度）</translation>
     </message>
     <message>
-        <location line="-263"/>
+        <location line="-266"/>
         <source>Linetypes and Lineweights</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5691,7 +5691,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Retinaディスプレイでフル解像度を用いる</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+117"/>
         <source>Anti-aliasing on by default</source>
         <translation>デフォルトでアンチエイリアスする</translation>
     </message>
@@ -6425,7 +6425,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">完了</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translation>角度:</translation>
     </message>
@@ -6736,7 +6736,7 @@ BUG: Interferes with group castings.</source>
         <translation>外周</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation>ポリライン面積:</translation>
     </message>
@@ -9319,7 +9319,7 @@ shown in search results:</source>
         <translation>線分,弧,円または楕円を選択してください</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -12659,7 +12659,7 @@ shown in search results:</source>
         <translation>デフォルト:</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;U アンドゥ</translation>
     </message>
@@ -12724,7 +12724,7 @@ shown in search results:</source>
         <translation>その他...</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation>角度</translation>
     </message>
@@ -13368,7 +13368,7 @@ shown in search results:</source>
         <translation>トリム対象を選択</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>２つのエンティティは交差していないか、現在トリムをサポートされていません。</translation>
     </message>

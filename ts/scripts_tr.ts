@@ -3709,7 +3709,7 @@ is already in the list.</source>
         <translation type="unfinished">Uzunluk:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5326,7 +5326,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+35"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6014,7 +6014,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Bitti</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translation>Açı:</translation>
     </message>
@@ -6325,7 +6325,7 @@ BUG: Interferes with group castings.</source>
         <translation>Çevre</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8621,7 +8621,7 @@ shown in search results:</source>
         <translation type="unfinished">Çizgi, yay, daire veya elips seç</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -11653,7 +11653,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation type="unfinished">&amp;Geri al</translation>
     </message>
@@ -11718,7 +11718,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12342,7 +12342,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation type="unfinished"></translation>
     </message>

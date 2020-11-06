@@ -346,7 +346,7 @@ Altri...</translatorcomment>
 <context>
     <name>RDocumentVariables</name>
     <message>
-        <location filename="../src/core/RDocumentVariables.cpp" line="+45"/>
+        <location filename="../src/core/RDocumentVariables.cpp" line="+49"/>
         <source>Current Layer ID</source>
         <translation>ID del livello corrente</translation>
     </message>
@@ -364,6 +364,16 @@ Altri...</translatorcomment>
         <location line="+1"/>
         <source>Dimension Font</source>
         <translation>Carattere per quota</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Working Set Block Reference Id</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Working Set Block Id</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -525,7 +535,7 @@ Inserisci l&apos;angolo della linea di quota:</translatorcomment>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+91"/>
-        <location filename="../src/core/RObject.cpp" line="+68"/>
+        <location filename="../src/core/RObject.cpp" line="+69"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: liferea-1.8-rc1.it.po--
@@ -649,6 +659,11 @@ Colore G&amp;riglia:</translatorcomment>
         <location line="+1"/>
         <source>Invisible</source>
         <translation>Invisibile</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Working Set</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>

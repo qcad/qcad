@@ -4323,7 +4323,7 @@ ist bereits in der Liste.</translation>
         <translation>Länge:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translation>Element ist keine Block Referenz.</translation>
     </message>
@@ -6297,7 +6297,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Schwarz / weiss automatisch anpassen</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation>Volle Auflösung benutzen für Retina-Anzeige (hochauflösende Anzeige)</translation>
     </message>
@@ -6317,7 +6317,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Persistente Selektion</translation>
     </message>
     <message>
-        <location line="-690"/>
+        <location line="-693"/>
         <source>Color lightness threshold:</source>
         <translation>Farbgrenzwert:</translation>
     </message>
@@ -6331,7 +6331,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Linientypen</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+56"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Automatisch Bildschirmbasierte Linientypen verwenden in Modellansicht</translation>
     </message>
@@ -6365,7 +6365,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Minimaler Winkel für Bogensegmentierung in Anzeige (Grad):</translation>
     </message>
     <message>
-        <location line="-263"/>
+        <location line="-266"/>
         <source>Linetypes and Lineweights</source>
         <translation>Linientypen und Linienbreiten</translation>
     </message>
@@ -6379,7 +6379,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Volle Auflösung benutzen für Retina-Display</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+117"/>
         <source>Anti-aliasing on by default</source>
         <translation>Kantenglättung standardmässig an</translation>
     </message>
@@ -7356,7 +7356,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Fertig</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translation>Winkel:</translation>
     </message>
@@ -7751,7 +7751,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Umfang</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation>Polylinienfläche:</translation>
     </message>
@@ -10817,7 +10817,7 @@ im Suchresultat:</translation>
         <translation>Linie, Bogen, Kreis oder Ellipse wählen</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
             <numerusform>Radius kleiner als 0.0 nach einem konzentrischen Kreis.</numerusform>
@@ -14664,7 +14664,7 @@ nicht öffnen.
         <translation>Standardwert:</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;Rückgängig</translation>
     </message>
@@ -14694,7 +14694,7 @@ nicht öffnen.
         <translation>&amp;Unterstreichen</translation>
     </message>
     <message>
-        <location line="+477"/>
+        <location line="+481"/>
         <source>Degree</source>
         <translation>Grad</translation>
     </message>
@@ -14880,7 +14880,7 @@ nicht öffnen.
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="-510"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="-514"/>
         <source>&amp;Bold</source>
         <translation>&amp;Fett</translation>
     </message>
@@ -14915,7 +14915,7 @@ nicht öffnen.
         <translation>Andere...</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Plus-Minus</source>
         <translation>Plus-Minus</translation>
     </message>
@@ -15520,7 +15520,7 @@ nicht öffnen.
         <translation>Zu trimmendes Objekt wählen</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>Die zwei Objekte schneiden sich nicht oder werden momentan nicht für Trimmen unterstützt.</translation>
     </message>

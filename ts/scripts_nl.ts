@@ -3839,7 +3839,7 @@ is al in de lijst.</translation>
         <translation>Lengte:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translation>Object is niet een blok referentie.</translation>
     </message>
@@ -5601,7 +5601,7 @@ BUG: Interferes with group castings.</source>
         <translation>Voorkom wit op wit / zwart op zwart weergave</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation>Gebruik volledige resolutie voor Retina-display (hoge resolutie)</translation>
     </message>
@@ -5621,7 +5621,7 @@ BUG: Interferes with group castings.</source>
         <translation>Blijvende selectie</translation>
     </message>
     <message>
-        <location line="-690"/>
+        <location line="-693"/>
         <source>Color lightness threshold:</source>
         <translation>Kleur lichtheid drempel:</translation>
     </message>
@@ -5635,7 +5635,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Lijntypen</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+56"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Automatisch scherm gebaseerde lijntypen gebruiken in model weergave</translation>
     </message>
@@ -5664,7 +5664,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Gebruik volledige resolutie voor Retina-display</translation>
     </message>
     <message>
-        <location line="-345"/>
+        <location line="-348"/>
         <source>Linetypes and Lineweights</source>
         <translation>Lijntypen en lijnbreedtes</translation>
     </message>
@@ -5674,7 +5674,7 @@ BUG: Interferes with group castings.</source>
         <translation>Standaard lijnbreedte:</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+117"/>
         <source>Anti-aliasing on by default</source>
         <translation>Anti-aliasing altijd aan</translation>
     </message>
@@ -6345,7 +6345,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Klaar</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translation>Hoek:</translation>
     </message>
@@ -6656,7 +6656,7 @@ BUG: Interferes with group castings.</source>
         <translation>Omtrek</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation>Oppervlakte:</translation>
     </message>
@@ -9119,7 +9119,7 @@ getoond in zoekresultaten:</translation>
         <translation>Lijn, boog, cirkel of ellips kiezen</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
             <numerusform>Radius gedaald tot onder 0 na een concentrische cirkel.</numerusform>
@@ -12277,7 +12277,7 @@ getoond in zoekresultaten:</translation>
         <translation>Standaardwaarde:</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;Herstel</translation>
     </message>
@@ -12342,7 +12342,7 @@ getoond in zoekresultaten:</translation>
         <translation>Andere...</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation>Graad</translation>
     </message>
@@ -12974,7 +12974,7 @@ getoond in zoekresultaten:</translation>
         <translation>Kies te trimmen object</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>De twee objecten snijden zich niet of worden momenteel niet ondersteund voor het trimmen.</translation>
     </message>

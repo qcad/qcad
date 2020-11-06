@@ -3864,7 +3864,7 @@ on jo luettelossa.</translation>
         <translation>Pituus:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translation>Kohde ei ole lohkoviite.</translation>
     </message>
@@ -5602,7 +5602,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+117"/>
         <source>Anti-aliasing on by default</source>
         <translation>Pehmennys päällä on oletuksena</translation>
     </message>
@@ -5631,7 +5631,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-674"/>
+        <location line="-677"/>
         <source>Color lightness threshold:</source>
         <translation>Värivaaleuden kynnys:</translation>
     </message>
@@ -5645,7 +5645,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Viivatyypit</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+56"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Automaattisesti vaihda kuvaruudun viivat muotoilunäkymässä</translation>
     </message>
@@ -6368,7 +6368,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Valmis</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translation>Kulma:</translation>
     </message>
@@ -6679,7 +6679,7 @@ BUG: Interferes with group castings.</source>
         <translation>Ympärysmitta</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation>Murtoviiva-alue:</translation>
     </message>
@@ -9125,7 +9125,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Valitse viiva, kaari, ympyrä tai ellipsi</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
             <numerusform>Säde laski alle 0,0:n jälkeen, kun keskipiste oli %n.</numerusform>
@@ -12343,7 +12343,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Oletusarvo:</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;Kumoa</translation>
     </message>
@@ -12408,7 +12408,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Muut ...</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation>Aste</translation>
     </message>
@@ -13045,7 +13045,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Valitse hienosäädettävä kohde</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>Kaksi kohdetta eivät leikkaa, tai eivät sovi rajaukseen.</translation>
     </message>

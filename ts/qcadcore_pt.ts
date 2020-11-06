@@ -341,7 +341,7 @@ Cinza Claro</translatorcomment>
 <context>
     <name>RDocumentVariables</name>
     <message>
-        <location filename="../src/core/RDocumentVariables.cpp" line="+45"/>
+        <location filename="../src/core/RDocumentVariables.cpp" line="+49"/>
         <source>Current Layer ID</source>
         <translation>ID da Camada Atual</translation>
     </message>
@@ -359,6 +359,16 @@ Cinza Claro</translatorcomment>
         <location line="+1"/>
         <source>Dimension Font</source>
         <translation>Fonte da Fonte</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Working Set Block Reference Id</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Working Set Block Id</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -506,7 +516,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+91"/>
-        <location filename="../src/core/RObject.cpp" line="+68"/>
+        <location filename="../src/core/RObject.cpp" line="+69"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -635,6 +645,11 @@ Abre diálogo de cores</translatorcomment>
         <location line="+1"/>
         <source>Invisible</source>
         <translation>Invisível</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Working Set</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
