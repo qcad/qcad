@@ -653,7 +653,7 @@ Colore G&amp;riglia:</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Working Set</source>
-        <translation type="unfinished"></translation>
+        <translation>Set di lavoro</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
