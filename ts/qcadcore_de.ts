@@ -238,16 +238,6 @@
         <source>Dimension Font</source>
         <translation>Bemassungsschriftart</translation>
     </message>
-    <message>
-        <location line="+1"/>
-        <source>Working Set Block Reference Id</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Working Set Block Id</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>REntity</name>
