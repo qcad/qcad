@@ -297,6 +297,9 @@
         isEditable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isInWorkingSet
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getComplexity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

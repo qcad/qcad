@@ -233,6 +233,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isEditable, "isEditable");
             
+            REcmaHelper::registerFunction(&engine, proto, isInWorkingSet, "isInWorkingSet");
+            
             REcmaHelper::registerFunction(&engine, proto, getComplexity, "getComplexity");
             
         engine.setDefaultPrototype(
@@ -8562,6 +8564,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerEntity::isEditable", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerEntity::isInWorkingSet
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerEntity::isInWorkingSet", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEntity::isInWorkingSet";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntity* self = 
+                        getSelf("isInWorkingSet", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isInWorkingSet();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntity.isInWorkingSet().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerEntity::isInWorkingSet", context, engine);
             return result;
         }
          QScriptValue

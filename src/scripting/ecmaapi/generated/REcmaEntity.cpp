@@ -231,6 +231,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isEditable, "isEditable");
             
+            REcmaHelper::registerFunction(&engine, proto, isInWorkingSet, "isInWorkingSet");
+            
             REcmaHelper::registerFunction(&engine, proto, getComplexity, "getComplexity");
             
         engine.setDefaultPrototype(
@@ -8561,6 +8563,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaEntity::isEditable", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaEntity::isInWorkingSet
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEntity::isInWorkingSet", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEntity::isInWorkingSet";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntity* self = 
+                        getSelf("isInWorkingSet", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isInWorkingSet();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntity.isInWorkingSet().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEntity::isInWorkingSet", context, engine);
             return result;
         }
          QScriptValue
