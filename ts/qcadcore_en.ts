@@ -582,7 +582,7 @@
     <message>
         <location line="+1"/>
         <source>Working Set</source>
-        <translation type="unfinished"></translation>
+        <translation>Working Set</translation>
     </message>
     <message>
         <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>
