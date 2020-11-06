@@ -1392,11 +1392,16 @@ Voulez-vous le récupérer ?</translation>
         <translation>Outils de bloc</translation>
     </message>
     <message>
+        <location line="+110"/>
+        <source>Cannot change block while editing a block in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Show block tools</source>
         <translation type="vanished">Voir les outils de bloc</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-82"/>
         <source>&amp;Block</source>
         <translation>&amp;Bloc</translation>
     </message>
@@ -2858,7 +2863,7 @@ Voulez-vous le récupérer ?</translation>
         <translation>Déplacer entité</translation>
     </message>
     <message>
-        <location line="+388"/>
+        <location line="+390"/>
         <source>Move Reference Point</source>
         <translation>Déplacer référence</translation>
     </message>

@@ -1284,11 +1284,16 @@ Do you wish to recover it?</source>
         <translation>ブロックツール</translation>
     </message>
     <message>
+        <location line="+110"/>
+        <source>Cannot change block while editing a block in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Show block tools</source>
         <translation type="vanished">表示ブロックツール</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-82"/>
         <source>&amp;Block</source>
         <translation>&amp;B ブロック</translation>
     </message>
@@ -2695,7 +2700,7 @@ Do you wish to recover it?</source>
         <translation>希望の位置にエンティティを移動</translation>
     </message>
     <message>
-        <location line="+388"/>
+        <location line="+390"/>
         <source>Move Reference Point</source>
         <translation>参照点の移動</translation>
     </message>

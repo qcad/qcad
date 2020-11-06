@@ -1427,11 +1427,16 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Blockwerkzeuge</translation>
     </message>
     <message>
+        <location line="+110"/>
+        <source>Cannot change block while editing a block in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Show block tools</source>
         <translation type="vanished">Blockwerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-82"/>
         <source>&amp;Block</source>
         <translation>Blo&amp;ck</translation>
     </message>
@@ -3051,7 +3056,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Objekt verschieben</translation>
     </message>
     <message>
-        <location line="+388"/>
+        <location line="+390"/>
         <source>Move Reference Point</source>
         <translation>Referenzpunkt verschieben</translation>
     </message>

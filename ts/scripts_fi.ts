@@ -1260,11 +1260,16 @@ Haluatko palauttaa sen?</translation>
         <translation>Lohkotyökalut</translation>
     </message>
     <message>
+        <location line="+110"/>
+        <source>Cannot change block while editing a block in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Show block tools</source>
         <translation type="vanished">Näytä lohkotyökalut</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-82"/>
         <source>&amp;Block</source>
         <translation>&amp;Lohko</translation>
     </message>
@@ -2659,7 +2664,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Siirrä kokonaisuus haluttuun sijaintiin</translation>
     </message>
     <message>
-        <location line="+388"/>
+        <location line="+390"/>
         <source>Move Reference Point</source>
         <translation>Siirrä viitepiste</translation>
     </message>

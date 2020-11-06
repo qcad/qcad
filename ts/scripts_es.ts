@@ -1395,11 +1395,16 @@ Do you wish to recover it?</source>
         <translation>Herramientas de bloque</translation>
     </message>
     <message>
+        <location line="+110"/>
+        <source>Cannot change block while editing a block in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Show block tools</source>
         <translation type="vanished">Mostrar las herramientas de bloque</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-82"/>
         <source>&amp;Block</source>
         <translation>&amp;Bloque</translation>
     </message>
@@ -2900,7 +2905,7 @@ Coordenadas polares relativa:</translatorcomment>
         <translation>Mover entidad</translation>
     </message>
     <message>
-        <location line="+388"/>
+        <location line="+390"/>
         <source>Move Reference Point</source>
         <translation>Mover punto de referencia</translation>
     </message>

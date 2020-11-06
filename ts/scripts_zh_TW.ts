@@ -1186,6 +1186,11 @@ Do you wish to recover it?</source>
         <source>&amp;Block</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location line="+82"/>
+        <source>Cannot change block while editing a block in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>BlockDialog</name>
@@ -2465,7 +2470,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+388"/>
+        <location line="+390"/>
         <source>Move Reference Point</source>
         <translation type="unfinished"></translation>
     </message>

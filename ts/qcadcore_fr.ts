@@ -237,7 +237,7 @@ Cyan</translatorcomment>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
 Bleu
-Bleu : 
+Bleu&#xa0;: 
 Bluetooth</translatorcomment>
         <translation>Bleu</translation>
     </message>
@@ -331,7 +331,7 @@ Autres...</translatorcomment>
 <context>
     <name>RDocumentVariables</name>
     <message>
-        <location filename="../src/core/RDocumentVariables.cpp" line="+49"/>
+        <location filename="../src/core/RDocumentVariables.cpp" line="+47"/>
         <source>Current Layer ID</source>
         <translation>ID du calque actuel</translation>
     </message>
