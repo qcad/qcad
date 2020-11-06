@@ -644,7 +644,7 @@ Colores
     <message>
         <location line="+1"/>
         <source>Working Set</source>
-        <translation type="unfinished"></translation>
+        <translation>Conjunto de trabajo</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
