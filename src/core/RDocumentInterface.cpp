@@ -104,6 +104,7 @@ RDocumentInterface::~RDocumentInterface() {
     }
 
     if (defaultAction!=NULL) {
+        defaultAction->suspendEvent();
         defaultAction->finishEvent();
         defaultAction->terminate();
         delete defaultAction;
@@ -1755,6 +1756,8 @@ bool RDocumentInterface::hasSelection() {
  * while drawing a window to magnify an area.
  */
 void RDocumentInterface::addZoomBoxToPreview(const RBox& box) {
+    RPolyline pl = box.getPolyline2d();
+
     QList<RGraphicsScene*>::iterator it;
     for (it = scenes.begin(); it != scenes.end(); it++) {
         RGraphicsScene* scene = *it;
@@ -1764,8 +1767,6 @@ void RDocumentInterface::addZoomBoxToPreview(const RBox& box) {
         scene->setLineweight(RLineweight::Weight000);
         scene->setStyle(Qt::DashLine);
         scene->setLinetypeId(document.getLinetypeId("CONTINUOUS"));
-
-        RPolyline pl = box.getPolyline2d();
         scene->exportShape(QSharedPointer<RShape>(pl.clone()));
         scene->endPreview();
     }
