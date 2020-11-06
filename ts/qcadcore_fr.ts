@@ -237,7 +237,7 @@ Cyan</translatorcomment>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
 Bleu
-Bleu&#xa0;: 
+Bleu : 
 Bluetooth</translatorcomment>
         <translation>Bleu</translation>
     </message>
@@ -638,7 +638,7 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Working Set</source>
-        <translation type="unfinished"></translation>
+        <translation>Ensemble de travail</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
