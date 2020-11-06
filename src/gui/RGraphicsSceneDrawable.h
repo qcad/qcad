@@ -162,6 +162,7 @@ public:
 
     void setSelected(bool on);
     void setHighlighted(bool on);
+    void setWorkingSet(bool on);
 
     RGraphicsSceneDrawable& operator=(const RGraphicsSceneDrawable& other);
 

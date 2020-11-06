@@ -1313,7 +1313,7 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
         }
 
         // TTF text block (CAD text block is painter path):
-        if (drawable.getType()==RGraphicsSceneDrawable::Text) {
+        else if (drawable.getType()==RGraphicsSceneDrawable::Text) {
             RTextBasedData text = drawable.getText();
 
             if (drawable.getPixelUnit()) {
@@ -1548,12 +1548,22 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
         // highlighted:
         if (!isPrintingOrExporting() && path.isHighlighted()) {
             if (pen.style() != Qt::NoPen) {
-                pen.setColor(RColor::getHighlighted(pen.color(), bgColorLightness, 100));
+                pen.setColor(RColor::getHighlighted(pen.color(), QColor((QRgb)bgColorLightness), 100));
             }
             if (brush.style() != Qt::NoBrush) {
-                RColor ch = RColor::getHighlighted(brush.color(), bgColorLightness, 100);
+                RColor ch = RColor::getHighlighted(brush.color(), QColor((QRgb)bgColorLightness), 100);
                 ch.setAlpha(128);
                 brush.setColor(ch);
+            }
+        }
+
+        if (!isPrintingOrExporting() && !preview) {
+            RDocument* doc = getDocument();
+            if (doc->getWorkingSetBlockReferenceId()!=RObject::INVALID_ID) {
+                if (!path.isWorkingSet()) {
+                    // fade out entities not in working set:
+                    pen.setColor(RColor::getHighlighted(pen.color(), QColor((QRgb)bgColorLightness), 100));
+                }
             }
         }
 

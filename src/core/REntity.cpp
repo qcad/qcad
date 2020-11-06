@@ -387,7 +387,8 @@ bool REntity::isVisible(RBlock::Id blockId) const {
  * \return true if this entity can be edited (i.e. is not on a locked layer).
  */
 bool REntity::isEditable(bool allowInvisible) const {
-    if (getDocument()==NULL) {
+    const RDocument* doc = getDocument();
+    if (doc==NULL) {
         return true;
     }
 
@@ -397,8 +398,15 @@ bool REntity::isEditable(bool allowInvisible) const {
     }
 
     // entities on locked layers are not editable:
-    if (getDocument()->isLayerLocked(getLayerId())) {
+    if (doc->isLayerLocked(getLayerId())) {
         return false;
+    }
+
+    // entity not in the current working set:
+    if (doc->getWorkingSetBlockReferenceId()!=RObject::INVALID_ID) {
+        if (!isWorkingSet()) {
+            return false;
+        }
     }
 
     return true;

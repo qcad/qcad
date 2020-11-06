@@ -850,6 +850,12 @@ void RGraphicsSceneQt::addDrawable(REntity::Id entityId, RGraphicsSceneDrawable&
         }
     }
 
+    if (entity!=NULL) {
+        if (entity->isWorkingSet()) {
+            drawable.setWorkingSet(true);
+        }
+    }
+
     QMap<REntity::Id, QList<RGraphicsSceneDrawable> >* dwb;
     if (preview) {
         dwb = &previewDrawables;

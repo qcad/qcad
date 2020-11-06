@@ -596,6 +596,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
     // delete original and add new since hatch geometry cannot be completely
     // defined through properties which is a requirement for changing objects
     // through transactions:
+    // TODO: check if entity is editable:
     if (mustClone) {
         QSharedPointer<RObject> clone = QSharedPointer<RObject>(object->clone());
 
@@ -637,6 +638,13 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         }
         if (useCurrentAttributes || entity->getLinetypeId()==RLinetype::INVALID_ID) {
             entity->setLinetypeId(doc->getCurrentLinetypeId());
+        }
+
+        // move entity to current working set:
+        // if we are editing a working set, add object to working set:
+        RObject::Id workingSetBlockRefId = doc->getWorkingSetBlockReferenceId();
+        if (workingSetBlockRefId!=RObject::INVALID_ID) {
+            entity->setWorkingSet(true);
         }
 
         // allowAll to make sure entities on hidden / locked layers can be imported:

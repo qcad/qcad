@@ -352,6 +352,7 @@ void RDocument::init(bool beforeLoad) {
     transaction.addObject(docVars);
 
     transaction.end();
+    resetTransactionStack();
     storage.setModified(false);
 }
 
@@ -425,10 +426,11 @@ void RDocument::clear(bool beforeLoad) {
     fileName = "";
     storage.clear();
     clearSpatialIndices();
-    transactionStack.reset();
 
     init(beforeLoad);
     setUnit(u);
+
+    transactionStack.reset();
 }
 
 
@@ -1249,6 +1251,13 @@ QSet<REntity::Id> RDocument::queryAllEntities(bool undone, bool allBlocks, RS::E
  */
 QSet<REntity::Id> RDocument::queryAllEntities(bool undone, bool allBlocks, QList<RS::EntityType> types) const {
     return storage.queryAllEntities(undone, allBlocks, types);
+}
+
+/**
+ * \copydoc RStorage::queryWorkingSetEntities
+ */
+QSet<REntity::Id> RDocument::queryWorkingSetEntities() const {
+    return storage.queryWorkingSetEntities();
 }
 
 /**
@@ -2896,6 +2905,14 @@ RDocument& RDocument::getClipboard() {
     }
 
     return *clipboard;
+}
+
+RBlockReferenceEntity::Id RDocument::getWorkingSetBlockReferenceId() const {
+    return storage.getWorkingSetBlockReferenceId();
+}
+
+void RDocument::setWorkingSetBlockReferenceId(RBlockReferenceEntity::Id id, int group, RTransaction* transaction) {
+    storage.setWorkingSetBlockReferenceId(id, group, transaction);
 }
 
 /**

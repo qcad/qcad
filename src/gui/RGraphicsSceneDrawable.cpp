@@ -136,6 +136,24 @@ void RGraphicsSceneDrawable::setHighlighted(bool on) {
     }
 }
 
+void RGraphicsSceneDrawable::setWorkingSet(bool on) {
+    switch (type) {
+    case PainterPath:
+    case PainterPathRay:
+    case PainterPathXLine:
+        painterPath->setWorkingSet(on);
+        break;
+    case Image:
+        break;
+    case Text:
+        break;
+    case Transform:
+        break;
+    default:
+        break;
+    }
+}
+
 RGraphicsSceneDrawable& RGraphicsSceneDrawable::operator=(const RGraphicsSceneDrawable& other) {
     uninit();
 

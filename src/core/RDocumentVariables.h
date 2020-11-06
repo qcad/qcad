@@ -43,6 +43,7 @@ public:
     static RPropertyTypeId PropertyUnit;
     static RPropertyTypeId PropertyLinetypeScale;
     static RPropertyTypeId PropertyDimensionFont;
+    static RPropertyTypeId PropertyWorkingSetBlockReferenceId;
 
 public:
     RDocumentVariables(RDocument* document);
@@ -129,6 +130,14 @@ public:
         dimensionFont = f;
     }
 
+    RObject::Id getWorkingSetBlockReferenceId() const {
+        return workingSetBlockReferenceId;
+    }
+
+    void setWorkingSetBlockReferenceId(RObject::Id id) {
+        workingSetBlockReferenceId = id;
+    }
+
     QString addAutoVariable(double value);
     QStringList getAutoVariables() const;
 
@@ -144,6 +153,8 @@ private:
     double linetypeScale;
     QString dimensionFont;
     QHash<RS::KnownVariable, QVariant> knownVariables;
+    // ID of block reference that we are currently editing in-place (current working set):
+    RObject::Id workingSetBlockReferenceId;
 };
 
 Q_DECLARE_METATYPE(RDocumentVariables*)

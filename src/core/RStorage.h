@@ -130,6 +130,11 @@ public:
             bool allBlocks, QList<RS::EntityType> types) = 0;
 
     /**
+     * \return A set of all entity IDs in the current working set.
+     */
+    virtual QSet<REntity::Id> queryWorkingSetEntities() = 0;
+
+    /**
      * \return A set of all UCS IDs of the document.
      */
     virtual QSet<RUcs::Id> queryAllUcs() = 0;
@@ -848,6 +853,9 @@ public:
      * Clear caches:
      */
     virtual void update() {}
+
+    RBlockReferenceEntity::Id getWorkingSetBlockReferenceId() const;
+    void setWorkingSetBlockReferenceId(RBlockReferenceEntity::Id id, int group = -1, RTransaction* transaction = NULL);
 
 protected:
     QDateTime lastModified;

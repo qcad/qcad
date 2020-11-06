@@ -173,6 +173,11 @@ Block.editBlock = function(di, blockName) {
 
     var i, view, blockZoom;
 
+    if (doc.getWorkingSetBlockReferenceId()!==RObject.INVALID_ID) {
+        EAction.handleUserWarning(qsTr("Cannot change block while editing a block in-place"));
+        return;
+    }
+
     // store offset and zoom factor of all views in a map blockId -> [factor, offset vector]:
     var blockId = doc.getCurrentBlockId();
     for (i=0; i<views.length; i++) {

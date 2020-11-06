@@ -292,6 +292,30 @@ QSet<REntity::Id> RMemoryStorage::queryAllEntities(bool undone, bool allBlocks, 
     return result;
 }
 
+QSet<REntity::Id> RMemoryStorage::queryWorkingSetEntities() {
+    QSet<REntity::Id> result;
+    RBlock::Id currentBlock = getCurrentBlockId();
+    QHash<REntity::Id, QSharedPointer<REntity> >::iterator it;
+    for (it = entityMap.begin(); it != entityMap.end(); ++it) {
+        QSharedPointer<REntity> e = *it;
+        if (e.isNull()) {
+            continue;
+        }
+        if (e->isUndone()) {
+            continue;
+        }
+        if (e->getBlockId() != currentBlock) {
+            continue;
+        }
+        if (!e->isWorkingSet()) {
+            continue;
+        }
+
+        result.insert(e->getId());
+    }
+    return result;
+}
+
 QSet<RUcs::Id> RMemoryStorage::queryAllUcs() {
     QSet<RUcs::Id> result;
     QHash<RObject::Id, QSharedPointer<RObject> >::iterator it;
