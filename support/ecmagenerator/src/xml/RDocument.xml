@@ -154,6 +154,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="queryWorkingSetEntities"
+    cppName="queryWorkingSetEntities" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSet &lt; REntity::Id &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="queryAllUcs" cppName="queryAllUcs"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -1736,6 +1742,27 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="expression" isConst="true" />
         <arg type="bool *" typeName="bool *" name="ok"
         hasDefault="true" default="NULL" isConst="false" />
+      </variant>
+    </method>
+    <method name="getWorkingSetBlockReferenceId"
+    cppName="getWorkingSetBlockReferenceId" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RBlockReferenceEntity::Id"
+      isPureVirtual="false" />
+    </method>
+    <method name="setWorkingSetBlockReferenceId"
+    cppName="setWorkingSetBlockReferenceId" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RBlockReferenceEntity::Id"
+        typeName="RBlockReferenceEntity::Id" name="id"
+        isConst="false" />
+        <arg type="int" typeName="int" name="group"
+        hasDefault="true" default="RDEFAULT_MIN1"
+        isConst="false" />
+        <arg type="RTransaction *" typeName="RTransaction *"
+        name="transaction" hasDefault="true" default="NULL"
+        isConst="false" />
       </variant>
     </method>
     <method name="getClipboard" cppName="getClipboard"

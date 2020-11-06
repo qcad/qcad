@@ -121,6 +121,9 @@
         setHighlighted
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setWorkingSet
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         operator_assign
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

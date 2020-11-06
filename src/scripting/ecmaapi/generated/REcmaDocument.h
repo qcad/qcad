@@ -90,6 +90,9 @@
         queryAllEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryWorkingSetEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryAllUcs
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -655,6 +658,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         eval
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getWorkingSetBlockReferenceId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setWorkingSetBlockReferenceId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getClipboard

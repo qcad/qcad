@@ -97,6 +97,12 @@
         isUndone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isWorkingSet
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setWorkingSet
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPropertyTypeIds
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

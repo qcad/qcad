@@ -43,10 +43,8 @@
 <class>class <macro><name>QCADOPERATIONS_EXPORT</name></macro> <name>RDeleteObjectsOperation</name><super>: <specifier>public</specifier> <name>ROperation</name></super> <block>{<private type="default">
 </private><public>public:
     <constructor_decl><name>RDeleteObjectsOperation</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>undoable</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
-    <constructor_decl><name>RDeleteObjectsOperation</name><parameter_list>(<param><decl><type><name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>, <param><decl><type><name>bool</name></type> <name>undoable</name> =<init>
-            <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
-    <destructor><specifier>virtual</specifier> <name>~RDeleteObjectsOperation</name><parameter_list>()</parameter_list> <block>{
-    }</block></destructor>
+    <constructor_decl><name>RDeleteObjectsOperation</name><parameter_list>(<param><decl><type><name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>, <param><decl><type><name>bool</name></type> <name>undoable</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <destructor><specifier>virtual</specifier> <name>~RDeleteObjectsOperation</name><parameter_list>()</parameter_list> <block>{ }</block></destructor>
 
     <function_decl><type><name>void</name></type> <name>deleteObject</name><parameter_list>(<param><decl><type><name>const</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name>&amp;</type> <name>o</name></decl></param>)</parameter_list>;</function_decl>
 
