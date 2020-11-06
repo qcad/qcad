@@ -639,7 +639,7 @@ Abre diálogo de cores</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Working Set</source>
-        <translation type="unfinished"></translation>
+        <translation>Conjunto de trabalho</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
