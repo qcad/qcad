@@ -1306,7 +1306,7 @@ Do you wish to recover it?</source>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
-        <translation type="unfinished"></translation>
+        <translation>块列表</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+17"/>
@@ -2143,12 +2143,12 @@ Do you wish to recover it?</source>
         <location line="+68"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
-        <translation type="unfinished"></translation>
+        <translation>命令行</translation>
     </message>
     <message>
         <location line="-21"/>
         <source>&amp;Command Line</source>
-        <translation type="unfinished"></translation>
+        <translation>命令行(&amp;C)</translation>
     </message>
     <message>
         <location line="+208"/>
@@ -2208,12 +2208,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Command</source>
-        <translation type="unfinished"></translation>
+        <translation>命令</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Command:</source>
-        <translation type="unfinished"></translation>
+        <translation>命令：</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3341,17 +3341,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Draw.js" line="+61"/>
         <source>Draw</source>
-        <translation type="unfinished"></translation>
+        <translation>绘制</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation type="unfinished"></translation>
+        <translation>绘制(&amp;D)</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Drawing Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>绘制工具</translation>
     </message>
 </context>
 <context>
@@ -3761,7 +3761,7 @@ is already in the list.</source>
     <message>
         <location line="+27"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>编辑(&amp;E)</translation>
     </message>
 </context>
 <context>
@@ -4572,7 +4572,7 @@ is already in the list.</source>
     <message>
         <location line="+27"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>文件(&amp;F)</translation>
     </message>
     <message>
         <location line="+92"/>
@@ -4593,7 +4593,7 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>All Files</source>
-        <translation type="unfinished">全部文件</translation>
+        <translation>全部文件</translation>
     </message>
 </context>
 <context>
@@ -5074,7 +5074,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Help/Forum/ForumInit.js" line="+2"/>
         <source>&amp;Forum</source>
-        <translation type="unfinished"></translation>
+        <translation>论坛(&amp;F)</translation>
     </message>
 </context>
 <context>
@@ -5747,7 +5747,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Help/Help.js" line="+60"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>帮助(&amp;H)</translation>
     </message>
 </context>
 <context>
@@ -5767,7 +5767,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Layer/HideAllLayers/HideAllLayersInit.js" line="+2"/>
         <source>&amp;Hide All Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>隐藏所有图层(&amp;H)</translation>
     </message>
 </context>
 <context>
@@ -5775,7 +5775,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/IOExamples.js" line="+51"/>
         <source>&amp;Import/Export</source>
-        <translation type="unfinished"></translation>
+        <translation>导入/导出(&amp;I)</translation>
     </message>
 </context>
 <context>
@@ -5808,32 +5808,32 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+27"/>
         <source>Position</source>
-        <translation type="unfinished">位置</translation>
+        <translation>位置</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
         <source>&amp;Insert Bitmap</source>
-        <translation type="unfinished"></translation>
+        <translation>插入位图(&amp;I)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Image/Image.ui" line="+17"/>
         <source>Width:</source>
-        <translation type="unfinished"></translation>
+        <translation>宽度：</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Keep proportions</source>
-        <translation type="unfinished"></translation>
+        <translation>保持纵横比</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Height:</source>
-        <translation type="unfinished">高度：</translation>
+        <translation>高度：</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Angle:</source>
-        <translation type="unfinished">角度：</translation>
+        <translation>角度：</translation>
     </message>
 </context>
 <context>
@@ -6337,12 +6337,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Information/Information.js" line="+334"/>
         <source>Information Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>量测工具</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Info</source>
-        <translation type="unfinished"></translation>
+        <translation>量测(&amp;I)</translation>
     </message>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
@@ -6835,12 +6835,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Layer/Layer.js" line="+97"/>
         <source>Layer Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>图层工具</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>&amp;Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>图层(&amp;L)</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -6999,12 +6999,12 @@ BUG: Interferes with group castings.</source>
         <location line="+0"/>
         <location line="+109"/>
         <source>Layer List</source>
-        <translation type="unfinished"></translation>
+        <translation>图层列表</translation>
     </message>
     <message>
         <location line="-55"/>
         <source>&amp;Layer List</source>
-        <translation type="unfinished"></translation>
+        <translation>图层列表(&amp;L)</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/LayerList/PreferencesPage.ui" line="+19"/>
@@ -8208,17 +8208,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Misc.js" line="+60"/>
         <source>Misc Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>其他工具</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>其他</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>其他(&amp;M)</translation>
     </message>
 </context>
 <context>
@@ -8339,12 +8339,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Modify.js" line="+99"/>
         <source>Modification Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>修改工具</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>修改(&amp;M)</translation>
     </message>
 </context>
 <context>
@@ -9309,7 +9309,7 @@ shown in search results:</source>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>属性</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+17"/>
@@ -10134,7 +10134,7 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>&amp;Select</source>
-        <translation type="unfinished"></translation>
+        <translation>选择(&amp;S)</translation>
     </message>
 </context>
 <context>
@@ -10142,7 +10142,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectAll/SelectAllInit.js" line="+2"/>
         <source>Select &amp;All</source>
-        <translation type="unfinished"></translation>
+        <translation>全选(&amp;A)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -10830,12 +10830,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/Snap.js" line="+57"/>
         <source>Snap Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>捕捉工具</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Snap</source>
-        <translation type="unfinished"></translation>
+        <translation>捕捉(&amp;S)</translation>
     </message>
 </context>
 <context>
@@ -12295,7 +12295,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/Undo/UndoInit.js" line="+2"/>
         <source>&amp;Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>撤销(&amp;U)</translation>
     </message>
 </context>
 <context>
@@ -12465,12 +12465,12 @@ shown in search results:</source>
     <message>
         <location line="+28"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation>视图</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation>视图(&amp;V)</translation>
     </message>
 </context>
 <context>
@@ -12752,12 +12752,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Window/Window.js" line="+108"/>
         <source>&amp;Window</source>
-        <translation type="unfinished"></translation>
+        <translation>窗口(&amp;W)</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Window Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>窗口工具</translation>
     </message>
 </context>
 <context>
