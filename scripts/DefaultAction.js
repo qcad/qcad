@@ -133,6 +133,8 @@ DefaultAction.prototype.suspendEvent = function() {
     if (!isNull(this.getGuiAction())) {
         this.getGuiAction().setChecked(false);
     }
+
+    EAction.prototype.suspendEvent.call(this);
 };
 
 DefaultAction.prototype.resumeEvent = function() {
