@@ -84,7 +84,16 @@ jobs:
           New-Item -ItemType Directory ${env:archiveName}
           # 拷贝exe
           Copy-Item bin\${env:targetName} ${env:archiveName}\
-
+          Copy-Item bin\qcadstemmer.dll ${env:archiveName}\
+          Copy-Item bin\qcadspatialindex.dll ${env:archiveName}\
+          Copy-Item bin\qcadsnap.dll ${env:archiveName}\
+          Copy-Item bin\qcadoperations.dll ${env:archiveName}\
+          Copy-Item bin\qcadgui.dll ${env:archiveName}\
+          Copy-Item bin\qcadgrid.dll ${env:archiveName}\
+          Copy-Item bin\qcadentity.dll ${env:archiveName}\
+          Copy-Item bin\qcadecmaapi.dll ${env:archiveName}\
+          Copy-Item bin\qcadcore.dll ${env:archiveName}\
+          Copy-Item bin\spatialindexnavel.dll ${env:archiveName}\
           # 拷贝依赖
           windeployqt ${env:archiveName}\${env:targetName}
           # 打包zip
