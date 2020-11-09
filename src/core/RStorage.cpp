@@ -1171,6 +1171,10 @@ bool RStorage::isEntityVisible(const REntity& entity, RObject::Id blockId) const
     bool ignoreLayerVisibility = false;
 
     QSharedPointer<RLayer> layer = queryLayerDirect(layerId);
+    if (layer.isNull()) {
+        // entity might not be on a layer yet:
+        return true;
+    }
 
 //    qDebug() << "entity: ";
 //    dump();
