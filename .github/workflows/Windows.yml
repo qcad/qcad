@@ -50,7 +50,7 @@ jobs:
         run: |
           call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" %vc_arch%
           qmake -r CONFIG+=ractivated 
-          nmake release
+          nmake
           cd src\3rdparty\qt-labs-qtscriptgenerator-%qt_ver%
           qmake -r CONFIG+=ractivated
-          nmake release
+          nmake 
