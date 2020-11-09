@@ -19,7 +19,7 @@ jobs:
     runs-on: windows-latest
     strategy:
       matrix:
-          qt_ver: [5.10.1]
+          qt_ver: [5.14.0]
           qt_target: [desktop]
           qt_arch: [win64_msvc2017_64]
           include:
