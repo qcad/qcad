@@ -7,9 +7,16 @@ name: Windows
 on:
   push:
     branches: [ master ]
+     # 忽略README.md
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE'
   pull_request:
     branches: [ master ]
-
+    # 忽略README.md
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE'
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -25,8 +32,17 @@ jobs:
           include:
             - qt_arch: win64_msvc2017_64
               msvc_arch: x64
+    env:
+      targetName: qcad.exe
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: cacheQt
+        id: WindowsCacheQt
+        uses: actions/cache@v1
+        with:
+          path: ../Qt/${{matrix.qt_ver}}/${{matrix.qt_arch_install}}
+          key: ${{ runner.os }}-Qt/${{matrix.qt_ver}}/${{matrix.qt_arch}}
+
       - name: Install Qt
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
         uses: jurplel/install-qt-action@v2
@@ -39,6 +55,7 @@ jobs:
           arch: ${{ matrix.qt_arch }}
           install-deps: 'true'
           modules: 'qtwebengine qtscript'
+          cached: ${{steps.WindowsCacheQt.outputs.cache-hit }}
 
       - uses: actions/checkout@v1
         with:
@@ -61,13 +78,13 @@ jobs:
         env:
           VCINSTALLDIR: 'C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC'
           archiveName: ${{ matrix.qt_ver }}-${{ matrix.qt_target }}-${{ matrix.qt_arch }}
-          targetName: qcad.exe
         shell: pwsh
         run: |
           # 创建文件夹
           New-Item -ItemType Directory ${env:archiveName}
           # 拷贝exe
           Copy-Item bin\${env:targetName} ${env:archiveName}\
+
           # 拷贝依赖
           windeployqt ${env:archiveName}\${env:targetName}
           # 打包zip
