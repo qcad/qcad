@@ -1270,7 +1270,7 @@ Do you wish to recover it?</translation>
     <message>
         <location line="+110"/>
         <source>Cannot change block while editing a block in-place</source>
-        <translation type="unfinished"></translation>
+        <translation>Cannot change block while editing a block in-place</translation>
     </message>
     <message>
         <source>Show block tools</source>
