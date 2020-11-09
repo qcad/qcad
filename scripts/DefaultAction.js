@@ -60,6 +60,8 @@ DefaultAction.prototype.beginEvent = function() {
     this.setState(DefaultAction.State.Neutral);
     this.blockRefId = RObject.INVALID_ID;
     this.entityInBlockId = RObject.INVALID_ID;
+
+    this.optOutRelativeZeroResume = true;
 };
 
 DefaultAction.prototype.setState = function(state) {
