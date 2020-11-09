@@ -37,7 +37,9 @@ jobs:
           target: ${{ matrix.qt_target }}
           # Architecture for Windows/Android
           arch: ${{ matrix.qt_arch }}
-          
+          install-deps: 'true'
+          modules: 'qtcharts qtwebengine qtscript'
+
       - uses: actions/checkout@v1
         with:
           fetch-depth: 1
