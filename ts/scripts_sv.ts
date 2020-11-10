@@ -6760,11 +6760,6 @@ BUG: Interferes with group castings.</source>
     </message>
     <message>
         <location line="+52"/>
-        <source>Allow navigation by typing start letters or using arrow keys. Disables key codes when lists have the keyboard focus.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
         <source>Enable keyboard navigation in list widgets</source>
         <translation type="unfinished"></translation>
     </message>
