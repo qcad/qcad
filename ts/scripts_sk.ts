@@ -2658,7 +2658,7 @@ Prajete si ho obnoviť?</translation>
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../scripts/DefaultAction.js" line="+90"/>
+        <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
         <translation>Vyberte prvok alebo oblasť</translation>
     </message>
@@ -3845,12 +3845,12 @@ už existuje v zozname.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2097"/>
+        <location line="+2102"/>
         <source>Cancel</source>
         <translation>Zrušiť</translation>
     </message>
     <message>
-        <location line="-2096"/>
+        <location line="-2101"/>
         <source>Done</source>
         <translation>Hotovo</translation>
     </message>
@@ -3885,12 +3885,17 @@ už existuje v zozname.</translation>
         <translation>CAD Nástroje</translation>
     </message>
     <message>
-        <location line="+710"/>
+        <location line="+711"/>
+        <source>Entity is not in working set.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Entity is on a locked layer.</source>
         <translation>Prvok je na zamknutej vrstve.</translation>
     </message>
     <message>
-        <location line="+224"/>
+        <location line="+225"/>
         <source>Length:</source>
         <translation>Dĺžka:</translation>
     </message>
@@ -7185,6 +7190,11 @@ BUG: Interferes with group castings.</source>
     </message>
     <message>
         <location line="+52"/>
+        <source>Allow navigation by typing start letters or using arrow keys. Disables key codes when lists have the keyboard focus.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Enable keyboard navigation in list widgets</source>
         <translation>Povoliť klávesovú navigáciu v zozname pomôcok</translation>
     </message>
@@ -12893,14 +12903,29 @@ vo výsledku vyhľadania:</translation>
         <translation>&amp;Vymazať originál</translation>
     </message>
     <message>
+        <location line="+3"/>
+        <source>Ctrl+D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+10"/>
         <source>&amp;Keep original</source>
         <translation>P&amp;onechať originál</translation>
     </message>
     <message>
+        <location line="+3"/>
+        <source>Ctrl+K</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+7"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Viac kópií</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Ctrl+M</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+86"/>

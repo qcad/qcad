@@ -2594,7 +2594,7 @@ Do you wish to recover it?</translation>
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../scripts/DefaultAction.js" line="+90"/>
+        <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
         <translation>Select entity or region</translation>
     </message>
@@ -3747,12 +3747,12 @@ is already in the list.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2097"/>
+        <location line="+2102"/>
         <source>Cancel</source>
         <translation>Cancel</translation>
     </message>
     <message>
-        <location line="-2096"/>
+        <location line="-2101"/>
         <source>Done</source>
         <translation>Done</translation>
     </message>
@@ -3783,12 +3783,17 @@ is already in the list.</translation>
         <translation>CAD Tools</translation>
     </message>
     <message>
-        <location line="+710"/>
+        <location line="+711"/>
+        <source>Entity is not in working set.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Entity is on a locked layer.</source>
         <translation>Entity is on a locked layer.</translation>
     </message>
     <message>
-        <location line="+224"/>
+        <location line="+225"/>
         <source>Length:</source>
         <translation>Length:</translation>
     </message>
@@ -7123,6 +7128,11 @@ BUG: Interferes with group castings.</translation>
     </message>
     <message>
         <location line="+52"/>
+        <source>Allow navigation by typing start letters or using arrow keys. Disables key codes when lists have the keyboard focus.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Enable keyboard navigation in list widgets</source>
         <translation>Enable keyboard navigation in list widgets</translation>
     </message>
@@ -12747,14 +12757,29 @@ shown in search results:</translation>
         <translation>&amp;Delete original</translation>
     </message>
     <message>
+        <location line="+3"/>
+        <source>Ctrl+D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+10"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Keep original</translation>
     </message>
     <message>
+        <location line="+3"/>
+        <source>Ctrl+K</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+7"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Multiple copies</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Ctrl+M</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+86"/>

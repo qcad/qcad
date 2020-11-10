@@ -2675,7 +2675,7 @@ Você deseja recuperá-lo?</translation>
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../scripts/DefaultAction.js" line="+90"/>
+        <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
         <translation>Selecione a entidade ou região</translation>
     </message>
@@ -3860,12 +3860,12 @@ já se encontra na lista.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2097"/>
+        <location line="+2102"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="-2096"/>
+        <location line="-2101"/>
         <source>Done</source>
         <translation>Concluído</translation>
     </message>
@@ -3896,12 +3896,17 @@ já se encontra na lista.</translation>
         <translation>Ferramentas CAD</translation>
     </message>
     <message>
-        <location line="+710"/>
+        <location line="+711"/>
+        <source>Entity is not in working set.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Entity is on a locked layer.</source>
         <translation>A entidade está em uma camada trancada.</translation>
     </message>
     <message>
-        <location line="+224"/>
+        <location line="+225"/>
         <source>Length:</source>
         <translation>Comprimento:</translation>
     </message>
@@ -7375,6 +7380,11 @@ BUG: Interferes with group castings.</source>
     </message>
     <message>
         <location line="+52"/>
+        <source>Allow navigation by typing start letters or using arrow keys. Disables key codes when lists have the keyboard focus.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Enable keyboard navigation in list widgets</source>
         <translation>Ativar navegação por teclado em widgets de lista</translation>
     </message>
@@ -13151,14 +13161,29 @@ nos resultados de busca:</translation>
         <translation>&amp;Elimine o original</translation>
     </message>
     <message>
+        <location line="+3"/>
+        <source>Ctrl+D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+10"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Mantenha o original</translation>
     </message>
     <message>
+        <location line="+3"/>
+        <source>Ctrl+K</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+7"/>
         <source>&amp;Multiple copies</source>
         <translation>Cópias &amp;múltiplas</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Ctrl+M</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+86"/>

@@ -2620,7 +2620,7 @@ Do you wish to recover it?</source>
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../scripts/DefaultAction.js" line="+90"/>
+        <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
         <translation>Выбрать объект или область</translation>
     </message>
@@ -3780,12 +3780,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2097"/>
+        <location line="+2102"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location line="-2096"/>
+        <location line="-2101"/>
         <source>Done</source>
         <translation>Готово</translation>
     </message>
@@ -3820,12 +3820,17 @@ is already in the list.</source>
         <translation>Инструменты САПР</translation>
     </message>
     <message>
-        <location line="+710"/>
+        <location line="+711"/>
+        <source>Entity is not in working set.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Entity is on a locked layer.</source>
         <translation>Объект находится на заблокированном слое.</translation>
     </message>
     <message>
-        <location line="+224"/>
+        <location line="+225"/>
         <source>Length:</source>
         <translation>Длина:</translation>
     </message>
@@ -7188,6 +7193,11 @@ BUG: Interferes with group castings.</source>
     </message>
     <message>
         <location line="+52"/>
+        <source>Allow navigation by typing start letters or using arrow keys. Disables key codes when lists have the keyboard focus.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Enable keyboard navigation in list widgets</source>
         <translation>Включить навигацию с помощью клавиатуры в виджетах списка</translation>
     </message>
@@ -12853,14 +12863,29 @@ shown in search results:</source>
         <translation>У&amp;далить оригинал</translation>
     </message>
     <message>
+        <location line="+3"/>
+        <source>Ctrl+D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+10"/>
         <source>&amp;Keep original</source>
         <translation>С&amp;охранить оригинал</translation>
     </message>
     <message>
+        <location line="+3"/>
+        <source>Ctrl+K</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+7"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Несколько копий</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Ctrl+M</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+86"/>

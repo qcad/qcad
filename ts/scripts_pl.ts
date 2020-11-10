@@ -3176,7 +3176,7 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../scripts/DefaultAction.js" line="+90"/>
+        <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Proszę zaznaczyć obiekt lub obszar</translation>
@@ -4645,7 +4645,7 @@ Powrót do poprzedniego menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2097"/>
+        <location line="+2102"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -4654,7 +4654,7 @@ Anuluj
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location line="-2096"/>
+        <location line="-2101"/>
         <source>Done</source>
         <translation type="unfinished">Zrobione</translation>
     </message>
@@ -4703,13 +4703,18 @@ Narzędzia CAD</translatorcomment>
         <translation>Narzędzia CAD</translation>
     </message>
     <message>
-        <location line="+710"/>
+        <location line="+711"/>
+        <source>Entity is not in working set.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Obiekt nie znajduje się na zablokowanej warstwie.</translation>
     </message>
     <message>
-        <location line="+224"/>
+        <location line="+225"/>
         <source>Length:</source>
         <translation>Długość:</translation>
     </message>
@@ -8705,6 +8710,11 @@ Rzutowanie &amp;izometryczne</translatorcomment>
     </message>
     <message>
         <location line="+52"/>
+        <source>Allow navigation by typing start letters or using arrow keys. Disables key codes when lists have the keyboard focus.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Enable keyboard navigation in list widgets</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16192,12 +16202,22 @@ Wprowadź liczbę kopii</translatorcomment>
         <translation>&amp;Usunięcie oryginału</translation>
     </message>
     <message>
+        <location line="+3"/>
+        <source>Ctrl+D</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+10"/>
         <source>&amp;Keep original</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Zachowaj oryginał</translatorcomment>
         <translation>&amp;Zachowanie oryginału</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Ctrl+K</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
@@ -16207,6 +16227,11 @@ Wprowadź liczbę kopii</translatorcomment>
 Kopie &amp;wielokrotne
 Kopie &amp;wielokrotne:</translatorcomment>
         <translation>&amp;Wielokrotne skopiowanie</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Ctrl+M</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+86"/>
