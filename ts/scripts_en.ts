@@ -3785,7 +3785,7 @@ is already in the list.</translation>
     <message>
         <location line="+711"/>
         <source>Entity is not in working set.</source>
-        <translation type="unfinished"></translation>
+        <translation>Entity is not in working set.</translation>
     </message>
     <message>
         <location line="+3"/>
