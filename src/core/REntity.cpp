@@ -428,7 +428,7 @@ bool REntity::isInWorkingSet() const {
  * \copydoc REntityData::setSelected
  */
 void REntity::setSelected(bool on) {
-    if (isEditable()) {
+    if (isInWorkingSet()) {
         getData().setSelected(on);
     }
 }
