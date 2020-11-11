@@ -46,7 +46,8 @@ public:
     enum Mode {
         NoMode = 0x0000,
         NoPlot = 0x0001,               //!< not plotted (from not plottable layers)
-        PixelUnit = 0x0002             //!< unit interpreted as pixels
+        PixelUnit = 0x0002,            //!< unit interpreted as pixels
+        WorkingSet = 0x0004            //!< in current working set
     };
     Q_DECLARE_FLAGS(Modes, Mode)
 
@@ -130,6 +131,13 @@ public:
         return getMode(RGraphicsSceneDrawable::PixelUnit);
     }
 
+    void setWorkingSet(bool on) {
+        setMode(RGraphicsSceneDrawable::WorkingSet, on);
+    }
+    bool isWorkingSet() const {
+        return getMode(RGraphicsSceneDrawable::WorkingSet);
+    }
+
     RPainterPath& getPainterPath() const {
         Q_ASSERT(painterPath!=NULL);
         return *painterPath;
@@ -162,7 +170,6 @@ public:
 
     void setSelected(bool on);
     void setHighlighted(bool on);
-    void setWorkingSet(bool on);
 
     RGraphicsSceneDrawable& operator=(const RGraphicsSceneDrawable& other);
 

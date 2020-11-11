@@ -60,8 +60,7 @@ public:
         NoClipping = 0x0200,            //!< disable clipping for this path
         PixelWidth = 0x0400,            //!< interpret width in pixels
         NoColorMode = 0x0800,           //!< disable color mode
-        SimplePointDisplay = 0x1000,    //!< simple point mode (for points in hatch patterns)
-        WorkingSet = 0x2000             //!< path is part of working set
+        SimplePointDisplay = 0x1000     //!< simple point mode (for points in hatch patterns)
     };
     Q_DECLARE_FLAGS(Modes, Mode)
 
@@ -219,9 +218,6 @@ public:
 
     void setSimplePointDisplay(bool on);
     bool getSimplePointDisplay() const;
-
-    void setWorkingSet(bool on);
-    bool isWorkingSet() const;
 
     void setPixelWidth(bool on);
     bool getPixelWidth() const;

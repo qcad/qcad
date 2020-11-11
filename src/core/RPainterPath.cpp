@@ -431,14 +431,6 @@ bool RPainterPath::getSimplePointDisplay() const {
     return getMode(RPainterPath::SimplePointDisplay);
 }
 
-void RPainterPath::setWorkingSet(bool on) {
-    setMode(RPainterPath::WorkingSet, on);
-}
-
-bool RPainterPath::isWorkingSet() const {
-    return getMode(RPainterPath::WorkingSet);
-}
-
 void RPainterPath::setPixelWidth(bool on) {
     setMode(RPainterPath::PixelWidth, on);
 }
