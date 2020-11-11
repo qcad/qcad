@@ -138,9 +138,9 @@ RColor RColor::getFaded(const RColor& color, const QColor& bgColor, double facto
     RColor ret = color;
 
     // mix color with background color:
-    ret.setRed((color.red() + bgColor.red()*factor) / (factor+1));
-    ret.setGreen((color.green() + bgColor.green()*factor) / (factor+1));
-    ret.setBlue((color.blue() + bgColor.blue()*factor) / (factor+1));
+    ret.setRedF((color.redF() + bgColor.redF()*factor) / (factor+1));
+    ret.setGreenF((color.greenF() + bgColor.greenF()*factor) / (factor+1));
+    ret.setBlueF((color.blueF() + bgColor.blueF()*factor) / (factor+1));
 
     return ret;
 }
