@@ -1303,7 +1303,7 @@ Wilt u het herstellen?</translation>
     </message>
     <message>
         <location line="+110"/>
-        <source>Cannot change block while editing a block in-place</source>
+        <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5446,7 +5446,12 @@ BUG: Interferes with group castings.</source>
         <translation>Dubbelklik op blokreferentie opent blok</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+28"/>
+        <source>Edit block reference in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <source>Tolerance:</source>
         <translation>Tolerantie:</translation>
     </message>
@@ -5488,7 +5493,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Hoekstap bij rotatie:</translation>
     </message>
     <message>
-        <location line="-232"/>
+        <location line="-259"/>
         <source>Right-Click</source>
         <translation>Rechtsklik</translation>
     </message>
@@ -5502,7 +5507,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Klik met rechtermuisknop op object toont contextmenu</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+73"/>
         <source>Double-click to select contour</source>
         <translation>Dubbelklik selecteert contour</translation>
     </message>

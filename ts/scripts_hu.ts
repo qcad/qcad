@@ -1212,7 +1212,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+82"/>
-        <source>Cannot change block while editing a block in-place</source>
+        <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5098,7 +5098,12 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+28"/>
+        <source>Edit block reference in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Double-click to select contour</source>
         <translation type="unfinished"></translation>
     </message>

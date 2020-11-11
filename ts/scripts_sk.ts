@@ -1297,7 +1297,7 @@ Prajete si ho obnoviť?</translation>
     </message>
     <message>
         <location line="+110"/>
-        <source>Cannot change block while editing a block in-place</source>
+        <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5422,7 +5422,12 @@ BUG: Interferes with group castings.</source>
         <translation>Dvojklikom na blok otvoriť úpravu bloku</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+28"/>
+        <source>Edit block reference in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <source>Tolerance:</source>
         <translation type="unfinished">Tolerancia:</translation>
     </message>
@@ -5456,7 +5461,7 @@ BUG: Interferes with group castings.</source>
         <translation>Zvýrazniť prvok v rozsahu</translation>
     </message>
     <message>
-        <location line="-232"/>
+        <location line="-259"/>
         <source>Right-Click</source>
         <translation>Kliknutie pravým tlačidlom myši</translation>
     </message>
@@ -5470,7 +5475,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Kliknutím na prvok sa zobrazí kontextová ponuka</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+73"/>
         <source>Double-click to select contour</source>
         <translation>Dvojklikom označiť obrys</translation>
     </message>

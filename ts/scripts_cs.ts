@@ -1254,7 +1254,7 @@ Přejete si ho obnovit?</translation>
     </message>
     <message>
         <location line="+110"/>
-        <source>Cannot change block while editing a block in-place</source>
+        <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5286,7 +5286,12 @@ BUG: Interferes with group castings.</source>
         <translation>Dvojklikem na referenci bloku otevřít blok</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+28"/>
+        <source>Edit block reference in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Double-click to select contour</source>
         <translation>Dvojklikem vybrat obrys</translation>
     </message>

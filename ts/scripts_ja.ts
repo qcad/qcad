@@ -1285,7 +1285,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+110"/>
-        <source>Cannot change block while editing a block in-place</source>
+        <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5470,7 +5470,12 @@ BUG: Interferes with group castings.</source>
         <translation>ブロック参照をダブルクリックしてブロックをオープン</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+28"/>
+        <source>Edit block reference in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <source>Tolerance:</source>
         <translation type="unfinished">許容誤差:</translation>
     </message>
@@ -5504,7 +5509,7 @@ BUG: Interferes with group castings.</source>
         <translation>範囲内のエンティティをハイライト</translation>
     </message>
     <message>
-        <location line="-232"/>
+        <location line="-259"/>
         <source>Right-Click</source>
         <translation>右クリック</translation>
     </message>
@@ -5514,7 +5519,7 @@ BUG: Interferes with group castings.</source>
         <translation>右クリックでエンティティを選択解除</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+73"/>
         <source>Double-click to select contour</source>
         <translation>ダブルクリックで輪郭を選択</translation>
     </message>

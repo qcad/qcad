@@ -1428,7 +1428,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     </message>
     <message>
         <location line="+110"/>
-        <source>Cannot change block while editing a block in-place</source>
+        <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6134,7 +6134,12 @@ BUG: Interferes with group castings.</translation>
         <translation>Doppelklick auf Blockreferenz öffnet Block</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+28"/>
+        <source>Edit block reference in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <source>Tolerance:</source>
         <translation>Toleranz:</translation>
     </message>
@@ -6176,7 +6181,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Winkelschritt zum Drehen:</translation>
     </message>
     <message>
-        <location line="-232"/>
+        <location line="-259"/>
         <source>Right-Click</source>
         <translation>Rechtsklick</translation>
     </message>
@@ -6190,7 +6195,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Rechtsklick auf Objekt zeigt Kontextmenü</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+73"/>
         <source>Double-click to select contour</source>
         <translation>Doppelklick selektiert Kontour</translation>
     </message>

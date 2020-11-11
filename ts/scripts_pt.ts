@@ -1314,7 +1314,7 @@ Você deseja recuperá-lo?</translation>
     </message>
     <message>
         <location line="+110"/>
-        <source>Cannot change block while editing a block in-place</source>
+        <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5529,7 +5529,12 @@ BUG: Interferes with group castings.</source>
         <translation>Clique duplo na referência do bloco para abrir o bloco</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+28"/>
+        <source>Edit block reference in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <source>Tolerance:</source>
         <translation>Tolerância:</translation>
     </message>
@@ -5571,7 +5576,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Passo angular para rotação:</translation>
     </message>
     <message>
-        <location line="-232"/>
+        <location line="-259"/>
         <source>Right-Click</source>
         <translation>Clique do Botão Direito</translation>
     </message>
@@ -5585,7 +5590,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Clique direito en un entidade mostra menu de contexto</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+73"/>
         <source>Double-click to select contour</source>
         <translation>Clique duplo para selecionar contorno</translation>
     </message>

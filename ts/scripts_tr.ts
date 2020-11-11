@@ -1245,7 +1245,7 @@ Onu kurtarmak ister misiniz?</translation>
     </message>
     <message>
         <location line="+110"/>
-        <source>Cannot change block while editing a block in-place</source>
+        <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5201,7 +5201,12 @@ BUG: Interferes with group castings.</source>
         <translation>Blok referans çift tıklatıldığında blok açılır</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+28"/>
+        <source>Edit block reference in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Double-click to select contour</source>
         <translation>Kontur seçmek için çift tıklayın</translation>
     </message>

@@ -1283,7 +1283,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+110"/>
-        <source>Cannot change block while editing a block in-place</source>
+        <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5429,7 +5429,12 @@ BUG: Interferes with group castings.</source>
         <translation>Двойной щелчок по привязке блока для открытия блока</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+28"/>
+        <source>Edit block reference in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <source>Tolerance:</source>
         <translation type="unfinished">Допуск:</translation>
     </message>
@@ -5463,7 +5468,7 @@ BUG: Interferes with group castings.</source>
         <translation>Выделить объект в пределах диапазона</translation>
     </message>
     <message>
-        <location line="-232"/>
+        <location line="-259"/>
         <source>Right-Click</source>
         <translation>Щелчок правой кнопкой</translation>
     </message>
@@ -5477,7 +5482,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Щелчок правой кнопкой мыши показывает контекстное меню</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+73"/>
         <source>Double-click to select contour</source>
         <translation>Двойной щелчок для выбора контура</translation>
     </message>

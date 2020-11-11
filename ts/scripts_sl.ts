@@ -1282,7 +1282,7 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+110"/>
-        <source>Cannot change block while editing a block in-place</source>
+        <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5560,7 +5560,12 @@ BUG: Interferes with group castings.</source>
         <translation>Dvoklik na blokovno referenco odpre blok</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+28"/>
+        <source>Edit block reference in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <source>Tolerance:</source>
         <translation>Dopustno odstopanje:</translation>
     </message>
@@ -5594,7 +5599,7 @@ BUG: Interferes with group castings.</source>
         <translation>Označi entiteto znotraj območja</translation>
     </message>
     <message>
-        <location line="-232"/>
+        <location line="-259"/>
         <source>Right-Click</source>
         <translation>Desni klik</translation>
     </message>
@@ -5608,7 +5613,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Desni klik na entiteto prikaže kontekstni meni</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+73"/>
         <source>Double-click to select contour</source>
         <translation>Dvoklik za izbiro konture</translation>
     </message>

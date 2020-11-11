@@ -1269,8 +1269,12 @@ Do you wish to recover it?</translation>
     </message>
     <message>
         <location line="+110"/>
+        <source>Cannot edit block while editing a block in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Cannot change block while editing a block in-place</source>
-        <translation>Cannot change block while editing a block in-place</translation>
+        <translation type="vanished">Cannot change block while editing a block in-place</translation>
     </message>
     <message>
         <source>Show block tools</source>
@@ -5406,7 +5410,12 @@ BUG: Interferes with group castings.</translation>
         <translation>Double-click on block reference opens block</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+28"/>
+        <source>Edit block reference in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Double-click to select contour</source>
         <translation>Double-click to select contour</translation>
     </message>

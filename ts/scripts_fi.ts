@@ -1261,7 +1261,7 @@ Haluatko palauttaa sen?</translation>
     </message>
     <message>
         <location line="+110"/>
-        <source>Cannot change block while editing a block in-place</source>
+        <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5463,7 +5463,12 @@ BUG: Interferes with group castings.</source>
         <translation>Kaksoisnapauta muokataksesi kuviointia</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+38"/>
+        <source>Edit block reference in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Double-click to select contour</source>
         <translation>Kaksoisnapsauta valitaksesi ääriviivat</translation>
     </message>

@@ -1393,7 +1393,7 @@ Voulez-vous le récupérer ?</translation>
     </message>
     <message>
         <location line="+110"/>
-        <source>Cannot change block while editing a block in-place</source>
+        <source>Cannot edit block while editing a block in-place</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5885,7 +5885,12 @@ BUG: Interferes with group castings.</source>
         <translation>Double-cliquez sur une référence de bloc pour ouvrir le bloc</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+28"/>
+        <source>Edit block reference in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <source>Tolerance:</source>
         <translation>Tolérance :</translation>
     </message>
@@ -5927,7 +5932,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Etape d&apos;angle pour la rotation :</translation>
     </message>
     <message>
-        <location line="-232"/>
+        <location line="-259"/>
         <source>Right-Click</source>
         <translation>Clic-droit</translation>
     </message>
@@ -5941,7 +5946,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Clic-droit sur entité montre menu contextuel</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+73"/>
         <source>Double-click to select contour</source>
         <translation>Double-cliquez pour sélectionner contour</translation>
     </message>
