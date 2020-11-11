@@ -85,7 +85,7 @@ void RGraphicsViewImage::setNumThreads(int n) {
 void RGraphicsViewImage::clear() {
     for (int i=0; i<graphicsBufferThread.length(); i++) {
         QPainter painter(&graphicsBufferThread[i]);
-        // erase background to background color:
+        // erase background to transparent:
         painter.setCompositionMode(QPainter::CompositionMode_Clear);
         painter.eraseRect(graphicsBufferThread[i].rect());
     }
@@ -1002,7 +1002,7 @@ QPainter* RGraphicsViewImage::initPainter(QPaintDevice& device, bool erase, bool
         if (rect.isNull()) {
             r = QRect(0,0,lastSize.width(),lastSize.height());
         }
-        // erase background to background color:
+        // erase background to transparent:
         painter->setCompositionMode(QPainter::CompositionMode_Clear);
         painter->eraseRect(r);
         painter->setCompositionMode(QPainter::CompositionMode_SourceOver);
@@ -1276,8 +1276,19 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
             continue;
         }
 
+        bool workingSet = true;
+        if (!isPrintingOrExporting() && !preview) {
+            RDocument* doc = getDocument();
+            if (doc->getWorkingSetBlockReferenceId()!=RObject::INVALID_ID) {
+                if (!drawable.isWorkingSet()) {
+                    // fade out entities not in working set:
+                    workingSet = false;
+                }
+            }
+        }
+
         // image:
-        if (drawable.getType()==RGraphicsSceneDrawable::Image) {
+        if (drawable.isImage()) {
             if (clipRectangle.isValid()) {
                 // re-enable clipping for image if a path switched it off:
                 painter->setClipping(true);
@@ -1305,7 +1316,7 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
                 }
             }
 
-            paintImage(painter, image);
+            paintImage(painter, image, workingSet);
 
             if (!entityTransformThread[threadId].isEmpty()) {
                 painter->restore();
@@ -1313,7 +1324,7 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
         }
 
         // TTF text block (CAD text block is painter path):
-        else if (drawable.getType()==RGraphicsSceneDrawable::Text) {
+        else if (drawable.isText()) {
             RTextBasedData text = drawable.getText();
 
             if (drawable.getPixelUnit()) {
@@ -1414,7 +1425,7 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
 //                }
             }
 
-            paintText(painter, text);
+            paintText(painter, text, workingSet);
 
             if (!entityTransformThread[threadId].isEmpty()) {
                 painter->restore();
@@ -1557,14 +1568,9 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
             }
         }
 
-        if (!isPrintingOrExporting() && !preview) {
-            RDocument* doc = getDocument();
-            if (doc->getWorkingSetBlockReferenceId()!=RObject::INVALID_ID) {
-                if (!path.isWorkingSet()) {
-                    // fade out entities not in working set:
-                    pen.setColor(RColor::getHighlighted(pen.color(), QColor((QRgb)bgColorLightness), 100));
-                }
-            }
+        if (!workingSet) {
+            // fade out entities not in working set:
+            pen.setColor(RColor::getFaded(pen.color(), getBackgroundColor(), 3.5));
         }
 
         if (!path.getNoColorMode()) {
@@ -1958,7 +1964,7 @@ void RGraphicsViewImage::drawSquare(QPainter* painter, QPointF pt, double pSize)
     );
 }
 
-void RGraphicsViewImage::paintImage(QPainter* painter, RImageData& image) {
+void RGraphicsViewImage::paintImage(QPainter* painter, RImageData& image, bool workingSet) {
     if (scene==NULL) {
         return;
     }
@@ -1988,9 +1994,14 @@ void RGraphicsViewImage::paintImage(QPainter* painter, RImageData& image) {
         wm.rotate(RMath::rad2deg(angle));
         wm.scale(scale.x, -scale.y);
         painter->setMatrix(wm);
+        double opacity = 1.0;
         if (image.getFade()>0 && image.getFade()<100) {
-            painter->setOpacity(1.0 - ((double)image.getFade()/100));
+            opacity = 1.0 - ((double)image.getFade()/100);
         }
+        if (!workingSet) {
+            opacity *= 0.5;
+        }
+        painter->setOpacity(opacity);
         painter->drawImage(0,-qImage.height(), qImage);
         painter->setOpacity(1.0);
         painter->restore();
@@ -2019,7 +2030,7 @@ void RGraphicsViewImage::paintImage(QPainter* painter, RImageData& image) {
 
 }
 
-void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text) {
+void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text, bool workingSet) {
     if (scene==NULL) {
         return;
     }
@@ -2098,8 +2109,15 @@ void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text) {
                 applyColorCorrection(pen);
                 applyColorMode(pen);
 
-                if (text.isHighlighted()) {
-                    pen.setColor(RColor::getHighlighted(pen.color(), bgColorLightness, 100));
+                if (!isPrintingOrExporting()) {
+                    if (text.isHighlighted()) {
+                        pen.setColor(RColor::getHighlighted(pen.color(), bgColorLightness, 100));
+                    }
+
+                    if (!workingSet) {
+                        // fade out entities not in working set:
+                        pen.setColor(RColor::getFaded(pen.color(), getBackgroundColor(), 3.5));
+                    }
                 }
 
                 painter->setPen(pen);
