@@ -182,10 +182,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, getSimplePointDisplay, "getSimplePointDisplay");
             
-            REcmaHelper::registerFunction(&engine, proto, setWorkingSet, "setWorkingSet");
-            
-            REcmaHelper::registerFunction(&engine, proto, isWorkingSet, "isWorkingSet");
-            
             REcmaHelper::registerFunction(&engine, proto, setPixelWidth, "setPixelWidth");
             
             REcmaHelper::registerFunction(&engine, proto, getPixelWidth, "getPixelWidth");
@@ -334,11 +330,6 @@
 
     ctor.setProperty("SimplePointDisplay",
     QScriptValue(RPainterPath::SimplePointDisplay),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("WorkingSet",
-    QScriptValue(RPainterPath::WorkingSet),
     QScriptValue::ReadOnly);
 
 
@@ -4163,110 +4154,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPainterPath::getSimplePointDisplay", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaPainterPath::setWorkingSet
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaPainterPath::setWorkingSet", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setWorkingSet";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RPainterPath* self = 
-                        getSelf("setWorkingSet", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isBool()
-        ) /* type: bool */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    bool
-                    a0 =
-                    (bool)
-                    
-                    context->argument( 0 ).
-                    toBool();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setWorkingSet(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setWorkingSet().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaPainterPath::setWorkingSet", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaPainterPath::isWorkingSet
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaPainterPath::isWorkingSet", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::isWorkingSet";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RPainterPath* self = 
-                        getSelf("isWorkingSet", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        
-               self->isWorkingSet();
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.isWorkingSet().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaPainterPath::isWorkingSet", context, engine);
             return result;
         }
          QScriptValue

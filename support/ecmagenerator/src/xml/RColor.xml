@@ -159,6 +159,17 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="75" isConst="false" />
       </variant>
     </method>
+    <method name="getFaded" cppName="getFaded" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false">
+        <arg type="RColor &amp;" typeName="RColor" name="color"
+        isConst="true" />
+        <arg type="QColor &amp;" typeName="QColor" name="bgColor"
+        isConst="true" />
+        <arg type="double" typeName="double" name="factor"
+        hasDefault="true" default="1" isConst="false" />
+      </variant>
+    </method>
     <method name="operator==" cppName="operator=="
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

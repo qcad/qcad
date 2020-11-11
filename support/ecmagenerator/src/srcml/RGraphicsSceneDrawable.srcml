@@ -47,7 +47,8 @@
     <enum>enum <name>Mode</name> <block>{
         <expr><name>NoMode</name> = 0x0000</expr>,
         <expr><name>NoPlot</name> = 0x0001</expr>,               <comment type="line">//!&lt; not plotted (from not plottable layers)</comment>
-        <expr><name>PixelUnit</name> = 0x0002</expr>             <comment type="line">//!&lt; unit interpreted as pixels</comment>
+        <expr><name>PixelUnit</name> = 0x0002</expr>,            <comment type="line">//!&lt; unit interpreted as pixels</comment>
+        <expr><name>WorkingSet</name> = 0x0004</expr>            <comment type="line">//!&lt; in current working set</comment>
     }</block>;</enum>
     <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Modes</argument>, <argument>Mode</argument>)</argument_list></macro>
 
@@ -131,6 +132,13 @@
         <return>return <expr><call><name>getMode</name><argument_list>(<argument><expr><name><name>RGraphicsSceneDrawable</name>::<name>PixelUnit</name></name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>setWorkingSet</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setMode</name><parameter_list>(<param><decl><type><name><name>RGraphicsSceneDrawable</name>::<name>WorkingSet</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+    <function><type><name>bool</name></type> <name>isWorkingSet</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getMode</name><argument_list>(<argument><expr><name><name>RGraphicsSceneDrawable</name>::<name>WorkingSet</name></name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
     <function><type><name>RPainterPath</name>&amp;</type> <name>getPainterPath</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <expr_stmt><expr><call><name>Q_ASSERT</name><argument_list>(<argument><expr><name>painterPath</name>!=<name>NULL</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
         <return>return <expr>*<name>painterPath</name></expr>;</return>
@@ -163,7 +171,6 @@
 
     <function_decl><type><name>void</name></type> <name>setSelected</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setHighlighted</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>setWorkingSet</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>RGraphicsSceneDrawable</name>&amp;</type> <name>operator=</name><parameter_list>(<param><decl><type><name>const</name> <name>RGraphicsSceneDrawable</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</function_decl>
 

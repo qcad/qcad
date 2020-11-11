@@ -19,6 +19,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="NoMode" />
       <value name="NoPlot" />
       <value name="PixelUnit" />
+      <value name="WorkingSet" />
     </enum>
     <constructor>
       <variant />
@@ -149,6 +150,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="setWorkingSet" cppName="setWorkingSet"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isWorkingSet" cppName="isWorkingSet"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="getPainterPath" cppName="getPainterPath"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -196,14 +210,6 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="setHighlighted" cppName="setHighlighted"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="bool" typeName="bool" name="on"
-        isConst="false" />
-      </variant>
-    </method>
-    <method name="setWorkingSet" cppName="setWorkingSet"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
