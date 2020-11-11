@@ -134,6 +134,17 @@ RColor RColor::getHighlighted(const RColor& color, const QColor& bgColor, int mi
     return ret;
 }
 
+RColor RColor::getFaded(const RColor& color, const QColor& bgColor, double factor) {
+    RColor ret = color;
+
+    // mix color with background color:
+    ret.setRed((color.red() + bgColor.red()*factor) / (factor+1));
+    ret.setGreen((color.green() + bgColor.green()*factor) / (factor+1));
+    ret.setBlue((color.blue() + bgColor.blue()*factor) / (factor+1));
+
+    return ret;
+}
+
 bool RColor::isValid() const {
     if (mode == RColor::ByBlock || mode == RColor::ByLayer) {
         return true;
