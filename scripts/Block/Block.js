@@ -174,7 +174,7 @@ Block.editBlock = function(di, blockName) {
     var i, view, blockZoom;
 
     if (doc.getWorkingSetBlockReferenceId()!==RObject.INVALID_ID) {
-        EAction.handleUserWarning(qsTr("Cannot change block while editing a block in-place"));
+        EAction.handleUserWarning(qsTr("Cannot edit block while editing a block in-place"));
         return;
     }
 
