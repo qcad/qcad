@@ -79,6 +79,33 @@
         </widget>
        </item>
        <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QWidget" name="widget_2" native="true">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>10</width>
+             <height>0</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="DoubleClickEditBlockInPlace">
+           <property name="text">
+            <string>Edit block reference in-place</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
         <widget class="QCheckBox" name="DoubleClickSelectContour">
          <property name="text">
           <string>Double-click to select contour</string>
@@ -309,6 +336,21 @@
    <header>RMathLineEdit.h</header>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>RightClickToDeselect</tabstop>
+  <tabstop>DoubleClickEditText</tabstop>
+  <tabstop>DoubleClickEditHatch</tabstop>
+  <tabstop>DoubleClickEditBlock</tabstop>
+  <tabstop>DoubleClickEditBlockInPlace</tabstop>
+  <tabstop>DoubleClickSelectContour</tabstop>
+  <tabstop>DoubleClickSelectContourTolerance</tabstop>
+  <tabstop>RightDoubleClickToReset</tabstop>
+  <tabstop>SelectBlockWithAttribute</tabstop>
+  <tabstop>HideAttributeWithBlock</tabstop>
+  <tabstop>SnapRange</tabstop>
+  <tabstop>PickRange</tabstop>
+  <tabstop>HighlightEntity</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>
@@ -318,12 +360,12 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>162</x>
-     <y>165</y>
+     <x>175</x>
+     <y>207</y>
     </hint>
     <hint type="destinationlabel">
-     <x>84</x>
-     <y>192</y>
+     <x>101</x>
+     <y>235</y>
     </hint>
    </hints>
   </connection>
@@ -334,12 +376,28 @@
    <slot>setEnabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>203</x>
-     <y>167</y>
+     <x>216</x>
+     <y>207</y>
     </hint>
     <hint type="destinationlabel">
-     <x>208</x>
-     <y>190</y>
+     <x>305</x>
+     <y>235</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>DoubleClickEditBlock</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>DoubleClickEditBlockInPlace</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>113</x>
+     <y>146</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>110</x>
+     <y>169</y>
     </hint>
    </hints>
   </connection>
