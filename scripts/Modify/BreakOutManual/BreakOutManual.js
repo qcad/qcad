@@ -256,7 +256,7 @@ BreakOutManual.prototype.pickCoordinate = function(event, preview) {
 
 BreakOutManual.prototype.getOperation = function(preview) {
     //var newSegments = BreakOutManual.autoTrim(this.shape, this.point2, this.point4);
-    var newSegments = ShapeAlgorithms.autoSplitManual(this.shape, undefined, undefined, this.point2, this.point4);
+    var newSegments = ShapeAlgorithms.autoSplitManual(this.shape, undefined, undefined, this.point2, this.point4, RVector.getAverage(this.point2, this.point4));
 
     if (isNull(newSegments)) {
         return undefined;
