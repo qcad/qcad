@@ -1355,6 +1355,7 @@ void RDocumentInterface::undoToTag(const QString& tag) {
  * Transaction based undo.
  */
 void RDocumentInterface::undo() {
+    RMainWindow* mainWindow = RMainWindow::getMainWindow();
     clearPreview();
 
     QList<RTransaction> t = document.undo();
@@ -1366,6 +1367,10 @@ void RDocumentInterface::undo() {
             RMainWindow::getMainWindow()->postTransactionEvent(t[i]);
         }
         notifyTransactionListeners(&t[i]);
+
+        if (i==0 && mainWindow!=NULL) {
+            mainWindow->handleUserMessage(QString("Undo:") + " " + t[i].getText());
+        }
     }
 }
 
@@ -1373,6 +1378,7 @@ void RDocumentInterface::undo() {
  * Transaction based redo.
  */
 void RDocumentInterface::redo() {
+    RMainWindow* mainWindow = RMainWindow::getMainWindow();
     clearPreview();
 
     QList<RTransaction> t = document.redo();
@@ -1385,6 +1391,10 @@ void RDocumentInterface::redo() {
             RMainWindow::getMainWindow()->postTransactionEvent(t[i]);
         }
         notifyTransactionListeners(&t[i]);
+
+        if (i==t.length()-1 && mainWindow!=NULL) {
+            mainWindow->handleUserMessage(QString("Redo:") + " " + t[i].getText());
+        }
     }
 }
 
