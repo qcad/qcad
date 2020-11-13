@@ -12,6 +12,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="CurrentLayerChange" />
       <value name="CurrentLayerSelectionChange" />
       <value name="LayerLockStatusChange" />
+      <value name="LayerVisibilityStatusChange" />
     </enum>
     <constructor>
       <variant />

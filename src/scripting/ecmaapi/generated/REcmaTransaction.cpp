@@ -169,6 +169,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("LayerVisibilityStatusChange",
+    QScriptValue(RTransaction::LayerVisibilityStatusChange),
+    QScriptValue::ReadOnly);
+
+
     // enum conversions:
     
     qScriptRegisterMetaType<RTransaction::Type>(
