@@ -33,9 +33,9 @@ RPropertyTypeId RObject::PropertyCustom;
 RPropertyTypeId RObject::PropertyType;
 RPropertyTypeId RObject::PropertyHandle;
 RPropertyTypeId RObject::PropertyProtected;
+RPropertyTypeId RObject::PropertyWorkingSet;
 RPropertyTypeId RObject::PropertySelected;
 RPropertyTypeId RObject::PropertyInvisible;
-RPropertyTypeId RObject::PropertyWorkingSet;
 
 RObject::RObject(RDocument* document) :
     document(document),
@@ -70,7 +70,7 @@ void RObject::init() {
     RObject::PropertyHandle.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Handle"));
     RObject::PropertyProtected.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Protected"));
     RObject::PropertySelected.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Selected"));
-    RObject::PropertySelected.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Invisible"));
+    RObject::PropertyInvisible.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Invisible"));
     RObject::PropertyWorkingSet.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Working Set"));
 }
 

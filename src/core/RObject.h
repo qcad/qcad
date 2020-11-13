@@ -72,9 +72,9 @@ public:
     static RPropertyTypeId PropertyType;
     static RPropertyTypeId PropertyHandle;
     static RPropertyTypeId PropertyProtected;
+    static RPropertyTypeId PropertyWorkingSet;
     static RPropertyTypeId PropertySelected;
     static RPropertyTypeId PropertyInvisible;
-    static RPropertyTypeId PropertyWorkingSet;
 
     enum XYZ {
         X, Y, Z

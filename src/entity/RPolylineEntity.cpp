@@ -24,6 +24,7 @@
 RPropertyTypeId RPolylineEntity::PropertyCustom;
 RPropertyTypeId RPolylineEntity::PropertyHandle;
 RPropertyTypeId RPolylineEntity::PropertyProtected;
+RPropertyTypeId RPolylineEntity::PropertyWorkingSet;
 RPropertyTypeId RPolylineEntity::PropertyType;
 RPropertyTypeId RPolylineEntity::PropertyBlock;
 RPropertyTypeId RPolylineEntity::PropertyLayer;
@@ -91,6 +92,7 @@ void RPolylineEntity::init() {
     RPolylineEntity::PropertyCustom.generateId(typeid(RPolylineEntity), RObject::PropertyCustom);
     RPolylineEntity::PropertyHandle.generateId(typeid(RPolylineEntity), RObject::PropertyHandle);
     RPolylineEntity::PropertyProtected.generateId(typeid(RPolylineEntity), RObject::PropertyProtected);
+    RPolylineEntity::PropertyWorkingSet.generateId(typeid(RPolylineEntity), RObject::PropertyWorkingSet);
     RPolylineEntity::PropertyType.generateId(typeid(RPolylineEntity), REntity::PropertyType);
     RPolylineEntity::PropertyBlock.generateId(typeid(RPolylineEntity), REntity::PropertyBlock);
     RPolylineEntity::PropertyLayer.generateId(typeid(RPolylineEntity), REntity::PropertyLayer);

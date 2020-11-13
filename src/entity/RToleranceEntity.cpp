@@ -24,6 +24,7 @@
 RPropertyTypeId RToleranceEntity::PropertyCustom;
 RPropertyTypeId RToleranceEntity::PropertyHandle;
 RPropertyTypeId RToleranceEntity::PropertyProtected;
+RPropertyTypeId RToleranceEntity::PropertyWorkingSet;
 RPropertyTypeId RToleranceEntity::PropertyType;
 RPropertyTypeId RToleranceEntity::PropertyBlock;
 RPropertyTypeId RToleranceEntity::PropertyLayer;
@@ -62,6 +63,7 @@ void RToleranceEntity::init() {
     RToleranceEntity::PropertyCustom.generateId(typeid(RToleranceEntity), RObject::PropertyCustom);
     RToleranceEntity::PropertyHandle.generateId(typeid(RToleranceEntity), RObject::PropertyHandle);
     RToleranceEntity::PropertyProtected.generateId(typeid(RToleranceEntity), RObject::PropertyProtected);
+    RToleranceEntity::PropertyWorkingSet.generateId(typeid(RToleranceEntity), RObject::PropertyWorkingSet);
     RToleranceEntity::PropertyType.generateId(typeid(RToleranceEntity), REntity::PropertyType);
     RToleranceEntity::PropertyBlock.generateId(typeid(RToleranceEntity), REntity::PropertyBlock);
     RToleranceEntity::PropertyLayer.generateId(typeid(RToleranceEntity), REntity::PropertyLayer);

@@ -23,6 +23,7 @@
 RPropertyTypeId RSolidEntity::PropertyCustom;
 RPropertyTypeId RSolidEntity::PropertyHandle;
 RPropertyTypeId RSolidEntity::PropertyProtected;
+RPropertyTypeId RSolidEntity::PropertyWorkingSet;
 RPropertyTypeId RSolidEntity::PropertyType;
 RPropertyTypeId RSolidEntity::PropertyBlock;
 RPropertyTypeId RSolidEntity::PropertyLayer;
@@ -61,6 +62,7 @@ void RSolidEntity::init() {
     RSolidEntity::PropertyCustom.generateId(typeid(RSolidEntity), RObject::PropertyCustom);
     RSolidEntity::PropertyHandle.generateId(typeid(RSolidEntity), RObject::PropertyHandle);
     RSolidEntity::PropertyProtected.generateId(typeid(RSolidEntity), RObject::PropertyProtected);
+    RSolidEntity::PropertyWorkingSet.generateId(typeid(RSolidEntity), RObject::PropertyWorkingSet);
     RSolidEntity::PropertyType.generateId(typeid(RSolidEntity), REntity::PropertyType);
     RSolidEntity::PropertyBlock.generateId(typeid(RSolidEntity), REntity::PropertyBlock);
     RSolidEntity::PropertyLayer.generateId(typeid(RSolidEntity), REntity::PropertyLayer);

@@ -22,6 +22,7 @@
 RPropertyTypeId RDimAlignedEntity::PropertyCustom;
 RPropertyTypeId RDimAlignedEntity::PropertyHandle;
 RPropertyTypeId RDimAlignedEntity::PropertyProtected;
+RPropertyTypeId RDimAlignedEntity::PropertyWorkingSet;
 RPropertyTypeId RDimAlignedEntity::PropertyType;
 RPropertyTypeId RDimAlignedEntity::PropertyBlock;
 RPropertyTypeId RDimAlignedEntity::PropertyLayer;
@@ -73,6 +74,7 @@ void RDimAlignedEntity::init() {
     RDimAlignedEntity::PropertyCustom.generateId(typeid(RDimAlignedEntity), RObject::PropertyCustom);
     RDimAlignedEntity::PropertyHandle.generateId(typeid(RDimAlignedEntity), RObject::PropertyHandle);
     RDimAlignedEntity::PropertyProtected.generateId(typeid(RDimAlignedEntity), RObject::PropertyProtected);
+    RDimAlignedEntity::PropertyWorkingSet.generateId(typeid(RDimAlignedEntity), RObject::PropertyWorkingSet);
     RDimAlignedEntity::PropertyType.generateId(typeid(RDimAlignedEntity), REntity::PropertyType);
     RDimAlignedEntity::PropertyBlock.generateId(typeid(RDimAlignedEntity), REntity::PropertyBlock);
     RDimAlignedEntity::PropertyLayer.generateId(typeid(RDimAlignedEntity), REntity::PropertyLayer);

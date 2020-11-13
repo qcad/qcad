@@ -80,7 +80,8 @@ public:
         Generic,
         CurrentLayerChange,
         CurrentLayerSelectionChange,
-        LayerLockStatusChange
+        LayerLockStatusChange,
+        LayerVisibilityStatusChange
     };
 
 public:

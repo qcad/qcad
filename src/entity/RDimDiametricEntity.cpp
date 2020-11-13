@@ -22,6 +22,7 @@
 RPropertyTypeId RDimDiametricEntity::PropertyCustom;
 RPropertyTypeId RDimDiametricEntity::PropertyHandle;
 RPropertyTypeId RDimDiametricEntity::PropertyProtected;
+RPropertyTypeId RDimDiametricEntity::PropertyWorkingSet;
 RPropertyTypeId RDimDiametricEntity::PropertyType;
 RPropertyTypeId RDimDiametricEntity::PropertyBlock;
 RPropertyTypeId RDimDiametricEntity::PropertyLayer;
@@ -72,6 +73,7 @@ void RDimDiametricEntity::init() {
     RDimDiametricEntity::PropertyCustom.generateId(typeid(RDimDiametricEntity), RObject::PropertyCustom);
     RDimDiametricEntity::PropertyHandle.generateId(typeid(RDimDiametricEntity), RObject::PropertyHandle);
     RDimDiametricEntity::PropertyProtected.generateId(typeid(RDimDiametricEntity), RObject::PropertyProtected);
+    RDimDiametricEntity::PropertyWorkingSet.generateId(typeid(RDimDiametricEntity), RObject::PropertyWorkingSet);
     RDimDiametricEntity::PropertyType.generateId(typeid(RDimDiametricEntity), REntity::PropertyType);
     RDimDiametricEntity::PropertyBlock.generateId(typeid(RDimDiametricEntity), REntity::PropertyBlock);
     RDimDiametricEntity::PropertyLayer.generateId(typeid(RDimDiametricEntity), REntity::PropertyLayer);

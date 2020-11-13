@@ -24,6 +24,7 @@
 RPropertyTypeId RLeaderEntity::PropertyCustom;
 RPropertyTypeId RLeaderEntity::PropertyHandle;
 RPropertyTypeId RLeaderEntity::PropertyProtected;
+RPropertyTypeId RLeaderEntity::PropertyWorkingSet;
 RPropertyTypeId RLeaderEntity::PropertyType;
 RPropertyTypeId RLeaderEntity::PropertyBlock;
 RPropertyTypeId RLeaderEntity::PropertyLayer;
@@ -61,6 +62,7 @@ void RLeaderEntity::init() {
     RLeaderEntity::PropertyCustom.generateId(typeid(RLeaderEntity), RObject::PropertyCustom);
     RLeaderEntity::PropertyHandle.generateId(typeid(RLeaderEntity), RObject::PropertyHandle);
     RLeaderEntity::PropertyProtected.generateId(typeid(RLeaderEntity), RObject::PropertyProtected);
+    RLeaderEntity::PropertyWorkingSet.generateId(typeid(RLeaderEntity), RObject::PropertyWorkingSet);
     RLeaderEntity::PropertyType.generateId(typeid(RLeaderEntity), REntity::PropertyType);
     RLeaderEntity::PropertyBlock.generateId(typeid(RLeaderEntity), REntity::PropertyBlock);
     RLeaderEntity::PropertyLayer.generateId(typeid(RLeaderEntity), REntity::PropertyLayer);

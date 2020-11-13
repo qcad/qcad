@@ -23,6 +23,7 @@
 RPropertyTypeId RFaceEntity::PropertyCustom;
 RPropertyTypeId RFaceEntity::PropertyHandle;
 RPropertyTypeId RFaceEntity::PropertyProtected;
+RPropertyTypeId RFaceEntity::PropertyWorkingSet;
 RPropertyTypeId RFaceEntity::PropertyType;
 RPropertyTypeId RFaceEntity::PropertyBlock;
 RPropertyTypeId RFaceEntity::PropertyLayer;
@@ -61,6 +62,7 @@ void RFaceEntity::init() {
     RFaceEntity::PropertyCustom.generateId(typeid(RFaceEntity), RObject::PropertyCustom);
     RFaceEntity::PropertyHandle.generateId(typeid(RFaceEntity), RObject::PropertyHandle);
     RFaceEntity::PropertyProtected.generateId(typeid(RFaceEntity), RObject::PropertyProtected);
+    RFaceEntity::PropertyWorkingSet.generateId(typeid(RFaceEntity), RObject::PropertyWorkingSet);
     RFaceEntity::PropertyType.generateId(typeid(RFaceEntity), REntity::PropertyType);
     RFaceEntity::PropertyBlock.generateId(typeid(RFaceEntity), REntity::PropertyBlock);
     RFaceEntity::PropertyLayer.generateId(typeid(RFaceEntity), REntity::PropertyLayer);

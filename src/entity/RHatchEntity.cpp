@@ -29,6 +29,7 @@
 RPropertyTypeId RHatchEntity::PropertyCustom;
 RPropertyTypeId RHatchEntity::PropertyHandle;
 RPropertyTypeId RHatchEntity::PropertyProtected;
+RPropertyTypeId RHatchEntity::PropertyWorkingSet;
 RPropertyTypeId RHatchEntity::PropertyType;
 RPropertyTypeId RHatchEntity::PropertyBlock;
 RPropertyTypeId RHatchEntity::PropertyLayer;
@@ -70,6 +71,7 @@ void RHatchEntity::init() {
     RHatchEntity::PropertyCustom.generateId(typeid(RHatchEntity), RObject::PropertyCustom);
     RHatchEntity::PropertyHandle.generateId(typeid(RHatchEntity), RObject::PropertyHandle);
     RHatchEntity::PropertyProtected.generateId(typeid(RHatchEntity), RObject::PropertyProtected);
+    RHatchEntity::PropertyWorkingSet.generateId(typeid(RHatchEntity), RObject::PropertyWorkingSet);
     RHatchEntity::PropertyType.generateId(typeid(RHatchEntity), REntity::PropertyType);
     RHatchEntity::PropertyBlock.generateId(typeid(RHatchEntity), REntity::PropertyBlock);
     RHatchEntity::PropertyLayer.generateId(typeid(RHatchEntity), REntity::PropertyLayer);
