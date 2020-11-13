@@ -246,7 +246,7 @@ QPair<QVariant, RPropertyAttributes> RLayer::getProperty(RPropertyTypeId& proper
  */
 QDebug operator<<(QDebug dbg, const RLayer& l) {
     dbg.nospace()
-       << "RLayer("
+       << "\nRLayer("
        << (RObject&) l
        << ", name: " << l.getName()
        << ", color: " << l.getColor()
