@@ -1163,7 +1163,7 @@ void RGraphicsViewImage::paintEntitiesThread(int threadId, QList<REntity::Id>& l
 }
 
 void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool preview) {
-    if (!preview && !isPrintingOrExporting() && !isSelected && getDocument()->isSelected(id)) {
+    if (!preview && !isPrintingOrExporting() && !isSelected && (getDocument()->isSelected(id) || getDocument()->isSelectedWorkingSet(id))) {
         static QMutex m;
         m.lock();
         // remember selected entities to overlay in the end:
@@ -1569,8 +1569,10 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
         }
 
         if (!workingSet) {
-            // fade out entities not in working set:
-            pen.setColor(RColor::getFaded(pen.color(), getBackgroundColor(), 3.5));
+            if (!path.isSelected()) {
+                // fade out entities not in working set:
+                pen.setColor(RColor::getFaded(pen.color(), getBackgroundColor(), 3.5));
+            }
         }
 
         if (!path.getNoColorMode()) {

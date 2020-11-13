@@ -431,6 +431,10 @@ void REntity::setSelected(bool on) {
     if (isInWorkingSet()) {
         getData().setSelected(on);
     }
+    else {
+        // special type of selection for block editing tool (?):
+        setSelectedWorkingSet(on);
+    }
 }
 
 QSharedPointer<REntity> REntity::scaleNonUniform(const RVector& scaleFactors, const RVector& center) {

@@ -662,6 +662,7 @@ void RObject::print(QDebug dbg) const {
             << ", undone: " << (int)isUndone()
             << ", protected: " << (int)isProtected()
             << ", selected: " << (int)isSelected()
+            << ", working set: " << (int)isWorkingSet()
             << ")";
 
     if (!customProperties.isEmpty()) {

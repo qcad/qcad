@@ -1706,7 +1706,7 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
         }
 
         if (selectedOnly) {
-            if (!entity->isSelected()) {
+            if (!entity->isSelected() && !entity->isSelectedWorkingSet()) {
                 continue;
             }
         }
@@ -2261,6 +2261,13 @@ QSharedPointer<RLinetype> RDocument::queryLinetype(const QString& linetypeName) 
  */
 bool RDocument::isSelected(REntity::Id entityId) {
     return storage.isSelected(entityId);
+}
+
+/**
+ * \copydoc RStorage::isSelectedWorkingSet
+ */
+bool RDocument::isSelectedWorkingSet(REntity::Id entityId) {
+    return storage.isSelectedWorkingSet(entityId);
 }
 
 /**

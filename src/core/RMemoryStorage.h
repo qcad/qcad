@@ -121,6 +121,7 @@ public:
     void setEntitySelected(QSharedPointer<REntity> entity, bool on,
         QSet<REntity::Id>* affectedEntities = NULL, bool onlyDescend = false);
     virtual bool isSelected(REntity::Id entityId);
+    virtual bool isSelectedWorkingSet(REntity::Id entityId);
 
     virtual bool isEntityVisible(const REntity& entity) const;
 

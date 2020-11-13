@@ -105,6 +105,11 @@ bool RMemoryStorage::isSelected(REntity::Id entityId) {
     return (!e.isNull() && e->isSelected());
 }
 
+bool RMemoryStorage::isSelectedWorkingSet(REntity::Id entityId) {
+    QSharedPointer<REntity> e = queryEntityDirect(entityId);
+    return (!e.isNull() && e->isSelectedWorkingSet());
+}
+
 bool RMemoryStorage::isEntityVisible(const REntity& entity) const {
     updateVisibleCache();
     REntity::Id id = entity.getId();
@@ -1147,7 +1152,7 @@ void RMemoryStorage::clearEntitySelection(QSet<REntity::Id>* affectedEntities) {
     QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
     for (it = entityMap.begin(); it != entityMap.end(); ++it) {
         QSharedPointer<REntity> e = *it;
-        if (!e.isNull() && e->isSelected()) {
+        if (!e.isNull() && (e->isSelected() || e->isSelectedWorkingSet())) {
             setEntitySelected(e, false, affectedEntities);
         }
     }
@@ -1178,7 +1183,7 @@ int RMemoryStorage::selectEntities(const QSet<REntity::Id>& entityIds,
         QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
         for (it = entityMap.begin(); it != entityMap.end(); ++it) {
             QSharedPointer<REntity> e = *it;
-            if (!e.isNull() && e->isSelected() &&
+            if (!e.isNull() && (e->isSelected() || e->isSelectedWorkingSet()) &&
                 !entityIds.contains(e->getId())) {
 
                 setEntitySelected(e, false, affectedEntities);
@@ -1191,7 +1196,7 @@ int RMemoryStorage::selectEntities(const QSet<REntity::Id>& entityIds,
     QSet<REntity::Id>::const_iterator it;
     for (it = entityIds.constBegin(); it != entityIds.constEnd(); ++it) {
         QSharedPointer<REntity> e = queryEntityDirect(*it);
-        if (!e.isNull() && !e->isSelected() &&
+        if (!e.isNull() && !e->isSelected() && !e->isSelectedWorkingSet() &&
             !isLayerLocked(e->getLayerId()) && !isLayerOffOrFrozen(e->getLayerId())) {
 
             setEntitySelected(e, true, affectedEntities);

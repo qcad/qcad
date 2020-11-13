@@ -214,6 +214,7 @@ public:
         QSet<REntity::Id>* affectedEntities=NULL
     );
     bool isSelected(REntity::Id entityId);
+    bool isSelectedWorkingSet(REntity::Id entityId);
     bool isLayerLocked(RLayer::Id layerId) const;
     bool isLayerLocked(const RLayer& layer) const;
     bool isParentLayerLocked(RLayer::Id layerId) const;

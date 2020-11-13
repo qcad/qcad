@@ -632,6 +632,11 @@ public:
         return (!e.isNull() && e->isSelected());
     }
 
+    virtual bool isSelectedWorkingSet(REntity::Id entityId) {
+        QSharedPointer<REntity> e = queryEntityDirect(entityId);
+        return (!e.isNull() && e->isSelectedWorkingSet());
+    }
+
     virtual bool isEntity(RObject::Id objectId) {
         QSharedPointer<REntity> e = queryEntityDirect(objectId);
         return !e.isNull();

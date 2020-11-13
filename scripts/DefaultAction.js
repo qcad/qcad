@@ -326,7 +326,7 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
             //qDebug("entityId: ", entityId);
 
             if (entityId !== -1) {
-                if (addToSelection && this.document.isSelected(entityId)) {
+                if (addToSelection && (this.document.isSelected(entityId) || this.document.isSelectedWorkingSet(entityId))) {
                     this.deselectEntity(entityId);
                 }
                 else {

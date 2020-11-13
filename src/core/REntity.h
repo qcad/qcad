@@ -163,6 +163,17 @@ public:
 
     virtual void setSelected(bool on);
 
+    /**
+     * \copydoc REntityData::isSelectedWorkingSet
+     */
+    virtual bool isSelectedWorkingSet() const {
+        return getData().isSelectedWorkingSet();
+    }
+
+    virtual void setSelectedWorkingSet(bool on) {
+        getData().setSelectedWorkingSet(on);
+    }
+
     virtual bool isUpdatesEnabled() const {
         return getData().isUpdatesEnabled();
     }
