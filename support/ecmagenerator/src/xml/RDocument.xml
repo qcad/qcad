@@ -698,6 +698,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="entityId" isConst="false" />
       </variant>
     </method>
+    <method name="isSelectedWorkingSet"
+    cppName="isSelectedWorkingSet" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="REntity::Id" typeName="REntity::Id"
+        name="entityId" isConst="false" />
+      </variant>
+    </method>
     <method name="isLayerLocked" cppName="isLayerLocked"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

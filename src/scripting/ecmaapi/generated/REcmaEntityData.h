@@ -106,6 +106,12 @@
         setSelected
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isSelectedWorkingSet
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setSelectedWorkingSet
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDrawOrder
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

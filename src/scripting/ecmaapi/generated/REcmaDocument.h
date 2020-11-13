@@ -252,6 +252,9 @@
         isSelected
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isSelectedWorkingSet
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isLayerLocked
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -447,6 +447,9 @@
         isSelected
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isSelectedWorkingSet
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
