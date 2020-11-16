@@ -985,8 +985,7 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object, bool force) {
 
     //QSharedPointer<RObject> obj = storage->queryObject(objectId);
     if (object.isNull()) {
-        qWarning("RTransaction::deleteObject: "
-            "original object not found in storage");
+        qWarning("RTransaction::deleteObject: object is null");
         failed = true;
         return;
     }
