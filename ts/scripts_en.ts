@@ -1270,7 +1270,7 @@ Do you wish to recover it?</translation>
     <message>
         <location line="+110"/>
         <source>Cannot edit block while editing a block in-place</source>
-        <translation type="unfinished"></translation>
+        <translation>Cannot edit block while editing a block in-place</translation>
     </message>
     <message>
         <source>Cannot change block while editing a block in-place</source>
@@ -5412,7 +5412,7 @@ BUG: Interferes with group castings.</translation>
     <message>
         <location line="+28"/>
         <source>Edit block reference in-place</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit block reference in-place</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -12763,7 +12763,7 @@ shown in search results:</translation>
     <message>
         <location line="+3"/>
         <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+D</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -12773,7 +12773,7 @@ shown in search results:</translation>
     <message>
         <location line="+3"/>
         <source>Ctrl+K</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+K</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12783,7 +12783,7 @@ shown in search results:</translation>
     <message>
         <location line="+3"/>
         <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+M</translation>
     </message>
     <message>
         <location line="+86"/>

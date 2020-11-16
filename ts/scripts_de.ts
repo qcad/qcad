@@ -1429,7 +1429,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+110"/>
         <source>Cannot edit block while editing a block in-place</source>
-        <translation type="unfinished"></translation>
+        <translation>Block kann nicht bearbeitet werden, während ein Block an Ort und Stelle bearbeitet wird</translation>
     </message>
     <message>
         <source>Show block tools</source>
@@ -4320,7 +4320,7 @@ ist bereits in der Liste.</translation>
     <message>
         <location line="+711"/>
         <source>Entity is not in working set.</source>
-        <translation type="unfinished"></translation>
+        <translation>Objekt befindet sich nicht im Bearbeitungssatz.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -6136,7 +6136,7 @@ BUG: Interferes with group castings.</translation>
     <message>
         <location line="+28"/>
         <source>Edit block reference in-place</source>
-        <translation type="unfinished"></translation>
+        <translation>Blockreferenz an Ort und Stelle bearbeiten</translation>
     </message>
     <message>
         <location line="+24"/>
