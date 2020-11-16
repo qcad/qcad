@@ -349,7 +349,7 @@ RVector RBlockReferenceData::getPointOnEntity() const {
  *
  * \param transform Transform according to the transformation of this block reference.
  */
-QSharedPointer<REntity> RBlockReferenceData::queryEntity(REntity::Id entityId, bool transform) const {
+QSharedPointer<REntity> RBlockReferenceData::queryEntity(REntity::Id entityId, bool transform, bool ignoreAttDef) const {
 
     if (cache.contains(entityId) && !transform) {
         QSharedPointer<REntity> e = cache.value(entityId);
@@ -378,7 +378,7 @@ QSharedPointer<REntity> RBlockReferenceData::queryEntity(REntity::Id entityId, b
     }
 
     // never render attribute definition as part of a block reference:
-    if (entity->getType()==RS::EntityAttributeDefinition) {
+    if (ignoreAttDef && entity->getType()==RS::EntityAttributeDefinition) {
         return QSharedPointer<REntity>();
     }
 

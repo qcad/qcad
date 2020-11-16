@@ -144,7 +144,7 @@ public:
     virtual void update() const;
     virtual void update(RObject::Id entityId) const;
 
-    QSharedPointer<REntity> queryEntity(REntity::Id entityId, bool transform = false) const;
+    QSharedPointer<REntity> queryEntity(REntity::Id entityId, bool transform = false, bool ignoreAttDef = true) const;
     bool applyTransformationTo(REntity& entity) const;
     /**
      * \nonscriptable
