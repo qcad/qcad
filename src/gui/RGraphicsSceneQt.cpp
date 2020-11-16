@@ -185,7 +185,7 @@ bool RGraphicsSceneQt::beginPath() {
 
     if (!exportToPreview) {
         if (entity!=NULL && (entity->isSelected() || entity->isSelectedWorkingSet())) {
-            qDebug() << "painter path selected for entity:" << entity->getId();
+            //qDebug() << "painter path selected for entity:" << entity->getId();
             currentPainterPath.setSelected(true);
         }
     }
@@ -838,7 +838,7 @@ void RGraphicsSceneQt::addDrawable(REntity::Id entityId, RGraphicsSceneDrawable&
     if (blockRefEntity!=NULL && blockRefEntity->getType()==RS::EntityBlockRef) {
         RBlockReferenceEntity* blockRef = dynamic_cast<RBlockReferenceEntity*>(blockRefEntity);
         if (blockRef!=NULL) {
-            qDebug() << "exporting entity in blockref:" << blockRef->getId();
+            //qDebug() << "exporting entity in blockref:" << blockRef->getId();
             RBlock::Id blockId = blockRef->getReferencedBlockId();
 
             // retrieve document from entity (could be a preview document):
@@ -856,7 +856,7 @@ void RGraphicsSceneQt::addDrawable(REntity::Id entityId, RGraphicsSceneDrawable&
         if (entity!=NULL) {
             for (int i=entityStack.length()-1; i>=0; i--) {
                 if (entityStack[i]->isWorkingSet()) {
-                    qDebug() << "working set";
+//                    qDebug() << "working set";
                     drawable.setWorkingSet(true);
                     break;
                 }
