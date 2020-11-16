@@ -1397,7 +1397,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+110"/>
         <source>Cannot edit block while editing a block in-place</source>
-        <translation type="unfinished"></translation>
+        <translation>No se puede editar el bloque mientras se edita un bloque in situ</translation>
     </message>
     <message>
         <source>Show block tools</source>
@@ -4174,7 +4174,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+711"/>
         <source>Entity is not in working set.</source>
-        <translation type="unfinished"></translation>
+        <translation>La entidad no está en el conjunto de trabajo.</translation>
     </message>
     <message>
         <location line="+3"/>
