@@ -264,7 +264,7 @@
     </message>
     <message>
         <location line="-2"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+93"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+95"/>
         <location line="+3"/>
         <location filename="../src/core/RLayout.cpp" line="+2"/>
         <location line="+3"/>
@@ -378,7 +378,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+91"/>
+        <location filename="../src/core/REntity.cpp" line="+93"/>
         <location filename="../src/core/RObject.cpp" line="+69"/>
         <source>Type</source>
         <translation type="unfinished"></translation>

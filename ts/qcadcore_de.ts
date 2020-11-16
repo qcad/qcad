@@ -242,7 +242,7 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+92"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+94"/>
         <source>Block</source>
         <translation>Block</translation>
     </message>
@@ -363,7 +363,7 @@
         <translation>Attribute</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+91"/>
+        <location filename="../src/core/REntity.cpp" line="+93"/>
         <location filename="../src/core/RObject.cpp" line="+69"/>
         <source>Type</source>
         <translation>Typ</translation>

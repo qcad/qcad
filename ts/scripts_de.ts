@@ -3056,7 +3056,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Objekt verschieben</translation>
     </message>
     <message>
-        <location line="+390"/>
+        <location line="+394"/>
         <source>Move Reference Point</source>
         <translation>Referenzpunkt verschieben</translation>
     </message>

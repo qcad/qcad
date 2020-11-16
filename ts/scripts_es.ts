@@ -2905,7 +2905,7 @@ Coordenadas polares relativa:</translatorcomment>
         <translation>Mover entidad</translation>
     </message>
     <message>
-        <location line="+390"/>
+        <location line="+394"/>
         <source>Move Reference Point</source>
         <translation>Mover punto de referencia</translation>
     </message>

@@ -242,7 +242,7 @@
         <translation type="obsolete">Blok</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+93"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+95"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+73"/>
@@ -354,7 +354,7 @@
         <translation>Atrybuty</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+91"/>
+        <location filename="../src/core/REntity.cpp" line="+93"/>
         <location filename="../src/core/RObject.cpp" line="+69"/>
         <source>Type</source>
         <translation>Rodzaj</translation>

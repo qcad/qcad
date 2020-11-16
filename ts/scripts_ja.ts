@@ -2700,7 +2700,7 @@ Do you wish to recover it?</source>
         <translation>希望の位置にエンティティを移動</translation>
     </message>
     <message>
-        <location line="+390"/>
+        <location line="+394"/>
         <source>Move Reference Point</source>
         <translation>参照点の移動</translation>
     </message>

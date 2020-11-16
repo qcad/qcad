@@ -2935,7 +2935,7 @@ Coordinate polari relativo:</translatorcomment>
         <translation>Spostare entità</translation>
     </message>
     <message>
-        <location line="+390"/>
+        <location line="+394"/>
         <source>Move Reference Point</source>
         <translation>Spostare riferimento</translation>
     </message>

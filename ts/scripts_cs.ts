@@ -2629,7 +2629,7 @@ Přejete si ho obnovit?</translation>
         <translation>Přesuňte prvek na požadované umístění</translation>
     </message>
     <message>
-        <location line="+390"/>
+        <location line="+394"/>
         <source>Move Reference Point</source>
         <translation>Přesuňte referenční bod</translation>
     </message>

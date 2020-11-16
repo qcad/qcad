@@ -2705,7 +2705,7 @@ Você deseja recuperá-lo?</translation>
         <translation>Mova a entidade para a localização desejada</translation>
     </message>
     <message>
-        <location line="+390"/>
+        <location line="+394"/>
         <source>Move Reference Point</source>
         <translation>Mova o Ponto de Referência</translation>
     </message>

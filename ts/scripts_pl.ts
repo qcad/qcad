@@ -3223,7 +3223,7 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
         <translation>Przenieś obiekt do określonego położenia</translation>
     </message>
     <message>
-        <location line="+390"/>
+        <location line="+394"/>
         <source>Move Reference Point</source>
         <translation>Przenieś punkt odniesienia</translation>
     </message>

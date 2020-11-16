@@ -354,7 +354,7 @@ Autres...</translatorcomment>
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+92"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+94"/>
         <source>Block</source>
         <translatorcomment>--exact match--
 --file: Block_fr.ts--
@@ -510,7 +510,7 @@ Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
         <translation>Attributs</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+91"/>
+        <location filename="../src/core/REntity.cpp" line="+93"/>
         <location filename="../src/core/RObject.cpp" line="+69"/>
         <source>Type</source>
         <translatorcomment>--exact match--

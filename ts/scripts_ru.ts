@@ -2662,7 +2662,7 @@ Do you wish to recover it?</source>
         <translation>Переместить объект в нужное место</translation>
     </message>
     <message>
-        <location line="+390"/>
+        <location line="+394"/>
         <source>Move Reference Point</source>
         <translation>Переместить точку привязки</translation>
     </message>

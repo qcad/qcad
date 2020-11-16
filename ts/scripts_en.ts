@@ -2640,7 +2640,7 @@ Do you wish to recover it?</translation>
         <translation>Move entity to desired location</translation>
     </message>
     <message>
-        <location line="+390"/>
+        <location line="+394"/>
         <source>Move Reference Point</source>
         <translation>Move Reference Point</translation>
     </message>
