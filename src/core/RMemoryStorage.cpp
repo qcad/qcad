@@ -2168,15 +2168,21 @@ void RMemoryStorage::update() {
 void RMemoryStorage::setEntityParentId(REntity& entity, REntity::Id parentId) {
     RStorage::setEntityParentId(entity, parentId);
 
-    QList<REntity::Id> parentIds = childMap.keys();
-    for (int i=0; i<parentIds.length(); i++) {
-        REntity::Id parentId = parentIds[i];
-        if (childMap.contains(parentId, entity.getId())) {
-            childMap.remove(parentId, entity.getId());
+    if (entity.getId()==REntity::INVALID_ID || parentId==REntity::INVALID_ID) {
+        return;
+    }
+
+    // remove links of old parents to this entity:
+    QList<REntity::Id> pIds = childMap.keys();
+    for (int i=0; i<pIds.length(); i++) {
+        REntity::Id pId = pIds[i];
+        if (childMap.contains(pId, entity.getId())) {
+            childMap.remove(pId, entity.getId());
         }
     }
 
-    childMap.insert(entity.getParentId(), entity.getId());
+    // new parent / child link:
+    childMap.insert(parentId, entity.getId());
 }
 
 //void RMemoryStorage::setUnit(RS::Unit unit, RTransaction* transaction) {
