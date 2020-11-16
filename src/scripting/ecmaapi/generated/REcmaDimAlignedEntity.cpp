@@ -127,6 +127,10 @@
                 qScriptValueFromValue(&engine, RDimAlignedEntity::PropertyProtected),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyWorkingSet",
+                qScriptValueFromValue(&engine, RDimAlignedEntity::PropertyWorkingSet),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyType",
                 qScriptValueFromValue(&engine, RDimAlignedEntity::PropertyType),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

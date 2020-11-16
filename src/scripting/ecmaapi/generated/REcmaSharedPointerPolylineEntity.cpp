@@ -246,6 +246,10 @@
                 qScriptValueFromValue(&engine, RPolylineEntity::PropertyProtected),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyWorkingSet",
+                qScriptValueFromValue(&engine, RPolylineEntity::PropertyWorkingSet),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyType",
                 qScriptValueFromValue(&engine, RPolylineEntity::PropertyType),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

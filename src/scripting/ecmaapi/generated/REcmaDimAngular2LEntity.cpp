@@ -127,6 +127,10 @@
                 qScriptValueFromValue(&engine, RDimAngular2LEntity::PropertyProtected),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyWorkingSet",
+                qScriptValueFromValue(&engine, RDimAngular2LEntity::PropertyWorkingSet),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyType",
                 qScriptValueFromValue(&engine, RDimAngular2LEntity::PropertyType),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

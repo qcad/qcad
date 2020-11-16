@@ -136,6 +136,10 @@
                 qScriptValueFromValue(&engine, RSolidEntity::PropertyProtected),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyWorkingSet",
+                qScriptValueFromValue(&engine, RSolidEntity::PropertyWorkingSet),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyType",
                 qScriptValueFromValue(&engine, RSolidEntity::PropertyType),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

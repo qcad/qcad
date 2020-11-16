@@ -163,6 +163,10 @@
                 qScriptValueFromValue(&engine, RArcEntity::PropertyProtected),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyWorkingSet",
+                qScriptValueFromValue(&engine, RArcEntity::PropertyWorkingSet),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyType",
                 qScriptValueFromValue(&engine, RArcEntity::PropertyType),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

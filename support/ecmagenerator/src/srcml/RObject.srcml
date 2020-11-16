@@ -73,9 +73,9 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyType</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyHandle</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyProtected</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyWorkingSet</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertySelected</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyInvisible</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyWorkingSet</name></decl>;</decl_stmt>
 
     <enum>enum <name>XYZ</name> <block>{
         <expr><name>X</name></expr>, <expr><name>Y</name></expr>, <expr><name>Z</name></expr>

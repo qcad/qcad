@@ -275,6 +275,10 @@
                 qScriptValueFromValue(&engine, REntity::PropertyProtected),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyWorkingSet",
+                qScriptValueFromValue(&engine, REntity::PropertyWorkingSet),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyType",
                 qScriptValueFromValue(&engine, REntity::PropertyType),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

@@ -221,6 +221,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="entityId" isConst="false" />
         <arg type="bool" typeName="bool" name="transform"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="ignoreAttDef"
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="applyTransformationTo"
@@ -244,6 +246,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyHandle" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyProtected" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyWorkingSet" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyType" type="RPropertyTypeId"
     isConst="false" isStatic="true" />

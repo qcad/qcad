@@ -168,16 +168,16 @@
                 qScriptValueFromValue(&engine, RObject::PropertyProtected),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyWorkingSet",
+                qScriptValueFromValue(&engine, RObject::PropertyWorkingSet),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertySelected",
                 qScriptValueFromValue(&engine, RObject::PropertySelected),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyInvisible",
                 qScriptValueFromValue(&engine, RObject::PropertyInvisible),
-                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
-            
-            ctor.setProperty("PropertyWorkingSet",
-                qScriptValueFromValue(&engine, RObject::PropertyWorkingSet),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
 

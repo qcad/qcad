@@ -327,6 +327,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="entityId" isConst="false" />
         <arg type="bool" typeName="bool" name="transform"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="ignoreAttDef"
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="applyTransformationTo"
