@@ -174,8 +174,8 @@ public:
         data.update(entityId);
     }
 
-    QSharedPointer<REntity> queryEntity(REntity::Id entityId, bool transform = false) const {
-        return data.queryEntity(entityId, transform);
+    QSharedPointer<REntity> queryEntity(REntity::Id entityId, bool transform = false, bool ignoreAttDef = true) const {
+        return data.queryEntity(entityId, transform, ignoreAttDef);
     }
 
     bool applyTransformationTo(REntity& entity) const {
