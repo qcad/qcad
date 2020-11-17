@@ -1315,7 +1315,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+110"/>
         <source>Cannot edit block while editing a block in-place</source>
-        <translation type="unfinished"></translation>
+        <translation>Não é possível editar um bloco durante a edição de um bloco in situ</translation>
     </message>
     <message>
         <source>Show block tools</source>
@@ -3898,7 +3898,7 @@ já se encontra na lista.</translation>
     <message>
         <location line="+711"/>
         <source>Entity is not in working set.</source>
-        <translation type="unfinished"></translation>
+        <translation>A entidade não está no conjunto de trabalho.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5531,7 +5531,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+28"/>
         <source>Edit block reference in-place</source>
-        <translation type="unfinished"></translation>
+        <translation>Editar referência de bloco no local</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -8882,12 +8882,12 @@ nos resultados de busca:</translation>
         <translation>&amp;Elimine o original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Mantenha o original</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+85"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Use a camada e os &amp;atributos atuais</translation>
     </message>
@@ -10446,17 +10446,17 @@ nos resultados de busca:</translation>
         <translation>&amp;Elimine o original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Mantenha o original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Cópias &amp;múltiplas</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>Angle &amp;a:</source>
         <translation>Ângulo &amp;a:</translation>
     </message>
@@ -10497,17 +10497,17 @@ nos resultados de busca:</translation>
         <translation>&amp;Elimine o original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Mantenha o original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Cópias &amp;múltiplas</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>Â&amp;ngulo (a):</translation>
     </message>
@@ -10882,17 +10882,17 @@ nos resultados de busca:</translation>
         <translation>&amp;Elimine o original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Mantenha o original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Cópias &amp;múltiplas</translation>
     </message>
     <message>
-        <location line="+112"/>
+        <location line="+115"/>
         <source>Factor x:</source>
         <translation>Fator x:</translation>
     </message>
@@ -13161,32 +13161,17 @@ nos resultados de busca:</translation>
         <translation>&amp;Elimine o original</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Mantenha o original</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Ctrl+K</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Cópias &amp;múltiplas</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+86"/>
+        <location line="+89"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Use a camada e os &amp;atributos atuais</translation>
     </message>
@@ -13222,17 +13207,17 @@ nos resultados de busca:</translation>
         <translation>&amp;Elimine o original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Mantenha o original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Cópias &amp;múltiplas</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>Ângulo (&amp;a):</translation>
     </message>

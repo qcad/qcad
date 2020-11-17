@@ -1394,7 +1394,7 @@ Voulez-vous le récupérer ?</translation>
     <message>
         <location line="+110"/>
         <source>Cannot edit block while editing a block in-place</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible d&apos;éditer un bloc pendant l&apos;édition d&apos;un bloc sur place</translation>
     </message>
     <message>
         <source>Show block tools</source>
@@ -4104,7 +4104,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+711"/>
         <source>Entity is not in working set.</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;entité n&apos;est pas dans le jeu de travail.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5887,7 +5887,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+28"/>
         <source>Edit block reference in-place</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifier la référence du bloc sur place</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -9661,12 +9661,12 @@ dans les résultats de recherche :</translation>
         <translation>&amp;Supprimer original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Garder original</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+85"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Utiliser calque et &amp;attributs actuel</translation>
     </message>
@@ -11464,17 +11464,17 @@ dans les résultats de recherche :</translation>
         <translation>&amp;Supprimer original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Garder original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Copies &amp;multiples</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>Angle &amp;a:</source>
         <translation>Angle &amp;a :</translation>
     </message>
@@ -11515,17 +11515,17 @@ dans les résultats de recherche :</translation>
         <translation>&amp;Supprimer original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Garder original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Copies &amp;multiples</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Angle (a) :</translation>
     </message>
@@ -11935,17 +11935,17 @@ dans les résultats de recherche :</translation>
         <translation>&amp;Supprimer original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Garder original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Copies &amp;multiples</translation>
     </message>
     <message>
-        <location line="+112"/>
+        <location line="+115"/>
         <source>Factor x:</source>
         <translation>Facteur x :</translation>
     </message>
@@ -14288,32 +14288,17 @@ dans les résultats de recherche :</translation>
         <translation>&amp;Supprimer original</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Garder original</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Ctrl+K</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Copies &amp;multiples</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+86"/>
+        <location line="+89"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Utiliser calque et &amp;attributs actuel</translation>
     </message>
@@ -14380,17 +14365,17 @@ dans les résultats de recherche :</translation>
         <translation>&amp;Supprimer original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Garder original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Copies &amp;multiples</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Angle (a) :</translation>
     </message>

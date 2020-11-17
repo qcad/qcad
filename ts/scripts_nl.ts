@@ -1304,7 +1304,7 @@ Wilt u het herstellen?</translation>
     <message>
         <location line="+110"/>
         <source>Cannot edit block while editing a block in-place</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan blok niet bewerken tijdens het bewerken van een blok ter plaatse</translation>
     </message>
     <message>
         <source>Show block tools</source>
@@ -3836,7 +3836,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+711"/>
         <source>Entity is not in working set.</source>
-        <translation type="unfinished"></translation>
+        <translation>Entiteit zit niet in de werkset.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5448,7 +5448,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+28"/>
         <source>Edit block reference in-place</source>
-        <translation type="unfinished"></translation>
+        <translation>Bewerk blokreferentie ter plekke</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -8705,12 +8705,12 @@ getoond in zoekresultaten:</translation>
         <translation>&amp;Origineel verwijderen</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>Origineel &amp;bewaren</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+85"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Huidige laag en &amp;attributen gebruiken</translation>
     </message>
@@ -10262,17 +10262,17 @@ getoond in zoekresultaten:</translation>
         <translation>&amp;Origineel verwijderen</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>Origineel &amp;bewaren</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Meerdere kopieën</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>Angle &amp;a:</source>
         <translation>Hoek &amp;a:</translation>
     </message>
@@ -10313,17 +10313,17 @@ getoond in zoekresultaten:</translation>
         <translation>&amp;Origineel verwijderen</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>Origineel &amp;bewaren</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Meerdere kopieën</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Hoek (a):</translation>
     </message>
@@ -10694,17 +10694,17 @@ getoond in zoekresultaten:</translation>
         <translation>&amp;Origineel verwijderen</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>Origineel &amp;bewaren</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Meerdere kopieën</translation>
     </message>
     <message>
-        <location line="+112"/>
+        <location line="+115"/>
         <source>Factor x:</source>
         <translation>Factor x:</translation>
     </message>
@@ -12910,32 +12910,17 @@ getoond in zoekresultaten:</translation>
         <translation>&amp;Origineel verwijderen</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>Origineel &amp;bewaren</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Ctrl+K</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Meerdere kopieën</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+86"/>
+        <location line="+89"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Huidige laag en &amp;attributen gebruiken</translation>
     </message>
@@ -12971,17 +12956,17 @@ getoond in zoekresultaten:</translation>
         <translation>&amp;Origineel verwijderen</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>Origineel &amp;bewaren</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Meerdere kopieën</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Hoek (a):</translation>
     </message>

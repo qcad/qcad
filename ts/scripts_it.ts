@@ -1402,7 +1402,7 @@ Vuoi recuperarlo?</translation>
     <message>
         <location line="+110"/>
         <source>Cannot edit block while editing a block in-place</source>
-        <translation type="unfinished"></translation>
+        <translation>Non è possibile modificare un blocco durante la modifica di un blocco in situ</translation>
     </message>
     <message>
         <source>Show block tools</source>
@@ -4184,7 +4184,7 @@ is already in the list.</source>
     <message>
         <location line="+711"/>
         <source>Entity is not in working set.</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;entità non è nell&apos;attuale gruppo di lavoro.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5960,7 +5960,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+28"/>
         <source>Edit block reference in-place</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifica direttamente il riferimento del blocco</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -9828,12 +9828,12 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation>&amp;Cancella originali</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Tieni originali</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+85"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Usa livello e gli &amp;attributi corrente</translation>
     </message>
@@ -11661,17 +11661,17 @@ Obiettivo punto</translatorcomment>
         <translation>&amp;Cancella originali</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Tieni originali</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Copie &amp;multiple</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>Angle &amp;a:</source>
         <translation>Angolo &amp;a:</translation>
     </message>
@@ -11712,17 +11712,17 @@ Obiettivo punto</translatorcomment>
         <translation>&amp;Cancella originali</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Tieni originali</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Copie &amp;multiple</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Angolo (a):</translation>
     </message>
@@ -12149,17 +12149,17 @@ Obiettivo punto</translatorcomment>
         <translation>&amp;Cancella originali</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Tieni originali</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Copie &amp;multiple</translation>
     </message>
     <message>
-        <location line="+112"/>
+        <location line="+115"/>
         <source>Factor x:</source>
         <translation>Fattore x:</translation>
     </message>
@@ -14625,32 +14625,17 @@ Obiettivo punto</translatorcomment>
         <translation>&amp;Cancella originali</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Ctrl+D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Tieni originali</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Ctrl+K</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Copie &amp;multiple</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Ctrl+M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+86"/>
+        <location line="+89"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Usa livello e gli &amp;attributi corrente</translation>
     </message>
@@ -14725,17 +14710,17 @@ Obiettivo punto</translatorcomment>
         <translation>&amp;Cancella originali</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Tieni originali</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Copie &amp;multiple</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Angolo (a):</translation>
     </message>
