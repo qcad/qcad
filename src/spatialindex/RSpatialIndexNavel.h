@@ -256,7 +256,7 @@ protected:
         void visitData(std::vector<const SpatialIndex::IData*>& v) {
             std::vector<const SpatialIndex::IData*>::iterator it;
             for (it = v.begin(); it != v.end(); it++) {
-                printf("Visitor::visitData[]: %lld\n", (*it)->getIdentifier());
+                printf("Visitor::visitData[]: %lld\n", (long long int)(*it)->getIdentifier());
             }
         }
 
