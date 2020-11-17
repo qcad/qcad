@@ -1429,7 +1429,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="+110"/>
         <source>Cannot edit block while editing a block in-place</source>
-        <translation>Block kann nicht bearbeitet werden, während ein Block an Ort und Stelle bearbeitet wird</translation>
+        <translation>Block kann nicht bearbeitet werden, während ein Block direkt bearbeitet wird</translation>
     </message>
     <message>
         <source>Show block tools</source>
