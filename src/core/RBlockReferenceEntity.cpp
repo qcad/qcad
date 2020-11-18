@@ -123,6 +123,9 @@ QSet<RPropertyTypeId> RBlockReferenceEntity::getPropertyTypeIds(RPropertyAttribu
             if (child.isNull()) {
                 continue;
             }
+            if (child->isUndone()) {
+                continue;
+            }
 
             // get block attribute properties:
             QSet<RPropertyTypeId> childProperties = child->getPropertyTypeIds(option);
