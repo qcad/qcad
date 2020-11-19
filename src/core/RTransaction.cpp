@@ -645,6 +645,10 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         RObject::Id workingSetBlockRefId = doc->getWorkingSetBlockReferenceId();
         if (workingSetBlockRefId!=RObject::INVALID_ID) {
             entity->setWorkingSet(true);
+            if (entity->isSelectedWorkingSet()) {
+                entity->setSelectedWorkingSet(false);
+                entity->setSelected(true);
+            }
         }
 
         // allowAll to make sure entities on hidden / locked layers can be imported:
