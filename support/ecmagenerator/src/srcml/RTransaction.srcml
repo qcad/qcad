@@ -82,7 +82,9 @@
         <expr><name>CurrentLayerChange</name></expr>,
         <expr><name>CurrentLayerSelectionChange</name></expr>,
         <expr><name>LayerLockStatusChange</name></expr>,
-        <expr><name>LayerVisibilityStatusChange</name></expr>
+        <expr><name>LayerVisibilityStatusChange</name></expr>,
+        <expr><name>SaveWorkingSet</name></expr>,
+        <expr><name>ChangeDocumentSetting</name></expr>
     }</block>;</enum>
 
 </public><public>public:

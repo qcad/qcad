@@ -174,6 +174,16 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("SaveWorkingSet",
+    QScriptValue(RTransaction::SaveWorkingSet),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ChangeDocumentSetting",
+    QScriptValue(RTransaction::ChangeDocumentSetting),
+    QScriptValue::ReadOnly);
+
+
     // enum conversions:
     
     qScriptRegisterMetaType<RTransaction::Type>(

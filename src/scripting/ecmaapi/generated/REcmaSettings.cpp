@@ -173,6 +173,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getColorThreshold, "getColorThreshold");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getFadingFactor, "getFadingFactor");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getTextHeightThreshold, "getTextHeightThreshold");
             
             REcmaHelper::registerFunction(&engine, &ctor, getArcAngleLengthThreshold, "getArcAngleLengthThreshold");
@@ -3666,6 +3668,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getColorThreshold", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getFadingFactor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getFadingFactor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getFadingFactor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        RSettings::
+       getFadingFactor();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getFadingFactor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getFadingFactor", context, engine);
             return result;
         }
          QScriptValue
