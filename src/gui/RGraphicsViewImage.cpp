@@ -1570,8 +1570,13 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
 
         if (!workingSet) {
             if (!path.isSelected()) {
-                // fade out entities not in working set:
-                pen.setColor(RColor::getFaded(pen.color(), getBackgroundColor(), 3.5));
+                if (pen.style() != Qt::NoPen) {
+                    // fade out entities not in working set:
+                    pen.setColor(RColor::getFaded(pen.color(), getBackgroundColor(), 3.5));
+                }
+                if (brush.style() != Qt::NoBrush) {
+                    brush.setColor(RColor::getFaded(brush.color(), getBackgroundColor(), 3.5));
+                }
             }
         }
 
