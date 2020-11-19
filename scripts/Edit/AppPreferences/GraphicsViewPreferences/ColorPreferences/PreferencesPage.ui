@@ -20,9 +20,9 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>0</y>
+     <y>-205</y>
      <width>556</width>
-     <height>1157</height>
+     <height>1193</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -669,9 +669,6 @@
        <string>Snap Tools</string>
       </property>
       <layout class="QFormLayout" name="formLayout_6">
-       <property name="fieldGrowthPolicy">
-        <enum>QFormLayout::FieldsStayAtSizeHint</enum>
-       </property>
        <item row="0" column="0">
         <widget class="QLabel" name="label_16">
          <property name="minimumSize">
@@ -796,6 +793,78 @@
          <property name="blackWhite" stdset="0">
           <bool>false</bool>
          </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_21">
+         <property name="text">
+          <string>Working set fading factor:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QComboBox" name="FadingFactor">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+         <property name="currentIndex">
+          <number>7</number>
+         </property>
+         <item>
+          <property name="text">
+           <string notr="true">0</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">0.5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">1.5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">2.5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">3</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">3.5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">4</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">4.5</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">5</string>
+          </property>
+         </item>
         </widget>
        </item>
       </layout>

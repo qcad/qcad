@@ -135,6 +135,7 @@ public:
     static bool getColorCorrection();
     static bool getColorCorrectionDisableForPrinting();
     static int getColorThreshold();
+    static double getFadingFactor();
     static int getTextHeightThreshold();
     static double getArcAngleLengthThreshold();
     static double getMinArcAngleStep();
@@ -330,6 +331,7 @@ private:
     static int positionByMousePress;
     static int allowMouseMoveInterruptions;
     static double arcAngleLengthThreshold;
+    static double fadingFactor;
     static double minArcAngleStep;
     static int dashThreshold;
     static int textRenderedAsText;

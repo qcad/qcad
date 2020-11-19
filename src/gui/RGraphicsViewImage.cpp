@@ -1572,10 +1572,10 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
             if (!path.isSelected()) {
                 if (pen.style() != Qt::NoPen) {
                     // fade out entities not in working set:
-                    pen.setColor(RColor::getFaded(pen.color(), getBackgroundColor(), 3.5));
+                    pen.setColor(RColor::getFaded(pen.color(), getBackgroundColor(), RSettings::getFadingFactor()));
                 }
                 if (brush.style() != Qt::NoBrush) {
-                    brush.setColor(RColor::getFaded(brush.color(), getBackgroundColor(), 3.5));
+                    brush.setColor(RColor::getFaded(brush.color(), getBackgroundColor(), RSettings::getFadingFactor()));
                 }
             }
         }
@@ -2123,7 +2123,7 @@ void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text, bool
 
                     if (!workingSet) {
                         // fade out entities not in working set:
-                        pen.setColor(RColor::getFaded(pen.color(), getBackgroundColor(), 3.5));
+                        pen.setColor(RColor::getFaded(pen.color(), getBackgroundColor(), RSettings::getFadingFactor()));
                     }
                 }
 
