@@ -314,6 +314,7 @@ QSharedPointer<RDocumentVariables> RStorage::startDocumentVariablesTransaction(R
 
     if (useLocalTransaction) {
         transaction = new RTransaction(*this, "Change document setting", true);
+        transaction->setType(RTransaction::ChangeDocumentSetting);
     }
 
     return queryDocumentVariables();

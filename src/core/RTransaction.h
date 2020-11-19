@@ -81,7 +81,9 @@ public:
         CurrentLayerChange,
         CurrentLayerSelectionChange,
         LayerLockStatusChange,
-        LayerVisibilityStatusChange
+        LayerVisibilityStatusChange,
+        SaveWorkingSet,
+        ChangeDocumentSetting
     };
 
 public:
