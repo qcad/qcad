@@ -5569,7 +5569,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+12"/>
         <source>Snap label:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5594,7 +5594,12 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+30"/>
+        <source>Working set fading factor:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+75"/>
         <source>Zoom Tools</source>
         <translation type="unfinished">Yakınlaştırma Araçları</translation>
     </message>
@@ -9902,7 +9907,7 @@ shown in search results:</source>
 <context>
     <name>Save</name>
     <message>
-        <location filename="../scripts/File/Save/Save.js" line="+78"/>
+        <location filename="../scripts/File/Save/Save.js" line="+90"/>
         <source>Overwrite File?</source>
         <translation>Dosya Üzerine Yazılsın mı?</translation>
     </message>
@@ -9957,7 +9962,17 @@ shown in search results:</source>
         <translation type="vanished">Özel renkler en yakın sabit renge yuvarlanır.</translation>
     </message>
     <message>
-        <location line="-41"/>
+        <location line="-60"/>
+        <source>Block editing in progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>A block is currently exploded and being edited. Please save the block before saving your drawing. Saving will save the block contents exploded. Save anyway?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
         <translation type="unfinished"></translation>
     </message>

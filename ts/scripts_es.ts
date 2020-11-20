@@ -6415,7 +6415,7 @@ BUG: Interferes with group castings.</source>
         <translation>Herramientas de forzar</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+12"/>
         <source>Snap label:</source>
         <translation>Etiqueta forzar cursor:</translation>
     </message>
@@ -6440,7 +6440,12 @@ BUG: Interferes with group castings.</source>
         <translation>Formas auxiliares:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+30"/>
+        <source>Working set fading factor:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+75"/>
         <source>Zoom Tools</source>
         <translation>Herramientas de zoom</translation>
     </message>
@@ -6450,7 +6455,7 @@ BUG: Interferes with group castings.</source>
         <translation>Borde del cuadro de selección:</translation>
     </message>
     <message>
-        <location line="-643"/>
+        <location line="-712"/>
         <source>Origin:</source>
         <translatorcomment>--exact match--
 --file: sketch_es.po--
@@ -11789,7 +11794,7 @@ Segunda entidad no se pueden recortar.</translatorcomment>
 <context>
     <name>Save</name>
     <message>
-        <location filename="../scripts/File/Save/Save.js" line="+78"/>
+        <location filename="../scripts/File/Save/Save.js" line="+90"/>
         <source>Overwrite File?</source>
         <translation>¿Sobrescribir archivo?</translation>
     </message>
@@ -11816,7 +11821,17 @@ Segunda entidad no se pueden recortar.</translatorcomment>
         <translation type="vanished">La versión del formato del archivo que está utilizando no se recomienda: &apos;%1&apos;.</translation>
     </message>
     <message>
+        <location line="-36"/>
+        <source>Block editing in progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+1"/>
+        <source>A block is currently exploded and being edited. Please save the block before saving your drawing. Saving will save the block contents exploded. Save anyway?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
         <source>The file format version you are using is not recommended: &quot;%1&quot;.</source>
         <translation>La versión del formato del archivo que está utilizando no se recomienda: &quot;%1&quot;.</translation>
     </message>
