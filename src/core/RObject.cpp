@@ -33,6 +33,7 @@ RPropertyTypeId RObject::PropertyCustom;
 RPropertyTypeId RObject::PropertyType;
 RPropertyTypeId RObject::PropertyHandle;
 RPropertyTypeId RObject::PropertyProtected;
+RPropertyTypeId RObject::PropertyWorkingSet;
 RPropertyTypeId RObject::PropertySelected;
 RPropertyTypeId RObject::PropertyInvisible;
 
@@ -69,7 +70,8 @@ void RObject::init() {
     RObject::PropertyHandle.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Handle"));
     RObject::PropertyProtected.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Protected"));
     RObject::PropertySelected.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Selected"));
-    RObject::PropertySelected.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Invisible"));
+    RObject::PropertyInvisible.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Invisible"));
+    RObject::PropertyWorkingSet.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Working Set"));
 }
 
 void RObject::setUndone(bool on) {
@@ -121,6 +123,9 @@ QPair<QVariant, RPropertyAttributes> RObject::getProperty(RPropertyTypeId& prope
     else if (propertyTypeId==PropertyInvisible) {
         return qMakePair(QVariant(isInvisible()), RPropertyAttributes(RPropertyAttributes::Invisible));
     }
+    else if (propertyTypeId==PropertyWorkingSet) {
+        return qMakePair(QVariant(isWorkingSet()), RPropertyAttributes(RPropertyAttributes::Invisible));
+    }
 
     if (propertyTypeId.isCustom()) {
         QString appId = propertyTypeId.getCustomPropertyTitle();
@@ -151,6 +156,7 @@ bool RObject::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
     ret = ret || RObject::setMemberFlag(RObject::Protect, value, PropertyProtected == propertyTypeId);
     ret = ret || RObject::setMemberFlag(RObject::Selected, value, PropertySelected == propertyTypeId);
     ret = ret || RObject::setMemberFlag(RObject::Invisible, value, PropertyInvisible == propertyTypeId);
+    ret = ret || RObject::setMemberFlag(RObject::WorkingSet, value, PropertyWorkingSet == propertyTypeId);
 
     // set custom property:
     if (propertyTypeId.getId()==RPropertyTypeId::INVALID_ID) {
@@ -656,6 +662,7 @@ void RObject::print(QDebug dbg) const {
             << ", undone: " << (int)isUndone()
             << ", protected: " << (int)isProtected()
             << ", selected: " << (int)isSelected()
+            << ", working set: " << (int)isWorkingSet()
             << ")";
 
     if (!customProperties.isEmpty()) {

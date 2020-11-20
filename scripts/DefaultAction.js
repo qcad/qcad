@@ -60,6 +60,8 @@ DefaultAction.prototype.beginEvent = function() {
     this.setState(DefaultAction.State.Neutral);
     this.blockRefId = RObject.INVALID_ID;
     this.entityInBlockId = RObject.INVALID_ID;
+
+    this.optOutRelativeZeroResume = true;
 };
 
 DefaultAction.prototype.setState = function(state) {
@@ -133,6 +135,8 @@ DefaultAction.prototype.suspendEvent = function() {
     if (!isNull(this.getGuiAction())) {
         this.getGuiAction().setChecked(false);
     }
+
+    EAction.prototype.suspendEvent.call(this);
 };
 
 DefaultAction.prototype.resumeEvent = function() {
@@ -322,7 +326,7 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
             //qDebug("entityId: ", entityId);
 
             if (entityId !== -1) {
-                if (addToSelection && this.document.isSelected(entityId)) {
+                if (addToSelection && (this.document.isSelected(entityId) || this.document.isSelectedWorkingSet(entityId))) {
                     this.deselectEntity(entityId);
                 }
                 else {
@@ -444,15 +448,19 @@ DefaultAction.prototype.mouseDoubleClickEvent = function(event) {
         var strictRange = view.mapDistanceFromView(10);
         var entityId = this.di.getClosestEntity(event.getModelPosition(), range, strictRange, false);
         if (entityId===RObject.INVALID_ID) {
-            if (this.document.getCurrentViewportId()!==RObject.INVALID_ID) {
-                this.di.unsetCurrentViewport();
-            }
+            this.emptySpaceDoubleClicked();
             return;
         }
 
         this.entityDoubleClicked(entityId, event);
     }
     EAction.prototype.mouseDoubleClickEvent.call(this, event);
+};
+
+DefaultAction.prototype.emptySpaceDoubleClicked = function() {
+    if (this.document.getCurrentViewportId()!==RObject.INVALID_ID) {
+        this.di.unsetCurrentViewport();
+    }
 };
 
 DefaultAction.prototype.escapeEvent = function(event) {

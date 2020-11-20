@@ -29,6 +29,9 @@
             <property name="text">
              <string>&amp;Delete original</string>
             </property>
+            <property name="shortcut">
+             <string notr="true">Ctrl+D</string>
+            </property>
             <property name="checked">
              <bool>false</bool>
             </property>
@@ -38,6 +41,9 @@
            <widget class="QRadioButton" name="KeepOriginal">
             <property name="text">
              <string>&amp;Keep original</string>
+            </property>
+            <property name="shortcut">
+             <string notr="true">Ctrl+K</string>
             </property>
             <property name="checked">
              <bool>true</bool>

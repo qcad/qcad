@@ -40,6 +40,8 @@ GraphicsViewPreferences.initPreferences = function(pageWidget, calledByPrefDialo
 //    cbCapStyle.addItem(qsTr("Square Cap"), Qt.SquareCap.valueOf());
 
     widgets["Threads"].setItemText(0, widgets["Threads"].itemText(0) + " (" + Math.min(RS.getIdealThreadCount(), 6) + ")");
+
+    widgets["DefaultLineweight"].setLineweight(RLineweight.Weight000);
 };
 
 GraphicsViewPreferences.applyPreferences = function(doc, mdiChild) {

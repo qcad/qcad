@@ -1313,11 +1313,16 @@ Você deseja recuperá-lo?</translation>
         <translation>Ferramentas de Bloco</translation>
     </message>
     <message>
+        <location line="+110"/>
+        <source>Cannot edit block while editing a block in-place</source>
+        <translation>Não é possível editar um bloco durante a edição de um bloco in situ</translation>
+    </message>
+    <message>
         <source>Show block tools</source>
         <translation type="vanished">Exiba as ferramentas para Blocos</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-82"/>
         <source>&amp;Block</source>
         <translation>&amp;Bloqueio</translation>
     </message>
@@ -2670,7 +2675,7 @@ Você deseja recuperá-lo?</translation>
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../scripts/DefaultAction.js" line="+90"/>
+        <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
         <translation>Selecione a entidade ou região</translation>
     </message>
@@ -2700,7 +2705,7 @@ Você deseja recuperá-lo?</translation>
         <translation>Mova a entidade para a localização desejada</translation>
     </message>
     <message>
-        <location line="+388"/>
+        <location line="+394"/>
         <source>Move Reference Point</source>
         <translation>Mova o Ponto de Referência</translation>
     </message>
@@ -3855,12 +3860,12 @@ já se encontra na lista.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2097"/>
+        <location line="+2102"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="-2096"/>
+        <location line="-2101"/>
         <source>Done</source>
         <translation>Concluído</translation>
     </message>
@@ -3891,17 +3896,22 @@ já se encontra na lista.</translation>
         <translation>Ferramentas CAD</translation>
     </message>
     <message>
-        <location line="+710"/>
+        <location line="+711"/>
+        <source>Entity is not in working set.</source>
+        <translation>A entidade não está no conjunto de trabalho.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Entity is on a locked layer.</source>
         <translation>A entidade está em uma camada trancada.</translation>
     </message>
     <message>
-        <location line="+224"/>
+        <location line="+225"/>
         <source>Length:</source>
         <translation>Comprimento:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translation>A entidade não é uma referência de bloco.</translation>
     </message>
@@ -5519,7 +5529,12 @@ BUG: Interferes with group castings.</source>
         <translation>Clique duplo na referência do bloco para abrir o bloco</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+28"/>
+        <source>Edit block reference in-place</source>
+        <translation>Editar referência de bloco no local</translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <source>Tolerance:</source>
         <translation>Tolerância:</translation>
     </message>
@@ -5561,7 +5576,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Passo angular para rotação:</translation>
     </message>
     <message>
-        <location line="-232"/>
+        <location line="-259"/>
         <source>Right-Click</source>
         <translation>Clique do Botão Direito</translation>
     </message>
@@ -5575,7 +5590,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Clique direito en un entidade mostra menu de contexto</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+73"/>
         <source>Double-click to select contour</source>
         <translation>Clique duplo para selecionar contorno</translation>
     </message>
@@ -5692,7 +5707,7 @@ BUG: Interferes with group castings.</source>
         <translation>Auto corrigir cores preto-no-preto e branco-no-branco</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation>Use resolução total para a exposição Retina / alta resolução</translation>
     </message>
@@ -5712,7 +5727,7 @@ BUG: Interferes with group castings.</source>
         <translation>Seleção Persistente</translation>
     </message>
     <message>
-        <location line="-690"/>
+        <location line="-693"/>
         <source>Color lightness threshold:</source>
         <translation>Limites para a luminosidade da cor:</translation>
     </message>
@@ -5726,7 +5741,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Tipos de Linha</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+56"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Comute automaticamente para tipos de linha baseados na tela, na visão de modelagem</translation>
     </message>
@@ -5760,7 +5775,7 @@ BUG: Interferes with group castings.</source>
         <translation>Passo mínimo de ângulo para renderização de arcos (graus):</translation>
     </message>
     <message>
-        <location line="-263"/>
+        <location line="-266"/>
         <source>Linetypes and Lineweights</source>
         <translation>Tipos de linha e pesos de linha</translation>
     </message>
@@ -5774,7 +5789,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Use resolução total para a exposição Retina</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+117"/>
         <source>Anti-aliasing on by default</source>
         <translation>Suavização ativada como padrão</translation>
     </message>
@@ -6483,7 +6498,7 @@ BUG: Interferes with group castings.</source>
         <translation>Especifique a segunda linha</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translation>Ângulo:</translation>
     </message>
@@ -6786,7 +6801,7 @@ BUG: Interferes with group castings.</source>
         <translation>Circunferência</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation>Área:</translation>
     </message>
@@ -8867,12 +8882,12 @@ nos resultados de busca:</translation>
         <translation>&amp;Elimine o original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Mantenha o original</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+85"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Use a camada e os &amp;atributos atuais</translation>
     </message>
@@ -9304,7 +9319,7 @@ nos resultados de busca:</translation>
         <translation>Escolha uma linha, arco, círculo ou elipse</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
             <numerusform>O Raio ficou abaixo de 0,0, após %n círculo concêntrico.</numerusform>
@@ -10431,17 +10446,17 @@ nos resultados de busca:</translation>
         <translation>&amp;Elimine o original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Mantenha o original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Cópias &amp;múltiplas</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>Angle &amp;a:</source>
         <translation>Ângulo &amp;a:</translation>
     </message>
@@ -10482,17 +10497,17 @@ nos resultados de busca:</translation>
         <translation>&amp;Elimine o original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Mantenha o original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Cópias &amp;múltiplas</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>Â&amp;ngulo (a):</translation>
     </message>
@@ -10867,17 +10882,17 @@ nos resultados de busca:</translation>
         <translation>&amp;Elimine o original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Mantenha o original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Cópias &amp;múltiplas</translation>
     </message>
     <message>
-        <location line="+112"/>
+        <location line="+115"/>
         <source>Factor x:</source>
         <translation>Fator x:</translation>
     </message>
@@ -12528,7 +12543,7 @@ nos resultados de busca:</translation>
         <translation>Valor padrão:</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;Desfazer</translation>
     </message>
@@ -12593,7 +12608,7 @@ nos resultados de busca:</translation>
         <translation>Outros...</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation>Grau</translation>
     </message>
@@ -13146,17 +13161,17 @@ nos resultados de busca:</translation>
         <translation>&amp;Elimine o original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Mantenha o original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Cópias &amp;múltiplas</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+89"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Use a camada e os &amp;atributos atuais</translation>
     </message>
@@ -13192,17 +13207,17 @@ nos resultados de busca:</translation>
         <translation>&amp;Elimine o original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Mantenha o original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Cópias &amp;múltiplas</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>Ângulo (&amp;a):</translation>
     </message>
@@ -13225,7 +13240,7 @@ nos resultados de busca:</translation>
         <translation>Escolha a entidade a aparar</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>As duas entidades não se cruzam, ou não são actualmente suportadas para o corte.</translation>
     </message>

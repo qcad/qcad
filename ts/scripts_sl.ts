@@ -1281,11 +1281,16 @@ Do you wish to recover it?</source>
         <translation>Orodja bloka</translation>
     </message>
     <message>
+        <location line="+110"/>
+        <source>Cannot edit block while editing a block in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Show block tools</source>
         <translation type="vanished">Prikaži orodja bloka</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-82"/>
         <source>&amp;Block</source>
         <translation>&amp;Blok</translation>
     </message>
@@ -2666,7 +2671,7 @@ Do you wish to recover it?</source>
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../scripts/DefaultAction.js" line="+90"/>
+        <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
         <translation>Izberi entiteto ali regijo</translation>
     </message>
@@ -2708,7 +2713,7 @@ Do you wish to recover it?</source>
         <translation>Premakni entiteto na željeno lokacijo</translation>
     </message>
     <message>
-        <location line="+388"/>
+        <location line="+394"/>
         <source>Move Reference Point</source>
         <translation>Premakni referenčno točko</translation>
     </message>
@@ -3879,12 +3884,12 @@ je že na seznamu.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2097"/>
+        <location line="+2102"/>
         <source>Cancel</source>
         <translation>Prekliči</translation>
     </message>
     <message>
-        <location line="-2096"/>
+        <location line="-2101"/>
         <source>Done</source>
         <translation>Končano</translation>
     </message>
@@ -3919,17 +3924,22 @@ je že na seznamu.</translation>
         <translation>CAD orodja</translation>
     </message>
     <message>
-        <location line="+710"/>
+        <location line="+711"/>
+        <source>Entity is not in working set.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Entity is on a locked layer.</source>
         <translation>Entiteta je na zaklenjeni plasti.</translation>
     </message>
     <message>
-        <location line="+224"/>
+        <location line="+225"/>
         <source>Length:</source>
         <translation>Dolžina:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translation>Entiteta ni blokovna referenca.</translation>
     </message>
@@ -5550,7 +5560,12 @@ BUG: Interferes with group castings.</source>
         <translation>Dvoklik na blokovno referenco odpre blok</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+28"/>
+        <source>Edit block reference in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <source>Tolerance:</source>
         <translation>Dopustno odstopanje:</translation>
     </message>
@@ -5584,7 +5599,7 @@ BUG: Interferes with group castings.</source>
         <translation>Označi entiteto znotraj območja</translation>
     </message>
     <message>
-        <location line="-232"/>
+        <location line="-259"/>
         <source>Right-Click</source>
         <translation>Desni klik</translation>
     </message>
@@ -5598,7 +5613,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Desni klik na entiteto prikaže kontekstni meni</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+73"/>
         <source>Double-click to select contour</source>
         <translation>Dvoklik za izbiro konture</translation>
     </message>
@@ -5717,7 +5732,7 @@ BUG: Interferes with group castings.</source>
         <translation>Privzeta debelina črte:</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+124"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5741,7 +5756,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Uporabi večnitnost</translation>
     </message>
     <message>
-        <location line="-690"/>
+        <location line="-693"/>
         <source>Color lightness threshold:</source>
         <translation>Prag svetlosti barv:</translation>
     </message>
@@ -5755,7 +5770,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Vrste črt</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+56"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Samodejno preklopi na zaslonske črte v prikazu modela</translation>
     </message>
@@ -6527,7 +6542,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Končano</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translation>Kot:</translation>
     </message>
@@ -6838,7 +6853,7 @@ BUG: Interferes with group castings.</source>
         <translation>Obseg</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation>Površina območja:</translation>
     </message>
@@ -9047,12 +9062,12 @@ shown in search results:</source>
         <translation>&amp;Izbriši original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Ohrani original</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+85"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Uporabi trenutno plast in &amp;atribute</translation>
     </message>
@@ -9496,7 +9511,7 @@ shown in search results:</source>
         <translation>Izberi črto, lok, krog ali elipso</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
             <numerusform>Polmer je padel pod 0.0 po %n kocentričnem krogu.</numerusform>
@@ -10680,17 +10695,17 @@ shown in search results:</source>
         <translation>&amp;Izbriši oroginal</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Ohrani original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Več kopij</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>Angle &amp;a:</source>
         <translation>Kot &amp;a:</translation>
     </message>
@@ -10731,17 +10746,17 @@ shown in search results:</source>
         <translation>&amp;Izbriši original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Ohrani original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Več kopij</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Kot:</translation>
     </message>
@@ -11116,17 +11131,17 @@ shown in search results:</source>
         <translation>&amp;Izbriši original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Ohrani orignal</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Več kopij</translation>
     </message>
     <message>
-        <location line="+112"/>
+        <location line="+115"/>
         <source>Factor x:</source>
         <translation>Faktor x:</translation>
     </message>
@@ -12818,7 +12833,7 @@ shown in search results:</source>
         <translation>Privzeta vrednost:</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>Ra&amp;zveljavi</translation>
     </message>
@@ -12883,7 +12898,7 @@ shown in search results:</source>
         <translation>Drugo...</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation>Stopinje</translation>
     </message>
@@ -13429,17 +13444,17 @@ shown in search results:</source>
         <translation>Izbriši o&amp;riginal</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>Ohrani &amp;original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Mnogo kopij</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+89"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Uporabi trenutno plast in &amp;atribute</translation>
     </message>
@@ -13487,17 +13502,17 @@ shown in search results:</source>
         <translation>Iz&amp;briši original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Ohrani original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Več kopij</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Kot (a):</translation>
     </message>
@@ -13520,7 +13535,7 @@ shown in search results:</source>
         <translation>Izberi entiteto za krajšanje</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>Izbrani entiteti se ne sekata, ali pa trenutno nista podprti za krajšanje.</translation>
     </message>

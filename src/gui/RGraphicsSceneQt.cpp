@@ -184,7 +184,8 @@ bool RGraphicsSceneQt::beginPath() {
 //    }
 
     if (!exportToPreview) {
-        if (entity!=NULL && entity->isSelected()) {
+        if (entity!=NULL && (entity->isSelected() || entity->isSelectedWorkingSet())) {
+            //qDebug() << "painter path selected for entity:" << entity->getId();
             currentPainterPath.setSelected(true);
         }
     }
@@ -271,8 +272,10 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
         currentPainterPath.setFillRule(Qt::WindingFill);
         currentPainterPath.setBrush(currentPen.color());
         //currentPainterPath.setPen(QPen(Qt::NoPen));
+
         QPen p(Qt::SolidLine);
         p.setCosmetic(true);
+        p.setWidthF(0.001);
         p.setColor(currentPen.color());
         currentPainterPath.setPen(p);
         endPath();
@@ -656,7 +659,7 @@ QList<RPainterPath> RGraphicsSceneQt::exportText(const RTextBasedData& text, boo
         for (int k=0; k<textLayouts[t].painterPaths.length(); k++) {
             RPainterPath pp = textLayouts[t].painterPaths[k];
             pp.transform(textLayouts[t].transform);
-            if (text.isSelected() || forceSelected) {
+            if (text.isSelected() || text.isSelectedWorkingSet() || forceSelected) {
                 pp.setSelected(true);
                 pp.setPen(RSettings::getSelectionColor());
             }
@@ -837,6 +840,7 @@ void RGraphicsSceneQt::addDrawable(REntity::Id entityId, RGraphicsSceneDrawable&
     if (blockRefEntity!=NULL && blockRefEntity->getType()==RS::EntityBlockRef) {
         RBlockReferenceEntity* blockRef = dynamic_cast<RBlockReferenceEntity*>(blockRefEntity);
         if (blockRef!=NULL) {
+            //qDebug() << "exporting entity in blockref:" << blockRef->getId();
             RBlock::Id blockId = blockRef->getReferencedBlockId();
 
             // retrieve document from entity (could be a preview document):
@@ -847,6 +851,21 @@ void RGraphicsSceneQt::addDrawable(REntity::Id entityId, RGraphicsSceneDrawable&
                     drawable.setPixelUnit(true);
                 }
             }
+        }
+    }
+
+    if (document->getWorkingSetBlockReferenceId()!=RObject::INVALID_ID) {
+        if (entity!=NULL) {
+            for (int i=entityStack.size()-1; i>=0; i--) {
+                if (entityStack[i]->isWorkingSet()) {
+//                    qDebug() << "working set";
+                    drawable.setWorkingSet(true);
+                    break;
+                }
+            }
+//            if (entity->isWorkingSet()) {
+//                drawable.setWorkingSet(true);
+//            }
         }
     }
 
@@ -919,7 +938,7 @@ void RGraphicsSceneQt::highlightEntity(REntity& entity) {
     beginPreview();
     RBox clipRectangle = getClipRectangle(entity.getId());
     for (int i = 0; i < drawablesCopy.size(); ++i) {
-        drawablesCopy[i].setSelected(entity.isSelected());
+        drawablesCopy[i].setSelected(entity.isSelected() || entity.isSelectedWorkingSet());
         drawablesCopy[i].setHighlighted(true);
     }
     if (clipRectangle.isValid()) {

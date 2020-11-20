@@ -112,7 +112,7 @@
 <context>
     <name>RColor</name>
     <message>
-        <location filename="../src/core/RColor.cpp" line="+288"/>
+        <location filename="../src/core/RColor.cpp" line="+299"/>
         <source>By Layer</source>
         <translation>By Layer</translation>
     </message>
@@ -215,7 +215,7 @@
 <context>
     <name>RDocumentVariables</name>
     <message>
-        <location filename="../src/core/RDocumentVariables.cpp" line="+45"/>
+        <location filename="../src/core/RDocumentVariables.cpp" line="+47"/>
         <source>Current Layer ID</source>
         <translation>Current Layer ID</translation>
     </message>
@@ -264,7 +264,7 @@
     </message>
     <message>
         <location line="-2"/>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+93"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+95"/>
         <location line="+3"/>
         <location filename="../src/core/RLayout.cpp" line="+2"/>
         <location line="+3"/>
@@ -378,8 +378,8 @@
         <translation>Attributes</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+91"/>
-        <location filename="../src/core/RObject.cpp" line="+68"/>
+        <location filename="../src/core/REntity.cpp" line="+93"/>
+        <location filename="../src/core/RObject.cpp" line="+69"/>
         <source>Type</source>
         <translation>Type</translation>
     </message>
@@ -578,6 +578,11 @@
         <location line="+1"/>
         <source>Invisible</source>
         <translation>Invisible</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Working Set</source>
+        <translation>Working Set</translation>
     </message>
     <message>
         <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>

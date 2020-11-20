@@ -1253,11 +1253,16 @@ Přejete si ho obnovit?</translation>
         <translation>Nástroje bloku</translation>
     </message>
     <message>
+        <location line="+110"/>
+        <source>Cannot edit block while editing a block in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Show block tools</source>
         <translation type="vanished">Zobrazit nástroje bloku</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-82"/>
         <source>&amp;Block</source>
         <translation>&amp;Blok</translation>
     </message>
@@ -2582,7 +2587,7 @@ Přejete si ho obnovit?</translation>
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../scripts/DefaultAction.js" line="+90"/>
+        <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
         <translation>Vyberte prvek nebo oblast</translation>
     </message>
@@ -2624,7 +2629,7 @@ Přejete si ho obnovit?</translation>
         <translation>Přesuňte prvek na požadované umístění</translation>
     </message>
     <message>
-        <location line="+388"/>
+        <location line="+394"/>
         <source>Move Reference Point</source>
         <translation>Přesuňte referenční bod</translation>
     </message>
@@ -3738,12 +3743,12 @@ již v seznamu je.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2097"/>
+        <location line="+2102"/>
         <source>Cancel</source>
         <translation>Storno</translation>
     </message>
     <message>
-        <location line="-2096"/>
+        <location line="-2101"/>
         <source>Done</source>
         <translation type="unfinished">Dokončit</translation>
     </message>
@@ -3774,17 +3779,22 @@ již v seznamu je.</translation>
         <translation>CAD nástroje</translation>
     </message>
     <message>
-        <location line="+710"/>
+        <location line="+711"/>
+        <source>Entity is not in working set.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Entity is on a locked layer.</source>
         <translation>Prvek je na uzamčené vrstvě.</translation>
     </message>
     <message>
-        <location line="+224"/>
+        <location line="+225"/>
         <source>Length:</source>
         <translation>Délka:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translation>Prvek není reference bloku.</translation>
     </message>
@@ -5276,7 +5286,12 @@ BUG: Interferes with group castings.</source>
         <translation>Dvojklikem na referenci bloku otevřít blok</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+28"/>
+        <source>Edit block reference in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Double-click to select contour</source>
         <translation>Dvojklikem vybrat obrys</translation>
     </message>
@@ -5415,7 +5430,7 @@ BUG: Interferes with group castings.</source>
         <translation>Zabránit bílé barvě na bílém / černé barvě na černém displeji</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5435,7 +5450,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-690"/>
+        <location line="-693"/>
         <source>Color lightness threshold:</source>
         <translation>Prahová hodnota světla barvy:</translation>
     </message>
@@ -5449,7 +5464,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Typy čar</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+53"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>V zobrazení modelu automaticky použít typy čar v závislosti na obrazovce</translation>
     </message>
@@ -5503,7 +5518,7 @@ BUG: Interferes with group castings.</source>
         <translation>Vyhlazování hran je standardně zapnuto</translation>
     </message>
     <message>
-        <location line="-122"/>
+        <location line="-125"/>
         <source>Linetypes and Lineweights</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5513,7 +5528,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+379"/>
+        <location line="+382"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Časový limit pro vykreslení šrafování:</translation>
     </message>
@@ -6123,7 +6138,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Dokončit</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translation>Úhel:</translation>
     </message>
@@ -6434,7 +6449,7 @@ BUG: Interferes with group castings.</source>
         <translation>Obvod</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation>Plocha lomené čáry:</translation>
     </message>
@@ -8420,12 +8435,12 @@ ve výsledcích vyhledávání:</translation>
         <translation>&amp;Smazat originál</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Zachovat originál</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+85"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Použít aktuální vrstvu a &amp;vlastnosti</translation>
     </message>
@@ -8801,7 +8816,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Vyberte čáru, oblouk, kružnici nebo elipsu</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
             <numerusform>Poloměr klesl pod hodnotu 0.0 po %n soustředné(ých) kružnici(ích).</numerusform>
@@ -9935,17 +9950,17 @@ ve výsledcích vyhledávání:</translation>
         <translation>&amp;Smazat originál</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Ponechat originál</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Vícenásobné kopie</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>Angle &amp;a:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9986,17 +10001,17 @@ ve výsledcích vyhledávání:</translation>
         <translation>&amp;Smazat originál</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Ponechat originál</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Vícenásobné kopie</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>Ú&amp;hel (a):</translation>
     </message>
@@ -10359,17 +10374,17 @@ ve výsledcích vyhledávání:</translation>
         <translation>&amp;Smazat originál</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Ponechat originál</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Vícenásobné kopie</translation>
     </message>
     <message>
-        <location line="+112"/>
+        <location line="+115"/>
         <source>Factor x:</source>
         <translation type="unfinished">Faktor &amp;x:</translation>
     </message>
@@ -11936,7 +11951,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Výchozí hodnota:</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;Zpět</translation>
     </message>
@@ -12001,7 +12016,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Další...</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation>Stupeň</translation>
     </message>
@@ -12547,17 +12562,17 @@ ve výsledcích vyhledávání:</translation>
         <translation>&amp;Smazat originál</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Ponechat originál</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Vícenásobné kopie</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+89"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Použít aktuální vrstvu a &amp;vlastnosti</translation>
     </message>
@@ -12593,17 +12608,17 @@ ve výsledcích vyhledávání:</translation>
         <translation>&amp;Smazat originál</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Ponechat originál</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Vícenásobné kopie</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Úhel (a):</translation>
     </message>
@@ -12626,7 +12641,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Vyberte prvek pro ořez</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>Tyto dva prvky se nepřekrývají nebo nejsou momentálně podporovány pro ořezávání.</translation>
     </message>

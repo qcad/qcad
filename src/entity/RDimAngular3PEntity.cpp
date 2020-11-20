@@ -22,6 +22,7 @@
 RPropertyTypeId RDimAngular3PEntity::PropertyCustom;
 RPropertyTypeId RDimAngular3PEntity::PropertyHandle;
 RPropertyTypeId RDimAngular3PEntity::PropertyProtected;
+RPropertyTypeId RDimAngular3PEntity::PropertyWorkingSet;
 RPropertyTypeId RDimAngular3PEntity::PropertyType;
 RPropertyTypeId RDimAngular3PEntity::PropertyBlock;
 RPropertyTypeId RDimAngular3PEntity::PropertyLayer;
@@ -79,6 +80,7 @@ void RDimAngular3PEntity::init() {
     RDimAngular3PEntity::PropertyCustom.generateId(typeid(RDimAngular3PEntity), RObject::PropertyCustom);
     RDimAngular3PEntity::PropertyHandle.generateId(typeid(RDimAngular3PEntity), RObject::PropertyHandle);
     RDimAngular3PEntity::PropertyProtected.generateId(typeid(RDimAngular3PEntity), RObject::PropertyProtected);
+    RDimAngular3PEntity::PropertyWorkingSet.generateId(typeid(RDimAngular3PEntity), RObject::PropertyWorkingSet);
     RDimAngular3PEntity::PropertyType.generateId(typeid(RDimAngular3PEntity), REntity::PropertyType);
     RDimAngular3PEntity::PropertyBlock.generateId(typeid(RDimAngular3PEntity), REntity::PropertyBlock);
     RDimAngular3PEntity::PropertyLayer.generateId(typeid(RDimAngular3PEntity), REntity::PropertyLayer);

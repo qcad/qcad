@@ -94,6 +94,12 @@
         getPixelUnit
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setWorkingSet
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isWorkingSet
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPainterPath
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

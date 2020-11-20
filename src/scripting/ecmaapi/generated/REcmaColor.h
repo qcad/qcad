@@ -102,6 +102,9 @@
         getHighlighted
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getFaded
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         equals
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

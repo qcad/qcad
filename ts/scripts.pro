@@ -688,6 +688,7 @@ SOURCES = \
 ../scripts/Modify/BreakOutManual/Tests/BreakOutManualTest00.js \
 ../scripts/Modify/BreakOutManual/Tests/BreakOutManualTest01.js \
 ../scripts/Modify/BreakOutManual/Tests/BreakOutManualTest02.js \
+../scripts/Modify/BreakOutManual/Tests/BreakOutManualTest03.js \
 ../scripts/Modify/Divide/Divide.js \
 ../scripts/Modify/Divide/DivideInit.js \
 ../scripts/Modify/Divide/Tests/DivideTest01.js \

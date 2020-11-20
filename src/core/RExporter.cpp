@@ -292,7 +292,7 @@ QBrush RExporter::getBrush(const RPainterPath& path) {
             }
         }
         REntity* e = getEntity();
-        if (e!=NULL && e->isSelected()) {
+        if (e!=NULL && (e->isSelected() || e->isSelectedWorkingSet())) {
             brush.setColor(RSettings::getSelectionColor());
         }
         else {
@@ -342,7 +342,7 @@ void RExporter::setEntityAttributes(bool forceSelected) {
         return;
     }
 
-    if (forceSelected || currentEntity->isSelected()) {
+    if (forceSelected || (currentEntity->isSelected() || currentEntity->isSelectedWorkingSet())) {
         setColor(RSettings::getSelectionColor());
     }
     else {
@@ -694,7 +694,7 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool
     if (!skip) {
         setEntityAttributes(forceSelected);
 
-        if ((forceSelected || entity.isSelected()) && RSettings::getUseSecondarySelectionColor()) {
+        if ((forceSelected || (entity.isSelected() || entity.isSelectedWorkingSet())) && RSettings::getUseSecondarySelectionColor()) {
             // first part of two color selection:
             twoColorSelectedMode = true;
         }
@@ -705,7 +705,7 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool
 
         // export again, with secondary selection color:
         if (visualExporter) {
-            if ((forceSelected || entity.isSelected()) &&
+            if ((forceSelected || (entity.isSelected() || entity.isSelectedWorkingSet())) &&
                 RSettings::getUseSecondarySelectionColor() &&
                 entity.getType()!=RS::EntityBlockRef &&
                 entity.getType()!=RS::EntityText &&

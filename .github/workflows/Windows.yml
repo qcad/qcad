@@ -7,6 +7,8 @@ name: Windows
 on:
   push:
     branches: [ master ]
+    tags:
+      - "v*"
      # 忽略README.md
     paths-ignore:
       - 'README.md'
@@ -74,7 +76,6 @@ jobs:
           qmake -r CONFIG+=ractivated
           nmake 
       - name: package
-        if: startsWith(github.event.ref, 'refs/tags/')
         env:
           VCINSTALLDIR: 'C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC'
           archiveName: ${{ matrix.qt_ver }}-${{ matrix.qt_target }}-${{ matrix.qt_arch }}
@@ -106,7 +107,6 @@ jobs:
       # tag 查询github-Release
       - name: queryReleaseWin
         id: queryReleaseWin
-        if: startsWith(github.event.ref, 'refs/tags/')
         shell: pwsh
         env:
           githubFullName: ${{ github.event.repository.full_name }}
@@ -133,7 +133,6 @@ jobs:
       # tag 创建github-Release
       - name: createReleaseWin
         id: createReleaseWin
-        if: startsWith(github.event.ref, 'refs/tags/') && steps.queryReleaseWin.outputs.needCreateRelease == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         uses: actions/create-release@v1.0.0
@@ -146,7 +145,7 @@ jobs:
       # 重定向upload_url到环境变量uploadUrl。
       - name: getLatestTagRelease
         # tag 上一步无论成功还是失败都执行
-        if: startsWith(github.event.ref, 'refs/tags/')
+        
         shell: pwsh
         env:
           githubFullName: ${{ github.event.repository.full_name }}
@@ -169,7 +168,6 @@ jobs:
       # tag 上传Release
       - name: uploadRelease
         id: uploadRelease
-        if: startsWith(github.event.ref, 'refs/tags/')
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         uses: actions/upload-release-asset@v1.0.1

@@ -167,6 +167,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="getWorkingSetBlockReferenceId"
+    cppName="getWorkingSetBlockReferenceId" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RObject::Id" isPureVirtual="false" />
+    </method>
+    <method name="setWorkingSetBlockReferenceId"
+    cppName="setWorkingSetBlockReferenceId" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RObject::Id" typeName="RObject::Id" name="id"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="addAutoVariable" cppName="addAutoVariable"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -201,5 +214,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyDimensionFont" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyWorkingSetBlockReferenceId"
+    type="RPropertyTypeId" isConst="false" isStatic="true" />
   </class>
 </unit>

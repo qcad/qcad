@@ -24,6 +24,7 @@
 RPropertyTypeId RBlockReferenceEntity::PropertyCustom;
 RPropertyTypeId RBlockReferenceEntity::PropertyHandle;
 RPropertyTypeId RBlockReferenceEntity::PropertyProtected;
+RPropertyTypeId RBlockReferenceEntity::PropertyWorkingSet;
 RPropertyTypeId RBlockReferenceEntity::PropertyType;
 RPropertyTypeId RBlockReferenceEntity::PropertyBlock;
 RPropertyTypeId RBlockReferenceEntity::PropertyLayer;
@@ -79,6 +80,7 @@ void RBlockReferenceEntity::init() {
     RBlockReferenceEntity::PropertyCustom.generateId(typeid(RBlockReferenceEntity), RObject::PropertyCustom);
     RBlockReferenceEntity::PropertyHandle.generateId(typeid(RBlockReferenceEntity), RObject::PropertyHandle);
     RBlockReferenceEntity::PropertyProtected.generateId(typeid(RBlockReferenceEntity), RObject::PropertyProtected);
+    RBlockReferenceEntity::PropertyWorkingSet.generateId(typeid(RBlockReferenceEntity), REntity::PropertyWorkingSet);
     RBlockReferenceEntity::PropertyType.generateId(typeid(RBlockReferenceEntity), REntity::PropertyType);
     RBlockReferenceEntity::PropertyBlock.generateId(typeid(RBlockReferenceEntity), REntity::PropertyBlock);
     RBlockReferenceEntity::PropertyLayer.generateId(typeid(RBlockReferenceEntity), REntity::PropertyLayer);
@@ -119,6 +121,9 @@ QSet<RPropertyTypeId> RBlockReferenceEntity::getPropertyTypeIds(RPropertyAttribu
             REntity::Id childId = *it;
             QSharedPointer<REntity> child = doc->queryEntityDirect(childId);
             if (child.isNull()) {
+                continue;
+            }
+            if (child->isUndone()) {
                 continue;
             }
 

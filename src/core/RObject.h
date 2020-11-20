@@ -72,6 +72,7 @@ public:
     static RPropertyTypeId PropertyType;
     static RPropertyTypeId PropertyHandle;
     static RPropertyTypeId PropertyProtected;
+    static RPropertyTypeId PropertyWorkingSet;
     static RPropertyTypeId PropertySelected;
     static RPropertyTypeId PropertyInvisible;
 
@@ -85,7 +86,8 @@ public:
         Undone = 0x001,           //!< object is undone
         Protect = 0x002,          //!< object is protected
         Selected = 0x004,         //!< object is selected
-        Invisible = 0x008         //!< object is invisible
+        Invisible = 0x008,        //!< object is invisible
+        WorkingSet = 0x010        //!< object is part of the current working set
     };
     Q_DECLARE_FLAGS(Flags, ObjectFlag)
 
@@ -126,7 +128,7 @@ public:
         }
     }
     bool getFlag(int flag) const {
-        return (flags & flag) == (ObjectFlag)flag;
+        return (int)(flags & flag) == flag;
     }
 
     /**
@@ -180,6 +182,14 @@ public:
 
     bool isUndone() const {
         return getFlag(RObject::Undone);
+    }
+
+    virtual bool isWorkingSet() const {
+        return getFlag(RObject::WorkingSet);
+    }
+
+    virtual void setWorkingSet(bool on) {
+        setFlag(RObject::WorkingSet, on);
     }
 
     virtual QSet<RPropertyTypeId> getPropertyTypeIds(RPropertyAttributes::Option option = RPropertyAttributes::NoOptions) const;

@@ -1543,11 +1543,16 @@ Bardzo gruby</translatorcomment>
         <translation>Narzędzia bloku</translation>
     </message>
     <message>
+        <location line="+110"/>
+        <source>Cannot edit block while editing a block in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Show block tools</source>
         <translation type="vanished">Wyświetla narzędzia bloku</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-82"/>
         <source>&amp;Block</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--
@@ -3171,7 +3176,7 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../scripts/DefaultAction.js" line="+90"/>
+        <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Proszę zaznaczyć obiekt lub obszar</translation>
@@ -3218,7 +3223,7 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
         <translation>Przenieś obiekt do określonego położenia</translation>
     </message>
     <message>
-        <location line="+388"/>
+        <location line="+394"/>
         <source>Move Reference Point</source>
         <translation>Przenieś punkt odniesienia</translation>
     </message>
@@ -4640,7 +4645,7 @@ Powrót do poprzedniego menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2097"/>
+        <location line="+2102"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -4649,7 +4654,7 @@ Anuluj
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location line="-2096"/>
+        <location line="-2101"/>
         <source>Done</source>
         <translation type="unfinished">Zrobione</translation>
     </message>
@@ -4698,18 +4703,23 @@ Narzędzia CAD</translatorcomment>
         <translation>Narzędzia CAD</translation>
     </message>
     <message>
-        <location line="+710"/>
+        <location line="+711"/>
+        <source>Entity is not in working set.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Obiekt nie znajduje się na zablokowanej warstwie.</translation>
     </message>
     <message>
-        <location line="+224"/>
+        <location line="+225"/>
         <source>Length:</source>
         <translation>Długość:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Obiekt nie jest odniesieniem bloku.</translation>
@@ -6445,7 +6455,12 @@ Czy chcesz zamknąć rysunek?</translatorcomment>
         <translation>Otwieranie bloku kliknięciem na odniesieniu</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+28"/>
+        <source>Edit block reference in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <source>Tolerance:</source>
         <translation type="unfinished">Tolerancja:</translation>
     </message>
@@ -6479,7 +6494,7 @@ Czy chcesz zamknąć rysunek?</translatorcomment>
         <translation>Zaznaczanie obiektów w zasięgu</translation>
     </message>
     <message>
-        <location line="-232"/>
+        <location line="-259"/>
         <source>Right-Click</source>
         <translation>Kliknięcie prawym przyciskiem</translation>
     </message>
@@ -6489,7 +6504,7 @@ Czy chcesz zamknąć rysunek?</translatorcomment>
         <translation>Odznaczanie obiektów</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+73"/>
         <source>Double-click to select contour</source>
         <translation>Zaznaczanie konturu</translation>
     </message>
@@ -6624,7 +6639,7 @@ Autozoom
         <translation>Zapobieganie wyświetlania białego na białym tle / czarnego na czarnym tle</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6644,7 +6659,7 @@ Autozoom
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-690"/>
+        <location line="-693"/>
         <source>Color lightness threshold:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Próg jasności koloru:</translation>
@@ -6659,7 +6674,7 @@ Autozoom
         <translation type="vanished">Rodzaje linii</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+56"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Automatyczne przełączanie ekranowego rodzaju linii w widoku modelu</translation>
     </message>
@@ -6689,7 +6704,7 @@ Autozoom
         <translation>Minimalny krok kątowy dla renderowania łuków (stopnie):</translation>
     </message>
     <message>
-        <location line="-263"/>
+        <location line="-266"/>
         <source>Linetypes and Lineweights</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6703,7 +6718,7 @@ Autozoom
         <translation type="vanished">Użycie pełnej rozdzielczości dla wyświetlaczy Retina</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+117"/>
         <source>Anti-aliasing on by default</source>
         <translation>Domyślnie włączony antyaliasing</translation>
     </message>
@@ -7651,7 +7666,7 @@ Zrobione
         <translation type="vanished">Zrobione</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -8023,7 +8038,7 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
         <translation>Obwód</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation>Pole powierzchni linii łamanej:</translation>
     </message>
@@ -10736,7 +10751,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translation>&amp;Usunięcie oryginału</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -10744,7 +10759,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translation>&amp;Zachowanie oryginału</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+85"/>
         <source>Use current layer and &amp;attributes</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Użycie bieżącej warstwy i &amp;atrybutów</translation>
@@ -11191,7 +11206,7 @@ Nowy &amp;formularz</translatorcomment>
         <translation>Proszę wskazać linię, łuk, okrąg lub elipsę</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
             <numerusform>Promień osiągnął wartość mniejszą niż 0.0 po narysowaniu %n koncentrycznego okręgu.</numerusform>
@@ -12817,7 +12832,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translation>&amp;Usunięcie oryginału</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -12825,7 +12840,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translation>&amp;Zachowanie oryginału</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -12834,7 +12849,7 @@ Kopie &amp;wielokrotne:</translatorcomment>
         <translation>&amp;Wielokrotne skopiowanie</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>Angle &amp;a:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12893,7 +12908,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translation>&amp;Usunięcie oryginału</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -12901,7 +12916,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translation>&amp;Zachowanie oryginału</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -12910,7 +12925,7 @@ Kopie &amp;wielokrotne:</translatorcomment>
         <translation>&amp;Wielokrotne skopiowanie</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -13364,7 +13379,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translation>&amp;Usunięcie oryginału</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -13372,7 +13387,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translation>&amp;Zachowanie oryginału</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -13381,7 +13396,7 @@ Kopie &amp;wielokrotne:</translatorcomment>
         <translation>&amp;Wielokrotne skopiowanie</translation>
     </message>
     <message>
-        <location line="+112"/>
+        <location line="+115"/>
         <source>Factor x:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -15371,7 +15386,7 @@ Rysuj obiekty tekstowe</translatorcomment>
         <translation>Domyślna wartość:</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -15461,7 +15476,7 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
         <translation>Inne...</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -16187,7 +16202,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translation>&amp;Usunięcie oryginału</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -16195,7 +16210,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translation>&amp;Zachowanie oryginału</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -16204,7 +16219,7 @@ Kopie &amp;wielokrotne:</translatorcomment>
         <translation>&amp;Wielokrotne skopiowanie</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+89"/>
         <source>Use current layer and &amp;attributes</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Użycie aktualnej warstwy i &amp;atrybutów</translation>
@@ -16277,7 +16292,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translation>&amp;Usunięcie oryginału</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -16285,7 +16300,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translation>&amp;Zachowanie oryginału</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -16294,7 +16309,7 @@ Kopie &amp;wielokrotne:</translatorcomment>
         <translation>&amp;Wielokrotne skopiowanie</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -16323,7 +16338,7 @@ Kopie &amp;wielokrotne:</translatorcomment>
         <translation>Proszę wskazać obiekt przycinany</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Te dwa obiekty nie przecinają się lub aktualnie ich przycinanie nie jest obsługiwane.</translation>

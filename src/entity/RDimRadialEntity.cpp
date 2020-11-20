@@ -22,6 +22,7 @@
 RPropertyTypeId RDimRadialEntity::PropertyCustom;
 RPropertyTypeId RDimRadialEntity::PropertyHandle;
 RPropertyTypeId RDimRadialEntity::PropertyProtected;
+RPropertyTypeId RDimRadialEntity::PropertyWorkingSet;
 RPropertyTypeId RDimRadialEntity::PropertyType;
 RPropertyTypeId RDimRadialEntity::PropertyBlock;
 RPropertyTypeId RDimRadialEntity::PropertyLayer;
@@ -70,6 +71,7 @@ void RDimRadialEntity::init() {
     RDimRadialEntity::PropertyCustom.generateId(typeid(RDimRadialEntity), RObject::PropertyCustom);
     RDimRadialEntity::PropertyHandle.generateId(typeid(RDimRadialEntity), RObject::PropertyHandle);
     RDimRadialEntity::PropertyProtected.generateId(typeid(RDimRadialEntity), RObject::PropertyProtected);
+    RDimRadialEntity::PropertyWorkingSet.generateId(typeid(RDimRadialEntity), RObject::PropertyWorkingSet);
     RDimRadialEntity::PropertyType.generateId(typeid(RDimRadialEntity), REntity::PropertyType);
     RDimRadialEntity::PropertyBlock.generateId(typeid(RDimRadialEntity), REntity::PropertyBlock);
     RDimRadialEntity::PropertyLayer.generateId(typeid(RDimRadialEntity), REntity::PropertyLayer);

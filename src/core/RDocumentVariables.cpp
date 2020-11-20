@@ -26,13 +26,15 @@ RPropertyTypeId RDocumentVariables::PropertyCurrentLayerId;
 RPropertyTypeId RDocumentVariables::PropertyUnit;
 RPropertyTypeId RDocumentVariables::PropertyLinetypeScale;
 RPropertyTypeId RDocumentVariables::PropertyDimensionFont;
+RPropertyTypeId RDocumentVariables::PropertyWorkingSetBlockReferenceId;
 
 RDocumentVariables::RDocumentVariables(RDocument* document)
         : RObject(document),
         currentLayerId(RLayer::INVALID_ID),
         unit(RS::None),
         measurement(RS::UnknownMeasurement),
-        linetypeScale(1.0) {
+        linetypeScale(1.0),
+        workingSetBlockReferenceId(RObject::INVALID_ID) {
 }
 
 RDocumentVariables::~RDocumentVariables() {
@@ -46,6 +48,7 @@ void RDocumentVariables::init() {
     RDocumentVariables::PropertyUnit.generateId(typeid(RDocumentVariables), "", QT_TRANSLATE_NOOP("RDocumentVariables", "Drawing Unit"));
     RDocumentVariables::PropertyLinetypeScale.generateId(typeid(RDocumentVariables), "", QT_TRANSLATE_NOOP("RDocumentVariables", "Linetype Scale"));
     RDocumentVariables::PropertyDimensionFont.generateId(typeid(RDocumentVariables), "", QT_TRANSLATE_NOOP("RDocumentVariables", "Dimension Font"));
+    RDocumentVariables::PropertyWorkingSetBlockReferenceId.generateId(typeid(RDocumentVariables), "", "Working Set Block Reference Id");
 }
 
 QSet<RPropertyTypeId> RDocumentVariables::getCustomPropertyTypeIds() const {
@@ -82,6 +85,10 @@ QPair<QVariant, RPropertyAttributes> RDocumentVariables::getProperty(RPropertyTy
         return qMakePair(QVariant(dimensionFont), RPropertyAttributes());
     }
 
+    if (propertyTypeId == PropertyWorkingSetBlockReferenceId) {
+        return qMakePair(QVariant(workingSetBlockReferenceId), RPropertyAttributes());
+    }
+
     if (propertyTypeId.isCustom()) {
         QString appId = propertyTypeId.getCustomPropertyTitle();
         QString name = propertyTypeId.getCustomPropertyName();
@@ -104,6 +111,7 @@ bool RDocumentVariables::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember((int&)unit, value, PropertyUnit == propertyTypeId);
     ret = ret || RObject::setMember(linetypeScale, value, PropertyLinetypeScale == propertyTypeId);
     ret = ret || RObject::setMember(dimensionFont, value, PropertyDimensionFont == propertyTypeId);
+    ret = ret || RObject::setMember(workingSetBlockReferenceId, value, PropertyWorkingSetBlockReferenceId == propertyTypeId);
 
     // custom property that is a known variable:
     if (propertyTypeId.isCustom()) {

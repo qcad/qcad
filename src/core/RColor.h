@@ -100,6 +100,7 @@ public:
     void setCompat(const QColor& col);
 
     static RColor getHighlighted(const RColor& color, const QColor& bgColor, int minDist = 75);
+    static RColor getFaded(const RColor& color, const QColor& bgColor, double factor = 1);
 
     //bool equalsCorrected(const RColor & color) const;
 

@@ -37,12 +37,12 @@
      id="namedview54"
      showgrid="false"
      inkscape:zoom="0.4609375"
-     inkscape:cx="256"
+     inkscape:cx="-139.9322"
      inkscape:cy="256"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g34" />
+     inkscape:current-layer="svg52" />
   <defs
      id="defs24">
     <linearGradient
@@ -110,25 +110,25 @@
     </radialGradient>
   </defs>
   <g
-     transform="matrix(.82188 0 0 .82188 105.53 119.67)"
-     id="g34">
-    <g
-       style="fill:#fff66e;fill-opacity:1"
-       id="g30">
-      <path
-         d="m376 312h-304v-224h304v224"
-         id="path26"
-         style="fill:#fff66e;fill-opacity:1" />
-      <path
-         d="m456 296c0 70.69-57.31 128-128 128-70.69 0-128-57.31-128-128 0-70.69 57.31-128 128-128 70.69 0 128 57.31 128 128z"
-         style="stroke:#fff;stroke-width:16;fill:#fff66e;fill-opacity:1"
-         id="path28" />
-    </g>
+     id="g30"
+     style="fill:#fff66e;fill-opacity:1"
+     transform="matrix(0.82188,0,0,0.82188,105.53,119.67)">
     <path
-       d="m376 312h-304v-224h304v224z"
-       style="fill:none;stroke:#fff;stroke-linecap:square;stroke-width:16"
-       id="path32" />
+       inkscape:connector-curvature="0"
+       style="fill:#ffd236;fill-opacity:1"
+       id="path26"
+       d="M 376,312 H 72 V 88 h 304 v 224" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path28"
+       style="fill:#ffd236;fill-opacity:1;stroke:#ffffff;stroke-width:16"
+       d="m 456,296 c 0,70.69 -57.31,128 -128,128 -70.69,0 -128,-57.31 -128,-128 0,-70.69 57.31,-128 128,-128 70.69,0 128,57.31 128,128 z" />
   </g>
+  <path
+     inkscape:connector-curvature="0"
+     id="path32"
+     style="fill:none;stroke:#ffffff;stroke-width:13.15007973;stroke-linecap:square"
+     d="M 414.55688,376.09656 H 164.70536 V 191.99544 h 249.85152 z" />
   <g
      transform="matrix(14.7166-5.23593 5.45683 14.1209-407.14 9.06)"
      style="fill-rule:evenodd"

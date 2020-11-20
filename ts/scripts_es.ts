@@ -1395,11 +1395,16 @@ Do you wish to recover it?</source>
         <translation>Herramientas de bloque</translation>
     </message>
     <message>
+        <location line="+110"/>
+        <source>Cannot edit block while editing a block in-place</source>
+        <translation>No se puede editar el bloque mientras se edita un bloque in situ</translation>
+    </message>
+    <message>
         <source>Show block tools</source>
         <translation type="vanished">Mostrar las herramientas de bloque</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-82"/>
         <source>&amp;Block</source>
         <translation>&amp;Bloque</translation>
     </message>
@@ -2868,7 +2873,7 @@ Coordenadas polares relativa:</translatorcomment>
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../scripts/DefaultAction.js" line="+90"/>
+        <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Seleccionar entidad o región</translation>
@@ -2900,7 +2905,7 @@ Coordenadas polares relativa:</translatorcomment>
         <translation>Mover entidad</translation>
     </message>
     <message>
-        <location line="+388"/>
+        <location line="+394"/>
         <source>Move Reference Point</source>
         <translation>Mover punto de referencia</translation>
     </message>
@@ -4130,12 +4135,12 @@ ya está en la lista.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2097"/>
+        <location line="+2102"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="-2096"/>
+        <location line="-2101"/>
         <source>Done</source>
         <translation>Terminar</translation>
     </message>
@@ -4167,18 +4172,23 @@ ya está en la lista.</translation>
         <translation>Herramientas CAD</translation>
     </message>
     <message>
-        <location line="+710"/>
+        <location line="+711"/>
+        <source>Entity is not in working set.</source>
+        <translation>La entidad no está en el conjunto de trabajo.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>La entidad está en una capa bloqueada.</translation>
     </message>
     <message>
-        <location line="+224"/>
+        <location line="+225"/>
         <source>Length:</source>
         <translation>Longitud:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>La entidad no es una referencia de bloque.</translation>
@@ -5959,7 +5969,12 @@ BUG: Interferes with group castings.</source>
         <translation>Doble clic en una referencia a bloque para abrir el bloque</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+28"/>
+        <source>Edit block reference in-place</source>
+        <translation>Editar la referencia del bloque in situ</translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <source>Tolerance:</source>
         <translation>Tolerancia:</translation>
     </message>
@@ -6001,7 +6016,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Paso de ángulo para rotación:</translation>
     </message>
     <message>
-        <location line="-232"/>
+        <location line="-259"/>
         <source>Right-Click</source>
         <translation>Botão direito do mouse</translation>
     </message>
@@ -6015,7 +6030,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Haga click en la entidad muestra el menú contextual</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+73"/>
         <source>Double-click to select contour</source>
         <translation>Doble clic para seleccionar contorno</translation>
     </message>
@@ -6132,7 +6147,7 @@ BUG: Interferes with group castings.</source>
         <translation>Auto corregir los colores blanco y negro</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation>Utilice la resolución completa de la pantalla Retina / alta resolución</translation>
     </message>
@@ -6152,7 +6167,7 @@ BUG: Interferes with group castings.</source>
         <translation>Selección persistente</translation>
     </message>
     <message>
-        <location line="-690"/>
+        <location line="-693"/>
         <source>Color lightness threshold:</source>
         <translation>Umbral para la claridad del color:</translation>
     </message>
@@ -6166,7 +6181,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Tipos de línea</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+56"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Usar automáticamente los tipos de línea base de la pantalla de visualización del modelo</translation>
     </message>
@@ -6200,7 +6215,7 @@ BUG: Interferes with group castings.</source>
         <translation>Paso ángulo mínimo para la prestación de arcos (grados):</translation>
     </message>
     <message>
-        <location line="-263"/>
+        <location line="-266"/>
         <source>Linetypes and Lineweights</source>
         <translation>Tipos de línea y luces de línea</translation>
     </message>
@@ -6214,7 +6229,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Utilice la resolución completa de la pantalla Retina</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+117"/>
         <source>Anti-aliasing on by default</source>
         <translation>Antialiasing activado por defecto</translation>
     </message>
@@ -7044,7 +7059,7 @@ Ver gráficos</translatorcomment>
         <translation type="vanished">Terminar</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translation>Ángulo:</translation>
     </message>
@@ -7382,7 +7397,7 @@ Delta Y:</translatorcomment>
         <translation>Circunferencia</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation>Área:</translation>
     </message>
@@ -9767,12 +9782,12 @@ en los resultados de búsqueda:</translation>
         <translation>&amp;Eliminar original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Conservar original</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+85"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Usar capa y los &amp;atributos actual</translation>
     </message>
@@ -10238,7 +10253,7 @@ en los resultados de búsqueda:</translation>
         <translation>Elija línea, arco, círculo o elipse</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
             <numerusform>Radio caído por debajo de 0,0 después %n de círculo concéntrico.</numerusform>
@@ -11604,17 +11619,17 @@ Punto objetivo</translatorcomment>
         <translation>&amp;Eliminar original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Conservar original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Copias &amp;múltiples</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>Angle &amp;a:</source>
         <translation>Ángulo &amp;a:</translation>
     </message>
@@ -11655,17 +11670,17 @@ Punto objetivo</translatorcomment>
         <translation>&amp;Eliminar original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Conservar original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Copias &amp;múltiples</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>Á&amp;ngulo (a):</translation>
     </message>
@@ -12094,17 +12109,17 @@ Punto objetivo</translatorcomment>
         <translation>&amp;Eliminar original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Conservar original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Copias &amp;múltiples</translation>
     </message>
     <message>
-        <location line="+112"/>
+        <location line="+115"/>
         <source>Factor x:</source>
         <translation>Factor x:</translation>
     </message>
@@ -13872,7 +13887,7 @@ Punto objetivo</translatorcomment>
         <translation>Por defecto:</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;Deshacer</translation>
     </message>
@@ -13938,7 +13953,7 @@ Punto objetivo</translatorcomment>
         <translation>Otros...</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation>Grados</translation>
     </message>
@@ -14524,17 +14539,17 @@ Punto objetivo</translatorcomment>
         <translation>&amp;Eliminar original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Conservar original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Copias &amp;múltiples</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+89"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Usar capa y los &amp;atributos actual</translation>
     </message>
@@ -14597,17 +14612,17 @@ Punto objetivo</translatorcomment>
         <translation>&amp;Eliminar original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Conservar original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>Copias &amp;múltiples</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>Ángulo (&amp;a):</translation>
     </message>
@@ -14632,7 +14647,7 @@ Punto objetivo</translatorcomment>
         <translation>Elegir entidad para recortar</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Las dos entidades no se cruzan, o actualmente no son compatibles con el recorte.</translation>

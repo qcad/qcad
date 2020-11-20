@@ -24,6 +24,7 @@
 RPropertyTypeId RSplineEntity::PropertyCustom;
 RPropertyTypeId RSplineEntity::PropertyHandle;
 RPropertyTypeId RSplineEntity::PropertyProtected;
+RPropertyTypeId RSplineEntity::PropertyWorkingSet;
 RPropertyTypeId RSplineEntity::PropertyType;
 RPropertyTypeId RSplineEntity::PropertyBlock;
 RPropertyTypeId RSplineEntity::PropertyLayer;
@@ -72,6 +73,7 @@ void RSplineEntity::init() {
     RSplineEntity::PropertyCustom.generateId(typeid(RSplineEntity), RObject::PropertyCustom);
     RSplineEntity::PropertyHandle.generateId(typeid(RSplineEntity), RObject::PropertyHandle);
     RSplineEntity::PropertyProtected.generateId(typeid(RSplineEntity), RObject::PropertyProtected);
+    RSplineEntity::PropertyWorkingSet.generateId(typeid(RSplineEntity), RObject::PropertyWorkingSet);
     RSplineEntity::PropertyType.generateId(typeid(RSplineEntity), REntity::PropertyType);
     RSplineEntity::PropertyBlock.generateId(typeid(RSplineEntity), REntity::PropertyBlock);
     RSplineEntity::PropertyLayer.generateId(typeid(RSplineEntity), REntity::PropertyLayer);

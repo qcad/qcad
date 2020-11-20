@@ -131,6 +131,9 @@ public:
     static QScriptValue ecmaQFileReadAll(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQFileFileName(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQFileWrite(QScriptContext* context, QScriptEngine* engine);
+    static QScriptValue ecmaQImagePixelColor(QScriptContext* context, QScriptEngine* engine);
+    static QScriptValue ecmaQImageSetPixelColor(QScriptContext* context, QScriptEngine* engine);
+    static QScriptValue ecmaQImageSetColorTable(QScriptContext* context, QScriptEngine* engine);
 
     //static QScriptValue ecmaGetShapeIntersections(QScriptContext* context, QScriptEngine* engine);
 

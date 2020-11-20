@@ -26,6 +26,7 @@
 RPropertyTypeId REntity::PropertyCustom;
 RPropertyTypeId REntity::PropertyHandle;
 RPropertyTypeId REntity::PropertyProtected;
+RPropertyTypeId REntity::PropertyWorkingSet;
 RPropertyTypeId REntity::PropertyType;
 RPropertyTypeId REntity::PropertyBlock;
 RPropertyTypeId REntity::PropertyLayer;
@@ -88,6 +89,7 @@ void REntity::init() {
     REntity::PropertyCustom.generateId(typeid(REntity), RObject::PropertyCustom);
     REntity::PropertyHandle.generateId(typeid(REntity), RObject::PropertyHandle);
     REntity::PropertyProtected.generateId(typeid(REntity), RObject::PropertyProtected);
+    REntity::PropertyWorkingSet.generateId(typeid(REntity), RObject::PropertyWorkingSet);
     REntity::PropertyType.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Type"));
     REntity::PropertyBlock.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Block ID"));
     REntity::PropertyLayer.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Layer"));
@@ -387,7 +389,8 @@ bool REntity::isVisible(RBlock::Id blockId) const {
  * \return true if this entity can be edited (i.e. is not on a locked layer).
  */
 bool REntity::isEditable(bool allowInvisible) const {
-    if (getDocument()==NULL) {
+    const RDocument* doc = getDocument();
+    if (doc==NULL) {
         return true;
     }
 
@@ -397,10 +400,29 @@ bool REntity::isEditable(bool allowInvisible) const {
     }
 
     // entities on locked layers are not editable:
-    if (getDocument()->isLayerLocked(getLayerId())) {
+    if (doc->isLayerLocked(getLayerId())) {
         return false;
     }
 
+    // entity not in the current working set:
+    if (!isInWorkingSet()) {
+        return false;
+    }
+
+    return true;
+}
+
+bool REntity::isInWorkingSet() const {
+    const RDocument* doc = getDocument();
+    if (doc==NULL) {
+        return false;
+    }
+    // entity not in the current working set:
+    if (doc->getWorkingSetBlockReferenceId()!=RObject::INVALID_ID) {
+        if (!isWorkingSet()) {
+            return false;
+        }
+    }
     return true;
 }
 
@@ -408,7 +430,13 @@ bool REntity::isEditable(bool allowInvisible) const {
  * \copydoc REntityData::setSelected
  */
 void REntity::setSelected(bool on) {
-    getData().setSelected(on);
+    if (isInWorkingSet()) {
+        getData().setSelected(on);
+    }
+    else {
+        // special type of selection for block editing tool (?):
+        setSelectedWorkingSet(on);
+    }
 }
 
 QSharedPointer<REntity> REntity::scaleNonUniform(const RVector& scaleFactors, const RVector& center) {

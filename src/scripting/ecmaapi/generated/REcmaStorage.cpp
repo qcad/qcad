@@ -93,6 +93,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryAllEntities, "queryAllEntities");
             
+            REcmaHelper::registerFunction(&engine, proto, queryWorkingSetEntities, "queryWorkingSetEntities");
+            
             REcmaHelper::registerFunction(&engine, proto, queryAllUcs, "queryAllUcs");
             
             REcmaHelper::registerFunction(&engine, proto, queryAllLayers, "queryAllLayers");
@@ -333,6 +335,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isSelected, "isSelected");
             
+            REcmaHelper::registerFunction(&engine, proto, isSelectedWorkingSet, "isSelectedWorkingSet");
+            
             REcmaHelper::registerFunction(&engine, proto, isEntity, "isEntity");
             
             REcmaHelper::registerFunction(&engine, proto, isLayerLocked, "isLayerLocked");
@@ -430,6 +434,8 @@
             REcmaHelper::registerFunction(&engine, proto, addModifiedListener, "addModifiedListener");
             
             REcmaHelper::registerFunction(&engine, proto, update, "update");
+            
+            REcmaHelper::registerFunction(&engine, proto, getWorkingSetBlockReferenceId, "getWorkingSetBlockReferenceId");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RStorage*>(), *proto);
@@ -1323,6 +1329,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::queryAllEntities", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::queryWorkingSetEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::queryWorkingSetEntities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::queryWorkingSetEntities";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("queryWorkingSetEntities", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < REntity::Id >'
+    QSet < REntity::Id > cppResult =
+        
+               self->queryWorkingSetEntities();
+        // return type: QSet < REntity::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.queryWorkingSetEntities().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::queryWorkingSetEntities", context, engine);
             return result;
         }
          QScriptValue
@@ -9819,6 +9875,66 @@
             return result;
         }
          QScriptValue
+        REcmaStorage::isSelectedWorkingSet
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::isSelectedWorkingSet", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::isSelectedWorkingSet";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("isSelectedWorkingSet", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: REntity::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    REntity::Id
+                    a0 =
+                    (REntity::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isSelectedWorkingSet(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.isSelectedWorkingSet().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::isSelectedWorkingSet", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaStorage::isEntity
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -13470,6 +13586,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::update", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::getWorkingSetBlockReferenceId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::getWorkingSetBlockReferenceId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::getWorkingSetBlockReferenceId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("getWorkingSetBlockReferenceId", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RBlockReferenceEntity::Id'
+    RBlockReferenceEntity::Id cppResult =
+        
+               self->getWorkingSetBlockReferenceId();
+        // return type: RBlockReferenceEntity::Id
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.getWorkingSetBlockReferenceId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::getWorkingSetBlockReferenceId", context, engine);
             return result;
         }
          QScriptValue REcmaStorage::toString

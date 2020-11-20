@@ -108,6 +108,12 @@
         setDimensionFont
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getWorkingSetBlockReferenceId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setWorkingSetBlockReferenceId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addAutoVariable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

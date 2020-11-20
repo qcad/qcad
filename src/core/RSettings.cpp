@@ -79,6 +79,7 @@ int RSettings::positionByMousePress = -1;
 int RSettings::allowMouseMoveInterruptions = -1;
 int RSettings::useSolidLineSelection = -1;
 double RSettings::arcAngleLengthThreshold = -1;
+double RSettings::fadingFactor = -1;
 double RSettings::minArcAngleStep = -1;
 int RSettings::dashThreshold = -1;
 int RSettings::textRenderedAsText = -1;
@@ -853,6 +854,13 @@ int RSettings::getColorThreshold() {
 
 int RSettings::getTextHeightThreshold() {
     return getValue("GraphicsView/TextHeightThreshold", 3).toInt();
+}
+
+double RSettings::getFadingFactor() {
+    if (fadingFactor<0.0) {
+        fadingFactor = getValue("GraphicsView/FadingFactor", 3.5).toDouble();
+    }
+    return fadingFactor;
 }
 
 double RSettings::getArcAngleLengthThreshold() {
@@ -1748,6 +1756,7 @@ void RSettings::resetCache() {
     cache.clear();
     darkMode = -1;
     darkGuiBackground = -1;
+    fadingFactor = -1;
 }
 
 void RSettings::uninit() {

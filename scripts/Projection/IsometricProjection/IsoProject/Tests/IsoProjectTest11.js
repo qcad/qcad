@@ -16,6 +16,9 @@ IsoProjectTest11.prototype.test00 = function() {
     this.setUp();
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::LineToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::LineToolsPanel::Line2PButton');
+    this.setToolOption('Line/Type', 'TypeSegment');
+    this.setToolOption('Line2P/Restrict', 'false');
+    this.updateToolOptions();
     this.setZoom(12.413102687059721, new RVector(2.139, 2.60251, 0, true));
     var p = new RVector(0.19724, 19.793182);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

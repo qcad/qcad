@@ -551,6 +551,14 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     classQFile.property("prototype").setProperty("write",
             engine->newFunction(ecmaQFileWrite));
 
+    QScriptValue classQImage = globalObject.property("QImage");
+    classQImage.property("prototype").setProperty("pixelColor",
+                                                 engine->newFunction(ecmaQImagePixelColor));
+    classQImage.property("prototype").setProperty("setPixelColor",
+                                                 engine->newFunction(ecmaQImageSetPixelColor));
+    classQImage.property("prototype").setProperty("setColorTable",
+                                                  engine->newFunction(ecmaQImageSetColorTable));
+
 #if QT_VERSION >= 0x050000
     QScriptValue classQLineEdit = globalObject.property("QLineEdit");
     classQLineEdit.property("prototype").setProperty("validator",
@@ -2388,6 +2396,71 @@ QScriptValue RScriptHandlerEcma::ecmaQFileWrite(QScriptContext* context, QScript
     qint64 ret = self->write(*ap0);
 
     return qScriptValueFromValue(engine, ret);
+}
+
+QScriptValue RScriptHandlerEcma::ecmaQImagePixelColor(QScriptContext* context, QScriptEngine* engine) {
+    QImage* self = qscriptvalue_cast<QImage*>(context->thisObject());
+    if (self == NULL) {
+        return throwError("QImage.pixelColor: Object is NULL", context);
+    }
+
+    if (context->argumentCount() != 2) {
+        return throwError("Wrong number/types of arguments for QImage.pixelColor.", context);
+    }
+
+    int a0 = qscriptvalue_cast<int>(context->argument(0));
+    int a1 = qscriptvalue_cast<int>(context->argument(1));
+#if QT_VERSION >= 0x050600
+    QColor ret = self->pixelColor(a0, a1);
+#else
+    // TODO:
+    QColor ret = QColor("white");
+    Q_ASSERT(false);
+#endif
+
+    return qScriptValueFromValue(engine, ret);
+}
+
+QScriptValue RScriptHandlerEcma::ecmaQImageSetPixelColor(QScriptContext* context, QScriptEngine* engine) {
+    QImage* self = qscriptvalue_cast<QImage*>(context->thisObject());
+    if (self == NULL) {
+        return throwError("QImage.setPixelColor: Object is NULL", context);
+    }
+
+    if (context->argumentCount() != 3) {
+        return throwError("Wrong number/types of arguments for QImage.setPixelColor.", context);
+    }
+
+    int a0 = qscriptvalue_cast<int>(context->argument(0));
+    int a1 = qscriptvalue_cast<int>(context->argument(1));
+    QColor a2 = qscriptvalue_cast<QColor>(context->argument(2));
+#if QT_VERSION >= 0x050600
+    self->setPixelColor(a0, a1, a2);
+#else
+    // TODO:
+    Q_ASSERT(false);
+#endif
+
+    return engine->undefinedValue();
+}
+
+QScriptValue RScriptHandlerEcma::ecmaQImageSetColorTable(QScriptContext *context, QScriptEngine *engine) {
+    QImage* self = qscriptvalue_cast<QImage*>(context->thisObject());
+    if (self == NULL) {
+        return throwError("QImage.setColorTable: Object is NULL", context);
+    }
+
+    if (context->argumentCount() != 1) {
+        return throwError("Wrong number/types of arguments for QImage.setColorTable.", context);
+    }
+
+    QVector<QRgb> a0;
+    REcmaHelper::fromScriptValue(engine, context->argument(0), a0);
+    //int a1 = qscriptvalue_cast<int>(context->argument(1));
+    //QColor a2 = qscriptvalue_cast<QColor>(context->argument(2));
+    self->setColorTable(a0);
+
+    return engine->undefinedValue();
 }
 
 //QScriptValue RScriptHandlerEcma::ecmaBlockEvents(QScriptContext* context,

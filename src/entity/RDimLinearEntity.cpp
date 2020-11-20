@@ -22,6 +22,7 @@
 RPropertyTypeId RDimLinearEntity::PropertyCustom;
 RPropertyTypeId RDimLinearEntity::PropertyHandle;
 RPropertyTypeId RDimLinearEntity::PropertyProtected;
+RPropertyTypeId RDimLinearEntity::PropertyWorkingSet;
 RPropertyTypeId RDimLinearEntity::PropertyType;
 RPropertyTypeId RDimLinearEntity::PropertyBlock;
 RPropertyTypeId RDimLinearEntity::PropertyLayer;
@@ -73,6 +74,7 @@ void RDimLinearEntity::init() {
     RDimLinearEntity::PropertyCustom.generateId(typeid(RDimLinearEntity), RObject::PropertyCustom);
     RDimLinearEntity::PropertyHandle.generateId(typeid(RDimLinearEntity), RObject::PropertyHandle);
     RDimLinearEntity::PropertyProtected.generateId(typeid(RDimLinearEntity), RObject::PropertyProtected);
+    RDimLinearEntity::PropertyWorkingSet.generateId(typeid(RDimLinearEntity), RObject::PropertyWorkingSet);
     RDimLinearEntity::PropertyType.generateId(typeid(RDimLinearEntity), REntity::PropertyType);
     RDimLinearEntity::PropertyBlock.generateId(typeid(RDimLinearEntity), REntity::PropertyBlock);
     RDimLinearEntity::PropertyLayer.generateId(typeid(RDimLinearEntity), REntity::PropertyLayer);

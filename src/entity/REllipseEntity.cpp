@@ -24,6 +24,7 @@
 RPropertyTypeId REllipseEntity::PropertyCustom;
 RPropertyTypeId REllipseEntity::PropertyHandle;
 RPropertyTypeId REllipseEntity::PropertyProtected;
+RPropertyTypeId REllipseEntity::PropertyWorkingSet;
 RPropertyTypeId REllipseEntity::PropertyType;
 RPropertyTypeId REllipseEntity::PropertyBlock;
 RPropertyTypeId REllipseEntity::PropertyLayer;
@@ -67,6 +68,7 @@ void REllipseEntity::init() {
     REllipseEntity::PropertyCustom.generateId(typeid(REllipseEntity), RObject::PropertyCustom);
     REllipseEntity::PropertyHandle.generateId(typeid(REllipseEntity), RObject::PropertyHandle);
     REllipseEntity::PropertyProtected.generateId(typeid(REllipseEntity), RObject::PropertyProtected);
+    REllipseEntity::PropertyWorkingSet.generateId(typeid(REllipseEntity), RObject::PropertyWorkingSet);
     REllipseEntity::PropertyType.generateId(typeid(REllipseEntity), REntity::PropertyType);
     REllipseEntity::PropertyBlock.generateId(typeid(REllipseEntity), REntity::PropertyBlock);
     REllipseEntity::PropertyLayer.generateId(typeid(REllipseEntity), REntity::PropertyLayer);

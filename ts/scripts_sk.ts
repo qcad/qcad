@@ -1296,11 +1296,16 @@ Prajete si ho obnoviť?</translation>
         <translation>Nástroje bloku</translation>
     </message>
     <message>
+        <location line="+110"/>
+        <source>Cannot edit block while editing a block in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Show block tools</source>
         <translation type="vanished">Zobraziť nástroje bloku</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-82"/>
         <source>&amp;Block</source>
         <translation>&amp;Blok</translation>
     </message>
@@ -2653,7 +2658,7 @@ Prajete si ho obnoviť?</translation>
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../scripts/DefaultAction.js" line="+90"/>
+        <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
         <translation>Vyberte prvok alebo oblasť</translation>
     </message>
@@ -2695,7 +2700,7 @@ Prajete si ho obnoviť?</translation>
         <translation>Presunúť prvok na požadované miesto</translation>
     </message>
     <message>
-        <location line="+388"/>
+        <location line="+394"/>
         <source>Move Reference Point</source>
         <translation>Presunúť referenčný bod</translation>
     </message>
@@ -3840,12 +3845,12 @@ už existuje v zozname.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2097"/>
+        <location line="+2102"/>
         <source>Cancel</source>
         <translation>Zrušiť</translation>
     </message>
     <message>
-        <location line="-2096"/>
+        <location line="-2101"/>
         <source>Done</source>
         <translation>Hotovo</translation>
     </message>
@@ -3880,17 +3885,22 @@ už existuje v zozname.</translation>
         <translation>CAD Nástroje</translation>
     </message>
     <message>
-        <location line="+710"/>
+        <location line="+711"/>
+        <source>Entity is not in working set.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Entity is on a locked layer.</source>
         <translation>Prvok je na zamknutej vrstve.</translation>
     </message>
     <message>
-        <location line="+224"/>
+        <location line="+225"/>
         <source>Length:</source>
         <translation>Dĺžka:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translation>Prvok nie je blok.</translation>
     </message>
@@ -5412,7 +5422,12 @@ BUG: Interferes with group castings.</source>
         <translation>Dvojklikom na blok otvoriť úpravu bloku</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+28"/>
+        <source>Edit block reference in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <source>Tolerance:</source>
         <translation type="unfinished">Tolerancia:</translation>
     </message>
@@ -5446,7 +5461,7 @@ BUG: Interferes with group castings.</source>
         <translation>Zvýrazniť prvok v rozsahu</translation>
     </message>
     <message>
-        <location line="-232"/>
+        <location line="-259"/>
         <source>Right-Click</source>
         <translation>Kliknutie pravým tlačidlom myši</translation>
     </message>
@@ -5460,7 +5475,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Kliknutím na prvok sa zobrazí kontextová ponuka</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+73"/>
         <source>Double-click to select contour</source>
         <translation>Dvojklikom označiť obrys</translation>
     </message>
@@ -5569,7 +5584,7 @@ BUG: Interferes with group castings.</source>
         <translation>Zamedziť zobrazeniu čierne na čiernom / biele na bielom</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5589,7 +5604,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-690"/>
+        <location line="-693"/>
         <source>Color lightness threshold:</source>
         <translation>Hranica svetlosti farby:</translation>
     </message>
@@ -5603,7 +5618,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Typy čiar</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+53"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automaticky použiť typy čiar na základnej obrazovke v zobrazení modelu</translation>
     </message>
@@ -5661,7 +5676,7 @@ BUG: Interferes with group castings.</source>
         <translation>Predvolené vyhladenie prvkov</translation>
     </message>
     <message>
-        <location line="-122"/>
+        <location line="-125"/>
         <source>Linetypes and Lineweights</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5671,7 +5686,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+379"/>
+        <location line="+382"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Časový limit pre zobrazenie šrafovania:</translation>
     </message>
@@ -6309,7 +6324,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Hotovo</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translation>Uhol:</translation>
     </message>
@@ -6620,7 +6635,7 @@ BUG: Interferes with group castings.</source>
         <translation>Obvod</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation>Plocha krivky:</translation>
     </message>
@@ -8658,12 +8673,12 @@ vo výsledku vyhľadania:</translation>
         <translation>&amp;Vymazať originál</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>P&amp;onechať originál</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+85"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Použiť aktuálnu vrstvu a vl&amp;astnosti</translation>
     </message>
@@ -9075,7 +9090,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Vyberte čiaru, oblúk, kružnicu alebo elipsu</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
             <numerusform>Polomer klesol pod hodnotu 0.0 za %n paralelnú kružnicu(-e).</numerusform>
@@ -10237,17 +10252,17 @@ vo výsledku vyhľadania:</translation>
         <translation>&amp;Vymazať originál</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>P&amp;onechať originál</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Viac kópií</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>Angle &amp;a:</source>
         <translation>Uhol &amp;a:</translation>
     </message>
@@ -10288,17 +10303,17 @@ vo výsledku vyhľadania:</translation>
         <translation>&amp;Vymazať originál</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>P&amp;onechať originál</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Viac kópií</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Uhol (a):</translation>
     </message>
@@ -10669,17 +10684,17 @@ vo výsledku vyhľadania:</translation>
         <translation>&amp;Vymazať originál</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>P&amp;onechať originál</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Viac kópií</translation>
     </message>
     <message>
-        <location line="+112"/>
+        <location line="+115"/>
         <source>Factor x:</source>
         <translation type="unfinished">Faktor x:</translation>
     </message>
@@ -12270,7 +12285,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Prednastavené:</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;Späť</translation>
     </message>
@@ -12335,7 +12350,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Ďalšie...</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation>Stupne</translation>
     </message>
@@ -12888,17 +12903,17 @@ vo výsledku vyhľadania:</translation>
         <translation>&amp;Vymazať originál</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>P&amp;onechať originál</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Viac kópií</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+89"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Použiť aktuálnu vrstvu a vl&amp;astnosti</translation>
     </message>
@@ -12934,17 +12949,17 @@ vo výsledku vyhľadania:</translation>
         <translation>&amp;Vymazať originál</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>P&amp;onechať originál</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Viac kópií</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>Uhol (&amp;a):</translation>
     </message>
@@ -12967,7 +12982,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Vyberte prvok ktorý chcete predĺžiť</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>Tieto dva prvky sa nepretínajú alebo nie sú podporované pre orezanie.</translation>
     </message>

@@ -90,6 +90,12 @@
         setSelected
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isSelectedWorkingSet
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setSelectedWorkingSet
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isUpdatesEnabled
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -295,6 +301,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isEditable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isInWorkingSet
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getComplexity

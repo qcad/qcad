@@ -29,6 +29,9 @@
             <property name="text">
              <string>&amp;Delete original</string>
             </property>
+            <property name="shortcut">
+             <string notr="true">Ctrl+D</string>
+            </property>
             <property name="checked">
              <bool>true</bool>
             </property>
@@ -39,12 +42,18 @@
             <property name="text">
              <string>&amp;Keep original</string>
             </property>
+            <property name="shortcut">
+             <string notr="true">Ctrl+K</string>
+            </property>
            </widget>
           </item>
           <item>
            <widget class="QRadioButton" name="MultipleCopies">
             <property name="text">
              <string>&amp;Multiple copies</string>
+            </property>
+            <property name="shortcut">
+             <string notr="true">Ctrl+M</string>
             </property>
            </widget>
           </item>

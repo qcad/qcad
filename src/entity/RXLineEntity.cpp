@@ -23,6 +23,7 @@
 RPropertyTypeId RXLineEntity::PropertyCustom;
 RPropertyTypeId RXLineEntity::PropertyHandle;
 RPropertyTypeId RXLineEntity::PropertyProtected;
+RPropertyTypeId RXLineEntity::PropertyWorkingSet;
 RPropertyTypeId RXLineEntity::PropertyType;
 RPropertyTypeId RXLineEntity::PropertyBlock;
 RPropertyTypeId RXLineEntity::PropertyLayer;
@@ -64,6 +65,7 @@ void RXLineEntity::init() {
     RXLineEntity::PropertyCustom.generateId(typeid(RXLineEntity), RObject::PropertyCustom);
     RXLineEntity::PropertyHandle.generateId(typeid(RXLineEntity), RObject::PropertyHandle);
     RXLineEntity::PropertyProtected.generateId(typeid(RXLineEntity), RObject::PropertyProtected);
+    RXLineEntity::PropertyWorkingSet.generateId(typeid(RXLineEntity), RObject::PropertyWorkingSet);
     RXLineEntity::PropertyType.generateId(typeid(RXLineEntity), REntity::PropertyType);
     RXLineEntity::PropertyBlock.generateId(typeid(RXLineEntity), REntity::PropertyBlock);
     RXLineEntity::PropertyLayer.generateId(typeid(RXLineEntity), REntity::PropertyLayer);

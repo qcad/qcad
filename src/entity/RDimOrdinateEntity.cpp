@@ -22,6 +22,7 @@
 RPropertyTypeId RDimOrdinateEntity::PropertyCustom;
 RPropertyTypeId RDimOrdinateEntity::PropertyHandle;
 RPropertyTypeId RDimOrdinateEntity::PropertyProtected;
+RPropertyTypeId RDimOrdinateEntity::PropertyWorkingSet;
 RPropertyTypeId RDimOrdinateEntity::PropertyType;
 RPropertyTypeId RDimOrdinateEntity::PropertyBlock;
 RPropertyTypeId RDimOrdinateEntity::PropertyLayer;
@@ -75,6 +76,7 @@ void RDimOrdinateEntity::init() {
     RDimOrdinateEntity::PropertyCustom.generateId(typeid(RDimOrdinateEntity), RObject::PropertyCustom);
     RDimOrdinateEntity::PropertyHandle.generateId(typeid(RDimOrdinateEntity), RObject::PropertyHandle);
     RDimOrdinateEntity::PropertyProtected.generateId(typeid(RDimOrdinateEntity), RObject::PropertyProtected);
+    RDimOrdinateEntity::PropertyWorkingSet.generateId(typeid(RDimOrdinateEntity), RObject::PropertyWorkingSet);
     RDimOrdinateEntity::PropertyType.generateId(typeid(RDimOrdinateEntity), REntity::PropertyType);
     RDimOrdinateEntity::PropertyBlock.generateId(typeid(RDimOrdinateEntity), REntity::PropertyBlock);
     RDimOrdinateEntity::PropertyLayer.generateId(typeid(RDimOrdinateEntity), REntity::PropertyLayer);

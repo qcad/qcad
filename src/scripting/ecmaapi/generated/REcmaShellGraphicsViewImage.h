@@ -670,13 +670,15 @@
     
     
       void paintImage(
-                QPainter * painter, RImageData & image
+                QPainter * painter, RImageData & image, bool workingSet
+        = true
             );
         
     
     
       void paintText(
-                QPainter * painter, RTextBasedData & text
+                QPainter * painter, RTextBasedData & text, bool workingSet
+        = true
             );
         
     

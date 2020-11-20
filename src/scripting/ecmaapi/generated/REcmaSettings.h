@@ -220,6 +220,9 @@
         getColorThreshold
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getFadingFactor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getTextHeightThreshold
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
