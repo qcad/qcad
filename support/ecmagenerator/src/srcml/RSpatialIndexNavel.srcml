@@ -257,7 +257,7 @@
         <function><type><name>void</name></type> <name>visitData</name><parameter_list>(<param><decl><type><name><name>std</name>::<name>vector<argument_list>&lt;<argument><name>const</name> <name><name>SpatialIndex</name>::<name>IData</name></name>*</argument>&gt;</argument_list></name></name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <block>{
             <decl_stmt><decl><type><name><name>std</name>::<name>vector<argument_list>&lt;<argument><name>const</name> <name><name>SpatialIndex</name>::<name>IData</name></name>*</argument>&gt;</argument_list></name>::<name>iterator</name></name></type> <name>it</name></decl>;</decl_stmt>
             <for>for (<init><expr><name>it</name> = <name>v</name>.<call><name>begin</name><argument_list>()</argument_list></call></expr>;</init> <condition><expr><name>it</name> != <name>v</name>.<call><name>end</name><argument_list>()</argument_list></call></expr>;</condition> <incr><expr><name>it</name>++</expr></incr>) <block>{
-                <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr>"Visitor::visitData[]: %lld\n"</expr></argument>, <argument><expr>(*<name>it</name>)-&gt;<call><name>getIdentifier</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+                <macro><name>printf</name><argument_list>(<argument>"Visitor::visitData[]: %lld\n"</argument>, <argument>(long long int)(*it)-&gt;getIdentifier()</argument>)</argument_list></macro>;
             }</block></for>
         }</block></function>
 

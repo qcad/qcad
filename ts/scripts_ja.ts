@@ -1284,11 +1284,16 @@ Do you wish to recover it?</source>
         <translation>ブロックツール</translation>
     </message>
     <message>
+        <location line="+110"/>
+        <source>Cannot edit block while editing a block in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Show block tools</source>
         <translation type="vanished">表示ブロックツール</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-82"/>
         <source>&amp;Block</source>
         <translation>&amp;B ブロック</translation>
     </message>
@@ -2653,7 +2658,7 @@ Do you wish to recover it?</source>
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../scripts/DefaultAction.js" line="+90"/>
+        <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
         <translation>エンティティまたは領域を選択</translation>
     </message>
@@ -2695,7 +2700,7 @@ Do you wish to recover it?</source>
         <translation>希望の位置にエンティティを移動</translation>
     </message>
     <message>
-        <location line="+388"/>
+        <location line="+394"/>
         <source>Move Reference Point</source>
         <translation>参照点の移動</translation>
     </message>
@@ -3868,12 +3873,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2097"/>
+        <location line="+2102"/>
         <source>Cancel</source>
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location line="-2096"/>
+        <location line="-2101"/>
         <source>Done</source>
         <translation type="unfinished">完了</translation>
     </message>
@@ -3908,17 +3913,22 @@ is already in the list.</source>
         <translation>CADツール</translation>
     </message>
     <message>
-        <location line="+710"/>
+        <location line="+711"/>
+        <source>Entity is not in working set.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Entity is on a locked layer.</source>
         <translation>エンティティはロックされた画層にあります。</translation>
     </message>
     <message>
-        <location line="+224"/>
+        <location line="+225"/>
         <source>Length:</source>
         <translation>長さ:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translation>エンティティはブロック参照ではありません。</translation>
     </message>
@@ -5460,7 +5470,12 @@ BUG: Interferes with group castings.</source>
         <translation>ブロック参照をダブルクリックしてブロックをオープン</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+28"/>
+        <source>Edit block reference in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <source>Tolerance:</source>
         <translation type="unfinished">許容誤差:</translation>
     </message>
@@ -5494,7 +5509,7 @@ BUG: Interferes with group castings.</source>
         <translation>範囲内のエンティティをハイライト</translation>
     </message>
     <message>
-        <location line="-232"/>
+        <location line="-259"/>
         <source>Right-Click</source>
         <translation>右クリック</translation>
     </message>
@@ -5504,7 +5519,7 @@ BUG: Interferes with group castings.</source>
         <translation>右クリックでエンティティを選択解除</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+73"/>
         <source>Double-click to select contour</source>
         <translation>ダブルクリックで輪郭を選択</translation>
     </message>
@@ -5613,7 +5628,7 @@ BUG: Interferes with group castings.</source>
         <translation>白に白/黒に黒の表示を防ぐ</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5633,7 +5648,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-690"/>
+        <location line="-693"/>
         <source>Color lightness threshold:</source>
         <translation>色の明るさ閾値:</translation>
     </message>
@@ -5647,7 +5662,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">ラインタイプ</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+56"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>自動的にモデルビューの基本線種を使用</translation>
     </message>
@@ -5677,7 +5692,7 @@ BUG: Interferes with group castings.</source>
         <translation>弧を描く時に分割する最小角度（度）</translation>
     </message>
     <message>
-        <location line="-263"/>
+        <location line="-266"/>
         <source>Linetypes and Lineweights</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5691,7 +5706,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Retinaディスプレイでフル解像度を用いる</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+117"/>
         <source>Anti-aliasing on by default</source>
         <translation>デフォルトでアンチエイリアスする</translation>
     </message>
@@ -6425,7 +6440,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">完了</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translation>角度:</translation>
     </message>
@@ -6736,7 +6751,7 @@ BUG: Interferes with group castings.</source>
         <translation>外周</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation>ポリライン面積:</translation>
     </message>
@@ -8898,12 +8913,12 @@ shown in search results:</source>
         <translation>&amp;D オリジナルを削除</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;K オリジナルを維持</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+85"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>&amp;a 現在の画層と属性を利用</translation>
     </message>
@@ -9319,7 +9334,7 @@ shown in search results:</source>
         <translation>線分,弧,円または楕円を選択してください</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -10493,17 +10508,17 @@ shown in search results:</source>
         <translation>&amp;D オリジナルを削除</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;K オリジナルを維持</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;M 多重コピー</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>Angle &amp;a:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10544,17 +10559,17 @@ shown in search results:</source>
         <translation>&amp;D オリジナルを削除</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;K オリジナルを維持</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;M 多重コピー</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;A 角度(a):</translation>
     </message>
@@ -10929,17 +10944,17 @@ shown in search results:</source>
         <translation>&amp;D オリジナルを削除</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;K オリジナルを維持</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;M 多重コピー</translation>
     </message>
     <message>
-        <location line="+112"/>
+        <location line="+115"/>
         <source>Factor x:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12659,7 +12674,7 @@ shown in search results:</source>
         <translation>デフォルト:</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;U アンドゥ</translation>
     </message>
@@ -12724,7 +12739,7 @@ shown in search results:</source>
         <translation>その他...</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation>角度</translation>
     </message>
@@ -13277,17 +13292,17 @@ shown in search results:</source>
         <translation>&amp;D オリジナルを削除</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;K オリジナルを維持</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;M 多重コピー</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+89"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>&amp;a 現在の画層と属性を使用</translation>
     </message>
@@ -13335,17 +13350,17 @@ shown in search results:</source>
         <translation>&amp;D オリジナルを削除</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;K オリジナルを維持</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;M 多重コピー</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;A 角度(a):</translation>
     </message>
@@ -13368,7 +13383,7 @@ shown in search results:</source>
         <translation>トリム対象を選択</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>２つのエンティティは交差していないか、現在トリムをサポートされていません。</translation>
     </message>

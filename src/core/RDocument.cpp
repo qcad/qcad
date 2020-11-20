@@ -352,6 +352,7 @@ void RDocument::init(bool beforeLoad) {
     transaction.addObject(docVars);
 
     transaction.end();
+    resetTransactionStack();
     storage.setModified(false);
 }
 
@@ -425,10 +426,11 @@ void RDocument::clear(bool beforeLoad) {
     fileName = "";
     storage.clear();
     clearSpatialIndices();
-    transactionStack.reset();
 
     init(beforeLoad);
     setUnit(u);
+
+    transactionStack.reset();
 }
 
 
@@ -1252,6 +1254,13 @@ QSet<REntity::Id> RDocument::queryAllEntities(bool undone, bool allBlocks, QList
 }
 
 /**
+ * \copydoc RStorage::queryWorkingSetEntities
+ */
+QSet<REntity::Id> RDocument::queryWorkingSetEntities() const {
+    return storage.queryWorkingSetEntities();
+}
+
+/**
  * Queries all UCSs of this document.
  *
  * \return Set of UCS IDs.
@@ -1697,7 +1706,7 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
         }
 
         if (selectedOnly) {
-            if (!entity->isSelected()) {
+            if (!entity->isSelected() && !entity->isSelectedWorkingSet()) {
                 continue;
             }
         }
@@ -2252,6 +2261,13 @@ QSharedPointer<RLinetype> RDocument::queryLinetype(const QString& linetypeName) 
  */
 bool RDocument::isSelected(REntity::Id entityId) {
     return storage.isSelected(entityId);
+}
+
+/**
+ * \copydoc RStorage::isSelectedWorkingSet
+ */
+bool RDocument::isSelectedWorkingSet(REntity::Id entityId) {
+    return storage.isSelectedWorkingSet(entityId);
 }
 
 /**
@@ -2896,6 +2912,14 @@ RDocument& RDocument::getClipboard() {
     }
 
     return *clipboard;
+}
+
+RBlockReferenceEntity::Id RDocument::getWorkingSetBlockReferenceId() const {
+    return storage.getWorkingSetBlockReferenceId();
+}
+
+void RDocument::setWorkingSetBlockReferenceId(RBlockReferenceEntity::Id id, int group, RTransaction* transaction) {
+    storage.setWorkingSetBlockReferenceId(id, group, transaction);
 }
 
 /**

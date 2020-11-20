@@ -314,6 +314,7 @@ QSharedPointer<RDocumentVariables> RStorage::startDocumentVariablesTransaction(R
 
     if (useLocalTransaction) {
         transaction = new RTransaction(*this, "Change document setting", true);
+        transaction->setType(RTransaction::ChangeDocumentSetting);
     }
 
     return queryDocumentVariables();
@@ -1171,6 +1172,10 @@ bool RStorage::isEntityVisible(const REntity& entity, RObject::Id blockId) const
     bool ignoreLayerVisibility = false;
 
     QSharedPointer<RLayer> layer = queryLayerDirect(layerId);
+    if (layer.isNull()) {
+        // entity might not be on a layer yet:
+        return true;
+    }
 
 //    qDebug() << "entity: ";
 //    dump();
@@ -1229,4 +1234,23 @@ bool RStorage::isEntityVisible(const REntity& entity, RObject::Id blockId) const
     }
 
     return true;
+}
+
+RBlockReferenceEntity::Id RStorage::getWorkingSetBlockReferenceId() const {
+    QSharedPointer<RDocumentVariables> v = queryDocumentVariablesDirect();
+    if (v.isNull()) {
+        return RObject::INVALID_ID;
+    }
+    return v->getWorkingSetBlockReferenceId();
+}
+
+void RStorage::setWorkingSetBlockReferenceId(RBlockReferenceEntity::Id id, int group, RTransaction* transaction) {
+    bool useLocalTransaction;
+    QSharedPointer<RDocumentVariables> docVars = startDocumentVariablesTransaction(transaction, useLocalTransaction);
+    if (group!=-1) {
+        transaction->setGroup(group);
+    }
+    Q_ASSERT(!docVars.isNull());
+    docVars->setWorkingSetBlockReferenceId(id);
+    endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
 }

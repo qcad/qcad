@@ -22,6 +22,7 @@
 RPropertyTypeId RDimAngular2LEntity::PropertyCustom;
 RPropertyTypeId RDimAngular2LEntity::PropertyHandle;
 RPropertyTypeId RDimAngular2LEntity::PropertyProtected;
+RPropertyTypeId RDimAngular2LEntity::PropertyWorkingSet;
 RPropertyTypeId RDimAngular2LEntity::PropertyType;
 RPropertyTypeId RDimAngular2LEntity::PropertyBlock;
 RPropertyTypeId RDimAngular2LEntity::PropertyLayer;
@@ -83,6 +84,7 @@ void RDimAngular2LEntity::init() {
     RDimAngular2LEntity::PropertyCustom.generateId(typeid(RDimAngular2LEntity), RObject::PropertyCustom);
     RDimAngular2LEntity::PropertyHandle.generateId(typeid(RDimAngular2LEntity), RObject::PropertyHandle);
     RDimAngular2LEntity::PropertyProtected.generateId(typeid(RDimAngular2LEntity), RObject::PropertyProtected);
+    RDimAngular2LEntity::PropertyWorkingSet.generateId(typeid(RDimAngular2LEntity), RObject::PropertyWorkingSet);
     RDimAngular2LEntity::PropertyType.generateId(typeid(RDimAngular2LEntity), REntity::PropertyType);
     RDimAngular2LEntity::PropertyBlock.generateId(typeid(RDimAngular2LEntity), REntity::PropertyBlock);
     RDimAngular2LEntity::PropertyLayer.generateId(typeid(RDimAngular2LEntity), REntity::PropertyLayer);

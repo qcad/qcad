@@ -73,6 +73,7 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyType</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyHandle</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyProtected</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyWorkingSet</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertySelected</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyInvisible</name></decl>;</decl_stmt>
 
@@ -86,7 +87,8 @@
         <expr><name>Undone</name> = 0x001</expr>,           <comment type="line">//!&lt; object is undone</comment>
         <expr><name>Protect</name> = 0x002</expr>,          <comment type="line">//!&lt; object is protected</comment>
         <expr><name>Selected</name> = 0x004</expr>,         <comment type="line">//!&lt; object is selected</comment>
-        <expr><name>Invisible</name> = 0x008</expr>         <comment type="line">//!&lt; object is invisible</comment>
+        <expr><name>Invisible</name> = 0x008</expr>,        <comment type="line">//!&lt; object is invisible</comment>
+        <expr><name>WorkingSet</name> = 0x010</expr>        <comment type="line">//!&lt; object is part of the current working set</comment>
     }</block>;</enum>
     <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Flags</argument>, <argument>ObjectFlag</argument>)</argument_list></macro>
 
@@ -127,7 +129,7 @@
         }</block></else></if>
     }</block></function>
     <function><type><name>bool</name></type> <name>getFlag</name><parameter_list>(<param><decl><type><name>int</name></type> <name>flag</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr>(<name>flags</name> &amp; <name>flag</name>) == (<name>ObjectFlag</name>)<name>flag</name></expr>;</return>
+        <return>return <expr>(<name>int</name>)(<name>flags</name> &amp; <name>flag</name>) == <name>flag</name></expr>;</return>
     }</block></function>
 
     <comment type="block">/**
@@ -181,6 +183,14 @@
 
     <function><type><name>bool</name></type> <name>isUndone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name><name>RObject</name>::<name>Undone</name></name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>bool</name></type> <name>isWorkingSet</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name><name>RObject</name>::<name>WorkingSet</name></name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>setWorkingSet</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>WorkingSet</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name>RPropertyTypeId</name></argument>&gt;</argument_list></name></type> <name>getPropertyTypeIds</name><parameter_list>(<param><decl><type><name><name>RPropertyAttributes</name>::<name>Option</name></name></type> <name>option</name> =<init> <expr><name><name>RPropertyAttributes</name>::<name>NoOptions</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>

@@ -54,6 +54,7 @@ public:
     virtual QSet<REntity::Id> queryAllVisibleEntities();
     virtual QSet<REntity::Id> queryAllEntities(bool undone = false, bool allBlocks = false, RS::EntityType type = RS::EntityAll);
     virtual QSet<REntity::Id> queryAllEntities(bool undone, bool allBlocks, QList<RS::EntityType> types);
+    virtual QSet<REntity::Id> queryWorkingSetEntities();
     virtual QSet<RUcs::Id> queryAllUcs();
     virtual QSet<RLayer::Id> queryAllLayers(bool undone = false);
     virtual QSet<RLayerState::Id> queryAllLayerStates(bool undone = false) const;
@@ -120,6 +121,7 @@ public:
     void setEntitySelected(QSharedPointer<REntity> entity, bool on,
         QSet<REntity::Id>* affectedEntities = NULL, bool onlyDescend = false);
     virtual bool isSelected(REntity::Id entityId);
+    virtual bool isSelectedWorkingSet(REntity::Id entityId);
 
     virtual bool isEntityVisible(const REntity& entity) const;
 

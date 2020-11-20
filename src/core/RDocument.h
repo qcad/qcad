@@ -50,6 +50,10 @@ class RStorage;
 #define RDEFAULT_QLIST_RBOX QList<RBox>()
 #endif
 
+#ifndef RDEFAULT_MIN1
+#define RDEFAULT_MIN1 -1
+#endif
+
 #define RDEFAULT_QLIST_RS_ENTITYTYPE QList<RS::EntityType>()
 
 
@@ -105,6 +109,7 @@ public:
     QSet<REntity::Id> queryAllVisibleEntities() const;
     QSet<REntity::Id> queryAllEntities(bool undone = false, bool allBlocks = false, RS::EntityType type = RS::EntityAll) const;
     QSet<REntity::Id> queryAllEntities(bool undone, bool allBlocks, QList<RS::EntityType> types) const;
+    QSet<REntity::Id> queryWorkingSetEntities() const;
     QSet<RUcs::Id> queryAllUcs() const;
     QSet<RLayer::Id> queryAllLayers() const;
     QSet<RLayerState::Id> queryAllLayerStates() const;
@@ -209,6 +214,7 @@ public:
         QSet<REntity::Id>* affectedEntities=NULL
     );
     bool isSelected(REntity::Id entityId);
+    bool isSelectedWorkingSet(REntity::Id entityId);
     bool isLayerLocked(RLayer::Id layerId) const;
     bool isLayerLocked(const RLayer& layer) const;
     bool isParentLayerLocked(RLayer::Id layerId) const;
@@ -429,6 +435,9 @@ public:
     QStringList getAutoVariables() const;
     QString substituteAutoVariables(const QString& expression);
     double eval(const QString& expression, bool* ok = NULL);
+
+    RBlockReferenceEntity::Id getWorkingSetBlockReferenceId() const;
+    void setWorkingSetBlockReferenceId(RBlockReferenceEntity::Id id, int group = RDEFAULT_MIN1, RTransaction* transaction = NULL);
 
     /*
     void copyToDocument(const RVector& reference, RDocument& other,

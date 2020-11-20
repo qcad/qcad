@@ -42,10 +42,8 @@ class RObject;
 class QCADOPERATIONS_EXPORT RDeleteObjectsOperation: public ROperation {
 public:
     RDeleteObjectsOperation(bool undoable = true);
-    RDeleteObjectsOperation(QList<QSharedPointer<RObject> >& list, bool undoable =
-            true);
-    virtual ~RDeleteObjectsOperation() {
-    }
+    RDeleteObjectsOperation(QList<QSharedPointer<RObject> >& list, bool undoable = true);
+    virtual ~RDeleteObjectsOperation() { }
 
     void deleteObject(const QSharedPointer<RObject>& o);
 

@@ -23,6 +23,7 @@
 RPropertyTypeId RRayEntity::PropertyCustom;
 RPropertyTypeId RRayEntity::PropertyHandle;
 RPropertyTypeId RRayEntity::PropertyProtected;
+RPropertyTypeId RRayEntity::PropertyWorkingSet;
 RPropertyTypeId RRayEntity::PropertyType;
 RPropertyTypeId RRayEntity::PropertyBlock;
 RPropertyTypeId RRayEntity::PropertyLayer;
@@ -64,6 +65,7 @@ void RRayEntity::init() {
     RRayEntity::PropertyCustom.generateId(typeid(RRayEntity), RObject::PropertyCustom);
     RRayEntity::PropertyHandle.generateId(typeid(RRayEntity), RObject::PropertyHandle);
     RRayEntity::PropertyProtected.generateId(typeid(RRayEntity), RObject::PropertyProtected);
+    RRayEntity::PropertyWorkingSet.generateId(typeid(RRayEntity), RObject::PropertyWorkingSet);
     RRayEntity::PropertyType.generateId(typeid(RRayEntity), REntity::PropertyType);
     RRayEntity::PropertyBlock.generateId(typeid(RRayEntity), REntity::PropertyBlock);
     RRayEntity::PropertyLayer.generateId(typeid(RRayEntity), REntity::PropertyLayer);

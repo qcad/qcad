@@ -1302,11 +1302,16 @@ Wilt u het herstellen?</translation>
         <translation>Blokgereedschap</translation>
     </message>
     <message>
+        <location line="+110"/>
+        <source>Cannot edit block while editing a block in-place</source>
+        <translation>Kan blok niet bewerken tijdens het bewerken van een blok ter plaatse</translation>
+    </message>
+    <message>
         <source>Show block tools</source>
         <translation type="vanished">Blokgereedschap tonen</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-82"/>
         <source>&amp;Block</source>
         <translation>&amp;Blok</translation>
     </message>
@@ -2631,7 +2636,7 @@ Wilt u het herstellen?</translation>
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../scripts/DefaultAction.js" line="+90"/>
+        <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
         <translation>Object of gebied selecteren</translation>
     </message>
@@ -2673,7 +2678,7 @@ Wilt u het herstellen?</translation>
         <translation>Object verplaatsen</translation>
     </message>
     <message>
-        <location line="+388"/>
+        <location line="+394"/>
         <source>Move Reference Point</source>
         <translation>Referentiepunt verplaatsen</translation>
     </message>
@@ -3793,12 +3798,12 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2097"/>
+        <location line="+2102"/>
         <source>Cancel</source>
         <translation>Annuleer</translation>
     </message>
     <message>
-        <location line="-2096"/>
+        <location line="-2101"/>
         <source>Done</source>
         <translation>Klaar</translation>
     </message>
@@ -3829,17 +3834,22 @@ is al in de lijst.</translation>
         <translation>CAD-gereedschappen</translation>
     </message>
     <message>
-        <location line="+710"/>
+        <location line="+711"/>
+        <source>Entity is not in working set.</source>
+        <translation>Entiteit zit niet in de werkset.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Entity is on a locked layer.</source>
         <translation>Object is op een vergrendelde laag.</translation>
     </message>
     <message>
-        <location line="+224"/>
+        <location line="+225"/>
         <source>Length:</source>
         <translation>Lengte:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translation>Object is niet een blok referentie.</translation>
     </message>
@@ -5436,7 +5446,12 @@ BUG: Interferes with group castings.</source>
         <translation>Dubbelklik op blokreferentie opent blok</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+28"/>
+        <source>Edit block reference in-place</source>
+        <translation>Bewerk blokreferentie ter plekke</translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <source>Tolerance:</source>
         <translation>Tolerantie:</translation>
     </message>
@@ -5478,7 +5493,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Hoekstap bij rotatie:</translation>
     </message>
     <message>
-        <location line="-232"/>
+        <location line="-259"/>
         <source>Right-Click</source>
         <translation>Rechtsklik</translation>
     </message>
@@ -5492,7 +5507,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Klik met rechtermuisknop op object toont contextmenu</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+73"/>
         <source>Double-click to select contour</source>
         <translation>Dubbelklik selecteert contour</translation>
     </message>
@@ -5601,7 +5616,7 @@ BUG: Interferes with group castings.</source>
         <translation>Voorkom wit op wit / zwart op zwart weergave</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation>Gebruik volledige resolutie voor Retina-display (hoge resolutie)</translation>
     </message>
@@ -5621,7 +5636,7 @@ BUG: Interferes with group castings.</source>
         <translation>Blijvende selectie</translation>
     </message>
     <message>
-        <location line="-690"/>
+        <location line="-693"/>
         <source>Color lightness threshold:</source>
         <translation>Kleur lichtheid drempel:</translation>
     </message>
@@ -5635,7 +5650,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Lijntypen</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+56"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Automatisch scherm gebaseerde lijntypen gebruiken in model weergave</translation>
     </message>
@@ -5664,7 +5679,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Gebruik volledige resolutie voor Retina-display</translation>
     </message>
     <message>
-        <location line="-345"/>
+        <location line="-348"/>
         <source>Linetypes and Lineweights</source>
         <translation>Lijntypen en lijnbreedtes</translation>
     </message>
@@ -5674,7 +5689,7 @@ BUG: Interferes with group castings.</source>
         <translation>Standaard lijnbreedte:</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+117"/>
         <source>Anti-aliasing on by default</source>
         <translation>Anti-aliasing altijd aan</translation>
     </message>
@@ -6345,7 +6360,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Klaar</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translation>Hoek:</translation>
     </message>
@@ -6656,7 +6671,7 @@ BUG: Interferes with group castings.</source>
         <translation>Omtrek</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation>Oppervlakte:</translation>
     </message>
@@ -8690,12 +8705,12 @@ getoond in zoekresultaten:</translation>
         <translation>&amp;Origineel verwijderen</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>Origineel &amp;bewaren</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+85"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Huidige laag en &amp;attributen gebruiken</translation>
     </message>
@@ -9119,7 +9134,7 @@ getoond in zoekresultaten:</translation>
         <translation>Lijn, boog, cirkel of ellips kiezen</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
             <numerusform>Radius gedaald tot onder 0 na een concentrische cirkel.</numerusform>
@@ -10247,17 +10262,17 @@ getoond in zoekresultaten:</translation>
         <translation>&amp;Origineel verwijderen</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>Origineel &amp;bewaren</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Meerdere kopieën</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>Angle &amp;a:</source>
         <translation>Hoek &amp;a:</translation>
     </message>
@@ -10298,17 +10313,17 @@ getoond in zoekresultaten:</translation>
         <translation>&amp;Origineel verwijderen</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>Origineel &amp;bewaren</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Meerdere kopieën</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Hoek (a):</translation>
     </message>
@@ -10679,17 +10694,17 @@ getoond in zoekresultaten:</translation>
         <translation>&amp;Origineel verwijderen</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>Origineel &amp;bewaren</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Meerdere kopieën</translation>
     </message>
     <message>
-        <location line="+112"/>
+        <location line="+115"/>
         <source>Factor x:</source>
         <translation>Factor x:</translation>
     </message>
@@ -12277,7 +12292,7 @@ getoond in zoekresultaten:</translation>
         <translation>Standaardwaarde:</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;Herstel</translation>
     </message>
@@ -12342,7 +12357,7 @@ getoond in zoekresultaten:</translation>
         <translation>Andere...</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation>Graad</translation>
     </message>
@@ -12895,17 +12910,17 @@ getoond in zoekresultaten:</translation>
         <translation>&amp;Origineel verwijderen</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>Origineel &amp;bewaren</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Meerdere kopieën</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+89"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Huidige laag en &amp;attributen gebruiken</translation>
     </message>
@@ -12941,17 +12956,17 @@ getoond in zoekresultaten:</translation>
         <translation>&amp;Origineel verwijderen</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>Origineel &amp;bewaren</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Meerdere kopieën</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Hoek (a):</translation>
     </message>
@@ -12974,7 +12989,7 @@ getoond in zoekresultaten:</translation>
         <translation>Kies te trimmen object</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>De twee objecten snijden zich niet of worden momenteel niet ondersteund voor het trimmen.</translation>
     </message>

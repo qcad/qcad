@@ -1282,11 +1282,16 @@ Do you wish to recover it?</source>
         <translation>Инструменты для работы с блоками</translation>
     </message>
     <message>
+        <location line="+110"/>
+        <source>Cannot edit block while editing a block in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Show block tools</source>
         <translation type="vanished">Показать инструменты для работы с блоками</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-82"/>
         <source>&amp;Block</source>
         <translation>&amp;Блок</translation>
     </message>
@@ -2615,7 +2620,7 @@ Do you wish to recover it?</source>
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../scripts/DefaultAction.js" line="+90"/>
+        <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
         <translation>Выбрать объект или область</translation>
     </message>
@@ -2657,7 +2662,7 @@ Do you wish to recover it?</source>
         <translation>Переместить объект в нужное место</translation>
     </message>
     <message>
-        <location line="+388"/>
+        <location line="+394"/>
         <source>Move Reference Point</source>
         <translation>Переместить точку привязки</translation>
     </message>
@@ -3775,12 +3780,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2097"/>
+        <location line="+2102"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location line="-2096"/>
+        <location line="-2101"/>
         <source>Done</source>
         <translation>Готово</translation>
     </message>
@@ -3815,17 +3820,22 @@ is already in the list.</source>
         <translation>Инструменты САПР</translation>
     </message>
     <message>
-        <location line="+710"/>
+        <location line="+711"/>
+        <source>Entity is not in working set.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Entity is on a locked layer.</source>
         <translation>Объект находится на заблокированном слое.</translation>
     </message>
     <message>
-        <location line="+224"/>
+        <location line="+225"/>
         <source>Length:</source>
         <translation>Длина:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translation>Объект не является привязкой блока.</translation>
     </message>
@@ -5419,7 +5429,12 @@ BUG: Interferes with group castings.</source>
         <translation>Двойной щелчок по привязке блока для открытия блока</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+28"/>
+        <source>Edit block reference in-place</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <source>Tolerance:</source>
         <translation type="unfinished">Допуск:</translation>
     </message>
@@ -5453,7 +5468,7 @@ BUG: Interferes with group castings.</source>
         <translation>Выделить объект в пределах диапазона</translation>
     </message>
     <message>
-        <location line="-232"/>
+        <location line="-259"/>
         <source>Right-Click</source>
         <translation>Щелчок правой кнопкой</translation>
     </message>
@@ -5467,7 +5482,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Щелчок правой кнопкой мыши показывает контекстное меню</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+73"/>
         <source>Double-click to select contour</source>
         <translation>Двойной щелчок для выбора контура</translation>
     </message>
@@ -5576,7 +5591,7 @@ BUG: Interferes with group castings.</source>
         <translation>Предотвратить белый на белом/чёрный на чёрном дисплее</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5596,7 +5611,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-690"/>
+        <location line="-693"/>
         <source>Color lightness threshold:</source>
         <translation>Порог светлоты цвета:</translation>
     </message>
@@ -5610,7 +5625,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Тип линии</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+56"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Автоматически переключиться на типы линий, оптимизированные для экрана, в просмотре моделей</translation>
     </message>
@@ -5644,7 +5659,7 @@ BUG: Interferes with group castings.</source>
         <translation>Сглаживание по умолчанию</translation>
     </message>
     <message>
-        <location line="-122"/>
+        <location line="-125"/>
         <source>Linetypes and Lineweights</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5654,7 +5669,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+35"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Автоматически использовать типы линий, оптимизированные для экрана, в просмотре моделей</translation>
     </message>
@@ -6312,7 +6327,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Завершено</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translation>Угол:</translation>
     </message>
@@ -6623,7 +6638,7 @@ BUG: Interferes with group castings.</source>
         <translation>Периметр</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation>Площадь ломаной:</translation>
     </message>
@@ -8653,12 +8668,12 @@ shown in search results:</source>
         <translation>У&amp;далить оригинал</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>С&amp;охранить оригинал</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+85"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Использовать текущий с&amp;лой и атрибуты</translation>
     </message>
@@ -9082,7 +9097,7 @@ shown in search results:</source>
         <translation>Выбрать линию, дугу, окружность или эллипс</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
             <numerusform>Радиус упал ниже 0,0 после %n концентрической окружности.</numerusform>
@@ -10204,17 +10219,17 @@ shown in search results:</source>
         <translation>У&amp;далить оригинал</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>С&amp;охранить оригинал</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Несколько копий</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>Angle &amp;a:</source>
         <translation>Угол &amp;a:</translation>
     </message>
@@ -10255,17 +10270,17 @@ shown in search results:</source>
         <translation>У&amp;далить оригинал</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>С&amp;охранить оригинал</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Несколько копий</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Угол (a):</translation>
     </message>
@@ -10636,17 +10651,17 @@ shown in search results:</source>
         <translation>У&amp;далить оригинал</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>С&amp;охранить оригинал</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Несколько копий</translation>
     </message>
     <message>
-        <location line="+112"/>
+        <location line="+115"/>
         <source>Factor x:</source>
         <translation>Коэффициент х:</translation>
     </message>
@@ -12237,7 +12252,7 @@ shown in search results:</source>
         <translation>Значение по умолчанию:</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;Отменить</translation>
     </message>
@@ -12302,7 +12317,7 @@ shown in search results:</source>
         <translation>Другие...</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation>Градусы</translation>
     </message>
@@ -12848,17 +12863,17 @@ shown in search results:</source>
         <translation>У&amp;далить оригинал</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>С&amp;охранить оригинал</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Несколько копий</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+89"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Использовать текущий с&amp;лой и атрибуты</translation>
     </message>
@@ -12894,17 +12909,17 @@ shown in search results:</source>
         <translation>У&amp;далить оригинал</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>С&amp;охранить оригинал</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Несколько копий</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Угол (a):</translation>
     </message>
@@ -12927,7 +12942,7 @@ shown in search results:</source>
         <translation>Выбрать объект для усечения</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>Два объекта не пересекаются, или в настоящее время нет поддержки для усечения.</translation>
     </message>

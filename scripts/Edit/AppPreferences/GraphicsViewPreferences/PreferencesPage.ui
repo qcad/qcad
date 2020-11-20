@@ -20,7 +20,7 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>-140</y>
+     <y>0</y>
      <width>635</width>
      <height>1067</height>
     </rect>
@@ -293,6 +293,9 @@
            </property>
            <property name="noDefault" stdset="0">
             <bool>true</bool>
+           </property>
+           <property name="defaultValue" stdset="0">
+            <string notr="true">0</string>
            </property>
           </widget>
          </item>

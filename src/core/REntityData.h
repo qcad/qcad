@@ -58,6 +58,8 @@ class RExporter;
  * entity to provide similar behavior (e.g. a wall might
  * behave similar like a line entity).
  *
+ * \TODO derive from RObjectData with flags for selection status etc.
+ *
  * \scriptable
  * \sharedPointerSupport
  * \ingroup core
@@ -187,6 +189,20 @@ public:
      */
     virtual void setSelected(bool on) {
         selectionStatus = on;
+    }
+
+    /**
+     * \return True if the entity is currently selected to be added to the working set.
+     */
+    virtual bool isSelectedWorkingSet() const {
+        return selectionStatusWorkingSet;
+    }
+
+    /**
+     * Selects or deselects this entity for addition to the current working set.
+     */
+    virtual void setSelectedWorkingSet(bool on) {
+        selectionStatusWorkingSet = on;
     }
 
     /**
@@ -400,6 +416,7 @@ protected:
     RDocument* document;
     bool updatesEnabled;
     bool selectionStatus;
+    bool selectionStatusWorkingSet;
     /** Block auto updates is true during imports, undo and redo. */
     bool autoUpdatesBlocked;
     int drawOrder;

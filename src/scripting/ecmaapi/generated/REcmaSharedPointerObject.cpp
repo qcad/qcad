@@ -89,6 +89,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, isUndone, "isUndone");
             
+            REcmaHelper::registerFunction(&engine, proto, isWorkingSet, "isWorkingSet");
+            
+            REcmaHelper::registerFunction(&engine, proto, setWorkingSet, "setWorkingSet");
+            
             REcmaHelper::registerFunction(&engine, proto, getPropertyTypeIds, "getPropertyTypeIds");
             
             REcmaHelper::registerFunction(&engine, proto, getCustomPropertyTypeIds, "getCustomPropertyTypeIds");
@@ -169,6 +173,10 @@
                 qScriptValueFromValue(&engine, RObject::PropertyProtected),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyWorkingSet",
+                qScriptValueFromValue(&engine, RObject::PropertyWorkingSet),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertySelected",
                 qScriptValueFromValue(&engine, RObject::PropertySelected),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
@@ -218,6 +226,11 @@
 
     ctor.setProperty("Invisible",
     QScriptValue(RObject::Invisible),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("WorkingSet",
+    QScriptValue(RObject::WorkingSet),
     QScriptValue::ReadOnly);
 
 
@@ -1206,6 +1219,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerObject::isUndone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerObject::isWorkingSet
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerObject::isWorkingSet", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::isWorkingSet";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("isWorkingSet", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isWorkingSet();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.isWorkingSet().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerObject::isWorkingSet", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerObject::setWorkingSet
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerObject::setWorkingSet", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::setWorkingSet";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("setWorkingSet", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setWorkingSet(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.setWorkingSet().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerObject::setWorkingSet", context, engine);
             return result;
         }
          QScriptValue

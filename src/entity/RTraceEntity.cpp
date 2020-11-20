@@ -23,6 +23,7 @@
 RPropertyTypeId RTraceEntity::PropertyCustom;
 RPropertyTypeId RTraceEntity::PropertyHandle;
 RPropertyTypeId RTraceEntity::PropertyProtected;
+RPropertyTypeId RTraceEntity::PropertyWorkingSet;
 RPropertyTypeId RTraceEntity::PropertyType;
 RPropertyTypeId RTraceEntity::PropertyBlock;
 RPropertyTypeId RTraceEntity::PropertyLayer;
@@ -61,6 +62,7 @@ void RTraceEntity::init() {
     RTraceEntity::PropertyCustom.generateId(typeid(RTraceEntity), RObject::PropertyCustom);
     RTraceEntity::PropertyHandle.generateId(typeid(RTraceEntity), RObject::PropertyHandle);
     RTraceEntity::PropertyProtected.generateId(typeid(RTraceEntity), RObject::PropertyProtected);
+    RTraceEntity::PropertyWorkingSet.generateId(typeid(RTraceEntity), RObject::PropertyWorkingSet);
     RTraceEntity::PropertyType.generateId(typeid(RTraceEntity), REntity::PropertyType);
     RTraceEntity::PropertyBlock.generateId(typeid(RTraceEntity), REntity::PropertyBlock);
     RTraceEntity::PropertyLayer.generateId(typeid(RTraceEntity), REntity::PropertyLayer);

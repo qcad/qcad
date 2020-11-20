@@ -1268,11 +1268,20 @@ Do you wish to recover it?</translation>
         <translation>Block Tools</translation>
     </message>
     <message>
+        <location line="+110"/>
+        <source>Cannot edit block while editing a block in-place</source>
+        <translation>Cannot edit block while editing a block in-place</translation>
+    </message>
+    <message>
+        <source>Cannot change block while editing a block in-place</source>
+        <translation type="vanished">Cannot change block while editing a block in-place</translation>
+    </message>
+    <message>
         <source>Show block tools</source>
         <translation type="vanished">Show block tools</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-82"/>
         <source>&amp;Block</source>
         <translation>&amp;Block</translation>
     </message>
@@ -2589,7 +2598,7 @@ Do you wish to recover it?</translation>
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../scripts/DefaultAction.js" line="+90"/>
+        <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
         <translation>Select entity or region</translation>
     </message>
@@ -2631,7 +2640,7 @@ Do you wish to recover it?</translation>
         <translation>Move entity to desired location</translation>
     </message>
     <message>
-        <location line="+388"/>
+        <location line="+394"/>
         <source>Move Reference Point</source>
         <translation>Move Reference Point</translation>
     </message>
@@ -3742,12 +3751,12 @@ is already in the list.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2097"/>
+        <location line="+2102"/>
         <source>Cancel</source>
         <translation>Cancel</translation>
     </message>
     <message>
-        <location line="-2096"/>
+        <location line="-2101"/>
         <source>Done</source>
         <translation>Done</translation>
     </message>
@@ -3778,17 +3787,22 @@ is already in the list.</translation>
         <translation>CAD Tools</translation>
     </message>
     <message>
-        <location line="+710"/>
+        <location line="+711"/>
+        <source>Entity is not in working set.</source>
+        <translation>Entity is not in working set.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Entity is on a locked layer.</source>
         <translation>Entity is on a locked layer.</translation>
     </message>
     <message>
-        <location line="+224"/>
+        <location line="+225"/>
         <source>Length:</source>
         <translation>Length:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translation>Entity is not a block reference.</translation>
     </message>
@@ -5396,7 +5410,12 @@ BUG: Interferes with group castings.</translation>
         <translation>Double-click on block reference opens block</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+28"/>
+        <source>Edit block reference in-place</source>
+        <translation>Edit block reference in-place</translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Double-click to select contour</source>
         <translation>Double-click to select contour</translation>
     </message>
@@ -5555,7 +5574,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Default lineweight:</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+124"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation>Use full resolution for Retina / high resolution display</translation>
     </message>
@@ -6263,7 +6282,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Done</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translation>Angle:</translation>
     </message>
@@ -6574,7 +6593,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Circumference</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation>Polyline area:</translation>
     </message>
@@ -8553,12 +8572,12 @@ shown in search results:</translation>
         <translation>&amp;Delete original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Keep original</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+85"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Use current layer and &amp;attributes</translation>
     </message>
@@ -8958,7 +8977,7 @@ shown in search results:</translation>
         <translation>Choose line, arc, circle or ellipse</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
             <numerusform>Radius dropped below 0.0 after one concentric circle.</numerusform>
@@ -10090,17 +10109,17 @@ shown in search results:</translation>
         <translation>&amp;Delete original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Keep original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Multiple copies</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>Angle &amp;a:</source>
         <translation>Angle &amp;a:</translation>
     </message>
@@ -10141,17 +10160,17 @@ shown in search results:</translation>
         <translation>&amp;Delete original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Keep original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Multiple copies</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Angle (a):</translation>
     </message>
@@ -10514,17 +10533,17 @@ shown in search results:</translation>
         <translation>&amp;Delete original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Keep original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Multiple copies</translation>
     </message>
     <message>
-        <location line="+112"/>
+        <location line="+115"/>
         <source>Factor x:</source>
         <translation>Factor x:</translation>
     </message>
@@ -12124,7 +12143,7 @@ shown in search results:</translation>
         <translation>Default value:</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;Undo</translation>
     </message>
@@ -12189,7 +12208,7 @@ shown in search results:</translation>
         <translation>Others...</translation>
     </message>
     <message>
-        <location line="+135"/>
+        <location line="+139"/>
         <source>Degree</source>
         <translation>Degree</translation>
     </message>
@@ -12742,17 +12761,29 @@ shown in search results:</translation>
         <translation>&amp;Delete original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <source>Ctrl+D</source>
+        <translation type="vanished">Ctrl+D</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Keep original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <source>Ctrl+K</source>
+        <translation type="vanished">Ctrl+K</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Multiple copies</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <source>Ctrl+M</source>
+        <translation type="vanished">Ctrl+M</translation>
+    </message>
+    <message>
+        <location line="+89"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Use current layer and &amp;attributes</translation>
     </message>
@@ -12788,17 +12819,17 @@ shown in search results:</translation>
         <translation>&amp;Delete original</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>&amp;Keep original</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Multiple copies</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Angle (a):</translation>
     </message>
@@ -12821,7 +12852,7 @@ shown in search results:</translation>
         <translation>Choose entity to trim</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>The two entities don&apos;t intersect, or are currently not supported for trimming.</translation>
     </message>

@@ -22,6 +22,7 @@
 RPropertyTypeId RDimArcLengthEntity::PropertyCustom;
 RPropertyTypeId RDimArcLengthEntity::PropertyHandle;
 RPropertyTypeId RDimArcLengthEntity::PropertyProtected;
+RPropertyTypeId RDimArcLengthEntity::PropertyWorkingSet;
 RPropertyTypeId RDimArcLengthEntity::PropertyType;
 RPropertyTypeId RDimArcLengthEntity::PropertyBlock;
 RPropertyTypeId RDimArcLengthEntity::PropertyLayer;
@@ -80,6 +81,7 @@ void RDimArcLengthEntity::init() {
     RDimArcLengthEntity::PropertyCustom.generateId(typeid(RDimArcLengthEntity), RObject::PropertyCustom);
     RDimArcLengthEntity::PropertyHandle.generateId(typeid(RDimArcLengthEntity), RObject::PropertyHandle);
     RDimArcLengthEntity::PropertyProtected.generateId(typeid(RDimArcLengthEntity), RObject::PropertyProtected);
+    RDimArcLengthEntity::PropertyWorkingSet.generateId(typeid(RDimArcLengthEntity), RObject::PropertyWorkingSet);
     RDimArcLengthEntity::PropertyType.generateId(typeid(RDimArcLengthEntity), REntity::PropertyType);
     RDimArcLengthEntity::PropertyBlock.generateId(typeid(RDimArcLengthEntity), REntity::PropertyBlock);
     RDimArcLengthEntity::PropertyLayer.generateId(typeid(RDimArcLengthEntity), REntity::PropertyLayer);

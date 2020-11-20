@@ -22,6 +22,7 @@
 RPropertyTypeId RDimAngularEntity::PropertyCustom;
 RPropertyTypeId RDimAngularEntity::PropertyHandle;
 RPropertyTypeId RDimAngularEntity::PropertyProtected;
+RPropertyTypeId RDimAngularEntity::PropertyWorkingSet;
 RPropertyTypeId RDimAngularEntity::PropertyType;
 RPropertyTypeId RDimAngularEntity::PropertyBlock;
 RPropertyTypeId RDimAngularEntity::PropertyLayer;
@@ -79,6 +80,7 @@ void RDimAngularEntity::init() {
     RDimAngularEntity::PropertyCustom.generateId(typeid(RDimAngularEntity), RObject::PropertyCustom);
     RDimAngularEntity::PropertyHandle.generateId(typeid(RDimAngularEntity), RObject::PropertyHandle);
     RDimAngularEntity::PropertyProtected.generateId(typeid(RDimAngularEntity), RObject::PropertyProtected);
+    RDimAngularEntity::PropertyWorkingSet.generateId(typeid(RDimAngularEntity), RObject::PropertyWorkingSet);
     RDimAngularEntity::PropertyType.generateId(typeid(RDimAngularEntity), REntity::PropertyType);
     RDimAngularEntity::PropertyBlock.generateId(typeid(RDimAngularEntity), REntity::PropertyBlock);
     RDimAngularEntity::PropertyLayer.generateId(typeid(RDimAngularEntity), REntity::PropertyLayer);

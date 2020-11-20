@@ -77,6 +77,9 @@
         queryAllEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryWorkingSetEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryAllUcs
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -216,6 +219,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isSelected
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isSelectedWorkingSet
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isEntityVisible

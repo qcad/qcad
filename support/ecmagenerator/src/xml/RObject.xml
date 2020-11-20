@@ -18,6 +18,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="Protect" />
       <value name="Selected" />
       <value name="Invisible" />
+      <value name="WorkingSet" />
     </enum>
     <constructor>
       <variant>
@@ -129,6 +130,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="isUndone" cppName="isUndone" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="isWorkingSet" cppName="isWorkingSet"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setWorkingSet" cppName="setWorkingSet"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
     </method>
     <method name="getPropertyTypeIds" cppName="getPropertyTypeIds"
     specifier="public" isStatic="false" isVirtual="true"
@@ -387,6 +401,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyHandle" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyProtected" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyWorkingSet" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertySelected" type="RPropertyTypeId"
     isConst="false" isStatic="true" />

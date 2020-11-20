@@ -104,6 +104,7 @@ RDocumentInterface::~RDocumentInterface() {
     }
 
     if (defaultAction!=NULL) {
+        defaultAction->suspendEvent();
         defaultAction->finishEvent();
         defaultAction->terminate();
         delete defaultAction;
@@ -1354,6 +1355,7 @@ void RDocumentInterface::undoToTag(const QString& tag) {
  * Transaction based undo.
  */
 void RDocumentInterface::undo() {
+    RMainWindow* mainWindow = RMainWindow::getMainWindow();
     clearPreview();
 
     QList<RTransaction> t = document.undo();
@@ -1365,6 +1367,10 @@ void RDocumentInterface::undo() {
             RMainWindow::getMainWindow()->postTransactionEvent(t[i]);
         }
         notifyTransactionListeners(&t[i]);
+
+        if (i==0 && mainWindow!=NULL) {
+            mainWindow->handleUserMessage(QString("Undo:") + " " + t[i].getText());
+        }
     }
 }
 
@@ -1372,6 +1378,7 @@ void RDocumentInterface::undo() {
  * Transaction based redo.
  */
 void RDocumentInterface::redo() {
+    RMainWindow* mainWindow = RMainWindow::getMainWindow();
     clearPreview();
 
     QList<RTransaction> t = document.redo();
@@ -1384,6 +1391,10 @@ void RDocumentInterface::redo() {
             RMainWindow::getMainWindow()->postTransactionEvent(t[i]);
         }
         notifyTransactionListeners(&t[i]);
+
+        if (i==t.length()-1 && mainWindow!=NULL) {
+            mainWindow->handleUserMessage(QString("Redo:") + " " + t[i].getText());
+        }
     }
 }
 
@@ -1755,6 +1766,8 @@ bool RDocumentInterface::hasSelection() {
  * while drawing a window to magnify an area.
  */
 void RDocumentInterface::addZoomBoxToPreview(const RBox& box) {
+    RPolyline pl = box.getPolyline2d();
+
     QList<RGraphicsScene*>::iterator it;
     for (it = scenes.begin(); it != scenes.end(); it++) {
         RGraphicsScene* scene = *it;
@@ -1764,8 +1777,6 @@ void RDocumentInterface::addZoomBoxToPreview(const RBox& box) {
         scene->setLineweight(RLineweight::Weight000);
         scene->setStyle(Qt::DashLine);
         scene->setLinetypeId(document.getLinetypeId("CONTINUOUS"));
-
-        RPolyline pl = box.getPolyline2d();
         scene->exportShape(QSharedPointer<RShape>(pl.clone()));
         scene->endPreview();
     }
@@ -2185,7 +2196,7 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
 
     bool ucsHasChanged = false;
     bool linetypeHasChanged = false;
-    bool layerHasChanged = false;
+    //bool layerHasChanged = false;
     QSet<RLayer::Id> changedLayerIds;
     bool blockHasChanged = false;
     bool layoutHasChanged = false;
@@ -2208,7 +2219,7 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
         if (!docVars.isNull()) {
             ucsHasChanged = true;
             linetypeHasChanged = true;
-            layerHasChanged = true;
+            //layerHasChanged = true;
             blockHasChanged = true;
             layoutHasChanged = true;
             viewHasChanged = true;
@@ -2236,6 +2247,7 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
 
         QSharedPointer<RLayer> layer = object.dynamicCast<RLayer> ();
         if (!layer.isNull()) {
+            //qDebug() << "layer changed";
             //layerHasChanged = true;
             changedLayerIds.insert(objectId);
 
@@ -2245,6 +2257,25 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
                     QSet<RObject::Id> ids = document.queryLayerEntities(*it);
                     deselectEntities(ids);
                 }
+            }
+
+            if (transaction.getType()==RTransaction::LayerVisibilityStatusChange) {
+                //qDebug() << "layer visibility changed";
+                // tag all block references as changed as they might contain entities on that layer:
+                // TODO: only tag if they do contain entities on that layer
+                QSet<RObject::Id> blockReferenceIds = document.queryAllBlockReferences();
+                //qDebug() << "blockReferenceIds:" << blockReferenceIds;
+                entityIdsToRegenerate.unite(blockReferenceIds);
+    //            QSet<RObject::Id>::iterator it;
+    //            for (it=blockReferenceIds.begin(); it!=blockReferenceIds.end(); it++) {
+    //                RObject::Id id = *it;
+    //                QSharedPointer<REntity> e = document.queryEntityDirect(id);
+    //                if (e.isNull()) {
+    //                    continue;
+    //                }
+    //                QSharedPointer<RBlockReferenceEntity> blockRef = e.dynamicCast<RBlockReferenceEntity>();
+    //                QSet<REntity::Id> blockEntityIds = document.queryBlockEntities(blockRef->getReferencedBlockId());
+    //            }
             }
             continue;
         }
@@ -2319,7 +2350,17 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
         return;
     }
 
-    if (layerHasChanged || !changedLayerIds.isEmpty() || blockHasChanged || linetypeHasChanged) {
+    if (transaction.getType()==RTransaction::LayerVisibilityStatusChange) {
+        // only visibility has changed, regen block references only:
+        // TODO: this can still be slow for drawings with many / complex block references
+        // TODO: find out which block references really need a regen or store layer info with
+        //       painter paths to switch off easily
+        regenerateScenes(entityIdsToRegenerate, false);
+        regenerateViews(entityIdsToRegenerate);
+        return;
+    }
+
+    if (/*layerHasChanged ||*/ !changedLayerIds.isEmpty() || blockHasChanged || linetypeHasChanged) {
         if (allowRegeneration) {
             regenerateScenes(true);
         }

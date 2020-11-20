@@ -29,6 +29,7 @@
 RPropertyTypeId RImageEntity::PropertyCustom;
 RPropertyTypeId RImageEntity::PropertyHandle;
 RPropertyTypeId RImageEntity::PropertyProtected;
+RPropertyTypeId RImageEntity::PropertyWorkingSet;
 RPropertyTypeId RImageEntity::PropertyType;
 RPropertyTypeId RImageEntity::PropertyBlock;
 RPropertyTypeId RImageEntity::PropertyLayer;
@@ -77,6 +78,7 @@ void RImageEntity::init() {
     RImageEntity::PropertyCustom.generateId(typeid(RImageEntity), RObject::PropertyCustom);
     RImageEntity::PropertyHandle.generateId(typeid(RImageEntity), RObject::PropertyHandle);
     RImageEntity::PropertyProtected.generateId(typeid(RImageEntity), RObject::PropertyProtected);
+    RImageEntity::PropertyWorkingSet.generateId(typeid(RImageEntity), RObject::PropertyWorkingSet);
     RImageEntity::PropertyType.generateId(typeid(RImageEntity), REntity::PropertyType);
     RImageEntity::PropertyBlock.generateId(typeid(RImageEntity), REntity::PropertyBlock);
     RImageEntity::PropertyLayer.generateId(typeid(RImageEntity), REntity::PropertyLayer);

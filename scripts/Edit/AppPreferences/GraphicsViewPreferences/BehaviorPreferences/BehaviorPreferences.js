@@ -23,3 +23,11 @@ function BehaviorPreferences() {
 BehaviorPreferences.getPreferencesCategory = function() {
     return [qsTr("Graphics View"), qsTr("Behavior")];
 };
+
+BehaviorPreferences.initPreferences = function(pageWidget, calledByPrefDialog, document) {
+    var widgets = getWidgets(pageWidget);
+
+    if (!hasPlugin("PROTOOLS")) {
+        widgets["DoubleClickEditBlockInPlace"].visible = false;
+    }
+};

@@ -26,7 +26,8 @@
 REntityData::REntityData(RDocument* document) :
     document(document),
     updatesEnabled(true),
-    selectionStatus(false), 
+    selectionStatus(false),
+    selectionStatusWorkingSet(false),
     autoUpdatesBlocked(false),
     drawOrder(RMININT),
     layerId(RLayer::INVALID_ID),
@@ -206,7 +207,7 @@ RLineweight::Lineweight REntityData::getLineweight(bool resolve, const QStack<RE
     if (lw==RLineweight::WeightByLwDefault || lw==RLineweight::WeightInvalid) {
         // return configured default line weight:
         //lw = RLineweight::Weight000;
-        lw = (RLineweight::Lineweight)RSettings::getIntValue("GraphicsView/DefaultLineweight", RLineweight::Weight025);
+        lw = (RLineweight::Lineweight)RSettings::getIntValue("GraphicsView/DefaultLineweight", RLineweight::Weight000);
     }
 
     if (lw<0) {

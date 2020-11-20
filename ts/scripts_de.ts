@@ -1427,11 +1427,16 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Blockwerkzeuge</translation>
     </message>
     <message>
+        <location line="+110"/>
+        <source>Cannot edit block while editing a block in-place</source>
+        <translation>Block kann nicht bearbeitet werden, während ein Block direkt bearbeitet wird</translation>
+    </message>
+    <message>
         <source>Show block tools</source>
         <translation type="vanished">Blockwerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-82"/>
         <source>&amp;Block</source>
         <translation>Blo&amp;ck</translation>
     </message>
@@ -3009,7 +3014,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>DefaultAction</name>
     <message>
-        <location filename="../scripts/DefaultAction.js" line="+90"/>
+        <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
         <translation>Element oder Bereich selektieren</translation>
     </message>
@@ -3051,7 +3056,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Objekt verschieben</translation>
     </message>
     <message>
-        <location line="+388"/>
+        <location line="+394"/>
         <source>Move Reference Point</source>
         <translation>Referenzpunkt verschieben</translation>
     </message>
@@ -4269,12 +4274,12 @@ ist bereits in der Liste.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2097"/>
+        <location line="+2102"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="-2096"/>
+        <location line="-2101"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
@@ -4313,17 +4318,22 @@ ist bereits in der Liste.</translation>
         <translation>CAD Werkzeuge</translation>
     </message>
     <message>
-        <location line="+710"/>
+        <location line="+711"/>
+        <source>Entity is not in working set.</source>
+        <translation>Objekt befindet sich nicht im Bearbeitungssatz.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Entity is on a locked layer.</source>
         <translation>Element ist auf gesperrtem Layer.</translation>
     </message>
     <message>
-        <location line="+224"/>
+        <location line="+225"/>
         <source>Length:</source>
         <translation>Länge:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+57"/>
         <source>Entity is not a block reference.</source>
         <translation>Element ist keine Block Referenz.</translation>
     </message>
@@ -6124,7 +6134,12 @@ BUG: Interferes with group castings.</translation>
         <translation>Doppelklick auf Blockreferenz öffnet Block</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+28"/>
+        <source>Edit block reference in-place</source>
+        <translation>Blockreferenz direkt bearbeiten</translation>
+    </message>
+    <message>
+        <location line="+24"/>
         <source>Tolerance:</source>
         <translation>Toleranz:</translation>
     </message>
@@ -6166,7 +6181,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Winkelschritt zum Drehen:</translation>
     </message>
     <message>
-        <location line="-232"/>
+        <location line="-259"/>
         <source>Right-Click</source>
         <translation>Rechtsklick</translation>
     </message>
@@ -6180,7 +6195,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Rechtsklick auf Objekt zeigt Kontextmenü</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+73"/>
         <source>Double-click to select contour</source>
         <translation>Doppelklick selektiert Kontour</translation>
     </message>
@@ -6297,7 +6312,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Schwarz / weiss automatisch anpassen</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation>Volle Auflösung benutzen für Retina-Anzeige (hochauflösende Anzeige)</translation>
     </message>
@@ -6317,7 +6332,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Persistente Selektion</translation>
     </message>
     <message>
-        <location line="-690"/>
+        <location line="-693"/>
         <source>Color lightness threshold:</source>
         <translation>Farbgrenzwert:</translation>
     </message>
@@ -6331,7 +6346,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Linientypen</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+56"/>
         <source>Auto switch to screen based linetypes in model view</source>
         <translation>Automatisch Bildschirmbasierte Linientypen verwenden in Modellansicht</translation>
     </message>
@@ -6365,7 +6380,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Minimaler Winkel für Bogensegmentierung in Anzeige (Grad):</translation>
     </message>
     <message>
-        <location line="-263"/>
+        <location line="-266"/>
         <source>Linetypes and Lineweights</source>
         <translation>Linientypen und Linienbreiten</translation>
     </message>
@@ -6379,7 +6394,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Volle Auflösung benutzen für Retina-Display</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+117"/>
         <source>Anti-aliasing on by default</source>
         <translation>Kantenglättung standardmässig an</translation>
     </message>
@@ -7356,7 +7371,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Fertig</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+96"/>
         <source>Angle:</source>
         <translation>Winkel:</translation>
     </message>
@@ -7751,7 +7766,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Umfang</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+72"/>
         <source>Polyline area:</source>
         <translation>Polylinienfläche:</translation>
     </message>
@@ -10282,12 +10297,12 @@ im Suchresultat:</translation>
         <translation>Original &amp;löschen</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>Original &amp;beibehalten</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+85"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Aktueller Layer / &amp;Attribute</translation>
     </message>
@@ -10817,7 +10832,7 @@ im Suchresultat:</translation>
         <translation>Linie, Bogen, Kreis oder Ellipse wählen</translation>
     </message>
     <message numerus="yes">
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation>
             <numerusform>Radius kleiner als 0.0 nach einem konzentrischen Kreis.</numerusform>
@@ -12324,17 +12339,17 @@ nicht öffnen.
         <translation>Original &amp;löschen</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>Original &amp;beibehalten</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Mehrere Kopien</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>Angle &amp;a:</source>
         <translation>Winkel &amp;a:</translation>
     </message>
@@ -12375,17 +12390,17 @@ nicht öffnen.
         <translation>Original &amp;löschen</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>Original &amp;beibehalten</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Mehrere Kopien</translation>
     </message>
     <message>
-        <location line="+114"/>
+        <location line="+117"/>
         <source>Define angle using mouse cursor</source>
         <translation>Winkel mit dem Mauszeiger definieren</translation>
     </message>
@@ -12837,17 +12852,17 @@ nicht öffnen.
         <translation>Original &amp;löschen</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>Original &amp;beibehalten</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Mehrere Kopien</translation>
     </message>
     <message>
-        <location line="+112"/>
+        <location line="+115"/>
         <source>Factor x:</source>
         <translation>Faktor X:</translation>
     </message>
@@ -14664,7 +14679,7 @@ nicht öffnen.
         <translation>Standardwert:</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+271"/>
         <source>&amp;Undo</source>
         <translation>&amp;Rückgängig</translation>
     </message>
@@ -14694,7 +14709,7 @@ nicht öffnen.
         <translation>&amp;Unterstreichen</translation>
     </message>
     <message>
-        <location line="+477"/>
+        <location line="+481"/>
         <source>Degree</source>
         <translation>Grad</translation>
     </message>
@@ -14880,7 +14895,7 @@ nicht öffnen.
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="-510"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="-514"/>
         <source>&amp;Bold</source>
         <translation>&amp;Fett</translation>
     </message>
@@ -14915,7 +14930,7 @@ nicht öffnen.
         <translation>Andere...</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Plus-Minus</source>
         <translation>Plus-Minus</translation>
     </message>
@@ -15377,17 +15392,17 @@ nicht öffnen.
         <translation>Original &amp;löschen</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>Original &amp;beibehalten</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Mehrere Kopien</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+89"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Aktueller Layer / &amp;Attribute</translation>
     </message>
@@ -15482,17 +15497,17 @@ nicht öffnen.
         <translation>Original &amp;löschen</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>&amp;Keep original</source>
         <translation>Original &amp;beibehalten</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>&amp;Multiple copies</source>
         <translation>&amp;Mehrere Kopien</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+97"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Winkel (a):</translation>
     </message>
@@ -15520,7 +15535,7 @@ nicht öffnen.
         <translation>Zu trimmendes Objekt wählen</translation>
     </message>
     <message>
-        <location line="+169"/>
+        <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>Die zwei Objekte schneiden sich nicht oder werden momentan nicht für Trimmen unterstützt.</translation>
     </message>

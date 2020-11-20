@@ -1930,7 +1930,12 @@ EAction.setProgressEnd = function() {
 EAction.assertEditable = function(entity, quiet) {
     if (!entity.isEditable()) {
         if (!quiet) {
-            EAction.handleUserWarning(qsTr("Entity is on a locked layer."));
+            if (!entity.isInWorkingSet()) {
+                EAction.handleUserWarning(qsTr("Entity is not in working set."));
+            }
+            else {
+                EAction.handleUserWarning(qsTr("Entity is on a locked layer."));
+            }
         }
         return false;
     }
