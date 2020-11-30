@@ -116,7 +116,7 @@ function disableInput() {
 }
 
 /**
- * Enables the main application window to prevent user input.
+ * Enables the main application window to allow user input.
  * \ingroup ecma_simple
  */
 function enableInput() {
