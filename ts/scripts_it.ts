@@ -6390,7 +6390,7 @@ BUG: Interferes with group castings.</source>
         <translation>Strumenti scatto</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+12"/>
         <source>Snap label:</source>
         <translation>Etichetta aggancia:</translation>
     </message>
@@ -6415,7 +6415,12 @@ BUG: Interferes with group castings.</source>
         <translation>Forme ausiliaria:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+30"/>
+        <source>Working set fading factor:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+75"/>
         <source>Zoom Tools</source>
         <translation>Strumenti zoom</translation>
     </message>
@@ -6429,7 +6434,7 @@ BUG: Interferes with group castings.</source>
         <translation type="obsolete">Reticolo inattivo:</translation>
     </message>
     <message>
-        <location line="-643"/>
+        <location line="-712"/>
         <source>Origin:</source>
         <translatorcomment>--exact match--
 --file: qgis_it.ts--
@@ -11830,7 +11835,7 @@ Seconda entità non può essere tagliata.</translatorcomment>
 <context>
     <name>Save</name>
     <message>
-        <location filename="../scripts/File/Save/Save.js" line="+78"/>
+        <location filename="../scripts/File/Save/Save.js" line="+90"/>
         <source>Overwrite File?</source>
         <translation>Sovrascrivere il file?</translation>
     </message>
@@ -11857,7 +11862,17 @@ Seconda entità non può essere tagliata.</translatorcomment>
         <translation type="vanished">La versione del formato del file in uso non è raccomandato: &apos;%1&apos;.</translation>
     </message>
     <message>
+        <location line="-36"/>
+        <source>Block editing in progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+1"/>
+        <source>A block is currently exploded and being edited. Please save the block before saving your drawing. Saving will save the block contents exploded. Save anyway?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
         <source>The file format version you are using is not recommended: &quot;%1&quot;.</source>
         <translation>La versione del formato del file in uso non è raccomandato: &quot;%1&quot;.</translation>
     </message>

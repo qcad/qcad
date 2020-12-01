@@ -111,6 +111,11 @@ LineRelativeAngle.prototype.pickEntity = function(event, preview) {
         return;
     }
 
+    if (!this.isEntitySnappable(entity)) {
+        // entity not on a snappable layer:
+        return;
+    }
+
     var shape = entity.getClosestSimpleShape(pos);
 
     //if (preview) {

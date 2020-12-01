@@ -62,12 +62,24 @@ Save.prototype.save = function(fileName, fileVersion, overwriteWarning) {
 
     var appWin = EAction.getMainWindow();
     var di = EAction.getDocumentInterface();
+    var buttons, ret;
+
+    var editingWorkingSet = (di.getDocument().getWorkingSetBlockReferenceId()!==RObject.INVALID_ID);
+    if (editingWorkingSet) {
+        buttons = new QMessageBox.StandardButtons(QMessageBox.Yes, QMessageBox.Cancel);
+        ret = QMessageBox.warning(
+                    appWin,
+                    qsTr("Block editing in progress"),
+                    qsTr("A block is currently exploded and being edited. Please save the block before saving your drawing. Saving will save the block contents exploded. Save anyway?"), buttons);
+        if (ret===QMessageBox.Cancel) {
+            return true;
+        }
+    }
 
     fileVersion = isNull(fileVersion) ? "" : fileVersion;
 
     fileName = di.getCorrectedFileName(fileName, fileVersion);
 
-    var buttons, ret;
     var saveAs = false;
 
     if (overwriteWarning) {

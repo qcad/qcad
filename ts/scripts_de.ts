@@ -6577,7 +6577,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Fangwerkzeuge</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+12"/>
         <source>Snap label:</source>
         <translation>Fang Hinweis:</translation>
     </message>
@@ -6602,7 +6602,12 @@ BUG: Interferes with group castings.</translation>
         <translation>Hilfsobjekte:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+30"/>
+        <source>Working set fading factor:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+75"/>
         <source>Zoom Tools</source>
         <translation>Zoomwerkzeuge</translation>
     </message>
@@ -6628,7 +6633,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="obsolete">Inaktives Fadenkreuz:</translation>
     </message>
     <message>
-        <location line="-724"/>
+        <location line="-793"/>
         <source>Crosshairs:</source>
         <translation>Fadenkreuz:</translation>
     </message>
@@ -12515,7 +12520,7 @@ nicht öffnen.
         <translation type="vanished">Alle Benutzerdefinierten Farben werden auf die nächste verfügbare Farbe gerundet.</translation>
     </message>
     <message>
-        <location filename="../scripts/File/Save/Save.js" line="+96"/>
+        <location filename="../scripts/File/Save/Save.js" line="+108"/>
         <source>File Format Version Not Recommended</source>
         <translation>Dateiversion nicht empfohlen</translation>
     </message>
@@ -12524,7 +12529,17 @@ nicht öffnen.
         <translation type="vanished">Die benutzte Dateiformatversion wird nicht empfohlen: &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="-36"/>
+        <source>Block editing in progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>A block is currently exploded and being edited. Please save the block before saving your drawing. Saving will save the block contents exploded. Save anyway?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+37"/>
         <source>Custom properties will not be saved.</source>
         <translation>Benutzerdefinierte Eigenschaften werden nicht gespeichert.</translation>
     </message>

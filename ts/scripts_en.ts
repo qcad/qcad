@@ -5806,7 +5806,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Snap Tools</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+12"/>
         <source>Snap label:</source>
         <translation>Snap label:</translation>
     </message>
@@ -5831,7 +5831,12 @@ BUG: Interferes with group castings.</translation>
         <translation>Auxiliary shapes:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+30"/>
+        <source>Working set fading factor:</source>
+        <translation>Working set fading factor:</translation>
+    </message>
+    <message>
+        <location line="+75"/>
         <source>Zoom Tools</source>
         <translation>Zoom Tools</translation>
     </message>
@@ -10269,7 +10274,7 @@ shown in search results:</translation>
 <context>
     <name>Save</name>
     <message>
-        <location filename="../scripts/File/Save/Save.js" line="+78"/>
+        <location filename="../scripts/File/Save/Save.js" line="+90"/>
         <source>Overwrite File?</source>
         <translation>Overwrite File?</translation>
     </message>
@@ -10324,7 +10329,17 @@ shown in search results:</translation>
         <translation type="vanished">Custom colors are &apos;rounded&apos; to the nearest fixed color.</translation>
     </message>
     <message>
-        <location line="-41"/>
+        <location line="-60"/>
+        <source>Block editing in progress</source>
+        <translation>Block editing in progress</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>A block is currently exploded and being edited. Please save the block before saving your drawing. Saving will save the block contents exploded. Save anyway?</source>
+        <translation>A block is currently exploded and being edited. Please save the block before saving your drawing. Sa</translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
         <translation>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</translation>
     </message>

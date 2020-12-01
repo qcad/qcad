@@ -94,6 +94,12 @@ ConvertUnit.convert = function(di, fromUnit, toUnit) {
     doc.startTransactionGroup();
 
     var docVars = doc.queryDocumentVariables();
+    // make sure we don't end up with a metric document with imperial dimension format:
+    if (doc.getLinearFormat()===RS.Engineering || doc.getLinearFormat()===RS.ArchitecturalStacked || doc.getLinearFormat()===RS.Architectural) {
+        if (!RUnit.isMetric(doc.getUnit()) && RUnit.isMetric(toUnit)) {
+            docVars.setKnownVariable(RS.DIMLUNIT, RS.Decimal);
+        }
+    }
     docVars.setUnit(toUnit);
     docVars.setKnownVariable(RS.DIMSCALE, doc.getKnownVariable(RS.DIMSCALE, 1.0) * factor);
 

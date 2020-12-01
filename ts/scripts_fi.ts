@@ -5857,7 +5857,7 @@ BUG: Interferes with group castings.</source>
         <translation>Tartuntatyökalut</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+12"/>
         <source>Snap label:</source>
         <translation>Tartunnan selite:</translation>
     </message>
@@ -5882,7 +5882,12 @@ BUG: Interferes with group castings.</source>
         <translation>Ylimääräiset muodot:</translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+30"/>
+        <source>Working set fading factor:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+75"/>
         <source>Zoom Tools</source>
         <translation>Suurennustyökalut</translation>
     </message>
@@ -5892,7 +5897,7 @@ BUG: Interferes with group castings.</source>
         <translation>Suurenna/säädä laatikon reuna:</translation>
     </message>
     <message>
-        <location line="-643"/>
+        <location line="-712"/>
         <source>Origin:</source>
         <translation>Nollakohta:</translation>
     </message>
@@ -10432,7 +10437,7 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>Save</name>
     <message>
-        <location filename="../scripts/File/Save/Save.js" line="+78"/>
+        <location filename="../scripts/File/Save/Save.js" line="+90"/>
         <source>Overwrite File?</source>
         <translation>Korvataanko tiedosto?</translation>
     </message>
@@ -10482,7 +10487,17 @@ näkyy hakutuloksissa:</translation>
         <translation type="vanished">Säädetyt värit &apos;pyöristetään&apos; lähimpään kiinteään väriin.</translation>
     </message>
     <message>
-        <location line="-41"/>
+        <location line="-60"/>
+        <source>Block editing in progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>A block is currently exploded and being edited. Please save the block before saving your drawing. Saving will save the block contents exploded. Save anyway?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
         <translation>Tiedosto &quot;%1&quot; on jo olemassa. Haluatko korvata sen?</translation>
     </message>
