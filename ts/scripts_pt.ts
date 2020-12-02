@@ -5996,7 +5996,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+30"/>
         <source>Working set fading factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Fator de desvanecimento do conjunto de trabalho:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -10631,22 +10631,22 @@ nos resultados de busca:</translation>
     <message>
         <location line="-38"/>
         <source>Block editing in progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Edição de bloco em andamento</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>A block is currently exploded and being edited. Please save the block before saving your drawing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Um bloco está explodido e sendo editado. Salve o bloco antes de salvar seu desenho.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Saving will save the block contents exploded.</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvar irá salvar o conteúdo do bloco explodido.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Save anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>Salvar mesmo assim?</translation>
     </message>
     <message>
         <location line="+18"/>
