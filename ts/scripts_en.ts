@@ -10340,17 +10340,17 @@ shown in search results:</translation>
     <message>
         <location line="+1"/>
         <source>A block is currently exploded and being edited. Please save the block before saving your drawing.</source>
-        <translation type="unfinished"></translation>
+        <translation>A block is currently exploded and being edited. Please save the block before saving your drawing.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Saving will save the block contents exploded.</source>
-        <translation type="unfinished"></translation>
+        <translation>Saving will save the block contents exploded.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Save anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>Save anyway?</translation>
     </message>
     <message>
         <location line="+18"/>
