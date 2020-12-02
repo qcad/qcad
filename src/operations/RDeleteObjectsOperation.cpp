@@ -40,6 +40,7 @@ RTransaction RDeleteObjectsOperation::apply(RDocument& document, bool preview) {
     transaction.setAllowAll(allowAll);
     transaction.setAllowInvisible(allowInvisible);
     transaction.setGroup(transactionGroup);
+    transaction.setType(transactionType);
 
     for (int i = 0; i < list.size(); ++i) {
         if (list[i].isNull()) {

@@ -78,6 +78,7 @@ RTransaction RMixedOperation::apply(RDocument& document, bool preview) {
 
     RTransaction transaction(document.getStorage(), text, undoable);
     transaction.setGroup(transactionGroup);
+    transaction.setType(transactionType);
 
     for (int i = 0; i < list.size(); ++i) {
         if (list[i].first.isNull()) {

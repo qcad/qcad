@@ -35,6 +35,7 @@ RTransaction RClickReferencePointOperation::apply(RDocument& document, bool prev
 
     RTransaction transaction(document.getStorage(), text);
     transaction.setGroup(transactionGroup);
+    transaction.setType(transactionType);
 
     QSet<REntity::Id> selectedEntities = document.querySelectedEntities();
     QSet<REntity::Id>::iterator it;

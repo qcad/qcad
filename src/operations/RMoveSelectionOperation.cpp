@@ -42,6 +42,7 @@ RMoveSelectionOperation::RMoveSelectionOperation(
 RTransaction RMoveSelectionOperation::apply(RDocument& document, bool preview) {
     RTransaction transaction(document.getStorage(), text);
     transaction.setGroup(transactionGroup);
+    transaction.setType(transactionType);
 
     QSet<REntity::Id> selectedEntities = document.querySelectedEntities();
 

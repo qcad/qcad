@@ -32,6 +32,7 @@ RCopyOperation::RCopyOperation(const RVector& offset, RDocument& src)
 RTransaction RCopyOperation::apply(RDocument& document, bool preview) {
     RTransaction transaction(document.getStorage(), text);
     transaction.setGroup(transactionGroup);
+    transaction.setType(transactionType);
 
     copy(
         src, document,

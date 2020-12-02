@@ -47,6 +47,7 @@ RTransaction RChangePropertyOperation::apply(RDocument& document, bool preview) 
     // always allow property changes (e.g. move entity to hidden layer)
     transaction.setAllowInvisible(true);
     transaction.setGroup(transactionGroup);
+    transaction.setType(transactionType);
 
     QVariant val = value;
 

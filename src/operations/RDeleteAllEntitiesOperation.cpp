@@ -27,6 +27,7 @@ RTransaction RDeleteAllEntitiesOperation::apply(RDocument& document, bool previe
     Q_UNUSED(preview)
     RTransaction transaction(document.getStorage(), text, undoable);
     transaction.setGroup(transactionGroup);
+    transaction.setType(transactionType);
 
     QSet<RObject::Id> ids = document.queryAllEntities();
 
