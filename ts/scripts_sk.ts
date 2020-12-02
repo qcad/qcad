@@ -2405,7 +2405,7 @@ Prajete si ho obnoviť?</translation>
         <translation type="vanished">Zvolená jednotka &apos;%1&apos; - sa nedá konvertovať</translation>
     </message>
     <message>
-        <location line="+130"/>
+        <location line="+136"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Konvertované z &quot;%1&quot; na &quot;%2&quot;</translation>
     </message>
@@ -3592,7 +3592,7 @@ už existuje v zozname.</translation>
 <context>
     <name>DrawBasedOnRectanglePP</name>
     <message>
-        <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+72"/>
+        <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+73"/>
         <source>First corner</source>
         <translation>Prvý roh</translation>
     </message>

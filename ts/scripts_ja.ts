@@ -2417,7 +2417,7 @@ Do you wish to recover it?</source>
         <translation type="vanished">単位&apos;%1&apos;が選択されました-何もされませんでした</translation>
     </message>
     <message>
-        <location line="+130"/>
+        <location line="+136"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>%1 から %2 にコンバートされた図面</translation>
     </message>
@@ -3622,7 +3622,7 @@ is already in the list.</source>
 <context>
     <name>DrawBasedOnRectanglePP</name>
     <message>
-        <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+72"/>
+        <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+73"/>
         <source>First corner</source>
         <translation>第１角</translation>
     </message>

@@ -2568,7 +2568,7 @@ Voulez-vous le récupérer ?</translation>
         <translation type="vanished">Unité &apos;%1&apos; sélectionné - rien à faire</translation>
     </message>
     <message>
-        <location line="+130"/>
+        <location line="+136"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Dessin converti de %1 à %2</translation>
     </message>
@@ -3802,7 +3802,7 @@ est déjà dans la liste.</translation>
 <context>
     <name>DrawBasedOnRectanglePP</name>
     <message>
-        <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+72"/>
+        <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+73"/>
         <source>First corner</source>
         <translation>Premier point d&apos;angle</translation>
     </message>

@@ -2373,7 +2373,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Yksikkö &quot;%1&quot; valittu. Ei tehtävää</translation>
     </message>
     <message>
-        <location line="+130"/>
+        <location line="+136"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Muunnettu piirros %1 %2</translation>
     </message>
@@ -3571,7 +3571,7 @@ on jo luettelossa.</translation>
 <context>
     <name>DrawBasedOnRectanglePP</name>
     <message>
-        <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+72"/>
+        <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+73"/>
         <source>First corner</source>
         <translation>Ensimmäinen kulma</translation>
     </message>

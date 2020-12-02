@@ -2904,7 +2904,7 @@ Wersja: </translatorcomment>
         <translation type="vanished">Wybrano jednostkę „%1” - brak czynności do wykonania</translation>
     </message>
     <message>
-        <location line="+130"/>
+        <location line="+136"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Skonwertowano jednostki rysunku z %1 na %2</translation>
     </message>
@@ -4373,7 +4373,7 @@ Podziel &amp;2</translatorcomment>
 <context>
     <name>DrawBasedOnRectanglePP</name>
     <message>
-        <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+72"/>
+        <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+73"/>
         <source>First corner</source>
         <translation>Pierwszy narożnik</translation>
     </message>

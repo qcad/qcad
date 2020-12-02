@@ -2341,7 +2341,7 @@ Do you wish to recover it?</translation>
         <translation type="vanished">Unit &apos;%1&apos; selected - Nothing to be done</translation>
     </message>
     <message>
-        <location line="+130"/>
+        <location line="+136"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Converted drawing from %1 to %2</translation>
     </message>
@@ -3504,7 +3504,7 @@ is already in the list.</translation>
 <context>
     <name>DrawBasedOnRectanglePP</name>
     <message>
-        <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+72"/>
+        <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+73"/>
         <source>First corner</source>
         <translation>First corner</translation>
     </message>

@@ -2713,7 +2713,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation type="vanished">Einheit &apos;%1&apos; gewählt - keine Konvertierung nötig</translation>
     </message>
     <message>
-        <location line="+130"/>
+        <location line="+136"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Zeichnung konvertiert von %1 in %2</translation>
     </message>
@@ -4003,7 +4003,7 @@ ist bereits in der Liste.</translation>
 <context>
     <name>DrawBasedOnRectanglePP</name>
     <message>
-        <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+72"/>
+        <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+73"/>
         <source>First corner</source>
         <translation>Erster Eckpunkt</translation>
     </message>

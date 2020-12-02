@@ -2321,7 +2321,7 @@ Onu kurtarmak ister misiniz?</translation>
         <translation type="vanished">&apos;%1&apos; birimi seçildi - Yapılacak bir şey yok</translation>
     </message>
     <message>
-        <location line="+130"/>
+        <location line="+136"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>%1&apos;den %2&apos;ye dönüştürülen çizim</translation>
     </message>
@@ -3429,7 +3429,7 @@ is already in the list.</source>
 <context>
     <name>DrawBasedOnRectanglePP</name>
     <message>
-        <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+72"/>
+        <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+73"/>
         <source>First corner</source>
         <translation type="unfinished">İlk köşe</translation>
     </message>

@@ -2383,7 +2383,7 @@ Wilt u het herstellen?</translation>
         <translation type="vanished">Eenheid &apos;%1&apos; geselecteerd - niets te doen</translation>
     </message>
     <message>
-        <location line="+130"/>
+        <location line="+136"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Tekening omgezet van %1 naar %2</translation>
     </message>
@@ -3550,7 +3550,7 @@ is al in de lijst.</translation>
 <context>
     <name>DrawBasedOnRectanglePP</name>
     <message>
-        <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+72"/>
+        <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+73"/>
         <source>First corner</source>
         <translation>Eerste hoekpunt</translation>
     </message>

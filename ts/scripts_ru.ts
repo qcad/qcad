@@ -2367,7 +2367,7 @@ Do you wish to recover it?</source>
         <translation>Единица «%1» выбрана. Нечего делать</translation>
     </message>
     <message>
-        <location line="+130"/>
+        <location line="+136"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Преобразованный чертёж из %1 в %2</translation>
     </message>
@@ -3531,7 +3531,7 @@ is already in the list.</source>
 <context>
     <name>DrawBasedOnRectanglePP</name>
     <message>
-        <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+72"/>
+        <location filename="../scripts/Draw/DrawBasedOnRectanglePP.js" line="+73"/>
         <source>First corner</source>
         <translation>Первый угол</translation>
     </message>
