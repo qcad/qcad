@@ -1150,6 +1150,7 @@ QDebug operator<<(QDebug dbg, RTransaction& t) {
     dbg.nospace() << "RTransaction(" << QString("%1").arg((long)&t, 0, 16);
 
     dbg.nospace() << ", id: " << t.getId();
+    dbg.nospace() << ", type: " << t.getType();
     dbg.nospace() << ", group: " << t.getGroup();
     dbg.nospace() << ", text: " << t.getText();
 
