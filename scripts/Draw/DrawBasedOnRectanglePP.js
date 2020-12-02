@@ -37,6 +37,7 @@ function DrawBasedOnRectanglePP(guiAction) {
     this.rotate = true;
     this.rotation = 0.0;
     this.previewRectangle = false;
+    this.square = false;
 }
 
 DrawBasedOnRectanglePP.prototype = new EAction();
@@ -113,6 +114,28 @@ DrawBasedOnRectanglePP.prototype.pickCoordinate = function(event, preview) {
 
     case DrawBasedOnRectanglePP.State.SettingCorner2:
         this.corner2 = event.getModelPosition();
+
+        // square:
+        if (isShiftPressed()) {
+            var w = this.corner2.x - this.corner1.x;
+            var h = this.corner2.y - this.corner1.y;
+            var s = Math.max(Math.abs(w), Math.abs(h));
+
+            if (w<0) {
+                this.corner2.x = this.corner1.x - s;
+            }
+            else {
+                this.corner2.x = this.corner1.x + s;
+            }
+
+            if (h<0) {
+                this.corner2.y = this.corner1.y - s;
+            }
+            else {
+                this.corner2.y = this.corner1.y + s;
+            }
+        }
+
         if (preview) {
             this.updatePreview();
         }
@@ -134,6 +157,7 @@ DrawBasedOnRectanglePP.prototype.getCorners = function() {
     }
 
     if (this.rotate===false || RMath.fuzzyCompare(this.rotation, 0.0)) {
+
         return [
             new RVector(this.corner1.x, this.corner1.y),
             new RVector(this.corner2.x, this.corner1.y),
