@@ -10437,7 +10437,7 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>Save</name>
     <message>
-        <location filename="../scripts/File/Save/Save.js" line="+90"/>
+        <location filename="../scripts/File/Save/Save.js" line="+92"/>
         <source>Overwrite File?</source>
         <translation>Korvataanko tiedosto?</translation>
     </message>
@@ -10487,13 +10487,23 @@ näkyy hakutuloksissa:</translation>
         <translation type="vanished">Säädetyt värit &apos;pyöristetään&apos; lähimpään kiinteään väriin.</translation>
     </message>
     <message>
-        <location line="-60"/>
+        <location line="-62"/>
         <source>Block editing in progress</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>A block is currently exploded and being edited. Please save the block before saving your drawing. Saving will save the block contents exploded. Save anyway?</source>
+        <source>A block is currently exploded and being edited. Please save the block before saving your drawing.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Saving will save the block contents exploded.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Save anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

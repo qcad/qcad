@@ -11794,7 +11794,7 @@ Segunda entidad no se pueden recortar.</translatorcomment>
 <context>
     <name>Save</name>
     <message>
-        <location filename="../scripts/File/Save/Save.js" line="+90"/>
+        <location filename="../scripts/File/Save/Save.js" line="+92"/>
         <source>Overwrite File?</source>
         <translation>¿Sobrescribir archivo?</translation>
     </message>
@@ -11821,13 +11821,23 @@ Segunda entidad no se pueden recortar.</translatorcomment>
         <translation type="vanished">La versión del formato del archivo que está utilizando no se recomienda: &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="-38"/>
         <source>Block editing in progress</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>A block is currently exploded and being edited. Please save the block before saving your drawing. Saving will save the block contents exploded. Save anyway?</source>
+        <source>A block is currently exploded and being edited. Please save the block before saving your drawing.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Saving will save the block contents exploded.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Save anyway?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
