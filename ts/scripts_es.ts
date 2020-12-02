@@ -6442,7 +6442,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+30"/>
         <source>Working set fading factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Factor de desvanecimiento del conjunto de trabajo:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -11823,22 +11823,22 @@ Segunda entidad no se pueden recortar.</translatorcomment>
     <message>
         <location line="-38"/>
         <source>Block editing in progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Edición de bloque en curso</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>A block is currently exploded and being edited. Please save the block before saving your drawing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Actualmente, un bloque está descompuesto y se está editando. Guarde el bloque antes de guardar su dibujo.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Saving will save the block contents exploded.</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar guardará el contenido del bloque explotado.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Save anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Guardar de todos modos?</translation>
     </message>
     <message>
         <location line="+36"/>
