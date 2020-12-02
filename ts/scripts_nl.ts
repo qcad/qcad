@@ -5885,7 +5885,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+30"/>
         <source>Working set fading factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Werkset vervagingsfactor:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -10484,22 +10484,22 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="-62"/>
         <source>Block editing in progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Bezig met bewerken van blok</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>A block is currently exploded and being edited. Please save the block before saving your drawing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Een blok is momenteel geëxplodeerd en wordt bewerkt. Sla het blok op voordat u uw tekening opslaat.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Saving will save the block contents exploded.</source>
-        <translation type="unfinished"></translation>
+        <translation>Door op te slaan wordt de geëxplodeerde inhoud van het blok opgeslagen.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Save anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>Toch opslaan?</translation>
     </message>
     <message>
         <location line="+18"/>
