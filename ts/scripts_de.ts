@@ -6604,7 +6604,7 @@ BUG: Interferes with group castings.</translation>
     <message>
         <location line="+30"/>
         <source>Working set fading factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ausblendungsfaktor des Arbeitssatzes:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -12531,12 +12531,12 @@ nicht öffnen.
     <message>
         <location line="-36"/>
         <source>Block editing in progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Block in Bearbeitung</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>A block is currently exploded and being edited. Please save the block before saving your drawing. Saving will save the block contents exploded. Save anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>Ein Block ist derzeit aufgebrochen und wird bearbeitet. Bitte speichern Sie den Block, bevor Sie Ihre Zeichnung speichern. Trotzdem speichern?</translation>
     </message>
     <message>
         <location line="+37"/>
