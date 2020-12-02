@@ -12540,17 +12540,17 @@ nicht öffnen.
     <message>
         <location line="+1"/>
         <source>A block is currently exploded and being edited. Please save the block before saving your drawing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ein Block ist derzeit aufgebrochen und wird bearbeitet. Bitte speichern Sie den Block, bevor Sie Ihre Zeichnung speichern.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Saving will save the block contents exploded.</source>
-        <translation type="unfinished"></translation>
+        <translation>Beim Speichern wird der aufgebrochene Blockinhalt gespeichert.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Save anyway?</source>
-        <translation type="unfinished"></translation>
+        <translation>Trotzdem speichern?</translation>
     </message>
     <message>
         <location line="+37"/>
