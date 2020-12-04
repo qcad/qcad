@@ -59,6 +59,8 @@ function EAction(guiAction) {
     this.waitingForContextMenu = false;
 
     this.optOutRelativeZeroResume = false;
+
+    this.resuming = false;
 }
 
 EAction.prototype = new RActionAdapter();
@@ -356,6 +358,8 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
         return;
     }
 
+    this.resuming = true;
+
     this.optionWidgetActions = [];
     for (var i = 0; i < this.uiFile.length; ++i) {
         var uiFile = this.uiFile[i];
@@ -408,6 +412,8 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
 
     // hide options tool bar widgets which are shown in a dialog instead:
     this.hideOptionsToolBarWidgets();
+
+    this.resuming = false;
 };
 
 /**
