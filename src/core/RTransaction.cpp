@@ -27,7 +27,7 @@
 #include "RTransaction.h"
 
 RTransaction::RTransaction()
-    : type(Generic),
+    : types(Generic),
       storage(NULL),
       transactionId(-1),
       transactionGroup(-1),
@@ -51,7 +51,7 @@ RTransaction::RTransaction()
  * Constructs an empty, invalid transaction.
  */
 RTransaction::RTransaction(RStorage& storage)
-    : type(Generic),
+    : types(Generic),
       storage(&storage),
       transactionId(-1),
       transactionGroup(-1),
@@ -83,7 +83,7 @@ RTransaction::RTransaction(
     const QList<RObject::Id>& affectedObjectIds,
     const QMap<RObject::Id, QList<RPropertyChange> >& propertyChanges)
     //RTransaction* parent)
-    : type(Generic),
+    : types(Generic),
       storage(&storage),
       transactionId(transactionId),
       transactionGroup(-1),
@@ -121,7 +121,7 @@ RTransaction::RTransaction(
     const QString& text,
     bool undoable)
     //RTransaction* parent)
-    : type(Generic),
+    : types(Generic),
       storage(&storage),
       transactionId(-1),
       transactionGroup(-1),
@@ -151,6 +151,20 @@ RTransaction::RTransaction(
 
 RTransaction::~RTransaction() {
 }
+
+
+void RTransaction::setType(RTransaction::Type type, bool on) {
+    if (on) {
+        types |= type;
+    } else {
+        types &= ~type;
+    }
+}
+
+bool RTransaction::getType(RTransaction::Type type) const {
+    return (types & type) == type;
+}
+
 
 
 /**
@@ -642,8 +656,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
 
         // move entity to current working set:
         // if we are editing a working set, add object to working set:
-        RObject::Id workingSetBlockRefId = doc->getWorkingSetBlockReferenceId();
-        if (workingSetBlockRefId!=RObject::INVALID_ID) {
+        if (doc->isEditingWorkingSet()) {
             entity->setWorkingSet(true);
             if (entity->isSelectedWorkingSet()) {
                 entity->setSelectedWorkingSet(false);
@@ -1150,7 +1163,7 @@ QDebug operator<<(QDebug dbg, RTransaction& t) {
     dbg.nospace() << "RTransaction(" << QString("%1").arg((long)&t, 0, 16);
 
     dbg.nospace() << ", id: " << t.getId();
-    dbg.nospace() << ", type: " << t.getType();
+    dbg.nospace() << ", types: " << t.getTypes();
     dbg.nospace() << ", group: " << t.getGroup();
     dbg.nospace() << ", text: " << t.getText();
 

@@ -128,7 +128,7 @@ RTransaction RAddObjectsOperation::apply(RDocument& document, bool preview) {
     transaction.setAllowAll(allowAll);
     transaction.setAllowInvisible(allowInvisible);
     transaction.setGroup(transactionGroup);
-    transaction.setType(transactionType);
+    transaction.setTypes(transactionTypes);
 
     for (int i=0; i<addedObjects.size(); ++i) {
         if (limitPreview && preview && i>RSettings::getPreviewEntities()) {

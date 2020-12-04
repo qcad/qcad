@@ -31,7 +31,7 @@ RTransaction RDeleteSelectionOperation::apply(RDocument& document, bool preview)
 
     RTransaction transaction(document.getStorage(), text);
     transaction.setGroup(transactionGroup);
-    transaction.setType(transactionType);
+    transaction.setTypes(transactionTypes);
 
     QSet<REntity::Id> selectedEntities = document.querySelectedEntities();
     QSet<REntity::Id>::iterator it;
