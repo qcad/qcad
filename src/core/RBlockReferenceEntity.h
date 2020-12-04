@@ -156,6 +156,10 @@ public:
         data.setReferencedBlockId(blockId);
     }
 
+    void setReferencedBlockName(const QString& blockName) {
+        data.setReferencedBlockName(blockName);
+    }
+
     RBlock::Id getReferencedBlockId() const {
         return data.getReferencedBlockId();
     }
