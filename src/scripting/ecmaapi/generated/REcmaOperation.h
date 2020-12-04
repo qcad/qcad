@@ -78,6 +78,9 @@
         getText
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getTransactionTypes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setTransactionType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

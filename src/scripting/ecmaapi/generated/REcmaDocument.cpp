@@ -481,9 +481,9 @@
             
             REcmaHelper::registerFunction(&engine, proto, eval, "eval");
             
-            REcmaHelper::registerFunction(&engine, proto, getWorkingSetBlockReferenceId, "getWorkingSetBlockReferenceId");
+            REcmaHelper::registerFunction(&engine, proto, isEditingWorkingSet, "isEditingWorkingSet");
             
-            REcmaHelper::registerFunction(&engine, proto, setWorkingSetBlockReferenceId, "setWorkingSetBlockReferenceId");
+            REcmaHelper::registerFunction(&engine, proto, setIgnoreWorkingSet, "setIgnoreWorkingSet");
             
             REcmaHelper::registerFunction(&engine, proto, dump, "dump");
             
@@ -16527,19 +16527,19 @@
             return result;
         }
          QScriptValue
-        REcmaDocument::getWorkingSetBlockReferenceId
+        REcmaDocument::isEditingWorkingSet
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDocument::getWorkingSetBlockReferenceId", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::getWorkingSetBlockReferenceId";
+            //REcmaHelper::functionStart("REcmaDocument::isEditingWorkingSet", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::isEditingWorkingSet";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDocument* self = 
-                        getSelf("getWorkingSetBlockReferenceId", context);
+                        getSelf("isEditingWorkingSet", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -16556,11 +16556,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RBlockReferenceEntity::Id'
-    RBlockReferenceEntity::Id cppResult =
+    // return type 'bool'
+    bool cppResult =
         
-               self->getWorkingSetBlockReferenceId();
-        // return type: RBlockReferenceEntity::Id
+               self->isEditingWorkingSet();
+        // return type: bool
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -16569,26 +16569,26 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.getWorkingSetBlockReferenceId().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.isEditingWorkingSet().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDocument::getWorkingSetBlockReferenceId", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocument::isEditingWorkingSet", context, engine);
             return result;
         }
          QScriptValue
-        REcmaDocument::setWorkingSetBlockReferenceId
+        REcmaDocument::setIgnoreWorkingSet
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDocument::setWorkingSetBlockReferenceId", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::setWorkingSetBlockReferenceId";
+            //REcmaHelper::functionStart("REcmaDocument::setIgnoreWorkingSet", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::setIgnoreWorkingSet";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDocument* self = 
-                        getSelf("setWorkingSetBlockReferenceId", context);
+                        getSelf("setIgnoreWorkingSet", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -16599,135 +16599,35 @@
     
     if( context->argumentCount() ==
     1 && (
-            context->argument(0).isNumber()
-        ) /* type: RBlockReferenceEntity::Id */
+            context->argument(0).isBool()
+        ) /* type: bool */
     
     ){
     // prepare arguments:
     
                     // argument isStandardType
-                    RBlockReferenceEntity::Id
+                    bool
                     a0 =
-                    (RBlockReferenceEntity::Id)
-                    (int)
+                    (bool)
+                    
                     context->argument( 0 ).
-                    toNumber();
+                    toBool();
                 
     // end of arguments
 
     // call C++ function:
     // return type 'void'
     
-               self->setWorkingSetBlockReferenceId(a0);
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    2 && (
-            context->argument(0).isNumber()
-        ) /* type: RBlockReferenceEntity::Id */
-     && (
-            context->argument(1).isNumber()
-        ) /* type: int */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    RBlockReferenceEntity::Id
-                    a0 =
-                    (RBlockReferenceEntity::Id)
-                    (int)
-                    context->argument( 0 ).
-                    toNumber();
-                
-                    // argument isStandardType
-                    int
-                    a1 =
-                    (int)
-                    
-                    context->argument( 1 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setWorkingSetBlockReferenceId(a0
-        ,
-    a1);
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    3 && (
-            context->argument(0).isNumber()
-        ) /* type: RBlockReferenceEntity::Id */
-     && (
-            context->argument(1).isNumber()
-        ) /* type: int */
-     && (
-            context->argument(2).isVariant() || 
-            context->argument(2).isQObject() || 
-            context->argument(2).isNull()
-        ) /* type: RTransaction * */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    RBlockReferenceEntity::Id
-                    a0 =
-                    (RBlockReferenceEntity::Id)
-                    (int)
-                    context->argument( 0 ).
-                    toNumber();
-                
-                    // argument isStandardType
-                    int
-                    a1 =
-                    (int)
-                    
-                    context->argument( 1 ).
-                    toNumber();
-                
-                    // argument is pointer
-                    RTransaction * a2 = NULL;
-
-                    a2 = 
-                        REcmaHelper::scriptValueTo<RTransaction >(
-                            context->argument(2)
-                        );
-                    
-                    if (a2==NULL && 
-                        !context->argument(2).isNull()) {
-                        return REcmaHelper::throwError("RDocument: Argument 2 is not of type RTransaction *RTransaction *.", context);                    
-                    }
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setWorkingSetBlockReferenceId(a0
-        ,
-    a1
-        ,
-    a2);
+               self->setIgnoreWorkingSet(a0);
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.setWorkingSetBlockReferenceId().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.setIgnoreWorkingSet().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDocument::setWorkingSetBlockReferenceId", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocument::setIgnoreWorkingSet", context, engine);
             return result;
         }
          QScriptValue

@@ -860,8 +860,8 @@
      */</comment>
     <function><type><name>virtual</name> <name>void</name></type> <name>update</name><parameter_list>()</parameter_list> <block>{}</block></function>
 
-    <function_decl><type><name><name>RBlockReferenceEntity</name>::<name>Id</name></name></type> <name>getWorkingSetBlockReferenceId</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
-    <decl_stmt><decl><type><name>void</name></type> <name>setWorkingSetBlockReferenceId</name><argument_list>(<argument><expr><name><name>RBlockReferenceEntity</name>::<name>Id</name></name> <name>id</name></expr></argument>, <argument><expr><name>int</name> <name>group</name> = -1</expr></argument>, <argument><expr><name>RTransaction</name>* <name>transaction</name> = <name>NULL</name></expr></argument>)</argument_list></decl>;</decl_stmt>
+<comment type="line">//    RBlockReferenceEntity::Id getWorkingSetBlockReferenceId() const;</comment>
+<comment type="line">//    void setWorkingSetBlockReferenceId(RBlockReferenceEntity::Id id, int group = -1, RTransaction* transaction = NULL);</comment>
 
 </public><protected>protected:
     <decl_stmt><decl><type><name>QDateTime</name></type> <name>lastModified</name></decl>;</decl_stmt>

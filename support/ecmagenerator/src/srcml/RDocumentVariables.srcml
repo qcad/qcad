@@ -131,13 +131,13 @@
         <expr_stmt><expr><name>dimensionFont</name> = <name>f</name></expr>;</expr_stmt>
     }</block></function>
 
-    <function><type><name><name>RObject</name>::<name>Id</name></name></type> <name>getWorkingSetBlockReferenceId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>workingSetBlockReferenceId</name></expr>;</return>
-    }</block></function>
+<comment type="line">//    RObject::Id getWorkingSetBlockReferenceId() const {</comment>
+<comment type="line">//        return workingSetBlockReferenceId;</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>void</name></type> <name>setWorkingSetBlockReferenceId</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>id</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>workingSetBlockReferenceId</name> = <name>id</name></expr>;</expr_stmt>
-    }</block></function>
+<comment type="line">//    void setWorkingSetBlockReferenceId(RObject::Id id) {</comment>
+<comment type="line">//        workingSetBlockReferenceId = id;</comment>
+<comment type="line">//    }</comment>
 
     <function_decl><type><name>QString</name></type> <name>addAutoVariable</name><parameter_list>(<param><decl><type><name>double</name></type> <name>value</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>QStringList</name></type> <name>getAutoVariables</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>

@@ -1591,11 +1591,5 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
-    <method name="getWorkingSetBlockReferenceId"
-    cppName="getWorkingSetBlockReferenceId" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="RBlockReferenceEntity::Id"
-      isPureVirtual="false" />
-    </method>
   </class>
 </unit>

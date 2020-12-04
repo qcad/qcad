@@ -47,7 +47,7 @@
     <constructor><name>ROperation</name><parameter_list>(
         <param><decl><type><name>bool</name></type> <name>undoable</name>=<init><expr><name>true</name></expr></init></decl></param>,
         <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>entityTypeFilter</name> =<init> <expr><name><name>RS</name>::<name>EntityAll</name></name></expr></init></decl></param>
-    )</parameter_list> <member_list>: <call><name>transactionType</name><argument_list>(<argument><expr><name><name>RTransaction</name>::<name>Generic</name></name></expr></argument>)</argument_list></call>,
+    )</parameter_list> <member_list>: <call><name>transactionTypes</name><argument_list>(<argument><expr><name><name>RTransaction</name>::<name>Generic</name></name></expr></argument>)</argument_list></call>,
         <call><name>undoable</name><argument_list>(<argument><expr><name>undoable</name></expr></argument>)</argument_list></call>,
         <call><name>recordAffectedObjects</name><argument_list>(<argument><expr><name>true</name></expr></argument>)</argument_list></call>,
         <call><name>spatialIndexDisabled</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call>,
@@ -107,16 +107,24 @@
         <return>return <expr><name>text</name></expr>;</return>
     }</block></function>
 
-    <function><type><name>void</name></type> <name>setTransactionType</name><parameter_list>(<param><decl><type><name><name>RTransaction</name>::<name>Type</name></name></type> <name>t</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>transactionType</name> = <name>t</name></expr>;</expr_stmt>
+    <function><type><name><name>RTransaction</name>::<name>Types</name></name></type> <name>getTransactionTypes</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>transactionTypes</name></expr>;</return>
     }</block></function>
 
-    <function><type><name><name>RTransaction</name>::<name>Type</name></name></type> <name>getTransactionType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>transactionType</name></expr>;</return>
+    <function><type><name>void</name></type> <name>setTransactionType</name><parameter_list>(<param><decl><type><name><name>RTransaction</name>::<name>Type</name></name></type> <name>t</name></decl></param>, <param><decl><type><name>bool</name></type> <name>on</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr><name>on</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>transactionTypes</name> |= <name>t</name></expr>;</expr_stmt>
+        }</block></then> <else>else <block>{
+            <expr_stmt><expr><name>transactionTypes</name> &amp;= ~<name>t</name></expr>;</expr_stmt>
+        }</block></else></if>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>getTransactionType</name><parameter_list>(<param><decl><type><name><name>RTransaction</name>::<name>Type</name></name></type> <name>t</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr>(<name>transactionTypes</name> &amp; <name>t</name>) == <name>t</name></expr>;</return>
     }</block></function>
 
 </public><protected>protected:
-    <decl_stmt><decl><type><name><name>RTransaction</name>::<name>Type</name></name></type> <name>transactionType</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RTransaction</name>::<name>Types</name></name></type> <name>transactionTypes</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>undoable</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>recordAffectedObjects</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>spatialIndexDisabled</name></decl>;</decl_stmt>

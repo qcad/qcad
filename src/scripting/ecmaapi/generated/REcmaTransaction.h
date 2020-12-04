@@ -151,10 +151,16 @@
         isPreview
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getType
+        setTypes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTypes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

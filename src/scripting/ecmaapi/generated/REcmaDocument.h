@@ -663,10 +663,10 @@
         eval
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getWorkingSetBlockReferenceId
+        isEditingWorkingSet
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setWorkingSetBlockReferenceId
+        setIgnoreWorkingSet
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getClipboard

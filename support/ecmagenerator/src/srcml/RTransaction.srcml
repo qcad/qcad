@@ -78,14 +78,17 @@
      * Transaction type for optimizations.
      */</comment>
     <enum>enum <name>Type</name> <block>{
-        <expr><name>Generic</name></expr>,
-        <expr><name>CurrentLayerChange</name></expr>,
-        <expr><name>CurrentLayerSelectionChange</name></expr>,
-        <expr><name>LayerLockStatusChange</name></expr>,
-        <expr><name>LayerVisibilityStatusChange</name></expr>,
-        <expr><name>SaveWorkingSet</name></expr>,
-        <expr><name>ChangeDocumentSetting</name></expr>
+        <expr><name>Generic</name> = 0x0000</expr>,
+        <expr><name>CurrentLayerChange</name> = 0x0001</expr>,
+        <expr><name>CurrentLayerSelectionChange</name> = 0x0002</expr>,
+        <expr><name>LayerLockStatusChange</name> = 0x0004</expr>,
+        <expr><name>LayerVisibilityStatusChange</name> = 0x0008</expr>,
+        <expr><name>SaveWorkingSet</name> = 0x0010</expr>,
+        <expr><name>ChangeDocumentSetting</name> = 0x0020</expr>,
+        <expr><name>Undo</name> = 0x0040</expr>,
+        <expr><name>Redo</name> = 0x0080</expr>
     }</block>;</enum>
+    <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Types</argument>, <argument>Type</argument>)</argument_list></macro>
 
 </public><public>public:
     <constructor_decl><name>RTransaction</name><parameter_list>()</parameter_list>;</constructor_decl>
@@ -271,13 +274,14 @@
 
     <function_decl><type><name>bool</name></type> <name>isPreview</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
-    <function><type><name><name>RTransaction</name>::<name>Type</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>type</name></expr>;</return>
+    <function><type><name>void</name></type> <name>setTypes</name><parameter_list>(<param><decl><type><name><name>RTransaction</name>::<name>Types</name></name></type> <name>t</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>types</name> = <name>t</name></expr>;</expr_stmt>
     }</block></function>
-
-    <function><type><name>void</name></type> <name>setType</name><parameter_list>(<param><decl><type><name><name>RTransaction</name>::<name>Type</name></name></type> <name>t</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>type</name> = <name>t</name></expr>;</expr_stmt>
+    <function><type><name><name>RTransaction</name>::<name>Types</name></name></type> <name>getTypes</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>types</name></expr>;</return>
     }</block></function>
+    <function_decl><type><name>void</name></type> <name>setType</name><parameter_list>(<param><decl><type><name><name>RTransaction</name>::<name>Type</name></name></type> <name>type</name></decl></param>, <param><decl><type><name>bool</name></type> <name>on</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>getType</name><parameter_list>(<param><decl><type><name><name>RTransaction</name>::<name>Type</name></name></type> <name>type</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
 </public><protected>protected:
     <function_decl><type><name>bool</name></type> <name>addPropertyChange</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>objectId</name></decl></param>, <param><decl><type><name>const</name> <name>RPropertyChange</name>&amp;</type> <name>propertyChange</name></decl></param>)</parameter_list>;</function_decl>
@@ -287,7 +291,7 @@
     <function_decl><type><name>void</name></type> <name>rollback</name><parameter_list>()</parameter_list>;</function_decl>
 
 </protected><protected>protected:
-    <decl_stmt><decl><type><name><name>RTransaction</name>::<name>Type</name></name></type> <name>type</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RTransaction</name>::<name>Types</name></name></type> <name>types</name></decl>;</decl_stmt>
 
     <comment type="block">/**
      * A transaction always belongs to the storage of a document.
@@ -412,10 +416,13 @@
 
 <function_decl><type><name>QCADCORE_EXPORT</name> <name>QDebug</name></type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>, <param><decl><type><name>RTransaction</name>&amp;</type> <name>t</name></decl></param>)</parameter_list>;</function_decl>
 
+<macro><name>Q_DECLARE_OPERATORS_FOR_FLAGS</name><argument_list>(<argument>RTransaction::Types</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTransaction</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTransaction*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTransaction::Type</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTransaction::Type*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QFlags&lt;RTransaction::Type&gt;</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QFlags&lt;RTransaction::Type&gt;*</argument>)</argument_list></macro>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

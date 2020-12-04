@@ -105,10 +105,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, setDimensionFont, "setDimensionFont");
             
-            REcmaHelper::registerFunction(&engine, proto, getWorkingSetBlockReferenceId, "getWorkingSetBlockReferenceId");
-            
-            REcmaHelper::registerFunction(&engine, proto, setWorkingSetBlockReferenceId, "setWorkingSetBlockReferenceId");
-            
             REcmaHelper::registerFunction(&engine, proto, addAutoVariable, "addAutoVariable");
             
             REcmaHelper::registerFunction(&engine, proto, getAutoVariables, "getAutoVariables");
@@ -1866,110 +1862,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocumentVariables::setDimensionFont", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDocumentVariables::getWorkingSetBlockReferenceId
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDocumentVariables::getWorkingSetBlockReferenceId", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::getWorkingSetBlockReferenceId";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDocumentVariables* self = 
-                        getSelf("getWorkingSetBlockReferenceId", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'RObject::Id'
-    RObject::Id cppResult =
-        
-               self->getWorkingSetBlockReferenceId();
-        // return type: RObject::Id
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.getWorkingSetBlockReferenceId().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDocumentVariables::getWorkingSetBlockReferenceId", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDocumentVariables::setWorkingSetBlockReferenceId
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDocumentVariables::setWorkingSetBlockReferenceId", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::setWorkingSetBlockReferenceId";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDocumentVariables* self = 
-                        getSelf("setWorkingSetBlockReferenceId", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isNumber()
-        ) /* type: RObject::Id */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    RObject::Id
-                    a0 =
-                    (RObject::Id)
-                    (int)
-                    context->argument( 0 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setWorkingSetBlockReferenceId(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.setWorkingSetBlockReferenceId().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDocumentVariables::setWorkingSetBlockReferenceId", context, engine);
             return result;
         }
          QScriptValue

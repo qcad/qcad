@@ -91,6 +91,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getText, "getText");
             
+            REcmaHelper::registerFunction(&engine, proto, getTransactionTypes, "getTransactionTypes");
+            
             REcmaHelper::registerFunction(&engine, proto, setTransactionType, "setTransactionType");
             
             REcmaHelper::registerFunction(&engine, proto, getTransactionType, "getTransactionType");
@@ -772,6 +774,55 @@
             return result;
         }
          QScriptValue
+        REcmaOperation::getTransactionTypes
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaOperation::getTransactionTypes", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaOperation::getTransactionTypes";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    ROperation* self = 
+                        getSelf("getTransactionTypes", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RTransaction::Types'
+    RTransaction::Types cppResult =
+        
+               self->getTransactionTypes();
+        // return type: RTransaction::Types
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for ROperation.getTransactionTypes().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaOperation::getTransactionTypes", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaOperation::setTransactionType
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -819,6 +870,46 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: RTransaction::Type */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RTransaction::Type
+                    a0 =
+                    (RTransaction::Type)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setTransactionType(a0
+        ,
+    a1);
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for ROperation.setTransactionType().",
                    context);
@@ -849,18 +940,29 @@
                 
     
     if( context->argumentCount() ==
-    0
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RTransaction::Type */
+    
     ){
     // prepare arguments:
     
+                    // argument isStandardType
+                    RTransaction::Type
+                    a0 =
+                    (RTransaction::Type)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
     // end of arguments
 
     // call C++ function:
-    // return type 'RTransaction::Type'
-    RTransaction::Type cppResult =
+    // return type 'bool'
+    bool cppResult =
         
-               self->getTransactionType();
-        // return type: RTransaction::Type
+               self->getTransactionType(a0);
+        // return type: bool
                 // standard Type
                 result = QScriptValue(cppResult);
             

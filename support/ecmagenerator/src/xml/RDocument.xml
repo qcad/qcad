@@ -1752,24 +1752,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="NULL" isConst="false" />
       </variant>
     </method>
-    <method name="getWorkingSetBlockReferenceId"
-    cppName="getWorkingSetBlockReferenceId" specifier="public"
+    <method name="isEditingWorkingSet"
+    cppName="isEditingWorkingSet" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="RBlockReferenceEntity::Id"
-      isPureVirtual="false" />
+      <variant returnType="bool" isPureVirtual="false" />
     </method>
-    <method name="setWorkingSetBlockReferenceId"
-    cppName="setWorkingSetBlockReferenceId" specifier="public"
+    <method name="setIgnoreWorkingSet"
+    cppName="setIgnoreWorkingSet" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RBlockReferenceEntity::Id"
-        typeName="RBlockReferenceEntity::Id" name="id"
-        isConst="false" />
-        <arg type="int" typeName="int" name="group"
-        hasDefault="true" default="RDEFAULT_MIN1"
-        isConst="false" />
-        <arg type="RTransaction *" typeName="RTransaction *"
-        name="transaction" hasDefault="true" default="NULL"
+        <arg type="bool" typeName="bool" name="on"
         isConst="false" />
       </variant>
     </method>

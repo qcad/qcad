@@ -194,6 +194,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="setReferencedBlockName"
+    cppName="setReferencedBlockName" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="blockName" isConst="true" />
+      </variant>
+    </method>
     <method name="getReferencedBlockId"
     cppName="getReferencedBlockId" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
