@@ -130,13 +130,13 @@ public:
         dimensionFont = f;
     }
 
-    RObject::Id getWorkingSetBlockReferenceId() const {
-        return workingSetBlockReferenceId;
-    }
+//    RObject::Id getWorkingSetBlockReferenceId() const {
+//        return workingSetBlockReferenceId;
+//    }
 
-    void setWorkingSetBlockReferenceId(RObject::Id id) {
-        workingSetBlockReferenceId = id;
-    }
+//    void setWorkingSetBlockReferenceId(RObject::Id id) {
+//        workingSetBlockReferenceId = id;
+//    }
 
     QString addAutoVariable(double value);
     QStringList getAutoVariables() const;

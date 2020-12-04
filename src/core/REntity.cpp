@@ -418,7 +418,7 @@ bool REntity::isInWorkingSet() const {
         return false;
     }
     // entity not in the current working set:
-    if (doc->getWorkingSetBlockReferenceId()!=RObject::INVALID_ID) {
+    if (doc->isEditingWorkingSet()) {
         if (!isWorkingSet()) {
             return false;
         }

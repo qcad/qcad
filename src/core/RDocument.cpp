@@ -2914,13 +2914,27 @@ RDocument& RDocument::getClipboard() {
     return *clipboard;
 }
 
-RBlockReferenceEntity::Id RDocument::getWorkingSetBlockReferenceId() const {
-    return storage.getWorkingSetBlockReferenceId();
+bool RDocument::isEditingWorkingSet() const {
+    QSharedPointer<RDocumentVariables> docVars = queryDocumentVariablesDirect();
+    return docVars->hasCustomProperty("QCAD", "WorkingSet/BlockName") && !docVars->hasCustomProperty("QCAD", "WorkingSet/Ignore");
 }
 
-void RDocument::setWorkingSetBlockReferenceId(RBlockReferenceEntity::Id id, int group, RTransaction* transaction) {
-    storage.setWorkingSetBlockReferenceId(id, group, transaction);
+void RDocument::setIgnoreWorkingSet(bool on) {
+    if (on) {
+        queryDocumentVariablesDirect()->setCustomProperty("QCAD", "WorkingSet/Ignore", true);
+    }
+    else {
+        queryDocumentVariablesDirect()->removeCustomProperty("QCAD", "WorkingSet/Ignore");
+    }
 }
+
+//RBlockReferenceEntity::Id RDocument::getWorkingSetBlockReferenceId() const {
+//    return storage.getWorkingSetBlockReferenceId();
+//}
+
+//void RDocument::setWorkingSetBlockReferenceId(RBlockReferenceEntity::Id id, int group, RTransaction* transaction) {
+//    storage.setWorkingSetBlockReferenceId(id, group, transaction);
+//}
 
 /**
  * Stream operator for QDebug

@@ -854,7 +854,7 @@ void RGraphicsSceneQt::addDrawable(REntity::Id entityId, RGraphicsSceneDrawable&
         }
     }
 
-    if (document->getWorkingSetBlockReferenceId()!=RObject::INVALID_ID) {
+    if (document->isEditingWorkingSet()) {
         if (entity!=NULL) {
             for (int i=entityStack.size()-1; i>=0; i--) {
                 if (entityStack[i]->isWorkingSet()) {

@@ -859,8 +859,8 @@ public:
      */
     virtual void update() {}
 
-    RBlockReferenceEntity::Id getWorkingSetBlockReferenceId() const;
-    void setWorkingSetBlockReferenceId(RBlockReferenceEntity::Id id, int group = -1, RTransaction* transaction = NULL);
+//    RBlockReferenceEntity::Id getWorkingSetBlockReferenceId() const;
+//    void setWorkingSetBlockReferenceId(RBlockReferenceEntity::Id id, int group = -1, RTransaction* transaction = NULL);
 
 protected:
     QDateTime lastModified;

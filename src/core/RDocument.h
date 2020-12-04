@@ -436,8 +436,11 @@ public:
     QString substituteAutoVariables(const QString& expression);
     double eval(const QString& expression, bool* ok = NULL);
 
-    RBlockReferenceEntity::Id getWorkingSetBlockReferenceId() const;
-    void setWorkingSetBlockReferenceId(RBlockReferenceEntity::Id id, int group = RDEFAULT_MIN1, RTransaction* transaction = NULL);
+    bool isEditingWorkingSet() const;
+    void setIgnoreWorkingSet(bool on);
+
+//    RBlockReferenceEntity::Id getWorkingSetBlockReferenceId() const;
+//    void setWorkingSetBlockReferenceId(RBlockReferenceEntity::Id id, int group = RDEFAULT_MIN1, RTransaction* transaction = NULL);
 
     /*
     void copyToDocument(const RVector& reference, RDocument& other,
