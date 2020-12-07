@@ -73,6 +73,22 @@ RVector RViewportData::getViewOffset() const {
     return position + offset;
 }
 
+QList<RRefPoint> RViewportData::getInternalReferencePoints(RS::ProjectionRenderingHint hint) const {
+    QList<RRefPoint> ret;
+
+    QList<QSharedPointer<RShape> > shapes = getShapes();
+    for (int i=0; i<shapes.size(); i++) {
+        QSharedPointer<RShape> shape = shapes[i];
+
+        QList<RVector> ps = shape->getArcReferencePoints();
+        for (int k=0; k<ps.length(); k++) {
+            ret.append(RRefPoint(ps[k], RRefPoint::Tertiary));
+        }
+    }
+
+    return ret;
+}
+
 QList<RRefPoint> RViewportData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 
