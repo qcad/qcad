@@ -395,7 +395,7 @@ protected:
     bool pixelWidth;
     Qt::PenCapStyle penCapStyle;
     //bool combineTransforms;
-    QStack<double> blockScales;
+    //QStack<double> blockScales;
 
 private:
     RS::ProjectionRenderingHint projectionRenderingHint;
