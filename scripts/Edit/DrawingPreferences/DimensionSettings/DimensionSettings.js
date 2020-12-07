@@ -235,11 +235,11 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
             }
 
             // text color:
-//            if (!isNull(wdtc)) {
-//                wdtc.setProperty("Loaded", true);
-//                var dimTextColor = RSettings.getStringValue(settingsName + "/DimensionTextColor", new RColor(RColor.ByLayer));
-//                wdtc.setColor(dimTextColor);
-//            }
+            if (!isNull(wdtc)) {
+                wdtc.setProperty("Loaded", true);
+                var dimTextColor = RSettings.getColorValue(settingsName + "/DimensionTextColor", new RColor(RColor.ByBlock));
+                wdtc.setColor(dimTextColor);
+            }
         }
         else {
             if (!isNull(wfg)) {
