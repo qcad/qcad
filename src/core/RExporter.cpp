@@ -1834,13 +1834,5 @@ double RExporter::getCurrentPixelSizeHint() const {
         }
     }
 
-//    for (int i=0; i<blockScales.size(); i++) {
-//        // blockScale array contains absolute values:
-//        qDebug() << "block scale:" << blockScales[i];
-//        if (blockScales[i]>RS::PointTolerance) {
-//            ret /= blockScales[i];
-//        }
-//    }
-
     return ret;
 }
