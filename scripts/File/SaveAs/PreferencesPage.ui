@@ -10,7 +10,7 @@
     <height>499</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_3">
+  <layout class="QVBoxLayout" name="verticalLayout_4">
    <item>
     <widget class="QGroupBox" name="groupBox_2">
      <property name="title">
@@ -24,6 +24,22 @@
         </property>
         <property name="checked">
          <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>Opening</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QCheckBox" name="OpenZeroSizeFile">
+        <property name="text">
+         <string>Allow opening of zero size files (e.g. online files that are not synched to disk)</string>
         </property>
        </widget>
       </item>

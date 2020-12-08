@@ -1190,8 +1190,10 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
         return RDocumentInterface::IoErrorNotFound;
     }
 
-    if (fi.size()==0) {
-        return RDocumentInterface::IoErrorZeroSize;
+    if (RSettings::getBoolValue("SaveAs/OpenZeroSizeFile", false)==false) {
+        if (fi.size()==0) {
+            return RDocumentInterface::IoErrorZeroSize;
+        }
     }
 
     if (!fi.isReadable()) {
