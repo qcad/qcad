@@ -399,5 +399,14 @@ void RHatchEntity::setViewportContext(const RViewportData& vp) {
     // apply viewport transforms:
     RVector offs =  vp.getViewCenter()*vp.getScale() + vp.getViewTarget()*vp.getScale() - data.getOriginPoint()*vp.getScale();
     offs.rotate(vp.getRotation());
-    data.setOriginPoint(vp.getCenter() - offs);
+
+    // make sure custom pattern is not cleared here:
+    data.setOriginPoint(vp.getCenter() - offs, false);
+
+    // rotate custom pattern:
+    if (data.hasCustomPattern()) {
+        RPattern p = data.getCustomPattern();
+        p.rotate(vp.getRotation());
+        data.setCustomPattern(p);
+    }
 }

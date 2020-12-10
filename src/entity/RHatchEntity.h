@@ -91,6 +91,10 @@ public:
         return data.getCustomPattern();
     }
 
+    void setCustomPattern(const RPattern& p) {
+        data.setCustomPattern(p);
+    }
+
     virtual bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         RTransaction* transaction=NULL);
     bool setBoundaryVector(RObject::XYZ xyz, const QVariant& value, bool condition);

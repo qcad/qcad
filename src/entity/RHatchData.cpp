@@ -489,6 +489,11 @@ QList<QSharedPointer<RShape> > RHatchData::getExploded() const {
     return getShapes();
 }
 
+void RHatchData::clearCustomPattern() {
+    pattern.clear();
+    update();
+}
+
 void RHatchData::newLoop() {
     QList<QSharedPointer<RShape> > loop;
     boundary.append(loop);

@@ -68,6 +68,10 @@ public:
         return pattern;
     }
 
+    void setCustomPattern(const RPattern& p) {
+        pattern = p;
+    }
+
     virtual bool cloneOnChange() const {
         // force clone to preserve custom pattern for undo:
         //return hasCustomPattern();
@@ -129,9 +133,11 @@ public:
         return originPoint;
     }
 
-    void setOriginPoint(const RVector& op) {
+    void setOriginPoint(const RVector& op, bool clearCustom = true) {
         originPoint = op;
-        clearCustomPattern();
+        if (clearCustom) {
+            clearCustomPattern();
+        }
     }
 
     QString getPatternName() const {
@@ -151,10 +157,7 @@ public:
         transparency = t;
     }
 
-    void clearCustomPattern() {
-        pattern.clear();
-        update();
-    }
+    void clearCustomPattern();
 
     void newLoop();
     void cancelLoop();
