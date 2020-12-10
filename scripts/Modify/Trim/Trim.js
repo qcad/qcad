@@ -142,7 +142,7 @@ Trim.prototype.pickEntity = function(event, preview) {
         var shape = entity.getClosestSimpleShape(pos);
 
         // unsupported entity chosen:
-        if (!this.isSupportedLimitingShape(shape)) {
+        if (!this.isSupportedLimitingShape(shape) || (this.trimBoth && !this.isSupportedTrimEntity(entity))) {
             if (preview) {
                 this.updatePreview();
             }
@@ -225,7 +225,7 @@ Trim.prototype.isSupportedLimitingShape = function(shape) {
            isCircleShape(shape) ||
            isEllipseShape(shape) ||
            (RSpline.hasProxy() && isSplineShape(shape)) ||
-           (RPolyline.hasProxy() && isPolylineShape(shape));
+           (RPolyline.hasProxy() && isPolylineShape(shape) && !isClosedPolylineShape(shape));
 };
 
 Trim.prototype.isSupportedTrimEntity = function(entity) {
@@ -234,12 +234,12 @@ Trim.prototype.isSupportedTrimEntity = function(entity) {
            isCircleEntity(entity) ||
            isEllipseEntity(entity) ||
            (RSpline.hasProxy() && isSplineEntity(entity)) ||
-           (RPolyline.hasProxy() && isPolylineEntity(entity));
+           (RPolyline.hasProxy() && isPolylineEntity(entity) && !isClosedPolylineEntity(entity));
 };
 
 Trim.prototype.warnUnsupportedEntity = function() {
     if (RSpline.hasProxy() && RPolyline.hasProxy()) {
-        EAction.warnNotLineArcCircleEllipseSplinePolyline();
+        EAction.warnNotLineArcCircleEllipseSplineOpenPolyline();
     }
     else {
         EAction.warnNotLineArcCircleEllipse();
