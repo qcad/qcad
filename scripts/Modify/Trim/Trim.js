@@ -142,7 +142,7 @@ Trim.prototype.pickEntity = function(event, preview) {
         var shape = entity.getClosestSimpleShape(pos);
 
         // unsupported entity chosen:
-        if (!this.isSupportedLimitingShape(shape) || (this.trimBoth && !this.isSupportedTrimEntity(entity))) {
+        if (!this.isSupportedLimitingShape(shape)) {
             if (preview) {
                 this.updatePreview();
             }
@@ -181,7 +181,7 @@ Trim.prototype.pickEntity = function(event, preview) {
         }
 
         // unsupported entity chosen:
-        if (!this.isSupportedTrimEntity(entity)) {
+        if (!Trim.isSupportedTrimEntity(entity)) {
             this.trimEntity = undefined;
             if (preview) {
                 this.updatePreview();
@@ -225,21 +225,21 @@ Trim.prototype.isSupportedLimitingShape = function(shape) {
            isCircleShape(shape) ||
            isEllipseShape(shape) ||
            (RSpline.hasProxy() && isSplineShape(shape)) ||
-           (RPolyline.hasProxy() && isPolylineShape(shape) && !isClosedPolylineShape(shape));
+           (RPolyline.hasProxy() && isPolylineShape(shape));
 };
 
-Trim.prototype.isSupportedTrimEntity = function(entity) {
+Trim.isSupportedTrimEntity = function(entity) {
     return isLineBasedEntity(entity) ||
            isArcEntity(entity) ||
            isCircleEntity(entity) ||
            isEllipseEntity(entity) ||
            (RSpline.hasProxy() && isSplineEntity(entity)) ||
-           (RPolyline.hasProxy() && isPolylineEntity(entity) && !isClosedPolylineEntity(entity));
+           (RPolyline.hasProxy() && isPolylineEntity(entity));
 };
 
 Trim.prototype.warnUnsupportedEntity = function() {
     if (RSpline.hasProxy() && RPolyline.hasProxy()) {
-        EAction.warnNotLineArcCircleEllipseSplineOpenPolyline();
+        EAction.warnNotLineArcCircleEllipseSplinePolyline();
     }
     else {
         EAction.warnNotLineArcCircleEllipse();
@@ -297,6 +297,7 @@ Trim.trim = function(op, limitingEntity, limitingClickPos, trimEntity, trimClick
         return false;
     }
 
+
     var trimShape = trimEntity.castToShape();
     if (isNull(trimShape)) {
         return false;
@@ -319,6 +320,11 @@ Trim.trim = function(op, limitingEntity, limitingClickPos, trimEntity, trimClick
             // TODO: fix trimming one segment within same polyline:
             return false;
         }
+    }
+
+    if (trimBoth && isClosedPolylineEntity(limitingEntity) && !samePolyline) {
+        // no trimming between two different closed polylines:
+        return false;
     }
 
     var newShapes = Trim.trimShapes(trimShape, trimClickPos, limitingShape, limitingClickPos, trimBoth, samePolyline);
