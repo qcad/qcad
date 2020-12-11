@@ -64,19 +64,19 @@ Save.prototype.save = function(fileName, fileVersion, overwriteWarning) {
     var di = EAction.getDocumentInterface();
     var buttons, ret;
 
-    var editingWorkingSet = di.getDocument().isEditingWorkingSet();
-    if (editingWorkingSet) {
-        buttons = new QMessageBox.StandardButtons(QMessageBox.Yes, QMessageBox.Cancel);
-        ret = QMessageBox.warning(
-                    appWin,
-                    qsTr("Block editing in progress"),
-                    qsTr("A block is currently exploded and being edited. Please save the block before saving your drawing.") + " " +
-                    qsTr("Saving will save the block contents exploded.") + " " +
-                    qsTr("Save anyway?"), buttons);
-        if (ret===QMessageBox.Cancel) {
-            return true;
-        }
-    }
+//    var editingWorkingSet = di.getDocument().isEditingWorkingSet();
+//    if (editingWorkingSet) {
+//        buttons = new QMessageBox.StandardButtons(QMessageBox.Yes, QMessageBox.Cancel);
+//        ret = QMessageBox.warning(
+//                    appWin,
+//                    qsTr("Block editing in progress"),
+//                    qsTr("A block is currently exploded and being edited. Please save the block before saving your drawing.") + " " +
+//                    qsTr("Saving will save the block contents exploded.") + " " +
+//                    qsTr("Save anyway?"), buttons);
+//        if (ret===QMessageBox.Cancel) {
+//            return true;
+//        }
+//    }
 
     fileVersion = isNull(fileVersion) ? "" : fileVersion;
 
