@@ -4,8 +4,10 @@
 #import <AppKit/NSWindow.h>
 
 bool isMacDarkMode() {
+    qDebug() << "isMacDarkMode";
     
-    if (QSysInfo::MacintoshVersion<0x0010) {
+    if (QSysInfo::MacintoshVersion<0x0010 && QSysInfo::MacintoshVersion!=0x0000) {
+        qDebug() << "mac version < 0x0010: " << QSysInfo::MacintoshVersion;
         // no dark mode before 10.14 (Mojave):
         // High Sierra reports dark menu bar as dark mode:
         return false;
