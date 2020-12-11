@@ -3745,24 +3745,24 @@ is already in the list.</translation>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../scripts/EAction.js" line="+68"/>
+        <location filename="../scripts/EAction.js" line="+70"/>
         <source>Back</source>
         <translation>Back</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2102"/>
+        <location line="+2106"/>
         <source>Cancel</source>
         <translation>Cancel</translation>
     </message>
     <message>
-        <location line="-2101"/>
+        <location line="-2105"/>
         <source>Done</source>
         <translation>Done</translation>
     </message>
     <message>
         <location line="+277"/>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Active Tool:</source>
         <translation>Active Tool:</translation>
     </message>
@@ -10329,31 +10329,27 @@ shown in search results:</translation>
         <translation type="vanished">Custom colors are &apos;rounded&apos; to the nearest fixed color.</translation>
     </message>
     <message>
-        <location line="-62"/>
         <source>Block editing in progress</source>
-        <translation>Block editing in progress</translation>
+        <translation type="vanished">Block editing in progress</translation>
     </message>
     <message>
         <source>A block is currently exploded and being edited. Please save the block before saving your drawing. Saving will save the block contents exploded. Save anyway?</source>
         <translation type="vanished">A block is currently exploded and being edited. Please save the block before saving your drawing. Sa</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>A block is currently exploded and being edited. Please save the block before saving your drawing.</source>
-        <translation>A block is currently exploded and being edited. Please save the block before saving your drawing.</translation>
+        <translation type="vanished">A block is currently exploded and being edited. Please save the block before saving your drawing.</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Saving will save the block contents exploded.</source>
-        <translation>Saving will save the block contents exploded.</translation>
+        <translation type="vanished">Saving will save the block contents exploded.</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Save anyway?</source>
-        <translation>Save anyway?</translation>
+        <translation type="vanished">Save anyway?</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="-41"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
         <translation>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</translation>
     </message>
@@ -10416,6 +10412,16 @@ shown in search results:</translation>
     </message>
     <message>
         <location line="+13"/>
+        <source>Opening</source>
+        <translation>Opening</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Allow opening of zero size files (e.g. online files that are not synched to disk)</source>
+        <translation>Allow opening of zero size files (e.g. online files that are not synched to disk)</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Saving</source>
         <translation>Saving</translation>
     </message>
@@ -12886,7 +12892,7 @@ shown in search results:</translation>
         <translation>The two entities don&apos;t intersect, or are currently not supported for trimming.</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+74"/>
         <source>First entity cannot be trimmed.</source>
         <translation>First entity cannot be trimmed.</translation>
     </message>

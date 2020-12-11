@@ -3737,24 +3737,24 @@ již v seznamu je.</translation>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../scripts/EAction.js" line="+68"/>
+        <location filename="../scripts/EAction.js" line="+70"/>
         <source>Back</source>
         <translation>Zpět</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2102"/>
+        <location line="+2106"/>
         <source>Cancel</source>
         <translation>Storno</translation>
     </message>
     <message>
-        <location line="-2101"/>
+        <location line="-2105"/>
         <source>Done</source>
         <translation type="unfinished">Dokončit</translation>
     </message>
     <message>
         <location line="+277"/>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Active Tool:</source>
         <translation>Aktivní nástroj:</translation>
     </message>
@@ -10170,27 +10170,7 @@ ve výsledcích vyhledávání:</translation>
         <translation type="vanished">Vlastní barvy jsou &apos;změněné&apos; na nejbližší fixní barvu.</translation>
     </message>
     <message>
-        <location line="-62"/>
-        <source>Block editing in progress</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>A block is currently exploded and being edited. Please save the block before saving your drawing.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Saving will save the block contents exploded.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Save anyway?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+18"/>
+        <location line="-41"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
         <translation>Soubor &quot;%1&quot; již existuje. Přejete si ho přepsat?</translation>
     </message>
@@ -10253,6 +10233,16 @@ ve výsledcích vyhledávání:</translation>
     </message>
     <message>
         <location line="+13"/>
+        <source>Opening</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Allow opening of zero size files (e.g. online files that are not synched to disk)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Saving</source>
         <translation>Ukládání</translation>
     </message>
@@ -12671,7 +12661,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Tyto dva prvky se nepřekrývají nebo nejsou momentálně podporovány pro ořezávání.</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+74"/>
         <source>First entity cannot be trimmed.</source>
         <translation>První prvek nemůže být oříznut.</translation>
     </message>

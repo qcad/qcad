@@ -4268,24 +4268,24 @@ ist bereits in der Liste.</translation>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../scripts/EAction.js" line="+68"/>
+        <location filename="../scripts/EAction.js" line="+70"/>
         <source>Back</source>
         <translation>Zurück</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2102"/>
+        <location line="+2106"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="-2101"/>
+        <location line="-2105"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
     <message>
         <location line="+277"/>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Active Tool:</source>
         <translation>Aktives Werkzeug:</translation>
     </message>
@@ -12529,31 +12529,27 @@ nicht öffnen.
         <translation type="vanished">Die benutzte Dateiformatversion wird nicht empfohlen: &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="-38"/>
         <source>Block editing in progress</source>
-        <translation>Block in Bearbeitung</translation>
+        <translation type="vanished">Block in Bearbeitung</translation>
     </message>
     <message>
         <source>A block is currently exploded and being edited. Please save the block before saving your drawing. Saving will save the block contents exploded. Save anyway?</source>
         <translation type="vanished">Ein Block ist derzeit aufgebrochen und wird bearbeitet. Bitte speichern Sie den Block, bevor Sie Ihre Zeichnung speichern. Trotzdem speichern?</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>A block is currently exploded and being edited. Please save the block before saving your drawing.</source>
-        <translation>Ein Block ist derzeit aufgebrochen und wird bearbeitet. Bitte speichern Sie den Block, bevor Sie Ihre Zeichnung speichern.</translation>
+        <translation type="vanished">Ein Block ist derzeit aufgebrochen und wird bearbeitet. Bitte speichern Sie den Block, bevor Sie Ihre Zeichnung speichern.</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Saving will save the block contents exploded.</source>
-        <translation>Beim Speichern wird der aufgebrochene Blockinhalt gespeichert.</translation>
+        <translation type="vanished">Beim Speichern wird der aufgebrochene Blockinhalt gespeichert.</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Save anyway?</source>
-        <translation>Trotzdem speichern?</translation>
+        <translation type="vanished">Trotzdem speichern?</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+2"/>
         <source>Custom properties will not be saved.</source>
         <translation>Benutzerdefinierte Eigenschaften werden nicht gespeichert.</translation>
     </message>
@@ -12703,6 +12699,16 @@ nicht öffnen.
     </message>
     <message>
         <location line="+13"/>
+        <source>Opening</source>
+        <translation>Laden</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Allow opening of zero size files (e.g. online files that are not synched to disk)</source>
+        <translation>Öffnen von Dateien mit Grösse Null erlauben (z. B. Online-Dateien, die nicht mit der Festplatte synchronisiert werden)</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Saving</source>
         <translation>Speichern</translation>
     </message>
@@ -15569,7 +15575,7 @@ nicht öffnen.
         <translation>Die zwei Objekte schneiden sich nicht oder werden momentan nicht für Trimmen unterstützt.</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+74"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Erstes Objekt kann nicht getrimmt werden.</translation>
     </message>

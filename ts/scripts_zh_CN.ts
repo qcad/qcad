@@ -1106,7 +1106,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Width:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">宽度：</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -1311,7 +1311,7 @@ Do you wish to recover it?</source>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
-        <translation type="unfinished"></translation>
+        <translation>块列表</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+17"/>
@@ -2148,12 +2148,12 @@ Do you wish to recover it?</source>
         <location line="+68"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
-        <translation type="unfinished"></translation>
+        <translation>命令行</translation>
     </message>
     <message>
         <location line="-21"/>
         <source>&amp;Command Line</source>
-        <translation type="unfinished"></translation>
+        <translation>命令行(&amp;C)</translation>
     </message>
     <message>
         <location line="+208"/>
@@ -2213,12 +2213,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+3"/>
         <source>Command</source>
-        <translation type="unfinished"></translation>
+        <translation>命令</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Command:</source>
-        <translation type="unfinished"></translation>
+        <translation>命令：</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2246,7 +2246,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/Examples/CommandLineExamples/CommandLineExamples.js" line="+50"/>
         <source>&amp;Command Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">命令行(&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -3157,7 +3157,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Keep proportions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">保持纵横比</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -3346,17 +3346,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Draw.js" line="+61"/>
         <source>Draw</source>
-        <translation type="unfinished"></translation>
+        <translation>绘制</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation type="unfinished"></translation>
+        <translation>绘制(&amp;D)</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Drawing Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>绘制工具</translation>
     </message>
 </context>
 <context>
@@ -3456,7 +3456,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/DrawExamples.js" line="+51"/>
         <source>&amp;Draw</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">绘制(&amp;D)</translation>
     </message>
 </context>
 <context>
@@ -3595,24 +3595,24 @@ is already in the list.</source>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../scripts/EAction.js" line="+68"/>
+        <location filename="../scripts/EAction.js" line="+70"/>
         <source>Back</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2102"/>
+        <location line="+2106"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-2101"/>
+        <location line="-2105"/>
         <source>Done</source>
         <translation type="unfinished">完成</translation>
     </message>
     <message>
         <location line="+277"/>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Active Tool:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3771,7 +3771,7 @@ is already in the list.</source>
     <message>
         <location line="+27"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>编辑(&amp;E)</translation>
     </message>
 </context>
 <context>
@@ -4582,7 +4582,7 @@ is already in the list.</source>
     <message>
         <location line="+27"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>文件(&amp;F)</translation>
     </message>
     <message>
         <location line="+92"/>
@@ -4603,7 +4603,7 @@ is already in the list.</source>
     <message>
         <location line="+21"/>
         <source>All Files</source>
-        <translation type="unfinished">全部文件</translation>
+        <translation>全部文件</translation>
     </message>
 </context>
 <context>
@@ -5084,7 +5084,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Help/Forum/ForumInit.js" line="+2"/>
         <source>&amp;Forum</source>
-        <translation type="unfinished"></translation>
+        <translation>论坛(&amp;F)</translation>
     </message>
 </context>
 <context>
@@ -5509,7 +5509,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+30"/>
         <source>Snap Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">捕捉工具</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -5529,7 +5529,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+33"/>
         <source>Drawing Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">绘制工具</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -5767,7 +5767,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Help/Help.js" line="+60"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>帮助(&amp;H)</translation>
     </message>
 </context>
 <context>
@@ -5787,7 +5787,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Layer/HideAllLayers/HideAllLayersInit.js" line="+2"/>
         <source>&amp;Hide All Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>隐藏所有图层(&amp;H)</translation>
     </message>
 </context>
 <context>
@@ -5795,7 +5795,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/IOExamples.js" line="+51"/>
         <source>&amp;Import/Export</source>
-        <translation type="unfinished"></translation>
+        <translation>导入/导出(&amp;I)</translation>
     </message>
 </context>
 <context>
@@ -5828,32 +5828,32 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+27"/>
         <source>Position</source>
-        <translation type="unfinished">位置</translation>
+        <translation>位置</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
         <source>&amp;Insert Bitmap</source>
-        <translation type="unfinished"></translation>
+        <translation>插入位图(&amp;I)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Image/Image.ui" line="+17"/>
         <source>Width:</source>
-        <translation type="unfinished"></translation>
+        <translation>宽度：</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Keep proportions</source>
-        <translation type="unfinished"></translation>
+        <translation>保持纵横比</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Height:</source>
-        <translation type="unfinished">高度：</translation>
+        <translation>高度：</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Angle:</source>
-        <translation type="unfinished">角度：</translation>
+        <translation>角度：</translation>
     </message>
 </context>
 <context>
@@ -6357,12 +6357,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Information/Information.js" line="+334"/>
         <source>Information Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>量测工具</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Info</source>
-        <translation type="unfinished"></translation>
+        <translation>量测(&amp;I)</translation>
     </message>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
@@ -6855,12 +6855,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Layer/Layer.js" line="+97"/>
         <source>Layer Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>图层工具</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>&amp;Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>图层(&amp;L)</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -7005,7 +7005,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/LayerExamples.js" line="+50"/>
         <source>&amp;Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">图层(&amp;L)</translation>
     </message>
 </context>
 <context>
@@ -7019,12 +7019,12 @@ BUG: Interferes with group castings.</source>
         <location line="+0"/>
         <location line="+109"/>
         <source>Layer List</source>
-        <translation type="unfinished"></translation>
+        <translation>图层列表</translation>
     </message>
     <message>
         <location line="-55"/>
         <source>&amp;Layer List</source>
-        <translation type="unfinished"></translation>
+        <translation>图层列表(&amp;L)</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/LayerList/PreferencesPage.ui" line="+19"/>
@@ -8228,17 +8228,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Misc.js" line="+60"/>
         <source>Misc Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>其他工具</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>其他</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>其他(&amp;M)</translation>
     </message>
 </context>
 <context>
@@ -8246,7 +8246,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/MiscBlock.js" line="+51"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">其他</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -8264,7 +8264,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/MiscDevelopment.js" line="+51"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">其他</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -8282,7 +8282,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/MiscDraw.js" line="+52"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">其他</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -8297,7 +8297,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">绘制(&amp;D)</translation>
     </message>
 </context>
 <context>
@@ -8305,7 +8305,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/MiscIO.js" line="+51"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">其他</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -8315,7 +8315,7 @@ shown in search results:</source>
     <message>
         <location line="+22"/>
         <source>&amp;Import/Export</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">导入/导出(&amp;I)</translation>
     </message>
 </context>
 <context>
@@ -8323,7 +8323,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/MiscModify.js" line="+44"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">其他</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -8333,7 +8333,7 @@ shown in search results:</source>
     <message>
         <location line="+23"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">修改(&amp;M)</translation>
     </message>
 </context>
 <context>
@@ -8341,7 +8341,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/MiscSelect.js" line="+52"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">其他</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -8351,7 +8351,7 @@ shown in search results:</source>
     <message>
         <location line="+23"/>
         <source>&amp;Select</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">选择(&amp;S)</translation>
     </message>
 </context>
 <context>
@@ -8359,12 +8359,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Modify.js" line="+99"/>
         <source>Modification Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>修改工具</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>修改(&amp;M)</translation>
     </message>
 </context>
 <context>
@@ -8395,7 +8395,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ModifyExamples.js" line="+49"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">修改(&amp;M)</translation>
     </message>
 </context>
 <context>
@@ -9329,7 +9329,7 @@ shown in search results:</source>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>属性</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+17"/>
@@ -9848,27 +9848,7 @@ shown in search results:</source>
 <context>
     <name>Save</name>
     <message>
-        <location filename="../scripts/File/Save/Save.js" line="+72"/>
-        <source>Block editing in progress</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>A block is currently exploded and being edited. Please save the block before saving your drawing.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Saving will save the block contents exploded.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Save anyway?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location filename="../scripts/File/Save/Save.js" line="+92"/>
         <source>Overwrite File?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9987,6 +9967,16 @@ shown in search results:</source>
     </message>
     <message>
         <location line="+13"/>
+        <source>Opening</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Allow opening of zero size files (e.g. online files that are not synched to disk)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Saving</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10174,7 +10164,7 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>&amp;Select</source>
-        <translation type="unfinished"></translation>
+        <translation>选择(&amp;S)</translation>
     </message>
 </context>
 <context>
@@ -10182,7 +10172,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectAll/SelectAllInit.js" line="+2"/>
         <source>Select &amp;All</source>
-        <translation type="unfinished"></translation>
+        <translation>全选(&amp;A)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -10870,12 +10860,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/Snap.js" line="+57"/>
         <source>Snap Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>捕捉工具</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Snap</source>
-        <translation type="unfinished"></translation>
+        <translation>捕捉(&amp;S)</translation>
     </message>
 </context>
 <context>
@@ -11562,7 +11552,7 @@ shown in search results:</source>
     <message>
         <location line="+271"/>
         <source>&amp;Undo</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">撤销(&amp;U)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -11908,7 +11898,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/TextPreferences.js" line="+30"/>
         <source>Draw</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">绘制</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -12242,7 +12232,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+74"/>
         <source>First entity cannot be trimmed.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12335,7 +12325,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/Undo/UndoInit.js" line="+2"/>
         <source>&amp;Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>撤销(&amp;U)</translation>
     </message>
 </context>
 <context>
@@ -12505,12 +12495,12 @@ shown in search results:</source>
     <message>
         <location line="+28"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation>视图</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation>视图(&amp;V)</translation>
     </message>
 </context>
 <context>
@@ -12792,12 +12782,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Window/Window.js" line="+108"/>
         <source>&amp;Window</source>
-        <translation type="unfinished"></translation>
+        <translation>窗口(&amp;W)</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Window Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>窗口工具</translation>
     </message>
 </context>
 <context>
@@ -12974,7 +12964,7 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">视图</translation>
     </message>
     <message>
         <location line="+3"/>

@@ -3792,24 +3792,24 @@ is al in de lijst.</translation>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../scripts/EAction.js" line="+68"/>
+        <location filename="../scripts/EAction.js" line="+70"/>
         <source>Back</source>
         <translation>Terug</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2102"/>
+        <location line="+2106"/>
         <source>Cancel</source>
         <translation>Annuleer</translation>
     </message>
     <message>
-        <location line="-2101"/>
+        <location line="-2105"/>
         <source>Done</source>
         <translation>Klaar</translation>
     </message>
     <message>
         <location line="+277"/>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Active Tool:</source>
         <translation>Actief gereedschap:</translation>
     </message>
@@ -10482,27 +10482,23 @@ getoond in zoekresultaten:</translation>
         <translation type="vanished">Gebruiker gedefinieerde kleuren worden &apos;gerond&apos; op de dichtstbijzijnde beschikbare kleur.</translation>
     </message>
     <message>
-        <location line="-62"/>
         <source>Block editing in progress</source>
-        <translation>Bezig met bewerken van blok</translation>
+        <translation type="vanished">Bezig met bewerken van blok</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>A block is currently exploded and being edited. Please save the block before saving your drawing.</source>
-        <translation>Een blok is momenteel geëxplodeerd en wordt bewerkt. Sla het blok op voordat u uw tekening opslaat.</translation>
+        <translation type="vanished">Een blok is momenteel geëxplodeerd en wordt bewerkt. Sla het blok op voordat u uw tekening opslaat.</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Saving will save the block contents exploded.</source>
-        <translation>Door op te slaan wordt de geëxplodeerde inhoud van het blok opgeslagen.</translation>
+        <translation type="vanished">Door op te slaan wordt de geëxplodeerde inhoud van het blok opgeslagen.</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Save anyway?</source>
-        <translation>Toch opslaan?</translation>
+        <translation type="vanished">Toch opslaan?</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="-41"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
         <translation>Het bestand &quot;%1&quot; bestaat al. Wilt u het overschrijven?</translation>
     </message>
@@ -10565,6 +10561,16 @@ getoond in zoekresultaten:</translation>
     </message>
     <message>
         <location line="+13"/>
+        <source>Opening</source>
+        <translation>Laden</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Allow opening of zero size files (e.g. online files that are not synched to disk)</source>
+        <translation>Sta het openen van nulgroottebestanden toe (bijv. online bestanden die niet gesynchroniseerd zijn met de schijf)</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Saving</source>
         <translation>Opslaan</translation>
     </message>
@@ -13019,7 +13025,7 @@ getoond in zoekresultaten:</translation>
         <translation>De twee objecten snijden zich niet of worden momenteel niet ondersteund voor het trimmen.</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+74"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Eerste object kan niet worden getrimmed.</translation>
     </message>

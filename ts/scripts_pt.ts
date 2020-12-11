@@ -3854,24 +3854,24 @@ já se encontra na lista.</translation>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../scripts/EAction.js" line="+68"/>
+        <location filename="../scripts/EAction.js" line="+70"/>
         <source>Back</source>
         <translation>Voltar</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2102"/>
+        <location line="+2106"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="-2101"/>
+        <location line="-2105"/>
         <source>Done</source>
         <translation>Concluído</translation>
     </message>
     <message>
         <location line="+277"/>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Active Tool:</source>
         <translation>Ferramenta Ativa:</translation>
     </message>
@@ -10629,27 +10629,23 @@ nos resultados de busca:</translation>
         <translation type="vanished">A versão de formato de arquivo que você está usando não é recomendada: &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="-38"/>
         <source>Block editing in progress</source>
-        <translation>Edição de bloco em andamento</translation>
+        <translation type="vanished">Edição de bloco em andamento</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>A block is currently exploded and being edited. Please save the block before saving your drawing.</source>
-        <translation>Um bloco está explodido e sendo editado. Salve o bloco antes de salvar seu desenho.</translation>
+        <translation type="vanished">Um bloco está explodido e sendo editado. Salve o bloco antes de salvar seu desenho.</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Saving will save the block contents exploded.</source>
-        <translation>Salvar irá salvar o conteúdo do bloco explodido.</translation>
+        <translation type="vanished">Salvar irá salvar o conteúdo do bloco explodido.</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Save anyway?</source>
-        <translation>Salvar mesmo assim?</translation>
+        <translation type="vanished">Salvar mesmo assim?</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="-17"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
         <translation>O arquivo &quot;%1&quot; já existe. Você deseja substituí-lo?</translation>
     </message>
@@ -10786,6 +10782,16 @@ nos resultados de busca:</translation>
     </message>
     <message>
         <location line="+13"/>
+        <source>Opening</source>
+        <translation>Carregue</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Allow opening of zero size files (e.g. online files that are not synched to disk)</source>
+        <translation>Permitir a abertura de arquivos de tamanho zero (por exemplo, arquivos on-line que não são sincronizados com o disco)</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Saving</source>
         <translation>Grave</translation>
     </message>
@@ -13270,7 +13276,7 @@ nos resultados de busca:</translation>
         <translation>As duas entidades não se cruzam, ou não são actualmente suportadas para o corte.</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+74"/>
         <source>First entity cannot be trimmed.</source>
         <translation>A primeira entidade não pode ser aparada.</translation>
     </message>

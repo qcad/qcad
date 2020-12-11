@@ -4136,24 +4136,24 @@ is already in the list.</source>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../scripts/EAction.js" line="+68"/>
+        <location filename="../scripts/EAction.js" line="+70"/>
         <source>Back</source>
         <translation>Indietro</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2102"/>
+        <location line="+2106"/>
         <source>Cancel</source>
         <translation>Annulla</translation>
     </message>
     <message>
-        <location line="-2101"/>
+        <location line="-2105"/>
         <source>Done</source>
         <translation>Fatto</translation>
     </message>
     <message>
         <location line="+277"/>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Active Tool:</source>
         <translation>Strumento attivo:</translation>
     </message>
@@ -11862,27 +11862,23 @@ Seconda entità non può essere tagliata.</translatorcomment>
         <translation type="vanished">La versione del formato del file in uso non è raccomandato: &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="-38"/>
         <source>Block editing in progress</source>
-        <translation>Editing del blocco in corso</translation>
+        <translation type="vanished">Editing del blocco in corso</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>A block is currently exploded and being edited. Please save the block before saving your drawing.</source>
-        <translation>Un blocco è attualmente esploso e in fase di modifica. Si prega di salvare il blocco prima di salvare il disegno.</translation>
+        <translation type="vanished">Un blocco è attualmente esploso e in fase di modifica. Si prega di salvare il blocco prima di salvare il disegno.</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Saving will save the block contents exploded.</source>
-        <translation>Il salvataggio salverà il contenuto del blocco esploso.</translation>
+        <translation type="vanished">Il salvataggio salverà il contenuto del blocco esploso.</translation>
+    </message>
+    <message>
+        <source>Save anyway?</source>
+        <translation type="vanished">Salvare comunque?</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Save anyway?</source>
-        <translation>Salvare comunque?</translation>
-    </message>
-    <message>
-        <location line="+36"/>
         <source>The file format version you are using is not recommended: &quot;%1&quot;.</source>
         <translation>La versione del formato del file in uso non è raccomandato: &quot;%1&quot;.</translation>
     </message>
@@ -12018,6 +12014,16 @@ Seconda entità non può essere tagliata.</translatorcomment>
     </message>
     <message>
         <location line="+13"/>
+        <source>Opening</source>
+        <translation>Carico</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Allow opening of zero size files (e.g. online files that are not synched to disk)</source>
+        <translation>Consentire l&apos;apertura di file di dimensioni zero (ad es. file online non sincronizzati su disco)</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Saving</source>
         <translation>Salva</translation>
     </message>
@@ -14773,7 +14779,7 @@ Obiettivo punto</translatorcomment>
         <translation>Le due entità non si intersecano, o non sono attualmente supportati per il taglio.</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+74"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Prima entità non può essere tagliato.</translation>
     </message>

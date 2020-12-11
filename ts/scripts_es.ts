@@ -4129,24 +4129,24 @@ ya está en la lista.</translation>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../scripts/EAction.js" line="+68"/>
+        <location filename="../scripts/EAction.js" line="+70"/>
         <source>Back</source>
         <translation>Atrás</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2102"/>
+        <location line="+2106"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="-2101"/>
+        <location line="-2105"/>
         <source>Done</source>
         <translation>Terminar</translation>
     </message>
     <message>
         <location line="+277"/>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Active Tool:</source>
         <translation>Herramienta activa:</translation>
     </message>
@@ -11821,27 +11821,23 @@ Segunda entidad no se pueden recortar.</translatorcomment>
         <translation type="vanished">La versión del formato del archivo que está utilizando no se recomienda: &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="-38"/>
         <source>Block editing in progress</source>
-        <translation>Edición de bloque en curso</translation>
+        <translation type="vanished">Edición de bloque en curso</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>A block is currently exploded and being edited. Please save the block before saving your drawing.</source>
-        <translation>Actualmente, un bloque está descompuesto y se está editando. Guarde el bloque antes de guardar su dibujo.</translation>
+        <translation type="vanished">Actualmente, un bloque está descompuesto y se está editando. Guarde el bloque antes de guardar su dibujo.</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Saving will save the block contents exploded.</source>
-        <translation>Guardar guardará el contenido del bloque explotado.</translation>
+        <translation type="vanished">Guardar guardará el contenido del bloque explotado.</translation>
+    </message>
+    <message>
+        <source>Save anyway?</source>
+        <translation type="vanished">¿Guardar de todos modos?</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Save anyway?</source>
-        <translation>¿Guardar de todos modos?</translation>
-    </message>
-    <message>
-        <location line="+36"/>
         <source>The file format version you are using is not recommended: &quot;%1&quot;.</source>
         <translation>La versión del formato del archivo que está utilizando no se recomienda: &quot;%1&quot;.</translation>
     </message>
@@ -11977,6 +11973,16 @@ Segunda entidad no se pueden recortar.</translatorcomment>
     </message>
     <message>
         <location line="+13"/>
+        <source>Opening</source>
+        <translation>Cargar</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Allow opening of zero size files (e.g. online files that are not synched to disk)</source>
+        <translation>Permitir la apertura de archivos de tamaño cero (por ejemplo, archivos en línea que no están sincronizados con el disco)</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Saving</source>
         <translation>Guardar</translation>
     </message>
@@ -14678,7 +14684,7 @@ Punto objetivo</translatorcomment>
         <translation>Las dos entidades no se cruzan, o actualmente no son compatibles con el recorte.</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+74"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Primera entidad no se pueden recortar.</translation>
     </message>
