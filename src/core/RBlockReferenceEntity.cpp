@@ -484,7 +484,7 @@ void RBlockReferenceEntity::exportEntity(RExporter& e, bool preview, bool forceS
                     }
                 }
 
-                e.exportEntity(*entity, preview, true, isSelected() || forceSelected);
+                e.exportEntity(*entity, preview, true, isSelected() || isSelectedWorkingSet() || forceSelected);
             }
 
             // clear transform:
