@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{64CF45FD-AA64-3FC7-9DE2-F1014CE96B75}</ProjectGuid>
+    <RootNamespace>opennurbs</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.17763.0</WindowsTargetPlatformMinVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+    <OutputDirectory>..\..\..\..\release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>opennurbs</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+    <OutputDirectory>..\..\..\..\debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>opennurbs</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\..\release\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\</IntDir>
+    <TargetName Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">opennurbs</TargetName>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</IgnoreImportLibrary>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\..\debug\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\</IntDir>
+    <TargetName Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">opennurbs</TargetName>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\..\..\core;..\..\..\core\math;..\..\..\grid;..\..\..\snap;..\..\..\gui;..\..\..\entity;..\..\..\operations;..\..\..\scripting;..\..\..\stemmer;..\..\..\scripting\ecmaapi;..\..\..\scripting\ecmaapi\generated;..\..\..\scripting\ecmaapi\adapters;..\..\..\io\dxf;..\..\..\spatialindex;..\..\..\3rdparty;C:/UE4/qcad/src/zip;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtPrintSupport;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSvg;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtOpenGL;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtHelp;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtDesigner;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiPlugin;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtWidgets;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtGui;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtANGLE;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScript;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScriptTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSql;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXmlPatterns;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtNetwork;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXml;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtCore;release;/include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;ON_COMPILING_OPENNURBS;NDEBUG;QT_NO_DEBUG;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName></ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)\opennurbs.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;ON_COMPILING_OPENNURBS;NDEBUG;QT_NO_DEBUG;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\..\..\core;..\..\..\core\math;..\..\..\grid;..\..\..\snap;..\..\..\gui;..\..\..\entity;..\..\..\operations;..\..\..\scripting;..\..\..\stemmer;..\..\..\scripting\ecmaapi;..\..\..\scripting\ecmaapi\generated;..\..\..\scripting\ecmaapi\adapters;..\..\..\io\dxf;..\..\..\spatialindex;..\..\..\3rdparty;C:/UE4/qcad/src/zip;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtPrintSupport;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSvg;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtOpenGL;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtHelp;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtDesigner;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiPlugin;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtWidgets;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtGui;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtANGLE;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScript;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScriptTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSql;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXmlPatterns;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtNetwork;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXml;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtCore;debug;/include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;ON_COMPILING_OPENNURBS;NDEBUG;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)\opennurbs.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;ON_COMPILING_OPENNURBS;NDEBUG;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\opennurbs_3dm_attributes.cpp" />
+    <ClCompile Include="..\opennurbs_3dm_properties.cpp" />
+    <ClCompile Include="..\opennurbs_3dm_settings.cpp" />
+    <ClCompile Include="..\opennurbs_annotation.cpp" />
+    <ClCompile Include="..\opennurbs_annotation2.cpp" />
+    <ClCompile Include="..\opennurbs_arc.cpp" />
+    <ClCompile Include="..\opennurbs_arccurve.cpp" />
+    <ClCompile Include="..\opennurbs_archive.cpp" />
+    <ClCompile Include="..\opennurbs_array.cpp" />
+    <ClCompile Include="..\opennurbs_base32.cpp" />
+    <ClCompile Include="..\opennurbs_base64.cpp" />
+    <ClCompile Include="..\opennurbs_basic.cpp" />
+    <ClCompile Include="..\opennurbs_beam.cpp" />
+    <ClCompile Include="..\opennurbs_bezier.cpp" />
+    <ClCompile Include="..\opennurbs_beziervolume.cpp" />
+    <ClCompile Include="..\opennurbs_bitmap.cpp" />
+    <ClCompile Include="..\opennurbs_bounding_box.cpp" />
+    <ClCompile Include="..\opennurbs_box.cpp" />
+    <ClCompile Include="..\opennurbs_brep.cpp" />
+    <ClCompile Include="..\opennurbs_brep_changesrf.cpp" />
+    <ClCompile Include="..\opennurbs_brep_extrude.cpp" />
+    <ClCompile Include="..\opennurbs_brep_io.cpp" />
+    <ClCompile Include="..\opennurbs_brep_isvalid.cpp" />
+    <ClCompile Include="..\opennurbs_brep_kinky.cpp" />
+    <ClCompile Include="..\opennurbs_brep_region.cpp" />
+    <ClCompile Include="..\opennurbs_brep_tools.cpp" />
+    <ClCompile Include="..\opennurbs_brep_v2valid.cpp" />
+    <ClCompile Include="..\opennurbs_circle.cpp" />
+    <ClCompile Include="..\opennurbs_color.cpp" />
+    <ClCompile Include="..\opennurbs_cone.cpp" />
+    <ClCompile Include="..\opennurbs_crc.cpp" />
+    <ClCompile Include="..\opennurbs_curve.cpp" />
+    <ClCompile Include="..\opennurbs_curveonsurface.cpp" />
+    <ClCompile Include="..\opennurbs_curveproxy.cpp" />
+    <ClCompile Include="..\opennurbs_cylinder.cpp" />
+    <ClCompile Include="..\opennurbs_defines.cpp" />
+    <ClCompile Include="..\opennurbs_detail.cpp" />
+    <ClCompile Include="..\opennurbs_dimstyle.cpp" />
+    <ClCompile Include="..\opennurbs_dll.cpp" />
+    <ClCompile Include="..\opennurbs_ellipse.cpp" />
+    <ClCompile Include="..\opennurbs_error.cpp" />
+    <ClCompile Include="..\opennurbs_error_message.cpp" />
+    <ClCompile Include="..\opennurbs_evaluate_nurbs.cpp" />
+    <ClCompile Include="..\opennurbs_extensions.cpp" />
+    <ClCompile Include="..\opennurbs_font.cpp" />
+    <ClCompile Include="..\opennurbs_geometry.cpp" />
+    <ClCompile Include="..\opennurbs_group.cpp" />
+    <ClCompile Include="..\opennurbs_hatch.cpp" />
+    <ClCompile Include="..\opennurbs_instance.cpp" />
+    <ClCompile Include="..\opennurbs_intersect.cpp" />
+    <ClCompile Include="..\opennurbs_knot.cpp" />
+    <ClCompile Include="..\opennurbs_layer.cpp" />
+    <ClCompile Include="..\opennurbs_light.cpp" />
+    <ClCompile Include="..\opennurbs_line.cpp" />
+    <ClCompile Include="..\opennurbs_linecurve.cpp" />
+    <ClCompile Include="..\opennurbs_linetype.cpp" />
+    <ClCompile Include="..\opennurbs_lookup.cpp" />
+    <ClCompile Include="..\opennurbs_massprop.cpp" />
+    <ClCompile Include="..\opennurbs_material.cpp" />
+    <ClCompile Include="..\opennurbs_math.cpp" />
+    <ClCompile Include="..\opennurbs_matrix.cpp" />
+    <ClCompile Include="..\opennurbs_memory.c" />
+    <ClCompile Include="..\opennurbs_memory_new.cpp" />
+    <ClCompile Include="..\opennurbs_memory_util.c" />
+    <ClCompile Include="..\opennurbs_mesh.cpp" />
+    <ClCompile Include="..\opennurbs_mesh_ngon.cpp" />
+    <ClCompile Include="..\opennurbs_mesh_tools.cpp" />
+    <ClCompile Include="..\opennurbs_morph.cpp" />
+    <ClCompile Include="..\opennurbs_nurbscurve.cpp" />
+    <ClCompile Include="..\opennurbs_nurbssurface.cpp" />
+    <ClCompile Include="..\opennurbs_nurbsvolume.cpp" />
+    <ClCompile Include="..\opennurbs_object.cpp" />
+    <ClCompile Include="..\opennurbs_object_history.cpp" />
+    <ClCompile Include="..\opennurbs_objref.cpp" />
+    <ClCompile Include="..\opennurbs_offsetsurface.cpp" />
+    <ClCompile Include="..\opennurbs_optimize.cpp" />
+    <ClCompile Include="..\opennurbs_plane.cpp" />
+    <ClCompile Include="..\opennurbs_planesurface.cpp" />
+    <ClCompile Include="..\opennurbs_pluginlist.cpp" />
+    <ClCompile Include="..\opennurbs_point.cpp" />
+    <ClCompile Include="..\opennurbs_pointcloud.cpp" />
+    <ClCompile Include="..\opennurbs_pointgeometry.cpp" />
+    <ClCompile Include="..\opennurbs_pointgrid.cpp" />
+    <ClCompile Include="..\opennurbs_polycurve.cpp" />
+    <ClCompile Include="..\opennurbs_polyedgecurve.cpp" />
+    <ClCompile Include="..\opennurbs_polyline.cpp" />
+    <ClCompile Include="..\opennurbs_polylinecurve.cpp" />
+    <ClCompile Include="..\opennurbs_quaternion.cpp" />
+    <ClCompile Include="..\opennurbs_rand.cpp" />
+    <ClCompile Include="..\opennurbs_revsurface.cpp" />
+    <ClCompile Include="..\opennurbs_rtree.cpp" />
+    <ClCompile Include="..\opennurbs_sort.cpp" />
+    <ClCompile Include="..\opennurbs_sphere.cpp" />
+    <ClCompile Include="..\opennurbs_string.cpp" />
+    <ClCompile Include="..\opennurbs_sum.cpp" />
+    <ClCompile Include="..\opennurbs_sumsurface.cpp" />
+    <ClCompile Include="..\opennurbs_surface.cpp" />
+    <ClCompile Include="..\opennurbs_surfaceproxy.cpp" />
+    <ClCompile Include="..\opennurbs_textlog.cpp" />
+    <ClCompile Include="..\opennurbs_torus.cpp" />
+    <ClCompile Include="..\opennurbs_userdata.cpp" />
+    <ClCompile Include="..\opennurbs_uuid.cpp" />
+    <ClCompile Include="..\opennurbs_viewport.cpp" />
+    <ClCompile Include="..\opennurbs_workspace.cpp" />
+    <ClCompile Include="..\opennurbs_wstring.cpp" />
+    <ClCompile Include="..\opennurbs_x.cpp" />
+    <ClCompile Include="..\opennurbs_xform.cpp" />
+    <ClCompile Include="..\opennurbs_zlib.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\opennurbs.h" />
+    <ClInclude Include="..\opennurbs_3dm.h" />
+    <ClInclude Include="..\opennurbs_3dm_attributes.h" />
+    <ClInclude Include="..\opennurbs_3dm_properties.h" />
+    <ClInclude Include="..\opennurbs_3dm_settings.h" />
+    <ClInclude Include="..\opennurbs_annotation.h" />
+    <ClInclude Include="..\opennurbs_annotation2.h" />
+    <ClInclude Include="..\opennurbs_arc.h" />
+    <ClInclude Include="..\opennurbs_arccurve.h" />
+    <ClInclude Include="..\opennurbs_archive.h" />
+    <ClInclude Include="..\opennurbs_array.h" />
+    <ClInclude Include="..\opennurbs_array_defs.h" />
+    <ClInclude Include="..\opennurbs_base32.h" />
+    <ClInclude Include="..\opennurbs_base64.h" />
+    <ClInclude Include="..\opennurbs_beam.h" />
+    <ClInclude Include="..\opennurbs_bezier.h" />
+    <ClInclude Include="..\opennurbs_bitmap.h" />
+    <ClInclude Include="..\opennurbs_bounding_box.h" />
+    <ClInclude Include="..\opennurbs_box.h" />
+    <ClInclude Include="..\opennurbs_brep.h" />
+    <ClInclude Include="..\opennurbs_circle.h" />
+    <ClInclude Include="..\opennurbs_color.h" />
+    <ClInclude Include="..\opennurbs_cone.h" />
+    <ClInclude Include="..\opennurbs_crashtest.h" />
+    <ClInclude Include="..\opennurbs_crc.h" />
+    <ClInclude Include="..\opennurbs_curve.h" />
+    <ClInclude Include="..\opennurbs_curveonsurface.h" />
+    <ClInclude Include="..\opennurbs_curveproxy.h" />
+    <ClInclude Include="..\opennurbs_cylinder.h" />
+    <ClInclude Include="..\opennurbs_defines.h" />
+    <ClInclude Include="..\opennurbs_detail.h" />
+    <ClInclude Include="..\opennurbs_dimstyle.h" />
+    <ClInclude Include="..\opennurbs_dll_resource.h" />
+    <ClInclude Include="..\opennurbs_ellipse.h" />
+    <ClInclude Include="..\opennurbs_error.h" />
+    <ClInclude Include="..\opennurbs_evaluate_nurbs.h" />
+    <ClInclude Include="..\opennurbs_extensions.h" />
+    <ClInclude Include="..\opennurbs_font.h" />
+    <ClInclude Include="..\opennurbs_fpoint.h" />
+    <ClInclude Include="..\opennurbs_geometry.h" />
+    <ClInclude Include="..\opennurbs_group.h" />
+    <ClInclude Include="..\opennurbs_hatch.h" />
+    <ClInclude Include="..\opennurbs_instance.h" />
+    <ClInclude Include="..\opennurbs_intersect.h" />
+    <ClInclude Include="..\opennurbs_knot.h" />
+    <ClInclude Include="..\opennurbs_layer.h" />
+    <ClInclude Include="..\opennurbs_light.h" />
+    <ClInclude Include="..\opennurbs_line.h" />
+    <ClInclude Include="..\opennurbs_linecurve.h" />
+    <ClInclude Include="..\opennurbs_linestyle.h" />
+    <ClInclude Include="..\opennurbs_linetype.h" />
+    <ClInclude Include="..\opennurbs_lookup.h" />
+    <ClInclude Include="..\opennurbs_mapchan.h" />
+    <ClInclude Include="..\opennurbs_massprop.h" />
+    <ClInclude Include="..\opennurbs_material.h" />
+    <ClInclude Include="..\opennurbs_math.h" />
+    <ClInclude Include="..\opennurbs_matrix.h" />
+    <ClInclude Include="..\opennurbs_memory.h" />
+    <ClInclude Include="..\opennurbs_mesh.h" />
+    <ClInclude Include="..\opennurbs_nurbscurve.h" />
+    <ClInclude Include="..\opennurbs_nurbssurface.h" />
+    <ClInclude Include="..\opennurbs_object.h" />
+    <ClInclude Include="..\opennurbs_object_history.h" />
+    <ClInclude Include="..\opennurbs_objref.h" />
+    <ClInclude Include="..\opennurbs_offsetsurface.h" />
+    <ClInclude Include="..\opennurbs_optimize.h" />
+    <ClInclude Include="..\opennurbs_plane.h" />
+    <ClInclude Include="..\opennurbs_planesurface.h" />
+    <ClInclude Include="..\opennurbs_pluginlist.h" />
+    <ClInclude Include="..\opennurbs_point.h" />
+    <ClInclude Include="..\opennurbs_pointcloud.h" />
+    <ClInclude Include="..\opennurbs_pointgeometry.h" />
+    <ClInclude Include="..\opennurbs_pointgrid.h" />
+    <ClInclude Include="..\opennurbs_polycurve.h" />
+    <ClInclude Include="..\opennurbs_polyedgecurve.h" />
+    <ClInclude Include="..\opennurbs_polyline.h" />
+    <ClInclude Include="..\opennurbs_polylinecurve.h" />
+    <ClInclude Include="..\opennurbs_quaternion.h" />
+    <ClInclude Include="..\opennurbs_rand.h" />
+    <ClInclude Include="..\opennurbs_rendering.h" />
+    <ClInclude Include="..\opennurbs_revsurface.h" />
+    <ClInclude Include="..\opennurbs_rtree.h" />
+    <ClInclude Include="..\opennurbs_sphere.h" />
+    <ClInclude Include="..\opennurbs_string.h" />
+    <ClInclude Include="..\opennurbs_sumsurface.h" />
+    <ClInclude Include="..\opennurbs_surface.h" />
+    <ClInclude Include="..\opennurbs_surfaceproxy.h" />
+    <ClInclude Include="..\opennurbs_system.h" />
+    <ClInclude Include="..\opennurbs_textlog.h" />
+    <ClInclude Include="..\opennurbs_texture.h" />
+    <ClInclude Include="..\opennurbs_texture_mapping.h" />
+    <ClInclude Include="..\opennurbs_torus.h" />
+    <ClInclude Include="..\opennurbs_userdata.h" />
+    <ClInclude Include="..\opennurbs_uuid.h" />
+    <ClInclude Include="..\opennurbs_version.h" />
+    <ClInclude Include="..\opennurbs_viewport.h" />
+    <ClInclude Include="..\opennurbs_workspace.h" />
+    <ClInclude Include="..\opennurbs_x.h" />
+    <ClInclude Include="..\opennurbs_xform.h" />
+    <ClInclude Include="..\opennurbs_zlib.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">cl -Bx&quot;$(QTDIR)\bin\qmake.exe&quot; -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">Generate moc_predefs.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">cl -Bx&quot;$(QTDIR)\bin\qmake.exe&quot; -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">Generate moc_predefs.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

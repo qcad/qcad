@@ -1,0 +1,1233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{22AC1D4E-1B64-3491-B33A-1F5B1A019083}</ProjectGuid>
+    <RootNamespace>qcadecmaapi</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.17763.0</WindowsTargetPlatformMinVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+    <OutputDirectory>..\..\..\release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>qcadecmaapi</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+    <OutputDirectory>..\..\..\debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>qcadecmaapi</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\release\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\</IntDir>
+    <TargetName Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">qcadecmaapi</TargetName>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">false</LinkIncremental>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\debug\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\</IntDir>
+    <TargetName Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">qcadecmaapi</TargetName>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\..\core;..\..\core\math;..\..\grid;..\..\snap;..\..\gui;..\..\entity;..\..\operations;..\..\scripting;..\..\stemmer;.;generated;adapters;..\..\io\dxf;..\..\spatialindex;..\..\3rdparty;C:/UE4/qcad/src/zip;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtPrintSupport;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSvg;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtOpenGL;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtHelp;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtDesigner;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiPlugin;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtWidgets;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtGui;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtANGLE;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScript;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScriptTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSql;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXmlPatterns;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtNetwork;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXml;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtCore;release;/include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForcedIncludeFiles>stable.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stable.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)\qcadecmaapi.pch</PrecompiledHeaderOutputFile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADECMAAPI_LIBRARY;QT_NO_DEBUG;QT_PLUGIN;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CORE_LIB;QDESIGNER_EXPORT_WIDGETS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName></ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>qcadcore.lib;qcadentity.lib;qcadgrid.lib;qcadgui.lib;qcadoperations.lib;qcadsnap.lib;qcadspatialindex.lib;qcadstemmer.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5PrintSupport.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Svg.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5OpenGL.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Help.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5UiTools.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Designer.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Widgets.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Gui.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Script.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5ScriptTools.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Sql.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5XmlPatterns.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Network.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Xml.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\UE4\qcad\release;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\qcadecmaapi.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADECMAAPI_LIBRARY;QT_NO_DEBUG;QT_PLUGIN;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CORE_LIB;QDESIGNER_EXPORT_WIDGETS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\..\core;..\..\core\math;..\..\grid;..\..\snap;..\..\gui;..\..\entity;..\..\operations;..\..\scripting;..\..\stemmer;.;generated;adapters;..\..\io\dxf;..\..\spatialindex;..\..\3rdparty;C:/UE4/qcad/src/zip;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtPrintSupport;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSvg;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtOpenGL;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtHelp;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtDesigner;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiPlugin;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtWidgets;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtGui;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtANGLE;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScript;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScriptTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSql;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXmlPatterns;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtNetwork;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXml;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtCore;debug;/include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForcedIncludeFiles>stable.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stable.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)\qcadecmaapi.pch</PrecompiledHeaderOutputFile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADECMAAPI_LIBRARY;QT_PLUGIN;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CORE_LIB;QDESIGNER_EXPORT_WIDGETS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>qcadcore.lib;qcadentity.lib;qcadgrid.lib;qcadgui.lib;qcadoperations.lib;qcadsnap.lib;qcadspatialindex.lib;qcadstemmer.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5PrintSupportd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Svgd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5OpenGLd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Helpd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5UiToolsd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Designerd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Widgetsd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Guid.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Scriptd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5ScriptToolsd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Sqld.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5XmlPatternsd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Networkd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Xmld.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\UE4\qcad\debug;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <OutputFile>$(OutDir)\qcadecmaapi.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADECMAAPI_LIBRARY;QT_PLUGIN;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CORE_LIB;QDESIGNER_EXPORT_WIDGETS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="RAutoLoadEcma.cpp" />
+    <ClCompile Include="generated\REcmaAction.cpp" />
+    <ClCompile Include="generated\REcmaActionAdapter.cpp" />
+    <ClCompile Include="generated\REcmaAddObjectOperation.cpp" />
+    <ClCompile Include="generated\REcmaAddObjectsOperation.cpp" />
+    <ClCompile Include="generated\REcmaArc.cpp" />
+    <ClCompile Include="generated\REcmaArcData.cpp" />
+    <ClCompile Include="generated\REcmaArcEntity.cpp" />
+    <ClCompile Include="generated\REcmaAttributeData.cpp" />
+    <ClCompile Include="generated\REcmaAttributeDefinitionData.cpp" />
+    <ClCompile Include="generated\REcmaAttributeDefinitionEntity.cpp" />
+    <ClCompile Include="generated\REcmaAttributeEntity.cpp" />
+    <ClCompile Include="generated\REcmaAutoLoadEcma.cpp" />
+    <ClCompile Include="generated\REcmaBlock.cpp" />
+    <ClCompile Include="generated\REcmaBlockListener.cpp" />
+    <ClCompile Include="generated\REcmaBlockListenerAdapter.cpp" />
+    <ClCompile Include="generated\REcmaBlockReferenceData.cpp" />
+    <ClCompile Include="generated\REcmaBlockReferenceEntity.cpp" />
+    <ClCompile Include="generated\REcmaBox.cpp" />
+    <ClCompile Include="generated\REcmaChangePropertyOperation.cpp" />
+    <ClCompile Include="generated\REcmaCharacterWidget.cpp" />
+    <ClCompile Include="generated\REcmaCircle.cpp" />
+    <ClCompile Include="generated\REcmaCircleData.cpp" />
+    <ClCompile Include="generated\REcmaCircleEntity.cpp" />
+    <ClCompile Include="generated\REcmaClickReferencePointOperation.cpp" />
+    <ClCompile Include="generated\REcmaClipboardOperation.cpp" />
+    <ClCompile Include="generated\REcmaCloseCurrentEvent.cpp" />
+    <ClCompile Include="generated\REcmaColor.cpp" />
+    <ClCompile Include="generated\REcmaColorCombo.cpp" />
+    <ClCompile Include="generated\REcmaCommandEvent.cpp" />
+    <ClCompile Include="generated\REcmaCommandLine.cpp" />
+    <ClCompile Include="generated\REcmaCoordinateEvent.cpp" />
+    <ClCompile Include="generated\REcmaCoordinateListener.cpp" />
+    <ClCompile Include="generated\REcmaCoordinateListenerAdapter.cpp" />
+    <ClCompile Include="generated\REcmaCopyOperation.cpp" />
+    <ClCompile Include="generated\REcmaDebug.cpp" />
+    <ClCompile Include="generated\REcmaDeleteAllEntitiesOperation.cpp" />
+    <ClCompile Include="generated\REcmaDeleteObjectOperation.cpp" />
+    <ClCompile Include="generated\REcmaDeleteObjectsOperation.cpp" />
+    <ClCompile Include="generated\REcmaDeleteSelectionOperation.cpp" />
+    <ClCompile Include="generated\REcmaDimAlignedData.cpp" />
+    <ClCompile Include="generated\REcmaDimAlignedEntity.cpp" />
+    <ClCompile Include="generated\REcmaDimAngular2LData.cpp" />
+    <ClCompile Include="generated\REcmaDimAngular2LEntity.cpp" />
+    <ClCompile Include="generated\REcmaDimAngular3PData.cpp" />
+    <ClCompile Include="generated\REcmaDimAngular3PEntity.cpp" />
+    <ClCompile Include="generated\REcmaDimAngularData.cpp" />
+    <ClCompile Include="generated\REcmaDimAngularEntity.cpp" />
+    <ClCompile Include="generated\REcmaDimArcLengthData.cpp" />
+    <ClCompile Include="generated\REcmaDimArcLengthEntity.cpp" />
+    <ClCompile Include="generated\REcmaDimDiametricData.cpp" />
+    <ClCompile Include="generated\REcmaDimDiametricEntity.cpp" />
+    <ClCompile Include="generated\REcmaDimLinearData.cpp" />
+    <ClCompile Include="generated\REcmaDimLinearEntity.cpp" />
+    <ClCompile Include="generated\REcmaDimOrdinateData.cpp" />
+    <ClCompile Include="generated\REcmaDimOrdinateEntity.cpp" />
+    <ClCompile Include="generated\REcmaDimRadialData.cpp" />
+    <ClCompile Include="generated\REcmaDimRadialEntity.cpp" />
+    <ClCompile Include="generated\REcmaDimRotatedData.cpp" />
+    <ClCompile Include="generated\REcmaDimRotatedEntity.cpp" />
+    <ClCompile Include="generated\REcmaDimensionData.cpp" />
+    <ClCompile Include="generated\REcmaDimensionEntity.cpp" />
+    <ClCompile Include="generated\REcmaDirected.cpp" />
+    <ClCompile Include="generated\REcmaDockWidget.cpp" />
+    <ClCompile Include="generated\REcmaDocument.cpp" />
+    <ClCompile Include="generated\REcmaDocumentInterface.cpp" />
+    <ClCompile Include="generated\REcmaDocumentVariables.cpp" />
+    <ClCompile Include="generated\REcmaDxfServices.cpp" />
+    <ClCompile Include="generated\REcmaEllipse.cpp" />
+    <ClCompile Include="generated\REcmaEllipseData.cpp" />
+    <ClCompile Include="generated\REcmaEllipseEntity.cpp" />
+    <ClCompile Include="generated\REcmaEntity.cpp" />
+    <ClCompile Include="generated\REcmaEntityData.cpp" />
+    <ClCompile Include="generated\REcmaEntityExportListener.cpp" />
+    <ClCompile Include="generated\REcmaEntityExportListenerAdapter.cpp" />
+    <ClCompile Include="generated\REcmaEntityPickEvent.cpp" />
+    <ClCompile Include="generated\REcmaEventFilter.cpp" />
+    <ClCompile Include="generated\REcmaEventHandler.cpp" />
+    <ClCompile Include="generated\REcmaExplodable.cpp" />
+    <ClCompile Include="generated\REcmaExportListener.cpp" />
+    <ClCompile Include="generated\REcmaExportListenerAdapter.cpp" />
+    <ClCompile Include="generated\REcmaExporter.cpp" />
+    <ClCompile Include="generated\REcmaFaceData.cpp" />
+    <ClCompile Include="generated\REcmaFaceEntity.cpp" />
+    <ClCompile Include="generated\REcmaFileCache.cpp" />
+    <ClCompile Include="generated\REcmaFileExporter.cpp" />
+    <ClCompile Include="generated\REcmaFileExporterAdapter.cpp" />
+    <ClCompile Include="generated\REcmaFileExporterFactory.cpp" />
+    <ClCompile Include="generated\REcmaFileExporterFactoryAdapter.cpp" />
+    <ClCompile Include="generated\REcmaFileExporterRegistry.cpp" />
+    <ClCompile Include="generated\REcmaFileImporter.cpp" />
+    <ClCompile Include="generated\REcmaFileImporterAdapter.cpp" />
+    <ClCompile Include="generated\REcmaFileImporterFactory.cpp" />
+    <ClCompile Include="generated\REcmaFileImporterFactoryAdapter.cpp" />
+    <ClCompile Include="generated\REcmaFileImporterRegistry.cpp" />
+    <ClCompile Include="generated\REcmaFileSystemModel.cpp" />
+    <ClCompile Include="generated\REcmaFlowLayout.cpp" />
+    <ClCompile Include="generated\REcmaFocusFrame.cpp" />
+    <ClCompile Include="generated\REcmaFocusListener.cpp" />
+    <ClCompile Include="generated\REcmaFocusListenerAdapter.cpp" />
+    <ClCompile Include="generated\REcmaFont.cpp" />
+    <ClCompile Include="generated\REcmaFontChooserWidget.cpp" />
+    <ClCompile Include="generated\REcmaFontDatabase.cpp" />
+    <ClCompile Include="generated\REcmaFontList.cpp" />
+    <ClCompile Include="generated\REcmaGraphicsScene.cpp" />
+    <ClCompile Include="generated\REcmaGraphicsSceneDrawable.cpp" />
+    <ClCompile Include="generated\REcmaGraphicsSceneQt.cpp" />
+    <ClCompile Include="generated\REcmaGraphicsView.cpp" />
+    <ClCompile Include="generated\REcmaGraphicsViewImage.cpp" />
+    <ClCompile Include="generated\REcmaGraphicsViewQt.cpp" />
+    <ClCompile Include="generated\REcmaGrid.cpp" />
+    <ClCompile Include="generated\REcmaGuiAction.cpp" />
+    <ClCompile Include="generated\REcmaHatchData.cpp" />
+    <ClCompile Include="generated\REcmaHatchEntity.cpp" />
+    <ClCompile Include="REcmaHelper.cpp" />
+    <ClCompile Include="generated\REcmaImageData.cpp" />
+    <ClCompile Include="generated\REcmaImageEntity.cpp" />
+    <ClCompile Include="generated\REcmaImportListener.cpp" />
+    <ClCompile Include="generated\REcmaImportListenerAdapter.cpp" />
+    <ClCompile Include="generated\REcmaImporter.cpp" />
+    <ClCompile Include="generated\REcmaInputEvent.cpp" />
+    <ClCompile Include="generated\REcmaInterTransactionListener.cpp" />
+    <ClCompile Include="generated\REcmaInterTransactionListenerAdapter.cpp" />
+    <ClCompile Include="generated\REcmaKeyListener.cpp" />
+    <ClCompile Include="generated\REcmaKeyListenerAdapter.cpp" />
+    <ClCompile Include="generated\REcmaLayer.cpp" />
+    <ClCompile Include="generated\REcmaLayerListener.cpp" />
+    <ClCompile Include="generated\REcmaLayerListenerAdapter.cpp" />
+    <ClCompile Include="generated\REcmaLayerState.cpp" />
+    <ClCompile Include="generated\REcmaLayout.cpp" />
+    <ClCompile Include="generated\REcmaLeaderData.cpp" />
+    <ClCompile Include="generated\REcmaLeaderEntity.cpp" />
+    <ClCompile Include="generated\REcmaLine.cpp" />
+    <ClCompile Include="generated\REcmaLineData.cpp" />
+    <ClCompile Include="generated\REcmaLineEntity.cpp" />
+    <ClCompile Include="generated\REcmaLinetype.cpp" />
+    <ClCompile Include="generated\REcmaLinetypeCombo.cpp" />
+    <ClCompile Include="generated\REcmaLinetypeList.cpp" />
+    <ClCompile Include="generated\REcmaLinetypeListImperial.cpp" />
+    <ClCompile Include="generated\REcmaLinetypeListMetric.cpp" />
+    <ClCompile Include="generated\REcmaLinetypePattern.cpp" />
+    <ClCompile Include="generated\REcmaLineweight.cpp" />
+    <ClCompile Include="generated\REcmaLineweightCombo.cpp" />
+    <ClCompile Include="generated\REcmaLinkedStorage.cpp" />
+    <ClCompile Include="generated\REcmaListView.cpp" />
+    <ClCompile Include="generated\REcmaListWidget.cpp" />
+    <ClCompile Include="generated\REcmaMainWindow.cpp" />
+    <ClCompile Include="generated\REcmaMainWindowQt.cpp" />
+    <ClCompile Include="generated\REcmaMath.cpp" />
+    <ClCompile Include="generated\REcmaMathComboBox.cpp" />
+    <ClCompile Include="generated\REcmaMathLineEdit.cpp" />
+    <ClCompile Include="generated\REcmaMatrix.cpp" />
+    <ClCompile Include="generated\REcmaMdiArea.cpp" />
+    <ClCompile Include="generated\REcmaMdiChildQt.cpp" />
+    <ClCompile Include="generated\REcmaMemoryStorage.cpp" />
+    <ClCompile Include="generated\REcmaMessageHandler.cpp" />
+    <ClCompile Include="generated\REcmaMixedOperation.cpp" />
+    <ClCompile Include="generated\REcmaModifiedListener.cpp" />
+    <ClCompile Include="generated\REcmaModifyObjectOperation.cpp" />
+    <ClCompile Include="generated\REcmaModifyObjectsOperation.cpp" />
+    <ClCompile Include="generated\REcmaMouseEvent.cpp" />
+    <ClCompile Include="generated\REcmaMoveReferencePointOperation.cpp" />
+    <ClCompile Include="generated\REcmaMoveSelectionOperation.cpp" />
+    <ClCompile Include="generated\REcmaNavigationAction.cpp" />
+    <ClCompile Include="generated\REcmaNewDocumentListener.cpp" />
+    <ClCompile Include="generated\REcmaNewDocumentListenerAdapter.cpp" />
+    <ClCompile Include="generated\REcmaObject.cpp" />
+    <ClCompile Include="generated\REcmaOperation.cpp" />
+    <ClCompile Include="generated\REcmaOperationUtils.cpp" />
+    <ClCompile Include="generated\REcmaOrthoGrid.cpp" />
+    <ClCompile Include="generated\REcmaPainterPath.cpp" />
+    <ClCompile Include="generated\REcmaPainterPathDevice.cpp" />
+    <ClCompile Include="generated\REcmaPainterPathSource.cpp" />
+    <ClCompile Include="generated\REcmaPaletteListener.cpp" />
+    <ClCompile Include="generated\REcmaPaletteListenerAdapter.cpp" />
+    <ClCompile Include="generated\REcmaPasteOperation.cpp" />
+    <ClCompile Include="generated\REcmaPattern.cpp" />
+    <ClCompile Include="generated\REcmaPatternLine.cpp" />
+    <ClCompile Include="generated\REcmaPatternList.cpp" />
+    <ClCompile Include="generated\REcmaPatternListImperial.cpp" />
+    <ClCompile Include="generated\REcmaPatternListMetric.cpp" />
+    <ClCompile Include="generated\REcmaPenListener.cpp" />
+    <ClCompile Include="generated\REcmaPenListenerAdapter.cpp" />
+    <ClCompile Include="generated\REcmaPluginInfo.cpp" />
+    <ClCompile Include="generated\REcmaPluginInterface.cpp" />
+    <ClCompile Include="generated\REcmaPluginLoader.cpp" />
+    <ClCompile Include="generated\REcmaPoint.cpp" />
+    <ClCompile Include="generated\REcmaPointData.cpp" />
+    <ClCompile Include="generated\REcmaPointEntity.cpp" />
+    <ClCompile Include="generated\REcmaPolyline.cpp" />
+    <ClCompile Include="generated\REcmaPolylineData.cpp" />
+    <ClCompile Include="generated\REcmaPolylineEntity.cpp" />
+    <ClCompile Include="generated\REcmaPreferencesListener.cpp" />
+    <ClCompile Include="generated\REcmaPreferencesListenerAdapter.cpp" />
+    <ClCompile Include="generated\REcmaProgressHandler.cpp" />
+    <ClCompile Include="generated\REcmaPropertyAttributes.cpp" />
+    <ClCompile Include="generated\REcmaPropertyChange.cpp" />
+    <ClCompile Include="generated\REcmaPropertyEditor.cpp" />
+    <ClCompile Include="generated\REcmaPropertyEvent.cpp" />
+    <ClCompile Include="generated\REcmaPropertyListener.cpp" />
+    <ClCompile Include="generated\REcmaPropertyTypeId.cpp" />
+    <ClCompile Include="generated\REcmaRay.cpp" />
+    <ClCompile Include="generated\REcmaRayData.cpp" />
+    <ClCompile Include="generated\REcmaRayEntity.cpp" />
+    <ClCompile Include="generated\REcmaRefPoint.cpp" />
+    <ClCompile Include="generated\REcmaRestrictAngleLength.cpp" />
+    <ClCompile Include="generated\REcmaRestrictHorizontal.cpp" />
+    <ClCompile Include="generated\REcmaRestrictOff.cpp" />
+    <ClCompile Include="generated\REcmaRestrictOrthogonal.cpp" />
+    <ClCompile Include="generated\REcmaRestrictVertical.cpp" />
+    <ClCompile Include="generated\REcmaRuler.cpp" />
+    <ClCompile Include="generated\REcmaRulerQt.cpp" />
+    <ClCompile Include="generated\REcmaRunner.cpp" />
+    <ClCompile Include="generated\REcmaS.cpp" />
+    <ClCompile Include="generated\REcmaScaleSelectionOperation.cpp" />
+    <ClCompile Include="generated\REcmaScriptAction.cpp" />
+    <ClCompile Include="generated\REcmaScriptHandler.cpp" />
+    <ClCompile Include="generated\REcmaSelectionChangedEvent.cpp" />
+    <ClCompile Include="generated\REcmaSelectionListener.cpp" />
+    <ClCompile Include="generated\REcmaSelectionListenerAdapter.cpp" />
+    <ClCompile Include="generated\REcmaSettings.cpp" />
+    <ClCompile Include="generated\REcmaShape.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerArc.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerArcEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerAttributeData.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerAttributeDefinitionData.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerAttributeDefinitionEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerAttributeEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerBlock.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerBlockReferenceEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerBox.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerCircle.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerCircleEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerDimAlignedEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerDimAngular2LEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerDimAngular3PEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerDimAngularEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerDimArcLengthEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerDimDiametricEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerDimLinearEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerDimOrdinateEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerDimRadialEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerDimRotatedEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerDimensionEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerDirected.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerDocumentVariables.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerEllipse.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerEllipseEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerEntityData.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerExplodable.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerFaceEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerHatchEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerImageEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerLayer.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerLayerState.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerLayout.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerLeaderEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerLine.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerLineEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerLinetype.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerObject.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerPainterPathSource.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerPoint.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerPointEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerPolyline.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerPolylineEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerRay.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerRayEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerShape.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerSolidEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerSpline.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerSplineEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerTextBasedData.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerTextBasedEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerTextData.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerTextEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerTextLabel.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerToleranceEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerTraceEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerTriangle.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerUcs.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerView.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerViewportEntity.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerXLine.cpp" />
+    <ClCompile Include="generated\REcmaSharedPointerXLineEntity.cpp" />
+    <ClCompile Include="generated\REcmaShellActionAdapter.cpp" />
+    <ClCompile Include="generated\REcmaShellEventHandler.cpp" />
+    <ClCompile Include="generated\REcmaShellFileExporterAdapter.cpp" />
+    <ClCompile Include="generated\REcmaShellFileExporterFactoryAdapter.cpp" />
+    <ClCompile Include="generated\REcmaShellFileImporterAdapter.cpp" />
+    <ClCompile Include="generated\REcmaShellFileImporterFactoryAdapter.cpp" />
+    <ClCompile Include="generated\REcmaShellFlowLayout.cpp" />
+    <ClCompile Include="generated\REcmaShellFocusListenerAdapter.cpp" />
+    <ClCompile Include="generated\REcmaShellGraphicsViewImage.cpp" />
+    <ClCompile Include="generated\REcmaShellGraphicsViewQt.cpp" />
+    <ClCompile Include="generated\REcmaShellListView.cpp" />
+    <ClCompile Include="generated\REcmaShellListWidget.cpp" />
+    <ClCompile Include="generated\REcmaShellMdiArea.cpp" />
+    <ClCompile Include="generated\REcmaShellPropertyEditor.cpp" />
+    <ClCompile Include="generated\REcmaShellRestrictAngleLength.cpp" />
+    <ClCompile Include="generated\REcmaShellRunner.cpp" />
+    <ClCompile Include="generated\REcmaShellSnap.cpp" />
+    <ClCompile Include="generated\REcmaShellSnapDistance.cpp" />
+    <ClCompile Include="generated\REcmaShellSnapRestriction.cpp" />
+    <ClCompile Include="generated\REcmaShellSpatialIndexVisitorAdapter.cpp" />
+    <ClCompile Include="generated\REcmaShellThread.cpp" />
+    <ClCompile Include="generated\REcmaShellToolMatrixItemDelegate.cpp" />
+    <ClCompile Include="generated\REcmaShellTreeWidget.cpp" />
+    <ClCompile Include="generated\REcmaShellViewFocusListenerAdapter.cpp" />
+    <ClCompile Include="generated\REcmaShellWidget.cpp" />
+    <ClCompile Include="generated\REcmaShortcutLineEdit.cpp" />
+    <ClCompile Include="generated\REcmaSnap.cpp" />
+    <ClCompile Include="generated\REcmaSnapAuto.cpp" />
+    <ClCompile Include="generated\REcmaSnapCenter.cpp" />
+    <ClCompile Include="generated\REcmaSnapDistance.cpp" />
+    <ClCompile Include="generated\REcmaSnapEnd.cpp" />
+    <ClCompile Include="generated\REcmaSnapEntityBase.cpp" />
+    <ClCompile Include="generated\REcmaSnapFree.cpp" />
+    <ClCompile Include="generated\REcmaSnapGrid.cpp" />
+    <ClCompile Include="generated\REcmaSnapIntersection.cpp" />
+    <ClCompile Include="generated\REcmaSnapListener.cpp" />
+    <ClCompile Include="generated\REcmaSnapMiddle.cpp" />
+    <ClCompile Include="generated\REcmaSnapOnEntity.cpp" />
+    <ClCompile Include="generated\REcmaSnapPerpendicular.cpp" />
+    <ClCompile Include="generated\REcmaSnapReference.cpp" />
+    <ClCompile Include="generated\REcmaSnapRestriction.cpp" />
+    <ClCompile Include="generated\REcmaSnapTangential.cpp" />
+    <ClCompile Include="generated\REcmaSolidData.cpp" />
+    <ClCompile Include="generated\REcmaSolidEntity.cpp" />
+    <ClCompile Include="generated\REcmaSpatialIndex.cpp" />
+    <ClCompile Include="generated\REcmaSpatialIndexNavel.cpp" />
+    <ClCompile Include="generated\REcmaSpatialIndexSimple.cpp" />
+    <ClCompile Include="generated\REcmaSpatialIndexVisitor.cpp" />
+    <ClCompile Include="generated\REcmaSpatialIndexVisitorAdapter.cpp" />
+    <ClCompile Include="generated\REcmaSpline.cpp" />
+    <ClCompile Include="generated\REcmaSplineData.cpp" />
+    <ClCompile Include="generated\REcmaSplineEntity.cpp" />
+    <ClCompile Include="generated\REcmaStemmer.cpp" />
+    <ClCompile Include="generated\REcmaStorage.cpp" />
+    <ClCompile Include="generated\REcmaTabletEvent.cpp" />
+    <ClCompile Include="generated\REcmaTerminateEvent.cpp" />
+    <ClCompile Include="generated\REcmaTextBasedData.cpp" />
+    <ClCompile Include="generated\REcmaTextBasedEntity.cpp" />
+    <ClCompile Include="generated\REcmaTextData.cpp" />
+    <ClCompile Include="generated\REcmaTextEdit.cpp" />
+    <ClCompile Include="generated\REcmaTextEntity.cpp" />
+    <ClCompile Include="generated\REcmaTextLabel.cpp" />
+    <ClCompile Include="generated\REcmaTextLayout.cpp" />
+    <ClCompile Include="generated\REcmaTextRenderer.cpp" />
+    <ClCompile Include="generated\REcmaThread.cpp" />
+    <ClCompile Include="generated\REcmaToleranceData.cpp" />
+    <ClCompile Include="generated\REcmaToleranceEntity.cpp" />
+    <ClCompile Include="generated\REcmaToolButton.cpp" />
+    <ClCompile Include="generated\REcmaToolMatrixItemDelegate.cpp" />
+    <ClCompile Include="generated\REcmaTraceData.cpp" />
+    <ClCompile Include="generated\REcmaTraceEntity.cpp" />
+    <ClCompile Include="generated\REcmaTransaction.cpp" />
+    <ClCompile Include="generated\REcmaTransactionEvent.cpp" />
+    <ClCompile Include="generated\REcmaTransactionListener.cpp" />
+    <ClCompile Include="generated\REcmaTransactionListenerAdapter.cpp" />
+    <ClCompile Include="generated\REcmaTransform.cpp" />
+    <ClCompile Include="generated\REcmaTransformOp.cpp" />
+    <ClCompile Include="generated\REcmaTransformation.cpp" />
+    <ClCompile Include="generated\REcmaTranslation.cpp" />
+    <ClCompile Include="generated\REcmaTreeWidget.cpp" />
+    <ClCompile Include="generated\REcmaTriangle.cpp" />
+    <ClCompile Include="generated\REcmaUcs.cpp" />
+    <ClCompile Include="generated\REcmaUnit.cpp" />
+    <ClCompile Include="generated\REcmaVector.cpp" />
+    <ClCompile Include="generated\REcmaView.cpp" />
+    <ClCompile Include="generated\REcmaViewFocusListener.cpp" />
+    <ClCompile Include="generated\REcmaViewFocusListenerAdapter.cpp" />
+    <ClCompile Include="generated\REcmaViewListener.cpp" />
+    <ClCompile Include="generated\REcmaViewListenerAdapter.cpp" />
+    <ClCompile Include="generated\REcmaViewportData.cpp" />
+    <ClCompile Include="generated\REcmaViewportEntity.cpp" />
+    <ClCompile Include="generated\REcmaWheelEvent.cpp" />
+    <ClCompile Include="generated\REcmaWidget.cpp" />
+    <ClCompile Include="generated\REcmaXLine.cpp" />
+    <ClCompile Include="generated\REcmaXLineData.cpp" />
+    <ClCompile Include="generated\REcmaXLineEntity.cpp" />
+    <ClCompile Include="adapters\RScriptAdapters.cpp" />
+    <ClCompile Include="RScriptHandlerEcma.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RAutoLoadEcma.h" />
+    <CustomBuild Include="adapters\RBlockListenerAdapter.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RBlockListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RBlockListenerAdapter.h -o release\moc_RBlockListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RBlockListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RBlockListenerAdapter.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RBlockListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RBlockListenerAdapter.h -o debug\moc_RBlockListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RBlockListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RBlockListenerAdapter.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="adapters\RCoordinateListenerAdapter.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RCoordinateListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RCoordinateListenerAdapter.h -o release\moc_RCoordinateListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RCoordinateListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RCoordinateListenerAdapter.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RCoordinateListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RCoordinateListenerAdapter.h -o debug\moc_RCoordinateListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RCoordinateListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RCoordinateListenerAdapter.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="generated\REcmaAction.h" />
+    <ClInclude Include="generated\REcmaActionAdapter.h" />
+    <ClInclude Include="generated\REcmaAddObjectOperation.h" />
+    <ClInclude Include="generated\REcmaAddObjectsOperation.h" />
+    <ClInclude Include="generated\REcmaArc.h" />
+    <ClInclude Include="generated\REcmaArcData.h" />
+    <ClInclude Include="generated\REcmaArcEntity.h" />
+    <ClInclude Include="generated\REcmaAttributeData.h" />
+    <ClInclude Include="generated\REcmaAttributeDefinitionData.h" />
+    <ClInclude Include="generated\REcmaAttributeDefinitionEntity.h" />
+    <ClInclude Include="generated\REcmaAttributeEntity.h" />
+    <ClInclude Include="generated\REcmaAutoLoadEcma.h" />
+    <ClInclude Include="generated\REcmaBlock.h" />
+    <ClInclude Include="generated\REcmaBlockListener.h" />
+    <ClInclude Include="generated\REcmaBlockListenerAdapter.h" />
+    <ClInclude Include="generated\REcmaBlockReferenceData.h" />
+    <ClInclude Include="generated\REcmaBlockReferenceEntity.h" />
+    <ClInclude Include="generated\REcmaBox.h" />
+    <ClInclude Include="generated\REcmaChangePropertyOperation.h" />
+    <ClInclude Include="generated\REcmaCharacterWidget.h" />
+    <ClInclude Include="generated\REcmaCircle.h" />
+    <ClInclude Include="generated\REcmaCircleData.h" />
+    <ClInclude Include="generated\REcmaCircleEntity.h" />
+    <ClInclude Include="generated\REcmaClickReferencePointOperation.h" />
+    <ClInclude Include="generated\REcmaClipboardOperation.h" />
+    <ClInclude Include="generated\REcmaCloseCurrentEvent.h" />
+    <ClInclude Include="generated\REcmaColor.h" />
+    <ClInclude Include="generated\REcmaColorCombo.h" />
+    <ClInclude Include="generated\REcmaCommandEvent.h" />
+    <ClInclude Include="generated\REcmaCommandLine.h" />
+    <ClInclude Include="generated\REcmaCoordinateEvent.h" />
+    <ClInclude Include="generated\REcmaCoordinateListener.h" />
+    <ClInclude Include="generated\REcmaCoordinateListenerAdapter.h" />
+    <ClInclude Include="generated\REcmaCopyOperation.h" />
+    <ClInclude Include="generated\REcmaDebug.h" />
+    <ClInclude Include="generated\REcmaDeleteAllEntitiesOperation.h" />
+    <ClInclude Include="generated\REcmaDeleteObjectOperation.h" />
+    <ClInclude Include="generated\REcmaDeleteObjectsOperation.h" />
+    <ClInclude Include="generated\REcmaDeleteSelectionOperation.h" />
+    <ClInclude Include="generated\REcmaDimAlignedData.h" />
+    <ClInclude Include="generated\REcmaDimAlignedEntity.h" />
+    <ClInclude Include="generated\REcmaDimAngular2LData.h" />
+    <ClInclude Include="generated\REcmaDimAngular2LEntity.h" />
+    <ClInclude Include="generated\REcmaDimAngular3PData.h" />
+    <ClInclude Include="generated\REcmaDimAngular3PEntity.h" />
+    <ClInclude Include="generated\REcmaDimAngularData.h" />
+    <ClInclude Include="generated\REcmaDimAngularEntity.h" />
+    <ClInclude Include="generated\REcmaDimArcLengthData.h" />
+    <ClInclude Include="generated\REcmaDimArcLengthEntity.h" />
+    <ClInclude Include="generated\REcmaDimDiametricData.h" />
+    <ClInclude Include="generated\REcmaDimDiametricEntity.h" />
+    <ClInclude Include="generated\REcmaDimLinearData.h" />
+    <ClInclude Include="generated\REcmaDimLinearEntity.h" />
+    <ClInclude Include="generated\REcmaDimOrdinateData.h" />
+    <ClInclude Include="generated\REcmaDimOrdinateEntity.h" />
+    <ClInclude Include="generated\REcmaDimRadialData.h" />
+    <ClInclude Include="generated\REcmaDimRadialEntity.h" />
+    <ClInclude Include="generated\REcmaDimRotatedData.h" />
+    <ClInclude Include="generated\REcmaDimRotatedEntity.h" />
+    <ClInclude Include="generated\REcmaDimensionData.h" />
+    <ClInclude Include="generated\REcmaDimensionEntity.h" />
+    <ClInclude Include="generated\REcmaDirected.h" />
+    <ClInclude Include="generated\REcmaDockWidget.h" />
+    <ClInclude Include="generated\REcmaDocument.h" />
+    <ClInclude Include="generated\REcmaDocumentInterface.h" />
+    <ClInclude Include="generated\REcmaDocumentVariables.h" />
+    <ClInclude Include="generated\REcmaDxfServices.h" />
+    <ClInclude Include="generated\REcmaEllipse.h" />
+    <ClInclude Include="generated\REcmaEllipseData.h" />
+    <ClInclude Include="generated\REcmaEllipseEntity.h" />
+    <ClInclude Include="generated\REcmaEntity.h" />
+    <ClInclude Include="generated\REcmaEntityData.h" />
+    <ClInclude Include="generated\REcmaEntityExportListener.h" />
+    <ClInclude Include="generated\REcmaEntityExportListenerAdapter.h" />
+    <ClInclude Include="generated\REcmaEntityPickEvent.h" />
+    <ClInclude Include="generated\REcmaEventFilter.h" />
+    <ClInclude Include="generated\REcmaEventHandler.h" />
+    <ClInclude Include="generated\REcmaExplodable.h" />
+    <ClInclude Include="generated\REcmaExportListener.h" />
+    <ClInclude Include="generated\REcmaExportListenerAdapter.h" />
+    <ClInclude Include="generated\REcmaExporter.h" />
+    <ClInclude Include="generated\REcmaFaceData.h" />
+    <ClInclude Include="generated\REcmaFaceEntity.h" />
+    <ClInclude Include="generated\REcmaFileCache.h" />
+    <ClInclude Include="generated\REcmaFileExporter.h" />
+    <ClInclude Include="generated\REcmaFileExporterAdapter.h" />
+    <ClInclude Include="generated\REcmaFileExporterFactory.h" />
+    <ClInclude Include="generated\REcmaFileExporterFactoryAdapter.h" />
+    <ClInclude Include="generated\REcmaFileExporterRegistry.h" />
+    <ClInclude Include="generated\REcmaFileImporter.h" />
+    <ClInclude Include="generated\REcmaFileImporterAdapter.h" />
+    <ClInclude Include="generated\REcmaFileImporterFactory.h" />
+    <ClInclude Include="generated\REcmaFileImporterFactoryAdapter.h" />
+    <ClInclude Include="generated\REcmaFileImporterRegistry.h" />
+    <ClInclude Include="generated\REcmaFileSystemModel.h" />
+    <ClInclude Include="generated\REcmaFlowLayout.h" />
+    <ClInclude Include="generated\REcmaFocusFrame.h" />
+    <ClInclude Include="generated\REcmaFocusListener.h" />
+    <ClInclude Include="generated\REcmaFocusListenerAdapter.h" />
+    <ClInclude Include="generated\REcmaFont.h" />
+    <ClInclude Include="generated\REcmaFontChooserWidget.h" />
+    <ClInclude Include="generated\REcmaFontDatabase.h" />
+    <ClInclude Include="generated\REcmaFontList.h" />
+    <ClInclude Include="generated\REcmaGraphicsScene.h" />
+    <ClInclude Include="generated\REcmaGraphicsSceneDrawable.h" />
+    <ClInclude Include="generated\REcmaGraphicsSceneQt.h" />
+    <ClInclude Include="generated\REcmaGraphicsView.h" />
+    <ClInclude Include="generated\REcmaGraphicsViewImage.h" />
+    <ClInclude Include="generated\REcmaGraphicsViewQt.h" />
+    <ClInclude Include="generated\REcmaGrid.h" />
+    <ClInclude Include="generated\REcmaGuiAction.h" />
+    <ClInclude Include="generated\REcmaHatchData.h" />
+    <ClInclude Include="generated\REcmaHatchEntity.h" />
+    <ClInclude Include="REcmaHelper.h" />
+    <ClInclude Include="generated\REcmaImageData.h" />
+    <ClInclude Include="generated\REcmaImageEntity.h" />
+    <ClInclude Include="generated\REcmaImportListener.h" />
+    <ClInclude Include="generated\REcmaImportListenerAdapter.h" />
+    <ClInclude Include="generated\REcmaImporter.h" />
+    <ClInclude Include="generated\REcmaInputEvent.h" />
+    <ClInclude Include="generated\REcmaInterTransactionListener.h" />
+    <ClInclude Include="generated\REcmaInterTransactionListenerAdapter.h" />
+    <ClInclude Include="generated\REcmaKeyListener.h" />
+    <ClInclude Include="generated\REcmaKeyListenerAdapter.h" />
+    <ClInclude Include="generated\REcmaLayer.h" />
+    <ClInclude Include="generated\REcmaLayerListener.h" />
+    <ClInclude Include="generated\REcmaLayerListenerAdapter.h" />
+    <ClInclude Include="generated\REcmaLayerState.h" />
+    <ClInclude Include="generated\REcmaLayout.h" />
+    <ClInclude Include="generated\REcmaLeaderData.h" />
+    <ClInclude Include="generated\REcmaLeaderEntity.h" />
+    <ClInclude Include="generated\REcmaLine.h" />
+    <ClInclude Include="generated\REcmaLineData.h" />
+    <ClInclude Include="generated\REcmaLineEntity.h" />
+    <ClInclude Include="generated\REcmaLinetype.h" />
+    <ClInclude Include="generated\REcmaLinetypeCombo.h" />
+    <ClInclude Include="generated\REcmaLinetypeList.h" />
+    <ClInclude Include="generated\REcmaLinetypeListImperial.h" />
+    <ClInclude Include="generated\REcmaLinetypeListMetric.h" />
+    <ClInclude Include="generated\REcmaLinetypePattern.h" />
+    <ClInclude Include="generated\REcmaLineweight.h" />
+    <ClInclude Include="generated\REcmaLineweightCombo.h" />
+    <ClInclude Include="generated\REcmaLinkedStorage.h" />
+    <ClInclude Include="generated\REcmaListView.h" />
+    <ClInclude Include="generated\REcmaListWidget.h" />
+    <ClInclude Include="generated\REcmaMainWindow.h" />
+    <ClInclude Include="generated\REcmaMainWindowQt.h" />
+    <ClInclude Include="generated\REcmaMath.h" />
+    <ClInclude Include="generated\REcmaMathComboBox.h" />
+    <ClInclude Include="generated\REcmaMathLineEdit.h" />
+    <ClInclude Include="generated\REcmaMatrix.h" />
+    <ClInclude Include="generated\REcmaMdiArea.h" />
+    <ClInclude Include="generated\REcmaMdiChildQt.h" />
+    <ClInclude Include="generated\REcmaMemoryStorage.h" />
+    <ClInclude Include="generated\REcmaMessageHandler.h" />
+    <ClInclude Include="generated\REcmaMixedOperation.h" />
+    <ClInclude Include="generated\REcmaModifiedListener.h" />
+    <ClInclude Include="generated\REcmaModifyObjectOperation.h" />
+    <ClInclude Include="generated\REcmaModifyObjectsOperation.h" />
+    <ClInclude Include="generated\REcmaMouseEvent.h" />
+    <ClInclude Include="generated\REcmaMoveReferencePointOperation.h" />
+    <ClInclude Include="generated\REcmaMoveSelectionOperation.h" />
+    <ClInclude Include="generated\REcmaNavigationAction.h" />
+    <ClInclude Include="generated\REcmaNewDocumentListener.h" />
+    <ClInclude Include="generated\REcmaNewDocumentListenerAdapter.h" />
+    <ClInclude Include="generated\REcmaObject.h" />
+    <ClInclude Include="generated\REcmaOperation.h" />
+    <ClInclude Include="generated\REcmaOperationUtils.h" />
+    <ClInclude Include="generated\REcmaOrthoGrid.h" />
+    <ClInclude Include="generated\REcmaPainterPath.h" />
+    <ClInclude Include="generated\REcmaPainterPathDevice.h" />
+    <ClInclude Include="generated\REcmaPainterPathSource.h" />
+    <ClInclude Include="generated\REcmaPaletteListener.h" />
+    <ClInclude Include="generated\REcmaPaletteListenerAdapter.h" />
+    <ClInclude Include="generated\REcmaPasteOperation.h" />
+    <ClInclude Include="generated\REcmaPattern.h" />
+    <ClInclude Include="generated\REcmaPatternLine.h" />
+    <ClInclude Include="generated\REcmaPatternList.h" />
+    <ClInclude Include="generated\REcmaPatternListImperial.h" />
+    <ClInclude Include="generated\REcmaPatternListMetric.h" />
+    <ClInclude Include="generated\REcmaPenListener.h" />
+    <ClInclude Include="generated\REcmaPenListenerAdapter.h" />
+    <ClInclude Include="generated\REcmaPluginInfo.h" />
+    <ClInclude Include="generated\REcmaPluginInterface.h" />
+    <ClInclude Include="generated\REcmaPluginLoader.h" />
+    <ClInclude Include="generated\REcmaPoint.h" />
+    <ClInclude Include="generated\REcmaPointData.h" />
+    <ClInclude Include="generated\REcmaPointEntity.h" />
+    <ClInclude Include="generated\REcmaPolyline.h" />
+    <ClInclude Include="generated\REcmaPolylineData.h" />
+    <ClInclude Include="generated\REcmaPolylineEntity.h" />
+    <ClInclude Include="generated\REcmaPreferencesListener.h" />
+    <ClInclude Include="generated\REcmaPreferencesListenerAdapter.h" />
+    <ClInclude Include="generated\REcmaProgressHandler.h" />
+    <ClInclude Include="generated\REcmaPropertyAttributes.h" />
+    <ClInclude Include="generated\REcmaPropertyChange.h" />
+    <ClInclude Include="generated\REcmaPropertyEditor.h" />
+    <ClInclude Include="generated\REcmaPropertyEvent.h" />
+    <ClInclude Include="generated\REcmaPropertyListener.h" />
+    <ClInclude Include="generated\REcmaPropertyTypeId.h" />
+    <ClInclude Include="generated\REcmaRay.h" />
+    <ClInclude Include="generated\REcmaRayData.h" />
+    <ClInclude Include="generated\REcmaRayEntity.h" />
+    <ClInclude Include="generated\REcmaRefPoint.h" />
+    <ClInclude Include="generated\REcmaRestrictAngleLength.h" />
+    <ClInclude Include="generated\REcmaRestrictHorizontal.h" />
+    <ClInclude Include="generated\REcmaRestrictOff.h" />
+    <ClInclude Include="generated\REcmaRestrictOrthogonal.h" />
+    <ClInclude Include="generated\REcmaRestrictVertical.h" />
+    <ClInclude Include="generated\REcmaRuler.h" />
+    <ClInclude Include="generated\REcmaRulerQt.h" />
+    <ClInclude Include="generated\REcmaRunner.h" />
+    <ClInclude Include="generated\REcmaS.h" />
+    <ClInclude Include="generated\REcmaScaleSelectionOperation.h" />
+    <ClInclude Include="generated\REcmaScriptAction.h" />
+    <ClInclude Include="generated\REcmaScriptHandler.h" />
+    <ClInclude Include="generated\REcmaSelectionChangedEvent.h" />
+    <ClInclude Include="generated\REcmaSelectionListener.h" />
+    <ClInclude Include="generated\REcmaSelectionListenerAdapter.h" />
+    <ClInclude Include="generated\REcmaSettings.h" />
+    <ClInclude Include="generated\REcmaShape.h" />
+    <ClInclude Include="generated\REcmaSharedPointerArc.h" />
+    <ClInclude Include="generated\REcmaSharedPointerArcEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerAttributeData.h" />
+    <ClInclude Include="generated\REcmaSharedPointerAttributeDefinitionData.h" />
+    <ClInclude Include="generated\REcmaSharedPointerAttributeDefinitionEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerAttributeEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerBlock.h" />
+    <ClInclude Include="generated\REcmaSharedPointerBlockReferenceEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerBox.h" />
+    <ClInclude Include="generated\REcmaSharedPointerCircle.h" />
+    <ClInclude Include="generated\REcmaSharedPointerCircleEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerDimAlignedEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerDimAngular2LEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerDimAngular3PEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerDimAngularEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerDimArcLengthEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerDimDiametricEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerDimLinearEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerDimOrdinateEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerDimRadialEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerDimRotatedEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerDimensionEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerDirected.h" />
+    <ClInclude Include="generated\REcmaSharedPointerDocumentVariables.h" />
+    <ClInclude Include="generated\REcmaSharedPointerEllipse.h" />
+    <ClInclude Include="generated\REcmaSharedPointerEllipseEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerEntityData.h" />
+    <ClInclude Include="generated\REcmaSharedPointerExplodable.h" />
+    <ClInclude Include="generated\REcmaSharedPointerFaceEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerHatchEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerImageEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerLayer.h" />
+    <ClInclude Include="generated\REcmaSharedPointerLayerState.h" />
+    <ClInclude Include="generated\REcmaSharedPointerLayout.h" />
+    <ClInclude Include="generated\REcmaSharedPointerLeaderEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerLine.h" />
+    <ClInclude Include="generated\REcmaSharedPointerLineEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerLinetype.h" />
+    <ClInclude Include="generated\REcmaSharedPointerObject.h" />
+    <ClInclude Include="generated\REcmaSharedPointerPainterPathSource.h" />
+    <ClInclude Include="generated\REcmaSharedPointerPoint.h" />
+    <ClInclude Include="generated\REcmaSharedPointerPointEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerPolyline.h" />
+    <ClInclude Include="generated\REcmaSharedPointerPolylineEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerRay.h" />
+    <ClInclude Include="generated\REcmaSharedPointerRayEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerShape.h" />
+    <ClInclude Include="generated\REcmaSharedPointerSolidEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerSpline.h" />
+    <ClInclude Include="generated\REcmaSharedPointerSplineEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerTextBasedData.h" />
+    <ClInclude Include="generated\REcmaSharedPointerTextBasedEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerTextData.h" />
+    <ClInclude Include="generated\REcmaSharedPointerTextEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerTextLabel.h" />
+    <ClInclude Include="generated\REcmaSharedPointerToleranceEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerTraceEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerTriangle.h" />
+    <ClInclude Include="generated\REcmaSharedPointerUcs.h" />
+    <ClInclude Include="generated\REcmaSharedPointerView.h" />
+    <ClInclude Include="generated\REcmaSharedPointerViewportEntity.h" />
+    <ClInclude Include="generated\REcmaSharedPointerXLine.h" />
+    <ClInclude Include="generated\REcmaSharedPointerXLineEntity.h" />
+    <ClInclude Include="generated\REcmaShellActionAdapter.h" />
+    <ClInclude Include="generated\REcmaShellEventHandler.h" />
+    <ClInclude Include="generated\REcmaShellFileExporterAdapter.h" />
+    <ClInclude Include="generated\REcmaShellFileExporterFactoryAdapter.h" />
+    <ClInclude Include="generated\REcmaShellFileImporterAdapter.h" />
+    <ClInclude Include="generated\REcmaShellFileImporterFactoryAdapter.h" />
+    <ClInclude Include="generated\REcmaShellFlowLayout.h" />
+    <ClInclude Include="generated\REcmaShellFocusListenerAdapter.h" />
+    <ClInclude Include="generated\REcmaShellGraphicsViewImage.h" />
+    <ClInclude Include="generated\REcmaShellGraphicsViewQt.h" />
+    <ClInclude Include="generated\REcmaShellListView.h" />
+    <ClInclude Include="generated\REcmaShellListWidget.h" />
+    <ClInclude Include="generated\REcmaShellMdiArea.h" />
+    <ClInclude Include="generated\REcmaShellPropertyEditor.h" />
+    <ClInclude Include="generated\REcmaShellRestrictAngleLength.h" />
+    <ClInclude Include="generated\REcmaShellRunner.h" />
+    <ClInclude Include="generated\REcmaShellSnap.h" />
+    <ClInclude Include="generated\REcmaShellSnapDistance.h" />
+    <ClInclude Include="generated\REcmaShellSnapRestriction.h" />
+    <ClInclude Include="generated\REcmaShellSpatialIndexVisitorAdapter.h" />
+    <ClInclude Include="generated\REcmaShellThread.h" />
+    <ClInclude Include="generated\REcmaShellToolMatrixItemDelegate.h" />
+    <ClInclude Include="generated\REcmaShellTreeWidget.h" />
+    <ClInclude Include="generated\REcmaShellViewFocusListenerAdapter.h" />
+    <ClInclude Include="generated\REcmaShellWidget.h" />
+    <ClInclude Include="generated\REcmaShortcutLineEdit.h" />
+    <ClInclude Include="generated\REcmaSnap.h" />
+    <ClInclude Include="generated\REcmaSnapAuto.h" />
+    <ClInclude Include="generated\REcmaSnapCenter.h" />
+    <ClInclude Include="generated\REcmaSnapDistance.h" />
+    <ClInclude Include="generated\REcmaSnapEnd.h" />
+    <ClInclude Include="generated\REcmaSnapEntityBase.h" />
+    <ClInclude Include="generated\REcmaSnapFree.h" />
+    <ClInclude Include="generated\REcmaSnapGrid.h" />
+    <ClInclude Include="generated\REcmaSnapIntersection.h" />
+    <ClInclude Include="generated\REcmaSnapListener.h" />
+    <ClInclude Include="generated\REcmaSnapMiddle.h" />
+    <ClInclude Include="generated\REcmaSnapOnEntity.h" />
+    <ClInclude Include="generated\REcmaSnapPerpendicular.h" />
+    <ClInclude Include="generated\REcmaSnapReference.h" />
+    <ClInclude Include="generated\REcmaSnapRestriction.h" />
+    <ClInclude Include="generated\REcmaSnapTangential.h" />
+    <ClInclude Include="generated\REcmaSolidData.h" />
+    <ClInclude Include="generated\REcmaSolidEntity.h" />
+    <ClInclude Include="generated\REcmaSpatialIndex.h" />
+    <ClInclude Include="generated\REcmaSpatialIndexNavel.h" />
+    <ClInclude Include="generated\REcmaSpatialIndexSimple.h" />
+    <ClInclude Include="generated\REcmaSpatialIndexVisitor.h" />
+    <ClInclude Include="generated\REcmaSpatialIndexVisitorAdapter.h" />
+    <ClInclude Include="generated\REcmaSpline.h" />
+    <ClInclude Include="generated\REcmaSplineData.h" />
+    <ClInclude Include="generated\REcmaSplineEntity.h" />
+    <ClInclude Include="generated\REcmaStemmer.h" />
+    <ClInclude Include="generated\REcmaStorage.h" />
+    <ClInclude Include="generated\REcmaTabletEvent.h" />
+    <ClInclude Include="generated\REcmaTerminateEvent.h" />
+    <ClInclude Include="generated\REcmaTextBasedData.h" />
+    <ClInclude Include="generated\REcmaTextBasedEntity.h" />
+    <ClInclude Include="generated\REcmaTextData.h" />
+    <ClInclude Include="generated\REcmaTextEdit.h" />
+    <ClInclude Include="generated\REcmaTextEntity.h" />
+    <ClInclude Include="generated\REcmaTextLabel.h" />
+    <ClInclude Include="generated\REcmaTextLayout.h" />
+    <ClInclude Include="generated\REcmaTextRenderer.h" />
+    <ClInclude Include="generated\REcmaThread.h" />
+    <ClInclude Include="generated\REcmaToleranceData.h" />
+    <ClInclude Include="generated\REcmaToleranceEntity.h" />
+    <ClInclude Include="generated\REcmaToolButton.h" />
+    <ClInclude Include="generated\REcmaToolMatrixItemDelegate.h" />
+    <ClInclude Include="generated\REcmaTraceData.h" />
+    <ClInclude Include="generated\REcmaTraceEntity.h" />
+    <ClInclude Include="generated\REcmaTransaction.h" />
+    <ClInclude Include="generated\REcmaTransactionEvent.h" />
+    <ClInclude Include="generated\REcmaTransactionListener.h" />
+    <ClInclude Include="generated\REcmaTransactionListenerAdapter.h" />
+    <ClInclude Include="generated\REcmaTransform.h" />
+    <ClInclude Include="generated\REcmaTransformOp.h" />
+    <ClInclude Include="generated\REcmaTransformation.h" />
+    <ClInclude Include="generated\REcmaTranslation.h" />
+    <ClInclude Include="generated\REcmaTreeWidget.h" />
+    <ClInclude Include="generated\REcmaTriangle.h" />
+    <ClInclude Include="generated\REcmaUcs.h" />
+    <ClInclude Include="generated\REcmaUnit.h" />
+    <ClInclude Include="generated\REcmaVector.h" />
+    <ClInclude Include="generated\REcmaView.h" />
+    <ClInclude Include="generated\REcmaViewFocusListener.h" />
+    <ClInclude Include="generated\REcmaViewFocusListenerAdapter.h" />
+    <ClInclude Include="generated\REcmaViewListener.h" />
+    <ClInclude Include="generated\REcmaViewListenerAdapter.h" />
+    <ClInclude Include="generated\REcmaViewportData.h" />
+    <ClInclude Include="generated\REcmaViewportEntity.h" />
+    <ClInclude Include="generated\REcmaWheelEvent.h" />
+    <ClInclude Include="generated\REcmaWidget.h" />
+    <ClInclude Include="generated\REcmaXLine.h" />
+    <ClInclude Include="generated\REcmaXLineData.h" />
+    <ClInclude Include="generated\REcmaXLineEntity.h" />
+    <CustomBuild Include="adapters\REntityExportListenerAdapter.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\REntityExportListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\REntityExportListenerAdapter.h -o release\moc_REntityExportListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/REntityExportListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_REntityExportListenerAdapter.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\REntityExportListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\REntityExportListenerAdapter.h -o debug\moc_REntityExportListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/REntityExportListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_REntityExportListenerAdapter.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="adapters\RExportListenerAdapter.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RExportListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RExportListenerAdapter.h -o release\moc_RExportListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RExportListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RExportListenerAdapter.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RExportListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RExportListenerAdapter.h -o debug\moc_RExportListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RExportListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RExportListenerAdapter.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="adapters\RFileExporterAdapter.h" />
+    <ClInclude Include="adapters\RFileExporterFactoryAdapter.h" />
+    <ClInclude Include="adapters\RFileImporterAdapter.h" />
+    <ClInclude Include="adapters\RFileImporterFactoryAdapter.h" />
+    <CustomBuild Include="adapters\RFocusListenerAdapter.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RFocusListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RFocusListenerAdapter.h -o release\moc_RFocusListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RFocusListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RFocusListenerAdapter.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RFocusListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RFocusListenerAdapter.h -o debug\moc_RFocusListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RFocusListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RFocusListenerAdapter.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="adapters\RFontDatabase.h" />
+    <CustomBuild Include="adapters\RImportListenerAdapter.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RImportListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RImportListenerAdapter.h -o release\moc_RImportListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RImportListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RImportListenerAdapter.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RImportListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RImportListenerAdapter.h -o debug\moc_RImportListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RImportListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RImportListenerAdapter.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="adapters\RInterTransactionListenerAdapter.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RInterTransactionListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RInterTransactionListenerAdapter.h -o release\moc_RInterTransactionListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RInterTransactionListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RInterTransactionListenerAdapter.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RInterTransactionListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RInterTransactionListenerAdapter.h -o debug\moc_RInterTransactionListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RInterTransactionListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RInterTransactionListenerAdapter.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="adapters\RKeyListenerAdapter.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RKeyListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RKeyListenerAdapter.h -o release\moc_RKeyListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RKeyListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RKeyListenerAdapter.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RKeyListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RKeyListenerAdapter.h -o debug\moc_RKeyListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RKeyListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RKeyListenerAdapter.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="adapters\RLayerListenerAdapter.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RLayerListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RLayerListenerAdapter.h -o release\moc_RLayerListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RLayerListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RLayerListenerAdapter.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RLayerListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RLayerListenerAdapter.h -o debug\moc_RLayerListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RLayerListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RLayerListenerAdapter.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="adapters\RNewDocumentListenerAdapter.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RNewDocumentListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RNewDocumentListenerAdapter.h -o release\moc_RNewDocumentListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RNewDocumentListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RNewDocumentListenerAdapter.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RNewDocumentListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RNewDocumentListenerAdapter.h -o debug\moc_RNewDocumentListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RNewDocumentListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RNewDocumentListenerAdapter.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="adapters\RPaletteListenerAdapter.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RPaletteListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RPaletteListenerAdapter.h -o release\moc_RPaletteListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RPaletteListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RPaletteListenerAdapter.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RPaletteListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RPaletteListenerAdapter.h -o debug\moc_RPaletteListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RPaletteListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RPaletteListenerAdapter.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="adapters\RPenListenerAdapter.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RPenListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RPenListenerAdapter.h -o release\moc_RPenListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RPenListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RPenListenerAdapter.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RPenListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RPenListenerAdapter.h -o debug\moc_RPenListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RPenListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RPenListenerAdapter.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="adapters\RPreferencesListenerAdapter.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RPreferencesListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RPreferencesListenerAdapter.h -o release\moc_RPreferencesListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RPreferencesListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RPreferencesListenerAdapter.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RPreferencesListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RPreferencesListenerAdapter.h -o debug\moc_RPreferencesListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RPreferencesListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RPreferencesListenerAdapter.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="RScriptHandlerEcma.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RScriptHandlerEcma.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt RScriptHandlerEcma.h -o release\moc_RScriptHandlerEcma.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RScriptHandlerEcma.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RScriptHandlerEcma.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RScriptHandlerEcma.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt RScriptHandlerEcma.h -o debug\moc_RScriptHandlerEcma.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RScriptHandlerEcma.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RScriptHandlerEcma.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="adapters\RSelectionListenerAdapter.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RSelectionListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RSelectionListenerAdapter.h -o release\moc_RSelectionListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RSelectionListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RSelectionListenerAdapter.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RSelectionListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RSelectionListenerAdapter.h -o debug\moc_RSelectionListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RSelectionListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RSelectionListenerAdapter.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="adapters\RSpatialIndexVisitorAdapter.h" />
+    <CustomBuild Include="adapters\RTransactionListenerAdapter.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RTransactionListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RTransactionListenerAdapter.h -o release\moc_RTransactionListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RTransactionListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RTransactionListenerAdapter.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RTransactionListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RTransactionListenerAdapter.h -o debug\moc_RTransactionListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RTransactionListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RTransactionListenerAdapter.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="adapters\RViewFocusListenerAdapter.h" />
+    <CustomBuild Include="adapters\RViewListenerAdapter.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RViewListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RViewListenerAdapter.h -o release\moc_RViewListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RViewListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RViewListenerAdapter.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RViewListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RViewListenerAdapter.h -o debug\moc_RViewListenerAdapter.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RViewListenerAdapter.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RViewListenerAdapter.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="stable.h">
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">echo /*-------------------------------------------------------------------- &gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * Precompiled header source file used by Visual Studio.NET to generate&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * the .pch file.&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo *&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * Due to issues with the dependencies checker within the IDE, it&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * sometimes fails to recompile the PCH file, if we force the IDE to&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * create the PCH file directly from the header file.&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo *&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * This file is auto-generated by qmake since no PRECOMPILED_SOURCE was&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * specified, and is used as the common stdafx.cpp. The file is only&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * generated when creating .vcxproj project files, and is not used for&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * command line compilations by nmake.&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo *&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * WARNING: All changes made in this file will be lost.&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo --------------------------------------------------------------------*/&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo #include &quot;stable.h&quot;&gt;&gt;stable.h.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">Generating precompiled header source file &apos;stable.h.cpp&apos; ...</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">stable.h.cpp;%(Outputs)</Outputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">echo /*-------------------------------------------------------------------- &gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * Precompiled header source file used by Visual Studio.NET to generate&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * the .pch file.&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo *&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * Due to issues with the dependencies checker within the IDE, it&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * sometimes fails to recompile the PCH file, if we force the IDE to&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * create the PCH file directly from the header file.&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo *&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * This file is auto-generated by qmake since no PRECOMPILED_SOURCE was&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * specified, and is used as the common stdafx.cpp. The file is only&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * generated when creating .vcxproj project files, and is not used for&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * command line compilations by nmake.&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo *&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * WARNING: All changes made in this file will be lost.&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo --------------------------------------------------------------------*/&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo #include &quot;stable.h&quot;&gt;&gt;stable.h.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">Generating precompiled header source file &apos;stable.h.cpp&apos; ...</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">stable.h.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="debug\moc_RBlockListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_RBlockListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_RCoordinateListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_RCoordinateListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_REntityExportListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_REntityExportListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_RExportListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_RExportListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_RFocusListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_RFocusListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_RImportListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_RImportListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_RInterTransactionListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_RInterTransactionListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_RKeyListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_RKeyListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_RLayerListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_RLayerListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_RNewDocumentListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_RNewDocumentListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_RPaletteListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_RPaletteListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_RPenListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_RPenListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_RPreferencesListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_RPreferencesListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_RScriptHandlerEcma.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_RScriptHandlerEcma.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_RSelectionListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_RSelectionListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_RTransactionListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_RTransactionListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc_RViewListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_RViewListenerAdapter.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">cl -Bx&quot;$(QTDIR)\bin\qmake.exe&quot; -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zi -MDd -W0 -E C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">Generate moc_predefs.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">cl -Bx&quot;$(QTDIR)\bin\qmake.exe&quot; -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -O2 -MD -W0 -E C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">Generate moc_predefs.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+    </CustomBuild>
+    <ClCompile Include="stable.h.cpp">
+      <ForcedIncludeFiles Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(NOINHERIT)</ForcedIncludeFiles>
+      <PrecompiledHeaderFile Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">stable.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">Create</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(NOINHERIT)</ForcedIncludeFiles>
+      <PrecompiledHeaderFile Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">stable.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ecmaapi.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

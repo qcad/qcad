@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{92DC4E16-5C23-3397-A6F9-76A9AB2F98F4}</ProjectGuid>
+    <RootNamespace>qtscript_core</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.17763.0</WindowsTargetPlatformMinVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+    <OutputDirectory>..\..\..\..\..\plugins\script\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>qtscript_core</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+    <OutputDirectory>..\..\..\..\..\plugins\script\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>qtscript_core</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\..\..\plugins\script\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\</IntDir>
+    <TargetName Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">qtscript_core</TargetName>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">false</LinkIncremental>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\..\..\plugins\script\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\</IntDir>
+    <TargetName Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">qtscript_core</TargetName>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\..\..\..\core;..\..\..\..\core\math;..\..\..\..\grid;..\..\..\..\snap;..\..\..\..\gui;..\..\..\..\entity;..\..\..\..\operations;..\..\..\..\scripting;..\..\..\..\stemmer;..\..\..\..\scripting\ecmaapi;..\..\..\..\scripting\ecmaapi\generated;..\..\..\..\scripting\ecmaapi\adapters;..\..\..\..\io\dxf;..\..\..\..\spatialindex;..\..\..\..\3rdparty;C:/UE4/qcad/src/zip;.;include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtPrintSupport;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSvg;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtOpenGL;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtHelp;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtDesigner;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiPlugin;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtWidgets;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtGui;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtANGLE;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScript;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScriptTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSql;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXmlPatterns;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtNetwork;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXml;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtConcurrent;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtCore;release;/include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QT_NO_DEBUG;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CONCURRENT_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName></ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5PrintSupport.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Svg.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5OpenGL.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Help.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5UiTools.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Designer.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Widgets.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Gui.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Script.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5ScriptTools.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Sql.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5XmlPatterns.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Network.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Xml.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Concurrent.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\UE4\qcad\release;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\qtscript_core.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QT_NO_DEBUG;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CONCURRENT_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\..\..\..\core;..\..\..\..\core\math;..\..\..\..\grid;..\..\..\..\snap;..\..\..\..\gui;..\..\..\..\entity;..\..\..\..\operations;..\..\..\..\scripting;..\..\..\..\stemmer;..\..\..\..\scripting\ecmaapi;..\..\..\..\scripting\ecmaapi\generated;..\..\..\..\scripting\ecmaapi\adapters;..\..\..\..\io\dxf;..\..\..\..\spatialindex;..\..\..\..\3rdparty;C:/UE4/qcad/src/zip;.;include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtPrintSupport;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSvg;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtOpenGL;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtHelp;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtDesigner;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiPlugin;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtWidgets;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtGui;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtANGLE;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScript;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScriptTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSql;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXmlPatterns;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtNetwork;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXml;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtConcurrent;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtCore;debug;/include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CONCURRENT_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5PrintSupportd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Svgd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5OpenGLd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Helpd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5UiToolsd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Designerd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Widgetsd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Guid.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Scriptd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5ScriptToolsd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Sqld.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5XmlPatternsd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Networkd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Xmld.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Concurrentd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\UE4\qcad\debug;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <OutputFile>$(OutDir)\qtscript_core.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CONCURRENT_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\com_trolltech_qt_core_init.cpp" />
+    <ClCompile Include="plugin.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_Global.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QAbstractAnimation.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QAbstractItemModel.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QAbstractListModel.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QAbstractState.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QAbstractTableModel.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QAbstractTransition.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QAnimationGroup.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QBasicTimer.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QBitArray.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QBuffer.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QByteArray.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QByteArrayMatcher.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QChildEvent.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QCoreApplication.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QCryptographicHash.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QDate.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QDateTime.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QDir.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QDirIterator.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QDynamicPropertyChangeEvent.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QEasingCurve.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QEvent.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QEventLoop.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QEventTransition.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QFile.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QFileInfo.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QFileSystemWatcher.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QFinalState.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QHistoryState.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QIODevice.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QLibraryInfo.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QLocale.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QMargins.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QMimeData.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QModelIndex.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QMutex.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QObject.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QParallelAnimationGroup.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QPauseAnimation.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QPersistentModelIndex.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QPoint.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QPointF.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QProcess.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QProcessEnvironment.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QPropertyAnimation.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QReadWriteLock.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QRect.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QRectF.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QRegExp.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QRunnable.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QSemaphore.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QSequentialAnimationGroup.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QSettings.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QSignalMapper.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QSignalTransition.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QSize.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QSizeF.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QState.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QStateMachine.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QStateMachine_SignalEvent.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QStateMachine_WrappedEvent.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QStringMatcher.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QSystemSemaphore.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QTemporaryFile.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QTextBoundaryFinder.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QTextCodec.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QTextDecoder.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QTextEncoder.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QTextStream.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QThreadPool.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QTime.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QTimeLine.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QTimer.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QTimerEvent.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QTranslator.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QUrl.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QUuid.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QVariantAnimation.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QWaitCondition.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QXmlStreamAttribute.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QXmlStreamAttributes.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QXmlStreamEntityDeclaration.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QXmlStreamEntityResolver.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QXmlStreamNamespaceDeclaration.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QXmlStreamNotationDeclaration.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QXmlStreamReader.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QXmlStreamWriter.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_Qt.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAbstractAnimation.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAbstractItemModel.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAbstractListModel.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAbstractState.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAbstractTableModel.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAbstractTransition.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAnimationGroup.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QBuffer.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QChildEvent.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QCoreApplication.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QEvent.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QEventLoop.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QEventTransition.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QFile.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QFileSystemWatcher.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QFinalState.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QHistoryState.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QIODevice.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QMimeData.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QObject.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QParallelAnimationGroup.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QPauseAnimation.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QProcess.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QPropertyAnimation.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QRunnable.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QSequentialAnimationGroup.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QSettings.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QSignalMapper.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QSignalTransition.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QState.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QStateMachine.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTemporaryFile.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTextCodec.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTextStream.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QThreadPool.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTimeLine.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTimer.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTimerEvent.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTranslator.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QUuid.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QVariantAnimation.cpp" />
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QXmlStreamEntityResolver.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="plugin.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">plugin.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQT_NO_DEBUG -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include C:/UE4/qcad/src/3rdparty/qt-labs-qtscriptgenerator-5.5.0/qtbindings/qtscript_core/release/moc_predefs.h @release/mocinclude.opt plugin.h -o release\moc_plugin.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC plugin.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_plugin.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">plugin.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include C:/UE4/qcad/src/3rdparty/qt-labs-qtscriptgenerator-5.5.0/qtbindings/qtscript_core/debug/moc_predefs.h @debug/mocinclude.opt plugin.h -o debug\moc_plugin.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC plugin.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_plugin.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="qtscriptconcurrent.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">qtscriptconcurrent.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQT_NO_DEBUG -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include C:/UE4/qcad/src/3rdparty/qt-labs-qtscriptgenerator-5.5.0/qtbindings/qtscript_core/release/moc_predefs.h @release/mocinclude.opt qtscriptconcurrent.h -o release\moc_qtscriptconcurrent.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC qtscriptconcurrent.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_qtscriptconcurrent.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">qtscriptconcurrent.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include C:/UE4/qcad/src/3rdparty/qt-labs-qtscriptgenerator-5.5.0/qtbindings/qtscript_core/debug/moc_predefs.h @debug/mocinclude.opt qtscriptconcurrent.h -o debug\moc_qtscriptconcurrent.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC qtscriptconcurrent.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_qtscriptconcurrent.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAbstractAnimation.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAbstractItemModel.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAbstractListModel.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAbstractState.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAbstractTableModel.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAbstractTransition.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAnimationGroup.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QBuffer.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QChildEvent.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QCoreApplication.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QEvent.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QEventLoop.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QEventTransition.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QFile.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QFileSystemWatcher.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QFinalState.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QHistoryState.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QIODevice.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QMimeData.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QObject.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QParallelAnimationGroup.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QPauseAnimation.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QProcess.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QPropertyAnimation.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QRunnable.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QSequentialAnimationGroup.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QSettings.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QSignalMapper.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QSignalTransition.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QState.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QStateMachine.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTemporaryFile.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTextCodec.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTextStream.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QThreadPool.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTimeLine.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTimer.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTimerEvent.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTranslator.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QUuid.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QVariantAnimation.h" />
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QXmlStreamEntityResolver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="debug\moc_plugin.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_plugin.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">cl -Bx&quot;$(QTDIR)\bin\qmake.exe&quot; -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">Generate moc_predefs.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">cl -Bx&quot;$(QTDIR)\bin\qmake.exe&quot; -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">Generate moc_predefs.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+    </CustomBuild>
+    <ClCompile Include="debug\moc_qtscriptconcurrent.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc_qtscriptconcurrent.cpp">
+      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

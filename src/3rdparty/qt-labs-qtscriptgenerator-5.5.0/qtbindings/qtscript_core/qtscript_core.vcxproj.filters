@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\com_trolltech_qt_core_init.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="plugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_Global.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QAbstractAnimation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QAbstractItemModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QAbstractListModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QAbstractState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QAbstractTableModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QAbstractTransition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QAnimationGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QBasicTimer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QBitArray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QByteArray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QByteArrayMatcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QChildEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QCoreApplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QCryptographicHash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QDate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QDateTime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QDir.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QDirIterator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QDynamicPropertyChangeEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QEasingCurve.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QEventLoop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QEventTransition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QFileInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QFileSystemWatcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QFinalState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QHistoryState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QIODevice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QLibraryInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QLocale.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QMargins.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QMimeData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QModelIndex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QMutex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QParallelAnimationGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QPauseAnimation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QPersistentModelIndex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QPoint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QPointF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QProcess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QProcessEnvironment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QPropertyAnimation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QReadWriteLock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QRect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QRectF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QRegExp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QRunnable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QSemaphore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QSequentialAnimationGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QSignalMapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QSignalTransition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QSize.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QSizeF.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QStateMachine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QStateMachine_SignalEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QStateMachine_WrappedEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QStringMatcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QSystemSemaphore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QTemporaryFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QTextBoundaryFinder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QTextCodec.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QTextDecoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QTextEncoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QTextStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QThreadPool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QTime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QTimeLine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QTimer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QTimerEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QTranslator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QUrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QUuid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QVariantAnimation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QWaitCondition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QXmlStreamAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QXmlStreamAttributes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QXmlStreamEntityDeclaration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QXmlStreamEntityResolver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QXmlStreamNamespaceDeclaration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QXmlStreamNotationDeclaration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QXmlStreamReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_QXmlStreamWriter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscript_Qt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAbstractAnimation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAbstractItemModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAbstractListModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAbstractState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAbstractTableModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAbstractTransition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAnimationGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QChildEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QCoreApplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QEventLoop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QEventTransition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QFileSystemWatcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QFinalState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QHistoryState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QIODevice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QMimeData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QParallelAnimationGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QPauseAnimation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QProcess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QPropertyAnimation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QRunnable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QSequentialAnimationGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QSignalMapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QSignalTransition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QStateMachine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTemporaryFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTextCodec.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTextStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QThreadPool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTimeLine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTimer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTimerEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTranslator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QUuid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QVariantAnimation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QXmlStreamEntityResolver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="plugin.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="qtscriptconcurrent.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAbstractAnimation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAbstractItemModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAbstractListModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAbstractState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAbstractTableModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAbstractTransition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QAnimationGroup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QChildEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QCoreApplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QEventLoop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QEventTransition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QFileSystemWatcher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QFinalState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QHistoryState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QIODevice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QMimeData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QParallelAnimationGroup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QPauseAnimation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QProcess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QPropertyAnimation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QRunnable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QSequentialAnimationGroup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QSettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QSignalMapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QSignalTransition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QStateMachine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTemporaryFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTextCodec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTextStream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QThreadPool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTimeLine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTimer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTimerEvent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QTranslator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QUuid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QVariantAnimation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_core\qtscriptshell_QXmlStreamEntityResolver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="debug\moc_plugin.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_plugin.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <ClCompile Include="debug\moc_qtscriptconcurrent.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_qtscriptconcurrent.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

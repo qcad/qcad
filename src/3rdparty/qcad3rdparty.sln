@@ -1,0 +1,47 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "spatialindexnavel", "C:/UE4/qcad/src/3rdparty/spatialindexnavel\spatialindexnavel.vcxproj", "{A6E56719-C10F-367B-9CD7-AF614800DF81}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "stemmer", "C:/UE4/qcad/src/3rdparty/stemmer\stemmer.vcxproj", "{CC364178-CD39-39A8-938B-74054A550ADA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "C:/UE4/qcad/src/3rdparty/opennurbs/zlib\zlib.vcxproj", "{8E2A5BD2-9045-35A8-82A3-51C2098AC751}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "opennurbs", "C:/UE4/qcad/src/3rdparty/opennurbs/opennurbs\opennurbs.vcxproj", "{64CF45FD-AA64-3FC7-9DE2-F1014CE96B75}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8E2A5BD2-9045-35A8-82A3-51C2098AC751} = {8E2A5BD2-9045-35A8-82A3-51C2098AC751}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dxflib", "C:/UE4/qcad/src/3rdparty/dxflib\dxflib.vcxproj", "{BE19A162-107D-3F9F-B5C0-082EC39D98BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6E56719-C10F-367B-9CD7-AF614800DF81}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A6E56719-C10F-367B-9CD7-AF614800DF81}.Debug|Win32.Build.0 = Debug|Win32
+		{A6E56719-C10F-367B-9CD7-AF614800DF81}.Release|Win32.ActiveCfg = Release|Win32
+		{A6E56719-C10F-367B-9CD7-AF614800DF81}.Release|Win32.Build.0 = Release|Win32
+		{CC364178-CD39-39A8-938B-74054A550ADA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CC364178-CD39-39A8-938B-74054A550ADA}.Debug|Win32.Build.0 = Debug|Win32
+		{CC364178-CD39-39A8-938B-74054A550ADA}.Release|Win32.ActiveCfg = Release|Win32
+		{CC364178-CD39-39A8-938B-74054A550ADA}.Release|Win32.Build.0 = Release|Win32
+		{8E2A5BD2-9045-35A8-82A3-51C2098AC751}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8E2A5BD2-9045-35A8-82A3-51C2098AC751}.Debug|Win32.Build.0 = Debug|Win32
+		{8E2A5BD2-9045-35A8-82A3-51C2098AC751}.Release|Win32.ActiveCfg = Release|Win32
+		{8E2A5BD2-9045-35A8-82A3-51C2098AC751}.Release|Win32.Build.0 = Release|Win32
+		{64CF45FD-AA64-3FC7-9DE2-F1014CE96B75}.Debug|Win32.ActiveCfg = Debug|Win32
+		{64CF45FD-AA64-3FC7-9DE2-F1014CE96B75}.Debug|Win32.Build.0 = Debug|Win32
+		{64CF45FD-AA64-3FC7-9DE2-F1014CE96B75}.Release|Win32.ActiveCfg = Release|Win32
+		{64CF45FD-AA64-3FC7-9DE2-F1014CE96B75}.Release|Win32.Build.0 = Release|Win32
+		{BE19A162-107D-3F9F-B5C0-082EC39D98BF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BE19A162-107D-3F9F-B5C0-082EC39D98BF}.Debug|Win32.Build.0 = Debug|Win32
+		{BE19A162-107D-3F9F-B5C0-082EC39D98BF}.Release|Win32.ActiveCfg = Release|Win32
+		{BE19A162-107D-3F9F-B5C0-082EC39D98BF}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

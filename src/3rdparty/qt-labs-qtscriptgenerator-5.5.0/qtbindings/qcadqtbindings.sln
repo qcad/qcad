@@ -1,0 +1,74 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qtscript_core", "C:/UE4/qcad/src/3rdparty/qt-labs-qtscriptgenerator-5.5.0/qtbindings/qtscript_core\qtscript_core.vcxproj", "{92DC4E16-5C23-3397-A6F9-76A9AB2F98F4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qtscript_gui", "C:/UE4/qcad/src/3rdparty/qt-labs-qtscriptgenerator-5.5.0/qtbindings/qtscript_gui\qtscript_gui.vcxproj", "{ED5FFFFB-D9D5-34D2-9686-6EB60DADE503}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qtscript_widgets", "C:/UE4/qcad/src/3rdparty/qt-labs-qtscriptgenerator-5.5.0/qtbindings/qtscript_widgets\qtscript_widgets.vcxproj", "{FF5C23F2-0AEC-3CD8-95DD-8A00EB0B6843}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qtscript_printsupport", "C:/UE4/qcad/src/3rdparty/qt-labs-qtscriptgenerator-5.5.0/qtbindings/qtscript_printsupport\qtscript_printsupport.vcxproj", "{224FDE21-2783-38E7-866E-C84F6ED5E430}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qtscript_network", "C:/UE4/qcad/src/3rdparty/qt-labs-qtscriptgenerator-5.5.0/qtbindings/qtscript_network\qtscript_network.vcxproj", "{F49A826A-9177-3291-9EC3-E627004C71BD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qtscript_opengl", "C:/UE4/qcad/src/3rdparty/qt-labs-qtscriptgenerator-5.5.0/qtbindings/qtscript_opengl\qtscript_opengl.vcxproj", "{F95A3040-B84E-3023-91C8-BC260637D9DB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qtscript_sql", "C:/UE4/qcad/src/3rdparty/qt-labs-qtscriptgenerator-5.5.0/qtbindings/qtscript_sql\qtscript_sql.vcxproj", "{F5338D80-3D83-35BD-91A5-576AE8E62172}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qtscript_uitools", "C:/UE4/qcad/src/3rdparty/qt-labs-qtscriptgenerator-5.5.0/qtbindings/qtscript_uitools\qtscript_uitools.vcxproj", "{3F41BC14-3206-3527-87B8-CB723D74E00B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qtscript_xml", "C:/UE4/qcad/src/3rdparty/qt-labs-qtscriptgenerator-5.5.0/qtbindings/qtscript_xml\qtscript_xml.vcxproj", "{0F9B17C1-E567-34D1-BDCF-616DC9E75E7B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qtscript_xmlpatterns", "C:/UE4/qcad/src/3rdparty/qt-labs-qtscriptgenerator-5.5.0/qtbindings/qtscript_xmlpatterns\qtscript_xmlpatterns.vcxproj", "{8EE88544-620E-3A9C-981E-D74D332E64CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92DC4E16-5C23-3397-A6F9-76A9AB2F98F4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{92DC4E16-5C23-3397-A6F9-76A9AB2F98F4}.Debug|Win32.Build.0 = Debug|Win32
+		{92DC4E16-5C23-3397-A6F9-76A9AB2F98F4}.Release|Win32.ActiveCfg = Release|Win32
+		{92DC4E16-5C23-3397-A6F9-76A9AB2F98F4}.Release|Win32.Build.0 = Release|Win32
+		{ED5FFFFB-D9D5-34D2-9686-6EB60DADE503}.Debug|Win32.ActiveCfg = Debug|Win32
+		{ED5FFFFB-D9D5-34D2-9686-6EB60DADE503}.Debug|Win32.Build.0 = Debug|Win32
+		{ED5FFFFB-D9D5-34D2-9686-6EB60DADE503}.Release|Win32.ActiveCfg = Release|Win32
+		{ED5FFFFB-D9D5-34D2-9686-6EB60DADE503}.Release|Win32.Build.0 = Release|Win32
+		{FF5C23F2-0AEC-3CD8-95DD-8A00EB0B6843}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FF5C23F2-0AEC-3CD8-95DD-8A00EB0B6843}.Debug|Win32.Build.0 = Debug|Win32
+		{FF5C23F2-0AEC-3CD8-95DD-8A00EB0B6843}.Release|Win32.ActiveCfg = Release|Win32
+		{FF5C23F2-0AEC-3CD8-95DD-8A00EB0B6843}.Release|Win32.Build.0 = Release|Win32
+		{224FDE21-2783-38E7-866E-C84F6ED5E430}.Debug|Win32.ActiveCfg = Debug|Win32
+		{224FDE21-2783-38E7-866E-C84F6ED5E430}.Debug|Win32.Build.0 = Debug|Win32
+		{224FDE21-2783-38E7-866E-C84F6ED5E430}.Release|Win32.ActiveCfg = Release|Win32
+		{224FDE21-2783-38E7-866E-C84F6ED5E430}.Release|Win32.Build.0 = Release|Win32
+		{F49A826A-9177-3291-9EC3-E627004C71BD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F49A826A-9177-3291-9EC3-E627004C71BD}.Debug|Win32.Build.0 = Debug|Win32
+		{F49A826A-9177-3291-9EC3-E627004C71BD}.Release|Win32.ActiveCfg = Release|Win32
+		{F49A826A-9177-3291-9EC3-E627004C71BD}.Release|Win32.Build.0 = Release|Win32
+		{F95A3040-B84E-3023-91C8-BC260637D9DB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F95A3040-B84E-3023-91C8-BC260637D9DB}.Debug|Win32.Build.0 = Debug|Win32
+		{F95A3040-B84E-3023-91C8-BC260637D9DB}.Release|Win32.ActiveCfg = Release|Win32
+		{F95A3040-B84E-3023-91C8-BC260637D9DB}.Release|Win32.Build.0 = Release|Win32
+		{F5338D80-3D83-35BD-91A5-576AE8E62172}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F5338D80-3D83-35BD-91A5-576AE8E62172}.Debug|Win32.Build.0 = Debug|Win32
+		{F5338D80-3D83-35BD-91A5-576AE8E62172}.Release|Win32.ActiveCfg = Release|Win32
+		{F5338D80-3D83-35BD-91A5-576AE8E62172}.Release|Win32.Build.0 = Release|Win32
+		{3F41BC14-3206-3527-87B8-CB723D74E00B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3F41BC14-3206-3527-87B8-CB723D74E00B}.Debug|Win32.Build.0 = Debug|Win32
+		{3F41BC14-3206-3527-87B8-CB723D74E00B}.Release|Win32.ActiveCfg = Release|Win32
+		{3F41BC14-3206-3527-87B8-CB723D74E00B}.Release|Win32.Build.0 = Release|Win32
+		{0F9B17C1-E567-34D1-BDCF-616DC9E75E7B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0F9B17C1-E567-34D1-BDCF-616DC9E75E7B}.Debug|Win32.Build.0 = Debug|Win32
+		{0F9B17C1-E567-34D1-BDCF-616DC9E75E7B}.Release|Win32.ActiveCfg = Release|Win32
+		{0F9B17C1-E567-34D1-BDCF-616DC9E75E7B}.Release|Win32.Build.0 = Release|Win32
+		{8EE88544-620E-3A9C-981E-D74D332E64CE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8EE88544-620E-3A9C-981E-D74D332E64CE}.Debug|Win32.Build.0 = Debug|Win32
+		{8EE88544-620E-3A9C-981E-D74D332E64CE}.Release|Win32.ActiveCfg = Release|Win32
+		{8EE88544-620E-3A9C-981E-D74D332E64CE}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

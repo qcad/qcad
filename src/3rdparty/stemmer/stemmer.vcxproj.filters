@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="runtime\api.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libstemmer\libstemmer_utf8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src_c\stem_UTF_8_danish.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src_c\stem_UTF_8_dutch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src_c\stem_UTF_8_english.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src_c\stem_UTF_8_finnish.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src_c\stem_UTF_8_french.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src_c\stem_UTF_8_german.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src_c\stem_UTF_8_hungarian.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src_c\stem_UTF_8_italian.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src_c\stem_UTF_8_norwegian.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src_c\stem_UTF_8_porter.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src_c\stem_UTF_8_portuguese.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src_c\stem_UTF_8_romanian.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src_c\stem_UTF_8_russian.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src_c\stem_UTF_8_spanish.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src_c\stem_UTF_8_swedish.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src_c\stem_UTF_8_turkish.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="runtime\utilities.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="runtime\api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="runtime\header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\libstemmer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libstemmer\modules_utf8.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src_c\stem_UTF_8_danish.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src_c\stem_UTF_8_dutch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src_c\stem_UTF_8_english.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src_c\stem_UTF_8_finnish.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src_c\stem_UTF_8_french.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src_c\stem_UTF_8_german.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src_c\stem_UTF_8_hungarian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src_c\stem_UTF_8_italian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src_c\stem_UTF_8_norwegian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src_c\stem_UTF_8_porter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src_c\stem_UTF_8_portuguese.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src_c\stem_UTF_8_romanian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src_c\stem_UTF_8_russian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src_c\stem_UTF_8_spanish.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src_c\stem_UTF_8_swedish.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src_c\stem_UTF_8_turkish.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "C:/UE4/qcad/src/3rdparty/opennurbs/zlib\zlib.vcxproj", "{8E2A5BD2-9045-35A8-82A3-51C2098AC751}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "opennurbs", "C:/UE4/qcad/src/3rdparty/opennurbs/opennurbs\opennurbs.vcxproj", "{64CF45FD-AA64-3FC7-9DE2-F1014CE96B75}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8E2A5BD2-9045-35A8-82A3-51C2098AC751} = {8E2A5BD2-9045-35A8-82A3-51C2098AC751}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E2A5BD2-9045-35A8-82A3-51C2098AC751}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8E2A5BD2-9045-35A8-82A3-51C2098AC751}.Debug|Win32.Build.0 = Debug|Win32
+		{8E2A5BD2-9045-35A8-82A3-51C2098AC751}.Release|Win32.ActiveCfg = Release|Win32
+		{8E2A5BD2-9045-35A8-82A3-51C2098AC751}.Release|Win32.Build.0 = Release|Win32
+		{64CF45FD-AA64-3FC7-9DE2-F1014CE96B75}.Debug|Win32.ActiveCfg = Debug|Win32
+		{64CF45FD-AA64-3FC7-9DE2-F1014CE96B75}.Debug|Win32.Build.0 = Debug|Win32
+		{64CF45FD-AA64-3FC7-9DE2-F1014CE96B75}.Release|Win32.ActiveCfg = Release|Win32
+		{64CF45FD-AA64-3FC7-9DE2-F1014CE96B75}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

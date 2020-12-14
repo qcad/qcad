@@ -1,0 +1,1706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\com_trolltech_qt_widgets_init.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="plugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QAbstractButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QAbstractGraphicsShapeItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QAbstractItemDelegate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QAbstractItemView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QAbstractScrollArea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QAbstractSlider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QAbstractSpinBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QAction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QActionGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QApplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QBoxLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QButtonGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QCalendarWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QCheckBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QColorDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QColumnView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QComboBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QCommandLinkButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QCommonStyle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QCompleter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QDataWidgetMapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QDateEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QDateTimeEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QDesktopWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QDial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QDialogButtonBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QDockWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QDoubleSpinBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QErrorMessage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QFileDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QFileIconProvider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QFocusFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QFontComboBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QFontDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QFormLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGesture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsAnchor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsAnchorLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsBlurEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsColorizeEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsDropShadowEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsEllipseItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsGridLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsItemAnimation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsItemGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsLayoutItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsLineItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsLinearLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsOpacityEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsPathItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsPixmapItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsPolygonItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsProxyWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsRectItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsRotation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsScale.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsSceneContextMenuEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsSceneDragDropEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsSceneEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsSceneHelpEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsSceneHoverEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsSceneMouseEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsSceneMoveEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsSceneResizeEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsSceneWheelEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsSimpleTextItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsTextItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsTransform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGraphicsWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGridLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QGroupBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QHBoxLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QHeaderView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QInputDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QItemDelegate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QItemEditorCreatorBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QItemEditorFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QItemSelection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QItemSelectionModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QItemSelectionRange.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QKeyEventTransition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QLCDNumber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QLabel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QLayoutItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QLineEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QListView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QListWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QListWidgetItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QMainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QMdiArea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QMdiSubWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QMenuBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QMessageBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QMouseEventTransition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QPaintDevice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QPanGesture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QPictureFormatPlugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QPinchGesture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QPlainTextDocumentLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QPlainTextEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QProgressBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QProgressDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QPushButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QRadioButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QRubberBand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QScrollArea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QScrollBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QSessionManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QShortcut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QSizeGrip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QSizePolicy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QSlider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QSpacerItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QSpinBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QSplashScreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QSplitter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QSplitterHandle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStackedLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStackedWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStandardItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStandardItemModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStatusBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStringListModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleHintReturn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleHintReturnMask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleHintReturnVariant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleOption.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleOptionButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleOptionComboBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleOptionComplex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleOptionDockWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleOptionFocusRect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleOptionFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleOptionGraphicsItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleOptionGroupBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleOptionHeader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleOptionMenuItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleOptionProgressBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleOptionRubberBand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleOptionSizeGrip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleOptionSlider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleOptionSpinBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleOptionTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleOptionTabBarBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleOptionTabWidgetFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleOptionTitleBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleOptionToolBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleOptionToolBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleOptionToolButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyleOptionViewItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStylePainter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStylePlugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QStyledItemDelegate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QSwipeGesture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QSystemTrayIcon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QTabBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QTabWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QTableView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QTableWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QTableWidgetItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QTableWidgetSelectionRange.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QTextBrowser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QTextEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QTextEdit_ExtraSelection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QTimeEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QToolBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QToolBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QToolButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QToolTip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QTouchEvent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QTreeView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QTreeWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QTreeWidgetItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QUndoCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QUndoGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QUndoStack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QUndoView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QVBoxLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QWhatsThis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QWidgetAction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QWidgetItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QWizard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscript_QWizardPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QAbstractButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QAbstractGraphicsShapeItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QAbstractItemDelegate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QAbstractItemView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QAbstractScrollArea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QAbstractSlider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QAbstractSpinBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QAction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QActionGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QApplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QBoxLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QButtonGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QCalendarWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QCheckBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QColorDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QColumnView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QComboBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QCommandLinkButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QCommonStyle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QCompleter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QDataWidgetMapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QDateEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QDateTimeEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QDesktopWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QDial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QDialogButtonBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QDockWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QDoubleSpinBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QErrorMessage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QFileDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QFileIconProvider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QFocusFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QFontComboBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QFontDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QFormLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGesture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsAnchorLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsBlurEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsColorizeEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsDropShadowEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsEllipseItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsGridLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsItemAnimation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsItemGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsLayoutItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsLineItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsLinearLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsOpacityEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsPathItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsPixmapItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsPolygonItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsProxyWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsRectItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsRotation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsScale.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsSimpleTextItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsTextItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsTransform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGridLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGroupBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QHBoxLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QHeaderView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QInputDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QItemDelegate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QItemEditorCreatorBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QItemEditorFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QItemSelectionModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QKeyEventTransition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QLCDNumber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QLabel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QLayoutItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QLineEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QListView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QListWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QListWidgetItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QMainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QMdiArea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QMdiSubWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QMenuBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QMessageBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QMouseEventTransition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QPaintDevice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QPanGesture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QPictureFormatPlugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QPinchGesture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QPlainTextDocumentLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QPlainTextEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QProgressBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QProgressDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QPushButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QRadioButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QRubberBand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QScrollArea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QScrollBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QShortcut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QSizeGrip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QSlider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QSpacerItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QSpinBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QSplashScreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QSplitter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QSplitterHandle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStackedLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStackedWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStandardItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStandardItemModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStatusBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStringListModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleHintReturn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleHintReturnMask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleHintReturnVariant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOption.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionComboBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionComplex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionDockWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionFocusRect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionGraphicsItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionGroupBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionHeader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionMenuItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionProgressBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionRubberBand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionSizeGrip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionSlider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionSpinBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionTab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionTabBarBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionTabWidgetFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionTitleBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionToolBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionToolBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionToolButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionViewItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStylePlugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyledItemDelegate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QSwipeGesture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QSystemTrayIcon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QTabBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QTabWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QTableView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QTableWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QTableWidgetItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QTextBrowser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QTextEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QTextEdit_ExtraSelection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QTimeEdit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QToolBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QToolBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QToolButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QTreeView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QTreeWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QTreeWidgetItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QUndoCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QUndoGroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QUndoStack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QUndoView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QVBoxLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QWidgetAction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QWidgetItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QWizard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QWizardPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="plugin.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QAbstractButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QAbstractGraphicsShapeItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QAbstractItemDelegate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QAbstractItemView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QAbstractScrollArea.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QAbstractSlider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QAbstractSpinBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QAction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QActionGroup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QApplication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QBoxLayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QButtonGroup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QCalendarWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QCheckBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QColorDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QColumnView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QComboBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QCommandLinkButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QCommonStyle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QCompleter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QDataWidgetMapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QDateEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QDateTimeEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QDesktopWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QDial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QDialogButtonBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QDockWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QDoubleSpinBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QErrorMessage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QFileDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QFileIconProvider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QFocusFrame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QFontComboBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QFontDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QFormLayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QFrame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGesture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsAnchorLayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsBlurEffect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsColorizeEffect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsDropShadowEffect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsEffect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsEllipseItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsGridLayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsItemAnimation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsItemGroup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsLayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsLayoutItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsLineItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsLinearLayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsOpacityEffect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsPathItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsPixmapItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsPolygonItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsProxyWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsRectItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsRotation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsScale.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsSimpleTextItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsTextItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsTransform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGraphicsWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGridLayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QGroupBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QHBoxLayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QHeaderView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QInputDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QItemDelegate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QItemEditorCreatorBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QItemEditorFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QItemSelectionModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QKeyEventTransition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QLCDNumber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QLabel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QLayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QLayoutItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QLineEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QListView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QListWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QListWidgetItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QMainWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QMdiArea.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QMdiSubWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QMenuBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QMessageBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QMouseEventTransition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QPaintDevice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QPanGesture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QPictureFormatPlugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QPinchGesture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QPlainTextDocumentLayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QPlainTextEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QProgressBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QProgressDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QPushButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QRadioButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QRubberBand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QScrollArea.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QScrollBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QShortcut.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QSizeGrip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QSlider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QSpacerItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QSpinBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QSplashScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QSplitter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QSplitterHandle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStackedLayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStackedWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStandardItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStandardItemModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStatusBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStringListModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleHintReturn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleHintReturnMask.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleHintReturnVariant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOption.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionComboBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionComplex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionDockWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionFocusRect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionFrame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionGraphicsItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionGroupBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionHeader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionMenuItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionProgressBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionRubberBand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionSizeGrip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionSlider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionSpinBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionTab.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionTabBarBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionTabWidgetFrame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionTitleBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionToolBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionToolBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionToolButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyleOptionViewItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStylePlugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QStyledItemDelegate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QSwipeGesture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QSystemTrayIcon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QTabBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QTabWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QTableView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QTableWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QTableWidgetItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QTextBrowser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QTextEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QTextEdit_ExtraSelection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QTimeEdit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QToolBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QToolBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QToolButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QTreeView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QTreeWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QTreeWidgetItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QUndoCommand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QUndoGroup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QUndoStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QUndoView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QVBoxLayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QWidgetAction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QWidgetItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QWizard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated_cpp\com_trolltech_qt_widgets\qtscriptshell_QWizardPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="debug\moc_plugin.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release\moc_plugin.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
