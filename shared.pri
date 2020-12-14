@@ -1,3 +1,11 @@
+macx {
+    arch = $$system("uname -m")
+    equals(arch, "arm64") {
+        QMAKE_APPLE_DEVICE_ARCHS=arm64
+    }
+}
+
+
 greaterThan(QT_MAJOR_VERSION, 4) {
     cache()
     DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x000000
