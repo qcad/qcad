@@ -1,6 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
@@ -9,16 +13,21 @@
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{10F57497-50CF-3914-B3BF-B4C21C100AA8}</ProjectGuid>
     <RootNamespace>qcadgui</RootNamespace>
-    <Keyword>Qt4VSv1.0</Keyword>
+    <Keyword>QtVS_v303</Keyword>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformMinVersion>10.0.17763.0</WindowsTargetPlatformMinVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <PlatformToolset>v140</PlatformToolset>
     <OutputDirectory>..\..\release\</OutputDirectory>
     <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
@@ -27,7 +36,25 @@
     <IntermediateDirectory>release\</IntermediateDirectory>
     <PrimaryOutput>qcadgui</PrimaryOutput>
   </PropertyGroup>
-  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+    <OutputDirectory>..\..\release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>qcadgui</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+    <OutputDirectory>..\..\debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>qcadgui</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <PlatformToolset>v140</PlatformToolset>
     <OutputDirectory>..\..\debug\</OutputDirectory>
     <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
@@ -37,28 +64,70 @@
     <PrimaryOutput>qcadgui</PrimaryOutput>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
   <ImportGroup Label="ExtensionSettings" />
-  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
   </ImportGroup>
-  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup>
-    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\release\</OutDir>
-    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\</IntDir>
-    <TargetName Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">qcadgui</TargetName>
-    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</IgnoreImportLibrary>
-    <LinkIncremental Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">false</LinkIncremental>
-    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\debug\</OutDir>
-    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\</IntDir>
-    <TargetName Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">qcadgui</TargetName>
-    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</IgnoreImportLibrary>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>qcadgui</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\debug\</OutDir>
+    <IntDir>debug\</IntDir>
+    <TargetName>qcadgui</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\release\</OutDir>
+    <IntDir>release\</IntDir>
+    <TargetName>qcadgui</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>qcadgui</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;xml;sql;opengl;network;gui;svg;designer;script;help;xmlpatterns;scripttools;uitools;widgets;printsupport;concurrent;uiplugin</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;xml;sql;opengl;network;gui;svg;designer;script;help;xmlpatterns;scripttools;uitools;widgets;printsupport;concurrent;uiplugin</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;xml;sql;opengl;network;gui;svg;designer;script;help;xmlpatterns;scripttools;uitools;widgets;printsupport;concurrent;uiplugin</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;xml;sql;opengl;network;gui;svg;designer;script;help;xmlpatterns;scripttools;uitools;widgets;printsupport;concurrent;uiplugin</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.;..\core;..\core\math;..\grid;..\snap;.;..\entity;..\operations;..\scripting;..\stemmer;..\scripting\ecmaapi;..\scripting\ecmaapi\generated;..\scripting\ecmaapi\adapters;..\io\dxf;..\spatialindex;..\3rdparty;C:/UE4/qcad/src/zip;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtPrintSupport;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSvg;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtOpenGL;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtHelp;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtDesigner;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiPlugin;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtWidgets;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtGui;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtANGLE;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScript;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScriptTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSql;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXmlPatterns;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtNetwork;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXml;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtConcurrent;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtCore;release;/include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;..\core;..\core\math;..\grid;..\snap;..\entity;..\operations;..\scripting;..\stemmer;..\scripting\ecmaapi;..\scripting\ecmaapi\generated;..\scripting\ecmaapi\adapters;..\io\dxf;..\spatialindex;..\3rdparty;C:/UE4/qcad/src/zip;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtPrintSupport;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSvg;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtOpenGL;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtHelp;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtDesigner;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiPlugin;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtWidgets;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtGui;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtANGLE;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScript;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScriptTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSql;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXmlPatterns;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtNetwork;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXml;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtConcurrent;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtCore;release;/include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>release\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -67,17 +136,19 @@
       <ExceptionHandling>Sync</ExceptionHandling>
       <ObjectFileName>release\</ObjectFileName>
       <Optimization>MaxSpeed</Optimization>
-      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADGUI_LIBRARY;QT_NO_DEBUG;QT_PLUGIN;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CONCURRENT_LIB;QT_CORE_LIB;QDESIGNER_EXPORT_WIDGETS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADGUI_LIBRARY;QT_NO_DEBUG;QT_PLUGIN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessToFile>false</PreprocessToFile>
-      <ProgramDataBaseFileName></ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>qcadcore.lib;qcadentity.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5PrintSupport.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Svg.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5OpenGL.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Help.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5UiTools.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Designer.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Widgets.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Gui.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Script.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5ScriptTools.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Sql.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5XmlPatterns.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Network.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Xml.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Concurrent.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\UE4\qcad\release;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>qcadcore.lib;qcadentity.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\UE4\qcad\release;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreImportLibrary>true</IgnoreImportLibrary>
@@ -96,10 +167,69 @@
     <ResourceCompile>
       <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADGUI_LIBRARY;QT_NO_DEBUG;QT_PLUGIN;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CONCURRENT_LIB;QT_CORE_LIB;QDESIGNER_EXPORT_WIDGETS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>C:/UE4/qcad/src/gui/$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.;..\core;..\core\math;..\grid;..\snap;.;..\entity;..\operations;..\scripting;..\stemmer;..\scripting\ecmaapi;..\scripting\ecmaapi\generated;..\scripting\ecmaapi\adapters;..\io\dxf;..\spatialindex;..\3rdparty;C:/UE4/qcad/src/zip;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtPrintSupport;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSvg;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtOpenGL;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtHelp;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtDesigner;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiPlugin;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtWidgets;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtGui;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtANGLE;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScript;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScriptTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSql;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXmlPatterns;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtNetwork;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXml;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtConcurrent;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtCore;debug;/include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;..\core;..\core\math;..\grid;..\snap;..\entity;..\operations;..\scripting;..\stemmer;..\scripting\ecmaapi;..\scripting\ecmaapi\generated;..\scripting\ecmaapi\adapters;..\io\dxf;..\spatialindex;..\3rdparty;C:/UE4/qcad/src/zip;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtPrintSupport;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSvg;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtOpenGL;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtHelp;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtDesigner;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiPlugin;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtWidgets;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtGui;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtANGLE;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScript;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScriptTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSql;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXmlPatterns;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtNetwork;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXml;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtConcurrent;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtCore;release;/include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADGUI_LIBRARY;QT_NO_DEBUG;QT_PLUGIN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>qcadcore.lib;qcadentity.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\UE4\qcad\release;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\qcadgui.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADGUI_LIBRARY;QT_NO_DEBUG;QT_PLUGIN;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CONCURRENT_LIB;QT_CORE_LIB;QDESIGNER_EXPORT_WIDGETS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>C:/UE4/qcad/src/gui/$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;..\core;..\core\math;..\grid;..\snap;..\entity;..\operations;..\scripting;..\stemmer;..\scripting\ecmaapi;..\scripting\ecmaapi\generated;..\scripting\ecmaapi\adapters;..\io\dxf;..\spatialindex;..\3rdparty;C:/UE4/qcad/src/zip;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtPrintSupport;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSvg;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtOpenGL;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtHelp;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtDesigner;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiPlugin;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtWidgets;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtGui;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtANGLE;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScript;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScriptTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSql;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXmlPatterns;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtNetwork;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXml;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtConcurrent;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtCore;debug;/include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>debug\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -108,16 +238,17 @@
       <ExceptionHandling>Sync</ExceptionHandling>
       <ObjectFileName>debug\</ObjectFileName>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADGUI_LIBRARY;QT_PLUGIN;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CONCURRENT_LIB;QT_CORE_LIB;QDESIGNER_EXPORT_WIDGETS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADGUI_LIBRARY;QT_PLUGIN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessToFile>false</PreprocessToFile>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>qcadcore.lib;qcadentity.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5PrintSupportd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Svgd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5OpenGLd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Helpd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5UiToolsd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Designerd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Widgetsd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Guid.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Scriptd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5ScriptToolsd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Sqld.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5XmlPatternsd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Networkd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Xmld.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Concurrentd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\UE4\qcad\debug;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>qcadcore.lib;qcadentity.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\UE4\qcad\debug;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreImportLibrary>true</IgnoreImportLibrary>
@@ -135,6 +266,62 @@
     <ResourceCompile>
       <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADGUI_LIBRARY;QT_PLUGIN;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CONCURRENT_LIB;QT_CORE_LIB;QDESIGNER_EXPORT_WIDGETS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>C:/UE4/qcad/src/gui/$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;..\core;..\core\math;..\grid;..\snap;..\entity;..\operations;..\scripting;..\stemmer;..\scripting\ecmaapi;..\scripting\ecmaapi\generated;..\scripting\ecmaapi\adapters;..\io\dxf;..\spatialindex;..\3rdparty;C:/UE4/qcad/src/zip;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtPrintSupport;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSvg;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtOpenGL;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtHelp;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtDesigner;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiPlugin;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtWidgets;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtGui;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtANGLE;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScript;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScriptTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSql;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXmlPatterns;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtNetwork;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXml;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtConcurrent;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtCore;debug;/include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADGUI_LIBRARY;QT_PLUGIN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>qcadcore.lib;qcadentity.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\UE4\qcad\debug;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;C:\UE4\qcad\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <OutputFile>$(OutDir)\qcadgui.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADGUI_LIBRARY;QT_PLUGIN;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CONCURRENT_LIB;QT_CORE_LIB;QDESIGNER_EXPORT_WIDGETS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>C:/UE4/qcad/src/gui/$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="RCharacterWidget.cpp" />
@@ -169,449 +356,98 @@
     <ClCompile Include="RTreeWidget.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="RCharacterWidget.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RCharacterWidget.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt RCharacterWidget.h -o release\moc_RCharacterWidget.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RCharacterWidget.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RCharacterWidget.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RCharacterWidget.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt RCharacterWidget.h -o debug\moc_RCharacterWidget.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RCharacterWidget.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RCharacterWidget.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
+    <QtMoc Include="RCharacterWidget.h">
+    </QtMoc>
     <ClInclude Include="RCloseCurrentEvent.h" />
-    <CustomBuild Include="RColorCombo.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RColorCombo.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt RColorCombo.h -o release\moc_RColorCombo.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RColorCombo.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RColorCombo.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RColorCombo.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt RColorCombo.h -o debug\moc_RColorCombo.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RColorCombo.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RColorCombo.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="RCommandLine.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RCommandLine.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt RCommandLine.h -o release\moc_RCommandLine.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RCommandLine.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RCommandLine.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RCommandLine.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt RCommandLine.h -o debug\moc_RCommandLine.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RCommandLine.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RCommandLine.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="RDockWidget.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RDockWidget.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt RDockWidget.h -o release\moc_RDockWidget.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RDockWidget.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RDockWidget.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RDockWidget.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt RDockWidget.h -o debug\moc_RDockWidget.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RDockWidget.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RDockWidget.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="REventFilter.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">REventFilter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt REventFilter.h -o release\moc_REventFilter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC REventFilter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_REventFilter.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">REventFilter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt REventFilter.h -o debug\moc_REventFilter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC REventFilter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_REventFilter.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="REventHandler.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">REventHandler.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt REventHandler.h -o release\moc_REventHandler.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC REventHandler.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_REventHandler.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">REventHandler.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt REventHandler.h -o debug\moc_REventHandler.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC REventHandler.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_REventHandler.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="RFileSystemModel.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RFileSystemModel.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt RFileSystemModel.h -o release\moc_RFileSystemModel.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RFileSystemModel.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RFileSystemModel.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RFileSystemModel.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt RFileSystemModel.h -o debug\moc_RFileSystemModel.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RFileSystemModel.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RFileSystemModel.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="RFlowLayout.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RFlowLayout.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt RFlowLayout.h -o release\moc_RFlowLayout.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RFlowLayout.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RFlowLayout.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RFlowLayout.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt RFlowLayout.h -o debug\moc_RFlowLayout.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RFlowLayout.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RFlowLayout.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="RFocusFrame.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RFocusFrame.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt RFocusFrame.h -o release\moc_RFocusFrame.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RFocusFrame.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RFocusFrame.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RFocusFrame.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt RFocusFrame.h -o debug\moc_RFocusFrame.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RFocusFrame.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RFocusFrame.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="RFontChooserWidget.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RFontChooserWidget.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt RFontChooserWidget.h -o release\moc_RFontChooserWidget.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RFontChooserWidget.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RFontChooserWidget.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RFontChooserWidget.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt RFontChooserWidget.h -o debug\moc_RFontChooserWidget.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RFontChooserWidget.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RFontChooserWidget.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
+    <QtMoc Include="RColorCombo.h">
+    </QtMoc>
+    <QtMoc Include="RCommandLine.h">
+    </QtMoc>
+    <QtMoc Include="RDockWidget.h">
+    </QtMoc>
+    <QtMoc Include="REventFilter.h">
+    </QtMoc>
+    <QtMoc Include="REventHandler.h">
+    </QtMoc>
+    <QtMoc Include="RFileSystemModel.h">
+    </QtMoc>
+    <QtMoc Include="RFlowLayout.h">
+    </QtMoc>
+    <QtMoc Include="RFocusFrame.h">
+    </QtMoc>
+    <QtMoc Include="RFontChooserWidget.h">
+    </QtMoc>
     <ClInclude Include="RGraphicsSceneDrawable.h" />
     <ClInclude Include="RGraphicsSceneQt.h" />
     <ClInclude Include="RGraphicsViewImage.h" />
-    <CustomBuild Include="RGraphicsViewQt.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RGraphicsViewQt.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt RGraphicsViewQt.h -o release\moc_RGraphicsViewQt.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RGraphicsViewQt.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RGraphicsViewQt.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RGraphicsViewQt.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt RGraphicsViewQt.h -o debug\moc_RGraphicsViewQt.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RGraphicsViewQt.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RGraphicsViewQt.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="RLinetypeCombo.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RLinetypeCombo.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt RLinetypeCombo.h -o release\moc_RLinetypeCombo.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RLinetypeCombo.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RLinetypeCombo.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RLinetypeCombo.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt RLinetypeCombo.h -o debug\moc_RLinetypeCombo.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RLinetypeCombo.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RLinetypeCombo.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
+    <QtMoc Include="RGraphicsViewQt.h">
+    </QtMoc>
+    <QtMoc Include="RLinetypeCombo.h">
+    </QtMoc>
     <ClInclude Include="RLinetypeComboDelegate.h" />
-    <CustomBuild Include="RLineweightCombo.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RLineweightCombo.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt RLineweightCombo.h -o release\moc_RLineweightCombo.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RLineweightCombo.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RLineweightCombo.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RLineweightCombo.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt RLineweightCombo.h -o debug\moc_RLineweightCombo.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RLineweightCombo.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RLineweightCombo.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="RListView.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RListView.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt RListView.h -o release\moc_RListView.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RListView.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RListView.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RListView.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt RListView.h -o debug\moc_RListView.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RListView.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RListView.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="RListWidget.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RListWidget.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt RListWidget.h -o release\moc_RListWidget.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RListWidget.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RListWidget.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RListWidget.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt RListWidget.h -o debug\moc_RListWidget.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RListWidget.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RListWidget.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="RMainWindowQt.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RMainWindowQt.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt RMainWindowQt.h -o release\moc_RMainWindowQt.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RMainWindowQt.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RMainWindowQt.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RMainWindowQt.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt RMainWindowQt.h -o debug\moc_RMainWindowQt.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RMainWindowQt.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RMainWindowQt.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="RMathComboBox.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RMathComboBox.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt RMathComboBox.h -o release\moc_RMathComboBox.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RMathComboBox.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RMathComboBox.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RMathComboBox.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt RMathComboBox.h -o debug\moc_RMathComboBox.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RMathComboBox.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RMathComboBox.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="RMathLineEdit.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RMathLineEdit.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt RMathLineEdit.h -o release\moc_RMathLineEdit.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RMathLineEdit.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RMathLineEdit.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RMathLineEdit.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt RMathLineEdit.h -o debug\moc_RMathLineEdit.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RMathLineEdit.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RMathLineEdit.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="RMdiArea.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RMdiArea.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt RMdiArea.h -o release\moc_RMdiArea.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RMdiArea.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RMdiArea.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RMdiArea.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt RMdiArea.h -o debug\moc_RMdiArea.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RMdiArea.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RMdiArea.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="RMdiChildQt.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RMdiChildQt.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt RMdiChildQt.h -o release\moc_RMdiChildQt.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RMdiChildQt.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RMdiChildQt.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RMdiChildQt.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt RMdiChildQt.h -o debug\moc_RMdiChildQt.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RMdiChildQt.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RMdiChildQt.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="RRulerQt.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RRulerQt.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt RRulerQt.h -o release\moc_RRulerQt.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RRulerQt.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RRulerQt.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RRulerQt.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt RRulerQt.h -o debug\moc_RRulerQt.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RRulerQt.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RRulerQt.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="RShortcutLineEdit.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RShortcutLineEdit.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt RShortcutLineEdit.h -o release\moc_RShortcutLineEdit.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RShortcutLineEdit.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RShortcutLineEdit.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RShortcutLineEdit.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt RShortcutLineEdit.h -o debug\moc_RShortcutLineEdit.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RShortcutLineEdit.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RShortcutLineEdit.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="RTextEdit.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RTextEdit.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt RTextEdit.h -o release\moc_RTextEdit.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RTextEdit.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RTextEdit.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RTextEdit.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt RTextEdit.h -o debug\moc_RTextEdit.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RTextEdit.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RTextEdit.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="RToolButton.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RToolButton.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt RToolButton.h -o release\moc_RToolButton.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RToolButton.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RToolButton.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RToolButton.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt RToolButton.h -o debug\moc_RToolButton.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RToolButton.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RToolButton.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="RToolMatrixItemDelegate.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RToolMatrixItemDelegate.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt RToolMatrixItemDelegate.h -o release\moc_RToolMatrixItemDelegate.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RToolMatrixItemDelegate.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RToolMatrixItemDelegate.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RToolMatrixItemDelegate.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt RToolMatrixItemDelegate.h -o debug\moc_RToolMatrixItemDelegate.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RToolMatrixItemDelegate.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RToolMatrixItemDelegate.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="RTreeWidget.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RTreeWidget.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/release/moc_predefs.h @release/mocinclude.opt RTreeWidget.h -o release\moc_RTreeWidget.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RTreeWidget.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RTreeWidget.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RTreeWidget.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADGUI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CONCURRENT_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/gui/debug/moc_predefs.h @debug/mocinclude.opt RTreeWidget.h -o debug\moc_RTreeWidget.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RTreeWidget.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RTreeWidget.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
+    <QtMoc Include="RLineweightCombo.h">
+    </QtMoc>
+    <QtMoc Include="RListView.h">
+    </QtMoc>
+    <QtMoc Include="RListWidget.h">
+    </QtMoc>
+    <QtMoc Include="RMainWindowQt.h">
+    </QtMoc>
+    <QtMoc Include="RMathComboBox.h">
+    </QtMoc>
+    <QtMoc Include="RMathLineEdit.h">
+    </QtMoc>
+    <QtMoc Include="RMdiArea.h">
+    </QtMoc>
+    <QtMoc Include="RMdiChildQt.h">
+    </QtMoc>
+    <QtMoc Include="RRulerQt.h">
+    </QtMoc>
+    <QtMoc Include="RShortcutLineEdit.h">
+    </QtMoc>
+    <QtMoc Include="RTextEdit.h">
+    </QtMoc>
+    <QtMoc Include="RToolButton.h">
+    </QtMoc>
+    <QtMoc Include="RToolMatrixItemDelegate.h">
+    </QtMoc>
+    <QtMoc Include="RTreeWidget.h">
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="debug\moc_RCharacterWidget.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RCharacterWidget.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RColorCombo.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RColorCombo.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RCommandLine.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RCommandLine.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RDockWidget.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RDockWidget.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_REventFilter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_REventFilter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_REventHandler.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_REventHandler.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RFileSystemModel.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RFileSystemModel.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RFlowLayout.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RFlowLayout.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RFocusFrame.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RFocusFrame.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RFontChooserWidget.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RFontChooserWidget.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RGraphicsViewQt.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RGraphicsViewQt.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RLinetypeCombo.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RLinetypeCombo.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RLineweightCombo.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RLineweightCombo.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RListView.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RListView.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RListWidget.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RListWidget.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RMainWindowQt.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RMainWindowQt.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RMathComboBox.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RMathComboBox.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RMathLineEdit.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RMathLineEdit.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RMdiArea.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RMdiArea.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RMdiChildQt.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RMdiChildQt.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RRulerQt.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RRulerQt.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RShortcutLineEdit.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RShortcutLineEdit.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RTextEdit.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RTextEdit.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RToolButton.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RToolButton.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RToolMatrixItemDelegate.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RToolMatrixItemDelegate.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RTreeWidget.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RTreeWidget.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
     <CustomBuild Include="debug\moc_predefs.h.cbt">
       <FileType>Document</FileType>
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">cl -Bx&quot;$(QTDIR)\bin\qmake.exe&quot; -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">Generate moc_predefs.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generate moc_predefs.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_predefs.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_predefs.h;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="release\moc_predefs.h.cbt">
       <FileType>Document</FileType>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">cl -Bx&quot;$(QTDIR)\bin\qmake.exe&quot; -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">Generate moc_predefs.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_predefs.h;%(Outputs)</Outputs>
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generate moc_predefs.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_predefs.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="gui.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
   <ImportGroup Label="ExtensionTargets" />
 </Project>

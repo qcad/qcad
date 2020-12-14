@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Generated Files">
@@ -1184,12 +1184,12 @@
     <ClInclude Include="RAutoLoadEcma.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <CustomBuild Include="adapters\RBlockListenerAdapter.h">
+    <QtMoc Include="adapters\RBlockListenerAdapter.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="adapters\RCoordinateListenerAdapter.h">
+    </QtMoc>
+    <QtMoc Include="adapters\RCoordinateListenerAdapter.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
     <ClInclude Include="generated\REcmaAction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2333,12 +2333,12 @@
     <ClInclude Include="generated\REcmaXLineEntity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <CustomBuild Include="adapters\REntityExportListenerAdapter.h">
+    <QtMoc Include="adapters\REntityExportListenerAdapter.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="adapters\RExportListenerAdapter.h">
+    </QtMoc>
+    <QtMoc Include="adapters\RExportListenerAdapter.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
     <ClInclude Include="adapters\RFileExporterAdapter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -2351,161 +2351,93 @@
     <ClInclude Include="adapters\RFileImporterFactoryAdapter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <CustomBuild Include="adapters\RFocusListenerAdapter.h">
+    <QtMoc Include="adapters\RFocusListenerAdapter.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
     <ClInclude Include="adapters\RFontDatabase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <CustomBuild Include="adapters\RImportListenerAdapter.h">
+    <QtMoc Include="adapters\RImportListenerAdapter.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="adapters\RInterTransactionListenerAdapter.h">
+    </QtMoc>
+    <QtMoc Include="adapters\RInterTransactionListenerAdapter.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="adapters\RKeyListenerAdapter.h">
+    </QtMoc>
+    <QtMoc Include="adapters\RKeyListenerAdapter.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="adapters\RLayerListenerAdapter.h">
+    </QtMoc>
+    <QtMoc Include="adapters\RLayerListenerAdapter.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="adapters\RNewDocumentListenerAdapter.h">
+    </QtMoc>
+    <QtMoc Include="adapters\RNewDocumentListenerAdapter.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="adapters\RPaletteListenerAdapter.h">
+    </QtMoc>
+    <QtMoc Include="adapters\RPaletteListenerAdapter.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="adapters\RPenListenerAdapter.h">
+    </QtMoc>
+    <QtMoc Include="adapters\RPenListenerAdapter.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="adapters\RPreferencesListenerAdapter.h">
+    </QtMoc>
+    <QtMoc Include="adapters\RPreferencesListenerAdapter.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="RScriptHandlerEcma.h">
+    </QtMoc>
+    <QtMoc Include="RScriptHandlerEcma.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="adapters\RSelectionListenerAdapter.h">
+    </QtMoc>
+    <QtMoc Include="adapters\RSelectionListenerAdapter.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
     <ClInclude Include="adapters\RSpatialIndexVisitorAdapter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <CustomBuild Include="adapters\RTransactionListenerAdapter.h">
+    <QtMoc Include="adapters\RTransactionListenerAdapter.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
     <ClInclude Include="adapters\RViewFocusListenerAdapter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <CustomBuild Include="adapters\RViewListenerAdapter.h">
+    <QtMoc Include="adapters\RViewListenerAdapter.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
     <CustomBuild Include="stable.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="debug\moc_RBlockListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RBlockListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RCoordinateListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RCoordinateListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_REntityExportListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_REntityExportListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RExportListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RExportListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RFocusListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RFocusListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RImportListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RImportListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RInterTransactionListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RInterTransactionListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RKeyListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RKeyListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RLayerListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RLayerListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RNewDocumentListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RNewDocumentListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RPaletteListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RPaletteListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RPenListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RPenListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RPreferencesListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RPreferencesListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RScriptHandlerEcma.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RScriptHandlerEcma.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RSelectionListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RSelectionListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RTransactionListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RTransactionListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RViewListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RViewListenerAdapter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <CustomBuild Include="debug\moc_predefs.h.cbt">
       <Filter>Generated Files</Filter>
     </CustomBuild>

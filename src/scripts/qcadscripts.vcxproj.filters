@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Generated Files">
@@ -42,29 +42,21 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="RScriptsPlugin.h">
+    <QtMoc Include="RScriptsPlugin.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="debug\moc_RScriptsPlugin.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RScriptsPlugin.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
+    
+    
     <CustomBuild Include="debug\moc_predefs.h.cbt">
       <Filter>Generated Files</Filter>
     </CustomBuild>
     <CustomBuild Include="release\moc_predefs.h.cbt">
       <Filter>Generated Files</Filter>
     </CustomBuild>
-    <ClCompile Include="debug\qrc_scripts.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\qrc_scripts_release.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
+    
+    
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\scripts\Widgets\ViewportWidget\Templates\00_Single.ui">
@@ -7642,9 +7634,9 @@
     <None Include="..\..\scripts\Modify\TrimBoth\Tests\data\same_polylines.dxf">
       <Filter>Resource Files</Filter>
     </None>
-    <CustomBuild Include="scripts.qrc">
+    <QtRcc Include="scripts.qrc">
       <Filter>Resource Files</Filter>
-    </CustomBuild>
+    </QtRcc>
     <None Include="..\..\ts\scripts_cs.qm">
       <Filter>Resource Files</Filter>
     </None>
@@ -7690,9 +7682,9 @@
     <None Include="..\..\ts\scripts_pt.qm">
       <Filter>Resource Files</Filter>
     </None>
-    <CustomBuild Include="scripts_release.qrc">
+    <QtRcc Include="scripts_release.qrc">
       <Filter>Resource Files</Filter>
-    </CustomBuild>
+    </QtRcc>
     <None Include="..\..\ts\scripts_ru.qm">
       <Filter>Resource Files</Filter>
     </None>

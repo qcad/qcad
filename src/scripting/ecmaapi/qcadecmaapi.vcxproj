@@ -1,6 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
@@ -9,16 +13,21 @@
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{22AC1D4E-1B64-3491-B33A-1F5B1A019083}</ProjectGuid>
     <RootNamespace>qcadecmaapi</RootNamespace>
-    <Keyword>Qt4VSv1.0</Keyword>
+    <Keyword>QtVS_v303</Keyword>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformMinVersion>10.0.17763.0</WindowsTargetPlatformMinVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <PlatformToolset>v140</PlatformToolset>
     <OutputDirectory>..\..\..\release\</OutputDirectory>
     <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
@@ -27,7 +36,25 @@
     <IntermediateDirectory>release\</IntermediateDirectory>
     <PrimaryOutput>qcadecmaapi</PrimaryOutput>
   </PropertyGroup>
-  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+    <OutputDirectory>..\..\..\release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>qcadecmaapi</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+    <OutputDirectory>..\..\..\debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>qcadecmaapi</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <PlatformToolset>v140</PlatformToolset>
     <OutputDirectory>..\..\..\debug\</OutputDirectory>
     <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
@@ -37,28 +64,70 @@
     <PrimaryOutput>qcadecmaapi</PrimaryOutput>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
   <ImportGroup Label="ExtensionSettings" />
-  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
   </ImportGroup>
-  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup>
-    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\release\</OutDir>
-    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\</IntDir>
-    <TargetName Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">qcadecmaapi</TargetName>
-    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</IgnoreImportLibrary>
-    <LinkIncremental Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">false</LinkIncremental>
-    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\debug\</OutDir>
-    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\</IntDir>
-    <TargetName Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">qcadecmaapi</TargetName>
-    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</IgnoreImportLibrary>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>qcadecmaapi</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\..\debug\</OutDir>
+    <IntDir>debug\</IntDir>
+    <TargetName>qcadecmaapi</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\..\release\</OutDir>
+    <IntDir>release\</IntDir>
+    <TargetName>qcadecmaapi</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>qcadecmaapi</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;xml;sql;opengl;network;gui;svg;designer;script;help;xmlpatterns;scripttools;uitools;widgets;printsupport;uiplugin</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;xml;sql;opengl;network;gui;svg;designer;script;help;xmlpatterns;scripttools;uitools;widgets;printsupport;uiplugin</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;xml;sql;opengl;network;gui;svg;designer;script;help;xmlpatterns;scripttools;uitools;widgets;printsupport;uiplugin</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;xml;sql;opengl;network;gui;svg;designer;script;help;xmlpatterns;scripttools;uitools;widgets;printsupport;uiplugin</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.;..\..\core;..\..\core\math;..\..\grid;..\..\snap;..\..\gui;..\..\entity;..\..\operations;..\..\scripting;..\..\stemmer;.;generated;adapters;..\..\io\dxf;..\..\spatialindex;..\..\3rdparty;C:/UE4/qcad/src/zip;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtPrintSupport;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSvg;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtOpenGL;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtHelp;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtDesigner;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiPlugin;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtWidgets;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtGui;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtANGLE;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScript;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScriptTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSql;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXmlPatterns;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtNetwork;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXml;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtCore;release;/include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;..\..\core;..\..\core\math;..\..\grid;..\..\snap;..\..\gui;..\..\entity;..\..\operations;..\..\scripting;..\..\stemmer;generated;adapters;..\..\io\dxf;..\..\spatialindex;..\..\3rdparty;C:/UE4/qcad/src/zip;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtPrintSupport;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSvg;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtOpenGL;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtHelp;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtDesigner;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiPlugin;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtWidgets;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtGui;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtANGLE;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScript;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScriptTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSql;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXmlPatterns;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtNetwork;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXml;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtCore;release;/include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>release\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -70,17 +139,19 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stable.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)\qcadecmaapi.pch</PrecompiledHeaderOutputFile>
-      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADECMAAPI_LIBRARY;QT_NO_DEBUG;QT_PLUGIN;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CORE_LIB;QDESIGNER_EXPORT_WIDGETS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADECMAAPI_LIBRARY;QT_NO_DEBUG;QT_PLUGIN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessToFile>false</PreprocessToFile>
-      <ProgramDataBaseFileName></ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>qcadcore.lib;qcadentity.lib;qcadgrid.lib;qcadgui.lib;qcadoperations.lib;qcadsnap.lib;qcadspatialindex.lib;qcadstemmer.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5PrintSupport.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Svg.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5OpenGL.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Help.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5UiTools.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Designer.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Widgets.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Gui.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Script.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5ScriptTools.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Sql.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5XmlPatterns.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Network.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Xml.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\UE4\qcad\release;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>qcadcore.lib;qcadentity.lib;qcadgrid.lib;qcadgui.lib;qcadoperations.lib;qcadsnap.lib;qcadspatialindex.lib;qcadstemmer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\UE4\qcad\release;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreImportLibrary>true</IgnoreImportLibrary>
@@ -99,10 +170,72 @@
     <ResourceCompile>
       <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADECMAAPI_LIBRARY;QT_NO_DEBUG;QT_PLUGIN;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CORE_LIB;QDESIGNER_EXPORT_WIDGETS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>C:/UE4/qcad/src/scripting/ecmaapi/$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.;..\..\core;..\..\core\math;..\..\grid;..\..\snap;..\..\gui;..\..\entity;..\..\operations;..\..\scripting;..\..\stemmer;.;generated;adapters;..\..\io\dxf;..\..\spatialindex;..\..\3rdparty;C:/UE4/qcad/src/zip;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtPrintSupport;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSvg;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtOpenGL;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtHelp;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtDesigner;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiPlugin;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtWidgets;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtGui;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtANGLE;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScript;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScriptTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSql;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXmlPatterns;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtNetwork;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXml;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtCore;debug;/include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;..\..\core;..\..\core\math;..\..\grid;..\..\snap;..\..\gui;..\..\entity;..\..\operations;..\..\scripting;..\..\stemmer;generated;adapters;..\..\io\dxf;..\..\spatialindex;..\..\3rdparty;C:/UE4/qcad/src/zip;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtPrintSupport;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSvg;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtOpenGL;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtHelp;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtDesigner;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiPlugin;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtWidgets;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtGui;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtANGLE;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScript;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScriptTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSql;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXmlPatterns;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtNetwork;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXml;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtCore;release;/include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForcedIncludeFiles>stable.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stable.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)\qcadecmaapi.pch</PrecompiledHeaderOutputFile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADECMAAPI_LIBRARY;QT_NO_DEBUG;QT_PLUGIN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>qcadcore.lib;qcadentity.lib;qcadgrid.lib;qcadgui.lib;qcadoperations.lib;qcadsnap.lib;qcadspatialindex.lib;qcadstemmer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\UE4\qcad\release;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\qcadecmaapi.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADECMAAPI_LIBRARY;QT_NO_DEBUG;QT_PLUGIN;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CORE_LIB;QDESIGNER_EXPORT_WIDGETS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>C:/UE4/qcad/src/scripting/ecmaapi/$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;..\..\core;..\..\core\math;..\..\grid;..\..\snap;..\..\gui;..\..\entity;..\..\operations;..\..\scripting;..\..\stemmer;generated;adapters;..\..\io\dxf;..\..\spatialindex;..\..\3rdparty;C:/UE4/qcad/src/zip;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtPrintSupport;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSvg;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtOpenGL;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtHelp;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtDesigner;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiPlugin;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtWidgets;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtGui;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtANGLE;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScript;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScriptTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSql;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXmlPatterns;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtNetwork;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXml;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtCore;debug;/include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>debug\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -114,16 +247,17 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stable.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)\qcadecmaapi.pch</PrecompiledHeaderOutputFile>
-      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADECMAAPI_LIBRARY;QT_PLUGIN;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CORE_LIB;QDESIGNER_EXPORT_WIDGETS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADECMAAPI_LIBRARY;QT_PLUGIN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessToFile>false</PreprocessToFile>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>qcadcore.lib;qcadentity.lib;qcadgrid.lib;qcadgui.lib;qcadoperations.lib;qcadsnap.lib;qcadspatialindex.lib;qcadstemmer.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5PrintSupportd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Svgd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5OpenGLd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Helpd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5UiToolsd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Designerd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Widgetsd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Guid.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Scriptd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5ScriptToolsd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Sqld.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5XmlPatternsd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Networkd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Xmld.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\UE4\qcad\debug;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>qcadcore.lib;qcadentity.lib;qcadgrid.lib;qcadgui.lib;qcadoperations.lib;qcadsnap.lib;qcadspatialindex.lib;qcadstemmer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\UE4\qcad\debug;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreImportLibrary>true</IgnoreImportLibrary>
@@ -141,6 +275,65 @@
     <ResourceCompile>
       <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADECMAAPI_LIBRARY;QT_PLUGIN;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CORE_LIB;QDESIGNER_EXPORT_WIDGETS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>C:/UE4/qcad/src/scripting/ecmaapi/$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;..\..\core;..\..\core\math;..\..\grid;..\..\snap;..\..\gui;..\..\entity;..\..\operations;..\..\scripting;..\..\stemmer;generated;adapters;..\..\io\dxf;..\..\spatialindex;..\..\3rdparty;C:/UE4/qcad/src/zip;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtPrintSupport;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSvg;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtOpenGL;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtHelp;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtDesigner;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiPlugin;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtWidgets;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtGui;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtANGLE;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScript;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScriptTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSql;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXmlPatterns;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtNetwork;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXml;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtCore;debug;/include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ForcedIncludeFiles>stable.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stable.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)\qcadecmaapi.pch</PrecompiledHeaderOutputFile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADECMAAPI_LIBRARY;QT_PLUGIN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>qcadcore.lib;qcadentity.lib;qcadgrid.lib;qcadgui.lib;qcadoperations.lib;qcadsnap.lib;qcadspatialindex.lib;qcadstemmer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\UE4\qcad\debug;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;C:\UE4\qcad\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <OutputFile>$(OutDir)\qcadecmaapi.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADECMAAPI_LIBRARY;QT_PLUGIN;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CORE_LIB;QDESIGNER_EXPORT_WIDGETS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>C:/UE4/qcad/src/scripting/ecmaapi/$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="RAutoLoadEcma.cpp" />
@@ -530,26 +723,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RAutoLoadEcma.h" />
-    <CustomBuild Include="adapters\RBlockListenerAdapter.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RBlockListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RBlockListenerAdapter.h -o release\moc_RBlockListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RBlockListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RBlockListenerAdapter.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RBlockListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RBlockListenerAdapter.h -o debug\moc_RBlockListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RBlockListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RBlockListenerAdapter.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="adapters\RCoordinateListenerAdapter.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RCoordinateListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RCoordinateListenerAdapter.h -o release\moc_RCoordinateListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RCoordinateListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RCoordinateListenerAdapter.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RCoordinateListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RCoordinateListenerAdapter.h -o debug\moc_RCoordinateListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RCoordinateListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RCoordinateListenerAdapter.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
+    <QtMoc Include="adapters\RBlockListenerAdapter.h">
+    </QtMoc>
+    <QtMoc Include="adapters\RCoordinateListenerAdapter.h">
+    </QtMoc>
     <ClInclude Include="generated\REcmaAction.h" />
     <ClInclude Include="generated\REcmaActionAdapter.h" />
     <ClInclude Include="generated\REcmaAddObjectOperation.h" />
@@ -931,303 +1108,226 @@
     <ClInclude Include="generated\REcmaXLine.h" />
     <ClInclude Include="generated\REcmaXLineData.h" />
     <ClInclude Include="generated\REcmaXLineEntity.h" />
-    <CustomBuild Include="adapters\REntityExportListenerAdapter.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\REntityExportListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\REntityExportListenerAdapter.h -o release\moc_REntityExportListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/REntityExportListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_REntityExportListenerAdapter.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\REntityExportListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\REntityExportListenerAdapter.h -o debug\moc_REntityExportListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/REntityExportListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_REntityExportListenerAdapter.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="adapters\RExportListenerAdapter.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RExportListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RExportListenerAdapter.h -o release\moc_RExportListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RExportListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RExportListenerAdapter.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RExportListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RExportListenerAdapter.h -o debug\moc_RExportListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RExportListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RExportListenerAdapter.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
+    <QtMoc Include="adapters\REntityExportListenerAdapter.h">
+    </QtMoc>
+    <QtMoc Include="adapters\RExportListenerAdapter.h">
+    </QtMoc>
     <ClInclude Include="adapters\RFileExporterAdapter.h" />
     <ClInclude Include="adapters\RFileExporterFactoryAdapter.h" />
     <ClInclude Include="adapters\RFileImporterAdapter.h" />
     <ClInclude Include="adapters\RFileImporterFactoryAdapter.h" />
-    <CustomBuild Include="adapters\RFocusListenerAdapter.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RFocusListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RFocusListenerAdapter.h -o release\moc_RFocusListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RFocusListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RFocusListenerAdapter.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RFocusListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RFocusListenerAdapter.h -o debug\moc_RFocusListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RFocusListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RFocusListenerAdapter.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
+    <QtMoc Include="adapters\RFocusListenerAdapter.h">
+    </QtMoc>
     <ClInclude Include="adapters\RFontDatabase.h" />
-    <CustomBuild Include="adapters\RImportListenerAdapter.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RImportListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RImportListenerAdapter.h -o release\moc_RImportListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RImportListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RImportListenerAdapter.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RImportListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RImportListenerAdapter.h -o debug\moc_RImportListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RImportListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RImportListenerAdapter.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="adapters\RInterTransactionListenerAdapter.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RInterTransactionListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RInterTransactionListenerAdapter.h -o release\moc_RInterTransactionListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RInterTransactionListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RInterTransactionListenerAdapter.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RInterTransactionListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RInterTransactionListenerAdapter.h -o debug\moc_RInterTransactionListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RInterTransactionListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RInterTransactionListenerAdapter.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="adapters\RKeyListenerAdapter.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RKeyListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RKeyListenerAdapter.h -o release\moc_RKeyListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RKeyListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RKeyListenerAdapter.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RKeyListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RKeyListenerAdapter.h -o debug\moc_RKeyListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RKeyListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RKeyListenerAdapter.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="adapters\RLayerListenerAdapter.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RLayerListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RLayerListenerAdapter.h -o release\moc_RLayerListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RLayerListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RLayerListenerAdapter.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RLayerListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RLayerListenerAdapter.h -o debug\moc_RLayerListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RLayerListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RLayerListenerAdapter.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="adapters\RNewDocumentListenerAdapter.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RNewDocumentListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RNewDocumentListenerAdapter.h -o release\moc_RNewDocumentListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RNewDocumentListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RNewDocumentListenerAdapter.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RNewDocumentListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RNewDocumentListenerAdapter.h -o debug\moc_RNewDocumentListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RNewDocumentListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RNewDocumentListenerAdapter.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="adapters\RPaletteListenerAdapter.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RPaletteListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RPaletteListenerAdapter.h -o release\moc_RPaletteListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RPaletteListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RPaletteListenerAdapter.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RPaletteListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RPaletteListenerAdapter.h -o debug\moc_RPaletteListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RPaletteListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RPaletteListenerAdapter.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="adapters\RPenListenerAdapter.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RPenListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RPenListenerAdapter.h -o release\moc_RPenListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RPenListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RPenListenerAdapter.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RPenListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RPenListenerAdapter.h -o debug\moc_RPenListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RPenListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RPenListenerAdapter.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="adapters\RPreferencesListenerAdapter.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RPreferencesListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RPreferencesListenerAdapter.h -o release\moc_RPreferencesListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RPreferencesListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RPreferencesListenerAdapter.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RPreferencesListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RPreferencesListenerAdapter.h -o debug\moc_RPreferencesListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RPreferencesListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RPreferencesListenerAdapter.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="RScriptHandlerEcma.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RScriptHandlerEcma.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt RScriptHandlerEcma.h -o release\moc_RScriptHandlerEcma.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC RScriptHandlerEcma.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RScriptHandlerEcma.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RScriptHandlerEcma.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt RScriptHandlerEcma.h -o debug\moc_RScriptHandlerEcma.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC RScriptHandlerEcma.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RScriptHandlerEcma.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="adapters\RSelectionListenerAdapter.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RSelectionListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RSelectionListenerAdapter.h -o release\moc_RSelectionListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RSelectionListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RSelectionListenerAdapter.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RSelectionListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RSelectionListenerAdapter.h -o debug\moc_RSelectionListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RSelectionListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RSelectionListenerAdapter.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
+    <QtMoc Include="adapters\RImportListenerAdapter.h">
+    </QtMoc>
+    <QtMoc Include="adapters\RInterTransactionListenerAdapter.h">
+    </QtMoc>
+    <QtMoc Include="adapters\RKeyListenerAdapter.h">
+    </QtMoc>
+    <QtMoc Include="adapters\RLayerListenerAdapter.h">
+    </QtMoc>
+    <QtMoc Include="adapters\RNewDocumentListenerAdapter.h">
+    </QtMoc>
+    <QtMoc Include="adapters\RPaletteListenerAdapter.h">
+    </QtMoc>
+    <QtMoc Include="adapters\RPenListenerAdapter.h">
+    </QtMoc>
+    <QtMoc Include="adapters\RPreferencesListenerAdapter.h">
+    </QtMoc>
+    <QtMoc Include="RScriptHandlerEcma.h">
+    </QtMoc>
+    <QtMoc Include="adapters\RSelectionListenerAdapter.h">
+    </QtMoc>
     <ClInclude Include="adapters\RSpatialIndexVisitorAdapter.h" />
-    <CustomBuild Include="adapters\RTransactionListenerAdapter.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RTransactionListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RTransactionListenerAdapter.h -o release\moc_RTransactionListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RTransactionListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RTransactionListenerAdapter.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RTransactionListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RTransactionListenerAdapter.h -o debug\moc_RTransactionListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RTransactionListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RTransactionListenerAdapter.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
+    <QtMoc Include="adapters\RTransactionListenerAdapter.h">
+    </QtMoc>
     <ClInclude Include="adapters\RViewFocusListenerAdapter.h" />
-    <CustomBuild Include="adapters\RViewListenerAdapter.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">adapters\RViewListenerAdapter.h;release\mocinclude.opt;release\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DNDEBUG -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_NO_DEBUG -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/release/moc_predefs.h @release/mocinclude.opt adapters\RViewListenerAdapter.h -o release\moc_RViewListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC adapters/RViewListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_RViewListenerAdapter.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">adapters\RViewListenerAdapter.h;debug\mocinclude.opt;debug\moc_predefs.h;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\bin\moc.exe  -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DQT_DISABLE_DEPRECATED_BEFORE=0x000000 -DQCAD_DLL -DQCADECMAAPI_LIBRARY -DQT_PLUGIN -DQT_PRINTSUPPORT_LIB -DQT_SVG_LIB -DQT_OPENGL_LIB -DQT_HELP_LIB -DQT_UITOOLS_LIB -DQT_DESIGNER_LIB -DQT_UIPLUGIN_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SCRIPT_LIB -DQT_SCRIPTTOOLS_LIB -DQT_SQL_LIB -DQT_XMLPATTERNS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_CORE_LIB -DQDESIGNER_EXPORT_WIDGETS --compiler-flavor=msvc --include C:/UE4/qcad/src/scripting/ecmaapi/debug/moc_predefs.h @debug/mocinclude.opt adapters\RViewListenerAdapter.h -o debug\moc_RViewListenerAdapter.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC adapters/RViewListenerAdapter.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_RViewListenerAdapter.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
+    <QtMoc Include="adapters\RViewListenerAdapter.h">
+    </QtMoc>
     <CustomBuild Include="stable.h">
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">echo /*-------------------------------------------------------------------- &gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * Precompiled header source file used by Visual Studio.NET to generate&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * the .pch file.&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo *&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * Due to issues with the dependencies checker within the IDE, it&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * sometimes fails to recompile the PCH file, if we force the IDE to&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * create the PCH file directly from the header file.&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo *&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * This file is auto-generated by qmake since no PRECOMPILED_SOURCE was&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * specified, and is used as the common stdafx.cpp. The file is only&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * generated when creating .vcxproj project files, and is not used for&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * command line compilations by nmake.&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo *&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * WARNING: All changes made in this file will be lost.&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo --------------------------------------------------------------------*/&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo #include &quot;stable.h&quot;&gt;&gt;stable.h.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">Generating precompiled header source file &apos;stable.h.cpp&apos; ...</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">stable.h.cpp;%(Outputs)</Outputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">echo /*-------------------------------------------------------------------- &gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * Precompiled header source file used by Visual Studio.NET to generate&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * the .pch file.&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo *&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * Due to issues with the dependencies checker within the IDE, it&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * sometimes fails to recompile the PCH file, if we force the IDE to&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * create the PCH file directly from the header file.&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo *&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * This file is auto-generated by qmake since no PRECOMPILED_SOURCE was&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * specified, and is used as the common stdafx.cpp. The file is only&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * generated when creating .vcxproj project files, and is not used for&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * command line compilations by nmake.&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo *&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo * WARNING: All changes made in this file will be lost.&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo --------------------------------------------------------------------*/&gt;&gt;stable.h.cpp&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo #include &quot;stable.h&quot;&gt;&gt;stable.h.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">Generating precompiled header source file &apos;stable.h.cpp&apos; ...</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">stable.h.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">echo /*-------------------------------------------------------------------- &gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * Precompiled header source file used by Visual Studio.NET to generate&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * the .pch file.&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo *&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * Due to issues with the dependencies checker within the IDE, it&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * sometimes fails to recompile the PCH file, if we force the IDE to&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * create the PCH file directly from the header file.&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo *&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * This file is auto-generated by qmake since no PRECOMPILED_SOURCE was&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * specified, and is used as the common stdafx.cpp. The file is only&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * generated when creating .vcxproj project files, and is not used for&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * command line compilations by nmake.&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo *&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * WARNING: All changes made in this file will be lost.&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo --------------------------------------------------------------------*/&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo #include "stable.h"&gt;&gt;stable.h.cpp</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">echo /*-------------------------------------------------------------------- &gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * Precompiled header source file used by Visual Studio.NET to generate&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * the .pch file.&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo *&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * Due to issues with the dependencies checker within the IDE, it&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * sometimes fails to recompile the PCH file, if we force the IDE to&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * create the PCH file directly from the header file.&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo *&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * This file is auto-generated by qmake since no PRECOMPILED_SOURCE was&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * specified, and is used as the common stdafx.cpp. The file is only&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * generated when creating .vcxproj project files, and is not used for&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * command line compilations by nmake.&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo *&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * WARNING: All changes made in this file will be lost.&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo --------------------------------------------------------------------*/&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo #include "stable.h"&gt;&gt;stable.h.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating precompiled header source file 'stable.h.cpp' ...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating precompiled header source file 'stable.h.cpp' ...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stable.h.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stable.h.cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">echo /*-------------------------------------------------------------------- &gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * Precompiled header source file used by Visual Studio.NET to generate&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * the .pch file.&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo *&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * Due to issues with the dependencies checker within the IDE, it&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * sometimes fails to recompile the PCH file, if we force the IDE to&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * create the PCH file directly from the header file.&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo *&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * This file is auto-generated by qmake since no PRECOMPILED_SOURCE was&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * specified, and is used as the common stdafx.cpp. The file is only&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * generated when creating .vcxproj project files, and is not used for&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * command line compilations by nmake.&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo *&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * WARNING: All changes made in this file will be lost.&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo --------------------------------------------------------------------*/&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo #include "stable.h"&gt;&gt;stable.h.cpp</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">echo /*-------------------------------------------------------------------- &gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * Precompiled header source file used by Visual Studio.NET to generate&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * the .pch file.&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo *&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * Due to issues with the dependencies checker within the IDE, it&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * sometimes fails to recompile the PCH file, if we force the IDE to&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * create the PCH file directly from the header file.&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo *&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * This file is auto-generated by qmake since no PRECOMPILED_SOURCE was&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * specified, and is used as the common stdafx.cpp. The file is only&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * generated when creating .vcxproj project files, and is not used for&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * command line compilations by nmake.&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo *&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo * WARNING: All changes made in this file will be lost.&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo --------------------------------------------------------------------*/&gt;&gt;stable.h.cpp
+if errorlevel 1 goto VCEnd
+echo #include "stable.h"&gt;&gt;stable.h.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating precompiled header source file 'stable.h.cpp' ...</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating precompiled header source file 'stable.h.cpp' ...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stable.h.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stable.h.cpp;%(Outputs)</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="debug\moc_RBlockListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RBlockListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RCoordinateListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RCoordinateListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_REntityExportListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_REntityExportListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RExportListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RExportListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RFocusListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RFocusListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RImportListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RImportListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RInterTransactionListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RInterTransactionListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RKeyListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RKeyListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RLayerListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RLayerListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RNewDocumentListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RNewDocumentListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RPaletteListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RPaletteListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RPenListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RPenListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RPreferencesListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RPreferencesListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RScriptHandlerEcma.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RScriptHandlerEcma.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RSelectionListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RSelectionListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RTransactionListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RTransactionListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RViewListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\moc_RViewListenerAdapter.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
     <CustomBuild Include="debug\moc_predefs.h.cbt">
       <FileType>Document</FileType>
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">cl -Bx&quot;$(QTDIR)\bin\qmake.exe&quot; -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zi -MDd -W0 -E C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">Generate moc_predefs.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zi -MDd -W0 -E C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zi -MDd -W0 -E C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generate moc_predefs.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_predefs.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_predefs.h;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="release\moc_predefs.h.cbt">
       <FileType>Document</FileType>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">cl -Bx&quot;$(QTDIR)\bin\qmake.exe&quot; -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -O2 -MD -W0 -E C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">Generate moc_predefs.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_predefs.h;%(Outputs)</Outputs>
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -O2 -MD -W0 -E C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -O2 -MD -W0 -E C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generate moc_predefs.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_predefs.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </CustomBuild>
     <ClCompile Include="stable.h.cpp">
-      <ForcedIncludeFiles Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(NOINHERIT)</ForcedIncludeFiles>
-      <PrecompiledHeaderFile Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">stable.h</PrecompiledHeaderFile>
-      <PrecompiledHeader Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">Create</PrecompiledHeader>
-      <ForcedIncludeFiles Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(NOINHERIT)</ForcedIncludeFiles>
-      <PrecompiledHeaderFile Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">stable.h</PrecompiledHeaderFile>
-      <PrecompiledHeader Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">Create</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(NOINHERIT)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(NOINHERIT)</ForcedIncludeFiles>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stable.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stable.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(NOINHERIT)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(NOINHERIT)</ForcedIncludeFiles>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stable.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stable.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ecmaapi.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
   <ImportGroup Label="ExtensionTargets" />
 </Project>

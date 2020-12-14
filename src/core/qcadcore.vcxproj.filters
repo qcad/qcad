@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Generated Files">
@@ -504,9 +504,9 @@
     <ClInclude Include="RGrid.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <CustomBuild Include="RGuiAction.h">
+    <QtMoc Include="RGuiAction.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
     <ClInclude Include="RImportListener.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -555,9 +555,9 @@
     <ClInclude Include="RLinkedStorage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <CustomBuild Include="RLocalPeer.h">
+    <QtMoc Include="RLocalPeer.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
     <ClInclude Include="RLockedFile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -696,9 +696,9 @@
     <ClInclude Include="RRuler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <CustomBuild Include="RRunner.h">
+    <QtMoc Include="RRunner.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
     <ClInclude Include="RS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -729,9 +729,9 @@
     <ClInclude Include="RShapesExporter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <CustomBuild Include="RSingleApplication.h">
+    <QtMoc Include="RSingleApplication.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
     <ClInclude Include="RSingleton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -786,9 +786,9 @@
     <ClInclude Include="RTextRenderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <CustomBuild Include="RThread.h">
+    <QtMoc Include="RThread.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
     <ClInclude Include="RTransaction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -843,67 +843,39 @@
     <ClInclude Include="RWheelEvent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <CustomBuild Include="RWidget.h">
+    <QtMoc Include="RWidget.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
     <ClInclude Include="math\RXLine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="debug\moc_RGuiAction.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RGuiAction.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RLocalPeer.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RLocalPeer.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RRunner.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RRunner.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RSingleApplication.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RSingleApplication.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RThread.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RThread.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RWidget.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RWidget.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <CustomBuild Include="debug\moc_predefs.h.cbt">
       <Filter>Generated Files</Filter>
     </CustomBuild>
     <CustomBuild Include="release\moc_predefs.h.cbt">
       <Filter>Generated Files</Filter>
     </CustomBuild>
-    <ClCompile Include="debug\qrc_core.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\qrc_core.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
+    
+    
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="resources\core.qrc">
+    <QtRcc Include="resources\core.qrc">
       <Filter>Resource Files</Filter>
-    </CustomBuild>
+    </QtRcc>
     <None Include="resources\linetype_border.svg">
       <Filter>Resource Files</Filter>
     </None>

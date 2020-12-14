@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Generated Files">
@@ -119,39 +119,39 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="RCharacterWidget.h">
+    <QtMoc Include="RCharacterWidget.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
     <ClInclude Include="RCloseCurrentEvent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <CustomBuild Include="RColorCombo.h">
+    <QtMoc Include="RColorCombo.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="RCommandLine.h">
+    </QtMoc>
+    <QtMoc Include="RCommandLine.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="RDockWidget.h">
+    </QtMoc>
+    <QtMoc Include="RDockWidget.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="REventFilter.h">
+    </QtMoc>
+    <QtMoc Include="REventFilter.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="REventHandler.h">
+    </QtMoc>
+    <QtMoc Include="REventHandler.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="RFileSystemModel.h">
+    </QtMoc>
+    <QtMoc Include="RFileSystemModel.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="RFlowLayout.h">
+    </QtMoc>
+    <QtMoc Include="RFlowLayout.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="RFocusFrame.h">
+    </QtMoc>
+    <QtMoc Include="RFocusFrame.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="RFontChooserWidget.h">
+    </QtMoc>
+    <QtMoc Include="RFontChooserWidget.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
     <ClInclude Include="RGraphicsSceneDrawable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -161,215 +161,111 @@
     <ClInclude Include="RGraphicsViewImage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <CustomBuild Include="RGraphicsViewQt.h">
+    <QtMoc Include="RGraphicsViewQt.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="RLinetypeCombo.h">
+    </QtMoc>
+    <QtMoc Include="RLinetypeCombo.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
     <ClInclude Include="RLinetypeComboDelegate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <CustomBuild Include="RLineweightCombo.h">
+    <QtMoc Include="RLineweightCombo.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="RListView.h">
+    </QtMoc>
+    <QtMoc Include="RListView.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="RListWidget.h">
+    </QtMoc>
+    <QtMoc Include="RListWidget.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="RMainWindowQt.h">
+    </QtMoc>
+    <QtMoc Include="RMainWindowQt.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="RMathComboBox.h">
+    </QtMoc>
+    <QtMoc Include="RMathComboBox.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="RMathLineEdit.h">
+    </QtMoc>
+    <QtMoc Include="RMathLineEdit.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="RMdiArea.h">
+    </QtMoc>
+    <QtMoc Include="RMdiArea.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="RMdiChildQt.h">
+    </QtMoc>
+    <QtMoc Include="RMdiChildQt.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="RRulerQt.h">
+    </QtMoc>
+    <QtMoc Include="RRulerQt.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="RShortcutLineEdit.h">
+    </QtMoc>
+    <QtMoc Include="RShortcutLineEdit.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="RTextEdit.h">
+    </QtMoc>
+    <QtMoc Include="RTextEdit.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="RToolButton.h">
+    </QtMoc>
+    <QtMoc Include="RToolButton.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="RToolMatrixItemDelegate.h">
+    </QtMoc>
+    <QtMoc Include="RToolMatrixItemDelegate.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="RTreeWidget.h">
+    </QtMoc>
+    <QtMoc Include="RTreeWidget.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="debug\moc_RCharacterWidget.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RCharacterWidget.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RColorCombo.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RColorCombo.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RCommandLine.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RCommandLine.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RDockWidget.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RDockWidget.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_REventFilter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_REventFilter.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_REventHandler.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_REventHandler.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RFileSystemModel.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RFileSystemModel.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RFlowLayout.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RFlowLayout.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RFocusFrame.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RFocusFrame.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RFontChooserWidget.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RFontChooserWidget.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RGraphicsViewQt.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RGraphicsViewQt.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RLinetypeCombo.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RLinetypeCombo.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RLineweightCombo.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RLineweightCombo.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RListView.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RListView.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RListWidget.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RListWidget.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RMainWindowQt.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RMainWindowQt.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RMathComboBox.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RMathComboBox.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RMathLineEdit.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RMathLineEdit.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RMdiArea.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RMdiArea.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RMdiChildQt.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RMdiChildQt.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RRulerQt.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RRulerQt.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RShortcutLineEdit.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RShortcutLineEdit.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RTextEdit.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RTextEdit.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RToolButton.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RToolButton.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RToolMatrixItemDelegate.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RToolMatrixItemDelegate.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="debug\moc_RTreeWidget.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_RTreeWidget.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <CustomBuild Include="debug\moc_predefs.h.cbt">
       <Filter>Generated Files</Filter>
     </CustomBuild>

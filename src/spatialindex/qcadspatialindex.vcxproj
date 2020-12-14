@@ -1,6 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
@@ -9,16 +13,21 @@
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{944F52B3-D431-3756-B817-D509F8046D41}</ProjectGuid>
     <RootNamespace>qcadspatialindex</RootNamespace>
-    <Keyword>Qt4VSv1.0</Keyword>
+    <Keyword>QtVS_v303</Keyword>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformMinVersion>10.0.17763.0</WindowsTargetPlatformMinVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <PlatformToolset>v140</PlatformToolset>
     <OutputDirectory>..\..\release\</OutputDirectory>
     <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
@@ -27,7 +36,25 @@
     <IntermediateDirectory>release\</IntermediateDirectory>
     <PrimaryOutput>qcadspatialindex</PrimaryOutput>
   </PropertyGroup>
-  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+    <OutputDirectory>..\..\release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>qcadspatialindex</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <PlatformToolset>v140</PlatformToolset>
+    <OutputDirectory>..\..\debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>qcadspatialindex</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <PlatformToolset>v140</PlatformToolset>
     <OutputDirectory>..\..\debug\</OutputDirectory>
     <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
@@ -37,28 +64,70 @@
     <PrimaryOutput>qcadspatialindex</PrimaryOutput>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
   <ImportGroup Label="ExtensionSettings" />
-  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
   </ImportGroup>
-  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup>
-    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\release\</OutDir>
-    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\</IntDir>
-    <TargetName Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">qcadspatialindex</TargetName>
-    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</IgnoreImportLibrary>
-    <LinkIncremental Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">false</LinkIncremental>
-    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\debug\</OutDir>
-    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\</IntDir>
-    <TargetName Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">qcadspatialindex</TargetName>
-    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</IgnoreImportLibrary>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>qcadspatialindex</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\debug\</OutDir>
+    <IntDir>debug\</IntDir>
+    <TargetName>qcadspatialindex</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\release\</OutDir>
+    <IntDir>release\</IntDir>
+    <TargetName>qcadspatialindex</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>qcadspatialindex</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;xml;sql;opengl;network;gui;svg;designer;script;help;xmlpatterns;scripttools;uitools;widgets;printsupport;uiplugin</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;xml;sql;opengl;network;gui;svg;designer;script;help;xmlpatterns;scripttools;uitools;widgets;printsupport;uiplugin</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;xml;sql;opengl;network;gui;svg;designer;script;help;xmlpatterns;scripttools;uitools;widgets;printsupport;uiplugin</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;xml;sql;opengl;network;gui;svg;designer;script;help;xmlpatterns;scripttools;uitools;widgets;printsupport;uiplugin</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.;..\core;..\core\math;..\grid;..\snap;..\gui;..\entity;..\operations;..\scripting;..\stemmer;..\scripting\ecmaapi;..\scripting\ecmaapi\generated;..\scripting\ecmaapi\adapters;..\io\dxf;.;..\3rdparty;C:/UE4/qcad/src/zip;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtPrintSupport;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSvg;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtOpenGL;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtHelp;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtDesigner;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiPlugin;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtWidgets;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtGui;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtANGLE;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScript;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScriptTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSql;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXmlPatterns;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtNetwork;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXml;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtCore;release;/include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;..\core;..\core\math;..\grid;..\snap;..\gui;..\entity;..\operations;..\scripting;..\stemmer;..\scripting\ecmaapi;..\scripting\ecmaapi\generated;..\scripting\ecmaapi\adapters;..\io\dxf;..\3rdparty;C:/UE4/qcad/src/zip;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtPrintSupport;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSvg;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtOpenGL;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtHelp;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtDesigner;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiPlugin;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtWidgets;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtGui;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtANGLE;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScript;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScriptTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSql;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXmlPatterns;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtNetwork;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXml;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtCore;release;/include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>release\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -67,17 +136,19 @@
       <ExceptionHandling>Sync</ExceptionHandling>
       <ObjectFileName>release\</ObjectFileName>
       <Optimization>MaxSpeed</Optimization>
-      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADSPATIALINDEX_LIBRARY;QT_NO_DEBUG;QT_PLUGIN;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CORE_LIB;QDESIGNER_EXPORT_WIDGETS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADSPATIALINDEX_LIBRARY;QT_NO_DEBUG;QT_PLUGIN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessToFile>false</PreprocessToFile>
-      <ProgramDataBaseFileName></ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>qcadcore.lib;spatialindexnavel.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5PrintSupport.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Svg.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5OpenGL.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Help.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5UiTools.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Designer.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Widgets.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Gui.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Script.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5ScriptTools.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Sql.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5XmlPatterns.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Network.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Xml.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\UE4\qcad\release;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>qcadcore.lib;spatialindexnavel.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\UE4\qcad\release;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreImportLibrary>true</IgnoreImportLibrary>
@@ -97,9 +168,52 @@
       <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADSPATIALINDEX_LIBRARY;QT_NO_DEBUG;QT_PLUGIN;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CORE_LIB;QDESIGNER_EXPORT_WIDGETS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.;..\core;..\core\math;..\grid;..\snap;..\gui;..\entity;..\operations;..\scripting;..\stemmer;..\scripting\ecmaapi;..\scripting\ecmaapi\generated;..\scripting\ecmaapi\adapters;..\io\dxf;.;..\3rdparty;C:/UE4/qcad/src/zip;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtPrintSupport;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSvg;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtOpenGL;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtHelp;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtDesigner;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiPlugin;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtWidgets;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtGui;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtANGLE;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScript;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScriptTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSql;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXmlPatterns;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtNetwork;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXml;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtCore;debug;/include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;..\core;..\core\math;..\grid;..\snap;..\gui;..\entity;..\operations;..\scripting;..\stemmer;..\scripting\ecmaapi;..\scripting\ecmaapi\generated;..\scripting\ecmaapi\adapters;..\io\dxf;..\3rdparty;C:/UE4/qcad/src/zip;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtPrintSupport;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSvg;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtOpenGL;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtHelp;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtDesigner;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiPlugin;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtWidgets;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtGui;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtANGLE;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScript;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScriptTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSql;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXmlPatterns;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtNetwork;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXml;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtCore;release;/include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADSPATIALINDEX_LIBRARY;QT_NO_DEBUG;QT_PLUGIN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>qcadcore.lib;spatialindexnavel.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\UE4\qcad\release;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\qcadspatialindex.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;NDEBUG;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADSPATIALINDEX_LIBRARY;QT_NO_DEBUG;QT_PLUGIN;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CORE_LIB;QDESIGNER_EXPORT_WIDGETS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;..\core;..\core\math;..\grid;..\snap;..\gui;..\entity;..\operations;..\scripting;..\stemmer;..\scripting\ecmaapi;..\scripting\ecmaapi\generated;..\scripting\ecmaapi\adapters;..\io\dxf;..\3rdparty;C:/UE4/qcad/src/zip;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtPrintSupport;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSvg;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtOpenGL;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtHelp;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtDesigner;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiPlugin;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtWidgets;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtGui;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtANGLE;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScript;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScriptTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSql;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXmlPatterns;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtNetwork;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXml;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtCore;debug;/include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>debug\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -108,16 +222,57 @@
       <ExceptionHandling>Sync</ExceptionHandling>
       <ObjectFileName>debug\</ObjectFileName>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADSPATIALINDEX_LIBRARY;QT_PLUGIN;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CORE_LIB;QDESIGNER_EXPORT_WIDGETS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADSPATIALINDEX_LIBRARY;QT_PLUGIN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessToFile>false</PreprocessToFile>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>qcadcore.lib;spatialindexnavel.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5PrintSupportd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Svgd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5OpenGLd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Helpd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5UiToolsd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Designerd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Widgetsd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Guid.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Scriptd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5ScriptToolsd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Sqld.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5XmlPatternsd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Networkd.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Xmld.lib;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\UE4\qcad\debug;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>qcadcore.lib;spatialindexnavel.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\UE4\qcad\debug;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <OutputFile>$(OutDir)\qcadspatialindex.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADSPATIALINDEX_LIBRARY;QT_PLUGIN;QT_PRINTSUPPORT_LIB;QT_SVG_LIB;QT_OPENGL_LIB;QT_HELP_LIB;QT_UITOOLS_LIB;QT_DESIGNER_LIB;QT_UIPLUGIN_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_SCRIPT_LIB;QT_SCRIPTTOOLS_LIB;QT_SQL_LIB;QT_XMLPATTERNS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_CORE_LIB;QDESIGNER_EXPORT_WIDGETS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;.;..\core;..\core\math;..\grid;..\snap;..\gui;..\entity;..\operations;..\scripting;..\stemmer;..\scripting\ecmaapi;..\scripting\ecmaapi\generated;..\scripting\ecmaapi\adapters;..\io\dxf;..\3rdparty;C:/UE4/qcad/src/zip;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtPrintSupport;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSvg;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtOpenGL;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtHelp;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtDesigner;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtUiPlugin;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtWidgets;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtGui;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtANGLE;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScript;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtScriptTools;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtSql;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXmlPatterns;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtNetwork;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtXml;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\include\QtCore;debug;/include;C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_DISABLE_DEPRECATED_BEFORE=0x000000;QCAD_DLL;QCADSPATIALINDEX_LIBRARY;QT_PLUGIN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>qcadcore.lib;spatialindexnavel.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\UE4\qcad\debug;C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;C:\UE4\qcad\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <DataExecutionPrevention>true</DataExecutionPrevention>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreImportLibrary>true</IgnoreImportLibrary>
@@ -145,24 +300,37 @@
   <ItemGroup>
     <CustomBuild Include="debug\moc_predefs.h.cbt">
       <FileType>Document</FileType>
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">cl -Bx&quot;$(QTDIR)\bin\qmake.exe&quot; -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">Generate moc_predefs.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generate moc_predefs.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\moc_predefs.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_predefs.h;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="release\moc_predefs.h.cbt">
       <FileType>Document</FileType>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">cl -Bx&quot;$(QTDIR)\bin\qmake.exe&quot; -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">Generate moc_predefs.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\moc_predefs.h;%(Outputs)</Outputs>
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\QT\QT5.13.2\5.13.2\MSVC2017_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generate moc_predefs.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\moc_predefs.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="spatialindex.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
   <ImportGroup Label="ExtensionTargets" />
 </Project>
