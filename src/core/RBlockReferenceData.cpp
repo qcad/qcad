@@ -335,13 +335,18 @@ RVector RBlockReferenceData::getPointOnEntity() const {
 
     QList<REntity::Id> idsOrdered = document->getStorage().orderBackToFront(ids);
 
-    QList<REntity::Id>::iterator it = idsOrdered.begin();
-    QSharedPointer<REntity> entity = queryEntity(*it, true);
-    if (entity.isNull()) {
-        return RVector::invalid;
+    QList<REntity::Id>::iterator it;
+    for (it=idsOrdered.begin(); it!=idsOrdered.end(); it++) {
+        QSharedPointer<REntity> entity = queryEntity(*it, true);
+        if (entity.isNull()) {
+            continue;
+        }
+
+        return entity->getPointOnEntity();
     }
 
-    return entity->getPointOnEntity();
+    // no valid entity in block:
+    return RVector::invalid;
 }
 
 /**
