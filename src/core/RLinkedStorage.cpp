@@ -168,6 +168,11 @@ QSet<REntity::Id> RLinkedStorage::queryAllBlockReferences() const {
             .unite(backStorage->queryAllBlockReferences());
 }
 
+QSet<REntity::Id> RLinkedStorage::queryAllViewports() const {
+    return RMemoryStorage::queryAllViewports()
+            .unite(backStorage->queryAllViewports());
+}
+
 QSharedPointer<RDocumentVariables> RLinkedStorage::queryDocumentVariablesDirect() const {
     return RMemoryStorage::queryDocumentVariablesDirect();
 }

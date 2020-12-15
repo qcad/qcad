@@ -127,6 +127,7 @@ public:
     bool hasChildEntities(REntity::Id parentId) const;
     QSet<REntity::Id> queryBlockReferences(RBlock::Id blockId) const;
     QSet<REntity::Id> queryAllBlockReferences() const;
+    QSet<REntity::Id> queryAllViewports() const;
 
     QSet<REntity::Id> queryContainedEntities(const RBox& box) const;
 

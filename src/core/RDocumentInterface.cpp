@@ -2272,6 +2272,9 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
                 QSet<RObject::Id> blockReferenceIds = document.queryAllBlockReferences();
                 //qDebug() << "blockReferenceIds:" << blockReferenceIds;
                 entityIdsToRegenerate.unite(blockReferenceIds);
+
+                QSet<RObject::Id> viewportIds = document.queryAllViewports();
+                entityIdsToRegenerate.unite(viewportIds);
     //            QSet<RObject::Id>::iterator it;
     //            for (it=blockReferenceIds.begin(); it!=blockReferenceIds.end(); it++) {
     //                RObject::Id id = *it;

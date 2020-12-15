@@ -212,6 +212,11 @@ public:
     virtual QSet<REntity::Id> queryAllBlockReferences() const = 0;
 
     /**
+     * \return A set of all viewport entity IDs.
+     */
+    virtual QSet<REntity::Id> queryAllViewports() const = 0;
+
+    /**
      * \return A set of entity IDs of all selected entities.
      */
     virtual QSet<REntity::Id> querySelectedEntities() const = 0;

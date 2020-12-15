@@ -681,14 +681,50 @@ QSet<REntity::Id> RMemoryStorage::queryBlockReferences(RBlock::Id blockId) const
 }
 
 QSet<REntity::Id> RMemoryStorage::queryAllBlockReferences() const {
+//    QSet<REntity::Id> result;
+//    QHash<RObject::Id, QSharedPointer<REntity> >::const_iterator it;
+//    for (it = entityMap.constBegin(); it != entityMap.constEnd(); ++it) {
+//        QSharedPointer<RBlockReferenceEntity> e = it->dynamicCast<RBlockReferenceEntity>();
+//        if (!e.isNull() && !e->isUndone()) {
+//            result.insert(e->getId());
+//        }
+//    }
+//    return result;
+
     QSet<REntity::Id> result;
-    QHash<RObject::Id, QSharedPointer<REntity> >::const_iterator it;
-    for (it = entityMap.constBegin(); it != entityMap.constEnd(); ++it) {
+
+    if (!typeObjectMap.contains(RS::EntityBlockRef)) {
+        return result;
+    }
+
+    const QHash<RObject::Id, QSharedPointer<RObject> >& map = typeObjectMap[RS::EntityBlockRef];
+    QHash<RObject::Id, QSharedPointer<RObject> >::const_iterator it;
+    for (it = map.constBegin(); it != map.constEnd(); ++it) {
         QSharedPointer<RBlockReferenceEntity> e = it->dynamicCast<RBlockReferenceEntity>();
-        if (!e.isNull() && !e->isUndone()) {
+        if (!e->isUndone()) {
             result.insert(e->getId());
         }
     }
+
+    return result;
+}
+
+QSet<REntity::Id> RMemoryStorage::queryAllViewports() const {
+    QSet<REntity::Id> result;
+
+    if (!typeObjectMap.contains(RS::EntityViewport)) {
+        return result;
+    }
+
+    const QHash<RObject::Id, QSharedPointer<RObject> >& map = typeObjectMap[RS::EntityViewport];
+    QHash<RObject::Id, QSharedPointer<RObject> >::const_iterator it;
+    for (it = map.constBegin(); it != map.constEnd(); ++it) {
+        QSharedPointer<RViewportEntity> e = it->dynamicCast<RViewportEntity>();
+        if (!e->isUndone()) {
+            result.insert(e->getId());
+        }
+    }
+
     return result;
 }
 

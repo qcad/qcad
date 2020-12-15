@@ -67,6 +67,7 @@ public:
     virtual bool hasChildEntities(REntity::Id parentId) const;
     virtual QSet<REntity::Id> queryBlockReferences(RBlock::Id blockId) const;
     virtual QSet<REntity::Id> queryAllBlockReferences() const;
+    virtual QSet<REntity::Id> queryAllViewports() const;
 
     QSharedPointer<RDocumentVariables> queryDocumentVariablesDirect() const;
     QSharedPointer<RDocumentVariables> queryDocumentVariables() const;

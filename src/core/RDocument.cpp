@@ -1394,6 +1394,13 @@ QSet<REntity::Id> RDocument::queryAllBlockReferences() const {
     return storage.queryAllBlockReferences();
 }
 
+/**
+ * \copydoc RStorage::queryAllViewports
+ */
+QSet<REntity::Id> RDocument::queryAllViewports() const {
+    return storage.queryAllViewports();
+}
+
 /*
 QSet<REntity::Id> RDocument::queryViewEntities(RView::Id viewId) const {
     return storage.queryViewEntities(viewId);
