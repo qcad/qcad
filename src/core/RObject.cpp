@@ -358,6 +358,7 @@ bool RObject::setMemberVector(QList<RVector>& variable, const QVariant& value, R
                 variable[i].z = v;
                 break;
             }
+            variable[i].valid = true;
         }
 
         else {
