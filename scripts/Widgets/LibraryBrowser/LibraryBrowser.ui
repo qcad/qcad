@@ -333,9 +333,6 @@
         <iconset>
          <normaloff>Sync.svg</normaloff>Sync.svg</iconset>
        </property>
-       <property name="shortcut">
-        <string>0</string>
-       </property>
       </widget>
      </item>
     </layout>
