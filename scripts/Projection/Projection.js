@@ -248,12 +248,19 @@ Projection.prototype.transform = function(entity, k, op, preview, flags, rec) {
         var e = entity.clone();
         e.setSelected(false);
         var p = e.getAlignmentPoint();
+        var ph = p.operator_add(new RVector(0,e.getTextHeight()));
         //qDebug("p before:", p);
         //qDebug("ap:", e.getAlignmentPoint());
         this.project(p);
+        this.project(ph);
+
+        // project height:
         //qDebug("p after:", p);
         //e.setPosition(p);
+
         e.setAlignmentPoint(p);
+        e.setTextHeight(p.getDistanceTo(ph));
+
         flags = flags | RAddObjectsOperation.UseAttributes;
         op.addObject(e, flags);
         return;
