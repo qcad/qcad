@@ -290,6 +290,9 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RPolyline" isPureVirtual="false">
         <arg type="double" typeName="double" name="tolerance"
         isConst="false" />
+        <arg type="double" typeName="double" name="radiusLimit"
+        hasDefault="true" default="RDEFAULT_MIN1"
+        isConst="false" />
       </variant>
     </method>
     <method name="simplify" cppName="simplify" specifier="public"

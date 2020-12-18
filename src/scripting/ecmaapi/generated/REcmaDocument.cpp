@@ -133,6 +133,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryAllBlockReferences, "queryAllBlockReferences");
             
+            REcmaHelper::registerFunction(&engine, proto, queryAllViewports, "queryAllViewports");
+            
             REcmaHelper::registerFunction(&engine, proto, queryContainedEntities, "queryContainedEntities");
             
             REcmaHelper::registerFunction(&engine, proto, queryInfiniteEntities, "queryInfiniteEntities");
@@ -3268,6 +3270,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::queryAllBlockReferences", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::queryAllViewports
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::queryAllViewports", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::queryAllViewports";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("queryAllViewports", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < REntity::Id >'
+    QSet < REntity::Id > cppResult =
+        
+               self->queryAllViewports();
+        // return type: QSet < REntity::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.queryAllViewports().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::queryAllViewports", context, engine);
             return result;
         }
          QScriptValue

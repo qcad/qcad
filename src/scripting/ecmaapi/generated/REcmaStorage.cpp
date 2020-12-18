@@ -127,6 +127,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryAllBlockReferences, "queryAllBlockReferences");
             
+            REcmaHelper::registerFunction(&engine, proto, queryAllViewports, "queryAllViewports");
+            
             REcmaHelper::registerFunction(&engine, proto, querySelectedEntities, "querySelectedEntities");
             
             REcmaHelper::registerFunction(&engine, proto, querySelectedLayers, "querySelectedLayers");
@@ -2601,6 +2603,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::queryAllBlockReferences", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::queryAllViewports
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::queryAllViewports", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::queryAllViewports";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("queryAllViewports", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < REntity::Id >'
+    QSet < REntity::Id > cppResult =
+        
+               self->queryAllViewports();
+        // return type: QSet < REntity::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.queryAllViewports().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::queryAllViewports", context, engine);
             return result;
         }
          QScriptValue

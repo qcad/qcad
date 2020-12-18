@@ -134,6 +134,9 @@
         queryAllBlockReferences
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryAllViewports
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryDocumentVariables
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
