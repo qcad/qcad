@@ -842,9 +842,9 @@ void RSpline::updateTangentsPeriodic() {
     setTangents(t, t);
 }
 
-RPolyline RSpline::approximateWithArcs(double tolerance) const {
+RPolyline RSpline::approximateWithArcs(double tolerance, double radiusLimit) const {
     if (hasProxy()) {
-        return getSplineProxy()->approximateWithArcs(*this, tolerance);
+        return getSplineProxy()->approximateWithArcs(*this, tolerance, radiusLimit);
     }
     return RPolyline();
 }

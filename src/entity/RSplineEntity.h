@@ -298,8 +298,8 @@ public:
         return data.toPolyline(segments);
     }
 
-    RPolyline approximateWithArcs(double tolerance) const {
-        return data.approximateWithArcs(tolerance);
+    RPolyline approximateWithArcs(double tolerance, double radiusLimit=RDEFAULT_MIN1) const {
+        return data.approximateWithArcs(tolerance, radiusLimit);
     }
 
     bool reverse() {

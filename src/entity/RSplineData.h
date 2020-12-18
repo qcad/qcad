@@ -191,8 +191,8 @@ public:
         return RSpline::toPolyline(segments);
     }
 
-    RPolyline approximateWithArcs(double tolerance) const {
-        return RSpline::approximateWithArcs(tolerance);
+    RPolyline approximateWithArcs(double tolerance, double radiusLimit=RDEFAULT_MIN1) const {
+        return RSpline::approximateWithArcs(tolerance, radiusLimit);
     }
 
     void simplify(double tolerance) {
