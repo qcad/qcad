@@ -245,6 +245,8 @@ void RClipboardOperation::copy(RDocument& src, RDocument& dest,
     if (copyEmptyBlocks && !preview) {
         QSet<RBlock::Id> blockIds = src.queryAllBlocks();
         QSet<RBlock::Id>::iterator it;
+
+        // copy empty blocks first (these do not reference other blocks):
         for (it=blockIds.begin(); it!=blockIds.end(); ++it) {
             RBlock::Id blockId = *it;
 
@@ -256,9 +258,24 @@ void RClipboardOperation::copy(RDocument& src, RDocument& dest,
             QList<REntity::Id> blockEntityIds = src.queryBlockEntities(blockId).toList();
 
             if (blockEntityIds.isEmpty()) {
-                copyBlock(blockId, src, dest, overwriteBlocks, toCurrentBlock, blockName, transaction);
+                //copyBlock(blockId, src, dest, overwriteBlocks, toCurrentBlock, blockName, transaction);
+                copyBlock(blockId, src, dest, false, false, blockName, transaction);
             }
-            else {
+        }
+
+        // copy non-empty, but possibly unreferenced blocks:
+        // these might reference each other, referenced blocks are coped when encountered:
+        for (it=blockIds.begin(); it!=blockIds.end(); ++it) {
+            RBlock::Id blockId = *it;
+
+            if (blockId==src.getModelSpaceBlockId()) {
+                // do not copy model space block (again):
+                continue;
+            }
+
+            QList<REntity::Id> blockEntityIds = src.queryBlockEntities(blockId).toList();
+
+            if (!blockEntityIds.isEmpty()) {
                 bool first = true;
                 QList<REntity::Id>::iterator it2;
                 for (it2=blockEntityIds.begin(); it2!=blockEntityIds.end(); ++it2) {
@@ -268,23 +285,23 @@ void RClipboardOperation::copy(RDocument& src, RDocument& dest,
                     }
 
                     copyEntity(
-                        *entity.data(),
-                        src, dest,
-                        RVector::nullVector,
-                        1.0,          // scale from user options not applied to block contents
-                                      // but to block reference
-                        unitScale,
-                        0.0,
-                        RVector(0,0),
-                        false, false, // no flips
-                        false, false, // keep original block and layer
-                        false/*overwriteLayers*/, first && overwriteBlocks,
-                        QString(),
-                        QString(),
-                        transaction,
-                        false,         // not to model space but actual block
-                        attributes
-                    );
+                                *entity.data(),
+                                src, dest,
+                                RVector::nullVector,
+                                1.0,          // scale from user options not applied to block contents
+                                // but to block reference
+                                unitScale,
+                                0.0,
+                                RVector(0,0),
+                                false, false, // no flips
+                                false, false, // keep original block and layer
+                                false/*overwriteLayers*/, first && overwriteBlocks,
+                                QString(),
+                                QString(),
+                                transaction,
+                                false,         // not to model space but actual block
+                                attributes
+                                );
 
                     first = false;
                 }
@@ -552,9 +569,11 @@ QSharedPointer<RBlock> RClipboardOperation::copyBlock(
     QString srcBlockName = srcBlock->getName();
     QSharedPointer<RBlock> destBlock;
     if (copiedBlocks.contains(srcBlockName)) {
+        // block was already copied and was added to cache:
         destBlock = copiedBlocks.value(srcBlockName);
     }
     else {
+        // copy block:
         QString destBlockName;
         if (!blockName.isNull()) {
             destBlockName = blockName;
