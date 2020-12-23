@@ -583,7 +583,8 @@ void RGraphicsViewImage::paintGridLine(const RLine& ucsPosition) {
  * Paints the absolute zero point (origin).
  */
 void RGraphicsViewImage::paintOrigin(QPaintDevice& device) {
-    if (!doPaintOrigin || isPrintingOrExporting()) {
+    // bitmap export: pain origin if requested (e.g. dwg2bmp -origin)
+    if (!doPaintOrigin || isPrinting()) {
         return;
     }
 
