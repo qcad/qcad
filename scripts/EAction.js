@@ -2218,6 +2218,13 @@ EAction.prototype.isEntitySnappable = function(e) {
     return doc.isLayerSnappable(layerId);
 };
 
+EAction.prototype.isEntityEditable = function(e) {
+    if (!isEntity(e)) {
+        return false;
+    }
+    return e.isEditable();
+};
+
 /**
  * Some common, shared translated warnings:
  */
