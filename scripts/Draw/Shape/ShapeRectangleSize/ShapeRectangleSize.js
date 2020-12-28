@@ -65,12 +65,31 @@ ShapeRectangleSize.prototype.slotRadiusChanged = function(v) {
 ShapeRectangleSize.prototype.initUiOptions = function(resume, optionsToolBar) {
     DrawBasedOnRectangleSize.prototype.initUiOptions.call(this, resume, optionsToolBar);
 
-    this.createPolyline = RSettings.getBoolValue(this.settingsGroup + "/CreatePolyline", false);
+    var w;
 
-    //var optionsToolBar = EAction.getOptionsToolBar();
-    var w = optionsToolBar.findChild("CreatePolyline");
+    this.createPolyline = RSettings.getBoolValue(this.settingsGroup + "/CreatePolyline", false);
+    this.fill = RSettings.getBoolValue(this.settingsGroup + "/Fill", false);
+    this.roundCorners = RSettings.getBoolValue(this.settingsGroup + "/RoundCorners", false);
+    this.radius = RSettings.getDoubleValue(this.settingsGroup + "/Radius", 1.0);
+
+    w = optionsToolBar.findChild("CreatePolyline");
     if (!isNull(w)) {
         w.checked = this.createPolyline;
+    }
+
+    w = optionsToolBar.findChild("Fill");
+    if (!isNull(w)) {
+        w.checked = this.fill;
+    }
+
+    w = optionsToolBar.findChild("RoundCorners");
+    if (!isNull(w)) {
+        w.checked = this.roundCorners;
+    }
+
+    w = optionsToolBar.findChild("Radius");
+    if (!isNull(w)) {
+        w.setValue(this.radius);
     }
 };
 
@@ -78,6 +97,9 @@ ShapeRectangleSize.prototype.hideUiOptions = function(saveToSettings) {
     DrawBasedOnRectangleSize.prototype.hideUiOptions.call(this, saveToSettings);
 
     RSettings.setValue(this.settingsGroup + "/CreatePolyline", this.createPolyline);
+    RSettings.setValue(this.settingsGroup + "/Fill", this.fill);
+    RSettings.setValue(this.settingsGroup + "/RoundCorners", this.roundCorners);
+    RSettings.setValue(this.settingsGroup + "/Radius", this.radius);
 };
 
 ShapeRectangleSize.prototype.getOperation = function(preview) {
