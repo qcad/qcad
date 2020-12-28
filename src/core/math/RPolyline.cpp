@@ -364,8 +364,8 @@ void RPolyline::insertVertex(int index, const RVector& vertex, double bulgeBefor
         bulges[index-1] = bulgeBefore;
     }
     bulges.insert(index, bulgeAfter);
-    startWidths.insert(index, RNANDOUBLE);
-    endWidths.insert(index, RNANDOUBLE);
+    startWidths.insert(index, 0.0);
+    endWidths.insert(index, 0.0);
 
     Q_ASSERT(vertices.length()==bulges.length());
     Q_ASSERT(vertices.length()==startWidths.length());
