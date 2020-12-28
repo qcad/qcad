@@ -376,6 +376,8 @@ public:
         return data.containsShape(shape);
     }
 
+    virtual bool validate();
+
 protected:
     virtual void print(QDebug dbg) const;
 
