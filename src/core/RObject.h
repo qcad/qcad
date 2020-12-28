@@ -270,6 +270,10 @@ public:
         qDebug() << *this;
     }
 
+    virtual bool validate() {
+        return true;
+    }
+
     /**
      * \nonscriptable
      */
