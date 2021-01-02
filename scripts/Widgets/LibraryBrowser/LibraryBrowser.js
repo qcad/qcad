@@ -1321,7 +1321,7 @@ LibraryBrowser.syncAll = function(progressDialog, startUp) {
     if (startUp && !force) {
         var updateOnStartup = RSettings.getBoolValue("LibraryBrowser/UpdateOnStartup", true);
         if (!updateOnStartup) {
-            // setting, not cancelation:
+            // setting, not cancellation:
             return true;
         }
     }

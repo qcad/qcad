@@ -144,17 +144,17 @@
 
 <label><name>signals</name>:</label>
     <comment type="block">/**
-     * Emmitted when the command prompt is requested to change.
+     * Emitted when the command prompt is requested to change.
      */</comment>
     <function_decl><type><name>void</name></type> <name>commandPrompt</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="block">/**
-     * Emmitted when the left mouse button tip is requested to change.
+     * Emitted when the left mouse button tip is requested to change.
      */</comment>
     <function_decl><type><name>void</name></type> <name>leftMouseTip</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="block">/**
-     * Emmitted when the right mouse button tip is requested to change.
+     * Emitted when the right mouse button tip is requested to change.
      */</comment>
     <function_decl><type><name>void</name></type> <name>rightMouseTip</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>)</parameter_list>;</function_decl>
 

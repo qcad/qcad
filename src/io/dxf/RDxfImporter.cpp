@@ -1001,7 +1001,7 @@ RDimensionData RDxfImporter::convDimensionData(const DL_DimensionData& data) {
     if (dxfServices.getVersion2Compatibility()) {
         // middlepoint of text can be 0/0 which is considered to be invalid (!):
         //  because older QCad 1 versions save the middle of the text as 0/0
-        //  althought they didn't support custom text positions.
+        //  although they didn't support custom text positions.
         if (fabs(data.mpx)<1.0e-6 && fabs(data.mpy)<1.0e-6) {
             midP = RVector::invalid;
         }

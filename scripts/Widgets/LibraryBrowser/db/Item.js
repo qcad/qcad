@@ -262,7 +262,7 @@ Item.prototype.getIcon = function(small, regenerate, noFavoritesMark) {
 };
 
 /**
- * Marks the given icon with futher information (favorite star, script wheel, error).
+ * Marks the given icon with further information (favorite star, script wheel, error).
  * \param icon QPixmap or undefined.
  * \param favorite True: mark as favorite.
  * \param script True: mark as script.

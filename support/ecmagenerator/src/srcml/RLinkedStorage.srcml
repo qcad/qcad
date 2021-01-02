@@ -31,7 +31,7 @@
 <comment type="block">/**
  * Memory based storage that is linked to another storage.
  * The other storage is read only and only used to read objects
- * that are not avilable in this storage. All added objects are
+ * that are not available in this storage. All added objects are
  * stored in this storage directly.
  *
  * \ingroup core

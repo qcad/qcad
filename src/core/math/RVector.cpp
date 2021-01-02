@@ -166,7 +166,7 @@ double RVector::getAngleTo(const RVector& v) const {
 }
 
 /**
- * Sets the vector magnitude without chaning the direction.
+ * Sets the vector magnitude without changing the direction.
  */
 void RVector::setMagnitude2D(double m) {
     double a = getAngle();

@@ -31,7 +31,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPluginInfo.h"</cpp:file></cpp:include>
 
 <comment type="block">/**
- * Loads and registeres plugins.
+ * Loads and registers plugins.
  *
  * \ingroup core
  * \scriptable

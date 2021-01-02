@@ -143,17 +143,17 @@ public slots:
 
 signals:
     /**
-     * Emmitted when the command prompt is requested to change.
+     * Emitted when the command prompt is requested to change.
      */
     void commandPrompt(const QString& text);
 
     /**
-     * Emmitted when the left mouse button tip is requested to change.
+     * Emitted when the left mouse button tip is requested to change.
      */
     void leftMouseTip(const QString& message);
 
     /**
-     * Emmitted when the right mouse button tip is requested to change.
+     * Emitted when the right mouse button tip is requested to change.
      */
     void rightMouseTip(const QString& message);
 

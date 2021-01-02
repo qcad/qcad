@@ -1806,7 +1806,7 @@ QSet<REntity::Id> RDocument::queryContainedEntitiesXY(const RBox& box) const {
     //spatialIndex.queryContained(boxExpanded).keys().toSet();
 
     // filter out entities that are not on the current block
-    // or whoes entire bounding box is not inside this query box
+    // or whose entire bounding box is not inside this query box
     // (e.g. block references which add multiple bounding boxes to the index):
     QSet<REntity::Id> outsiders;
     QSet<REntity::Id>::iterator it;

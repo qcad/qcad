@@ -32,7 +32,7 @@ const double RS::AngleTolerance = 1.0e-9;
 
 /**
  * \return True if the two values are considered to be equal.
- * \param noTolerance True strict comparision of doubles.
+ * \param noTolerance True strict comparison of doubles.
  */
 bool RS::compare(const QVariant& v1, const QVariant& v2, bool noTolerance) {
     // 20120609: tolerance when comparing doubles (property editor)
@@ -310,7 +310,7 @@ QStringList RS::compareChunkify(const QString& s) {
 }
 
 /**
- * Alphanumerical, locale aware, case insensitive comparision.
+ * Alphanumerical, locale aware, case insensitive comparison.
  */
 int RS::compareAlphanumerical(const QString& s1, const QString& s2) {
     // note: we deliberately do not use QCollator here (buggy, crashes under Linux):

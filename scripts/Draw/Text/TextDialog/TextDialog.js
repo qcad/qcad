@@ -423,7 +423,7 @@ TextDialog.prototype.show =  function(textDataIn) {
         this.updateSource(true);
     }
 
-    // analize dialog input:
+    // analyze dialog input:
     var textDataOut;
     if (isNull(textDataIn)) {
         if (this.mode === TextDialog.Mode.Attribute) {

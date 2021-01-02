@@ -739,7 +739,7 @@ PrintPreviewImpl.prototype.slotScaleChanged = function(scaleString) {
 
     this.updateBackgroundTransform();
 
-    // update pattern scale accordint to drawing scale:
+    // update pattern scale according to drawing scale:
     di.regenerateScenes();
 };
 

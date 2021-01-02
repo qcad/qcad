@@ -33,7 +33,7 @@
 #endif
 
 /**
- * Information about a plugin. Ususally shown in an about dialog.
+ * Information about a plugin. Usually shown in an about dialog.
  *
  * \ingroup core
  * \scriptable

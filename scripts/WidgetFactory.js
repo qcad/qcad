@@ -141,7 +141,7 @@ WidgetFactory.createDialog = function(basePath, uiFile, parent) {
     dialog.setWindowFlags(flags);
 
     // a global function might be defined to do additional
-    // initilization for all dialogs (e.g. for testing purposes):
+    // initialization for all dialogs (e.g. for testing purposes):
     if (typeof(initDialog)!=="undefined") {
         for (var i=0; i<initDialog.length; i++) {
             initDialog[i](dialog);
