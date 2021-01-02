@@ -7,7 +7,7 @@ main classes being SvgExporterPG:
 
 \snippet ExSvgExport.jsd include
 
-The export can be done through funciton 'exportFile':
+The export can be done through function 'exportFile':
 
 \snippet ExSvgExport.jsd export
 

@@ -142,7 +142,7 @@ RBlockListQt.prototype.contextMenuEvent = function(e) {
 };
 
 RBlockListQt.complementContextMenu = function(menu, blockListWidget) {
-    // add addtional context menu actions provided by plugins:
+    // add additional context menu actions provided by plugins:
     var scriptFiles = RBlockListQt.getContextMenuScriptFiles(blockListWidget);
     for (var i=0; i<scriptFiles.length; i++) {
         var scriptFile = scriptFiles[i];
@@ -200,7 +200,7 @@ RBlockListQt.prototype.updateCurrentBlock = function(documentInterface) {
 };
 
 /**
- * Called when blocks are addded, edited or deleted. Updates the block list.
+ * Called when blocks are added, edited or deleted. Updates the block list.
  */
 RBlockListQt.prototype.updateBlocks = function(documentInterface) {
     this.currentItem = undefined;

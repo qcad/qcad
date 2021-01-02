@@ -182,7 +182,7 @@ void RSpatialIndexNavel::bulkLoad(const QList<int>& ids, const QList<QList<RBox>
  * \param x2 higher value of the first dimension.
  * \param y2 higher value of the second dimension.
  * \param z2 higher value of the third dimension.
- * \param dataLength Legth of the data in bytes or 0.
+ * \param dataLength Length of the data in bytes or 0.
  * \param data Pointer to the data associated with the item. The
  *      index makes a deep copy of the data, the caller is responsible 
  *      for deleting the data. NULL indicates that the item data is stored

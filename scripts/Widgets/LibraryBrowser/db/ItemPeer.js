@@ -445,7 +445,7 @@ ItemPeer.getIdsByTagIdsRecursive = function(tagIds) {
 };
 
 /**
- * \return Object with item IDs of all decendants (children, grand children, ...)
+ * \return Object with item IDs of all descendants (children, grand children, ...)
  * of type file of the given parent item as properties.
  */
 ItemPeer.getFileDescendants = function(parentId/*, excludeIds*/) {

@@ -321,7 +321,7 @@ ShapeAlgorithms.getIntersectingShapes = function(doc, entityId, shape, extend) {
 
     // find other shapes that potentially intersect with the chosen entity:
     var ret = [];
-    // allow for error: especialy for ellipse segments bordering to tangential lines this is needed:
+    // allow for error: especially for ellipse segments bordering to tangential lines this is needed:
     var otherEntityIds;
 
     if (extend===true) {

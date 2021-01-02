@@ -32,7 +32,7 @@ function PropertyWatcher(propertyEditor, sender, propertyType) {
 
 /**
  * Called when a property has been changed by the user. Triggers
- * a transaction to change the propery of all selected entities
+ * a transaction to change the property of all selected entities
  * that match the current entity type filter.
  */
 PropertyWatcher.prototype.propertyChanged = function(value) {
@@ -105,7 +105,7 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
 
 /**
  * Called when a custom property has been deleted by the user. Triggers
- * a transaction to delete the propery from all selected entities
+ * a transaction to delete the property from all selected entities
  * that match the current entity type filter.
  */
 PropertyWatcher.prototype.propertyRemoved = function() {
@@ -167,7 +167,7 @@ IndexWatcher.prototype.indexChanged = function(index) {
     }
 
 
-    // preview postition in drawing:
+    // preview position in drawing:
     di.clearPreview();
     var r = view.mapDistanceFromView(10);
     di.addAuxShapeToPreview(new RCircle(new RVector(x, y), r));
@@ -774,7 +774,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
 /**
  * Initializes a control for the given property.
  *
- * \param propertyTypeId The propery the returned control edits.
+ * \param propertyTypeId The property the returned control edits.
  * \param onlyChanges Control already exists and only need to be re-initialized.
  * \param control The control to initialize if it is already known by the caller.
  *
@@ -1355,7 +1355,7 @@ PropertyEditorImpl.prototype.requestAllProperties = function() {
 };
 
 PropertyEditorImpl.prototype.getAdjustedPropertyValue = function(propertyTypeId) {
-    // show handle as hex reprensentation (string):
+    // show handle as hex representation (string):
     if (propertyTypeId.getId()===RObject.PropertyHandle.getId()) {
         var value = this.getPropertyValue(propertyTypeId);
         if (value===RObject.INVALID_HANDLE) {

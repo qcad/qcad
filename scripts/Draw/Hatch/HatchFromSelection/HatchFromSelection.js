@@ -210,7 +210,7 @@ HatchFromSelection.createHatchData = function(doc, entityIds, ignoreOpenLoops) {
 
 /**
  * Traverses the given candidates recursively for connected entities.
- * Resulting loops are appened to the given hatch data.
+ * Resulting loops are appended to the given hatch data.
  */
 HatchFromSelection.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
     var i;

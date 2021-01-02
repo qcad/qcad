@@ -255,7 +255,7 @@ protected:
     /**
      * Text string entered explicitly by user or null
      * or "<>" for the actual measurement or " " (one blank space)
-     * for supressing the text.
+     * for suppressing the text.
      */
     QString text;
     /** Upper tolerance limit */

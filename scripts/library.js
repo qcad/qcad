@@ -2051,7 +2051,7 @@ function mergeProperties(obj1,obj2) {
  * (i.e. contains invalid characters).
  */
 function fixSymbolTableName(name) {
-    // trim white space at begining and end to avoid invalid block name:
+    // trim white space at beginning and end to avoid invalid block name:
     name = name.trim();
 
     // max length:
@@ -2173,9 +2173,9 @@ function initUserShortcuts() {
 
         if (match) qDebug("scStringList", scStringList);
 
-        // explicitely no shortcuts:
+        // explicitly no shortcuts:
         if (isNull(scStringList)) {
-            if (match) qDebug("explicitely no shortcuts");
+            if (match) qDebug("explicitly no shortcuts");
             action.setShortcuts([]);
             continue;
         }
@@ -2203,7 +2203,7 @@ function initUserShortcuts() {
         }
         var cmStringList = RSettings.getValue("Commands/" + key);
 
-        // explicitely no commands:
+        // explicitly no commands:
         if (isNull(cmStringList)) {
             action.setCommands([]);
             continue;

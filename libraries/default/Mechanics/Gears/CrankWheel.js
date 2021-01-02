@@ -344,7 +344,7 @@ function chordLength(radius, angle) {
 }
 
 // Does all the drawing work. Remember most things here just add points (vertices)
-// to an array for drawing. Drawing is closed so should alway be a closed surface for
+// to an array for drawing. Drawing is closed so should always be a closed surface for
 // the wheel.
 CrankWheel.getOperation = function (di) {
     var addOperation = new RAddObjectsOperation(false);

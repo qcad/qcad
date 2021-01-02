@@ -29,7 +29,7 @@
 
 
 /**
- * Represents a transform with recorded operations (reproducable).
+ * Represents a transform with recorded operations (reproducible).
  *
  * \ingroup math
  * \scriptable

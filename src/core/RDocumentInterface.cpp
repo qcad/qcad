@@ -1937,7 +1937,7 @@ void RDocumentInterface::setCursorPosition(const RVector& p) {
 
 /**
  * Force cursor to be shown. Used for e.g. snap to intersection manual where we
- * want to show the cursor eventhough we are in entity picking mode.
+ * want to show the cursor even though we are in entity picking mode.
  */
 void RDocumentInterface::setCursorOverride(bool on) {
     cursorOverride = on;

@@ -78,7 +78,7 @@ TranslateRotate.prototype.showDialog = function() {
 
 TranslateRotate.prototype.getOperation = function(preview, selectResult) {
     // skip implementation from class Translate and use
-    // Transform implementaiton instead:
+    // Transform implementation instead:
     return Transform.prototype.getOperation.call(this, preview, selectResult);
 };
 

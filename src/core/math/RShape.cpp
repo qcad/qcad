@@ -1417,7 +1417,7 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
     //qDebug() << "PHI_2R: " << PHI_2R;
 
     // Calculate implicit (Polynomial) coefficients for the second ellipse
-    // in its translated-by (-H1, -H2) and rotated-by -PHI_1 postion
+    // in its translated-by (-H1, -H2) and rotated-by -PHI_1 position
     // AA*x^2 + BB*x*y + CC*y^2 + DD*x + EE*y + FF = 0
     // Formulas derived in the reference
     // To speed things up, store multiply-used expressions first
@@ -2333,7 +2333,7 @@ QList<QSharedPointer<RShape> > RShape::roundAllCorners(const QList<QSharedPointe
 }
 
 /**
- * Rounds the given shape1 againt shape2.
+ * Rounds the given shape1 against shape2.
  *
  * \param shape1 First shape of corner.
  * \param clickPos1 Coordinate that was clicked when the user selected shape1.
@@ -2344,7 +2344,7 @@ QList<QSharedPointer<RShape> > RShape::roundAllCorners(const QList<QSharedPointe
  * \param solutionPos Position that determines which solution to apply (optional, defaults to clickPos1)
  *
  * \return Array of three shapes: shape1 (trimmed), rounding, shape2 (trimmed)
- * or emtpy array.
+ * or empty array.
  */
 QList<QSharedPointer<RShape> > RShape::roundShapes(
         const QSharedPointer<RShape> shape1, const RVector& clickPos1,

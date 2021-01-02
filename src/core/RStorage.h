@@ -246,7 +246,7 @@ public:
     virtual QSharedPointer<RObject> queryObjectByHandle(RObject::Handle objectHandle) const = 0;
 
     /**
-     * \return A pointer to the enitity with the given \c entityId
+     * \return A pointer to the entity with the given \c entityId
      *      or NULL if no such entity exists.
      */
     virtual QSharedPointer<REntity> queryEntity(REntity::Id entityId) const = 0;
@@ -768,7 +768,7 @@ public:
     /**
      * Deletes all transactions with IDs from transactionId (inclusive)
      * to the maximum transaction ID. This is called if some transactions
-     * have been undone and then a redo is triggerd. All undone
+     * have been undone and then a redo is triggered. All undone
      * transactions have to be deleted at this point.
      */
     virtual void deleteTransactionsFrom(int transactionId) = 0;

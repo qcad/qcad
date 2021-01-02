@@ -16,7 +16,7 @@ function getIntersectionPoints(e1, e2, limited) {
         limited = true;
     }
 
-    // document is required if entitiy IDs are passed:
+    // document is required if entity IDs are passed:
     var doc = undefined;
     if (isNumber(e1) || isNumber(e2)) {
         doc = getDocument();

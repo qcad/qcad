@@ -280,7 +280,7 @@ function execScripts(args) {
 }
 
 /**
- * Sets up drag and drop support (droping files on the application window
+ * Sets up drag and drop support (dropping files on the application window
  * opens them).
  */
 function setUpDragAndDrop(appWin) {
@@ -795,7 +795,7 @@ function main() {
         }
     }
 
-    // open files clicked in Finder if application is alreay running (Mac):
+    // open files clicked in Finder if application is already running (Mac):
     qApp.fileOpenRequestReceived.connect(function(fileName) {
         openFiles([fileName], false);
     });
