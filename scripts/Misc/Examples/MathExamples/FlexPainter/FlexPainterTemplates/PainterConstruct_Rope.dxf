@@ -6791,7 +6791,7 @@ AcDbMText
  72
      1
   1
-Begin painter 1-4\P- lenght zero\P- fully inside Main painter area\PMain painter 5-7\P- lenght 12.8571\P- stepsize 6.4286\PEnd painter 8-10\P- lenght zero\P- fully inside Main painter area
+Begin painter 1-4\P- length zero\P- fully inside Main painter area\PMain painter 5-7\P- length 12.8571\P- stepsize 6.4286\PEnd painter 8-10\P- length zero\P- fully inside Main painter area
   7
 textstyle12
  73
@@ -6827,7 +6827,7 @@ AcDbMText
  72
      1
   1
-BeginApex ...\P- lenght 12.6000\P- may travers to Main painter area\PEndApex ... \P- lenght 12.8571\P- may travers to Main painter area\P\PExcept the main painter all local and global are optionally\PAll painters may include global spline references
+BeginApex ...\P- length 12.6000\P- may travers to Main painter area\PEndApex ... \P- length 12.8571\P- may travers to Main painter area\P\PExcept the main painter all local and global are optionally\PAll painters may include global spline references
   7
 textstyle13
  73

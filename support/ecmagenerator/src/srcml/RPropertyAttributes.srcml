@@ -74,7 +74,7 @@
         <expr><name>OnRequest</name> = 0x400000</expr>,            <comment type="line">//!&lt; Property shown on request (slow to compute)</comment>
         <expr><name>Location</name> = 0x800000</expr>,             <comment type="line">//!&lt; Property affected when transforming</comment>
         <expr><name>RefPoint</name> = 0x1000000</expr>,            <comment type="line">//!&lt; Property affected when moving reference point</comment>
-        <expr><name>Geometry</name> = <name>Location</name> | <name>RefPoint</name></expr>,  <comment type="line">//!&lt; Property affected when chaning geometry (Location | RefPoint)</comment>
+        <expr><name>Geometry</name> = <name>Location</name> | <name>RefPoint</name></expr>,  <comment type="line">//!&lt; Property affected when changing geometry (Location | RefPoint)</comment>
         <expr><name>Scale</name> = 0x2000000</expr>,               <comment type="line">//!&lt; Property is scale (1:2, 5"=1", ...)</comment>
         <expr><name>Area</name> = 0x4000000</expr>,                <comment type="line">//!&lt; Property is area (relevant for formatting of value)</comment>
         <expr><name>UnitLess</name> = 0x8000000</expr>             <comment type="line">//!&lt; Property has no unit (linetype scale, draw order, ...)</comment>

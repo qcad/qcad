@@ -18,7 +18,7 @@ ToggleLayerVisibilityTest00.prototype.test00 = function() {
     var doc = di.getDocument();
     var layer;
 
-    addLayer("Layer1", "white", "CONTINOUS", RLineweight.Weight025);
+    addLayer("Layer1", "white", "CONTINUOUS", RLineweight.Weight025);
     doc.setCurrentLayer("Layer1");
 
     //               showFrozen, freezeLayer,    frozen, off,      frozenRes, offRes

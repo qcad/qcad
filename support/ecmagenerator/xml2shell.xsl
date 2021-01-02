@@ -275,9 +275,9 @@
         <xsl:message>***</xsl:message>
         <xsl:message>class: <xsl:value-of select="/unit/class/@name"/></xsl:message>
         <xsl:message>method: <xsl:value-of select="@name"/></xsl:message>
-        <xsl:message>overrride 1: <xsl:value-of select="$overrideClassName"/></xsl:message>
-        <xsl:message>overrride 2: <xsl:value-of select="$overrideClassName2"/></xsl:message>
-        <xsl:message>overrride 3: <xsl:value-of select="$overrideClassName3"/></xsl:message>
+        <xsl:message>override 1: <xsl:value-of select="$overrideClassName"/></xsl:message>
+        <xsl:message>override 2: <xsl:value-of select="$overrideClassName2"/></xsl:message>
+        <xsl:message>override 3: <xsl:value-of select="$overrideClassName3"/></xsl:message>
         -->
 
         <xsl:variable name="methodName" select="@name"/>
