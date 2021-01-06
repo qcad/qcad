@@ -256,6 +256,7 @@ TextDialog.prototype.show =  function(textDataIn) {
         checkMainBold.checked = textDataIn.isBold();
         checkMainItalic.checked = textDataIn.isItalic();
         editMainHeight.setValue(textDataIn.getTextHeight());
+
         this.sourceEdit.setPlainText(textDataIn.getEscapedText());
         this.updateRichText(true);
         //qDebug("this.sourceEdit:", this.sourceEdit.plainText);
@@ -634,7 +635,12 @@ TextDialog.prototype.getMainFont = function() {
  */
 TextDialog.prototype.mainFontChanged = function() {
     var font = this.getMainFont();
-    this.fontHeightFactor = 14.0 / font.pointSizeF();
+    if (font.pointSizeF()>RS.PointTolerance) {
+        this.fontHeightFactor = 14.0 / font.pointSizeF();
+    }
+    else {
+        this.fontHeightFactor = 10.0;
+    }
 
     if (this.tabWidget.currentIndex===1) {
         this.updateRichText(true);
@@ -1018,6 +1024,9 @@ TextDialog.prototype.updateRichText = function(force) {
         var richText = RTextBasedData.toRichText(source, this.getMainFont(), this.fontHeightFactor);
         //richText = richText.replace("<html>", "<html xmlns='http://www.w3.org/1999/xhtml' xml:space='preserve'>");
         //qDebug("richText: \n\n", richText, "\n\n");
+
+        // TODO: preserve tabs (img with arrow?)
+
         this.textEdit.setHtml(richText);
         //qDebug("HTML from text edit: \n\n", this.textEdit.html, "\n\n");
         this.getSourceDocument().modified = false;
