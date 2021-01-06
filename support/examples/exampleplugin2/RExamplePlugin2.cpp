@@ -108,7 +108,7 @@ QScriptValue EcmaMyClass::createMyClass(QScriptContext* context, QScriptEngine* 
 }
 
 /**
- * Allows implicit converstion of MyClass objects to strings:
+ * Allows implicit conversion of MyClass objects to strings:
  *
  * var v = new MyClass();
  * qDebug(v);

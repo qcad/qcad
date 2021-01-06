@@ -36,7 +36,7 @@ QList<RFileImporterFactory*> RFileImporterRegistry::factories;
  *
  * \param factoryFunction The function that can be used to instantiate
  *      the importer.
- * \param checkFunction The function tht can be used to check whether
+ * \param checkFunction The function that can be used to check whether
  *      the importer can import a given file.
  */
 void RFileImporterRegistry::registerFileImporter(RFileImporterFactory* factory) {
@@ -48,7 +48,7 @@ void RFileImporterRegistry::registerFileImporter(RFileImporterFactory* factory) 
  *
  * \param factoryFunction The function that can be used to instantiate
  *      the importer.
- * \param checkFunction The function tht can be used to check whether
+ * \param checkFunction The function that can be used to check whether
  *      the importer can import a given file.
  */
 void RFileImporterRegistry::unregisterFileImporter(RFileImporterFactory* factory) {

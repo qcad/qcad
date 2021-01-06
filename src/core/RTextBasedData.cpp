@@ -60,7 +60,7 @@ RTextBasedData::RTextBasedData(RDocument* document, const RTextBasedData& data)
 
 /**
  * \param position Insertion point (see DXF code 10 doc).
- * \param alignmentPoint Alignement point of text (see DXF code 11 doc).
+ * \param alignmentPoint Alignment point of text (see DXF code 11 doc).
  * \param height Nominal (initial) text height
  * \param textWidth Reference rectangle width for wrapping (not supported)
  * \param valign Vertical alignment
@@ -1030,7 +1030,7 @@ QDebug operator<<(QDebug dbg, const RTextBasedData& t) {
                   << ", font: " << t.getFontName()
                   << ", file: " << t.getFontFile()
                   << ", position: " << t.getPosition()
-                  << ", alignmnet point: " << t.getAlignmentPoint()
+                  << ", alignment point: " << t.getAlignmentPoint()
                   << ", angle: " << RMath::rad2deg(t.getAngle())
                   << ", pps: " << t.getPainterPaths()
                   << ")";

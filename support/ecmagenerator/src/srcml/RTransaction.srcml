@@ -363,7 +363,7 @@
     <decl_stmt><decl><type><name>bool</name></type> <name>onlyChanges</name></decl>;</decl_stmt>
 
     <comment type="block">/**
-     * True if caller is intereseted in list of objects that are affected
+     * True if caller is interested in list of objects that are affected
      * by this transaction.
      */</comment>
     <decl_stmt><decl><type><name>bool</name></type> <name>recordAffectedObjects</name></decl>;</decl_stmt>

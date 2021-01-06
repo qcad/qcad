@@ -114,7 +114,7 @@ and then terminate itself.
 
 In the next step, we add some interaction to our tool. Our tool should
 wait for the user to click a coordinate in the drawing, draw three points
-at and beside that coordiante and then termiante.
+at and beside that coordinate and then termiante.
 
 If a tool is interactive (i.e. waits for the user to do something), 
 we have to keep track of its progress. One way to do this is by adding 

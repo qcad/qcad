@@ -53,7 +53,7 @@ Transform.prototype.verifySelection = function() {
 };
 
 /**
- * Implemetation of getOperation for tools that operate on a selection and
+ * Implementation of getOperation for tools that operate on a selection and
  * do something with every entity in the selection (e.g. move, rotate, ...).
  * The callback function 'this.transform(entity, copy number)' is called for
  * every selected entity.

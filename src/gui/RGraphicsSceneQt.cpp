@@ -410,7 +410,7 @@ void RGraphicsSceneQt::exportLineSegment(const RLine& line, double angle) {
     if (line.getLength()<RS::PointTolerance && !RMath::isNaN(angle)) {
         // Qt won't export a zero length line as point:
         // note: QPainterPath compares points as floats with lower precision,
-        // 1e-1 should work, even for extreme coordiantes
+        // 1e-1 should work, even for extreme coordinates
         // see FS#2053
         RVector startPoint = line.startPoint - RVector::createPolar(1e-4, angle);
         RVector endPoint = line.endPoint + RVector::createPolar(1e-4, angle);

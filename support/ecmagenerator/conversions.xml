@@ -7,7 +7,7 @@
 	<entry key="int" value="toNumber()" testFunction="isNumber()" />
 	<entry key="char" value="toNumber()" testFunction="isNumber()" />
     <!--
-    causes ambigous calls:
+    causes ambiguous calls:
 	<entry key="qint64" value="toNumber()" testFunction="isNumber()" />
     -->
 	<entry key="uint" value="toNumber()" testFunction="isNumber()" />

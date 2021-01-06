@@ -22,7 +22,7 @@ printed or exported in QCAD.
 
 \snippet ExPdfExport.jsd settings
 
-The actual export is done through funciton 'print':
+The actual export is done through function 'print':
 
 \snippet ExPdfExport.jsd export
 

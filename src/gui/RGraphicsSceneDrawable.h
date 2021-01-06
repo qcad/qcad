@@ -85,7 +85,7 @@ public:
     static RGraphicsSceneDrawable createFromPainterPath(const RPainterPath& pp, const RVector& offset = RVector::nullVector);
     static RGraphicsSceneDrawable createFromImage(const RImageData& img, const RVector& offset = RVector::nullVector);
     static RGraphicsSceneDrawable createFromText(const RTextBasedData& txt, const RVector& offset = RVector::nullVector);
-    static RGraphicsSceneDrawable createFromTransform(const RTransform& transfrom, const RVector& offset = RVector::nullVector);
+    static RGraphicsSceneDrawable createFromTransform(const RTransform& transform, const RVector& offset = RVector::nullVector);
     static RGraphicsSceneDrawable createEndTransform(const RVector& offset);
 
     void uninit();

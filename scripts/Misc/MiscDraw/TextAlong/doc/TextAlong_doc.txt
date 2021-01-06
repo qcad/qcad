@@ -24,5 +24,5 @@ Figure 3. Text Along an Arc or Circle
 This shows you can place text along an arc, but you are not constrained to placing the text on the arc. But this alters the radius of the arc, so as the mouse pointer gets closer, or further away from the centre of the arc, the arc gets smaller, or bigger, and the text is adjusted to that arc.
 This was also produced in one use of the command, like the line drawing above. This time I changed the text in the contents box. 
 You can place this anywhere in the drawing, but remember the arc radius gets bigger or smaller.
-If you select a circle, this works exactly the same. But because the circle has no startpoint or endpoint, if you use 'Fit', the last character of the text is placed immediately before the first charcter of the text. To get a gap, add one or more spaces to the start or end of the text.
+If you select a circle, this works exactly the same. But because the circle has no startpoint or endpoint, if you use 'Fit', the last character of the text is placed immediately before the first character of the text. To get a gap, add one or more spaces to the start or end of the text.
 

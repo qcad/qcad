@@ -262,7 +262,7 @@ ColumnLayout.prototype.setGeometry = function(rect) {
         this.setProperty("sHint", new QSize(buttonSize*columns, h));
     }
 
-    // store settings used for calculation, so we don't have to calcuate
+    // store settings used for calculation, so we don't have to calculate
     // size again if not necessary:
     this.setProperty("sHintColumns", columns);
     this.setProperty("sHintWidth", width);

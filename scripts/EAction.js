@@ -251,7 +251,7 @@ EAction.prototype.initState = function() {
 };
 
 /**
- * Called whenver the action resumes its operation, for example after it was
+ * Called whenever the action resumes its operation, for example after it was
  * temporary suspended for another action.
  */
 EAction.prototype.resumeEvent = function() {
@@ -285,7 +285,7 @@ EAction.prototype.resumeEvent = function() {
 };
 
 /**
- * Called whenver the action is suspended, for example if another action is
+ * Called whenever the action is suspended, for example if another action is
  * started while this action is active.
  */
 EAction.prototype.suspendEvent = function() {
@@ -997,7 +997,7 @@ EAction.getMenu = function(title, objectName, initFunction) {
  * icon.
  * 
  * \param menu Parent menu.
- * \param sortOrder Sort oder among other submenus. All
+ * \param sortOrder Sort order among other submenus. All
  *      submenus within the same menu are ordered by this number.
  * \param title Translated title of the submenu. E.g. qsTr("&Line").
  * \param objectName Object name to use for the menu. Used mainly for
@@ -1670,7 +1670,7 @@ EAction.prototype.getAuxPreview = function() {
 };
 
 /**
- * Called by updatePreview. Implementations must return an array of enitity IDs
+ * Called by updatePreview. Implementations must return an array of entity IDs
  * which should be highlighted.
  */
 EAction.prototype.getHighlightedEntities = function() {
@@ -1950,7 +1950,7 @@ EAction.assertEditable = function(entity, quiet) {
 };
 
 /**
- * Allows all actions to handle property change events. This is neccessary to
+ * Allows all actions to handle property change events. This is necessary to
  * ensure that properties can be changed even if a tool is active (e.g. while
  * drawing lines).
  */

@@ -30,7 +30,7 @@
 #include "RPluginInfo.h"
 
 /**
- * Loads and registeres plugins.
+ * Loads and registers plugins.
  *
  * \ingroup core
  * \scriptable

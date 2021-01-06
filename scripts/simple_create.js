@@ -232,7 +232,7 @@ function addCircle(center, radius) {
  * relative: True if this vector's coordinates are relative to the previous coordinates,
  * defaults to false.
  *
- * \param closed True for an implicitely closed polyline. Default is false.
+ * \param closed True for an implicitly closed polyline. Default is false.
  * \param relative True to treat all coordinates as relative.
  * The first coordinate is always absolute. Default is false.
  *

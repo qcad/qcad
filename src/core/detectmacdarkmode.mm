@@ -24,8 +24,8 @@ bool isMacDarkMode() {
             qDebug() << "dark mode allowed in plist file: use system setting";
         }
         else {
-            // dark mode explicitely disabled in plist file:
-            qDebug() << "dark mode explicitely disabled in plist file";
+            // dark mode explicitly disabled in plist file:
+            qDebug() << "dark mode explicitly disabled in plist file";
             return false;
         }
     }

@@ -67,7 +67,7 @@ FlexPainter.prototype.beginEvent = function() {
         EAction.handleUserMessage("Nothing casted. Command terminated");
         this.terminate();
         return;
-    } // -> Continue with PRO recources
+    } // -> Continue with PRO resources
 
     // FlexPainter.init states "Requires Document"
     // A document should be available....Retrieve document, units:
@@ -130,12 +130,12 @@ FlexPainter.prototype.beginEvent = function() {
     if (this.doEndApex) appendiceslength += this.endApexData[0][2];
     if (this.doInserts) appendiceslength += knotlength * this.insertions;
 
-    // # Busy # SetType: Slanted, Boxed, Stepped, Periodic v0.38 posponed
+    // # Busy # SetType: Slanted, Boxed, Stepped, Periodic v0.38 postponed
     var underStepped = (painterStepSize * this.mainScaleS) < (painterLength * this.mainScaleX);
     var boxStepped = (painterStepSize * this.mainScaleS) == (painterLength * this.mainScaleX);
     var overStepped = (painterStepSize * this.mainScaleS) > (painterLength * this.mainScaleX);
 
-    // # Busy # There is a difference between A: hasNeatEnds or B: underStepped v0.39 posponed
+    // # Busy # There is a difference between A: hasNeatEnds or B: underStepped v0.39 postponed
     this.hasNeatEnds = (this.beginData[0][0] > 0 || this.endData[0][0] > 0);
 
     // Initiate pi/2, counters, trash can and intermediate message string
@@ -201,7 +201,7 @@ FlexPainter.prototype.beginEvent = function() {
             //    Is by serie expansion. Is very time consuming
             if (isEllipseEntity(entity)) {
                 // # Workaround # Ellipses by casting on a Polyline approximateWithArcs
-                // # Issue # Relative acuracy, absolute acuracy sizes with the magnetude
+                // # Issue # Relative accuracy, absolute accuracy sizes with the magnetude
                 var shape = shape.approximateWithArcs(128);
                 this.castingType = 3;
                 if (this.isTanCloObj) shape.convertToClosed;
@@ -312,7 +312,7 @@ FlexPainter.prototype.beginEvent = function() {
             // # ToDo # Treat originally slanted with neat ends different
             if (!this.isTanCloObj) {
                 if (!this.forcedDyn) {
-                // Pro / Cons ??? v0.39 posponed
+                // Pro / Cons ??? v0.39 postponed
                 // Aligned and exposing a void globally is automatic
                 // Overstepped with Apex not
                 }
@@ -483,7 +483,7 @@ FlexPainter.prototype.beginEvent = function() {
                 }
                 // When not cast in group cast one by one
                 // # Issue Fixed # 1.Not showing castings sequentially
-                // # Issue Fixed # 2.Fix slows down unecessary
+                // # Issue Fixed # 2.Fix slows down unnecessary
                 if (i != idn - 1) {    // # Workaround # 2.Skip only one and last
                     this.updatePreview();    // # Workaround # 1.Best fix to show progress sequentially
                 }
@@ -932,7 +932,7 @@ FlexPainter.prototype.showDialog = function() {
     }  // End first load detection
 //debugger;
 
-    // Repeat Dialog untill entries are flawless
+    // Repeat Dialog until entries are flawless
     do {
     // # Issue # Simple & Dirty! Surely there are neater ways to do this
         var errmsg = undefined;    // Reset former error
@@ -1039,7 +1039,7 @@ FlexPainter.prototype.showDialog = function() {
             // Text entries stay text, re-parse value to UI as text:
             widgets["MainStepX"].setValue(this.mainData[0][3] * this.mainScaleS);
         } // End validate MainPainterBox
-    } // Loop untill entries are flawless
+    } // Loop until entries are flawless
     while (!isNull(errmsg));
 
     // Retrieve user Closed Forms shifting preference (0-100)
@@ -2312,7 +2312,7 @@ FlexPainter.prototype.initWidgetsCombo = function(widget) {
 FlexPainter.init = function(basePath) {
     // Prevent FlexPainter to be loaded without PRO resources
     if (!hasPlugin("PROTOOLS")) { return; };
-    // -> Continue with PRO recources
+    // -> Continue with PRO resources
 
     var action = new RGuiAction(qsTr("&FlexPainter"), RMainWindowQt.getMainWindow());
     var tip = qsTranslate("FlexPainter", "Paints over selection mimicking a roller stamp");
@@ -2331,7 +2331,7 @@ FlexPainter.init = function(basePath) {
 };
 
 /**
- * Major remark block as dummy function. Collapsable in NPP as such.
+ * Major remark block as dummy function. Collapsible in NPP as such.
  */
 FlexPainter.Remarks = function(only4DummysLikeMe) {
     //    Recheck last status!!!
@@ -2354,7 +2354,7 @@ FlexPainter.Remarks = function(only4DummysLikeMe) {
     //              Done: Made absolute and factor limited to 0.01 & 111 and written back to Widget v.38
     //              Done: limited casting main painter to 9999 / entity  v.38
     //                  (# ToDo # Revise: On short line in test f0.01 14s 21139 splines /3 is about 7000 painters)
-    //              Done: Dirty loop Dialog untill flawless v.39
+    //              Done: Dirty loop Dialog until flawless v.39
 
     // *************************************************************************************************
     //    # MAJOR ISSUE Fixed # Fails in CE
@@ -2436,7 +2436,7 @@ FlexPainter.Remarks = function(only4DummysLikeMe) {
     //              With the dialog change functions active less are displayed
     //              RMathLineEdit is with precision 6 and displaying is java related
     //              # Workaround # Reordered sequence
-    //                   And get stuck with precision 6, allways better then an endless number of digits.
+    //                   And get stuck with precision 6, always better then an endless number of digits.
     //    # Issue Solved # Pushing messages to command history is slow (80ms/entry vs casting fitpoints: 10/ms)
     //              Solved with optionally suppress if not critical or essential
     //              With beVerbose flag in Dialog. Super persistently set
@@ -2451,7 +2451,7 @@ FlexPainter.Remarks = function(only4DummysLikeMe) {
 
 
     // ***Reminders*************************************************************************************
-    //    !! Use '==' not '=' !! apart from the fact '==' is allways conditional
+    //    !! Use '==' not '=' !! apart from the fact '==' is always conditional
     //    Don't use '>>' by mistake nor '<<' '=<' '=>'
     //    Code on lines must end with ';' or '}' and nothing else unless the code is properly multilined
     //    Simple test: even counts of '[', ']', '(', ')', '{', '}'   forget 1 ')' will lead to crash

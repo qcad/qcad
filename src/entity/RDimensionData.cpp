@@ -63,7 +63,7 @@ RDimensionData::RDimensionData(RDocument* document, const RDimensionData& data)
  * \param lineSpacingFactor Line spacing factor.
  * \param text Text string entered explicitly by user or null
  *         or "<>" for the actual measurement or " " (one blank space).
- *         for supressing the text.
+ *         for suppressing the text.
  * \param style Dimension style name.
  * \param angle Rotation angle of dimension text away from
  *         default orientation.

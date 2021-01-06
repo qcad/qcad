@@ -120,7 +120,7 @@ Round.round = function(op, entity1, clickPos1, entity2, clickPos2, trim, radius,
 };
 
 /**
- * Rounds the given shape1 againt shape2.
+ * Rounds the given shape1 against shape2.
  *
  * \param shape1 First shape which will be rounded.
  * \param clickPos1 Coordinate that was clicked when the user selected shape1.
@@ -131,7 +131,7 @@ Round.round = function(op, entity1, clickPos1, entity2, clickPos2, trim, radius,
  * \param solutionPos Position that determines which solution to apply (optional, defaults to clickPos1)
  *
  * \return Array of three shapes: shape1 (trimmed), rounding, shape2 (trimmed)
- * or emtpy array.
+ * or empty array.
  */
 Round.roundShapes = function(shape1, clickPos1, shape2, clickPos2, trim, samePolyline, radius, solutionPos) {
     if (isNull(solutionPos)) {

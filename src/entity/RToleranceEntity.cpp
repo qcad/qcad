@@ -172,7 +172,7 @@ void RToleranceEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
             }
             else {
                 // render text as paths:
-                // set brush explicitely:
+                // set brush explicitly:
                 QVariant v = getDocument()->getKnownVariable(RS::DIMCLRT, RColor(RColor::ByBlock));
                 RColor textColor = v.value<RColor>();
                 if (!textColor.isByBlock()) {

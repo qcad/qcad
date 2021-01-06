@@ -286,7 +286,7 @@ double RMath::eval(const QString& expression, bool* ok) {
 
     //qDebug() << "RMath::eval: expression 003 is: " << expr;
 
-    // convert explicitely indicated degree angles (e.g. "90d30'5\"") to degrees:
+    // convert explicitly indicated degree angles (e.g. "90d30'5\"") to degrees:
     {
         QRegExp re(
             "(?:[^a-zA-Z0-9]|^)"                                // not preceded by letter or number (could be part of a function)
@@ -823,7 +823,7 @@ void RMath::toFraction(double v, int maxDenominator, int& number, int& numerator
 }
 
 /**
- * \return Simlified fraction for the given fraction (numerator/denomiator).
+ * \return Simplified fraction for the given fraction (numerator/denomiator).
  */
 void RMath::simplify(int numerator, int denominator, int& numeratorRes, int& denominatorRes) {
     int g = getGcd(numerator, denominator);

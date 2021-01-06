@@ -365,7 +365,7 @@ protected:
     bool onlyChanges;
 
     /**
-     * True if caller is intereseted in list of objects that are affected
+     * True if caller is interested in list of objects that are affected
      * by this transaction.
      */
     bool recordAffectedObjects;

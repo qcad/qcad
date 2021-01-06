@@ -298,7 +298,7 @@ void RGraphicsViewQt::mouseReleaseEvent(QMouseEvent* event) {
 
     RMouseEvent e(*event, *scene, *this, getDevicePixelRatio());
 
-    // if mouse press and mouse release happend within a short time span and the
+    // if mouse press and mouse release happened within a short time span and the
     // mouse movement was small, use the mouse press location
     // otherwise use mouse release location to define point:
     if (mouseClickTimer.elapsed()<ignoreTimeThreshold &&

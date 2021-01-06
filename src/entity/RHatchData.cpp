@@ -562,7 +562,7 @@ void RHatchData::addBoundary(QSharedPointer<RShape> shape, bool addAutoLoops) {
                 // gap of more than 0.0001:
                 else if (!ep.equalsFuzzy(sp, 0.0001)) {
                     // enforce tolerance accepted by DXF/DWG format:
-                    // insert bridge elemenent on the fly:
+                    // insert bridge element on the fly:
                     boundary.last().append(QSharedPointer<RLine>(new RLine(ep, sp)));
                 }
             }
