@@ -42,6 +42,7 @@ RTransaction::RTransaction()
       existingLayerDetectionDisabled(false),
       blockRecursionDetectionDisabled(false),
       keepHandles(false),
+      keepChildren(false),
       undoing(false),
       redoing(false) {
 }
@@ -66,6 +67,7 @@ RTransaction::RTransaction(RStorage& storage)
       existingLayerDetectionDisabled(false),
       blockRecursionDetectionDisabled(false),
       keepHandles(false),
+      keepChildren(false),
       undoing(false),
       redoing(false) {
 }
@@ -101,6 +103,7 @@ RTransaction::RTransaction(
       existingLayerDetectionDisabled(false),
       blockRecursionDetectionDisabled(false),
       keepHandles(false),
+      keepChildren(false),
       undoing(false),
       redoing(false) {
 
@@ -137,6 +140,7 @@ RTransaction::RTransaction(
       existingLayerDetectionDisabled(false),
       blockRecursionDetectionDisabled(false),
       keepHandles(false),
+      keepChildren(false),
       undoing(false),
       redoing(false) {
 
@@ -812,20 +816,20 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
 //            }
 
             // don't record changes in redundant properties (e.g. angle for lines):
-            if (newProperty.second.isRedundant()) {
+            if (newProperty.second.isRedundant() || oldProperty.second.isRedundant()) {
                 continue;
             }
 
             // property that has changed affects the visibility of
-            // other attributes:
-            if (newProperty.second.affectsOtherProperties()) {
+            // other properties:
+            if (newProperty.second.affectsOtherProperties() || oldProperty.second.affectsOtherProperties()) {
                 onlyChanges = false;
             }
 
             objectHasChanged |= addPropertyChange(
                 object->getId(),
                 RPropertyChange(
-                    *it, 
+                    pid,
                     oldProperty.first,
                     newProperty.first
                 )
@@ -1096,7 +1100,7 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object, bool force) {
     }
 
     // if the entity has child entities, delete all child entities (e.g. attributes):
-    if (!entity.isNull() && storage->hasChildEntities(entity->getId())) {
+    if (!entity.isNull() && storage->hasChildEntities(entity->getId()) && !keepChildren) {
         // make sure child entities on locked layers are deleted:
         bool allowAllOri = allowAll;
         allowAll = true;

@@ -38,6 +38,7 @@ RTransaction RDeleteObjectsOperation::apply(RDocument& document, bool preview) {
     transaction.setRecordAffectedObjects(recordAffectedObjects);
     transaction.setSpatialIndexDisabled(spatialIndexDisabled);
     transaction.setAllowAll(allowAll);
+    transaction.setKeepChildren(keepChildren);
     transaction.setAllowInvisible(allowInvisible);
     transaction.setGroup(transactionGroup);
     transaction.setTypes(transactionTypes);

@@ -52,6 +52,7 @@ public:
         spatialIndexDisabled(false),
         allowInvisible(false),
         allowAll(false),
+        keepChildren(false),
         entityTypeFilter(entityTypeFilter),
         transactionGroup(-1) {
         RDebug::incCounter("ROperation");
@@ -88,6 +89,13 @@ public:
 
     void setAllowAll(bool on) {
         allowAll = on;
+    }
+
+    /**
+     * Keep child entities (e.g. keep block attributes when deleting block references)
+     */
+    void setKeepChildren(bool on) {
+        keepChildren = on;
     }
 
     void setTransactionGroup(int g) {
@@ -129,6 +137,7 @@ protected:
     bool spatialIndexDisabled;
     bool allowInvisible;
     bool allowAll;
+    bool keepChildren;
     RS::EntityType entityTypeFilter;
     int transactionGroup;
     QString text;
