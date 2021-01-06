@@ -50,6 +50,8 @@ AddLayer.prototype.beginEvent = function() {
     var di = this.getDocumentInterface();
     di.setCurrentLayer(this.layer);
 
+    // TODO: make new item the active, selected item
+
     this.terminate();
 };
 
