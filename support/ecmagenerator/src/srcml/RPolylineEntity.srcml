@@ -377,6 +377,8 @@
         <return>return <expr><name>data</name>.<call><name>containsShape</name><argument_list>(<argument><expr><name>shape</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>validate</name><parameter_list>()</parameter_list>;</function_decl>
+
 </public><protected>protected:
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>print</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 

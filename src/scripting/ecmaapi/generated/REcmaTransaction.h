@@ -73,6 +73,9 @@
         setKeepHandles
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setKeepChildren
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isUndoing
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

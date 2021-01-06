@@ -216,6 +216,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, containsShape, "containsShape");
             
+            REcmaHelper::registerFunction(&engine, proto, validate, "validate");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RPolylineEntity*>(), *proto);
 
@@ -6379,6 +6381,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolylineEntity::containsShape", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineEntity::validate
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineEntity::validate", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::validate";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineEntity* self = 
+                        getSelf("validate", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->validate();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.validate().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::validate", context, engine);
             return result;
         }
          QScriptValue REcmaPolylineEntity::toString
