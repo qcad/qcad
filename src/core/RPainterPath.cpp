@@ -431,6 +431,14 @@ bool RPainterPath::getSimplePointDisplay() const {
     return getMode(RPainterPath::SimplePointDisplay);
 }
 
+void RPainterPath::setPolylineGen(bool on) {
+    setMode(RPainterPath::PolylineGen, on);
+}
+
+bool RPainterPath::getPolylineGen() const {
+    return getMode(RPainterPath::PolylineGen);
+}
+
 void RPainterPath::setPixelWidth(bool on) {
     setMode(RPainterPath::PixelWidth, on);
 }

@@ -74,6 +74,8 @@ public:
 
     bool beginPath();
     void endPath();
+
+    void transformAndApplyPatternPath(RPainterPath& path) const;
     
     virtual void unexportEntity(REntity::Id entityId);
 

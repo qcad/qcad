@@ -1108,7 +1108,7 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
             regen = true;
         }
         else {
-            for (int p=0; p<drawables->size() && !regen; p++) {
+            for (int p=0; p<drawables->size(); p++) {
                 RGraphicsSceneDrawable& drawable = drawables->operator[](p);
 
                 if (drawable.isPainterPath()) {
@@ -1121,6 +1121,10 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
                             regen = true;
                         }
                     }
+                }
+
+                if (regen) {
+                    break;
                 }
             }
         }
@@ -1455,13 +1459,6 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
         RPainterPath path = drawable.getPainterPath();
         if (!path.isSane()) {
             continue;
-        }
-
-        // local transform of entity (e.g. block reference transforms):
-        if (!entityTransformThread[threadId].isEmpty()) {
-            for (int k=entityTransformThread[threadId].size()-1; k>=0; k--) {
-                path.transform(entityTransformThread[threadId][k]);
-            }
         }
 
         if (drawable.getPixelUnit() || path.getPixelUnit()) {

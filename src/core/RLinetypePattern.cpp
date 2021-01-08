@@ -978,6 +978,7 @@ QDebug operator<<(QDebug dbg, const RLinetypePattern& p) {
         }
     }
     dbg.nospace() << "\nsymmetries: " << p.getSymmetries();
+    dbg.nospace() << "\nvalid: " << p.isValid();
     dbg.nospace() << ")";
     return dbg.space();
 }
