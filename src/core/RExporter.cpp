@@ -1136,7 +1136,7 @@ void RExporter::exportArc(const RArc& arc, double offset) {
         return;
     }
 
-    if (getEntity() == NULL || draftMode || getScreenBasedLinetypes() || twoColorSelectedMode) {
+    if (getEntity() == NULL || draftMode || getScreenBasedLinetypes() || twoColorSelectedMode || !enablePatterns) {
         exportArcSegment(arc);
         return;
     }
