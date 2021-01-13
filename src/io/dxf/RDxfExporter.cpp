@@ -395,7 +395,8 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
                         break;
                     default:
                         qWarning() << "RDxfExporter::exportFile: unsupported extension data type: " << value.type();
-                        Q_ASSERT(false);
+                        qWarning() << value;
+                        //Q_ASSERT(false);
                         break;
                     }
                 }
