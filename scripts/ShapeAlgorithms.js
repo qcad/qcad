@@ -798,6 +798,8 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
 
     // polyline:
     else if (isPolylineShape(shape)) {
+        // TODO: make sure point 1 is closer to the start of the polyline:
+
         var closed = shape.isGeometricallyClosed();
         if (closed) {
             shape.relocateStartPoint(cutDist1);
