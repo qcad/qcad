@@ -129,7 +129,7 @@ RColor REntityData::getColor(bool resolve, const QStack<REntity*>& blockRefStack
         return getColor();
     }
 
-    // this only only applies for color by layer (?):
+    // this only applies for color by layer (?):
     RColor entityColor = getColor();
     if (entityColor.isByLayer()) {
         if (getType()==RS::EntityAttribute && document!=NULL) {
