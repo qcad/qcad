@@ -243,6 +243,16 @@ void RGraphicsSceneQt::transformAndApplyPatternPath(RPainterPath& path) const {
         return;
     }
 
+    if (path.getNoPattern()) {
+        // path has no pattern (e.g. polyline with segment widths):
+        return;
+    }
+
+    if (path.getPen().style()==Qt::NoPen) {
+        // solid fills without pen
+        return;
+    }
+
     // apply line type pattern to path:
     RLinetypePattern lp = currentLinetypePattern;
     if (lp.isValid() && lp.getNumDashes() > 1) {
@@ -367,6 +377,9 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
         p.setWidthF(0.001);
         p.setColor(currentPen.color());
         currentPainterPath.setPen(p);
+
+        currentPainterPath.setNoPattern(true);
+
         endPath();
     }
     else {
@@ -394,6 +407,14 @@ void RGraphicsSceneQt::exportPolyline(const RPolyline& polyline, bool polylineGe
     // let path remember if path uses pattern along whole polyline:
     // used to apply the line pattern on regen:
     currentPainterPath.setPolylineGen(polylineGen);
+
+    if (!polylineGen) {
+        for (int i=0; i<polyline.countSegments(); i++) {
+            // add original shapes of polyline:
+            // needed for correct rendering of polylines with individual segment patterns:
+            currentPainterPath.addOriginalShape(polyline.getSegmentAt(i));
+        }
+    }
 
     if (created) {
         endPath();
@@ -487,6 +508,7 @@ void RGraphicsSceneQt::exportArcSegment(const RArc& arc, bool allowForZeroLength
     }
     else {
         currentPainterPath.setAutoRegen(true);
+        currentPainterPath.setPolylineGen(true);
         RGraphicsScene::exportArcSegment(arc, allowForZeroLength);
 
         // TODO: this might be worth considering:
@@ -513,7 +535,6 @@ void RGraphicsSceneQt::exportLineSegment(const RLine& line, double angle) {
         return;
     }
 
-    // add new painter path with current entity ID:
     if ((currentPainterPath.currentPosition() - QPointF(line.startPoint.x, line.startPoint.y)).manhattanLength() > RS::PointTolerance) {
         currentPainterPath.moveTo(line.startPoint);
     }
@@ -664,6 +685,7 @@ void RGraphicsSceneQt::exportPainterPaths(const QList<RPainterPath>& paths, doub
     RPainterPath path;
     for (int i=0; i<paths.size(); i++) {
         path = paths.at(i);
+
         path.setZLevel(0);
 
         path.setBrush(getBrush(path));
@@ -674,13 +696,13 @@ void RGraphicsSceneQt::exportPainterPaths(const QList<RPainterPath>& paths, doub
             path.setPen(getPen(path));
         }
 
-        transformAndApplyPatternPath(path);
-
         // export into current path (used for complex linetypes):
         if (currentPainterPath.isValid()) {
             currentPainterPath.addPath(path);
         }
         else {
+            transformAndApplyPatternPath(path);
+
             RGraphicsSceneDrawable d(path);
             addDrawable(getBlockRefOrEntityId(), d, draftMode, exportToPreview);
         }
@@ -763,14 +785,13 @@ QList<RPainterPath> RGraphicsSceneQt::exportText(const RTextBasedData& text, boo
             }
             else {
                 // use fixed color from given text data instead of current entity
-                // used for dimension text labels if dimension text color is configured:
-                if (!col.isByBlock() && !col.isByLayer()) {
+                // used (only) for dimension text labels if dimension text color is configured:
+                if (!col.isByBlock() && !col.isByLayer() && !pp.getPen().color().isValid()) {
                     pp.setPen(col);
                     pp.setFixedPenColor(true);
                 }
             }
 
-            transformAndApplyPatternPath(pp);
             pp.setAutoRegen(true);
             pp.setPixelSizeHint(pixelSizeHint);
             ret.append(pp);
