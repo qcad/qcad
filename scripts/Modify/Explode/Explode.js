@@ -80,6 +80,7 @@ Explode.explodeSelection = function(di, toolTitle) {
     options["ellipseSegments"] = RSettings.getIntValue("Explode/EllipseSegments", 32);
     options["splinesToLineSegments"] = RSettings.getBoolValue("Explode/SplinesToLineSegments", false);
     options["textToPolylines"] = RSettings.getBoolValue("Explode/TextToPolylines", true);
+    options["textSplineToLineOrArc"] = RSettings.getBoolValue("Explode/TextSplineToLineOrArc", true);
     options["multilineTextToSimpleText"] = RSettings.getBoolValue("Explode/MultilineTextToSimpleText", true);
     options["circlesToPolylines"] = RSettings.getBoolValue("Explode/CirclesToPolylines", true);
 
@@ -209,10 +210,11 @@ Explode.explodeEntity = function(entity, options) {
     var splineTolerance = options["splineTolerance"];
     var splineSegments = options["splineSegments"];
     var ellipseSegments = options["ellipseSegments"];
-    var splinesToLineSegments = options["splinesToLineSegments"]
-    var textToPolylines = options["textToPolylines"]
+    var splinesToLineSegments = options["splinesToLineSegments"];
+    var textToPolylines = options["textToPolylines"];
+    var textSplineToLineOrArc = options["textSplineToLineOrArc"];
     var multilineTextToSimpleText = options["multilineTextToSimpleText"];
-    var circlesToPolylines = options["circlesToPolylines"]
+    var circlesToPolylines = options["circlesToPolylines"];
 
     if (isNull(splineTolerance)) {
         splineTolerance = RSettings.getDoubleValue("Explode/SplineTolerance", 0.01);
@@ -228,6 +230,9 @@ Explode.explodeEntity = function(entity, options) {
     }
     if (isNull(textToPolylines)) {
         textToPolylines = RSettings.getBoolValue("Explode/TextToPolylines", true);
+    }
+    if (isNull(textSplineToLineOrArc)) {
+        textSplineToLineOrArc = RSettings.getBoolValue("Explode/TextSplineToLineOrArc", true);
     }
     if (isNull(multilineTextToSimpleText)) {
         multilineTextToSimpleText = RSettings.getBoolValue("Explode/MultilineTextToSimpleText", true);
@@ -521,7 +526,9 @@ Explode.explodeEntity = function(entity, options) {
                     shape = shapes[n];
                     if (isSplineShape(shape)) {
                         // spline to arc or line or spline:
-                        shape = ShapeAlgorithms.splineToLineOrArc(shape, splineTolerance);
+                        if (textSplineToLineOrArc) {
+                            shape = ShapeAlgorithms.splineToLineOrArc(shape, splineTolerance);
+                        }
 
                         if (textToPolylines) {
                             // spline to polyline with arcs:
