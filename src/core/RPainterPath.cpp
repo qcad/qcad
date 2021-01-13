@@ -439,6 +439,14 @@ bool RPainterPath::getPolylineGen() const {
     return getMode(RPainterPath::PolylineGen);
 }
 
+void RPainterPath::setNoPattern(bool on) {
+    setMode(RPainterPath::NoPattern, on);
+}
+
+bool RPainterPath::getNoPattern() const {
+    return getMode(RPainterPath::NoPattern);
+}
+
 void RPainterPath::setPixelWidth(bool on) {
     setMode(RPainterPath::PixelWidth, on);
 }
