@@ -279,6 +279,10 @@ public:
         setOption(UnitLess, v);
     }
 
+    bool isPercentage() const {
+        return options.testFlag(Percentage);
+    }
+
     QString getLabel() const {
         return label;
     }
