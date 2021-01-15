@@ -986,7 +986,8 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
             if (RSettings.getBoolValue("PropertyEditor/FormatAsDecimal", false)!==true &&
                 !attributes.isAngleType() &&
                 !attributes.isAreaType() &&
-                !attributes.isUnitLess() /*&&
+                !attributes.isUnitLess() &&
+                !attributes.isPercentage() /*&&
                 (document.getLinearFormat()===RS.Fractional ||
                  document.getLinearFormat()===RS.FractionalStacked)*/) {
 
