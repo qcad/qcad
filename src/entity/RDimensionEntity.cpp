@@ -230,9 +230,9 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
                              RPropertyAttributes(RPropertyAttributes::ReadOnly));
         }
     } else if (propertyTypeId == PropertyLinearFactor) {
-        return qMakePair(QVariant(getData().linearFactor), RPropertyAttributes());
+        return qMakePair(QVariant(getData().linearFactor), RPropertyAttributes(RPropertyAttributes::UnitLess));
     } else if (propertyTypeId == PropertyDimScale) {
-        return qMakePair(QVariant(getData().dimScaleOverride), RPropertyAttributes());
+        return qMakePair(QVariant(getData().dimScaleOverride), RPropertyAttributes(RPropertyAttributes::UnitLess));
     } else if (propertyTypeId == PropertyDimBlockName) {
         return qMakePair(QVariant(getData().dimBlockName), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     } else if (propertyTypeId == PropertyAutoTextPos) {

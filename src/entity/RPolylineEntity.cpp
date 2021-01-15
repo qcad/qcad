@@ -204,7 +204,7 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
     } else if (propertyTypeId == PropertyBulgeN) {
         QVariant v;
         v.setValue(data.bulges);
-        return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List));
+        return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List|RPropertyAttributes::UnitLess));
     } else if (propertyTypeId == PropertyAngleN) {
         QVariant v;
         v.setValue(data.getVertexAngles());

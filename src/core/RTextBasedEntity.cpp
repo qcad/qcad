@@ -169,13 +169,13 @@ QPair<QVariant, RPropertyAttributes> RTextBasedEntity::getProperty(
     } else if (propertyTypeId == PropertyAngle) {
         return qMakePair(QVariant(getData().angle), RPropertyAttributes(RPropertyAttributes::Angle));
     } else if (propertyTypeId == PropertyXScale) {
-        return qMakePair(QVariant(getData().xScale), RPropertyAttributes());
+        return qMakePair(QVariant(getData().xScale), RPropertyAttributes(RPropertyAttributes::UnitLess));
     } else if (propertyTypeId == PropertyBold) {
         return qMakePair(QVariant(getData().isBold()), RPropertyAttributes());
     } else if (propertyTypeId == PropertyItalic) {
         return qMakePair(QVariant(getData().isItalic()), RPropertyAttributes());
     } else if (propertyTypeId == PropertyLineSpacingFactor) {
-        return qMakePair(QVariant(getData().lineSpacingFactor), RPropertyAttributes());
+        return qMakePair(QVariant(getData().lineSpacingFactor), RPropertyAttributes(RPropertyAttributes::UnitLess));
     } else if (propertyTypeId == PropertyHAlign) {
 //        return qMakePair(QVariant(getData().horizontalAlignment), RPropertyAttributes(RPropertyAttributes::AffectsOtherProperties));
         return qMakePair(QVariant(getData().horizontalAlignment), RPropertyAttributes());

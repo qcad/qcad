@@ -196,9 +196,9 @@ QPair<QVariant, RPropertyAttributes> RImageEntity::getProperty(
     }
 
     else if (propertyTypeId == PropertyScaleFactorX) {
-        return qMakePair(QVariant(data.uVector.getMagnitude()), RPropertyAttributes(RPropertyAttributes::Redundant));
+        return qMakePair(QVariant(data.uVector.getMagnitude()), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::UnitLess));
     } else if (propertyTypeId == PropertyScaleFactorY) {
-        return qMakePair(QVariant(data.vVector.getMagnitude()), RPropertyAttributes(RPropertyAttributes::Redundant));
+        return qMakePair(QVariant(data.vVector.getMagnitude()), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::UnitLess));
     }
 
     else if (propertyTypeId == PropertyWidth) {
