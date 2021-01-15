@@ -952,6 +952,102 @@ function entityTypeToString(type, plural) {
     }
 }
 
+/**
+ * Converts the given entity type name to the entity type enum.
+ *
+ * \return entity type enum.
+ *
+ * \param typeName Entity type name ("Line", "Arc", ...)
+ */
+function getEntityType(typeName) {
+    switch (typeName) {
+    case "Block":
+        return RS.ObjectBlock;
+    case "Layer":
+        return RS.ObjectLayer;
+    case "Layout":
+        return RS.ObjectLayout;
+    case "Linetype":
+        return RS.ObjectLinetype;
+    case "View":
+        return RS.ObjectView;
+
+    case "Entity":
+        return RS.EntityAll;
+    case "3dFace":
+        return RS.Entity3dFace;
+    case "Block Reference":
+        return RS.EntityBlockRef;
+    case "Block Reference and Attributes":
+        return RS.EntityBlockRefAttr;
+    case "Arc":
+        return RS.EntityArc;
+    case "Attribute":
+        return RS.EntityAttribute;
+    case "Attribute Definition":
+        return RS.EntityAttributeDefinition;
+    case "Circle":
+        return RS.EntityCircle;
+    case "Dimension":
+        return RS.EntityDimension;
+    case "Aligned Dimension":
+        return RS.EntityDimAligned;
+    case "Angular Dimension":
+        return RS.EntityDimAngular;
+    case "Angular Dimension (2 Line)":
+        return RS.EntityDimAngular2L;
+    case "Angular Dimension (3 Point)":
+        return RS.EntityDimAngular3P;
+    case "Arc Dimension":
+        return RS.EntityDimArcLength;
+    case "Diametric Dimension":
+        return RS.EntityDimDiametric;
+    case "Ordinate Dimension":
+        return RS.EntityDimOrdinate;
+    case "Rotated Dimension":
+        return RS.EntityDimRotated;
+    case "Radial Dimension":
+        return RS.EntityDimRadial;
+    case "Ellipse":
+        return RS.EntityEllipse;
+    case "Hatch":
+        return RS.EntityHatch;
+    case "Image":
+        return RS.EntityImage;
+    case "Leader":
+        return RS.EntityLeader;
+    case "Tolerance":
+        return RS.EntityTolerance;
+    case "Line":
+        return RS.EntityLine;
+    case "Infinite Line":
+    case "XLine":
+        return RS.EntityXLine;
+    case "Ray":
+        return RS.EntityRay;
+    case "Point":
+        return RS.EntityPoint;
+    case "Polyline":
+        return RS.EntityPolyline;
+    case "Solid":
+        return RS.EntitySolid;
+    case "Trace":
+        return RS.EntityTrace;
+    case "Face":
+        return RS.EntityFace;
+    case "Spline":
+        return RS.EntitySpline;
+    case "Text based":
+        return RS.EntityTextBased;
+    case "Text":
+        return RS.EntityText;
+    case "Viewport":
+        return RS.EntityViewport;
+    default:
+        return RS.ObjectUnknown;
+    }
+}
+
 function translateFilterStrings(filterStrings) {
     for (var i=0; i<filterStrings.length; i++) {
         filterStrings[i] = filterStrings[i].replace("All CAD Files", qsTr("All CAD Files"));
