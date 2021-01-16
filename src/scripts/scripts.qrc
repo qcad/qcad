@@ -1753,7 +1753,10 @@
     <file alias="scripts/Modify/Explode/Explode.svg">../../scripts/Modify/Explode/Explode.svg</file>
     <file alias="scripts/Modify/Explode/ExplodeDialog.ui">../../scripts/Modify/Explode/ExplodeDialog.ui</file>
     <file alias="scripts/Modify/Explode/ExplodeInit.js">../../scripts/Modify/Explode/ExplodeInit.js</file>
+    <file alias="scripts/Modify/Explode/Explode_CVS.js">../../scripts/Modify/Explode/Explode_CVS.js</file>
+    <file alias="scripts/Modify/Explode/Explode_diff.js">../../scripts/Modify/Explode/Explode_diff.js</file>
     <file alias="scripts/Modify/Explode/PreferencesPage.ui">../../scripts/Modify/Explode/PreferencesPage.ui</file>
+    <file alias="scripts/Modify/Explode/PreferencesPage_CV.ui">../../scripts/Modify/Explode/PreferencesPage_CV.ui</file>
     <file alias="scripts/Modify/Explode/Tests/ExplodeTest00.js">../../scripts/Modify/Explode/Tests/ExplodeTest00.js</file>
     <file alias="scripts/Modify/Explode/Tests/ExplodeTest01.js">../../scripts/Modify/Explode/Tests/ExplodeTest01.js</file>
     <file alias="scripts/Modify/Explode/Tests/ExplodeTest02.js">../../scripts/Modify/Explode/Tests/ExplodeTest02.js</file>

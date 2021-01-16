@@ -142,6 +142,9 @@
         <expr_stmt><expr><name>keepHandles</name> = <name>on</name></expr>;</expr_stmt>
     }</block></function>
 
+    <comment type="block">/**
+     * Keep child entities (e.g. keep block attributes when deleting block references)
+     */</comment>
     <function><type><name>void</name></type> <name>setKeepChildren</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>keepChildren</name> = <name>on</name></expr>;</expr_stmt>
     }</block></function>

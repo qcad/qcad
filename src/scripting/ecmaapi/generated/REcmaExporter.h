@@ -357,6 +357,9 @@
         ;static  QScriptValue
         setPixelWidth
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setEnablePatterns
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
