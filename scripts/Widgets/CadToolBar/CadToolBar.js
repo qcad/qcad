@@ -218,7 +218,6 @@ CadToolBar.prototype.updateIconSize = function() {
 };
 
 CadToolBar.initStyle = function() {
-    qDebug("CadToolBar.initStyle");
     var appWin = EAction.getMainWindow();
 
     var toolBar = appWin.findChild("CadQToolBar");
