@@ -57,7 +57,7 @@ var credits =
         qsTr("Hatch Patterns"),
         [ "John Hyslop",         "AR-CONC-01, " +
                                  "BARBWIRE, " +
-                                 "BLOCKS-01, BLOCKS-01, " +
+                                 "BLOCKS-01, BLOCKS-02, " +
                                  "BOXJOIN-01, BOXJOIN-02, " +
                                  "BOX-OVERLAP, " +
                                  "BUBBLES-01, BUBBLES-02, BUBBLES-03, " +
