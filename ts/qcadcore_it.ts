@@ -369,7 +369,7 @@ Altri...</translatorcomment>
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+94"/>
+        <location filename="../src/core/REntity.cpp" line="+94"/>
         <source>Block</source>
         <translatorcomment>--exact match--
 --file: photivo_it.ts--
@@ -379,9 +379,10 @@ Lista Blocchi</translatorcomment>
         <translation>Blocco</translation>
     </message>
     <message>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+94"/>
         <source>Referenced Block</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Blocco</translation>
+        <translation>Blocco referenziato</translation>
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="+66"/>
@@ -524,7 +525,7 @@ Inserisci l&apos;angolo della linea di quota:</translatorcomment>
         <translation>Attributi</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+93"/>
+        <location filename="../src/core/REntity.cpp" line="-1"/>
         <location filename="../src/core/RObject.cpp" line="+69"/>
         <source>Type</source>
         <translatorcomment>--exact match--
@@ -535,12 +536,11 @@ Tipo Ordinata</translatorcomment>
         <translation>Tipo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Block ID</source>
-        <translation>Blocco ID</translation>
+        <translation type="vanished">Blocco ID</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Layer</source>
         <translatorcomment>--exact match--
 --file: dia.master.it.po--

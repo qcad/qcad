@@ -238,11 +238,12 @@
 <context>
     <name>REntity</name>
     <message>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+94"/>
         <source>Referenced Block</source>
-        <translation type="obsolete">Blok</translation>
+        <translation type="unfinished">Blok</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+95"/>
+        <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+73"/>
@@ -360,14 +361,13 @@
         <translation>Rodzaj</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-14"/>
+        <location line="+1"/>
         <source>Block</source>
         <translation>Blok</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+1"/>
         <source>Block ID</source>
-        <translation>Identyfikator bloku</translation>
+        <translation type="vanished">Identyfikator bloku</translation>
     </message>
     <message>
         <location line="+1"/>

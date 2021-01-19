@@ -364,12 +364,13 @@ Cinza Claro</translatorcomment>
 <context>
     <name>REntity</name>
     <message>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+94"/>
         <source>Referenced Block</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Bloco referenciado</translation>
+        <translation>Bloco referenciado</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+95"/>
+        <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+73"/>
@@ -515,7 +516,7 @@ Tipo Ordinal</translatorcomment>
         <translation>Tipo</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-14"/>
+        <location line="+1"/>
         <source>Block</source>
         <translatorcomment>--exact match--
 --file: Block_pt.ts--
@@ -525,9 +526,8 @@ Lista de Blocos</translatorcomment>
         <translation>Bloco</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+1"/>
         <source>Block ID</source>
-        <translation>ID do Bloco</translation>
+        <translation type="vanished">ID do Bloco</translation>
     </message>
     <message>
         <location line="+1"/>

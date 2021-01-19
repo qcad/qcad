@@ -359,7 +359,7 @@ Otros...</translatorcomment>
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+94"/>
+        <location filename="../src/core/REntity.cpp" line="+94"/>
         <source>Block</source>
         <translatorcomment>--exact match--
 --file: Block_es.ts--
@@ -369,9 +369,10 @@ Lista de bloques</translatorcomment>
         <translation>Bloque</translation>
     </message>
     <message>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+94"/>
         <source>Referenced Block</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Bloque</translation>
+        <translation>Bloqueo referido</translation>
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="+66"/>
@@ -515,7 +516,7 @@ Introduzca ángulo en línea de cota:</translatorcomment>
         <translation>Atributos</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+93"/>
+        <location filename="../src/core/REntity.cpp" line="-1"/>
         <location filename="../src/core/RObject.cpp" line="+69"/>
         <source>Type</source>
         <translatorcomment>--exact match--
@@ -526,12 +527,11 @@ Tipo de Ordinal</translatorcomment>
         <translation>Tipo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Block ID</source>
-        <translation>Bloque ID</translation>
+        <translation type="vanished">Bloque ID</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Layer</source>
         <translatorcomment>--exact match--
 --file: es.po--
