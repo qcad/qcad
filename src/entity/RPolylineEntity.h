@@ -194,7 +194,7 @@ public:
     }
 
     double getVertexAngle(int i, RS::Orientation orientation = RS::UnknownOrientation) const {
-        data.getVertexAngle(i, orientation);
+        return data.getVertexAngle(i, orientation);
     }
 
     void stripWidths() {

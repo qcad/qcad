@@ -134,7 +134,7 @@ public:
     }
 
     double getVertexAngle(int i, RS::Orientation orientation = RS::UnknownOrientation) const {
-        RPolyline::getVertexAngle(i, orientation);
+        return RPolyline::getVertexAngle(i, orientation);
     }
 
     double getDirection1() const {
