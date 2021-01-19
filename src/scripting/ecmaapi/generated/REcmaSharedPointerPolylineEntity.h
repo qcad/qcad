@@ -133,6 +133,9 @@
         setBulgeAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getVertexAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         stripWidths
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

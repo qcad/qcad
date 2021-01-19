@@ -108,6 +108,9 @@
         setBulgeAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getVertexAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDirection1
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

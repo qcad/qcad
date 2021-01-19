@@ -84,6 +84,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setCopyEmptyBlocks, "setCopyEmptyBlocks");
             
+            REcmaHelper::registerFunction(&engine, proto, setCopyAllLayers, "setCopyAllLayers");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RClipboardOperation*>(), *proto);
 
@@ -1330,6 +1332,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaClipboardOperation::setCopyEmptyBlocks", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaClipboardOperation::setCopyAllLayers
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaClipboardOperation::setCopyAllLayers", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaClipboardOperation::setCopyAllLayers";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RClipboardOperation* self = 
+                        getSelf("setCopyAllLayers", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCopyAllLayers(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RClipboardOperation.setCopyAllLayers().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaClipboardOperation::setCopyAllLayers", context, engine);
             return result;
         }
          QScriptValue REcmaClipboardOperation::toString

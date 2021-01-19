@@ -73,6 +73,9 @@
         ;static  QScriptValue
         setCopyEmptyBlocks
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCopyAllLayers
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
