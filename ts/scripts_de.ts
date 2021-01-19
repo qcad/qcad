@@ -4333,7 +4333,7 @@ ist bereits in der Liste.</translation>
         <translation>Länge:</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+64"/>
         <source>Entity is not a block reference.</source>
         <translation>Element ist keine Block Referenz.</translation>
     </message>
@@ -5336,32 +5336,42 @@ ist bereits in der Liste.</translation>
         <translation>Aufbrechen</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+197"/>
+        <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+244"/>
         <source>Explode text glyphs to polylines</source>
         <translation>Textumrisse aufbrechen in Polylinien</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="-121"/>
         <source>Spline segments:</source>
         <translation>Splinesegmente:</translation>
     </message>
     <message>
-        <location line="-27"/>
+        <location line="+7"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Ellipsensegmente (Vollellipse):</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="-111"/>
         <source>Explode splines to polylines with line segments</source>
         <translation>Splines aufbrechen in Polylinien mit Liniensegmenten</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+125"/>
+        <source>Convert splines from texts to arcs or lines if appropriate</source>
+        <translation>Splines von Texten in Bögen oder Linien umwandeln, falls zutreffend</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Explode circles into polylines with two half circles</source>
+        <translation>Kreise in Polylinien mit zwei Halbkreisen aufbrechen</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
         <translation>Mehrzeilige Texte in mehrere einfache Texte aufbrechen</translation>
     </message>
     <message>
-        <location line="-31"/>
+        <location line="-27"/>
         <source>Spline approximation tolerance:</source>
         <translation>Spline Toleranz:</translation>
     </message>
@@ -7926,22 +7936,22 @@ BUG: Interferes with group castings.</translation>
         <translation>Dezimalpunkt:</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Cartesian coordinate separator:</source>
         <translation>Separator für Kartesische Koordinaten:</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Polar coordinate separator:</source>
         <translation>Separator für polare Koordinaten:</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Relative coordinate prefix:</source>
         <translation>Präfix für relative Koordinaten:</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Examples</source>
         <translation>Beispiele</translation>
     </message>
@@ -9180,9 +9190,8 @@ im Suchresultat:</translation>
         <translation>Aktualisieren von Dateisystem</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>0</source>
-        <translation>0</translation>
+        <translation type="vanished">0</translation>
     </message>
 </context>
 <context>
@@ -11737,12 +11746,12 @@ nicht öffnen.
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1469"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1470"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="-1276"/>
+        <location line="-1277"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -11791,7 +11800,7 @@ nicht öffnen.
         <translation>Alle Eigenschaften anzeigen</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+663"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -11828,7 +11837,7 @@ nicht öffnen.
         <translation type="obsolete">Mittelpunkt</translation>
     </message>
     <message>
-        <location line="-708"/>
+        <location line="-709"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
@@ -11846,7 +11855,7 @@ nicht öffnen.
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+145"/>
         <source>Use auto measurement</source>
         <translation>Automatisch</translation>
     </message>
@@ -11926,7 +11935,7 @@ nicht öffnen.
         <translation type="vanished">Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1145"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1146"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>
@@ -13535,9 +13544,8 @@ nicht öffnen.
         <translation type="vanished">1</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
         <source>Rotate:</source>
-        <translation>Rotieren:</translation>
+        <translation type="vanished">Rotieren:</translation>
     </message>
 </context>
 <context>
@@ -13551,7 +13559,7 @@ nicht öffnen.
         <translation type="vanished">Radius kleiner als 0.0 nach %1 konzentrischen Kreisbögen.</translation>
     </message>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1432"/>
         <source>No circle possible.</source>
         <translation>Kein Kreis möglich.</translation>
     </message>
@@ -13778,6 +13786,11 @@ nicht öffnen.
         <location line="+5"/>
         <source>Draw rectangle from two corners</source>
         <translation>Rechteck von zwei Eckpunkten</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
+        <source>Rotate:</source>
+        <translation>Rotieren:</translation>
     </message>
 </context>
 <context>
@@ -14714,7 +14727,7 @@ nicht öffnen.
         <translation>Standardwert:</translation>
     </message>
     <message>
-        <location line="+271"/>
+        <location line="+269"/>
         <source>&amp;Undo</source>
         <translation>&amp;Rückgängig</translation>
     </message>
@@ -14744,7 +14757,7 @@ nicht öffnen.
         <translation>&amp;Unterstreichen</translation>
     </message>
     <message>
-        <location line="+481"/>
+        <location line="+485"/>
         <source>Degree</source>
         <translation>Grad</translation>
     </message>
@@ -14930,7 +14943,7 @@ nicht öffnen.
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="-514"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="-518"/>
         <source>&amp;Bold</source>
         <translation>&amp;Fett</translation>
     </message>
@@ -14960,12 +14973,12 @@ nicht öffnen.
         <translation>&amp;Sonderzeichen...</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+310"/>
         <source>Others...</source>
         <translation>Andere...</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+139"/>
         <source>Plus-Minus</source>
         <translation>Plus-Minus</translation>
     </message>
@@ -16412,7 +16425,7 @@ nicht öffnen.
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+865"/>
+        <location filename="../scripts/library.js" line="+959"/>
         <source>Objects</source>
         <translation>Objekte</translation>
     </message>
@@ -16848,7 +16861,7 @@ nicht öffnen.
         <translation>Unbekanntes Element</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+102"/>
         <source>All CAD Files</source>
         <translation>Alle CAD Dateien</translation>
     </message>

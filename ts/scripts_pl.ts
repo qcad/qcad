@@ -4719,7 +4719,7 @@ Narzędzia CAD</translatorcomment>
         <translation>Długość:</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+64"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Obiekt nie jest odniesieniem bloku.</translation>
@@ -5699,34 +5699,44 @@ Wybuch
         <translation>&amp;Rozbij</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+197"/>
+        <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+244"/>
         <source>Explode text glyphs to polylines</source>
         <translation>Rozbijanie znaków tekstu na linie łamane</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="-121"/>
         <source>Spline segments:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Liczba segmentów splajnu:</translation>
     </message>
     <message>
-        <location line="-27"/>
+        <location line="+7"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Liczba segmentów elipsy (dla pełnej elipsy):</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="-111"/>
         <source>Explode splines to polylines with line segments</source>
         <translation>Rozbijanie splajnów na linie łamane z segmentami linii</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+125"/>
+        <source>Convert splines from texts to arcs or lines if appropriate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Explode circles into polylines with two half circles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
         <translation>Rozbijanie tekstów wielowierszowym na wiele bloków prostych tekstów</translation>
     </message>
     <message>
-        <location line="-31"/>
+        <location line="-27"/>
         <source>Spline approximation tolerance:</source>
         <translation>Tolerancja aproksymacji splajnu:</translation>
     </message>
@@ -8155,22 +8165,22 @@ Wskaż położenie linii wymiarowej:</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Cartesian coordinate separator:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Polar coordinate separator:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Relative coordinate prefix:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Examples</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Przykłady</translation>
@@ -9534,13 +9544,12 @@ Ulubione</translatorcomment>
         <translation>Uaktualnij bazę danych z systemu plików</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>0</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--
 Poziomy
 Pionowy</translatorcomment>
-        <translation>0</translation>
+        <translation type="vanished">0</translation>
     </message>
 </context>
 <context>
@@ -12168,13 +12177,13 @@ Wskaż punkt docelowy</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1469"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1470"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*RÓŻNE*</translation>
     </message>
     <message>
-        <location line="-1276"/>
+        <location line="-1277"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_pl.ts--
@@ -12252,7 +12261,7 @@ Czy chcesz zamknąć plik
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+663"/>
         <source>Widgets</source>
         <translation>Widżety</translation>
     </message>
@@ -12262,7 +12271,7 @@ Czy chcesz zamknąć plik
         <translation type="obsolete">Dodaj niestandardowy obiekt</translation>
     </message>
     <message>
-        <location line="-708"/>
+        <location line="-709"/>
         <source>Add custom property to selected objects</source>
         <translation>Dodaj dostosowaną właściwość do zaznaczonych obiektów</translation>
     </message>
@@ -12350,7 +12359,7 @@ Przyciąganie automatyczne</translatorcomment>
         <translation>Automatycznie</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+145"/>
         <source>Use auto measurement</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Użyj automatycznego pomiaru</translation>
@@ -14130,11 +14139,6 @@ Wskaż pozycje</translatorcomment>
         <source>1</source>
         <translation type="obsolete">1</translation>
     </message>
-    <message>
-        <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
-        <source>Rotate:</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ShapeAlgorithms</name>
@@ -14149,7 +14153,7 @@ Wskaż pozycje</translatorcomment>
         <translation type="obsolete">Promień spadła poniżej 0,0 po koncentrycznym łuk (s).</translation>
     </message>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1423"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1425"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -14373,6 +14377,11 @@ Wskaż pozycje</translatorcomment>
         <location line="+5"/>
         <source>Draw rectangle from two corners</source>
         <translation>Rysuje prostokąt z dwóch narożników</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
+        <source>Rotate:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -15401,7 +15410,7 @@ Rysuj obiekty tekstowe</translatorcomment>
         <translation>Domyślna wartość:</translation>
     </message>
     <message>
-        <location line="+271"/>
+        <location line="+269"/>
         <source>&amp;Undo</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -15484,14 +15493,14 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
         <translation>Znaki &amp;specjalne...</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+310"/>
         <source>Others...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pl.ts--</translatorcomment>
         <translation>Inne...</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+138"/>
         <source>Degree</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
@@ -17323,7 +17332,7 @@ Zoom wg &amp;wyboru</translatorcomment>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+865"/>
+        <location filename="../scripts/library.js" line="+959"/>
         <source>Objects</source>
         <translatorcomment>Plural form should be used</translatorcomment>
         <translation>Obiekty</translation>
@@ -17868,7 +17877,7 @@ Wprowadź tekst</translatorcomment>
         <translation>Nieznany obiekt</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+102"/>
         <source>All CAD Files</source>
         <translation>Wszystkie pliki CAD</translation>
     </message>

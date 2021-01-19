@@ -3928,7 +3928,7 @@ is already in the list.</source>
         <translation>長さ:</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+64"/>
         <source>Entity is not a block reference.</source>
         <translation>エンティティはブロック参照ではありません。</translation>
     </message>
@@ -4814,32 +4814,42 @@ is already in the list.</source>
         <translation>&amp;E 分解</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+197"/>
+        <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+244"/>
         <source>Explode text glyphs to polylines</source>
         <translation>テキストのグリフをポリラインに分解</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="-121"/>
         <source>Spline segments:</source>
         <translation>スプラインセグメント:</translation>
     </message>
     <message>
-        <location line="-27"/>
+        <location line="+7"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>弧セグメント（楕円あたり）:</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="+14"/>
+        <source>Convert splines from texts to arcs or lines if appropriate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-125"/>
         <source>Explode splines to polylines with line segments</source>
         <translation>スプラインを線分セグメントのポリラインに分解</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+135"/>
+        <source>Explode circles into polylines with two half circles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
         <translation>マルチラインテキストを複数の1行テキストに分解する</translation>
     </message>
     <message>
-        <location line="-31"/>
+        <location line="-27"/>
         <source>Spline approximation tolerance:</source>
         <translation>スプライン近似公差:</translation>
     </message>
@@ -6867,22 +6877,22 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Cartesian coordinate separator:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Polar coordinate separator:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Relative coordinate prefix:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Examples</source>
         <translation>例</translation>
     </message>
@@ -7966,9 +7976,8 @@ shown in search results:</source>
         <translation>ファイルシステムからDBをアップデート</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>0</source>
-        <translation>0</translation>
+        <translation type="vanished">0</translation>
     </message>
 </context>
 <context>
@@ -10033,12 +10042,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1469"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1470"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
     <message>
-        <location line="-1276"/>
+        <location line="-1277"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10092,7 +10101,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+663"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -10101,7 +10110,7 @@ shown in search results:</source>
         <translation type="obsolete">カスタムプロパティを追加</translation>
     </message>
     <message>
-        <location line="-708"/>
+        <location line="-709"/>
         <source>Add custom property to selected objects</source>
         <translation>選択したオブジェクトにカスタムプロパティを追加</translation>
     </message>
@@ -10111,7 +10120,7 @@ shown in search results:</source>
         <translation>自動</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+145"/>
         <source>Use auto measurement</source>
         <translation>自動計測を使用</translation>
     </message>
@@ -11592,11 +11601,6 @@ shown in search results:</source>
         <source>1</source>
         <translation type="obsolete">1</translation>
     </message>
-    <message>
-        <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
-        <source>Rotate:</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ShapeAlgorithms</name>
@@ -11609,7 +11613,7 @@ shown in search results:</source>
         <translation type="vanished">%1同心弧の半径が0.0を下回りました。</translation>
     </message>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1423"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1425"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>少なくとも2点が同一です。</translation>
@@ -11828,6 +11832,11 @@ shown in search results:</source>
         <location line="+5"/>
         <source>Draw rectangle from two corners</source>
         <translation>２頂点から四角形を描画</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
+        <source>Rotate:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12689,7 +12698,7 @@ shown in search results:</source>
         <translation>デフォルト:</translation>
     </message>
     <message>
-        <location line="+271"/>
+        <location line="+269"/>
         <source>&amp;Undo</source>
         <translation>&amp;U アンドゥ</translation>
     </message>
@@ -12749,12 +12758,12 @@ shown in search results:</source>
         <translation>&amp;S 特殊文字...</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+310"/>
         <source>Others...</source>
         <translation>その他...</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+138"/>
         <source>Degree</source>
         <translation>角度</translation>
     </message>
@@ -14139,7 +14148,7 @@ shown in search results:</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+865"/>
+        <location filename="../scripts/library.js" line="+959"/>
         <source>Objects</source>
         <translation>オブジェクト</translation>
     </message>
@@ -14559,7 +14568,7 @@ shown in search results:</source>
         <translation>不明なエンティティ</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+102"/>
         <source>All CAD Files</source>
         <translation type="unfinished"></translation>
     </message>

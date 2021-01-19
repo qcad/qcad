@@ -3939,7 +3939,7 @@ je že na seznamu.</translation>
         <translation>Dolžina:</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+64"/>
         <source>Entity is not a block reference.</source>
         <translation>Entiteta ni blokovna referenca.</translation>
     </message>
@@ -4868,32 +4868,42 @@ je že na seznamu.</translation>
         <translation>&amp;Razbij</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+197"/>
+        <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+244"/>
         <source>Explode text glyphs to polylines</source>
         <translation>Razbij črke besedila v lomljenke </translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="-121"/>
         <source>Spline segments:</source>
         <translation>Segmenti krivulj:</translation>
     </message>
     <message>
-        <location line="-27"/>
+        <location line="+7"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Segmenti elips (za cele elipse):</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="+14"/>
+        <source>Convert splines from texts to arcs or lines if appropriate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-125"/>
         <source>Explode splines to polylines with line segments</source>
         <translation>Razbij krivulje v lomljenke z črtnimi segmenti</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+135"/>
+        <source>Explode circles into polylines with two half circles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
         <translation>Razbij večvrstična besedila v več preprostih besedilnih blokov </translation>
     </message>
     <message>
-        <location line="-31"/>
+        <location line="-27"/>
         <source>Spline approximation tolerance:</source>
         <translation>Toleranca približka krivulje:</translation>
     </message>
@@ -6965,22 +6975,22 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Cartesian coordinate separator:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Polar coordinate separator:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Relative coordinate prefix:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Examples</source>
         <translation>Primeri</translation>
     </message>
@@ -8068,9 +8078,8 @@ shown in search results:</source>
         <translation>Posodobi podatkovno bazo iz datoteke</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>0</source>
-        <translation>0</translation>
+        <translation type="vanished">0</translation>
     </message>
 </context>
 <context>
@@ -10188,12 +10197,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1469"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1470"/>
         <source>*VARIES*</source>
         <translation>*RAZLIČNO*</translation>
     </message>
     <message>
-        <location line="-1276"/>
+        <location line="-1277"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10252,7 +10261,7 @@ shown in search results:</source>
         <translation>Prikaži vse lasnosti</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+663"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -10293,12 +10302,12 @@ shown in search results:</source>
         <translation type="obsolete">Dno</translation>
     </message>
     <message>
-        <location line="-545"/>
+        <location line="-546"/>
         <source>Auto</source>
         <translation>Samodejno</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+145"/>
         <source>Use auto measurement</source>
         <translation>Uporabi samodejne meritve</translation>
     </message>
@@ -11747,11 +11756,6 @@ shown in search results:</source>
         <source>1</source>
         <translation type="obsolete">1</translation>
     </message>
-    <message>
-        <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
-        <source>Rotate:</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ShapeAlgorithms</name>
@@ -11764,7 +11768,7 @@ shown in search results:</source>
         <translation type="vanished">Polmer je padel pod 0.0 po %1 kocentričnih lokih.</translation>
     </message>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1423"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1425"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vsaj dve točki sta identični.</translation>
@@ -11983,6 +11987,11 @@ shown in search results:</source>
         <location line="+5"/>
         <source>Draw rectangle from two corners</source>
         <translation>Nariši pravokotnik iz dveh kotov</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
+        <source>Rotate:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -12848,7 +12857,7 @@ shown in search results:</source>
         <translation>Privzeta vrednost:</translation>
     </message>
     <message>
-        <location line="+271"/>
+        <location line="+269"/>
         <source>&amp;Undo</source>
         <translation>Ra&amp;zveljavi</translation>
     </message>
@@ -12908,12 +12917,12 @@ shown in search results:</source>
         <translation>Posebni &amp;znaki...</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+310"/>
         <source>Others...</source>
         <translation>Drugo...</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+138"/>
         <source>Degree</source>
         <translation>Stopinje</translation>
     </message>
@@ -14295,7 +14304,7 @@ shown in search results:</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+865"/>
+        <location filename="../scripts/library.js" line="+959"/>
         <source>Objects</source>
         <translation>Objekti</translation>
     </message>
@@ -14715,7 +14724,7 @@ shown in search results:</source>
         <translation>Neznana entiteta</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+102"/>
         <source>All CAD Files</source>
         <translation>Vse CAD Datoteke</translation>
     </message>

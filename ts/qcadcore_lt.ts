@@ -241,7 +241,7 @@
         <location filename="../src/core/RBlock.cpp" line="+63"/>
         <location filename="../src/core/RLayer.cpp" line="+93"/>
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
-        <location filename="../src/core/RLayout.cpp" line="+80"/>
+        <location filename="../src/core/RLayout.cpp" line="+82"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
@@ -686,7 +686,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+827"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+832"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -707,7 +707,7 @@
 <context>
     <name>RLinetype</name>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+52"/>
+        <location filename="../src/core/RLinetype.cpp" line="+54"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>

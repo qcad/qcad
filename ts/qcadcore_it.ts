@@ -387,7 +387,7 @@ Lista Blocchi</translatorcomment>
         <location filename="../src/core/RBlock.cpp" line="+66"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="+1"/>
         <location line="+3"/>
-        <location filename="../src/core/RLayout.cpp" line="+82"/>
+        <location filename="../src/core/RLayout.cpp" line="+84"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -879,7 +879,7 @@ Colore G&amp;riglia:</translatorcomment>
         <translation type="vanished">Margini di stampa</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+827"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+832"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>È stato rilevato un riferimento circolare (ricorsivo) blocco:</translation>
     </message>
@@ -1091,7 +1091,7 @@ Margine (Ingrandita)</translatorcomment>
         <translation type="vanished">Margine (Ingrandita)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+52"/>
+        <location filename="../src/core/RLinetype.cpp" line="+54"/>
         <source>Name</source>
         <translation>Nome</translation>
     </message>
