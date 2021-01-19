@@ -131,6 +131,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, dump, "dump");
             
+            REcmaHelper::registerFunction(&engine, proto, validate, "validate");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RObjectPointer>(), *proto);
       
@@ -3579,6 +3581,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerObject::dump", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerObject::validate
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerObject::validate", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::validate";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("validate", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->validate();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.validate().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerObject::validate", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerObject::toString

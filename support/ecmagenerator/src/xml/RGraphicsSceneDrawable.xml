@@ -71,7 +71,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RGraphicsSceneDrawable"
       isPureVirtual="false">
         <arg type="RTransform &amp;" typeName="RTransform"
-        name="transfrom" isConst="true" />
+        name="transform" isConst="true" />
         <arg type="RVector &amp;" typeName="RVector" name="offset"
         hasDefault="true" default="RVector :: nullVector"
         isConst="true" />

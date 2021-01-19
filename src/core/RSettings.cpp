@@ -964,7 +964,7 @@ int RSettings::getReferencePointShape() {
 }
 
 /**
- * \return True to show slow properties availabe on request.
+ * \return True to show slow properties available on request.
  */
 bool RSettings::getPropertyEditorShowOnRequest() {
     if (propertyEditorShowOnRequest==-1) {

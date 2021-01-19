@@ -837,7 +837,7 @@ double RArc::getDistanceFromStart(const RVector& p) const {
 }
 
 /**
- * \return Polyline aproximation of arc with line segments of given length or (if length is 0) given angle.
+ * \return Polyline approximation of arc with line segments of given length or (if length is 0) given angle.
  * Polyline is on the inside of the arc.
  */
 RPolyline RArc::approximateWithLines(double segmentLength, double angle) const {
@@ -893,7 +893,7 @@ RPolyline RArc::approximateWithLines(double segmentLength, double angle) const {
 }
 
 /**
- * \return Polyline aproximation of arc with line segments of given length or (if length is 0) given angle.
+ * \return Polyline approximation of arc with line segments of given length or (if length is 0) given angle.
  * Polyline is on the outside of the arc.
  */
 RPolyline RArc::approximateWithLinesTan(double segmentLength, double angle) const {

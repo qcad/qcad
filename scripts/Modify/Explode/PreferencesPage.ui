@@ -6,13 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>391</width>
+    <width>398</width>
     <height>286</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QGridLayout" name="GridLayout">
+     <item row="1" column="0" colspan="3">
+      <widget class="QCheckBox" name="SplinesToLineSegments">
+       <property name="text">
+        <string>Explode splines to polylines with line segments</string>
+       </property>
+      </widget>
+     </item>
      <item row="0" column="2">
       <widget class="QComboBox" name="SplineTolerance">
        <property name="editable">
@@ -110,6 +117,67 @@
        </item>
       </widget>
      </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="SplineSegments_Label">
+       <property name="text">
+        <string>Spline segments:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" colspan="2">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Ellipse segments (per full ellipse):</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="2">
+      <widget class="QLabel" name="SplineTolerance_Label">
+       <property name="text">
+        <string>Spline approximation tolerance:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0" colspan="3">
+      <widget class="QCheckBox" name="TextSplineToLineOrArc">
+       <property name="text">
+        <string>Convert splines from texts to arcs or lines if appropriate</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0" colspan="3">
+      <widget class="QCheckBox" name="CirclesToPolylines">
+       <property name="text">
+        <string>Explode circles into polylines with two half circles</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0" colspan="3">
+      <widget class="QCheckBox" name="MultilineTextToSimpleText">
+       <property name="text">
+        <string>Explode multiline texts into multiple simple text blocks</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QWidget" name="Indent" native="true">
+       <property name="maximumSize">
+        <size>
+         <width>20</width>
+         <height>16777215</height>
+        </size>
+       </property>
+      </widget>
+     </item>
      <item row="3" column="2">
       <widget class="QComboBox" name="EllipseSegments">
        <property name="editable">
@@ -170,61 +238,13 @@
        </item>
       </widget>
      </item>
-     <item row="0" column="0" colspan="2">
-      <widget class="QLabel" name="SplineTolerance_Label">
-       <property name="text">
-        <string>Spline approximation tolerance:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0" colspan="3">
-      <widget class="QCheckBox" name="SplinesToLineSegments">
-       <property name="text">
-        <string>Explode splines to polylines with line segments</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0" colspan="2">
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>Ellipse segments (per full ellipse):</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="0" colspan="3">
+     <item row="5" column="0" colspan="3">
       <widget class="QCheckBox" name="TextToPolylines">
        <property name="text">
         <string>Explode text glyphs to polylines</string>
        </property>
        <property name="checked">
         <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="0" colspan="3">
-      <widget class="QCheckBox" name="MultilineTextToSimpleText">
-       <property name="text">
-        <string>Explode multiline texts into multiple simple text blocks</string>
-       </property>
-       <property name="checked">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QLabel" name="SplineSegments_Label">
-       <property name="text">
-        <string>Spline segments:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QWidget" name="Indent" native="true">
-       <property name="maximumSize">
-        <size>
-         <width>20</width>
-         <height>16777215</height>
-        </size>
        </property>
       </widget>
      </item>

@@ -285,6 +285,12 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QSet &lt; REntity::Id &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="queryAllViewports" cppName="queryAllViewports"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSet &lt; REntity::Id &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="queryContainedEntities"
     cppName="queryContainedEntities" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

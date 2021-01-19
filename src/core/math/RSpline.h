@@ -200,7 +200,7 @@ public:
     QList<RSpline> splitAtParams(const QList<double>& params) const;
 
     RPolyline toPolyline(int segments) const;
-    RPolyline approximateWithArcs(double tolerance) const;
+    RPolyline approximateWithArcs(double tolerance, double radiusLimit=RDEFAULT_MIN1) const;
 
     virtual QList<QSharedPointer<RShape> > getExploded(int segments = RDEFAULT_MIN1) const;
     QList<QSharedPointer<RShape> > getExplodedBezier(int segments) const;

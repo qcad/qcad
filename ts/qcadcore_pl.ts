@@ -238,11 +238,12 @@
 <context>
     <name>REntity</name>
     <message>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+94"/>
         <source>Referenced Block</source>
-        <translation type="obsolete">Blok</translation>
+        <translation type="unfinished">Blok</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+95"/>
+        <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+73"/>
@@ -260,7 +261,7 @@
         <location line="+1"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/core/RLayout.cpp" line="+82"/>
+        <location filename="../src/core/RLayout.cpp" line="+84"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -360,14 +361,13 @@
         <translation>Rodzaj</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-14"/>
+        <location line="+1"/>
         <source>Block</source>
         <translation>Blok</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+1"/>
         <source>Block ID</source>
-        <translation>Identyfikator bloku</translation>
+        <translation type="vanished">Identyfikator bloku</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -691,7 +691,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+827"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+832"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Wykryto rekursywne zależności bloku:</translation>
     </message>
@@ -824,7 +824,7 @@
         <translation type="vanished">Obramowanie (wielka)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+52"/>
+        <location filename="../src/core/RLinetype.cpp" line="+54"/>
         <source>Name</source>
         <translation>Nazwa</translation>
     </message>

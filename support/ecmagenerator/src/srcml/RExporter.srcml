@@ -366,6 +366,10 @@
         <expr_stmt><expr><name>pixelWidth</name> = <name>on</name></expr>;</expr_stmt>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>setEnablePatterns</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>enablePatterns</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
 <comment type="line">//    bool getCombineTransforms() const {</comment>
 <comment type="line">//        return combineTransforms;</comment>
 <comment type="line">//    }</comment>
@@ -395,8 +399,8 @@
     <decl_stmt><decl><type><name>bool</name></type> <name>clipping</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>pixelWidth</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>Qt</name>::<name>PenCapStyle</name></name></type> <name>penCapStyle</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>enablePatterns</name></decl>;</decl_stmt>
     <comment type="line">//bool combineTransforms;</comment>
-    <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name></type> <name>blockScales</name></decl>;</decl_stmt>
 
 </protected><private>private:
     <decl_stmt><decl><type><name><name>RS</name>::<name>ProjectionRenderingHint</name></name></type> <name>projectionRenderingHint</name></decl>;</decl_stmt>

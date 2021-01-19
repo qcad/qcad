@@ -382,6 +382,8 @@ void RTextRenderer::renderSimple() {
         painterPaths[i].setFeatureSize(featureSize);
     }
 
+    // add bounding box with negative feature size:
+    // only shown when text is smaller than threshold:
     RPainterPath bbPath;
     bbPath.addBox(boundingBox);
     bbPath.setFeatureSize(-featureSize);

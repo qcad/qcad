@@ -237,6 +237,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getVertexAngle" cppName="getVertexAngle"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+        <arg type="RS::Orientation" typeName="RS::Orientation"
+        name="orientation" hasDefault="true"
+        default="RS :: UnknownOrientation" isConst="false" />
+      </variant>
+    </method>
     <method name="stripWidths" cppName="stripWidths"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -568,6 +578,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RShape &amp;" typeName="RShape" name="shape"
         isConst="true" />
       </variant>
+    </method>
+    <method name="validate" cppName="validate" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="print" cppName="print" specifier="protected"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">

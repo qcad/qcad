@@ -24,6 +24,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="PixelWidth" />
       <value name="NoColorMode" />
       <value name="SimplePointDisplay" />
+      <value name="PolylineGen" />
+      <value name="NoPattern" />
     </enum>
     <constructor>
       <variant />
@@ -444,6 +446,32 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getSimplePointDisplay"
     cppName="getSimplePointDisplay" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setPolylineGen" cppName="setPolylineGen"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getPolylineGen" cppName="getPolylineGen"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setNoPattern" cppName="setNoPattern"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getNoPattern" cppName="getNoPattern"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="setPixelWidth" cppName="setPixelWidth"

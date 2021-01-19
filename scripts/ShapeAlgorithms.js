@@ -321,7 +321,7 @@ ShapeAlgorithms.getIntersectingShapes = function(doc, entityId, shape, extend) {
 
     // find other shapes that potentially intersect with the chosen entity:
     var ret = [];
-    // allow for error: especialy for ellipse segments bordering to tangential lines this is needed:
+    // allow for error: especially for ellipse segments bordering to tangential lines this is needed:
     var otherEntityIds;
 
     if (extend===true) {
@@ -798,6 +798,8 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
 
     // polyline:
     else if (isPolylineShape(shape)) {
+        // TODO: make sure point 1 is closer to the start of the polyline:
+
         var closed = shape.isGeometricallyClosed();
         if (closed) {
             shape.relocateStartPoint(cutDist1);

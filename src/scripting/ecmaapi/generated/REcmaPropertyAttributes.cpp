@@ -142,6 +142,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setUnitLess, "setUnitLess");
             
+            REcmaHelper::registerFunction(&engine, proto, isPercentage, "isPercentage");
+            
             REcmaHelper::registerFunction(&engine, proto, getLabel, "getLabel");
             
             REcmaHelper::registerFunction(&engine, proto, setLabel, "setLabel");
@@ -2876,6 +2878,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPropertyAttributes::setUnitLess", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyAttributes::isPercentage
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyAttributes::isPercentage", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::isPercentage";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyAttributes* self = 
+                        getSelf("isPercentage", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isPercentage();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.isPercentage().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyAttributes::isPercentage", context, engine);
             return result;
         }
          QScriptValue

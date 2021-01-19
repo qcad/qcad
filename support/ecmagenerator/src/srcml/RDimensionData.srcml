@@ -256,7 +256,7 @@
     <comment type="block">/**
      * Text string entered explicitly by user or null
      * or "&lt;&gt;" for the actual measurement or " " (one blank space)
-     * for supressing the text.
+     * for suppressing the text.
      */</comment>
     <decl_stmt><decl><type><name>QString</name></type> <name>text</name></decl>;</decl_stmt>
     <comment type="block">/** Upper tolerance limit */</comment>

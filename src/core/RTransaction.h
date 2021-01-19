@@ -141,6 +141,13 @@ public:
         keepHandles = on;
     }
 
+    /**
+     * Keep child entities (e.g. keep block attributes when deleting block references)
+     */
+    void setKeepChildren(bool on) {
+        keepChildren = on;
+    }
+
 //    void setUndoing(bool on) {
 //        undoing = on;
 //    }
@@ -358,7 +365,7 @@ protected:
     bool onlyChanges;
 
     /**
-     * True if caller is intereseted in list of objects that are affected
+     * True if caller is interested in list of objects that are affected
      * by this transaction.
      */
     bool recordAffectedObjects;
@@ -406,6 +413,11 @@ protected:
      * True to keep existing object handles (importers).
      */
     bool keepHandles;
+
+    /**
+     * True to keep and not delete child entities (block attributes for block references).
+     */
+    bool keepChildren;
 
     QMap<RObject::Id, RObject::Id> cloneIds;
 

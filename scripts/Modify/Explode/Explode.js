@@ -80,7 +80,9 @@ Explode.explodeSelection = function(di, toolTitle) {
     options["ellipseSegments"] = RSettings.getIntValue("Explode/EllipseSegments", 32);
     options["splinesToLineSegments"] = RSettings.getBoolValue("Explode/SplinesToLineSegments", false);
     options["textToPolylines"] = RSettings.getBoolValue("Explode/TextToPolylines", true);
+    options["textSplineToLineOrArc"] = RSettings.getBoolValue("Explode/TextSplineToLineOrArc", true);
     options["multilineTextToSimpleText"] = RSettings.getBoolValue("Explode/MultilineTextToSimpleText", true);
+    options["circlesToPolylines"] = RSettings.getBoolValue("Explode/CirclesToPolylines", true);
 
     var op = new RAddObjectsOperation();
     if (!isNull(toolTitle)) {
@@ -99,21 +101,15 @@ Explode.explodeSelection = function(di, toolTitle) {
             debugger;
         }
 
-        // these entity types are not explodable:
-        if (isPointEntity(entity) ||
-            isLineEntity(entity) ||
-            isXLineEntity(entity) ||
-            isRayEntity(entity) ||
-            isImageEntity(entity) ||
-            isArcEntity(entity) ||
-            isViewportEntity(entity)) {
-            continue;
-        }
-
         //var newShapes = [];
         //var newEntities = [];
 
         var news = Explode.explodeEntity(entity, options);
+
+        if (isNull(news)) {
+            // do nothing:
+            continue;
+        }
 
         // add explosion result and delete original:
         if (news.length!==0) {
@@ -184,13 +180,24 @@ Explode.explodeSelection = function(di, toolTitle) {
 };
 
 /**
- * \return Array of new shapes and entities.
+ * \return Array of new shapes and entities or undefined to do nothing.
  */
 Explode.explodeEntity = function(entity, options) {
     var ret = [];
 
     if (isNull(options)) {
         options = {};
+    }
+
+    // these entity types are not explodable:
+    if (isPointEntity(entity) ||
+        isLineEntity(entity) ||
+        isXLineEntity(entity) ||
+        isRayEntity(entity) ||
+        isImageEntity(entity) ||
+        isArcEntity(entity) ||
+        isViewportEntity(entity)) {
+        return undefined;
     }
 
     var k, e, n, d;
@@ -203,9 +210,11 @@ Explode.explodeEntity = function(entity, options) {
     var splineTolerance = options["splineTolerance"];
     var splineSegments = options["splineSegments"];
     var ellipseSegments = options["ellipseSegments"];
-    var splinesToLineSegments = options["splinesToLineSegments"]
-    var textToPolylines = options["textToPolylines"]
+    var splinesToLineSegments = options["splinesToLineSegments"];
+    var textToPolylines = options["textToPolylines"];
+    var textSplineToLineOrArc = options["textSplineToLineOrArc"];
     var multilineTextToSimpleText = options["multilineTextToSimpleText"];
+    var circlesToPolylines = options["circlesToPolylines"];
 
     if (isNull(splineTolerance)) {
         splineTolerance = RSettings.getDoubleValue("Explode/SplineTolerance", 0.01);
@@ -222,8 +231,14 @@ Explode.explodeEntity = function(entity, options) {
     if (isNull(textToPolylines)) {
         textToPolylines = RSettings.getBoolValue("Explode/TextToPolylines", true);
     }
+    if (isNull(textSplineToLineOrArc)) {
+        textSplineToLineOrArc = RSettings.getBoolValue("Explode/TextSplineToLineOrArc", true);
+    }
     if (isNull(multilineTextToSimpleText)) {
         multilineTextToSimpleText = RSettings.getBoolValue("Explode/MultilineTextToSimpleText", true);
+    }
+    if (isNull(circlesToPolylines)) {
+        circlesToPolylines = RSettings.getBoolValue("Explode/CirclesToPolylines", true);
     }
 
     // explode ellipse into polyline with arc segments:
@@ -236,17 +251,23 @@ Explode.explodeEntity = function(entity, options) {
             }
         }
         else {
-            continue;
+            return undefined;
         }
     }
 
     // explode circle into polyline with two arc segments:
     else if (isCircleEntity(entity)) {
-        var circle = entity.getData().castToShape();
-        polyline = new RPolyline();
-        polyline.appendShape(new RArc(circle.getCenter(), circle.getRadius(), 0.0, Math.PI, false));
-        polyline.appendShape(new RArc(circle.getCenter(), circle.getRadius(), Math.PI, 2*Math.PI, false));
-        ret.push(polyline);
+        if (circlesToPolylines) {
+            var circle = entity.getData().castToShape();
+            polyline = new RPolyline();
+            polyline.appendShape(new RArc(circle.getCenter(), circle.getRadius(), 0.0, Math.PI, false));
+            polyline.appendShape(new RArc(circle.getCenter(), circle.getRadius(), Math.PI, 2*Math.PI, false));
+            polyline.autoClose();
+            ret.push(polyline);
+        }
+        else {
+            return undefined;
+        }
     }
 
     // explode polyline into line and arc segments:
@@ -505,7 +526,9 @@ Explode.explodeEntity = function(entity, options) {
                     shape = shapes[n];
                     if (isSplineShape(shape)) {
                         // spline to arc or line or spline:
-                        shape = ShapeAlgorithms.splineToLineOrArc(shape, splineTolerance);
+                        if (textSplineToLineOrArc) {
+                            shape = ShapeAlgorithms.splineToLineOrArc(shape, splineTolerance);
+                        }
 
                         if (textToPolylines) {
                             // spline to polyline with arcs:

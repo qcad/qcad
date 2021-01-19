@@ -364,12 +364,13 @@ Cinza Claro</translatorcomment>
 <context>
     <name>REntity</name>
     <message>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+94"/>
         <source>Referenced Block</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Bloco referenciado</translation>
+        <translation>Bloco referenciado</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+95"/>
+        <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+73"/>
@@ -391,7 +392,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <location line="+1"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/core/RLayout.cpp" line="+82"/>
+        <location filename="../src/core/RLayout.cpp" line="+84"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -515,7 +516,7 @@ Tipo Ordinal</translatorcomment>
         <translation>Tipo</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-14"/>
+        <location line="+1"/>
         <source>Block</source>
         <translatorcomment>--exact match--
 --file: Block_pt.ts--
@@ -525,9 +526,8 @@ Lista de Blocos</translatorcomment>
         <translation>Bloco</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+1"/>
         <source>Block ID</source>
-        <translation>ID do Bloco</translation>
+        <translation type="vanished">ID do Bloco</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -865,7 +865,7 @@ Abre diálogo de cores</translatorcomment>
         <translation type="vanished">Margens de trama</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+827"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+832"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Foi detectada uma referência de bloco circular (recursiva):</translation>
     </message>
@@ -1074,7 +1074,7 @@ Borda (grande)</translatorcomment>
         <translation type="vanished">Margem (grande)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+52"/>
+        <location filename="../src/core/RLinetype.cpp" line="+54"/>
         <source>Name</source>
         <translation>Nome</translation>
     </message>

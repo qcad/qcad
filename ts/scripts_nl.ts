@@ -3849,7 +3849,7 @@ is al in de lijst.</translation>
         <translation>Lengte:</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+64"/>
         <source>Entity is not a block reference.</source>
         <translation>Object is niet een blok referentie.</translation>
     </message>
@@ -4746,32 +4746,42 @@ is al in de lijst.</translation>
         <translation>&amp;Opbreken</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+197"/>
+        <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+244"/>
         <source>Explode text glyphs to polylines</source>
         <translation>Tekstcontouren opbreken in polylines</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="-121"/>
         <source>Spline segments:</source>
         <translation>Spline segmenten:</translation>
     </message>
     <message>
-        <location line="-27"/>
+        <location line="+7"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Ellipse segmenten (per volledige ellips):</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="-111"/>
         <source>Explode splines to polylines with line segments</source>
         <translation>Splines opbreken in polylijnen met lijnstukken</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+125"/>
+        <source>Convert splines from texts to arcs or lines if appropriate</source>
+        <translation>Zet eventueel splines om van teksten naar bogen of lijnen</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Explode circles into polylines with two half circles</source>
+        <translation>Cirkels in polylijnen laten exploderen met twee halve cirkels</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
         <translation>Teksten met meerdere regels in meerdere eenvoudige tekstblokken opbreken</translation>
     </message>
     <message>
-        <location line="-31"/>
+        <location line="-27"/>
         <source>Spline approximation tolerance:</source>
         <translation>Spline tolerantie:</translation>
     </message>
@@ -6783,22 +6793,22 @@ BUG: Interferes with group castings.</source>
         <translation>Decimale punt:</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Cartesian coordinate separator:</source>
         <translation>Scheidingsteken voor Cartesiaanse coördinaten:</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Polar coordinate separator:</source>
         <translation>Scheidingsteken voor polaire coördinaten:</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Relative coordinate prefix:</source>
         <translation>Prefix voor relatieve coördinaten:</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Examples</source>
         <translation>Voorbeelden</translation>
     </message>
@@ -7902,9 +7912,8 @@ getoond in zoekresultaten:</translation>
         <translation>Bijwerken van bestandssysteem</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>0</source>
-        <translation>0</translation>
+        <translation type="vanished">0</translation>
     </message>
 </context>
 <context>
@@ -9799,12 +9808,12 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1469"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1470"/>
         <source>*VARIES*</source>
         <translation>*VARIEERT*</translation>
     </message>
     <message>
-        <location line="-1276"/>
+        <location line="-1277"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -9864,7 +9873,7 @@ getoond in zoekresultaten:</translation>
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+145"/>
         <source>Use auto measurement</source>
         <translation>Automatisch</translation>
     </message>
@@ -11310,9 +11319,8 @@ getoond in zoekresultaten:</translation>
         <translation type="vanished">1</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
         <source>Rotate:</source>
-        <translation>Roteren:</translation>
+        <translation type="vanished">Roteren:</translation>
     </message>
 </context>
 <context>
@@ -11326,7 +11334,7 @@ getoond in zoekresultaten:</translation>
         <translation type="vanished">Radius gedaald tot onder 0 na %1 concentrische boog(en).</translation>
     </message>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1423"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1425"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Ten minste twee punten zijn identiek.</translation>
@@ -11506,6 +11514,11 @@ getoond in zoekresultaten:</translation>
         <location line="+5"/>
         <source>Draw rectangle from two corners</source>
         <translation>Rechthoek van twee hoeken tekenen</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
+        <source>Rotate:</source>
+        <translation>Roteren:</translation>
     </message>
 </context>
 <context>
@@ -12323,7 +12336,7 @@ getoond in zoekresultaten:</translation>
         <translation>Standaardwaarde:</translation>
     </message>
     <message>
-        <location line="+271"/>
+        <location line="+269"/>
         <source>&amp;Undo</source>
         <translation>&amp;Herstel</translation>
     </message>
@@ -12383,12 +12396,12 @@ getoond in zoekresultaten:</translation>
         <translation>&amp;Speciale tekens...</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+310"/>
         <source>Others...</source>
         <translation>Andere...</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+138"/>
         <source>Degree</source>
         <translation>Graad</translation>
     </message>
@@ -13761,7 +13774,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+865"/>
+        <location filename="../scripts/library.js" line="+959"/>
         <source>Objects</source>
         <translation>Objecten</translation>
     </message>
@@ -14197,7 +14210,7 @@ getoond in zoekresultaten:</translation>
         <translation>Onbekende object</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+102"/>
         <source>All CAD Files</source>
         <translation>Alle CAD bestanden</translation>
     </message>

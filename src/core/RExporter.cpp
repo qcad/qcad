@@ -59,6 +59,7 @@ RExporter::RExporter()
       clipping(false),
       pixelWidth(false),
       penCapStyle(Qt::RoundCap),
+      enablePatterns(true),
       //combineTransforms(true),
       projectionRenderingHint(RS::RenderThreeD) {
 
@@ -79,6 +80,7 @@ RExporter::RExporter(RDocument& document, RMessageHandler *messageHandler, RProg
       clipping(false),
       pixelWidth(false),
       penCapStyle(Qt::RoundCap),
+      enablePatterns(true),
       //combineTransforms(true),
       projectionRenderingHint(RS::RenderThreeD) {
 
@@ -934,6 +936,9 @@ void RExporter::exportBox(const RBox& box) {
 }
 
 RLinetypePattern RExporter::getLinetypePattern() {
+    if (!enablePatterns) {
+        return RLinetypePattern();
+    }
     return currentLinetypePattern;
 }
 
@@ -960,7 +965,7 @@ double RExporter::exportLine(const RLine& line, double offset) {
     // continuous line or
     // we are in draft mode or
     // QCAD is configured to show screen based line patterns
-    if (draftMode || getScreenBasedLinetypes() || twoColorSelectedMode) {
+    if (draftMode || getScreenBasedLinetypes() || twoColorSelectedMode || !enablePatterns) {
         exportLineSegment(line, angle);
         return ret;
     }
@@ -1131,7 +1136,7 @@ void RExporter::exportArc(const RArc& arc, double offset) {
         return;
     }
 
-    if (getEntity() == NULL || draftMode || getScreenBasedLinetypes() || twoColorSelectedMode) {
+    if (getEntity() == NULL || draftMode || getScreenBasedLinetypes() || twoColorSelectedMode || !enablePatterns) {
         exportArcSegment(arc);
         return;
     }

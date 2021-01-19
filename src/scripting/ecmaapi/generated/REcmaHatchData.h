@@ -70,6 +70,9 @@
         getCustomPattern
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setCustomPattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         cloneOnChange
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -3625,7 +3625,7 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+64"/>
         <source>Entity is not a block reference.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4495,32 +4495,42 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+176"/>
+        <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+137"/>
         <source>Spline approximation tolerance:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-118"/>
         <source>Explode splines to polylines with line segments</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+111"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
+        <source>Convert splines from texts to arcs or lines if appropriate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Explode circles into polylines with two half circles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+90"/>
         <source>Explode text glyphs to polylines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-80"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-41"/>
         <source>Spline segments:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6293,22 +6303,22 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Cartesian coordinate separator:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Polar coordinate separator:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Relative coordinate prefix:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Examples</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7316,11 +7326,6 @@ shown in search results:</source>
     <message>
         <location line="+27"/>
         <source>Update DB from file system</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>0</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -9190,7 +9195,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+145"/>
         <source>Use auto measurement</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10452,16 +10457,11 @@ shown in search results:</source>
         <source>Radius:</source>
         <translation type="unfinished">Sugár:</translation>
     </message>
-    <message>
-        <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
-        <source>Rotate:</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1423"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1425"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation type="unfinished"></translation>
@@ -10624,6 +10624,11 @@ shown in search results:</source>
     <message>
         <location line="+5"/>
         <source>Draw rectangle from two corners</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
+        <source>Rotate:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -11408,7 +11413,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+271"/>
+        <location line="+269"/>
         <source>&amp;Undo</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11468,12 +11473,12 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+310"/>
         <source>Others...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+138"/>
         <source>Degree</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12755,7 +12760,7 @@ shown in search results:</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+865"/>
+        <location filename="../scripts/library.js" line="+959"/>
         <source>Objects</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13175,7 +13180,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+102"/>
         <source>All CAD Files</source>
         <translation type="unfinished"></translation>
     </message>

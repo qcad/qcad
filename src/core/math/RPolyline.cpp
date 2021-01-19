@@ -364,8 +364,8 @@ void RPolyline::insertVertex(int index, const RVector& vertex, double bulgeBefor
         bulges[index-1] = bulgeBefore;
     }
     bulges.insert(index, bulgeAfter);
-    startWidths.insert(index, RNANDOUBLE);
-    endWidths.insert(index, RNANDOUBLE);
+    startWidths.insert(index, 0.0);
+    endWidths.insert(index, 0.0);
 
     Q_ASSERT(vertices.length()==bulges.length());
     Q_ASSERT(vertices.length()==startWidths.length());
@@ -711,7 +711,7 @@ QList<double> RPolyline::getEndWidths() const {
 }
 
 /**
- * Marks the poyline as logically (explicitely) closed.
+ * Marks the poyline as logically (explicitly) closed.
  * The first and last node are usually not identical. Logically
  * closed polylines have an additional segment from start to end point.
  */
@@ -728,7 +728,7 @@ bool RPolyline::isClosed() const {
 
 /**
  * \return True is this polyline is geometrically closed. If this polyline is
- * logically closed it is implicitely also geometrically closed.
+ * logically closed it is implicitly also geometrically closed.
  */
 bool RPolyline::isGeometricallyClosed(double tolerance) const {
     return isClosed() || getStartPoint().getDistanceTo(getEndPoint()) < tolerance;
@@ -859,7 +859,7 @@ RS::Orientation RPolyline::getOrientation(bool implicitelyClosed) const {
         previousShape = shape;
     }
 
-    // TOOD: fails for large arc (>180d) at bottom left corner, creating round bottom left shape:
+    // TODO: fails for large arc (>180d) at bottom left corner, creating round bottom left shape:
 //    double l;
 //    RVector p;
 //    QList<RVector> list;
@@ -1511,7 +1511,7 @@ double RPolyline::getLengthTo(const RVector& p, bool limited) const {
 }
 
 /**
- * \return Length of all segements from first index (fromIndex) to last index (toIndex),
+ * \return Length of all segments from first index (fromIndex) to last index (toIndex),
  * excluding toIndex.
  */
 double RPolyline::getSegmentsLength(int fromIndex, int toIndex) const {
@@ -1999,7 +1999,7 @@ QList<RVector> RPolyline::verifyTangency(double toleranceMin, double toleranceMa
 
 /**
  * Modifies (bevels, rounds, trims) the corner of this polyline between segmentIndex1 and segmentIndex2
- * at the given segment endings. The given cornerShape (bevel, rouding) is inserted between.
+ * at the given segment endings. The given cornerShape (bevel, rounding) is inserted between.
  */
 RPolyline RPolyline::modifyPolylineCorner(const RShape& trimmedShape1, RS::Ending ending1, int segmentIndex1,
                                      const RShape& trimmedShape2, RS::Ending ending2, int segmentIndex2,

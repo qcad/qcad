@@ -193,6 +193,10 @@ public:
         data.setBulgeAt(i, b);
     }
 
+    double getVertexAngle(int i, RS::Orientation orientation = RS::UnknownOrientation) const {
+        return data.getVertexAngle(i, orientation);
+    }
+
     void stripWidths() {
         data.stripWidths();
     }
@@ -375,6 +379,8 @@ public:
     bool containsShape(const RShape& shape) const {
         return data.containsShape(shape);
     }
+
+    virtual bool validate();
 
 protected:
     virtual void print(QDebug dbg) const;

@@ -137,7 +137,6 @@ int main(int argc, char *argv[]) {
 #if QT_VERSION >= 0x050600
     //_putenv_s("QT_SCALE_FACTOR", "auto");
     if (RSettings::getBoolValue("Ui/QT_AUTO_SCREEN_SCALE_FACTOR", true)==true) {
-        qDebug() << "auto scale";
         _putenv_s("QT_AUTO_SCREEN_SCALE_FACTOR", "1");
     }
     if (RSettings::getBoolValue("Ui/EnableHighDpiScaling", false)==true) {

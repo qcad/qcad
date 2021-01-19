@@ -518,10 +518,15 @@ SvgImporter.prototype.importPath = function(dData) {
 
     var shapes = [];
 
+    var rxLeadingZero = new RegExp(" 0([0-9])", "g");
     for (var i=0; i<segs.length; i++) {
         var seg = segs[i];
         if (seg.trim().length===0) {
             continue;
+        }
+
+        while (seg.match(rxLeadingZero)) {
+            seg = seg.replace(rxLeadingZero, " 0 $1");
         }
 
         var cmd = seg.match(/[mlhvcsqtaz]/i);

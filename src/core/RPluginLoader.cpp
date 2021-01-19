@@ -97,7 +97,7 @@ void RPluginLoader::loadPlugins(bool init) {
 
 
 #ifndef Q_OS_MAC
-    // disable OpenGL plugin if not explicitely enabled:
+    // disable OpenGL plugin if not explicitly enabled:
     //bool loadOpenGL = RSettings::getBoolValue("PluginLoader/qcadgles3d", false);
     //RSettings::setValue("PluginLoader/qcadgles3d", loadOpenGL);
 #endif

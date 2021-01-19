@@ -278,7 +278,7 @@ QPair<QVariant, RPropertyAttributes> RHatchEntity::getProperty(
     }
 
     if (propertyTypeId == PropertyTransparency) {
-        return qMakePair(QVariant(data.transparency), RPropertyAttributes());
+        return qMakePair(QVariant(data.transparency), RPropertyAttributes(RPropertyAttributes::UnitLess));
     }
 
     if (propertyTypeId == PropertyPatternName) {
@@ -286,7 +286,7 @@ QPair<QVariant, RPropertyAttributes> RHatchEntity::getProperty(
     } else if (propertyTypeId == PropertyEntityPattern) {
         return qMakePair(QVariant(data.hasCustomPattern() ? QT_TRANSLATE_NOOP("REntity", "Yes") : QT_TRANSLATE_NOOP("REntity", "No")), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     } else if (propertyTypeId == PropertyScaleFactor) {
-        return qMakePair(QVariant(data.scaleFactor), RPropertyAttributes(op));
+        return qMakePair(QVariant(data.scaleFactor), RPropertyAttributes(RPropertyAttributes::UnitLess|op));
     } else if (propertyTypeId == PropertyAngle) {
         return qMakePair(QVariant(data.angle), RPropertyAttributes(RPropertyAttributes::Angle|op));
     } else if (propertyTypeId == PropertyOriginX) {

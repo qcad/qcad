@@ -241,7 +241,7 @@
         <location filename="../src/core/RBlock.cpp" line="+63"/>
         <location filename="../src/core/RLayer.cpp" line="+93"/>
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
-        <location filename="../src/core/RLayout.cpp" line="+80"/>
+        <location filename="../src/core/RLayout.cpp" line="+82"/>
         <source>Name</source>
         <translation>Jméno</translation>
     </message>
@@ -315,9 +315,14 @@
         <translation>Rozvržení</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
+        <location filename="../src/core/REntity.cpp" line="+94"/>
         <source>Block</source>
         <translation>Blok</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
+        <source>Referenced Block</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -368,18 +373,17 @@
         <translation>Vlastnosti</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+93"/>
+        <location filename="../src/core/REntity.cpp" line="-1"/>
         <location filename="../src/core/RObject.cpp" line="+69"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Block ID</source>
-        <translation>ID bloku</translation>
+        <translation type="vanished">ID bloku</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Layer</source>
         <translation>Vrstva</translation>
     </message>
@@ -686,7 +690,7 @@
         <translation>Celkově</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+827"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+832"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Detekováno kruhové (rekurzivní) odkazování bloku</translation>
     </message>
@@ -707,7 +711,7 @@
 <context>
     <name>RLinetype</name>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+52"/>
+        <location filename="../src/core/RLinetype.cpp" line="+54"/>
         <source>Name</source>
         <translation>Jméno</translation>
     </message>

@@ -30,7 +30,7 @@
 
 /**
  * Stores and manages all data that defines the geometry and
- * appearance of an infinit line (xline) entity.
+ * appearance of an infinite line (xline) entity.
  *
  * \scriptable
  * \copyable

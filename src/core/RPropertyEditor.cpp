@@ -450,14 +450,14 @@ QStringList RPropertyEditor::getPropertyTitles(const QString& group) {
 }
 
 /**
- * \return Property value of given propery.
+ * \return Property value of given property.
  */
 QVariant RPropertyEditor::getPropertyValue(const RPropertyTypeId& propertyTypeId) {
     return getPropertyValue(propertyTypeId.getPropertyGroupTitle(), propertyTypeId.getPropertyTitle());
 }
 
 /**
- * \return Property value of given propery.
+ * \return Property value of given property.
  */
 QVariant RPropertyEditor::getPropertyValue(const QString& group, const QString& title) {
     if (!combinedProperties.contains(group)) {
@@ -473,7 +473,7 @@ QVariant RPropertyEditor::getPropertyValue(const QString& group, const QString& 
 }
 
 /**
- * \return Property attributes of given propery.
+ * \return Property attributes of given property.
  */
 RPropertyAttributes RPropertyEditor::getPropertyAttributes(const RPropertyTypeId& propertyTypeId) {
     if (propertyTypeId.isCustom()) {
@@ -486,7 +486,7 @@ RPropertyAttributes RPropertyEditor::getPropertyAttributes(const RPropertyTypeId
 }
 
 /**
- * \return Property attributes for given propery.
+ * \return Property attributes for given property.
  */
 RPropertyAttributes RPropertyEditor::getPropertyAttributes(const QString& group, const QString& title) {
     if (!combinedProperties.contains(group)) {

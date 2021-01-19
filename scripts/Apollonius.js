@@ -29,7 +29,7 @@ function Apollonius() {
 Apollonius.constructionShapes = [];
 
 /**
- * \return Solutions for circles (<=8) that are tangetial to the three given shapes.
+ * \return Solutions for circles (<=8) that are tangential to the three given shapes.
  */
 Apollonius.getSolutions = function(shape1, shape2, shape3) {
     if (isArray(shape1) && isNull(shape2) && isNull(shape3)) {
@@ -111,14 +111,14 @@ Apollonius.getSolutions = function(shape1, shape2, shape3) {
 };
 
 /**
- * \return Solutions for circles that are tangetial to the three given points.
+ * \return Solutions for circles that are tangential to the three given points.
  */
 Apollonius.getSolutionsPPP = function(point1, point2, point3) {
     return RCircle.createFrom3Points(point1.position, point2.position, point3.position);
 };
 
 /**
- * \return Solutions for circles that are tangetial to the three given circles.
+ * \return Solutions for circles that are tangential to the three given circles.
  */
 Apollonius.getSolutionsCCC = function(c1, c2, c3, intersect) {
     if (!isCircleShape(c1) ||
@@ -773,7 +773,7 @@ Apollonius.getRadicalAxis = function(c1, c2, length) {
 
 
 /**
- * \return Solutions for circles (<=4) that are tangetial to the three given lines.
+ * \return Solutions for circles (<=4) that are tangential to the three given lines.
  */
 Apollonius.getSolutionsLLL = function(line1, line2, line3) {
     if (!isLineBasedShape(line1) ||
@@ -849,7 +849,7 @@ Apollonius.getSolutionsLLL = function(line1, line2, line3) {
 
 
 /**
- * \return Solutions for circles that are tangetial to the two given circles
+ * \return Solutions for circles that are tangential to the two given circles
  * and the given point.
  */
 Apollonius.getSolutionsPCC = function(point, circle1, circle2) {
@@ -883,7 +883,7 @@ Apollonius.getSolutionsPCC = function(point, circle1, circle2) {
 };
 
 /**
- * \return Solutions for circles that are tangetial to the two given points
+ * \return Solutions for circles that are tangential to the two given points
  * and the given circle.
  */
 Apollonius.getSolutionsPPC = function(point1, point2, circle) {
@@ -910,7 +910,7 @@ Apollonius.getSolutionsPPC = function(point1, point2, circle) {
 };
 
 /**
- * \return Solutions for circles that are tangetial to the two given points
+ * \return Solutions for circles that are tangential to the two given points
  * and the given line.
  */
 Apollonius.getSolutionsPPL = function(point1, point2, line) {
@@ -941,7 +941,7 @@ Apollonius.getSolutionsPPL = function(point1, point2, line) {
 };
 
 /**
- * \return Solutions for circles that are tangetial to the two given lines
+ * \return Solutions for circles that are tangential to the two given lines
  * and the given circle.
  */
 Apollonius.getSolutionsLLC = function(line1, line2, circle) {
@@ -1021,7 +1021,7 @@ Apollonius.getSolutionsLLC = function(line1, line2, circle) {
 };
 
 /**
- * \return Solutions for circles that are tangetial to the given line and the
+ * \return Solutions for circles that are tangential to the given line and the
  * two given circles.
  */
 Apollonius.getSolutionsLCC = function(line, circle1, circle2) {
@@ -1129,7 +1129,7 @@ Apollonius.getSolutionsLCC = function(line, circle1, circle2) {
 };
 
 /**
- * \return Solutions for circles that are tangetial to the given point, line
+ * \return Solutions for circles that are tangential to the given point, line
  * and circle.
  */
 Apollonius.getSolutionsPLC = function(point, line, circle) {
@@ -1283,7 +1283,7 @@ Apollonius.getSolutionsPLC = function(point, line, circle) {
 };
 
 /**
- * \return Solutions for circles that are tangetial to the given point
+ * \return Solutions for circles that are tangential to the given point
  * and the given lines.
  */
 Apollonius.getSolutionsPLL = function(point, line1, line2) {
@@ -1406,7 +1406,7 @@ Apollonius.getSolutionsPLL = function(point, line1, line2) {
                     line = new RLine(ipsLL[0], point.position);
                 }
 
-                // intersections beteeen line L and circle C -> G, H:
+                // intersections between line L and circle C -> G, H:
                 var ipsLC = line.getIntersectionPoints(circle, false);
                 if (ipsLC.length!==2) {
                     continue;

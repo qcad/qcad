@@ -238,11 +238,12 @@
 <context>
     <name>REntity</name>
     <message>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+94"/>
         <source>Referenced Block</source>
-        <translation type="obsolete">参照ブロック</translation>
+        <translation type="unfinished">参照ブロック</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+95"/>
+        <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+73"/>
@@ -260,7 +261,7 @@
         <location line="+1"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/core/RLayout.cpp" line="+82"/>
+        <location filename="../src/core/RLayout.cpp" line="+84"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -360,15 +361,14 @@
         <translation>タイプ</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-14"/>
+        <location line="+1"/>
         <source>Block</source>
         <translation>ブロック</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+1"/>
         <source>Block ID</source>
         <translatorcomment>never shown to user</translatorcomment>
-        <translation>Block ID</translation>
+        <translation type="vanished">Block ID</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -691,7 +691,7 @@
         <translation>最大範囲</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+827"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+832"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>回状（再起的）ブロック参照が検出されました:</translation>
     </message>
@@ -823,7 +823,7 @@
         <translation type="vanished">ボーダー（大）</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+52"/>
+        <location filename="../src/core/RLinetype.cpp" line="+54"/>
         <source>Name</source>
         <translation>名前</translation>
     </message>

@@ -230,7 +230,7 @@ AddOn.prototype.preferenceFileExists = function() {
 
 /**
  * \return True if shortcuts can be defined for this add-on (default) or
- *      false if a add-on explicitely defines, that is does not support
+ *      false if a add-on explicitly defines, that is does not support
  *      shortcuts (ClassName.hasShortcuts()).
  */
 AddOn.prototype.hasShortcuts = function() {

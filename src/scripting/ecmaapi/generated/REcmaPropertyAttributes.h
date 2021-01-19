@@ -184,6 +184,9 @@
         setUnitLess
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isPercentage
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLabel
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -83,6 +83,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setAllowAll, "setAllowAll");
             
+            REcmaHelper::registerFunction(&engine, proto, setKeepChildren, "setKeepChildren");
+            
             REcmaHelper::registerFunction(&engine, proto, setTransactionGroup, "setTransactionGroup");
             
             REcmaHelper::registerFunction(&engine, proto, getTransactionGroup, "getTransactionGroup");
@@ -563,6 +565,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaOperation::setAllowAll", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaOperation::setKeepChildren
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaOperation::setKeepChildren", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaOperation::setKeepChildren";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    ROperation* self = 
+                        getSelf("setKeepChildren", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setKeepChildren(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for ROperation.setKeepChildren().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaOperation::setKeepChildren", context, engine);
             return result;
         }
          QScriptValue

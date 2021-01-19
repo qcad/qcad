@@ -66,6 +66,9 @@
         setAllowAll
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setKeepChildren
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setTransactionGroup
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -73,7 +73,7 @@ public:
         OnRequest = 0x400000,            //!< Property shown on request (slow to compute)
         Location = 0x800000,             //!< Property affected when transforming
         RefPoint = 0x1000000,            //!< Property affected when moving reference point
-        Geometry = Location | RefPoint,  //!< Property affected when chaning geometry (Location | RefPoint)
+        Geometry = Location | RefPoint,  //!< Property affected when changing geometry (Location | RefPoint)
         Scale = 0x2000000,               //!< Property is scale (1:2, 5"=1", ...)
         Area = 0x4000000,                //!< Property is area (relevant for formatting of value)
         UnitLess = 0x8000000             //!< Property has no unit (linetype scale, draw order, ...)
@@ -277,6 +277,10 @@ public:
 
     void setUnitLess(bool v) {
         setOption(UnitLess, v);
+    }
+
+    bool isPercentage() const {
+        return options.testFlag(Percentage);
     }
 
     QString getLabel() const {

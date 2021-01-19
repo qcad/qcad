@@ -36,6 +36,9 @@ public:
     RPainterPathExporter() :
         RExporter(), exportZeroLinesAsPoints(true), ignoreZeroLines(false) { }
 
+    RPainterPathExporter(RDocument& doc) :
+        RExporter(doc), exportZeroLinesAsPoints(true), ignoreZeroLines(false) { }
+
     virtual void exportLineSegment(const RLine& line, double angle = RNANDOUBLE);
     virtual void exportPainterPaths(const QList<RPainterPath>& paths, double z = 0.0);
 

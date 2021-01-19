@@ -289,6 +289,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setPixelWidth, "setPixelWidth");
             
+            REcmaHelper::registerFunction(&engine, proto, setEnablePatterns, "setEnablePatterns");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RExporter*>(), *proto);
 
@@ -8182,6 +8184,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::setPixelWidth", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::setEnablePatterns
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::setEnablePatterns", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::setEnablePatterns";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("setEnablePatterns", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setEnablePatterns(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.setEnablePatterns().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::setEnablePatterns", context, engine);
             return result;
         }
          QScriptValue REcmaExporter::toString

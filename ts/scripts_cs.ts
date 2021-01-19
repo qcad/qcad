@@ -3794,7 +3794,7 @@ již v seznamu je.</translation>
         <translation>Délka:</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+64"/>
         <source>Entity is not a block reference.</source>
         <translation>Prvek není reference bloku.</translation>
     </message>
@@ -4660,32 +4660,42 @@ již v seznamu je.</translation>
         <translation>&amp;Roztrhat</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+190"/>
+        <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+130"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Segmenty elipsy (na celou elipsu):</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="-7"/>
         <source>Spline segments:</source>
         <translation>Segmenty křivky</translation>
     </message>
     <message>
-        <location line="-41"/>
+        <location line="+14"/>
         <source>Spline approximation tolerance:</source>
         <translation>Aproximovaná tolerance křivky</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+7"/>
+        <source>Convert splines from texts to arcs or lines if appropriate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Explode circles into polylines with two half circles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+90"/>
         <source>Explode text glyphs to polylines</source>
         <translation>Roztrhat text na lomené čáry</translation>
     </message>
     <message>
-        <location line="-14"/>
+        <location line="-225"/>
         <source>Explode splines to polylines with line segments</source>
         <translation>Roztrhat křivky na lomené čáry s úsečkovými segmenty</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+145"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
         <translation>Roztrhat víceřádkové texty do více jednoduchých textových bloků</translation>
     </message>
@@ -6557,22 +6567,22 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Cartesian coordinate separator:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Polar coordinate separator:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Relative coordinate prefix:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Examples</source>
         <translation>Příklady</translation>
     </message>
@@ -7636,9 +7646,8 @@ ve výsledcích vyhledávání:</translation>
         <translation>Aktualizace DB souboru ze souborového systému</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>0</source>
-        <translation>0</translation>
+        <translation type="vanished">0</translation>
     </message>
 </context>
 <context>
@@ -9580,7 +9589,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+145"/>
         <source>Use auto measurement</source>
         <translation>Použít automatické měření</translation>
     </message>
@@ -10964,16 +10973,11 @@ ve výsledcích vyhledávání:</translation>
         <source>1</source>
         <translation type="vanished">1</translation>
     </message>
-    <message>
-        <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
-        <source>Rotate:</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1423"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1425"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Alespoň 2 body jsou identické.</translation>
@@ -11153,6 +11157,11 @@ ve výsledcích vyhledávání:</translation>
         <location line="+5"/>
         <source>Draw rectangle from two corners</source>
         <translation>Nakreslit obdélník pomocí 2 vrcholů</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
+        <source>Rotate:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -11966,7 +11975,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Výchozí hodnota:</translation>
     </message>
     <message>
-        <location line="+271"/>
+        <location line="+269"/>
         <source>&amp;Undo</source>
         <translation>&amp;Zpět</translation>
     </message>
@@ -12026,12 +12035,12 @@ ve výsledcích vyhledávání:</translation>
         <translation>&amp;Speciální znaky...</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+310"/>
         <source>Others...</source>
         <translation>Další...</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+138"/>
         <source>Degree</source>
         <translation>Stupeň</translation>
     </message>
@@ -13346,7 +13355,7 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+865"/>
+        <location filename="../scripts/library.js" line="+959"/>
         <source>Objects</source>
         <translation>Objektů</translation>
     </message>
@@ -13782,7 +13791,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Neznámý prvek</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+102"/>
         <source>All CAD Files</source>
         <translation>Všechny CAD soubory</translation>
     </message>

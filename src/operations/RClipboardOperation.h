@@ -156,12 +156,17 @@ public:
         copyEmptyBlocks = on;
     }
 
+    void setCopyAllLayers(bool on) {
+        copyAllLayers = on;
+    }
+
 private:
     QMap<QString, QSharedPointer<RLayer> > copiedLayers;
     QMap<QString, QSharedPointer<RLinetype> > copiedLinetypes;
     QMap<QString, QSharedPointer<RBlock> > copiedBlocks;
     QSet<RBlock::Id> copiedBlockContents;
     bool copyEmptyBlocks;
+    bool copyAllLayers;
 };
 
 Q_DECLARE_METATYPE(RClipboardOperation*)

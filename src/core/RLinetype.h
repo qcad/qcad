@@ -51,6 +51,7 @@ class QCADCORE_EXPORT RLinetype: public RObject {
     //Q_DECLARE_TR_FUNCTIONS(RLinetype);
 
 public:
+    static RPropertyTypeId PropertyType;
     static RPropertyTypeId PropertyName;
     static RPropertyTypeId PropertyDescription;
     static RPropertyTypeId PropertyMetric;

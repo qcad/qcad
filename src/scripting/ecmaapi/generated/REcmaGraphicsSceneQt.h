@@ -68,6 +68,9 @@
         endPath
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        transformAndApplyPatternPath
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         unexportEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

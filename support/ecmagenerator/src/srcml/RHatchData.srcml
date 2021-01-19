@@ -69,6 +69,10 @@
         <return>return <expr><name>pattern</name></expr>;</return>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>setCustomPattern</name><parameter_list>(<param><decl><type><name>const</name> <name>RPattern</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>pattern</name> = <name>p</name></expr>;</expr_stmt>
+    }</block></function>
+
     <function><type><name>virtual</name> <name>bool</name></type> <name>cloneOnChange</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <comment type="line">// force clone to preserve custom pattern for undo:</comment>
         <comment type="line">//return hasCustomPattern();</comment>
@@ -130,9 +134,11 @@
         <return>return <expr><name>originPoint</name></expr>;</return>
     }</block></function>
 
-    <function><type><name>void</name></type> <name>setOriginPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>op</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>void</name></type> <name>setOriginPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>op</name></decl></param>, <param><decl><type><name>bool</name></type> <name>clearCustom</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>originPoint</name> = <name>op</name></expr>;</expr_stmt>
-        <constructor_decl><name>clearCustomPattern</name><parameter_list>()</parameter_list>;</constructor_decl>
+        <if>if <condition>(<expr><name>clearCustom</name></expr>)</condition><then> <block>{
+            <constructor_decl><name>clearCustomPattern</name><parameter_list>()</parameter_list>;</constructor_decl>
+        }</block></then></if>
     }</block></function>
 
     <function><type><name>QString</name></type> <name>getPatternName</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
@@ -152,10 +158,7 @@
         <expr_stmt><expr><name>transparency</name> = <name>t</name></expr>;</expr_stmt>
     }</block></function>
 
-    <function><type><name>void</name></type> <name>clearCustomPattern</name><parameter_list>()</parameter_list> <block>{
-        <expr_stmt><expr><name>pattern</name>.<call><name>clear</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
-        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
-    }</block></function>
+    <function_decl><type><name>void</name></type> <name>clearCustomPattern</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>newLoop</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>cancelLoop</name><parameter_list>()</parameter_list>;</function_decl>

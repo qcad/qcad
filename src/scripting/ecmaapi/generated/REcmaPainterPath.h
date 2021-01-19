@@ -213,6 +213,18 @@
         getSimplePointDisplay
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setPolylineGen
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPolylineGen
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setNoPattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getNoPattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setPixelWidth
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

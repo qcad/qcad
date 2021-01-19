@@ -241,7 +241,7 @@
         <location filename="../src/core/RBlock.cpp" line="+63"/>
         <location filename="../src/core/RLayer.cpp" line="+93"/>
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
-        <location filename="../src/core/RLayout.cpp" line="+80"/>
+        <location filename="../src/core/RLayout.cpp" line="+82"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>
@@ -315,7 +315,7 @@
         <translation>Layout</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+827"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+832"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Circular (recursive) block referencing detected:</translation>
     </message>
@@ -325,9 +325,14 @@
         <translation>Block name:</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
+        <location filename="../src/core/REntity.cpp" line="+94"/>
         <source>Block</source>
         <translation>Block</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
+        <source>Referenced Block</source>
+        <translation>Referenced Block</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -378,18 +383,17 @@
         <translation>Attributes</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+93"/>
+        <location filename="../src/core/REntity.cpp" line="-1"/>
         <location filename="../src/core/RObject.cpp" line="+69"/>
         <source>Type</source>
         <translation>Type</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Block ID</source>
-        <translation>Block ID</translation>
+        <translation type="vanished">Block ID</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Layer</source>
         <translation>Layer</translation>
     </message>
@@ -707,7 +711,7 @@
 <context>
     <name>RLinetype</name>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+52"/>
+        <location filename="../src/core/RLinetype.cpp" line="+54"/>
         <source>Name</source>
         <translation>Name</translation>
     </message>

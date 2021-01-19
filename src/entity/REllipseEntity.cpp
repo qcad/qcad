@@ -145,7 +145,7 @@ QPair<QVariant, RPropertyAttributes> REllipseEntity::getProperty(
     } else if (propertyTypeId == PropertyMajorPointZ) {
         return qMakePair(QVariant(data.majorPoint.z), RPropertyAttributes());
     } else if (propertyTypeId == PropertyRatio) {
-        return qMakePair(QVariant(data.ratio), RPropertyAttributes());
+        return qMakePair(QVariant(data.ratio), RPropertyAttributes(RPropertyAttributes::UnitLess));
     } else if (propertyTypeId == PropertyStartParam) {
         return qMakePair(QVariant(data.startParam), RPropertyAttributes(RPropertyAttributes::Angle));
     } else if (propertyTypeId == PropertyEndParam) {

@@ -269,14 +269,16 @@ Projection.prototype.transform = function(entity, k, op, preview, flags, rec) {
     // explode block reference to keep attributes (colors, etc.):
     if (isBlockReferenceEntity(entity)) {
         var explodedEntities = Explode.explodeEntity(entity);
-        for (i=0; i<explodedEntities.length; i++) {
-            var explodedEntity = explodedEntities[i];
+        if (!isNull(explodedEntities)) {
+            for (i=0; i<explodedEntities.length; i++) {
+                var explodedEntity = explodedEntities[i];
 
-            if (isEntity(explodedEntity)) {
-                this.transform(explodedEntity, k, op, preview, flags, true);
-            }
-            else {
-                qWarning("shape in exploded block");
+                if (isEntity(explodedEntity)) {
+                    this.transform(explodedEntity, k, op, preview, flags, true);
+                }
+                else {
+                    qWarning("shape in exploded block");
+                }
             }
         }
         return;

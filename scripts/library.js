@@ -845,6 +845,100 @@ function isTriangleShape(obj) {
     return isOfType(obj, RTriangle) || isOfType(obj, RTrianglePointer);
 }
 
+/**
+ * Converts the given entity type enum to the class name.
+ *
+ * \return Class name (e.g. "RLineEntity" for RS.EntityLine
+ *
+ * \param type Entity type (RS::EntityType)
+ */
+function entityTypeToClass(type) {
+    switch (type) {
+    case RS.ObjectAll:
+        return "RObject";
+    case RS.ObjectUnknown:
+        return "RObject";
+    case RS.ObjectBlock:
+        return "RBlock";
+    case RS.ObjectLayer:
+        return "RLayer";
+    case RS.ObjectLayout:
+        return "RLayout";
+    case RS.ObjectLinetype:
+        return "RLinetype";
+    case RS.ObjectView:
+        return "RView";
+
+    case RS.EntityAll:
+        return "REntity";
+    case RS.EntityBlockRef:
+        return "RBlockReferenceEntity";
+    case RS.EntityArc:
+        return "RArcEntity";
+    case RS.EntityAttribute:
+        return "RAttributeEntity";
+    case RS.EntityAttributeDefinition:
+        return "RAttributeDefinitionEntity";
+    case RS.EntityCircle:
+        return "RCircleEntity";
+    case RS.EntityDimension:
+        return "RDimensionEntity";
+    case RS.EntityDimAligned:
+        return "RDimAlignedEntity";
+    case RS.EntityDimAngular:
+        return "RDimAngularEntity";
+    case RS.EntityDimAngular2L:
+        return "RDimAngular2LEntity";
+    case RS.EntityDimAngular3P:
+        return "RDimAngular3PEntity";
+    case RS.EntityDimArcLength:
+        return "RDimArcLengthEntity";
+    case RS.EntityDimDiametric:
+        return "RDimDiametricEntity";
+    case RS.EntityDimOrdinate:
+        return "RDimOrdinateEntity";
+    case RS.EntityDimRotated:
+        return "RDimRotatedEntity";
+    case RS.EntityDimRadial:
+        return "RDimRadialEntity";
+    case RS.EntityEllipse:
+        return "REllipseEntity";
+    case RS.EntityHatch:
+        return "RHatchEntity";
+    case RS.EntityImage:
+        return "RImageEntity";
+    case RS.EntityLeader:
+        return "RLeaderEntity";
+    case RS.EntityTolerance:
+        return "RToleranceEntity";
+    case RS.EntityLine:
+        return "RLineEntity";
+    case RS.EntityXLine:
+        return "RXLineEntity";
+    case RS.EntityRay:
+        return "RRayEntity";
+    case RS.EntityPoint:
+        return "RPointEntity";
+    case RS.EntityPolyline:
+        return "RPolylineEntity";
+    case RS.EntitySolid:
+        return "RSolidEntity";
+    case RS.EntityTrace:
+        return "RTraceEntity";
+    case RS.EntityFace:
+        return "RFaceEntity";
+    case RS.EntitySpline:
+        return "RSplineEntity";
+    case RS.EntityTextBased:
+        return "RTextBasedEntity";
+    case RS.EntityText:
+        return "RTextEntity";
+    case RS.EntityViewport:
+        return "RViewportEntity";
+    default:
+        return undefined;
+    }
+}
 
 /**
  * Converts the given entity type enum to a human readable,
@@ -949,6 +1043,102 @@ function entityTypeToString(type, plural) {
     case RS.EntityUnknown:
     default:
         return plural ? qsTr("Unknown Entities") : qsTr("Unknown Entity");
+    }
+}
+
+/**
+ * Converts the given entity type name to the entity type enum.
+ *
+ * \return entity type enum.
+ *
+ * \param typeName Entity type name ("Line", "Arc", ...)
+ */
+function getEntityType(typeName) {
+    switch (typeName) {
+    case "Block":
+        return RS.ObjectBlock;
+    case "Layer":
+        return RS.ObjectLayer;
+    case "Layout":
+        return RS.ObjectLayout;
+    case "Linetype":
+        return RS.ObjectLinetype;
+    case "View":
+        return RS.ObjectView;
+
+    case "Entity":
+        return RS.EntityAll;
+    case "3dFace":
+        return RS.Entity3dFace;
+    case "Block Reference":
+        return RS.EntityBlockRef;
+    case "Block Reference and Attributes":
+        return RS.EntityBlockRefAttr;
+    case "Arc":
+        return RS.EntityArc;
+    case "Attribute":
+        return RS.EntityAttribute;
+    case "Attribute Definition":
+        return RS.EntityAttributeDefinition;
+    case "Circle":
+        return RS.EntityCircle;
+    case "Dimension":
+        return RS.EntityDimension;
+    case "Aligned Dimension":
+        return RS.EntityDimAligned;
+    case "Angular Dimension":
+        return RS.EntityDimAngular;
+    case "Angular Dimension (2 Line)":
+        return RS.EntityDimAngular2L;
+    case "Angular Dimension (3 Point)":
+        return RS.EntityDimAngular3P;
+    case "Arc Dimension":
+        return RS.EntityDimArcLength;
+    case "Diametric Dimension":
+        return RS.EntityDimDiametric;
+    case "Ordinate Dimension":
+        return RS.EntityDimOrdinate;
+    case "Rotated Dimension":
+        return RS.EntityDimRotated;
+    case "Radial Dimension":
+        return RS.EntityDimRadial;
+    case "Ellipse":
+        return RS.EntityEllipse;
+    case "Hatch":
+        return RS.EntityHatch;
+    case "Image":
+        return RS.EntityImage;
+    case "Leader":
+        return RS.EntityLeader;
+    case "Tolerance":
+        return RS.EntityTolerance;
+    case "Line":
+        return RS.EntityLine;
+    case "Infinite Line":
+    case "XLine":
+        return RS.EntityXLine;
+    case "Ray":
+        return RS.EntityRay;
+    case "Point":
+        return RS.EntityPoint;
+    case "Polyline":
+        return RS.EntityPolyline;
+    case "Solid":
+        return RS.EntitySolid;
+    case "Trace":
+        return RS.EntityTrace;
+    case "Face":
+        return RS.EntityFace;
+    case "Spline":
+        return RS.EntitySpline;
+    case "Text based":
+        return RS.EntityTextBased;
+    case "Text":
+        return RS.EntityText;
+    case "Viewport":
+        return RS.EntityViewport;
+    default:
+        return RS.ObjectUnknown;
     }
 }
 
@@ -2051,7 +2241,7 @@ function mergeProperties(obj1,obj2) {
  * (i.e. contains invalid characters).
  */
 function fixSymbolTableName(name) {
-    // trim white space at begining and end to avoid invalid block name:
+    // trim white space at beginning and end to avoid invalid block name:
     name = name.trim();
 
     // max length:
@@ -2173,9 +2363,9 @@ function initUserShortcuts() {
 
         if (match) qDebug("scStringList", scStringList);
 
-        // explicitely no shortcuts:
+        // explicitly no shortcuts:
         if (isNull(scStringList)) {
-            if (match) qDebug("explicitely no shortcuts");
+            if (match) qDebug("explicitly no shortcuts");
             action.setShortcuts([]);
             continue;
         }
@@ -2203,7 +2393,7 @@ function initUserShortcuts() {
         }
         var cmStringList = RSettings.getValue("Commands/" + key);
 
-        // explicitely no commands:
+        // explicitly no commands:
         if (isNull(cmStringList)) {
             action.setCommands([]);
             continue;

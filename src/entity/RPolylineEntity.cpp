@@ -204,7 +204,7 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
     } else if (propertyTypeId == PropertyBulgeN) {
         QVariant v;
         v.setValue(data.bulges);
-        return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List));
+        return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List|RPropertyAttributes::UnitLess));
     } else if (propertyTypeId == PropertyAngleN) {
         QVariant v;
         v.setValue(data.getVertexAngles());
@@ -246,7 +246,7 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
         if (propertyTypeId == PropertyLength) {
             QVariant v;
             v.setValue(data.getLength());
-            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::ReadOnly));
+            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly));
         } else if (propertyTypeId == PropertyTotalLength) {
             if (showOnRequest) {
                 QVariant v;
@@ -256,18 +256,18 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
             else {
                 QVariant v;
                 v.setValue(0.0);
-                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::OnRequest));
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::OnRequest));
             }
         } else if (propertyTypeId == PropertyArea) {
             if (showOnRequest) {
                 QVariant v;
                 v.setValue(data.getArea());
-                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::ReadOnly|RPropertyAttributes::Area));
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly|RPropertyAttributes::Area));
             }
             else {
                 QVariant v;
                 v.setValue(0.0);
-                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::OnRequest|RPropertyAttributes::Area));
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::OnRequest|RPropertyAttributes::Area));
             }
         } else if (propertyTypeId == PropertyTotalArea) {
             if (showOnRequest) {
@@ -278,7 +278,7 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
             else {
                 QVariant v;
                 v.setValue(0.0);
-                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::OnRequest|RPropertyAttributes::Area));
+                return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::OnRequest|RPropertyAttributes::Area));
             }
         }
     }
@@ -331,4 +331,17 @@ void RPolylineEntity::print(QDebug dbg) const {
     REntity::print(dbg);
     data.print(dbg);
     dbg.nospace()  << ")";
+}
+
+bool RPolylineEntity::validate() {
+    if (data.getVertices().length()!=data.getBulges().length()) {
+        return false;
+    }
+    if (data.getVertices().length()!=data.getStartWidths().length()) {
+        return false;
+    }
+    if (data.getVertices().length()!=data.getEndWidths().length()) {
+        return false;
+    }
+    return true;
 }

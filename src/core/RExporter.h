@@ -365,6 +365,10 @@ public:
         pixelWidth = on;
     }
 
+    void setEnablePatterns(bool on) {
+        enablePatterns = on;
+    }
+
 //    bool getCombineTransforms() const {
 //        return combineTransforms;
 //    }
@@ -394,6 +398,7 @@ protected:
     bool clipping;
     bool pixelWidth;
     Qt::PenCapStyle penCapStyle;
+    bool enablePatterns;
     //bool combineTransforms;
 
 private:

@@ -19,5 +19,10 @@ SUBDIRS = \
         run
 }
 
+win32 {
+    SUBDIRS += \
+        console
+}
+
 TEMPLATE = subdirs
 OTHER_FILES += api_overview.dox

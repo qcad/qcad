@@ -126,12 +126,12 @@ public:
         ObjectAll,
         ObjectUnknown,      /**< Unknown object */
 
-        ObjectBlock,
-        ObjectLayer,
-        ObjectLayerState,
         ObjectLinetype,
-        ObjectView,
+        ObjectLayer,
+        ObjectBlock,
         ObjectLayout,
+        ObjectLayerState,
+        ObjectView,
         ObjectUcs,
         ObjectDocumentVariable,
 
@@ -199,7 +199,7 @@ public:
     };
 
     /**
-     * Side used for side of a point relativ to an entity
+     * Side used for side of a point relative to an entity
      * (right hand or left hand side)
      */
     enum Side {

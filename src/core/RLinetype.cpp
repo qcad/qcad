@@ -21,6 +21,7 @@
 #include "RMetaTypes.h"
 
 
+RPropertyTypeId RLinetype::PropertyType;
 RPropertyTypeId RLinetype::PropertyName;
 RPropertyTypeId RLinetype::PropertyDescription;
 RPropertyTypeId RLinetype::PropertyMetric;
@@ -49,6 +50,7 @@ bool RLinetype::operator!=(const RLinetype & linetype) const{
 }
 
 void RLinetype::init() {
+    RLinetype::PropertyType.generateId(typeid(RLinetype), RObject::PropertyType);
     RLinetype::PropertyName.generateId(typeid(RLinetype), "", QT_TRANSLATE_NOOP("RLinetype", "Name"));
     RLinetype::PropertyDescription.generateId(typeid(RLinetype), "", QT_TRANSLATE_NOOP("RLinetype", "Description"));
     RLinetype::PropertyMetric.generateId(typeid(RLinetype), "", QT_TRANSLATE_NOOP("RLinetype", "Metric"));

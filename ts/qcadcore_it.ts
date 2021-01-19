@@ -369,7 +369,7 @@ Altri...</translatorcomment>
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+94"/>
+        <location filename="../src/core/REntity.cpp" line="+94"/>
         <source>Block</source>
         <translatorcomment>--exact match--
 --file: photivo_it.ts--
@@ -379,15 +379,16 @@ Lista Blocchi</translatorcomment>
         <translation>Blocco</translation>
     </message>
     <message>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+94"/>
         <source>Referenced Block</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Blocco</translation>
+        <translation>Blocco referenziato</translation>
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="+66"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="+1"/>
         <location line="+3"/>
-        <location filename="../src/core/RLayout.cpp" line="+82"/>
+        <location filename="../src/core/RLayout.cpp" line="+84"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -524,7 +525,7 @@ Inserisci l&apos;angolo della linea di quota:</translatorcomment>
         <translation>Attributi</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+93"/>
+        <location filename="../src/core/REntity.cpp" line="-1"/>
         <location filename="../src/core/RObject.cpp" line="+69"/>
         <source>Type</source>
         <translatorcomment>--exact match--
@@ -535,12 +536,11 @@ Tipo Ordinata</translatorcomment>
         <translation>Tipo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Block ID</source>
-        <translation>Blocco ID</translation>
+        <translation type="vanished">Blocco ID</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Layer</source>
         <translatorcomment>--exact match--
 --file: dia.master.it.po--
@@ -879,7 +879,7 @@ Colore G&amp;riglia:</translatorcomment>
         <translation type="vanished">Margini di stampa</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+827"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+832"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>È stato rilevato un riferimento circolare (ricorsivo) blocco:</translation>
     </message>
@@ -1091,7 +1091,7 @@ Margine (Ingrandita)</translatorcomment>
         <translation type="vanished">Margine (Ingrandita)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+52"/>
+        <location filename="../src/core/RLinetype.cpp" line="+54"/>
         <source>Name</source>
         <translation>Nome</translation>
     </message>

@@ -60,7 +60,9 @@ public:
         NoClipping = 0x0200,            //!< disable clipping for this path
         PixelWidth = 0x0400,            //!< interpret width in pixels
         NoColorMode = 0x0800,           //!< disable color mode
-        SimplePointDisplay = 0x1000     //!< simple point mode (for points in hatch patterns)
+        SimplePointDisplay = 0x1000,    //!< simple point mode (for points in hatch patterns)
+        PolylineGen = 0x2000,           //!< use polyline pattern along whole path (polyline)
+        NoPattern = 0x4000              //!< no pattern (polyline with widths)
     };
     Q_DECLARE_FLAGS(Modes, Mode)
 
@@ -218,6 +220,12 @@ public:
 
     void setSimplePointDisplay(bool on);
     bool getSimplePointDisplay() const;
+
+    void setPolylineGen(bool on);
+    bool getPolylineGen() const;
+
+    void setNoPattern(bool on);
+    bool getNoPattern() const;
 
     void setPixelWidth(bool on);
     bool getPixelWidth() const;

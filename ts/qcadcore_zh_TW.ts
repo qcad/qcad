@@ -241,7 +241,7 @@
         <location filename="../src/core/RBlock.cpp" line="+63"/>
         <location filename="../src/core/RLayer.cpp" line="+93"/>
         <location filename="../src/core/RLayerState.cpp" line="+46"/>
-        <location filename="../src/core/RLayout.cpp" line="+80"/>
+        <location filename="../src/core/RLayout.cpp" line="+82"/>
         <source>Name</source>
         <translation>名稱</translation>
     </message>
@@ -251,12 +251,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+94"/>
+        <location filename="../src/core/REntity.cpp" line="+94"/>
         <source>Block</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+95"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+73"/>
@@ -330,7 +330,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
+        <source>Referenced Block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
@@ -368,18 +373,13 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+93"/>
+        <location filename="../src/core/REntity.cpp" line="-1"/>
         <location filename="../src/core/RObject.cpp" line="+69"/>
         <source>Type</source>
         <translation>類型</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Block ID</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Layer</source>
         <translation>圖層</translation>
     </message>
@@ -686,7 +686,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+827"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+832"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -707,7 +707,7 @@
 <context>
     <name>RLinetype</name>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+52"/>
+        <location filename="../src/core/RLinetype.cpp" line="+54"/>
         <source>Name</source>
         <translation>名稱</translation>
     </message>

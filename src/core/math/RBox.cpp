@@ -439,7 +439,7 @@ bool RBox::intersects(const RBox& other) const {
 /**
  * \return True if this box intersects the given shape.
  * \param limited True to limit the shape to its actual length,
- * false to return true if the extended shape interesects this box.
+ * false to return true if the extended shape intersects this box.
  */
 bool RBox::intersectsWith(const RShape& shape, bool limited) const {
     if (limited && !intersects(shape.getBoundingBox())) {
@@ -511,7 +511,7 @@ void RBox::growToInclude(const RVector& v) {
  * as \c c1, counter-clockwise.
  * The next four corners are on the same Z-level as \c c2
  * starting with the corner at the same X/Y position as \c c1,
- * continueing counter-clockwise.
+ * continuing counter-clockwise.
  */
 QList<RVector> RBox::getCorners() const {
     QList<RVector> ret;

@@ -74,7 +74,7 @@
         <expr><name>OnRequest</name> = 0x400000</expr>,            <comment type="line">//!&lt; Property shown on request (slow to compute)</comment>
         <expr><name>Location</name> = 0x800000</expr>,             <comment type="line">//!&lt; Property affected when transforming</comment>
         <expr><name>RefPoint</name> = 0x1000000</expr>,            <comment type="line">//!&lt; Property affected when moving reference point</comment>
-        <expr><name>Geometry</name> = <name>Location</name> | <name>RefPoint</name></expr>,  <comment type="line">//!&lt; Property affected when chaning geometry (Location | RefPoint)</comment>
+        <expr><name>Geometry</name> = <name>Location</name> | <name>RefPoint</name></expr>,  <comment type="line">//!&lt; Property affected when changing geometry (Location | RefPoint)</comment>
         <expr><name>Scale</name> = 0x2000000</expr>,               <comment type="line">//!&lt; Property is scale (1:2, 5"=1", ...)</comment>
         <expr><name>Area</name> = 0x4000000</expr>,                <comment type="line">//!&lt; Property is area (relevant for formatting of value)</comment>
         <expr><name>UnitLess</name> = 0x8000000</expr>             <comment type="line">//!&lt; Property has no unit (linetype scale, draw order, ...)</comment>
@@ -278,6 +278,10 @@
 
     <function><type><name>void</name></type> <name>setUnitLess</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
         <constructor_decl><name>setOption</name><parameter_list>(<param><decl><type><name>UnitLess</name></type></decl></param>, <param><decl><type><name>v</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isPercentage</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>options</name>.<call><name>testFlag</name><argument_list>(<argument><expr><name>Percentage</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>QString</name></type> <name>getLabel</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{

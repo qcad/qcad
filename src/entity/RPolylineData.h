@@ -133,6 +133,10 @@ public:
         RPolyline::setBulgeAt(i, b);
     }
 
+    double getVertexAngle(int i, RS::Orientation orientation = RS::UnknownOrientation) const {
+        return RPolyline::getVertexAngle(i, orientation);
+    }
+
     double getDirection1() const {
         return RPolyline::getDirection1();
     }

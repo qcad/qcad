@@ -47,7 +47,7 @@ RTransaction RMoveReferencePointOperation::apply(RDocument& document, bool previ
     bool moveSelected = false;
     QMap<REntity::Id, QList<RRefPoint> > referencePoints;
 
-    // if multilpe reference points are selected, move all of those:
+    // if multiple reference points are selected, move all of those:
     if (scene!=NULL && scene->hasSelectedReferencePoints()) {
         moveSelected = true;
         referencePoints = scene->getReferencePoints();

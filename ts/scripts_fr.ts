@@ -4117,7 +4117,7 @@ est déjà dans la liste.</translation>
         <translation>Longueur :</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+64"/>
         <source>Entity is not a block reference.</source>
         <translation>L&apos;entité n&apos;est pas une référence de bloc.</translation>
     </message>
@@ -5052,32 +5052,42 @@ est déjà dans la liste.</translation>
         <translation>Décomposer</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+197"/>
+        <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+244"/>
         <source>Explode text glyphs to polylines</source>
         <translation>Décomposer contours de texte en polylignes</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="-121"/>
         <source>Spline segments:</source>
         <translation>Segments de spline :</translation>
     </message>
     <message>
-        <location line="-27"/>
+        <location line="+7"/>
         <source>Ellipse segments (per full ellipse):</source>
         <translation>Segments de ellipse :</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="-111"/>
         <source>Explode splines to polylines with line segments</source>
         <translation>Décomposer splines aux polylignes avec des segments de ligne</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+125"/>
+        <source>Convert splines from texts to arcs or lines if appropriate</source>
+        <translation>Convertir les splines des textes en arcs ou lignes si approprié</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Explode circles into polylines with two half circles</source>
+        <translation>Exploser les cercles en polylignes avec deux demi-cercles</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
         <translation>Décomposer texte multiligne dans plusieurs blocs de texte simple</translation>
     </message>
     <message>
-        <location line="-31"/>
+        <location line="-27"/>
         <source>Spline approximation tolerance:</source>
         <translation>Spline tolérance :</translation>
     </message>
@@ -7429,22 +7439,22 @@ BUG: Interferes with group castings.</source>
         <translation>Point décimal :</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Cartesian coordinate separator:</source>
         <translation>Séparateur de coordonnées cartésiennes :</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Polar coordinate separator:</source>
         <translation>Séparateur de coordonnées polaires :</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+14"/>
         <source>Relative coordinate prefix:</source>
         <translation>Préfixe des coordonnées relatives :</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Examples</source>
         <translation>Exemples</translation>
     </message>
@@ -8655,9 +8665,8 @@ dans les résultats de recherche :</translation>
         <translation>Actualiser</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>0</source>
-        <translation>0</translation>
+        <translation type="vanished">0</translation>
     </message>
 </context>
 <context>
@@ -10956,7 +10965,7 @@ dans les résultats de recherche :</translation>
         <translation>Afficher toutes les propriétés</translation>
     </message>
     <message>
-        <location line="+662"/>
+        <location line="+663"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -10990,7 +10999,7 @@ dans les résultats de recherche :</translation>
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1276"/>
+        <location line="-1277"/>
         <source>:</source>
         <translation> :</translation>
     </message>
@@ -11024,7 +11033,7 @@ dans les résultats de recherche :</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+145"/>
         <source>Use auto measurement</source>
         <translation>Utiliser la mesure automatique</translation>
     </message>
@@ -12563,15 +12572,14 @@ dans les résultats de recherche :</translation>
         <translation type="vanished">1</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
         <source>Rotate:</source>
-        <translation>Rotation :</translation>
+        <translation type="vanished">Rotation :</translation>
     </message>
 </context>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1423"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1425"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Au moins deux points sont identiques.</translation>
@@ -12794,6 +12802,11 @@ dans les résultats de recherche :</translation>
         <location line="+5"/>
         <source>Draw rectangle from two corners</source>
         <translation>Dessinez un rectangle de deux points d&apos;angle</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
+        <source>Rotate:</source>
+        <translation>Rotation :</translation>
     </message>
 </context>
 <context>
@@ -13674,7 +13687,7 @@ dans les résultats de recherche :</translation>
         <translation>Valeur par défaut :</translation>
     </message>
     <message>
-        <location line="+271"/>
+        <location line="+269"/>
         <source>&amp;Undo</source>
         <translation>&amp;Annuler</translation>
     </message>
@@ -13734,12 +13747,12 @@ dans les résultats de recherche :</translation>
         <translation>&amp;Caractère spécial...</translation>
     </message>
     <message>
-        <location line="+305"/>
+        <location line="+310"/>
         <source>Others...</source>
         <translation>Autres...</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+138"/>
         <source>Degree</source>
         <translation>Degré</translation>
     </message>
@@ -15210,7 +15223,7 @@ dans les résultats de recherche :</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+865"/>
+        <location filename="../scripts/library.js" line="+959"/>
         <source>Objects</source>
         <translation>Objets</translation>
     </message>
@@ -15646,7 +15659,7 @@ dans les résultats de recherche :</translation>
         <translation>Entité inconnue</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+102"/>
         <source>All CAD Files</source>
         <translation>Tous les fichiers CAO</translation>
     </message>

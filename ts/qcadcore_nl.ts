@@ -238,12 +238,12 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+94"/>
+        <location filename="../src/core/REntity.cpp" line="+94"/>
         <source>Block</source>
         <translation>Blok</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+95"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+73"/>
@@ -261,7 +261,7 @@
         <location line="+1"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
         <location line="+3"/>
-        <location filename="../src/core/RLayout.cpp" line="+82"/>
+        <location filename="../src/core/RLayout.cpp" line="+84"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -317,7 +317,12 @@
         <translation>Layout</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
+        <source>Referenced Block</source>
+        <translation>Gerefereerde blok</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
@@ -355,18 +360,17 @@
         <translation>Attributen</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+93"/>
+        <location filename="../src/core/REntity.cpp" line="-1"/>
         <location filename="../src/core/RObject.cpp" line="+69"/>
         <source>Type</source>
         <translation>Type</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Block ID</source>
-        <translation>Blok ID</translation>
+        <translation type="vanished">Blok ID</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Layer</source>
         <translation>Laag</translation>
     </message>
@@ -690,7 +694,7 @@
         <translation type="vanished">Plotranden</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+827"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+832"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Circulaire (recursieve) blokverwijzingen gedetecteerd:</translation>
     </message>
@@ -742,7 +746,7 @@
 <context>
     <name>RLinetype</name>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+52"/>
+        <location filename="../src/core/RLinetype.cpp" line="+54"/>
         <source>Name</source>
         <translation>Naam</translation>
     </message>

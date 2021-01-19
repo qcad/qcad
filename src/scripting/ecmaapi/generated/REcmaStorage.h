@@ -135,6 +135,9 @@
         queryAllBlockReferences
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryAllViewports
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         querySelectedEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

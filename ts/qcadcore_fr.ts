@@ -354,7 +354,7 @@ Autres...</translatorcomment>
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+94"/>
+        <location filename="../src/core/REntity.cpp" line="+94"/>
         <source>Block</source>
         <translatorcomment>--exact match--
 --file: Block_fr.ts--
@@ -364,15 +364,16 @@ Liste des blocs</translatorcomment>
         <translation>Bloc</translation>
     </message>
     <message>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+94"/>
         <source>Referenced Block</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="obsolete">Bloc référencé</translation>
+        <translation>Bloc référencé</translation>
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="+66"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="+1"/>
         <location line="+3"/>
-        <location filename="../src/core/RLayout.cpp" line="+82"/>
+        <location filename="../src/core/RLayout.cpp" line="+84"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -510,7 +511,7 @@ Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
         <translation>Attributs</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+93"/>
+        <location filename="../src/core/REntity.cpp" line="-1"/>
         <location filename="../src/core/RObject.cpp" line="+69"/>
         <source>Type</source>
         <translatorcomment>--exact match--
@@ -521,12 +522,11 @@ Type ordonnée</translatorcomment>
         <translation>Type</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Block ID</source>
-        <translation>Bloc ID</translation>
+        <translation type="vanished">Bloc ID</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Layer</source>
         <translatorcomment>--exact match--
 --file: AdvancedSelection_fr.ts--
@@ -864,7 +864,7 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
         <translation type="vanished">Marges des tracés</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+827"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+832"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Une référence de bloc circulaire (récursive) a été détectée :</translation>
     </message>
@@ -1075,7 +1075,7 @@ Bordure (grande)</translatorcomment>
         <translation type="vanished">Bordure (grande)</translation>
     </message>
     <message>
-        <location filename="../src/core/RLinetype.cpp" line="+52"/>
+        <location filename="../src/core/RLinetype.cpp" line="+54"/>
         <source>Name</source>
         <translation>Nom</translation>
     </message>

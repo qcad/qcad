@@ -131,6 +131,9 @@
         setBulgeAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getVertexAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         stripWidths
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -264,6 +267,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         containsShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        validate
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
