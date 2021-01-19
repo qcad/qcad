@@ -193,6 +193,10 @@ public:
         data.setBulgeAt(i, b);
     }
 
+    double getVertexAngle(int i, RS::Orientation orientation = RS::UnknownOrientation) const {
+        data.getVertexAngle(i, orientation);
+    }
+
     void stripWidths() {
         data.stripWidths();
     }
