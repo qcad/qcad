@@ -42,6 +42,7 @@ class RTransaction;
  */
 class QCADCORE_EXPORT RLayout: public RObject {
 public:
+    static RPropertyTypeId PropertyType;
     static RPropertyTypeId PropertyCustom;
     static RPropertyTypeId PropertyName;
     static RPropertyTypeId PropertyTabOrder;

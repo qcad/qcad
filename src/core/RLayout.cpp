@@ -19,6 +19,7 @@
 #include "RLayout.h"
 #include "RDocument.h"
 
+RPropertyTypeId RLayout::PropertyType;
 RPropertyTypeId RLayout::PropertyCustom;
 RPropertyTypeId RLayout::PropertyName;
 RPropertyTypeId RLayout::PropertyTabOrder;
@@ -76,6 +77,7 @@ RLayout::~RLayout() {
 }
 
 void RLayout::init() {
+    RLayout::PropertyType.generateId(typeid(RLayout), RObject::PropertyType);
     RLayout::PropertyCustom.generateId(typeid(RLayout), RObject::PropertyCustom);
     RLayout::PropertyName.generateId(typeid(RLayout), "", QT_TRANSLATE_NOOP("REntity", "Name"));
     RLayout::PropertyTabOrder.generateId(typeid(RLayout), "", QT_TRANSLATE_NOOP("REntity", "Tab Order"));
