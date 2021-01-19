@@ -27,7 +27,7 @@
 #include "RUnit.h"
 
 
-RClipboardOperation::RClipboardOperation() : copyEmptyBlocks(false) {
+RClipboardOperation::RClipboardOperation() : copyEmptyBlocks(false), copyAllLayers(false) {
 }
 
 void RClipboardOperation::copy(RDocument& src, RDocument& dest,
@@ -232,12 +232,31 @@ void RClipboardOperation::copy(RDocument& src, RDocument& dest,
                 continue;
             }
 
+
             copyEntityLayer(
                         *entity.data(),
                         src, dest,
                         overwriteLayers,
                         transaction
                         );
+        }
+    }
+
+    // copy all (even empty or unused) layers:
+    if (copyAllLayers && !preview) {
+        QSet<RLayer::Id> layerIds = src.queryAllLayers();
+        QSet<RLayer::Id>::iterator it;
+
+        for (it=layerIds.begin(); it!=layerIds.end(); ++it) {
+            RLayer::Id layerId = *it;
+
+           // QList<REntity::Id> blockEntityIds = src.queryBlockEntities(layerId).toList();
+
+            //if (blockEntityIds.isEmpty()) {
+                //copyBlock(blockId, src, dest, overwriteBlocks, toCurrentBlock, blockName, transaction);
+                //copyBlock(layerId, src, dest, false, false, blockName, transaction);
+            //}
+            copyLayer(layerId, src, dest, overwriteLayers, transaction);
         }
     }
 
