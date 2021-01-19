@@ -114,12 +114,14 @@ else {
         }
 
         greaterThan(QT_MAJOR_VERSION, 4) {
-            system(cp "$$[QT_INSTALL_PLUGINS]/platforms/libqxcb.so" "$${DESTDIR}/../platforms")
-            system(cp "$$[QT_INSTALL_PLUGINS]/platforms/libqoffscreen.so" "$${DESTDIR}/../platforms")
-            system(cp "$$[QT_INSTALL_PLUGINS]/platforms/libqminimal.so" "$${DESTDIR}/../platforms")
-            system(cp "$$[QT_INSTALL_PLUGINS]/platforms/libqlinuxfb.so" "$${DESTDIR}/../platforms")
+            #system(cp "$$[QT_INSTALL_PLUGINS]/platforms/libqxcb.so" "$${DESTDIR}/../platforms")
+            #system(cp "$$[QT_INSTALL_PLUGINS]/platforms/libqoffscreen.so" "$${DESTDIR}/../platforms")
+            #system(cp "$$[QT_INSTALL_PLUGINS]/platforms/libqminimal.so" "$${DESTDIR}/../platforms")
+            #system(cp "$$[QT_INSTALL_PLUGINS]/platforms/libqlinuxfb.so" "$${DESTDIR}/../platforms")
+            system(cp "$$[QT_INSTALL_PLUGINS]/platforms/libq*.so" "$${DESTDIR}/../platforms")
             system(cp "$$[QT_INSTALL_PLUGINS]/platforminputcontexts/*.so" "$${DESTDIR}/../platforminputcontexts")
             system(cp "$$[QT_INSTALL_PLUGINS]/xcbglintegrations/*.so" "$${DESTDIR}/../xcbglintegrations")
+            system(cp -r "$$[QT_INSTALL_PLUGINS]/wayland-*" "$${DESTDIR}/../")
         }
     }
 
