@@ -845,6 +845,100 @@ function isTriangleShape(obj) {
     return isOfType(obj, RTriangle) || isOfType(obj, RTrianglePointer);
 }
 
+/**
+ * Converts the given entity type enum to the class name.
+ *
+ * \return Class name (e.g. "RLineEntity" for RS.EntityLine
+ *
+ * \param type Entity type (RS::EntityType)
+ */
+function entityTypeToClass(type) {
+    switch (type) {
+    case RS.ObjectAll:
+        return "RObject";
+    case RS.ObjectUnknown:
+        return "RObject";
+    case RS.ObjectBlock:
+        return "RBlock";
+    case RS.ObjectLayer:
+        return "RLayer";
+    case RS.ObjectLayout:
+        return "RLayout";
+    case RS.ObjectLinetype:
+        return "RLinetype";
+    case RS.ObjectView:
+        return "RView";
+
+    case RS.EntityAll:
+        return "REntity";
+    case RS.EntityBlockRef:
+        return "RBlockReferenceEntity";
+    case RS.EntityArc:
+        return "RArcEntity";
+    case RS.EntityAttribute:
+        return "RAttributeEntity";
+    case RS.EntityAttributeDefinition:
+        return "RAttributeDefinitionEntity";
+    case RS.EntityCircle:
+        return "RCircleEntity";
+    case RS.EntityDimension:
+        return "RDimensionEntity";
+    case RS.EntityDimAligned:
+        return "RDimAlignedEntity";
+    case RS.EntityDimAngular:
+        return "RDimAngularEntity";
+    case RS.EntityDimAngular2L:
+        return "RDimAngular2LEntity";
+    case RS.EntityDimAngular3P:
+        return "RDimAngular3PEntity";
+    case RS.EntityDimArcLength:
+        return "RDimArcLengthEntity";
+    case RS.EntityDimDiametric:
+        return "RDimDiametricEntity";
+    case RS.EntityDimOrdinate:
+        return "RDimOrdinateEntity";
+    case RS.EntityDimRotated:
+        return "RDimRotatedEntity";
+    case RS.EntityDimRadial:
+        return "RDimRadialEntity";
+    case RS.EntityEllipse:
+        return "REllipseEntity";
+    case RS.EntityHatch:
+        return "RHatchEntity";
+    case RS.EntityImage:
+        return "RImageEntity";
+    case RS.EntityLeader:
+        return "RLeaderEntity";
+    case RS.EntityTolerance:
+        return "RToleranceEntity";
+    case RS.EntityLine:
+        return "RLineEntity";
+    case RS.EntityXLine:
+        return "RXLineEntity";
+    case RS.EntityRay:
+        return "RRayEntity";
+    case RS.EntityPoint:
+        return "RPointEntity";
+    case RS.EntityPolyline:
+        return "RPolylineEntity";
+    case RS.EntitySolid:
+        return "RSolidEntity";
+    case RS.EntityTrace:
+        return "RTraceEntity";
+    case RS.EntityFace:
+        return "RFaceEntity";
+    case RS.EntitySpline:
+        return "RSplineEntity";
+    case RS.EntityTextBased:
+        return "RTextBasedEntity";
+    case RS.EntityText:
+        return "RTextEntity";
+    case RS.EntityViewport:
+        return "RViewportEntity";
+    default:
+        return undefined;
+    }
+}
 
 /**
  * Converts the given entity type enum to a human readable,
