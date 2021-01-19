@@ -1,6 +1,6 @@
 include( ../run/run.pri )
 
 CONFIG += console
-TARGET = qcad.com
+TARGET = qcadcmd.com
 
-QMAKE_POST_LINK = mv "$${DESTDIR}/qcad.com.exe" "$${DESTDIR}/qcad.com"
+QMAKE_POST_LINK = mv "$${DESTDIR}/qcadcmd.com.exe" "$${DESTDIR}/qcadcmd.com"
