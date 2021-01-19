@@ -126,12 +126,12 @@ public:
         ObjectAll,
         ObjectUnknown,      /**< Unknown object */
 
-        ObjectBlock,
-        ObjectLayer,
-        ObjectLayerState,
         ObjectLinetype,
-        ObjectView,
+        ObjectLayer,
+        ObjectBlock,
         ObjectLayout,
+        ObjectLayerState,
+        ObjectView,
         ObjectUcs,
         ObjectDocumentVariable,
 
