@@ -288,7 +288,7 @@
         <return>return <expr><name>types</name></expr>;</return>
     }</block></function>
     <function_decl><type><name>void</name></type> <name>setType</name><parameter_list>(<param><decl><type><name><name>RTransaction</name>::<name>Type</name></name></type> <name>type</name></decl></param>, <param><decl><type><name>bool</name></type> <name>on</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>bool</name></type> <name>getType</name><parameter_list>(<param><decl><type><name><name>RTransaction</name>::<name>Type</name></name></type> <name>type</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isType</name><parameter_list>(<param><decl><type><name><name>RTransaction</name>::<name>Type</name></name></type> <name>type</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
 </public><protected>protected:
     <function_decl><type><name>bool</name></type> <name>addPropertyChange</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>objectId</name></decl></param>, <param><decl><type><name>const</name> <name>RPropertyChange</name>&amp;</type> <name>propertyChange</name></decl></param>)</parameter_list>;</function_decl>

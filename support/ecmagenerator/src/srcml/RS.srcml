@@ -127,12 +127,12 @@
         <expr><name>ObjectAll</name></expr>,
         <expr><name>ObjectUnknown</name></expr>,      <comment type="block">/**&lt; Unknown object */</comment>
 
-        <expr><name>ObjectBlock</name></expr>,
-        <expr><name>ObjectLayer</name></expr>,
-        <expr><name>ObjectLayerState</name></expr>,
         <expr><name>ObjectLinetype</name></expr>,
-        <expr><name>ObjectView</name></expr>,
+        <expr><name>ObjectLayer</name></expr>,
+        <expr><name>ObjectBlock</name></expr>,
         <expr><name>ObjectLayout</name></expr>,
+        <expr><name>ObjectLayerState</name></expr>,
+        <expr><name>ObjectView</name></expr>,
         <expr><name>ObjectUcs</name></expr>,
         <expr><name>ObjectDocumentVariable</name></expr>,
 

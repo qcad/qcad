@@ -322,7 +322,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
-    <method name="getType" cppName="getType" specifier="public"
+    <method name="isType" cppName="isType" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="RTransaction::Type"

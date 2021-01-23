@@ -135,7 +135,7 @@
     }</block></function>
 
     <function><type><name>double</name></type> <name>getVertexAngle</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>Orientation</name></name></type> <name>orientation</name> =<init> <expr><name><name>RS</name>::<name>UnknownOrientation</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
-        <constructor_decl><name>RPolyline::getVertexAngle</name><parameter_list>(<param><decl><type><name>i</name></type></decl></param>, <param><decl><type><name>orientation</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        <return>return <expr><call><name><name>RPolyline</name>::<name>getVertexAngle</name></name><argument_list>(<argument><expr><name>i</name></expr></argument>, <argument><expr><name>orientation</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>double</name></type> <name>getDirection1</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{

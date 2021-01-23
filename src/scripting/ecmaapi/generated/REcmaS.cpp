@@ -143,8 +143,8 @@
     QScriptValue::ReadOnly);
 
 
-    ctor.setProperty("ObjectBlock",
-    QScriptValue(RS::ObjectBlock),
+    ctor.setProperty("ObjectLinetype",
+    QScriptValue(RS::ObjectLinetype),
     QScriptValue::ReadOnly);
 
 
@@ -153,23 +153,23 @@
     QScriptValue::ReadOnly);
 
 
-    ctor.setProperty("ObjectLayerState",
-    QScriptValue(RS::ObjectLayerState),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("ObjectLinetype",
-    QScriptValue(RS::ObjectLinetype),
-    QScriptValue::ReadOnly);
-
-
-    ctor.setProperty("ObjectView",
-    QScriptValue(RS::ObjectView),
+    ctor.setProperty("ObjectBlock",
+    QScriptValue(RS::ObjectBlock),
     QScriptValue::ReadOnly);
 
 
     ctor.setProperty("ObjectLayout",
     QScriptValue(RS::ObjectLayout),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ObjectLayerState",
+    QScriptValue(RS::ObjectLayerState),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ObjectView",
+    QScriptValue(RS::ObjectView),
     QScriptValue::ReadOnly);
 
 

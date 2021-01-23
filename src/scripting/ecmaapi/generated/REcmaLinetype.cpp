@@ -124,6 +124,10 @@
 
     // static properties:
     
+            ctor.setProperty("PropertyType",
+                qScriptValueFromValue(&engine, RLinetype::PropertyType),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyName",
                 qScriptValueFromValue(&engine, RLinetype::PropertyName),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

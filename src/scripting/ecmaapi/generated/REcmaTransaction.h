@@ -163,7 +163,7 @@
         setType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getType
+        isType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

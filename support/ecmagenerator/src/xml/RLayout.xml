@@ -430,6 +430,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <property name="PropertyType" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyCustom" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyName" type="RPropertyTypeId"
