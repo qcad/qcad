@@ -287,7 +287,7 @@ public:
         return types;
     }
     void setType(RTransaction::Type type, bool on = true);
-    bool getType(RTransaction::Type type) const;
+    bool isType(RTransaction::Type type) const;
 
 protected:
     bool addPropertyChange(RObject::Id objectId, const RPropertyChange& propertyChange);

@@ -137,8 +137,12 @@ void RStorage::setCurrentLayer(const QString& layerName, RTransaction* transacti
         return;
     }
 
+    // old layer is affected object:
+    transaction->addAffectedObject(docVars->getCurrentLayerId());
     docVars->setCurrentLayerId(layerId);
     transaction->setType(RTransaction::CurrentLayerChange);
+    // new layer is affected object:
+    transaction->addAffectedObject(layerId);
     endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
 }
 

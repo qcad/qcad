@@ -165,7 +165,7 @@ void RTransaction::setType(RTransaction::Type type, bool on) {
     }
 }
 
-bool RTransaction::getType(RTransaction::Type type) const {
+bool RTransaction::isType(RTransaction::Type type) const {
     return (types & type) == type;
 }
 

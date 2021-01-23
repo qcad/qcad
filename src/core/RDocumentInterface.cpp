@@ -2193,11 +2193,13 @@ RTransaction RDocumentInterface::applyOperation(ROperation* operation) {
  * Triggers an objectChangeEvent for every object in the given set.
  */
 void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
-    if (transaction.getType(RTransaction::CurrentLayerChange) ||
-        transaction.getType(RTransaction::CurrentLayerSelectionChange)) {
+    if (transaction.isType(RTransaction::CurrentLayerChange) ||
+        transaction.isType(RTransaction::CurrentLayerSelectionChange)) {
 
         // optimization for layer change / layer selection change:
-        return;
+        if (!transaction.isType(RTransaction::Undo) && !transaction.isType(RTransaction::Redo)) {
+            return;
+        }
     }
 
     bool ucsHasChanged = false;
@@ -2253,7 +2255,6 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
 
         QSharedPointer<RLayer> layer = object.dynamicCast<RLayer> ();
         if (!layer.isNull()) {
-            //qDebug() << "layer changed";
             //layerHasChanged = true;
             changedLayerIds.insert(objectId);
 
@@ -2265,7 +2266,7 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
                 }
             }
 
-            if (transaction.getType(RTransaction::LayerVisibilityStatusChange)) {
+            if (transaction.isType(RTransaction::LayerVisibilityStatusChange)) {
                 //qDebug() << "layer visibility changed";
                 // tag all block references as changed as they might contain entities on that layer:
                 // TODO: only tag if they do contain entities on that layer
@@ -2354,12 +2355,12 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
         }
     }
 
-    if (transaction.getType(RTransaction::LayerLockStatusChange)) {
+    if (transaction.isType(RTransaction::LayerLockStatusChange)) {
         // only lock status has changed, no regen:
         return;
     }
 
-    if (transaction.getType(RTransaction::LayerVisibilityStatusChange)) {
+    if (transaction.isType(RTransaction::LayerVisibilityStatusChange)) {
         // only visibility has changed, regen block references only:
         // TODO: this can still be slow for drawings with many / complex block references
         // TODO: find out which block references really need a regen or store layer info with
