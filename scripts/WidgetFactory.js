@@ -1196,19 +1196,42 @@ WidgetFactory.initTextBrowser = function(textBrowser, linkHandler, slot) {
 //    }
 //};
 
-WidgetFactory.initLayerCombo = function(comboBox, doc) {
+WidgetFactory.initLayerCombo = function(comboBox, doc, clear) {
+    var i;
+
     if (isNull(doc)) {
         return;
     }
+    if (isNull(clear)) {
+        clear = true;
+    }
 
-    comboBox.clear();
+    var existingLayerNames = [];
+    if (clear) {
+        comboBox.clear();
+    }
+    else {
+        for (i=0; i<comboBox.count; i++) {
+            var t = comboBox.itemText(i);
+            existingLayerNames.push(t);
+        }
+    }
+
     comboBox.iconSize = new QSize(16, 10);
     var names = doc.getLayerNames();
     //names = RS.sortAlphanumerical(names);
     names.sort(Array.alphaNumericalSorter);
-    for (var i=0; i<names.length; i++) {
+    for (i=0; i<names.length; i++) {
         var name = names[i];
         var layer = doc.queryLayer(name);
+
+        if (existingLayerNames.containsIgnoreCase(layer.getName())) {
+            // don't overwrite existing layers:
+            continue;
+        }
+
+        qDebug("add layer:", layer.getName());
+
         var icon = RColor.getIcon(layer.getColor(), new QSize(comboBox.iconSize.width(),10));
         comboBox.addItem(icon, layer.getName());
     }
