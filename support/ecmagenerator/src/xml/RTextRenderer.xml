@@ -260,9 +260,17 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" />
     <property name="rxUnicode" type="QRegExp" isConst="false"
     isStatic="true" />
+    <property name="rxOptionalBreakStr" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxOptionalBreak" type="QRegExp" isConst="false"
+    isStatic="true" />
     <property name="rxAllStr" type="QString" isConst="false"
     isStatic="true" />
+    <property name="rxAllBreakStr" type="QString" isConst="false"
+    isStatic="true" />
     <property name="rxAll" type="QRegExp" isConst="false"
+    isStatic="true" />
+    <property name="rxAllBreak" type="QRegExp" isConst="false"
     isStatic="true" />
     <property name="chDegree" type="QChar" isConst="false"
     isStatic="true" />

@@ -265,6 +265,10 @@
                 qScriptValueFromValue(&engine, RTextBasedEntity::PropertyHeight),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyWidth",
+                qScriptValueFromValue(&engine, RTextBasedEntity::PropertyWidth),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyAngle",
                 qScriptValueFromValue(&engine, RTextBasedEntity::PropertyAngle),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

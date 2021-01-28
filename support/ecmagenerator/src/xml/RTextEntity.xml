@@ -93,6 +93,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyHeight" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyWidth" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyAngle" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyXScale" type="RPropertyTypeId"

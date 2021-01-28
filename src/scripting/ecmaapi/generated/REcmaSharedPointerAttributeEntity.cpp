@@ -189,6 +189,10 @@
                 qScriptValueFromValue(&engine, RAttributeEntity::PropertyHeight),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyWidth",
+                qScriptValueFromValue(&engine, RAttributeEntity::PropertyWidth),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyItalic",
                 qScriptValueFromValue(&engine, RAttributeEntity::PropertyItalic),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

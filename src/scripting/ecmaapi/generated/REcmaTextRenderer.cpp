@@ -456,12 +456,28 @@
                 qScriptValueFromValue(&engine, RTextRenderer::rxUnicode),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxOptionalBreakStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxOptionalBreakStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxOptionalBreak",
+                qScriptValueFromValue(&engine, RTextRenderer::rxOptionalBreak),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxAllStr",
                 qScriptValueFromValue(&engine, RTextRenderer::rxAllStr),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxAllBreakStr",
+                qScriptValueFromValue(&engine, RTextRenderer::rxAllBreakStr),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxAll",
                 qScriptValueFromValue(&engine, RTextRenderer::rxAll),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxAllBreak",
+                qScriptValueFromValue(&engine, RTextRenderer::rxAllBreak),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("chDegree",
