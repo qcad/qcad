@@ -1230,8 +1230,6 @@ WidgetFactory.initLayerCombo = function(comboBox, doc, clear) {
             continue;
         }
 
-        qDebug("add layer:", layer.getName());
-
         var icon = RColor.getIcon(layer.getColor(), new QSize(comboBox.iconSize.width(),10));
         comboBox.addItem(icon, layer.getName());
     }
