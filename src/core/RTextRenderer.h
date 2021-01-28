@@ -97,6 +97,7 @@ private:
         const QList<QTextLayout::FormatRange>& formats,
         double& horizontalAdvance,
         double& horizontalAdvanceNoSpacing,
+        double& horizontalAdvanceNoTrailingSpace,
         double& ascent,
         double& descent,
         double& usedHeight);
@@ -106,6 +107,7 @@ private:
         const QList<QTextLayout::FormatRange>& formats,
         double& horizontalAdvance,
         double& horizontalAdvanceNoSpacing,
+        double& horizontalAdvanceNoTrailingSpace,
         double& ascent,
         double& descent,
         double& usedHeight);
@@ -115,6 +117,7 @@ private:
         const QList<QTextLayout::FormatRange>& formats,
         double& horizontalAdvance,
         double& horizontalAdvanceNoSpacing,
+        double& horizontalAdvanceNoTrailingSpace,
         double& ascent,
         double& descent,
         double& usedHeight);
@@ -333,9 +336,13 @@ public:
     static QRegExp escNoOp;
     static QString rxUnicodeStr;
     static QRegExp rxUnicode;
+    static QString rxOptionalBreakStr;
+    static QRegExp rxOptionalBreak;
 
     static QString rxAllStr;
+    static QString rxAllBreakStr;
     static QRegExp rxAll;
+    static QRegExp rxAllBreak;
 
     static QChar chDegree;
     static QChar chPlusMinus;

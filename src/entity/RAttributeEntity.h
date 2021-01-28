@@ -61,6 +61,7 @@ public:
     static RPropertyTypeId PropertyFontName;
     static RPropertyTypeId PropertyHAlign;
     static RPropertyTypeId PropertyHeight;
+    static RPropertyTypeId PropertyWidth;
     static RPropertyTypeId PropertyItalic;
     static RPropertyTypeId PropertyLineSpacingFactor;
     static RPropertyTypeId PropertyPositionX;

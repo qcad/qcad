@@ -60,6 +60,7 @@ public:
     static RPropertyTypeId PropertyPlainText;
     static RPropertyTypeId PropertyFontName;
     static RPropertyTypeId PropertyHeight;
+    static RPropertyTypeId PropertyWidth;
     static RPropertyTypeId PropertyAngle;
     static RPropertyTypeId PropertyXScale;
     static RPropertyTypeId PropertyBold;

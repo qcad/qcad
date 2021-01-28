@@ -143,9 +143,12 @@ QString RTextRenderer::escNoOpStr = "%%";
 QRegExp RTextRenderer::escNoOp(escNoOpStr);
 QString RTextRenderer::rxUnicodeStr = "\\\\[Uu]\\+([0-9a-fA-F]{4})";
 QRegExp RTextRenderer::rxUnicode(rxUnicodeStr);
+// optional break at spaced for wrapped text:
+QString RTextRenderer::rxOptionalBreakStr = "[ ]";
+QRegExp RTextRenderer::rxOptionalBreak(rxOptionalBreakStr);
 
-QString RTextRenderer::rxAllStr = "("
-    + RTextRenderer::rxLineFeedStr + "|"
+QString rxAllTmp =
+      RTextRenderer::rxLineFeedStr + "|"
     + RTextRenderer::rxAlignmentLeftStr + "|"
     + RTextRenderer::rxAlignmentCenterStr + "|"
     + RTextRenderer::rxAlignmentRightStr + "|"
@@ -183,9 +186,12 @@ QString RTextRenderer::rxAllStr = "("
     + RTextRenderer::rxPlusMinusStr + "|"
     + RTextRenderer::rxDiameterStr + "|"
     + RTextRenderer::rxUnderlineStr + "|"
-    + RTextRenderer::rxUnicodeStr
-    + ")";
+    + RTextRenderer::rxUnicodeStr;
+
+QString RTextRenderer::rxAllStr = "(" + rxAllTmp + ")";
+QString RTextRenderer::rxAllBreakStr = "(" + rxAllTmp + "|" + RTextRenderer::rxOptionalBreakStr + ")";
 QRegExp RTextRenderer::rxAll(RTextRenderer::rxAllStr);
+QRegExp RTextRenderer::rxAllBreak(RTextRenderer::rxAllBreakStr);
 
 QMutex RTextRenderer::m;
 
@@ -291,6 +297,7 @@ void RTextRenderer::renderSimple() {
 
     double horizontalAdvance = 0.0;
     double horizontalAdvanceNoSpacing = 0.0;
+    double horizontalAdvanceNoTrailingSpace = 0.0;
     double ascent = 0.0;
     double descent = 0.0;
     double usedHeight = 0.0;
@@ -330,6 +337,7 @@ void RTextRenderer::renderSimple() {
                 text, formats,
                 horizontalAdvance,
                 horizontalAdvanceNoSpacing,
+                horizontalAdvanceNoTrailingSpace,
                 ascent, descent,
                 usedHeight);
 
@@ -486,6 +494,8 @@ void RTextRenderer::renderSimple() {
  * Renders the text data into painter paths.
  */
 void RTextRenderer::render() {
+    bool wrap = true;
+
     boundingBox = RBox();
     painterPaths.clear();
     textLayouts.clear();
@@ -507,18 +517,22 @@ void RTextRenderer::render() {
     //RColor color = textData.getColor(true);
 
     // split up text where separation is required due to line feed,
-    // or any type of height change (\P, \H[0-9]*.?[0-9]+;, \S*/*;)
+    // or any type of height change, color change, or other formatting change
+    // (\P, \H[0-9]*.?[0-9]+;, \S*/*;, ...)
 
     // split up text at every formatting change:
-    //QRegExp regExpAll(rxAll);
-    QStringList literals = text.split(rxAll);
+    QRegExp& rxAllLocal = rxAll;
+    if (wrap) {
+        rxAllLocal = rxAllBreak;
+    }
+    QStringList literals = text.split(rxAllLocal);
 
     // collect formatting change information for every literal:
     QStringList formattings;
     int pos = 0;
-    while ((pos = rxAll.indexIn(text, pos)) != -1) {
-        formattings << rxAll.cap(1);
-        pos += rxAll.matchedLength();
+    while ((pos = rxAllLocal.indexIn(text, pos)) != -1) {
+        formattings << rxAllLocal.cap(1);
+        pos += rxAllLocal.matchedLength();
     }
 
     // x position in real units:
@@ -572,8 +586,32 @@ void RTextRenderer::render() {
     width = 0.0;
     height = 0.0;
 
+    bool insertWrap = false;
+    // don't wrap first block in line:
+    bool noWrapFirstBlock = true;
+
     // iterate through all text blocks:
-    for (int i=0; i<literals.size(); ++i) {
+    for (int i=0; i<literals.size() || insertWrap; ++i) {
+        bool wrapLineFeed = false;
+
+        // insert auto line wrap and render same block again but on new line:
+        // remove already rendered block that extends over width of text box:
+        if (insertWrap) {
+            i--;
+            insertWrap = false;
+
+            // remove last added block that caused line wrap:
+            if (!textLayouts.isEmpty()) {
+                QSharedPointer<QTextLayout> l;
+                l = textLayouts.last().getLayout();
+                textLayouts.removeLast();
+
+                if (!textLayouts.isEmpty() && l.isNull()) {
+                    l = textLayouts.last().getLayout();
+                    textLayouts.removeLast();
+                }
+            }
+        }
 
         // the literal text, e.g. "ABC":
         QString literal = literals.at(i);
@@ -619,6 +657,7 @@ void RTextRenderer::render() {
         bool underlineChange = false;
         bool colorChange = false;
         bool blockEnd = false;
+        bool optionalBreak = false;
 
         // detect formatting that ends the current text block:
         if (!formatting.isEmpty()) {
@@ -635,13 +674,22 @@ void RTextRenderer::render() {
                 xFeed = rxXFeed.exactMatch(formatting);
             }
             blockEnd = rxEndBlock.exactMatch(formatting);
+            optionalBreak = rxOptionalBreak.exactMatch(formatting);
+        }
+
+        // TODO: wrap if over width limit:
+        if (optionalBreak) {
+            // formatting is the space or other whitespace:
+            if (!wrapLineFeed) {
+                textBlock.append(formatting);
+            }
         }
 
         bool start = (i==0);
         bool end = (i==literals.size()-1);
 
         // first line is empty:
-        if (textBlock.trimmed().isEmpty() && (lineFeed || paragraphFeed || xFeed || end)) {
+        if (textBlock.trimmed().isEmpty() && (lineFeed || wrapLineFeed || paragraphFeed || xFeed || end)) {
             if (start) {
                 leadingEmptyLines = true;
             }
@@ -653,24 +701,26 @@ void RTextRenderer::render() {
         // reached a new text block that needs to be rendered separately
         // due to line feed, height change, font change, ...:
         if (target==RichText ||
-            lineFeed || paragraphFeed || xFeed || heightChange || underlineChange || stackedText ||
-            fontChange || colorChange || end
-            || (blockEnd && blockChangedHeightOrFont)) {
+            lineFeed || wrapLineFeed || paragraphFeed || xFeed || heightChange || underlineChange || stackedText ||
+            fontChange || colorChange || end ||
+            (blockEnd && blockChangedHeightOrFont) ||
+            optionalBreak) {
 
             // render block _before_ format change that requires new block:
             if (textBlock!="") {
+
                 // fix format lengths to match up. each format stops where
                 // the next one starts. formatting that is carried over is set
                 // again for the new format.
-                for (int i=0; i<formats.size(); i++) {
+                for (int k=0; k<formats.size(); k++) {
                     int nextStart;
-                    if (i<formats.size()-1) {
-                        nextStart = formats[i+1].start;
+                    if (k<formats.size()-1) {
+                        nextStart = formats[k+1].start;
                     }
                     else {
                         nextStart = textBlock.length();
                     }
-                    formats[i].length = nextStart - formats[i].start;
+                    formats[k].length = nextStart - formats[k].start;
                 }
 
                 if (target==RichText) {
@@ -680,6 +730,7 @@ void RTextRenderer::render() {
                 if (target==PainterPaths) {
                     double horizontalAdvance = 0.0;
                     double horizontalAdvanceNoSpacing = 0.0;
+                    double horizontalAdvanceNoTrailingSpace = 0.0;
                     double ascent = 0.0;
                     double descent = 0.0;
                     QList<RPainterPath> paths;
@@ -689,8 +740,21 @@ void RTextRenderer::render() {
                                 textBlock, formats,
                                 horizontalAdvance,
                                 horizontalAdvanceNoSpacing,
+                                horizontalAdvanceNoTrailingSpace,
                                 ascent, descent,
                                 usedHeight);
+
+                    // detected wrap:
+                    if (!noWrapFirstBlock) {
+                        if (wrap && textData.getTextWidth()>0.0) {
+                            if (xCursor + horizontalAdvanceNoTrailingSpace * getBlockHeight() * textData.getXScale() > textData.getTextWidth()) {
+                                insertWrap = true;
+                            }
+                        }
+                    }
+                    else {
+                        noWrapFirstBlock = false;
+                    }
 
                     // transform to scale text from 1.0 to current text height:
                     QTransform sizeTransform;
@@ -717,8 +781,8 @@ void RTextRenderer::render() {
 
                     // transform paths of current block and append to paths
                     // of current text line:
-                    for (int i=0; i<paths.size(); ++i) {
-                        RPainterPath p = paths.at(i);
+                    for (int k=0; k<paths.size(); ++k) {
+                        RPainterPath p = paths.at(k);
                         // ### TODO ###:
                         p.transform(allTransforms);
                         linePaths.append(p);
@@ -732,10 +796,11 @@ void RTextRenderer::render() {
             }
 
             // empty text, might be line feed, we need ascent, descent anyway:
-            else if ((lineFeed || paragraphFeed || xFeed || end) && !blockHeight.isEmpty()) {
+            else if ((lineFeed || wrapLineFeed || paragraphFeed || xFeed || end) && !blockHeight.isEmpty()) {
                 if (target==PainterPaths) {
                     double horizontalAdvance = 0.0;
                     double horizontalAdvanceNoSpacing = 0.0;
+                    double horizontalAdvanceNoTrailingSpace = 0.0;
                     double ascent = 0.0;
                     double descent = 0.0;
                     double usedHeight = 0.0;
@@ -745,6 +810,7 @@ void RTextRenderer::render() {
                                 "A", QList<QTextLayout::FormatRange>(),
                                 horizontalAdvance,
                                 horizontalAdvanceNoSpacing,
+                                horizontalAdvanceNoTrailingSpace,
                                 ascent, descent,
                                 usedHeight);
 
@@ -784,6 +850,7 @@ void RTextRenderer::render() {
                         double ascent = 0.0;
                         double descent = 0.0;
                         double usedHeight = 0.0;
+                        double horizontalAdvanceNoTrailingSpace = 0.0;
 
                         QList<QTextLayout::FormatRange> localFormats;
 
@@ -798,6 +865,7 @@ void RTextRenderer::render() {
                                     script, localFormats,
                                     horizontalAdvance[s],
                                     horizontalAdvanceNoSpacing[s],
+                                    horizontalAdvanceNoTrailingSpace,
                                     ascent, descent,
                                     usedHeight);
 
@@ -839,8 +907,8 @@ void RTextRenderer::render() {
 
                         // transform paths of current block and append to paths
                         // of current text line:
-                        for (int i=0; i<paths.size(); ++i) {
-                            RPainterPath p = paths.at(i);
+                        for (int k=0; k<paths.size(); ++k) {
+                            RPainterPath p = paths.at(k);
                             // ### TODO ###:
                             p.transform(allTransforms);
                             linePaths.append(p);
@@ -868,7 +936,7 @@ void RTextRenderer::render() {
             // end of stacked text handling
 
             // prepare for next text block:
-            if (lineFeed || paragraphFeed || xFeed || end) {
+            if (lineFeed || wrapLineFeed || paragraphFeed || xFeed || end) {
                 if (!textBlock.isEmpty()) {
                     if (textBlock.at(textBlock.length()-1).isSpace()) {
                         trailingSpaces = true;
@@ -894,7 +962,7 @@ void RTextRenderer::render() {
             // handle text line.
             // add all painter paths of the current line to result set of
             // painter paths. apply line feed transformations.
-            if (lineFeed || paragraphFeed || xFeed || end) {
+            if (insertWrap || lineFeed || wrapLineFeed || paragraphFeed || xFeed || end) {
 //                qDebug() << "lineFeed: adding text line:";
 //                qDebug() << "  maxAscent: " << maxAscent;
 //                qDebug() << "  minDescent: " << minDescent;
@@ -903,7 +971,7 @@ void RTextRenderer::render() {
 //                qDebug() << "  trailingSpaces: " << trailingSpaces;
 
                 if (target==RichText) {
-                    if (lineFeed || paragraphFeed || xFeed) {
+                    if (lineFeed || wrapLineFeed || paragraphFeed || xFeed) {
                         richText += "<br/>";
                     }
                 }
@@ -912,10 +980,16 @@ void RTextRenderer::render() {
                     yCursor += (minDescentPrevious - maxAscent) * lineSpacingFactor;
                 }
 
+                if (insertWrap) {
+                    //qDebug() << "linePaths:" << linePaths.length();
+                    // remove last path of last block that is wrapped to next line:
+                    linePaths.removeLast();
+                }
+
                 // calculate line bounding box for alignment without spaces at borders:
                 RBox lineBoundingBox;
-                for (int i=0; i<linePaths.size(); ++i) {
-                    RPainterPath p = linePaths.at(i);
+                for (int k=0; k<linePaths.size(); ++k) {
+                    RPainterPath p = linePaths.at(k);
                     lineBoundingBox.growToInclude(p.getBoundingBox());
                 }
 
@@ -969,12 +1043,12 @@ void RTextRenderer::render() {
                 width = qMax(width, lineBoundingBox.getMaximum().x - qMin(0.0, lineBoundingBox.getMinimum().x));
 
                 // apply transforms of current text line to all text layouts of current line:
-                for (int i=0; i<lineBlockTransforms.length(); ++i) {
-                    lineBlockTransforms[i] *= lineTransform;
+                for (int n=0; n<lineBlockTransforms.length(); ++n) {
+                    lineBlockTransforms[n] *= lineTransform;
                     if (!textLayouts.isEmpty()) {
-                        int k = textLayouts.length()-lineBlockTransforms.length()+i;
+                        int k = textLayouts.length()-lineBlockTransforms.length()+n;
                         if (k>=0 && k<textLayouts.length()) {
-                            textLayouts[k].transform *= lineBlockTransforms[i];
+                            textLayouts[k].transform *= lineBlockTransforms[n];
                         }
                     }
                 }
@@ -987,9 +1061,9 @@ void RTextRenderer::render() {
                 // add current text line to result set:
                 // one painter path per text block:
                 QPen pen;
-                for (int i=0; i<linePaths.size(); ++i) {
-                    RPainterPath p = linePaths[i];
-                    if (i==0) {
+                for (int k=0; k<linePaths.size(); ++k) {
+                    RPainterPath p = linePaths[k];
+                    if (k==0) {
                         pen = p.getPen();
                         if (pen.style()==Qt::NoPen) {
                            pen = QPen(p.getBrush().color());
@@ -1026,6 +1100,7 @@ void RTextRenderer::render() {
                 leadingSpaces = false;
                 trailingSpaces = false;
                 usedHeight = 0.0;
+                noWrapFirstBlock = true;
             }
         }
 
@@ -1287,8 +1362,8 @@ void RTextRenderer::render() {
             if (target==RichText) {
                 // close all tags that were opened in this block:
                 if (!openTags.isEmpty()) {
-                    for (int i=openTags.top().size()-1; i>=0; --i) {
-                        QString tag = openTags.top().at(i);
+                    for (int k=openTags.top().size()-1; k>=0; --k) {
+                        QString tag = openTags.top().at(k);
                         richText += QString("</%1>").arg(tag);
                     }
                     openTags.pop();
@@ -1439,6 +1514,7 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlock(
     const QList<QTextLayout::FormatRange>& formats,
     double& horizontalAdvance,
     double& horizontalAdvanceNoSpacing,
+    double& horizontalAdvanceNoTrailingSpace,
     double& ascent,
     double& descent,
     double& usedHeight) {
@@ -1449,6 +1525,7 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlock(
                     formats,
                     horizontalAdvance,
                     horizontalAdvanceNoSpacing,
+                    horizontalAdvanceNoTrailingSpace,
                     ascent, descent,
                     usedHeight);
     }
@@ -1458,6 +1535,7 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlock(
                     formats,
                     horizontalAdvance,
                     horizontalAdvanceNoSpacing,
+                    horizontalAdvanceNoTrailingSpace,
                     ascent, descent,
                     usedHeight);
     }
@@ -1473,6 +1551,7 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
     const QList<QTextLayout::FormatRange>& formats,
     double& horizontalAdvance,
     double& horizontalAdvanceNoSpacing,
+    double& horizontalAdvanceNoTrailingSpace,
     double& ascent,
     double& descent,
     double& usedHeight) {
@@ -1564,8 +1643,28 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
         return QList<RPainterPath>() << RPainterPath();
     }
     layout->endLayout();
-
     horizontalAdvance = line.horizontalAdvance() * ttfScale;
+
+    // same block without trailing space:
+    QString blockTextNoTrailingSpace = blockText;
+    blockTextNoTrailingSpace.replace(QRegExp(" $"), "");
+    QTextLayout l;
+    l.setCacheEnabled(true);
+    l.setFont(font);
+    l.setText(blockText);
+#if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
+    l.setFormats(formats.toVector());
+#else
+    l.setAdditionalFormats(formats);
+#endif
+    l.setText(blockTextNoTrailingSpace);
+    l.beginLayout();
+    line = l.createLine();
+    l.endLayout();
+    horizontalAdvanceNoTrailingSpace = line.horizontalAdvance() * ttfScale;
+
+    //qDebug() << "horizontalAdvance:" << horizontalAdvance;
+    //qDebug() << "horizontalAdvanceNoTrailingSpace:" << horizontalAdvanceNoTrailingSpace;
 
     RPainterPathDevice ppd;
     QPainter ppPainter(&ppd);
@@ -1627,6 +1726,7 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
     const QList<QTextLayout::FormatRange>& formats,
     double& horizontalAdvance,
     double& horizontalAdvanceNoSpacing,
+    double& horizontalAdvanceNoTrailingSpace,
     double& ascent,
     double& descent,
     double& usedHeight) {

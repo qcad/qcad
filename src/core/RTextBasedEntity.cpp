@@ -39,6 +39,7 @@ RPropertyTypeId RTextBasedEntity::PropertyText;
 RPropertyTypeId RTextBasedEntity::PropertyPlainText;
 RPropertyTypeId RTextBasedEntity::PropertyFontName;
 RPropertyTypeId RTextBasedEntity::PropertyHeight;
+RPropertyTypeId RTextBasedEntity::PropertyWidth;
 RPropertyTypeId RTextBasedEntity::PropertyAngle;
 RPropertyTypeId RTextBasedEntity::PropertyXScale;
 RPropertyTypeId RTextBasedEntity::PropertyBold;
@@ -78,6 +79,7 @@ void RTextBasedEntity::init() {
     RTextBasedEntity::PropertyPlainText.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Plain Text"));
     RTextBasedEntity::PropertyFontName.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Font Name"));
     RTextBasedEntity::PropertyHeight.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Text Height"), false, RPropertyAttributes::Geometry);
+    RTextBasedEntity::PropertyWidth.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Text Width"), false, RPropertyAttributes::Geometry);
     RTextBasedEntity::PropertyAngle.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Text Angle"), false, RPropertyAttributes::Geometry);
     RTextBasedEntity::PropertyXScale.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "X Scale"));
     RTextBasedEntity::PropertyBold.generateId(typeid(RTextBasedEntity), "", QT_TRANSLATE_NOOP("REntity", "Bold"));
@@ -100,6 +102,7 @@ bool RTextBasedEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(getData().text, value, PropertyText == propertyTypeId);
     ret = ret || RObject::setMember(getData().fontName, value, PropertyFontName == propertyTypeId);
     ret = ret || RObject::setMember(getData().textHeight, value, PropertyHeight == propertyTypeId);
+    ret = ret || RObject::setMember(getData().textWidth, value, PropertyWidth == propertyTypeId);
     ret = ret || RObject::setMember(getData().angle, value, PropertyAngle == propertyTypeId);
     if (PropertyXScale == propertyTypeId) {
         // no negative x-scale:
@@ -166,6 +169,8 @@ QPair<QVariant, RPropertyAttributes> RTextBasedEntity::getProperty(
         return qMakePair(QVariant(getData().fontName), RPropertyAttributes(RPropertyAttributes::Style));
     } else if (propertyTypeId == PropertyHeight) {
         return qMakePair(QVariant(getData().textHeight), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyWidth) {
+        return qMakePair(QVariant(getData().textWidth), RPropertyAttributes());
     } else if (propertyTypeId == PropertyAngle) {
         return qMakePair(QVariant(getData().angle), RPropertyAttributes(RPropertyAttributes::Angle));
     } else if (propertyTypeId == PropertyXScale) {
