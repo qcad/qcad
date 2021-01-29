@@ -477,7 +477,7 @@ Explode.explodeEntity = function(entity, options) {
         }
     }
 
-    // explode text entities into lines, arcs and splines:
+    // explode text entities into text blocks or lines, arcs and splines:
     else if (isTextEntity(entity)) {
         // explode multi-block text into simple text entities:
         // each text block with the same format is converted into one individual simple text entity:
