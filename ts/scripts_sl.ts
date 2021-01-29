@@ -14095,7 +14095,7 @@ shown in search results:</source>
         <translation>Izmerjena vrednost</translation>
     </message>
     <message>
-        <location line="+116"/>
+        <location line="+137"/>
         <source>Left</source>
         <translation>Levo</translation>
     </message>

@@ -13150,7 +13150,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Naměřená hodnota</translation>
     </message>
     <message>
-        <location line="+116"/>
+        <location line="+137"/>
         <source>Left</source>
         <translation>Vlevo</translation>
     </message>

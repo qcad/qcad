@@ -13542,7 +13542,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Nameraná hodnota</translation>
     </message>
     <message>
-        <location line="+116"/>
+        <location line="+137"/>
         <source>Left</source>
         <translation>Vľavo</translation>
     </message>

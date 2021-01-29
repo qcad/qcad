@@ -13616,7 +13616,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Mitattu arvo</translation>
     </message>
     <message>
-        <location line="+116"/>
+        <location line="+137"/>
         <source>Left</source>
         <translation>Vasen</translation>
     </message>

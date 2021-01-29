@@ -13565,7 +13565,7 @@ getoond in zoekresultaten:</translation>
         <translation>Gemeten waarde</translation>
     </message>
     <message>
-        <location line="+116"/>
+        <location line="+137"/>
         <source>Left</source>
         <translation>Links</translation>
     </message>

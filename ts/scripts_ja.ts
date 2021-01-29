@@ -13939,7 +13939,7 @@ shown in search results:</source>
         <translation>測定値</translation>
     </message>
     <message>
-        <location line="+116"/>
+        <location line="+137"/>
         <source>Left</source>
         <translation>左</translation>
     </message>

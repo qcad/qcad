@@ -278,8 +278,8 @@
         <translation>Skupna ploščina</translation>
     </message>
     <message>
-        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+91"/>
-        <location filename="../src/entity/RAttributeEntity.cpp" line="+95"/>
+        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+93"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+97"/>
         <source>Tag</source>
         <translation>Značka</translation>
     </message>

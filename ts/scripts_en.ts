@@ -13389,7 +13389,7 @@ shown in search results:</translation>
         <translation>Measured value</translation>
     </message>
     <message>
-        <location line="+116"/>
+        <location line="+137"/>
         <source>Left</source>
         <translation>Left</translation>
     </message>

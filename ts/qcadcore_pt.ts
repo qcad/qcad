@@ -397,7 +397,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/core/RTextBasedEntity.cpp" line="+74"/>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="+75"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <location line="+8"/>
         <location line="+2"/>
@@ -692,6 +692,11 @@ Abre diálogo de cores</translatorcomment>
         <location line="+1"/>
         <source>Text Height</source>
         <translation>Altura do Texto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text Width</source>
+        <translation>Largura do texto</translation>
     </message>
     <message>
         <location line="+1"/>

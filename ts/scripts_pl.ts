@@ -17092,7 +17092,7 @@ Dzielenie (÷)</translatorcomment>
         <translation>Zmierzona wartość</translation>
     </message>
     <message>
-        <location line="+116"/>
+        <location line="+137"/>
         <source>Left</source>
         <translation>Lewo</translation>
     </message>
