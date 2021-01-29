@@ -123,7 +123,7 @@ LineBoxJoint.prototype.getOperation = function(preview) {
     if (isNull(this.corner1) || isNull(this.corner2)) {
         return undefined;
     }
-    if (!isNumber(this.fingerHeight) || !isNumber(this.slotRatio) || !isNumber(this.fingerLength)) {
+    if (!isNumberGreaterZero(this.fingerHeight) || !isNumberGreaterZero(this.slotRatio) || !isNumberGreaterZero(this.fingerLength)) {
         return undefined;
     }
 
@@ -136,6 +136,10 @@ LineBoxJoint.prototype.getOperation = function(preview) {
 
     var slotLength = this.fingerLength * this.slotRatio;
     var nFingers = Math.ceil((len-slotLength)/(this.fingerLength+slotLength));
+    if (!isNumber(nFingers)) {
+        return undefined;
+    }
+
     slotLength = (len-(nFingers*this.fingerLength))/(nFingers+1);
 
     var op = new RAddObjectsOperation();
