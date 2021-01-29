@@ -144,7 +144,7 @@ QRegExp RTextRenderer::escNoOp(escNoOpStr);
 QString RTextRenderer::rxUnicodeStr = "\\\\[Uu]\\+([0-9a-fA-F]{4})";
 QRegExp RTextRenderer::rxUnicode(rxUnicodeStr);
 // optional break at spaced for wrapped text:
-QString RTextRenderer::rxOptionalBreakStr = "[ ]";
+QString RTextRenderer::rxOptionalBreakStr = "[ ]+";
 QRegExp RTextRenderer::rxOptionalBreak(rxOptionalBreakStr);
 
 QString rxAllTmp =
@@ -494,7 +494,9 @@ void RTextRenderer::renderSimple() {
  * Renders the text data into painter paths.
  */
 void RTextRenderer::render() {
-    bool wrap = true;
+    qDebug() << "=========================================================";
+    bool wrap = textData.getTextWidth()>0.0;
+    wrap = false;
 
     boundingBox = RBox();
     painterPaths.clear();
@@ -523,17 +525,21 @@ void RTextRenderer::render() {
     // split up text at every formatting change:
     QRegExp& rxAllLocal = rxAll;
     if (wrap) {
+        qDebug() << "wrap";
         rxAllLocal = rxAllBreak;
     }
     QStringList literals = text.split(rxAllLocal);
 
-    // collect formatting change information for every literal:
+    // collect formatting change information for after every literal:
     QStringList formattings;
     int pos = 0;
     while ((pos = rxAllLocal.indexIn(text, pos)) != -1) {
         formattings << rxAllLocal.cap(1);
         pos += rxAllLocal.matchedLength();
     }
+
+    qDebug() << "literals:" << literals;
+    qDebug() << "formattings (after block):" << formattings;
 
     // x position in real units:
     double xCursor = 0.0;
@@ -589,6 +595,8 @@ void RTextRenderer::render() {
     bool insertWrap = false;
     // don't wrap first block in line:
     bool noWrapFirstBlock = true;
+    QList<QTextLayout::FormatRange> formatsPrev = formats;
+    QStack<QTextCharFormat> currentFormatPrev = currentFormat;
 
     // iterate through all text blocks:
     for (int i=0; i<literals.size() || insertWrap; ++i) {
@@ -597,6 +605,8 @@ void RTextRenderer::render() {
         // insert auto line wrap and render same block again but on new line:
         // remove already rendered block that extends over width of text box:
         if (insertWrap) {
+            formats = formatsPrev;
+            currentFormat = currentFormatPrev;
             i--;
             insertWrap = false;
 
@@ -606,12 +616,18 @@ void RTextRenderer::render() {
                 l = textLayouts.last().getLayout();
                 textLayouts.removeLast();
 
+                //formats.removeLast();
+
                 if (!textLayouts.isEmpty() && l.isNull()) {
                     l = textLayouts.last().getLayout();
                     textLayouts.removeLast();
+                    //formats.removeLast();
                 }
             }
         }
+
+        formatsPrev = formats;
+        currentFormatPrev = currentFormat;
 
         // the literal text, e.g. "ABC":
         QString literal = literals.at(i);
@@ -677,9 +693,9 @@ void RTextRenderer::render() {
             optionalBreak = rxOptionalBreak.exactMatch(formatting);
         }
 
-        // TODO: wrap if over width limit:
+        // add spaces if we're not at end of wrapped line:
         if (optionalBreak) {
-            // formatting is the space or other whitespace:
+            // formatting is the whitespace:
             if (!wrapLineFeed) {
                 textBlock.append(formatting);
             }
@@ -735,6 +751,17 @@ void RTextRenderer::render() {
                     double descent = 0.0;
                     QList<RPainterPath> paths;
 
+                    qDebug() << "== render: " << textBlock << "==";
+                    qDebug() << "formatting after:" << formatting;
+                    qDebug() << "formats:" << formats.length();
+                    for (int k=0; k<formats.length(); k++) {
+                        QTextLayout::FormatRange f = formats[k];
+                        qDebug() << "  start:" << f.start;
+                        qDebug() << "  length:" << f.length;
+                        qDebug() << "  fmt:" << f.format;
+                        qDebug() << "  col:" << f.format.foreground();
+                    }
+
                     // get painter paths for current text block at height 1.0, position 0,0:
                     paths = getPainterPathsForBlock(
                                 textBlock, formats,
@@ -746,10 +773,8 @@ void RTextRenderer::render() {
 
                     // detected wrap:
                     if (!noWrapFirstBlock) {
-                        if (wrap && textData.getTextWidth()>0.0) {
-                            if (xCursor + horizontalAdvanceNoTrailingSpace * getBlockHeight() * textData.getXScale() > textData.getTextWidth()) {
-                                insertWrap = true;
-                            }
+                        if (wrap && xCursor + horizontalAdvanceNoTrailingSpace * getBlockHeight() * textData.getXScale() > textData.getTextWidth()) {
+                            insertWrap = true;
                         }
                     }
                     else {
@@ -919,6 +944,18 @@ void RTextRenderer::render() {
                         }
                     }
 
+                    // detected wrap:
+                    if (!noWrapFirstBlock) {
+                        if (wrap && qMax(horizontalAdvance[0], horizontalAdvance[1]) * getBlockHeight() * heightFactor > textData.getTextWidth()) {
+                            qDebug() << "wrap before stacked text";
+                            insertWrap = true;
+                        }
+                    }
+                    else {
+                        noWrapFirstBlock = false;
+                    }
+
+
                     xCursor += qMax(horizontalAdvance[0], horizontalAdvance[1]) * getBlockHeight() * heightFactor;
                 }
 
@@ -957,6 +994,7 @@ void RTextRenderer::render() {
             if (!currentFormat.isEmpty()) {
                 fr.format = currentFormat.top();
             }
+            qDebug() << "appending format:" << fr.format.foreground();
             formats.append(fr);
 
             // handle text line.
@@ -983,7 +1021,9 @@ void RTextRenderer::render() {
                 if (insertWrap) {
                     //qDebug() << "linePaths:" << linePaths.length();
                     // remove last path of last block that is wrapped to next line:
-                    linePaths.removeLast();
+                    if (!linePaths.isEmpty()) {
+                        linePaths.removeLast();
+                    }
                 }
 
                 // calculate line bounding box for alignment without spaces at borders:
@@ -1377,7 +1417,9 @@ void RTextRenderer::render() {
         //reg.setPattern(rxColorChangeIndex);
         if (rxColorChangeIndex.exactMatch(formatting)) {
             RColor blockColor = RColor::createFromCadIndex(rxColorChangeIndex.cap(1));
+            qDebug() << "block color:" << blockColor;
             if (!currentFormat.isEmpty()) {
+                //qDebug() << "001";
                 if (blockColor.isByLayer()) {
                     currentFormat.top().setForeground(RColor::CompatByLayer);
                 } else if (blockColor.isByBlock()) {
@@ -1388,6 +1430,7 @@ void RTextRenderer::render() {
                 }
                 fr.format = currentFormat.top();
                 formats.append(fr);
+                qDebug() << "appending format 2:" << fr.format.foreground();
             }
 
             if (target==RichText && !openTags.isEmpty()) {
@@ -1407,6 +1450,8 @@ void RTextRenderer::render() {
                 currentFormat.top().setForeground(blockColor);
                 fr.format = currentFormat.top();
                 formats.append(fr);
+                //qDebug() << "formatting:" << formatting;
+                qDebug() << "appending format 3:" << fr.format.foreground();
             }
 
             if (target==RichText && !openTags.isEmpty()) {
@@ -1645,23 +1690,28 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
     layout->endLayout();
     horizontalAdvance = line.horizontalAdvance() * ttfScale;
 
-    // same block without trailing space:
+    // same block without trailing spaces:
     QString blockTextNoTrailingSpace = blockText;
-    blockTextNoTrailingSpace.replace(QRegExp(" $"), "");
-    QTextLayout l;
-    l.setCacheEnabled(true);
-    l.setFont(font);
-    l.setText(blockText);
+    blockTextNoTrailingSpace.replace(QRegExp("[ ]+$"), "");
+    if (blockTextNoTrailingSpace!=blockText) {
+        QTextLayout l;
+        l.setCacheEnabled(true);
+        l.setFont(font);
+        l.setText(blockText);
 #if (QT_VERSION >= QT_VERSION_CHECK(5,6,0))
-    l.setFormats(formats.toVector());
+        l.setFormats(formats.toVector());
 #else
-    l.setAdditionalFormats(formats);
+        l.setAdditionalFormats(formats);
 #endif
-    l.setText(blockTextNoTrailingSpace);
-    l.beginLayout();
-    line = l.createLine();
-    l.endLayout();
-    horizontalAdvanceNoTrailingSpace = line.horizontalAdvance() * ttfScale;
+        l.setText(blockTextNoTrailingSpace);
+        l.beginLayout();
+        line = l.createLine();
+        l.endLayout();
+        horizontalAdvanceNoTrailingSpace = line.horizontalAdvance() * ttfScale;
+    }
+    else {
+        horizontalAdvanceNoTrailingSpace = horizontalAdvance;
+    }
 
     //qDebug() << "horizontalAdvance:" << horizontalAdvance;
     //qDebug() << "horizontalAdvanceNoTrailingSpace:" << horizontalAdvanceNoTrailingSpace;
