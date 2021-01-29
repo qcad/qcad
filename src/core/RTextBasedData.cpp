@@ -265,20 +265,26 @@ QList<RRefPoint> RTextBasedData::getReferencePoints(RS::ProjectionRenderingHint 
 
     ret.append(alignmentPoint);
 
-    /*
-    if (!simple) {
-        if (height<1.0e-6 || dirty) {
-            getPainterPaths();
+    if (!isSimple()) {
+//        if (height<1.0e-6 || dirty) {
+//            getPainterPaths();
+//        }
+
+        double w = textWidth;
+        switch (horizontalAlignment) {
+        case RS::HAlignCenter:
+        case RS::HAlignMid:
+            w=w/2;
+            break;
+        case RS::HAlignRight:
+            w=-w;
+            break;
         }
-
-        RVector vWidth = RVector::createPolar(textWidth, angle);
-        RVector vHeight = RVector::createPolar(height, angle);
-
-        ret.append(position + vWidth);
-        ret.append(position + vWidth + vHeight);
-        ret.append(position + vHeight);
+        RVector vWidth = RVector::createPolar(w, angle);
+        ret.append(alignmentPoint + vWidth);
+        //ret.append(position + vWidth + vHeight);
+        //ret.append(position + vHeight);
     }
-    */
 
     return ret;
 }
@@ -297,6 +303,43 @@ bool RTextBasedData::moveReferencePoint(const RVector& referencePoint, const RVe
         ret = true;
         update(false);
     }
+
+    double w = textWidth;
+    switch (horizontalAlignment) {
+    case RS::HAlignCenter:
+    case RS::HAlignMid:
+        w=w/2;
+        break;
+    case RS::HAlignRight:
+        w=-w;
+        break;
+    }
+
+    RVector vWidth = RVector::createPolar(w, angle);
+    RVector widthHandle = alignmentPoint + vWidth;
+
+    if (referencePoint.equalsFuzzy(widthHandle)) {
+        // TODO: handle centered, right-aligned text:
+
+        RLine alignmentAxis(alignmentPoint, alignmentPoint + RVector::createPolar(1.0, angle+M_PI/2));
+        double d = alignmentAxis.getDistanceTo(targetPoint, false);
+
+        switch (horizontalAlignment) {
+        case RS::HAlignCenter:
+        case RS::HAlignMid:
+            textWidth = d * 2;
+            break;
+        case RS::HAlignRight:
+        default:
+            textWidth = d;
+            break;
+        }
+
+        qDebug() << "changed width to: " << textWidth;
+        ret = true;
+        update(false);
+    }
+
     return ret;
 }
 
