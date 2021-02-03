@@ -38,15 +38,46 @@ void RColorCombo::init() {
     setMaxVisibleItems(20);
     QVariant v;
     QListIterator<QPair<QString, RColor> > it(RColor::getList(onlyFixed));
+    QColor prev;
 
+    int i = 0;
+    bool lastIsSeparator = false;
     while (it.hasNext()) {
         QPair<QString, RColor> p = it.next();
+
         if (p.second.isValid()) {
             v.setValue<RColor> (p.second);
             addItem(RColor::getIcon(p.second, iconSize()), p.first, v);
+            lastIsSeparator = false;
         } else {
-            addItem(RColor::getIcon(p.second, iconSize()), p.first);
+            // separator:
+            if (p.first=="---") {
+                if (!lastIsSeparator) {
+                    insertSeparator(count());
+                }
+                lastIsSeparator = true;
+                continue;
+            }
+            else {
+                // others...
+                if (!lastIsSeparator) {
+                    insertSeparator(count());
+                }
+                addItem(RColor::getIcon(p.second, iconSize()), p.first);
+                lastIsSeparator = false;
+                continue;
+            }
         }
+
+//        if (p.second==RColor(QString("#ffffff")) && prev==RColor(QString("#c0c0c0")) && i<25) {
+//            if (!lastIsSeparator) {
+//                insertSeparator(count());
+//            }
+//            lastIsSeparator = true;
+//        }
+
+        prev = p.second;
+        i++;
     }
 
     if (!onlyFixed) {

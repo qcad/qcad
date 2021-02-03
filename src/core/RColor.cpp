@@ -315,7 +315,33 @@ void RColor::init() {
     init(tr("Gray"), RColor(Qt::gray));
     init(tr("Light Gray"), RColor(Qt::lightGray));
     init(tr("White"), RColor(Qt::white));
+    init("---", RColor());
     init(tr("Others..."), RColor());
+
+    QString palette = RSettings::getStringValue("UserPalette/Colors", "");
+    QStringList colorStrings = palette.split("\n");
+    bool first = true;
+    for (int i=0; i<colorStrings.length(); i++) {
+        QString colorString = colorStrings[i];
+        if (colorString.isEmpty()) {
+            continue;
+        }
+        //qDebug("color:", colorString);
+        QStringList tuples = colorString.split(",");
+        if (tuples.length()!=2) {
+            init("---", RColor());
+            continue;
+        }
+        QString title = tuples[0];
+        QString code = tuples[1];
+
+        if (first) {
+            init("---", RColor());
+            first = false;
+        }
+        init(title, RColor(code));
+    }
+
 }
 
 void RColor::init(const QString& cn, const RColor& c) {
