@@ -6327,22 +6327,36 @@ BUG: Interferes with group castings.</translation>
         <translation>Volle Auflösung benutzen für Retina-Anzeige (hochauflösende Anzeige)</translation>
     </message>
     <message>
-        <location line="+398"/>
+        <location line="+15"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+98"/>
+        <location line="-8"/>
         <source>Number of threads:</source>
         <translation>Anzahl Threads:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <source>Text height threshold:</source>
+        <translation type="vanished">Schwellenwert für Textgrösse:</translation>
+    </message>
+    <message>
+        <location line="+486"/>
+        <source>Reference point size (px):</source>
+        <translation>Referenzpunktgrösse (pix):</translation>
+    </message>
+    <message>
+        <location line="+74"/>
+        <source>Text height threshold (px):</source>
+        <translation>Schwellenwert für Textgrösse (pix):</translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>Persistent selection</source>
         <translation>Persistente Selektion</translation>
     </message>
     <message>
-        <location line="-693"/>
+        <location line="-826"/>
         <source>Color lightness threshold:</source>
         <translation>Farbgrenzwert:</translation>
     </message>
@@ -6376,7 +6390,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Anzeige und Leistung</translation>
     </message>
     <message>
-        <location line="+229"/>
+        <location line="+335"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Gestrichelte Objekte mit mehr als N Strichen ausgezogen darstellen:</translation>
     </message>
@@ -6390,7 +6404,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Minimaler Winkel für Bogensegmentierung in Anzeige (Grad):</translation>
     </message>
     <message>
-        <location line="-266"/>
+        <location line="-372"/>
         <source>Linetypes and Lineweights</source>
         <translation>Linientypen und Linienbreiten</translation>
     </message>
@@ -6409,7 +6423,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Kantenglättung standardmässig an</translation>
     </message>
     <message>
-        <location line="+327"/>
+        <location line="+433"/>
         <source>Maximum number of reference points displayed:</source>
         <translation>Maximale Anzahl angezeigte Referenzpunkte:</translation>
     </message>
@@ -6427,7 +6441,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="obsolete">Gestrichelte Objekte mit mehr als N Strichen ausgezogen darstellen:</translation>
     </message>
     <message>
-        <location line="-347"/>
+        <location line="-453"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatisch Bildschirmbasierte Linientypen verwenden in Modellansicht</translation>
     </message>
@@ -6440,7 +6454,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Leistung</translation>
     </message>
     <message>
-        <location line="+96"/>
+        <location line="+202"/>
         <source>Number of preview entities:</source>
         <translation>Anzahl Vorschau Objekte:</translation>
     </message>
@@ -6458,7 +6472,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="obsolete">Anzeigegrenzwert für Texte:</translation>
     </message>
     <message>
-        <location line="+441"/>
+        <location line="+468"/>
         <source>Selection</source>
         <translation>Selektion</translation>
     </message>

@@ -207,7 +207,7 @@
         <translation>Wit</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Others...</source>
         <translation>Andere...</translation>
     </message>

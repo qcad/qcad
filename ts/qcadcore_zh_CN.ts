@@ -207,7 +207,7 @@
         <translation>白色</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Others...</source>
         <translation>其它...</translation>
     </message>

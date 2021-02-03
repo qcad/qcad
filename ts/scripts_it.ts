@@ -6147,22 +6147,36 @@ BUG: Interferes with group castings.</source>
         <translation>Utilizzare piena risoluzione per il display Retina / alta risoluzione</translation>
     </message>
     <message>
-        <location line="+398"/>
+        <location line="+15"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+98"/>
+        <location line="-8"/>
         <source>Number of threads:</source>
         <translation>Numero di thread:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <source>Text height threshold:</source>
+        <translation type="vanished">Soglia di altezza del testo:</translation>
+    </message>
+    <message>
+        <location line="+486"/>
+        <source>Reference point size (px):</source>
+        <translation>Dimensione del punto di riferimento (px):</translation>
+    </message>
+    <message>
+        <location line="+74"/>
+        <source>Text height threshold (px):</source>
+        <translation>Soglia di altezza del testo (px):</translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>Persistent selection</source>
         <translation>Selezione permanente</translation>
     </message>
     <message>
-        <location line="-693"/>
+        <location line="-826"/>
         <source>Color lightness threshold:</source>
         <translation>Soglia per la leggerezza del colore:</translation>
     </message>
@@ -6196,7 +6210,7 @@ BUG: Interferes with group castings.</source>
         <translation>Visualizzazione e prestazioni</translation>
     </message>
     <message>
-        <location line="+229"/>
+        <location line="+335"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Visualizza entità con più di N trattini come continuo:</translation>
     </message>
@@ -6210,7 +6224,7 @@ BUG: Interferes with group castings.</source>
         <translation>Passo angolo minimo per rendere archi (gradi):</translation>
     </message>
     <message>
-        <location line="-266"/>
+        <location line="-372"/>
         <source>Linetypes and Lineweights</source>
         <translation>Tipi di linee e pesi di linee</translation>
     </message>
@@ -6229,7 +6243,7 @@ BUG: Interferes with group castings.</source>
         <translation>Antialiasing di default</translation>
     </message>
     <message>
-        <location line="+327"/>
+        <location line="+433"/>
         <source>Maximum number of reference points displayed:</source>
         <translation>Numero massimo di punti di riferimento visualizzati:</translation>
     </message>
@@ -6243,7 +6257,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Antialiasing di default</translation>
     </message>
     <message>
-        <location line="-347"/>
+        <location line="-453"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Utilizzare automaticamente i tipi di linea a base di schermo in vista del modello</translation>
     </message>
@@ -6256,7 +6270,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Performance</translation>
     </message>
     <message>
-        <location line="+96"/>
+        <location line="+202"/>
         <source>Number of preview entities:</source>
         <translation>Numero di entità in anteprima:</translation>
     </message>
@@ -6274,7 +6288,7 @@ BUG: Interferes with group castings.</source>
         <translation type="obsolete">Visualizzare limite per il testo:</translation>
     </message>
     <message>
-        <location line="+441"/>
+        <location line="+468"/>
         <source>Selection</source>
         <translation>Selezione</translation>
     </message>

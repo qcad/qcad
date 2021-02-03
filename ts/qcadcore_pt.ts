@@ -331,7 +331,7 @@ Cinza Claro</translatorcomment>
         <translation>Cinza Claro</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Others...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pt.ts--</translatorcomment>

@@ -32,7 +32,7 @@ Impossibile eseguire Qt Assistant (%1)</translatorcomment>
 <context>
     <name>RColorCombo</name>
     <message>
-        <location filename="../src/gui/RColorCombo.cpp" line="+126"/>
+        <location filename="../src/gui/RColorCombo.cpp" line="+157"/>
         <source>Custom</source>
         <translation>Personalizzato</translation>
     </message>

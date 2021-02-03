@@ -5631,22 +5631,36 @@ BUG: Interferes with group castings.</source>
         <translation>Gebruik volledige resolutie voor Retina-display (hoge resolutie)</translation>
     </message>
     <message>
-        <location line="+398"/>
+        <location line="+15"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+98"/>
+        <location line="-8"/>
         <source>Number of threads:</source>
         <translation>Aantal threads:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <source>Text height threshold:</source>
+        <translation type="vanished">Drempel voor teksthoogte:</translation>
+    </message>
+    <message>
+        <location line="+486"/>
+        <source>Reference point size (px):</source>
+        <translation>Referentiepuntgrootte (px):</translation>
+    </message>
+    <message>
+        <location line="+74"/>
+        <source>Text height threshold (px):</source>
+        <translation>Drempel voor teksthoogte (px):</translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>Persistent selection</source>
         <translation>Blijvende selectie</translation>
     </message>
     <message>
-        <location line="-693"/>
+        <location line="-826"/>
         <source>Color lightness threshold:</source>
         <translation>Kleur lichtheid drempel:</translation>
     </message>
@@ -5680,7 +5694,7 @@ BUG: Interferes with group castings.</source>
         <translation>Weergave en prestatie</translation>
     </message>
     <message>
-        <location line="+229"/>
+        <location line="+335"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Objecten met meer dan N streepjes als doorlopend weergeven:</translation>
     </message>
@@ -5689,7 +5703,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Gebruik volledige resolutie voor Retina-display</translation>
     </message>
     <message>
-        <location line="-348"/>
+        <location line="-454"/>
         <source>Linetypes and Lineweights</source>
         <translation>Lijntypen en lijnbreedtes</translation>
     </message>
@@ -5709,7 +5723,7 @@ BUG: Interferes with group castings.</source>
         <translation>Automatisch scherm gebaseerde lijntypen gebruiken in model weergave</translation>
     </message>
     <message>
-        <location line="+96"/>
+        <location line="+202"/>
         <source>Number of preview entities:</source>
         <translation>Aantal voorbeeld objecten:</translation>
     </message>
@@ -5742,7 +5756,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Multithreading gebruiken</translation>
     </message>
     <message>
-        <location line="+186"/>
+        <location line="+213"/>
         <source>Selection</source>
         <translation>Selectie</translation>
     </message>

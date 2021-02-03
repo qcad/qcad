@@ -5637,7 +5637,17 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+512"/>
+        <location line="+493"/>
+        <source>Reference point size (px):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+74"/>
+        <source>Text height threshold (px):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>Persistent selection</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5646,17 +5656,17 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Käytä täyttä tarkkuutta Retinanäytöissä</translation>
     </message>
     <message>
-        <location line="-114"/>
+        <location line="-630"/>
         <source>auto</source>
         <translation type="unfinished">automaattinen</translation>
     </message>
     <message>
-        <location line="+98"/>
+        <location line="-8"/>
         <source>Number of threads:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-677"/>
+        <location line="-188"/>
         <source>Color lightness threshold:</source>
         <translation>Värivaaleuden kynnys:</translation>
     </message>
@@ -5703,7 +5713,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Suorituskyky</translation>
     </message>
     <message>
-        <location line="+96"/>
+        <location line="+202"/>
         <source>Number of preview entities:</source>
         <translation>Esikatseltavien kohteiden määrä:</translation>
     </message>
@@ -5741,7 +5751,7 @@ BUG: Interferes with group castings.</source>
         <translation type="obsolete">Käytä monisäkeistystä</translation>
     </message>
     <message>
-        <location line="+186"/>
+        <location line="+213"/>
         <source>Selection</source>
         <translation>Valinta</translation>
     </message>

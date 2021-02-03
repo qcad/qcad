@@ -5643,22 +5643,32 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+398"/>
+        <location line="+15"/>
         <source>auto</source>
         <translation type="unfinished">自動</translation>
     </message>
     <message>
-        <location line="+98"/>
+        <location line="-8"/>
         <source>Number of threads:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+486"/>
+        <source>Reference point size (px):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+74"/>
+        <source>Text height threshold (px):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>Persistent selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-693"/>
+        <location line="-826"/>
         <source>Color lightness threshold:</source>
         <translation>色の明るさ閾値:</translation>
     </message>
@@ -5692,7 +5702,7 @@ BUG: Interferes with group castings.</source>
         <translation>表示と性能</translation>
     </message>
     <message>
-        <location line="+229"/>
+        <location line="+335"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>エンティティをこの数以上の連続点として表示する</translation>
     </message>
@@ -5702,7 +5712,7 @@ BUG: Interferes with group castings.</source>
         <translation>弧を描く時に分割する最小角度（度）</translation>
     </message>
     <message>
-        <location line="-266"/>
+        <location line="-372"/>
         <source>Linetypes and Lineweights</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5721,7 +5731,7 @@ BUG: Interferes with group castings.</source>
         <translation>デフォルトでアンチエイリアスする</translation>
     </message>
     <message>
-        <location line="+327"/>
+        <location line="+433"/>
         <source>Maximum number of reference points displayed:</source>
         <translation>表示される参照点の最大数</translation>
     </message>
@@ -5731,7 +5741,7 @@ BUG: Interferes with group castings.</source>
         <translation>ハッチング表示のタイムアウト:</translation>
     </message>
     <message>
-        <location line="-347"/>
+        <location line="-453"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>自動的にモデルビューの基本線種を使用</translation>
     </message>
@@ -5744,7 +5754,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">パフォーマンス</translation>
     </message>
     <message>
-        <location line="+96"/>
+        <location line="+202"/>
         <source>Number of preview entities:</source>
         <translation>プレビューエンティティの数:</translation>
     </message>
@@ -5762,7 +5772,7 @@ BUG: Interferes with group castings.</source>
         <translation type="obsolete">テキスト高さの表示閾値:</translation>
     </message>
     <message>
-        <location line="+441"/>
+        <location line="+468"/>
         <source>Selection</source>
         <translation>選択</translation>
     </message>

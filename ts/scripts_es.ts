@@ -6162,22 +6162,36 @@ BUG: Interferes with group castings.</source>
         <translation>Utilice la resolución completa de la pantalla Retina / alta resolución</translation>
     </message>
     <message>
-        <location line="+398"/>
+        <location line="+15"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+98"/>
+        <location line="-8"/>
         <source>Number of threads:</source>
         <translation>Número de hilos:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <source>Text height threshold:</source>
+        <translation type="vanished">Umbral de altura del texto:</translation>
+    </message>
+    <message>
+        <location line="+486"/>
+        <source>Reference point size (px):</source>
+        <translation>Tamaño del punto de referencia (px):</translation>
+    </message>
+    <message>
+        <location line="+74"/>
+        <source>Text height threshold (px):</source>
+        <translation>Umbral de altura del texto (px):</translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>Persistent selection</source>
         <translation>Selección persistente</translation>
     </message>
     <message>
-        <location line="-693"/>
+        <location line="-826"/>
         <source>Color lightness threshold:</source>
         <translation>Umbral para la claridad del color:</translation>
     </message>
@@ -6211,7 +6225,7 @@ BUG: Interferes with group castings.</source>
         <translation>Visualización y rendimiento</translation>
     </message>
     <message>
-        <location line="+229"/>
+        <location line="+335"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Mostrar las entidades con más de N guiones como contínua:</translation>
     </message>
@@ -6225,7 +6239,7 @@ BUG: Interferes with group castings.</source>
         <translation>Paso ángulo mínimo para la prestación de arcos (grados):</translation>
     </message>
     <message>
-        <location line="-266"/>
+        <location line="-372"/>
         <source>Linetypes and Lineweights</source>
         <translation>Tipos de línea y luces de línea</translation>
     </message>
@@ -6244,7 +6258,7 @@ BUG: Interferes with group castings.</source>
         <translation>Antialiasing activado por defecto</translation>
     </message>
     <message>
-        <location line="+327"/>
+        <location line="+433"/>
         <source>Maximum number of reference points displayed:</source>
         <translation>Número máximo de puntos de referencia muestran:</translation>
     </message>
@@ -6262,7 +6276,7 @@ BUG: Interferes with group castings.</source>
         <translation type="obsolete">Mostrar entidades con guiones N como contínua:</translation>
     </message>
     <message>
-        <location line="-347"/>
+        <location line="-453"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Usar automáticamente los tipos de línea base de la pantalla de visualización del modelo</translation>
     </message>
@@ -6275,7 +6289,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Rendimiento</translation>
     </message>
     <message>
-        <location line="+96"/>
+        <location line="+202"/>
         <source>Number of preview entities:</source>
         <translation>Número de entidades previsualizadas:</translation>
     </message>
@@ -6293,7 +6307,7 @@ BUG: Interferes with group castings.</source>
         <translation type="obsolete">Mostrar límite para el texto:</translation>
     </message>
     <message>
-        <location line="+441"/>
+        <location line="+468"/>
         <source>Selection</source>
         <translation>Selección</translation>
     </message>

@@ -320,7 +320,7 @@ Gris clair</translatorcomment>
         <translation>Gris clair</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Others...</source>
         <translatorcomment>--exact match--
 --file: Text_fr.ts--

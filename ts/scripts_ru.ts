@@ -5606,22 +5606,32 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+398"/>
+        <location line="+15"/>
         <source>auto</source>
         <translation type="unfinished">авто</translation>
     </message>
     <message>
-        <location line="+98"/>
+        <location line="-8"/>
         <source>Number of threads:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+486"/>
+        <source>Reference point size (px):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+74"/>
+        <source>Text height threshold (px):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>Persistent selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-693"/>
+        <location line="-826"/>
         <source>Color lightness threshold:</source>
         <translation>Порог светлоты цвета:</translation>
     </message>
@@ -5659,12 +5669,12 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Использовать полное разрешение для дисплея Retina</translation>
     </message>
     <message>
-        <location line="+229"/>
+        <location line="+335"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Отображать объекты с более чем N тире как непрерывные:</translation>
     </message>
     <message>
-        <location line="-223"/>
+        <location line="-329"/>
         <source>Anti-aliasing on by default</source>
         <translation>Сглаживание по умолчанию</translation>
     </message>
@@ -5684,7 +5694,7 @@ BUG: Interferes with group castings.</source>
         <translation>Автоматически использовать типы линий, оптимизированные для экрана, в просмотре моделей</translation>
     </message>
     <message>
-        <location line="+96"/>
+        <location line="+202"/>
         <source>Number of preview entities:</source>
         <translation>Количество объектов при предпросмотре:</translation>
     </message>
@@ -5717,7 +5727,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Использовать многопоточность</translation>
     </message>
     <message>
-        <location line="+186"/>
+        <location line="+213"/>
         <source>Selection</source>
         <translation>Выделение</translation>
     </message>

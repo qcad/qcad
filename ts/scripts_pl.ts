@@ -6654,22 +6654,32 @@ Autozoom
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+398"/>
+        <location line="+15"/>
         <source>auto</source>
         <translation type="unfinished">Automatycznie</translation>
     </message>
     <message>
-        <location line="+98"/>
+        <location line="-8"/>
         <source>Number of threads:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+486"/>
+        <source>Reference point size (px):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+74"/>
+        <source>Text height threshold (px):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>Persistent selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-693"/>
+        <location line="-826"/>
         <source>Color lightness threshold:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Próg jasności koloru:</translation>
@@ -6704,7 +6714,7 @@ Autozoom
         <translation>Wyświetlanie i wydajność</translation>
     </message>
     <message>
-        <location line="+229"/>
+        <location line="+335"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Liczba kresek obiektu powyżej, której obiekt wyświetlany będzie linią ciągłą:</translation>
     </message>
@@ -6714,7 +6724,7 @@ Autozoom
         <translation>Minimalny krok kątowy dla renderowania łuków (stopnie):</translation>
     </message>
     <message>
-        <location line="-266"/>
+        <location line="-372"/>
         <source>Linetypes and Lineweights</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6733,7 +6743,7 @@ Autozoom
         <translation>Domyślnie włączony antyaliasing</translation>
     </message>
     <message>
-        <location line="+327"/>
+        <location line="+433"/>
         <source>Maximum number of reference points displayed:</source>
         <translation>Maksymalna liczba wyświetlanych punktów referencyjnych:</translation>
     </message>
@@ -6743,7 +6753,7 @@ Autozoom
         <translation>Czas renderowania kreskowania:</translation>
     </message>
     <message>
-        <location line="-347"/>
+        <location line="-453"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatyczne użycie linii ekranowych w widoku modelu</translation>
     </message>
@@ -6753,7 +6763,7 @@ Autozoom
         <translation type="obsolete">Wydajność</translation>
     </message>
     <message>
-        <location line="+96"/>
+        <location line="+202"/>
         <source>Number of preview entities:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -6771,7 +6781,7 @@ Liczba obiektów w podglądzie:</translatorcomment>
         <translation type="obsolete">Wysokość progu Text display:</translation>
     </message>
     <message>
-        <location line="+441"/>
+        <location line="+468"/>
         <source>Selection</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

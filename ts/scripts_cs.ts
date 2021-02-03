@@ -5445,22 +5445,27 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+398"/>
+        <location line="+15"/>
         <source>auto</source>
         <translation type="unfinished">auto</translation>
     </message>
     <message>
-        <location line="+98"/>
+        <location line="-8"/>
         <source>Number of threads:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+486"/>
+        <source>Reference point size (px):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+152"/>
         <source>Persistent selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-693"/>
+        <location line="-826"/>
         <source>Color lightness threshold:</source>
         <translation>Prahová hodnota světla barvy:</translation>
     </message>
@@ -5499,7 +5504,7 @@ BUG: Interferes with group castings.</source>
         <translation>Displej a výkon</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+126"/>
         <source>Number of preview entities:</source>
         <translation>Počet prvků náhledu:</translation>
     </message>
@@ -5523,7 +5528,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Použít plné rozlišení pro displej Retina</translation>
     </message>
     <message>
-        <location line="-141"/>
+        <location line="-247"/>
         <source>Anti-aliasing on by default</source>
         <translation>Vyhlazování hran je standardně zapnuto</translation>
     </message>
@@ -5538,7 +5543,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+382"/>
+        <location line="+488"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Časový limit pro vykreslení šrafování:</translation>
     </message>
@@ -5548,7 +5553,12 @@ BUG: Interferes with group castings.</source>
         <translation>Zobrazit maximální počet referenčních bodů:</translation>
     </message>
     <message>
-        <location line="+186"/>
+        <location line="+141"/>
+        <source>Text height threshold (px):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+72"/>
         <source>Selection</source>
         <translation>Výběr</translation>
     </message>

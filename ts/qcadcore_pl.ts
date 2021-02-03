@@ -207,7 +207,7 @@
         <translation>Jasny szary</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Others...</source>
         <translation>Inne...</translation>
     </message>

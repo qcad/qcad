@@ -5589,17 +5589,31 @@ BUG: Interferes with group castings.</translation>
         <translation>Use full resolution for Retina / high resolution display</translation>
     </message>
     <message>
-        <location line="+398"/>
+        <location line="+15"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+98"/>
+        <location line="-8"/>
         <source>Number of threads:</source>
         <translation>Number of threads:</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <source>Text height threshold:</source>
+        <translation type="vanished">Text height threshold:</translation>
+    </message>
+    <message>
+        <location line="+486"/>
+        <source>Reference point size (px):</source>
+        <translation>Reference point size (px):</translation>
+    </message>
+    <message>
+        <location line="+74"/>
+        <source>Text height threshold (px):</source>
+        <translation>Text height threshold (px):</translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>Persistent selection</source>
         <translation>Persistent selection</translation>
     </message>
@@ -5608,7 +5622,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Linetypes</translation>
     </message>
     <message>
-        <location line="-601"/>
+        <location line="-734"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatically use screen based linetypes in model view</translation>
     </message>
@@ -5642,7 +5656,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Use full resolution for Retina display</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+120"/>
         <source>Number of preview entities:</source>
         <translation>Number of preview entities:</translation>
     </message>
@@ -5680,7 +5694,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="obsolete">Pen cap style:</translation>
     </message>
     <message>
-        <location line="+186"/>
+        <location line="+213"/>
         <source>Selection</source>
         <translation>Selection</translation>
     </message>

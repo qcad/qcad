@@ -5747,17 +5747,27 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+398"/>
+        <location line="+15"/>
         <source>auto</source>
         <translation type="unfinished">samodejno</translation>
     </message>
     <message>
-        <location line="+98"/>
+        <location line="-8"/>
         <source>Number of threads:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+486"/>
+        <source>Reference point size (px):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+74"/>
+        <source>Text height threshold (px):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+78"/>
         <source>Persistent selection</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5766,7 +5776,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Uporabi večnitnost</translation>
     </message>
     <message>
-        <location line="-693"/>
+        <location line="-826"/>
         <source>Color lightness threshold:</source>
         <translation>Prag svetlosti barv:</translation>
     </message>
@@ -5800,7 +5810,7 @@ BUG: Interferes with group castings.</source>
         <translation>Prikaz in optimizacija</translation>
     </message>
     <message>
-        <location line="+229"/>
+        <location line="+335"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Prikaži entitete z več kot N pikami kot neprekinjene:</translation>
     </message>
@@ -5814,12 +5824,12 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Uporabi polno resolucijo za Retina zaslone</translation>
     </message>
     <message>
-        <location line="-141"/>
+        <location line="-247"/>
         <source>Anti-aliasing on by default</source>
         <translation>Glajenje robov provzeto vklopljeno</translation>
     </message>
     <message>
-        <location line="+327"/>
+        <location line="+433"/>
         <source>Maximum number of reference points displayed:</source>
         <translation>Največje število prikazanih referenčnih točk:</translation>
     </message>
@@ -5829,7 +5839,7 @@ BUG: Interferes with group castings.</source>
         <translation>Iztek časa za izris šrafur:</translation>
     </message>
     <message>
-        <location line="-347"/>
+        <location line="-453"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Samodejno uporabi zaslonske črte v prikazu modela</translation>
     </message>
@@ -5842,7 +5852,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Optimizacija</translation>
     </message>
     <message>
-        <location line="+96"/>
+        <location line="+202"/>
         <source>Number of preview entities:</source>
         <translation>Število entitet v predogledu:</translation>
     </message>
@@ -5860,7 +5870,7 @@ BUG: Interferes with group castings.</source>
         <translation type="obsolete">Prag prikaza višine besedila:</translation>
     </message>
     <message>
-        <location line="+441"/>
+        <location line="+468"/>
         <source>Selection</source>
         <translation>Izbor</translation>
     </message>

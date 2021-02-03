@@ -207,7 +207,7 @@
         <translation>明るい灰色</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Others...</source>
         <translation>その他...</translation>
     </message>
