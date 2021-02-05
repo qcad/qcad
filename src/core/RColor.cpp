@@ -328,12 +328,12 @@ void RColor::init() {
         }
         //qDebug() << "color:" << colorString;
         QStringList tuples = colorString.split(",");
-        if (tuples.length()!=2) {
+        if (tuples.length()<2) {
             init("---", RColor());
             continue;
         }
-        QString title = tuples[0];
-        QString code = tuples[1];
+        QString title = colorString.left(colorString.length()-tuples.last().length()-1);
+        QString code = tuples.last();
 
         if (first) {
             init("---", RColor());
