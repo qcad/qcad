@@ -108,6 +108,12 @@ public:
     bool operator!=(const RColor & color) const;
     bool operator<(const RColor & color) const;
 
+    static void reinit() {
+        isInitialized = false;
+        list.clear();
+        init();
+    }
+
 public:
     static QColor CompatByLayer;
     static QColor CompatByBlock;

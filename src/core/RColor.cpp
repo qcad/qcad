@@ -326,7 +326,7 @@ void RColor::init() {
         if (colorString.isEmpty()) {
             continue;
         }
-        //qDebug("color:", colorString);
+        //qDebug() << "color:" << colorString;
         QStringList tuples = colorString.split(",");
         if (tuples.length()!=2) {
             init("---", RColor());
