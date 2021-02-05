@@ -605,6 +605,19 @@ About.prototype.initAboutLicenses = function(textBrowser) {
           + "FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, "
           + "ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>"
 
+    var palettesDirs = RS.getDirectoryList("palettes");
+    if (palettesDirs.length>0 && new QFileInfo(palettesDirs[0]).exists()) {
+        html += "<h2>Color Palette Files</h2>"
+        html += "<p>Copyright 2016<br/>"
+              + "dtp studio oldenburg (<a href='http://www.dtpstudio.de'>http://www.dtpstudio.de</a>)<br/>"
+              + "Grünteweg 31<br/>"
+              + "D-26127 Oldenburg<br/>"
+              + "Tel. +49 - (0)441-3001807<br/>"
+              + "info@dtpstudio.de<br/>"
+              + "<br/>"
+              + "Creative Commons Attribution-NoDerivatives 4.0 International Public License (<a href='https://creativecommons.org/licenses/by-nd/4.0/legalcode'>https://creativecommons.org/licenses/by-nd/4.0/legalcode</a>)</p>"
+    }
+
     var numPlugins = RPluginLoader.countPlugins();
 
     for (var i=0; i<numPlugins; i++) {
@@ -621,6 +634,7 @@ About.prototype.initAboutLicenses = function(textBrowser) {
     html += "</body>";
     html += "</html>";
     textBrowser.setHtml(html);
+    WidgetFactory.initTextBrowser(textBrowser, this, "openUrl");
 };
 
 About.prototype.openUrl = function(url) {
