@@ -235,12 +235,18 @@ File.getSaveFileName = function(parentWidget, caption, path, filterStrings) {
  *
  * \return path and file name chosen by the user
  */
-File.getOpenFileName = function(parentWidget, caption, dir, filterStrings) {
+File.getOpenFileName = function(parentWidget, caption, dir, filterStrings, noAllFiles) {
     if (isNull(filterStrings)) {
         filterStrings = RFileImporterRegistry.getFilterStrings();
         filterStrings = translateFilterStrings(filterStrings);
     }
-    filterStrings = new Array(qsTr("All Files") + " (*)").concat(filterStrings);
+    if (isNull(noAllFiles)) {
+        noAllFiles = false;
+    }
+
+    if (!noAllFiles) {
+        filterStrings = new Array(qsTr("All Files") + " (*)").concat(filterStrings);
+    }
 
     var fileDialog = new QFileDialog(parentWidget, caption, dir, "");
     var allFilter = filterStrings[0];
