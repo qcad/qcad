@@ -124,6 +124,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getFaded, "getFaded");
             
+            REcmaHelper::registerFunction(&engine, &ctor, reinit, "reinit");
+            
 
     // static properties:
     
@@ -2211,6 +2213,40 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaColor::operator<", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaColor::reinit
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaColor::reinit", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaColor::reinit";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RColor::
+       reinit();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RColor.reinit().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaColor::reinit", context, engine);
             return result;
         }
          QScriptValue REcmaColor::toString

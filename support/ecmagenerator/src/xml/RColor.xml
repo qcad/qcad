@@ -194,6 +194,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="reinit" cppName="reinit" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <property name="CompatByLayer" type="QColor" isConst="false"
     isStatic="true" />
     <property name="CompatByBlock" type="QColor" isConst="false"

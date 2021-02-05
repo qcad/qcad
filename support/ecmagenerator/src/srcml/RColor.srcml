@@ -109,6 +109,12 @@
     <function_decl><type><name>bool</name></type> <name>operator!=</name><parameter_list>(<param><decl><type><name>const</name> <name>RColor</name> &amp;</type> <name>color</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>operator&lt;</name><parameter_list>(<param><decl><type><name>const</name> <name>RColor</name> &amp;</type> <name>color</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function><type><name>static</name> <name>void</name></type> <name>reinit</name><parameter_list>()</parameter_list> <block>{
+        <expr_stmt><expr><name>isInitialized</name> = <name>false</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>list</name>.<call><name>clear</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+        <constructor_decl><name>init</name><parameter_list>()</parameter_list>;</constructor_decl>
+    }</block></function>
+
 </public><public>public:
     <decl_stmt><decl><type><name>static</name> <name>QColor</name></type> <name>CompatByLayer</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QColor</name></type> <name>CompatByBlock</name></decl>;</decl_stmt>
