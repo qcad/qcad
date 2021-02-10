@@ -24,6 +24,7 @@
 #include "RCircle.h"
 #include "RDebug.h"
 #include "RMath.h"
+#include "RPluginLoader.h"
 #include "RSettings.h"
 
 QColor RColor::CompatByLayer = QColor(1,1,1);
@@ -318,30 +319,31 @@ void RColor::init() {
     init("---", RColor());
     init(tr("Others..."), RColor());
 
-    QString palette = RSettings::getStringValue("UserPalette/Colors", "");
-    QStringList colorStrings = palette.split("\n");
-    bool first = true;
-    for (int i=0; i<colorStrings.length(); i++) {
-        QString colorString = colorStrings[i];
-        if (colorString.isEmpty()) {
-            continue;
-        }
-        //qDebug() << "color:" << colorString;
-        QStringList tuples = colorString.split(",");
-        if (tuples.length()<2) {
-            init("---", RColor());
-            continue;
-        }
-        QString title = colorString.left(colorString.length()-tuples.last().length()-1);
-        QString code = tuples.last();
+    if (RPluginLoader::hasPlugin("PROTOOLS")) {
+        QString palette = RSettings::getStringValue("UserPalette/Colors", "");
+        QStringList colorStrings = palette.split("\n");
+        bool first = true;
+        for (int i=0; i<colorStrings.length(); i++) {
+            QString colorString = colorStrings[i];
+            if (colorString.isEmpty()) {
+                continue;
+            }
+            //qDebug() << "color:" << colorString;
+            QStringList tuples = colorString.split(",");
+            if (tuples.length()<2) {
+                init("---", RColor());
+                continue;
+            }
+            QString title = colorString.left(colorString.length()-tuples.last().length()-1);
+            QString code = tuples.last();
 
-        if (first) {
-            init("---", RColor());
-            first = false;
+            if (first) {
+                init("---", RColor());
+                first = false;
+            }
+            init(title, RColor(code));
         }
-        init(title, RColor(code));
     }
-
 }
 
 void RColor::init(const QString& cn, const RColor& c) {
