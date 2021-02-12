@@ -67,12 +67,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+408"/>
+        <location line="+421"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-383"/>
+        <location line="-396"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -5209,12 +5209,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+92"/>
-        <location line="+70"/>
+        <location line="+76"/>
         <source>Format:</source>
         <translation>Formato:</translation>
     </message>
     <message>
-        <location line="-33"/>
+        <location line="-39"/>
         <source>Overwrite File?</source>
         <translatorcomment>--exact match--
 --file: Save_it.ts--
@@ -5230,7 +5230,7 @@ Sovrascrivere?</translatorcomment>
         <translation>Il file &quot;%1&quot; esiste già. Vuoi sovrascriverlo?</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+26"/>
         <source>All Files</source>
         <translation>Tutti i file</translation>
     </message>

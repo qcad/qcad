@@ -43,12 +43,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+408"/>
+        <location line="+421"/>
         <source>Plugin:</source>
         <translation>Wtyczka:</translation>
     </message>
     <message>
-        <location line="-383"/>
+        <location line="-396"/>
         <source>ID:</source>
         <translation>Identyfikator:</translation>
     </message>
@@ -5772,7 +5772,7 @@ Os&amp;tatnio otwierane pliki</translatorcomment>
     </message>
     <message>
         <location line="+92"/>
-        <location line="+70"/>
+        <location line="+76"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -5781,7 +5781,7 @@ Format:</translatorcomment>
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="-33"/>
+        <location line="-39"/>
         <source>Overwrite File?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Zastąpić plik?</translation>
@@ -5797,7 +5797,7 @@ Format:</translatorcomment>
         <translation type="vanished">Plik „%1” już istnieje. Zastąpić go?</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+26"/>
         <source>All Files</source>
         <translation>Wszystkie pliki</translation>
     </message>

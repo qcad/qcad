@@ -85,12 +85,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+408"/>
+        <location line="+421"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-383"/>
+        <location line="-396"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -5413,7 +5413,7 @@ ist bereits in der Liste.</translation>
     </message>
     <message>
         <location line="+92"/>
-        <location line="+70"/>
+        <location line="+76"/>
         <source>Format:</source>
         <translation>Format:</translation>
     </message>
@@ -5422,7 +5422,7 @@ ist bereits in der Liste.</translation>
         <translation type="vanished">Die Datei &apos;%1&apos; besteht bereits. Möchten Sie die bestehende Datei überschreiben?</translation>
     </message>
     <message>
-        <location line="-11"/>
+        <location line="-12"/>
         <source>All Files</source>
         <translation>Alle Dateien</translation>
     </message>
@@ -5431,7 +5431,7 @@ ist bereits in der Liste.</translation>
         <translation type="obsolete">Datei</translation>
     </message>
     <message>
-        <location line="-22"/>
+        <location line="-27"/>
         <source>Overwrite File?</source>
         <translation>Datei überschreiben?</translation>
     </message>

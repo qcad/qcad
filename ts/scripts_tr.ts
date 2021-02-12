@@ -123,12 +123,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+408"/>
+        <location line="+421"/>
         <source>Plugin:</source>
         <translation>Eklenti:</translation>
     </message>
     <message>
-        <location line="-383"/>
+        <location line="-396"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -4645,12 +4645,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+92"/>
-        <location line="+70"/>
+        <location line="+76"/>
         <source>Format:</source>
         <translation>Biçim:</translation>
     </message>
     <message>
-        <location line="-33"/>
+        <location line="-39"/>
         <source>Overwrite File?</source>
         <translation>Üzerine yazılsın mı?</translation>
     </message>
@@ -4664,7 +4664,7 @@ is already in the list.</source>
         <translation type="vanished">&apos;%1&apos; dosyası zaten var. Üzerine yazmak istiyor musun?</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+26"/>
         <source>All Files</source>
         <translation>Tüm Dosyalar</translation>
     </message>

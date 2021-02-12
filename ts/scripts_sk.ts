@@ -44,12 +44,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+408"/>
+        <location line="+421"/>
         <source>Plugin:</source>
         <translation>Zásuvný modul:</translation>
     </message>
     <message>
-        <location line="-383"/>
+        <location line="-396"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -4872,12 +4872,12 @@ už existuje v zozname.</translation>
     </message>
     <message>
         <location line="+92"/>
-        <location line="+70"/>
+        <location line="+76"/>
         <source>Format:</source>
         <translation>Formát:</translation>
     </message>
     <message>
-        <location line="-33"/>
+        <location line="-39"/>
         <source>Overwrite File?</source>
         <translation>Prepísať súbor?</translation>
     </message>
@@ -4891,7 +4891,7 @@ už existuje v zozname.</translation>
         <translation type="vanished">Súbor &apos;%1&apos; už existuje. Chcete ho prepísať?</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+26"/>
         <source>All Files</source>
         <translation>Všetky súbory</translation>
     </message>

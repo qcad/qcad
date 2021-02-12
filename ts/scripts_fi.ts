@@ -20,12 +20,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+408"/>
+        <location line="+421"/>
         <source>Plugin:</source>
         <translation>Laajennusosa:</translation>
     </message>
     <message>
-        <location line="-383"/>
+        <location line="-396"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -4827,12 +4827,12 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location line="+92"/>
-        <location line="+70"/>
+        <location line="+76"/>
         <source>Format:</source>
         <translation>Muoto:</translation>
     </message>
     <message>
-        <location line="-33"/>
+        <location line="-39"/>
         <source>Overwrite File?</source>
         <translation>Korvataanko tiedosto?</translation>
     </message>
@@ -4846,7 +4846,7 @@ on jo luettelossa.</translation>
         <translation type="vanished">Tiedosto &apos;%1&apos; on jo olemassa. Haluatko korvata sen?</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+26"/>
         <source>All Files</source>
         <translation>Kaikki tiedostot</translation>
     </message>

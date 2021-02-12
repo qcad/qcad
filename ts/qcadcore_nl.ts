@@ -112,7 +112,7 @@
 <context>
     <name>RColor</name>
     <message>
-        <location filename="../src/core/RColor.cpp" line="+299"/>
+        <location filename="../src/core/RColor.cpp" line="+300"/>
         <source>By Layer</source>
         <translation>Door laag bepaald</translation>
     </message>
