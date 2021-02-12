@@ -71,6 +71,7 @@ OptionsToolBar.init = function(basePath) {
     // make sure that the options tool bar is initialized before 
     // positions are restored from the config file:
     var optionsToolBar = EAction.getOptionsToolBar();
+    //optionsToolBar.minimumWidth = 600;
 };
 
 OptionsToolBar.initStyle = function() {
