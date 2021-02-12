@@ -1416,14 +1416,21 @@ void RTextRenderer::render() {
                     setBlockItalic(value!=0);
                 }
             }
-            setUseCadFont(true);
+            if (getBlockFont()=="gdt") {
+                setUseCadFont(true);
+            }
+            else {
+                setUseCadFont(false);
+            }
             blockChangedHeightOrFont = true;
 
             if (target==RichText) {
                 QString style;
                 style += QString("font-family:%1;").arg(getBlockFont());
-                style += QString("font-weight:%1;").arg(getBlockBold() ? "bold" : "normal");
-                style += QString("font-style:%1;").arg(getBlockItalic() ? "italic" : "normal");
+                if (!useCadFont.top()) {
+                    style += QString("font-weight:%1;").arg(getBlockBold() ? "bold" : "normal");
+                    style += QString("font-style:%1;").arg(getBlockItalic() ? "italic" : "normal");
+                }
                 richText += QString("<span style=\"%1\">").arg(style);
                 openTags.top().append("span");
             }
