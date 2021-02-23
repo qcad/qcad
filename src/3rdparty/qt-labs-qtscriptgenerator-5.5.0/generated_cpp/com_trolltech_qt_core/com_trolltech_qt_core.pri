@@ -15,6 +15,7 @@ HEADERS += \
            $$PWD/qtscriptshell_QEventLoop.h \
            $$PWD/qtscriptshell_QEventTransition.h \
            $$PWD/qtscriptshell_QFile.h \
+           $$PWD/qtscriptshell_QFileDevice.h \
            $$PWD/qtscriptshell_QFileSystemWatcher.h \
            $$PWD/qtscriptshell_QFinalState.h \
            #$$PWD/qtscriptshell_QFutureSynchronizer.h \
@@ -76,6 +77,7 @@ SOURCES += \
            $$PWD/qtscript_QEventLoop.cpp \
            $$PWD/qtscript_QEventTransition.cpp \
            $$PWD/qtscript_QFile.cpp \
+           $$PWD/qtscript_QFileDevice.cpp \
            $$PWD/qtscript_QFileInfo.cpp \
            $$PWD/qtscript_QFileSystemWatcher.cpp \
            $$PWD/qtscript_QFinalState.cpp \
@@ -165,6 +167,7 @@ SOURCES += \
            $$PWD/qtscriptshell_QEventLoop.cpp \
            $$PWD/qtscriptshell_QEventTransition.cpp \
            $$PWD/qtscriptshell_QFile.cpp \
+           $$PWD/qtscriptshell_QFileDevice.cpp \
            $$PWD/qtscriptshell_QFileSystemWatcher.cpp \
            $$PWD/qtscriptshell_QFinalState.cpp \
            #$$PWD/qtscriptshell_QFutureSynchronizer.cpp \
