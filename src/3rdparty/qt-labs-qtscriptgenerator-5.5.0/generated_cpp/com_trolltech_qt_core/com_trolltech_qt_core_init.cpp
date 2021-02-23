@@ -137,6 +137,7 @@ static const char * const qtscript_com_trolltech_qt_core_class_names[] = {
     , "QDirIterator"
     //, "QFutureWatcher"
     , "QDir"
+    , "QFileDevice"
     , "QFile"
     //, "QFutureIterator"
     , "QMargins"
@@ -239,6 +240,7 @@ static const QtBindingCreator qtscript_com_trolltech_qt_core_class_functions[] =
     , qtscript_create_QDirIterator_class
     //, qtscript_create_QFutureWatcher_class
     , qtscript_create_QDir_class
+    , qtscript_create_QFileDevice_class
     , qtscript_create_QFile_class
     //, qtscript_create_QFutureIterator_class
     , qtscript_create_QMargins_class
@@ -307,7 +309,7 @@ static const QtBindingCreator qtscript_com_trolltech_qt_core_class_functions[] =
 void qtscript_initialize_com_trolltech_qt_core_bindings(QScriptValue &extensionObject)
 {
     QScriptEngine *engine = extensionObject.engine();
-    for (int i = 0; i < 88; ++i) {
+    for (int i = 0; i < 89; ++i) {
         extensionObject.setProperty(qtscript_com_trolltech_qt_core_class_names[i],
             qtscript_com_trolltech_qt_core_class_functions[i](engine),
             QScriptValue::SkipInEnumeration);
