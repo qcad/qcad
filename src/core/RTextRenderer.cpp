@@ -694,7 +694,7 @@ void RTextRenderer::render() {
                 }
             }
             else {
-                if (formatting=="\\~" || formatting.at(0).isSpace()) {
+                if (formatting=="\\~" || (!formatting.isEmpty() && formatting.at(0).isSpace())) {
 //                    qDebug() << "got leading space";
                     leadingSpaces = true;
                 }
