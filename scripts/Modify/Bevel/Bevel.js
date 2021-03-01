@@ -110,7 +110,9 @@ Bevel.bevel = function(op, entity1, clickPos1, entity2, clickPos2, trim, distanc
         }
     }
 
-    op.addObject(new RLineEntity(entity1.getDocument(), new RLineData(newShapes[1])));
+    if (newShapes[1].getLength()>RS.PointTolerance) {
+        op.addObject(new RLineEntity(entity1.getDocument(), new RLineData(newShapes[1])));
+    }
 
     return true;
 };
