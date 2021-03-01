@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+421"/>
+        <location line="+422"/>
         <source>Plugin:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-396"/>
+        <location line="-397"/>
         <source>ID:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -186,7 +186,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+163"/>
+        <location line="+164"/>
         <source>Licenses</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1057,12 +1057,12 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length 1:</source>
+        <source>Length &amp;1:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length 2:</source>
+        <source>Length &amp;2:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7763,7 +7763,7 @@ shown in search results:</source>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
-        <source>&amp;Distance:</source>
+        <source>Dist&amp;ance:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9698,8 +9698,12 @@ shown in search results:</source>
     </message>
     <message>
         <location line="+17"/>
+        <source>&amp;Radius:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Radius:</source>
-        <translation type="unfinished">Sugár:</translation>
+        <translation type="obsolete">Sugár:</translation>
     </message>
 </context>
 <context>

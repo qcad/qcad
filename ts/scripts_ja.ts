@@ -39,12 +39,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+421"/>
+        <location line="+422"/>
         <source>Plugin:</source>
         <translation>プラグイン:</translation>
     </message>
     <message>
-        <location line="-396"/>
+        <location line="-397"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -198,7 +198,7 @@
         <translation>クレジット</translation>
     </message>
     <message>
-        <location line="+163"/>
+        <location line="+164"/>
         <source>Licenses</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1111,13 +1111,21 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length 1:</source>
-        <translation>長さ１:</translation>
+        <source>Length &amp;1:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17"/>
+        <source>Length &amp;2:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Length 1:</source>
+        <translation type="vanished">長さ１:</translation>
+    </message>
+    <message>
         <source>Length 2:</source>
-        <translation>長さ２:</translation>
+        <translation type="vanished">長さ２:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -8423,9 +8431,13 @@ shown in search results:</source>
         <translation type="vanished">線分、弧、円を選択</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>&amp;Distance:</source>
-        <translation>&amp;D 距離:</translation>
+        <translation type="vanished">&amp;D 距離:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
+        <source>Dist&amp;ance:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -10632,8 +10644,12 @@ shown in search results:</source>
     </message>
     <message>
         <location line="+17"/>
+        <source>&amp;Radius:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Radius:</source>
-        <translation>半径:</translation>
+        <translation type="vanished">半径:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>

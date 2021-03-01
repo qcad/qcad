@@ -20,12 +20,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+421"/>
+        <location line="+422"/>
         <source>Plugin:</source>
         <translation>Laajennusosa:</translation>
     </message>
     <message>
-        <location line="-396"/>
+        <location line="-397"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>Tekijät</translation>
     </message>
     <message>
-        <location line="+163"/>
+        <location line="+164"/>
         <source>Licenses</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1087,13 +1087,21 @@ Haluatko palauttaa sen?</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length 1:</source>
-        <translation>Pituus 1:</translation>
+        <source>Length &amp;1:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17"/>
+        <source>Length &amp;2:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Length 1:</source>
+        <translation type="vanished">Pituus 1:</translation>
+    </message>
+    <message>
         <source>Length 2:</source>
-        <translation>Pituus 2:</translation>
+        <translation type="vanished">Pituus 2:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -8362,9 +8370,13 @@ näkyy hakutuloksissa:</translation>
         <translation type="vanished">Valitse viiva, kaari tai ympyrä</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>&amp;Distance:</source>
-        <translation>&amp;Etäisyys:</translation>
+        <translation type="vanished">&amp;Etäisyys:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
+        <source>Dist&amp;ance:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -10396,8 +10408,12 @@ näkyy hakutuloksissa:</translation>
     </message>
     <message>
         <location line="+17"/>
+        <source>&amp;Radius:</source>
+        <translation type="unfinished">&amp;Säde:</translation>
+    </message>
+    <message>
         <source>Radius:</source>
-        <translation>Säde:</translation>
+        <translation type="vanished">Säde:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>

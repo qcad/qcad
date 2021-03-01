@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+421"/>
+        <location line="+422"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-396"/>
+        <location line="-397"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>Credits</translation>
     </message>
     <message>
-        <location line="+163"/>
+        <location line="+164"/>
         <source>Licenses</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1060,13 +1060,21 @@ Vill du återställa den?</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length 1:</source>
-        <translation>Längd 1:</translation>
+        <source>Length &amp;1:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17"/>
+        <source>Length &amp;2:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Length 1:</source>
+        <translation type="vanished">Längd 1:</translation>
+    </message>
+    <message>
         <source>Length 2:</source>
-        <translation>Längd 2:</translation>
+        <translation type="vanished">Längd 2:</translation>
     </message>
 </context>
 <context>
@@ -7817,9 +7825,13 @@ shown in search results:</source>
 <context>
     <name>LineParallel</name>
     <message>
-        <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>&amp;Distance:</source>
-        <translation>&amp;Avstånd:</translation>
+        <translation type="vanished">&amp;Avstånd:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
+        <source>Dist&amp;ance:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9765,8 +9777,12 @@ shown in search results:</source>
     </message>
     <message>
         <location line="+17"/>
+        <source>&amp;Radius:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Radius:</source>
-        <translation type="unfinished">Radie:</translation>
+        <translation type="obsolete">Radie:</translation>
     </message>
 </context>
 <context>

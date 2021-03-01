@@ -44,12 +44,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+421"/>
+        <location line="+422"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-396"/>
+        <location line="-397"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -214,7 +214,7 @@
         <translation>Meewerkende</translation>
     </message>
     <message>
-        <location line="+163"/>
+        <location line="+164"/>
         <source>Licenses</source>
         <translation>Licenties</translation>
     </message>
@@ -1125,13 +1125,21 @@ Wilt u het herstellen?</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length 1:</source>
-        <translation>Lengte 1:</translation>
+        <source>Length &amp;1:</source>
+        <translation>Lengte &amp;1:</translation>
     </message>
     <message>
         <location line="+17"/>
+        <source>Length &amp;2:</source>
+        <translation>Lengte &amp;2:</translation>
+    </message>
+    <message>
+        <source>Length 1:</source>
+        <translation type="vanished">Lengte 1:</translation>
+    </message>
+    <message>
         <source>Length 2:</source>
-        <translation>Lengte 2:</translation>
+        <translation type="vanished">Lengte 2:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -8359,8 +8367,12 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>LineParallel</name>
     <message>
-        <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>&amp;Distance:</source>
+        <translation type="vanished">&amp;Afstand:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
+        <source>Dist&amp;ance:</source>
         <translation>&amp;Afstand:</translation>
     </message>
     <message>
@@ -10390,8 +10402,12 @@ getoond in zoekresultaten:</translation>
     </message>
     <message>
         <location line="+17"/>
+        <source>&amp;Radius:</source>
+        <translation>&amp;Straal:</translation>
+    </message>
+    <message>
         <source>Radius:</source>
-        <translation>Straal:</translation>
+        <translation type="vanished">Straal:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>

@@ -85,12 +85,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+421"/>
+        <location line="+422"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-396"/>
+        <location line="-397"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -107,12 +107,12 @@
         <translation>Unbekannt</translation>
     </message>
     <message>
-        <location line="+289"/>
+        <location line="+290"/>
         <source>Licenses</source>
         <translation>Lizenzen</translation>
     </message>
     <message>
-        <location line="-419"/>
+        <location line="-420"/>
         <location line="+123"/>
         <source>Version:</source>
         <translation>Version:</translation>
@@ -1223,17 +1223,25 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     </message>
     <message>
         <location line="+17"/>
+        <source>Length &amp;1:</source>
+        <translation>Länge &amp;1:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Length &amp;2:</source>
+        <translation>Länge &amp;2:</translation>
+    </message>
+    <message>
         <source>Length 1:</source>
-        <translation>Länge 1:</translation>
+        <translation type="vanished">Länge 1:</translation>
     </message>
     <message>
         <source>1</source>
         <translation type="obsolete">1</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Length 2:</source>
-        <translation>Länge 2:</translation>
+        <translation type="vanished">Länge 2:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -9766,8 +9774,12 @@ im Suchresultat:</translation>
         <translation>Parallele zu existierender Linie oder konzentrischer Bogen, Kreis</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>&amp;Distance:</source>
+        <translation type="vanished">&amp;Abstand:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
+        <source>Dist&amp;ance:</source>
         <translation>&amp;Abstand:</translation>
     </message>
     <message>
@@ -12480,8 +12492,12 @@ nicht öffnen.
     </message>
     <message>
         <location line="+17"/>
+        <source>&amp;Radius:</source>
+        <translation>&amp;Radius:</translation>
+    </message>
+    <message>
         <source>Radius:</source>
-        <translation>Radius:</translation>
+        <translation type="vanished">Radius:</translation>
     </message>
 </context>
 <context>

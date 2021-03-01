@@ -67,12 +67,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+421"/>
+        <location line="+422"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-396"/>
+        <location line="-397"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -89,12 +89,12 @@
         <translation>Desconocido</translation>
     </message>
     <message>
-        <location line="+289"/>
+        <location line="+290"/>
         <source>Licenses</source>
         <translation>Licencias</translation>
     </message>
     <message>
-        <location line="-419"/>
+        <location line="-420"/>
         <location line="+123"/>
         <source>Version:</source>
         <translation>Versión:</translation>
@@ -1191,13 +1191,21 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length 1:</source>
-        <translation>Medida 1:</translation>
+        <source>Length &amp;1:</source>
+        <translation>Medida &amp;1:</translation>
     </message>
     <message>
         <location line="+17"/>
+        <source>Length &amp;2:</source>
+        <translation>Medida &amp;2:</translation>
+    </message>
+    <message>
+        <source>Length 1:</source>
+        <translation type="vanished">Medida 1:</translation>
+    </message>
+    <message>
         <source>Length 2:</source>
-        <translation>Medida 2:</translation>
+        <translation type="vanished">Medida 2:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/Bevel.js" line="+55"/>
@@ -9263,9 +9271,13 @@ en los resultados de búsqueda:</translation>
         <translation>Dibujar un paralelo a una línea existente o un arco o círculo concéntrico</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>&amp;Distance:</source>
-        <translation>&amp;Distancia:</translation>
+        <translation type="vanished">&amp;Distancia:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
+        <source>Dist&amp;ance:</source>
+        <translation>Dist&amp;ancia:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -11762,8 +11774,12 @@ Segunda entidad no se pueden recortar.</translatorcomment>
     </message>
     <message>
         <location line="+17"/>
+        <source>&amp;Radius:</source>
+        <translation>&amp;Radio:</translation>
+    </message>
+    <message>
         <source>Radius:</source>
-        <translation>Radio:</translation>
+        <translation type="vanished">Radio:</translation>
     </message>
 </context>
 <context>

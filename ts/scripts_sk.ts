@@ -44,12 +44,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+421"/>
+        <location line="+422"/>
         <source>Plugin:</source>
         <translation>Zásuvný modul:</translation>
     </message>
     <message>
-        <location line="-396"/>
+        <location line="-397"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -210,7 +210,7 @@
         <translation>Prispievatelia</translation>
     </message>
     <message>
-        <location line="+163"/>
+        <location line="+164"/>
         <source>Licenses</source>
         <translation>Licencií</translation>
     </message>
@@ -1119,13 +1119,21 @@ Prajete si ho obnoviť?</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length 1:</source>
-        <translation>Dĺžka 1:</translation>
+        <source>Length &amp;1:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17"/>
+        <source>Length &amp;2:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Length 1:</source>
+        <translation type="vanished">Dĺžka 1:</translation>
+    </message>
+    <message>
         <source>Length 2:</source>
-        <translation>Dĺžka 2:</translation>
+        <translation type="vanished">Dĺžka 2:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -8319,9 +8327,13 @@ vo výsledku vyhľadania:</translation>
 <context>
     <name>LineParallel</name>
     <message>
-        <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>&amp;Distance:</source>
-        <translation>&amp;Vzdialenosť:</translation>
+        <translation type="vanished">&amp;Vzdialenosť:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
+        <source>Dist&amp;ance:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -10376,8 +10388,12 @@ vo výsledku vyhľadania:</translation>
     </message>
     <message>
         <location line="+17"/>
+        <source>&amp;Radius:</source>
+        <translation type="unfinished">&amp;Polomer:</translation>
+    </message>
+    <message>
         <source>Radius:</source>
-        <translation>Polomer:</translation>
+        <translation type="vanished">Polomer:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>

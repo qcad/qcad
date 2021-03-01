@@ -67,12 +67,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+421"/>
+        <location line="+422"/>
         <source>Plugin:</source>
         <translation>Plugin :</translation>
     </message>
     <message>
-        <location line="-396"/>
+        <location line="-397"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -89,12 +89,12 @@
         <translation>Inconnu</translation>
     </message>
     <message>
-        <location line="+289"/>
+        <location line="+290"/>
         <source>Licenses</source>
         <translation>Licences</translation>
     </message>
     <message>
-        <location line="-419"/>
+        <location line="-420"/>
         <location line="+123"/>
         <source>Version:</source>
         <translation>Version :</translation>
@@ -1220,13 +1220,21 @@ Voulez-vous le récupérer ?</translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length 1:</source>
-        <translation>Longueur 1 :</translation>
+        <source>Length &amp;1:</source>
+        <translation>Longueur &amp;1 :</translation>
     </message>
     <message>
         <location line="+17"/>
+        <source>Length &amp;2:</source>
+        <translation>Longueur &amp;2 :</translation>
+    </message>
+    <message>
+        <source>Length 1:</source>
+        <translation type="vanished">Longueur 1 :</translation>
+    </message>
+    <message>
         <source>Length 2:</source>
-        <translation>Longueur 2 :</translation>
+        <translation type="vanished">Longueur 2 :</translation>
     </message>
 </context>
 <context>
@@ -9150,9 +9158,13 @@ dans les résultats de recherche :</translation>
         <translation>Dessinez une parallèle à une ligne existante ou un arc ou cercle concentriques</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>&amp;Distance:</source>
-        <translation>&amp;Distance :</translation>
+        <translation type="vanished">&amp;Distance :</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
+        <source>Dist&amp;ance:</source>
+        <translation>Dist&amp;ance :</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -11597,8 +11609,12 @@ dans les résultats de recherche :</translation>
     </message>
     <message>
         <location line="+17"/>
+        <source>&amp;Radius:</source>
+        <translation>&amp;Rayon :</translation>
+    </message>
+    <message>
         <source>Radius:</source>
-        <translation>Rayon :</translation>
+        <translation type="vanished">Rayon :</translation>
     </message>
 </context>
 <context>

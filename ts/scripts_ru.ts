@@ -39,12 +39,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+421"/>
+        <location line="+422"/>
         <source>Plugin:</source>
         <translation>Модуль:</translation>
     </message>
     <message>
-        <location line="-396"/>
+        <location line="-397"/>
         <source>ID:</source>
         <translation>Идентификатор:</translation>
     </message>
@@ -210,7 +210,7 @@
         <translation>Об авторах</translation>
     </message>
     <message>
-        <location line="+163"/>
+        <location line="+164"/>
         <source>Licenses</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1109,13 +1109,21 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length 1:</source>
-        <translation>Длина 1:</translation>
+        <source>Length &amp;1:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17"/>
+        <source>Length &amp;2:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Length 1:</source>
+        <translation type="vanished">Длина 1:</translation>
+    </message>
+    <message>
         <source>Length 2:</source>
-        <translation>Длина 2:</translation>
+        <translation type="vanished">Длина 2:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
@@ -8318,9 +8326,13 @@ shown in search results:</source>
 <context>
     <name>LineParallel</name>
     <message>
-        <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>&amp;Distance:</source>
-        <translation>&amp;Расстояние:</translation>
+        <translation type="vanished">&amp;Расстояние:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
+        <source>Dist&amp;ance:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -10343,8 +10355,12 @@ shown in search results:</source>
     </message>
     <message>
         <location line="+17"/>
+        <source>&amp;Radius:</source>
+        <translation type="unfinished">&amp;Радиус:</translation>
+    </message>
+    <message>
         <source>Radius:</source>
-        <translation>Радиус:</translation>
+        <translation type="vanished">Радиус:</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>

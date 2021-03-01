@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+421"/>
+        <location line="+422"/>
         <source>Plugin:</source>
         <translation>插件：</translation>
     </message>
     <message>
-        <location line="-396"/>
+        <location line="-397"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -186,7 +186,7 @@
         <translation>信誉</translation>
     </message>
     <message>
-        <location line="+163"/>
+        <location line="+164"/>
         <source>Licenses</source>
         <translation>授权</translation>
     </message>
@@ -1057,12 +1057,12 @@ Do you wish to recover it?</source>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length 1:</source>
+        <source>Length &amp;1:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+17"/>
-        <source>Length 2:</source>
+        <source>Length &amp;2:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7862,9 +7862,13 @@ shown in search results:</source>
 <context>
     <name>LineParallel</name>
     <message>
-        <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>&amp;Distance:</source>
-        <translation>距离(&amp;D)：</translation>
+        <translation type="vanished">距离(&amp;D)：</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
+        <source>Dist&amp;ance:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9808,8 +9812,12 @@ shown in search results:</source>
     </message>
     <message>
         <location line="+17"/>
+        <source>&amp;Radius:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Radius:</source>
-        <translation type="unfinished">半径：</translation>
+        <translation type="obsolete">半径：</translation>
     </message>
 </context>
 <context>
