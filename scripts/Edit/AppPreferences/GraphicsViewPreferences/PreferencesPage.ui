@@ -20,7 +20,7 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>-172</y>
+     <y>0</y>
      <width>635</width>
      <height>1109</height>
     </rect>
@@ -96,6 +96,19 @@
           <string>Show large crosshairs</string>
          </property>
          <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="SystemCursors">
+         <property name="statusTip">
+          <string>This can be used if cursors are not visible on external monitors</string>
+         </property>
+         <property name="text">
+          <string>Use system cursors</string>
+         </property>
+         <property name="RequiresRestart" stdset="0">
           <bool>true</bool>
          </property>
         </widget>

@@ -131,9 +131,14 @@ function PrintPreviewImpl(guiAction) {
 
     this.updateDisabled = false;
 
-    var bitmap = new QBitmap(PrintPreviewImpl.includeBasePath + "/PrintPreviewOffsetCursor.png", "PNG");
-    var mask = new QBitmap(PrintPreviewImpl.includeBasePath + "/PrintPreviewOffsetCursorMask.png", "PNG");
-    this.cursor = new QCursor(bitmap, mask, 15, 13);
+    if (RSettings.getBoolValue("GraphicsView/SystemCursors", false)===true) {
+        this.cursor = new QCursor(Qt.OpenHandCursor);
+    }
+    else {
+        var bitmap = new QBitmap(PrintPreviewImpl.includeBasePath + "/PrintPreviewOffsetCursor.png", "PNG");
+        var mask = new QBitmap(PrintPreviewImpl.includeBasePath + "/PrintPreviewOffsetCursorMask.png", "PNG");
+        this.cursor = new QCursor(bitmap, mask, 15, 13);
+    }
     this.view = undefined;
     this.saveView = false;
     this.savedScale = undefined;

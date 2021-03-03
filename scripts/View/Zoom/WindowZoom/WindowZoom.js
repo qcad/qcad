@@ -28,16 +28,21 @@ function WindowZoom(guiAction) {
     this.s1 = RVector.invalid;
     this.s2 = RVector.invalid;
 
-    var bitmap, mask
-    if (RSettings.getDevicePixelRatio()===2 && RS.getSystemId()!=="osx") {
-        bitmap = new QBitmap(WindowZoom.includeBasePath + "/WindowZoomCursor@2x.png", "PNG");
-        mask = new QBitmap(WindowZoom.includeBasePath + "/WindowZoomCursorMask@2x.png", "PNG");
-        this.cursor = new QCursor(bitmap, mask, 24, 24);
+    if (RSettings.getBoolValue("GraphicsView/SystemCursors", false)===true) {
+        this.cursor = new QCursor(Qt.CrossCursor);
     }
     else {
-        bitmap = new QBitmap(WindowZoom.includeBasePath + "/WindowZoomCursor.png", "PNG");
-        mask = new QBitmap(WindowZoom.includeBasePath + "/WindowZoomCursorMask.png", "PNG");
-        this.cursor = new QCursor(bitmap, mask, 12, 12);
+        var bitmap, mask;
+        if (RSettings.getDevicePixelRatio()===2 && RS.getSystemId()!=="osx") {
+            bitmap = new QBitmap(WindowZoom.includeBasePath + "/WindowZoomCursor@2x.png", "PNG");
+            mask = new QBitmap(WindowZoom.includeBasePath + "/WindowZoomCursorMask@2x.png", "PNG");
+            this.cursor = new QCursor(bitmap, mask, 24, 24);
+        }
+        else {
+            bitmap = new QBitmap(WindowZoom.includeBasePath + "/WindowZoomCursor.png", "PNG");
+            mask = new QBitmap(WindowZoom.includeBasePath + "/WindowZoomCursorMask.png", "PNG");
+            this.cursor = new QCursor(bitmap, mask, 12, 12);
+        }
     }
 }
 

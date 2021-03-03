@@ -755,18 +755,24 @@ EAction.prototype.keyReleaseEvent = function(event) {
  */
 EAction.prototype.setCrosshairCursor = function() {
     if (isNull(EAction.crossCursor)) {
-        var bitmap, mask
-        if (RSettings.getDevicePixelRatio()===2 && RS.getSystemId()!=="osx") {
-            bitmap = new QBitmap(EAction.includeBasePath + "/CrosshairCursor@2x.png", "PNG");
-            mask = new QBitmap(EAction.includeBasePath + "/CrosshairCursorMask@2x.png", "PNG");
-            //bitmap.setDevicePixelRatio(2);
-            //mask.setDevicePixelRatio(2);
-            EAction.crossCursor = new QCursor(bitmap, mask, 30, 30);
+
+        if (RSettings.getBoolValue("GraphicsView/SystemCursors", false)===true) {
+            EAction.crossCursor = new QCursor(Qt.CrossCursor);
         }
         else {
-            bitmap = new QBitmap(EAction.includeBasePath + "/CrosshairCursor.png", "PNG");
-            mask = new QBitmap(EAction.includeBasePath + "/CrosshairCursorMask.png", "PNG");
-            EAction.crossCursor = new QCursor(bitmap, mask, 15, 15);
+            var bitmap, mask
+            if (RSettings.getDevicePixelRatio()===2 && RS.getSystemId()!=="osx") {
+                bitmap = new QBitmap(EAction.includeBasePath + "/CrosshairCursor@2x.png", "PNG");
+                mask = new QBitmap(EAction.includeBasePath + "/CrosshairCursorMask@2x.png", "PNG");
+                //bitmap.setDevicePixelRatio(2);
+                //mask.setDevicePixelRatio(2);
+                EAction.crossCursor = new QCursor(bitmap, mask, 30, 30);
+            }
+            else {
+                bitmap = new QBitmap(EAction.includeBasePath + "/CrosshairCursor.png", "PNG");
+                mask = new QBitmap(EAction.includeBasePath + "/CrosshairCursorMask.png", "PNG");
+                EAction.crossCursor = new QCursor(bitmap, mask, 15, 15);
+            }
         }
     }
 
