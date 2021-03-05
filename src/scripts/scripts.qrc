@@ -1548,6 +1548,10 @@
     <file alias="scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.svg">../../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.svg</file>
     <file alias="scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui">../../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui</file>
     <file alias="scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js">../../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js</file>
+    <file alias="scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbol-inverse.svg">../../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbol-inverse.svg</file>
+    <file alias="scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbol.js">../../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbol.js</file>
+    <file alias="scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbol.svg">../../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbol.svg</file>
+    <file alias="scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbolInit.js">../../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbolInit.js</file>
     <file alias="scripts/Misc/MiscDraw/LineDove/LineDove-inverse.svg">../../scripts/Misc/MiscDraw/LineDove/LineDove-inverse.svg</file>
     <file alias="scripts/Misc/MiscDraw/LineDove/LineDove.js">../../scripts/Misc/MiscDraw/LineDove/LineDove.js</file>
     <file alias="scripts/Misc/MiscDraw/LineDove/LineDove.svg">../../scripts/Misc/MiscDraw/LineDove/LineDove.svg</file>
