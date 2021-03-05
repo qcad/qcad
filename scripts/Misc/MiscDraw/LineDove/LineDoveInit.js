@@ -6,6 +6,6 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("LineDove", "Draw a dovetail joint"));
     action.setDefaultCommands(["dovetail"]);
     action.setGroupSortOrder(54200);
-    action.setSortOrder(220);
+    action.setSortOrder(200);
     action.setWidgetNames(["MiscDrawMenu", "MiscDrawToolBar", "MiscDrawToolsPanel", "MiscDrawMatrixPanel"]);
 }

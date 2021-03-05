@@ -6,6 +6,7 @@ SUBDIRS = \
     Cross \
     DrawBoundingBox \
     LineBoxJoint \
+    LineBreakSymbol \
     LineDove \
     LineRadicalAxis \
     LineSimilarityAxes \
