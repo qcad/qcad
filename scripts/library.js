@@ -2710,8 +2710,8 @@ function writeTextFile(fileName, str) {
         var textStream = new QTextStream(file);
         textStream.setCodec("UTF-8");
         textStream.writeString(str);
+        file.close();
     }
-    file.close();
 }
 
 function getKeyboardModifiers(event) {
