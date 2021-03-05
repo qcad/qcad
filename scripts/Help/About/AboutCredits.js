@@ -19,6 +19,8 @@ var credits =
                               ],
         [ "Norbert K.",       "Modify > Break out Gap<br>"
                               ],
+        [ "Pete Vickerstaff", "Misc > Draw > Line break symbol from 2 points<br>"
+                              ],
         [ "Robert S.",        "Direct distance entry<br>" +
                               "Selecting overlapping entities<br>" +
                               "Polyline area calculation<br>" +
@@ -44,7 +46,7 @@ var credits =
                               "Info > Arc/Circle/Ellipse Area<br>" +
                               "Custom linetype support, loading .lin files<br>"
                               ],
-        [ "Stephen Casner",   "Misc > Select > By Color"
+        [ "Stephen Casner",   "Misc > Select > By Color<br>"
                               ],
         [ "Tamas Tevesz",     "Port to FreeBSD<br>" +
                               "Various improvements and fixes<br>"
