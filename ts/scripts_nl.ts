@@ -232,7 +232,7 @@
         <translation>Programmering</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+55"/>
         <source>Hatch Patterns</source>
         <translation>Arceerpatronen</translation>
     </message>
@@ -3806,12 +3806,12 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2106"/>
+        <location line="+2112"/>
         <source>Cancel</source>
         <translation>Annuleer</translation>
     </message>
     <message>
-        <location line="-2105"/>
+        <location line="-2111"/>
         <source>Done</source>
         <translation>Klaar</translation>
     </message>
@@ -3827,7 +3827,7 @@ is al in de lijst.</translation>
         <translation>Geen</translation>
     </message>
     <message>
-        <location line="+687"/>
+        <location line="+693"/>
         <source>Options</source>
         <translation>Opties</translation>
     </message>
@@ -5607,6 +5607,16 @@ BUG: Interferes with group castings.</source>
         <location line="+10"/>
         <source>Show large crosshairs</source>
         <translation>Groot dradenkruis tonen</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>This can be used if cursors are not visible on external monitors</source>
+        <translation>Dit kan worden gebruikt als muisaanwijzers niet zichtbaar zijn op externe monitors</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use system cursors</source>
+        <translation>Muiscursors van het systeem gebruiken</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -8191,6 +8201,29 @@ getoond in zoekresultaten:</translation>
     </message>
 </context>
 <context>
+    <name>LineBreakSymbol</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbol.js" line="+57"/>
+        <source>Pick the first point</source>
+        <translation>Kies het eerste punt</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Pick the second point</source>
+        <translation>Kies het tweede punt</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbolInit.js" line="+2"/>
+        <source>&amp;Line break symbol from 2 points</source>
+        <translation>&amp;Lijnbreuksymbool van 2 punten</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw a line break symbol from 2 points</source>
+        <translation>Teken een lijn onderbreking symbool van 2 punten</translation>
+    </message>
+</context>
+<context>
     <name>LineDove</name>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.js" line="+63"/>
@@ -9679,7 +9712,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+242"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+247"/>
         <source>Drag to move paper</source>
         <translation>Slepen om papier te verplaatsen</translation>
     </message>

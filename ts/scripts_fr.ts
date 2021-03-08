@@ -240,7 +240,7 @@
         <translation>Programmation</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+55"/>
         <source>Hatch Patterns</source>
         <translation>Motifs de hachures</translation>
     </message>
@@ -4074,12 +4074,12 @@ est déjà dans la liste.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2106"/>
+        <location line="+2112"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
     <message>
-        <location line="-2105"/>
+        <location line="-2111"/>
         <source>Done</source>
         <translation>Terminer</translation>
     </message>
@@ -4095,7 +4095,7 @@ est déjà dans la liste.</translation>
         <translation>Aucun</translation>
     </message>
     <message>
-        <location line="+687"/>
+        <location line="+693"/>
         <source>Options</source>
         <translation>Options</translation>
     </message>
@@ -6056,7 +6056,17 @@ BUG: Interferes with group castings.</source>
         <translation>Montrer réticule grande</translation>
     </message>
     <message>
-        <location line="+71"/>
+        <location line="+68"/>
+        <source>This can be used if cursors are not visible on external monitors</source>
+        <translation>Il peut être utilisé si les curseurs ne sont pas visibles sur les moniteurs externes</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use system cursors</source>
+        <translation>Utiliser les curseurs du système</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Auto Zoom</source>
         <translation>Zoom automatique</translation>
     </message>
@@ -8952,6 +8962,29 @@ dans les résultats de recherche :</translation>
     </message>
 </context>
 <context>
+    <name>LineBreakSymbol</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbol.js" line="+57"/>
+        <source>Pick the first point</source>
+        <translation>Choisissez le premier point</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Pick the second point</source>
+        <translation>Choisissez le deuxième point</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbolInit.js" line="+2"/>
+        <source>&amp;Line break symbol from 2 points</source>
+        <translation>Symbole d&apos;interruption de &amp;ligne à partir de 2 points</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw a line break symbol from 2 points</source>
+        <translation>Dessinez un symbole d&apos;interruption de ligne à partir de 2 points</translation>
+    </message>
+</context>
+<context>
     <name>LineDove</name>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.js" line="+63"/>
@@ -10767,7 +10800,7 @@ dans les résultats de recherche :</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+242"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+247"/>
         <source>Drag to move paper</source>
         <translation>Faites glisser pour déplacer le papier</translation>
     </message>

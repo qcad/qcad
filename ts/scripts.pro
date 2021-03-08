@@ -604,6 +604,8 @@ SOURCES = \
 ../scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js \
 ../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.js \
 ../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js \
+../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbol.js \
+../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbolInit.js \
 ../scripts/Misc/MiscDraw/LineDove/LineDove.js \
 ../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js \
 ../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.js \

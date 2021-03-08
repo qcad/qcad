@@ -204,7 +204,7 @@
         <translation>Ohjelmointi</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+55"/>
         <source>Hatch Patterns</source>
         <translation>Peittokuviot</translation>
     </message>
@@ -3827,12 +3827,12 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2106"/>
+        <location line="+2112"/>
         <source>Cancel</source>
         <translation>Peruuta</translation>
     </message>
     <message>
-        <location line="-2105"/>
+        <location line="-2111"/>
         <source>Done</source>
         <translation>Valmis</translation>
     </message>
@@ -3848,7 +3848,7 @@ on jo luettelossa.</translation>
         <translation>Ei mitään</translation>
     </message>
     <message>
-        <location line="+687"/>
+        <location line="+693"/>
         <source>Options</source>
         <translation>Asetukset</translation>
     </message>
@@ -5598,6 +5598,16 @@ BUG: Interferes with group castings.</source>
         <location line="+10"/>
         <source>Show large crosshairs</source>
         <translation>Näytä suuri ristikko</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>This can be used if cursors are not visible on external monitors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use system cursors</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
@@ -8190,6 +8200,29 @@ näkyy hakutuloksissa:</translation>
     </message>
 </context>
 <context>
+    <name>LineBreakSymbol</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbol.js" line="+57"/>
+        <source>Pick the first point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Pick the second point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbolInit.js" line="+2"/>
+        <source>&amp;Line break symbol from 2 points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw a line break symbol from 2 points</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>LineDove</name>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.js" line="+63"/>
@@ -9677,7 +9710,7 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+242"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+247"/>
         <source>Drag to move paper</source>
         <translation>Siirrä paperia vetämällä</translation>
     </message>

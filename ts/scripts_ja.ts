@@ -216,7 +216,7 @@
         <translation>プログラミング</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+55"/>
         <source>Hatch Patterns</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3881,12 +3881,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2106"/>
+        <location line="+2112"/>
         <source>Cancel</source>
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location line="-2105"/>
+        <location line="-2111"/>
         <source>Done</source>
         <translation type="unfinished">完了</translation>
     </message>
@@ -3902,7 +3902,7 @@ is already in the list.</source>
         <translation>なし</translation>
     </message>
     <message>
-        <location line="+687"/>
+        <location line="+693"/>
         <source>Options</source>
         <translation>オプション</translation>
     </message>
@@ -5621,7 +5621,17 @@ BUG: Interferes with group castings.</source>
         <translation>原点軸の表示</translation>
     </message>
     <message>
-        <location line="+71"/>
+        <location line="+68"/>
+        <source>This can be used if cursors are not visible on external monitors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use system cursors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Auto Zoom</source>
         <translation>オートズーム</translation>
     </message>
@@ -8251,6 +8261,29 @@ shown in search results:</source>
     </message>
 </context>
 <context>
+    <name>LineBreakSymbol</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbol.js" line="+57"/>
+        <source>Pick the first point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Pick the second point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbolInit.js" line="+2"/>
+        <source>&amp;Line break symbol from 2 points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw a line break symbol from 2 points</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>LineDove</name>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.js" line="+63"/>
@@ -9909,7 +9942,7 @@ shown in search results:</source>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+242"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+247"/>
         <source>Drag to move paper</source>
         <translation>用紙を移動するためドラッグしてください</translation>
     </message>

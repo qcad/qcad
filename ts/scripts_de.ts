@@ -252,7 +252,7 @@
         <translation>Programmierung</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+55"/>
         <source>Hatch Patterns</source>
         <translation>Schraffurmuster</translation>
     </message>
@@ -4282,12 +4282,12 @@ ist bereits in der Liste.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2106"/>
+        <location line="+2112"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="-2105"/>
+        <location line="-2111"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
@@ -4307,7 +4307,7 @@ ist bereits in der Liste.</translation>
         <translation>Kein</translation>
     </message>
     <message>
-        <location line="+687"/>
+        <location line="+693"/>
         <source>Options</source>
         <translation>Optionen</translation>
     </message>
@@ -6305,7 +6305,17 @@ BUG: Interferes with group castings.</translation>
         <translation>Grosse Ursprungsachsen anzeigen</translation>
     </message>
     <message>
-        <location line="+71"/>
+        <location line="+68"/>
+        <source>This can be used if cursors are not visible on external monitors</source>
+        <translation>Dies kann verwendet werden, wenn Mauszeiger auf externen Monitoren nicht sichtbar sind</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Use system cursors</source>
+        <translation>System-Mauszeiger verwenden</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Auto Zoom</source>
         <translation>Auto Ansicht</translation>
     </message>
@@ -9529,6 +9539,29 @@ im Suchresultat:</translation>
     </message>
 </context>
 <context>
+    <name>LineBreakSymbol</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbol.js" line="+57"/>
+        <source>Pick the first point</source>
+        <translation>Wählen Sie den ersten Punkt</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Pick the second point</source>
+        <translation>Wählen Sie den zweiten Punkt</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbolInit.js" line="+2"/>
+        <source>&amp;Line break symbol from 2 points</source>
+        <translation>&amp;Linienunterbrechung von 2 Punkten</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw a line break symbol from 2 points</source>
+        <translation>Unterbrechungssymbol für eine Linie von 2 Punkten zeichnen</translation>
+    </message>
+</context>
+<context>
     <name>LineDove</name>
     <message>
         <source>First corner</source>
@@ -11582,7 +11615,7 @@ nicht öffnen.
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+243"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+248"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
