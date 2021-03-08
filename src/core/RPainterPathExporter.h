@@ -65,11 +65,17 @@ public:
     void setIgnoreZeroLines(bool on) {
         ignoreZeroLines = on;
     }
+    void setIgnoreLineTypePatternScale(bool on) {
+        ignoreLineTypePatternScale = on;
+    }
+
+    virtual double getLineTypePatternScale(const RLinetypePattern& p) const;
 
 private:
     RPainterPath path;
     bool exportZeroLinesAsPoints;
     bool ignoreZeroLines;
+    bool ignoreLineTypePatternScale;
 };
 
 #endif

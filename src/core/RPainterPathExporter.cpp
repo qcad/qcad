@@ -64,3 +64,12 @@ RPainterPath RPainterPathExporter::getPainterPath() {
     path = RPainterPath();
     return ret;
 }
+
+double RPainterPathExporter::getLineTypePatternScale(const RLinetypePattern& p) const {
+    if (ignoreLineTypePatternScale) {
+        return 1.0;
+    }
+    else {
+        return RExporter::getLineTypePatternScale(p);
+    }
+}

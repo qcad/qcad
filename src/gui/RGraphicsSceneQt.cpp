@@ -228,6 +228,9 @@ void RGraphicsSceneQt::endPath() {
     screenBasedLinetypesOverride = false;
 }
 
+/**
+ * Transform the given paths according to current block reference scales.
+ */
 void RGraphicsSceneQt::transformAndApplyPatternPath(RPainterPath& path) const {
     // apply transforms (for paths inside block references):
     if (!transformStack.isEmpty()) {
@@ -281,11 +284,13 @@ void RGraphicsSceneQt::transformAndApplyPatternPath(RPainterPath& path) const {
             pathWithPattern.addPath(p);
         }
         else {
+            RPainterPathExporter ppe(getDocument());
+            ppe.setPixelSizeHint(getPixelSizeHint());
+            ppe.setExportZeroLinesAsPoints(false);
+            ppe.setLinetypePattern(lp);
+            ppe.setIgnoreLineTypePatternScale(true);
+
             for (int i=0; i<pathShapes.length(); i++) {
-                RPainterPathExporter ppe(getDocument());
-                ppe.setPixelSizeHint(getPixelSizeHint());
-                ppe.setExportZeroLinesAsPoints(false);
-                ppe.setLinetypePattern(lp);
                 //double length = 0.0;
                 //qDebug() << "shape:" << *pathShapes[i];
 
@@ -307,7 +312,6 @@ void RGraphicsSceneQt::transformAndApplyPatternPath(RPainterPath& path) const {
                 RShapesExporter(ppe, shapes, offset);
                 //lp.getPatternOffset(length));
                 RPainterPath p = ppe.getPainterPath();
-                //qDebug() << "path with dashes:" << p;
                 pathWithPattern.addPath(p);
             }
         }
