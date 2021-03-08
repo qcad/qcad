@@ -551,8 +551,9 @@ void RExporter::exportEntities(bool allBlocks, bool undone) {
 
 void RExporter::exportLayers() {
     QSet<RLayer::Id> ids = document->queryAllLayers();
-    QSet<RLayer::Id>::iterator it;
-    for (it = ids.begin(); it != ids.end(); it++) {
+    QList<RLayer::Id> idsList = document->sortLayers(ids.toList());
+    QList<RLayer::Id>::iterator it;
+    for (it = idsList.begin(); it != idsList.end(); it++) {
         // 20110715: queryLayer -> queryLayerDirect
         QSharedPointer<RLayer> e = document->queryLayerDirect(*it);
         if (!e.isNull()) {
