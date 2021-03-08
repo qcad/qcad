@@ -360,6 +360,7 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
                 pp.addPath(pls[i].toPainterPath());
             }
             else {
+                // add open polylines directly to currentPainterPath:
                 currentPainterPath.addPath(pls[i].toPainterPath());
             }
         }
@@ -417,7 +418,10 @@ void RGraphicsSceneQt::exportPolyline(const RPolyline& polyline, bool polylineGe
     }
 
     if (created) {
-        endPath();
+        if (!polyline.hasWidths()) {
+            // if polyline has widths, this is called by exportThickPolyline:
+            endPath();
+        }
     }
 }
 
