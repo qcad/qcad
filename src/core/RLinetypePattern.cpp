@@ -940,12 +940,13 @@ QDebug operator<<(QDebug dbg, const RLinetypePattern& p) {
     << ", " << p.getDescription()
     << ", string: " << p.getPatternString() << ", "
     << ", length: " << p.getPatternLength() << ", "
-    << ", dashes: " << p.getNumDashes() << ", ";
+    << ", dashes: " << p.getNumDashes() << ":";
     for (int i=0; i<p.getNumDashes(); ++i) {
+        dbg.nospace() << "\ndash:";
         if (i!=0) {
             dbg.nospace() << ",";
         }
-        dbg.nospace() << p.getDashLengthAt(i);
+        dbg.nospace() << "\n  length: " << p.getDashLengthAt(i);
 
         bool gotShape = false;
         if (p.hasShapeNumberAt(i) || p.hasShapeTextAt(i)) {
@@ -953,7 +954,7 @@ QDebug operator<<(QDebug dbg, const RLinetypePattern& p) {
         }
 
         if (gotShape) {
-            dbg.nospace() << "[";
+            dbg.nospace() << "\n[";
         }
         if (p.hasShapeTextAt(i)) {
             dbg.nospace() << "text: " << p.getShapeTextAt(i);
