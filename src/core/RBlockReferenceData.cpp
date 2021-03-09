@@ -673,7 +673,7 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
     }
 
     bool isArray = (columnCount!=1 || rowCount!=1);
-    bool isUniform = RMath::fuzzyCompare(scaleFactors.x, scaleFactors.y);
+    bool isUniform = RMath::fuzzyCompare(scaleFactors.x, scaleFactors.y) || RMath::fuzzyCompare(scaleFactors.x, -scaleFactors.y);
 
     RBox queryBoxBlockCoordinates;
     if (queryBox.isValid()) {
