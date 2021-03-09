@@ -117,6 +117,7 @@ public:
     void setKnotVector(const QList<double>& knots);
     void appendKnot(double k);
     QList<double> getWeights() const;
+    void setWeights(QList<double>& w);
 
     void setDegree(int d);
     int getDegree() const;
@@ -278,6 +279,7 @@ public:
 
     /**
      * \getter{getWeights}
+     * \setter{setWeights}
      */
     mutable QList<double> weights;
 

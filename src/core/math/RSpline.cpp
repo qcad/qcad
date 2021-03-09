@@ -529,6 +529,10 @@ QList<double> RSpline::getWeights() const {
     */
 }
 
+void RSpline::setWeights(QList<double>& w) {
+    weights = w;
+}
+
 /**
  * Sets the degree of this spline (2 or 3 for control point defined spline,
  * 3 for fit point defined spline).
@@ -1517,12 +1521,19 @@ void RSpline::updateFromControlPoints() const {
     // open or from fit points:
     else {
         curve.Create(3, false, getOrder(), controlPoints.size());
+        //curve.Create(3, true, getOrder(), controlPoints.size());
 
         // setting control points:
         for (int i=0; i<controlPoints.size(); ++i) {
             RVector cp = controlPoints.at(i);
             ON_3dPoint onp(cp.x, cp.y, cp.z);
+            //ON_4dPoint onp(cp.x, cp.y, cp.z, weights.length()>i ? weights.at(i) : 1.0);
             curve.SetCV(i, onp);
+
+//            if (i<weights.length()) {
+//                double w = weights.at(i);
+//                curve.SetWeight(i, w);
+//            }
             //qDebug() << "RSpline: controlPoints[" << i << "]: " << cp;
         }
 
@@ -1559,6 +1570,22 @@ void RSpline::updateFromControlPoints() const {
             }
         }
     }
+
+    // set weights:
+//    qDebug() << "rat:" << curve.m_is_rat;
+//    //curve.m_is_rat = 1;
+//    for (int i=0; i<weights.size(); ++i) {
+//        if (i<curve.CVCount()) {
+//            double w = weights.at(i);
+//            curve.SetWeight(i, w);
+//            qDebug() << "set weight of internal curve:" << w;
+//        }
+//        //qDebug() << "RSpline: controlPoints[" << i << "]: " << cp;
+//    }
+
+//    for (int i=0; i<curve.CVCount(); ++i) {
+//        qDebug() << "weight internal:" << curve.Weight(i);
+//    }
 
     //##getExploded();
 #endif
@@ -1907,6 +1934,11 @@ void RSpline::print(QDebug dbg) const {
     dbg.nospace() << ",\ncontrolPoints (" << controlPoints.count() << "): ";
     for (int i=0; i<controlPoints.count(); ++i) {
         dbg.nospace() << i << ": " << controlPoints.at(i) << ", ";
+    }
+
+    dbg.nospace() << ",\nweights (" << weights.count() << "): ";
+    for (int i=0; i<weights.count(); ++i) {
+        dbg.nospace() << i << ": " << weights.at(i) << ", ";
     }
 
     QList<RVector> fitPoints = getFitPoints();
