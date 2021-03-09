@@ -491,12 +491,13 @@ void RGraphicsSceneQt::exportArcSegment(const RArc& arc, bool allowForZeroLength
             currentPainterPath.lineTo(arc.getEndPoint());
         }
         else {
-//            if (getLinetypePattern().getNumDashes()<=1) {
-//                // continuous arc:
-//                currentPainterPath.setAutoRegen(true);
-//                RGraphicsScene::exportArcSegment(arc, allowForZeroLength);
-//            }
-//            else {
+            if (getLinetypePattern().getNumDashes()<=1) {
+                // continuous arc:
+                currentPainterPath.setAutoRegen(true);
+                RGraphicsScene::exportArcSegment(arc, allowForZeroLength);
+            }
+            else {
+                // slower:
                 currentPainterPath.setAutoRegen(true);
                 QList<RSpline> splines = RSpline::createSplinesFromArc(arc);
                 for (int i=0; i<splines.length(); i++) {
@@ -511,7 +512,7 @@ void RGraphicsSceneQt::exportArcSegment(const RArc& arc, bool allowForZeroLength
 //                    RMath::rad2deg(-arc.getStartAngle()),
 //                    RMath::rad2deg(-arc.getSweep())
 //                );
-//            }
+            }
         }
     }
     else {
