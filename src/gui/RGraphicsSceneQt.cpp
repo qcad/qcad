@@ -492,7 +492,7 @@ void RGraphicsSceneQt::exportArcSegment(const RArc& arc, bool allowForZeroLength
         }
         else {
             if (getLinetypePattern().getNumDashes()<=1) {
-                // continuous arc:
+                // this is faster for continuous arcs:
                 currentPainterPath.setAutoRegen(true);
                 RGraphicsScene::exportArcSegment(arc, allowForZeroLength);
             }
