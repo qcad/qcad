@@ -19,7 +19,7 @@ var credits =
                               ],
         [ "Norbert K.",       "Modify > Break out Gap<br>"
                               ],
-        [ "Pete Vickerstaff", "Misc > Draw > Line break symbol from 2 points<br>"
+        [ "Pete Vickerstaff", "Misc > Draw > Polyline break symbol from 2 points<br>"
                               ],
         [ "Robert S.",        "Direct distance entry<br>" +
                               "Selecting overlapping entities<br>" +
