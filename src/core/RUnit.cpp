@@ -626,7 +626,6 @@ QString RUnit::formatFractional(double length, RS::Unit /*unit*/,
     denominator = (int)RMath::pow(2, prec);
     nominator = RMath::mround((length-num)*denominator);
 
-
     // fraction rounds up to 1:
     if (nominator==denominator) {
         nominator=0;
@@ -648,8 +647,11 @@ QString RUnit::formatFractional(double length, RS::Unit /*unit*/,
     }
 
     if (onlyPreciseResult) {
-        double res = (double)num + (double)nominator / (double)denominator;
-        if (!RMath::fuzzyCompare(res, length)) {
+        double res = (double)num;
+        if (denominator!=0) {
+            res += (double)nominator / (double)denominator;
+        }
+        if (!RMath::fuzzyCompare(res, length, 0.001)) {
             return "";
         }
     }
