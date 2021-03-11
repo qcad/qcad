@@ -674,9 +674,8 @@ void RDocumentInterface::regenerateScenes(bool undone) {
         return;
     }
 
-    QList<RGraphicsScene*>::iterator it;
-    for (it=scenes.begin(); it!=scenes.end(); it++) {
-        (*it)->regenerate(undone);
+    for (int i=0; i<scenes.length(); i++) {
+        scenes[i]->regenerate(undone);
     }
 }
 
