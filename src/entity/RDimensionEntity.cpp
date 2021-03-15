@@ -338,6 +338,7 @@ void RDimensionEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
             RColor textColor = v.value<RColor>();
             if (!textColor.isByBlock()) {
                 brush.setColor(textColor);
+                e.setPen(textColor);
             }
             e.setBrush(brush);
             e.exportPainterPathSource(textData);
