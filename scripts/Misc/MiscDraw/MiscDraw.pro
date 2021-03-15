@@ -6,12 +6,12 @@ SUBDIRS = \
     Cross \
     DrawBoundingBox \
     LineBoxJoint \
-    LineBreakSymbol \
     LineDove \
     LineRadicalAxis \
     LineSimilarityAxes \
     PointPole \
     PointPowerCenter \
+    PolyLineBreakSymbol \
     TextAlong \
     XLineHorizontal \
     XLineVertical
