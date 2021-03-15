@@ -798,7 +798,6 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
 
     // polyline:
     else if (isPolylineShape(shape)) {
-        // TODO: make sure point 1 is closer to the start of the polyline:
 
         var closed = shape.isGeometricallyClosed();
         if (closed) {
@@ -821,32 +820,21 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
             rest2.trimStartPoint(cutDist2);
         }
         else {
-//            var l1 = shape.getLengthTo(cutDist1);
-//            if (l1<RS.PointTolerance && cutDist1.isEnd===true) {
-//                l1 = shape.getLength();
-//            }
-//            var l2 = shape.getLengthTo(cutDist2);
-//            if (l2<RS.PointTolerance && cutDist2.isEnd===true) {
-//                l2 = shape.getLength();
-//            }
+            // make sure point 1 is closer to the start of the polyline:
+            if (cutDist1 > cutDist2) {
+                var dummy = cutDist1;
+                cutDist1 = cutDist2;
+                cutDist2 = dummy;
+            }
 
-            // TODO: use real click point (position)
-//            if (l1 > l2) {
-//                rest1.trimEndPoint(cutDist2, cutDist2);
-//                segment.trimStartPoint(cutDist2, cutDist2);
-//                segment.trimEndPoint(cutDist1, cutDist1);
-//                rest2.trimStartPoint(cutDist1, cutDist1);
-//            }
-//            else {
-                rest1.trimEndPoint(cutDist1);
+            rest1.trimEndPoint(cutDist1);
 
-                var l1 = segment.getLength();
-                segment.trimStartPoint(cutDist1);
-                var l2 = segment.getLength();
-                segment.trimEndPoint(cutDist2 - (l1-l2));
+            var l1 = segment.getLength();
+            segment.trimStartPoint(cutDist1);
+            var l2 = segment.getLength();
+            segment.trimEndPoint(cutDist2 - (l1-l2));
 
-                rest2.trimStartPoint(cutDist2);
-//            }
+            rest2.trimStartPoint(cutDist2);
         }
 
         if (!isNull(segment)) {
