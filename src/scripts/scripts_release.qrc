@@ -1105,10 +1105,6 @@
     <file alias="scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.svg">../../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.svg</file>
     <file alias="scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui">../../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui</file>
     <file alias="scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js">../../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js</file>
-    <file alias="scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbol-inverse.svg">../../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbol-inverse.svg</file>
-    <file alias="scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbol.js">../../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbol.js</file>
-    <file alias="scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbol.svg">../../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbol.svg</file>
-    <file alias="scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbolInit.js">../../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbolInit.js</file>
     <file alias="scripts/Misc/MiscDraw/LineDove/LineDove-inverse.svg">../../scripts/Misc/MiscDraw/LineDove/LineDove-inverse.svg</file>
     <file alias="scripts/Misc/MiscDraw/LineDove/LineDove.js">../../scripts/Misc/MiscDraw/LineDove/LineDove.js</file>
     <file alias="scripts/Misc/MiscDraw/LineDove/LineDove.svg">../../scripts/Misc/MiscDraw/LineDove/LineDove.svg</file>
@@ -1132,6 +1128,11 @@
     <file alias="scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenter.js">../../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenter.js</file>
     <file alias="scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenter.svg">../../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenter.svg</file>
     <file alias="scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js">../../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js</file>
+    <file alias="scripts/Misc/MiscDraw/PolyLineBreakSymbol/PolyLineBreakSymbol-inverse.svg">../../scripts/Misc/MiscDraw/PolyLineBreakSymbol/PolyLineBreakSymbol-inverse.svg</file>
+    <file alias="scripts/Misc/MiscDraw/PolyLineBreakSymbol/PolyLineBreakSymbol.js">../../scripts/Misc/MiscDraw/PolyLineBreakSymbol/PolyLineBreakSymbol.js</file>
+    <file alias="scripts/Misc/MiscDraw/PolyLineBreakSymbol/PolyLineBreakSymbol.svg">../../scripts/Misc/MiscDraw/PolyLineBreakSymbol/PolyLineBreakSymbol.svg</file>
+    <file alias="scripts/Misc/MiscDraw/PolyLineBreakSymbol/PolyLineBreakSymbol.ui">../../scripts/Misc/MiscDraw/PolyLineBreakSymbol/PolyLineBreakSymbol.ui</file>
+    <file alias="scripts/Misc/MiscDraw/PolyLineBreakSymbol/PolyLineBreakSymbolInit.js">../../scripts/Misc/MiscDraw/PolyLineBreakSymbol/PolyLineBreakSymbolInit.js</file>
     <file alias="scripts/Misc/MiscDraw/TextAlong/Clockwise-inverse.svg">../../scripts/Misc/MiscDraw/TextAlong/Clockwise-inverse.svg</file>
     <file alias="scripts/Misc/MiscDraw/TextAlong/Clockwise.svg">../../scripts/Misc/MiscDraw/TextAlong/Clockwise.svg</file>
     <file alias="scripts/Misc/MiscDraw/TextAlong/CounterClockwise-inverse.svg">../../scripts/Misc/MiscDraw/TextAlong/CounterClockwise-inverse.svg</file>
