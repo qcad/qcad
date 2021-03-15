@@ -738,13 +738,6 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
                         entity = QSharedPointer<REntity>(entity->clone());
                         applyColumnRowOffsetTo(*entity, col, row, true);
                     }
-
-                    // bounding box check for arrays:
-                    if (queryBoxBlockCoordinates.isValid()) {
-                        if (!queryBoxBlockCoordinates.intersects(entity->getBoundingBox())) {
-                            continue;
-                        }
-                    }
                 }
                 ret.append(entity->getShapes(queryBox, ignoreComplex));
             }
