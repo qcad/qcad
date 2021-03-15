@@ -640,6 +640,12 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
 
     // arcs:
     else if (isArcShape(shape)) {
+        if (cutDist1 > cutDist2) {
+            var dummy = cutDist1;
+            cutDist1 = cutDist2;
+            cutDist2 = dummy;
+        }
+
         rest1 = shape.clone();
         rest2 = shape.clone();
 
