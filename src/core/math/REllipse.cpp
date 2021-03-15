@@ -606,7 +606,7 @@ bool REllipse::isFullEllipse() const {
  * \return True if minor radius and major radius are equal, i.e. ratio is 1.0.
  */
 bool REllipse::isCircular() const {
-    return getRatio()>(1.0-RS::PointTolerance);
+    return getRatio()>(1.0-0.001);
 }
 
 /**
