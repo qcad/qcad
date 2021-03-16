@@ -1,4 +1,4 @@
-/* 
+/*
 QCAD Dark Theme
 IconPostfix:inverse
 RequiresPlugin:true
@@ -10,8 +10,15 @@ On macOS, the system's dark mode can be used instead.
 -- Leave this header intact --
 */
 
-QToolTip { 
-    color: #ffffff; background-color: #363636; border: 1px solid #070707; 
+/*
+Updates------
+v1 - 21/01/21 - font colour changed to fix unreadable text in the FlexPainter dialog. REMOVED replaced by v2
+v2 - 01/02/21 - Fix for Version and Units text background display in FlexPainter dialog.
+
+*/
+
+QToolTip {
+    color: #ffffff; background-color: #363636; border: 1px solid #070707;
 }
 
 /* Current tool icon in options tool bar */
@@ -27,4 +34,17 @@ QToolBar#Options QLabel#Icon {
 /* Background of text field in text editor */
 QDialog#TextDialog QTextEdit#Text {
     background-color: white;
+}
+
+
+/* Fix for Version and Units text background display in FlexPainter dialog. */
+QObject#FlexPainterDialog QLineEdit#lineEdit,
+QObject#FlexPainterDialog QLineEdit#UnitsLabel
+{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    border-style: none;
+    background-color: transparent;
+    color: #fff;
 }

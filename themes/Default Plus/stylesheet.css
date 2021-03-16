@@ -1,0 +1,381 @@
+/*
+Default Plus theme
+an enhancement to the Default theme, gives a more tactile feel.
+
+Created by Pete Vickerstaff
+
+THIS FILE IS PROVIDED *AS IS*, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THIS FILE OR THE USE OR OTHER DEALINGS IN THIS FILE.
+
+Updates------
+v1 - 15/01/21 - Renamed to Default Plus
+                Hover added to QTabBar.
+v2 - 23/01/21 - QComboBox section removed to fix white font on light background in WindowsOS
+v3 - 01/02/21 - RadioButton:hover changed to an icon
+                Fix for Version and Units text background display in FlexPainter dialog.
+v4 - 24/02/21 - Full set of Checkbox and Radio button icons added.
+                Tab bar and Tabs improvements.
+                General graphical and colour improvements.
+                Added a ToolButton checked state for on/off tool buttons
+                 in the Reset, Options and Snap toolbars, possibly other locations.
+v5 - 16/03/21 - Move  all the bottom tabs right so first tab is not floating.
+                Bottom inactive tabs background fixed.
+
+*/
+
+
+
+/* Current tool icon in options tool bar */
+QToolBar#Options QLabel#Icon {
+    background-color: qlineargradient(x1:1, y1:0, x2:1, y2:1, stop:0 #d7dadb,stop:1 #fff);
+    border: 1px outset #808080;
+    border-radius: 6px;
+}
+
+/* Tool bar button icons in options tool bar */
+QToolBar QToolButton {
+    background-color: qlineargradient(x1:1, y1:0, x2:1, y2:1, stop:0 #d7dadb,stop:1 #fff);
+    border: 1px outset #808080;
+    border-radius: 5px;
+}
+
+
+/*-----QToolButton-----*/
+QToolButton
+{
+    background-color: qlineargradient(x1:1, y1:0, x2:1, y2:1, stop:0 #d7dadb,stop:1 #fff);
+    border: 1px outset #808080;
+    border-radius: 5px;
+}
+
+QToolButton::disabled
+{
+    background-color: #afb4b6;
+    border: 1px solid #999999;
+}
+
+QToolButton::hover
+{
+    background-color: qlineargradient(x1:1, y1:0, x2:1, y2:1, stop:0 #fff,stop:1 #d7dadb);
+    border: 1px inset #808080;
+    border-radius: 5px;
+}
+
+/* checked state for on/off toolbar buttons */
+QToolButton:checked {
+    background-color: #d7dadb;
+    border: 1px inset #308CC6;
+}
+
+QToolButton::pressed
+{
+    background-color: qlineargradient(x1:1, y1:0, x2:1, y2:1, stop:0 #d7dadb,stop:1 #fff);
+    border: 2px inset #808080;
+    border-radius: 5px;
+}
+
+/*-----QPushButton-----*/
+QPushButton
+{
+    background-color: qlineargradient(x1:1, y1:0, x2:1, y2:1, stop:0 #d7dadb,stop:1 #fff);
+    border: 1px outset #808080;
+    border-radius: 5px;
+    padding: 3px;
+    min-width: 6em;
+}
+
+QPushButton::disabled
+{
+    background-color: #afb4b6;
+    border: 1px solid #7292a7;
+}
+
+QPushButton::hover
+{
+    background-color: qlineargradient(x1:1, y1:0, x2:1, y2:1, stop:0 #fff,stop:1 #d7dadb);
+    border: 1px inset #808080;
+    border-radius: 5px;
+}
+
+QPushButton:focus {
+    background-color: qlineargradient(x1:1, y1:0, x2:1, y2:1, stop:0 #fff,stop:1 #d7dadb);
+    border: 1px inset #308CC6;
+}
+
+QPushButton::pressed
+{
+    background-color: qlineargradient(x1:1, y1:0, x2:1, y2:1, stop:0 #d7dadb,stop:1 #fff);
+    border: 2px inset #808080;
+    border-radius: 5px;
+}
+
+
+
+/*-----QCheckBox-----*/
+QCheckBox::indicator:checked
+{
+    image:url(icons/checkbox-checked.png);
+}
+
+QCheckBox::indicator:unchecked
+{
+    image:url(icons/checkbox-unchecked.png);
+}
+
+QCheckBox::indicator:checked:hover
+{
+    image:url(icons/checkbox-checked-hover.png);
+}
+
+QCheckBox::indicator:unchecked:hover
+{
+    image:url(icons/checkbox-unchecked-hover.png);
+}
+
+QCheckBox::indicator:checked:disabled
+{
+    image:url(icons/checkbox-checked-disabled.png);
+}
+
+QCheckBox::indicator:unchecked:disabled
+{
+    image:url(icons/checkbox-unchecked-disabled.png);
+}
+
+
+/*-----QRadioButton-----*/
+QRadioButton::indicator:checked
+{
+    image:url(icons/radio-checked.png);
+}
+
+QRadioButton::indicator:unchecked
+{
+    image:url(icons/radio-unchecked.png);
+}
+
+QRadioButton::indicator:checked:disabled
+{
+    image:url(icons/radio-checked-disabled.png);
+}
+
+QRadioButton::indicator:unchecked:disabled
+{
+    image:url(icons/radio-unchecked-disabled.png);
+}
+
+QRadioButton::indicator:checked:hover
+{
+    image:url(icons/radio-checked-hover.png);
+}
+
+QRadioButton::indicator:unchecked:hover
+{
+    image:url(icons/radio-unchecked-hover.png);
+}
+
+
+
+/*-----QStatusBar-----*/
+QStatusBar
+{
+    border: 1px solid #b7c1c8;
+    border-radius: 3px;
+}
+
+QStatusBar::item {
+    border-width: 0px;
+}
+
+
+
+/* remove border from dockable widgets */
+QWidget#PropertyEditor,
+QWidget#ViewList,
+QWidget#BlockList,
+QWidget#EcmaScriptShell QFrame,
+QWidget#LayerList,
+QWidget#LayerListPro {
+    border: 0px;
+	background-color: #EFEFEF;
+}
+
+
+
+/*-----Preferences dialog menu-----*/
+QTreeView::item:hover {
+    background: #308CC6;
+    color: #fff;
+}
+
+
+/* border in Application Preferences>General>Tool Settings */
+QTabWidget::pane {
+    top: -1px;
+    border: 1px solid #BCBCBC;
+}
+
+QTabBar::tab:top:disabled,
+QTabBar::tab:top:!selected:disabled {
+    color: #c6c6c6;
+}
+
+
+/* move all the vertical tabs down so first tab is not floating */
+QTabBar::tab:first:left,
+QTabBar::tab:first:right {
+    margin-top: 40px;
+}
+
+/* move all the bottom tabs right so first tab is not floating */
+QTabBar::tab:first:bottom {
+    margin-left: 10px;
+}
+
+
+/* VERTICAL LEFT TABS */
+QTabBar::tab:left {
+    border-left: 1px solid #BCBCBC;
+    border-top: 1px solid #BCBCBC;
+    border-bottom: 1px solid #BCBCBC;
+    padding: 12px 3px;
+    color: #000;
+    background: #EFEFEF;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    margin-right: 1px;
+}
+
+QTabBar::tab:left:!selected {
+    border-left: 1px solid #BCBCBC;
+    border-top: 1px solid #BCBCBC;
+    border-bottom: 1px solid #BCBCBC;
+    margin-left: 3px;
+    padding: 12px 3px;
+    color: #ABABAB;
+    background-color: qlineargradient(y1:1, x1:0, y2:1, x2:1, stop:0 #DDDDDD,stop:1 #EFEFEF);
+}
+
+QTabBar::tab:left:!selected:hover {
+    border-left: 1px solid #BCBCBC;
+    border-top: 1px solid #BCBCBC;
+    border-bottom: 1px solid #BCBCBC;
+    color: #000;
+    font: italic;
+    margin-left: 0px;
+}
+
+/* VERTICAL RIGHT TABS */
+QTabBar::tab:right {
+    border-right: 1px solid #BCBCBC;
+    border-top: 1px solid #BCBCBC;
+    border-bottom: 1px solid #BCBCBC;
+    padding: 12px 3px;
+    color: #000;
+    background: #EFEFEF;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    margin-left: 1px;
+}
+
+QTabBar::tab:right:!selected {
+    border-right: 1px solid #BCBCBC;
+    border-top: 1px solid #BCBCBC;
+    border-bottom: 1px solid #BCBCBC;
+    margin-right: 3px;
+    padding: 12px 3px;
+    color: #ABABAB;
+    background-color: qlineargradient(y1:1, x1:0, y2:1, x2:1, stop:0 #EFEFEF,stop:1 #DDDDDD);
+}
+
+QTabBar::tab:right:!selected:hover {
+    border-right: 1px solid #BCBCBC;
+    border-top: 1px solid #BCBCBC;
+    border-bottom: 1px solid #BCBCBC;
+    color: #000;
+    font: italic;
+    margin-right: 0px;
+}
+
+
+/* HORIZONTAL TOP TABS */
+QTabBar::tab:top {
+    border-left: 1px solid #BCBCBC;
+    border-top: 1px solid #BCBCBC;
+    border-right: 1px solid #BCBCBC;
+    padding: 3px;
+    color: #000;
+    background: #EFEFEF;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+QTabBar::tab:top:!selected {
+    border-left: 1px solid #BCBCBC;
+    border-top: 1px solid #BCBCBC;
+    border-right: 1px solid #BCBCBC;
+    margin-top: 3px;
+    margin-bottom: -1px;
+    padding: 3px;
+    color: #ABABAB;
+    background-color: qlineargradient(x1:1, y1:0, x2:1, y2:1, stop:0 #DDDDDD,stop:1 #EFEFEF);
+}
+
+QTabBar::tab:top:!selected:hover {
+    border-left: 1px solid #BCBCBC;
+    border-top: 1px solid #BCBCBC;
+    border-right: 1px solid #BCBCBC;
+    color: #000;
+    font: italic;
+    margin-top: 0px;
+}
+
+
+/* HORIZONTAL BOTTOM TABS */
+QTabBar::tab:bottom {
+    border-left: 1px solid #BCBCBC;
+    border-bottom: 1px solid #BCBCBC;
+    border-right: 1px solid #BCBCBC;
+    padding: 5px;
+    color: #000;
+    background: #EFEFEF;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin-top: 1px;
+}
+
+QTabBar::tab:bottom:!selected {
+    border-left: 1px solid #BCBCBC;
+    border-bottom: 1px solid #BCBCBC;
+    border-right: 1px solid #BCBCBC;
+    margin-bottom: 3px;
+    padding: 5px;
+    color: #ABABAB;
+    background-color: qlineargradient(x1:1, y1:0, x2:1, y2:1, stop:0 #EFEFEF,stop:1 #DDDDDD);
+}
+
+QTabBar::tab:bottom:!selected:hover {
+    border-left: 1px solid #BCBCBC;
+    border-bottom: 1px solid #BCBCBC;
+    border-right: 1px solid #BCBCBC;
+    color: #000;
+    font: italic;
+    margin-bottom: 0px;
+}
+
+
+/* Fix for Version and Units text background display in FlexPainter dialog. */
+QObject#FlexPainterDialog QLineEdit#lineEdit,
+QObject#FlexPainterDialog QLineEdit#UnitsLabel
+{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    border-style: none;
+    background-color: transparent;
+    color: #000;
+}
