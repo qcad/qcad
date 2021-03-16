@@ -6,24 +6,50 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>466</width>
-    <height>44</height>
+    <width>474</width>
+    <height>52</height>
    </rect>
   </property>
-  <property name="sizePolicy">
-   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-    <horstretch>0</horstretch>
-    <verstretch>0</verstretch>
-   </sizepolicy>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
   </property>
-  <layout class="QHBoxLayout" name="horizontalLayout">
+  <layout class="QHBoxLayout">
+   <property name="spacing">
+    <number>5</number>
+   </property>
    <item>
     <widget class="QCheckBox" name="RemoveSegment">
      <property name="toolTip">
-      <string>Remove section of line between break</string>
+      <string>Remove line break segment</string>
+     </property>
+     <property name="statusTip">
+      <string>Remove the line segment between the break symbol</string>
      </property>
      <property name="text">
       <string>Remove Segment</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="Inherit">
+     <property name="toolTip">
+      <string>Inherit entity properties</string>
+     </property>
+     <property name="statusTip">
+      <string>Inherit all properties from the chosen entity</string>
+     </property>
+     <property name="text">
+      <string>Inherit</string>
      </property>
      <property name="checked">
       <bool>true</bool>
@@ -40,33 +66,75 @@
    <item>
     <widget class="QLabel" name="label">
      <property name="toolTip">
-      <string>Break symbol peak height</string>
+      <string>Peak ratio</string>
+     </property>
+     <property name="statusTip">
+      <string>The ratio of the peak height to the break width</string>
      </property>
      <property name="text">
-      <string>Peak Height</string>
+      <string>Peak Ratio :</string>
      </property>
     </widget>
    </item>
    <item>
-    <widget class="QSpinBox" name="BreakHeight">
+    <widget class="QComboBox" name="BreakRatio">
      <property name="toolTip">
-      <string>Break symbol peak height</string>
+      <string>Peak ratio</string>
      </property>
-     <property name="suffix">
-      <string/>
+     <property name="statusTip">
+      <string>The ratio of the peak height to the break width</string>
      </property>
-     <property name="prefix">
-      <string/>
+     <property name="currentIndex">
+      <number>2</number>
      </property>
-     <property name="minimum">
-      <number>1</number>
+     <property name="minimumContentsLength">
+      <number>4</number>
      </property>
-     <property name="maximum">
-      <number>9</number>
-     </property>
-     <property name="value">
-      <number>3</number>
-     </property>
+     <item>
+      <property name="text">
+       <string notr="true">1:3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">2:3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">1:1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">4:3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">5:3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">2:1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">7:3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">8:3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string notr="true">3:1</string>
+      </property>
+     </item>
     </widget>
    </item>
    <item>
@@ -77,31 +145,54 @@
     </widget>
    </item>
    <item>
-    <widget class="QRadioButton" name="IncSeg">
+    <widget class="QToolButton" name="IncSeg">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="toolTip">
-      <string>First/Last segment is inclined</string>
+      <string>First/Last segment inclined</string>
+     </property>
+     <property name="statusTip">
+      <string>The first and last segment of the break symbol is inclined</string>
      </property>
      <property name="text">
-      <string>Inclined  </string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>IncSeg.svg</normaloff>IncSeg.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
      </property>
      <property name="checked">
       <bool>true</bool>
      </property>
      <attribute name="buttonGroup">
-      <string notr="true">FirstLastGroup</string>
+      <string notr="true">IncVert</string>
      </attribute>
     </widget>
    </item>
    <item>
-    <widget class="QRadioButton" name="VertSeg">
+    <widget class="QToolButton" name="VertSeg">
      <property name="toolTip">
-      <string>First/Last segment is vertical</string>
+      <string>First/Last segment vertical</string>
+     </property>
+     <property name="statusTip">
+      <string>The first and last segment of the break symbol is vertical</string>
      </property>
      <property name="text">
-      <string>Vertical</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>VertSeg.svg</normaloff>VertSeg.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
      </property>
      <attribute name="buttonGroup">
-      <string notr="true">FirstLastGroup</string>
+      <string notr="true">IncVert</string>
      </attribute>
     </widget>
    </item>
@@ -110,6 +201,6 @@
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="FirstLastGroup"/>
+  <buttongroup name="IncVert"/>
  </buttongroups>
 </ui>

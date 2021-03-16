@@ -22,6 +22,14 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
+UPDATES
+v0 - 11/03/2021 - First upload
+v1 - 15/03/2021 - Inherit checkbox added in UI, toggles inherit properties from chosen entity.
+                  Spin box replaced by a drop down combo box in UI.
+                  Peak Height changed to Peak Ratio. breakHeight vars now breakRatio.
+                  Radio buttons replaced with Toolbar buttons in UI.
+                  Added status line comments for toolbar items in UI.
+
  */
 
 //  Base Class
@@ -41,8 +49,9 @@ function PolyLineBreakSymbol(guiAction) {
 
 
     // Default settings matching the UI:
+    this.inherit = true;          // inherit properties from chosen entity
     this.removeSegment = true;    // Remove segment by Default
-    this.breakHeight = 3;         // Default height
+    this.breakRatio = 3;          // Default height
     this.inclinedSegment = true;  // Default first/last segment
     // Entity/Shape:
     this.entity = undefined;      // Selected entity
@@ -81,7 +90,6 @@ PolyLineBreakSymbol.prototype.escapeEvent = function() {
     case PolyLineBreakSymbol.State.SettingEndpt:
         this.setState(PolyLineBreakSymbol.State.SettingStartpt);
         break;    // Step back to SettingStartpt
-    default:    // Good practice to include, break not required
     }
 };
 
@@ -125,7 +133,6 @@ PolyLineBreakSymbol.prototype.setState = function(state) {
         this.setLeftMouseTip(trSecondPoint);
         this.setRightMouseTip(EAction.trCancel);
         break;
-    default:    // Good practice to include, break not required
     }
 
     this.setCrosshairCursor();
@@ -145,15 +152,15 @@ PolyLineBreakSymbol.prototype.pickEntity = function(event, preview) {
 
     // Store entity & shape:
     this.entity = entity;
-    this.shape = this.entity.castToShape()
+    this.shape = this.entity.castToShape();
 
     // Validation of entity:
-    var cond = isLineBasedEntity(entity) ||
-                isArcEntity(entity) ||
-                isCircleEntity(entity) ||
-                isEllipseEntity(entity) ||
-                (RSpline.hasProxy() && isSplineEntity(entity)) ||
-                (RPolyline.hasProxy() && isPolylineEntity(entity));
+    var cond = isLineBasedShape(this.shape) ||
+                isArcShape(this.shape) ||
+                isCircleShape(this.shape) ||
+                isEllipseShape(this.shape) ||
+                (RSpline.hasProxy() && isSplineShape(this.shape)) ||
+                (RPolyline.hasProxy() && isPolylineShape(this.shape));
 
     if (!cond) {   // When validation failed
         // Warn about when unsupported entity if not a preview:
@@ -179,7 +186,6 @@ PolyLineBreakSymbol.prototype.pickEntity = function(event, preview) {
     }
 
     if (!preview) {   // When NOT previewing
-// No need to manually select any segment to remove
         this.setState(PolyLineBreakSymbol.State.SettingStartpt);
     }
 };
@@ -189,7 +195,6 @@ PolyLineBreakSymbol.prototype.coordinateEvent = function(event) {
 
     switch (this.state) {
     case PolyLineBreakSymbol.State.SettingStartpt:
-//        this.cutPoint1 = event.getModelPosition();
         this.point1 = event.getModelPosition();
         this.cutPoint1 = this.shape.getClosestPointOnShape(this.point1, true);    // Limited =true
         if (!isValidVector(this.cutPoint1)) this.cutPoint1 = this.point1;
@@ -197,7 +202,6 @@ PolyLineBreakSymbol.prototype.coordinateEvent = function(event) {
         this.setState(PolyLineBreakSymbol.State.SettingEndpt);
         break;
     case PolyLineBreakSymbol.State.SettingEndpt:
-//        this.cutPoint2 = event.getModelPosition();
         this.point2 = event.getModelPosition();
         this.cutPoint2 = this.shape.getClosestPointOnShape(this.point2, true);    // Limited =true
         if (!isValidVector(this.cutPoint2)) this.cutPoint2 = this.point2;
@@ -220,7 +224,6 @@ PolyLineBreakSymbol.prototype.coordinateEvent = function(event) {
         // Return to SettingShape state when done:
         this.setState(PolyLineBreakSymbol.State.SettingShape)
         break;
-    default:    // Good practice to include, break not required
     }
 };
 
@@ -242,7 +245,6 @@ PolyLineBreakSymbol.prototype.coordinateEventPreview = function(event) {
         di.addAuxShapeToPreview(line);
         this.updatePreview();
         break;
-    default:    // Good practice to include, break not required
     }
 };
 
@@ -252,15 +254,15 @@ PolyLineBreakSymbol.prototype.getOperation = function(preview) {    // Unused va
         return undefined;
     }
 
-    var len = this.cutPoint1.getDistanceTo(this.cutPoint2);
-    var ang = this.cutPoint1.getAngleTo(this.cutPoint2);
+    var factor = this.cutPoint1.getDistanceTo(this.cutPoint2) / 3;
+    var scaleV = new RVector(factor, factor);
     var segvi = (this.inclinedSegment === true) ? 1 : 0;
 
     // Define SEED:
     var points = new Array(
         new RVector( 0, 0),
-        new RVector( segvi, this.breakHeight),
-        new RVector( 3-segvi, this.breakHeight * -1),
+        new RVector( segvi, this.breakRatio),
+        new RVector( 3-segvi, this.breakRatio * -1),
         new RVector( 3, 0)
     );
 
@@ -272,14 +274,15 @@ PolyLineBreakSymbol.prototype.getOperation = function(preview) {    // Unused va
     var poly = new RPolyline();
     for (var i=0; i<3; ++i) {
         var line = new RLine(points[i],points[i+1]);
-        line.scale(new RVector(len/3,len/3));
+        line.scale(scaleV);
         line.move(this.cutPoint1);
-        line.rotate(ang, this.cutPoint1);
+        line.rotate(this.cutPoint1.getAngleTo(this.cutPoint2), this.cutPoint1);
         poly.appendShape(line);
     }
     var polylineEntity = new RPolylineEntity(this.getDocument(), new RPolylineData(poly))
     polylineEntity.copyAttributesFrom(this.entity.data());
-    op.addObject(polylineEntity, false);    // NOTuseCurrentAttributes
+    var pinherit = (this.inherit === true) ? false : true;  //reverse true/false
+    op.addObject(polylineEntity, pinherit);
 
     // Return the operation:
     return op;
@@ -288,7 +291,7 @@ PolyLineBreakSymbol.prototype.getOperation = function(preview) {    // Unused va
 PolyLineBreakSymbol.prototype.getBreakOutOperation = function(preview) {    // Unused var preview =?OBSOLETE
     var segment;
 
-    // Return none when no break points:
+    // Return the operations:
     if (!isValidVector(this.cutPoint1) || !isValidVector(this.cutPoint2)) {
         return undefined;
     }
@@ -334,7 +337,7 @@ PolyLineBreakSymbol.prototype.getBreakOutOperation = function(preview) {    // U
                                                         this.cutPoint1,
                                                         this.cutPoint2,
                                                         RVector.getAverage(this.cutPoint1, this.cutPoint2),
-                                                        false);        // NOT extending arcs
+                                                        false);        // NOT extending Arcs
 
     // Add the first segment with the same attributes as entity, if any:
     if (!isNull(newSegments[0])) {
@@ -365,10 +368,14 @@ PolyLineBreakSymbol.prototype.slotRemoveSegmentChanged = function(bool) {
     this.removeSegment = bool;
 };
 
-PolyLineBreakSymbol.prototype.slotBreakHeightChanged = function(spinnerValue) {
-    this.breakHeight = spinnerValue;
+PolyLineBreakSymbol.prototype.slotBreakRatioChanged = function(index) {
+    this.breakRatio = index + 1;
 };
 
 PolyLineBreakSymbol.prototype.slotIncSegChanged = function(bool) {
     this.inclinedSegment = bool;
+};
+
+PolyLineBreakSymbol.prototype.slotInheritChanged = function(bool) {
+    this.inherit = bool;
 };
