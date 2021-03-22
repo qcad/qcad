@@ -72,6 +72,10 @@ public:
 
     virtual void clearPreview();
 
+    virtual void exportEntities(bool allBlocks = true, bool undone = false);
+    void exportEntitiesThread(int threadId, QList<REntity::Id>& list, int start, int end);
+    void exportEntityThread(int threadId, REntity::Id id);
+
     bool beginPath();
     void endPath();
 
@@ -161,6 +165,9 @@ private:
     bool screenBasedLinetypesOverride;
 
     QStack<QTransform> transformStack;
+
+
+    QList<RGraphicsSceneQt*> threadScenes;
 };
 
 Q_DECLARE_METATYPE(RGraphicsSceneQt*)
