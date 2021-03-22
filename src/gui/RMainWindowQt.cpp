@@ -634,6 +634,8 @@ bool RMainWindowQt::event(QEvent* e) {
         return false;
     }
 
+    qDebug() << "e->type():" << e->type();
+
     if (e->type()==QEvent::PaletteChange) {
         qDebug() << "QEvent::PaletteChange";
         RSettings::resetCache();
