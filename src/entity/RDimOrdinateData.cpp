@@ -59,6 +59,7 @@ bool RDimOrdinateData::isSane() const {
 RBox RDimOrdinateData::getBoundingBox(bool ignoreEmpty) const {
     RBox ret = RDimensionData::getBoundingBox(ignoreEmpty);
     if (!ignoreEmpty) {
+        // include definition point in bounding box, so the origin can be moved when stretching:
         ret.growToInclude(definitionPoint);
     }
     return ret;
