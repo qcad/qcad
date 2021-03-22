@@ -286,7 +286,7 @@ QList<RTextData> RToleranceData::getTextLabels() const {
             RTextData textData(RVector(cursorX, cursorY),
                          RVector(cursorX, cursorY),
                          dimtxt,
-                         100.0,
+                         0.0,
                          RS::VAlignMiddle,
                          RS::HAlignLeft,
                          RS::LeftToRight,
