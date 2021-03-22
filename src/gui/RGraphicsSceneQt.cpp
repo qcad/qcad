@@ -1052,6 +1052,8 @@ void RGraphicsSceneQt::exportEntities(bool allBlocks, bool undone) {
     RDebug::startTimer(100);
     RGraphicsScene::exportEntities(allBlocks, undone);
     RDebug::stopTimer(100, "exportEntities");
+
+    /*
     return;
 
     QSet<REntity::Id> ids = document->queryAllEntities(undone, allBlocks);
@@ -1129,6 +1131,7 @@ void RGraphicsSceneQt::exportEntities(bool allBlocks, bool undone) {
     RDebug::stopTimer(100, "exportEntitiesThread");
 
     //qDebug() << "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^";
+    */
 }
 
 void RGraphicsSceneQt::exportEntitiesThread(int threadId, QList<REntity::Id>& list, int start, int end) {
