@@ -1441,11 +1441,14 @@ void RTextRenderer::render() {
         //reg.setPattern(rxFontChangeCad);
         if (rxFontChangeCad.exactMatch(formatting)) {
             setBlockFont(rxFontChangeCad.cap(1));
+            bool prevTtf = !getUseCadFont();
             setUseCadFont(true);
             if (xCursor>RS::PointTolerance) {
                 RFont* f = RFontList::get(getBlockFont());
                 if (f!=NULL && f->isValid()) {
-                    xCursor += f->getLetterSpacing() / 9.0;
+                    if (prevTtf) {
+                        xCursor += f->getLetterSpacing() / 9.0 * getBlockHeight() * textData.getXScale();
+                    }
                 }
             }
             blockChangedHeightOrFont = true;
