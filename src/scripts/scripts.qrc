@@ -1571,11 +1571,15 @@
     <file alias="scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenter.js">../../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenter.js</file>
     <file alias="scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenter.svg">../../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenter.svg</file>
     <file alias="scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js">../../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js</file>
+    <file alias="scripts/Misc/MiscDraw/PolyLineBreakSymbol/IncSeg-inverse.svg">../../scripts/Misc/MiscDraw/PolyLineBreakSymbol/IncSeg-inverse.svg</file>
+    <file alias="scripts/Misc/MiscDraw/PolyLineBreakSymbol/IncSeg.svg">../../scripts/Misc/MiscDraw/PolyLineBreakSymbol/IncSeg.svg</file>
     <file alias="scripts/Misc/MiscDraw/PolyLineBreakSymbol/PolyLineBreakSymbol-inverse.svg">../../scripts/Misc/MiscDraw/PolyLineBreakSymbol/PolyLineBreakSymbol-inverse.svg</file>
     <file alias="scripts/Misc/MiscDraw/PolyLineBreakSymbol/PolyLineBreakSymbol.js">../../scripts/Misc/MiscDraw/PolyLineBreakSymbol/PolyLineBreakSymbol.js</file>
     <file alias="scripts/Misc/MiscDraw/PolyLineBreakSymbol/PolyLineBreakSymbol.svg">../../scripts/Misc/MiscDraw/PolyLineBreakSymbol/PolyLineBreakSymbol.svg</file>
     <file alias="scripts/Misc/MiscDraw/PolyLineBreakSymbol/PolyLineBreakSymbol.ui">../../scripts/Misc/MiscDraw/PolyLineBreakSymbol/PolyLineBreakSymbol.ui</file>
     <file alias="scripts/Misc/MiscDraw/PolyLineBreakSymbol/PolyLineBreakSymbolInit.js">../../scripts/Misc/MiscDraw/PolyLineBreakSymbol/PolyLineBreakSymbolInit.js</file>
+    <file alias="scripts/Misc/MiscDraw/PolyLineBreakSymbol/VertSeg-inverse.svg">../../scripts/Misc/MiscDraw/PolyLineBreakSymbol/VertSeg-inverse.svg</file>
+    <file alias="scripts/Misc/MiscDraw/PolyLineBreakSymbol/VertSeg.svg">../../scripts/Misc/MiscDraw/PolyLineBreakSymbol/VertSeg.svg</file>
     <file alias="scripts/Misc/MiscDraw/TextAlong/Clockwise-inverse.svg">../../scripts/Misc/MiscDraw/TextAlong/Clockwise-inverse.svg</file>
     <file alias="scripts/Misc/MiscDraw/TextAlong/Clockwise.svg">../../scripts/Misc/MiscDraw/TextAlong/Clockwise.svg</file>
     <file alias="scripts/Misc/MiscDraw/TextAlong/CounterClockwise-inverse.svg">../../scripts/Misc/MiscDraw/TextAlong/CounterClockwise-inverse.svg</file>
