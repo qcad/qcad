@@ -75,6 +75,8 @@ OptionsToolBar.init = function(basePath) {
 };
 
 OptionsToolBar.initStyle = function() {
+    qDebug("OptionsToolBar.initStyle");
+
     var optionsToolBar = EAction.getOptionsToolBar();
 
     var iconLabel = optionsToolBar.findChild("Icon");

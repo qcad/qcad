@@ -225,6 +225,8 @@ CadToolBar.initStyle = function() {
         return;
     }
 
+    qDebug("CadToolBar.initStyle");
+
     if (RSettings.isQt(5)) {
         // tool bar buttons under Qt 5 have no border:
         if (!RSettings.hasCustomStyleSheet()) {

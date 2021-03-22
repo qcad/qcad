@@ -183,6 +183,7 @@ void RRulerQt::paintEvent(QPaintEvent* e) {
     if (viewportChanged) {
         // 20190515: bug with rulers displayed on top of each other:
         //buffer.fill(Qt::transparent);
+        qDebug() << "palette().color(QPalette::Window):" << palette().color(QPalette::Window);
         buffer.fill(palette().color(QPalette::Window));
 
         painter = new QPainter(&buffer);

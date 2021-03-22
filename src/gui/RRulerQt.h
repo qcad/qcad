@@ -64,6 +64,7 @@ public:
 
     virtual void updatePalette() {
         lastSize = QSize(0,0);
+        darkGuiBackground = -1;
     }
 
 protected:
