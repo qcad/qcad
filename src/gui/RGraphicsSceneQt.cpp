@@ -16,6 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+
+#if QT_VERSION >= 0x050000
+#include <QtConcurrent>
+#else
+#include <qtconcurrentrun.h>
+#endif
+
 #include "RBlockReferenceEntity.h"
 #include "RDebug.h"
 #include "RDocumentInterface.h"
@@ -49,6 +56,7 @@ RGraphicsSceneQt::RGraphicsSceneQt(RDocumentInterface& documentInterface) :
 }
 
 RGraphicsSceneQt::~RGraphicsSceneQt() {
+    clear();
 }
 
 RGraphicsViewImage* RGraphicsSceneQt::getGraphicsView() const {
@@ -1038,6 +1046,107 @@ QList<RGraphicsSceneDrawable>* RGraphicsSceneQt::getPreviewDrawables(RObject::Id
 void RGraphicsSceneQt::clearPreview() {
     RGraphicsScene::clearPreview();
     previewDrawables.clear();
+}
+
+void RGraphicsSceneQt::exportEntities(bool allBlocks, bool undone) {
+    RDebug::startTimer(100);
+    RGraphicsScene::exportEntities(allBlocks, undone);
+    RDebug::stopTimer(100, "exportEntities");
+    return;
+
+    QSet<REntity::Id> ids = document->queryAllEntities(undone, allBlocks);
+    if (ids.isEmpty()) {
+        return;
+    }
+
+    RDebug::startTimer(100);
+    //qDebug() << "vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv";
+    RDocumentInterface& di = getDocumentInterface();
+    di.disableUpdates();
+
+    //QList<REntity::Id> list = document->getStorage().orderBackToFront(ids);
+    QList<REntity::Id> list = ids.toList();
+
+    for (int i=0; i<8; i++) {
+        RGraphicsSceneQt* s  = new RGraphicsSceneQt(di);
+        // TODO: init scenes based on this scene:
+        //s->
+        threadScenes.append(s);
+    }
+
+    // render into multiple scenes using threads:
+    int slice = int(floor(double(list.length())/threadScenes.length()));
+
+    QList<QFuture<void> > futureThread;
+    for (int threadId=0; threadId<threadScenes.length(); threadId++) {
+        int start = threadId*slice;
+        int end = (threadId+1)*slice;
+        if (threadId==threadScenes.length()-1) {
+            end = list.length();
+        }
+        qDebug() << "slice:" << start << end;
+        futureThread.append(QtConcurrent::run(this, &RGraphicsSceneQt::exportEntitiesThread, threadId, list, start, end));
+    }
+    //RDebug::stopTimer(100, "launch threads");
+
+    for (int i=0; i<futureThread.length(); i++) {
+        futureThread[i].waitForFinished();
+    }
+
+    // merge result into this scene:
+    // TODO:
+    for (int i=0; i<threadScenes.length(); i++) {
+        //qDebug() << "thread " << i << " has " << threadScenes[i]->drawables.size() << " drawables";
+        drawables.insert(threadScenes[i]->drawables);
+
+//        QMap<REntity::Id, QList<RGraphicsSceneDrawable> >::iterator it;
+//        for (it=threadScenes[i]->drawables.begin(); it!=threadScenes[i]->drawables.end(); it++) {
+//            QList<RGraphicsSceneDrawable> list;
+//            for (int k=0; k<it->length(); k++) {
+//                list.append((*it).at(k).clone());
+//            }
+//            drawables.insert(it.key(), list);
+//        }
+
+        clipRectangles.insert(threadScenes[i]->clipRectangles);
+        referencePoints.insert(threadScenes[i]->referencePoints);
+
+        //threadScenes[i]->drawables.clear();
+        //threadScenes[i]->clipRectangles.clear();
+        //threadScenes[i]->referencePoints.clear();
+    }
+
+    //qDebug() << "got drawables:" << drawables.size();
+
+    for (int i=0; i<threadScenes.length(); i++) {
+        di.unregisterScene(*threadScenes[i]);
+        delete threadScenes[i];
+    }
+    threadScenes.clear();
+
+    di.enableUpdates();
+
+    RDebug::stopTimer(100, "exportEntitiesThread");
+
+    //qDebug() << "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^";
+}
+
+void RGraphicsSceneQt::exportEntitiesThread(int threadId, QList<REntity::Id>& list, int start, int end) {
+    qDebug() << "threadId:" << threadId;
+    qDebug() << "start:" << start;
+    qDebug() << "end:" << end;
+
+    for (int i=start; i<end; i++) {
+        exportEntityThread(threadId, list[i]);
+    }
+}
+
+void RGraphicsSceneQt::exportEntityThread(int threadId, REntity::Id id) {
+    //qDebug() << "export:" << id;
+    QSharedPointer<REntity> e = document->queryEntityDirect(id);
+    if (!e.isNull()) {
+        threadScenes[threadId]->exportEntity(*e, false);
+    }
 }
     
 void RGraphicsSceneQt::addToPreview(REntity::Id entityId, RGraphicsSceneDrawable& drawable) {
