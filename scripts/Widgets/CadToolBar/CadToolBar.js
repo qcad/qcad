@@ -253,6 +253,21 @@ CadToolBar.initStyle = function() {
                         + "  border-right: 1px solid #777777;"
                         + "  background-color: #606060;"
                         + "}";
+                appWin.styleSheet =
+                        "QToolBar > QToolButton {"
+                             // make sure unchecked button renders with same size as checked
+                             // prevents things from moving around when checking / unchecking
+                        + "  border: 1px solid transparent;"
+                        + "} "
+                        + "QToolBar > QToolButton:checked { "
+//                        + "  border-top: 1px solid #161616;"
+//                        + "  border-left: 1px solid #161616;"
+//                        + "  border-bottom: 1px solid #777777;"
+//                        + "  border-right: 1px solid #777777;"
+                        + "  border: 1px solid transparent;"
+                        + "  border-radius: 6px;"
+                        + "  background-color: #555555;"
+                        + "}";
             }
             else {
                 toolBar.styleSheet =
@@ -266,6 +281,14 @@ CadToolBar.initStyle = function() {
                         + "QToolButton:pressed {"
                         + "  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #a4a4a4, stop: 0.8 #b3b3b3, stop: 1 #b5b5b5);"
                         + "}";
+                appWin.styleSheet =
+                            "QToolBar > QToolButton {" +
+                            "  border: 1px solid transparent;" +
+                            "} " +
+                            "QToolBar > QToolButton:checked { " +
+                            "  border:1px solid #7f7f7f; " +
+                            "  background: qlineargradient(x1:0 y1:0, x2:0 y2:1 stop:0 #c0c0c0, stop:0.1 #8a8a8a stop:0.2 #a3a3a3 stop:1 transparent); " +
+                            "}";
             }
         }
     }

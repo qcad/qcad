@@ -39,9 +39,11 @@ RMdiArea::RMdiArea(QWidget* parent) :
         addTabButton->hide();
     }
 
+#ifndef Q_OS_MAC
     if (RSettings::hasDarkGuiBackground()) {
         setBackground(QBrush(QColor("#1E1E1E")));
     }
+#endif
 }
 
 /**

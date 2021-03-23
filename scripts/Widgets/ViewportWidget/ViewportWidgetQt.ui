@@ -17,7 +17,7 @@
    </sizepolicy>
   </property>
   <property name="autoFillBackground">
-   <bool>true</bool>
+   <bool>false</bool>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <property name="leftMargin">
@@ -59,6 +59,9 @@
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
     </widget>
    </item>
    <item row="1" column="2">
@@ -109,6 +112,9 @@
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
