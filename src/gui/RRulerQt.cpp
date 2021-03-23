@@ -24,6 +24,7 @@
 #include "RMainWindowQt.h"
 #include "RMdiChildQt.h"
 
+#include <QApplication>
 #include <QPainter>
 
 /**
@@ -153,16 +154,19 @@ void RRulerQt::paintEvent(QPaintEvent* e) {
 #endif
 
     darkGuiBackground = RSettings::hasDarkGuiBackground();
+    qDebug() << "dark bg";
 
     if (orientation == Qt::Horizontal) {
         if (sizeHint().height()*dpr != lastSize.height()) {
             lastSize.setHeight(sizeHint().height()*dpr);
+            qDebug() << "updateViewport";
             updateViewport();
             return;
         }
     } else {
         if (sizeHint().width()*dpr != lastSize.width()) {
             lastSize.setWidth(sizeHint().width()*dpr);
+            qDebug() << "updateViewport";
             updateViewport();
             return;
         }
@@ -184,7 +188,9 @@ void RRulerQt::paintEvent(QPaintEvent* e) {
         // 20190515: bug with rulers displayed on top of each other:
         //buffer.fill(Qt::transparent);
         qDebug() << "palette().color(QPalette::Window):" << palette().color(QPalette::Window);
-        buffer.fill(palette().color(QPalette::Window));
+        qDebug() << "QApp palette().color(QPalette::Window):" << QApplication::palette("QWidget").color(QPalette::Window);
+        //buffer.fill(palette().color(QPalette::Window));
+        buffer.fill(QApplication::palette("QWidget").color(QPalette::Window));
 
         painter = new QPainter(&buffer);
         painter->setPen(Qt::black);
