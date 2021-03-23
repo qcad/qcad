@@ -400,7 +400,10 @@ void RGuiAction::setShortcutsFromStrings(const QStringList& shortcuts) {
 }
 
 QList<QKeySequence> RGuiAction::getShortcuts() const {
-    return multiKeyShortcuts + shortcuts();
+    QList<QKeySequence> ret;
+    ret = multiKeyShortcuts;
+    ret.append(shortcuts());
+    return ret;
 }
 
 void RGuiAction::setToolTip(const QString& tip) {

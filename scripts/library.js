@@ -2410,6 +2410,7 @@ function addActionsToWidgets() {
 
     // delete previous shortcut delegates:
     // part of workaround for QTBUG-38256, QTBUG-57990:
+    /*
     if ((RSettings.getQtVersion()<0x050500 && RSettings.getQtVersion()>=0x050000) ||
         (RSettings.getQtVersion()===0x050800 && RS.getSystemId()==="linux")) {
 
@@ -2424,6 +2425,7 @@ function addActionsToWidgets() {
         }
         appWin.setProperty("DelegatedShortcutsObjs", []);
     }
+    */
 
     var actions = RGuiAction.getActions();
     var widgetTypes = ["Menu", "ToolBar", "MatrixPanel", "Panel"];
@@ -2472,6 +2474,7 @@ function addActionsToWidgets() {
 
                 // workaround for QTBUG-38256 (action not triggered for letter based shortcuts in SUB menus):
                 // workaround for QTBUG-57990 (action not triggered for letter based shortcuts in ALL menus):
+                /*
                 if ((RSettings.getQtVersion()<0x050500 && RSettings.getQtVersion()>=0x050000) ||
                     (RSettings.getQtVersion()===0x050800 && RS.getSystemId()==="linux")) {
 
@@ -2502,6 +2505,7 @@ function addActionsToWidgets() {
                         a.setDefaultShortcuts([]);
                     }
                 }
+                */
 
                 if (visibility) {
                     RGuiAction.addToWidget(a, w);
@@ -2522,7 +2526,9 @@ function addActionsToWidgets() {
             }
         }
 
-        if (!addedToWidget) {
+        if ((RSettings.getQtVersion()<0x050500 && RSettings.getQtVersion()>=0x050000) ||
+            (RSettings.getQtVersion()===0x050800 && RS.getSystemId()==="linux") ||
+            !addedToWidget) {
             // always add action to main window to make sure keycodes
             // are active even if action is invisible:
             RGuiAction.addToWidget(a, appWin);
