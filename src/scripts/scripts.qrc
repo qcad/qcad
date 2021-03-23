@@ -791,6 +791,7 @@
     <file alias="scripts/Draw/Text/Tests/Text39.js">../../scripts/Draw/Text/Tests/Text39.js</file>
     <file alias="scripts/Draw/Text/Tests/Text40.js">../../scripts/Draw/Text/Tests/Text40.js</file>
     <file alias="scripts/Draw/Text/Tests/Text41.js">../../scripts/Draw/Text/Tests/Text41.js</file>
+    <file alias="scripts/Draw/Text/Tests/Text42.js">../../scripts/Draw/Text/Tests/Text42.js</file>
     <file alias="scripts/Draw/Text/Tests/data/text01.dxf">../../scripts/Draw/Text/Tests/data/text01.dxf</file>
     <file alias="scripts/Draw/Text/Tests/data/text02.dxf">../../scripts/Draw/Text/Tests/data/text02.dxf</file>
     <file alias="scripts/Draw/Text/Tests/data/text03.dxf">../../scripts/Draw/Text/Tests/data/text03.dxf</file>
@@ -823,6 +824,7 @@
     <file alias="scripts/Draw/Text/Tests/data/text39.dxf">../../scripts/Draw/Text/Tests/data/text39.dxf</file>
     <file alias="scripts/Draw/Text/Tests/data/text40.dxf">../../scripts/Draw/Text/Tests/data/text40.dxf</file>
     <file alias="scripts/Draw/Text/Tests/data/text41.dxf">../../scripts/Draw/Text/Tests/data/text41.dxf</file>
+    <file alias="scripts/Draw/Text/Tests/data/text42.dxf">../../scripts/Draw/Text/Tests/data/text42.dxf</file>
     <file alias="scripts/Draw/Text/Tests/required/Text01_000.dxf">../../scripts/Draw/Text/Tests/required/Text01_000.dxf</file>
     <file alias="scripts/Draw/Text/Tests/required/Text02_000.dxf">../../scripts/Draw/Text/Tests/required/Text02_000.dxf</file>
     <file alias="scripts/Draw/Text/Tests/required/Text03_000.dxf">../../scripts/Draw/Text/Tests/required/Text03_000.dxf</file>
@@ -883,6 +885,8 @@
     <file alias="scripts/Draw/Text/Tests/required/Text40_001.dxf">../../scripts/Draw/Text/Tests/required/Text40_001.dxf</file>
     <file alias="scripts/Draw/Text/Tests/required/Text41_000.dxf">../../scripts/Draw/Text/Tests/required/Text41_000.dxf</file>
     <file alias="scripts/Draw/Text/Tests/required/Text41_001.dxf">../../scripts/Draw/Text/Tests/required/Text41_001.dxf</file>
+    <file alias="scripts/Draw/Text/Tests/required/Text42_000.dxf">../../scripts/Draw/Text/Tests/required/Text42_000.dxf</file>
+    <file alias="scripts/Draw/Text/Tests/required/Text42_001.dxf">../../scripts/Draw/Text/Tests/required/Text42_001.dxf</file>
     <file alias="scripts/Draw/Text/Text-inverse.svg">../../scripts/Draw/Text/Text-inverse.svg</file>
     <file alias="scripts/Draw/Text/Text.js">../../scripts/Draw/Text/Text.js</file>
     <file alias="scripts/Draw/Text/Text.svg">../../scripts/Draw/Text/Text.svg</file>
