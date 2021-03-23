@@ -154,7 +154,6 @@ void RRulerQt::paintEvent(QPaintEvent* e) {
 #endif
 
     darkGuiBackground = RSettings::hasDarkGuiBackground();
-    qDebug() << "dark bg";
 
     if (orientation == Qt::Horizontal) {
         if (sizeHint().height()*dpr != lastSize.height()) {
