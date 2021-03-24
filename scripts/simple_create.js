@@ -392,7 +392,7 @@ function addSimpleText(text, position, height, angle, font, vAlign, hAlign, bold
               position,
               position,
               height,
-              100.0,
+              0.0,
               vAlign,
               hAlign,
               RS.LeftToRight,

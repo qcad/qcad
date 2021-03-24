@@ -55,7 +55,7 @@ ExDrawFonts.prototype.beginEvent = function() {
                   new RVector(x,y),    // position
                   new RVector(x,y),    // alignment point
                   1.0,                 // height
-                  1.0,                 // text width (ignored for now)
+                  0.0,                 // text width (ignored for now)
                   RS.VAlignTop,        // alignments
                   RS.HAlignCenter,
                   RS.LeftToRight,

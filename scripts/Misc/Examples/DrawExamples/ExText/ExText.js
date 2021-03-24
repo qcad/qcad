@@ -43,7 +43,7 @@ ExText.prototype.beginEvent = function() {
               pos,                 // position
               pos,                 // alignment point
               2.0,                 // height
-              2.0,                 // text width (ignored for now)
+              0.0,                 // text width (ignored for now)
               RS.VAlignTop,        // alignments
               RS.HAlignCenter,
               RS.LeftToRight,
