@@ -339,6 +339,21 @@ void RGuiAction::addShortcut(const QKeySequence& shortcut) {
     multiKeyShortcuts.append(shortcut);
 }
 
+void RGuiAction::removeShortcuts() {
+    QStringList toRemove;
+    QMap<QString, RGuiAction*>::iterator it;
+    for (it=actionsByShortcut.begin(); it!=actionsByShortcut.end(); it++) {
+        if (it.value()==this) {
+            toRemove.append(it.key());
+        }
+    }
+    for (int i=0; i<toRemove.length(); i++) {
+        actionsByShortcut.remove(toRemove[i]);
+    }
+    // TODO:
+    //multiKeyShortcuts.remove(shortcut);
+}
+
 void RGuiAction::setShortcut(const QKeySequence& shortcut) {
     multiKeyShortcuts.clear();
 

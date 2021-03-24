@@ -89,6 +89,7 @@ public:
     //RDocumentInterface* getDocumentInterface() const;
 
     void addShortcut(const QKeySequence& shortcut);
+    void removeShortcuts();
     /**
      * Sets the shortcut(s) for this action.
      *
