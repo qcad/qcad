@@ -2367,6 +2367,7 @@ function initUserShortcuts() {
         if (isNull(scStringList)) {
             if (match) qDebug("explicitly no shortcuts");
             action.setShortcuts([]);
+            action.removeShortcuts();
             continue;
         }
 
@@ -2380,6 +2381,7 @@ function initUserShortcuts() {
             var sc = new QKeySequence(scStringList[k]);
             scList.push(sc);
         }
+        action.removeShortcuts();
         action.setShortcuts(scList);
     }
 
