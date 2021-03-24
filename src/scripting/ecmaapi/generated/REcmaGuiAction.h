@@ -87,6 +87,9 @@
         addShortcut
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        removeShortcuts
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setShortcut
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -115,6 +115,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, addShortcut, "addShortcut");
             
+            REcmaHelper::registerFunction(&engine, proto, removeShortcuts, "removeShortcuts");
+            
             REcmaHelper::registerFunction(&engine, proto, setShortcut, "setShortcut");
             
             REcmaHelper::registerFunction(&engine, proto, setDefaultShortcut, "setDefaultShortcut");
@@ -881,6 +883,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGuiAction::addShortcut", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::removeShortcuts
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::removeShortcuts", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::removeShortcuts";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGuiAction* self = 
+                        getSelf("removeShortcuts", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeShortcuts();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.removeShortcuts().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::removeShortcuts", context, engine);
             return result;
         }
          QScriptValue

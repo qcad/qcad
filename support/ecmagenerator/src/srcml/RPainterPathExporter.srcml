@@ -66,11 +66,17 @@
     <function><type><name>void</name></type> <name>setIgnoreZeroLines</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>ignoreZeroLines</name> = <name>on</name></expr>;</expr_stmt>
     }</block></function>
+    <function><type><name>void</name></type> <name>setIgnoreLineTypePatternScale</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>ignoreLineTypePatternScale</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function_decl><type><name>virtual</name> <name>double</name></type> <name>getLineTypePatternScale</name><parameter_list>(<param><decl><type><name>const</name> <name>RLinetypePattern</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
 </public><private>private:
     <decl_stmt><decl><type><name>RPainterPath</name></type> <name>path</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>exportZeroLinesAsPoints</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>ignoreZeroLines</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>ignoreLineTypePatternScale</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>

@@ -65,6 +65,7 @@
 
     <function><type><name>virtual</name> <name>void</name></type> <name>updatePalette</name><parameter_list>()</parameter_list> <block>{
         <expr_stmt><expr><name>lastSize</name> = <call><name>QSize</name><argument_list>(<argument><expr>0</expr></argument>,<argument><expr>0</expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>darkGuiBackground</name> = -1</expr>;</expr_stmt>
     }</block></function>
 
 </public><protected>protected:

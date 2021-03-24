@@ -95,6 +95,8 @@
                 getSetWeights),
                 QScriptValue::PropertyGetter
                 
+                    | QScriptValue::PropertySetter
+                
             );          
             
             proto->setProperty("fitPoints", engine.newFunction(
@@ -185,6 +187,8 @@
             REcmaHelper::registerFunction(&engine, proto, appendKnot, "appendKnot");
             
             REcmaHelper::registerFunction(&engine, proto, getWeights, "getWeights");
+            
+            REcmaHelper::registerFunction(&engine, proto, setWeights, "setWeights");
             
             REcmaHelper::registerFunction(&engine, proto, setDegree, "setDegree");
             
@@ -634,6 +638,20 @@
         if (self==NULL) {
             return REcmaHelper::throwError("self is NULL", context);
         }
+        
+            if(context->argumentCount() == 1){
+                
+                    // argument isArray
+                    QList < double >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+                self->setWeights(a0);
+            }
         QList < double >
         cppResult = self->
         getWeights();
@@ -2797,6 +2815,62 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSpline::getWeights", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpline::setWeights
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpline::setWeights", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpline::setWeights";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("setWeights", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < double > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < double >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setWeights(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.setWeights().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpline::setWeights", context, engine);
             return result;
         }
          QScriptValue

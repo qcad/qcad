@@ -178,6 +178,9 @@
         getWeights
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setWeights
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setDegree
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

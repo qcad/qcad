@@ -278,6 +278,15 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; double &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="setWeights" cppName="setWeights"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QList &lt; double &gt; &amp;"
+        typeName="QList &lt; double &gt;" name="w"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="setDegree" cppName="setDegree" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -851,7 +860,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="knotVector" type="QList &lt; double &gt;"
     cppGetter="getKnotVector" />
     <property name="weights" type="QList &lt; double &gt;"
-    cppGetter="getWeights" />
+    cppGetter="getWeights" cppSetter="setWeights" />
     <property name="fitPoints" type="QList &lt; RVector &gt;"
     cppGetter="getFitPoints" cppSetter="setFitPoints" />
     <property name="degree" type="int" cppGetter="getDegree"

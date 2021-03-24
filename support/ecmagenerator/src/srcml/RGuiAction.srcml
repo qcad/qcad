@@ -90,6 +90,7 @@
     <comment type="line">//RDocumentInterface* getDocumentInterface() const;</comment>
 
     <function_decl><type><name>void</name></type> <name>addShortcut</name><parameter_list>(<param><decl><type><name>const</name> <name>QKeySequence</name>&amp;</type> <name>shortcut</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>removeShortcuts</name><parameter_list>()</parameter_list>;</function_decl>
     <comment type="block">/**
      * Sets the shortcut(s) for this action.
      *

@@ -63,6 +63,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="shortcut" isConst="true" />
       </variant>
     </method>
+    <method name="removeShortcuts" cppName="removeShortcuts"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="setShortcut" cppName="setShortcut"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

@@ -62,6 +62,15 @@
         clearPreview
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        exportEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        exportEntitiesThread
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        exportEntityThread
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         beginPath
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
