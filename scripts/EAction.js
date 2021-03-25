@@ -397,7 +397,7 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
 
         // automatically add separator to toolbar:
         var a = optionsToolBar.addSeparator();
-        a.objectName = "LastSeparator";
+        a.objectName = "LastSeparator" + i;
         this.optionWidgetActions.push(a);
 
         // give action a chance to initialize toolbar widgets that cannot
