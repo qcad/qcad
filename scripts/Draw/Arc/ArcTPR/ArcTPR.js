@@ -132,12 +132,12 @@ ArcTPR.prototype.pickEntity = function(event, preview) {
     var pos = event.getModelPosition();
     var shape = undefined;
 
-    if (!this.isEntitySnappable(entity)) {
-        // entity not on a snappable layer:
-        return;
-    }
-
     if (this.state!==ArcTPR.State.ChoosingSolution) {
+        if (!this.isEntitySnappable(entity)) {
+            // entity not on a snappable layer:
+            return;
+        }
+
         if (isNull(entity)) {
             return;
         }
