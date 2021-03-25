@@ -193,12 +193,7 @@ QStringList RSettings::getArguments(const QStringList& args, const QString& shor
         }
 
         if (args[k].startsWith(longFlag+"=")) {
-            QStringList tokens = args[k].split("=");
-            if (tokens.length()==2) {
-                ret.append(tokens[1]);
-            }
-            //int j=args[k].indexOf("=");
-            //ret.push(args[k].substr(j+1));
+            ret.append(args[k].mid(longFlag.length()+1));
         }
     }
 
