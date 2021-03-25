@@ -15,7 +15,7 @@ StretchTest09.prototype.test00 = function() {
     qDebug('running StretchTest09.test00()...');
     this.setUp();
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::DimensionToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::DimensionToolsPanel::DimOrdinateButton');
+    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::DimensionToolsPanel::DimOrdinateProButton');
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(20.1, 9.8);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

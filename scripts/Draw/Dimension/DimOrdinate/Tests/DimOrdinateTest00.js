@@ -37,7 +37,7 @@ DimOrdinateTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.MidButton, 4, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.MidButton, 0, 0);
     TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::DimensionToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadToolBar::DimensionToolsPanel::DimOrdinateButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::DimensionToolsPanel::DimOrdinateProButton');
     this.setZoom(7.192927390667505, new RVector(14.6038, 10.2177, 0) );
     var p = new RVector(10.559787, 19.116629);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
