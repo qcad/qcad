@@ -180,6 +180,7 @@ QStringList RS::getDirectoryList(const QString& subDirectory) {
 
     // add a path to users home (config dir) to be used to extend pattern, linetypes, etc.
     dirList.append(RSettings::getPath() + "/" + subDirectory);
+    dirList.append(RSettings::getDataLocation() + "/" + subDirectory);
 
     QStringList ret;
     for (int i=0; i<dirList.size(); i++) {
