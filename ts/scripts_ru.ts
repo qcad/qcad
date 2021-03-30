@@ -287,7 +287,7 @@
     <message>
         <location line="+23"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation>Лицензии</translation>
     </message>
 </context>
 <context>
@@ -1292,7 +1292,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+110"/>
         <source>Cannot edit block while editing a block in-place</source>
-        <translation type="unfinished"></translation>
+        <translation>Нельзя редактировать блок во время редактирования блока на месте</translation>
     </message>
     <message>
         <source>Show block tools</source>
@@ -1574,7 +1574,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+17"/>
         <source>Icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер значка:</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -1641,7 +1641,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/PreferencesPage.ui" line="+17"/>
         <source>Icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер значка:</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -2325,7 +2325,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
         <source>History size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер истории:</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -2499,7 +2499,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+14"/>
         <source>Number Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Формат чисел:</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -3198,17 +3198,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
         <source>Dimension Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Масштаб размеров</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
-        <translation type="unfinished"></translation>
+        <translation>Масштаб новых размеров не составляет 1:1. В размерных метках будут показаны значения, отличающиеся от измеренных значений на чертеже. Коэффициент масштабирования можно исправить на расположенной выше панели параметров.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Don&apos;t show this warning again</source>
-        <translation type="unfinished"></translation>
+        <translation>Больше не показывать это предупреждение</translation>
     </message>
 </context>
 <context>
@@ -3378,22 +3378,22 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation type="unfinished"></translation>
+        <translation>Архитектурная засечка</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Label</source>
-        <translation type="unfinished"></translation>
+        <translation>Метка</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Label font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Шрифт метки:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Label color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Цвет метки:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -3830,7 +3830,7 @@ is already in the list.</source>
     <message>
         <location line="+711"/>
         <source>Entity is not in working set.</source>
-        <translation type="unfinished"></translation>
+        <translation>Объект не входит в рабочий набор.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3865,7 +3865,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc.</source>
-        <translation type="unfinished"></translation>
+        <translation>Объект не является дугой.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -3915,7 +3915,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a spline with fit points.</source>
-        <translation type="unfinished"></translation>
+        <translation>Объект не является сплайном с точками посадки.</translation>
     </message>
 </context>
 <context>
@@ -4894,12 +4894,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1115"/>
         <source>Add Active SubLayer</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить активный подслой</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>FP added layer:</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавленный слой FP:</translation>
     </message>
     <message>
         <location line="+1196"/>
@@ -4909,7 +4909,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation type="unfinished"></translation>
+        <translation>Запечатывает выделение, имитируя роликовый штамп</translation>
     </message>
 </context>
 <context>
@@ -4994,43 +4994,44 @@ is already in the list.</source>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Отражать роликовые штампы над базовой линией.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation type="unfinished"></translation>
+        <translation>Сгруппировать все размещения в одну операцию.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Cast on newly sub-layer &apos;Painted&apos;.
 BUG: Interferes with group castings.</source>
-        <translation type="unfinished"></translation>
+        <translation>Разместить на новом подслое «Роликовый штамп».
+Ошибка: препятствует групповому размещению.</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation type="unfinished"></translation>
+        <translation>Начать с размещения начальной вершины на открытых формах.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation type="unfinished"></translation>
+        <translation>Завершить добавлением конечной вершины на открытые формы.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add insertions in between eg. spacers, knots. (Not implemented)</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить вставки (например, разделители, узлы). (Не реализовано)</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation type="unfinished"></translation>
+        <translation>Предварительный просмотр роликовых штампов.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation type="unfinished"></translation>
+        <translation>Выбрать набор роликовых штампов.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5105,67 +5106,67 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+36"/>
         <source>Preview of insertion.</source>
-        <translation type="unfinished"></translation>
+        <translation>Предварительный просмотр вставки.</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation type="unfinished"></translation>
+        <translation>Выбрать вставку или ввести пустое пространство. (Не реализовано)</translation>
     </message>
     <message>
         <location line="+250"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation>Версия</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>FlexPainter Beta 0.42e © CVH 2020 </source>
-        <translation type="unfinished"></translation>
+        <translation>FlexPainter Beta 0.42e © CVH 2020 </translation>
     </message>
     <message>
         <location line="+245"/>
         <source>Document Units.</source>
-        <translation type="unfinished"></translation>
+        <translation>Единицы измерения документа.</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите ширину роликового штампа. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите размер шага главного роликового штампа. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите длину главного роликового штампа. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохранять пропорции роликовых штампов.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Select percentage of Stepsize.</source>
-        <translation type="unfinished"></translation>
+        <translation>Выбрать процент размера шага.</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation type="unfinished"></translation>
+        <translation>Адаптировать масштаб f1.00-0.90 для вписывания во всю форму.</translation>
     </message>
     <message>
         <location line="+92"/>
         <source>Verbose info. (persistent on)</source>
-        <translation type="unfinished"></translation>
+        <translation>Подробные сведения. (постоянно включено)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить запечатанные роликовым штампом базовые объекты. (постоянно выключено)</translation>
     </message>
     <message>
         <source>Preview of insertion</source>
@@ -5449,12 +5450,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+28"/>
         <source>Edit block reference in-place</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактировать привязку блока на месте</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Tolerance:</source>
-        <translation type="unfinished">Допуск:</translation>
+        <translation>Допуск:</translation>
     </message>
     <message>
         <source>0.001</source>
@@ -5621,17 +5622,17 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+152"/>
         <source>Use full resolution for Retina / high resolution display</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать полное разрешение для дисплея Retina / дисплея с высоким разрешением</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>auto</source>
-        <translation type="unfinished">авто</translation>
+        <translation>авто</translation>
     </message>
     <message>
         <location line="-8"/>
         <source>Number of threads:</source>
-        <translation type="unfinished"></translation>
+        <translation>Количество потоков:</translation>
     </message>
     <message>
         <location line="+486"/>
@@ -5646,7 +5647,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+78"/>
         <source>Persistent selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Постоянное выделение</translation>
     </message>
     <message>
         <location line="-826"/>
@@ -5699,12 +5700,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="-125"/>
         <source>Linetypes and Lineweights</source>
-        <translation type="unfinished"></translation>
+        <translation>Типы и вес линий</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation type="unfinished"></translation>
+        <translation>Вес линии по умолчанию:</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -5898,7 +5899,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+30"/>
         <source>Working set fading factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Коэффициент обесцвечивания рабочего набора:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -5938,17 +5939,17 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
         <source>Ruler font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Шрифт линейки:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Snap label font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Шрифт метки прилипания:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Info label font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Шрифт метки информации:</translation>
     </message>
 </context>
 <context>
@@ -6785,22 +6786,22 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/PreferencesPage.ui" line="+19"/>
         <source>Decimal point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Десятичная точка:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Cartesian coordinate separator:</source>
-        <translation type="unfinished"></translation>
+        <translation>Разделитель декартовой координаты:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Polar coordinate separator:</source>
-        <translation type="unfinished"></translation>
+        <translation>Разделитель полярной координаты:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Relative coordinate prefix:</source>
-        <translation type="unfinished"></translation>
+        <translation>Префикс относительной координаты:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6810,22 +6811,22 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+6"/>
         <source>Absolute Cartesian coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Абсолютная декартовая координата:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Absolute polar coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Абсолютная полярная координата:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Relative Cartesian coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Относительная декартовая координата:</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative polar coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Относительная полярная координата:</translation>
     </message>
     <message>
         <source>Absolute Cartesian Coordinate:</source>
@@ -7267,7 +7268,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui" line="+20"/>
         <source>Language of user interface:</source>
-        <translation type="unfinished"></translation>
+        <translation>Язык интерфейса пользователя:</translation>
     </message>
 </context>
 <context>
@@ -7517,7 +7518,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Отменить последний сегмент</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -7792,12 +7793,12 @@ Library browser will not be available.</source>
     <message>
         <location line="-44"/>
         <source>Icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер значка:</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>View mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим просмотра:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -8574,7 +8575,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
         <source>Global linetype scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Глобальный масштаб типа линии:</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -10075,7 +10076,7 @@ shown in search results:</source>
     <message>
         <location line="+7"/>
         <source>Always format property values as decimal numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>Всегда форматировать значения свойств как десятичные числа</translation>
     </message>
 </context>
 <context>
@@ -11052,7 +11053,7 @@ shown in search results:</source>
     <message>
         <location line="+27"/>
         <source>Same Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Тот же слой</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
@@ -12138,7 +12139,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
         <source>Status bar font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Шрифт панели состояния:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12808,7 +12809,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/PreferencesPage.ui" line="+20"/>
         <source>User interface theme:</source>
-        <translation type="unfinished"></translation>
+        <translation>Тема интерфейса пользователя:</translation>
     </message>
 </context>
 <context>
@@ -12905,7 +12906,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui" line="+19"/>
         <source>Icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер значка:</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -12925,7 +12926,7 @@ shown in search results:</source>
     <message>
         <location line="+6"/>
         <source>Shortcut prefix character:</source>
-        <translation type="unfinished"></translation>
+        <translation>Символ префикса горячей клавиши:</translation>
     </message>
     <message>
         <source>Shortcut Prefix Character:</source>
@@ -13194,22 +13195,22 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>These settings affect the resolution and scale of the QCAD user interface. These preferences can be adjusted if there are problems with the user interface of QCAD, such as very large or very small icons or text labels.</source>
-        <translation type="unfinished"></translation>
+        <translation>Эти параметры влияют на разрешение и масштаб интерфейса пользователя QCAD. Их можно изменить, если при работе возникают неудобства (например, если значки или текстовые метки слишком крупные или слишком мелкие).</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Auto screen scale factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Автоматический коэффициент масштабирования экрана</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Enable high DPI scaling</source>
-        <translation type="unfinished"></translation>
+        <translation>Включить масштабирование высокого разрешения</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Scale factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Коэффициент масштабирования:</translation>
     </message>
 </context>
 <context>
@@ -13217,12 +13218,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/UiPreferences.js" line="+29"/>
         <source>General</source>
-        <translation type="unfinished">Основное</translation>
+        <translation>Основное</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>User Interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Интерфейс пользователя</translation>
     </message>
 </context>
 <context>
@@ -13381,17 +13382,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
         <source>Drawing unit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Единица измерения чертежа:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Paper unit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Единица размера бумаги:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Measurement system (for line types and hatch patterns):</source>
-        <translation type="unfinished"></translation>
+        <translation>Система измерения (для типов линий и образцов штриховки):</translation>
     </message>
 </context>
 <context>
@@ -14164,12 +14165,12 @@ shown in search results:</source>
     <message>
         <location line="+2"/>
         <source>Tolerances</source>
-        <translation type="unfinished"></translation>
+        <translation>Допуски</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Tolerance</source>
-        <translation type="unfinished"></translation>
+        <translation>Допуск</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14329,7 +14330,7 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>PDF/A-1B File</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл PDF/A-1B</translation>
     </message>
 </context>
 <context>
