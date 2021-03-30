@@ -37,6 +37,9 @@
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
         <widget class="QToolButton" name="UncheckAll">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>Uncheck all</string>
          </property>
@@ -44,6 +47,9 @@
        </item>
        <item>
         <widget class="QToolButton" name="CheckAll">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>Check all</string>
          </property>
