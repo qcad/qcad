@@ -212,7 +212,7 @@
     <message>
         <location line="+164"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation>Лицензии</translation>
     </message>
     <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
