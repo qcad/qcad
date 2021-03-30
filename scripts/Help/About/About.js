@@ -122,7 +122,7 @@ About.prototype.initAboutApp = function(textBrowser) {
               .arg(versionComplete)
               .arg(version.length>0 ? "("+version+")" : "")
             + "</tr><tr>"
-            + "<td><b>" + qsTr("Internet:") + "</b> </td><td><a href='http://%1'>%1</a></td>".arg(qApp.organizationDomain)
+            + "<td><b>" + qsTr("Internet:") + "</b> </td><td><a href='https://%1'>%1</a></td>".arg(qApp.organizationDomain)
             + "</tr><tr>"
             + "<td><b>" + qsTr("Build Date:") + "</b> </td><td>%1</td>".arg(RSettings.getReleaseDate())
             + "</tr><tr>"
@@ -150,7 +150,7 @@ About.prototype.initAboutApp = function(textBrowser) {
             }
             else {
                 html += "<p>" + qsTr("%1 is free (open source) software.").arg("QCAD") + "<br/>"
-                     + "" + qsTr("This means that everyone can <a href='%1'>get involved</a>!").arg("http://www.qcad.org/contribute") + "</p>"
+                     + "" + qsTr("This means that everyone can <a href='%1'>get involved</a>!").arg("https://www.qcad.org/contribute") + "</p>"
                      + "" + qsTr("Additional tools, features and file formats including DWG are available in <a href='%1'>QCAD Professional</a> or <a href='%2'>QCAD/CAM</a>.").arg("https://qcad.org/shop").arg("https://qcad.org/shop");
             }
 
@@ -160,7 +160,7 @@ About.prototype.initAboutApp = function(textBrowser) {
             + "<p/>"
             + "<p>© 2011-2021 RibbonSoft, GmbH.</p>"
             + "<p>" + qsTr("Portions of this software © %1 The Qt Company Ltd.").arg("2008-2021") + "</p>"
-            + "<p>" + qsTr("Qt ships with QCAD under the <a href='%1'>LGPL Open Source license</a> which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the <a href='%2'>documentation shown on the Qt website</a>.").arg("http://www.gnu.org/licenses/lgpl-3.0.html").arg("http://doc.qt.io/qt-5/build-sources.html") + "</p>"
+            + "<p>" + qsTr("Qt ships with QCAD under the <a href='%1'>LGPL Open Source license</a> which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the <a href='%2'>documentation shown on the Qt website</a>.").arg("https://www.gnu.org/licenses/lgpl-3.0.html").arg("https://doc.qt.io/qt-5/build-sources.html") + "</p>"
             + "<p>" + qsTr("The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.") + "</p>"
             + "<p/>"
             + "</body></html>";
@@ -610,7 +610,7 @@ About.prototype.initAboutLicenses = function(textBrowser) {
     if (palettesDirs.length>0 && new QFileInfo(palettesDirs[0]).exists()) {
         html += "<h2>Color Palette Files</h2>"
         html += "<p>Copyright 2016<br/>"
-              + "dtp studio oldenburg (<a href='http://www.dtpstudio.de'>http://www.dtpstudio.de</a>)<br/>"
+              + "dtp studio oldenburg (<a href='https://www.dtpstudio.de'>https://www.dtpstudio.de</a>)<br/>"
               + "Grünteweg 31<br/>"
               + "D-26127 Oldenburg<br/>"
               + "Tel. +49 - (0)441-3001807<br/>"
