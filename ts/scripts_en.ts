@@ -815,7 +815,7 @@ the preference changes to take effect.</translation>
         <translation>Choose solution</translation>
     </message>
     <message>
-        <location line="+123"/>
+        <location line="+128"/>
         <location line="+65"/>
         <source>No solution</source>
         <translation>No solution</translation>
@@ -1799,7 +1799,7 @@ Do you wish to recover it?</translation>
         <translation>Choose solution</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+144"/>
         <location line="+45"/>
         <source>No solution</source>
         <translation>No solution</translation>
@@ -1833,7 +1833,7 @@ Do you wish to recover it?</translation>
         <translation>Choose solution</translation>
     </message>
     <message>
-        <location line="+99"/>
+        <location line="+103"/>
         <source>No solution</source>
         <translation>No solution</translation>
     </message>
@@ -1904,7 +1904,7 @@ Do you wish to recover it?</translation>
         <translation>Choose solution</translation>
     </message>
     <message>
-        <location line="+116"/>
+        <location line="+120"/>
         <location line="+65"/>
         <source>No solution</source>
         <translation>No solution</translation>
@@ -2067,7 +2067,7 @@ Do you wish to recover it?</translation>
         <translation>Choose solution</translation>
     </message>
     <message>
-        <location line="+134"/>
+        <location line="+138"/>
         <location line="+48"/>
         <source>No solution</source>
         <translation>No solution</translation>
@@ -3759,12 +3759,12 @@ is already in the list.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2112"/>
+        <location line="+2081"/>
         <source>Cancel</source>
         <translation>Cancel</translation>
     </message>
     <message>
-        <location line="-2111"/>
+        <location line="-2080"/>
         <source>Done</source>
         <translation>Done</translation>
     </message>
@@ -3780,7 +3780,7 @@ is already in the list.</translation>
         <translation>None</translation>
     </message>
     <message>
-        <location line="+693"/>
+        <location line="+662"/>
         <source>Options</source>
         <translation>Options</translation>
     </message>
@@ -3893,7 +3893,7 @@ is already in the list.</translation>
         <translation>Show ECMAScript Shell</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+56"/>
         <source>&amp;Script Shell</source>
         <translation>&amp;Script Shell</translation>
     </message>
@@ -8074,24 +8074,20 @@ shown in search results:</translation>
 <context>
     <name>LineBreakSymbol</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbol.js" line="+57"/>
         <source>Pick the first point</source>
-        <translation>Pick the first point</translation>
+        <translation type="vanished">Pick the first point</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Pick the second point</source>
-        <translation>Pick the second point</translation>
+        <translation type="vanished">Pick the second point</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbolInit.js" line="+2"/>
         <source>&amp;Line break symbol from 2 points</source>
-        <translation>&amp;Line break symbol from 2 points</translation>
+        <translation type="vanished">&amp;Line break symbol from 2 points</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Draw a line break symbol from 2 points</source>
-        <translation>Draw a line break symbol from 2 points</translation>
+        <translation type="vanished">Draw a line break symbol from 2 points</translation>
     </message>
 </context>
 <context>
@@ -9480,6 +9476,118 @@ shown in search results:</translation>
     </message>
 </context>
 <context>
+    <name>PolyLineBreakSymbol</name>
+    <message>
+        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
+        <translation type="vanished">Choose line, arc, circle, ellipse, spline or polyline to break up</translation>
+    </message>
+    <message>
+        <source>Choose line, arc, circle or ellipse to break up</source>
+        <translation type="vanished">Choose line, arc, circle or ellipse to break up</translation>
+    </message>
+    <message>
+        <source>Pick the first point</source>
+        <translation type="vanished">Pick the first point</translation>
+    </message>
+    <message>
+        <source>Pick the first break point</source>
+        <translation type="vanished">Pick the first break point</translation>
+    </message>
+    <message>
+        <source>Pick the second point</source>
+        <translation type="vanished">Pick the second point</translation>
+    </message>
+    <message>
+        <source>Pick the second break point</source>
+        <translation type="vanished">Pick the second break point</translation>
+    </message>
+    <message>
+        <source>Break Out Segment</source>
+        <translation type="vanished">Break Out Segment</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
+        <source>Remove line break segment</source>
+        <translation>Remove line break segment</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Remove the line segment between the break symbol</source>
+        <translation>Remove the line segment between the break symbol</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Remove Segment</source>
+        <translation>Remove Segment</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Inherit entity properties</source>
+        <translation>Inherit entity properties</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Inherit all properties from the chosen entity</source>
+        <translation>Inherit all properties from the chosen entity</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Inherit</source>
+        <translation>Inherit</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <location line="+13"/>
+        <source>Peak ratio</source>
+        <translation>Peak ratio</translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <location line="+13"/>
+        <source>The ratio of the peak height to the break width</source>
+        <translation>The ratio of the peak height to the break width</translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <source>Peak Ratio:</source>
+        <translation>Peak Ratio:</translation>
+    </message>
+    <message>
+        <source>Peak Ratio :</source>
+        <translation type="vanished">Peak Ratio :</translation>
+    </message>
+    <message>
+        <location line="+78"/>
+        <source>First/Last segment inclined</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The first and last segment of the break symbol is inclined</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>First/Last segment vertical</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The first and last segment of the break symbol is vertical</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
+        <source>&amp;PolyLine break symbol from 2 points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw a polyline break symbol from 2 points</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Polyline</name>
     <message>
         <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
@@ -9494,6 +9602,44 @@ shown in search results:</translation>
         <location line="+27"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Polyline</translation>
+    </message>
+</context>
+<context>
+    <name>PolylineBreakSymbol</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
+        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
+        <translation type="unfinished">Choose line, arc, circle, ellipse, spline or polyline to break up</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Choose line, arc, circle or ellipse to break up</source>
+        <translation type="unfinished">Choose line, arc, circle or ellipse to break up</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Pick the first point</source>
+        <translation type="unfinished">Pick the first point</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pick the first break point</source>
+        <translation type="unfinished">Pick the first break point</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Pick the second point</source>
+        <translation type="unfinished">Pick the second point</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pick the second break point</source>
+        <translation type="unfinished">Pick the second break point</translation>
+    </message>
+    <message>
+        <location line="+170"/>
+        <source>Break Out Segment</source>
+        <translation type="unfinished">Break Out Segment</translation>
     </message>
 </context>
 <context>
@@ -11252,7 +11398,7 @@ shown in search results:</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1425"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1419"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>At least two points are identical.</translation>
@@ -12157,12 +12303,12 @@ shown in search results:</translation>
         <translation>Use reduced selection of fonts:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Uncheck all</source>
         <translation>Uncheck all</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Check all</source>
         <translation>Check all</translation>
     </message>
@@ -12626,7 +12772,7 @@ shown in search results:</translation>
 <context>
     <name>ThemePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+30"/>
+        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+31"/>
         <source>General</source>
         <translation>General</translation>
     </message>
@@ -13290,7 +13436,7 @@ shown in search results:</translation>
         <translation>Preview</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+108"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation>Grid Spacing &lt; Meta Grid Spacing</translation>
     </message>

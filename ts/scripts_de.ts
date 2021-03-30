@@ -906,7 +906,7 @@ um die Änderungen zu übernehmen.</translation>
         <translation>Lösung wählen</translation>
     </message>
     <message>
-        <location line="+123"/>
+        <location line="+128"/>
         <location line="+65"/>
         <source>No solution</source>
         <translation>Keine Lösung</translation>
@@ -2061,7 +2061,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Lösung wählen</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+144"/>
         <location line="+45"/>
         <source>No solution</source>
         <translation>Keine Lösung</translation>
@@ -2099,7 +2099,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Lösung wählen</translation>
     </message>
     <message>
-        <location line="+99"/>
+        <location line="+103"/>
         <source>No solution</source>
         <translation>Keine Lösung</translation>
     </message>
@@ -2174,7 +2174,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Lösung wählen</translation>
     </message>
     <message>
-        <location line="+116"/>
+        <location line="+120"/>
         <location line="+65"/>
         <source>No solution</source>
         <translation>Keine Lösung</translation>
@@ -2385,7 +2385,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Lösung wählen</translation>
     </message>
     <message>
-        <location line="+134"/>
+        <location line="+138"/>
         <location line="+48"/>
         <source>No solution</source>
         <translation>Keine Lösung</translation>
@@ -4282,12 +4282,12 @@ ist bereits in der Liste.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2112"/>
+        <location line="+2081"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="-2111"/>
+        <location line="-2080"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
@@ -4307,7 +4307,7 @@ ist bereits in der Liste.</translation>
         <translation>Kein</translation>
     </message>
     <message>
-        <location line="+693"/>
+        <location line="+662"/>
         <source>Options</source>
         <translation>Optionen</translation>
     </message>
@@ -4424,7 +4424,7 @@ ist bereits in der Liste.</translation>
         <translation>ECMAScript Shell anzeigen</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+56"/>
         <source>&amp;Script Shell</source>
         <translation>&amp;Skriptshell</translation>
     </message>
@@ -9541,24 +9541,20 @@ im Suchresultat:</translation>
 <context>
     <name>LineBreakSymbol</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbol.js" line="+57"/>
         <source>Pick the first point</source>
-        <translation>Wählen Sie den ersten Punkt</translation>
+        <translation type="vanished">Wählen Sie den ersten Punkt</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Pick the second point</source>
-        <translation>Wählen Sie den zweiten Punkt</translation>
+        <translation type="vanished">Wählen Sie den zweiten Punkt</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbolInit.js" line="+2"/>
         <source>&amp;Line break symbol from 2 points</source>
-        <translation>&amp;Linienunterbrechung von 2 Punkten</translation>
+        <translation type="vanished">&amp;Linienunterbrechung von 2 Punkten</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Draw a line break symbol from 2 points</source>
-        <translation>Unterbrechungssymbol für eine Linie von 2 Punkten zeichnen</translation>
+        <translation type="vanished">Unterbrechungssymbol für eine Linie von 2 Punkten zeichnen</translation>
     </message>
 </context>
 <context>
@@ -11502,6 +11498,114 @@ nicht öffnen.
     </message>
 </context>
 <context>
+    <name>PolyLineBreakSymbol</name>
+    <message>
+        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
+        <translation type="vanished">Linie, Bogen, Kreis, Ellipse, Spline oder Polylinie zum Aufbrechen wählen</translation>
+    </message>
+    <message>
+        <source>Choose line, arc, circle or ellipse to break up</source>
+        <translation type="vanished">Linie, Bogen, Kreis oder Ellipse zum Aufbrechen wählen</translation>
+    </message>
+    <message>
+        <source>Pick the first point</source>
+        <translation type="vanished">Wählen Sie den ersten Punkt</translation>
+    </message>
+    <message>
+        <source>Pick the first break point</source>
+        <translation type="vanished">Wählen Sie den ersten Unterbrechnungspunkt</translation>
+    </message>
+    <message>
+        <source>Pick the second point</source>
+        <translation type="vanished">Wählen Sie den zweiten Punkt</translation>
+    </message>
+    <message>
+        <source>Pick the second break point</source>
+        <translation type="vanished">Wählen Sie den zweiten Unterbrechnungspunkt</translation>
+    </message>
+    <message>
+        <source>Break Out Segment</source>
+        <translation type="vanished">Segment heraustrennen</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
+        <source>Remove line break segment</source>
+        <translation>Segment am Linienunterbruch entfernen</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Remove the line segment between the break symbol</source>
+        <translation>Liniensegment zwischen dem Unterbrechungssymbol entfernen</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Remove Segment</source>
+        <translation>Segment entfernen</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Inherit entity properties</source>
+        <translation>Objekteigenschaften erben</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Inherit all properties from the chosen entity</source>
+        <translation>Vererbt alle Eigenschaften vom gewählten Objekt</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Inherit</source>
+        <translation>Vererben</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <location line="+13"/>
+        <source>Peak ratio</source>
+        <translation>Spitzenwertverhältnis</translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <location line="+13"/>
+        <source>The ratio of the peak height to the break width</source>
+        <translation>Das Verhältnis der Peakhöhe zur Bruchbreite</translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <source>Peak Ratio:</source>
+        <translation>Spitzenwertverhältnis:</translation>
+    </message>
+    <message>
+        <location line="+78"/>
+        <source>First/Last segment inclined</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The first and last segment of the break symbol is inclined</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>First/Last segment vertical</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The first and last segment of the break symbol is vertical</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
+        <source>&amp;PolyLine break symbol from 2 points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw a polyline break symbol from 2 points</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Polyline</name>
     <message>
         <source>Show polyline tools</source>
@@ -11516,6 +11620,44 @@ nicht öffnen.
         <location line="-27"/>
         <source>Polyline Tools</source>
         <translation>Polylinienwerkzeuge</translation>
+    </message>
+</context>
+<context>
+    <name>PolylineBreakSymbol</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
+        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
+        <translation type="unfinished">Linie, Bogen, Kreis, Ellipse, Spline oder Polylinie zum Aufbrechen wählen</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Choose line, arc, circle or ellipse to break up</source>
+        <translation type="unfinished">Linie, Bogen, Kreis oder Ellipse zum Aufbrechen wählen</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Pick the first point</source>
+        <translation type="unfinished">Wählen Sie den ersten Punkt</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pick the first break point</source>
+        <translation type="unfinished">Wählen Sie den ersten Unterbrechnungspunkt</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Pick the second point</source>
+        <translation type="unfinished">Wählen Sie den zweiten Punkt</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pick the second break point</source>
+        <translation type="unfinished">Wählen Sie den zweiten Unterbrechnungspunkt</translation>
+    </message>
+    <message>
+        <location line="+170"/>
+        <source>Break Out Segment</source>
+        <translation type="unfinished">Segment heraustrennen</translation>
     </message>
 </context>
 <context>
@@ -13622,7 +13764,7 @@ nicht öffnen.
         <translation type="vanished">Radius kleiner als 0.0 nach %1 konzentrischen Kreisbögen.</translation>
     </message>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1432"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1426"/>
         <source>No circle possible.</source>
         <translation>Kein Kreis möglich.</translation>
     </message>
@@ -14694,12 +14836,12 @@ nicht öffnen.
         <translation>Reduzierte Schriftauswahl benutzen:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Uncheck all</source>
         <translation>Alle deaktivieren</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Check all</source>
         <translation>Alle aktivieren</translation>
     </message>
@@ -15222,7 +15364,7 @@ nicht öffnen.
 <context>
     <name>ThemePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+30"/>
+        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+31"/>
         <source>General</source>
         <translation>Allgemein</translation>
     </message>
@@ -15991,7 +16133,7 @@ nicht öffnen.
         <translation>Vorschau</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+108"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation>Rasterabstand &lt; Meta Rasterabstand</translation>
     </message>

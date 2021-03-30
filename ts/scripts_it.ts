@@ -889,7 +889,7 @@ applicare le modifiche.</translation>
         <translation>Scegli soluzione</translation>
     </message>
     <message>
-        <location line="+123"/>
+        <location line="+128"/>
         <location line="+65"/>
         <source>No solution</source>
         <translation>Nessuna soluzione</translation>
@@ -1971,7 +1971,7 @@ Spaziatura Griglia minima (px):</translatorcomment>
         <translation>Scegli soluzione</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+144"/>
         <location line="+45"/>
         <source>No solution</source>
         <translation>Nessuna soluzione</translation>
@@ -2009,7 +2009,7 @@ Spaziatura Griglia minima (px):</translatorcomment>
         <translation>Scegli soluzione</translation>
     </message>
     <message>
-        <location line="+99"/>
+        <location line="+103"/>
         <source>No solution</source>
         <translation>Nessuna soluzione</translation>
     </message>
@@ -2084,7 +2084,7 @@ Spaziatura Griglia minima (px):</translatorcomment>
         <translation>Scegli soluzione</translation>
     </message>
     <message>
-        <location line="+116"/>
+        <location line="+120"/>
         <location line="+65"/>
         <source>No solution</source>
         <translation>Nessuna soluzione</translation>
@@ -2291,7 +2291,7 @@ Spaziatura Griglia minima (px):</translatorcomment>
         <translation>Scegli soluzione</translation>
     </message>
     <message>
-        <location line="+134"/>
+        <location line="+138"/>
         <location line="+48"/>
         <source>No solution</source>
         <translation>Nessuna soluzione</translation>
@@ -4150,12 +4150,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2112"/>
+        <location line="+2081"/>
         <source>Cancel</source>
         <translation>Annulla</translation>
     </message>
     <message>
-        <location line="-2111"/>
+        <location line="-2080"/>
         <source>Done</source>
         <translation>Fatto</translation>
     </message>
@@ -4171,7 +4171,7 @@ is already in the list.</source>
         <translation>Niente</translation>
     </message>
     <message>
-        <location line="+693"/>
+        <location line="+662"/>
         <source>Options</source>
         <translation>Opzioni</translation>
     </message>
@@ -4288,7 +4288,7 @@ is already in the list.</source>
         <translation>Mostra shell ECMAScript</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+56"/>
         <source>&amp;Script Shell</source>
         <translation>&amp;Script Shell</translation>
     </message>
@@ -9123,24 +9123,20 @@ mostrati nei risultati di ricerca:</translation>
 <context>
     <name>LineBreakSymbol</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbol.js" line="+57"/>
         <source>Pick the first point</source>
-        <translation>Scegliere il primo punto</translation>
+        <translation type="vanished">Scegliere il primo punto</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Pick the second point</source>
-        <translation>Scegliere il secondo punto</translation>
+        <translation type="vanished">Scegliere il secondo punto</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbolInit.js" line="+2"/>
         <source>&amp;Line break symbol from 2 points</source>
-        <translation>Simbolo di interruzione di &amp;linea da 2 punti</translation>
+        <translation type="vanished">Simbolo di interruzione di &amp;linea da 2 punti</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Draw a line break symbol from 2 points</source>
-        <translation>Disegna un simbolo di interruzione di linea da 2 punti</translation>
+        <translation type="vanished">Disegna un simbolo di interruzione di linea da 2 punti</translation>
     </message>
 </context>
 <context>
@@ -10865,6 +10861,114 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
     </message>
 </context>
 <context>
+    <name>PolyLineBreakSymbol</name>
+    <message>
+        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
+        <translation type="vanished">Scegli linea, arco, cerchio, ellisse, spline o polilinea</translation>
+    </message>
+    <message>
+        <source>Choose line, arc, circle or ellipse to break up</source>
+        <translation type="vanished">Scegliere linea, arco, cerchio o ellisse</translation>
+    </message>
+    <message>
+        <source>Pick the first point</source>
+        <translation type="vanished">Scegliere il primo punto</translation>
+    </message>
+    <message>
+        <source>Pick the first break point</source>
+        <translation type="vanished">Scegliere il primo punto di rottura</translation>
+    </message>
+    <message>
+        <source>Pick the second point</source>
+        <translation type="vanished">Scegliere il secondo punto</translation>
+    </message>
+    <message>
+        <source>Pick the second break point</source>
+        <translation type="vanished">Scegliere il secondo punto di rottura</translation>
+    </message>
+    <message>
+        <source>Break Out Segment</source>
+        <translation type="vanished">Rompi segmento</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
+        <source>Remove line break segment</source>
+        <translation>Rimuovere il segmento all&apos;interruzione della linea</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Remove the line segment between the break symbol</source>
+        <translation>Rimuovere il segmento di linea tra il simbolo di interruzione</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Remove Segment</source>
+        <translation>Elimina segmento</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Inherit entity properties</source>
+        <translation>Ereditare le proprietà delle entità</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Inherit all properties from the chosen entity</source>
+        <translation>Eredita tutte le proprietà dall&apos;entità scelta</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Inherit</source>
+        <translation>Eredita</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <location line="+13"/>
+        <source>Peak ratio</source>
+        <translation>Rapporto di picco</translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <location line="+13"/>
+        <source>The ratio of the peak height to the break width</source>
+        <translation>Il rapporto tra l&apos;altezza del picco e la larghezza della rottura</translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <source>Peak Ratio:</source>
+        <translation>Rapporto di picco:</translation>
+    </message>
+    <message>
+        <location line="+78"/>
+        <source>First/Last segment inclined</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The first and last segment of the break symbol is inclined</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>First/Last segment vertical</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The first and last segment of the break symbol is vertical</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
+        <source>&amp;PolyLine break symbol from 2 points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw a polyline break symbol from 2 points</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Polyline</name>
     <message>
         <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
@@ -10879,6 +10983,44 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <location line="+27"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Polilinea</translation>
+    </message>
+</context>
+<context>
+    <name>PolylineBreakSymbol</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
+        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
+        <translation type="unfinished">Scegli linea, arco, cerchio, ellisse, spline o polilinea</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Choose line, arc, circle or ellipse to break up</source>
+        <translation type="unfinished">Scegliere linea, arco, cerchio o ellisse</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Pick the first point</source>
+        <translation type="unfinished">Scegliere il primo punto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pick the first break point</source>
+        <translation type="unfinished">Scegliere il primo punto di rottura</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Pick the second point</source>
+        <translation type="unfinished">Scegliere il secondo punto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pick the second break point</source>
+        <translation type="unfinished">Scegliere il secondo punto di rottura</translation>
+    </message>
+    <message>
+        <location line="+170"/>
+        <source>Break Out Segment</source>
+        <translation type="unfinished">Rompi segmento</translation>
     </message>
 </context>
 <context>
@@ -12945,7 +13087,7 @@ Interseca con la selezione corrente</translatorcomment>
         <translation type="vanished">Raggio è sceso sotto 0,0 dopo %1 archi concentrici.</translation>
     </message>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1425"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1419"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Almeno due punti sono identici.</translation>
@@ -13990,12 +14132,12 @@ Tutti i file</translatorcomment>
         <translation>Uso ridotto selezione di font:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Uncheck all</source>
         <translation>Deselezionare tutti</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Check all</source>
         <translation>Selezionare tutti</translation>
     </message>
@@ -14459,7 +14601,7 @@ Tutti i file</translatorcomment>
 <context>
     <name>ThemePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+30"/>
+        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+31"/>
         <source>General</source>
         <translation>Generale</translation>
     </message>
@@ -15200,7 +15342,7 @@ Obiettivo punto</translatorcomment>
         <translation>Anteprima</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+108"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation>Spaziatura della griglia &lt; Meta spaziatura della griglia</translation>
     </message>

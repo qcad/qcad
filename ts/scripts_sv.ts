@@ -799,7 +799,7 @@ the preference changes to take effect.</source>
         <translation>Välj lösning</translation>
     </message>
     <message>
-        <location line="+123"/>
+        <location line="+128"/>
         <location line="+65"/>
         <source>No solution</source>
         <translation>Ingen lösning</translation>
@@ -1720,7 +1720,7 @@ Vill du återställa den?</translation>
         <translation>Välj lösning</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+144"/>
         <location line="+45"/>
         <source>No solution</source>
         <translation>Ingen lösning</translation>
@@ -1754,7 +1754,7 @@ Vill du återställa den?</translation>
         <translation type="unfinished">Välj lösning</translation>
     </message>
     <message>
-        <location line="+99"/>
+        <location line="+103"/>
         <source>No solution</source>
         <translation>Ingen lösning</translation>
     </message>
@@ -1829,7 +1829,7 @@ Vill du återställa den?</translation>
         <translation type="unfinished">Välj lösning</translation>
     </message>
     <message>
-        <location line="+116"/>
+        <location line="+120"/>
         <location line="+65"/>
         <source>No solution</source>
         <translation type="unfinished">Ingen lösning</translation>
@@ -1992,7 +1992,7 @@ Vill du återställa den?</translation>
         <translation>Välj lösning</translation>
     </message>
     <message>
-        <location line="+134"/>
+        <location line="+138"/>
         <location line="+48"/>
         <source>No solution</source>
         <translation>Ingen lösning</translation>
@@ -3595,12 +3595,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2112"/>
+        <location line="+2081"/>
         <source>Cancel</source>
         <translation type="unfinished">Avbryt</translation>
     </message>
     <message>
-        <location line="-2111"/>
+        <location line="-2080"/>
         <source>Done</source>
         <translation type="unfinished">Klar</translation>
     </message>
@@ -3616,7 +3616,7 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+693"/>
+        <location line="+662"/>
         <source>Options</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3729,7 +3729,7 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+56"/>
         <source>&amp;Script Shell</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7659,29 +7659,6 @@ shown in search results:</source>
     </message>
 </context>
 <context>
-    <name>LineBreakSymbol</name>
-    <message>
-        <location filename="../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbol.js" line="+57"/>
-        <source>Pick the first point</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Pick the second point</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbolInit.js" line="+2"/>
-        <source>&amp;Line break symbol from 2 points</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Draw a line break symbol from 2 points</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>LineDove</name>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.js" line="+63"/>
@@ -9019,6 +8996,86 @@ shown in search results:</source>
     </message>
 </context>
 <context>
+    <name>PolyLineBreakSymbol</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
+        <source>Remove line break segment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Remove the line segment between the break symbol</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Remove Segment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Inherit entity properties</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Inherit all properties from the chosen entity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Inherit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <location line="+13"/>
+        <source>Peak ratio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <location line="+13"/>
+        <source>The ratio of the peak height to the break width</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <source>Peak Ratio:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+78"/>
+        <source>First/Last segment inclined</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The first and last segment of the break symbol is inclined</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>First/Last segment vertical</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The first and last segment of the break symbol is vertical</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
+        <source>&amp;PolyLine break symbol from 2 points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw a polyline break symbol from 2 points</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Polyline</name>
     <message>
         <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
@@ -9029,6 +9086,44 @@ shown in search results:</source>
         <location line="+27"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Polylinje</translation>
+    </message>
+</context>
+<context>
+    <name>PolylineBreakSymbol</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
+        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Choose line, arc, circle or ellipse to break up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Pick the first point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pick the first break point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Pick the second point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pick the second break point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+170"/>
+        <source>Break Out Segment</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -10606,7 +10701,7 @@ shown in search results:</source>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1425"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1419"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation type="unfinished"></translation>
@@ -11481,12 +11576,12 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Uncheck all</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Check all</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11942,7 +12037,7 @@ shown in search results:</source>
 <context>
     <name>ThemePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+30"/>
+        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+31"/>
         <source>General</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12559,7 +12654,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+108"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation type="unfinished"></translation>
     </message>

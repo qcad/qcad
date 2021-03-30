@@ -831,7 +831,7 @@ de wijzigingen door te voeren.</translation>
         <translation>Kies oplossing</translation>
     </message>
     <message>
-        <location line="+123"/>
+        <location line="+128"/>
         <location line="+65"/>
         <source>No solution</source>
         <translation>Geen oplossing</translation>
@@ -1829,7 +1829,7 @@ Wilt u het herstellen?</translation>
         <translation>Kies oplossing</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+144"/>
         <location line="+45"/>
         <source>No solution</source>
         <translation>Geen oplossing</translation>
@@ -1867,7 +1867,7 @@ Wilt u het herstellen?</translation>
         <translation>Kies oplossing</translation>
     </message>
     <message>
-        <location line="+99"/>
+        <location line="+103"/>
         <source>No solution</source>
         <translation>Geen oplossing</translation>
     </message>
@@ -1942,7 +1942,7 @@ Wilt u het herstellen?</translation>
         <translation>Kies oplossing</translation>
     </message>
     <message>
-        <location line="+116"/>
+        <location line="+120"/>
         <location line="+65"/>
         <source>No solution</source>
         <translation>Geen oplossing</translation>
@@ -2105,7 +2105,7 @@ Wilt u het herstellen?</translation>
         <translation>Kies oplossing</translation>
     </message>
     <message>
-        <location line="+134"/>
+        <location line="+138"/>
         <location line="+48"/>
         <source>No solution</source>
         <translation>Geen oplossing</translation>
@@ -3806,12 +3806,12 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2112"/>
+        <location line="+2081"/>
         <source>Cancel</source>
         <translation>Annuleer</translation>
     </message>
     <message>
-        <location line="-2111"/>
+        <location line="-2080"/>
         <source>Done</source>
         <translation>Klaar</translation>
     </message>
@@ -3827,7 +3827,7 @@ is al in de lijst.</translation>
         <translation>Geen</translation>
     </message>
     <message>
-        <location line="+693"/>
+        <location line="+662"/>
         <source>Options</source>
         <translation>Opties</translation>
     </message>
@@ -3940,7 +3940,7 @@ is al in de lijst.</translation>
         <translation>ECMAScript Shell tonen</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+56"/>
         <source>&amp;Script Shell</source>
         <translation>&amp;Script Shell</translation>
     </message>
@@ -8203,24 +8203,20 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>LineBreakSymbol</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbol.js" line="+57"/>
         <source>Pick the first point</source>
-        <translation>Kies het eerste punt</translation>
+        <translation type="vanished">Kies het eerste punt</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Pick the second point</source>
-        <translation>Kies het tweede punt</translation>
+        <translation type="vanished">Kies het tweede punt</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbolInit.js" line="+2"/>
         <source>&amp;Line break symbol from 2 points</source>
-        <translation>&amp;Lijnbreuksymbool van 2 punten</translation>
+        <translation type="vanished">&amp;Lijnbreuksymbool van 2 punten</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Draw a line break symbol from 2 points</source>
-        <translation>Teken een lijn onderbreking symbool van 2 punten</translation>
+        <translation type="vanished">Teken een lijn onderbreking symbool van 2 punten</translation>
     </message>
 </context>
 <context>
@@ -9617,6 +9613,114 @@ getoond in zoekresultaten:</translation>
     </message>
 </context>
 <context>
+    <name>PolyLineBreakSymbol</name>
+    <message>
+        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
+        <translation type="vanished">Kies lijn, boog, cirkel, ellips, spline of polylijn</translation>
+    </message>
+    <message>
+        <source>Choose line, arc, circle or ellipse to break up</source>
+        <translation type="vanished">Kies lijn, boog, cirkel of ellips</translation>
+    </message>
+    <message>
+        <source>Pick the first point</source>
+        <translation type="vanished">Kies het eerste punt</translation>
+    </message>
+    <message>
+        <source>Pick the first break point</source>
+        <translation type="vanished">Kies het eerste breekpunt</translation>
+    </message>
+    <message>
+        <source>Pick the second point</source>
+        <translation type="vanished">Kies het tweede punt</translation>
+    </message>
+    <message>
+        <source>Pick the second break point</source>
+        <translation type="vanished">Kies het tweede breekpunt</translation>
+    </message>
+    <message>
+        <source>Break Out Segment</source>
+        <translation type="vanished">Segment uitbreken</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
+        <source>Remove line break segment</source>
+        <translation>Verwijder segment bij lijnbreuk</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Remove the line segment between the break symbol</source>
+        <translation>Verwijder het lijnstuk tussen het breuksymbool</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Remove Segment</source>
+        <translation>Segment verwijderen</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Inherit entity properties</source>
+        <translation>Entiteitseigenschappen overerven</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Inherit all properties from the chosen entity</source>
+        <translation>Erft alle eigenschappen van de gekozen entiteit</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Inherit</source>
+        <translation>Erven</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <location line="+13"/>
+        <source>Peak ratio</source>
+        <translation>Piekverhouding</translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <location line="+13"/>
+        <source>The ratio of the peak height to the break width</source>
+        <translation>De verhouding van de piekhoogte tot de breukbreedte</translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <source>Peak Ratio:</source>
+        <translation>Piekverhouding:</translation>
+    </message>
+    <message>
+        <location line="+78"/>
+        <source>First/Last segment inclined</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The first and last segment of the break symbol is inclined</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>First/Last segment vertical</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The first and last segment of the break symbol is vertical</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
+        <source>&amp;PolyLine break symbol from 2 points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Draw a polyline break symbol from 2 points</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Polyline</name>
     <message>
         <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
@@ -9631,6 +9735,44 @@ getoond in zoekresultaten:</translation>
         <location line="+27"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Polylijn</translation>
+    </message>
+</context>
+<context>
+    <name>PolylineBreakSymbol</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
+        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
+        <translation type="unfinished">Kies lijn, boog, cirkel, ellips, spline of polylijn</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Choose line, arc, circle or ellipse to break up</source>
+        <translation type="unfinished">Kies lijn, boog, cirkel of ellips</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Pick the first point</source>
+        <translation type="unfinished">Kies het eerste punt</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pick the first break point</source>
+        <translation type="unfinished">Kies het eerste breekpunt</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Pick the second point</source>
+        <translation type="unfinished">Kies het tweede punt</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pick the second break point</source>
+        <translation type="unfinished">Kies het tweede breekpunt</translation>
+    </message>
+    <message>
+        <location line="+170"/>
+        <source>Break Out Segment</source>
+        <translation type="unfinished">Segment uitbreken</translation>
     </message>
 </context>
 <context>
@@ -11397,7 +11539,7 @@ getoond in zoekresultaten:</translation>
         <translation type="vanished">Radius gedaald tot onder 0 na %1 concentrische boog(en).</translation>
     </message>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1425"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1419"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Ten minste twee punten zijn identiek.</translation>
@@ -12306,12 +12448,12 @@ getoond in zoekresultaten:</translation>
         <translation>Gebruik verminderde selectie van lettertypen:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Uncheck all</source>
         <translation>Deselecteer alle</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+10"/>
         <source>Check all</source>
         <translation>Selecteer alle</translation>
     </message>
@@ -12771,7 +12913,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>ThemePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+30"/>
+        <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+31"/>
         <source>General</source>
         <translation>Algemeen</translation>
     </message>
@@ -13419,7 +13561,7 @@ getoond in zoekresultaten:</translation>
         <translation>Voorbeeld</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+108"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation>Raster tussenafstand &lt; Meta raster tussenafstand</translation>
     </message>

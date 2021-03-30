@@ -336,6 +336,7 @@ SOURCES = \
 ../scripts/Draw/Text/Tests/Text39.js \
 ../scripts/Draw/Text/Tests/Text40.js \
 ../scripts/Draw/Text/Tests/Text41.js \
+../scripts/Draw/Text/Tests/Text42.js \
 ../scripts/Draw/Text/Text.js \
 ../scripts/Draw/Text/TextDialog/CharacterMapDialog.js \
 ../scripts/Draw/Text/TextDialog/TextDialog.js \
@@ -604,8 +605,6 @@ SOURCES = \
 ../scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js \
 ../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.js \
 ../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js \
-../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbol.js \
-../scripts/Misc/MiscDraw/LineBreakSymbol/LineBreakSymbolInit.js \
 ../scripts/Misc/MiscDraw/LineDove/LineDove.js \
 ../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js \
 ../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.js \
@@ -617,6 +616,8 @@ SOURCES = \
 ../scripts/Misc/MiscDraw/PointPole/PointPoleInit.js \
 ../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenter.js \
 ../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js \
+../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js \
+../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js \
 ../scripts/Misc/MiscDraw/TextAlong/TextAlong.js \
 ../scripts/Misc/MiscDraw/TextAlong/TextAlongInit.js \
 ../scripts/Misc/MiscDraw/XLineHorizontal/XLineHorizontal.js \
@@ -703,6 +704,10 @@ SOURCES = \
 ../scripts/Modify/BreakOutManual/Tests/BreakOutManualTest01.js \
 ../scripts/Modify/BreakOutManual/Tests/BreakOutManualTest02.js \
 ../scripts/Modify/BreakOutManual/Tests/BreakOutManualTest03.js \
+../scripts/Modify/BreakOutManual/Tests/BreakOutManualTest04.js \
+../scripts/Modify/BreakOutManual/Tests/BreakOutManualTest05.js \
+../scripts/Modify/BreakOutManual/Tests/BreakOutManualTest06.js \
+../scripts/Modify/BreakOutManual/Tests/BreakOutManualTest07.js \
 ../scripts/Modify/Divide/Divide.js \
 ../scripts/Modify/Divide/DivideInit.js \
 ../scripts/Modify/Divide/Tests/DivideTest01.js \
@@ -1140,6 +1145,7 @@ SOURCES = \
 ../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui \
 ../scripts/Misc/MiscDraw/LineDove/LineDove.ui \
 ../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui \
+../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui \
 ../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui \
 ../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui \
 ../scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.ui \
