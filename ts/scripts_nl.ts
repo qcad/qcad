@@ -9643,6 +9643,121 @@ getoond in zoekresultaten:</translation>
         <translation type="vanished">Segment uitbreken</translation>
     </message>
     <message>
+        <source>Remove line break segment</source>
+        <translation type="vanished">Verwijder segment bij lijnbreuk</translation>
+    </message>
+    <message>
+        <source>Remove the line segment between the break symbol</source>
+        <translation type="vanished">Verwijder het lijnstuk tussen het breuksymbool</translation>
+    </message>
+    <message>
+        <source>Remove Segment</source>
+        <translation type="vanished">Segment verwijderen</translation>
+    </message>
+    <message>
+        <source>Inherit entity properties</source>
+        <translation type="vanished">Entiteitseigenschappen overerven</translation>
+    </message>
+    <message>
+        <source>Inherit all properties from the chosen entity</source>
+        <translation type="vanished">Erft alle eigenschappen van de gekozen entiteit</translation>
+    </message>
+    <message>
+        <source>Inherit</source>
+        <translation type="vanished">Erven</translation>
+    </message>
+    <message>
+        <source>Peak ratio</source>
+        <translation type="vanished">Piekverhouding</translation>
+    </message>
+    <message>
+        <source>The ratio of the peak height to the break width</source>
+        <translation type="vanished">De verhouding van de piekhoogte tot de breukbreedte</translation>
+    </message>
+    <message>
+        <source>Peak Ratio:</source>
+        <translation type="vanished">Piekverhouding:</translation>
+    </message>
+    <message>
+        <source>First/Last segment inclined</source>
+        <translation type="vanished">Eerste/laatste segment hellend</translation>
+    </message>
+    <message>
+        <source>The first and last segment of the break symbol is inclined</source>
+        <translation type="vanished">Het eerste en laatste segment van het breuksymbool zijn schuin</translation>
+    </message>
+    <message>
+        <source>First/Last segment vertical</source>
+        <translation type="vanished">Eerste/laatste segment verticaal</translation>
+    </message>
+    <message>
+        <source>The first and last segment of the break symbol is vertical</source>
+        <translation type="vanished">Het eerste en laatste segment van het breuksymbool is verticaal</translation>
+    </message>
+    <message>
+        <source>&amp;PolyLine break symbol from 2 points</source>
+        <translation type="vanished">&amp;Polylijn breeksymbool van 2 punten</translation>
+    </message>
+    <message>
+        <source>Draw a polyline break symbol from 2 points</source>
+        <translation type="vanished">Teken een polylijn breuksymbool vanuit 2 punten</translation>
+    </message>
+</context>
+<context>
+    <name>Polyline</name>
+    <message>
+        <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
+        <source>Polyline Tools</source>
+        <translation>Polylijngereedschappen</translation>
+    </message>
+    <message>
+        <source>Show polyline tools</source>
+        <translation type="vanished">Polylijngereedschappen tonen</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>&amp;Polyline</source>
+        <translation>&amp;Polylijn</translation>
+    </message>
+</context>
+<context>
+    <name>PolylineBreakSymbol</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
+        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
+        <translation>Kies lijn, boog, cirkel, ellips, spline of polylijn</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Choose line, arc, circle or ellipse to break up</source>
+        <translation>Kies lijn, boog, cirkel of ellips om op te breken</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Pick the first point</source>
+        <translation>Kies de eerste punt</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pick the first break point</source>
+        <translation>Kies het eerste breekpunt</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Pick the second point</source>
+        <translation>Kies de tweede punt</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pick the second break point</source>
+        <translation>Kies het tweede breekpunt</translation>
+    </message>
+    <message>
+        <location line="+170"/>
+        <source>Break Out Segment</source>
+        <translation>Segment uitbreken</translation>
+    </message>
+    <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
         <source>Remove line break segment</source>
         <translation>Verwijder segment bij lijnbreuk</translation>
@@ -9665,7 +9780,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+3"/>
         <source>Inherit all properties from the chosen entity</source>
-        <translation>Erft alle eigenschappen van de gekozen entiteit</translation>
+        <translation>Erft alle eigenschappen van het gekozen object</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9692,87 +9807,32 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+78"/>
         <source>First/Last segment inclined</source>
-        <translation type="unfinished"></translation>
+        <translation>Eerste/laatste segment hellend</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>The first and last segment of the break symbol is inclined</source>
-        <translation type="unfinished"></translation>
+        <source>The first and last segment of the break symbol are inclined</source>
+        <translation>Het eerste en laatste segment van het breuksymbool zijn schuin</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>First/Last segment vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>Eerste/laatste segment verticaal</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>The first and last segment of the break symbol is vertical</source>
-        <translation type="unfinished"></translation>
+        <source>The first and last segment of the break symbol are vertical</source>
+        <translation>Het eerste en laatste segment van het breuksymbool zijn verticaal</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
-        <source>&amp;PolyLine break symbol from 2 points</source>
-        <translation type="unfinished"></translation>
+        <source>&amp;Polyline break symbol from 2 points</source>
+        <translation>&amp;Polylijn breeksymbool van 2 punten</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw a polyline break symbol from 2 points</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>Polyline</name>
-    <message>
-        <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
-        <source>Polyline Tools</source>
-        <translation>Polylijngereedschappen</translation>
-    </message>
-    <message>
-        <source>Show polyline tools</source>
-        <translation type="vanished">Polylijngereedschappen tonen</translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>&amp;Polyline</source>
-        <translation>&amp;Polylijn</translation>
-    </message>
-</context>
-<context>
-    <name>PolylineBreakSymbol</name>
-    <message>
-        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
-        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation type="unfinished">Kies lijn, boog, cirkel, ellips, spline of polylijn</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation type="unfinished">Kies lijn, boog, cirkel of ellips</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Pick the first point</source>
-        <translation type="unfinished">Kies het eerste punt</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Pick the first break point</source>
-        <translation type="unfinished">Kies het eerste breekpunt</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Pick the second point</source>
-        <translation type="unfinished">Kies het tweede punt</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Pick the second break point</source>
-        <translation type="unfinished">Kies het tweede breekpunt</translation>
-    </message>
-    <message>
-        <location line="+170"/>
-        <source>Break Out Segment</source>
-        <translation type="unfinished">Segment uitbreken</translation>
+        <translation>Teken een polylijn breuksymbool vanuit 2 punten</translation>
     </message>
 </context>
 <context>

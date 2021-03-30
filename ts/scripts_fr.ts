@@ -10724,6 +10724,121 @@ dans les résultats de recherche :</translation>
         <translation type="vanished">Suppression de segments</translation>
     </message>
     <message>
+        <source>Remove line break segment</source>
+        <translation type="vanished">Suppression du segment au point de rupture de la ligne</translation>
+    </message>
+    <message>
+        <source>Remove the line segment between the break symbol</source>
+        <translation type="vanished">Supprimez le segment de ligne entre le symbole de rupture</translation>
+    </message>
+    <message>
+        <source>Remove Segment</source>
+        <translation type="vanished">Supprimer le segment</translation>
+    </message>
+    <message>
+        <source>Inherit entity properties</source>
+        <translation type="vanished">Hériter des propriétés de l&apos;entité</translation>
+    </message>
+    <message>
+        <source>Inherit all properties from the chosen entity</source>
+        <translation type="vanished">Hériter de toutes les propriétés de l&apos;entité choisie</translation>
+    </message>
+    <message>
+        <source>Inherit</source>
+        <translation type="vanished">Hériter</translation>
+    </message>
+    <message>
+        <source>Peak ratio</source>
+        <translation type="vanished">Ratio de crête</translation>
+    </message>
+    <message>
+        <source>The ratio of the peak height to the break width</source>
+        <translation type="vanished">Le rapport entre la hauteur du pic et la largeur de la rupture.</translation>
+    </message>
+    <message>
+        <source>Peak Ratio:</source>
+        <translation type="vanished">Rapport de crête :</translation>
+    </message>
+    <message>
+        <source>First/Last segment inclined</source>
+        <translation type="vanished">Premier/dernier segment incliné</translation>
+    </message>
+    <message>
+        <source>The first and last segment of the break symbol is inclined</source>
+        <translation type="vanished">Le premier et le dernier segment du symbole de rupture sont inclinés</translation>
+    </message>
+    <message>
+        <source>First/Last segment vertical</source>
+        <translation type="vanished">Premier/dernier segment vertical</translation>
+    </message>
+    <message>
+        <source>The first and last segment of the break symbol is vertical</source>
+        <translation type="vanished">Le premier et le dernier segment du symbole de rupture sont verticaux</translation>
+    </message>
+    <message>
+        <source>&amp;PolyLine break symbol from 2 points</source>
+        <translation type="vanished">&amp;Polyligne symbole de rupture à partir de 2 points</translation>
+    </message>
+    <message>
+        <source>Draw a polyline break symbol from 2 points</source>
+        <translation type="vanished">Dessiner un symbole de rupture de polyligne à partir de 2 points</translation>
+    </message>
+</context>
+<context>
+    <name>Polyline</name>
+    <message>
+        <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
+        <source>Polyline Tools</source>
+        <translation>Outils de polyligne</translation>
+    </message>
+    <message>
+        <source>Show polyline tools</source>
+        <translation type="vanished">Afficher les outils de polyligne</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>&amp;Polyline</source>
+        <translation>&amp;Polyligne</translation>
+    </message>
+</context>
+<context>
+    <name>PolylineBreakSymbol</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
+        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
+        <translation>Choisissez la ligne, l&apos;arc, le cercle, l&apos;ellipse, la spline ou la polyligne à décomposer</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Choose line, arc, circle or ellipse to break up</source>
+        <translation>Choisissez la ligne, l&apos;arc, le cercle ou l&apos;ellipse pour rompre</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Pick the first point</source>
+        <translation>Choisissez le premier point</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pick the first break point</source>
+        <translation>Choisissez le premier point de rupture</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Pick the second point</source>
+        <translation>Choisissez le deuxième point</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pick the second break point</source>
+        <translation>Choisissez le deuxième point de rupture</translation>
+    </message>
+    <message>
+        <location line="+170"/>
+        <source>Break Out Segment</source>
+        <translation>Ventiler le segment</translation>
+    </message>
+    <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
         <source>Remove line break segment</source>
         <translation>Suppression du segment au point de rupture de la ligne</translation>
@@ -10773,87 +10888,32 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="+78"/>
         <source>First/Last segment inclined</source>
-        <translation type="unfinished"></translation>
+        <translation>Premier/dernier segment incliné</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>The first and last segment of the break symbol is inclined</source>
-        <translation type="unfinished"></translation>
+        <source>The first and last segment of the break symbol are inclined</source>
+        <translation>Le premier et le dernier segment du symbole de rupture sont inclinés</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>First/Last segment vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>Premier/dernier segment vertical</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>The first and last segment of the break symbol is vertical</source>
-        <translation type="unfinished"></translation>
+        <source>The first and last segment of the break symbol are vertical</source>
+        <translation>Le premier et le dernier segment du symbole de rupture sont verticaux</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
-        <source>&amp;PolyLine break symbol from 2 points</source>
-        <translation type="unfinished"></translation>
+        <source>&amp;Polyline break symbol from 2 points</source>
+        <translation>&amp;Polyligne symbole de rupture à partir de 2 points</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw a polyline break symbol from 2 points</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>Polyline</name>
-    <message>
-        <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
-        <source>Polyline Tools</source>
-        <translation>Outils de polyligne</translation>
-    </message>
-    <message>
-        <source>Show polyline tools</source>
-        <translation type="vanished">Afficher les outils de polyligne</translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>&amp;Polyline</source>
-        <translation>&amp;Polyligne</translation>
-    </message>
-</context>
-<context>
-    <name>PolylineBreakSymbol</name>
-    <message>
-        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
-        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation type="unfinished">Choisir ligne, arc, cercle, ellipse, spline ou polyligne</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation type="unfinished">Choisissez ligne, arc, cercle ou ellipse</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Pick the first point</source>
-        <translation type="unfinished">Choisissez le premier point</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Pick the first break point</source>
-        <translation type="unfinished">Choisissez le premier point de rupture</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Pick the second point</source>
-        <translation type="unfinished">Choisissez le deuxième point</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Pick the second break point</source>
-        <translation type="unfinished">Choisissez le deuxième point de rupture</translation>
-    </message>
-    <message>
-        <location line="+170"/>
-        <source>Break Out Segment</source>
-        <translation type="unfinished">Suppression de segments</translation>
+        <translation>Dessiner un symbole de rupture de polyligne à partir de 2 points</translation>
     </message>
 </context>
 <context>

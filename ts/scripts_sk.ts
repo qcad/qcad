@@ -9581,6 +9581,61 @@ vo výsledku vyhľadania:</translation>
         <source>Choose line, arc, circle or ellipse to break up</source>
         <translation type="obsolete">Vyberte prvok ktorý chcete orezať</translation>
     </message>
+</context>
+<context>
+    <name>Polyline</name>
+    <message>
+        <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
+        <source>Polyline Tools</source>
+        <translation>Nástroje Krivky</translation>
+    </message>
+    <message>
+        <source>Show polyline tools</source>
+        <translation type="vanished">Zobraziť nástroje krivky</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>&amp;Polyline</source>
+        <translation>&amp;Krivka</translation>
+    </message>
+</context>
+<context>
+    <name>PolylineBreakSymbol</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
+        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
+        <translation type="unfinished">Vyberte prvok ktorý chcete prerušiť</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Choose line, arc, circle or ellipse to break up</source>
+        <translation type="unfinished">Vyberte prvok ktorý chcete orezať</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Pick the first point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pick the first break point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Pick the second point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pick the second break point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+170"/>
+        <source>Break Out Segment</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
         <source>Remove line break segment</source>
@@ -9635,7 +9690,7 @@ vo výsledku vyhľadania:</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>The first and last segment of the break symbol is inclined</source>
+        <source>The first and last segment of the break symbol are inclined</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9645,72 +9700,17 @@ vo výsledku vyhľadania:</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>The first and last segment of the break symbol is vertical</source>
+        <source>The first and last segment of the break symbol are vertical</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
-        <source>&amp;PolyLine break symbol from 2 points</source>
+        <source>&amp;Polyline break symbol from 2 points</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw a polyline break symbol from 2 points</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>Polyline</name>
-    <message>
-        <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
-        <source>Polyline Tools</source>
-        <translation>Nástroje Krivky</translation>
-    </message>
-    <message>
-        <source>Show polyline tools</source>
-        <translation type="vanished">Zobraziť nástroje krivky</translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>&amp;Polyline</source>
-        <translation>&amp;Krivka</translation>
-    </message>
-</context>
-<context>
-    <name>PolylineBreakSymbol</name>
-    <message>
-        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
-        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation type="unfinished">Vyberte prvok ktorý chcete prerušiť</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation type="unfinished">Vyberte prvok ktorý chcete orezať</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Pick the first point</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Pick the first break point</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Pick the second point</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Pick the second break point</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+170"/>
-        <source>Break Out Segment</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

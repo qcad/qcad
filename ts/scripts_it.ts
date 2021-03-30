@@ -2343,7 +2343,7 @@ Spaziatura Griglia minima (px):</translatorcomment>
 --file: Translate_it.ts--
 Punto di riferimento
 Copia gli oggetti nel blocco note con un punto di riferimento</translatorcomment>
-        <translation>Punto di riferimento</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -2543,7 +2543,7 @@ Copia gli oggetti nel blocco note con un punto di riferimento</translatorcomment
 --file: CommandLine_it.ts--
 Vai alla Riga di Comando
 Vai alla &amp;Riga di Comando</translatorcomment>
-        <translation>Comando</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+12"/>
@@ -2557,7 +2557,7 @@ Vai alla &amp;Riga di Comando</translatorcomment>
 --file: Arduino_it_IT.po--
 Documento caricato:
 Versione:</translatorcomment>
-        <translation>: </translation>
+        <translation></translation>
     </message>
     <message>
         <source>History Size:</source>
@@ -2667,7 +2667,7 @@ Versione:</translatorcomment>
 --file: Input_it.ts--
 Coordinate cartesiane assolute
 Coordinate cartesiane assolute:</translatorcomment>
-        <translation>Coordinata cartesiana assoluta</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -2676,7 +2676,7 @@ Coordinate cartesiane assolute:</translatorcomment>
 --file: Input_it.ts--
 Coordinate polari assolute
 Coordinate polari assolute:</translatorcomment>
-        <translation>Coordinata polare assoluta</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -2685,7 +2685,7 @@ Coordinate polari assolute:</translatorcomment>
 --file: Input_it.ts--
 Coordinate cartesiane relative
 Coordinate cartesiane relativo:</translatorcomment>
-        <translation>Coordinata cartesiana relativa</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -2694,7 +2694,7 @@ Coordinate cartesiane relativo:</translatorcomment>
 --file: Input_it.ts--
 Coordinate polari relative
 Coordinate polari relativo:</translatorcomment>
-        <translation>Coordinata polare relativa</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+28"/>
@@ -2981,7 +2981,7 @@ Coordinate polari relativo:</translatorcomment>
 Barra di navigazione
 Navigazione mappa
 Layer ad alta risoluzione possono rallentare la navigazione in QGIS.</translatorcomment>
-        <translation>Navigazione</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+5"/>
@@ -5230,7 +5230,7 @@ Sovrascrivere il file?
 Il file esiste:
 &apos;%1&apos;
 Sovrascrivere?</translatorcomment>
-        <translation>Sovrascrivi file?</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5296,7 +5296,7 @@ Sovrascrivere?</translatorcomment>
         <translatorcomment>--exact match--
 --file: Input_it.ts--
 Punto decimale:</translatorcomment>
-        <translation>Punto decimale:</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6481,7 +6481,7 @@ BUG: Interferes with group castings.</source>
         <translatorcomment>--exact match--
 --file: qgis_it.ts--
 Origine:</translatorcomment>
-        <translation>Origine:</translation>
+        <translation></translation>
     </message>
     <message>
         <source>Relative Zero:</source>
@@ -6498,7 +6498,7 @@ Origine:</translatorcomment>
 --file: it.po--
 Meta griglia:
 &amp;Meta griglia:</translatorcomment>
-        <translation>Griglia:</translation>
+        <translation></translation>
     </message>
     <message>
         <source>Meta Grid:</source>
@@ -6701,7 +6701,7 @@ Meta griglia:
         <translatorcomment>--exact match--
 --file: DefaultNavigation_it.ts--
 Visualizzazione grafica</translatorcomment>
-        <translation>Visualizzazione grafica</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -7151,7 +7151,7 @@ Visualizzazione grafica</translatorcomment>
 --file: LineAngle_it.ts--
 &amp;Angolo
 &amp;Angolo fra due linee</translatorcomment>
-        <translation>&amp;Angolo</translation>
+        <translation></translation>
     </message>
     <message>
         <source>Angle</source>
@@ -7324,7 +7324,7 @@ Visualizzazione grafica</translatorcomment>
         <source>Polygon area:</source>
         <translatorcomment>--ignored colon--
 --file: qgis_it.ts--</translatorcomment>
-        <translation>Area poligonale:</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7939,7 +7939,7 @@ Visualizzazione grafica</translatorcomment>
         <translatorcomment>--exact match--
 --file: Insert_it.ts--
 &amp;Inserisci Blocco</translatorcomment>
-        <translation>&amp;Inserisci blocco</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -7987,7 +7987,7 @@ Visualizzazione grafica</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_it.ts--
 Proiezione &amp;Isometrica</translatorcomment>
-        <translation>Proiezione &amp;isometrica</translation>
+        <translation></translation>
     </message>
     <message>
         <source>Isometric Projection</source>
@@ -9761,7 +9761,7 @@ mostrati nei risultati di ricerca:</translation>
         <source>&amp;Lock Relative Zero</source>
         <translatorcomment>--google--
 (S-)&amp;Blocca Zero Relativo</translatorcomment>
-        <translation>&amp;Bloccare lo zero relativo</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -9828,7 +9828,7 @@ mostrati nei risultati di ricerca:</translation>
         <source>First point of symmetry axis</source>
         <translatorcomment>--google--
 Primo punto per l&apos;asse dello specchio</translatorcomment>
-        <translation>Primo punto dell&apos;asse di simmetria</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+7"/>
@@ -10891,6 +10891,121 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
         <translation type="vanished">Rompi segmento</translation>
     </message>
     <message>
+        <source>Remove line break segment</source>
+        <translation type="vanished">Rimuovere il segmento all&apos;interruzione della linea</translation>
+    </message>
+    <message>
+        <source>Remove the line segment between the break symbol</source>
+        <translation type="vanished">Rimuovere il segmento di linea tra il simbolo di interruzione</translation>
+    </message>
+    <message>
+        <source>Remove Segment</source>
+        <translation type="vanished">Elimina segmento</translation>
+    </message>
+    <message>
+        <source>Inherit entity properties</source>
+        <translation type="vanished">Ereditare le proprietà delle entità</translation>
+    </message>
+    <message>
+        <source>Inherit all properties from the chosen entity</source>
+        <translation type="vanished">Eredita tutte le proprietà dall&apos;entità scelta</translation>
+    </message>
+    <message>
+        <source>Inherit</source>
+        <translation type="vanished">Eredita</translation>
+    </message>
+    <message>
+        <source>Peak ratio</source>
+        <translation type="vanished">Rapporto di picco</translation>
+    </message>
+    <message>
+        <source>The ratio of the peak height to the break width</source>
+        <translation type="vanished">Il rapporto tra l&apos;altezza del picco e la larghezza della rottura</translation>
+    </message>
+    <message>
+        <source>Peak Ratio:</source>
+        <translation type="vanished">Rapporto di picco:</translation>
+    </message>
+    <message>
+        <source>First/Last segment inclined</source>
+        <translation type="vanished">Primo/ultimo segmento inclinato</translation>
+    </message>
+    <message>
+        <source>The first and last segment of the break symbol is inclined</source>
+        <translation type="vanished">Il primo e l&apos;ultimo segmento del simbolo di rottura sono inclinati</translation>
+    </message>
+    <message>
+        <source>First/Last segment vertical</source>
+        <translation type="vanished">Primo/ultimo segmento verticale</translation>
+    </message>
+    <message>
+        <source>The first and last segment of the break symbol is vertical</source>
+        <translation type="vanished">Il primo e l&apos;ultimo segmento del simbolo di rottura sono verticali</translation>
+    </message>
+    <message>
+        <source>&amp;PolyLine break symbol from 2 points</source>
+        <translation type="vanished">&amp;Polilinea simbolo di rottura da 2 punti</translation>
+    </message>
+    <message>
+        <source>Draw a polyline break symbol from 2 points</source>
+        <translation type="vanished">Disegna un simbolo di interruzione di polilinea da 2 punti</translation>
+    </message>
+</context>
+<context>
+    <name>Polyline</name>
+    <message>
+        <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
+        <source>Polyline Tools</source>
+        <translation>Strumenti polilinea</translation>
+    </message>
+    <message>
+        <source>Show polyline tools</source>
+        <translation type="vanished">Mostra strumenti polilinea</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>&amp;Polyline</source>
+        <translation>&amp;Polilinea</translation>
+    </message>
+</context>
+<context>
+    <name>PolylineBreakSymbol</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
+        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
+        <translation>Scegliere linea, arco, cerchio, ellisse, spline o polilinea per spezzare</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Choose line, arc, circle or ellipse to break up</source>
+        <translation>Scegliere linea, arco, cerchio o ellisse per spezzare</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Pick the first point</source>
+        <translation>Scegliere il primo punto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pick the first break point</source>
+        <translation>Scegliere il primo punto di rottura</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Pick the second point</source>
+        <translation>Scegliere il secondo punto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pick the second break point</source>
+        <translation>Scegliere il secondo punto di rottura</translation>
+    </message>
+    <message>
+        <location line="+170"/>
+        <source>Break Out Segment</source>
+        <translation>Rompere il segmento</translation>
+    </message>
+    <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
         <source>Remove line break segment</source>
         <translation>Rimuovere il segmento all&apos;interruzione della linea</translation>
@@ -10940,87 +11055,32 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
     <message>
         <location line="+78"/>
         <source>First/Last segment inclined</source>
-        <translation type="unfinished"></translation>
+        <translation>Primo/ultimo segmento inclinato</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>The first and last segment of the break symbol is inclined</source>
-        <translation type="unfinished"></translation>
+        <source>The first and last segment of the break symbol are inclined</source>
+        <translation>Il primo e l&apos;ultimo segmento del simbolo di rottura sono inclinati</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>First/Last segment vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>Primo/ultimo segmento verticale</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>The first and last segment of the break symbol is vertical</source>
-        <translation type="unfinished"></translation>
+        <source>The first and last segment of the break symbol are vertical</source>
+        <translation>Il primo e l&apos;ultimo segmento del simbolo di rottura sono verticali</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
-        <source>&amp;PolyLine break symbol from 2 points</source>
-        <translation type="unfinished"></translation>
+        <source>&amp;Polyline break symbol from 2 points</source>
+        <translation>&amp;Polilinea simbolo di rottura da 2 punti</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw a polyline break symbol from 2 points</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>Polyline</name>
-    <message>
-        <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
-        <source>Polyline Tools</source>
-        <translation>Strumenti polilinea</translation>
-    </message>
-    <message>
-        <source>Show polyline tools</source>
-        <translation type="vanished">Mostra strumenti polilinea</translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>&amp;Polyline</source>
-        <translation>&amp;Polilinea</translation>
-    </message>
-</context>
-<context>
-    <name>PolylineBreakSymbol</name>
-    <message>
-        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
-        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation type="unfinished">Scegli linea, arco, cerchio, ellisse, spline o polilinea</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation type="unfinished">Scegliere linea, arco, cerchio o ellisse</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Pick the first point</source>
-        <translation type="unfinished">Scegliere il primo punto</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Pick the first break point</source>
-        <translation type="unfinished">Scegliere il primo punto di rottura</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Pick the second point</source>
-        <translation type="unfinished">Scegliere il secondo punto</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Pick the second break point</source>
-        <translation type="unfinished">Scegliere il secondo punto di rottura</translation>
-    </message>
-    <message>
-        <location line="+170"/>
-        <source>Break Out Segment</source>
-        <translation type="unfinished">Rompi segmento</translation>
+        <translation>Disegna un simbolo di interruzione di polilinea da 2 punti</translation>
     </message>
 </context>
 <context>
@@ -11343,7 +11403,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
 --file: Arduino_it_IT.po--
 Documento caricato:
 Versione:</translatorcomment>
-        <translation>:</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+151"/>
@@ -11351,7 +11411,7 @@ Versione:</translatorcomment>
         <translatorcomment>--ignored case--
 --file: photivo_it.ts--
 Nessuna selezione</translatorcomment>
-        <translation>Nessuna selezione</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+20"/>
@@ -11438,7 +11498,7 @@ Nessuna selezione</translatorcomment>
         <source>Selection:</source>
         <translatorcomment>--ignored colon--
 --file: it3.po--</translatorcomment>
-        <translation>Selezione:</translation>
+        <translation></translation>
     </message>
     <message>
         <source>General</source>
@@ -11682,7 +11742,7 @@ Nessuna selezione</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Limitazione &amp;Orizzontale</translatorcomment>
-        <translation>Limita e &amp;orizzontalmente</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -11701,7 +11761,7 @@ Limitazione &amp;Orizzontale</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Limitazione &amp;Ortogonale</translatorcomment>
-        <translation>Limitare e &amp;ortogonalmente</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -11712,7 +11772,7 @@ Limitazione &amp;Ortogonale</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Limitazione &amp;Verticale</translatorcomment>
-        <translation>Limita e &amp;verticalmente</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -11742,7 +11802,7 @@ Limitazione &amp;Verticale</translatorcomment>
 Aggancia ai punti centrali
 Specificare il centro:
 Specificare il centro</translatorcomment>
-        <translation>Punto centrale</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11756,7 +11816,7 @@ Specificare il centro</translatorcomment>
 --file: IsoProject_it.ts--
 Punto finale
 Obiettivo punto</translatorcomment>
-        <translation>Punto obiettivo</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
@@ -11952,7 +12012,7 @@ Obiettivo punto</translatorcomment>
         <translatorcomment>--exact match--
 --file: Mirror_it.ts--
 Usa livello e gli &amp;attributi corrente</translatorcomment>
-        <translation>Utilizzare il livello corrente e gli &amp;attributi</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -11968,7 +12028,7 @@ Usa livello e gli &amp;attributi corrente</translatorcomment>
         <translatorcomment>--exact match--
 --file: Bevel_it.ts--
 Prima entità non può essere tagliato.</translatorcomment>
-        <translation>Prima entità non può essere tagliato.</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+11"/>
@@ -11976,7 +12036,7 @@ Prima entità non può essere tagliato.</translatorcomment>
         <translatorcomment>--exact match--
 --file: Bevel_it.ts--
 Seconda entità non può essere tagliata.</translatorcomment>
-        <translation>Seconda entità non può essere tagliata.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
@@ -12291,7 +12351,7 @@ Seconda entità non può essere tagliata.</translatorcomment>
 --file: IsoProject_it.ts--
 Punto finale
 Obiettivo punto</translatorcomment>
-        <translation>Punto obiettivo</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -12464,7 +12524,7 @@ Obiettivo punto</translatorcomment>
         <source>Selection Tools</source>
         <translatorcomment>--google--
 Mostra menù &quot;Seleziona&quot;</translatorcomment>
-        <translation>Strumenti di selezione</translation>
+        <translation></translation>
     </message>
     <message>
         <source>Show selection tools</source>
@@ -12602,7 +12662,7 @@ Mostra menù &quot;Seleziona&quot;</translatorcomment>
         <translatorcomment>--ignored colon--
 --file: qgis_it.ts--
 Modo colore:</translatorcomment>
-        <translation>Modalità:</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12668,7 +12728,7 @@ Modo colore:</translatorcomment>
 --file: SelectContour_it.ts--
 Modo colore:
 Modalità:</translatorcomment>
-        <translation>Modalità:</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12676,7 +12736,7 @@ Modalità:</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
 Sostituire la selezione corrente</translatorcomment>
-        <translation>Sostituire la selezione corrente</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -12684,7 +12744,7 @@ Sostituire la selezione corrente</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
 Aggiungere alla selezione corrente</translatorcomment>
-        <translation>Aggiungere alla selezione corrente</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+20"/>
@@ -12692,7 +12752,7 @@ Aggiungere alla selezione corrente</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
 Sottrai dalla selezione corrente</translatorcomment>
-        <translation>Sottrai dalla selezione corrente</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+20"/>
@@ -12700,7 +12760,7 @@ Sottrai dalla selezione corrente</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
 Interseca con la selezione corrente</translatorcomment>
-        <translation>Interseca con la selezione corrente</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -12821,7 +12881,7 @@ Interseca con la selezione corrente</translatorcomment>
 --file: SelectContour_it.ts--
 Modo colore:
 Modalità:</translatorcomment>
-        <translation>Modalità:</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12829,7 +12889,7 @@ Modalità:</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
 Sostituire la selezione corrente</translatorcomment>
-        <translation>Sostituire la selezione corrente</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -12837,7 +12897,7 @@ Sostituire la selezione corrente</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
 Aggiungere alla selezione corrente</translatorcomment>
-        <translation>Aggiungere alla selezione corrente</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+20"/>
@@ -12845,7 +12905,7 @@ Aggiungere alla selezione corrente</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
 Sottrai dalla selezione corrente</translatorcomment>
-        <translation>Sottrai dalla selezione corrente</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+20"/>
@@ -12853,7 +12913,7 @@ Sottrai dalla selezione corrente</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_it.ts--
 Interseca con la selezione corrente</translatorcomment>
-        <translation>Interseca con la selezione corrente</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+27"/>
@@ -13592,7 +13652,7 @@ Interseca con la selezione corrente</translatorcomment>
 &amp;Distanza da Punto a Punto
 &amp;Distanza da Oggetto a Punto
 &amp;Distanza dalla Fine</translatorcomment>
-        <translation>&amp;Distanza</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
@@ -13971,7 +14031,7 @@ Interseca con la selezione corrente</translatorcomment>
 --file: IsoProject_it.ts--
 Punto finale
 Obiettivo punto</translatorcomment>
-        <translation>Punto obiettivo</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+141"/>
@@ -14013,7 +14073,7 @@ Obiettivo punto</translatorcomment>
 --file: SvgExportAs_it.ts--
 File SVG (*.svg)
 File SVG</translatorcomment>
-        <translation>File SVG</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14023,7 +14083,7 @@ File SVG</translatorcomment>
 Tutti i file(*.*)
 File locale
 Tutti i file</translatorcomment>
-        <translation>Tutti i file</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportInit.js" line="+2"/>
@@ -14800,7 +14860,7 @@ Tutti i file</translatorcomment>
 --file: IsoProject_it.ts--
 Punto finale
 Obiettivo punto</translatorcomment>
-        <translation>Punto obiettivo</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateInit.js" line="+2"/>
@@ -15447,7 +15507,7 @@ Obiettivo punto</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcad_it.ts--
 Visita il &amp;sito web</translatorcomment>
-        <translation>Visita il sito &amp;web</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -15907,7 +15967,7 @@ Visita il &amp;sito web</translatorcomment>
         <translatorcomment>--google--
 Scegliere il riferimento di blocco
 Modificare un blocco sulla base di un riferimento di blocco scelto</translatorcomment>
-        <translation>Riferimento di blocco</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -16180,7 +16240,7 @@ Modificare un blocco sulla base di un riferimento di blocco scelto</translatorco
         <source>Solids</source>
         <translatorcomment>--google--
 in linee, solidi e testi</translatorcomment>
-        <translation>Solidi</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>

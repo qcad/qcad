@@ -402,7 +402,7 @@ para aplicar los cambios.</translation>
         <location filename="../scripts/Widgets/PropertyEditor/AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Añadir propiedad personalizada</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+8"/>
@@ -411,7 +411,7 @@ para aplicar los cambios.</translation>
 --file: es.po--
 Nombre del Bloque:
 Nombre de capa:</translatorcomment>
-        <translation>Nombre:</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1211,25 +1211,25 @@ Do you wish to recover it?</source>
         <location filename="../scripts/Modify/Bevel/Bevel.js" line="+55"/>
         <source>The two entities cannot be bevelled.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Las dos entidades no pueden ser biseladas.</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Primera entidad no se pueden recortar.</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Segunda entidad no se pueden recortar.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Bevel/BevelInit.js" line="+2"/>
         <source>&amp;Chamfer / Bevel</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>&amp;Chaflán / bisel</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -1570,7 +1570,7 @@ Do you wish to recover it?</source>
         <location filename="../scripts/Modify/BreakOut/BreakOutInit.js" line="+2"/>
         <source>&amp;Break out Segment</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>&amp;Rompe un segmento</translation>
+        <translation></translation>
     </message>
     <message>
         <source>Choose line, arc, circle or ellipse to auto trim</source>
@@ -1690,7 +1690,7 @@ Do you wish to recover it?</source>
 --file: es.po--
 Portable Pixel Map
 X Pixel Map</translatorcomment>
-        <translation>Pixel</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1700,7 +1700,7 @@ X Pixel Map</translatorcomment>
 Espacio mínimo en la cuadrícula (pxl):
 Espacio mínimo en la cuadrícula (pxl)
 Fuji PXG</translatorcomment>
-        <translation>px</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1712,7 +1712,7 @@ Fuji PXG</translatorcomment>
         <source>Widgets</source>
         <translatorcomment>--google--
 Seleccionador de varios métodos de entrada que usa el menú contextual de los elementos de texto</translatorcomment>
-        <translation>Widgets</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2526,7 +2526,7 @@ Seleccionador de varios métodos de entrada que usa el menú contextual de los e
 --file: sketch_es.po--
 Pasar a Línea de Comandos
 Pasar a Línea de &amp;Comandos</translatorcomment>
-        <translation>Comando</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+12"/>
@@ -2540,12 +2540,7 @@ Pasar a Línea de &amp;Comandos</translatorcomment>
 --file: LibraryBrowser_es.ts--
 Documento cargado:
 Versión:</translatorcomment>
-        <translation>: </translation>
-    </message>
-    <message>
-        <source>History Size:</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Tamaño de la historia:</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
@@ -2651,7 +2646,7 @@ Versión:</translatorcomment>
 --file: Input_es.ts--
 Coordendas cartesianas absolutas
 Coordenadas cartesianas absoluta:</translatorcomment>
-        <translation>Coordenada cartesiana absoluta</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -2660,7 +2655,7 @@ Coordenadas cartesianas absoluta:</translatorcomment>
 --file: Input_es.ts--
 Coordenadas polares absolutas
 Coordenadas polares absoluta:</translatorcomment>
-        <translation>Coordenadas polares absolutas</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -2669,7 +2664,7 @@ Coordenadas polares absoluta:</translatorcomment>
 --file: Input_es.ts--
 Coordenadas cartesianas relativas
 Coordenadas cartesianas relativa:</translatorcomment>
-        <translation>Coordenada cartesiana relativa</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+21"/>
@@ -2678,7 +2673,7 @@ Coordenadas cartesianas relativa:</translatorcomment>
 --file: Input_es.ts--
 Coordenadas polares relativas
 Coordenadas polares relativa:</translatorcomment>
-        <translation>Coordenada polar relativa</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+28"/>
@@ -2884,13 +2879,13 @@ Coordenadas polares relativa:</translatorcomment>
         <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Seleccionar entidad o región</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Move entity or reference</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Mover entidad o referencia</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+11"/>
@@ -2943,7 +2938,7 @@ Coordenadas polares relativa:</translatorcomment>
         <location filename="../scripts/Navigation/DefaultNavigation/DefaultNavigation.js" line="+47"/>
         <source>Graphics View</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Vista de gráficos</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -2952,19 +2947,19 @@ Coordenadas polares relativa:</translatorcomment>
 Navegación de mapas
 Las capas ráster de elevada resolución pueden ralentizar la navegación en QGIS.
 Las capas ráster de elevada resolución pueden ralentizar la navegación en QGIS</translatorcomment>
-        <translation>Navegación</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Zoom (Wheel Mouse)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Zoom (rueda del mouse)</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Scroll (Trackpad, Multi-Touch Mouse)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desplazamiento (Trackpad, mouse multitáctil)</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -2986,7 +2981,7 @@ Las capas ráster de elevada resolución pueden ralentizar la navegación en QGI
         <location line="+4"/>
         <source>Deselect all entities</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Deseleccionar todas las entidades</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -3033,19 +3028,19 @@ Las capas ráster de elevada resolución pueden ralentizar la navegación en QGI
         <location line="+8"/>
         <source>Arcs and Circles</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Arcos y círculos</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into line segments (fixed length)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>en segmentos de línea (longitud fija)</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+5"/>
         <source>into line segments (fixed angle)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>en segmentos de línea (ángulo fijo)</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+11"/>
@@ -3056,14 +3051,14 @@ Las capas ráster de elevada resolución pueden ralentizar la navegación en QGI
         <location line="+8"/>
         <source>into polyline with arc segments</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>en polilínea con segmentos de arco</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+16"/>
         <source>into polyline with line segments</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>en polilínea con segmentos de línea</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="-8"/>
@@ -3079,7 +3074,7 @@ Las capas ráster de elevada resolución pueden ralentizar la navegación en QGI
         <location line="+8"/>
         <source>into lines, solids and texts</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>en líneas, sólidos y textos</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3088,13 +3083,13 @@ Las capas ráster de elevada resolución pueden ralentizar la navegación en QGI
 Dibujar sombreados y rellenos
 Dibuja texturas y rellenos sólidos
 Sombreado/Relleno</translatorcomment>
-        <translation>Sombreados</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into lines</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>en lineas</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3105,7 +3100,7 @@ Sombreado/Relleno</translatorcomment>
         <location line="+8"/>
         <source>into entities</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>en entidades</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/Dialog.ui" line="+94"/>
@@ -3751,7 +3746,7 @@ ya está en la lista.</translation>
         <location line="+2"/>
         <source>Folder not added</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Carpeta no agregada</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -3812,7 +3807,7 @@ ya está en la lista.</translation>
         <location filename="../scripts/View/DraftMode/DraftMode.js" line="+86"/>
         <source>&amp;Draft Mode</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>&amp;Modo borrador</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -4172,7 +4167,7 @@ ya está en la lista.</translation>
         <location line="+28"/>
         <source>Main Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Herramientas principales</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+25"/>
@@ -4188,7 +4183,7 @@ ya está en la lista.</translation>
         <location line="+3"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>La entidad está en una capa bloqueada.</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+225"/>
@@ -4199,13 +4194,13 @@ ya está en la lista.</translation>
         <location line="+64"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>La entidad no es una referencia de bloque.</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>La entidad no es una línea o arco.</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4216,7 +4211,7 @@ ya está en la lista.</translation>
         <location line="+4"/>
         <source>Entity is not a line.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>La entidad no es una línea.</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4227,19 +4222,19 @@ ya está en la lista.</translation>
         <location line="+4"/>
         <source>Entity is not an arc or circle.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>La entidad no es un arco o círculo.</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>La entidad no es una línea, arco o círculo.</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc, circle or ellipse.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>La entidad no es un arco, círculo o elipse.</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4270,7 +4265,7 @@ ya está en la lista.</translation>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>La entidad no es una polilínea.</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4399,7 +4394,7 @@ ya está en la lista.</translation>
         <location filename="../scripts/Modify/EditText/EditText.js" line="+61"/>
         <source>Choose text</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Elegir texto</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditText/EditTextInit.js" line="+2"/>
@@ -5185,7 +5180,7 @@ ya está en la lista.</translation>
         <location filename="../scripts/Help/FAQ/FAQInit.js" line="+2"/>
         <source>FA&amp;Qs (online)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>&amp;Preguntas frecuentes (en línea)</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -5226,7 +5221,7 @@ ya está en la lista.</translation>
 El archivo ya existe:
 &apos;%1&apos;
 Sobrescribir?</translatorcomment>
-        <translation>¿Sobrescribir archivo?</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5271,7 +5266,7 @@ Sobrescribir?</translatorcomment>
         <location line="+1"/>
         <source>Please choose the settings used for new drawings. All these settings can be changed later in the Preference Dialog.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Por favor, elija la configuración utilizada para los nuevos dibujos. Todos estos ajustes se pueden cambiar más tarde en el diálogo de preferencias.</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+14"/>
@@ -5282,7 +5277,7 @@ Sobrescribir?</translatorcomment>
         <location line="+1"/>
         <source>Default Paper Size:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Tamaño de papel predeterminado:</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5290,7 +5285,7 @@ Sobrescribir?</translatorcomment>
         <translatorcomment>--exact match--
 --file: Input_es.ts--
 Punto decimal:</translatorcomment>
-        <translation>Punto decimal:</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5882,19 +5877,19 @@ BUG: Interferes with group castings.</source>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
         <source>Three: Right</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Tres: derecho</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/21_ThreeLeft.ui" line="+14"/>
         <source>Three: Left</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Tres: izquierda</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/22_ThreeAbove.ui" line="+14"/>
         <source>Three: Above</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Tres: arriba</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.ui" line="+14"/>
@@ -5922,7 +5917,7 @@ BUG: Interferes with group castings.</source>
         <location filename="../scripts/Help/Forum/ForumInit.js" line="+2"/>
         <source>&amp;Forum</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>&amp;Foro</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -6356,7 +6351,7 @@ BUG: Interferes with group castings.</source>
         <source>Crosshairs:</source>
         <translatorcomment>--ignored colon--
 --file: sketch_es.po--</translatorcomment>
-        <translation>Punto de mira:</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+36"/>
@@ -6502,7 +6497,7 @@ BUG: Interferes with group castings.</source>
         <translatorcomment>--exact match--
 --file: sketch_es.po--
 Origen:</translatorcomment>
-        <translation>Origen:</translation>
+        <translation></translation>
     </message>
     <message>
         <source>Reference Point:</source>
@@ -6515,7 +6510,7 @@ Origen:</translatorcomment>
 --file: sketch_es.po--
 Meta cuadrícula
 &amp;Meta cuadrícula</translatorcomment>
-        <translation>Cuadrícula:</translation>
+        <translation></translation>
     </message>
     <message>
         <source>Meta Grid:</source>
@@ -6524,21 +6519,6 @@ Meta cuadrícula
 </context>
 <context>
     <name>GraphicsViewFonts</name>
-    <message>
-        <source>Ruler Font:</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Fuente de la regla:</translation>
-    </message>
-    <message>
-        <source>Snap Label Font:</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Fuente de la etiqueta para forzcursor:</translation>
-    </message>
-    <message>
-        <source>Info Label Font:</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Fuente de etiqueta de información:</translation>
-    </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
         <source>Ruler font:</source>
@@ -6561,13 +6541,13 @@ Meta cuadrícula
         <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+332"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Rueda del mouse / deslizar dos dedos:</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="-231"/>
         <source>Enable pan gesture</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Habilitar gesto panorámico</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+7"/>
@@ -6667,7 +6647,7 @@ Meta cuadrícula
         <translatorcomment>--exact match--
 --file: DefaultNavigation_es.ts--
 Ver gráficos</translatorcomment>
-        <translation>Vista de gráficos</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -7396,7 +7376,7 @@ Ver gráficos</translatorcomment>
         <translatorcomment>--exact match--
 --file: es.po--
 Delta X:</translatorcomment>
-        <translation>Delta X:</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7404,7 +7384,7 @@ Delta X:</translatorcomment>
         <translatorcomment>--exact match--
 --file: es.po--
 Delta Y:</translatorcomment>
-        <translation>Delta Y:</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7415,7 +7395,7 @@ Delta Y:</translatorcomment>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePPInit.js" line="+2"/>
         <source>Distance &amp;Point to Point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Distancia &amp;punto a punto</translation>
+        <translation></translation>
     </message>
     <message>
         <source>Distance Point to Point</source>
@@ -7506,7 +7486,7 @@ Delta Y:</translatorcomment>
         <location filename="../scripts/Information/Information.js" line="+334"/>
         <source>Information Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Herramientas de información</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+27"/>
@@ -7545,26 +7525,6 @@ Delta Y:</translatorcomment>
     <message>
         <source>Dot</source>
         <translation type="obsolete">Puntos</translation>
-    </message>
-    <message>
-        <source>Decimal Point:</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Punto decimal:</translation>
-    </message>
-    <message>
-        <source>Cartesian Coordinate Separator:</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Separador de coordenadas cartesianas:</translation>
-    </message>
-    <message>
-        <source>Polar Coordinate Separator:</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Separador de coordenadas polares:</translation>
-    </message>
-    <message>
-        <source>Relative Coordinate Prefix:</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Prefijo de coordenadas relativas:</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/PreferencesPage.ui" line="+19"/>
@@ -7610,26 +7570,6 @@ Delta Y:</translatorcomment>
         <location line="+21"/>
         <source>Relative polar coordinate:</source>
         <translation>Coordenada polar relativa:</translation>
-    </message>
-    <message>
-        <source>Absolute Cartesian Coordinate:</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Coordenada cartesiana absoluta:</translation>
-    </message>
-    <message>
-        <source>Absolute Polar Coordinate:</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Coordenadas polares absolutas:</translation>
-    </message>
-    <message>
-        <source>Relative Cartesian Coordinate:</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Coordenada cartesiana relativa:</translation>
-    </message>
-    <message>
-        <source>Relative Polar Coordinate:</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Coordenada polar relativa:</translation>
     </message>
 </context>
 <context>
@@ -7926,7 +7866,7 @@ Delta Y:</translatorcomment>
         <location line="+4"/>
         <source>Invert the current selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Invertir la selección actual</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -7945,7 +7885,7 @@ Delta Y:</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_es.ts--
 Proyección &amp;Isométrica</translatorcomment>
-        <translation>Proyección &amp;isométrica</translation>
+        <translation></translation>
     </message>
     <message>
         <source>Isometric Projection</source>
@@ -8124,11 +8064,6 @@ Proyección &amp;Isométrica</translatorcomment>
         <translation type="obsolete">Idioma</translation>
     </message>
     <message>
-        <source>Language of User Interface:</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Idioma de la interfaz de usuario:</translation>
-    </message>
-    <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui" line="+20"/>
         <source>Language of user interface:</source>
         <translation>Idioma de la interfaz de usuario:</translation>
@@ -8281,14 +8216,14 @@ Proyección &amp;Isométrica</translatorcomment>
         <location line="+29"/>
         <source>Lineweight:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Grosor de la línea:</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Linetype:</source>
         <translatorcomment>--ignored colon--
 --file: LinetypeSettings_es.ts--</translatorcomment>
-        <translation>Tipo de línea:</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
@@ -8305,13 +8240,13 @@ Proyección &amp;Isométrica</translatorcomment>
         <location line="+7"/>
         <source>Layer name is empty.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>El nombre de la capa está vacío.</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Layer already exists.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>La capa ya existe.</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -8436,7 +8371,7 @@ Proyección &amp;Isométrica</translatorcomment>
         <location filename="../scripts/Modify/Lengthen/Lengthen.js" line="+60"/>
         <source>Choose line or arc</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Elija línea o arco</translation>
+        <translation></translation>
     </message>
     <message>
         <source>&amp;Lengthen</source>
@@ -8451,7 +8386,7 @@ Proyección &amp;Isométrica</translatorcomment>
         <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Cantidad para alargar o acortar (negativo)</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
@@ -9719,7 +9654,7 @@ en los resultados de búsqueda:</translation>
         <source>&amp;Lock Relative Zero</source>
         <translatorcomment>--google--
 (Des)bloquear el &amp;Cero relativo</translatorcomment>
-        <translation>&amp;Bloqueo cero relativo</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -9785,13 +9720,13 @@ en los resultados de búsqueda:</translation>
         <location line="+27"/>
         <source>First point of symmetry axis</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Primer punto del eje de simetría</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point of symmetry axis</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Segundo punto del eje de simetría</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
@@ -10026,7 +9961,7 @@ en los resultados de búsqueda:</translation>
         <location filename="../scripts/Modify/Modify.js" line="+99"/>
         <source>Modification Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Herramientas de modificación</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+27"/>
@@ -10045,13 +9980,13 @@ en los resultados de búsqueda:</translation>
         <location line="+17"/>
         <source>Choose first entity</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Elige la primera entidad</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose second entity</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Elige segunda entidad</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10710,7 +10645,7 @@ en los resultados de búsqueda:</translation>
         <location line="+64"/>
         <source>Reset to Defaults</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Restablecer los valores predeterminados</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -10847,6 +10782,121 @@ en los resultados de búsqueda:</translation>
         <translation type="vanished">Rompe un segmento</translation>
     </message>
     <message>
+        <source>Remove line break segment</source>
+        <translation type="vanished">Eliminar el segmento en el rotura de línea</translation>
+    </message>
+    <message>
+        <source>Remove the line segment between the break symbol</source>
+        <translation type="vanished">Eliminar el segmento de línea entre el símbolo de ruptura</translation>
+    </message>
+    <message>
+        <source>Remove Segment</source>
+        <translation type="vanished">Eliminar Segmento</translation>
+    </message>
+    <message>
+        <source>Inherit entity properties</source>
+        <translation type="vanished">Heredar propiedades de la entidad</translation>
+    </message>
+    <message>
+        <source>Inherit all properties from the chosen entity</source>
+        <translation type="vanished">Heredar todas las propiedades de la entidad elegida</translation>
+    </message>
+    <message>
+        <source>Inherit</source>
+        <translation type="vanished">Heredar</translation>
+    </message>
+    <message>
+        <source>Peak ratio</source>
+        <translation type="vanished">Relación de picos</translation>
+    </message>
+    <message>
+        <source>The ratio of the peak height to the break width</source>
+        <translation type="vanished">La relación entre la altura del pico y la anchura de la rotura</translation>
+    </message>
+    <message>
+        <source>Peak Ratio:</source>
+        <translation type="vanished">Relación de picos:</translation>
+    </message>
+    <message>
+        <source>First/Last segment inclined</source>
+        <translation type="vanished">Primer/último segmento inclinado</translation>
+    </message>
+    <message>
+        <source>The first and last segment of the break symbol is inclined</source>
+        <translation type="vanished">El primer y último segmento del símbolo de ruptura está inclinado</translation>
+    </message>
+    <message>
+        <source>First/Last segment vertical</source>
+        <translation type="vanished">Primer/último segmento vertical</translation>
+    </message>
+    <message>
+        <source>The first and last segment of the break symbol is vertical</source>
+        <translation type="vanished">El primer y último segmento del símbolo de ruptura es vertical</translation>
+    </message>
+    <message>
+        <source>&amp;PolyLine break symbol from 2 points</source>
+        <translation type="vanished">&amp;Polylínea símbolo de ruptura de 2 puntos</translation>
+    </message>
+    <message>
+        <source>Draw a polyline break symbol from 2 points</source>
+        <translation type="vanished">Dibujar un símbolo de rotura de polilínea a partir de 2 puntos</translation>
+    </message>
+</context>
+<context>
+    <name>Polyline</name>
+    <message>
+        <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
+        <source>Polyline Tools</source>
+        <translation>Herramientas de polilínea</translation>
+    </message>
+    <message>
+        <source>Show polyline tools</source>
+        <translation type="vanished">Mostrar menú &quot;Polilíneas&quot;</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>&amp;Polyline</source>
+        <translation>&amp;Polilínea</translation>
+    </message>
+</context>
+<context>
+    <name>PolylineBreakSymbol</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
+        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
+        <translation>Elija la línea, el arco, el círculo, la elipse, la spline o la polilínea para dividir</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Choose line, arc, circle or ellipse to break up</source>
+        <translation>Elige la línea, el arco, el círculo o la elipse para romper</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Pick the first point</source>
+        <translation>Elige el primer punto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pick the first break point</source>
+        <translation>Elige el primer punto de ruptura</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Pick the second point</source>
+        <translation>Elige el segundo punto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pick the second break point</source>
+        <translation>Elige el segundo punto de ruptura</translation>
+    </message>
+    <message>
+        <location line="+170"/>
+        <source>Break Out Segment</source>
+        <translation>Desglosar el segmento</translation>
+    </message>
+    <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
         <source>Remove line break segment</source>
         <translation>Eliminar el segmento en el rotura de línea</translation>
@@ -10859,7 +10909,7 @@ en los resultados de búsqueda:</translation>
     <message>
         <location line="+3"/>
         <source>Remove Segment</source>
-        <translation>Eliminar Segmento</translation>
+        <translation>Eliminar segmento</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -10896,87 +10946,32 @@ en los resultados de búsqueda:</translation>
     <message>
         <location line="+78"/>
         <source>First/Last segment inclined</source>
-        <translation type="unfinished"></translation>
+        <translation>Primer/último segmento inclinado</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>The first and last segment of the break symbol is inclined</source>
-        <translation type="unfinished"></translation>
+        <source>The first and last segment of the break symbol are inclined</source>
+        <translation>El primer y último segmento del símbolo de ruptura está inclinado</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>First/Last segment vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>Primer/último segmento vertical</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>The first and last segment of the break symbol is vertical</source>
-        <translation type="unfinished"></translation>
+        <source>The first and last segment of the break symbol are vertical</source>
+        <translation>El primer y último segmento del símbolo de ruptura es vertical</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
-        <source>&amp;PolyLine break symbol from 2 points</source>
-        <translation type="unfinished"></translation>
+        <source>&amp;Polyline break symbol from 2 points</source>
+        <translation>&amp;Polylínea símbolo de ruptura de 2 puntos</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw a polyline break symbol from 2 points</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>Polyline</name>
-    <message>
-        <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
-        <source>Polyline Tools</source>
-        <translation>Herramientas de polilínea</translation>
-    </message>
-    <message>
-        <source>Show polyline tools</source>
-        <translation type="vanished">Mostrar menú &quot;Polilíneas&quot;</translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>&amp;Polyline</source>
-        <translation>&amp;Polilínea</translation>
-    </message>
-</context>
-<context>
-    <name>PolylineBreakSymbol</name>
-    <message>
-        <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
-        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation type="unfinished">Seleccionar línea, arco, círculo, elipse, spline o polilínea</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation type="unfinished">Elija línea, arco, círculo o elipse</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <source>Pick the first point</source>
-        <translation type="unfinished">Elige el primer punto</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Pick the first break point</source>
-        <translation type="unfinished">Elige el primer punto de ruptura</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Pick the second point</source>
-        <translation type="unfinished">Elige el segundo punto</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Pick the second break point</source>
-        <translation type="unfinished">Elige el segundo punto de ruptura</translation>
-    </message>
-    <message>
-        <location line="+170"/>
-        <source>Break Out Segment</source>
-        <translation type="unfinished">Rompe un segmento</translation>
+        <translation>Dibujar un símbolo de rotura de polilínea a partir de 2 puntos</translation>
     </message>
 </context>
 <context>
@@ -11291,7 +11286,7 @@ en los resultados de búsqueda:</translation>
         <location line="+706"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>*VARIA*</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="-1277"/>
@@ -11300,7 +11295,7 @@ en los resultados de búsqueda:</translation>
 --file: artisan_es.ts--
 Documento cargado:
 Versión:</translatorcomment>
-        <translation>:</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+151"/>
@@ -11309,7 +11304,7 @@ Versión:</translatorcomment>
 --file: sketch_es.po--
 Ajusta el lienzo al tamaño de la selección o del dibujo si no hay selección
 Seleccin nula</translatorcomment>
-        <translation>Sin selección</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+20"/>
@@ -11333,7 +11328,7 @@ Seleccin nula</translatorcomment>
 --file: qgis_es.ts--
 Índice
 Valor indexado</translatorcomment>
-        <translation>Índice</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+79"/>
@@ -11349,7 +11344,7 @@ Mosaico &amp;horizontal
 Mosaico horizontal
 ¿Realmente quiere cerrar el fichero
 %1?</translatorcomment>
-        <translation>Todos</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+69"/>
@@ -11379,7 +11374,7 @@ Mosaico horizontal
         <location line="+145"/>
         <source>Use auto measurement</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Usar medición automática</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+39"/>
@@ -11403,7 +11398,7 @@ Mosaico horizontal
         <source>Selection:</source>
         <translatorcomment>--ignored colon--
 --file: grassmods_es.po--</translatorcomment>
-        <translation>Selección:</translation>
+        <translation></translation>
     </message>
     <message>
         <source>General</source>
@@ -11434,7 +11429,7 @@ Mosaico horizontal
         <source>Handle:</source>
         <translatorcomment>--ignored colon--
 --file: es.po--</translatorcomment>
-        <translation>Handle:</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+17"/>
@@ -11586,7 +11581,7 @@ Mosaico horizontal
         <location filename="../scripts/Help/ReportBug/ReportBugInit.js" line="+2"/>
         <source>Report &amp;Bug</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Reportar un &amp;error</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -11676,7 +11671,7 @@ Mosaico horizontal
         <location filename="../scripts/Modify/Reverse/ReverseInit.js" line="+2"/>
         <source>&amp;Reverse</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>&amp;Invertir</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -11698,7 +11693,7 @@ Mosaico horizontal
 Forzar al centro
 Arremolinar los mapas de bits seleccionados alrededor de un punto central.
 Arremolinar los mapas de bits seleccionados alrededor de un punto central</translatorcomment>
-        <translation>Punto central</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11712,7 +11707,7 @@ Arremolinar los mapas de bits seleccionados alrededor de un punto central</trans
 --file: IsoProject_es.ts--
 Especifique punto de destino
 Punto objetivo</translatorcomment>
-        <translation>Punto objetivo</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
@@ -11756,13 +11751,13 @@ Punto objetivo</translatorcomment>
         <location filename="../scripts/Modify/Rotate2/Rotate2.js" line="+67"/>
         <source>Center of primary rotation</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Centro de rotación primaria</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Center of secondary rotation</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Centro de rotación secundaria</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Init.js" line="+2"/>
@@ -11910,7 +11905,7 @@ Punto objetivo</translatorcomment>
         <translatorcomment>--exact match--
 --file: Mirror_es.ts--
 Usar capa y los &amp;atributos actual</translatorcomment>
-        <translation>Usar capa y los &amp;atributos actual</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -11919,7 +11914,7 @@ Usar capa y los &amp;atributos actual</translatorcomment>
         <location filename="../scripts/Modify/Round/Round.js" line="+58"/>
         <source>The two entities cannot be rounded.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Las dos entidades no se pueden redondear.</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+43"/>
@@ -11927,7 +11922,7 @@ Usar capa y los &amp;atributos actual</translatorcomment>
         <translatorcomment>--exact match--
 --file: Bevel_es.ts--
 Primera entidad no se pueden recortar.</translatorcomment>
-        <translation>Primera entidad no se pueden recortar.</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+11"/>
@@ -11935,7 +11930,7 @@ Primera entidad no se pueden recortar.</translatorcomment>
         <translatorcomment>--exact match--
 --file: Bevel_es.ts--
 Segunda entidad no se pueden recortar.</translatorcomment>
-        <translation>Segunda entidad no se pueden recortar.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
@@ -12237,7 +12232,7 @@ Segunda entidad no se pueden recortar.</translatorcomment>
         <location line="+32"/>
         <source>Focus point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Punto de enfoque</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+11"/>
@@ -12251,7 +12246,7 @@ Segunda entidad no se pueden recortar.</translatorcomment>
 --file: IsoProject_es.ts--
 Especifique punto de destino
 Punto objetivo</translatorcomment>
-        <translation>Punto objetivo</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -12420,7 +12415,7 @@ Punto objetivo</translatorcomment>
         <source>Selection Tools</source>
         <translatorcomment>--google--
 Mostrar menú &quot;Selección&quot;</translatorcomment>
-        <translation>Herramientas de seleccion</translation>
+        <translation></translation>
     </message>
     <message>
         <source>Show selection tools</source>
@@ -12529,7 +12524,7 @@ Mostrar menú &quot;Selección&quot;</translatorcomment>
         <location filename="../scripts/Select/SelectContour/SelectContour.js" line="+54"/>
         <source>Choose entity of contour</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Elegir entidad de contorno</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
@@ -12540,7 +12535,7 @@ Mostrar menú &quot;Selección&quot;</translatorcomment>
         <location line="+4"/>
         <source>(De-)Select connected entities</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>(De-)seleccione entidades conectadas</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.ui" line="+17"/>
@@ -12549,31 +12544,31 @@ Mostrar menú &quot;Selección&quot;</translatorcomment>
 --file: es.po--
 Modo de color:
 Modo de búsqueda:</translatorcomment>
-        <translation>Modo:</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Reemplazar la selección actual</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Añadir a la selección actual</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Restar de la selección actual</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Se cruzan con la selección actual</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+27"/>
@@ -12602,13 +12597,13 @@ Modo de búsqueda:</translatorcomment>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>(De-)seleccione entidades intersectadas</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities intersected by a line</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>(De-)seleccione todas las entidades intersectadas por una línea</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.ui" line="+17"/>
@@ -12617,31 +12612,31 @@ Modo de búsqueda:</translatorcomment>
 --file: es.po--
 Modo de color:
 Modo de búsqueda:</translatorcomment>
-        <translation>Modo:</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Reemplazar la selección actual</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Añadir a la selección actual</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Restar de la selección actual</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Se cruzan con la selección actual</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -12737,7 +12732,7 @@ Modo de búsqueda:</translatorcomment>
         <location line="+4"/>
         <source>(De-)Select all entities inside a rectangle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>(De-)seleccione todas las entidades dentro de un rectángulo</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="+9"/>
@@ -12751,7 +12746,7 @@ Modo de búsqueda:</translatorcomment>
 --file: es.po--
 Modo de color:
 Modo:</translatorcomment>
-        <translation>Modo:</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12759,7 +12754,7 @@ Modo:</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_es.ts--
 Reemplazar la selección actual</translatorcomment>
-        <translation>Reemplazar la selección actual</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -12767,7 +12762,7 @@ Reemplazar la selección actual</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_es.ts--
 Añadir a la selección actual</translatorcomment>
-        <translation>Añadir a la selección actual</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+20"/>
@@ -12775,7 +12770,7 @@ Añadir a la selección actual</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_es.ts--
 Restar de la selección actual</translatorcomment>
-        <translation>Restar de la selección actual</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+20"/>
@@ -12783,13 +12778,13 @@ Restar de la selección actual</translatorcomment>
         <translatorcomment>--exact match--
 --file: SelectContour_es.ts--
 Se cruzan con la selección actual</translatorcomment>
-        <translation>Se cruzan con la selección actual</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Cross Selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Selección cruzada</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -12946,7 +12941,7 @@ Se cruzan con la selección actual</translatorcomment>
         <location filename="../scripts/Snap/SetRelativeZero/SetRelativeZeroInit.js" line="+2"/>
         <source>Set &amp;Relative Zero</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Establecer la posición del cero &amp;relativo</translation>
+        <translation></translation>
     </message>
     <message>
         <source>Set Relative Zero</source>
@@ -13004,13 +12999,13 @@ Se cruzan con la selección actual</translatorcomment>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Al menos dos puntos son idénticos.</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="-22"/>
         <source>No circle possible.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>No hay círculo posible.</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+29"/>
@@ -13021,13 +13016,13 @@ Se cruzan con la selección actual</translatorcomment>
         <location line="+19"/>
         <source>Invalid number of segments: %1.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Número de segmentos no válido: %1.</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Invalid ellipse major / minor: %1 / %2.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Elipse inválida mayor / menor: %1 / %2.</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -13321,7 +13316,7 @@ Se cruzan con la selección actual</translatorcomment>
         <location filename="../scripts/Layer/ShowActiveLayer/ShowActiveLayerInit.js" line="+2"/>
         <source>Show &amp;Only Active</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Mostrar &amp;solo activo</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -13354,7 +13349,7 @@ Se cruzan con la selección actual</translatorcomment>
         <location filename="../scripts/Help/ShowReadme/ShowReadmeInit.js" line="+2"/>
         <source>Show &amp;Readme</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Mostrar &amp;Readme</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadme.js" line="+46"/>
@@ -13376,7 +13371,7 @@ Se cruzan con la selección actual</translatorcomment>
         <location filename="../scripts/Snap/Snap.js" line="+57"/>
         <source>Snap Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Herramientas de forzcursor</translation>
+        <translation></translation>
     </message>
     <message>
         <source>Show snap tools</source>
@@ -13440,7 +13435,7 @@ Se cruzan con la selección actual</translatorcomment>
         <location line="+13"/>
         <source>Tick for Relative Coordinate</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Marque para coordenadas relativas</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+3"/>
@@ -13455,7 +13450,7 @@ Se cruzan con la selección actual</translatorcomment>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.js" line="+87"/>
         <source>Set coordinate</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Establecer coordenada</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
@@ -13489,7 +13484,7 @@ Se cruzan con la selección actual</translatorcomment>
         <location line="+13"/>
         <source>Tick for Relative Coordinate</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Marque para coordenadas relativas</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+3"/>
@@ -13511,13 +13506,13 @@ Se cruzan con la selección actual</translatorcomment>
 &amp;Distancia de punto a punto
 &amp;Distancia de entidad a punto
 &amp;Distancia desde el extremo</translatorcomment>
-        <translation>&amp;Distancia</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap distance:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Distancia para el forzcursor:</translation>
+        <translation></translation>
     </message>
     <message>
         <source>Distance</source>
@@ -13613,7 +13608,7 @@ Se cruzan con la selección actual</translatorcomment>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>&amp;Intersección manualmente</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js" line="+47"/>
@@ -13655,7 +13650,7 @@ Se cruzan con la selección actual</translatorcomment>
         <location filename="../scripts/Snap/SnapMiddleManual/SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>&amp;Medio manualmente</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -13672,7 +13667,7 @@ Se cruzan con la selección actual</translatorcomment>
         <location filename="../scripts/Snap/SnapPerpendicular/SnapPerpendicularInit.js" line="+2"/>
         <source>&amp;Perpendicular</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>&amp;Perpendicularmente</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -13889,7 +13884,7 @@ Se cruzan con la selección actual</translatorcomment>
 --file: IsoProject_es.ts--
 Especifique punto de destino
 Punto objetivo</translatorcomment>
-        <translation>Punto objetivo</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+141"/>
@@ -13923,7 +13918,7 @@ Punto objetivo</translatorcomment>
         <location line="+33"/>
         <source>Import SVG</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Importar SVG</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13939,7 +13934,7 @@ Punto objetivo</translatorcomment>
         <location filename="../scripts/File/SvgImport/SvgImportInit.js" line="+2"/>
         <source>SVG &amp;Import...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>SVG &amp;importación...</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImport.js" line="-34"/>
@@ -14194,7 +14189,7 @@ Punto objetivo</translatorcomment>
         <location line="+4"/>
         <source>&amp;Special Characters...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>&amp;Caracteres especiales...</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+310"/>
@@ -14686,7 +14681,7 @@ Punto objetivo</translatorcomment>
         <location filename="../scripts/Modify/Transform.js" line="+47"/>
         <source>This tool requires a selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Esta herramienta requiere una selección</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -14713,7 +14708,7 @@ Punto objetivo</translatorcomment>
 --file: IsoProject_es.ts--
 Especifique punto de destino
 Punto objetivo</translatorcomment>
-        <translation>Punto objetivo</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateInit.js" line="+2"/>
@@ -14724,7 +14719,7 @@ Punto objetivo</translatorcomment>
         <location line="+10"/>
         <source>Move or copy entities once or multiple times</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Mover o copiar entidades una o varias veces</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/PreferencesPage.ui" line="+17"/>
@@ -14887,19 +14882,19 @@ Punto objetivo</translatorcomment>
         <location filename="../scripts/Modify/Trim/Trim.js" line="+77"/>
         <source>Choose limiting entity</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Elegir entidad limitante</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose entity to trim</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Elegir entidad para recortar</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Las dos entidades no se cruzan, o actualmente no son compatibles con el recorte.</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+74"/>
@@ -15333,7 +15328,7 @@ Punto objetivo</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcad_es.ts--
 Visita el sitio &amp;Web</translatorcomment>
-        <translation>Visita la página &amp;web</translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -15437,13 +15432,13 @@ Visita el sitio &amp;Web</translatorcomment>
         <location line="+1"/>
         <source>Stacked text</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Texto apilado</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Measured value</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Valor medido</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+137"/>
@@ -15622,7 +15617,7 @@ Visita el sitio &amp;Web</translatorcomment>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelection.js" line="+31"/>
         <source>No selection found.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>No se ha encontrado ninguna selección.</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelectionInit.js" line="+2"/>
@@ -15767,19 +15762,19 @@ Visita el sitio &amp;Web</translatorcomment>
         <location line="+2"/>
         <source>3dFaces</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>3dFaces</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+0"/>
         <source>3dFace</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>3dFace</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Referencias de bloque</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+0"/>
@@ -15787,7 +15782,7 @@ Visita el sitio &amp;Web</translatorcomment>
         <translatorcomment>--google--
 Elija la referencia a bloque
 Editar un bloque basado en una referencia a bloque elegido</translatorcomment>
-        <translation>Referencia de bloque</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15858,7 +15853,7 @@ Editar un bloque basado en una referencia a bloque elegido</translatorcomment>
         <location line="+0"/>
         <source>Aligned Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Dimensiones alineadas</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15920,7 +15915,7 @@ Editar un bloque basado en una referencia a bloque elegido</translatorcomment>
         <location line="+0"/>
         <source>Diametric Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Dimensiones diametricas</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15931,19 +15926,19 @@ Editar un bloque basado en una referencia a bloque elegido</translatorcomment>
         <location line="+0"/>
         <source>Ordinate Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Dimensiones ordenadas</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rotated Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Dimensiones rotadas</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotated Dimension</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Dimensión rotada</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15954,7 +15949,7 @@ Editar un bloque basado en una referencia a bloque elegido</translatorcomment>
         <location line="+0"/>
         <source>Radial Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Dimensiones radiales</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15979,7 +15974,7 @@ Editar un bloque basado en una referencia a bloque elegido</translatorcomment>
 Dibujar sombreados y rellenos
 Dibuja texturas y rellenos sólidos
 Sombreado/Relleno</translatorcomment>
-        <translation>Sombreados</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -15993,7 +15988,7 @@ Sombreado/Relleno</translatorcomment>
 --file: grassmods_es.po--
 La ruta base o url desde la que las imágenes y documentos pueden ser &quot;relativas&quot;
 Imgenes</translatorcomment>
-        <translation>Imágenes</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -16004,7 +15999,7 @@ Imgenes</translatorcomment>
         <location line="+0"/>
         <source>Leaders</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Directriz</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -16076,7 +16071,7 @@ Imgenes</translatorcomment>
         <source>Solids</source>
         <translatorcomment>--google--
 en las líneas, los sólidos y los textos</translatorcomment>
-        <translation>Sólidos</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -16137,13 +16132,13 @@ en las líneas, los sólidos y los textos</translatorcomment>
         <location line="+3"/>
         <source>Unknown Entities</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Entidades desconocidas</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Entity</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Entidad desconocida</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+102"/>
