@@ -42,7 +42,7 @@ CheckForUpdates.getBaseName = function() {
 
 CheckForUpdates.getUrl = function() {
     // compile update info URL:
-    var url = "http://www.qcad.org/qcad/version/" + CheckForUpdates.getBaseName() + ".html";
+    var url = "https://www.qcad.org/qcad/version/" + CheckForUpdates.getBaseName() + ".html";
     return url;
 };
 
