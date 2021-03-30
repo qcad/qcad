@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>PolyLineBreakSymbol</class>
- <widget class="QWidget" name="PolyLineBreakSymbol">
+ <class>PolylineBreakSymbol</class>
+ <widget class="QWidget" name="PolylineBreakSymbol">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -153,7 +153,7 @@
       <string>First/Last segment inclined</string>
      </property>
      <property name="statusTip">
-      <string>The first and last segment of the break symbol is inclined</string>
+      <string>The first and last segment of the break symbol are inclined</string>
      </property>
      <property name="text">
       <string/>
@@ -179,7 +179,7 @@
       <string>First/Last segment vertical</string>
      </property>
      <property name="statusTip">
-      <string>The first and last segment of the break symbol is vertical</string>
+      <string>The first and last segment of the break symbol are vertical</string>
      </property>
      <property name="text">
       <string/>

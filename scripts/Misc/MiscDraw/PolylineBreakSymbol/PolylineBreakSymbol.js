@@ -39,12 +39,12 @@ include("scripts/ShapeAlgorithms.js");
 
 
 /**
- * \class PolyLineBreakSymbol
+ * \class PolylineBreakSymbol
  * \brief break symbol between two points.
  * \ingroup ecma_misc_draw
  */
 
-function PolyLineBreakSymbol(guiAction) {
+function PolylineBreakSymbol(guiAction) {
     EAction.call(this, guiAction);
 
 
@@ -62,43 +62,43 @@ function PolyLineBreakSymbol(guiAction) {
     this.cutPoint1 = undefined;   // First cut point on shape
     this.cutPoint2 = undefined;   // Second cut point on shape
     // Toolbar widget:
-    this.setUiOptions("PolyLineBreakSymbol.ui");
+    this.setUiOptions("PolylineBreakSymbol.ui");
 }
 
-PolyLineBreakSymbol.prototype = new EAction();
+PolylineBreakSymbol.prototype = new EAction();
 
 
-PolyLineBreakSymbol.State = {
+PolylineBreakSymbol.State = {
     SettingShape : 0,
     SettingStartpt : 1,
     SettingEndpt : 2
 };
 
-PolyLineBreakSymbol.prototype.beginEvent = function() {
+PolylineBreakSymbol.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
-    this.setState(PolyLineBreakSymbol.State.SettingShape);
+    this.setState(PolylineBreakSymbol.State.SettingShape);
 };
 
-PolyLineBreakSymbol.prototype.escapeEvent = function() {
+PolylineBreakSymbol.prototype.escapeEvent = function() {
     switch (this.state) {
-    case PolyLineBreakSymbol.State.SettingShape:
+    case PolylineBreakSymbol.State.SettingShape:
         EAction.prototype.escapeEvent.call(this);
         return;    // Stop action
-    case PolyLineBreakSymbol.State.SettingStartpt:
-        this.setState(PolyLineBreakSymbol.State.SettingShape);
+    case PolylineBreakSymbol.State.SettingStartpt:
+        this.setState(PolylineBreakSymbol.State.SettingShape);
         break;    // Step back to SettingShape
-    case PolyLineBreakSymbol.State.SettingEndpt:
-        this.setState(PolyLineBreakSymbol.State.SettingStartpt);
+    case PolylineBreakSymbol.State.SettingEndpt:
+        this.setState(PolylineBreakSymbol.State.SettingStartpt);
         break;    // Step back to SettingStartpt
     }
 };
 
-PolyLineBreakSymbol.prototype.setState = function(state) {
+PolylineBreakSymbol.prototype.setState = function(state) {
     EAction.prototype.setState.call(this, state);
     var di = this.getDocumentInterface();
 
     switch (this.state) {
-    case PolyLineBreakSymbol.State.SettingShape:
+    case PolylineBreakSymbol.State.SettingShape:
         this.cutPoint1 = undefined;        // Reset first cut point on shape
         this.cutPoint2 = undefined;        // Reset second cut point on shape
         di.setClickMode(RAction.PickEntity);
@@ -114,7 +114,7 @@ PolyLineBreakSymbol.prototype.setState = function(state) {
         this.setLeftMouseTip(trFirstPoint);
         this.setRightMouseTip(EAction.trCancel);
         break;
-    case PolyLineBreakSymbol.State.SettingStartpt:
+    case PolylineBreakSymbol.State.SettingStartpt:
         this.cutPoint2 = undefined;        // Reset second cut point on shape
         di.setClickMode(RAction.PickCoordinate);    // Missing, but functional coordinateEvent & +Preview
         // Set prompt and button tips textual:
@@ -124,7 +124,7 @@ PolyLineBreakSymbol.prototype.setState = function(state) {
         this.setLeftMouseTip(trFirstPoint);
         this.setRightMouseTip(EAction.trCancel);
         break;
-    case PolyLineBreakSymbol.State.SettingEndpt:
+    case PolylineBreakSymbol.State.SettingEndpt:
         di.setClickMode(RAction.PickCoordinate);    // Missing but functional coordinateEvent & +Preview
         // Set prompt and button tips textual:
         var trSecondPoint = qsTr("Pick the second point");
@@ -139,7 +139,7 @@ PolyLineBreakSymbol.prototype.setState = function(state) {
     EAction.showSnapTools();
 };
 
-PolyLineBreakSymbol.prototype.pickEntity = function(event, preview) {
+PolylineBreakSymbol.prototype.pickEntity = function(event, preview) {
     var di = this.getDocumentInterface();
     var doc = this.getDocument();
     var entityId = this.getEntityId(event, preview);
@@ -186,22 +186,22 @@ PolyLineBreakSymbol.prototype.pickEntity = function(event, preview) {
     }
 
     if (!preview) {   // When NOT previewing
-        this.setState(PolyLineBreakSymbol.State.SettingStartpt);
+        this.setState(PolylineBreakSymbol.State.SettingStartpt);
     }
 };
 
-PolyLineBreakSymbol.prototype.coordinateEvent = function(event) {
+PolylineBreakSymbol.prototype.coordinateEvent = function(event) {
     var di = this.getDocumentInterface();
 
     switch (this.state) {
-    case PolyLineBreakSymbol.State.SettingStartpt:
+    case PolylineBreakSymbol.State.SettingStartpt:
         this.point1 = event.getModelPosition();
         this.cutPoint1 = this.shape.getClosestPointOnShape(this.point1, true);    // Limited =true
         if (!isValidVector(this.cutPoint1)) this.cutPoint1 = this.point1;
         di.setRelativeZero(this.cutPoint1);
-        this.setState(PolyLineBreakSymbol.State.SettingEndpt);
+        this.setState(PolylineBreakSymbol.State.SettingEndpt);
         break;
-    case PolyLineBreakSymbol.State.SettingEndpt:
+    case PolylineBreakSymbol.State.SettingEndpt:
         this.point2 = event.getModelPosition();
         this.cutPoint2 = this.shape.getClosestPointOnShape(this.point2, true);    // Limited =true
         if (!isValidVector(this.cutPoint2)) this.cutPoint2 = this.point2;
@@ -222,23 +222,23 @@ PolyLineBreakSymbol.prototype.coordinateEvent = function(event) {
         }
 
         // Return to SettingShape state when done:
-        this.setState(PolyLineBreakSymbol.State.SettingShape)
+        this.setState(PolylineBreakSymbol.State.SettingShape)
         break;
     }
 };
 
-PolyLineBreakSymbol.prototype.coordinateEventPreview = function(event) {
+PolylineBreakSymbol.prototype.coordinateEventPreview = function(event) {
     var di = this.getDocumentInterface();
 
     switch (this.state) {
-    case PolyLineBreakSymbol.State.SettingStartpt:
+    case PolylineBreakSymbol.State.SettingStartpt:
         this.point1 = event.getModelPosition();
         this.cutPoint1 = this.shape.getClosestPointOnShape(this.point1, true);    // Limited =true
         line = new RLine(this.point1, this.cutPoint1);
         di.addAuxShapeToPreview(line);
         this.updatePreview();
         break;
-    case PolyLineBreakSymbol.State.SettingEndpt:
+    case PolylineBreakSymbol.State.SettingEndpt:
         this.point2 = event.getModelPosition();
         this.cutPoint2 = this.shape.getClosestPointOnShape(this.point2, true);    // Limited =true
         line = new RLine(this.point2, this.cutPoint2);
@@ -248,7 +248,7 @@ PolyLineBreakSymbol.prototype.coordinateEventPreview = function(event) {
     }
 };
 
-PolyLineBreakSymbol.prototype.getOperation = function(preview) {    // Unused var preview =?OBSOLETE
+PolylineBreakSymbol.prototype.getOperation = function(preview) {    // Unused var preview =?OBSOLETE
     // Return none when no endpoints:
     if (!isValidVector(this.cutPoint1) || !isValidVector(this.cutPoint2)) {
         return undefined;
@@ -288,7 +288,7 @@ PolyLineBreakSymbol.prototype.getOperation = function(preview) {    // Unused va
     return op;
 };
 
-PolyLineBreakSymbol.prototype.getBreakOutOperation = function(preview) {    // Unused var preview =?OBSOLETE
+PolylineBreakSymbol.prototype.getBreakOutOperation = function(preview) {    // Unused var preview =?OBSOLETE
     var segment;
 
     // Return the operations:
@@ -364,18 +364,18 @@ PolyLineBreakSymbol.prototype.getBreakOutOperation = function(preview) {    // U
     return op;
 };
 
-PolyLineBreakSymbol.prototype.slotRemoveSegmentChanged = function(bool) {
+PolylineBreakSymbol.prototype.slotRemoveSegmentChanged = function(bool) {
     this.removeSegment = bool;
 };
 
-PolyLineBreakSymbol.prototype.slotBreakRatioChanged = function(index) {
+PolylineBreakSymbol.prototype.slotBreakRatioChanged = function(index) {
     this.breakRatio = index + 1;
 };
 
-PolyLineBreakSymbol.prototype.slotIncSegChanged = function(bool) {
+PolylineBreakSymbol.prototype.slotIncSegChanged = function(bool) {
     this.inclinedSegment = bool;
 };
 
-PolyLineBreakSymbol.prototype.slotInheritChanged = function(bool) {
+PolylineBreakSymbol.prototype.slotInheritChanged = function(bool) {
     this.inherit = bool;
 };

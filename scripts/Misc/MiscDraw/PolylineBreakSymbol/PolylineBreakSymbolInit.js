@@ -1,9 +1,9 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("PolyLineBreakSymbol", "&PolyLine break symbol from 2 points"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("PolylineBreakSymbol", "&Polyline break symbol from 2 points"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
-    action.setScriptFile(basePath + "/PolyLineBreakSymbol.js");
-    action.setIcon(basePath + "/PolyLineBreakSymbol.svg");
-    action.setStatusTip(qsTranslate("PolyLineBreakSymbol", "Draw a polyline break symbol from 2 points"));
+    action.setScriptFile(basePath + "/PolylineBreakSymbol.js");
+    action.setIcon(basePath + "/PolylineBreakSymbol.svg");
+    action.setStatusTip(qsTranslate("PolylineBreakSymbol", "Draw a polyline break symbol from 2 points"));
     action.setDefaultShortcut(new QKeySequence("S,3"));
     action.setDefaultCommands(["pbreaksymbol", "pbrksym"]);
     action.setGroupSortOrder(54250);
