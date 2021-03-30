@@ -11,7 +11,7 @@ SUBDIRS = \
     LineSimilarityAxes \
     PointPole \
     PointPowerCenter \
-    PolyLineBreakSymbol \
+    PolylineBreakSymbol \
     TextAlong \
     XLineHorizontal \
     XLineVertical

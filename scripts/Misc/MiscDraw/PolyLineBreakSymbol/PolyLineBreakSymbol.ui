@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>474</width>
+    <width>432</width>
     <height>52</height>
    </rect>
   </property>
@@ -72,7 +72,7 @@
       <string>The ratio of the peak height to the break width</string>
      </property>
      <property name="text">
-      <string>Peak Ratio :</string>
+      <string>Peak Ratio:</string>
      </property>
     </widget>
    </item>
