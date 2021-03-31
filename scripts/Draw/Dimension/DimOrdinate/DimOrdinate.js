@@ -94,7 +94,10 @@ DimOrdinate.prototype.pickCoordinate = function(event, preview) {
     switch (this.state) {
     case DimOrdinate.State.SettingDefiningPoint:
         this.data.setDefiningPoint(event.getModelPosition());
-        if (!preview) {
+        if (preview) {
+            this.updatePreview();
+        }
+        else {
             di.setRelativeZero(event.getModelPosition());
             this.setState(DimOrdinate.State.SettingLeaderEndPoint);
         }
