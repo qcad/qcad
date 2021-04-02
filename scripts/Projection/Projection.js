@@ -649,6 +649,35 @@ Projection.prototype.projectShape = function(shape, preview, trim, rec) {
             ret.push(pl);
         }
 
+        // set global width if polyline has uniform global semgent width:
+        var gotGlobalWidth = false;
+        var startWidths = shape.getStartWidths();
+        var endWidths = shape.getEndWidths();
+        if (startWidths.length>0 && endWidths.length>0) {
+            if (startWidths[0]>RS.PointTolerance) {
+                startWidths.sortNumerical();
+                endWidths.sortNumerical();
+                if (RMath.fuzzyCompare(startWidths[0], startWidths[startWidths.length-1]) &&
+                    RMath.fuzzyCompare(endWidths[0], startWidths[endWidths.length-1]) &&
+                    RMath.fuzzyCompare(startWidths[0], endWidths[0])) {
+
+                    // got global polyline width:
+                    gotGlobalWidth = true;
+                    for (i=0; i<ret.length; i++) {
+                        ret[i].setGlobalWidth(startWidths[0]);
+                    }
+                }
+            }
+        }
+
+        // set segment widths if there's no segmentation and the number of segments match:
+        if (!gotGlobalWidth && !this.segmentation && ret.length===1 && shape.countSegments()===ret[0].countSegments()) {
+            for (i=0; i<shape.countVertices(); i++) {
+                ret[0].setStartWidthAt(i, shape.getStartWidthAt(i));
+                ret[0].setEndWidthAt(i, shape.getEndWidthAt(i));
+            }
+        }
+
         return ret;
     }
 
