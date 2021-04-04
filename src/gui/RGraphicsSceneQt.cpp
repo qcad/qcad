@@ -279,6 +279,7 @@ void RGraphicsSceneQt::transformAndApplyPatternPath(RPainterPath& path) const {
             ppe.setPixelSizeHint(getPixelSizeHint());
             ppe.setExportZeroLinesAsPoints(false);
             ppe.setLinetypePattern(lp);
+            ppe.setIgnoreLineTypePatternScale(true);
 
             double length = 0.0;
             for (int i=0; i<pathShapes.length(); i++) {
