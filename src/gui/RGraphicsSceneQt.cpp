@@ -762,6 +762,9 @@ void RGraphicsSceneQt::exportImage(const RImageData& image, bool forceSelected) 
 QList<RPainterPath> RGraphicsSceneQt::exportText(const RTextBasedData& text, bool forceSelected) {
     RTextBasedData textCopy = text;
 
+    // make sure we render the correct text (tag) for attribute definitions:
+    textCopy.setText(text.getRenderedText());
+
     // resolve line type, color by layer, by block:
     textCopy.setLineweight(text.getLineweight(true, blockRefViewportStack));
     RColor col = text.getColor(true, blockRefViewportStack);
