@@ -43,8 +43,8 @@ LanguagePreferences.localLanguageName["sk"] = "Slovenčina";
 LanguagePreferences.localLanguageName["sl"] = "Slovenščina";
 LanguagePreferences.localLanguageName["sv"] = "Svenska";
 LanguagePreferences.localLanguageName["tr"] = "Türkçe";
-LanguagePreferences.localLanguageName["zh_TW"] = "臺灣話";
-LanguagePreferences.localLanguageName["zh_ZN"] = "普通话";
+LanguagePreferences.localLanguageName["zh_TW"] = "繁體中文";
+LanguagePreferences.localLanguageName["zh_ZN"] = "简体中文";
 
 function LanguagePreferences(guiAction) {
     EAction.call(this, guiAction);
