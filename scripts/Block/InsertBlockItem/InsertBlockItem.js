@@ -141,6 +141,7 @@ InsertBlockItem.prototype.beginEvent = function() {
     var first = true;
     var optionsToolBar = EAction.getOptionsToolBar();
     var tagCombo = optionsToolBar.findChild("AttributeTag");
+    var tags = {};
     if (!isNull(tagCombo)) {
         var ids = this.docItem.queryAllEntities();
         for (i=0; i<ids.length; i++) {
@@ -159,7 +160,13 @@ InsertBlockItem.prototype.beginEvent = function() {
             var prompt = attDef.getPrompt();
             var defaultValue = attDef.getEscapedText();
 
+            if (tags[tag]===true) {
+                // tag already added:
+                continue;
+            }
+
             tagCombo.addItem(prompt, [tag, defaultValue]);
+            tags[tag] = true;
         }
     }
 
