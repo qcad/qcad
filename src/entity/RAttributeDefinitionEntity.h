@@ -104,7 +104,7 @@ public:
             RPropertyTypeId& propertyTypeId,
             bool humanReadable = false, bool noAttributes = false, bool showOnRequest = false);
 
-   // void exportEntity(RExporter& e, bool preview) const;
+    //virtual void exportEntity(RExporter& e, bool preview=false, bool forceSelected=false) const;
 
     QString getTag() const {
         return data.getTag();
