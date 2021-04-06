@@ -201,7 +201,8 @@ void RTextBasedEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
     Q_UNUSED(preview)
 
     // TODO: use transforms:
-    RTextBasedData data = getData();
+    // use reference, so we don't loose aspects of attribute definition and other derrived entity types:
+    const RTextBasedData& data = getData();
 //    data.move(-getAlignmentPoint());
 //    data.rotate(-getAngle(), RVector(0,0));
 //    data.setXScale(1.0);

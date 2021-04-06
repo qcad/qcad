@@ -220,7 +220,7 @@ void RTextRenderer::renderSimple() {
     textLayouts.clear();
     richText = "";
 
-    if (textData.getText().isEmpty()) {
+    if (textData.getRenderedText().isEmpty()) {
         return;
     }
 
