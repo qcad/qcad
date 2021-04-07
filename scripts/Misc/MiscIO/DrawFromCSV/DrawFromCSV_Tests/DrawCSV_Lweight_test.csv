@@ -1,0 +1,124 @@
+; ---------------------------------------------------------------------------- ;
+; Lineweight test file for QCAD3 DrawFromCSV script (C) by CVH 2021            ;
+; Auto CSV style           (Written in CSVsemicolon/comma style)               ;
+; ---------------------------------------------------------------+ by CVH +--- ;
+;                                                                              ;
+; Specific entity Lineweight: ByLayer, ByBlock.                                ;
+; Specific Lineweight: Default.                                                ;
+; Lineweight with valid number in 1/100.                                       ;
+; See CAD-Lineweight.dxf for more details.                                     ;
+;   Layer names & custom properties are literal.                               ;
+;   Others text is case insensitive.                                           ;
+;   All text is without quotation marks.                                       ;
+; ---------------------------------------------------------------------------- ;
+; Casting from 55 out of 124 text lines. 7 Errors on purpose.
+
+; Forced CSV style
+CSVsemicolon/comma
+
+; Layers with an invalid Lineweight:
+; NOT created on any attribute fault!
+NewLayer;Invalid Lineweight1;Black;ByBlock;Continuous;true;true
+NewLayer;Invalid Lineweight2;Black;ByLayer;Continuous;true;true
+NewLayer;Invalid Lineweight3;Black;wide;Continuous;true;true
+NewLayer;Invalid Lineweight4;Black;017;Continuous;true;true
+
+; Layers with a valid QCAD Lineweight by number:
+; Draw a vector on each.
+NewLayer;01 Default;red;Default;Continuous;true;true
+Vector;03;03;15;-45
+NewLayer;02 Weight000;lime;000;Continuous;true;true
+Vector;04;04;15;-45
+NewLayer;03 Weight005;blue;005;Continuous;true;true
+Vector;05;05;15;-45
+NewLayer;04 Weight009;cyan;009;Continuous;true;true
+Vector;06;06;15;-45
+NewLayer;05 Weight013;magenta;013;Continuous;true;true
+Vector;07;07;15;-45
+NewLayer;06 Weight015;yellow;015;Continuous;true;true
+Vector;08;08;15;-45
+NewLayer;07 Weight018;Qorange;018;Continuous;true;true
+Vector;09;09;15;-45
+NewLayer;08 Weight020;maroon;020;Continuous;true;true
+Vector;10;10;15;-45
+NewLayer;09 Weight025;green;025;Continuous;true;true
+Vector;11;11;15;-45
+NewLayer;10 Weight030;navy;030;Continuous;true;true
+Vector;12;12;15;-45
+NewLayer;11 Weight035;teal;035;Continuous;true;true
+Vector;13;13;15;-45
+NewLayer;12 Weight040;purple;040;Continuous;true;true
+Vector;14;14;15;-45
+NewLayer;13 Weight050;olive;050;Continuous;true;true
+Vector;15;15;15;-45
+NewLayer;14 Weight053;black;053;Continuous;true;true
+Vector;16;16;15;-45
+NewLayer;15 Weight060;black;060;Continuous;true;true
+Vector;17,5;17,5;15;-45
+NewLayer;16 Weight070;black;070;Continuous;true;true
+Vector;19;19;15;-45
+NEWLAYER;17 Weight080;BLACK;080;Continuous;true;true
+Vector;20,5;20,5;15;-45
+NEWLAyEr;18 Weight090;blaCK;090;Continuous;true;true
+Vector;22;22;15;-45
+NewLayer;19 Weight100;black;100;Continuous;true;true
+Vector;24;24;15;-45
+NewLayer;20 Weight106;black;106;Continuous;true;true
+Vector;26;26;15;-45
+NewLayer;21 Weight120;black;120;Continuous;true;true
+Vector;28;28;15;-45
+NewLayer;22 Weight140;black;140;Continuous;true;true
+Vector;30,5;30,5;15;-45
+NewLayer;23 Weight158;black;158;Continuous;true;true
+Vector;33;33;15;-45
+NewLayer;24 Weight200;black;200;Continuous;true;true
+Vector;36;36;15;-45
+NewLayer;25 Weight211;black;211;Continuous;true;true
+Vector;40;40;15;-45
+
+; Switch to a new entity attribute test layer:
+; Draw vectors with Lineweight attributes, weight 005 if faulty.
+NewLayer;0 Entity Lineweights %;BLACK;015;Continuous;true;true
+
+; Vectors with an invalid Linetype:
+; Any attribute fault reverts to default!
+Vector;-05;-05;10;195;&[Attrib;linetype:Orange line;Lineweight:005]
+Vector;-04;-04;10;195;&[Attrib;linetype:ISO dash dot;Lineweight:005]
+Vector;-03;-03;10;195;&[Attrib;linetype:15;Lineweight:005]
+
+; Vectors with a valid QCAD Linetype by designator:
+Vector;01;01;15;195;&[Attrib;Lineweight:ByBlock]
+Vector;02;02;15;195;&[Attrib;Lineweight:ByLayer]
+Vector;03;03;15;195;&[Attrib;Lineweight:Default]
+Vector;04;04;15;195;&[Attrib;Lineweight:000]
+Vector;05;05;15;195;&[Attrib;Lineweight:005]
+Vector;06;06;15;195;&[Attrib;Lineweight:009]
+Vector;07;07;15;195;&[Attrib;Lineweight:013]
+Vector;08;08;15;195;&[Attrib;Lineweight:015]
+Vector;09;09;15;195;&[Attrib;Lineweight:018]
+Vector;10;10;15;195;&[Attrib;Lineweight:020]
+Vector;11;11;15;195;&[Attrib;Lineweight:025]
+Vector;12;12;15;195;&[Attrib;Lineweight:030]
+Vector;13;13;15;195;&[Attrib;Lineweight:035]
+Vector;14;14;15;195;&[Attrib;Lineweight:040]
+Vector;15;15;15;195;&[Attrib;Lineweight:050]
+Vector;16;16;15;195;&[Attrib;Lineweight:053]
+Vector;17,5;17,5;15;195;&[Attrib;Lineweight:060]
+Vector;19;19;15;195;&[Attrib;Lineweight:070]
+Vector;20,5;20,5;15;195;&[Attrib;Lineweight:080]
+Vector;22;22;15;195;&[Attrib;Lineweight:090]
+Vector;24;24;15;195;&[Attrib;Lineweight:100]
+Vector;26;26;15;195;&[Attrib;Lineweight:106]
+Vector;28;28;15;195;&[Attrib;Lineweight:120]
+Vector;30,5;30,5;15;195;&[Attrib;Lineweight:140]
+Vector;33;33;15;195;&[Attrib;Lineweight:158]
+Vector;36;36;15;195;&[Attrib;Lineweight:200]
+Vector;40;40;15;195;&[Attrib;Lineweight:211]
+
+; Lock entity layer:
+LockLayer;0 Entity Lineweights %
+
+; Select all new shapes and zoom to selected:
+SelectAll
+ZoomToAll
+; ============================================================== End of file ===

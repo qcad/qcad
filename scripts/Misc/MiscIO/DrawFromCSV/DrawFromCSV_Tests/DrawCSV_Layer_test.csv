@@ -1,0 +1,90 @@
+; ---------------------------------------------------------------------------- ;
+; Layer test file for QCAD3 DrawFromCSV script (C) by CVH 2021                 ;
+; Auto CSV style           (Written in CSVsemicolon/comma style)               ;
+; ---------------------------------------------------------------+ by CVH +--- ;
+;                                                                              ;
+; Layers are NOT created on any faults in a 'NewLayer' switch.                 ;
+; Faulty attributes off an entity revert to their default.                     ;
+; One can't use, change nor switch to a non existing layer.                    ;
+;   Layer names & custom properties are literal.                               ;
+;   Others text is case insensitive.                                           ;
+;   All text is without quotation marks.                                       ;
+; ---------------------------------------------------------------------------- ;
+; Casting from 4 out of 90 text lines. 13 Errors on purpose.
+
+; Forced CSV style
+CSVsemicolon/comma
+
+; Vectors with an invalid layer:
+; Fails when layer '0 Entity Colors' doesn't exist!
+Vector;-01;-01;10;195;&[Attrib;Layer:0 Entity Colors;color:ByLayer;Lineweight:050]
+
+; Layers with an invalid entry:
+; Layers are NOT created on any attribute fault!
+NewLayer;Invalid=`name`;Black;015;Continuous;true;true
+NewLayer;Invalid color;ByBlock;025;Continuous;true;true
+NewLayer;Invalid Lineweight;Black;999;Continuous;true;true
+NewLayer;Invalid Linetype;Black;015;Orange line;true;true
+
+; Sub-layers of non existent parent layers:
+; Fails when the parent layer doesn't exist.
+NewLayer;MyLayer/Invalid parent;red;025;Continuous;true;true
+
+; Handling non existent layers:
+HideLayer;Invalid Hide
+FreezeLayer;Invalid Freeze/Invalid SUB
+LockLayer;Invalid Lock
+LockLayer;Invalid=`name`
+AllowLayer;Invalid Allow
+Layer;Invalid layer switch
+Layer;Invalid=`name`
+
+; Valid layers:
+NewLayer;01 Green;lime;025;Continuous;true;true
+NewLayer;02 Parent1;blue;025;Continuous;true;true
+NewLayer;02 Parent1/Sub1;cyan;025;Continuous;true;true
+NewLayer;02 Parent1/Sub1/SubSub1 %;magenta;025;Continuous;true;true
+NewLayer;03 Parent2;blue;025;Continuous;true;true
+NewLayer;03 Parent2/Sub2;cyan;025;Continuous;true;true
+NewLayer;03 Parent2/Sub2/SubSub2;magenta;025;Continuous;true;true
+NewLayer;04 Parent3;blue;025;Continuous;true;true
+NewLayer;04 Parent3/Sub3;cyan;025;Continuous;true;true
+NewLayer;04 Parent3/Sub3/SubSub3;magenta;025;Continuous;true;true
+NewLayer;Last New &Current;black;025;Continuous;true;true
+
+; Layer handling:
+HideLayer;03 Parent2
+FreezeLayer;03 Parent2/Sub2
+LockLayer;03 Parent2/Sub2/SubSub2
+
+HideLayer;04 Parent3
+FreezeLayer;04 Parent3
+LockLayer;04 Parent3
+HideLayer;04 Parent3/Sub3
+FreezeLayer;04 Parent3/Sub3
+LockLayer;04 Parent3/Sub3
+HideLayer;04 Parent3/Sub3/SubSub3
+FreezeLayer;04 Parent3/Sub3/SubSub3
+LockLayer;04 Parent3/Sub3/SubSub3
+
+AllowLayer;04 Parent3
+
+; Draw on 'Last New &Current' layer:
+Vector;01;01;15;15
+
+; Switch to an existing layer:
+Layer;02 Parent1/Sub1/SubSub1 %
+
+; Draw on current '02 Parent1/Sub1/SubSub1 %' layer:
+Vector;02;02;15;15
+
+; Draw on a different layer as the current layer:
+Vector;03;03;15;15;&[Attrib;layer:02 Parent1]
+
+; Finally switch to '02 Parent1/Sub1/SubSub1 %' and set active:
+Layer;02 Parent1/Sub1/SubSub1 %
+
+; Select all new shapes and zoom to selected:
+SelectAll
+ZoomToAll
+; ============================================================== End of file ===

@@ -1,0 +1,116 @@
+; ---------------------------------------------------------------------------- ;
+; Color test file for QCAD3 DrawFromCSV script (C) by CVH 2021                 ;
+; Auto CSV style           (Written in CSVsemicolon/comma style)               ;
+; ---------------------------------------------------------------+ by CVH +--- ;
+;                                                                              ;
+; Specific entity colors: ByLayer, ByBlock.                                    ;
+; Colors in HTML RGB code #XXXXXX.                                             ;
+; Colors by name are SVG colors. Limited standard list.                        ;
+; See CAD-Colors.dxf for more details.                                         ;
+; QCAD Orange = 'Qorange', QCAD Gray = 'Qgray'                                 ;
+;   Layer names & custom properties are literal.                               ;
+;   Others text is case insensitive.                                           ;
+;   All text is without quotation marks.                                       ;
+; ---------------------------------------------------------------------------- ;
+; Casting from 44 out of 116 text lines. 9 Errors on purpose.
+
+; Forced CSV style
+CSVsemicolon/comma
+
+; Vectors with an invalid layer:
+; Fails when layer '0 Entity Colors' doesn't exist!
+Vector;-01;-01;10;195;&[Attrib;Layer:0 Entity Colors;color:ByLayer;Lineweight:050]
+
+; Layers with an invalid color:
+; Layers are NOT created on any attribute fault!
+NewLayer;Invalid color1;ByBlock;025;Continuous;true;true
+NewLayer;Invalid color2;ByLayer;025;Continuous;true;true
+NewLayer;Invalid color3;Orange juice;025;Continuous;true;true
+NewLayer;Invalid color4;#x1y2z3;025;Continuous;true;true
+NewLayer;Invalid color5;116;025;Continuous;true;true
+
+; Layers with a valid QCAD color by name:
+; Draw a vector on each.
+NewLayer;01 Red;red;025;Continuous;true;true
+Vector;03;03;15;-45
+NewLayer;02 Green;lime;025;Continuous;true;true
+Vector;04;04;15;-45
+NewLayer;03 Blue;blue;025;Continuous;true;true
+Vector;05;05;15;-45
+NewLayer;04 Cyan;cyan;025;Continuous;true;true
+Vector;06;06;15;-45
+NewLayer;05 Magenta;magenta;025;Continuous;true;true
+Vector;07;07;15;-45
+NewLayer;06 Yellow;yellow;025;Continuous;true;true
+Vector;08;08;15;-45
+NewLayer;07 Orange;Qorange;025;Continuous;true;true
+Vector;09;09;15;-45
+NewLayer;08 Dark Red;maroon;025;Continuous;true;true
+Vector;10;10;15;-45
+NewLayer;09 Dark Green;green;025;Continuous;true;true
+Vector;11;11;15;-45
+NewLayer;10 Dark Blue;navy;025;Continuous;true;true
+Vector;12;12;15;-45
+NewLayer;11 Dark Cyan;teal;025;Continuous;true;true
+Vector;13;13;15;-45
+NewLayer;12 Dark Magenta;purple;025;Continuous;true;true
+Vector;14;14;15;-45
+NewLayer;13 Dark Yellow;olive;025;Continuous;true;true
+Vector;15;15;15;-45
+NewLayer;14 Black;black;025;Continuous;true;true
+Vector;16;16;15;-45
+NewLayer;15 Gray;Qgray;025;Continuous;true;true
+Vector;17;17;15;-45
+NewLayer;16 Light Gray;silver;025;Continuous;true;true
+Vector;18;18;15;-45
+NewLayer;17 White;white;025;Continuous;true;true
+Vector;19;19;15;-45
+
+; Layers with a valid QCAD color by HTML color:
+NewLayer;101 #Red;#FF0000;025;Continuous;true;true
+Vector;22;22;15;-45
+NewLayer;112 #Dark Purple;#55027F;025;Continuous;true;true
+Vector;23;23;15;-45
+
+; Switch to a new entity attribute test layer:
+; Draw vectors with color attributes, weight 5 if faulty otherwise 50.
+NewLayer;0 Entity Colors %;BLACK;025;Continuous;true;true
+
+; Vectors with an invalid color:
+; Any entity attribute fault reverts to default!
+Vector;-05;-05;10;195;&[Attrib;color:Orange juice;Lineweight:005]
+Vector;-04;-04;10;195;&[Attrib;color:#x1y2z3;Lineweight:005]
+Vector;-03;-03;10;195;&[Attrib;color:116;Lineweight:005]
+
+; Vectors with a valid QCAD color by name:
+Vector;01;01;15;195;&[Attrib;color:ByBlock;Lineweight:050]
+Vector;02;02;15;195;&[Attrib;color:ByLayer;Lineweight:050]
+Vector;03;03;15;195;&[Attrib;color:red;Lineweight:050]
+Vector;04;04;15;195;&[Attrib;color:lime;Lineweight:050]
+Vector;05;05;15;195;&[Attrib;color:blue;Lineweight:050]
+Vector;06;06;15;195;&[Attrib;color:cyan;Lineweight:050]
+Vector;07;07;15;195;&[Attrib;color:magenta;Lineweight:050]
+Vector;08;08;15;195;&[Attrib;color:yellow;Lineweight:050]
+Vector;09;09;15;195;&[Attrib;color:Qorange;Lineweight:050]
+Vector;10;10;15;195;&[Attrib;color:maroon;Lineweight:050]
+Vector;11;11;15;195;&[Attrib;color:green;Lineweight:050]
+Vector;12;12;15;195;&[Attrib;color:navy;Lineweight:050]
+Vector;13;13;15;195;&[Attrib;color:teal;Lineweight:050]
+Vector;14;14;15;195;&[Attrib;color:purple;Lineweight:050]
+Vector;15;15;15;195;&[Attrib;color:olive;Lineweight:050]
+Vector;16;16;15;195;&[Attrib;color:black;Lineweight:050]
+Vector;17;17;15;195;&[Attrib;color:Qgray;Lineweight:050]
+Vector;18;18;15;195;&[Attrib;color:silver;Lineweight:050]
+Vector;19;19;15;195;&[Attrib;color:white;Lineweight:050]
+
+; Vectors with a valid QCAD color by HTML color:
+Vector;22;22;15;195;&[Attrib;color:#FF0000;Lineweight:050]
+Vector;23;23;15;195;&[Attrib;color:#55027F;Lineweight:050]
+
+; Lock entity colors layer:
+LockLayer;0 Entity Colors %
+
+; Select all new shapes and zoom to selected:
+SelectAll
+ZoomToAll
+; ============================================================== End of file ===

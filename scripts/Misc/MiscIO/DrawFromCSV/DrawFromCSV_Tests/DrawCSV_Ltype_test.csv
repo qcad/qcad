@@ -1,0 +1,190 @@
+; ---------------------------------------------------------------------------- ;
+; Linetype test file for QCAD3 DrawFromCSV script (C) by CVH 2021              ;
+; Auto CSV style           (Written in CSVsemicolon/comma style)               ;
+; ---------------------------------------------------------------+ by CVH +--- ;
+;                                                                              ;
+; Specific entity Linetype: ByLayer, ByBlock.                                  ;
+; Textual Linetype with QCAD designator.                                       ;
+; See CAD-Linetypes.dxf for more details.                                      ;
+;   Layer names & custom properties are literal.                               ;
+;   Others text is case insensitive.                                           ;
+;   All text is without quotation marks.                                       ;
+; ---------------------------------------------------------------------------- ;
+; Casting from 99 out of 190 text lines. 8 Errors on purpose.
+
+; Forced CSV style
+CSVsemicolon/comma
+
+; Layers with an invalid Linetype:
+; NOT created on any attribute fault!
+NewLayer;Invalid Linetype1;Black;009;ByBlock;true;true
+NewLayer;Invalid Linetype2;Black;009;ByLayer;true;true
+NewLayer;Invalid Linetype3;Black;009;Orange line;true;true
+NewLayer;Invalid Linetype4;Black;009;ISO dash dot;true;true
+NewLayer;Invalid Linetype5;Black;009;15;true;true
+
+; Layers with a valid QCAD Linetype by designator:
+; Draw a vector on each with reduced LineTypeScale scale.
+NewLayer;01 Continuous;red;009;Continuous;true;true
+Vector;03;03;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;02 ISO dash;lime;009;ACAD_ISO02W100;true;true
+Vector;04;04;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;03 ISO dash dot;blue;009;ACAD_ISO10W100;true;true
+Vector;05;05;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;04 ISO dash double-dot;cyan;009;ACAD_ISO12W100;true;true
+Vector;06;06;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;05 ISO dash space;magenta;009;ACAD_ISO03W100;true;true
+Vector;07;07;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;06 ISO dash triple-dot;yellow;009;ACAD_ISO14W100;true;true
+Vector;08;08;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;07 ISO dot;Qorange;009;ACAD_ISO07W100;true;true
+Vector;09;09;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;08 ISO double-dash dot;maroon;009;ACAD_ISO11W100;true;true
+Vector;10;10;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;09 ISO double-dash double-dot;green;009;ACAD_ISO13W100;true;true
+Vector;11;11;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;10 ISO double-dash triple-dot;navy;009;ACAD_ISO15W100;true;true
+Vector;12;12;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;11 ISO long-dash dot;teal;009;ACAD_ISO04W100;true;true
+Vector;13;13;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;12 ISO long-dash double-dot;purple;009;ACAD_ISO05W100;true;true
+Vector;14;14;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;13 ISO long-dash double-short-dash;olive;009;ACAD_ISO09W100;true;true
+Vector;15;15;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;14 ISO long-dash triple-dot;black;009;ACAD_ISO06W100;true;true
+Vector;16;16;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;15 Batting;black;009;BATTING;true;true
+Vector;17;17;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;16 Border;black;009;BORDER;true;true
+Vector;18;18;15;-45;&[Attrib;LineTypeScale:0,3]
+NEWLAYER;17 Border (.5x);BLACK;009;border2;true;true
+Vector;19;19;15;-45;&[Attrib;LineTypeScale:0,3]
+NEWLAyEr;18 Border (2x);blaCK;009;BOrdErx2;true;true
+Vector;20;20;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;19 Center;black;009;CENTER;true;true
+Vector;21;21;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;20 Center (.5x);black;009;CENTER2;true;true
+Vector;22;22;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;21 Center (2x);black;009;CENTERX2;true;true
+Vector;23;23;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;22 Dash dot;black;009;DASHDOT;true;true
+Vector;24;24;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;23 Dash dot (.5x);black;009;DASHDOT2;true;true
+Vector;25;25;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;24 Dash dot (2x);black;009;DASHDOTX2;true;true
+Vector;26;26;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;25 Dashed;black;009;DASHED;true;true
+Vector;27;27;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;26 Dashed (.5x);black;009;DASHED2;true;true
+Vector;28;28;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;27 Dashed (2x);black;009;DASHEDX2;true;true
+Vector;29;29;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;28 Divide;black;009;DIVIDE;true;true
+Vector;30;30;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;29 Divide (.5x);black;009;DIVIDE2;true;true
+Vector;31;31;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;30 Divide (2x);black;009;DIVIDEX2;true;true
+Vector;32;32;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;31 Dot;black;009;DOT;true;true
+Vector;33;33;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;32 Dot (.5x);black;009;DOT2;true;true
+Vector;34;34;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;33 Dot (2x);black;009;DOTX2;true;true
+Vector;35;35;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;34 Drainage;black;009;DRAINAGE;true;true
+Vector;36;36;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;35 Drainage reversed;black;009;DRAINAGE2;true;true
+Vector;37;37;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;36 Fenceline circle;black;009;FENCELINE1;true;true
+Vector;38;38;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;37 Fenceline square;black;009;FENCELINE2;true;true
+Vector;39;39;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;38 Gas line;black;009;GAS_LINE;true;true
+Vector;40;40;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;39 Hidden;black;009;HIDDEN;true;true
+Vector;41;41;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;40 Hidden (.5x);black;009;HIDDEN2;true;true
+Vector;42;42;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;41 Hidden (2x);black;009;HIDDENX2;true;true
+Vector;43;43;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;42 Hot water supply;black;009;HOT_WATER_SUPPLY;true;true
+Vector;44;44;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;43 Phantom;black;009;PHANTOM;true;true
+Vector;45;45;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;44 Phantom (.5x);black;009;PHANTOM2;true;true
+Vector;46;46;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;45 Phantom (2x);black;009;PHANTOMX2;true;true
+Vector;47;47;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;46 Tracks;black;009;TRACKS;true;true
+Vector;48;48;15;-45;&[Attrib;LineTypeScale:0,3]
+NewLayer;47 Zig zag;black;009;ZIGZAG;true;true
+Vector;49;49;15;-45;&[Attrib;LineTypeScale:0,3]
+
+; Switch to a new entity attribute test layer:
+; Draw vectors with Linetype attributes, reduced scale, weight 000 if faulty otherwise 009.
+NewLayer;0 Entity Linetypes %;BLACK;009;Continuous;true;true
+
+; Vectors with an invalid Linetype:
+; Any attribute fault reverts to default!
+Vector;-05;-05;10;195;&[Attrib;linetype:Orange line;Lineweight:000;LineTypeScale:0,3]
+Vector;-04;-04;10;195;&[Attrib;linetype:ISO dash dot;Lineweight:000;LineTypeScale:0,3]
+Vector;-03;-03;10;195;&[Attrib;linetype:15;Lineweight:000;LineTypeScale:0,3]
+
+; Vectors with a valid QCAD Linetype by designator:
+Vector;01;01;15;195;&[Attrib;Linetype:ByBlock;Lineweight:009;LineTypeScale:0,3]
+Vector;02;02;15;195;&[Attrib;Linetype:ByLayer;Lineweight:009;LineTypeScale:0,3]
+Vector;03;03;15;195;&[Attrib;Linetype:Continuous;Lineweight:009;LineTypeScale:0,3]
+Vector;04;04;15;195;&[Attrib;Linetype:ACAD_ISO02W100;Lineweight:009;LineTypeScale:0,3]
+Vector;05;05;15;195;&[Attrib;Linetype:ACAD_ISO10W100;Lineweight:009;LineTypeScale:0,3]
+Vector;06;06;15;195;&[Attrib;Linetype:ACAD_ISO12W100;Lineweight:009;LineTypeScale:0,3]
+Vector;07;07;15;195;&[Attrib;Linetype:ACAD_ISO03W100;Lineweight:009;LineTypeScale:0,3]
+Vector;08;08;15;195;&[Attrib;Linetype:ACAD_ISO14W100;Lineweight:009;LineTypeScale:0,3]
+Vector;09;09;15;195;&[Attrib;Linetype:ACAD_ISO07W100;Lineweight:009;LineTypeScale:0,3]
+Vector;10;10;15;195;&[Attrib;Linetype:ACAD_ISO11W100;Lineweight:009;LineTypeScale:0,3]
+Vector;11;11;15;195;&[Attrib;Linetype:ACAD_ISO13W100;Lineweight:009;LineTypeScale:0,3]
+Vector;12;12;15;195;&[Attrib;Linetype:ACAD_ISO15W100;Lineweight:009;LineTypeScale:0,3]
+Vector;13;13;15;195;&[Attrib;Linetype:ACAD_ISO04W100;Lineweight:009;LineTypeScale:0,3]
+Vector;14;14;15;195;&[Attrib;Linetype:ACAD_ISO05W100;Lineweight:009;LineTypeScale:0,3]
+Vector;15;15;15;195;&[Attrib;Linetype:ACAD_ISO09W100;Lineweight:009;LineTypeScale:0,3]
+Vector;16;16;15;195;&[Attrib;Linetype:ACAD_ISO06W100;Lineweight:009;LineTypeScale:0,3]
+Vector;17;17;15;195;&[Attrib;Linetype:BATTING;Lineweight:009;LineTypeScale:0,3]
+Vector;18;18;15;195;&[Attrib;Linetype:BORDER;Lineweight:009;LineTypeScale:0,3]
+Vector;19;19;15;195;&[Attrib;Linetype:BORDER2;Lineweight:009;LineTypeScale:0,3]
+Vector;20;20;15;195;&[Attrib;Linetype:BORDERX2;Lineweight:009;LineTypeScale:0,3]
+Vector;21;21;15;195;&[Attrib;Linetype:CENTER;Lineweight:009;LineTypeScale:0,3]
+Vector;22;22;15;195;&[Attrib;Linetype:CENTER2;Lineweight:009;LineTypeScale:0,3]
+Vector;23;23;15;195;&[Attrib;Linetype:CENTERX2;Lineweight:009;LineTypeScale:0,3]
+Vector;24;24;15;195;&[Attrib;Linetype:DASHDOT;Lineweight:009;LineTypeScale:0,3]
+Vector;25;25;15;195;&[Attrib;Linetype:DASHDOT2;Lineweight:009;LineTypeScale:0,3]
+Vector;26;26;15;195;&[Attrib;Linetype:DASHDOTX2;Lineweight:009;LineTypeScale:0,3]
+Vector;27;27;15;195;&[Attrib;Linetype:DASHED;Lineweight:009;LineTypeScale:0,3]
+Vector;28;28;15;195;&[Attrib;Linetype:DASHED2;Lineweight:009;LineTypeScale:0,3]
+Vector;29;29;15;195;&[Attrib;Linetype:DASHEDX2;Lineweight:009;LineTypeScale:0,3]
+Vector;30;30;15;195;&[Attrib;Linetype:DIVIDE;Lineweight:009;LineTypeScale:0,3]
+Vector;31;31;15;195;&[Attrib;Linetype:DIVIDE2;Lineweight:009;LineTypeScale:0,3]
+Vector;32;32;15;195;&[Attrib;Linetype:DIVIDEX2;Lineweight:009;LineTypeScale:0,3]
+Vector;33;33;15;195;&[Attrib;Linetype:DOT;Lineweight:009;LineTypeScale:0,3]
+Vector;34;34;15;195;&[Attrib;Linetype:DOT2;Lineweight:009;LineTypeScale:0,3]
+Vector;35;35;15;195;&[Attrib;Linetype:DOTX2;Lineweight:009;LineTypeScale:0,3]
+Vector;36;36;15;195;&[Attrib;Linetype:DRAINAGE;Lineweight:009;LineTypeScale:0,3]
+Vector;37;37;15;195;&[Attrib;Linetype:DRAINAGE2;Lineweight:009;LineTypeScale:0,3]
+Vector;38;38;15;195;&[Attrib;Linetype:FENCELINE1;Lineweight:009;LineTypeScale:0,3]
+Vector;39;39;15;195;&[Attrib;Linetype:FENCELINE2;Lineweight:009;LineTypeScale:0,3]
+Vector;40;40;15;195;&[Attrib;Linetype:GAS_LINE;Lineweight:009;LineTypeScale:0,3]
+Vector;41;41;15;195;&[Attrib;Linetype:HIDDEN;Lineweight:009;LineTypeScale:0,3]
+Vector;42;42;15;195;&[Attrib;Linetype:HIDDEN2;Lineweight:009;LineTypeScale:0,3]
+Vector;43;43;15;195;&[Attrib;Linetype:HIDDENX2;Lineweight:009;LineTypeScale:0,3]
+Vector;44;44;15;195;&[Attrib;Linetype:HOT_WATER_SUPPLY;Lineweight:009;LineTypeScale:0,3]
+Vector;45;45;15;195;&[Attrib;Linetype:PHANTOM;Lineweight:009;LineTypeScale:0,3]
+Vector;46;46;15;195;&[Attrib;Linetype:PHANTOM2;Lineweight:009;LineTypeScale:0,3]
+Vector;47;47;15;195;&[Attrib;Linetype:PHANTOMX2;Lineweight:009;LineTypeScale:0,3]
+Vector;48;48;15;195;&[Attrib;Linetype:TRACKS;Lineweight:009;LineTypeScale:0,3]
+Vector;49;49;15;195;&[Attrib;Linetype:ZIGZAG;Lineweight:009;LineTypeScale:0,3]
+
+; Lock entity layer:
+LockLayer;0 Entity Linetypes %
+
+; Select all new shapes and zoom to selected:
+SelectAll
+ZoomToAll
+; ============================================================== End of file ===

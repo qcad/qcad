@@ -1,0 +1,174 @@
+; ---------------------------------------------------------------------------- ;
+; Test file for QCAD3 DrawFromCSV script (C) by CVH 2021                       ;
+; semicolon/comma CSV style                                                    ;
+; ---------------------------------------------------------------+ by CVH +--- ;
+; File is for native semicolon list separator & comma/dot as decimal point.
+; Casting from 106 out of 174 text lines. No errors on purpose.
+
+; Auto switch ruled out:
+;CSVsemicolon/comma
+
+; Entities examples:
+; ------------------------------------------------------------------------------
+
+; Adding a new & active layer:
+NewLayer;Examples;Black;015;Continuous;true;true
+
+Point;40;50
+Line;70;0;100;100
+LineTo;100;0
+Vector;120;0;65;45
+VectorTo;30;270
+LineTo;@10;<190
+Line;@0;-5;@5;<-60
+Ray;-100;-100;-100;100
+XLine;-100;-100;100;-100
+Arc;210;30;14;105;285;false
+Arc;210;20;14;75;255;true
+Circle;210;90;32
+
+; Arc methods
+Arc;1100;500;106,301458;228,814075;156,037511;true
+ArcTo+R;1010;600;115;false
+ArcTo+A;970;550;75;true
+ArcTo+R;1030;420;115;false
+Arc3P;@126,127585;<1,7876673268rad;970;550;1010;600
+
+; Circle through a point
+Line;970;750;980;750
+LineTo;990;770
+Circle+P;980;750;990;770
+
+; Triangle with a circumscribed circle
+Triangle;975;708;960;662;1005;680
+Circle3P;975;708;960;662;1005;680
+
+Triangle;260;40;370;0;260;0
+Rectangle;260;50;110;20;340
+Square;270,04654;77,627985;31;340
+Square;-50;-50;1100;0
+RSolid3;480;0;430,934847;0;485,203661;20,729911
+RSolid4;474,944694;37,578313;399,75956;8,858667;406,664248;0,791427;481,849382;29,511074
+Polygon;720;10;711,353792;43,297331;678,194353;52,458161;653,681123;28,32166;662,327331;-4,975672;695,486769;-14,136501
+Polyline;false;520;0;0;550;40;-0,210358;590;60;0;630;60;0,44905;600;0;0
+Polyline;true;690;70;-0,18;724,061463;74,825551;0,34;745,271244;47,740234;-0,18;732,419562;15,829368;0,34;698,358099;11,003817;-0,18;677,148319;38,089133;0,34
+FitSpline;false;770;-20;800;10;850;-20;900;10;930;-10;900;-20;&[Attrib;color:Qorange]
+ControlSpline;true;940;80;850;20;750;110;780;50;830;20;890;20;&[Attrib;color:purple]
+Text;80;990;15;000;0;1;0;1;1,25;DrawFromCSV writes:;Arial;false;false;15;true;&[Attrib;Color:Qgray]
+Text;100;950;25;000;0;1;0;1;1,25;Hello World;SansND;false;false;15;true;&[Attrib;Color:Cyan]
+; ------------------------------------------------------------------------------
+
+; Piping:
+NewLayer;QCAD Logo;Black;015;Continuous;true;false
+NewLayer;QCAD Logo/Piping;Black;015;Continuous;true;true
+Line;745,90;376,10;755,10;376,10;&[Attrib;Color:Red;Lineweight:140;Linetype:DASHDOT2]
+Line;897,26;376,10;1030;376,10;&[Attrib;Color:Red;Lineweight:140;Linetype:DASHDOT2]
+Line;534,49;531,37;671,43;768,52;&[Attrib;Color:Red;Lineweight:140;Linetype:DASHDOT2]
+Line;-20;376,10;111,55;376,10;&[Attrib;Color:Red;Lineweight:140;Linetype:DASHDOT2]
+Line;253,71;376,10;557,90;376,10;&[Attrib;Color:Red;Lineweight:140;Linetype:DASHDOT2]
+Line;735,61;879,67;805,091;1000;&[Attrib;Color:Red;Lineweight:140;Linetype:DASHDOT2]
+Line;444,83;376,10;503,73;478,11;&[Attrib;Color:Red;Lineweight:140;Linetype:DASHDOT2]
+
+Line;414,20;249,00;594,61;249,00;&[Attrib;Lineweight:100]
+Polyline;false;212,43;503,21;0;408,20;503,21;0;585,03;809,48;0;&[Attrib;Lineweight:100]
+Polyline;false;796,38;503,21;0;628,36;503,21;0;741,74;699,61;0;&[Attrib;Lineweight:100]
+FitSpline;false;408,200103;503,209077;411,141237;494,267702;416,416645;486,280651;452,523373;467,657219;509,126187;463,127192;&[Attrib;Lineweight:100]
+
+NewLayer;QCAD Logo/Piping/Hidden;Black;015;Continuous;true;true
+Line;101,70;261,71;101,70;404,64;&[Attrib;Lineweight:005;Linetype:DOT]
+Line;915,17;261,71;915,17;435,02;&[Attrib;Lineweight:005;Linetype:DOT]
+Arc;101,72;541,34;38,13;180;242;false;&[Attrib;Lineweight:005;Linetype:DOT]
+Arc;915,19;541,34;38,13;285;0;false;&[Attrib;Lineweight:005;Linetype:DOT]
+Polyline;false;188,75;249,00;0;101,72;249,00;0,41421356;63,58;210,87;0;&[Attrib;Lineweight:005;Linetype:DOT]
+Polyline;false;873,00;249,00;0;915,20;249,00;-0,41421356;953,32;210,87;0;&[Attrib;Lineweight:005;Linetype:DOT]
+Quad;953,33;630,32;953,33;121,89;1004,17;121,89;1004,17;630,32;&[Attrib;Lineweight:005;Linetype:DOT]
+Quad;12,74;630,32;12,74;121,89;63,59;121,89;63,59;630,32;&[Attrib;Lineweight:005;Linetype:DOT]
+
+; Q sign:
+NewLayer;QCAD Logo/Q sign;Black;015;Continuous;true;true
+Arc;504,40;527,75;421,10;305,514;323,679;true;&[Attrib;Lineweight:140;Color:Blue]
+Arc;504,40;527,75;293,01;327,526;301,299;false;&[Attrib;Lineweight:140;Color:Blue]
+ControlSpline;false;892,56;486,11;892,56;693,13;724,78;860,91;517,76;860,91;&[Attrib;Color:Blue]
+ControlSpline;false;142,96;486,11;142,96;279,09;310,74;111,31;517,76;111,31;&[Attrib;Color:Blue]
+ControlSpline;false;517,76;111,31;603,44;111,31;682,40;140,05;745,56;188,44;&[Attrib;Color:Blue]
+ControlSpline;false;835,22;286,78;871,52;344,43;892,56;412,81;892,56;486,11;&[Attrib;Color:Blue]
+ControlSpline;false;517,76;860,91;310,74;860,91;142,96;693,13;142,96;486,11;&[Attrib;Color:Blue]
+
+; Pencil:
+NewLayer;QCAD Logo/Pencil;Black;015;Continuous;true;true
+RSolid3;516;511;506;500;482;545;&[Attrib;Color:Silver]
+RSolid4;505,5;500;499;493;481,5;541;482;543,5;&[Attrib;Color:Qgray]
+RSolid4;534;531;516,5;511,5;482,5;545,5;486;547;&[Attrib;Color:Black]
+
+RSolid4;881;241;787;147;780;154;874;248;&[Attrib;Color:Black]
+RSolid4;869;253;775;159;768;166;862;260;&[Attrib;Color:Black]
+RSolid4;857;265;763;171;756;178;850;272;&[Attrib;Color:Black]
+
+Line;768;210;572;406;&[Attrib;Lineweight:080;Color:Qorange]
+Line;793;235;572;456;&[Attrib;Lineweight:080;Color:Qorange]
+Line;816;258;618;456;&[Attrib;Lineweight:080;Color:Qorange]
+Line;840;282;746;188;&[Attrib;Lineweight:080;Color:Qorange]
+Line;890;232;796;138;&[Attrib;Lineweight:080;Color:Qorange]
+Line;756;198;550;404;&[Attrib;Color:Yellow]
+Line;779;221;572;428;&[Attrib;Color:Qorange]
+Line;781;223;572;432;&[Attrib;Color:Yellow]
+Line;800;242;586;456;&[Attrib;Color:Qorange]
+Line;804;246;594;456;&[Attrib;Color:Yellow]
+
+Line;883;103;824;162;&[Attrib;Color:Maroon]
+Line;914;144;857;197;&[Attrib;Color:Maroon]
+Line;909;128;849;187;&[Attrib;Color:Maroon]
+Line;897;115;837;175;&[Attrib;Color:Maroon]
+Line;870;96;814;152;&[Attrib;Color:Maroon]
+Line;916;166;872;210;&[Attrib;Color:Maroon]
+
+Polyline;false;939,023014;182,976986;0;618,562014;503,437986;0;487,563284;546,957206;0,625869;481,282168;540,519524;0;530,622939;403,377061;0;845,023014;88,976986;0;&[Attrib;Lineweight:120;Color:Yellow]
+Polyline;false;618;502;0;618;456;0;572;456;0;572;404;0;532;404;0;&[Attrib;Lineweight:120;Color:Qorange]
+FitSpline;false;845,023014;88,976986;858;89,5;907,227533;120,772467;938,5;170;939,023014;182,976986;&[Attrib;Lineweight:120;Color:Yellow]
+
+; Little house:
+; The order is important.
+NewLayer;Examples/Little house;Black;015;Continuous;true;true
+RSolid4;900;970;1000;970;1000;900;900;900;&[Attrib;color:Qgray]
+RSolid3;950;1000;890;970;1010;970;&[Attrib;color:Maroon]
+RSolid4;910;900;930;900;930;940;910;940;&[Attrib;color:Silver]
+RSolid4;940;940;990;940;990;920;940;920;&[Attrib;color:Silver]
+Polyline;false;910;900;0;910;940;0;930;940;0;930;900;0;&[Attrib;color:Black]
+Quad;940;940;990;940;990;920;940;920;&[Attrib;color:Black]
+Line;950;940;950;920;&[Attrib;color:Black]
+Line;980;940;980;920;&[Attrib;color:Black]
+Line;880;900;1010;900;&[Attrib;color:Black]
+Line;890;900;889;902;&[Attrib;color:Teal]
+Line;890;900;890;903;&[Attrib;color:Teal]
+Line;890;900;892;901;&[Attrib;color:Teal]
+
+; Date & File stamp:
+NewLayer;Examples/Stamps;Black;015;Continuous;false;true
+Text;0;1200;15;000;1;0;0;1;1,25;DateStamp;Arial;false;false;0;true
+Text;0;1150;15;600;1;0;0;1;1,25;FileStamp;Arial;false;false;0;true
+
+; CVH mark:
+NewOrigin;0,0;0,0
+NewOrigin;@50;<-45
+Point;970,00;30,00;&[Custom;DrawFromCSV:By CVH]
+Polyline;false;956,52;49,04;0;953,62;48,27;0,41421356;950,08;42,14;0;951,12;38,28;0,41421356;957,24;34,74;0;960,14;35,52;0
+Polyline;false;959,42;49,82;0;967,87;37,59;0;969,08;52,41;0
+Line;971,49;53,05;975,11;39,53
+Line;973,30;46,29;980,55;48,23
+Line;978,73;55,00;982,36;41,47
+
+; Changing some layer settings:
+HideLayer;QCAD Logo/Piping/Hidden
+LockLayer;QCAD Logo
+NewLayer;Examples/Little house;Red;015;Continuous;true;true
+
+; Last active layer:
+NewLayer;minor BUG - This should be listed as the current layer;olive;040;Continuous;true;true
+; BUG ... The active layer changes but the Layer List doesn't reflect this
+
+; Zoom to all new shapes
+ZoomToAll
+
+; Select all new shapes ruled out
+;SelectAll
+; ============================================================== End of file ===
