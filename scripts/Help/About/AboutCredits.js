@@ -6,7 +6,8 @@ var credits =
                               ],
         [ "Christian Aigner", "Misc > Draw > Dovetail from 2 Points<br>"
                               ],
-        [ "CVH",              "Misc > Script Examples > Mathematics > FlexPainter<br>"
+        [ "CVH",              "Misc > Script Examples > Mathematics > FlexPainter<br>" +
+                              "Misc > Import/Export > Draw from CSV"
                               ],
         [ "Matfie",           "Gear generator library item \"InvoluteSpur\"<br>"
                               ],
