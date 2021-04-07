@@ -17053,12 +17053,12 @@ nicht öffnen.
     <message>
         <location line="+2"/>
         <source>Solids</source>
-        <translation>Volumenkörper</translation>
+        <translation>2D-Volumenkörper</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Solid</source>
-        <translation>Volumenkörper</translation>
+        <translation>2D-Volumenkörper</translation>
     </message>
     <message>
         <location line="+2"/>
