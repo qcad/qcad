@@ -1000,6 +1000,7 @@
     <file alias="scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.svg">../../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.svg</file>
     <file alias="scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.svg">../../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.svg</file>
     <file alias="scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui">../../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui</file>
+    <file alias="scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js">../../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js</file>
     <file alias="scripts/Misc/Examples/MathExamples/FlexPainter/Icons/1_OrthoPointGlobal.svg">../../scripts/Misc/Examples/MathExamples/FlexPainter/Icons/1_OrthoPointGlobal.svg</file>
     <file alias="scripts/Misc/Examples/MathExamples/FlexPainter/Icons/1_OrthoPointGlobalFlex.svg">../../scripts/Misc/Examples/MathExamples/FlexPainter/Icons/1_OrthoPointGlobalFlex.svg</file>
     <file alias="scripts/Misc/Examples/MathExamples/FlexPainter/Icons/2_OrthoPointsGlobal.svg">../../scripts/Misc/Examples/MathExamples/FlexPainter/Icons/2_OrthoPointsGlobal.svg</file>
@@ -1154,6 +1155,14 @@
     <file alias="scripts/Misc/MiscDraw/XLineVertical/XLineVertical.js">../../scripts/Misc/MiscDraw/XLineVertical/XLineVertical.js</file>
     <file alias="scripts/Misc/MiscDraw/XLineVertical/XLineVertical.svg">../../scripts/Misc/MiscDraw/XLineVertical/XLineVertical.svg</file>
     <file alias="scripts/Misc/MiscDraw/XLineVertical/XLineVerticalInit.js">../../scripts/Misc/MiscDraw/XLineVertical/XLineVerticalInit.js</file>
+    <file alias="scripts/Misc/MiscIO/Batch2Pdf/Batch2Pdf.js">../../scripts/Misc/MiscIO/Batch2Pdf/Batch2Pdf.js</file>
+    <file alias="scripts/Misc/MiscIO/Batch2Pdf/Batch2Pdf.svg">../../scripts/Misc/MiscIO/Batch2Pdf/Batch2Pdf.svg</file>
+    <file alias="scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js">../../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js</file>
+    <file alias="scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV-inverse.svg">../../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV-inverse.svg</file>
+    <file alias="scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js">../../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js</file>
+    <file alias="scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.svg">../../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.svg</file>
+    <file alias="scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js">../../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js</file>
+    <file alias="scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV_Documents/DrawFromCSV.png">../../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV_Documents/DrawFromCSV.png</file>
     <file alias="scripts/Misc/MiscIO/ImportPoints/ImportPoints.js">../../scripts/Misc/MiscIO/ImportPoints/ImportPoints.js</file>
     <file alias="scripts/Misc/MiscIO/MiscIO.js">../../scripts/Misc/MiscIO/MiscIO.js</file>
     <file alias="scripts/Misc/MiscIO/MolImport/MolImport-inverse.svg">../../scripts/Misc/MiscIO/MolImport/MolImport-inverse.svg</file>
