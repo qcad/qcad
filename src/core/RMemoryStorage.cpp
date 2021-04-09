@@ -2115,7 +2115,7 @@ RBlock::Id RMemoryStorage::getBlockIdAuto(const QString& blockLayoutName) const 
         QSet<RBlock::Id>::iterator it;
         for (it = ids.begin(); it != ids.end(); it++) {
             QSharedPointer<RBlock> layoutBlock = queryBlockDirect(*it);
-            if (QString::compare(layoutBlock->getName(), blockLayoutName, Qt::CaseInsensitive)==0) {
+            if (QString::compare(layoutBlock->getLayoutName(), blockLayoutName, Qt::CaseInsensitive)==0) {
                 return *it;
             }
         }
