@@ -17,7 +17,7 @@
    </sizepolicy>
   </property>
   <property name="autoFillBackground">
-   <bool>false</bool>
+   <bool>true</bool>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <property name="leftMargin">
@@ -59,9 +59,6 @@
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
-       <property name="autoFillBackground">
-        <bool>true</bool>
-       </property>
     </widget>
    </item>
    <item row="1" column="2">
@@ -107,14 +104,14 @@
        <property name="toolTip">
         <string>Grid Spacing &lt; Meta Grid Spacing</string>
        </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
        <property name="text">
         <string/>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-       <property name="autoFillBackground">
-        <bool>true</bool>
        </property>
       </widget>
      </item>
