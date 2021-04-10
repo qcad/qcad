@@ -4994,7 +4994,7 @@ is already in the list.</source>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation>Отражать роликовые штампы над базовой линией.</translation>
+        <translation>Отражать роликовые штампы над базовой линией</translation>
     </message>
     <message>
         <location line="+10"/>
