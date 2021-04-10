@@ -81,6 +81,7 @@ Window.getMenu = function() {
                 if (modified) {
                     text += " *";
                 }
+                text = text.replace(/&/g, "&&");
                 action = menu.addAction(text);
                 action.checkable = true;
                 if (!isNull(mdiArea.activeSubWindow()) && window.getObjectId() == mdiArea.activeSubWindow().getObjectId()) {

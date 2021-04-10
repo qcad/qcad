@@ -342,7 +342,8 @@ NewFile.updateTitle = function(mdiChild) {
 
     var document = mdiChild.getDocument();
     var fileName = document.getFileName();
-    var title = undefined;
+    var title = "";
+    var titleAppWin = "";
 
     // untitled:
     if (fileName==="") {
@@ -354,16 +355,17 @@ NewFile.updateTitle = function(mdiChild) {
             mdiChild.objectName = "Untitled%1".arg(documentCounter);
             documentCounter++;
             mdiChild.setWindowTitle(title);
+            titleAppWin = title;
         }
     }
     else {
         var fi = new QFileInfo(fileName);
         var name = fi.fileName();
-        var roStr = qsTr("read-only");
         if (fi.isWritable()) {
             title = addDirtyFlag(name);
         }
         else {
+            var roStr = qsTr("read-only");
             title = name + " " + roStr;
         }
 
@@ -371,11 +373,13 @@ NewFile.updateTitle = function(mdiChild) {
         if (!isNull(tabBar)) {
             tabBar.setTabToolTip(tabBar.currentIndex, fileName);
         }
+        titleAppWin = title;
+        title = title.replace(/&/g, "&&");
         mdiChild.setWindowTitle(title);
     }
 
     appWin.setWindowTitle(
-        stripDirtyFlag(mdiChild.windowTitle) +
+        stripDirtyFlag(titleAppWin) +
         (document.isModified() ? " *" : "") +
         " - " + qApp.applicationName
     );

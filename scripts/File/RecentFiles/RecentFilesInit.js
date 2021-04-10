@@ -44,8 +44,8 @@ RecentFilesMenu.prototype.refresh = function() {
         var fp = fi.path().elidedText(this.font, 200);
 
         // make sure ampersand is not interpreted as shortcut indicator:
-        fn = fn.replace("&", "&&");
-        fp = fp.replace("&", "&&");
+        fn = fn.replace(/&/g, "&&");
+        fp = fp.replace(/&/g, "&&");
 
         text += (files.length - i) + " "
                 + fn + " ["
