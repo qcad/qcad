@@ -1888,7 +1888,7 @@ String.prototype.wordWrap = function(m, c, b){
 String.prototype.regexIndexOf = function(regex, startpos) {
     var indexOf = this.substring(startpos || 0).search(regex);
     return (indexOf >= 0) ? (indexOf + (startpos || 0)) : indexOf;
-}
+};
 
 String.prototype.regexLastIndexOf = function(regex, startpos) {
     regex = (regex.global) ? regex : new RegExp(regex.source, "g" + (regex.ignoreCase ? "i" : "") + (regex.multiLine ? "m" : ""));
@@ -1905,7 +1905,7 @@ String.prototype.regexLastIndexOf = function(regex, startpos) {
         regex.lastIndex = ++nextStop;
     }
     return lastIndexOf;
-}
+};
 
 /**
  * Modulo which works also for negative numbers (workaround for
