@@ -658,7 +658,7 @@ Projection.prototype.projectShape = function(shape, preview, trim, rec) {
                 startWidths.sortNumerical();
                 endWidths.sortNumerical();
                 if (RMath.fuzzyCompare(startWidths[0], startWidths[startWidths.length-1]) &&
-                    RMath.fuzzyCompare(endWidths[0], startWidths[endWidths.length-1]) &&
+                    RMath.fuzzyCompare(endWidths[0], endWidths[endWidths.length-1]) &&
                     RMath.fuzzyCompare(startWidths[0], endWidths[0])) {
 
                     // got global polyline width:
