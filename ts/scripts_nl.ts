@@ -232,7 +232,7 @@
         <translation>Programmering</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+58"/>
         <source>Hatch Patterns</source>
         <translation>Arceerpatronen</translation>
     </message>
@@ -1086,6 +1086,20 @@ Wilt u het herstellen?</translation>
         <location filename="../scripts/View/Zoom/AutoZoom/AutoZoomInit.js" line="+2"/>
         <source>&amp;Auto Zoom</source>
         <translation>&amp;Auto zoom</translation>
+    </message>
+</context>
+<context>
+    <name>Batch2Pdf</name>
+    <message>
+        <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2Pdf.js" line="+30"/>
+        <source>Export to PDF</source>
+        <translation>PDF exporteren</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
+        <location line="+4"/>
+        <source>&amp;Batch2Pdf visible layout blocks</source>
+        <translation>&amp;Batch2Pdf zichtbare layout-blokken</translation>
     </message>
 </context>
 <context>
@@ -3656,6 +3670,528 @@ is al in de lijst.</translation>
     </message>
 </context>
 <context>
+    <name>DrawFromCSV</name>
+    <message>
+        <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+129"/>
+        <source>No import file selected !</source>
+        <translation>Geen importbestand geselecteerd.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+15"/>
+        <location line="+1168"/>
+        <source>Command ended.</source>
+        <translation>Commando beëindigd.</translation>
+    </message>
+    <message>
+        <location line="-1171"/>
+        <source>No file opened!</source>
+        <translation>Geen bestand geopend.</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Cast CSV</source>
+        <translation>Van CSV tekenen</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Reading from file: %1</source>
+        <translation>Lezen uit bestand: %1</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Switched to comma/dot CSV style.</source>
+        <translation>Overgeschakeld naar komma/streep CSV stijl.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Switched to semicolon/dot CSV style.</source>
+        <translation>Overgeschakeld naar puntkomma/streep CSV stijl.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Switched to semicolon/comma CSV style.</source>
+        <translation>Overgeschakeld naar puntkomma/komma CSV stijl.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Unsupported or invalid CSV style, ignored ! Text line %1</source>
+        <translation>Niet-ondersteunde of ongeldige CSV-stijl, genegeerd. Tekstblok %1</translation>
+    </message>
+    <message>
+        <location line="+82"/>
+        <source>Setting new relative origin failed, ignored ! Text line %1</source>
+        <translation>Instellen nieuwe relatieve oorsprong mislukt, genegeerd. Tekst blok %1</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Can not switch to layer, ignored ! Text line %1 layer: %2</source>
+        <translation>Kan niet naar laag schakelen, genegeerd. Tekstblok %1 laag: %2</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Not a correct  layer switch, ignored ! Text line %1</source>
+        <translation>Geen correcte laagschakelaar, genegeerd ! Tekst blok %1</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Not a correct  new layer switch, ignored ! Text line %1</source>
+        <translation>Geen correcte nieuwe laagschakelaar, genegeerd ! Tekst blok %1</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Can not hide layer, ignored ! Text line %1 layer: %2</source>
+        <translation>Kan laag niet verbergen, genegeerd ! Tekstblok %1 laag: %2</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Not a correct  hide layer switch, ignored ! Text line %1</source>
+        <translation>Geen correcte verberg laag schakelaar, genegeerd ! Tekst blok %1</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Can not freeze layer, ignored ! Text line %1 layer: %2</source>
+        <translation>Kan laag niet bevriezen, genegeerd ! Tekstblok %1 laag: %2</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Not a correct  freeze layer switch, ignored ! Text line %1</source>
+        <translation>Geen correcte vrieslaagschakelaar, genegeerd ! Tekst blok %1</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Can not lock layer, ignored ! Text line %1 layer: %2</source>
+        <translation>Kan laag niet vergrendelen, genegeerd ! Tekstblok %1 laag: %2</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Not a correct  lock layer switch, ignored ! Text line %1</source>
+        <translation>Geen correcte slotlaagschakelaar, genegeerd ! Tekst blok %1</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Can not allow layer, ignored ! Text line %1 layer: %2</source>
+        <translation>Kan laag niet toestaan, genegeerd ! Tekstblok %1 laag: %2</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Not a correct  allow layer switch, ignored ! Text line %1</source>
+        <translation>Niet een correcte toestaan laag schakelaar, genegeerd ! Tekst blok %1</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <location line="+17"/>
+        <location line="+19"/>
+        <location line="+18"/>
+        <location line="+25"/>
+        <location line="+24"/>
+        <location line="+19"/>
+        <location line="+19"/>
+        <location line="+25"/>
+        <location line="+22"/>
+        <location line="+48"/>
+        <location line="+46"/>
+        <location line="+19"/>
+        <location line="+21"/>
+        <location line="+22"/>
+        <location line="+24"/>
+        <location line="+21"/>
+        <location line="+26"/>
+        <location line="+23"/>
+        <location line="+32"/>
+        <source>Low field count !</source>
+        <translation>Laag veld aantal !</translation>
+    </message>
+    <message>
+        <location line="-469"/>
+        <location line="+17"/>
+        <location line="+19"/>
+        <location line="+18"/>
+        <location line="+25"/>
+        <location line="+24"/>
+        <location line="+19"/>
+        <location line="+19"/>
+        <location line="+25"/>
+        <location line="+22"/>
+        <location line="+48"/>
+        <location line="+46"/>
+        <location line="+19"/>
+        <location line="+21"/>
+        <location line="+22"/>
+        <location line="+24"/>
+        <location line="+21"/>
+        <location line="+26"/>
+        <location line="+23"/>
+        <location line="+32"/>
+        <location line="+34"/>
+        <location line="+23"/>
+        <location line="+29"/>
+        <location line="+25"/>
+        <source>Odd field count !</source>
+        <translation>Oneven veldtelling !</translation>
+    </message>
+    <message>
+        <location line="-579"/>
+        <location line="+37"/>
+        <location line="+104"/>
+        <location line="+48"/>
+        <location line="+48"/>
+        <location line="+45"/>
+        <location line="+156"/>
+        <location line="+166"/>
+        <source>Rv Invalid !</source>
+        <translation>Rv Ongeldig !</translation>
+    </message>
+    <message>
+        <location line="-587"/>
+        <location line="+37"/>
+        <location line="+49"/>
+        <location line="+19"/>
+        <location line="+44"/>
+        <location line="+135"/>
+        <location line="+21"/>
+        <location line="+22"/>
+        <location line="+24"/>
+        <location line="+21"/>
+        <location line="+26"/>
+        <location line="+55"/>
+        <source>Rv1 Invalid !</source>
+        <translation>Rv1 Ongeldig !</translation>
+    </message>
+    <message>
+        <location line="-451"/>
+        <location line="+43"/>
+        <location line="+24"/>
+        <location line="+19"/>
+        <location line="+19"/>
+        <location line="+44"/>
+        <location line="+135"/>
+        <location line="+21"/>
+        <location line="+22"/>
+        <location line="+24"/>
+        <location line="+21"/>
+        <location line="+26"/>
+        <location line="+27"/>
+        <location line="+34"/>
+        <source>Rv2 Invalid !</source>
+        <translation>Rv2 Ongeldig !</translation>
+    </message>
+    <message>
+        <location line="-422"/>
+        <location line="+24"/>
+        <location line="+63"/>
+        <location line="+52"/>
+        <location line="+44"/>
+        <location line="+45"/>
+        <location line="+21"/>
+        <source>Radius Invalid !</source>
+        <translation>Straal ongeldig !</translation>
+    </message>
+    <message>
+        <location line="-247"/>
+        <location line="+24"/>
+        <location line="+109"/>
+        <location line="+251"/>
+        <location line="+34"/>
+        <location line="+149"/>
+        <source>Angle Invalid !</source>
+        <translation>Hoek ongeldig !</translation>
+    </message>
+    <message>
+        <location line="-480"/>
+        <source>Angle1 Invalid !</source>
+        <translation>Hoek1 ongeldig !</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Angle2 Invalid !</source>
+        <translation>Hoek2 ongeldig !</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Equal angles !</source>
+        <translation>Gelijke hoeken !</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <location line="+156"/>
+        <location line="+22"/>
+        <location line="+24"/>
+        <location line="+21"/>
+        <location line="+26"/>
+        <location line="+27"/>
+        <location line="+34"/>
+        <source>Rv3 Invalid !</source>
+        <translation>Rv3 ongeldig !</translation>
+    </message>
+    <message>
+        <location line="-308"/>
+        <source>Arc Invalid !</source>
+        <translation>Boog ongeldig !</translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <location line="+46"/>
+        <source>Center Invalid !</source>
+        <translation>Centrum Ongeldig !</translation>
+    </message>
+    <message>
+        <location line="-21"/>
+        <source>Radius too small !</source>
+        <translation>Straal te klein !</translation>
+    </message>
+    <message>
+        <location line="+88"/>
+        <source>Circle Invalid !</source>
+        <translation>Cirkel ongeldig !</translation>
+    </message>
+    <message>
+        <location line="+67"/>
+        <location line="+26"/>
+        <location line="+27"/>
+        <location line="+34"/>
+        <source>Rv4 Invalid !</source>
+        <translation>Rv4 ongeldig !</translation>
+    </message>
+    <message>
+        <location line="-42"/>
+        <source>Size Invalid !</source>
+        <translation>Grootte ongeldig !</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Size in X Invalid !</source>
+        <translation>Grootte in X Ongeldig !</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Size in Y Invalid !</source>
+        <translation>Grootte in Y Ongeldig !</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Polygon, less than 5 references !</source>
+        <translation>Polygoon, minder dan 5 referenties !</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+25"/>
+        <location line="+27"/>
+        <location line="+28"/>
+        <source>Rv %1 Invalid !</source>
+        <translation>Rv %1 Ongeldig !</translation>
+    </message>
+    <message>
+        <location line="-62"/>
+        <source>Polyline, less than 2 references !</source>
+        <translation>Polylijn, minder dan 2 referenties !</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Bulge %1 Invalid !</source>
+        <translation>Uitsteeksel %1 Ongeldig !</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Unsupported PRO feature !</source>
+        <translation>Niet ondersteunde PRO functie !</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fit point Spline, less than 3 references !</source>
+        <translation>Paspunt Spline, minder dan 3 referenties !</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Control point Spline, less than 4 references !</source>
+        <translation>Controlepunt Spline, minder dan 4 referenties !</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Text, low field count !</source>
+        <translation>Tekst, laag veld aantal !</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text, odd field count !</source>
+        <translation>Tekst, oneven veldtelling !</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Height Invalid !</source>
+        <translation>Hoogte Ongeldig !</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Width Invalid !</source>
+        <translation>Breedte ongeldig !</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Vert. alignment Invalid !</source>
+        <translation>Vert. uitlijning Ongeldig !</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Horz. alignment Invalid !</source>
+        <translation>Horz. Uitlijning Ongeldig !</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Drawing direction Invalid !</source>
+        <translation>Tekenrichting ongeldig !</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Line spacing style Invalid !</source>
+        <translation>Blokafstand ongeldig !</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Line spacing Invalid !</source>
+        <translation>Blokafstand Ongeldig !</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Unsupported entry ! Text line %1</source>
+        <translation>Niet-ondersteunde invoer ! Tekst blok %1</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Error with first optional list !</source>
+        <translation>Fout met eerste optionele lijst !</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Error with second optional list !</source>
+        <translation>Fout met tweede optionele lijst !</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Not a correct entry ! Text line %1 : %2</source>
+        <translation>Geen correcte invoer ! Tekst blok %1 : %2</translation>
+    </message>
+    <message>
+        <location line="+77"/>
+        <source>Casted entries : %1 with %2 text lines</source>
+        <translation>Gegoten vermeldingen : %1 met %2 tekstblokken</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Importing CSV complete. Command ended.</source>
+        <translation>Importeren CSV voltooid. Commando beëindigd.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Nothing casted !</source>
+        <translation>Niets gegoten !</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Draw from CSV</source>
+        <translation>Tekenen uit CSV</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>CSV</source>
+        <translation>CSV</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>All Files</source>
+        <translation>Alle bestanden</translation>
+    </message>
+    <message>
+        <location line="+165"/>
+        <source>Attributes empty ! Text line %1</source>
+        <translation>Attributen leeg ! Tekst blok %1</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <location line="+97"/>
+        <source>Not a correct layer name ! Text line %1 name: %2</source>
+        <translation>Geen correcte laagnaam ! Naam tekstblok %1: %2</translation>
+    </message>
+    <message>
+        <location line="-90"/>
+        <source>Layer doesn&apos;t exist, ignored ! Text line %1 layer: %2</source>
+        <translation>Laag bestaat niet, genegeerd ! Tekstblok %1 laag: %2</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Not a correct color, ignored ! Text line %1 color: %2</source>
+        <translation>Geen correcte kleur, genegeerd ! Tekst blok %1 kleur: %2</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Not a correct Lineweight, ignored ! Text line %1 weight: %2</source>
+        <translation>Geen correct Lijngewicht, genegeerd ! Gewicht tekstblok %1: %2</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Not a correct Linetype, ignored ! Text line %1 type: %2</source>
+        <translation>Geen correct Linetype, genegeerd ! Tekst blok %1 type: %2</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Not a correct Linetype scale, ignored ! Text line %1 scale: %2</source>
+        <translation>Geen correcte Linetype schaal, genegeerd ! Tekst lijn %1 schaal: %2</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Not a correct attribute, ignored ! Text line %1 &gt; %2</source>
+        <translation>Geen correct attribuut, genegeerd ! Tekstblok %1 &gt; %2</translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>Parent layer doesn&apos;t exist ! Text line %1 layer: %2</source>
+        <translation>Moederlaag bestaat niet ! Tekstblok %1 laag: %2</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Not a correct color ! Text line %1 color: %2</source>
+        <translation>Geen correcte kleur ! Tekst blok %1 kleur: %2</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Not a correct Lineweight ! Text line %1 weight: %2</source>
+        <translation>Geen correct Lijngewicht ! Gewicht tekstblok %1: %2</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Not a correct Linetype ! Text line %1 type: %2</source>
+        <translation>Geen correct Linetype ! Tekst blok %1 type: %2</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Add/Update layer ignored !</source>
+        <translation>Toevoegen/bijwerken laag genegeerd !</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Updated layer : %1</source>
+        <translation>Bijgewerkte laag : %1</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Added new layer : %1</source>
+        <translation>Nieuwe laag toegevoegd : %1</translation>
+    </message>
+</context>
+<context>
+    <name>DrawFromCSVInit</name>
+    <message>
+        <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
+        <source>&amp;Draw from CSV</source>
+        <translation>&amp;Tekenen uit CSV</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Draws entities based on textual entries in a CSV file</source>
+        <translation>Tekent objecten gebaseerd op tekstuele gegevens in een CSV-bestand</translation>
+    </message>
+</context>
+<context>
     <name>DrawOrder</name>
     <message>
         <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
@@ -4911,12 +5447,11 @@ is al in de lijst.</translation>
         <translation>FP toegevoegde laag:</translation>
     </message>
     <message>
-        <location line="+1196"/>
         <source>&amp;FlexPainter</source>
-        <translation>&amp;FlexPainter</translation>
+        <translation type="vanished">&amp;FlexPainter</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation>Verven over de selectie, nabootsen van een rolstempel</translation>
     </message>
@@ -5299,6 +5834,14 @@ BUG: Interferes with group castings.</source>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
         <translation>Basisobjecten verwijderen *</translation>
+    </message>
+</context>
+<context>
+    <name>FlexPainterInit</name>
+    <message>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
+        <source>&amp;FlexPainter</source>
+        <translation>&amp;FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -7049,7 +7592,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Ongeldig blok naam gecorrigeerd in &apos;%1&apos;</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+69"/>
         <source>Position</source>
         <translation>Positie</translation>
     </message>
@@ -9142,17 +9685,17 @@ getoond in zoekresultaten:</translation>
         <translation>Formaat:</translation>
     </message>
     <message>
-        <location line="+137"/>
+        <location line="+138"/>
         <source>Untitled %1</source>
         <translation>Naamloos %1</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+18"/>
         <source>read-only</source>
         <translation>alleen lezen</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+63"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translation>Wilt u de wijzigingen in het document&lt;br&gt;&apos;%1&apos; opslaan?</translation>
     </message>
@@ -10802,7 +11345,7 @@ getoond in zoekresultaten:</translation>
         <translation>Bestand %1 kon niet worden opgeslagen.</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+21"/>
         <source>Saved file:</source>
         <translation>Opgeslagen bestand:</translation>
     </message>
@@ -13621,7 +14164,7 @@ getoond in zoekresultaten:</translation>
         <translation>Voorbeeld</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+108"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation>Raster tussenafstand &lt; Meta raster tussenafstand</translation>
     </message>
@@ -13914,7 +14457,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>Window</name>
     <message>
-        <location filename="../scripts/Window/Window.js" line="+108"/>
+        <location filename="../scripts/Window/Window.js" line="+109"/>
         <source>&amp;Window</source>
         <translation>&amp;Scherm</translation>
     </message>

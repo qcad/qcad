@@ -577,6 +577,7 @@ SOURCES = \
 ../scripts/Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js \
 ../scripts/Misc/Examples/MathExamples/ExMathSpiral/ExMathSpiral.js \
 ../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js \
+../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js \
 ../scripts/Misc/Examples/MathExamples/MathExamples.js \
 ../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js \
 ../scripts/Misc/Examples/ModifyExamples/ModifyExamples.js \
@@ -624,6 +625,10 @@ SOURCES = \
 ../scripts/Misc/MiscDraw/XLineHorizontal/XLineHorizontalInit.js \
 ../scripts/Misc/MiscDraw/XLineVertical/XLineVertical.js \
 ../scripts/Misc/MiscDraw/XLineVertical/XLineVerticalInit.js \
+../scripts/Misc/MiscIO/Batch2Pdf/Batch2Pdf.js \
+../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js \
+../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js \
+../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js \
 ../scripts/Misc/MiscIO/ImportPoints/ImportPoints.js \
 ../scripts/Misc/MiscIO/MiscIO.js \
 ../scripts/Misc/MiscIO/MolImport/MolImport.js \

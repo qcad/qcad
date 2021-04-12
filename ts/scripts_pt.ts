@@ -236,7 +236,7 @@
         <translation>Programação</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+58"/>
         <source>Hatch Patterns</source>
         <translation>Padrões de hachuras</translation>
     </message>
@@ -1105,6 +1105,20 @@ Você deseja recuperá-lo?</translation>
         <location filename="../scripts/View/Zoom/AutoZoom/AutoZoomInit.js" line="+2"/>
         <source>&amp;Auto Zoom</source>
         <translation>Zoom &amp;automático</translation>
+    </message>
+</context>
+<context>
+    <name>Batch2Pdf</name>
+    <message>
+        <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2Pdf.js" line="+30"/>
+        <source>Export to PDF</source>
+        <translation>Exportar para PDF</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
+        <location line="+4"/>
+        <source>&amp;Batch2Pdf visible layout blocks</source>
+        <translation>&amp;Batch2Pdf blocos de layout visíveis</translation>
     </message>
 </context>
 <context>
@@ -3718,6 +3732,528 @@ já se encontra na lista.</translation>
     </message>
 </context>
 <context>
+    <name>DrawFromCSV</name>
+    <message>
+        <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+129"/>
+        <source>No import file selected !</source>
+        <translation>Nenhum arquivo de importação selecionado.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+15"/>
+        <location line="+1168"/>
+        <source>Command ended.</source>
+        <translation>O comando terminou.</translation>
+    </message>
+    <message>
+        <location line="-1171"/>
+        <source>No file opened!</source>
+        <translation>Nenhum arquivo aberto.</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Cast CSV</source>
+        <translation>CSV fundido</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Reading from file: %1</source>
+        <translation>Leitura de arquivo: %1</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Switched to comma/dot CSV style.</source>
+        <translation>Comutado para o estilo CSV vírgula/dot.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Switched to semicolon/dot CSV style.</source>
+        <translation>Comutado para ponto e vírgula/dote estilo CSV.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Switched to semicolon/comma CSV style.</source>
+        <translation>Comutado para o estilo ponto e vírgula/comum CSV.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Unsupported or invalid CSV style, ignored ! Text line %1</source>
+        <translation>Estilo CSV sem suporte ou inválido, ignorado. Linha de texto %1</translation>
+    </message>
+    <message>
+        <location line="+82"/>
+        <source>Setting new relative origin failed, ignored ! Text line %1</source>
+        <translation>A definição de nova origem relativa falhou, ignorada. Linha de texto %1</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Can not switch to layer, ignored ! Text line %1 layer: %2</source>
+        <translation>Não pode mudar para camada, ignorado. Linha de texto %1 camada: %2</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Not a correct  layer switch, ignored ! Text line %1</source>
+        <translation>Não é um interruptor de camadas correcto, ignorado! Linha de texto %1</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Not a correct  new layer switch, ignored ! Text line %1</source>
+        <translation>Não é um novo interruptor de camadas correcto, ignorado! Linha de texto %1</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Can not hide layer, ignored ! Text line %1 layer: %2</source>
+        <translation>Não pode esconder camada, ignorada! Linha de texto %1 camada: %2</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Not a correct  hide layer switch, ignored ! Text line %1</source>
+        <translation>Não é um interruptor de ocultação correcto, ignorado! Linha de texto %1</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Can not freeze layer, ignored ! Text line %1 layer: %2</source>
+        <translation>Não pode congelar camada, ignorado! Linha de texto %1 camada: %2</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Not a correct  freeze layer switch, ignored ! Text line %1</source>
+        <translation>Não é um interruptor de congelamento correcto, ignorado! Linha de texto %1</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Can not lock layer, ignored ! Text line %1 layer: %2</source>
+        <translation>Não pode bloquear a camada, ignorada! Linha de texto %1 camada: %2</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Not a correct  lock layer switch, ignored ! Text line %1</source>
+        <translation>Não é um interruptor de bloqueio correcto, ignorado! Linha de texto %1</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Can not allow layer, ignored ! Text line %1 layer: %2</source>
+        <translation>Não pode permitir camadas, ignoradas! Linha de texto %1 camada: %2</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Not a correct  allow layer switch, ignored ! Text line %1</source>
+        <translation>Não é um interruptor de camadas correto, ignorado! Linha de texto %1</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <location line="+17"/>
+        <location line="+19"/>
+        <location line="+18"/>
+        <location line="+25"/>
+        <location line="+24"/>
+        <location line="+19"/>
+        <location line="+19"/>
+        <location line="+25"/>
+        <location line="+22"/>
+        <location line="+48"/>
+        <location line="+46"/>
+        <location line="+19"/>
+        <location line="+21"/>
+        <location line="+22"/>
+        <location line="+24"/>
+        <location line="+21"/>
+        <location line="+26"/>
+        <location line="+23"/>
+        <location line="+32"/>
+        <source>Low field count !</source>
+        <translation>Baixa contagem de campos !</translation>
+    </message>
+    <message>
+        <location line="-469"/>
+        <location line="+17"/>
+        <location line="+19"/>
+        <location line="+18"/>
+        <location line="+25"/>
+        <location line="+24"/>
+        <location line="+19"/>
+        <location line="+19"/>
+        <location line="+25"/>
+        <location line="+22"/>
+        <location line="+48"/>
+        <location line="+46"/>
+        <location line="+19"/>
+        <location line="+21"/>
+        <location line="+22"/>
+        <location line="+24"/>
+        <location line="+21"/>
+        <location line="+26"/>
+        <location line="+23"/>
+        <location line="+32"/>
+        <location line="+34"/>
+        <location line="+23"/>
+        <location line="+29"/>
+        <location line="+25"/>
+        <source>Odd field count !</source>
+        <translation>Contagem de campos estranha!</translation>
+    </message>
+    <message>
+        <location line="-579"/>
+        <location line="+37"/>
+        <location line="+104"/>
+        <location line="+48"/>
+        <location line="+48"/>
+        <location line="+45"/>
+        <location line="+156"/>
+        <location line="+166"/>
+        <source>Rv Invalid !</source>
+        <translation>Rv Inválido!</translation>
+    </message>
+    <message>
+        <location line="-587"/>
+        <location line="+37"/>
+        <location line="+49"/>
+        <location line="+19"/>
+        <location line="+44"/>
+        <location line="+135"/>
+        <location line="+21"/>
+        <location line="+22"/>
+        <location line="+24"/>
+        <location line="+21"/>
+        <location line="+26"/>
+        <location line="+55"/>
+        <source>Rv1 Invalid !</source>
+        <translation>Rv1 Inválido!</translation>
+    </message>
+    <message>
+        <location line="-451"/>
+        <location line="+43"/>
+        <location line="+24"/>
+        <location line="+19"/>
+        <location line="+19"/>
+        <location line="+44"/>
+        <location line="+135"/>
+        <location line="+21"/>
+        <location line="+22"/>
+        <location line="+24"/>
+        <location line="+21"/>
+        <location line="+26"/>
+        <location line="+27"/>
+        <location line="+34"/>
+        <source>Rv2 Invalid !</source>
+        <translation>Rv2 Inválido!</translation>
+    </message>
+    <message>
+        <location line="-422"/>
+        <location line="+24"/>
+        <location line="+63"/>
+        <location line="+52"/>
+        <location line="+44"/>
+        <location line="+45"/>
+        <location line="+21"/>
+        <source>Radius Invalid !</source>
+        <translation>Radius Invalid !</translation>
+    </message>
+    <message>
+        <location line="-247"/>
+        <location line="+24"/>
+        <location line="+109"/>
+        <location line="+251"/>
+        <location line="+34"/>
+        <location line="+149"/>
+        <source>Angle Invalid !</source>
+        <translation>Angle Invalid !</translation>
+    </message>
+    <message>
+        <location line="-480"/>
+        <source>Angle1 Invalid !</source>
+        <translation>Angle1 Inválido!</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Angle2 Invalid !</source>
+        <translation>Angle2 Inválido !</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Equal angles !</source>
+        <translation>Ângulos iguais !</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <location line="+156"/>
+        <location line="+22"/>
+        <location line="+24"/>
+        <location line="+21"/>
+        <location line="+26"/>
+        <location line="+27"/>
+        <location line="+34"/>
+        <source>Rv3 Invalid !</source>
+        <translation>Rv3 Inválido!</translation>
+    </message>
+    <message>
+        <location line="-308"/>
+        <source>Arc Invalid !</source>
+        <translation>Arco Inválido!</translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <location line="+46"/>
+        <source>Center Invalid !</source>
+        <translation>Centro Inválido !</translation>
+    </message>
+    <message>
+        <location line="-21"/>
+        <source>Radius too small !</source>
+        <translation>Raio demasiado pequeno!</translation>
+    </message>
+    <message>
+        <location line="+88"/>
+        <source>Circle Invalid !</source>
+        <translation>Círculo Inválido !</translation>
+    </message>
+    <message>
+        <location line="+67"/>
+        <location line="+26"/>
+        <location line="+27"/>
+        <location line="+34"/>
+        <source>Rv4 Invalid !</source>
+        <translation>Rv4 Inválido!</translation>
+    </message>
+    <message>
+        <location line="-42"/>
+        <source>Size Invalid !</source>
+        <translation>Tamanho Inválido !</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Size in X Invalid !</source>
+        <translation>Tamanho em X Inválido !</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Size in Y Invalid !</source>
+        <translation>Tamanho em Y Inválido !</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Polygon, less than 5 references !</source>
+        <translation>Polígono, menos de 5 referências !</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+25"/>
+        <location line="+27"/>
+        <location line="+28"/>
+        <source>Rv %1 Invalid !</source>
+        <translation>Rv %1 Inválido !</translation>
+    </message>
+    <message>
+        <location line="-62"/>
+        <source>Polyline, less than 2 references !</source>
+        <translation>Polyline, menos de 2 referências !</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Bulge %1 Invalid !</source>
+        <translation>Bulge %1 Inválido !</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Unsupported PRO feature !</source>
+        <translation>Funcionalidade PRO não suportada!</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fit point Spline, less than 3 references !</source>
+        <translation>Fit point Spline, menos de 3 referências !</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Control point Spline, less than 4 references !</source>
+        <translation>Ponto de controlo Spline, menos de 4 referências !</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Text, low field count !</source>
+        <translation>Texto, baixa contagem de campos !</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text, odd field count !</source>
+        <translation>Texto, contagem de campos ímpares !</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Height Invalid !</source>
+        <translation>Altura Inválida!</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Width Invalid !</source>
+        <translation>Largura Inválido !</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Vert. alignment Invalid !</source>
+        <translation>Vert. alinhamento Inválido!</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Horz. alignment Invalid !</source>
+        <translation>Alinhamento Horz. Inválido!</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Drawing direction Invalid !</source>
+        <translation>Direcção do desenho Inválido !</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Line spacing style Invalid !</source>
+        <translation>Estilo de espaçamento de linha Inválido !</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Line spacing Invalid !</source>
+        <translation>Espaçamento de linha Inválido !</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Unsupported entry ! Text line %1</source>
+        <translation>Entrada não suportada ! Linha de texto %1</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Error with first optional list !</source>
+        <translation>Erro com a primeira lista opcional !</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Error with second optional list !</source>
+        <translation>Erro com a segunda lista opcional !</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Not a correct entry ! Text line %1 : %2</source>
+        <translation>Não é uma entrada correcta ! Linha de texto %1 : %2</translation>
+    </message>
+    <message>
+        <location line="+77"/>
+        <source>Casted entries : %1 with %2 text lines</source>
+        <translation>Entradas fundidas : %1 com %2 linhas de texto</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Importing CSV complete. Command ended.</source>
+        <translation>Importação de CSV completo. Comando terminado.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Nothing casted !</source>
+        <translation>Nada de fundido!</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Draw from CSV</source>
+        <translation>Desenho a partir de CSV</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>CSV</source>
+        <translation>CSV</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>All Files</source>
+        <translation>Todos os arquivos</translation>
+    </message>
+    <message>
+        <location line="+165"/>
+        <source>Attributes empty ! Text line %1</source>
+        <translation>Atributos vazios! Linha de texto %1</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <location line="+97"/>
+        <source>Not a correct layer name ! Text line %1 name: %2</source>
+        <translation>Não é um nome de camada correcto! Linha de texto %1 nome: %2</translation>
+    </message>
+    <message>
+        <location line="-90"/>
+        <source>Layer doesn&apos;t exist, ignored ! Text line %1 layer: %2</source>
+        <translation>A camada não existe, ignorada! Linha de texto %1 camada: %2</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Not a correct color, ignored ! Text line %1 color: %2</source>
+        <translation>Não é uma cor correta, ignorada! Linha de texto %1 cor: %2</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Not a correct Lineweight, ignored ! Text line %1 weight: %2</source>
+        <translation>Não é um Lineweight correcto, ignorado! Linha de texto %1 peso: %2</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Not a correct Linetype, ignored ! Text line %1 type: %2</source>
+        <translation>Não é um Linetype correcto, ignorado! Linha de texto tipo %1: %2</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Not a correct Linetype scale, ignored ! Text line %1 scale: %2</source>
+        <translation>Não é uma escala Linetype correta, ignorada! Linha de texto escala %1: %2</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Not a correct attribute, ignored ! Text line %1 &gt; %2</source>
+        <translation>Não é um atributo correto, ignorado! Linha de texto %1 &gt; %2</translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>Parent layer doesn&apos;t exist ! Text line %1 layer: %2</source>
+        <translation>A camada dos pais não existe! Linha de texto %1 camada: %2</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Not a correct color ! Text line %1 color: %2</source>
+        <translation>Não é uma cor correta! Linha de texto %1 cor: %2</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Not a correct Lineweight ! Text line %1 weight: %2</source>
+        <translation>Não é um Lineweight correcto! Linha de texto %1 peso: %2</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Not a correct Linetype ! Text line %1 type: %2</source>
+        <translation>Não é um Linetype correcto! Linha de texto tipo %1: %2</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Add/Update layer ignored !</source>
+        <translation>Adicionar/Atualizar camada ignorada !</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Updated layer : %1</source>
+        <translation>Camada actualizada : %1</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Added new layer : %1</source>
+        <translation>Adicionada nova camada : %1</translation>
+    </message>
+</context>
+<context>
+    <name>DrawFromCSVInit</name>
+    <message>
+        <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
+        <source>&amp;Draw from CSV</source>
+        <translation>&amp;Draw de CSV</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Draws entities based on textual entries in a CSV file</source>
+        <translation>Desenha entidades com base em entradas textuais em um arquivo CSV</translation>
+    </message>
+</context>
+<context>
     <name>DrawOrder</name>
     <message>
         <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
@@ -5010,12 +5546,11 @@ já se encontra na lista.</translation>
         <translation>Camada adicional de FP:</translation>
     </message>
     <message>
-        <location line="+1196"/>
         <source>&amp;FlexPainter</source>
-        <translation>&amp;FlexPainter</translation>
+        <translation type="vanished">&amp;FlexPainter</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation>Tintas sobre a seleção, imitando um carimbo de rolo</translation>
     </message>
@@ -5398,6 +5933,14 @@ BUG: Interferes with group castings.</source>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
         <translation>Apagar entidades Base *</translation>
+    </message>
+</context>
+<context>
+    <name>FlexPainterInit</name>
+    <message>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
+        <source>&amp;FlexPainter</source>
+        <translation>&amp;FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -7249,7 +7792,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Ajustado o nome do Bloco inválido para &apos;%1&apos;</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+69"/>
         <source>Position</source>
         <translation>Posição</translation>
     </message>
@@ -9327,17 +9870,17 @@ nos resultados de busca:</translation>
         <translation>Formato:</translation>
     </message>
     <message>
-        <location line="+137"/>
+        <location line="+138"/>
         <source>Untitled %1</source>
         <translation>Sem título %1</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+18"/>
         <source>read-only</source>
         <translation>apenas leitura</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+63"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translation>Você quer salvar as alterações que fez&lt;br&gt;no documento &apos;%1&apos;?</translation>
     </message>
@@ -10963,7 +11506,7 @@ nos resultados de busca:</translation>
         <translation>As cores personalizadas são aproximadas para a cor fixa mais próxima.</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+27"/>
         <source>Saved file:</source>
         <translation>Arquivo salvo:</translation>
     </message>
@@ -10981,7 +11524,7 @@ nos resultados de busca:</translation>
         <translation type="obsolete">Todas as cores personalizadas serão &apos;arredondado&apos; para a cor mais próxima fixo. Proceder?</translation>
     </message>
     <message>
-        <location line="-32"/>
+        <location line="-34"/>
         <source>Saving...</source>
         <translation>A salvar...</translation>
     </message>
@@ -13880,7 +14423,7 @@ nos resultados de busca:</translation>
         <translation>Pré-visualização</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+108"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation>Espaçamento da grade &lt; Meta espaçamento da grade</translation>
     </message>
@@ -14145,7 +14688,7 @@ nos resultados de busca:</translation>
 <context>
     <name>Window</name>
     <message>
-        <location filename="../scripts/Window/Window.js" line="+108"/>
+        <location filename="../scripts/Window/Window.js" line="+109"/>
         <source>&amp;Window</source>
         <translation>&amp;Janela</translation>
     </message>

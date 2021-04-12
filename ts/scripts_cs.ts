@@ -208,7 +208,7 @@
         <translation>Programování</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+58"/>
         <source>Hatch Patterns</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1041,6 +1041,20 @@ Přejete si ho obnovit?</translation>
         <location filename="../scripts/View/Zoom/AutoZoom/AutoZoomInit.js" line="+2"/>
         <source>&amp;Auto Zoom</source>
         <translation>&amp;Automatické přiblížení</translation>
+    </message>
+</context>
+<context>
+    <name>Batch2Pdf</name>
+    <message>
+        <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2Pdf.js" line="+30"/>
+        <source>Export to PDF</source>
+        <translation type="unfinished">Export do PDF</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
+        <location line="+4"/>
+        <source>&amp;Batch2Pdf visible layout blocks</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3600,6 +3614,528 @@ již v seznamu je.</translation>
     </message>
 </context>
 <context>
+    <name>DrawFromCSV</name>
+    <message>
+        <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+129"/>
+        <source>No import file selected !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+15"/>
+        <location line="+1168"/>
+        <source>Command ended.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-1171"/>
+        <source>No file opened!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Cast CSV</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Reading from file: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Switched to comma/dot CSV style.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Switched to semicolon/dot CSV style.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Switched to semicolon/comma CSV style.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Unsupported or invalid CSV style, ignored ! Text line %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+82"/>
+        <source>Setting new relative origin failed, ignored ! Text line %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Can not switch to layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Not a correct  layer switch, ignored ! Text line %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Not a correct  new layer switch, ignored ! Text line %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Can not hide layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Not a correct  hide layer switch, ignored ! Text line %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Can not freeze layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Not a correct  freeze layer switch, ignored ! Text line %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Can not lock layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Not a correct  lock layer switch, ignored ! Text line %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Can not allow layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Not a correct  allow layer switch, ignored ! Text line %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <location line="+17"/>
+        <location line="+19"/>
+        <location line="+18"/>
+        <location line="+25"/>
+        <location line="+24"/>
+        <location line="+19"/>
+        <location line="+19"/>
+        <location line="+25"/>
+        <location line="+22"/>
+        <location line="+48"/>
+        <location line="+46"/>
+        <location line="+19"/>
+        <location line="+21"/>
+        <location line="+22"/>
+        <location line="+24"/>
+        <location line="+21"/>
+        <location line="+26"/>
+        <location line="+23"/>
+        <location line="+32"/>
+        <source>Low field count !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-469"/>
+        <location line="+17"/>
+        <location line="+19"/>
+        <location line="+18"/>
+        <location line="+25"/>
+        <location line="+24"/>
+        <location line="+19"/>
+        <location line="+19"/>
+        <location line="+25"/>
+        <location line="+22"/>
+        <location line="+48"/>
+        <location line="+46"/>
+        <location line="+19"/>
+        <location line="+21"/>
+        <location line="+22"/>
+        <location line="+24"/>
+        <location line="+21"/>
+        <location line="+26"/>
+        <location line="+23"/>
+        <location line="+32"/>
+        <location line="+34"/>
+        <location line="+23"/>
+        <location line="+29"/>
+        <location line="+25"/>
+        <source>Odd field count !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-579"/>
+        <location line="+37"/>
+        <location line="+104"/>
+        <location line="+48"/>
+        <location line="+48"/>
+        <location line="+45"/>
+        <location line="+156"/>
+        <location line="+166"/>
+        <source>Rv Invalid !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-587"/>
+        <location line="+37"/>
+        <location line="+49"/>
+        <location line="+19"/>
+        <location line="+44"/>
+        <location line="+135"/>
+        <location line="+21"/>
+        <location line="+22"/>
+        <location line="+24"/>
+        <location line="+21"/>
+        <location line="+26"/>
+        <location line="+55"/>
+        <source>Rv1 Invalid !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-451"/>
+        <location line="+43"/>
+        <location line="+24"/>
+        <location line="+19"/>
+        <location line="+19"/>
+        <location line="+44"/>
+        <location line="+135"/>
+        <location line="+21"/>
+        <location line="+22"/>
+        <location line="+24"/>
+        <location line="+21"/>
+        <location line="+26"/>
+        <location line="+27"/>
+        <location line="+34"/>
+        <source>Rv2 Invalid !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-422"/>
+        <location line="+24"/>
+        <location line="+63"/>
+        <location line="+52"/>
+        <location line="+44"/>
+        <location line="+45"/>
+        <location line="+21"/>
+        <source>Radius Invalid !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-247"/>
+        <location line="+24"/>
+        <location line="+109"/>
+        <location line="+251"/>
+        <location line="+34"/>
+        <location line="+149"/>
+        <source>Angle Invalid !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-480"/>
+        <source>Angle1 Invalid !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Angle2 Invalid !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Equal angles !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <location line="+156"/>
+        <location line="+22"/>
+        <location line="+24"/>
+        <location line="+21"/>
+        <location line="+26"/>
+        <location line="+27"/>
+        <location line="+34"/>
+        <source>Rv3 Invalid !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-308"/>
+        <source>Arc Invalid !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <location line="+46"/>
+        <source>Center Invalid !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-21"/>
+        <source>Radius too small !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+88"/>
+        <source>Circle Invalid !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+67"/>
+        <location line="+26"/>
+        <location line="+27"/>
+        <location line="+34"/>
+        <source>Rv4 Invalid !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-42"/>
+        <source>Size Invalid !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Size in X Invalid !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Size in Y Invalid !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Polygon, less than 5 references !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+25"/>
+        <location line="+27"/>
+        <location line="+28"/>
+        <source>Rv %1 Invalid !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-62"/>
+        <source>Polyline, less than 2 references !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Bulge %1 Invalid !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Unsupported PRO feature !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fit point Spline, less than 3 references !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Control point Spline, less than 4 references !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Text, low field count !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text, odd field count !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Height Invalid !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Width Invalid !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Vert. alignment Invalid !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Horz. alignment Invalid !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Drawing direction Invalid !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Line spacing style Invalid !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Line spacing Invalid !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Unsupported entry ! Text line %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Error with first optional list !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Error with second optional list !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Not a correct entry ! Text line %1 : %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+77"/>
+        <source>Casted entries : %1 with %2 text lines</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Importing CSV complete. Command ended.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Nothing casted !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Draw from CSV</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>CSV</source>
+        <translation type="unfinished">CSV</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>All Files</source>
+        <translation type="unfinished">Všechny soubory</translation>
+    </message>
+    <message>
+        <location line="+165"/>
+        <source>Attributes empty ! Text line %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <location line="+97"/>
+        <source>Not a correct layer name ! Text line %1 name: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-90"/>
+        <source>Layer doesn&apos;t exist, ignored ! Text line %1 layer: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Not a correct color, ignored ! Text line %1 color: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Not a correct Lineweight, ignored ! Text line %1 weight: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Not a correct Linetype, ignored ! Text line %1 type: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Not a correct Linetype scale, ignored ! Text line %1 scale: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Not a correct attribute, ignored ! Text line %1 &gt; %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>Parent layer doesn&apos;t exist ! Text line %1 layer: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Not a correct color ! Text line %1 color: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Not a correct Lineweight ! Text line %1 weight: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Not a correct Linetype ! Text line %1 type: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Add/Update layer ignored !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Updated layer : %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Added new layer : %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>DrawFromCSVInit</name>
+    <message>
+        <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
+        <source>&amp;Draw from CSV</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Draws entities based on textual entries in a CSV file</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>DrawOrder</name>
     <message>
         <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
@@ -4825,12 +5361,7 @@ již v seznamu je.</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+1196"/>
-        <source>&amp;FlexPainter</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
         <source>Paints over selection mimicking a roller stamp</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5136,6 +5667,14 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+16"/>
         <source>Delete Base Entities *</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>FlexPainterInit</name>
+    <message>
+        <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
+        <source>&amp;FlexPainter</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6819,7 +7358,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Chybně nastavené jméno bloku na &apos;%1&apos;</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+69"/>
         <source>Position</source>
         <translation>Pozice</translation>
     </message>
@@ -8821,17 +9360,17 @@ ve výsledcích vyhledávání:</translation>
         <translation>Formát:</translation>
     </message>
     <message>
-        <location line="+137"/>
+        <location line="+138"/>
         <source>Untitled %1</source>
         <translation>Nepojmenovaný %1</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+18"/>
         <source>read-only</source>
         <translation>jen pro čtení</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+63"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translation>Chcete uložit změny provedené&lt;br&gt;v dokumentu &apos;%1&apos;?</translation>
     </message>
@@ -10375,7 +10914,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Soubor %1 nebyl uložen.</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+21"/>
         <source>Saved file:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13154,7 +13693,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Náhled</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+108"/>
+        <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13400,7 +13939,7 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>Window</name>
     <message>
-        <location filename="../scripts/Window/Window.js" line="+108"/>
+        <location filename="../scripts/Window/Window.js" line="+109"/>
         <source>&amp;Window</source>
         <translation>&amp;Okno</translation>
     </message>
