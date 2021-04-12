@@ -476,6 +476,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="showInFileManager" cppName="showInFileManager"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="filePaths" isConst="true" />
+      </variant>
+    </method>
     <method name="getDirectoryList" cppName="getDirectoryList"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

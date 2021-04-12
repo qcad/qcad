@@ -665,6 +665,8 @@
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getSystemId</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getWindowManagerId</name><parameter_list>()</parameter_list>;</function_decl>
 
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>showInFileManager</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>filePaths</name></decl></param>)</parameter_list>;</function_decl>
+
     <function_decl><type><name>static</name> <name>QStringList</name></type> <name>getDirectoryList</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>subDirectory</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QStringList</name></type> <name>getFileList</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>subDirectory</name></decl></param>,
                                    <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileExtension</name></decl></param>)</parameter_list>;</function_decl>

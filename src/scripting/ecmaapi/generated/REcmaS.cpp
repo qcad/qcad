@@ -75,6 +75,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getWindowManagerId, "getWindowManagerId");
             
+            REcmaHelper::registerFunction(&engine, &ctor, showInFileManager, "showInFileManager");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getDirectoryList, "getDirectoryList");
             
             REcmaHelper::registerFunction(&engine, &ctor, getFileList, "getFileList");
@@ -2750,6 +2752,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaS::getWindowManagerId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaS::showInFileManager
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaS::showInFileManager", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaS::showInFileManager";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RS::
+       showInFileManager(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RS.showInFileManager().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaS::showInFileManager", context, engine);
             return result;
         }
          QScriptValue

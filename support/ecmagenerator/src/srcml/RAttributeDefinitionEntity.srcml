@@ -105,7 +105,7 @@
             <param><decl><type><name>RPropertyTypeId</name>&amp;</type> <name>propertyTypeId</name></decl></param>,
             <param><decl><type><name>bool</name></type> <name>humanReadable</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>noAttributes</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>showOnRequest</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
-   <comment type="line">// void exportEntity(RExporter&amp; e, bool preview) const;</comment>
+    <comment type="line">//virtual void exportEntity(RExporter&amp; e, bool preview=false, bool forceSelected=false) const;</comment>
 
     <function><type><name>QString</name></type> <name>getTag</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>data</name>.<call><name>getTag</name><argument_list>()</argument_list></call></expr>;</return>
