@@ -276,6 +276,7 @@ bool RS::showInFileManager(const QString& filePath) {
     // Mac, Windows support folder or file.
 #ifdef Q_OS_WIN
     // open Explorer:
+    // TODO: find out where Explorer is:
     const QString explorer = "C:\\Windows\\explorer.exe";
     QStringList param;
     if (!fileInfo.isDir()) {
@@ -290,12 +291,16 @@ bool RS::showInFileManager(const QString& filePath) {
     scriptArgs.append(QString("tell application \"Finder\" to reveal POSIX file \"%1\"").arg(fileInfo.canonicalFilePath());
     QProcess::execute("/usr/bin/osascript", scriptArgs);
 
+    // raise Finder Window to the top:
     scriptArgs.clear();
     scriptArgs.append("-e");
     scriptArgs.append("tell application \"Finder\" to activate");
     QProcess::execute("/usr/bin/osascript", scriptArgs);
 #else
-    // TODO (if possible at all)
+    // start default file browser:
+    QStringList args;
+    args.append("\"" + filePath + "\"");
+    QProcess::startDetached("xdg-open", args);
 #endif
 
     return true;
