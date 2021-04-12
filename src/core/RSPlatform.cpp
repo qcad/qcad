@@ -288,7 +288,7 @@ bool RS::showInFileManager(const QString& filePath) {
     // open Finder:
     QStringList scriptArgs;
     scriptArgs.append("-e");
-    scriptArgs.append(QString("tell application \"Finder\" to reveal POSIX file \"%1\"").arg(fileInfo.canonicalFilePath());
+    scriptArgs.append(QString("tell application \"Finder\" to reveal POSIX file \"%1\"").arg(fileInfo.canonicalFilePath()));
     QProcess::execute("/usr/bin/osascript", scriptArgs);
 
     // raise Finder Window to the top:
@@ -298,11 +298,8 @@ bool RS::showInFileManager(const QString& filePath) {
     QProcess::execute("/usr/bin/osascript", scriptArgs);
 #else
     // start default file browser:
-    //QStringList args;
-    //args.append(filePath);
     QProcess p;
     QString cmd = QString("xdg-open %1").arg(fileInfo.canonicalPath());
-    qDebug() << "cmd:" << cmd;
     p.startDetached(cmd);
 #endif
 
