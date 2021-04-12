@@ -498,8 +498,8 @@ void RPolyline::setVertices(const QList<RVector>& vertices) {
     endWidths.clear();
     for (int i=0; i<vertices.size(); ++i) {
         bulges.append(0.0);
-        startWidths.append(RNANDOUBLE);
-        endWidths.append(RNANDOUBLE);
+        startWidths.append(0.0);
+        endWidths.append(0.0);
     }
 
     Q_ASSERT(vertices.length()==bulges.length());
