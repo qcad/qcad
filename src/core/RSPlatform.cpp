@@ -301,7 +301,7 @@ bool RS::showInFileManager(const QString& filePath) {
     //QStringList args;
     //args.append(filePath);
     QProcess p;
-    QString cmd = QString("xdg-open \"%1\"").arg(filePath));
+    QString cmd = QString("xdg-open \"%1\"").arg(filePath);
     p.startDetached(cmd);
 #endif
 
