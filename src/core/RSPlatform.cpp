@@ -298,9 +298,11 @@ bool RS::showInFileManager(const QString& filePath) {
     QProcess::execute("/usr/bin/osascript", scriptArgs);
 #else
     // start default file browser:
-    QStringList args;
-    args.append("\"" + filePath + "\"");
-    QProcess::startDetached("xdg-open", args);
+    //QStringList args;
+    //args.append(filePath);
+    QProcess p;
+    QString cmd = QString("xdg-open \"%1\"").arg(filePath));
+    p.startDetached(cmd);
 #endif
 
     return true;
