@@ -25,6 +25,7 @@
 #include <QTabBar>
 #include <QToolBar>
 #include <QToolButton>
+#include <QIconDragEvent>
 
 #include <RSingleApplication.h>
 
@@ -634,8 +635,15 @@ bool RMainWindowQt::event(QEvent* e) {
         return false;
     }
 
+    // TODO: never triggered on macOS when draging title bar icon
+//    QIconDragEvent* ide = dynamic_cast<QIconDragEvent*>(e);
+//    if (ide!=NULL) {
+//        qDebug() << "QIconDragEvent";
+//        ide->accept();
+//        return true;
+//    }
+
     if (e->type()==QEvent::PaletteChange) {
-        qDebug() << "QEvent::PaletteChange";
         RSettings::resetCache();
         RGuiAction::updateIcons();
         notifyPaletteListeners();

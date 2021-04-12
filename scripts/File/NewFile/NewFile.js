@@ -355,8 +355,9 @@ NewFile.updateTitle = function(mdiChild) {
             mdiChild.objectName = "Untitled%1".arg(documentCounter);
             documentCounter++;
             mdiChild.setWindowTitle(title);
-            titleAppWin = title;
         }
+        titleAppWin = mdiChild.windowTitle;
+        fileName = "Untitled.dxf";
     }
     else {
         var fi = new QFileInfo(fileName);
@@ -377,6 +378,13 @@ NewFile.updateTitle = function(mdiChild) {
         title = title.replace(/&/g, "&&");
         mdiChild.setWindowTitle(title);
     }
+
+    // TODO: implement proxy icon with drag and drop
+    // triggers QIconDragEvent
+    //if (RS.getSystemId()==="osx") {
+        //appWin.windowFilePath = fileName;
+        //appWin.windowModified = document.isModified();
+    //}
 
     appWin.setWindowTitle(
         stripDirtyFlag(titleAppWin) +
