@@ -282,7 +282,7 @@ bool RS::showInFileManager(const QString& filePath) {
         param += QLatin1String("/select,");
     }
     param += QDir::toNativeSeparators(fileInfo.canonicalFilePath());
-    QProcess::startDetached(explorer.toString(), param);
+    QProcess::startDetached(explorer, param);
 #elif defined(Q_OS_MAC)
     // open Finder:
     QStringList scriptArgs;
