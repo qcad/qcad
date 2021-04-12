@@ -277,7 +277,7 @@ bool RS::showInFileManager(const QString& filePath) {
 #ifdef Q_OS_WIN
     // open Explorer:
     // TODO: find out where Explorer is:
-    const QString explorer = "C:\\Windows\\explorer.exe";
+    const QString explorer = RSettings::getStringValue("FileManager/ExplorerBinary", "C:\\Windows\\explorer.exe");
     QStringList param;
     if (!fileInfo.isDir()) {
         param += QLatin1String("/select,");
