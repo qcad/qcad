@@ -20,6 +20,7 @@
 #include <QDir>
 #include <QFileInfo>
 #include <QHostInfo>
+#include <QProcess>
 #include <QThread>
 #ifdef Q_OS_WIN
 #include <Windows.h>
@@ -267,4 +268,54 @@ QString RS::getBuildCpuArchitecture() {
     return "";
 #endif
 #endif
+}
+
+bool RS::showInFileManager(const QString& filePath) {
+    const QFileInfo fileInfo(filePath);
+
+    // Mac, Windows support folder or file.
+#ifdef Q_OS_WIN
+        const FileName explorer = Environment::systemEnvironment().searchInPath(QLatin1String("explorer.exe"));
+        if (explorer.isEmpty()) {
+            qWarning() << "Launching Windows Explorer Failed";
+//            QMessageBox::warning(parent,
+//                                 QApplication::translate("Core::Internal",
+//                                                         "Launching Windows Explorer Failed"),
+//                                 QApplication::translate("Core::Internal",
+//                                                         "Could not find explorer.exe in path to launch Windows Explorer."));
+            return false;
+        }
+        QStringList param;
+        if (!fileInfo.isDir()) {
+            param += QLatin1String("/select,");
+        }
+        param += QDir::toNativeSeparators(fileInfo.canonicalFilePath());
+        QProcess::startDetached(explorer.toString(), param);
+#elif defined(Q_OS_MAC)
+        QStringList scriptArgs;
+        scriptArgs << QLatin1String("-e")
+                   << QString::fromLatin1("tell application \"Finder\" to reveal POSIX file \"%1\"")
+                                         .arg(fileInfo.canonicalFilePath());
+        QProcess::execute(QLatin1String("/usr/bin/osascript"), scriptArgs);
+        scriptArgs.clear();
+        scriptArgs << QLatin1String("-e")
+                   << QLatin1String("tell application \"Finder\" to activate");
+        QProcess::execute(QLatin1String("/usr/bin/osascript"), scriptArgs);
+#else
+        // we cannot select a file here, because no file browser really supports it...
+        const QString folder = fileInfo.isDir() ? fileInfo.absoluteFilePath() : fileInfo.filePath();
+        const QString app = UnixUtils::fileBrowser(ICore::settings());
+        QProcess browserProc;
+        const QString browserArgs = UnixUtils::substituteFileBrowserParameters(app, folder);
+        bool success = browserProc.startDetached(browserArgs);
+        const QString error = QString::fromLocal8Bit(browserProc.readAllStandardError());
+        success = success && error.isEmpty();
+        if (!success) {
+            qWarning() << error;
+            return false;
+            //showGraphicalShellError(parent, app, error);
+        }
+#endif
+
+    return true;
 }

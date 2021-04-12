@@ -664,6 +664,8 @@ public:
     static QString getSystemId();
     static QString getWindowManagerId();
 
+    static bool showInFileManager(const QString& filePaths);
+
     static QStringList getDirectoryList(const QString& subDirectory);
     static QStringList getFileList(const QString& subDirectory,
                                    const QString& fileExtension);
