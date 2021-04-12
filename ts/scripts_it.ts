@@ -4063,52 +4063,52 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Not a correct  layer switch, ignored ! Text line %1</source>
-        <translation>Non è un cambio di livello corretto, ignorato! Linea di testo %1</translation>
+        <translation>Non è un cambio di livello corretto, ignorato. Linea di testo %1</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Not a correct  new layer switch, ignored ! Text line %1</source>
-        <translation>Non è un cambio di livello corretto, ignorato! Linea di testo %1</translation>
+        <translation>Non è un cambio di livello corretto, ignorato. Linea di testo %1</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Can not hide layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Impossibile nascondere il livello, ignorato! Riga di testo %1 livello: %2</translation>
+        <translation>Impossibile nascondere il livello, ignorato. Riga di testo %1 livello: %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  hide layer switch, ignored ! Text line %1</source>
-        <translation>Non è un interruttore corretto per nascondere il livello, ignorato! Riga di testo %1</translation>
+        <translation>Non è un interruttore corretto per nascondere il livello, ignorato. Riga di testo %1</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Can not freeze layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Impossibile congelare il livello, ignorato! Riga di testo %1 livello: %2</translation>
+        <translation>Impossibile congelare il livello, ignorato. Riga di testo %1 livello: %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  freeze layer switch, ignored ! Text line %1</source>
-        <translation>Non è un interruttore di livello di congelamento corretto, ignorato! Linea di testo %1</translation>
+        <translation>Non è un interruttore di livello di congelamento corretto, ignorato. Linea di testo %1</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Can not lock layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Impossibile bloccare il livello, ignorato! Riga di testo %1 livello: %2</translation>
+        <translation>Impossibile bloccare il livello, ignorato. Riga di testo %1 livello: %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  lock layer switch, ignored ! Text line %1</source>
-        <translation>Non è un interruttore di livello di blocco corretto, ignorato! Linea di testo %1</translation>
+        <translation>Non è un interruttore di livello di blocco corretto, ignorato. Linea di testo %1</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Can not allow layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Impossibile consentire il livello, ignorato! Riga di testo %1 livello: %2</translation>
+        <translation>Impossibile consentire il livello, ignorato. Riga di testo %1 livello: %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  allow layer switch, ignored ! Text line %1</source>
-        <translation>Non è un interruttore di livello allow corretto, ignorato! Linea di testo %1</translation>
+        <translation>Non è un interruttore di livello allow corretto, ignorato. Linea di testo %1</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -4132,7 +4132,7 @@ is already in the list.</source>
         <location line="+23"/>
         <location line="+32"/>
         <source>Low field count !</source>
-        <translation>Basso numero di campi!</translation>
+        <translation>Basso numero di campi.</translation>
     </message>
     <message>
         <location line="-469"/>
@@ -4160,7 +4160,7 @@ is already in the list.</source>
         <location line="+29"/>
         <location line="+25"/>
         <source>Odd field count !</source>
-        <translation>Conteggio dei campi dispari!</translation>
+        <translation>Conteggio dei campi dispari.</translation>
     </message>
     <message>
         <location line="-579"/>
@@ -4172,7 +4172,7 @@ is already in the list.</source>
         <location line="+156"/>
         <location line="+166"/>
         <source>Rv Invalid !</source>
-        <translation>Rv Invalid !</translation>
+        <translation>Rv Invalid.</translation>
     </message>
     <message>
         <location line="-587"/>
@@ -4188,7 +4188,7 @@ is already in the list.</source>
         <location line="+26"/>
         <location line="+55"/>
         <source>Rv1 Invalid !</source>
-        <translation>Rv1 Invalid !</translation>
+        <translation>Rv1 Invalid.</translation>
     </message>
     <message>
         <location line="-451"/>
@@ -4206,7 +4206,7 @@ is already in the list.</source>
         <location line="+27"/>
         <location line="+34"/>
         <source>Rv2 Invalid !</source>
-        <translation>Rv2 Invalid !</translation>
+        <translation>Rv2 Invalid.</translation>
     </message>
     <message>
         <location line="-422"/>
@@ -4217,7 +4217,7 @@ is already in the list.</source>
         <location line="+45"/>
         <location line="+21"/>
         <source>Radius Invalid !</source>
-        <translation>Raggio non valido!</translation>
+        <translation>Raggio non valido.</translation>
     </message>
     <message>
         <location line="-247"/>
@@ -4227,22 +4227,22 @@ is already in the list.</source>
         <location line="+34"/>
         <location line="+149"/>
         <source>Angle Invalid !</source>
-        <translation>Angolo non valido!</translation>
+        <translation>Angolo non valido.</translation>
     </message>
     <message>
         <location line="-480"/>
         <source>Angle1 Invalid !</source>
-        <translation>Angle1 Invalid !</translation>
+        <translation>Angle1 Invalid.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angle2 Invalid !</source>
-        <translation>Angolo2 non valido!</translation>
+        <translation>Angolo2 non valido.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Equal angles !</source>
-        <translation>Angoli uguali!</translation>
+        <translation>Angoli uguali.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -4254,28 +4254,28 @@ is already in the list.</source>
         <location line="+27"/>
         <location line="+34"/>
         <source>Rv3 Invalid !</source>
-        <translation>Rv3 Invalid !</translation>
+        <translation>Rv3 Invalid.</translation>
     </message>
     <message>
         <location line="-308"/>
         <source>Arc Invalid !</source>
-        <translation>Arco non valido!</translation>
+        <translation>Arco non valido.</translation>
     </message>
     <message>
         <location line="+43"/>
         <location line="+46"/>
         <source>Center Invalid !</source>
-        <translation>Centro non valido!</translation>
+        <translation>Centro non valido.</translation>
     </message>
     <message>
         <location line="-21"/>
         <source>Radius too small !</source>
-        <translation>Raggio troppo piccolo!</translation>
+        <translation>Raggio troppo piccolo.</translation>
     </message>
     <message>
         <location line="+88"/>
         <source>Circle Invalid !</source>
-        <translation>Cerchio non valido!</translation>
+        <translation>Cerchio non valido.</translation>
     </message>
     <message>
         <location line="+67"/>
@@ -4283,27 +4283,27 @@ is already in the list.</source>
         <location line="+27"/>
         <location line="+34"/>
         <source>Rv4 Invalid !</source>
-        <translation>Rv4 Invalid !</translation>
+        <translation>Rv4 Invalid.</translation>
     </message>
     <message>
         <location line="-42"/>
         <source>Size Invalid !</source>
-        <translation>Dimensione non valida!</translation>
+        <translation>Dimensione non valida.</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Size in X Invalid !</source>
-        <translation>Dimensione in X Invalid !</translation>
+        <translation>Dimensione in X Invalid.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Size in Y Invalid !</source>
-        <translation>Dimensione in Y Invalid !</translation>
+        <translation>Dimensione in Y Invalid.</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Polygon, less than 5 references !</source>
-        <translation>Poligono, meno di 5 riferimenti!</translation>
+        <translation>Poligono, meno di 5 riferimenti.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4311,97 +4311,97 @@ is already in the list.</source>
         <location line="+27"/>
         <location line="+28"/>
         <source>Rv %1 Invalid !</source>
-        <translation>Rv %1 Invalid !</translation>
+        <translation>Rv %1 Invalid.</translation>
     </message>
     <message>
         <location line="-62"/>
         <source>Polyline, less than 2 references !</source>
-        <translation>Polilinea, meno di 2 riferimenti!</translation>
+        <translation>Polilinea, meno di 2 riferimenti.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Bulge %1 Invalid !</source>
-        <translation>Ingombro %1 non valido!</translation>
+        <translation>Ingombro %1 non valido.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Unsupported PRO feature !</source>
-        <translation>Caratteristica PRO non supportata!</translation>
+        <translation>Caratteristica PRO non supportata.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fit point Spline, less than 3 references !</source>
-        <translation>Fit point Spline, meno di 3 riferimenti!</translation>
+        <translation>Fit point Spline, meno di 3 riferimenti.</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Control point Spline, less than 4 references !</source>
-        <translation>Punto di controllo Spline, meno di 4 riferimenti!</translation>
+        <translation>Punto di controllo Spline, meno di 4 riferimenti.</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Text, low field count !</source>
-        <translation>Testo, basso numero di campi!</translation>
+        <translation>Testo, basso numero di campi.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text, odd field count !</source>
-        <translation>Testo, numero di campi dispari !</translation>
+        <translation>Testo, numero di campi dispari.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Height Invalid !</source>
-        <translation>Altezza non valida!</translation>
+        <translation>Altezza non valida.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Width Invalid !</source>
-        <translation>Larghezza non valida!</translation>
+        <translation>Larghezza non valida.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Vert. alignment Invalid !</source>
-        <translation>Allineamento verticale Non valido!</translation>
+        <translation>Allineamento verticale Non valido.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Horz. alignment Invalid !</source>
-        <translation>Allineamento Horz. non valido!</translation>
+        <translation>Allineamento Horz. non valido.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing direction Invalid !</source>
-        <translation>Direzione del disegno non valida!</translation>
+        <translation>Direzione del disegno non valida.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing style Invalid !</source>
-        <translation>Stile di interlinea Invalid !</translation>
+        <translation>Stile di interlinea Invalid.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing Invalid !</source>
-        <translation>Interlinea non valida !</translation>
+        <translation>Interlinea non valida.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Unsupported entry ! Text line %1</source>
-        <translation>Voce non supportata ! Riga di testo %1</translation>
+        <translation>Voce non supportata. Riga di testo %1</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Error with first optional list !</source>
-        <translation>Errore con la prima lista opzionale!</translation>
+        <translation>Errore con la prima lista opzionale.</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Error with second optional list !</source>
-        <translation>Errore con la seconda lista opzionale!</translation>
+        <translation>Errore con la seconda lista opzionale.</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Not a correct entry ! Text line %1 : %2</source>
-        <translation>Non è una voce corretta! Riga di testo %1 : %2</translation>
+        <translation>Non è una voce corretta. Riga di testo %1 : %2</translation>
     </message>
     <message>
         <location line="+77"/>
@@ -4416,7 +4416,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Nothing casted !</source>
-        <translation>Niente di lanciato!</translation>
+        <translation>Niente di lanciato.</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -4436,68 +4436,68 @@ is already in the list.</source>
     <message>
         <location line="+165"/>
         <source>Attributes empty ! Text line %1</source>
-        <translation>Attributi vuoti! Riga di testo %1</translation>
+        <translation>Attributi vuoti. Riga di testo %1</translation>
     </message>
     <message>
         <location line="+24"/>
         <location line="+97"/>
         <source>Not a correct layer name ! Text line %1 name: %2</source>
-        <translation>Non è un nome di livello corretto! Linea di testo %1 nome: %2</translation>
+        <translation>Non è un nome di livello corretto. Linea di testo %1 nome: %2</translation>
     </message>
     <message>
         <location line="-90"/>
         <source>Layer doesn&apos;t exist, ignored ! Text line %1 layer: %2</source>
-        <translation>Il livello non esiste, ignorato! Riga di testo %1 livello: %2</translation>
+        <translation>Il livello non esiste, ignorato. Riga di testo %1 livello: %2</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Not a correct color, ignored ! Text line %1 color: %2</source>
-        <translation>Non è un colore corretto, ignorato! Riga di testo %1 colore: %2</translation>
+        <translation>Non è un colore corretto, ignorato. Riga di testo %1 colore: %2</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight, ignored ! Text line %1 weight: %2</source>
-        <translation>Non è un peso di linea corretto, ignorato! Testo linea %1 peso: %2</translation>
+        <translation>Non è un peso di linea corretto, ignorato. Testo linea %1 peso: %2</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype, ignored ! Text line %1 type: %2</source>
-        <translation>Non è un Linetype corretto, ignorato! Tipo di linea di testo %1: %2</translation>
+        <translation>Non è un Linetype corretto, ignorato. Tipo di linea di testo %1: %2</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Not a correct Linetype scale, ignored ! Text line %1 scale: %2</source>
-        <translation>Non è una scala Linetype corretta, ignorata! Riga di testo %1 scala: %2</translation>
+        <translation>Non è una scala Linetype corretta, ignorata. Riga di testo %1 scala: %2</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Not a correct attribute, ignored ! Text line %1 &gt; %2</source>
-        <translation>Non è un attributo corretto, ignorato! Riga di testo %1 &gt; %2</translation>
+        <translation>Non è un attributo corretto, ignorato. Riga di testo %1 &gt; %2</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Parent layer doesn&apos;t exist ! Text line %1 layer: %2</source>
-        <translation>Il livello padre non esiste! Riga di testo %1 livello: %2</translation>
+        <translation>Il livello padre non esiste. Riga di testo %1 livello: %2</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Not a correct color ! Text line %1 color: %2</source>
-        <translation>Non è un colore corretto! Riga di testo %1 colore: %2</translation>
+        <translation>Non è un colore corretto. Riga di testo %1 colore: %2</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Not a correct Lineweight ! Text line %1 weight: %2</source>
-        <translation>Il peso della linea non è corretto! Peso della linea di testo %1: %2</translation>
+        <translation>Il peso della linea non è corretto. Peso della linea di testo %1: %2</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Not a correct Linetype ! Text line %1 type: %2</source>
-        <translation>Non è un Linetype corretto! Tipo di linea di testo %1: %2</translation>
+        <translation>Non è un Linetype corretto. Tipo di linea di testo %1: %2</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Add/Update layer ignored !</source>
-        <translation>Aggiungi/aggiorna il livello ignorato!</translation>
+        <translation>Aggiungi/aggiorna il livello ignorato.</translation>
     </message>
     <message>
         <location line="+11"/>

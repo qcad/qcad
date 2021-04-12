@@ -3731,52 +3731,52 @@ is al in de lijst.</translation>
     <message>
         <location line="+4"/>
         <source>Not a correct  layer switch, ignored ! Text line %1</source>
-        <translation>Geen correcte laagschakelaar, genegeerd ! Tekst blok %1</translation>
+        <translation>Geen correcte laagschakelaar, genegeerd. Tekst blok %1</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Not a correct  new layer switch, ignored ! Text line %1</source>
-        <translation>Geen correcte nieuwe laagschakelaar, genegeerd ! Tekst blok %1</translation>
+        <translation>Geen correcte nieuwe laagschakelaar, genegeerd. Tekst blok %1</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Can not hide layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Kan laag niet verbergen, genegeerd ! Tekstblok %1 laag: %2</translation>
+        <translation>Kan laag niet verbergen, genegeerd. Tekstblok %1 laag: %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  hide layer switch, ignored ! Text line %1</source>
-        <translation>Geen correcte verberg laag schakelaar, genegeerd ! Tekst blok %1</translation>
+        <translation>Geen correcte verberg laag schakelaar, genegeerd. Tekst blok %1</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Can not freeze layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Kan laag niet bevriezen, genegeerd ! Tekstblok %1 laag: %2</translation>
+        <translation>Kan laag niet bevriezen, genegeerd. Tekstblok %1 laag: %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  freeze layer switch, ignored ! Text line %1</source>
-        <translation>Geen correcte vrieslaagschakelaar, genegeerd ! Tekst blok %1</translation>
+        <translation>Geen correcte vrieslaagschakelaar, genegeerd. Tekst blok %1</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Can not lock layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Kan laag niet vergrendelen, genegeerd ! Tekstblok %1 laag: %2</translation>
+        <translation>Kan laag niet vergrendelen, genegeerd. Tekstblok %1 laag: %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  lock layer switch, ignored ! Text line %1</source>
-        <translation>Geen correcte slotlaagschakelaar, genegeerd ! Tekst blok %1</translation>
+        <translation>Geen correcte slotlaagschakelaar, genegeerd. Tekst blok %1</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Can not allow layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Kan laag niet toestaan, genegeerd ! Tekstblok %1 laag: %2</translation>
+        <translation>Kan laag niet toestaan, genegeerd. Tekstblok %1 laag: %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  allow layer switch, ignored ! Text line %1</source>
-        <translation>Niet een correcte toestaan laag schakelaar, genegeerd ! Tekst blok %1</translation>
+        <translation>Niet een correcte toestaan laag schakelaar, genegeerd. Tekst blok %1</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -3800,7 +3800,7 @@ is al in de lijst.</translation>
         <location line="+23"/>
         <location line="+32"/>
         <source>Low field count !</source>
-        <translation>Laag veld aantal !</translation>
+        <translation>Laag veld aantal.</translation>
     </message>
     <message>
         <location line="-469"/>
@@ -3828,7 +3828,7 @@ is al in de lijst.</translation>
         <location line="+29"/>
         <location line="+25"/>
         <source>Odd field count !</source>
-        <translation>Oneven veldtelling !</translation>
+        <translation>Oneven veldtelling.</translation>
     </message>
     <message>
         <location line="-579"/>
@@ -3840,7 +3840,7 @@ is al in de lijst.</translation>
         <location line="+156"/>
         <location line="+166"/>
         <source>Rv Invalid !</source>
-        <translation>Rv Ongeldig !</translation>
+        <translation>Rv Ongeldig.</translation>
     </message>
     <message>
         <location line="-587"/>
@@ -3856,7 +3856,7 @@ is al in de lijst.</translation>
         <location line="+26"/>
         <location line="+55"/>
         <source>Rv1 Invalid !</source>
-        <translation>Rv1 Ongeldig !</translation>
+        <translation>Rv1 Ongeldig.</translation>
     </message>
     <message>
         <location line="-451"/>
@@ -3874,7 +3874,7 @@ is al in de lijst.</translation>
         <location line="+27"/>
         <location line="+34"/>
         <source>Rv2 Invalid !</source>
-        <translation>Rv2 Ongeldig !</translation>
+        <translation>Rv2 Ongeldig.</translation>
     </message>
     <message>
         <location line="-422"/>
@@ -3885,7 +3885,7 @@ is al in de lijst.</translation>
         <location line="+45"/>
         <location line="+21"/>
         <source>Radius Invalid !</source>
-        <translation>Straal ongeldig !</translation>
+        <translation>Straal ongeldig.</translation>
     </message>
     <message>
         <location line="-247"/>
@@ -3895,22 +3895,22 @@ is al in de lijst.</translation>
         <location line="+34"/>
         <location line="+149"/>
         <source>Angle Invalid !</source>
-        <translation>Hoek ongeldig !</translation>
+        <translation>Hoek ongeldig.</translation>
     </message>
     <message>
         <location line="-480"/>
         <source>Angle1 Invalid !</source>
-        <translation>Hoek1 ongeldig !</translation>
+        <translation>Hoek1 ongeldig.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angle2 Invalid !</source>
-        <translation>Hoek2 ongeldig !</translation>
+        <translation>Hoek2 ongeldig.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Equal angles !</source>
-        <translation>Gelijke hoeken !</translation>
+        <translation>Gelijke hoeken.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -3922,28 +3922,28 @@ is al in de lijst.</translation>
         <location line="+27"/>
         <location line="+34"/>
         <source>Rv3 Invalid !</source>
-        <translation>Rv3 ongeldig !</translation>
+        <translation>Rv3 ongeldig.</translation>
     </message>
     <message>
         <location line="-308"/>
         <source>Arc Invalid !</source>
-        <translation>Boog ongeldig !</translation>
+        <translation>Boog ongeldig.</translation>
     </message>
     <message>
         <location line="+43"/>
         <location line="+46"/>
         <source>Center Invalid !</source>
-        <translation>Centrum Ongeldig !</translation>
+        <translation>Centrum Ongeldig.</translation>
     </message>
     <message>
         <location line="-21"/>
         <source>Radius too small !</source>
-        <translation>Straal te klein !</translation>
+        <translation>Straal te klein.</translation>
     </message>
     <message>
         <location line="+88"/>
         <source>Circle Invalid !</source>
-        <translation>Cirkel ongeldig !</translation>
+        <translation>Cirkel ongeldig.</translation>
     </message>
     <message>
         <location line="+67"/>
@@ -3951,27 +3951,27 @@ is al in de lijst.</translation>
         <location line="+27"/>
         <location line="+34"/>
         <source>Rv4 Invalid !</source>
-        <translation>Rv4 ongeldig !</translation>
+        <translation>Rv4 ongeldig.</translation>
     </message>
     <message>
         <location line="-42"/>
         <source>Size Invalid !</source>
-        <translation>Grootte ongeldig !</translation>
+        <translation>Grootte ongeldig.</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Size in X Invalid !</source>
-        <translation>Grootte in X Ongeldig !</translation>
+        <translation>Grootte in X Ongeldig.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Size in Y Invalid !</source>
-        <translation>Grootte in Y Ongeldig !</translation>
+        <translation>Grootte in Y Ongeldig.</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Polygon, less than 5 references !</source>
-        <translation>Polygoon, minder dan 5 referenties !</translation>
+        <translation>Polygoon, minder dan 5 referenties.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3979,97 +3979,97 @@ is al in de lijst.</translation>
         <location line="+27"/>
         <location line="+28"/>
         <source>Rv %1 Invalid !</source>
-        <translation>Rv %1 Ongeldig !</translation>
+        <translation>Rv %1 Ongeldig.</translation>
     </message>
     <message>
         <location line="-62"/>
         <source>Polyline, less than 2 references !</source>
-        <translation>Polylijn, minder dan 2 referenties !</translation>
+        <translation>Polylijn, minder dan 2 referenties.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Bulge %1 Invalid !</source>
-        <translation>Uitsteeksel %1 Ongeldig !</translation>
+        <translation>Uitsteeksel %1 Ongeldig.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Unsupported PRO feature !</source>
-        <translation>Niet ondersteunde PRO functie !</translation>
+        <translation>Niet ondersteunde PRO functie.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fit point Spline, less than 3 references !</source>
-        <translation>Paspunt Spline, minder dan 3 referenties !</translation>
+        <translation>Paspunt Spline, minder dan 3 referenties.</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Control point Spline, less than 4 references !</source>
-        <translation>Controlepunt Spline, minder dan 4 referenties !</translation>
+        <translation>Controlepunt Spline, minder dan 4 referenties.</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Text, low field count !</source>
-        <translation>Tekst, laag veld aantal !</translation>
+        <translation>Tekst, laag veld aantal.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text, odd field count !</source>
-        <translation>Tekst, oneven veldtelling !</translation>
+        <translation>Tekst, oneven veldtelling.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Height Invalid !</source>
-        <translation>Hoogte Ongeldig !</translation>
+        <translation>Hoogte Ongeldig.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Width Invalid !</source>
-        <translation>Breedte ongeldig !</translation>
+        <translation>Breedte ongeldig.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Vert. alignment Invalid !</source>
-        <translation>Vert. uitlijning Ongeldig !</translation>
+        <translation>Vert. uitlijning Ongeldig.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Horz. alignment Invalid !</source>
-        <translation>Horz. Uitlijning Ongeldig !</translation>
+        <translation>Horz. Uitlijning Ongeldig.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing direction Invalid !</source>
-        <translation>Tekenrichting ongeldig !</translation>
+        <translation>Tekenrichting ongeldig.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing style Invalid !</source>
-        <translation>Blokafstand ongeldig !</translation>
+        <translation>Blokafstand ongeldig.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing Invalid !</source>
-        <translation>Blokafstand Ongeldig !</translation>
+        <translation>Blokafstand Ongeldig.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Unsupported entry ! Text line %1</source>
-        <translation>Niet-ondersteunde invoer ! Tekst blok %1</translation>
+        <translation>Niet-ondersteunde invoer. Tekst blok %1</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Error with first optional list !</source>
-        <translation>Fout met eerste optionele lijst !</translation>
+        <translation>Fout met eerste optionele lijst.</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Error with second optional list !</source>
-        <translation>Fout met tweede optionele lijst !</translation>
+        <translation>Fout met tweede optionele lijst.</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Not a correct entry ! Text line %1 : %2</source>
-        <translation>Geen correcte invoer ! Tekst blok %1 : %2</translation>
+        <translation>Geen correcte invoer. Tekst blok %1 : %2</translation>
     </message>
     <message>
         <location line="+77"/>
@@ -4084,7 +4084,7 @@ is al in de lijst.</translation>
     <message>
         <location line="+3"/>
         <source>Nothing casted !</source>
-        <translation>Niets gegoten !</translation>
+        <translation>Niets gegoten.</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -4104,68 +4104,68 @@ is al in de lijst.</translation>
     <message>
         <location line="+165"/>
         <source>Attributes empty ! Text line %1</source>
-        <translation>Attributen leeg ! Tekst blok %1</translation>
+        <translation>Attributen leeg. Tekst blok %1</translation>
     </message>
     <message>
         <location line="+24"/>
         <location line="+97"/>
         <source>Not a correct layer name ! Text line %1 name: %2</source>
-        <translation>Geen correcte laagnaam ! Naam tekstblok %1: %2</translation>
+        <translation>Geen correcte laagnaam. Naam tekstblok %1: %2</translation>
     </message>
     <message>
         <location line="-90"/>
         <source>Layer doesn&apos;t exist, ignored ! Text line %1 layer: %2</source>
-        <translation>Laag bestaat niet, genegeerd ! Tekstblok %1 laag: %2</translation>
+        <translation>Laag bestaat niet, genegeerd. Tekstblok %1 laag: %2</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Not a correct color, ignored ! Text line %1 color: %2</source>
-        <translation>Geen correcte kleur, genegeerd ! Tekst blok %1 kleur: %2</translation>
+        <translation>Geen correcte kleur, genegeerd. Tekst blok %1 kleur: %2</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight, ignored ! Text line %1 weight: %2</source>
-        <translation>Geen correct Lijngewicht, genegeerd ! Gewicht tekstblok %1: %2</translation>
+        <translation>Geen correct Lijngewicht, genegeerd. Gewicht tekstblok %1: %2</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype, ignored ! Text line %1 type: %2</source>
-        <translation>Geen correct Linetype, genegeerd ! Tekst blok %1 type: %2</translation>
+        <translation>Geen correct Linetype, genegeerd. Tekst blok %1 type: %2</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Not a correct Linetype scale, ignored ! Text line %1 scale: %2</source>
-        <translation>Geen correcte Linetype schaal, genegeerd ! Tekst lijn %1 schaal: %2</translation>
+        <translation>Geen correcte Linetype schaal, genegeerd. Tekst lijn %1 schaal: %2</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Not a correct attribute, ignored ! Text line %1 &gt; %2</source>
-        <translation>Geen correct attribuut, genegeerd ! Tekstblok %1 &gt; %2</translation>
+        <translation>Geen correct attribuut, genegeerd. Tekstblok %1 &gt; %2</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Parent layer doesn&apos;t exist ! Text line %1 layer: %2</source>
-        <translation>Moederlaag bestaat niet ! Tekstblok %1 laag: %2</translation>
+        <translation>Moederlaag bestaat niet. Tekstblok %1 laag: %2</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Not a correct color ! Text line %1 color: %2</source>
-        <translation>Geen correcte kleur ! Tekst blok %1 kleur: %2</translation>
+        <translation>Geen correcte kleur. Tekst blok %1 kleur: %2</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Not a correct Lineweight ! Text line %1 weight: %2</source>
-        <translation>Geen correct Lijngewicht ! Gewicht tekstblok %1: %2</translation>
+        <translation>Geen correct Lijngewicht. Gewicht tekstblok %1: %2</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Not a correct Linetype ! Text line %1 type: %2</source>
-        <translation>Geen correct Linetype ! Tekst blok %1 type: %2</translation>
+        <translation>Geen correct Linetype. Tekst blok %1 type: %2</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Add/Update layer ignored !</source>
-        <translation>Toevoegen/bijwerken laag genegeerd !</translation>
+        <translation>Toevoegen/bijwerken laag genegeerd.</translation>
     </message>
     <message>
         <location line="+11"/>
