@@ -29,6 +29,7 @@
 #endif
 
 #include "RGlobal.h"
+#include "RSettings.h"
 
 #if defined(Q_WS_X11)
 #include <X11/Xlib.h>
