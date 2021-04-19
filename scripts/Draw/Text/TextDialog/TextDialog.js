@@ -128,13 +128,6 @@ TextDialog.prototype.show =  function(textDataIn) {
     this.sourceEdit = this.dialog.findChild("Source");
     this.tabWidget = this.dialog.findChild("TabWidget");
 
-    // brighter background of text area in dark mode:
-    if (RSettings.hasDarkGuiBackground()) {
-        var p = this.textEdit.palette;
-        p.setColor(QPalette.Active, QPalette.Base, new QColor(Qt.gray));
-        this.textEdit.palette = p;
-    }
-
     // main font combo box:
     var comboMainFont = this.dialog.findChild("MainFont");
     var comboFont = this.dialog.findChild("Font");
@@ -719,17 +712,23 @@ TextDialog.prototype.fixHtml = function(html) {
         if(!e.isNull()) {
             if (e.tagName().toLowerCase()==="body") {
                 var qcol = this.initialColor.toCompat();
-                e.setAttribute("style",
-                               ("font-family:'%1';" +
-                               "font-size:%2pt;" +
-                               "font-weight:%3;" +
-                               "font-style:%4;" +
-                               "color:%5;")
-                               .arg(font.family())
-                               .arg(font.pointSizeF() * this.fontHeightFactor)
-                               .arg(font.weight()<=QFont.Normal ? "normal" : "bold")
-                               .arg(font.italic() ? "italic" : "normal")
-                               .arg(qcol.name()));
+                var bodyStyle = ("font-family:'%1';" +
+                        "font-size:%2pt;" +
+                        "font-weight:%3;" +
+                        "font-style:%4;" +
+                        "color:%5;")
+                        .arg(font.family())
+                        .arg(font.pointSizeF() * this.fontHeightFactor)
+                        .arg(font.weight()<=QFont.Normal ? "normal" : "bold")
+                        .arg(font.italic() ? "italic" : "normal")
+                        .arg(qcol.name());
+
+                // brighter background of text area in macOS dark mode:
+                if (RSettings.hasDarkGuiBackground() && RS.getSystemId()==="osx") {
+                    bodyStyle += "background-color:#dddddd;";
+                }
+
+                e.setAttribute("style", bodyStyle);
             }
         }
         n = n.nextSibling();
