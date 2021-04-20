@@ -2654,15 +2654,15 @@ function autoIconPath(path) {
 }
 
 function applyTheme() {
+    var systemId = RS.getSystemId();
     var theme = RSettings.getValue("Theme/ThemeName", undefined);
-    if (!isNull(theme)) {
+    if (systemId!=="osx" && !isNull(theme)) {
         var path = "themes/" + theme + "/";
 
         qApp.styleSheet = "";
 
         // load stylesheet.css, stylesheet_[win|macos|linux].css:
         var found = false;
-        var systemId = RS.getSystemId();
         if (systemId==="osx") systemId = "macos";
 
         var postfixes = ["", "_" + systemId];
