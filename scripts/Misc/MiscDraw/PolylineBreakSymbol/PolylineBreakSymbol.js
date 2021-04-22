@@ -29,7 +29,7 @@ v1 - 15/03/2021 - Inherit checkbox added in UI, toggles inherit properties from 
                   Peak Height changed to Peak Ratio. breakHeight vars now breakRatio.
                   Radio buttons replaced with Toolbar buttons in UI.
                   Added status line comments for toolbar items in UI.
-
+v2 - 22/04/2021 - All lines 158 to 163 - .entity was .shape
  */
 
 //  Base Class
@@ -154,13 +154,13 @@ PolylineBreakSymbol.prototype.pickEntity = function(event, preview) {
     this.entity = entity;
     this.shape = this.entity.castToShape();
 
-    // Validation of entity:
-    var cond = isLineBasedShape(this.shape) ||
-                isArcShape(this.shape) ||
-                isCircleShape(this.shape) ||
-                isEllipseShape(this.shape) ||
-                (RSpline.hasProxy() && isSplineShape(this.shape)) ||
-                (RPolyline.hasProxy() && isPolylineShape(this.shape));
+    // Validation of entity:  All lines 158 to 163 - .entity was .shape
+    var cond = isLineBasedEntity(this.entity) ||
+                isArcEntity(this.entity) ||
+                isCircleEntity(this.entity) ||
+                isEllipseEntity(this.entity) ||
+                (RSpline.hasProxy() && isSplineEntity(this.entity)) ||
+                (RPolyline.hasProxy() && isPolylineEntity(this.entity));
 
     if (!cond) {   // When validation failed
         // Warn about when unsupported entity if not a preview:
