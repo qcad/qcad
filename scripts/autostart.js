@@ -468,7 +468,7 @@ function main() {
     var i;
     var filesToOpen = [];
 
-    // open file that was clicked in Finder if application was not yet running (Mac OS X):
+    // open file that was clicked in Finder if application was not yet running (macOS):
     qApp.fileOpenRequestReceived.connect(function(fileName) {
         filesToOpen.push(fileName);
     });
