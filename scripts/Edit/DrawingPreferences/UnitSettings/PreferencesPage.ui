@@ -6,40 +6,40 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>583</width>
-    <height>346</height>
+    <width>518</width>
+    <height>251</height>
    </rect>
   </property>
   <layout class="QFormLayout" name="formLayout">
-   <item row="1" column="0">
+   <item row="0" column="0">
     <widget class="QLabel" name="label">
      <property name="text">
       <string>Drawing unit:</string>
      </property>
     </widget>
    </item>
-   <item row="1" column="1">
+   <item row="0" column="1">
     <widget class="QComboBox" name="Unit"/>
    </item>
-   <item row="2" column="0">
+   <item row="1" column="0">
     <widget class="QLabel" name="label_2">
      <property name="text">
       <string>Paper unit:</string>
      </property>
     </widget>
    </item>
-   <item row="2" column="1">
+   <item row="1" column="1">
     <widget class="QComboBox" name="PaperUnit"/>
    </item>
-   <item row="3" column="1">
-    <widget class="QComboBox" name="Measurement"/>
-   </item>
-   <item row="3" column="0">
+   <item row="2" column="0">
     <widget class="QLabel" name="label_3">
      <property name="text">
       <string>Measurement system (for line types and hatch patterns):</string>
      </property>
     </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QComboBox" name="Measurement"/>
    </item>
   </layout>
  </widget>
