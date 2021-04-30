@@ -18,7 +18,7 @@
  */
 
 /**
- * \defgroup ecma_misc_block Misc I/O related tools
+ * \defgroup ecma_misc_io Misc I/O related tools
  * \ingroup ecma_misc
  *
  * \brief This module contains misc import export tools..
