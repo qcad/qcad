@@ -1360,6 +1360,8 @@ EAction.addGuiActionTo = function(action, iface, addToMenu, addToToolBar,
     if (isNull(addSeparator)) {
         addSeparator = false;
     }
+    var addToUserToolBar1 = false;
+    var addToUserToolBar2 = false;
 
     if (className.length!==0) {
         var key = className + "/VisibleInMenu";
@@ -1376,6 +1378,16 @@ EAction.addGuiActionTo = function(action, iface, addToMenu, addToToolBar,
         addToCadToolBar = RSettings.getBoolValue(key, addToCadToolBar);
         if (!RSettings.hasValue(key)) {
             RSettings.setValue(key, addToCadToolBar);
+        }
+        key = className + "/VisibleInUserToolBar1";
+        addToUserToolBar1 = RSettings.getBoolValue(key, addToUserToolBar1);
+        if (!RSettings.hasValue(key)) {
+            RSettings.setValue(key, addToUserToolBar1);
+        }
+        key = className + "/VisibleInUserToolBar2";
+        addToUserToolBar2 = RSettings.getBoolValue(key, addToUserToolBar2);
+        if (!RSettings.hasValue(key)) {
+            RSettings.setValue(key, addToUserToolBar2);
         }
     }
 
@@ -1434,6 +1446,21 @@ EAction.addGuiActionTo = function(action, iface, addToMenu, addToToolBar,
                 //ctb.addAction(action);
                 action.addToWidget(ctb);
             }
+        }
+    }
+
+    var appWin = EAction.getMainWindow();
+    if (addToUserToolBar1) {
+        var tb = appWin.findChild("UserToolBar1");
+        if (!isNull(tb)) {
+            action.addToToolBar(tb);
+        }
+    }
+
+    if (addToUserToolBar2) {
+        var tb = appWin.findChild("UserToolBar2");
+        if (!isNull(tb)) {
+            action.addToToolBar(tb);
         }
     }
 };

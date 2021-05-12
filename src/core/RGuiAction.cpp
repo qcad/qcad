@@ -560,12 +560,13 @@ void RGuiAction::setWidgetNamesStatic(QAction* a, const QStringList& widgetNames
 }
 
 QStringList RGuiAction::getWidgetNamesStatic(const QAction* a) {
+    QStringList ret;
     if (a->property("WidgetNames").isValid()) {
-        return a->property("WidgetNames").toStringList();
+        ret = a->property("WidgetNames").toStringList();
     }
-    else {
-        return QStringList();
-    }
+    ret.append("!UserToolBar1");
+    ret.append("!UserToolBar2");
+    return ret;
 }
 
 void RGuiAction::setWidgetNames(const QStringList& widgetNames) {

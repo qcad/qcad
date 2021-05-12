@@ -2430,7 +2430,7 @@ function addActionsToWidgets() {
     */
 
     var actions = RGuiAction.getActions();
-    var widgetTypes = ["Menu", "ToolBar", "MatrixPanel", "Panel"];
+    var widgetTypes = ["Menu", "ToolBar", "MatrixPanel", "Panel", "UserToolBar1", "UserToolBar2"];
     for (var c=0; c<actions.length; ++c) {
         var a = actions[c];
         if (a.icon.isNull() && !a.isIconDisabled()) {
@@ -2448,6 +2448,7 @@ function addActionsToWidgets() {
 
             var visibility = true;
             if (wn[0]==="!") {
+                // action not visible by default in this widget:
                 visibility = false;
                 wn = wn.substring(1);
             }
