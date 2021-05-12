@@ -332,17 +332,26 @@ void RDimensionEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
             e.exportPainterPaths(paths);
         }
         else {
-            // render text as paths:
-            // set brush explicitly:
-            QVariant v = getDocument()->getKnownVariable(RS::DIMCLRT, RColor(RColor::ByBlock));
-            RColor textColor = v.value<RColor>();
-            if (!textColor.isByBlock()) {
-                brush.setColor(textColor);
-                QPen p = e.getPen();
-                p.setColor(textColor);
-                e.setPen(p);
+            if (!isSelected()) {
+                // render text as paths:
+                // set brush explicitly:
+                QVariant v = getDocument()->getKnownVariable(RS::DIMCLRT, RColor(RColor::ByBlock));
+                RColor textColor = v.value<RColor>();
+                if (textColor.isByLayer()) {
+                    QSharedPointer<RLayer> layer = getDocument()->queryLayerDirect(getLayerId());
+                    if (!layer.isNull()) {
+                        textColor = layer->getColor();
+                    }
+                }
+
+                if (!textColor.isByBlock()) {
+                    brush.setColor(textColor);
+                    QPen p = e.getPen();
+                    p.setColor(textColor);
+                    e.setPen(p);
+                }
+                e.setBrush(brush);
             }
-            e.setBrush(brush);
             e.exportPainterPathSource(textData);
         }
     }
