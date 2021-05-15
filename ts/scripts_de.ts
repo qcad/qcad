@@ -4818,12 +4818,12 @@ ist bereits in der Liste.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2081"/>
+        <location line="+2108"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="-2080"/>
+        <location line="-2107"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
@@ -4862,7 +4862,7 @@ ist bereits in der Liste.</translation>
         <translation>CAD Werkzeuge</translation>
     </message>
     <message>
-        <location line="+711"/>
+        <location line="+738"/>
         <source>Entity is not in working set.</source>
         <translation>Objekt befindet sich nicht im Bearbeitungssatz.</translation>
     </message>
@@ -15530,7 +15530,7 @@ nicht öffnen.
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+248"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+241"/>
         <source>Default value:</source>
         <translation>Standardwert:</translation>
     </message>
@@ -15565,7 +15565,7 @@ nicht öffnen.
         <translation>&amp;Unterstreichen</translation>
     </message>
     <message>
-        <location line="+485"/>
+        <location line="+491"/>
         <source>Degree</source>
         <translation>Grad</translation>
     </message>
@@ -15751,7 +15751,7 @@ nicht öffnen.
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="-518"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="-524"/>
         <source>&amp;Bold</source>
         <translation>&amp;Fett</translation>
     </message>
@@ -15781,7 +15781,7 @@ nicht öffnen.
         <translation>&amp;Sonderzeichen...</translation>
     </message>
     <message>
-        <location line="+310"/>
+        <location line="+316"/>
         <source>Others...</source>
         <translation>Andere...</translation>
     </message>
@@ -16647,7 +16647,7 @@ nicht öffnen.
         <translation>Papiereinheit:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+10"/>
         <source>Measurement system (for line types and hatch patterns):</source>
         <translation>Messsystem (für Linientypen und Schraffurmuster):</translation>
     </message>

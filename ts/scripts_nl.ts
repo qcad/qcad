@@ -4342,12 +4342,12 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2081"/>
+        <location line="+2108"/>
         <source>Cancel</source>
         <translation>Annuleer</translation>
     </message>
     <message>
-        <location line="-2080"/>
+        <location line="-2107"/>
         <source>Done</source>
         <translation>Klaar</translation>
     </message>
@@ -4378,7 +4378,7 @@ is al in de lijst.</translation>
         <translation>CAD-gereedschappen</translation>
     </message>
     <message>
-        <location line="+711"/>
+        <location line="+738"/>
         <source>Entity is not in working set.</source>
         <translation>Entiteit zit niet in de werkset.</translation>
     </message>
@@ -13139,7 +13139,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+248"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+241"/>
         <source>Default value:</source>
         <translation>Standaardwaarde:</translation>
     </message>
@@ -13204,7 +13204,7 @@ getoond in zoekresultaten:</translation>
         <translation>&amp;Speciale tekens...</translation>
     </message>
     <message>
-        <location line="+310"/>
+        <location line="+316"/>
         <source>Others...</source>
         <translation>Andere...</translation>
     </message>
@@ -14098,7 +14098,7 @@ getoond in zoekresultaten:</translation>
         <translation>Papier eenheid:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+10"/>
         <source>Measurement system (for line types and hatch patterns):</source>
         <translation>Meetsysteem (voor lijn types en arceerpatronen):</translation>
     </message>

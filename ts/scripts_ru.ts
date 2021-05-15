@@ -4324,12 +4324,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2081"/>
+        <location line="+2108"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location line="-2080"/>
+        <location line="-2107"/>
         <source>Done</source>
         <translation>Готово</translation>
     </message>
@@ -4364,7 +4364,7 @@ is already in the list.</source>
         <translation>Инструменты САПР</translation>
     </message>
     <message>
-        <location line="+711"/>
+        <location line="+738"/>
         <source>Entity is not in working set.</source>
         <translation>Объект не входит в рабочий набор.</translation>
     </message>
@@ -12981,7 +12981,7 @@ shown in search results:</source>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+248"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+241"/>
         <source>Default value:</source>
         <translation>Значение по умолчанию:</translation>
     </message>
@@ -13046,7 +13046,7 @@ shown in search results:</source>
         <translation>&amp;Специальные символы...</translation>
     </message>
     <message>
-        <location line="+310"/>
+        <location line="+316"/>
         <source>Others...</source>
         <translation>Другие...</translation>
     </message>
@@ -13933,7 +13933,7 @@ shown in search results:</source>
         <translation>Единица размера бумаги:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+10"/>
         <source>Measurement system (for line types and hatch patterns):</source>
         <translation>Система измерения (для типов линий и образцов штриховки):</translation>
     </message>

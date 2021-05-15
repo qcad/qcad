@@ -5189,7 +5189,7 @@ Powrót do poprzedniego menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2081"/>
+        <location line="+2108"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -5198,7 +5198,7 @@ Anuluj
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location line="-2080"/>
+        <location line="-2107"/>
         <source>Done</source>
         <translation type="unfinished">Zrobione</translation>
     </message>
@@ -5247,7 +5247,7 @@ Narzędzia CAD</translatorcomment>
         <translation>Narzędzia CAD</translation>
     </message>
     <message>
-        <location line="+711"/>
+        <location line="+738"/>
         <source>Entity is not in working set.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16110,7 +16110,7 @@ Rysuj obiekty tekstowe</translatorcomment>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+248"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+241"/>
         <source>Default value:</source>
         <translation>Domyślna wartość:</translation>
     </message>
@@ -16198,7 +16198,7 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
         <translation>Znaki &amp;specjalne...</translation>
     </message>
     <message>
-        <location line="+310"/>
+        <location line="+316"/>
         <source>Others...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pl.ts--</translatorcomment>
@@ -17418,7 +17418,7 @@ Parsek</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+10"/>
         <source>Measurement system (for line types and hatch patterns):</source>
         <translation type="unfinished"></translation>
     </message>

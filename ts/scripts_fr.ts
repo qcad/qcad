@@ -4610,12 +4610,12 @@ est déjà dans la liste.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2081"/>
+        <location line="+2108"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
     <message>
-        <location line="-2080"/>
+        <location line="-2107"/>
         <source>Done</source>
         <translation>Terminer</translation>
     </message>
@@ -4646,7 +4646,7 @@ est déjà dans la liste.</translation>
         <translation>Outils de CAO</translation>
     </message>
     <message>
-        <location line="+711"/>
+        <location line="+738"/>
         <source>Entity is not in working set.</source>
         <translation>L&apos;entité n&apos;est pas dans le jeu de travail.</translation>
     </message>
@@ -14490,7 +14490,7 @@ dans les résultats de recherche :</translation>
 <context>
     <name>TextDialog</name>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+248"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="+241"/>
         <source>Default value:</source>
         <translation>Valeur par défaut :</translation>
     </message>
@@ -14555,7 +14555,7 @@ dans les résultats de recherche :</translation>
         <translation>&amp;Caractère spécial...</translation>
     </message>
     <message>
-        <location line="+310"/>
+        <location line="+316"/>
         <source>Others...</source>
         <translation>Autres...</translation>
     </message>
@@ -15511,7 +15511,7 @@ dans les résultats de recherche :</translation>
         <translation>Unité papier :</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+10"/>
         <source>Measurement system (for line types and hatch patterns):</source>
         <translation>Système de mesure (types de ligne et motifs de hachures):</translation>
     </message>
