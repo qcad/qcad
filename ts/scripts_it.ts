@@ -12924,7 +12924,7 @@ Obiettivo punto</translatorcomment>
     <message>
         <location line="+14"/>
         <source>Factor x:</source>
-        <translation>Fattore &amp;x:</translation>
+        <translation>Fattore x:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12935,7 +12935,7 @@ Obiettivo punto</translatorcomment>
     <message>
         <location line="-7"/>
         <source>Factor y:</source>
-        <translation>Fattore &amp;y:</translation>
+        <translation>Fattore y:</translation>
     </message>
     <message>
         <location line="+14"/>

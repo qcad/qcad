@@ -11692,7 +11692,7 @@ nos resultados de busca:</translation>
     <message>
         <location line="+14"/>
         <source>Factor x:</source>
-        <translation>Fator &amp;x:</translation>
+        <translation>Fator x:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -11703,7 +11703,7 @@ nos resultados de busca:</translation>
     <message>
         <location line="-7"/>
         <source>Factor y:</source>
-        <translation>Fator &amp;y:</translation>
+        <translation>Fator y:</translation>
     </message>
     <message>
         <location line="+14"/>

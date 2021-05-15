@@ -12710,7 +12710,7 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="+14"/>
         <source>Factor x:</source>
-        <translation>Facteur &amp;x :</translation>
+        <translation>Facteur x :</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12721,7 +12721,7 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="-7"/>
         <source>Factor y:</source>
-        <translation>Facteur &amp;y :</translation>
+        <translation>Facteur y :</translation>
     </message>
     <message>
         <location line="+14"/>

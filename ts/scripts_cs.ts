@@ -11061,7 +11061,7 @@ ve výsledcích vyhledávání:</translation>
     <message>
         <location line="+14"/>
         <source>Factor x:</source>
-        <translation>Faktor &amp;x:</translation>
+        <translation>Faktor x:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -11072,7 +11072,7 @@ ve výsledcích vyhledávání:</translation>
     <message>
         <location line="-7"/>
         <source>Factor y:</source>
-        <translation>Faktor &amp;y:</translation>
+        <translation>Faktor y:</translation>
     </message>
     <message>
         <location line="+14"/>

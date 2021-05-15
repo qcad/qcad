@@ -13619,7 +13619,7 @@ nicht öffnen.
     <message>
         <location line="+14"/>
         <source>Factor x:</source>
-        <translation>Faktor &amp;X:</translation>
+        <translation>Faktor X:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -13630,7 +13630,7 @@ nicht öffnen.
     <message>
         <location line="-7"/>
         <source>Factor y:</source>
-        <translation>Faktor &amp;Y:</translation>
+        <translation>Faktor Y:</translation>
     </message>
     <message>
         <location line="+14"/>
