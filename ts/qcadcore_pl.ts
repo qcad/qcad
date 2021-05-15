@@ -240,7 +240,7 @@
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="+94"/>
         <source>Referenced Block</source>
-        <translation type="unfinished">Blok</translation>
+        <translation type="unfinished">Blok, do którego nawiązano</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -255,7 +255,7 @@
     <message>
         <location filename="../src/core/RBlock.cpp" line="+65"/>
         <source>Pixel Unit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Jednostka pikseli</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -405,8 +405,7 @@
     <message>
         <location line="+1"/>
         <source>Draw Order</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation>Kolejność rysowania</translation>
+        <translation>Kolejność losowania</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -459,17 +458,17 @@
     <message>
         <location line="+1"/>
         <source>Selected</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wybrane</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Invisible</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Niewidzialny</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Working Set</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zestaw roboczy</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
@@ -526,7 +525,7 @@
     <message>
         <location line="+1"/>
         <source>Text Width</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Szerokość tekstu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -572,12 +571,12 @@
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Backward</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Upside Down</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Do góry nogami</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
@@ -587,7 +586,7 @@
     <message>
         <location line="+1"/>
         <source>On</source>
-        <translation type="unfinished">Włączona</translation>
+        <translation type="unfinished">Na stronie</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -653,7 +652,7 @@
     <message>
         <location line="+1"/>
         <source>Off is Freeze</source>
-        <translation type="unfinished">Wyłączenie działa jak zamrożenie</translation>
+        <translation type="unfinished">Wył. jest zamrożeniem</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
@@ -665,35 +664,35 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Limits</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Min. limity</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Limits</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Maks. limity</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Insertion Base</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Podstawa wprowadzająca</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Min Extents</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Min. zakresy</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Max Extents</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Maks. długość</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceData.cpp" line="+825"/>
@@ -711,8 +710,7 @@
     <message>
         <location filename="../src/core/RGuiAction.cpp" line="+186"/>
         <source>Requires selection</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation>Wymaga zaznaczenia</translation>
+        <translation></translation>
     </message>
 </context>
 <context>

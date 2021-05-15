@@ -272,7 +272,7 @@
 Obszar wieloboczny
 Obszar &amp;wieloboczny
 Mierzy obszar wieloboku</translatorcomment>
-        <translation>Pole powierzchni</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -294,7 +294,7 @@ Mierzy obszar wieloboku</translatorcomment>
         <translatorcomment>--google--
 Wskaż położenie linii wymiarowej:
 Wskaż położenie linii wymiarowej</translatorcomment>
-        <translation>Linia wymiarowa</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -304,7 +304,7 @@ Wskaż położenie linii wymiarowej</translatorcomment>
         <translatorcomment>--google--
 Punkt 1 rozszerzenia|X
 Punkt 1 rozszerzenia|Y</translatorcomment>
-        <translation>Punkt linii pomocniczej 1</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -314,7 +314,7 @@ Punkt 1 rozszerzenia|Y</translatorcomment>
         <translatorcomment>--google--
 Punkt 2 rozszerzenia|X
 Punkt 2 rozszerzenia|Y</translatorcomment>
-        <translation>Punkt linii pomocniczej 2</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngular2LEntity.cpp" line="-14"/>
@@ -351,7 +351,7 @@ Punkt 2 rozszerzenia|Y</translatorcomment>
         <source>Dimension Arc</source>
         <translatorcomment>--google--
 Wskaż położenie linii wymiarowej łuku</translatorcomment>
-        <translation>Wymiar łuku</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-6"/>
@@ -362,7 +362,7 @@ Wskaż położenie linii wymiarowej łuku</translatorcomment>
         <location line="+1"/>
         <source>Chord Point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Punkt cięciwy</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -370,7 +370,7 @@ Wskaż położenie linii wymiarowej łuku</translatorcomment>
         <location line="+1"/>
         <source>Far Chord Point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Odległy punkt cięciwy</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
@@ -383,7 +383,7 @@ Wskaż położenie linii wymiarowej łuku</translatorcomment>
 Wskaż początek pierwszej linii rozszerzenia
 Wskaż początek drugiej linii rozszerzenia
 &amp;Usuń oryginał</translatorcomment>
-        <translation>Początek układu współrzędnych</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -396,7 +396,7 @@ Wskaż początek drugiej linii rozszerzenia
         <location line="+1"/>
         <source>Defining Point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Definiowanie punktu</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -404,13 +404,13 @@ Wskaż początek drugiej linii rozszerzenia
         <location line="+1"/>
         <source>Leader End Point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Punkt końcowy odnośnika</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+123"/>
         <source>Dimension Angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Kąt wymiaru</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>
@@ -427,13 +427,13 @@ Wskaż początek drugiej linii rozszerzenia
         <location line="-1"/>
         <source>Upper Limit</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Górna odchyłka</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lower Limit</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Dolna odchyłka</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -441,7 +441,7 @@ Wskaż początek drugiej linii rozszerzenia
         <location line="+1"/>
         <source>Definition Point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Punkt definicji</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -449,27 +449,27 @@ Wskaż początek drugiej linii rozszerzenia
         <location line="+1"/>
         <source>Text Position</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Położenie tekstu</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Flip First Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Odwróć pierwszą strzałkę</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Flip Second Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Przerzuć drugą strzałę</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Fixed Extension Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stała linia przedłużająca</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension Line Length</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Długość przewodu przedłużającego</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -504,7 +504,7 @@ Wskaż początek drugiej linii rozszerzenia
         <translatorcomment>--google--
 Punkt główny|X
 Punkt główny|Y</translatorcomment>
-        <translation>Główny punkt</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -549,7 +549,7 @@ Punkt główny|Y</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Alpha</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alfa</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -633,25 +633,25 @@ Punkt główny|Y</translatorcomment>
         <location line="+2"/>
         <location line="+1"/>
         <source>U</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">U</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">V</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Width Factor</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Współczynnik szerokości</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Height Factor</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Współczynnik wysokości</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -689,7 +689,7 @@ Punkt główny|Y</translatorcomment>
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
         <source>Polyline Pattern</source>
-        <translation type="unfinished">Wzór linii łamanej</translation>
+        <translation type="unfinished">Wzór polilinii</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -700,7 +700,7 @@ Punkt główny|Y</translatorcomment>
         <location line="+4"/>
         <source>Bulge</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Wybrzuszenie</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+3"/>
@@ -732,22 +732,22 @@ Punkt główny|Y</translatorcomment>
     <message>
         <location line="-2"/>
         <source>Base Angle</source>
-        <translation type="unfinished">Kąt podstawy</translation>
+        <translation type="unfinished">Kąt nachylenia podstawy</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Size 1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wielkość 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Size 2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rozmiar 2</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Global Z</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Globalny Z</translation>
     </message>
     <message>
         <location filename="../src/entity/RFaceEntity.cpp" line="-14"/>
@@ -820,7 +820,7 @@ Punkt główny|Y</translatorcomment>
 Wskaż pierwszy punkt kontrolny
 Wskaż następny punkt kontrolny lub [%1]
 Wskaż następny punkt kontrolny</translatorcomment>
-        <translation>Punkt kontrolny</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -828,7 +828,7 @@ Wskaż następny punkt kontrolny</translatorcomment>
         <location line="+1"/>
         <source>Fit Point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Punkt dopasowania</translation>
+        <translation></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -843,26 +843,26 @@ Wskaż następny punkt kontrolny</translatorcomment>
     <message>
         <location line="+6"/>
         <source>Use Start Tangent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Użyj stycznej początkowej</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Tangent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Początek stycznej</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Use End Tangent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wykorzystanie stycznej końcowej</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>End Tangent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Styczna końcowa</translation>
     </message>
     <message>
         <source>Simple</source>
@@ -877,14 +877,14 @@ Wskaż następny punkt kontrolny</translatorcomment>
         <location line="+1"/>
         <location line="+1"/>
         <source>Location</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lokalizacja</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kierunek</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -894,11 +894,6 @@ Wskaż następny punkt kontrolny</translatorcomment>
     <message>
         <source>Plain Text</source>
         <translation type="vanished">Zwykły tekst</translation>
-    </message>
-    <message>
-        <source>Font Name</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Nazwa czcionki</translation>
     </message>
     <message>
         <source>Text Height</source>
@@ -991,7 +986,7 @@ Wskaż następny punkt kontrolny</translatorcomment>
     <message>
         <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+143"/>
         <source>Arc Symbol Type</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Symbol łuku Typ</translation>
     </message>
 </context>
 </TS>
