@@ -1754,7 +1754,9 @@
     <file alias="scripts/Modify/BreakOut/Tests/BreakOutTest14.js">../../scripts/Modify/BreakOut/Tests/BreakOutTest14.js</file>
     <file alias="scripts/Modify/BreakOut/Tests/BreakOutTest15.js">../../scripts/Modify/BreakOut/Tests/BreakOutTest15.js</file>
     <file alias="scripts/Modify/BreakOut/Tests/BreakOutTest16.js">../../scripts/Modify/BreakOut/Tests/BreakOutTest16.js</file>
+    <file alias="scripts/Modify/BreakOut/Tests/BreakOutTest17.js">../../scripts/Modify/BreakOut/Tests/BreakOutTest17.js</file>
     <file alias="scripts/Modify/BreakOut/Tests/data/closed_polyline.dxf">../../scripts/Modify/BreakOut/Tests/data/closed_polyline.dxf</file>
+    <file alias="scripts/Modify/BreakOut/Tests/data/full_circle_line.dxf">../../scripts/Modify/BreakOut/Tests/data/full_circle_line.dxf</file>
     <file alias="scripts/Modify/BreakOut/Tests/data/line_arc_circle.dxf">../../scripts/Modify/BreakOut/Tests/data/line_arc_circle.dxf</file>
     <file alias="scripts/Modify/BreakOut/Tests/data/line_xline_ray.dxf">../../scripts/Modify/BreakOut/Tests/data/line_xline_ray.dxf</file>
     <file alias="scripts/Modify/BreakOut/Tests/data/line_xline_ray2.dxf">../../scripts/Modify/BreakOut/Tests/data/line_xline_ray2.dxf</file>
@@ -1777,6 +1779,7 @@
     <file alias="scripts/Modify/BreakOut/Tests/required/BreakOutTest14_000.dxf">../../scripts/Modify/BreakOut/Tests/required/BreakOutTest14_000.dxf</file>
     <file alias="scripts/Modify/BreakOut/Tests/required/BreakOutTest15_000.dxf">../../scripts/Modify/BreakOut/Tests/required/BreakOutTest15_000.dxf</file>
     <file alias="scripts/Modify/BreakOut/Tests/required/BreakOutTest16_000.dxf">../../scripts/Modify/BreakOut/Tests/required/BreakOutTest16_000.dxf</file>
+    <file alias="scripts/Modify/BreakOut/Tests/required/BreakOutTest17_000.dxf">../../scripts/Modify/BreakOut/Tests/required/BreakOutTest17_000.dxf</file>
     <file alias="scripts/Modify/BreakOutGap/BreakOutGap-inverse.svg">../../scripts/Modify/BreakOutGap/BreakOutGap-inverse.svg</file>
     <file alias="scripts/Modify/BreakOutGap/BreakOutGap.js">../../scripts/Modify/BreakOutGap/BreakOutGap.js</file>
     <file alias="scripts/Modify/BreakOutGap/BreakOutGap.svg">../../scripts/Modify/BreakOutGap/BreakOutGap.svg</file>
