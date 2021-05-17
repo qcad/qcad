@@ -664,19 +664,24 @@ Projection.prototype.projectShape = function(shape, preview, trim, rec) {
                     // got global polyline width:
                     gotGlobalWidth = true;
                     for (i=0; i<ret.length; i++) {
-                        ret[i].setGlobalWidth(startWidths[0]);
+                        if (isPolylineShape(ret[i])) {
+                            ret[i].setGlobalWidth(startWidths[0]);
+                        }
                     }
                 }
             }
         }
 
-        // set segment widths if there's no segmentation and the number of segments match:
-        if (!gotGlobalWidth && !this.segmentation && ret.length===1 && shape.countSegments()===ret[0].countSegments()) {
-            for (i=0; i<shape.countVertices(); i++) {
-                ret[0].setStartWidthAt(i, shape.getStartWidthAt(i));
-                ret[0].setEndWidthAt(i, shape.getEndWidthAt(i));
+        // set pl segment widths if there's no segmentation and the number of segments match:
+        if (ret.length===1 && isPolylineShape(ret[0])) {
+            if (!gotGlobalWidth && !this.segmentation && shape.countSegments()===ret[0].countSegments()) {
+                for (i=0; i<shape.countVertices(); i++) {
+                    ret[0].setStartWidthAt(i, shape.getStartWidthAt(i));
+                    ret[0].setEndWidthAt(i, shape.getEndWidthAt(i));
+                }
             }
         }
+
 
         return ret;
     }
