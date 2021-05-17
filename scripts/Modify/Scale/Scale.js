@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2018 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2021 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -33,6 +33,7 @@ function Scale(guiAction) {
     this.targetPoint = undefined;
     this.factorX = undefined;
     this.factorY = undefined;
+    this.factorByMouse = false;
 
     this.useDialog = RSettings.getBoolValue("Scale/UseDialog", true);
 
@@ -49,7 +50,7 @@ Scale.getPreferencesCategory = function() {
 };
 
 Scale.State = {
-    SettingCenterPoint : 0,
+    SettingFocusPoint : 0,
     SettingReferencePoint : 1,
     SettingTargetPoint : 2
 };
@@ -61,7 +62,7 @@ Scale.prototype.beginEvent = function() {
         return;
     }
 
-    this.setState(Scale.State.SettingCenterPoint);
+    this.setState(Scale.State.SettingFocusPoint);
 };
 
 Scale.prototype.setState = function(state) {
@@ -72,7 +73,7 @@ Scale.prototype.setState = function(state) {
 
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
-    case Scale.State.SettingCenterPoint:
+    case Scale.State.SettingFocusPoint:
         this.referencePoint = undefined;
         this.targetPoint = undefined;
         //this.factorX = undefined;
@@ -116,12 +117,12 @@ Scale.prototype.initUiOptions = function(resume, optionsToolBar) {
 
 Scale.prototype.escapeEvent = function() {
     switch (this.state) {
-    case Scale.State.SettingCenterPoint:
+    case Scale.State.SettingFocusPoint:
         Transform.prototype.escapeEvent.call(this);
         break;
 
     case Scale.State.SettingReferencePoint:
-        this.setState(Scale.State.SettingCenterPoint);
+        this.setState(Scale.State.SettingFocusPoint);
         break;
 
     case Scale.State.SettingTargetPoint:
@@ -135,7 +136,7 @@ Scale.prototype.pickCoordinate = function(event, preview) {
     var op;
 
     switch (this.state) {
-    case Scale.State.SettingCenterPoint:
+    case Scale.State.SettingFocusPoint:
         this.focusPoint = event.getModelPosition();
 
         if (preview) {
