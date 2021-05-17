@@ -16,8 +16,9 @@ BreakOutTest03.prototype.test00 = function() {
     this.setUp();
     this.importFile('scripts/Modify/BreakOut/Tests/data/polylines.dxf');
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
-    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ModifyToolsPanel::BreakOutButton');
-    this.setToolOption('BreakOut/RemoveSegment', 'true');
+    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ModifyToolsPanel::BreakOutProButton');
+    this.setToolOption('BreakOutPro/RemoveSegment', 'true');
+    this.setToolOption('BreakOutPro/LineMode', 'false');
     this.updateToolOptions();
     this.setZoom(3.910224438902743, new RVector(48.176, 36.5185, 0, true));
     var p = new RVector(35.962372, 63.987245);
