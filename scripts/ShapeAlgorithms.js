@@ -663,7 +663,14 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutDist1, cutDist2, cutPos1, c
         if (!extend) {
             var angleLength1 = rest1.getAngleLength(true);
             var angleLength2 = rest2.getAngleLength(true);
-            if (angleLength1+angleLength2 > shape.getAngleLength()) {
+
+            // rest1 is the same as the segment:
+            var same1 = RMath.fuzzyAngleCompare(rest1.getStartAngle(), segment.getStartAngle()) &&
+                    RMath.fuzzyAngleCompare(rest1.getEndAngle(), segment.getEndAngle()) &&
+                    rest1.isReversed()===segment.isReversed();
+
+            // catch common errors:
+            if (angleLength1+angleLength2 > shape.getAngleLength() || same1) {
                 rest1.trimEndPoint(cutDist2);
                 rest2.trimStartPoint(cutDist1);
 
