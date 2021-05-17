@@ -12658,7 +12658,7 @@ dans les résultats de recherche :</translation>
 <context>
     <name>Scale</name>
     <message>
-        <location filename="../scripts/Modify/Scale/Scale.js" line="+48"/>
+        <location filename="../scripts/Modify/Scale/Scale.js" line="+49"/>
         <source>Modify</source>
         <translation>Modifier</translation>
     </message>
@@ -13387,7 +13387,7 @@ dans les résultats de recherche :</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1419"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1426"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Au moins deux points sont identiques.</translation>

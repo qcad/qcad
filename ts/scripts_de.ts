@@ -13567,7 +13567,7 @@ nicht öffnen.
 <context>
     <name>Scale</name>
     <message>
-        <location filename="../scripts/Modify/Scale/Scale.js" line="+91"/>
+        <location filename="../scripts/Modify/Scale/Scale.js" line="+92"/>
         <source>Reference point</source>
         <translation>Referenzpunkt</translation>
     </message>
@@ -14367,7 +14367,7 @@ nicht öffnen.
         <translation type="vanished">Radius kleiner als 0.0 nach %1 konzentrischen Kreisbögen.</translation>
     </message>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1426"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1433"/>
         <source>No circle possible.</source>
         <translation>Kein Kreis möglich.</translation>
     </message>

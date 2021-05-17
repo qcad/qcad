@@ -11579,7 +11579,7 @@ shown in search results:</source>
 <context>
     <name>Scale</name>
     <message>
-        <location filename="../scripts/Modify/Scale/Scale.js" line="+48"/>
+        <location filename="../scripts/Modify/Scale/Scale.js" line="+49"/>
         <source>Scale</source>
         <translation type="unfinished">スケール</translation>
     </message>
@@ -12318,7 +12318,7 @@ shown in search results:</source>
         <translation type="vanished">%1同心弧の半径が0.0を下回りました。</translation>
     </message>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1419"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1426"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>少なくとも2点が同一です。</translation>

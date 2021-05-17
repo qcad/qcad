@@ -11319,7 +11319,7 @@ vo výsledku vyhľadania:</translation>
 <context>
     <name>Scale</name>
     <message>
-        <location filename="../scripts/Modify/Scale/Scale.js" line="+48"/>
+        <location filename="../scripts/Modify/Scale/Scale.js" line="+49"/>
         <source>Modify</source>
         <translation>Úpravy</translation>
     </message>
@@ -12012,7 +12012,7 @@ vo výsledku vyhľadania:</translation>
         <translation type="vanished">Polomer klesol pod 0.0 po %1 sústredných oblúkoch.</translation>
     </message>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1419"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1426"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Minimálne dva body sú rovnaké.</translation>

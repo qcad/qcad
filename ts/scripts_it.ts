@@ -12868,7 +12868,7 @@ Seconda entità non può essere tagliata.</translatorcomment>
 <context>
     <name>Scale</name>
     <message>
-        <location filename="../scripts/Modify/Scale/Scale.js" line="+48"/>
+        <location filename="../scripts/Modify/Scale/Scale.js" line="+49"/>
         <source>Modify</source>
         <translation>Modifica</translation>
     </message>
@@ -13690,7 +13690,7 @@ Interseca con la selezione corrente</translatorcomment>
         <translation type="vanished">Raggio è sceso sotto 0,0 dopo %1 archi concentrici.</translation>
     </message>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1419"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1426"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Almeno due punti sono identici.</translation>

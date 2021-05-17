@@ -11291,7 +11291,7 @@ shown in search results:</source>
 <context>
     <name>Scale</name>
     <message>
-        <location filename="../scripts/Modify/Scale/Scale.js" line="+48"/>
+        <location filename="../scripts/Modify/Scale/Scale.js" line="+49"/>
         <source>Modify</source>
         <translation>Изменить</translation>
     </message>
@@ -11988,7 +11988,7 @@ shown in search results:</source>
         <translation type="vanished">Радиус уменьшился до 0.0 после %1 концентрической(их) дуг(и).</translation>
     </message>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1419"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1426"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>По крайней мере две точки идентичны.</translation>

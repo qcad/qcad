@@ -11448,7 +11448,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>Scale</name>
     <message>
-        <location filename="../scripts/Modify/Scale/Scale.js" line="+48"/>
+        <location filename="../scripts/Modify/Scale/Scale.js" line="+49"/>
         <source>Modify</source>
         <translation>Modificeren</translation>
     </message>
@@ -12142,7 +12142,7 @@ getoond in zoekresultaten:</translation>
         <translation type="vanished">Radius gedaald tot onder 0 na %1 concentrische boog(en).</translation>
     </message>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1419"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1426"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Ten minste twee punten zijn identiek.</translation>

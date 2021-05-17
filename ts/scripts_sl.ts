@@ -11770,7 +11770,7 @@ shown in search results:</source>
 <context>
     <name>Scale</name>
     <message>
-        <location filename="../scripts/Modify/Scale/Scale.js" line="+48"/>
+        <location filename="../scripts/Modify/Scale/Scale.js" line="+49"/>
         <source>Scale</source>
         <translation>Merilo</translation>
     </message>
@@ -12477,7 +12477,7 @@ shown in search results:</source>
         <translation type="vanished">Polmer je padel pod 0.0 po %1 kocentričnih lokih.</translation>
     </message>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1419"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1426"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vsaj dve točki sta identični.</translation>

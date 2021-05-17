@@ -700,6 +700,7 @@ SOURCES = \
 ../scripts/Modify/BreakOut/Tests/BreakOutTest14.js \
 ../scripts/Modify/BreakOut/Tests/BreakOutTest15.js \
 ../scripts/Modify/BreakOut/Tests/BreakOutTest16.js \
+../scripts/Modify/BreakOut/Tests/BreakOutTest17.js \
 ../scripts/Modify/BreakOutGap/BreakOutGap.js \
 ../scripts/Modify/BreakOutGap/BreakOutGapInit.js \
 ../scripts/Modify/BreakOutGap/Tests/BreakOutGapTest01.js \
