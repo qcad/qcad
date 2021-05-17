@@ -162,10 +162,11 @@ Scale.prototype.pickCoordinate = function(event, preview) {
                 op = this.getOperation(false);
                 if (!isNull(op)) {
                     di.applyOperation(op);
-                    di.setRelativeZero(this.focusPoint);
                     this.terminate();
                 }
             }
+
+            di.setRelativeZero(this.focusPoint);
         }
         break;
 
@@ -338,6 +339,8 @@ Scale.prototype.transform = function(entity, k, op, preview, flags) {
         return;
     }
 
+    this.preTransform(entity);
+
     var e;
 
     // non-uniform scaling of arc, circle or ellipse:
@@ -359,6 +362,7 @@ Scale.prototype.transform = function(entity, k, op, preview, flags) {
             op.deleteObject(entity);
         }
         if (!isNull(e)) {
+            this.postTransform(e);
             op.addObject(e, flags);
         }
         return;
@@ -399,13 +403,23 @@ Scale.prototype.transform = function(entity, k, op, preview, flags) {
         newHatchData.setOriginPoint(entity.getOriginPoint());
 
         entity.setData(newHatchData);
+        this.postTransform(entity);
         op.addObject(entity, flags);
         return;
     }
 
     // non-uniform scaling of other entities:
     entity.scale(sv, this.focusPoint);
+    this.postTransform(entity);
     op.addObject(entity, flags);
+};
+
+Scale.prototype.preTransform = function(entity) {
+    return;
+};
+
+Scale.prototype.postTransform = function(entity) {
+    return;
 };
 
 Scale.prototype.getAuxPreview = function() {
