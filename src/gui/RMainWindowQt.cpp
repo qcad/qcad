@@ -19,6 +19,7 @@
 #include <QtGui>
 #include <QDesktopWidget>
 #include <QLabel>
+#include <QLineEdit>
 #include <QMenu>
 #include <QMdiArea>
 #include <QStatusBar>
@@ -667,8 +668,10 @@ bool RMainWindowQt::event(QEvent* e) {
 
                         emit enterPressed();
                     }
+
+                    // enter pressed in toolbar but NOT in a line edit:
                     QWidget* parent = w->parentWidget();
-                    if (dynamic_cast<QToolBar*>(parent)!=NULL) {
+                    if (dynamic_cast<QToolBar*>(parent)!=NULL && dynamic_cast<QLineEdit*>(w)==NULL) {
                         emit enterPressed();
                     }
                 }

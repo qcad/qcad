@@ -81,12 +81,25 @@ RSnapCoordinate.prototype.showUiOptions = function() {
     // init Set button:
     var optionsToolBar = EAction.getOptionsToolBar();
     var setButton = optionsToolBar.findChild("Set");
+    // can't have both Return and Enter here:
     setButton.shortcut = new QKeySequence("Return");
     setButton.toolTip =
         RGuiAction.formatToolTip(
             qsTr("Set coordinate"),
-            setButton.shortcut.toString()
+            qsTr("Enter")
         );
+
+    // trigger snap when number pad enter is pressed in coordinate line edits:
+    var self = this;
+    var leX = optionsToolBar.findChild("X");
+    leX.returnPressed.connect(function() {
+        self.action.slotSet();
+    });
+
+    var leY = optionsToolBar.findChild("Y");
+    leY.returnPressed.connect(function() {
+        self.action.slotSet();
+    });
 };
 
 RSnapCoordinate.prototype.hideUiOptions = function() {
