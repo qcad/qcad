@@ -12412,9 +12412,14 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>SnapCoordinate</name>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.js" line="+87"/>
+        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.js" line="+88"/>
         <source>Set coordinate</source>
         <translation>Aseta koordinaatti</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+17"/>

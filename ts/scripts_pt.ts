@@ -12716,9 +12716,14 @@ nos resultados de busca:</translation>
 <context>
     <name>SnapCoordinate</name>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.js" line="+87"/>
+        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.js" line="+88"/>
         <source>Set coordinate</source>
         <translation>Definir coordenada</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter</source>
+        <translation>Digite</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>

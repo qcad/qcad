@@ -13827,9 +13827,14 @@ dans les résultats de recherche :</translation>
         <translation type="obsolete">Retour</translation>
     </message>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.js" line="+87"/>
+        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.js" line="+88"/>
         <source>Set coordinate</source>
         <translation>Définir les coordonnées</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter</source>
+        <translation>Entrée</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>

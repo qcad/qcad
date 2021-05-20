@@ -14138,9 +14138,14 @@ Interseca con la selezione corrente</translatorcomment>
         <translation type="obsolete">Ritorna</translation>
     </message>
     <message>
-        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.js" line="+87"/>
+        <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.js" line="+88"/>
         <source>Set coordinate</source>
         <translation>Accetta le coordinate</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter</source>
+        <translation>Invio</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
