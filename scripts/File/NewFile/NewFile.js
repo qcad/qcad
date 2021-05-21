@@ -310,7 +310,7 @@ NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneCla
         for (k=0; k<NewFile.postNewActions.length; k++) {
             if (!isNull(NewFile.postNewActions[k])) {
                 include(NewFile.postNewActions[k]);
-                if (isFunction(initNewFile)) {
+                if (typeof(initNewFile)!=="undefined" && isFunction(initNewFile)) {
                     initNewFile(mdiChild);
                 }
                 action = RGuiAction.getByScriptFile(NewFile.postNewActions[k]);
