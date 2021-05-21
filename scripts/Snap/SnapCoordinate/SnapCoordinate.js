@@ -91,15 +91,17 @@ RSnapCoordinate.prototype.showUiOptions = function() {
 
     // trigger snap when number pad enter is pressed in coordinate line edits:
     var self = this;
-    var leX = optionsToolBar.findChild("X");
-    leX.returnPressed.connect(function() {
-        self.action.slotSet();
-    });
+    var widgetNames = ["X", "Y", "R", "A"];
+    for (var i=0; i<widgetNames.length; i++) {
+        var widgetName = widgetNames[i];
 
-    var leY = optionsToolBar.findChild("Y");
-    leY.returnPressed.connect(function() {
-        self.action.slotSet();
-    });
+        var le = optionsToolBar.findChild(widgetName);
+        if (!isNull(le)) {
+            le.returnPressed.connect(function() {
+                self.action.slotSet();
+            });
+        }
+    }
 };
 
 RSnapCoordinate.prototype.hideUiOptions = function() {
