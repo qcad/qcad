@@ -560,7 +560,6 @@ SOURCES = \
 ../scripts/Misc/Examples/ExMinimal2/ExMinimal2.js \
 ../scripts/Misc/Examples/Examples.js \
 ../scripts/Misc/Examples/IOExamples/ExDumpPolyline/ExDumpPolyline.js \
-../scripts/Misc/Examples/IOExamples/ExPostNewAction/ExNewFileHandler.js \
 ../scripts/Misc/Examples/IOExamples/ExPostNewAction/ExPostNewAction.js \
 ../scripts/Misc/Examples/IOExamples/ExPostNewAction/ExPostNewActionInit.js \
 ../scripts/Misc/Examples/IOExamples/ExRegisterFileExporter/ExRegisterFileExporter.js \
