@@ -462,6 +462,7 @@ void RGraphicsSceneQt::exportSpline(const RSpline& spline, double offset) {
     bool created = beginPath();
 
     RGraphicsScene::exportSpline(spline, offset);
+    currentPainterPath.setPolylineGen(true);
 
     if (created) {
         endPath();
