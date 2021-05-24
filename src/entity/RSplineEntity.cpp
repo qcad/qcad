@@ -262,8 +262,8 @@ void RSplineEntity::setShape(const RSpline& s) {
 }
 
 void RSplineEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
-    Q_UNUSED(preview);
-    Q_UNUSED(forceSelected);
+    Q_UNUSED(preview)
+    Q_UNUSED(forceSelected)
 
     e.setBrush(Qt::NoBrush);
     e.exportSpline(data);
