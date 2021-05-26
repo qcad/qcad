@@ -2589,6 +2589,14 @@ Přejete si ho obnovit?</translation>
         <source>Angle:</source>
         <translation>Úhel:</translation>
     </message>
+    <message>
+        <source>Line</source>
+        <translation type="obsolete">Čára</translation>
+    </message>
+    <message>
+        <source>Face</source>
+        <translation type="obsolete">Plocha</translation>
+    </message>
 </context>
 <context>
     <name>Cut</name>
@@ -9496,6 +9504,29 @@ ve výsledcích vyhledávání:</translation>
         <location filename="../scripts/View/OptionsToolBarFocus/OptionsToolBarFocusInit.js" line="+2"/>
         <source>&amp;Focus on Options Toolbar</source>
         <translation>Skočit na panel Nastavení</translation>
+    </message>
+</context>
+<context>
+    <name>OrthogonalProjections</name>
+    <message>
+        <source>First vertex</source>
+        <translation type="obsolete">První vrchol</translation>
+    </message>
+    <message>
+        <source>close</source>
+        <translation type="obsolete">uzavřít</translation>
+    </message>
+    <message>
+        <source>undo</source>
+        <translation type="obsolete">zpět</translation>
+    </message>
+    <message>
+        <source>redo</source>
+        <translation type="obsolete">znovu</translation>
+    </message>
+    <message>
+        <source>arc</source>
+        <translation type="obsolete">oblouk</translation>
     </message>
 </context>
 <context>

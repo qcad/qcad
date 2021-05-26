@@ -2976,6 +2976,14 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
         <source>Angle:</source>
         <translation type="unfinished">Kąt:</translation>
     </message>
+    <message>
+        <source>Line</source>
+        <translation type="obsolete">Linia</translation>
+    </message>
+    <message>
+        <source>Face</source>
+        <translation type="obsolete">Powierzchnia</translation>
+    </message>
 </context>
 <context>
     <name>Cut</name>
@@ -10814,6 +10822,25 @@ Wszystkie pliki (*)</translatorcomment>
         <location filename="../scripts/View/OptionsToolBarFocus/OptionsToolBarFocusInit.js" line="+2"/>
         <source>&amp;Focus on Options Toolbar</source>
         <translation>U&amp;aktywnij pasek narzędziowy opcji</translation>
+    </message>
+</context>
+<context>
+    <name>OrthogonalProjections</name>
+    <message>
+        <source>close</source>
+        <translation type="obsolete">zamknij</translation>
+    </message>
+    <message>
+        <source>undo</source>
+        <translation type="obsolete">cofnij</translation>
+    </message>
+    <message>
+        <source>redo</source>
+        <translation type="obsolete">ponów</translation>
+    </message>
+    <message>
+        <source>arc</source>
+        <translation type="obsolete">łuk</translation>
     </message>
 </context>
 <context>

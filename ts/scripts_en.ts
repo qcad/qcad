@@ -2600,6 +2600,14 @@ Do you wish to recover it?</translation>
         <source>Angle:</source>
         <translation>Angle:</translation>
     </message>
+    <message>
+        <source>Line</source>
+        <translation type="obsolete">Line</translation>
+    </message>
+    <message>
+        <source>Face</source>
+        <translation type="obsolete">Face</translation>
+    </message>
 </context>
 <context>
     <name>Cut</name>
@@ -9690,6 +9698,37 @@ shown in search results:</translation>
         <location filename="../scripts/View/OptionsToolBarFocus/OptionsToolBarFocusInit.js" line="+2"/>
         <source>&amp;Focus on Options Toolbar</source>
         <translation>&amp;Focus on Options Toolbar</translation>
+    </message>
+</context>
+<context>
+    <name>OrthogonalProjections</name>
+    <message>
+        <source>First vertex</source>
+        <translation type="obsolete">First vertex</translation>
+    </message>
+    <message>
+        <source>Next vertex</source>
+        <translation type="obsolete">Next vertex</translation>
+    </message>
+    <message>
+        <source>Done</source>
+        <translation type="obsolete">Done</translation>
+    </message>
+    <message>
+        <source>close</source>
+        <translation type="obsolete">close</translation>
+    </message>
+    <message>
+        <source>undo</source>
+        <translation type="obsolete">undo</translation>
+    </message>
+    <message>
+        <source>redo</source>
+        <translation type="obsolete">redo</translation>
+    </message>
+    <message>
+        <source>arc</source>
+        <translation type="obsolete">arc</translation>
     </message>
 </context>
 <context>

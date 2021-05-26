@@ -9213,6 +9213,33 @@ shown in search results:</source>
     </message>
 </context>
 <context>
+    <name>OrthogonalProjections</name>
+    <message>
+        <source>Next vertex</source>
+        <translation type="obsolete">nästa spets</translation>
+    </message>
+    <message>
+        <source>Done</source>
+        <translation type="obsolete">Klar</translation>
+    </message>
+    <message>
+        <source>close</source>
+        <translation type="obsolete">stäng</translation>
+    </message>
+    <message>
+        <source>undo</source>
+        <translation type="obsolete">ångra</translation>
+    </message>
+    <message>
+        <source>redo</source>
+        <translation type="obsolete">gör om</translation>
+    </message>
+    <message>
+        <source>arc</source>
+        <translation type="obsolete">båge</translation>
+    </message>
+</context>
+<context>
     <name>PageSettings</name>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+29"/>

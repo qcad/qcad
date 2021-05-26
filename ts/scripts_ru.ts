@@ -2622,6 +2622,14 @@ Do you wish to recover it?</source>
         <source>Angle:</source>
         <translation>Угол:</translation>
     </message>
+    <message>
+        <source>Line</source>
+        <translation type="obsolete">Линия</translation>
+    </message>
+    <message>
+        <source>Face</source>
+        <translation type="obsolete">Грань</translation>
+    </message>
 </context>
 <context>
     <name>Cut</name>
@@ -9762,6 +9770,33 @@ shown in search results:</source>
         <location filename="../scripts/View/OptionsToolBarFocus/OptionsToolBarFocusInit.js" line="+2"/>
         <source>&amp;Focus on Options Toolbar</source>
         <translation>&amp;Сфокусироваться на панели параметров</translation>
+    </message>
+</context>
+<context>
+    <name>OrthogonalProjections</name>
+    <message>
+        <source>First vertex</source>
+        <translation type="obsolete">Первая вершина</translation>
+    </message>
+    <message>
+        <source>Next vertex</source>
+        <translation type="obsolete">Следующая вершина</translation>
+    </message>
+    <message>
+        <source>close</source>
+        <translation type="obsolete">закрыть</translation>
+    </message>
+    <message>
+        <source>undo</source>
+        <translation type="obsolete">отменить</translation>
+    </message>
+    <message>
+        <source>redo</source>
+        <translation type="obsolete">вернуть</translation>
+    </message>
+    <message>
+        <source>arc</source>
+        <translation type="obsolete">дуга</translation>
     </message>
 </context>
 <context>

@@ -9219,6 +9219,17 @@ shown in search results:</source>
     </message>
 </context>
 <context>
+    <name>OrthogonalProjections</name>
+    <message>
+        <source>Next vertex</source>
+        <translation type="obsolete">Sljedeći vertex</translation>
+    </message>
+    <message>
+        <source>Done</source>
+        <translation type="obsolete">Završeno</translation>
+    </message>
+</context>
+<context>
     <name>PageSettings</name>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+29"/>

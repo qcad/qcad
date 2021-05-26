@@ -2660,6 +2660,14 @@ Prajete si ho obnoviť?</translation>
         <source>Extension</source>
         <translation>Presah(mm)</translation>
     </message>
+    <message>
+        <source>Line</source>
+        <translation type="obsolete">Čiara</translation>
+    </message>
+    <message>
+        <source>Face</source>
+        <translation type="obsolete">Plocha</translation>
+    </message>
 </context>
 <context>
     <name>Cut</name>
@@ -9782,6 +9790,37 @@ vo výsledku vyhľadania:</translation>
         <location filename="../scripts/View/OptionsToolBarFocus/OptionsToolBarFocusInit.js" line="+2"/>
         <source>&amp;Focus on Options Toolbar</source>
         <translation>&amp;Nastaviť sa na Možnosti panela nástroja</translation>
+    </message>
+</context>
+<context>
+    <name>OrthogonalProjections</name>
+    <message>
+        <source>First vertex</source>
+        <translation type="obsolete">Prvý bod</translation>
+    </message>
+    <message>
+        <source>Next vertex</source>
+        <translation type="obsolete">Ďalší bod</translation>
+    </message>
+    <message>
+        <source>Done</source>
+        <translation type="obsolete">Hotovo</translation>
+    </message>
+    <message>
+        <source>close</source>
+        <translation type="obsolete">zavrieť</translation>
+    </message>
+    <message>
+        <source>undo</source>
+        <translation type="obsolete">krok späť</translation>
+    </message>
+    <message>
+        <source>redo</source>
+        <translation type="obsolete">krok vpred</translation>
+    </message>
+    <message>
+        <source>arc</source>
+        <translation type="obsolete">oblúk</translation>
     </message>
 </context>
 <context>

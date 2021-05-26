@@ -3016,6 +3016,14 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <source>Angle:</source>
         <translation>Winkel:</translation>
     </message>
+    <message>
+        <source>Line</source>
+        <translation type="obsolete">Linie</translation>
+    </message>
+    <message>
+        <source>Face</source>
+        <translation type="obsolete">Fläche</translation>
+    </message>
 </context>
 <context>
     <name>Cut</name>
@@ -11569,6 +11577,33 @@ nicht öffnen.
         <location filename="../scripts/View/OptionsToolBarFocus/OptionsToolBarFocusInit.js" line="+2"/>
         <source>&amp;Focus on Options Toolbar</source>
         <translation>&amp;Fokus auf Optionenwerkzeugleiste</translation>
+    </message>
+</context>
+<context>
+    <name>OrthogonalProjections</name>
+    <message>
+        <source>First vertex</source>
+        <translation type="obsolete">Erster Eckpunkt</translation>
+    </message>
+    <message>
+        <source>Next vertex</source>
+        <translation type="obsolete">Nächster Eckpunkt</translation>
+    </message>
+    <message>
+        <source>close</source>
+        <translation type="obsolete">close</translation>
+    </message>
+    <message>
+        <source>undo</source>
+        <translation type="obsolete">undo</translation>
+    </message>
+    <message>
+        <source>redo</source>
+        <translation type="obsolete">redo</translation>
+    </message>
+    <message>
+        <source>arc</source>
+        <translation type="obsolete">arc</translation>
     </message>
 </context>
 <context>

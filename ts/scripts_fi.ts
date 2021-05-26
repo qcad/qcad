@@ -2624,6 +2624,14 @@ Haluatko palauttaa sen?</translation>
         <source>Angle:</source>
         <translation>Kulma:</translation>
     </message>
+    <message>
+        <source>Line</source>
+        <translation type="obsolete">Viiva</translation>
+    </message>
+    <message>
+        <source>Face</source>
+        <translation type="obsolete">Pinta</translation>
+    </message>
 </context>
 <context>
     <name>Cut</name>
@@ -9802,6 +9810,33 @@ näkyy hakutuloksissa:</translation>
         <location filename="../scripts/View/OptionsToolBarFocus/OptionsToolBarFocusInit.js" line="+2"/>
         <source>&amp;Focus on Options Toolbar</source>
         <translation>&amp;Kohdista valinnaisten työkaluun</translation>
+    </message>
+</context>
+<context>
+    <name>OrthogonalProjections</name>
+    <message>
+        <source>First vertex</source>
+        <translation type="obsolete">Ensimmäinen kärkipiste</translation>
+    </message>
+    <message>
+        <source>Done</source>
+        <translation type="obsolete">Valmis</translation>
+    </message>
+    <message>
+        <source>close</source>
+        <translation type="obsolete">sulje</translation>
+    </message>
+    <message>
+        <source>undo</source>
+        <translation type="obsolete">kumoa</translation>
+    </message>
+    <message>
+        <source>redo</source>
+        <translation type="obsolete">tee uudelleen</translation>
+    </message>
+    <message>
+        <source>arc</source>
+        <translation type="obsolete">kaari</translation>
     </message>
 </context>
 <context>

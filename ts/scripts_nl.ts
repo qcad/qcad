@@ -2638,6 +2638,14 @@ Wilt u het herstellen?</translation>
         <source>Angle:</source>
         <translation>Hoek:</translation>
     </message>
+    <message>
+        <source>Line</source>
+        <translation type="obsolete">Lijn</translation>
+    </message>
+    <message>
+        <source>Face</source>
+        <translation type="obsolete">Oppervlak</translation>
+    </message>
 </context>
 <context>
     <name>Cut</name>
@@ -9827,6 +9835,33 @@ getoond in zoekresultaten:</translation>
         <location filename="../scripts/View/OptionsToolBarFocus/OptionsToolBarFocusInit.js" line="+2"/>
         <source>&amp;Focus on Options Toolbar</source>
         <translation>&amp;Focus op opties werkbalk</translation>
+    </message>
+</context>
+<context>
+    <name>OrthogonalProjections</name>
+    <message>
+        <source>First vertex</source>
+        <translation type="obsolete">Eerste hoekpunt</translation>
+    </message>
+    <message>
+        <source>Next vertex</source>
+        <translation type="obsolete">Volgende hoekpunt</translation>
+    </message>
+    <message>
+        <source>close</source>
+        <translation type="obsolete">close</translation>
+    </message>
+    <message>
+        <source>undo</source>
+        <translation type="obsolete">undo</translation>
+    </message>
+    <message>
+        <source>redo</source>
+        <translation type="obsolete">Opnieuw toepassen</translation>
+    </message>
+    <message>
+        <source>arc</source>
+        <translation type="obsolete">arc</translation>
     </message>
 </context>
 <context>

@@ -2673,6 +2673,14 @@ Do you wish to recover it?</source>
         <source>Angle:</source>
         <translation>Kot:</translation>
     </message>
+    <message>
+        <source>Line</source>
+        <translation type="obsolete">Črta</translation>
+    </message>
+    <message>
+        <source>Face</source>
+        <translation type="obsolete">Površina</translation>
+    </message>
 </context>
 <context>
     <name>Cut</name>
@@ -10189,6 +10197,33 @@ shown in search results:</source>
         <location filename="../scripts/View/OptionsToolBarFocus/OptionsToolBarFocusInit.js" line="+2"/>
         <source>&amp;Focus on Options Toolbar</source>
         <translation>&amp;Fokus na orodno vrstico nastavitev</translation>
+    </message>
+</context>
+<context>
+    <name>OrthogonalProjections</name>
+    <message>
+        <source>First vertex</source>
+        <translation type="obsolete">Prvi lom</translation>
+    </message>
+    <message>
+        <source>Next vertex</source>
+        <translation type="obsolete">Naslednji lom</translation>
+    </message>
+    <message>
+        <source>close</source>
+        <translation type="obsolete">zapri</translation>
+    </message>
+    <message>
+        <source>undo</source>
+        <translation type="obsolete">razveljavi</translation>
+    </message>
+    <message>
+        <source>redo</source>
+        <translation type="obsolete">uveljavi</translation>
+    </message>
+    <message>
+        <source>arc</source>
+        <translation type="obsolete">lok</translation>
     </message>
 </context>
 <context>

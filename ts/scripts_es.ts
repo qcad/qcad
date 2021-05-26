@@ -2870,6 +2870,14 @@ Coordenadas polares relativa:</translatorcomment>
         <source>Angle:</source>
         <translation>Ángulo:</translation>
     </message>
+    <message>
+        <source>Line</source>
+        <translation type="obsolete">Línea</translation>
+    </message>
+    <message>
+        <source>Face</source>
+        <translation type="obsolete">Cara</translation>
+    </message>
 </context>
 <context>
     <name>Cut</name>
@@ -10921,6 +10929,37 @@ en los resultados de búsqueda:</translation>
         <location filename="../scripts/View/OptionsToolBarFocus/OptionsToolBarFocusInit.js" line="+2"/>
         <source>&amp;Focus on Options Toolbar</source>
         <translation>&amp;Foco a la barra de opciones</translation>
+    </message>
+</context>
+<context>
+    <name>OrthogonalProjections</name>
+    <message>
+        <source>First vertex</source>
+        <translation type="obsolete">Primer vértice</translation>
+    </message>
+    <message>
+        <source>Next vertex</source>
+        <translation type="obsolete">Siguiente vértice</translation>
+    </message>
+    <message>
+        <source>Done</source>
+        <translation type="obsolete">Terminar</translation>
+    </message>
+    <message>
+        <source>close</source>
+        <translation type="obsolete">close</translation>
+    </message>
+    <message>
+        <source>undo</source>
+        <translation type="obsolete">undo</translation>
+    </message>
+    <message>
+        <source>redo</source>
+        <translation type="obsolete">redo</translation>
+    </message>
+    <message>
+        <source>arc</source>
+        <translation type="obsolete">arc</translation>
     </message>
 </context>
 <context>

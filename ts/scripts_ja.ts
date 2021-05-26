@@ -2660,6 +2660,14 @@ Do you wish to recover it?</source>
         <source>Angle:</source>
         <translation type="unfinished">角度:</translation>
     </message>
+    <message>
+        <source>Line</source>
+        <translation type="obsolete">線分</translation>
+    </message>
+    <message>
+        <source>Face</source>
+        <translation type="obsolete">フェイス</translation>
+    </message>
 </context>
 <context>
     <name>Cut</name>
@@ -10002,6 +10010,37 @@ shown in search results:</source>
         <location filename="../scripts/View/OptionsToolBarFocus/OptionsToolBarFocusInit.js" line="+2"/>
         <source>&amp;Focus on Options Toolbar</source>
         <translation>&amp;F オプションツールバーへフォーカス</translation>
+    </message>
+</context>
+<context>
+    <name>OrthogonalProjections</name>
+    <message>
+        <source>First vertex</source>
+        <translation type="obsolete">最初の頂点</translation>
+    </message>
+    <message>
+        <source>Next vertex</source>
+        <translation type="obsolete">次の頂点</translation>
+    </message>
+    <message>
+        <source>Done</source>
+        <translation type="obsolete">完了</translation>
+    </message>
+    <message>
+        <source>close</source>
+        <translation type="obsolete">close</translation>
+    </message>
+    <message>
+        <source>undo</source>
+        <translation type="obsolete">undo</translation>
+    </message>
+    <message>
+        <source>redo</source>
+        <translation type="obsolete">redo</translation>
+    </message>
+    <message>
+        <source>arc</source>
+        <translation type="obsolete">arc</translation>
     </message>
 </context>
 <context>
