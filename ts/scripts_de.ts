@@ -6190,7 +6190,7 @@ BUG: Interferes with group castings.</translation>
     <message>
         <location line="+16"/>
         <source>Add insertions in between eg. spacers, knots. (Not implemented)</source>
-        <translation>Add insertions in between eg. spacers, knots. (Not implemented)</translation>
+        <translation>Einfügungen dazwischen hinzufügen, z. B. Abstandshalter, Knoten. (Nicht implementiert)</translation>
     </message>
     <message>
         <location line="+65"/>

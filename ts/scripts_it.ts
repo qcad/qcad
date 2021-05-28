@@ -1704,12 +1704,12 @@ Vuoi recuperarlo?</translation>
     <message>
         <location line="+71"/>
         <source>Pixel</source>
-        <translation></translation>
+        <translation>Pixel</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translation></translation>
+        <translation>px</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -5915,27 +5915,27 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+14"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation></translation>
+        <translation>Iniziare con il lancio di un vertice iniziale su forme aperte.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation></translation>
+        <translation>Terminare con la fusione di un apice finale su forme aperte.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add insertions in between eg. spacers, knots. (Not implemented)</source>
-        <translation></translation>
+        <translation>Aggiungere inserzioni in mezzo, ad esempio distanziatori, nodi. (Non implementato)</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation></translation>
+        <translation>Anteprima dei pittori.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation></translation>
+        <translation>Seleziona il set di pittori.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -6035,42 +6035,42 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation></translation>
+        <translation>Inserisci la larghezza del pittore. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation></translation>
+        <translation>Inserire la dimensione del passo del pittore principale. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation></translation>
+        <translation>Inserire la lunghezza del pittore principale. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation></translation>
+        <translation>Mantenere le proporzioni dei pittori.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Select percentage of Stepsize.</source>
-        <translation></translation>
+        <translation>Selezionare la percentuale di Stepsize.</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation></translation>
+        <translation>Adattare la scala f 1.00-0.90 per adattarla all&apos;intera forma.</translation>
     </message>
     <message>
         <location line="+92"/>
         <source>Verbose info. (persistent on)</source>
-        <translation></translation>
+        <translation>Informazioni verbose. (persistente su)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation></translation>
+        <translation>Cancellato dipinto sulle entità di base. (persistente spento)</translation>
     </message>
     <message>
         <source>Preview of insertion</source>

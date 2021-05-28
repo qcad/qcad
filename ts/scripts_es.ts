@@ -5861,27 +5861,27 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+14"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation></translation>
+        <translation>Comenzar con la fundición de un vértice inicial en formas abiertas.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation></translation>
+        <translation>Terminar con la fundición de un vértice final en formas abiertas.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add insertions in between eg. spacers, knots. (Not implemented)</source>
-        <translation></translation>
+        <translation>Añadir inserciones en el medio, por ejemplo, espaciadores, nudos. (No se ha implementado)</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation></translation>
+        <translation>Vista previa de los pintores.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation></translation>
+        <translation>Seleccione el conjunto de pintores.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5986,37 +5986,37 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation></translation>
+        <translation>Introduzca el tamaño de paso del pintor principal. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation></translation>
+        <translation>Introduzca la longitud del pintor principal. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation></translation>
+        <translation>Mantener la proporción de pintores.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Select percentage of Stepsize.</source>
-        <translation></translation>
+        <translation>Seleccione el porcentaje de Stepsize.</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation></translation>
+        <translation>Adaptar la escala f 1,00-0,90 para que se ajuste a todo el formulario.</translation>
     </message>
     <message>
         <location line="+92"/>
         <source>Verbose info. (persistent on)</source>
-        <translation></translation>
+        <translation>Información verdosa. (persistente)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation></translation>
+        <translation>Eliminado pintado sobre las entidades de base. (persistente desactivado)</translation>
     </message>
     <message>
         <source>Preview of insertion</source>
