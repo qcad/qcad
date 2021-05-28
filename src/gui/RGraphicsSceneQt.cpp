@@ -272,14 +272,23 @@ void RGraphicsSceneQt::transformAndApplyPatternPath(RPainterPath& path) const {
         QList<QSharedPointer<RShape> > pathShapes = path.getShapes();
 
         lp.scale(getLineTypePatternScale(lp));
+
+        // detect viewport context:
+        double scaleHint = 1.0;
+        RViewportEntity* vp = getCurrentViewport();
+        if (vp!=NULL) {
+            scaleHint = vp->getScale();
+        }
+
         QPainterPath pathWithPattern;
+        RPainterPathExporter ppe(getDocument());
+        ppe.setPixelSizeHint(getPixelSizeHint());
+        ppe.setExportZeroLinesAsPoints(false);
+        ppe.setLinetypePattern(lp);
+        ppe.setIgnoreLineTypePatternScale(true);
+        ppe.setScaleHint(scaleHint);
 
         if (path.getPolylineGen()) {
-            RPainterPathExporter ppe(getDocument());
-            ppe.setPixelSizeHint(getPixelSizeHint());
-            ppe.setExportZeroLinesAsPoints(false);
-            ppe.setLinetypePattern(lp);
-            ppe.setIgnoreLineTypePatternScale(true);
 
             double length = 0.0;
             for (int i=0; i<pathShapes.length(); i++) {
@@ -293,11 +302,12 @@ void RGraphicsSceneQt::transformAndApplyPatternPath(RPainterPath& path) const {
             pathWithPattern.addPath(p);
         }
         else {
-            RPainterPathExporter ppe(getDocument());
-            ppe.setPixelSizeHint(getPixelSizeHint());
-            ppe.setExportZeroLinesAsPoints(false);
-            ppe.setLinetypePattern(lp);
-            ppe.setIgnoreLineTypePatternScale(true);
+            //RPainterPathExporter ppe(getDocument());
+            //ppe.setPixelSizeHint(getPixelSizeHint());
+            //ppe.setExportZeroLinesAsPoints(false);
+            //ppe.setLinetypePattern(lp);
+            //ppe.setIgnoreLineTypePatternScale(true);
+            //ppe.setScaleHint(scaleHint);
 
             for (int i=0; i<pathShapes.length(); i++) {
                 //double length = 0.0;

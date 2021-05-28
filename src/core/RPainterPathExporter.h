@@ -34,10 +34,10 @@
 class QCADCORE_EXPORT RPainterPathExporter : public RExporter {
 public:
     RPainterPathExporter() :
-        RExporter(), exportZeroLinesAsPoints(true), ignoreZeroLines(false) { }
+        RExporter(), exportZeroLinesAsPoints(true), ignoreZeroLines(false), ignoreLineTypePatternScale(false), scaleHint(1.0) { }
 
     RPainterPathExporter(RDocument& doc) :
-        RExporter(doc), exportZeroLinesAsPoints(true), ignoreZeroLines(false) { }
+        RExporter(doc), exportZeroLinesAsPoints(true), ignoreZeroLines(false), ignoreLineTypePatternScale(false), scaleHint(1.0) { }
 
     virtual void exportLineSegment(const RLine& line, double angle = RNANDOUBLE);
     virtual void exportPainterPaths(const QList<RPainterPath>& paths, double z = 0.0);
@@ -68,6 +68,13 @@ public:
     void setIgnoreLineTypePatternScale(bool on) {
         ignoreLineTypePatternScale = on;
     }
+    /**
+     * @brief setScaleHint Set additional pattern scale hint, used for scaling dots in patterns in viewports.
+     * @param s Factor (viewport scale)
+     */
+    void setScaleHint(double s) {
+        scaleHint = s;
+    }
 
     virtual double getLineTypePatternScale(const RLinetypePattern& p) const;
 
@@ -76,6 +83,7 @@ private:
     bool exportZeroLinesAsPoints;
     bool ignoreZeroLines;
     bool ignoreLineTypePatternScale;
+    double scaleHint;
 };
 
 #endif
