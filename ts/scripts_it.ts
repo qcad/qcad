@@ -1704,19 +1704,11 @@ Vuoi recuperarlo?</translation>
     <message>
         <location line="+71"/>
         <source>Pixel</source>
-        <translatorcomment>--exact match--
---file: photivo_it.ts--
-PPM
-Mappa X Pixel</translatorcomment>
         <translation></translation>
     </message>
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translatorcomment>--exact match--
---file: draft_it.ts--
-Spaziatura Griglia minima (px)
-Spaziatura Griglia minima (px):</translatorcomment>
         <translation></translation>
     </message>
     <message>
@@ -2353,11 +2345,7 @@ Spaziatura Griglia minima (px):</translatorcomment>
     <message>
         <location filename="../scripts/Edit/ClipboardOperation.js" line="+54"/>
         <source>Reference point</source>
-        <translatorcomment>--exact match--
---file: Translate_it.ts--
-Punto di riferimento
-Copia gli oggetti nel blocco note con un punto di riferimento</translatorcomment>
-        <translation></translation>
+        <translation>Punto di riferimento</translation>
     </message>
 </context>
 <context>
@@ -2553,11 +2541,7 @@ Copia gli oggetti nel blocco note con un punto di riferimento</translatorcomment
     <message>
         <location line="+3"/>
         <source>Command</source>
-        <translatorcomment>--exact match--
---file: CommandLine_it.ts--
-Vai alla Riga di Comando
-Vai alla &amp;Riga di Comando</translatorcomment>
-        <translation></translation>
+        <translation>Comando</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -2567,11 +2551,7 @@ Vai alla &amp;Riga di Comando</translatorcomment>
     <message>
         <location line="+3"/>
         <source>: </source>
-        <translatorcomment>--ignored colon--
---file: Arduino_it_IT.po--
-Documento caricato:
-Versione:</translatorcomment>
-        <translation></translation>
+        <translation>: </translation>
     </message>
     <message>
         <source>History Size:</source>
@@ -2677,38 +2657,22 @@ Versione:</translatorcomment>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.ui" line="+72"/>
         <source>Absolute Cartesian Coordinate</source>
-        <translatorcomment>--exact match--
---file: Input_it.ts--
-Coordinate cartesiane assolute
-Coordinate cartesiane assolute:</translatorcomment>
-        <translation></translation>
+        <translation>Coordinata cartesiana assoluta</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Absolute Polar Coordinate</source>
-        <translatorcomment>--exact match--
---file: Input_it.ts--
-Coordinate polari assolute
-Coordinate polari assolute:</translatorcomment>
-        <translation></translation>
+        <translation>Coordinata polare assoluta</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative Cartesian Coordinate</source>
-        <translatorcomment>--exact match--
---file: Input_it.ts--
-Coordinate cartesiane relative
-Coordinate cartesiane relativo:</translatorcomment>
-        <translation></translation>
+        <translation>Coordinata cartesiana relativa</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative Polar Coordinate</source>
-        <translatorcomment>--exact match--
---file: Input_it.ts--
-Coordinate polari relative
-Coordinate polari relativo:</translatorcomment>
-        <translation></translation>
+        <translation>Coordinata polare relativa</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+28"/>
@@ -2895,14 +2859,6 @@ Coordinate polari relativo:</translatorcomment>
         <source>Angle:</source>
         <translation>Angolo:</translation>
     </message>
-    <message>
-        <source>Line</source>
-        <translation type="obsolete">Linea</translation>
-    </message>
-    <message>
-        <source>Face</source>
-        <translation type="obsolete">Faccia</translation>
-    </message>
 </context>
 <context>
     <name>Cut</name>
@@ -2999,11 +2955,7 @@ Coordinate polari relativo:</translatorcomment>
     <message>
         <location line="+0"/>
         <source>Navigation</source>
-        <translatorcomment>--google--
-Barra di navigazione
-Navigazione mappa
-Layer ad alta risoluzione possono rallentare la navigazione in QGIS.</translatorcomment>
-        <translation></translation>
+        <translation>Navigazione</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4056,67 +4008,67 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Unsupported or invalid CSV style, ignored ! Text line %1</source>
-        <translation>Stile CSV non supportato o non valido, ignorato. Riga di testo %1</translation>
+        <translation>Stile CSV non supportato o non valido, ignorato! Riga di testo %1</translation>
     </message>
     <message>
         <location line="+82"/>
         <source>Setting new relative origin failed, ignored ! Text line %1</source>
-        <translation>Impostazione nuova origine relativa fallita, ignorata. Linea di testo %1</translation>
+        <translation>Impostazione nuova origine relativa fallita, ignorata! Linea di testo %1</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Can not switch to layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Impossibile passare al livello, ignorato. Riga di testo %1 livello: %2</translation>
+        <translation>Impossibile passare al livello, ignorato! Riga di testo %1 livello: %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  layer switch, ignored ! Text line %1</source>
-        <translation>Non è un cambio di livello corretto, ignorato. Linea di testo %1</translation>
+        <translation>Non è un cambio di livello corretto, ignorato! Linea di testo %1</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Not a correct  new layer switch, ignored ! Text line %1</source>
-        <translation>Non è un cambio di livello corretto, ignorato. Linea di testo %1</translation>
+        <translation>Non è un cambio di livello corretto, ignorato! Linea di testo %1</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Can not hide layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Impossibile nascondere il livello, ignorato. Riga di testo %1 livello: %2</translation>
+        <translation>Impossibile nascondere il livello, ignorato! Riga di testo %1 livello: %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  hide layer switch, ignored ! Text line %1</source>
-        <translation>Non è un interruttore corretto per nascondere il livello, ignorato. Riga di testo %1</translation>
+        <translation>Non è un interruttore corretto per nascondere il livello, ignorato! Riga di testo %1</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Can not freeze layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Impossibile congelare il livello, ignorato. Riga di testo %1 livello: %2</translation>
+        <translation>Impossibile congelare il livello, ignorato! Riga di testo %1 livello: %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  freeze layer switch, ignored ! Text line %1</source>
-        <translation>Non è un interruttore di livello di congelamento corretto, ignorato. Linea di testo %1</translation>
+        <translation>Non è un interruttore di livello di congelamento corretto, ignorato! Linea di testo %1</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Can not lock layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Impossibile bloccare il livello, ignorato. Riga di testo %1 livello: %2</translation>
+        <translation>Impossibile bloccare il livello, ignorato! Riga di testo %1 livello: %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  lock layer switch, ignored ! Text line %1</source>
-        <translation>Non è un interruttore di livello di blocco corretto, ignorato. Linea di testo %1</translation>
+        <translation>Non è un interruttore di livello di blocco corretto, ignorato! Linea di testo %1</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Can not allow layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Impossibile consentire il livello, ignorato. Riga di testo %1 livello: %2</translation>
+        <translation>Impossibile consentire il livello, ignorato! Riga di testo %1 livello: %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  allow layer switch, ignored ! Text line %1</source>
-        <translation>Non è un interruttore di livello allow corretto, ignorato. Linea di testo %1</translation>
+        <translation>Non è un interruttore di livello allow corretto, ignorato! Linea di testo %1</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -4140,7 +4092,7 @@ is already in the list.</source>
         <location line="+23"/>
         <location line="+32"/>
         <source>Low field count !</source>
-        <translation>Basso numero di campi.</translation>
+        <translation>Basso numero di campi!</translation>
     </message>
     <message>
         <location line="-469"/>
@@ -4168,7 +4120,7 @@ is already in the list.</source>
         <location line="+29"/>
         <location line="+25"/>
         <source>Odd field count !</source>
-        <translation>Conteggio dei campi dispari.</translation>
+        <translation>Conteggio dei campi dispari!</translation>
     </message>
     <message>
         <location line="-579"/>
@@ -4180,7 +4132,7 @@ is already in the list.</source>
         <location line="+156"/>
         <location line="+166"/>
         <source>Rv Invalid !</source>
-        <translation>Rv Invalid.</translation>
+        <translation>Rv Invalid !</translation>
     </message>
     <message>
         <location line="-587"/>
@@ -4196,7 +4148,7 @@ is already in the list.</source>
         <location line="+26"/>
         <location line="+55"/>
         <source>Rv1 Invalid !</source>
-        <translation>Rv1 Invalid.</translation>
+        <translation>Rv1 Invalid !</translation>
     </message>
     <message>
         <location line="-451"/>
@@ -4214,7 +4166,7 @@ is already in the list.</source>
         <location line="+27"/>
         <location line="+34"/>
         <source>Rv2 Invalid !</source>
-        <translation>Rv2 Invalid.</translation>
+        <translation>Rv2 Invalid !</translation>
     </message>
     <message>
         <location line="-422"/>
@@ -4225,7 +4177,7 @@ is already in the list.</source>
         <location line="+45"/>
         <location line="+21"/>
         <source>Radius Invalid !</source>
-        <translation>Raggio non valido.</translation>
+        <translation>Raggio non valido!</translation>
     </message>
     <message>
         <location line="-247"/>
@@ -4235,22 +4187,22 @@ is already in the list.</source>
         <location line="+34"/>
         <location line="+149"/>
         <source>Angle Invalid !</source>
-        <translation>Angolo non valido.</translation>
+        <translation>Angolo non valido!</translation>
     </message>
     <message>
         <location line="-480"/>
         <source>Angle1 Invalid !</source>
-        <translation>Angle1 Invalid.</translation>
+        <translation>Angle1 Invalid !</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angle2 Invalid !</source>
-        <translation>Angolo2 non valido.</translation>
+        <translation>Angolo2 non valido!</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Equal angles !</source>
-        <translation>Angoli uguali.</translation>
+        <translation>Angoli uguali!</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -4262,28 +4214,28 @@ is already in the list.</source>
         <location line="+27"/>
         <location line="+34"/>
         <source>Rv3 Invalid !</source>
-        <translation>Rv3 Invalid.</translation>
+        <translation>Rv3 Invalid !</translation>
     </message>
     <message>
         <location line="-308"/>
         <source>Arc Invalid !</source>
-        <translation>Arco non valido.</translation>
+        <translation>Arco non valido!</translation>
     </message>
     <message>
         <location line="+43"/>
         <location line="+46"/>
         <source>Center Invalid !</source>
-        <translation>Centro non valido.</translation>
+        <translation>Centro non valido!</translation>
     </message>
     <message>
         <location line="-21"/>
         <source>Radius too small !</source>
-        <translation>Raggio troppo piccolo.</translation>
+        <translation>Raggio troppo piccolo!</translation>
     </message>
     <message>
         <location line="+88"/>
         <source>Circle Invalid !</source>
-        <translation>Cerchio non valido.</translation>
+        <translation>Cerchio non valido!</translation>
     </message>
     <message>
         <location line="+67"/>
@@ -4291,27 +4243,27 @@ is already in the list.</source>
         <location line="+27"/>
         <location line="+34"/>
         <source>Rv4 Invalid !</source>
-        <translation>Rv4 Invalid.</translation>
+        <translation>Rv4 Invalid !</translation>
     </message>
     <message>
         <location line="-42"/>
         <source>Size Invalid !</source>
-        <translation>Dimensione non valida.</translation>
+        <translation>Dimensione non valida!</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Size in X Invalid !</source>
-        <translation>Dimensione in X Invalid.</translation>
+        <translation>Dimensione in X Invalid !</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Size in Y Invalid !</source>
-        <translation>Dimensione in Y Invalid.</translation>
+        <translation>Dimensione in Y Invalid !</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Polygon, less than 5 references !</source>
-        <translation>Poligono, meno di 5 riferimenti.</translation>
+        <translation>Poligono, meno di 5 riferimenti!</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4319,97 +4271,97 @@ is already in the list.</source>
         <location line="+27"/>
         <location line="+28"/>
         <source>Rv %1 Invalid !</source>
-        <translation>Rv %1 Invalid.</translation>
+        <translation>Rv %1 Invalid !</translation>
     </message>
     <message>
         <location line="-62"/>
         <source>Polyline, less than 2 references !</source>
-        <translation>Polilinea, meno di 2 riferimenti.</translation>
+        <translation>Polilinea, meno di 2 riferimenti!</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Bulge %1 Invalid !</source>
-        <translation>Ingombro %1 non valido.</translation>
+        <translation>Ingombro %1 non valido!</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Unsupported PRO feature !</source>
-        <translation>Caratteristica PRO non supportata.</translation>
+        <translation>Caratteristica PRO non supportata!</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fit point Spline, less than 3 references !</source>
-        <translation>Fit point Spline, meno di 3 riferimenti.</translation>
+        <translation>Fit point Spline, meno di 3 riferimenti!</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Control point Spline, less than 4 references !</source>
-        <translation>Punto di controllo Spline, meno di 4 riferimenti.</translation>
+        <translation>Punto di controllo Spline, meno di 4 riferimenti!</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Text, low field count !</source>
-        <translation>Testo, basso numero di campi.</translation>
+        <translation>Testo, basso numero di campi!</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text, odd field count !</source>
-        <translation>Testo, numero di campi dispari.</translation>
+        <translation>Testo, numero di campi dispari !</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Height Invalid !</source>
-        <translation>Altezza non valida.</translation>
+        <translation>Altezza non valida!</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Width Invalid !</source>
-        <translation>Larghezza non valida.</translation>
+        <translation>Larghezza non valida!</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Vert. alignment Invalid !</source>
-        <translation>Allineamento verticale Non valido.</translation>
+        <translation>Allineamento verticale Non valido!</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Horz. alignment Invalid !</source>
-        <translation>Allineamento Horz. non valido.</translation>
+        <translation>Allineamento Horz. non valido!</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing direction Invalid !</source>
-        <translation>Direzione del disegno non valida.</translation>
+        <translation>Direzione del disegno non valida!</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing style Invalid !</source>
-        <translation>Stile di interlinea Invalid.</translation>
+        <translation>Stile di interlinea Invalid !</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing Invalid !</source>
-        <translation>Interlinea non valida.</translation>
+        <translation>Interlinea non valida !</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Unsupported entry ! Text line %1</source>
-        <translation>Voce non supportata. Riga di testo %1</translation>
+        <translation>Voce non supportata ! Riga di testo %1</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Error with first optional list !</source>
-        <translation>Errore con la prima lista opzionale.</translation>
+        <translation>Errore con la prima lista opzionale!</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Error with second optional list !</source>
-        <translation>Errore con la seconda lista opzionale.</translation>
+        <translation>Errore con la seconda lista opzionale!</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Not a correct entry ! Text line %1 : %2</source>
-        <translation>Non è una voce corretta. Riga di testo %1 : %2</translation>
+        <translation>Non è una voce corretta! Riga di testo %1 : %2</translation>
     </message>
     <message>
         <location line="+77"/>
@@ -4424,7 +4376,7 @@ is already in the list.</source>
     <message>
         <location line="+3"/>
         <source>Nothing casted !</source>
-        <translation>Niente di lanciato.</translation>
+        <translation>Niente di lanciato!</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -4444,68 +4396,68 @@ is already in the list.</source>
     <message>
         <location line="+165"/>
         <source>Attributes empty ! Text line %1</source>
-        <translation>Attributi vuoti. Riga di testo %1</translation>
+        <translation>Attributi vuoti! Riga di testo %1</translation>
     </message>
     <message>
         <location line="+24"/>
         <location line="+97"/>
         <source>Not a correct layer name ! Text line %1 name: %2</source>
-        <translation>Non è un nome di livello corretto. Linea di testo %1 nome: %2</translation>
+        <translation>Non è un nome di livello corretto! Linea di testo %1 nome: %2</translation>
     </message>
     <message>
         <location line="-90"/>
         <source>Layer doesn&apos;t exist, ignored ! Text line %1 layer: %2</source>
-        <translation>Il livello non esiste, ignorato. Riga di testo %1 livello: %2</translation>
+        <translation>Il livello non esiste, ignorato! Riga di testo %1 livello: %2</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Not a correct color, ignored ! Text line %1 color: %2</source>
-        <translation>Non è un colore corretto, ignorato. Riga di testo %1 colore: %2</translation>
+        <translation>Non è un colore corretto, ignorato! Riga di testo %1 colore: %2</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight, ignored ! Text line %1 weight: %2</source>
-        <translation>Non è un peso di linea corretto, ignorato. Testo linea %1 peso: %2</translation>
+        <translation>Non è un peso di linea corretto, ignorato! Testo linea %1 peso: %2</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype, ignored ! Text line %1 type: %2</source>
-        <translation>Non è un Linetype corretto, ignorato. Tipo di linea di testo %1: %2</translation>
+        <translation>Non è un Linetype corretto, ignorato! Tipo di linea di testo %1: %2</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Not a correct Linetype scale, ignored ! Text line %1 scale: %2</source>
-        <translation>Non è una scala Linetype corretta, ignorata. Riga di testo %1 scala: %2</translation>
+        <translation>Non è una scala Linetype corretta, ignorata! Riga di testo %1 scala: %2</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Not a correct attribute, ignored ! Text line %1 &gt; %2</source>
-        <translation>Non è un attributo corretto, ignorato. Riga di testo %1 &gt; %2</translation>
+        <translation>Non è un attributo corretto, ignorato! Riga di testo %1 &gt; %2</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Parent layer doesn&apos;t exist ! Text line %1 layer: %2</source>
-        <translation>Il livello padre non esiste. Riga di testo %1 livello: %2</translation>
+        <translation>Il livello padre non esiste! Riga di testo %1 livello: %2</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Not a correct color ! Text line %1 color: %2</source>
-        <translation>Non è un colore corretto. Riga di testo %1 colore: %2</translation>
+        <translation>Non è un colore corretto! Riga di testo %1 colore: %2</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Not a correct Lineweight ! Text line %1 weight: %2</source>
-        <translation>Il peso della linea non è corretto. Peso della linea di testo %1: %2</translation>
+        <translation>Non è un peso di linea corretto! Peso della linea di testo %1: %2</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Not a correct Linetype ! Text line %1 type: %2</source>
-        <translation>Non è un Linetype corretto. Tipo di linea di testo %1: %2</translation>
+        <translation>Non è un Linetype corretto! Tipo di linea di testo %1: %2</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Add/Update layer ignored !</source>
-        <translation>Aggiungi/aggiorna il livello ignorato.</translation>
+        <translation>Aggiungi/aggiorna il livello ignorato!</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -5768,13 +5720,7 @@ is already in the list.</source>
     <message>
         <location line="-39"/>
         <source>Overwrite File?</source>
-        <translatorcomment>--exact match--
---file: Save_it.ts--
-Sovrascrivere il file?
-Il file esiste:
-&apos;%1&apos;
-Sovrascrivere?</translatorcomment>
-        <translation></translation>
+        <translation>Sovrascrivi file?</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5837,10 +5783,7 @@ Sovrascrivere?</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Decimal Point:</source>
-        <translatorcomment>--exact match--
---file: Input_it.ts--
-Punto decimale:</translatorcomment>
-        <translation></translation>
+        <translation>Punto decimale:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6067,12 +6010,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+36"/>
         <source>Preview of insertion.</source>
-        <translation></translation>
+        <translation>Anteprima di inserimento.</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation></translation>
+        <translation>Selezionare Inserisci o Inserisci spazio vuoto. (Non implementato)</translation>
     </message>
     <message>
         <location line="+250"/>
@@ -6087,7 +6030,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+245"/>
         <source>Document Units.</source>
-        <translation></translation>
+        <translation>Unità di documenti.</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -7029,10 +6972,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="-712"/>
         <source>Origin:</source>
-        <translatorcomment>--exact match--
---file: qgis_it.ts--
-Origine:</translatorcomment>
-        <translation></translation>
+        <translation>Origine:</translation>
     </message>
     <message>
         <source>Relative Zero:</source>
@@ -7045,11 +6985,7 @@ Origine:</translatorcomment>
     <message>
         <location line="+81"/>
         <source>Grid:</source>
-        <translatorcomment>--ignored colon--
---file: it.po--
-Meta griglia:
-&amp;Meta griglia:</translatorcomment>
-        <translation></translation>
+        <translation>Griglia:</translation>
     </message>
     <message>
         <source>Meta Grid:</source>
@@ -7249,10 +7185,7 @@ Meta griglia:
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GraphicsViewPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translatorcomment>--exact match--
---file: DefaultNavigation_it.ts--
-Visualizzazione grafica</translatorcomment>
-        <translation></translation>
+        <translation>Visualizzazione grafica</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -7698,11 +7631,7 @@ Visualizzazione grafica</translatorcomment>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngleInit.js" line="+2"/>
         <source>&amp;Angle</source>
-        <translatorcomment>--exact match--
---file: LineAngle_it.ts--
-&amp;Angolo
-&amp;Angolo fra due linee</translatorcomment>
-        <translation></translation>
+        <translation>&amp;Angolo</translation>
     </message>
     <message>
         <source>Angle</source>
@@ -7873,9 +7802,7 @@ Visualizzazione grafica</translatorcomment>
     <message>
         <location line="+144"/>
         <source>Polygon area:</source>
-        <translatorcomment>--ignored colon--
---file: qgis_it.ts--</translatorcomment>
-        <translation></translation>
+        <translation>Area poligonale:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8487,10 +8414,7 @@ Visualizzazione grafica</translatorcomment>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItemInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
-        <translatorcomment>--exact match--
---file: Insert_it.ts--
-&amp;Inserisci Blocco</translatorcomment>
-        <translation></translation>
+        <translation>&amp;Inserisci blocco</translation>
     </message>
 </context>
 <context>
@@ -8535,10 +8459,7 @@ Visualizzazione grafica</translatorcomment>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
         <source>&amp;Isometric Projection</source>
-        <translatorcomment>--exact match--
---file: qcadactions_it.ts--
-Proiezione &amp;Isometrica</translatorcomment>
-        <translation></translation>
+        <translation>Proiezione &amp;isometrica</translation>
     </message>
     <message>
         <source>Isometric Projection</source>
@@ -10310,9 +10231,7 @@ mostrati nei risultati di ricerca:</translation>
     <message>
         <location filename="../scripts/Snap/LockRelativeZero/LockRelativeZeroInit.js" line="+2"/>
         <source>&amp;Lock Relative Zero</source>
-        <translatorcomment>--google--
-(S-)&amp;Blocca Zero Relativo</translatorcomment>
-        <translation></translation>
+        <translation>&amp;Bloccare lo zero relativo</translation>
     </message>
 </context>
 <context>
@@ -10377,9 +10296,7 @@ mostrati nei risultati di ricerca:</translation>
     <message>
         <location line="+27"/>
         <source>First point of symmetry axis</source>
-        <translatorcomment>--google--
-Primo punto per l&apos;asse dello specchio</translatorcomment>
-        <translation></translation>
+        <translation>Primo punto dell&apos;asse di simmetria</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -11042,37 +10959,6 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
     </message>
 </context>
 <context>
-    <name>OrthogonalProjections</name>
-    <message>
-        <source>First vertex</source>
-        <translation type="obsolete">Primo vertice</translation>
-    </message>
-    <message>
-        <source>Next vertex</source>
-        <translation type="obsolete">Prossimo vertice</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="obsolete">Fatto</translation>
-    </message>
-    <message>
-        <source>close</source>
-        <translation type="obsolete">close</translation>
-    </message>
-    <message>
-        <source>undo</source>
-        <translation type="obsolete">undo</translation>
-    </message>
-    <message>
-        <source>redo</source>
-        <translation type="obsolete">redo</translation>
-    </message>
-    <message>
-        <source>arc</source>
-        <translation type="obsolete">arc</translation>
-    </message>
-</context>
-<context>
     <name>PageSettings</name>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+19"/>
@@ -11443,97 +11329,6 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
     </message>
 </context>
 <context>
-    <name>PolyLineBreakSymbol</name>
-    <message>
-        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation type="vanished">Scegli linea, arco, cerchio, ellisse, spline o polilinea</translation>
-    </message>
-    <message>
-        <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation type="vanished">Scegliere linea, arco, cerchio o ellisse</translation>
-    </message>
-    <message>
-        <source>Pick the first point</source>
-        <translation type="vanished">Scegliere il primo punto</translation>
-    </message>
-    <message>
-        <source>Pick the first break point</source>
-        <translation type="vanished">Scegliere il primo punto di rottura</translation>
-    </message>
-    <message>
-        <source>Pick the second point</source>
-        <translation type="vanished">Scegliere il secondo punto</translation>
-    </message>
-    <message>
-        <source>Pick the second break point</source>
-        <translation type="vanished">Scegliere il secondo punto di rottura</translation>
-    </message>
-    <message>
-        <source>Break Out Segment</source>
-        <translation type="vanished">Rompi segmento</translation>
-    </message>
-    <message>
-        <source>Remove line break segment</source>
-        <translation type="vanished">Rimuovere il segmento all&apos;interruzione della linea</translation>
-    </message>
-    <message>
-        <source>Remove the line segment between the break symbol</source>
-        <translation type="vanished">Rimuovere il segmento di linea tra il simbolo di interruzione</translation>
-    </message>
-    <message>
-        <source>Remove Segment</source>
-        <translation type="vanished">Elimina segmento</translation>
-    </message>
-    <message>
-        <source>Inherit entity properties</source>
-        <translation type="vanished">Ereditare le proprietà delle entità</translation>
-    </message>
-    <message>
-        <source>Inherit all properties from the chosen entity</source>
-        <translation type="vanished">Eredita tutte le proprietà dall&apos;entità scelta</translation>
-    </message>
-    <message>
-        <source>Inherit</source>
-        <translation type="vanished">Eredita</translation>
-    </message>
-    <message>
-        <source>Peak ratio</source>
-        <translation type="vanished">Rapporto di picco</translation>
-    </message>
-    <message>
-        <source>The ratio of the peak height to the break width</source>
-        <translation type="vanished">Il rapporto tra l&apos;altezza del picco e la larghezza della rottura</translation>
-    </message>
-    <message>
-        <source>Peak Ratio:</source>
-        <translation type="vanished">Rapporto di picco:</translation>
-    </message>
-    <message>
-        <source>First/Last segment inclined</source>
-        <translation type="vanished">Primo/ultimo segmento inclinato</translation>
-    </message>
-    <message>
-        <source>The first and last segment of the break symbol is inclined</source>
-        <translation type="vanished">Il primo e l&apos;ultimo segmento del simbolo di rottura sono inclinati</translation>
-    </message>
-    <message>
-        <source>First/Last segment vertical</source>
-        <translation type="vanished">Primo/ultimo segmento verticale</translation>
-    </message>
-    <message>
-        <source>The first and last segment of the break symbol is vertical</source>
-        <translation type="vanished">Il primo e l&apos;ultimo segmento del simbolo di rottura sono verticali</translation>
-    </message>
-    <message>
-        <source>&amp;PolyLine break symbol from 2 points</source>
-        <translation type="vanished">&amp;Polilinea simbolo di rottura da 2 punti</translation>
-    </message>
-    <message>
-        <source>Draw a polyline break symbol from 2 points</source>
-        <translation type="vanished">Disegna un simbolo di interruzione di polilinea da 2 punti</translation>
-    </message>
-</context>
-<context>
     <name>Polyline</name>
     <message>
         <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
@@ -11585,12 +11380,12 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
     <message>
         <location line="+170"/>
         <source>Break Out Segment</source>
-        <translation>Rompere il segmento</translation>
+        <translation>Break Out Segmento</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
         <source>Remove line break segment</source>
-        <translation>Rimuovere il segmento all&apos;interruzione della linea</translation>
+        <translation>Rimuovere il segmento di interruzione di linea</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11600,7 +11395,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
     <message>
         <location line="+3"/>
         <source>Remove Segment</source>
-        <translation>Elimina segmento</translation>
+        <translation>Rimuovi segmento</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -11657,7 +11452,7 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
         <source>&amp;Polyline break symbol from 2 points</source>
-        <translation>&amp;Polilinea simbolo di rottura da 2 punti</translation>
+        <translation>&amp;Simbolo di interruzione della polilinea da 2 punti</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -11981,19 +11776,12 @@ Primo punto per l&apos;asse dello specchio</translatorcomment>
     <message>
         <location line="-1277"/>
         <source>:</source>
-        <translatorcomment>--ignored colon--
---file: Arduino_it_IT.po--
-Documento caricato:
-Versione:</translatorcomment>
-        <translation></translation>
+        <translation>:</translation>
     </message>
     <message>
         <location line="+151"/>
         <source>No Selection</source>
-        <translatorcomment>--ignored case--
---file: photivo_it.ts--
-Nessuna selezione</translatorcomment>
-        <translation></translation>
+        <translation>Nessuna selezione</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -12078,9 +11866,7 @@ Nessuna selezione</translatorcomment>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40"/>
         <source>Selection:</source>
-        <translatorcomment>--ignored colon--
---file: it3.po--</translatorcomment>
-        <translation></translation>
+        <translation>Selezione:</translation>
     </message>
     <message>
         <source>General</source>
@@ -12321,10 +12107,7 @@ Nessuna selezione</translatorcomment>
     <message>
         <location filename="../scripts/Snap/RestrictHorizontal/RestrictHorizontalInit.js" line="+2"/>
         <source>Restrict &amp;Horizontally</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_it.ts--
-Limitazione &amp;Orizzontale</translatorcomment>
-        <translation></translation>
+        <translation>Limita e &amp;orizzontalmente</translation>
     </message>
 </context>
 <context>
@@ -12340,10 +12123,7 @@ Limitazione &amp;Orizzontale</translatorcomment>
     <message>
         <location filename="../scripts/Snap/RestrictOrthogonal/RestrictOrthogonalInit.js" line="+2"/>
         <source>Restrict &amp;Orthogonally</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_it.ts--
-Limitazione &amp;Ortogonale</translatorcomment>
-        <translation></translation>
+        <translation>Limitare e &amp;ortogonalmente</translation>
     </message>
 </context>
 <context>
@@ -12351,10 +12131,7 @@ Limitazione &amp;Ortogonale</translatorcomment>
     <message>
         <location filename="../scripts/Snap/RestrictVertical/RestrictVerticalInit.js" line="+2"/>
         <source>Restrict &amp;Vertically</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_it.ts--
-Limitazione &amp;Verticale</translatorcomment>
-        <translation></translation>
+        <translation>Limita e &amp;verticalmente</translation>
     </message>
 </context>
 <context>
@@ -12380,11 +12157,7 @@ Limitazione &amp;Verticale</translatorcomment>
     <message>
         <location line="+30"/>
         <source>Center point</source>
-        <translatorcomment>--google--
-Aggancia ai punti centrali
-Specificare il centro:
-Specificare il centro</translatorcomment>
-        <translation></translation>
+        <translation>Punto centrale</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -12394,11 +12167,7 @@ Specificare il centro</translatorcomment>
     <message>
         <location line="+9"/>
         <source>Target point</source>
-        <translatorcomment>--exact match--
---file: IsoProject_it.ts--
-Punto finale
-Obiettivo punto</translatorcomment>
-        <translation></translation>
+        <translation>Punto obiettivo</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
@@ -12591,10 +12360,7 @@ Obiettivo punto</translatorcomment>
     <message>
         <location line="+16"/>
         <source>Use current layer and &amp;attributes</source>
-        <translatorcomment>--exact match--
---file: Mirror_it.ts--
-Usa livello e gli &amp;attributi corrente</translatorcomment>
-        <translation></translation>
+        <translation>Utilizzare il livello corrente e gli &amp;attributi</translation>
     </message>
 </context>
 <context>
@@ -12607,18 +12373,12 @@ Usa livello e gli &amp;attributi corrente</translatorcomment>
     <message>
         <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
-        <translatorcomment>--exact match--
---file: Bevel_it.ts--
-Prima entità non può essere tagliato.</translatorcomment>
-        <translation></translation>
+        <translation>Prima entità non può essere tagliato.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translatorcomment>--exact match--
---file: Bevel_it.ts--
-Seconda entità non può essere tagliata.</translatorcomment>
-        <translation></translation>
+        <translation>Seconda entità non può essere tagliata.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
@@ -12929,11 +12689,7 @@ Seconda entità non può essere tagliata.</translatorcomment>
     <message>
         <location line="+10"/>
         <source>Target point</source>
-        <translatorcomment>--exact match--
---file: IsoProject_it.ts--
-Punto finale
-Obiettivo punto</translatorcomment>
-        <translation></translation>
+        <translation>Punto obiettivo</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
@@ -12963,7 +12719,7 @@ Obiettivo punto</translatorcomment>
     <message>
         <location line="+14"/>
         <source>Factor x:</source>
-        <translation>Fattore x:</translation>
+        <translation>Fattore &amp;x:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12974,7 +12730,7 @@ Obiettivo punto</translatorcomment>
     <message>
         <location line="-7"/>
         <source>Factor y:</source>
-        <translation>Fattore y:</translation>
+        <translation>Fattore &amp;y:</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -13104,9 +12860,7 @@ Obiettivo punto</translatorcomment>
     <message>
         <location filename="../scripts/Select/Select.js" line="+216"/>
         <source>Selection Tools</source>
-        <translatorcomment>--google--
-Mostra menù &quot;Seleziona&quot;</translatorcomment>
-        <translation></translation>
+        <translation>Strumenti di selezione</translation>
     </message>
     <message>
         <source>Show selection tools</source>
@@ -13241,10 +12995,7 @@ Mostra menù &quot;Seleziona&quot;</translatorcomment>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.ui" line="+17"/>
         <source>Mode:</source>
-        <translatorcomment>--ignored colon--
---file: qgis_it.ts--
-Modo colore:</translatorcomment>
-        <translation></translation>
+        <translation>Modalità:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -13306,43 +13057,27 @@ Modo colore:</translatorcomment>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.ui" line="+17"/>
         <source>Mode:</source>
-        <translatorcomment>--exact match--
---file: SelectContour_it.ts--
-Modo colore:
-Modalità:</translatorcomment>
-        <translation></translation>
+        <translation>Modalità:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translatorcomment>--exact match--
---file: SelectContour_it.ts--
-Sostituire la selezione corrente</translatorcomment>
-        <translation></translation>
+        <translation>Sostituire la selezione corrente</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translatorcomment>--exact match--
---file: SelectContour_it.ts--
-Aggiungere alla selezione corrente</translatorcomment>
-        <translation></translation>
+        <translation>Aggiungere alla selezione corrente</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translatorcomment>--exact match--
---file: SelectContour_it.ts--
-Sottrai dalla selezione corrente</translatorcomment>
-        <translation></translation>
+        <translation>Sottrai dalla selezione corrente</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translatorcomment>--exact match--
---file: SelectContour_it.ts--
-Interseca con la selezione corrente</translatorcomment>
-        <translation></translation>
+        <translation>Interseca con la selezione corrente</translation>
     </message>
 </context>
 <context>
@@ -13459,43 +13194,27 @@ Interseca con la selezione corrente</translatorcomment>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
         <source>Mode:</source>
-        <translatorcomment>--exact match--
---file: SelectContour_it.ts--
-Modo colore:
-Modalità:</translatorcomment>
-        <translation></translation>
+        <translation>Modalità:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translatorcomment>--exact match--
---file: SelectContour_it.ts--
-Sostituire la selezione corrente</translatorcomment>
-        <translation></translation>
+        <translation>Sostituire la selezione corrente</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translatorcomment>--exact match--
---file: SelectContour_it.ts--
-Aggiungere alla selezione corrente</translatorcomment>
-        <translation></translation>
+        <translation>Aggiungere alla selezione corrente</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translatorcomment>--exact match--
---file: SelectContour_it.ts--
-Sottrai dalla selezione corrente</translatorcomment>
-        <translation></translation>
+        <translation>Sottrai dalla selezione corrente</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translatorcomment>--exact match--
---file: SelectContour_it.ts--
-Interseca con la selezione corrente</translatorcomment>
-        <translation></translation>
+        <translation>Interseca con la selezione corrente</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -14235,11 +13954,7 @@ Interseca con la selezione corrente</translatorcomment>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistanceInit.js" line="+2"/>
         <source>&amp;Distance</source>
-        <translatorcomment>--google--
-&amp;Distanza da Punto a Punto
-&amp;Distanza da Oggetto a Punto
-&amp;Distanza dalla Fine</translatorcomment>
-        <translation></translation>
+        <translation>&amp;Distanza</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
@@ -14614,11 +14329,7 @@ Interseca con la selezione corrente</translatorcomment>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        <translatorcomment>--exact match--
---file: IsoProject_it.ts--
-Punto finale
-Obiettivo punto</translatorcomment>
-        <translation></translation>
+        <translation>Punto obiettivo</translation>
     </message>
     <message>
         <location line="+141"/>
@@ -14656,21 +14367,12 @@ Obiettivo punto</translatorcomment>
     <message>
         <location line="+1"/>
         <source>SVG Files</source>
-        <translatorcomment>--exact match--
---file: SvgExportAs_it.ts--
-File SVG (*.svg)
-File SVG</translatorcomment>
-        <translation></translation>
+        <translation>File SVG</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>All Files</source>
-        <translatorcomment>--exact match--
---file: liferea-1.8-rc1.it.po--
-Tutti i file(*.*)
-File locale
-Tutti i file</translatorcomment>
-        <translation></translation>
+        <translation>Tutti i file</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportInit.js" line="+2"/>
@@ -15443,11 +15145,7 @@ Tutti i file</translatorcomment>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        <translatorcomment>--exact match--
---file: IsoProject_it.ts--
-Punto finale
-Obiettivo punto</translatorcomment>
-        <translation></translation>
+        <translation>Punto obiettivo</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateInit.js" line="+2"/>
@@ -16091,10 +15789,7 @@ Obiettivo punto</translatorcomment>
     <message>
         <location filename="../scripts/Help/Website/WebsiteInit.js" line="+2"/>
         <source>Visit &amp;Website</source>
-        <translatorcomment>--exact match--
---file: qcad_it.ts--
-Visita il &amp;sito web</translatorcomment>
-        <translation></translation>
+        <translation>Visita il sito &amp;web</translation>
     </message>
 </context>
 <context>
@@ -16551,10 +16246,7 @@ Visita il &amp;sito web</translatorcomment>
     <message>
         <location line="+0"/>
         <source>Block Reference</source>
-        <translatorcomment>--google--
-Scegliere il riferimento di blocco
-Modificare un blocco sulla base di un riferimento di blocco scelto</translatorcomment>
-        <translation></translation>
+        <translation>Riferimento di blocco</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -16825,9 +16517,7 @@ Modificare un blocco sulla base di un riferimento di blocco scelto</translatorco
     <message>
         <location line="+0"/>
         <source>Solids</source>
-        <translatorcomment>--google--
-in linee, solidi e testi</translatorcomment>
-        <translation></translation>
+        <translation>Solidi</translation>
     </message>
     <message>
         <location line="+2"/>

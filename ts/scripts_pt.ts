@@ -5661,27 +5661,27 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+14"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation></translation>
+        <translation>Comece por fundir um vértice de início em formulários abertos.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation></translation>
+        <translation>Termine com a fundição de um ápice final em formas abertas.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add insertions in between eg. spacers, knots. (Not implemented)</source>
-        <translation></translation>
+        <translation>Adicione inserções entre, por exemplo, espaçadores, nós. (Não implementado)</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation></translation>
+        <translation>Pré-visualização dos pintores.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation></translation>
+        <translation>Selecione o conjunto de pintores.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -5756,12 +5756,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+36"/>
         <source>Preview of insertion.</source>
-        <translation></translation>
+        <translation>Pré-visualização da inserção.</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation></translation>
+        <translation>Selecione Inserção ou Entrar espaço vazio. (Não implementado)</translation>
     </message>
     <message>
         <location line="+250"/>
@@ -5776,47 +5776,47 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+245"/>
         <source>Document Units.</source>
-        <translation></translation>
+        <translation>Unidades de documento.</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation></translation>
+        <translation>Introduza a largura do pintor. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation></translation>
+        <translation>Entre os passos do pintor principal. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation></translation>
+        <translation>Digite o comprimento do pintor principal. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation></translation>
+        <translation>Mantenha os pintores proporcionais.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Select percentage of Stepsize.</source>
-        <translation></translation>
+        <translation>Seleccione a percentagem do tamanho dos degraus.</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation></translation>
+        <translation>Adaptar a escala f 1.00-0.90 para se adaptar a toda a forma.</translation>
     </message>
     <message>
         <location line="+92"/>
         <source>Verbose info. (persistent on)</source>
-        <translation></translation>
+        <translation>Informação verbal. (persistente sobre)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation></translation>
+        <translation>Eliminado pintado sobre as entidades base. (persistente fora)</translation>
     </message>
     <message>
         <source>Preview of insertion</source>

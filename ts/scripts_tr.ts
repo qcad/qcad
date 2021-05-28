@@ -7112,7 +7112,6 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Block/InsertBlock/InsertBlock.js" line="+117"/>
         <source>Position</source>
-        <translatorcomment>Konum olsa daha iyi olur muydu?</translatorcomment>
         <translation>Konum</translation>
     </message>
     <message>

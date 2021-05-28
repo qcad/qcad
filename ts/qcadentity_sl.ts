@@ -592,7 +592,6 @@
         <location line="+2"/>
         <location line="+1"/>
         <source>Vertex</source>
-        <translatorcomment>temer krivulje?</translatorcomment>
         <translation>Oglišče</translation>
     </message>
     <message>

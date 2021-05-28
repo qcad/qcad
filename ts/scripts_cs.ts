@@ -292,7 +292,7 @@
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+86"/>
@@ -5435,7 +5435,7 @@ již v seznamu je.</translation>
         <location line="+16"/>
         <source>Cast on newly sub-layer &apos;Painted&apos;.
 BUG: Interferes with group castings.</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>

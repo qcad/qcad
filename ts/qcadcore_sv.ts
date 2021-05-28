@@ -954,7 +954,6 @@
     <message>
         <location line="+1"/>
         <source>Drainage Reversed</source>
-        <translatorcomment>Say what now? word to word translation here. I have no idéa what reversed drainage is..</translatorcomment>
         <translation>Omvänd dränering</translation>
     </message>
 </context>

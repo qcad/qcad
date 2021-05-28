@@ -1189,7 +1189,7 @@ Voulez-vous le récupérer ?</translation>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
         <location line="+4"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
-        <translation>Blocs de mise en page visibles de &amp;Batch2Pdf</translation>
+        <translation>&amp;Batch2Pdf blocs de mise en page visibles</translation>
     </message>
 </context>
 <context>
@@ -2835,14 +2835,6 @@ Voulez-vous le récupérer ?</translation>
         <source>Angle:</source>
         <translation>Angle :</translation>
     </message>
-    <message>
-        <source>Line</source>
-        <translation type="obsolete">Ligne</translation>
-    </message>
-    <message>
-        <source>Face</source>
-        <translation type="obsolete">Face</translation>
-    </message>
 </context>
 <context>
     <name>Cut</name>
@@ -3976,67 +3968,67 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+4"/>
         <source>Unsupported or invalid CSV style, ignored ! Text line %1</source>
-        <translation>Style CSV non supporté ou invalide, ignoré. Ligne de texte %1</translation>
+        <translation>Style CSV non supporté ou invalide, ignoré ! Ligne de texte %1</translation>
     </message>
     <message>
         <location line="+82"/>
         <source>Setting new relative origin failed, ignored ! Text line %1</source>
-        <translation>Le réglage de la nouvelle origine relative a échoué, ignoré. Ligne de texte %1</translation>
+        <translation>Le réglage de la nouvelle origine relative a échoué, ignoré ! Ligne de texte %1</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Can not switch to layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Impossible de passer à la couche, ignoré. Ligne de texte %1 couche : %2</translation>
+        <translation>Impossible de passer à la couche, ignoré ! Ligne de texte %1 couche : %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  layer switch, ignored ! Text line %1</source>
-        <translation>Un changement de couche incorrect, ignoré. Ligne de texte %1</translation>
+        <translation>Un changement de couche incorrect, ignoré ! Ligne de texte %1</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Not a correct  new layer switch, ignored ! Text line %1</source>
-        <translation>Ce n&apos;est pas un nouveau commutateur de couche correct, ignoré. Ligne de texte %1</translation>
+        <translation>Ce n&apos;est pas un nouveau commutateur de couche correct, ignoré ! Ligne de texte %1</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Can not hide layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Impossible de cacher la couche, ignoré. Ligne de texte %1 couche : %2</translation>
+        <translation>Impossible de cacher la couche, ignoré ! Ligne de texte %1 couche : %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  hide layer switch, ignored ! Text line %1</source>
-        <translation>Le changement de couche de masquage n&apos;est pas correct, il est ignoré. Ligne de texte %1</translation>
+        <translation>Le changement de couche de masquage n&apos;est pas correct, il est ignoré ! Ligne de texte %1</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Can not freeze layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Impossible de geler la couche, ignoré. Ligne de texte %1 couche : %2</translation>
+        <translation>Impossible de geler la couche, ignoré ! Ligne de texte %1 couche : %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  freeze layer switch, ignored ! Text line %1</source>
-        <translation>Un changement de couche de gel non correct, ignoré. Ligne de texte %1</translation>
+        <translation>Un changement de couche de gel non correct, ignoré ! Ligne de texte %1</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Can not lock layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Impossible de verrouiller la couche, ignoré. Ligne de texte %1 couche : %2</translation>
+        <translation>Impossible de verrouiller la couche, ignoré ! Ligne de texte %1 couche : %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  lock layer switch, ignored ! Text line %1</source>
-        <translation>Commutation de couche de verrouillage non correcte, ignorée. Ligne de texte %1</translation>
+        <translation>Commutation de couche de verrouillage non correcte, ignorée ! Ligne de texte %1</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Can not allow layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Impossible d&apos;autoriser la couche, ignoré. Ligne de texte %1 couche : %2</translation>
+        <translation>Impossible d&apos;autoriser la couche, ignoré ! Ligne de texte %1 couche : %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  allow layer switch, ignored ! Text line %1</source>
-        <translation>Pas un commutateur de couche autorisé correct, ignoré. Ligne de texte %1</translation>
+        <translation>Pas un commutateur de couche autorisé correct, ignoré ! Ligne de texte %1</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -4060,7 +4052,7 @@ est déjà dans la liste.</translation>
         <location line="+23"/>
         <location line="+32"/>
         <source>Low field count !</source>
-        <translation>Faible nombre de champs.</translation>
+        <translation>Faible nombre de champs !</translation>
     </message>
     <message>
         <location line="-469"/>
@@ -4088,7 +4080,7 @@ est déjà dans la liste.</translation>
         <location line="+29"/>
         <location line="+25"/>
         <source>Odd field count !</source>
-        <translation>Nombre de champs impair.</translation>
+        <translation>Nombre de champs impair !</translation>
     </message>
     <message>
         <location line="-579"/>
@@ -4100,7 +4092,7 @@ est déjà dans la liste.</translation>
         <location line="+156"/>
         <location line="+166"/>
         <source>Rv Invalid !</source>
-        <translation>Rv Invalide.</translation>
+        <translation>Rv Invalide !</translation>
     </message>
     <message>
         <location line="-587"/>
@@ -4116,7 +4108,7 @@ est déjà dans la liste.</translation>
         <location line="+26"/>
         <location line="+55"/>
         <source>Rv1 Invalid !</source>
-        <translation>Rv1 Invalide.</translation>
+        <translation>Rv1 Invalide !</translation>
     </message>
     <message>
         <location line="-451"/>
@@ -4134,7 +4126,7 @@ est déjà dans la liste.</translation>
         <location line="+27"/>
         <location line="+34"/>
         <source>Rv2 Invalid !</source>
-        <translation>Rv2 Invalide.</translation>
+        <translation>Rv2 Invalide !</translation>
     </message>
     <message>
         <location line="-422"/>
@@ -4145,7 +4137,7 @@ est déjà dans la liste.</translation>
         <location line="+45"/>
         <location line="+21"/>
         <source>Radius Invalid !</source>
-        <translation>Rayon invalide.</translation>
+        <translation>Rayon invalide !</translation>
     </message>
     <message>
         <location line="-247"/>
@@ -4155,22 +4147,22 @@ est déjà dans la liste.</translation>
         <location line="+34"/>
         <location line="+149"/>
         <source>Angle Invalid !</source>
-        <translation>Angle Invalide.</translation>
+        <translation>Angle Invalide !</translation>
     </message>
     <message>
         <location line="-480"/>
         <source>Angle1 Invalid !</source>
-        <translation>Angle1 Invalide.</translation>
+        <translation>Angle1 Invalide !</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angle2 Invalid !</source>
-        <translation>Angle2 Invalide.</translation>
+        <translation>Angle2 Invalide !</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Equal angles !</source>
-        <translation>Des angles égaux.</translation>
+        <translation>Des angles égaux !</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -4182,28 +4174,28 @@ est déjà dans la liste.</translation>
         <location line="+27"/>
         <location line="+34"/>
         <source>Rv3 Invalid !</source>
-        <translation>Rv3 Invalide.</translation>
+        <translation>Rv3 Invalide !</translation>
     </message>
     <message>
         <location line="-308"/>
         <source>Arc Invalid !</source>
-        <translation>Arc Invalide.</translation>
+        <translation>Arc Invalide !</translation>
     </message>
     <message>
         <location line="+43"/>
         <location line="+46"/>
         <source>Center Invalid !</source>
-        <translation>Centre Invalide.</translation>
+        <translation>Centre Invalide !</translation>
     </message>
     <message>
         <location line="-21"/>
         <source>Radius too small !</source>
-        <translation>Rayon trop petit.</translation>
+        <translation>Rayon trop petit !</translation>
     </message>
     <message>
         <location line="+88"/>
         <source>Circle Invalid !</source>
-        <translation>Cercle Invalide.</translation>
+        <translation>Cercle Invalide !</translation>
     </message>
     <message>
         <location line="+67"/>
@@ -4211,27 +4203,27 @@ est déjà dans la liste.</translation>
         <location line="+27"/>
         <location line="+34"/>
         <source>Rv4 Invalid !</source>
-        <translation>Rv4 Invalide.</translation>
+        <translation>Rv4 Invalide !</translation>
     </message>
     <message>
         <location line="-42"/>
         <source>Size Invalid !</source>
-        <translation>Taille non valide.</translation>
+        <translation>Taille non valide !</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Size in X Invalid !</source>
-        <translation>Taille en X Invalide.</translation>
+        <translation>Taille en X Invalide !</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Size in Y Invalid !</source>
-        <translation>Taille en Y Invalide.</translation>
+        <translation>Taille en Y Invalide !</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Polygon, less than 5 references !</source>
-        <translation>Polygone, moins de 5 références.</translation>
+        <translation>Polygone, moins de 5 références !</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4239,97 +4231,97 @@ est déjà dans la liste.</translation>
         <location line="+27"/>
         <location line="+28"/>
         <source>Rv %1 Invalid !</source>
-        <translation>Rv %1 Invalide.</translation>
+        <translation>Rv %1 Invalide !</translation>
     </message>
     <message>
         <location line="-62"/>
         <source>Polyline, less than 2 references !</source>
-        <translation>Polyligne, moins de 2 références.</translation>
+        <translation>Polyligne, moins de 2 références !</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Bulge %1 Invalid !</source>
-        <translation>Bulge %1 Invalide.</translation>
+        <translation>Bulge %1 Invalide !</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Unsupported PRO feature !</source>
-        <translation>Fonctionnalité PRO non supportée.</translation>
+        <translation>Fonctionnalité PRO non supportée !</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fit point Spline, less than 3 references !</source>
-        <translation>Point d&apos;ajustement Spline, moins de 3 références.</translation>
+        <translation>Point d&apos;ajustement Spline, moins de 3 références !</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Control point Spline, less than 4 references !</source>
-        <translation>Point de contrôle Spline, moins de 4 références.</translation>
+        <translation>Point de contrôle Spline, moins de 4 références !</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Text, low field count !</source>
-        <translation>Texte, faible nombre de champs.</translation>
+        <translation>Texte, faible nombre de champs !</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text, odd field count !</source>
-        <translation>Texte, nombre impair de champs.</translation>
+        <translation>Texte, nombre impair de champs !</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Height Invalid !</source>
-        <translation>Hauteur invalide.</translation>
+        <translation>Hauteur invalide !</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Width Invalid !</source>
-        <translation>Largeur non valide.</translation>
+        <translation>Largeur non valide !</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Vert. alignment Invalid !</source>
-        <translation>Alignement vert. Invalide.</translation>
+        <translation>Alignement vert. Invalide !</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Horz. alignment Invalid !</source>
-        <translation>Horz. alignement Invalide.</translation>
+        <translation>Horz. alignement Invalide !</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing direction Invalid !</source>
-        <translation>Direction du dessin non valide.</translation>
+        <translation>Direction du dessin non valide !</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing style Invalid !</source>
-        <translation>Style d&apos;interligne Invalide.</translation>
+        <translation>Style d&apos;interligne Invalide !</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing Invalid !</source>
-        <translation>Espacement des lignes Invalide.</translation>
+        <translation>Espacement des lignes Invalide !</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Unsupported entry ! Text line %1</source>
-        <translation>Entrée non supportée. Ligne de texte %1</translation>
+        <translation>Entrée non supportée ! Ligne de texte %1</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Error with first optional list !</source>
-        <translation>Erreur avec la première liste d&apos;options.</translation>
+        <translation>Erreur avec la première liste d&apos;options !</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Error with second optional list !</source>
-        <translation>Erreur avec la deuxième liste d&apos;options.</translation>
+        <translation>Erreur avec la deuxième liste d&apos;options !</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Not a correct entry ! Text line %1 : %2</source>
-        <translation>L&apos;entrée n&apos;est pas correcte. Ligne de texte %1 : %2</translation>
+        <translation>L&apos;entrée n&apos;est pas correcte ! Ligne de texte %1 : %2</translation>
     </message>
     <message>
         <location line="+77"/>
@@ -4344,7 +4336,7 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+3"/>
         <source>Nothing casted !</source>
-        <translation>Rien n&apos;a été lancé.</translation>
+        <translation>Rien n&apos;a été lancé !</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -4364,68 +4356,68 @@ est déjà dans la liste.</translation>
     <message>
         <location line="+165"/>
         <source>Attributes empty ! Text line %1</source>
-        <translation>Attributs vides. Ligne de texte %1</translation>
+        <translation>Attributs vides ! Ligne de texte %1</translation>
     </message>
     <message>
         <location line="+24"/>
         <location line="+97"/>
         <source>Not a correct layer name ! Text line %1 name: %2</source>
-        <translation>Le nom de la couche n&apos;est pas correct. Nom de la ligne de texte %1 : %2</translation>
+        <translation>Le nom de la couche n&apos;est pas correct ! Nom de la ligne de texte %1 : %2</translation>
     </message>
     <message>
         <location line="-90"/>
         <source>Layer doesn&apos;t exist, ignored ! Text line %1 layer: %2</source>
-        <translation>Le calque n&apos;existe pas, ignoré. Ligne de texte %1 calque : %2</translation>
+        <translation>Le calque n&apos;existe pas, ignoré ! Ligne de texte %1 calque : %2</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Not a correct color, ignored ! Text line %1 color: %2</source>
-        <translation>Couleur non correcte, ignorée. Ligne de texte %1 couleur : %2</translation>
+        <translation>Couleur non correcte, ignorée ! Ligne de texte %1 couleur : %2</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight, ignored ! Text line %1 weight: %2</source>
-        <translation>Le poids de la ligne n&apos;est pas correct, ignoré. Poids de la ligne de texte %1 : %2</translation>
+        <translation>Le poids de la ligne n&apos;est pas correct, ignoré ! Poids de la ligne de texte %1 : %2</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype, ignored ! Text line %1 type: %2</source>
-        <translation>Linetype incorrect, ignoré. Type de ligne de texte %1 : %2</translation>
+        <translation>Linetype incorrect, ignoré ! Type de ligne de texte %1 : %2</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Not a correct Linetype scale, ignored ! Text line %1 scale: %2</source>
-        <translation>Echelle Linetype non correcte, ignorée. Ligne de texte %1 échelle : %2</translation>
+        <translation>Echelle Linetype non correcte, ignorée ! Ligne de texte %1 échelle : %2</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Not a correct attribute, ignored ! Text line %1 &gt; %2</source>
-        <translation>Attribut non correct, ignoré. Ligne de texte %1 &gt; %2</translation>
+        <translation>Attribut non correct, ignoré ! Ligne de texte %1 &gt; %2</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Parent layer doesn&apos;t exist ! Text line %1 layer: %2</source>
-        <translation>Le calque parent n&apos;existe pas. Ligne de texte %1 calque : %2</translation>
+        <translation>Le calque parent n&apos;existe pas ! Ligne de texte %1 calque : %2</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Not a correct color ! Text line %1 color: %2</source>
-        <translation>La couleur n&apos;est pas correcte. Ligne de texte %1 couleur : %2</translation>
+        <translation>La couleur n&apos;est pas correcte ! Ligne de texte %1 couleur : %2</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Not a correct Lineweight ! Text line %1 weight: %2</source>
-        <translation>Le poids de la ligne n&apos;est pas correct. Poids de la ligne de texte %1 : %2</translation>
+        <translation>Le poids de la ligne n&apos;est pas correct ! Poids de la ligne de texte %1 : %2</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Not a correct Linetype ! Text line %1 type: %2</source>
-        <translation>Linetype incorrect. Type de ligne de texte %1 : %2</translation>
+        <translation>Linetype incorrect ! Type de ligne de texte %1 : %2</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Add/Update layer ignored !</source>
-        <translation>Ajout/mise à jour de la couche ignorée.</translation>
+        <translation>Ajout/mise à jour de la couche ignorée !</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -5970,12 +5962,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+36"/>
         <source>Preview of insertion.</source>
-        <translation></translation>
+        <translation>Aperçu de l&apos;insertion.</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation></translation>
+        <translation>Sélectionnez Insertion ou Saisir un espace vide. (Non implémenté)</translation>
     </message>
     <message>
         <location line="+250"/>
@@ -5990,12 +5982,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+245"/>
         <source>Document Units.</source>
-        <translation></translation>
+        <translation>Unités de document.</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation></translation>
+        <translation>Entrez la largeur du peintre. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
@@ -10875,33 +10867,6 @@ dans les résultats de recherche :</translation>
     </message>
 </context>
 <context>
-    <name>OrthogonalProjections</name>
-    <message>
-        <source>First vertex</source>
-        <translation type="obsolete">Premier vertex</translation>
-    </message>
-    <message>
-        <source>Done</source>
-        <translation type="obsolete">Terminer</translation>
-    </message>
-    <message>
-        <source>close</source>
-        <translation type="obsolete">fermer</translation>
-    </message>
-    <message>
-        <source>undo</source>
-        <translation type="obsolete">annuler</translation>
-    </message>
-    <message>
-        <source>redo</source>
-        <translation type="obsolete">refaire</translation>
-    </message>
-    <message>
-        <source>arc</source>
-        <translation type="obsolete">arc</translation>
-    </message>
-</context>
-<context>
     <name>PageSettings</name>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+31"/>
@@ -11272,97 +11237,6 @@ dans les résultats de recherche :</translation>
     </message>
 </context>
 <context>
-    <name>PolyLineBreakSymbol</name>
-    <message>
-        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation type="vanished">Choisir ligne, arc, cercle, ellipse, spline ou polyligne</translation>
-    </message>
-    <message>
-        <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation type="vanished">Choisissez ligne, arc, cercle ou ellipse</translation>
-    </message>
-    <message>
-        <source>Pick the first point</source>
-        <translation type="vanished">Choisissez le premier point</translation>
-    </message>
-    <message>
-        <source>Pick the first break point</source>
-        <translation type="vanished">Choisissez le premier point de rupture</translation>
-    </message>
-    <message>
-        <source>Pick the second point</source>
-        <translation type="vanished">Choisissez le deuxième point</translation>
-    </message>
-    <message>
-        <source>Pick the second break point</source>
-        <translation type="vanished">Choisissez le deuxième point de rupture</translation>
-    </message>
-    <message>
-        <source>Break Out Segment</source>
-        <translation type="vanished">Suppression de segments</translation>
-    </message>
-    <message>
-        <source>Remove line break segment</source>
-        <translation type="vanished">Suppression du segment au point de rupture de la ligne</translation>
-    </message>
-    <message>
-        <source>Remove the line segment between the break symbol</source>
-        <translation type="vanished">Supprimez le segment de ligne entre le symbole de rupture</translation>
-    </message>
-    <message>
-        <source>Remove Segment</source>
-        <translation type="vanished">Supprimer le segment</translation>
-    </message>
-    <message>
-        <source>Inherit entity properties</source>
-        <translation type="vanished">Hériter des propriétés de l&apos;entité</translation>
-    </message>
-    <message>
-        <source>Inherit all properties from the chosen entity</source>
-        <translation type="vanished">Hériter de toutes les propriétés de l&apos;entité choisie</translation>
-    </message>
-    <message>
-        <source>Inherit</source>
-        <translation type="vanished">Hériter</translation>
-    </message>
-    <message>
-        <source>Peak ratio</source>
-        <translation type="vanished">Ratio de crête</translation>
-    </message>
-    <message>
-        <source>The ratio of the peak height to the break width</source>
-        <translation type="vanished">Le rapport entre la hauteur du pic et la largeur de la rupture.</translation>
-    </message>
-    <message>
-        <source>Peak Ratio:</source>
-        <translation type="vanished">Rapport de crête :</translation>
-    </message>
-    <message>
-        <source>First/Last segment inclined</source>
-        <translation type="vanished">Premier/dernier segment incliné</translation>
-    </message>
-    <message>
-        <source>The first and last segment of the break symbol is inclined</source>
-        <translation type="vanished">Le premier et le dernier segment du symbole de rupture sont inclinés</translation>
-    </message>
-    <message>
-        <source>First/Last segment vertical</source>
-        <translation type="vanished">Premier/dernier segment vertical</translation>
-    </message>
-    <message>
-        <source>The first and last segment of the break symbol is vertical</source>
-        <translation type="vanished">Le premier et le dernier segment du symbole de rupture sont verticaux</translation>
-    </message>
-    <message>
-        <source>&amp;PolyLine break symbol from 2 points</source>
-        <translation type="vanished">&amp;Polyligne symbole de rupture à partir de 2 points</translation>
-    </message>
-    <message>
-        <source>Draw a polyline break symbol from 2 points</source>
-        <translation type="vanished">Dessiner un symbole de rupture de polyligne à partir de 2 points</translation>
-    </message>
-</context>
-<context>
     <name>Polyline</name>
     <message>
         <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
@@ -11419,7 +11293,7 @@ dans les résultats de recherche :</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
         <source>Remove line break segment</source>
-        <translation>Suppression du segment au point de rupture de la ligne</translation>
+        <translation>Supprimer le segment de rupture de ligne</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -11444,19 +11318,19 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="+3"/>
         <source>Inherit</source>
-        <translation>Hériter</translation>
+        <translation>Hériter de</translation>
     </message>
     <message>
         <location line="+17"/>
         <location line="+13"/>
         <source>Peak ratio</source>
-        <translation>Ratio de crête</translation>
+        <translation>Rapport de crête</translation>
     </message>
     <message>
         <location line="-10"/>
         <location line="+13"/>
         <source>The ratio of the peak height to the break width</source>
-        <translation>Le rapport entre la hauteur du pic et la largeur de la rupture.</translation>
+        <translation>Le rapport entre la hauteur du pic et la largeur de la rupture</translation>
     </message>
     <message>
         <location line="-10"/>
@@ -11486,7 +11360,7 @@ dans les résultats de recherche :</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
         <source>&amp;Polyline break symbol from 2 points</source>
-        <translation>&amp;Polyligne symbole de rupture à partir de 2 points</translation>
+        <translation>&amp;Polyline symbole de rupture à partir de 2 points</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -12745,7 +12619,7 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="+14"/>
         <source>Factor x:</source>
-        <translation>Facteur x :</translation>
+        <translation>Facteur &amp;x :</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12756,7 +12630,7 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="-7"/>
         <source>Factor y:</source>
-        <translation>Facteur y :</translation>
+        <translation>Facteur &amp;y :</translation>
     </message>
     <message>
         <location line="+14"/>

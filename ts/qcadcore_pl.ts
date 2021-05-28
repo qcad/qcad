@@ -710,7 +710,7 @@
     <message>
         <location filename="../src/core/RGuiAction.cpp" line="+186"/>
         <source>Requires selection</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -6275,7 +6275,7 @@ BUG: Interferes with group castings.</translation>
     <message>
         <location line="+36"/>
         <source>Preview of insertion.</source>
-        <translation>Preview of insertion.</translation>
+        <translation>Vorschau der Einfügung.</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -6295,47 +6295,47 @@ BUG: Interferes with group castings.</translation>
     <message>
         <location line="+245"/>
         <source>Document Units.</source>
-        <translation></translation>
+        <translation>Dokumenteinheiten.</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation></translation>
+        <translation>Malerbreite eingeben. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation></translation>
+        <translation>Schrittweite des Hauptmalers eingeben. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation></translation>
+        <translation>Geben Sie die Hauptlackierlänge ein. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation></translation>
+        <translation>Halten Sie Maler proportional.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Select percentage of Stepsize.</source>
-        <translation></translation>
+        <translation>Wählen Sie den Prozentsatz der Stepsize.</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation></translation>
+        <translation>Skalierung f 1,00-0,90 anpassen, um die gesamte Form anzupassen.</translation>
     </message>
     <message>
         <location line="+92"/>
         <source>Verbose info. (persistent on)</source>
-        <translation></translation>
+        <translation>Ausführliche Info. (persistent ein)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation></translation>
+        <translation>Gelöschte übermalte Basisentitäten. (persistent aus)</translation>
     </message>
     <message>
         <source>Preview of insertion</source>

@@ -6,175 +6,106 @@
     <message>
         <location filename="../src/core/RUnit.cpp" line="+273"/>
         <source>None</source>
-        <translatorcomment>--exact match--
---file: qt_fr.ts--
-Aucun
-Aucune des expressions pragma n&apos;est supportée. Une expression par défault doit être présente</translatorcomment>
         <translation>Aucun</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inch</source>
-        <translatorcomment>--exact match--
---file: UnitSettings_fr.ts--
-Pouce
-Micropouce</translatorcomment>
         <translation>Pouce</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Foot</source>
-        <translatorcomment>--exact match--
---file: UnitSettings_fr.ts--
-Pied</translatorcomment>
         <translation>Pied</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Mile</source>
-        <translatorcomment>--exact match--
---file: UnitSettings_fr.ts--
-Mile</translatorcomment>
         <translation>Mile</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Millimeter</source>
-        <translatorcomment>--exact match--
---file: UnitSettings_fr.ts--
-Millimètre
-Millimètres (mm)</translatorcomment>
         <translation>Millimètre</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Centimeter</source>
-        <translatorcomment>--exact match--
---file: UnitSettings_fr.ts--
-Centimètre
-Centimètres (cm)</translatorcomment>
         <translation>Centimètre</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Meter</source>
-        <translatorcomment>--exact match--
---file: UnitSettings_fr.ts--
-Permuter le signe de diamètre
-Diamètre</translatorcomment>
         <translation>Mètre</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Kilometer</source>
-        <translatorcomment>--exact match--
---file: UnitSettings_fr.ts--
-Kilomètre</translatorcomment>
         <translation>Kilomètre</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Microinch</source>
-        <translatorcomment>--exact match--
---file: UnitSettings_fr.ts--
-Micropouce</translatorcomment>
         <translation>Micropouce</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Mil</source>
-        <translatorcomment>--exact match--
---file: UnitSettings_fr.ts--
-Tamoul
-Mile</translatorcomment>
         <translation>Mil</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Yard</source>
-        <translatorcomment>--exact match--
---file: UnitSettings_fr.ts--
-Yard</translatorcomment>
         <translation>Yard</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Angstrom</source>
-        <translatorcomment>--exact match--
---file: UnitSettings_fr.ts--
-Angström</translatorcomment>
         <translation>Angström</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Nanometer</source>
-        <translatorcomment>--exact match--
---file: UnitSettings_fr.ts--
-Nanomètre</translatorcomment>
         <translation>Nanomètre</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Micron</source>
-        <translatorcomment>--exact match--
---file: UnitSettings_fr.ts--
-Micron</translatorcomment>
         <translation>Micron</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Decimeter</source>
-        <translatorcomment>--exact match--
---file: UnitSettings_fr.ts--
-Décimètre</translatorcomment>
         <translation>Décimètre</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Decameter</source>
-        <translatorcomment>--exact match--
---file: UnitSettings_fr.ts--
-Décamètre</translatorcomment>
         <translation>Décamètre</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Hectometer</source>
-        <translatorcomment>--exact match--
---file: UnitSettings_fr.ts--
-Hectomètre</translatorcomment>
         <translation>Hectomètre</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Gigameter</source>
-        <translatorcomment>--exact match--
---file: UnitSettings_fr.ts--
-Gigamètre</translatorcomment>
         <translation>Gigamètre</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Astro</source>
-        <translatorcomment>--exact match--
---file: UnitSettings_fr.ts--
-Astro</translatorcomment>
         <translation>Astronomique</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Lightyear</source>
-        <translatorcomment>--exact match--
---file: UnitSettings_fr.ts--
-Année-lumière</translatorcomment>
         <translation>Année-lumière</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Parsec</source>
-        <translatorcomment>--exact match--
---file: UnitSettings_fr.ts--
-Parsec</translatorcomment>
         <translation>Parsec</translation>
     </message>
 </context>
@@ -183,70 +114,41 @@ Parsec</translatorcomment>
     <message>
         <location filename="../src/core/RColor.cpp" line="+300"/>
         <source>By Layer</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Par calque</translatorcomment>
         <translation>Par calque</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Par bloc</translatorcomment>
         <translation>Par bloc</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Red</source>
-        <translatorcomment>--exact match--
---file: designer_fr.ts--
-&amp;Rétablir
-Rétablir
-Rétablit la dernière action</translatorcomment>
         <translation>Rouge</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Yellow</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Jaune</translatorcomment>
         <translation>Jaune</translation>
     </message>
     <message>
         <location line="-4"/>
         <source>Green</source>
-        <translatorcomment>--exact match--
---file: designer_fr.ts--
-Vert
-Greenphone (179 x 185)</translatorcomment>
         <translation>Vert</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Cyan</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Cyan</translatorcomment>
         <translation>Cyan</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Blue</source>
-        <translatorcomment>--exact match--
---file: designer_fr.ts--
-Bleu
-Bleu&#xa0;: 
-Bluetooth</translatorcomment>
         <translation>Bleu</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Magenta</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Magenta</translatorcomment>
         <translation>Magenta</translation>
     </message>
     <message>
@@ -287,44 +189,26 @@ Magenta</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Black</source>
-        <translatorcomment>--exact match--
---file: qt_fr.ts--
-Noir/Blanc
-Extra-gras</translatorcomment>
         <translation>Noir</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>White</source>
-        <translatorcomment>--exact match--
---file: FirstStart_fr.ts--
-Noir/Blanc
-Blanc</translatorcomment>
         <translation>Blanc</translation>
     </message>
     <message>
         <location line="-2"/>
         <source>Gray</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Gris
-Gris clair</translatorcomment>
         <translation>Gris</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Light Gray</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Gris clair</translatorcomment>
         <translation>Gris clair</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Others...</source>
-        <translatorcomment>--exact match--
---file: Text_fr.ts--
-Autres...</translatorcomment>
         <translation>Autres...</translation>
     </message>
 </context>
@@ -356,17 +240,11 @@ Autres...</translatorcomment>
     <message>
         <location filename="../src/core/REntity.cpp" line="+94"/>
         <source>Block</source>
-        <translatorcomment>--exact match--
---file: Block_fr.ts--
-&amp;Bloc
-Bloc
-Liste des blocs</translatorcomment>
         <translation>Bloc</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="+94"/>
         <source>Referenced Block</source>
-        <translatorcomment>--google--</translatorcomment>
         <translation>Bloc référencé</translation>
     </message>
     <message>
@@ -383,11 +261,6 @@ Liste des blocs</translatorcomment>
         <location line="+8"/>
         <location line="+2"/>
         <source>X</source>
-        <translatorcomment>--exact match--
---file: designer_fr.ts--
-Sortie de l&apos;application...
-Sortie de l&apos;application
-Exportation du dessin...</translatorcomment>
         <translation>X</translation>
     </message>
     <message>
@@ -398,11 +271,6 @@ Exportation du dessin...</translatorcomment>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
-        <translatorcomment>--exact match--
---file: qt_fr.ts--
-Indiquer la position de la ligne de cote ou un angle :
-Indiquer la position de la ligne de cote ou un angle
-Indiquer la position [angle/longueur]</translatorcomment>
         <translation>Position</translation>
     </message>
     <message>
@@ -431,11 +299,6 @@ Indiquer la position [angle/longueur]</translatorcomment>
         <location line="+8"/>
         <location line="+2"/>
         <source>Y</source>
-        <translatorcomment>--exact match--
---file: designer_fr.ts--
-&amp;Modifier
-Modifier
-&amp;Calque</translatorcomment>
         <translation>Y</translation>
     </message>
     <message>
@@ -451,10 +314,6 @@ Modifier
         <location filename="../src/core/RViewportEntity.cpp" line="-9"/>
         <location line="+10"/>
         <source>Z</source>
-        <translatorcomment>--google--
-Partage &amp;Horizontal
-Partage Horizontal
-&amp;Horizontale</translatorcomment>
         <translation>Z</translation>
     </message>
     <message>
@@ -468,21 +327,11 @@ Partage Horizontal
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
         <source>Scale</source>
-        <translatorcomment>--exact match--
---file: Scale_fr.ts--
-&amp;Echelle
-Echelle
-Met les entités à l&apos;échelle</translatorcomment>
         <translation>Échelle</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angle</source>
-        <translatorcomment>--exact match--
---file: designer_fr.ts--
-Angle :
-Angle
-Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
         <translation>Angle</translation>
     </message>
     <message>
@@ -514,11 +363,6 @@ Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
         <location filename="../src/core/REntity.cpp" line="-1"/>
         <location filename="../src/core/RObject.cpp" line="+69"/>
         <source>Type</source>
-        <translatorcomment>--exact match--
---file: qt_fr.ts--
-Type de trait :
-Type de trait
-Type ordonnée</translatorcomment>
         <translation>Type</translation>
     </message>
     <message>
@@ -528,20 +372,12 @@ Type ordonnée</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Layer</source>
-        <translatorcomment>--exact match--
---file: AdvancedSelection_fr.ts--
-&amp;Calque
-Liste des calques</translatorcomment>
         <translation>Calque</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+102"/>
         <source>Linetype</source>
-        <translatorcomment>--exact match--
---file: LinetypeSettings_fr.ts--
-Type de ligne par défaut
-Type de ligne</translatorcomment>
         <translation>Type de ligne</translation>
     </message>
     <message>
@@ -553,17 +389,12 @@ Type de ligne</translatorcomment>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
-        <translatorcomment>--google--</translatorcomment>
         <translation>Épaisseur de ligne</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="-2"/>
         <source>Color</source>
-        <translatorcomment>--exact match--
---file: qt_fr.ts--
-Couleurs
-Ouvrir la boîte de dialogue des couleurs</translatorcomment>
         <translation>Couleur</translation>
     </message>
     <message>
@@ -574,7 +405,6 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Draw Order</source>
-        <translatorcomment>--google--</translatorcomment>
         <translation>Ordre de dessin</translation>
     </message>
     <message>
@@ -884,7 +714,6 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
     <message>
         <location filename="../src/core/RGuiAction.cpp" line="+186"/>
         <source>Requires selection</source>
-        <translatorcomment>--google--</translatorcomment>
         <translation>Demande une sélection</translation>
     </message>
 </context>
@@ -923,160 +752,86 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
     <name>RLinetype</name>
     <message>
         <source>By Layer</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Par calque</translatorcomment>
         <translation type="vanished">Par calque</translation>
     </message>
     <message>
         <source>By Block</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Par bloc</translatorcomment>
         <translation type="vanished">Par bloc</translation>
     </message>
     <message>
         <source>Continuous</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Continu</translatorcomment>
         <translation type="vanished">Continu</translation>
     </message>
     <message>
         <source>Dot</source>
-        <translatorcomment>--exact match--
---file: Input_fr.ts--
-Points de la g&amp;rille :
-Points de la g&amp;rille
-Points de la grille :</translatorcomment>
         <translation type="vanished">Point</translation>
     </message>
     <message>
         <source>Dot (small)</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Point (petit)
-Tiret-point (petit)</translatorcomment>
         <translation type="vanished">Point (petit)</translation>
     </message>
     <message>
         <source>Dot (large)</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Point (grand)
-Tiret-point (grand)</translatorcomment>
         <translation type="vanished">Point (grand)</translation>
     </message>
     <message>
         <source>Dash</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Tiret
-Tiret (petit)</translatorcomment>
         <translation type="vanished">Tiret</translation>
     </message>
     <message>
         <source>Dash (small)</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Tiret (petit)</translatorcomment>
         <translation type="vanished">Tiret (petit)</translation>
     </message>
     <message>
         <source>Dash (large)</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Tiret (grand)</translatorcomment>
         <translation type="vanished">Tiret (grand)</translation>
     </message>
     <message>
         <source>Dash Dot</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Tiret-point
-Tiret-point (petit)</translatorcomment>
         <translation type="vanished">Tiret-point</translation>
     </message>
     <message>
         <source>Dash Dot (small)</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Tiret-point (petit)</translatorcomment>
         <translation type="vanished">Tiret-point (petit)</translation>
     </message>
     <message>
         <source>Dash Dot (large)</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Tiret-point (grand)</translatorcomment>
         <translation type="vanished">Tiret-point (grand)</translation>
     </message>
     <message>
         <source>Divide</source>
-        <translatorcomment>--exact match--
---file: Divide_fr.ts--
-&amp;Division
-Division
-Divise les entités</translatorcomment>
         <translation type="vanished">Division</translation>
     </message>
     <message>
         <source>Divide (small)</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Division (petite)</translatorcomment>
         <translation type="vanished">Division (petite)</translation>
     </message>
     <message>
         <source>Divide (large)</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Division (grande)</translatorcomment>
         <translation type="vanished">Division (grande)</translation>
     </message>
     <message>
         <source>Center</source>
-        <translatorcomment>--exact match--
---file: qt_fr.ts--
-&amp;Centre, point, angles
-Centre, point, angles
-Indiquer le centre</translatorcomment>
         <translation type="vanished">Centré</translation>
     </message>
     <message>
         <source>Center (small)</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Centre (petit)</translatorcomment>
         <translation type="vanished">Centre (petit)</translation>
     </message>
     <message>
         <source>Center (large)</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Centre (grand)</translatorcomment>
         <translation type="vanished">Centre (grand)</translation>
     </message>
     <message>
         <source>Border</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Bordure
-Bordure (petite)</translatorcomment>
         <translation type="vanished">Bordure</translation>
     </message>
     <message>
         <source>Border (small)</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Bordure (petite)</translatorcomment>
         <translation type="vanished">Bordure (petite)</translation>
     </message>
     <message>
         <source>Border (large)</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Bordure (grande)</translatorcomment>
         <translation type="vanished">Bordure (grande)</translation>
     </message>
     <message>
@@ -1311,219 +1066,136 @@ Bordure (grande)</translatorcomment>
     <message>
         <location filename="../src/core/RLineweight.cpp" line="+35"/>
         <source>By Layer</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Par calque</translatorcomment>
         <translation>Par calque</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>By Block</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-Par bloc</translatorcomment>
         <translation>Par bloc</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Default</source>
-        <translatorcomment>--exact match--
---file: qt_fr.ts--
-Unité par défaut :
-Unité par défaut
-Valeurs par &amp;défaut</translatorcomment>
         <translation>Défaut</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.00mm</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-0.00mm</translatorcomment>
         <translation>0.00mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.05mm</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-0.05mm</translatorcomment>
         <translation>0.05mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.09mm</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-0.09mm</translatorcomment>
         <translation>0.09mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.13mm (ISO)</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-0.13mm (ISO)</translatorcomment>
         <translation>0,13 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.15mm</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-0.15mm</translatorcomment>
         <translation>0.15mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.18mm (ISO)</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-0.18mm (ISO)</translatorcomment>
         <translation>0,18 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.20mm</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-0.20mm</translatorcomment>
         <translation>0.20mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.25mm (ISO)</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-0.25mm (ISO)</translatorcomment>
         <translation>0,25 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.30mm</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-0.30mm</translatorcomment>
         <translation>0.30mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.35mm (ISO)</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-0.35mm (ISO)</translatorcomment>
         <translation>0,35 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.40mm</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-0.40mm</translatorcomment>
         <translation>0.40mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.50mm (ISO)</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-0.50mm (ISO)</translatorcomment>
         <translation>0,50 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.53mm</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-0.53mm</translatorcomment>
         <translation>0.53mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.60mm</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-0.60mm</translatorcomment>
         <translation>0.60mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.70mm (ISO)</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-0.70mm (ISO)</translatorcomment>
         <translation>0,70 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.80mm</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-0.80mm</translatorcomment>
         <translation>0.80mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>0.90mm</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-0.90mm</translatorcomment>
         <translation>0.90mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.00mm (ISO)</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-1.00mm (ISO)</translatorcomment>
         <translation>1,00 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.06mm</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-1.06mm</translatorcomment>
         <translation>1.06mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.20mm</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-1.20mm</translatorcomment>
         <translation>1.20mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.40mm (ISO)</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-1.40mm (ISO)</translatorcomment>
         <translation>1,40 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>1.58mm</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-1.58mm</translatorcomment>
         <translation>1.58mm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>2.00mm (ISO)</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-2.00mm (ISO)</translatorcomment>
         <translation>2,00 mm (ISO)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>2.11mm</source>
-        <translatorcomment>--exact match--
---file: qcadguiqt_fr.ts--
-1.58mm {2.11m?}</translatorcomment>
         <translation>1.58mm {2.11m?}</translation>
     </message>
 </context>
@@ -1531,11 +1203,6 @@ Valeurs par &amp;défaut</translatorcomment>
     <name>RObject</name>
     <message>
         <source>Custom</source>
-        <translatorcomment>--exact match--
---file: qt_fr.ts--
-Aucun objets de dimension sélectionné avec une position de texte personnalisé.
-Aucun objets de dimension sélectionné avec une position de texte personnalisé
-Personnalisé</translatorcomment>
         <translation type="vanished">Personnalisé</translation>
     </message>
     <message>
@@ -1544,9 +1211,6 @@ Personnalisé</translatorcomment>
     </message>
     <message>
         <source>Handle</source>
-        <translatorcomment>--google--
-Séquence ambiguë %1 non traitée
-Poignée du slider</translatorcomment>
         <translation type="vanished">Poignée</translation>
     </message>
     <message>
@@ -1555,3 +1219,4 @@ Poignée du slider</translatorcomment>
     </message>
 </context>
 </TS>
+

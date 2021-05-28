@@ -367,7 +367,6 @@
     </message>
     <message>
         <source>Block ID</source>
-        <translatorcomment>never shown to user</translatorcomment>
         <translation type="vanished">Block ID</translation>
     </message>
     <message>

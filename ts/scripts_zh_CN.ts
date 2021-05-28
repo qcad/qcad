@@ -4504,7 +4504,6 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
-        <translatorcomment>The original tip text is wrong, it should be &quot;Draw ellipse arc from center, major point, minor point and angles&quot;</translatorcomment>
         <translation>由中心，长轴点，短轴点及角度绘制椭圆弧</translation>
     </message>
 </context>
@@ -4512,19 +4511,16 @@ is already in the list.</source>
     <name>EllipseCPP</name>
     <message>
         <source>&amp;Full Ellipse with Center, Point, Ratio</source>
-        <translatorcomment>tips is wrong, it should be &quot;&amp;Full Ellipse with Center, Points&quot; or &quot;&amp;Full Ellipse with Center, Major Point and Minor Point&quot;</translatorcomment>
         <translation type="vanished">由中心、长轴点、短轴点绘制椭圆(&amp;F)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseCPP/EllipseCPPInit.js" line="+2"/>
         <source>&amp;Ellipse (Center, Point, Ratio)</source>
-        <translatorcomment>The correct tips should be &quot;&amp;Ellipse (Center, Points)&quot; or &quot;&amp;Ellipse (Center, Major Point and Minor Point)&quot;</translatorcomment>
         <translation>椭圆(中心点，长轴，短轴)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw full ellipse from center, major point and ratio</source>
-        <translatorcomment>Tips are also wrong. Programs operation has no &quot;ratio&quot;.</translatorcomment>
         <translation>由中心、长轴点和短轴点绘制椭圆</translation>
     </message>
 </context>

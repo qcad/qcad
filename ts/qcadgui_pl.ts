@@ -6,12 +6,7 @@
     <message>
         <location filename="../src/gui/RColorCombo.cpp" line="+157"/>
         <source>Custom</source>
-        <translatorcomment>--exact match--
---file: qvfb_pl.ts--
-Niestandardowe..
-Niestandardowy
-Własne filtry</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
