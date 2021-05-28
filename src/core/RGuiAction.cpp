@@ -781,6 +781,7 @@ void RGuiAction::updateTransactionListener(RDocument* document, RTransaction* tr
             if (undoText.isEmpty()) {
                 undoText = "-";
             }
+            undoText.replace("\t", " ");
             t.replace(QRegExp("\\[[^\\]]*\\]"), "[" + undoText + "]");
             setText(t);
         }
@@ -793,6 +794,7 @@ void RGuiAction::updateTransactionListener(RDocument* document, RTransaction* tr
             if (redoText.isEmpty()) {
                 redoText = "-";
             }
+            redoText.replace("\t", " ");
             t.replace(QRegExp("\\[[^\\]]*\\]"), "[" + redoText + "]");
             setText(t);
         }
