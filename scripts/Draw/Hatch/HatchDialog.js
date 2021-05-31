@@ -69,6 +69,7 @@ HatchDialog.prototype.show =  function(hatchDataIn) {
     layout.addWidget(view, 0, 0);
     view.setScene(new RGraphicsSceneQt(this.previewDi));
     view.disableGestures();
+    view.setMargin(10);
 
     var patternNames;
     if (RUnit.isMetric(EAction.getDocument().getUnit())) {
