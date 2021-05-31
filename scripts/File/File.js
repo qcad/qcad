@@ -233,7 +233,7 @@ File.getSaveFileName = function(parentWidget, caption, path, filterStrings) {
 /**
  * Show file dialog and let user choose a file to open.
  *
- * \return path and file name chosen by the user
+ * \return Array with [path and file name chosen by the user] and [filter chosen by user]
  */
 File.getOpenFileName = function(parentWidget, caption, dir, filterStrings, noAllFiles) {
     if (isNull(filterStrings)) {
