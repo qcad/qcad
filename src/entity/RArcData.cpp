@@ -62,15 +62,17 @@ QList<RRefPoint> RArcData::getReferencePoints(RS::ProjectionRenderingHint hint) 
 bool RArcData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers) {
     Q_UNUSED(modifiers)
 
+    bool shift = (modifiers & Qt::ShiftModifier)>0;
+
     bool ret = false;
     if (referencePoint.equalsFuzzy(center)) {
         center = targetPoint;
         ret = true;
     } else if (referencePoint.equalsFuzzy(getStartPoint())) {
-        moveStartPoint(targetPoint);
+        moveStartPoint(targetPoint, shift);
         ret = true;
     } else if (referencePoint.equalsFuzzy(getEndPoint())) {
-        moveEndPoint(targetPoint);
+        moveEndPoint(targetPoint, shift);
         ret = true;
     }
     else if (referencePoint.equalsFuzzy(center + RVector(radius, 0)) ||
