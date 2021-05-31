@@ -301,27 +301,45 @@ RS::Side RArc::getSideOfPoint(const RVector& point) const {
     }
 }
 
-void RArc::moveStartPoint(const RVector& pos) {
-    double bulge = getBulge();
-
-    // full circle: trim instead of move:
-    if (bulge < 1.0e-6 || bulge > 1.0e6) {
-        startAngle = center.getAngleTo(pos);
+void RArc::moveStartPoint(const RVector& pos, bool keepRadius) {
+    if (!keepRadius) {
+        RArc a = RArc::createFrom3Points(pos, getMiddlePoint(), getEndPoint());
+        if (a.isReversed()!=isReversed()) {
+            a.reverse();
+        }
+        *this = a;
     }
     else {
-        *this = RArc::createFrom2PBulge(pos, getEndPoint(), bulge);
+        double bulge = getBulge();
+
+        // full circle: trim instead of move:
+        if (bulge < 1.0e-6 || bulge > 1.0e6) {
+            startAngle = center.getAngleTo(pos);
+        }
+        else {
+            *this = RArc::createFrom2PBulge(pos, getEndPoint(), bulge);
+        }
     }
 }
 
-void RArc::moveEndPoint(const RVector& pos) {
-    double bulge = getBulge();
-
-    // full circle: trim instead of move:
-    if (bulge < 1.0e-6 || bulge > 1.0e6) {
-        endAngle = center.getAngleTo(pos);
+void RArc::moveEndPoint(const RVector& pos, bool keepRadius) {
+    if (!keepRadius) {
+        RArc a = RArc::createFrom3Points(pos, getMiddlePoint(), getStartPoint());
+        if (a.isReversed()!=isReversed()) {
+            a.reverse();
+        }
+        *this = a;
     }
     else {
-        *this = RArc::createFrom2PBulge(getStartPoint(), pos, bulge);
+        double bulge = getBulge();
+
+        // full circle: trim instead of move:
+        if (bulge < 1.0e-6 || bulge > 1.0e6) {
+            endAngle = center.getAngleTo(pos);
+        }
+        else {
+            *this = RArc::createFrom2PBulge(getStartPoint(), pos, bulge);
+        }
     }
 }
 

@@ -129,8 +129,8 @@ public:
     virtual double getAngleAt(double distance, RS::From from = RS::FromStart) const;
     virtual RVector getMiddlePoint() const;
 
-    void moveStartPoint(const RVector& pos);
-    void moveEndPoint(const RVector& pos);
+    void moveStartPoint(const RVector& pos, bool keepRadius = true);
+    void moveEndPoint(const RVector& pos, bool keepRadius = true);
     void moveMiddlePoint(const RVector& pos);
     double getBulge() const;
 
