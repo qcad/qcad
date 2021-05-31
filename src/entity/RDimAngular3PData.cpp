@@ -68,8 +68,6 @@ QList<RRefPoint> RDimAngular3PData::getReferencePoints(RS::ProjectionRenderingHi
 }
 
 bool RDimAngular3PData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint, Qt::KeyboardModifiers modifiers) {
-    Q_UNUSED(modifiers)
-
     bool ret = false;
 
     if (referencePoint.equalsFuzzy(center)) {
