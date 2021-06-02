@@ -35,13 +35,13 @@
  */</comment>
 <class>class <macro><name>QCADGUI_EXPORT</name></macro> <name>RMathComboBox</name><super>: <specifier>public</specifier> <name>QComboBox</name></super> <block>{<private type="default">
 
-<decl_stmt><decl><type><name>Q_OBJECT</name></type>
+<function_decl><type><name>Q_OBJECT</name></type>
 
 <comment type="line">// keep extra ';' in place for the benefit of ecmagenerator:</comment>
-<name>Q_PROPERTY</name><argument_list>(<argument><expr><name>bool</name> <name>angle</name> <name>READ</name> <name>isAngle</name> <name>WRITE</name> <name>setAngle</name></expr></argument>)</argument_list>
-<name>Q_PROPERTY</name><argument_list>(<argument><expr><name>bool</name> <name>integer</name> <name>READ</name> <name>isInteger</name> <name>WRITE</name> <name>setInteger</name></expr></argument>)</argument_list>
+<name>Q_PROPERTY</name><parameter_list>(<param><decl><type><name>bool</name> <name>angle</name> <name>READ</name> <name>isAngle</name> <name>WRITE</name></type> <name>setAngle</name></decl></param>)</parameter_list>;</function_decl>
+<constructor_decl><name>Q_PROPERTY</name><parameter_list>(<param><decl><type><name>bool</name> <name>integer</name> <name>READ</name> <name>isInteger</name> <name>WRITE</name></type> <name>setInteger</name></decl></param>)</parameter_list>;</constructor_decl>
 
-public</decl></decl_stmt>:
+</private><public>public:
     <constructor_decl><name>RMathComboBox</name><parameter_list>(<param><decl><type><name>QWidget</name>*</type> <name>parent</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
 
     <function><type><name>RMathLineEdit</name>*</type> <name>getMathLineEdit</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
@@ -85,7 +85,7 @@ public</decl></decl_stmt>:
         <return>return <expr><call><name>getMathLineEdit</name><argument_list>()</argument_list></call>-&gt;<call><name>isSane</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
-</private><public>public slots:
+</public><public>public slots:
     <function><type><name>void</name></type> <name>slotTextChanged</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><call><name>getMathLineEdit</name><argument_list>()</argument_list></call>-&gt;<call><name>slotTextChanged</name><argument_list>(<argument><expr><name>text</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>

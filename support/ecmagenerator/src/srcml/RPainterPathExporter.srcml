@@ -35,10 +35,10 @@
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RPainterPathExporter</name> <super>: <specifier>public</specifier> <name>RExporter</name></super> <block>{<private type="default">
 </private><public>public:
     <constructor><name>RPainterPathExporter</name><parameter_list>()</parameter_list> <member_list>:
-        <call><name>RExporter</name><argument_list>()</argument_list></call>, <call><name>exportZeroLinesAsPoints</name><argument_list>(<argument><expr><name>true</name></expr></argument>)</argument_list></call>, <call><name>ignoreZeroLines</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call> </member_list><block>{ }</block></constructor>
+        <call><name>RExporter</name><argument_list>()</argument_list></call>, <call><name>exportZeroLinesAsPoints</name><argument_list>(<argument><expr><name>true</name></expr></argument>)</argument_list></call>, <call><name>ignoreZeroLines</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call>, <call><name>ignoreLineTypePatternScale</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call>, <call><name>scaleHint</name><argument_list>(<argument><expr>1.0</expr></argument>)</argument_list></call> </member_list><block>{ }</block></constructor>
 
     <constructor><name>RPainterPathExporter</name><parameter_list>(<param><decl><type><name>RDocument</name>&amp;</type> <name>doc</name></decl></param>)</parameter_list> <member_list>:
-        <call><name>RExporter</name><argument_list>(<argument><expr><name>doc</name></expr></argument>)</argument_list></call>, <call><name>exportZeroLinesAsPoints</name><argument_list>(<argument><expr><name>true</name></expr></argument>)</argument_list></call>, <call><name>ignoreZeroLines</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call> </member_list><block>{ }</block></constructor>
+        <call><name>RExporter</name><argument_list>(<argument><expr><name>doc</name></expr></argument>)</argument_list></call>, <call><name>exportZeroLinesAsPoints</name><argument_list>(<argument><expr><name>true</name></expr></argument>)</argument_list></call>, <call><name>ignoreZeroLines</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call>, <call><name>ignoreLineTypePatternScale</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call>, <call><name>scaleHint</name><argument_list>(<argument><expr>1.0</expr></argument>)</argument_list></call> </member_list><block>{ }</block></constructor>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportLineSegment</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>line</name></decl></param>, <param><decl><type><name>double</name></type> <name>angle</name> =<init> <expr><name>RNANDOUBLE</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportPainterPaths</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name>&amp;</type> <name>paths</name></decl></param>, <param><decl><type><name>double</name></type> <name>z</name> =<init> <expr>0.0</expr></init></decl></param>)</parameter_list>;</function_decl>
@@ -69,6 +69,13 @@
     <function><type><name>void</name></type> <name>setIgnoreLineTypePatternScale</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>ignoreLineTypePatternScale</name> = <name>on</name></expr>;</expr_stmt>
     }</block></function>
+    <comment type="block">/**
+     * @brief setScaleHint Set additional pattern scale hint, used for scaling dots in patterns in viewports.
+     * @param s Factor (viewport scale)
+     */</comment>
+    <function><type><name>void</name></type> <name>setScaleHint</name><parameter_list>(<param><decl><type><name>double</name></type> <name>s</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>scaleHint</name> = <name>s</name></expr>;</expr_stmt>
+    }</block></function>
 
     <function_decl><type><name>virtual</name> <name>double</name></type> <name>getLineTypePatternScale</name><parameter_list>(<param><decl><type><name>const</name> <name>RLinetypePattern</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
@@ -77,6 +84,7 @@
     <decl_stmt><decl><type><name>bool</name></type> <name>exportZeroLinesAsPoints</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>ignoreZeroLines</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>ignoreLineTypePatternScale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>scaleHint</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
