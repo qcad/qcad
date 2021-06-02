@@ -14256,7 +14256,7 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1069"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1094"/>
         <source>Restore defaults</source>
         <translation>Palauta oletusarvot</translation>
     </message>

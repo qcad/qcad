@@ -15603,7 +15603,7 @@ dans les résultats de recherche :</translation>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../scripts/WidgetFactory.js" line="+1069"/>
+        <location filename="../scripts/WidgetFactory.js" line="+1094"/>
         <source>Restore defaults</source>
         <translation>Restaurer les valeurs par défaut</translation>
     </message>
