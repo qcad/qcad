@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./scripting/jsapi" filename="RJSWrapper.h"><cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RJSWRAPPER_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RJSWRAPPER_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDebug&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QJSEngine&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QJSValue&gt;</cpp:file></cpp:include>
+
+
+<comment type="block">/**
+ * Base class for all JS wrapper classes.
+ */</comment>
+<class>class <name>RJSWrapper</name> <block>{<private type="default">
+</private><public>public:
+    <constructor><name>RJSWrapper</name><parameter_list>()</parameter_list> <member_list>: <call><name>engine</name><argument_list>(<argument><expr><name>nullptr</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
+
+    <function><type><name>void</name></type> <name>setEngine</name><parameter_list>(<param><decl><type><name>QObject</name>*</type> <name>e</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>engine</name> = (<name>QJSEngine</name>*)<name>e</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>self</name> = <name>engine</name>-&gt;<call><name>evaluate</name><argument_list>(<argument><expr>"self"</expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+</public><public>public:
+    <decl_stmt><decl><type><name>QJSEngine</name>*</type> <name>engine</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QJSValue</name></type> <name>self</name></decl>;</decl_stmt>
+</public>}</block>;</class>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

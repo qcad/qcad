@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./scripting/jsapi" filename="RJSHelper.h"><cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RJSHELPER_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RJSHELPER_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QJSEngine&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QJSValue&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
+
+<function_decl><type><name>QJSValue</name></type> <name>cpp2js</name><parameter_list>(<param><decl><type><name>QJSEngine</name>*</type> <name>engine</name></decl></param>, <param><decl><type><name>bool</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+<function_decl><type><name>QJSValue</name></type> <name>cpp2js</name><parameter_list>(<param><decl><type><name>QJSEngine</name>*</type> <name>engine</name></decl></param>, <param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+<function_decl><type><name>QJSValue</name></type> <name>cpp2js</name><parameter_list>(<param><decl><type><name>QJSEngine</name>*</type> <name>engine</name></decl></param>, <param><decl><type><name>int</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+<function_decl><type><name>QJSValue</name></type> <name>cpp2js</name><parameter_list>(<param><decl><type><name>QJSEngine</name>*</type> <name>engine</name></decl></param>, <param><decl><type><name><name>Qt</name>::<name>MouseButton</name></name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+<function_decl><type><name>QJSValue</name></type> <name>cpp2js</name><parameter_list>(<param><decl><type><name>QJSEngine</name>*</type> <name>engine</name></decl></param>, <param><decl><type><name><name>Qt</name>::<name>MouseButtons</name></name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+<function_decl><type><name>QJSValue</name></type> <name>cpp2js</name><parameter_list>(<param><decl><type><name>QJSEngine</name>*</type> <name>engine</name></decl></param>, <param><decl><type><name><name>Qt</name>::<name>MouseEventFlags</name></name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+
+<function_decl><type><name>QJSValue</name></type> <name>cpp2js</name><parameter_list>(<param><decl><type><name>QJSEngine</name>*</type> <name>engine</name></decl></param>, <param><decl><type><name>const</name> <name>QPoint</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+<function_decl><type><name>QJSValue</name></type> <name>cpp2js</name><parameter_list>(<param><decl><type><name>QJSEngine</name>*</type> <name>engine</name></decl></param>, <param><decl><type><name>const</name> <name>QPointF</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+<function_decl><type><name>QJSValue</name></type> <name>cpp2js</name><parameter_list>(<param><decl><type><name>QJSEngine</name>*</type> <name>engine</name></decl></param>, <param><decl><type><name>const</name> <name>QRect</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+<function_decl><type><name>QJSValue</name></type> <name>cpp2js</name><parameter_list>(<param><decl><type><name>QJSEngine</name>*</type> <name>engine</name></decl></param>, <param><decl><type><name>const</name> <name>QRectF</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+<function_decl><type><name>QJSValue</name></type> <name>cpp2js</name><parameter_list>(<param><decl><type><name>QJSEngine</name>*</type> <name>engine</name></decl></param>, <param><decl><type><name>const</name> <name>QRegion</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+<function_decl><type><name>QJSValue</name></type> <name>cpp2js</name><parameter_list>(<param><decl><type><name>QJSEngine</name>*</type> <name>engine</name></decl></param>, <param><decl><type><name>const</name> <name>QSize</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+
+<function_decl><type><name>QJSValue</name></type> <name>cpp2js</name><parameter_list>(<param><decl><type><name>QJSEngine</name>*</type> <name>engine</name></decl></param>, <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+
+<function_decl><type><name>QJSValue</name></type> <name>cpp2js</name><parameter_list>(<param><decl><type><name>QJSEngine</name>*</type> <name>engine</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+
+<function_decl><type><name>bool</name></type> <name>js2cpp_bool</name><parameter_list>(<param><decl><type><name>const</name> <name>QJSValue</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+<function_decl><type><name>int</name></type> <name>js2cpp_int</name><parameter_list>(<param><decl><type><name>const</name> <name>QJSValue</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+<function_decl><type><name>double</name></type> <name>js2cpp_double</name><parameter_list>(<param><decl><type><name>const</name> <name>QJSValue</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+<function_decl><type><name>qreal</name></type> <name>js2cpp_qreal</name><parameter_list>(<param><decl><type><name>const</name> <name>QJSValue</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+
+<function_decl><type><name>RVector</name></type> <name>js2cpp_RVector</name><parameter_list>(<param><decl><type><name>const</name> <name>QJSValue</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+
+<function_decl><type><name>QPoint</name></type> <name>js2cpp_QPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>QJSValue</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+<function_decl><type><name>QPointF</name></type> <name>js2cpp_QPointF</name><parameter_list>(<param><decl><type><name>const</name> <name>QJSValue</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+<function_decl><type><name>QRegion</name></type> <name>js2cpp_QRegion</name><parameter_list>(<param><decl><type><name>const</name> <name>QJSValue</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+<function_decl><type><name>QSize</name></type> <name>js2cpp_QSize</name><parameter_list>(<param><decl><type><name>const</name> <name>QJSValue</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+
+<function_decl><type><name>QWidget</name>*</type> <name>js2cpp_QWidget</name><parameter_list>(<param><decl><type><name>const</name> <name>QJSValue</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+
+<function_decl><type><name><name>Qt</name>::<name>WindowFlags</name></name></type> <name>js2cpp_Qt_WindowFlags</name><parameter_list>(<param><decl><type><name>const</name> <name>QJSValue</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+<function_decl><type><name><name>Qt</name>::<name>MouseButton</name></name></type> <name>js2cpp_Qt_MouseButton</name><parameter_list>(<param><decl><type><name>const</name> <name>QJSValue</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+<function_decl><type><name><name>Qt</name>::<name>MouseButtons</name></name></type> <name>js2cpp_Qt_MouseButtons</name><parameter_list>(<param><decl><type><name>const</name> <name>QJSValue</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+<function_decl><type><name><name>Qt</name>::<name>KeyboardModifiers</name></name></type> <name>js2cpp_Qt_KeyboardModifiers</name><parameter_list>(<param><decl><type><name>const</name> <name>QJSValue</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+<function_decl><type><name><name>Qt</name>::<name>MouseEventSource</name></name></type> <name>js2cpp_Qt_MouseEventSource</name><parameter_list>(<param><decl><type><name>const</name> <name>QJSValue</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+<function_decl><type><name><name>QEvent</name>::<name>Type</name></name></type> <name>js2cpp_QEvent_Type</name><parameter_list>(<param><decl><type><name>const</name> <name>QJSValue</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+
+<function_decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>js2cpp_QList_RVector</name><parameter_list>(<param><decl><type><name>const</name> <name>QJSValue</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+<function_decl><type><name>QList<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name></type> <name>js2cpp_QList_double</name><parameter_list>(<param><decl><type><name>const</name> <name>QJSValue</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+
+<comment type="line">//Qt::ApplicationAttribute js2cpp_Qt_ApplicationAttribute(const QJSValue&amp; v);</comment>
+
+<comment type="line">//QFileInfo js2cpp_QFileInfo(const QJSValue&amp; v);</comment>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

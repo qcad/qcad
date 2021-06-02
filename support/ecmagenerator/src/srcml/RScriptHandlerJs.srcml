@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./scripting/jsapi" filename="RScriptHandlerJs.h"><comment type="block">/**
+ * Copyright (c) 2021 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RSCRIPTHANDLERJS_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RSCRIPTHANDLERJS_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"jsapi_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QJSEngine&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMainWindow&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RScriptHandler.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocumentInterface.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGuiAction.h"</cpp:file></cpp:include>
+
+
+<comment type="block">/**
+ * Script handler implementation for JS scripts, based on QJSEngine..
+ *
+ * \ingroup js
+ */</comment>
+<class>class <macro><name>QCADJSAPI_EXPORT</name></macro> <name>RScriptHandlerJs</name><super>: <specifier>public</specifier> <name>QObject</name>, <specifier>public</specifier> <name>RScriptHandler</name></super> <block>{<private type="default">
+<macro><name>Q_OBJECT</name></macro>
+
+</private><public>public:
+    <constructor_decl><name>RScriptHandlerJs</name><parameter_list>()</parameter_list>;</constructor_decl>
+    <destructor_decl><specifier>virtual</specifier> <name>~RScriptHandlerJs</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <function_decl><type><name>static</name> <name>RScriptHandler</name>*</type> <name>factory</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>getSupportedFileExtensionsStatic</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>getSupportedFileExtensions</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <decl_stmt><decl><type><name>virtual</name> <name>void</name></type> <name>doScript</name><argument_list>(<argument><expr><name>const</name> <name>QString</name>&amp; <name>scriptFile</name></expr></argument>,<argument><expr><name>const</name> <name>QStringList</name>&amp; <name>arguments</name> = <call><name>QStringList</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>virtual</name> <name>QVariant</name></type> <name>eval</name><argument_list>(<argument><expr><name>const</name> <name>QString</name>&amp; <name>script</name></expr></argument>, <argument><expr><name>const</name> <name>QString</name>&amp; <name>fileName</name> = <call><name>QString</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>virtual</name> <name>QVariant</name></type> <name>evalGlobal</name><argument_list>(<argument><expr><name>const</name> <name>QString</name>&amp; <name>script</name></expr></argument>, <argument><expr><name>const</name> <name>QString</name>&amp; <name>fileName</name> = <call><name>QString</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></decl>;</decl_stmt>
+    <function_decl><type><name>virtual</name> <name>RFileImporterAdapter</name>*</type> <name>createFileImporter</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>className</name></decl></param>, <param><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>isRunning</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>abort</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>hasUncaughtExceptions</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>createActionDocumentLevel</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scriptFile</name></decl></param>,
+            <param><decl><type><name>RGuiAction</name>*</type> <name>guiAction</name></decl></param>, <param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>createActionApplicationLevel</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scriptFile</name></decl></param>,
+            <param><decl><type><name>RGuiAction</name>*</type> <name>guiAction</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="line">//Q_INVOKABLE void include(const QString&amp; fileName);</comment>
+
+    <function_decl><type><name>void</name></type> <name>markIncluded</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>className</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isIncluded</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>className</name></decl></param>)</parameter_list>;</function_decl>
+    <decl_stmt><decl><type><name>Q_INVOKABLE</name> <name>bool</name></type> <name>include</name><argument_list>(<argument><expr><name>const</name> <name>QString</name>&amp; <name>fileName</name></expr></argument>, <argument><expr><name>QString</name> <name>trContext</name> = <call><name>QString</name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><name>bool</name> <name>force</name> = <name>false</name></expr></argument>)</argument_list></decl>;</decl_stmt>
+
+</public><private>private:
+    <decl_stmt><decl><type><name>QJSEngine</name>*</type> <name>engine</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>alwaysLoadScripts</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RScriptHandlerJs*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif> <comment type="line">// RJSSCRIPTHANDLER_H</comment>
+</unit>

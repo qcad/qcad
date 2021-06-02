@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./scripting/jsapi" filename="RJSWrapperObj.h"><cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RJSWRAPPERQOBJECT_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RJSWRAPPERQOBJECT_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QQmlEngine&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RJSWrapper.h"</cpp:file></cpp:include>
+
+<comment type="block">/**
+ * Base class for all JS wrapper classes that are not based on QObject.
+ */</comment>
+<class>class <name>RJSWrapperObj</name> <super>: <specifier>public</specifier> <name>QObject</name>, <specifier>public</specifier> <name>RJSWrapper</name></super> <block>{<private type="default">
+    <macro><name>Q_OBJECT</name></macro>
+
+</private><public>public:
+    <constructor><name>RJSWrapperObj</name><parameter_list>()</parameter_list> <block>{}</block></constructor>
+
+    <function><type><name>void</name></type> <name>setEngine</name><parameter_list>(<param><decl><type><name>QObject</name>*</type> <name>e</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RJSWrapper::setEngine</name><parameter_list>(<param><decl><type><name>e</name></type></decl></param>)</parameter_list>;</constructor_decl>
+
+        <comment type="line">// set by default:</comment>
+        <comment type="line">//QQmlEngine::setObjectOwnership(this, QQmlEngine::JavaScriptOwnership);</comment>
+    }</block></function>
+</public>}</block>;</class>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

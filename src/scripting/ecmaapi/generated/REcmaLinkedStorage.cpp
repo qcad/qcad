@@ -227,8 +227,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, getBackStorage, "getBackStorage");
             
-            REcmaHelper::registerFunction(&engine, proto, getStorage, "getStorage");
-            
         engine.setDefaultPrototype(
             qMetaTypeId<RLinkedStorage*>(), *proto);
 
@@ -5626,55 +5624,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLinkedStorage::getBackStorage", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaLinkedStorage::getStorage
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaLinkedStorage::getStorage", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getStorage";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RLinkedStorage* self = 
-                        getSelf("getStorage", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'RStorage *'
-    RStorage * cppResult =
-        
-               self->getStorage();
-        // return type: RStorage *
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getStorage().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaLinkedStorage::getStorage", context, engine);
             return result;
         }
          QScriptValue REcmaLinkedStorage::toString
