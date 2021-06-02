@@ -194,6 +194,31 @@ WidgetFactory.getKeyString = function(group, obj) {
     }
 };
 
+WidgetFactory.saveSize = function(widget) {
+    if (!widget) {
+        return;
+    }
+    var name = widget.objectName;
+    if (name.length===0) {
+        return;
+    }
+    RSettings.setValue(name + "/Width", widget.width);
+    RSettings.setValue(name + "/Height", widget.height);
+};
+
+WidgetFactory.restoreSize = function(widget) {
+    if (!widget) {
+        return;
+    }
+    var name = widget.objectName;
+    if (name.length===0) {
+        return;
+    }
+    var w = RSettings.getIntValue(name + "/Width", widget.width);
+    var h = RSettings.getIntValue(name + "/Height", widget.height);
+    widget.resize(w, h);
+};
+
 /**
  * Saves the current state of the given \c widget and all its child widgets.
  *
