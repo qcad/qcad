@@ -43,6 +43,13 @@
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QCheckBox" name="UTF8">
+        <property name="text">
+         <string>Decode strings in DXF/DWG as UTF-8 (experimental)</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>
