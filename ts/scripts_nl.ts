@@ -11422,6 +11422,11 @@ getoond in zoekresultaten:</translation>
         <translation>Sta het openen van nulgroottebestanden toe (bijv. online bestanden die niet gesynchroniseerd zijn met de schijf)</translation>
     </message>
     <message>
+        <location line="+7"/>
+        <source>Decode strings in DXF/DWG as UTF-8 (experimental)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+10"/>
         <source>Saving</source>
         <translation>Opslaan</translation>

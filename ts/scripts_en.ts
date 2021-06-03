@@ -11281,6 +11281,11 @@ shown in search results:</translation>
         <translation>Allow opening of zero size files (e.g. online files that are not synched to disk)</translation>
     </message>
     <message>
+        <location line="+7"/>
+        <source>Decode strings in DXF/DWG as UTF-8 (experimental)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+10"/>
         <source>Saving</source>
         <translation>Saving</translation>

@@ -12639,6 +12639,11 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Consentire l&apos;apertura di file di dimensioni zero (ad es. file online non sincronizzati su disco)</translation>
     </message>
     <message>
+        <location line="+7"/>
+        <source>Decode strings in DXF/DWG as UTF-8 (experimental)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+10"/>
         <source>Saving</source>
         <translation>Salva</translation>

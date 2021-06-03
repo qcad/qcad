@@ -12512,6 +12512,11 @@ en los resultados de búsqueda:</translation>
         <translation>Permitir la apertura de archivos de tamaño cero (por ejemplo, archivos en línea que no están sincronizados con el disco)</translation>
     </message>
     <message>
+        <location line="+7"/>
+        <source>Decode strings in DXF/DWG as UTF-8 (experimental)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+10"/>
         <source>Saving</source>
         <translation>Guardar</translation>
