@@ -4129,9 +4129,6 @@ již v seznamu je.</translation>
         <source>Added new layer : %1</source>
         <translation type="unfinished">Přidána nová vrstva : %1</translation>
     </message>
-</context>
-<context>
-    <name>DrawFromCSVInit</name>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
@@ -4141,6 +4138,17 @@ již v seznamu je.</translation>
         <location line="+7"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation type="unfinished">Kreslí entity na základě textových záznamů v souboru CSV</translation>
+    </message>
+</context>
+<context>
+    <name>DrawFromCSVInit</name>
+    <message>
+        <source>&amp;Draw from CSV</source>
+        <translation type="obsolete">&amp;Kreslení z CSV</translation>
+    </message>
+    <message>
+        <source>Draws entities based on textual entries in a CSV file</source>
+        <translation type="obsolete">Kreslí entity na základě textových záznamů v souboru CSV</translation>
     </message>
 </context>
 <context>

@@ -4469,9 +4469,6 @@ is already in the list.</source>
         <source>Added new layer : %1</source>
         <translation>Aggiunto un nuovo livello: %1</translation>
     </message>
-</context>
-<context>
-    <name>DrawFromCSVInit</name>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
@@ -4481,6 +4478,17 @@ is already in the list.</source>
         <location line="+7"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation>Disegna entità basate su voci testuali in un file CSV</translation>
+    </message>
+</context>
+<context>
+    <name>DrawFromCSVInit</name>
+    <message>
+        <source>&amp;Draw from CSV</source>
+        <translation type="vanished">&amp;Disegna da CSV</translation>
+    </message>
+    <message>
+        <source>Draws entities based on textual entries in a CSV file</source>
+        <translation type="vanished">Disegna entità basate su voci testuali in un file CSV</translation>
     </message>
 </context>
 <context>
@@ -12641,7 +12649,7 @@ mostrati nei risultati di ricerca:</translation>
     <message>
         <location line="+7"/>
         <source>Decode strings in DXF/DWG as UTF-8 (experimental)</source>
-        <translation type="unfinished"></translation>
+        <translation>Decodifica le stringhe in DXF/DWG come UTF-8 (sperimentale)</translation>
     </message>
     <message>
         <location line="+10"/>

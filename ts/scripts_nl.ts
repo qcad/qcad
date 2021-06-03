@@ -4185,18 +4185,26 @@ is al in de lijst.</translation>
         <source>Added new layer : %1</source>
         <translation>Nieuwe laag toegevoegd : %1</translation>
     </message>
-</context>
-<context>
-    <name>DrawFromCSVInit</name>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
-        <translation>&amp;Tekenen uit CSV</translation>
+        <translation>&amp;Tekenen van CSV</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation>Tekent objecten gebaseerd op tekstuele gegevens in een CSV-bestand</translation>
+    </message>
+</context>
+<context>
+    <name>DrawFromCSVInit</name>
+    <message>
+        <source>&amp;Draw from CSV</source>
+        <translation type="vanished">&amp;Tekenen uit CSV</translation>
+    </message>
+    <message>
+        <source>Draws entities based on textual entries in a CSV file</source>
+        <translation type="vanished">Tekent objecten gebaseerd op tekstuele gegevens in een CSV-bestand</translation>
     </message>
 </context>
 <context>
@@ -11424,7 +11432,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location line="+7"/>
         <source>Decode strings in DXF/DWG as UTF-8 (experimental)</source>
-        <translation type="unfinished"></translation>
+        <translation>Decodeer tekenreeksen in DXF/DWG als UTF-8 (experimenteel)</translation>
     </message>
     <message>
         <location line="+10"/>

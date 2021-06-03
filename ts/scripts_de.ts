@@ -4642,18 +4642,26 @@ ist bereits in der Liste.</translation>
         <source>Added new layer : %1</source>
         <translation>Neue Layer hinzugefügt: %1</translation>
     </message>
-</context>
-<context>
-    <name>DrawFromCSVInit</name>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
-        <translation>&amp;Zeichnen aus CSV</translation>
+        <translation>&amp;Zeichnen von CSV</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation>Zeichnet Objekte basierend auf textuellen Einträgen in einer CSV-Datei</translation>
+    </message>
+</context>
+<context>
+    <name>DrawFromCSVInit</name>
+    <message>
+        <source>&amp;Draw from CSV</source>
+        <translation type="vanished">&amp;Zeichnen aus CSV</translation>
+    </message>
+    <message>
+        <source>Draws entities based on textual entries in a CSV file</source>
+        <translation type="vanished">Zeichnet Objekte basierend auf textuellen Einträgen in einer CSV-Datei</translation>
     </message>
 </context>
 <context>
@@ -13562,7 +13570,7 @@ nicht öffnen.
     <message>
         <location line="+7"/>
         <source>Decode strings in DXF/DWG as UTF-8 (experimental)</source>
-        <translation type="unfinished"></translation>
+        <translation>Strings in DXF/DWG als UTF-8 dekodieren (experimentell)</translation>
     </message>
     <message>
         <location line="+10"/>

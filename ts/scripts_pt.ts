@@ -4247,18 +4247,26 @@ já se encontra na lista.</translation>
         <source>Added new layer : %1</source>
         <translation>Adicionada nova camada : %1</translation>
     </message>
-</context>
-<context>
-    <name>DrawFromCSVInit</name>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
-        <translation>&amp;Draw de CSV</translation>
+        <translation>&amp;Desenho de CSV</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation>Desenha entidades com base em entradas textuais em um arquivo CSV</translation>
+    </message>
+</context>
+<context>
+    <name>DrawFromCSVInit</name>
+    <message>
+        <source>&amp;Draw from CSV</source>
+        <translation type="vanished">&amp;Draw de CSV</translation>
+    </message>
+    <message>
+        <source>Draws entities based on textual entries in a CSV file</source>
+        <translation type="vanished">Desenha entidades com base em entradas textuais em um arquivo CSV</translation>
     </message>
 </context>
 <context>
@@ -11649,7 +11657,7 @@ nos resultados de busca:</translation>
     <message>
         <location line="+7"/>
         <source>Decode strings in DXF/DWG as UTF-8 (experimental)</source>
-        <translation type="unfinished"></translation>
+        <translation>Decodificar cordas em DXF/DWG como UTF-8 (experimental)</translation>
     </message>
     <message>
         <location line="+10"/>

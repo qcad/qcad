@@ -4041,9 +4041,6 @@ jest już na liście.</translation>
         <source>Added new layer : %1</source>
         <translation type="unfinished">Dodano nową warstwę : %1</translation>
     </message>
-</context>
-<context>
-    <name>DrawFromCSVInit</name>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
@@ -4053,6 +4050,17 @@ jest już na liście.</translation>
         <location line="+7"/>
         <source>Draws entities based on textual entries in a CSV file</source>
         <translation type="unfinished">Rysuje elementy na podstawie wpisów tekstowych w pliku CSV</translation>
+    </message>
+</context>
+<context>
+    <name>DrawFromCSVInit</name>
+    <message>
+        <source>&amp;Draw from CSV</source>
+        <translation type="obsolete">&amp;Rysuj z CSV</translation>
+    </message>
+    <message>
+        <source>Draws entities based on textual entries in a CSV file</source>
+        <translation type="obsolete">Rysuje elementy na podstawie wpisów tekstowych w pliku CSV</translation>
     </message>
 </context>
 <context>

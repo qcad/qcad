@@ -4231,9 +4231,6 @@ už existuje v zozname.</translation>
         <source>Added new layer : %1</source>
         <translation type="unfinished"></translation>
     </message>
-</context>
-<context>
-    <name>DrawFromCSVInit</name>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
