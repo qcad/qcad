@@ -221,6 +221,7 @@ public:
     bool isParentLayerLocked(RLayer::Id layerId) const;
     bool isParentLayerLocked(const RLayer& layer) const;
 
+    bool isEntity(RObject::Id objectId) const;
     bool isEntityEditable(REntity::Id entityId) const;
     //bool isEntityLayerLocked(REntity::Id entityId) const;
 

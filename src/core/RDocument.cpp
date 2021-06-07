@@ -2305,6 +2305,14 @@ bool RDocument::isParentLayerLocked(const RLayer& layer) const {
     return storage.isParentLayerLocked(layer);
 }
 
+bool RDocument::isEntity(RObject::Id entityId) const {
+    QSharedPointer<REntity> entity = queryEntityDirect(entityId);
+    if (entity.isNull()) {
+        return false;
+    }
+    return true;
+}
+
 bool RDocument::isEntityEditable(REntity::Id entityId) const {
     QSharedPointer<REntity> entity = queryEntityDirect(entityId);
     if (entity.isNull()) {
