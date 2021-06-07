@@ -222,6 +222,7 @@
     <function_decl><type><name>bool</name></type> <name>isParentLayerLocked</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>isParentLayerLocked</name><parameter_list>(<param><decl><type><name>const</name> <name>RLayer</name>&amp;</type> <name>layer</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function_decl><type><name>bool</name></type> <name>isEntity</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>objectId</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>isEntityEditable</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <comment type="line">//bool isEntityLayerLocked(REntity::Id entityId) const;</comment>
 

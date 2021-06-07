@@ -736,6 +736,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="isEntity" cppName="isEntity" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RObject::Id" typeName="RObject::Id"
+        name="objectId" isConst="false" />
+      </variant>
+    </method>
     <method name="isEntityEditable" cppName="isEntityEditable"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
