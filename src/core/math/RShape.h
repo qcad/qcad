@@ -379,6 +379,7 @@ public:
 
     virtual QSharedPointer<RShape> getTransformed(const QTransform& transform) const = 0;
 
+    static QList<QSharedPointer<RShape> > getOrderedShapes(const QList<QSharedPointer<RShape> >& shapes);
     static bool order(QList<QList<QSharedPointer<RShape> > >& boundary);
 
     static QList<RVector> getIntersectionPointsLL(const RLine& line1,
