@@ -215,6 +215,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isParentLayerLocked, "isParentLayerLocked");
             
+            REcmaHelper::registerFunction(&engine, proto, isEntity, "isEntity");
+            
             REcmaHelper::registerFunction(&engine, proto, isEntityEditable, "isEntityEditable");
             
             REcmaHelper::registerFunction(&engine, proto, isLayerOff, "isLayerOff");
@@ -7652,6 +7654,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::isParentLayerLocked", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::isEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::isEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::isEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("isEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RObject::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RObject::Id
+                    a0 =
+                    (RObject::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isEntity(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.isEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::isEntity", context, engine);
             return result;
         }
          QScriptValue
