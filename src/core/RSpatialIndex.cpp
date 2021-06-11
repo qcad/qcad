@@ -125,6 +125,15 @@ QMap<int, QSet<int> > RSpatialIndex::queryContained(const RBox& b,
     );
 }
 
+QList<int> RSpatialIndex::queryContainedIds(
+    double x1, double y1, double z1,
+    double x2, double y2, double z2,
+    RSpatialIndexVisitor* dataVisitor) {
+
+    QMap<int, QSet<int> > res = queryContained(x1, y1, z1, x2, y2, z2, dataVisitor);
+    return res.keys();
+}
+
 /**
  * Convenience implementation for scripts.
  */
