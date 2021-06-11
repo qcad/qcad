@@ -92,6 +92,12 @@
             
             REcmaHelper::registerFunction(&engine, proto, getVectorProperties, "getVectorProperties");
             
+            REcmaHelper::registerFunction(&engine, proto, getPolyline, "getPolyline");
+            
+            REcmaHelper::registerFunction(&engine, proto, getOrientation, "getOrientation");
+            
+            REcmaHelper::registerFunction(&engine, proto, reverse, "reverse");
+            
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
             
             REcmaHelper::registerFunction(&engine, proto, getLength, "getLength");
@@ -594,6 +600,153 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerTriangle::getVectorProperties", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerTriangle::getPolyline
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerTriangle::getPolyline", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTriangle::getPolyline";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTriangle* self = 
+                        getSelf("getPolyline", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RPolyline'
+    RPolyline cppResult =
+        
+               self->getPolyline();
+        // return type: RPolyline
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.getPolyline().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerTriangle::getPolyline", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerTriangle::getOrientation
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerTriangle::getOrientation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTriangle::getOrientation";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTriangle* self = 
+                        getSelf("getOrientation", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::Orientation'
+    RS::Orientation cppResult =
+        
+               self->getOrientation();
+        // return type: RS::Orientation
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.getOrientation().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerTriangle::getOrientation", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerTriangle::reverse
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerTriangle::reverse", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTriangle::reverse";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTriangle* self = 
+                        getSelf("reverse", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->reverse();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.reverse().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerTriangle::reverse", context, engine);
             return result;
         }
          QScriptValue

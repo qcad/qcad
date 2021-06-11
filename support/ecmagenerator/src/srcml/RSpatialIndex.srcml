@@ -195,6 +195,11 @@
         <param><decl><type><name>RSpatialIndexVisitor</name>*</type> <name>dataVisitor</name>=<init><expr><name>NULL</name></expr></init></decl></param>
     )</parameter_list>;</function_decl>
 
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name></type> <name>queryContainedIds</name><parameter_list>(
+        <param><decl><type><name>double</name></type> <name>x1</name></decl></param>, <param><decl><type><name>double</name></type> <name>y1</name></decl></param>, <param><decl><type><name>double</name></type> <name>z1</name></decl></param>,
+        <param><decl><type><name>double</name></type> <name>x2</name></decl></param>, <param><decl><type><name>double</name></type> <name>y2</name></decl></param>, <param><decl><type><name>double</name></type> <name>z2</name></decl></param>,
+        <param><decl><type><name>RSpatialIndexVisitor</name>*</type> <name>dataVisitor</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
     <comment type="block">/**
      * Queries the index for closest neighbor items.
      *

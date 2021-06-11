@@ -90,6 +90,12 @@
             
             REcmaHelper::registerFunction(&engine, proto, getVectorProperties, "getVectorProperties");
             
+            REcmaHelper::registerFunction(&engine, proto, getPolyline, "getPolyline");
+            
+            REcmaHelper::registerFunction(&engine, proto, getOrientation, "getOrientation");
+            
+            REcmaHelper::registerFunction(&engine, proto, reverse, "reverse");
+            
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
             
             REcmaHelper::registerFunction(&engine, proto, getLength, "getLength");
@@ -597,6 +603,153 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTriangle::getVectorProperties", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTriangle::getPolyline
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTriangle::getPolyline", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::getPolyline";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTriangle* self = 
+                        getSelf("getPolyline", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RPolyline'
+    RPolyline cppResult =
+        
+               self->getPolyline();
+        // return type: RPolyline
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.getPolyline().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTriangle::getPolyline", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTriangle::getOrientation
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTriangle::getOrientation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::getOrientation";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTriangle* self = 
+                        getSelf("getOrientation", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::Orientation'
+    RS::Orientation cppResult =
+        
+               self->getOrientation();
+        // return type: RS::Orientation
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.getOrientation().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTriangle::getOrientation", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTriangle::reverse
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTriangle::reverse", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::reverse";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTriangle* self = 
+                        getSelf("reverse", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->reverse();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.reverse().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTriangle::reverse", context, engine);
             return result;
         }
          QScriptValue

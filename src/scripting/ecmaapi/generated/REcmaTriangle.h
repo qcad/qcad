@@ -67,6 +67,15 @@
         getVectorProperties
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getPolyline
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getOrientation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        reverse
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         createArrow
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

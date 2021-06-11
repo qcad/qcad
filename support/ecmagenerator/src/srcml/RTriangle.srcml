@@ -27,6 +27,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RShape.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLine.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPolyline.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RBox</name>;</class_decl>
 
@@ -61,6 +62,9 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setZ</name><parameter_list>(<param><decl><type><name>double</name></type> <name>z</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getVectorProperties</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RPolyline</name></type> <name>getPolyline</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name><name>RS</name>::<name>Orientation</name></name></type> <name>getOrientation</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>reverse</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>RTriangle</name></type> <name>createArrow</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>position</name></decl></param>, <param><decl><type><name>double</name></type> <name>direction</name></decl></param>, <param><decl><type><name>double</name></type> <name>size</name></decl></param>)</parameter_list>;</function_decl>
 
