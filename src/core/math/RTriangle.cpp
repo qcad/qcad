@@ -35,7 +35,6 @@ RTriangle::RTriangle() {
  * Creates a triangle with the given corners.
  */
 RTriangle::RTriangle(const RVector& p1, const RVector& p2, const RVector& p3) {
-
     corner[0] = p1;
     corner[1] = p2;
     corner[2] = p3;
@@ -52,6 +51,33 @@ void RTriangle::setZ(double z) {
 
 QList<RVector> RTriangle::getVectorProperties() const {
     return QList<RVector>() << corner[0] << corner[1] << corner[2];
+}
+
+RPolyline RTriangle::getPolyline() const {
+    QList<RVector> vertices;
+    vertices << corner[0];
+    vertices << corner[1];
+    vertices << corner[2];
+    return RPolyline(vertices, true);
+}
+
+RS::Orientation RTriangle::getOrientation() const {
+    double val = (corner[1].y - corner[0].y) * (corner[2].x - corner[1].x) -
+                 (corner[1].x - corner[0].x) * (corner[2].y - corner[1].y);
+
+    if (val>0.0) {
+        return RS::CW;
+    }
+    else {
+        return RS::CCW;
+    }
+}
+
+bool RTriangle::reverse() {
+    RVector dummy = corner[0];
+    corner[0] = corner[2];
+    corner[2] = dummy;
+    return true;
 }
 
 RTriangle RTriangle::createArrow(const RVector& position, double direction, double arrowSize) {

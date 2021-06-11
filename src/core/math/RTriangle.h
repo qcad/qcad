@@ -26,6 +26,7 @@
 #include "RShape.h"
 #include "RVector.h"
 #include "RLine.h"
+#include "RPolyline.h"
 
 class RBox;
 
@@ -60,6 +61,9 @@ public:
     virtual void setZ(double z);
 
     virtual QList<RVector> getVectorProperties() const;
+    RPolyline getPolyline() const;
+    RS::Orientation getOrientation() const;
+    virtual bool reverse();
 
     static RTriangle createArrow(const RVector& position, double direction, double size);
 
