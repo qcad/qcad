@@ -25,9 +25,12 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QRectF&gt;</cpp:file></cpp:include>
 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RShape.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTriangle.h"</cpp:file></cpp:include>
+<comment type="line">//#include "RTriangle.h"</comment>
 
+<class_decl>class <name>RLine</name>;</class_decl>
+<class_decl>class <name>RTriangle</name>;</class_decl>
 <class_decl>class <name>RPolyline</name>;</class_decl>
 
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_RBOX</name> <name>RBox</name>()</cpp:define>

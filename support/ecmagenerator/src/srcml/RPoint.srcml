@@ -27,6 +27,8 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RBox.h"</cpp:file></cpp:include>
 
+<class_decl>class <name>RLine</name>;</class_decl>
+
 <comment type="block">/**
  * Low-level mathematical representation of a point.
  *

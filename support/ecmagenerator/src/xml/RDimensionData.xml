@@ -353,6 +353,25 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
     </method>
+    <method name="setDimtxt" cppName="setDimtxt" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="t"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getDimlunit" cppName="getDimlunit"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="setDimlunit" cppName="setDimlunit"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="l" isConst="false" />
+      </variant>
+    </method>
     <method name="useArchTick" cppName="useArchTick"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

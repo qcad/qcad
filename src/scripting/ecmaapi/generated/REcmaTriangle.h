@@ -94,6 +94,9 @@
         setCorner
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setCorners
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getEndPoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

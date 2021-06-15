@@ -7,6 +7,10 @@
 
         // forwards declarations mapped to includes
         
+                #include "RLine.h"
+            
+                #include "RTriangle.h"
+            
                 #include "RPolyline.h"
             
             

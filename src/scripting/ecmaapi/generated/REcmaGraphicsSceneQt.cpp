@@ -9,6 +9,8 @@
         
                 #include "RGraphicsViewImage.h"
             
+                #include "RTriangle.h"
+            
             
         // includes for base ecma wrapper classes
         
