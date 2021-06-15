@@ -21,6 +21,7 @@
 #include "RArc.h"
 #include "RCircle.h"
 #include "RBox.h"
+#include "RLine.h"
 #include "RMath.h"
 #include "RPolyline.h"
 

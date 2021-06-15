@@ -198,6 +198,15 @@ public:
     double getDimasz() const;
     double getDimgap() const;
     double getDimtxt() const;
+    void setDimtxt(double t) {
+        dimtxtOverride = t;
+        update();
+    }
+    int getDimlunit() const;
+    void setDimlunit(int l) {
+        dimlunitOverride = l;
+        update();
+    }
     bool useArchTick() const;
     bool hasCustomTextPosition() const;
     void setCustomTextPosition(bool on);
@@ -275,6 +284,8 @@ protected:
 
     double linearFactor;
     double dimScaleOverride;
+    double dimtxtOverride;
+    int dimlunitOverride;
     bool arrow1Flipped;
     bool arrow2Flipped;
 

@@ -31,6 +31,8 @@
 
 #include "RPolyline.h"
 
+class RLine;
+
 #ifndef R_NO_OPENNURBS
 #include "opennurbs/opennurbs.h"
 #endif

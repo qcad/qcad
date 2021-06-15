@@ -135,6 +135,12 @@ void RTriangle::setCorner(int i, const RVector& p) {
     corner[i] = p;
 }
 
+void RTriangle::setCorners(const RVector& c1, const RVector& c2, const RVector& c3) {
+    corner[0] = c1;
+    corner[1] = c2;
+    corner[2] = c3;
+}
+
 double RTriangle::getDistanceTo(const RVector& point, bool limited, double strictRange) const {
     Q_UNUSED(strictRange)
 

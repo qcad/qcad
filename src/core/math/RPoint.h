@@ -26,6 +26,8 @@
 #include "RVector.h"
 #include "RBox.h"
 
+class RLine;
+
 /**
  * Low-level mathematical representation of a point.
  *

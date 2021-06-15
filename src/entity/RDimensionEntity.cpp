@@ -20,6 +20,7 @@
 #include "RExporter.h"
 #include "RPluginLoader.h"
 #include "RStorage.h"
+#include "RTriangle.h"
 
 RPropertyTypeId RDimensionEntity::PropertyCustom;
 RPropertyTypeId RDimensionEntity::PropertyHandle;

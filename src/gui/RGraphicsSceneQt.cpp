@@ -36,6 +36,7 @@
 #include "RShapesExporter.h"
 #include "RSpline.h"
 #include "RTextLabel.h"
+#include "RTriangle.h"
 #include "RUnit.h"
 #include "RViewportEntity.h"
 

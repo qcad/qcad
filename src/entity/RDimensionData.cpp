@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RDimensionData.h"
+#include "RTriangle.h"
 #include "RUnit.h"
 
 
@@ -33,6 +34,8 @@ RDimensionData::RDimensionData(RDocument* document) :
     textAngle(0.0),
     linearFactor(1.0),
     dimScaleOverride(0.0),
+    dimtxtOverride(0.0),
+    dimlunitOverride(-1),
     arrow1Flipped(false),
     arrow2Flipped(false),
     extLineFix(false),
@@ -90,6 +93,8 @@ RDimensionData::RDimensionData(const RVector& definitionPoint,
       textAngle(angle),
       linearFactor(1.0),
       dimScaleOverride(0.0),
+      dimtxtOverride(0.0),
+      dimlunitOverride(-1),
       arrow1Flipped(false),
       arrow2Flipped(false),
       extLineFix(false),
@@ -358,16 +363,35 @@ double RDimensionData::getDimgap() const {
 }
 
 double RDimensionData::getDimtxt() const {
-    double dimtxt = 2.5;
+    double dimtxt = dimtxtOverride;
 
     if (document!=NULL) {
-        dimtxt = document->getKnownVariable(RS::DIMTXT, dimtxt).toDouble();
+        if (RMath::fuzzyCompare(dimtxt, 0.0)) {
+            // no override, use value from document settings:
+            dimtxt = document->getKnownVariable(RS::DIMTXT, 2.5).toDouble();
+        }
     }
     else {
         qWarning() << "RDimensionData::getDimtxt: no document";
     }
 
     return dimtxt * getDimScale();
+}
+
+int RDimensionData::getDimlunit() const {
+    int dimlunit = dimlunitOverride;
+
+    if (document!=NULL) {
+        if (RMath::fuzzyCompare(dimlunit, -1)) {
+            // no override, use value from document settings:
+            dimlunit = document->getLinearFormat();
+        }
+    }
+    else {
+        qWarning() << "RDimensionData::getDimlunit: no document";
+    }
+
+    return dimlunit;
 }
 
 bool RDimensionData::useArchTick() const {
@@ -648,7 +672,7 @@ QString RDimensionData::formatLabel(double distance) const {
 
     if (document!=NULL) {
         ret = RUnit::formatLinear(distance, document->getUnit(),
-            document->getLinearFormat(), document->getLinearPrecision(),
+            (RS::LinearFormat)getDimlunit(), document->getLinearPrecision(),
             false,
             document->showLeadingZeroes(), document->showTrailingZeroes(),
             false,

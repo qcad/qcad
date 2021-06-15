@@ -31,6 +31,7 @@
 #include "RVector.h"
 
 class RBox;
+class RLine;
 
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1

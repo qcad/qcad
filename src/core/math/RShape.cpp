@@ -30,6 +30,7 @@
 #include "RShape.h"
 #include "RSpline.h"
 #include "RSplineProxy.h"
+#include "RTriangle.h"
 #include "RXLine.h"
 
 double RShape::twopi = M_PI*2;

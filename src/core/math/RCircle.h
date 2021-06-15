@@ -27,6 +27,7 @@
 #include "RVector.h"
 
 class RBox;
+class RLine;
 
 /**
  * Low-level mathematical representation of a circle.
