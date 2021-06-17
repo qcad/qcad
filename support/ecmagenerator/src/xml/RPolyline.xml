@@ -444,7 +444,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="getSelfIntersectionPoints" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QList &lt; RVector &gt;"
-      isPureVirtual="false" />
+      isPureVirtual="false">
+        <arg type="double" typeName="double" name="tolerance"
+        hasDefault="true" default="RS :: PointTolerance"
+        isConst="false" />
+      </variant>
     </method>
     <method name="getOrientation" cppName="getOrientation"
     specifier="public" isStatic="false" isVirtual="false"
