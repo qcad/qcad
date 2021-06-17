@@ -203,7 +203,7 @@ QList<RArc> RArc::createBiarc(const RVector& startPoint, double startDirection,
     double beta = RMath::getAngleDifference180(angle, endDirection);
 
     double theta;
-    if ((alpha>=0 && beta>=0) || (alpha<=0 && beta<=0)) {
+    if ((alpha>0 && beta>0) || (alpha<0 && beta<0)) {
         // same sign: C-shaped curve:
         theta = alpha;
     }
