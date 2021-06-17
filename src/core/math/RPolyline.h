@@ -134,7 +134,7 @@ public:
     bool toLogicallyClosed(double tolerance=RS::PointTolerance);
     bool toLogicallyOpen();
 
-    QList<RVector> getSelfIntersectionPoints() const;
+    QList<RVector> getSelfIntersectionPoints(double tolerance=RS::PointTolerance) const;
 
     RS::Orientation getOrientation(bool implicitelyClosed = false) const;
     bool setOrientation(RS::Orientation orientation);

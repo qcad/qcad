@@ -783,7 +783,7 @@ bool RPolyline::toLogicallyOpen() {
     return true;
 }
 
-QList<RVector> RPolyline::getSelfIntersectionPoints() const {
+QList<RVector> RPolyline::getSelfIntersectionPoints(double tolerance) const {
     QList<RVector> ret;
 
     bool cl = isGeometricallyClosed();
@@ -798,13 +798,13 @@ QList<RVector> RPolyline::getSelfIntersectionPoints() const {
             QList<RVector> ips = segment->getIntersectionPoints(*otherSegment);
             for (int n=0; n<ips.length(); n++) {
                 RVector ip = ips[n];
-                if (k==i+1 && ip.equalsFuzzy(segment->getEndPoint())) {
+                if (k==i+1 && ip.equalsFuzzy(segment->getEndPoint(), tolerance)) {
                     // ignore intersection at vertex between two consecutive segments:
                     continue;
                 }
 
                 if (cl) {
-                    if (i==0 && k==segments.length()-1 && ip.equalsFuzzy(segment->getStartPoint())) {
+                    if (i==0 && k==segments.length()-1 && ip.equalsFuzzy(segment->getStartPoint(), tolerance)) {
                         continue;
                     }
                 }
