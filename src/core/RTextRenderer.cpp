@@ -786,7 +786,7 @@ void RTextRenderer::render() {
 //                        qDebug() << "textLayouts:" << textLayouts.length();
 
 //                        // potential future line break:
-//                        // remeber state at this point:
+//                        // remember state at this point:
 //                        breakPointFormats = formats;
 //                        breakPointCurrentFormat = currentFormat;
 //                        // start new line _after_ white space and skip whitespace in case of break:
