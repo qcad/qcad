@@ -629,7 +629,7 @@ TextDialog.prototype.getMainFont = function() {
 TextDialog.prototype.mainFontChanged = function() {
     var font = this.getMainFont();
     if (font.pointSizeF()>RS.PointTolerance) {
-        this.fontHeightFactor = 14.0 / font.pointSizeF();
+        this.fontHeightFactor = RSettings.getDoubleValue("Text/PreviewFontSize", 14.0) / font.pointSizeF();
     }
     else {
         this.fontHeightFactor = 10.0;
