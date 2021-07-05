@@ -52,13 +52,13 @@ Dimension.prototype.beginEvent = function() {
 Dimension.prototype.initUiOptions = function(resume, optionsToolBar) {
     EAction.prototype.initUiOptions.call(this, resume, optionsToolBar);
 
-    // for some dimensions (e.g. leader), no standard dimensions toolbar
-    // is shown:
-    if (this.uiFile.join(",").indexOf("/Dimension.ui")===-1) {
+    var prefixCombo = optionsToolBar.findChild("Prefix");
+    if (isNull(prefixCombo)) {
+        // for some dimensions (e.g. leader), no standard dimensions toolbar
+        // is shown:
         return;
     }
 
-    var prefixCombo = optionsToolBar.findChild("Prefix");
     prefixCombo.clear();
     prefixCombo.addItem("(" + qsTr("No prefix") + ")");
     prefixCombo.addItem("R (" + qsTr("Radius") + ")");
@@ -121,8 +121,8 @@ Dimension.prototype.showUiOptions = function(resume, restoreFromSettings) {
     EAction.prototype.showUiOptions.call(this, resume, restoreFromSettings);
 
     if (!resume) {
-        var scale = this.parseScale(this.getScaleString());
-        if (!RMath.fuzzyCompare(scale, 1) && RSettings.getBoolValue("DimensionScaleDialog/DontShowDialog", false)!==true) {
+        var factor = this.getFactor();
+        if (!RMath.fuzzyCompare(factor, 1) && RSettings.getBoolValue("DimensionScaleDialog/DontShowDialog", false)!==true) {
             // warning if scale is not 1:
             var appWin = RMainWindowQt.getMainWindow();
 
@@ -138,6 +138,9 @@ Dimension.prototype.showUiOptions = function(resume, restoreFromSettings) {
 Dimension.prototype.initScaleCombo = function() {
     var optionsToolBar = EAction.getOptionsToolBar();
     var scaleCombo = optionsToolBar.findChild("Scale");
+    if (isNull(scaleCombo)) {
+        return;
+    }
     scaleCombo.blockSignals(true);
     var prev = scaleCombo.currentText;
     scaleCombo.clear();
@@ -268,6 +271,14 @@ Dimension.prototype.getScaleString = function() {
     var optionsToolBar = EAction.getOptionsToolBar();
     var scaleCombo = optionsToolBar.findChild("Scale");
     return scaleCombo.currentText;
+};
+
+Dimension.prototype.getFactor = function() {
+    var scale = this.parseScale(this.getScaleString());
+    if (!RMath.fuzzyCompare(scale, 0)) {
+        return 1 / scale;
+    }
+    return 1;
 };
 
 /**

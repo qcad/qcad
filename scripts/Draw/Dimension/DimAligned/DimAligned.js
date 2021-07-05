@@ -162,10 +162,10 @@ DimAligned.prototype.getOperation = function(preview) {
     }
 
     var doc = this.getDocument();
-    var scale = this.parseScale(this.getScaleString());
+    var factor = this.getFactor();
     var scaled_data = this.data;
 
-    scaled_data.setLinearFactor(1/scale);
+    scaled_data.setLinearFactor(factor);
 
     var entity = new RDimAlignedEntity(doc, scaled_data);
     if (!isEntity(entity)) {

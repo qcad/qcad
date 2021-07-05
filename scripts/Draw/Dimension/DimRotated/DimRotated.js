@@ -161,17 +161,25 @@ DimRotated.prototype.getOperation = function(preview) {
     }
 
     var doc = this.getDocument();
-    var scale = this.parseScale(this.getScaleString());
+    var factor = this.getFactor();
     var scaled_data = this.data;
 
-    scaled_data.setLinearFactor(1/scale);
+    scaled_data.setLinearFactor(factor);
 
     var entity = new RDimRotatedEntity(doc, scaled_data);
     if (!isEntity(entity)) {
         return undefined;
     }
 
+    this.initEntity(entity, preview);
+
     return new RAddObjectOperation(entity, this.getToolTitle());
+};
+
+/**
+ * Can be overwritten to initialize the added entity.
+ */
+DimRotated.prototype.initEntity = function(entity, preview) {
 };
 
 /*
