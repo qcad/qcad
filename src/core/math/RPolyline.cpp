@@ -1406,6 +1406,9 @@ double RPolyline::getDirection2() const {
     }
 
     QSharedPointer<RShape> shape = getSegmentAt(i);
+    if (shape.isNull()) {
+        return RNANDOUBLE;
+    }
     return shape->getDirection2();
 }
 
