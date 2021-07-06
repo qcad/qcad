@@ -324,20 +324,18 @@ int main(int argc, char *argv[]) {
 
     int ret = 0;
 
-#ifdef RJSAPI
-    if (QCoreApplication::arguments().contains("-jsapi")) {
-        RScriptHandler* handler = RScriptHandlerRegistry::getGlobalScriptHandler("js");
-        Q_ASSERT(handler!=NULL);
+    RScriptHandler* handler = RScriptHandlerRegistry::getGlobalScriptHandler("js");
+    if (handler!=NULL) {
+        // got a custom JS handler from a plugin:
         handler->init(autostartFile, arguments.mid(i+1));
         app->exec();
         delete handler;
     }
     else {
-#endif
         RScriptHandlerRegistry::registerScriptHandler(RScriptHandlerEcma::factory,
                 RScriptHandlerEcma::getSupportedFileExtensionsStatic());
 
-        RScriptHandler* handler = RScriptHandlerRegistry::getGlobalScriptHandler("js");
+        handler = RScriptHandlerRegistry::getGlobalScriptHandler("js");
         Q_ASSERT(handler!=NULL);
         handler->init(autostartFile, arguments.mid(i+1));
 
@@ -347,9 +345,7 @@ int main(int argc, char *argv[]) {
 
         // delete script handler and print uncaught exceptions:
         delete handler;
-#ifdef RJSAPI
     }
-#endif
 
     RPluginLoader::unloadPlugins();
 
