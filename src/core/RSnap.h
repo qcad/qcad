@@ -112,9 +112,8 @@ public:
         return lastSnap;
     }
 
-    void reset() {
+    virtual void reset() {
         entityIds.clear();
-        status = RSnap::Unknown;
         lastSnap = RVector::invalid;
     }
 

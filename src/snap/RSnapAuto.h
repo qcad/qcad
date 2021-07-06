@@ -47,6 +47,10 @@ public:
 
     static void init(bool force = false);
 
+    virtual void reset() {
+        status = RSnap::Unknown;
+    }
+
 private:
     static bool initialized;
 
