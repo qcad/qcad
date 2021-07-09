@@ -339,6 +339,14 @@ public:
         visualExporter = on;
     }
 
+    bool getExportInvisible() const {
+        return exportInvisible;
+    }
+
+    void setExportInvisible(bool on) {
+        exportInvisible = on;
+    }
+
     double getPixelSizeHint() const {
         return pixelSizeHint;
     }
@@ -392,6 +400,7 @@ protected:
     bool twoColorSelectedMode;
     bool screenBasedLinetypes;
     bool visualExporter;
+    bool exportInvisible;
     QString errorMessage;
     double pixelSizeHint;
     bool pixelUnit;
