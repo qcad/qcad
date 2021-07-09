@@ -120,6 +120,7 @@ public:
     QSet<RLinetype::Id> queryAllLinetypes() const;
 
     QSet<REntity::Id> queryLayerEntities(RLayer::Id layerId, bool allBlocks = false) const;
+    QSet<REntity::Id> querySelectedLayerEntities(RLayer::Id layerId, bool allBlocks = false) const;
     bool hasBlockEntities(RBlock::Id blockId) const;
     QSet<REntity::Id> queryBlockEntities(RBlock::Id blockId) const;
     QSet<REntity::Id> queryLayerBlockEntities(RLayer::Id layerId, RBlock::Id blockId) const;

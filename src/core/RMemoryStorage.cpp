@@ -567,6 +567,20 @@ QSet<REntity::Id> RMemoryStorage::queryLayerEntities(RLayer::Id layerId, bool al
     return result;
 }
 
+QSet<REntity::Id> RMemoryStorage::querySelectedLayerEntities(RLayer::Id layerId, bool allBlocks) {
+    RBlock::Id currentBlock = getCurrentBlockId();
+    QSet<REntity::Id> result;
+    QHash<RObject::Id, QSharedPointer<REntity> >::iterator it;
+    for (it = entityMap.begin(); it != entityMap.end(); ++it) {
+        QSharedPointer<REntity> e = *it;
+        if (!e.isNull() && e->isSelected() && e->getLayerId() == layerId && !e->isUndone() &&
+                (allBlocks || e->getBlockId() == currentBlock)) {
+            result.insert(e->getId());
+        }
+    }
+    return result;
+}
+
 bool RMemoryStorage::hasBlockEntities(RBlock::Id blockId) const {
     if (!blockEntityMap.contains(blockId)) {
         return false;

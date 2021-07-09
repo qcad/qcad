@@ -111,6 +111,11 @@ QSet<REntity::Id> RLinkedStorage::queryLayerEntities(RLayer::Id layerId, bool al
             .unite(backStorage->queryLayerEntities(layerId, allBlocks));
 }
 
+QSet<REntity::Id> RLinkedStorage::querySelectedLayerEntities(RLayer::Id layerId, bool allBlocks) {
+    return RMemoryStorage::querySelectedLayerEntities(layerId, allBlocks)
+            .unite(backStorage->querySelectedLayerEntities(layerId, allBlocks));
+}
+
 bool RLinkedStorage::hasBlockEntities(RBlock::Id blockId) const {
     if (blockMap.contains(blockId)) {
         // got block, return only true for block entities from this block:
