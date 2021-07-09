@@ -2260,8 +2260,10 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
             // deselect entities on locked or invisible layer:
             if (layer->isLocked() || layer->isOffOrFrozen()) {
                 if (document.hasSelection()) {
-                    QSet<RObject::Id> ids = document.queryLayerEntities(*it);
+                    QSet<RObject::Id> ids = document.querySelectedLayerEntities(*it);
+
                     deselectEntities(ids);
+                    entityIdsToRegenerate.unite(ids);
                 }
             }
 
