@@ -169,7 +169,9 @@ void RGraphicsScene::regenerate(QSet<REntity::Id>& affectedEntities, bool update
  * exports the entities again. May be overridden for performance reasons.
  */
 void RGraphicsScene::updateSelectionStatus(QSet<REntity::Id>& affectedEntities, bool updateViews) {
+    setExportInvisible(true);
     exportEntities(affectedEntities, false);
+    setExportInvisible(false);
 
     QSet<REntity::Id>::iterator it;
     for (it=affectedEntities.begin(); it!=affectedEntities.end(); it++) {
