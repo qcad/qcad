@@ -3154,7 +3154,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+100"/>
         <source>Dimension Tools</source>
         <translation>Mittatyökalut</translation>
     </message>
@@ -13026,7 +13026,12 @@ näkyy hakutuloksissa:</translation>
         <translation>Piirrä teksti</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
+        <source>Font size in text dialog preview:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+99"/>
         <source>Show font preview in font controls</source>
         <translation>Näytä kirjasimien esikatselu niiden ohjauksessa</translation>
     </message>
