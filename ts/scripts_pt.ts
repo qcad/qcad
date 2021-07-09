@@ -13351,7 +13351,7 @@ nos resultados de busca:</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
         <source>Font size in text dialog preview:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamanho da fonte na visualização do diálogo de texto:</translation>
     </message>
     <message>
         <location line="+99"/>

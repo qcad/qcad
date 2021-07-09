@@ -13096,7 +13096,7 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
         <source>Font size in text dialog preview:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lettergrootte in het voorbeeld van het tekstdialoogvenster:</translation>
     </message>
     <message>
         <location line="+99"/>

@@ -12955,7 +12955,7 @@ shown in search results:</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
         <source>Font size in text dialog preview:</source>
-        <translation type="unfinished"></translation>
+        <translation>Font size in text dialog preview:</translation>
     </message>
     <message>
         <location line="+99"/>

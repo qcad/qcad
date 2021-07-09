@@ -15484,7 +15484,7 @@ nicht öffnen.
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
         <source>Font size in text dialog preview:</source>
-        <translation type="unfinished"></translation>
+        <translation>Schriftgrösse in der Vorschau des Textdialogs:</translation>
     </message>
     <message>
         <location line="+99"/>

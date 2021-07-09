@@ -14298,7 +14298,7 @@ en los resultados de búsqueda:</translation>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
         <source>Font size in text dialog preview:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tamaño de la fuente en la vista previa del diálogo de texto:</translation>
     </message>
     <message>
         <location line="+99"/>
