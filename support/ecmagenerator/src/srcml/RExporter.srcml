@@ -340,6 +340,14 @@
         <expr_stmt><expr><name>visualExporter</name> = <name>on</name></expr>;</expr_stmt>
     }</block></function>
 
+    <function><type><name>bool</name></type> <name>getExportInvisible</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>exportInvisible</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setExportInvisible</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>exportInvisible</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
     <function><type><name>double</name></type> <name>getPixelSizeHint</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>pixelSizeHint</name></expr>;</return>
     }</block></function>
@@ -393,6 +401,7 @@
     <decl_stmt><decl><type><name>bool</name></type> <name>twoColorSelectedMode</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>screenBasedLinetypes</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>visualExporter</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>exportInvisible</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QString</name></type> <name>errorMessage</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>pixelSizeHint</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>pixelUnit</name></decl>;</decl_stmt>

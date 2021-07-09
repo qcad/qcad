@@ -77,7 +77,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RVector" isPureVirtual="false" />
     </method>
     <method name="reset" cppName="reset" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
   </class>

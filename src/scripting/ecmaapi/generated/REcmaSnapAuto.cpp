@@ -71,6 +71,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, snap, "snap");
             
+            REcmaHelper::registerFunction(&engine, proto, reset, "reset");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RSnapAuto*>(), *proto);
 
@@ -418,6 +420,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSnapAuto::init", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnapAuto::reset
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnapAuto::reset", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::reset";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSnapAuto* self = 
+                        getSelf("reset", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->reset();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.reset().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnapAuto::reset", context, engine);
             return result;
         }
          QScriptValue REcmaSnapAuto::toString

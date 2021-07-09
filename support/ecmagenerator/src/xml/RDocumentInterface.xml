@@ -435,6 +435,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="bool" typeName="bool" name="updateViews"
         isConst="false" />
+        <arg type="bool" typeName="bool" name="forceInvisible"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
         <arg type="REntity::Id" typeName="REntity::Id"

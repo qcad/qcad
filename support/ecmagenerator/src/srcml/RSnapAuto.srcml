@@ -48,6 +48,10 @@
 
     <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>force</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
+    <function><type><name>virtual</name> <name>void</name></type> <name>reset</name><parameter_list>()</parameter_list> <block>{
+        <expr_stmt><expr><name>status</name> = <name><name>RSnap</name>::<name>Unknown</name></name></expr>;</expr_stmt>
+    }</block></function>
+
 </public><private>private:
     <decl_stmt><decl><type><name>static</name> <name>bool</name></type> <name>initialized</name></decl>;</decl_stmt>
 

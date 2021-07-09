@@ -616,6 +616,16 @@
             );
         
     
+      bool getExportInvisible(
+                
+            );
+        
+    
+      void setExportInvisible(
+                bool on
+            );
+        
+    
       double getPixelSizeHint(
                 
             );

@@ -337,6 +337,12 @@
         setVisualExporter
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getExportInvisible
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setExportInvisible
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPixelSizeHint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
