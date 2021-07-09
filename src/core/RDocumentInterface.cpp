@@ -2263,7 +2263,6 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
                     QSet<RObject::Id> ids = document.querySelectedLayerEntities(*it);
 
                     deselectEntities(ids);
-                    entityIdsToRegenerate.unite(ids);
                 }
             }
 
