@@ -3878,60 +3878,6 @@
         
     
     if( context->argumentCount() ==
-    3 && (
-            context->argument(0).isArray()
-        ) /* type: QSet < REntity::Id > */
-     && (
-            context->argument(1).isBool()
-        ) /* type: bool */
-     && (
-            context->argument(2).isBool()
-        ) /* type: bool */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isArray
-                    QSet < REntity::Id >
-                    a0;
-                    REcmaHelper::fromScriptValue(
-                        engine,
-                        context->argument(0),
-                        a0
-                    );
-                
-                    // argument isStandardType
-                    bool
-                    a1 =
-                    (bool)
-                    
-                    context->argument( 1 ).
-                    toBool();
-                
-                    // argument isStandardType
-                    bool
-                    a2 =
-                    (bool)
-                    
-                    context->argument( 2 ).
-                    toBool();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->regenerateScenes(a0
-        ,
-    a1
-        ,
-    a2);
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
     2 && (
             context->argument(0).isNumber()
         ) /* type: REntity::Id */
