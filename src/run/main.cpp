@@ -133,11 +133,15 @@ int main(int argc, char *argv[]) {
     RSettings::setApplicationNameOverride("QCAD3");
 
     // Auto scale up user interface for high res displays under Windows:
-#ifdef Q_OS_WIN
+//#ifdef Q_OS_WIN
 #if QT_VERSION >= 0x050600
     //_putenv_s("QT_SCALE_FACTOR", "auto");
     if (RSettings::getBoolValue("Ui/QT_AUTO_SCREEN_SCALE_FACTOR", true)==true) {
+#ifdef Q_OS_WIN
         _putenv_s("QT_AUTO_SCREEN_SCALE_FACTOR", "1");
+#else
+        setenv("QT_AUTO_SCREEN_SCALE_FACTOR", "1", 1);
+#endif
     }
     if (RSettings::getBoolValue("Ui/EnableHighDpiScaling", false)==true) {
         qDebug() << "enable high dpi scaling";
@@ -145,14 +149,22 @@ int main(int argc, char *argv[]) {
     }
     double qsf = RSettings::getDoubleValue("Ui/QT_SCALE_FACTOR", -1.0);
     if (qsf>0.0) {
+#ifdef Q_OS_WIN
         _putenv_s("QT_SCALE_FACTOR", (const char*)QString("%1").arg(qsf).toLocal8Bit());
+#else
+        setenv("QT_SCALE_FACTOR", (const char*)QString("%1").arg(qsf).toLocal8Bit(), 1);
+#endif
     }
 
         //QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 #else
+#ifdef Q_OS_WIN
     _putenv_s("QT_DEVICE_PIXEL_RATIO", "auto");
+#else
+    setenv("QT_DEVICE_PIXEL_RATIO", "auto");
 #endif
 #endif
+//#endif
 
     RMainWindow::installMessageHandler();
 
