@@ -30,6 +30,7 @@
 #include "RShape.h"
 #include "RSpline.h"
 #include "RSplineProxy.h"
+#include "RTriangle.h"
 #include "RXLine.h"
 
 double RShape::twopi = M_PI*2;
@@ -1760,6 +1761,100 @@ void RShape::print(QDebug dbg) const {
     dbg.nospace() << "RShape("
             << "address: " << QString("0x%1").arg((long int) this, 0, 16)
             << ")";
+}
+
+QList<QSharedPointer<RShape> > RShape::getOrderedShapes(const QList<QSharedPointer<RShape> >& shapes) {
+    QList<QSharedPointer<RShape> > ret;
+    //RVector cursor = RVector::invalid;
+    QSet<int> traversed;
+
+    // find next first entity of a contour:
+    for (int i=0; i<shapes.size(); ++i) {
+        if (traversed.contains(i)) {
+            continue;
+        }
+
+        QSharedPointer<RShape> shape = shapes.at(i);
+        //qDebug() << "RShape::order: shape: " << *shape;
+
+        // circle:
+        QSharedPointer<RCircle> circle = shape.dynamicCast<RCircle>();
+        if (!circle.isNull()) {
+            ret.append(shape);
+            traversed.insert(i);
+            break;
+        }
+
+        // full ellipse:
+        QSharedPointer<REllipse> ellipseArc = shape.dynamicCast<REllipse>();
+        if (!ellipseArc.isNull() && ellipseArc->isFullEllipse()) {
+            ret.append(shape);
+            traversed.insert(i);
+            break;
+        }
+
+        // full spline:
+        QSharedPointer<RSpline> spline = shape.dynamicCast<RSpline>();
+        if (!spline.isNull()) {
+            if (spline->isPeriodic()) {
+                ret.append(shape);
+                traversed.insert(i);
+                break;
+            }
+        }
+
+        // line, arc, ellipse arc, spline loop segment:
+        if (shape->isDirected()) {
+            QList<QSharedPointer<RShape> > contour;
+            RVector sp = shape->getStartPoint();
+            RVector ep = shape->getEndPoint();
+            bool found = false;
+
+            // first shape of contour:
+            contour.append(shape);
+            traversed.insert(i);
+
+            // extend contour on both sides:
+            do {
+                found = false;
+                for (int k=0; k<shapes.size(); ++k) {
+                    if (traversed.contains(k)) {
+                        continue;
+                    }
+
+                    QSharedPointer<RShape> shape2 = shapes.at(k);
+                    if (ep.equalsFuzzy(shape2->getStartPoint())) {
+                        contour.append(shape2);
+                        traversed.insert(k);
+                        found = true;
+                    }
+                    if (ep.equalsFuzzy(shape2->getEndPoint())) {
+                        RShape* s = shape2->clone();
+                        s->reverse();
+                        contour.append(QSharedPointer<RShape>(s));
+                        traversed.insert(k);
+                        found = true;
+                    }
+                    if (sp.equalsFuzzy(shape2->getEndPoint())) {
+                        contour.prepend(shape2);
+                        traversed.insert(k);
+                        found = true;
+                    }
+                    if (sp.equalsFuzzy(shape2->getStartPoint())) {
+                        RShape* s = shape2->clone();
+                        s->reverse();
+                        contour.append(QSharedPointer<RShape>(s));
+                        traversed.insert(k);
+                        found = true;
+                    }
+                }
+            } while(found);
+
+            ret.append(contour);
+        }
+    }
+
+    return ret;
 }
 
 /**

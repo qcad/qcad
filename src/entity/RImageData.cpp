@@ -241,6 +241,9 @@ void RImageData::load() const {
         return;
     }
 
+    // QFileInfo does not correctly handle paths with mixed slash / backslash notation:
+    fileName = fileName.replace('\\', '/');
+
     // load image from absolute path:
     if (QFileInfo(fileName).exists()) {
         if (!image.load(fileName)) {

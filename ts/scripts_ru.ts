@@ -3161,7 +3161,7 @@ Do you wish to recover it?</source>
         <translation>Дельта</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+100"/>
         <source>Dimension Tools</source>
         <translation>Инструменты для работы с размерами</translation>
     </message>
@@ -12925,7 +12925,12 @@ shown in search results:</source>
         <translation>Начертить текст</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
+        <source>Font size in text dialog preview:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+99"/>
         <source>Show font preview in font controls</source>
         <translation>Показать предпросмотр шрифта в управлении шрифтами</translation>
     </message>

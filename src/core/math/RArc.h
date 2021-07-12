@@ -26,6 +26,7 @@
 #include "RVector.h"
 
 class RBox;
+class RLine;
 class RPolyline;
 
 /**

@@ -3176,7 +3176,7 @@ Wilt u het herstellen?</translation>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+100"/>
         <source>Dimension Tools</source>
         <translation>Bematinggereedschappen</translation>
     </message>
@@ -13094,7 +13094,12 @@ getoond in zoekresultaten:</translation>
         <translation>Tekst tekenen</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
+        <source>Font size in text dialog preview:</source>
+        <translation>Lettergrootte in het voorbeeld van het tekstdialoogvenster:</translation>
+    </message>
+    <message>
+        <location line="+99"/>
         <source>Show font preview in font controls</source>
         <translation>Toon lettertype voorvertoning in lettertype bedieningselementen</translation>
     </message>

@@ -334,19 +334,30 @@ int main(int argc, char *argv[]) {
         autostartFile = arguments.at(i+1);
     }
 
-    RScriptHandlerRegistry::registerScriptHandler(RScriptHandlerEcma::factory,
-            RScriptHandlerEcma::getSupportedFileExtensionsStatic());
-    RScriptHandler* handler = RScriptHandlerRegistry::getGlobalScriptHandler("js");
-    Q_ASSERT(handler!=NULL);
-    handler->init(autostartFile, arguments.mid(i+1));
-
     int ret = 0;
-    if (handler->hasUncaughtExceptions()) {
-        ret = 1;
-    }
 
-    // delete script handler and print uncaught exceptions:
-    delete handler;
+    RScriptHandler* handler = RScriptHandlerRegistry::getGlobalScriptHandler("js");
+    if (handler!=NULL) {
+        // got a custom JS handler from a plugin:
+        handler->init(autostartFile, arguments.mid(i+1));
+        app->exec();
+        delete handler;
+    }
+    else {
+        RScriptHandlerRegistry::registerScriptHandler(RScriptHandlerEcma::factory,
+                RScriptHandlerEcma::getSupportedFileExtensionsStatic());
+
+        handler = RScriptHandlerRegistry::getGlobalScriptHandler("js");
+        Q_ASSERT(handler!=NULL);
+        handler->init(autostartFile, arguments.mid(i+1));
+
+        if (handler->hasUncaughtExceptions()) {
+            ret = 1;
+        }
+
+        // delete script handler and print uncaught exceptions:
+        delete handler;
+    }
 
     RPluginLoader::unloadPlugins();
 

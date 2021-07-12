@@ -7,10 +7,111 @@
     <x>0</x>
     <y>0</y>
     <width>391</width>
-    <height>286</height>
+    <height>495</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="PreviewFontSize_Label">
+       <property name="text">
+        <string>Font size in text dialog preview:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="PreviewFontSize">
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+       <property name="currentIndex">
+        <number>5</number>
+       </property>
+       <item>
+        <property name="text">
+         <string notr="true">8</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">10</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">11</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">12</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">13</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">14</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">15</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">16</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">18</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">20</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">22</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">24</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">26</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">28</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">30</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">32</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
    <item>
     <widget class="QCheckBox" name="ShowFontPreview">
      <property name="text">

@@ -275,6 +275,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setVisualExporter, "setVisualExporter");
             
+            REcmaHelper::registerFunction(&engine, proto, getExportInvisible, "getExportInvisible");
+            
+            REcmaHelper::registerFunction(&engine, proto, setExportInvisible, "setExportInvisible");
+            
             REcmaHelper::registerFunction(&engine, proto, getPixelSizeHint, "getPixelSizeHint");
             
             REcmaHelper::registerFunction(&engine, proto, getCurrentPixelSizeHint, "getCurrentPixelSizeHint");
@@ -7823,6 +7827,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::setVisualExporter", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::getExportInvisible
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::getExportInvisible", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::getExportInvisible";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("getExportInvisible", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getExportInvisible();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.getExportInvisible().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::getExportInvisible", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::setExportInvisible
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::setExportInvisible", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::setExportInvisible";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("setExportInvisible", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setExportInvisible(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.setExportInvisible().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::setExportInvisible", context, engine);
             return result;
         }
          QScriptValue

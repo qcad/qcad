@@ -194,6 +194,11 @@ public:
         RSpatialIndexVisitor* dataVisitor=NULL
     );
 
+    QList<int> queryContainedIds(
+        double x1, double y1, double z1,
+        double x2, double y2, double z2,
+        RSpatialIndexVisitor* dataVisitor = NULL);
+
     /**
      * Queries the index for closest neighbor items.
      *

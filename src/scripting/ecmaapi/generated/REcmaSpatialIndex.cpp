@@ -81,6 +81,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryContained, "queryContained");
             
+            REcmaHelper::registerFunction(&engine, proto, queryContainedIds, "queryContainedIds");
+            
             REcmaHelper::registerFunction(&engine, proto, queryNearestNeighbor, "queryNearestNeighbor");
             
         engine.setDefaultPrototype(
@@ -1796,6 +1798,248 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSpatialIndex::queryContained", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpatialIndex::queryContainedIds
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpatialIndex::queryContainedIds", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpatialIndex::queryContainedIds";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpatialIndex* self = 
+                        getSelf("queryContainedIds", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    6 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(3).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(4).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(5).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a2 =
+                    (double)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a3 =
+                    (double)
+                    
+                    context->argument( 3 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a4 =
+                    (double)
+                    
+                    context->argument( 4 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a5 =
+                    (double)
+                    
+                    context->argument( 5 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < int >'
+    QList < int > cppResult =
+        
+               self->queryContainedIds(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4
+        ,
+    a5);
+        // return type: QList < int >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    7 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(3).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(4).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(5).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(6).isVariant() || 
+            context->argument(6).isQObject() || 
+            context->argument(6).isNull()
+        ) /* type: RSpatialIndexVisitor * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a2 =
+                    (double)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a3 =
+                    (double)
+                    
+                    context->argument( 3 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a4 =
+                    (double)
+                    
+                    context->argument( 4 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a5 =
+                    (double)
+                    
+                    context->argument( 5 ).
+                    toNumber();
+                
+                    // argument is pointer
+                    RSpatialIndexVisitor * a6 = NULL;
+
+                    a6 = 
+                        REcmaHelper::scriptValueTo<RSpatialIndexVisitor >(
+                            context->argument(6)
+                        );
+                    
+                    if (a6==NULL && 
+                        !context->argument(6).isNull()) {
+                        return REcmaHelper::throwError("RSpatialIndex: Argument 6 is not of type RSpatialIndexVisitor *RSpatialIndexVisitor *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < int >'
+    QList < int > cppResult =
+        
+               self->queryContainedIds(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4
+        ,
+    a5
+        ,
+    a6);
+        // return type: QList < int >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpatialIndex.queryContainedIds().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpatialIndex::queryContainedIds", context, engine);
             return result;
         }
          QScriptValue

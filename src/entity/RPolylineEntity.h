@@ -293,8 +293,8 @@ public:
         return data.toLogicallyOpen();
     }
 
-    QList<RVector> getSelfIntersectionPoints() const {
-        return data.getSelfIntersectionPoints();
+    QList<RVector> getSelfIntersectionPoints(double tolerance=RS::PointTolerance) const {
+        return data.getSelfIntersectionPoints(tolerance);
     }
 
     RS::Orientation getOrientation(bool implicitelyClosed = false) const {

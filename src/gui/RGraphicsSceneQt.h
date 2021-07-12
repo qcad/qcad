@@ -43,6 +43,7 @@
 #include "RXLine.h"
 
 class RGraphicsViewImage;
+class RTriangle;
 
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1

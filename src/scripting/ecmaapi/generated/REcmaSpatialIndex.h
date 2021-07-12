@@ -81,6 +81,9 @@
         queryContained
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryContainedIds
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryNearestNeighbor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

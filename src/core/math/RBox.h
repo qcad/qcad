@@ -24,9 +24,12 @@
 
 #include <QRectF>
 
+#include "RShape.h"
 #include "RVector.h"
-#include "RTriangle.h"
+//#include "RTriangle.h"
 
+class RLine;
+class RTriangle;
 class RPolyline;
 
 #define RDEFAULT_RBOX RBox()

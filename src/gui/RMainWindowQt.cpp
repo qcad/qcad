@@ -636,7 +636,7 @@ bool RMainWindowQt::event(QEvent* e) {
         return false;
     }
 
-    // TODO: never triggered on macOS when draging title bar icon
+    // TODO: never triggered on macOS when dragging title bar icon
 //    QIconDragEvent* ide = dynamic_cast<QIconDragEvent*>(e);
 //    if (ide!=NULL) {
 //        qDebug() << "QIconDragEvent";

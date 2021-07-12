@@ -1346,6 +1346,13 @@ QSet<REntity::Id> RDocument::queryLayerEntities(RLayer::Id layerId, bool allBloc
 }
 
 /**
+ * \copydoc RStorage::querySelectedLayerEntities
+ */
+QSet<REntity::Id> RDocument::querySelectedLayerEntities(RLayer::Id layerId, bool allBlocks) const {
+    return storage.querySelectedLayerEntities(layerId, allBlocks);
+}
+
+/**
  * \copydoc RStorage::hasBlockEntities
  */
 bool RDocument::hasBlockEntities(RBlock::Id blockId) const {
@@ -2303,6 +2310,14 @@ bool RDocument::isParentLayerLocked(RLayer::Id layerId) const {
  */
 bool RDocument::isParentLayerLocked(const RLayer& layer) const {
     return storage.isParentLayerLocked(layer);
+}
+
+bool RDocument::isEntity(RObject::Id entityId) const {
+    QSharedPointer<REntity> entity = queryEntityDirect(entityId);
+    if (entity.isNull()) {
+        return false;
+    }
+    return true;
 }
 
 bool RDocument::isEntityEditable(REntity::Id entityId) const {

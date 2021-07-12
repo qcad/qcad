@@ -3359,7 +3359,7 @@ Do you wish to recover it?</source>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+100"/>
         <source>Dimension Tools</source>
         <translation>Herramientas de dimensión</translation>
     </message>
@@ -14296,7 +14296,12 @@ en los resultados de búsqueda:</translation>
         <translation>Ángulo:</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
+        <source>Font size in text dialog preview:</source>
+        <translation>Tamaño de la fuente en la vista previa del diálogo de texto:</translation>
+    </message>
+    <message>
+        <location line="+99"/>
         <source>Show font preview in font controls</source>
         <translation>Mostrar vista previa de la fuente en los controles de fuente</translation>
     </message>

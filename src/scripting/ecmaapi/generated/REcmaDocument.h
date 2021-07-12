@@ -120,6 +120,9 @@
         queryLayerEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        querySelectedLayerEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasBlockEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -262,6 +265,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isParentLayerLocked
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isEntityEditable

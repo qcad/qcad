@@ -67,7 +67,7 @@ RScriptHandler* RScriptHandlerRegistry::createScriptHandler(const QString& exten
         return factoryFunctions[extension]();
     }
 
-    qCritical() << "no script handler found for extension" << extension;
+    //qCritical() << "no script handler found for extension" << extension;
     return NULL;
 }
 
@@ -76,11 +76,11 @@ RScriptHandler* RScriptHandlerRegistry::getGlobalScriptHandler(
     if (globalScriptHandlers.count(extension) == 0) {
         RScriptHandler* handler = createScriptHandler(extension);
         if (handler == NULL) {
-            qWarning() <<
-                    QString(
-                            "RScriptHandlerRegistry::getGlobalScriptHandler: "
-                            "Creation of Script Handler for %1 failed.").arg(
-                            extension);
+//            qWarning() <<
+//                    QString(
+//                            "RScriptHandlerRegistry::getGlobalScriptHandler: "
+//                            "Creation of Script Handler for %1 failed.").arg(
+//                            extension);
             return NULL;
         }
         globalScriptHandlers[extension] = handler;

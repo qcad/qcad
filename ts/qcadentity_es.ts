@@ -74,7 +74,7 @@
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="+105"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+94"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+95"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+82"/>
         <location line="+3"/>

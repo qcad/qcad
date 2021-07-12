@@ -180,6 +180,11 @@ public:
     virtual QSet<REntity::Id> queryLayerEntities(RLayer::Id layerId, bool allBlocks = false) = 0;
 
     /**
+     * \return A set of all entity IDs of selected entities on the given layer.
+     */
+    virtual QSet<REntity::Id> querySelectedLayerEntities(RLayer::Id layerId, bool allBlocks = false) = 0;
+
+    /**
      * \return True if the given block contains any entities.
      */
     virtual bool hasBlockEntities(RBlock::Id blockId) const = 0;

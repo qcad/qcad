@@ -54,6 +54,7 @@ RExporter::RExporter()
       twoColorSelectedMode(false),
       screenBasedLinetypes(false),
       visualExporter(false),
+      exportInvisible(false),
       pixelSizeHint(0.5),
       pixelUnit(false),
       clipping(false),
@@ -75,6 +76,7 @@ RExporter::RExporter(RDocument& document, RMessageHandler *messageHandler, RProg
       twoColorSelectedMode(false),
       screenBasedLinetypes(false),
       visualExporter(false),
+      exportInvisible(false),
       pixelSizeHint(0.5),
       pixelUnit(false),
       clipping(false),
@@ -691,7 +693,7 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool
     // if this exporter exports a visual
     // representation of the drawing (scene, view, print)...
     if (isVisualExporter()) {
-        skip = !isVisible(entity);
+        skip = !getExportInvisible() && !isVisible(entity);
     }
 
     if (!skip) {

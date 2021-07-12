@@ -9,6 +9,8 @@
         
                 #include "RBox.h"
             
+                #include "RLine.h"
+            
                 #include "RPolyline.h"
             
             

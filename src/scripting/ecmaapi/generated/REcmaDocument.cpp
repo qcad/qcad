@@ -119,6 +119,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryLayerEntities, "queryLayerEntities");
             
+            REcmaHelper::registerFunction(&engine, proto, querySelectedLayerEntities, "querySelectedLayerEntities");
+            
             REcmaHelper::registerFunction(&engine, proto, hasBlockEntities, "hasBlockEntities");
             
             REcmaHelper::registerFunction(&engine, proto, queryBlockEntities, "queryBlockEntities");
@@ -214,6 +216,8 @@
             REcmaHelper::registerFunction(&engine, proto, isLayerLocked, "isLayerLocked");
             
             REcmaHelper::registerFunction(&engine, proto, isParentLayerLocked, "isParentLayerLocked");
+            
+            REcmaHelper::registerFunction(&engine, proto, isEntity, "isEntity");
             
             REcmaHelper::registerFunction(&engine, proto, isEntityEditable, "isEntityEditable");
             
@@ -2797,6 +2801,113 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::queryLayerEntities", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::querySelectedLayerEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::querySelectedLayerEntities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::querySelectedLayerEntities";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("querySelectedLayerEntities", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RLayer::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLayer::Id
+                    a0 =
+                    (RLayer::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < REntity::Id >'
+    QSet < REntity::Id > cppResult =
+        
+               self->querySelectedLayerEntities(a0);
+        // return type: QSet < REntity::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: RLayer::Id */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLayer::Id
+                    a0 =
+                    (RLayer::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < REntity::Id >'
+    QSet < REntity::Id > cppResult =
+        
+               self->querySelectedLayerEntities(a0
+        ,
+    a1);
+        // return type: QSet < REntity::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.querySelectedLayerEntities().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::querySelectedLayerEntities", context, engine);
             return result;
         }
          QScriptValue
@@ -7652,6 +7763,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::isParentLayerLocked", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::isEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::isEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::isEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("isEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RObject::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RObject::Id
+                    a0 =
+                    (RObject::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isEntity(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.isEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::isEntity", context, engine);
             return result;
         }
          QScriptValue

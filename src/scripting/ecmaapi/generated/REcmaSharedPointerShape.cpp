@@ -218,6 +218,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, isRayShape, "isRayShape");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getOrderedShapes, "getOrderedShapes");
+            
             REcmaHelper::registerFunction(&engine, &ctor, order, "order");
             
             REcmaHelper::registerFunction(&engine, &ctor, getIntersectionPointsLL, "getIntersectionPointsLL");
@@ -6304,6 +6306,57 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerShape::getTransformed", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerShape::getOrderedShapes
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerShape::getOrderedShapes", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerShape::getOrderedShapes";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < QSharedPointer < RShape > > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < QSharedPointer < RShape > >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QSharedPointer < RShape > >'
+    QList < QSharedPointer < RShape > > cppResult =
+        RShape::
+       getOrderedShapes(a0);
+        // return type: QList < QSharedPointer < RShape > >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.getOrderedShapes().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerShape::getOrderedShapes", context, engine);
             return result;
         }
          QScriptValue

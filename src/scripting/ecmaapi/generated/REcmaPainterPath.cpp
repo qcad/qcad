@@ -9,6 +9,8 @@
         
                 #include "RArc.h"
             
+                #include "RLine.h"
+            
                 #include "RShape.h"
             
                 #include "RSpline.h"

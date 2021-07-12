@@ -25,9 +25,12 @@
 #include "RExplodable.h"
 #include "RShape.h"
 #include "RVector.h"
-#include "RLine.h"
+//#include "RLine.h"
+#include "RPolyline.h"
 
+//class RPolyline;
 class RBox;
+class RLine;
 
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1
@@ -60,6 +63,9 @@ public:
     virtual void setZ(double z);
 
     virtual QList<RVector> getVectorProperties() const;
+    RPolyline getPolyline() const;
+    RS::Orientation getOrientation() const;
+    virtual bool reverse();
 
     static RTriangle createArrow(const RVector& position, double direction, double size);
 
@@ -68,6 +74,7 @@ public:
     double getArea() const;
     RVector getCorner(int i) const;
     void setCorner(int i, const RVector& p);
+    void setCorners(const RVector& c1, const RVector& c2, const RVector& c3);
 
     virtual QList<RVector> getEndPoints() const;
     virtual QList<RVector> getMiddlePoints() const;

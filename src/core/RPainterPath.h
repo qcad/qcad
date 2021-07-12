@@ -32,6 +32,7 @@
 #include "RVector.h"
 
 class RArc;
+class RLine;
 class RShape;
 class RSpline;
 

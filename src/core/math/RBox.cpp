@@ -17,8 +17,9 @@
  * along with QCAD.
  */
 #include "RBox.h"
+#include "RLine.h"
 #include "RPolyline.h"
-
+#include "RTriangle.h"
 
 
 /**

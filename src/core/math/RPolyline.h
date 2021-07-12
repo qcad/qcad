@@ -31,6 +31,7 @@
 #include "RVector.h"
 
 class RBox;
+class RLine;
 
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1
@@ -133,7 +134,7 @@ public:
     bool toLogicallyClosed(double tolerance=RS::PointTolerance);
     bool toLogicallyOpen();
 
-    QList<RVector> getSelfIntersectionPoints() const;
+    QList<RVector> getSelfIntersectionPoints(double tolerance=RS::PointTolerance) const;
 
     RS::Orientation getOrientation(bool implicitelyClosed = false) const;
     bool setOrientation(RS::Orientation orientation);

@@ -36,6 +36,7 @@
 #include "RShapesExporter.h"
 #include "RSpline.h"
 #include "RTextLabel.h"
+#include "RTriangle.h"
 #include "RUnit.h"
 #include "RViewportEntity.h"
 
@@ -294,7 +295,7 @@ void RGraphicsSceneQt::transformAndApplyPatternPath(RPainterPath& path) const {
             for (int i=0; i<pathShapes.length(); i++) {
                 length += pathShapes[i]->getLength();
             }
-            //qDebug() << "pattern offet:" << lp.getPatternOffset(length);
+            //qDebug() << "pattern offset:" << lp.getPatternOffset(length);
             RShapesExporter(ppe, pathShapes, lp.getPatternOffset(length));
             //lp.getPatternOffset(length));
             RPainterPath p = ppe.getPainterPath();
@@ -327,7 +328,7 @@ void RGraphicsSceneQt::transformAndApplyPatternPath(RPainterPath& path) const {
                     //length = pathShapes[i]->getLength();
                 }
 
-                //qDebug() << "pattern offet:" << lp.getPatternOffset(length);
+                //qDebug() << "pattern offset:" << lp.getPatternOffset(length);
                 RShapesExporter(ppe, shapes, offset);
                 //lp.getPatternOffset(length));
                 RPainterPath p = ppe.getPainterPath();

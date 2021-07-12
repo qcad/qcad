@@ -1,6 +1,5 @@
 include( ../../shared.pri )
 
-SUBDIRS = \
-    ecmaapi
+SUBDIRS = ecmaapi
 
 TEMPLATE = subdirs

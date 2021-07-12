@@ -156,22 +156,38 @@ DimRotated.prototype.pickCoordinate = function(event, preview) {
 };
 
 DimRotated.prototype.getOperation = function(preview) {
+    var entity = this.getEntity(preview);
+    if (isNull(entity)) {
+        return undefined;
+    }
+    return new RAddObjectOperation(entity, this.getToolTitle());
+};
+
+DimRotated.prototype.getEntity = function(preview) {
     if (!this.data.isValid()) {
         return undefined;
     }
 
     var doc = this.getDocument();
-    var scale = this.parseScale(this.getScaleString());
+    var factor = this.getFactor();
     var scaled_data = this.data;
 
-    scaled_data.setLinearFactor(1/scale);
+    scaled_data.setLinearFactor(factor);
 
     var entity = new RDimRotatedEntity(doc, scaled_data);
     if (!isEntity(entity)) {
         return undefined;
     }
 
-    return new RAddObjectOperation(entity, this.getToolTitle());
+    this.initEntity(entity, preview);
+
+    return entity;
+};
+
+/**
+ * Can be overwritten to initialize the added entity.
+ */
+DimRotated.prototype.initEntity = function(entity, preview) {
 };
 
 /*

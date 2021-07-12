@@ -186,6 +186,15 @@
         getDimtxt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setDimtxt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimlunit
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimlunit
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         useArchTick
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -28,6 +28,8 @@
 #include "RPolyline.h"
 #include "RVector.h"
 
+class RTriangle;
+
 /**
  * Stores and manages all data that defines the geometry and
  * appearance of a solid entity.

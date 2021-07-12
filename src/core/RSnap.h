@@ -48,21 +48,21 @@ public:
      * to indicate what snap was used.
      */
     enum Status {
-        Unknown,
-        Free,
-        Grid,
-        Endpoint,
-        OnEntity,
-        Center,
-        Middle,
-        Distance,
-        Intersection,
-        IntersectionManual,
-        Reference,
-        Perpendicular,
-        Tangential,
-        Coordinate,
-        CoordinatePolar
+        Unknown = 0,
+        Free = 1,
+        Grid = 2,
+        Endpoint = 3,
+        OnEntity = 4,
+        Center = 5,
+        Middle = 6,
+        Distance = 7,
+        Intersection = 8,
+        IntersectionManual = 9,
+        Reference = 10,
+        Perpendicular = 11,
+        Tangential = 12,
+        Coordinate = 13,
+        CoordinatePolar = 14
     };
 
 public:
@@ -112,9 +112,8 @@ public:
         return lastSnap;
     }
 
-    void reset() {
+    virtual void reset() {
         entityIds.clear();
-        status = RSnap::Unknown;
         lastSnap = RVector::invalid;
     }
 

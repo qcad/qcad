@@ -246,6 +246,9 @@
         getTransformed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getOrderedShapes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         order
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

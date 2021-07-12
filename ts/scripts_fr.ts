@@ -3365,7 +3365,7 @@ Voulez-vous le récupérer ?</translation>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+100"/>
         <source>Dimension Tools</source>
         <translation>Outils dimension</translation>
     </message>
@@ -14319,7 +14319,12 @@ dans les résultats de recherche :</translation>
         <translation>Angle :</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+17"/>
+        <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
+        <source>Font size in text dialog preview:</source>
+        <translation>Taille de la police dans l&apos;aperçu de la boîte de dialogue du texte :</translation>
+    </message>
+    <message>
+        <location line="+99"/>
         <source>Show font preview in font controls</source>
         <translation>Afficher l&apos;aperçu de police dans les contrôles de police</translation>
     </message>
