@@ -36,12 +36,18 @@
      <property name="checked">
       <bool>true</bool>
      </property>
+     <property name="RequiresRestart" stdset="0">
+      <bool>true</bool>
+     </property>
     </widget>
    </item>
    <item>
     <widget class="QCheckBox" name="EnableHighDpiScaling">
      <property name="text">
       <string>Enable high DPI scaling</string>
+     </property>
+     <property name="RequiresRestart" stdset="0">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
@@ -57,6 +63,9 @@
      <item>
       <widget class="QComboBox" name="QT_SCALE_FACTOR">
        <property name="editable">
+        <bool>true</bool>
+       </property>
+       <property name="RequiresRestart" stdset="0">
         <bool>true</bool>
        </property>
        <item>
