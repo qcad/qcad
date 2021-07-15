@@ -1657,7 +1657,7 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
 
     if (!layer.isNull()) {
         layerMap[object->getId()] = layer;
-        layerNameMap[layer->getName().toLower() ] = layer;
+        layerNameMap[layer->getName().toLower()] = layer;
     }
 
     if (!layerState.isNull()) {
