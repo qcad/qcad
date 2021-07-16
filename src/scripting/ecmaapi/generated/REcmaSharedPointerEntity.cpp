@@ -3503,6 +3503,94 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    4 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RBox */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(3).isArray()
+        ) /* type: QList < RObject::Id > * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RBox*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RBox*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RBox.",
+                               context);                    
+                    }
+                    RBox 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+                    // argument is pointer
+                    QList < RObject::Id > * a3 = NULL;
+
+                    a3 = 
+                        REcmaHelper::scriptValueTo<QList < RObject::Id > >(
+                            context->argument(3)
+                        );
+                    
+                    if (a3==NULL && 
+                        !context->argument(3).isNull()) {
+                        return REcmaHelper::throwError("REntity: Argument 3 is not of type QList < RObject::Id > *QList < RObject::Id > *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QSharedPointer < RShape > >'
+    QList < QSharedPointer < RShape > > cppResult =
+        
+               self->getShapes(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3);
+        // return type: QList < QSharedPointer < RShape > >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for REntity.getShapes().",
                    context);
@@ -3694,6 +3782,89 @@
     a1
         ,
     a2);
+        // return type: QSharedPointer < RShape >
+                // Shared pointer to shape, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    4 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(3).isNumber()
+        ) /* type: RObject::Id * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    RObject::Id *
+                    a3 =
+                    (RObject::Id *)
+                    (int)
+                    context->argument( 3 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RShape >'
+    QSharedPointer < RShape > cppResult =
+        
+               self->getClosestShape(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3);
         // return type: QSharedPointer < RShape >
                 // Shared pointer to shape, cast to best match:
                 result = REcmaHelper::toScriptValue(engine, cppResult);
@@ -5053,6 +5224,68 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RBox */
+     && (
+            context->argument(1).isArray()
+        ) /* type: QList < RObject::Id > * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RBox*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RBox*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RBox.",
+                               context);                    
+                    }
+                    RBox 
+                    a0 = 
+                    *ap0;
+                
+                    // argument is pointer
+                    QList < RObject::Id > * a1 = NULL;
+
+                    a1 = 
+                        REcmaHelper::scriptValueTo<QList < RObject::Id > >(
+                            context->argument(1)
+                        );
+                    
+                    if (a1==NULL && 
+                        !context->argument(1).isNull()) {
+                        return REcmaHelper::throwError("REntity: Argument 1 is not of type QList < RObject::Id > *QList < RObject::Id > *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getEndPoints(a0
+        ,
+    a1);
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for REntity.getEndPoints().",
                    context);
@@ -5146,6 +5379,68 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RBox */
+     && (
+            context->argument(1).isArray()
+        ) /* type: QList < RObject::Id > * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RBox*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RBox*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RBox.",
+                               context);                    
+                    }
+                    RBox 
+                    a0 = 
+                    *ap0;
+                
+                    // argument is pointer
+                    QList < RObject::Id > * a1 = NULL;
+
+                    a1 = 
+                        REcmaHelper::scriptValueTo<QList < RObject::Id > >(
+                            context->argument(1)
+                        );
+                    
+                    if (a1==NULL && 
+                        !context->argument(1).isNull()) {
+                        return REcmaHelper::throwError("REntity: Argument 1 is not of type QList < RObject::Id > *QList < RObject::Id > *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getMiddlePoints(a0
+        ,
+    a1);
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for REntity.getMiddlePoints().",
                    context);
@@ -5231,6 +5526,68 @@
     QList < RVector > cppResult =
         
                self->getCenterPoints(a0);
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RBox */
+     && (
+            context->argument(1).isArray()
+        ) /* type: QList < REntity::Id > * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RBox*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RBox*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RBox.",
+                               context);                    
+                    }
+                    RBox 
+                    a0 = 
+                    *ap0;
+                
+                    // argument is pointer
+                    QList < REntity::Id > * a1 = NULL;
+
+                    a1 = 
+                        REcmaHelper::scriptValueTo<QList < REntity::Id > >(
+                            context->argument(1)
+                        );
+                    
+                    if (a1==NULL && 
+                        !context->argument(1).isNull()) {
+                        return REcmaHelper::throwError("REntity: Argument 1 is not of type QList < REntity::Id > *QList < REntity::Id > *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getCenterPoints(a0
+        ,
+    a1);
         // return type: QList < RVector >
                 // List of ...:
                 result = REcmaHelper::listToScriptValue(engine, cppResult);
@@ -5438,6 +5795,89 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    4 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(3).isNumber()
+        ) /* type: REntity::Id * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    REntity::Id *
+                    a3 =
+                    (REntity::Id *)
+                    (int)
+                    context->argument( 3 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getClosestPointOnEntity(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3);
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for REntity.getClosestPointOnEntity().",
                    context);
@@ -5605,6 +6045,94 @@
     a1
         ,
     a2);
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    4 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNull()
+        ) /* type: RBox */
+     && (
+            context->argument(3).isArray()
+        ) /* type: QList < RObject::Id > * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RBox*
+                    ap2 =
+                    qscriptvalue_cast<
+                    RBox*
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                    if (ap2 == NULL) {
+                           return REcmaHelper::throwError("REntity: Argument 2 is not of type RBox.",
+                               context);                    
+                    }
+                    RBox 
+                    a2 = 
+                    *ap2;
+                
+                    // argument is pointer
+                    QList < RObject::Id > * a3 = NULL;
+
+                    a3 = 
+                        REcmaHelper::scriptValueTo<QList < RObject::Id > >(
+                            context->argument(3)
+                        );
+                    
+                    if (a3==NULL && 
+                        !context->argument(3).isNull()) {
+                        return REcmaHelper::throwError("REntity: Argument 3 is not of type QList < RObject::Id > *QList < RObject::Id > *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getPointsWithDistanceToEnd(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3);
         // return type: QList < RVector >
                 // List of ...:
                 result = REcmaHelper::listToScriptValue(engine, cppResult);
@@ -5903,6 +6431,117 @@
     a2
         ,
     a3);
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    5 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: REntity */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNull()
+        ) /* type: RBox */
+     && (
+            context->argument(3).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(4).isArray()
+        ) /* type: QList < QPair < REntity::Id , REntity::Id > > * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    REntity*
+                    ap0 =
+                    qscriptvalue_cast<
+                    REntity*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type REntity*.",
+                               context);                    
+                    }
+                    REntity& a0 = *ap0;
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RBox*
+                    ap2 =
+                    qscriptvalue_cast<
+                    RBox*
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                    if (ap2 == NULL) {
+                           return REcmaHelper::throwError("REntity: Argument 2 is not of type RBox.",
+                               context);                    
+                    }
+                    RBox 
+                    a2 = 
+                    *ap2;
+                
+                    // argument isStandardType
+                    bool
+                    a3 =
+                    (bool)
+                    
+                    context->argument( 3 ).
+                    toBool();
+                
+                    // argument is pointer
+                    QList < QPair < REntity::Id , REntity::Id > > * a4 = NULL;
+
+                    a4 = 
+                        REcmaHelper::scriptValueTo<QList < QPair < REntity::Id , REntity::Id > > >(
+                            context->argument(4)
+                        );
+                    
+                    if (a4==NULL && 
+                        !context->argument(4).isNull()) {
+                        return REcmaHelper::throwError("REntity: Argument 4 is not of type QList < QPair < REntity::Id , REntity::Id > > *QList < QPair < REntity::Id , REntity::Id > > *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getIntersectionPoints(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4);
         // return type: QList < RVector >
                 // List of ...:
                 result = REcmaHelper::listToScriptValue(engine, cppResult);

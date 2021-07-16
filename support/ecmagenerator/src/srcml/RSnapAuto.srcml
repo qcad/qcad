@@ -47,6 +47,12 @@
     )</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>force</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function><type><name>static</name> <name>void</name></type> <name>setGridPoints</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>gridPoints</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>static</name> <name>void</name></type> <name>setFreePositioning</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>freePositioning</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
 
     <function><type><name>virtual</name> <name>void</name></type> <name>reset</name><parameter_list>()</parameter_list> <block>{
         <expr_stmt><expr><name>status</name> = <name><name>RSnap</name>::<name>Unknown</name></name></expr>;</expr_stmt>

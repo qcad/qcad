@@ -86,7 +86,7 @@
         
     
     
-      QSet < REntity::Id > getEntityIds(
+      QList < REntity::Id > getEntityIds(
                 
             );
         

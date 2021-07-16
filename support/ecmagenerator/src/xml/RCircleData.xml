@@ -76,6 +76,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="segment"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="QList &lt; RObject::Id &gt; *"
+        typeName="QList &lt; RObject::Id &gt; *" name="entityIds"
+        hasDefault="true" default="NULL" isConst="false" />
       </variant>
     </method>
   </class>

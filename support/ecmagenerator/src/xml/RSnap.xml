@@ -64,7 +64,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getEntityIds" cppName="getEntityIds"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="QSet &lt; REntity::Id &gt;"
+      <variant returnType="QList &lt; REntity::Id &gt;"
       isPureVirtual="false" />
     </method>
     <method name="getStatus" cppName="getStatus" specifier="public"

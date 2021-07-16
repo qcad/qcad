@@ -672,15 +672,14 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QSet < REntity::Id >'
-    QSet < REntity::Id > cppResult =
+    // return type 'QList < REntity::Id >'
+    QList < REntity::Id > cppResult =
         
                self->getEntityIds();
-        // return type: QSet < REntity::Id >
-                // QSet (convert to QVariantList):
-                result = REcmaHelper::setToScriptValue(engine, cppResult);
-
-                
+        // return type: QList < REntity::Id >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
     } else
 
 

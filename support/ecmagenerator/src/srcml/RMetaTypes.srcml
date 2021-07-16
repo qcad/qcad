@@ -313,12 +313,16 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QFlags&lt;QDir::Filter&gt;*</argument>)</argument_list></macro>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QList&lt;int&gt;</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QList&lt;int&gt;*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QList&lt;double&gt;</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QList&lt;QGraphicsItem*&gt;</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QList&lt;QString&gt;</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QList&lt;QKeySequence&gt;</argument>)</argument_list></macro>
 <typedef>typedef <type><name>QPair<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>double</name></argument>&gt;</argument_list></name></type> <name>_RPairIntDouble</name>;</typedef>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QList&lt;_RPairIntDouble&gt;</argument>)</argument_list></macro>
+<typedef>typedef <type><name>QPair<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>int</name></argument>&gt;</argument_list></name></type> <name>_RPairIntInt</name>;</typedef>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QList&lt;_RPairIntInt&gt;</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QList&lt;_RPairIntInt&gt;*</argument>)</argument_list></macro>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSet&lt;QString&gt;</argument>)</argument_list></macro>
 <typedef>typedef <type><name>QMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>QVariant</name></argument>&gt;</argument_list></name></type> <name>_RMapIntVariant</name>;</typedef>

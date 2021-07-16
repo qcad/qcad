@@ -401,7 +401,7 @@
         
     
     
-      QSet < REntity::Id > REcmaShellSnap::getEntityIds(
+      QList < REntity::Id > REcmaShellSnap::getEntityIds(
                 
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
@@ -427,7 +427,7 @@
                         //if (cppSig!="RGraphicsViewQt::event") {
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
-                        QSet < REntity::Id > ret =
+                        QList < REntity::Id > ret =
                         RSnap::getEntityIds(
                             
                         );
@@ -445,14 +445,14 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    QSet < REntity::Id > res;
+                    QList < REntity::Id > res;
                       
-                          res = qscriptvalue_cast< 
-                            QSet < REntity::Id >
-                          >(
+                          REcmaHelper::fromScriptValue(engine, 
                         
                             _q_function.call(__qtscript_self)
                         
+                      , res
+                    
                       )
                     
                     ;

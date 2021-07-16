@@ -101,7 +101,7 @@
      * \return Set of entity IDs that are relevant for the last performed
      * snap, usually used for highlighting.
      */</comment>
-    <function><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>getEntityIds</name><parameter_list>()</parameter_list> <block>{
+    <function><type><name>QList<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>getEntityIds</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr><name>entityIds</name></expr>;</return>
     }</block></function>
 
@@ -119,7 +119,7 @@
     }</block></function>
 
 </public><protected>protected:
-    <decl_stmt><decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>entityIds</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>entityIds</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RSnap</name>::<name>Status</name></name></type> <name>status</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RVector</name></type> <name>lastSnap</name></decl>;</decl_stmt>
 </protected>}</block>;</class>

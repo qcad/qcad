@@ -367,6 +367,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="segment"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="QList &lt; RObject::Id &gt; *"
+        typeName="QList &lt; RObject::Id &gt; *" name="entityIds"
+        hasDefault="true" default="NULL" isConst="false" />
       </variant>
     </method>
     <method name="getClosestShape" cppName="getClosestShape"
@@ -380,6 +383,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="RNANDOUBLE" isConst="false" />
         <arg type="bool" typeName="bool" name="ignoreComplex"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="RObject::Id *" typeName="RObject::Id *"
+        name="subEntityId" hasDefault="true" default="NULL"
+        isConst="false" />
       </variant>
     </method>
     <method name="getClosestSimpleShape"
@@ -483,6 +489,10 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="RBox &amp;" typeName="RBox" name="queryBox"
         hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
+        <arg type="QList &lt; RObject::Id &gt; *"
+        typeName="QList &lt; RObject::Id &gt; *"
+        name="subEntityIds" hasDefault="true" default="NULL"
+        isConst="false" />
       </variant>
     </method>
     <method name="getMiddlePoints" cppName="getMiddlePoints"
@@ -492,6 +502,10 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="RBox &amp;" typeName="RBox" name="queryBox"
         hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
+        <arg type="QList &lt; RObject::Id &gt; *"
+        typeName="QList &lt; RObject::Id &gt; *"
+        name="subEntityIds" hasDefault="true" default="NULL"
+        isConst="false" />
       </variant>
     </method>
     <method name="getCenterPoints" cppName="getCenterPoints"
@@ -501,6 +515,10 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="RBox &amp;" typeName="RBox" name="queryBox"
         hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
+        <arg type="QList &lt; REntity::Id &gt; *"
+        typeName="QList &lt; REntity::Id &gt; *"
+        name="subEntityIds" hasDefault="true" default="NULL"
+        isConst="false" />
       </variant>
     </method>
     <method name="getClosestPointOnEntity"
@@ -513,6 +531,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="RNANDOUBLE" isConst="false" />
         <arg type="bool" typeName="bool" name="limited"
         hasDefault="true" default="true" isConst="false" />
+        <arg type="REntity::Id *" typeName="REntity::Id *"
+        name="subEntityId" hasDefault="true" default="NULL"
+        isConst="false" />
       </variant>
     </method>
     <method name="getPointsWithDistanceToEnd"
@@ -527,6 +548,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="RBox &amp;" typeName="RBox" name="queryBox"
         hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
+        <arg type="QList &lt; RObject::Id &gt; *"
+        typeName="QList &lt; RObject::Id &gt; *"
+        name="subEntityIds" hasDefault="true" default="NULL"
+        isConst="false" />
       </variant>
     </method>
     <method name="getIntersectionPoints"
@@ -542,6 +567,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
         <arg type="bool" typeName="bool" name="ignoreComplex"
         hasDefault="true" default="true" isConst="false" />
+        <arg type="QList &lt; QPair &lt; REntity::Id , REntity::Id &gt; &gt; *"
+        typeName="QList &lt; QPair &lt; REntity::Id , REntity::Id &gt; &gt; *"
+        name="entityIds" hasDefault="true" default="NULL"
+        isConst="false" />
       </variant>
       <variant returnType="QList &lt; RVector &gt;"
       isPureVirtual="false">

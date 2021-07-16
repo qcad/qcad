@@ -29,21 +29,5 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
-    <method name="snapEntity" cppName="snapEntity"
-    specifier="protected" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="QList &lt; RVector &gt;"
-      isPureVirtual="false">
-        <arg type="QSharedPointer &lt; REntity &gt;"
-        typeName="QSharedPointer &lt; REntity &gt;" name="entity"
-        isConst="false" />
-        <arg type="RVector &amp;" typeName="RVector" name="point"
-        isConst="true" />
-        <arg type="RBox &amp;" typeName="RBox" name="queryBox"
-        isConst="true" />
-        <arg type="RGraphicsView &amp;" typeName="RGraphicsView"
-        name="view" isConst="false" />
-      </variant>
-    </method>
   </class>
 </unit>
