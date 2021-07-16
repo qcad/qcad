@@ -132,10 +132,11 @@ bool RDimRadialData::mirror(const RLine& axis) {
     return true;
 }
 
-QList<QSharedPointer<RShape> > RDimRadialData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment) const {
+QList<QSharedPointer<RShape> > RDimRadialData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment, QList<RObject::Id>* entityIds) const {
     Q_UNUSED(queryBox)
     Q_UNUSED(ignoreComplex)
     Q_UNUSED(segment)
+    Q_UNUSED(entityIds)
 
     QSharedPointer<RBlockReferenceEntity> dimBlockReference = getDimensionBlockReference();
     if (!dimBlockReference.isNull()) {

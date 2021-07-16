@@ -549,16 +549,17 @@ QList<RPainterPath> RTextBasedData::getPainterPaths(bool draft, double pixelSize
 RVector RTextBasedData::getClosestPointOnEntity(const RVector& point,
     double range, bool limited) const {
 
-    Q_UNUSED(point);
-    Q_UNUSED(range);
-    Q_UNUSED(limited);
+    Q_UNUSED(point)
+    Q_UNUSED(range)
+    Q_UNUSED(limited)
 
     return RVector::invalid;
 }
 
-QList<QSharedPointer<RShape> > RTextBasedData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment) const {
-    Q_UNUSED(queryBox);
-    Q_UNUSED(segment);
+QList<QSharedPointer<RShape> > RTextBasedData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment, QList<RObject::Id>* entityIds) const {
+    Q_UNUSED(queryBox)
+    Q_UNUSED(segment)
+    Q_UNUSED(entityIds)
 
     QList<QSharedPointer<RShape> > ret;
 

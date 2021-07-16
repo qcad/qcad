@@ -110,10 +110,11 @@ public:
      * \param ignoreComplex Ignore complex shapes and explode those into simple shapes
      * \param segment Split up splines into spline segments
      */
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false) const {
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false, QList<RObject::Id>* entityIds = NULL) const {
         Q_UNUSED(queryBox)
         Q_UNUSED(ignoreComplex)
         Q_UNUSED(segment)
+        Q_UNUSED(entityIds)
 
         return QList<QSharedPointer<RShape> >();
     }
@@ -122,7 +123,7 @@ public:
      * \return The one shape that is part of this entity which is the
      *      closest to the given position.
      */
-    virtual QSharedPointer<RShape> getClosestShape(const RVector& pos, double range = RNANDOUBLE, bool ignoreComplex = false) const;
+    virtual QSharedPointer<RShape> getClosestShape(const RVector& pos, double range = RNANDOUBLE, bool ignoreComplex = false, RObject::Id* subEntityId = NULL) const;
 
     virtual RShape* castToShape() {
         return NULL;
@@ -331,15 +332,15 @@ public:
     virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint=RS::RenderTop) const = 0;
 
     virtual RVector getPointOnEntity() const;
-    virtual QList<RVector> getEndPoints(const RBox& queryBox = RDEFAULT_RBOX) const;
-    virtual QList<RVector> getMiddlePoints(const RBox& queryBox = RDEFAULT_RBOX) const;
-    virtual QList<RVector> getCenterPoints(const RBox& queryBox = RDEFAULT_RBOX) const;
+    virtual QList<RVector> getEndPoints(const RBox& queryBox = RDEFAULT_RBOX, QList<RObject::Id>* subEntityIds = NULL) const;
+    virtual QList<RVector> getMiddlePoints(const RBox& queryBox = RDEFAULT_RBOX, QList<RObject::Id>* subEntityIds = NULL) const;
+    virtual QList<RVector> getCenterPoints(const RBox& queryBox = RDEFAULT_RBOX, QList<RObject::Id>* subEntityIds = NULL) const;
     virtual QList<RVector> getArcReferencePoints(const RBox& queryBox = RDEFAULT_RBOX) const;
     virtual QList<RVector> getPointsWithDistanceToEnd(
-        double distance, int from = RS::FromAny, const RBox& queryBox = RDEFAULT_RBOX) const;
+        double distance, int from = RS::FromAny, const RBox& queryBox = RDEFAULT_RBOX, QList<RObject::Id>* subEntityIds = NULL) const;
 
     virtual RVector getClosestPointOnEntity(const RVector& point,
-        double range=RNANDOUBLE, bool limited=true) const;
+        double range=RNANDOUBLE, bool limited=true, RObject::Id* subEntityId = NULL) const;
 
 //    /**
 //     * Override to disable intersection point
@@ -350,7 +351,8 @@ public:
 
     virtual QList<RVector> getIntersectionPoints(
             const REntityData& other, bool limited = true, bool same = false,
-            const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = true) const;
+            const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = true,
+            QList<QPair<RObject::Id, RObject::Id> >* entityIds = NULL) const;
     virtual QList<RVector> getIntersectionPoints(
             const RShape& shape, bool limited = true,
             const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = true) const;

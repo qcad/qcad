@@ -105,7 +105,7 @@ bool RSplineData::moveReferencePoint(const RVector& referencePoint, const RVecto
     return ret;
 }
 
-QList<QSharedPointer<RShape> > RSplineData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment) const {
+QList<QSharedPointer<RShape> > RSplineData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment, QList<RObject::Id>* entityIds) const {
     Q_UNUSED(ignoreComplex)
 
     if (!queryBox.isValid() || !segment) {

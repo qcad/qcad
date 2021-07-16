@@ -1496,9 +1496,13 @@ RVector RDocumentInterface::snap(RMouseEvent& event, bool preview) {
             ret = restrictOrtho(ret, getRelativeZero(), RS::Orthogonal);
         }
         
-        QSet<REntity::Id> entityIds = currentSnap->getEntityIds();
-        QSet<REntity::Id>::iterator it;
+        QList<REntity::Id> entityIds = currentSnap->getEntityIds();
+        QList<REntity::Id>::iterator it;
         for (it=entityIds.begin(); it!=entityIds.end(); ++it) {
+            // don't highlight entities that are part of the block (negative):
+            if (*it<0) {
+                continue;
+            }
             highlightEntity(*it);
         }
 

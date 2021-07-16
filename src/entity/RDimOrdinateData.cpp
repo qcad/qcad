@@ -140,10 +140,11 @@ bool RDimOrdinateData::stretch(const RPolyline& area, const RVector& offset) {
     return true;
 }
 
-QList<QSharedPointer<RShape> > RDimOrdinateData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment) const {
+QList<QSharedPointer<RShape> > RDimOrdinateData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment, QList<RObject::Id>* entityIds) const {
     Q_UNUSED(queryBox)
     Q_UNUSED(ignoreComplex)
     Q_UNUSED(segment)
+    Q_UNUSED(entityIds)
 
     QSharedPointer<RBlockReferenceEntity> dimBlockReference = getDimensionBlockReference();
     if (!dimBlockReference.isNull()) {

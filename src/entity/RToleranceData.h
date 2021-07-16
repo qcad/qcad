@@ -113,7 +113,7 @@ public:
     //virtual bool scale(const RVector& scaleFactors, const RVector& center);
     //virtual bool stretch(const RPolyline& area, const RVector& offset);
 
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false) const;
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false, QList<RObject::Id>* entityIds = NULL) const;
 
     virtual void update() const;
 

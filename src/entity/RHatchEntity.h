@@ -194,7 +194,7 @@ public:
         return data.getBoundaryAsPolylines(segmentLength);
     }
 
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false) const {
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false, QList<RObject::Id>* entityIds = NULL) const {
         return data.getShapes(queryBox, ignoreComplex, segment);
     }
 

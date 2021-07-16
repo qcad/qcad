@@ -100,7 +100,7 @@ public:
      * \return Set of entity IDs that are relevant for the last performed
      * snap, usually used for highlighting.
      */
-    QSet<REntity::Id> getEntityIds() {
+    QList<REntity::Id> getEntityIds() {
         return entityIds;
     }
 
@@ -118,7 +118,7 @@ public:
     }
 
 protected:
-    QSet<REntity::Id> entityIds;
+    QList<REntity::Id> entityIds;
     RSnap::Status status;
     RVector lastSnap;
 };

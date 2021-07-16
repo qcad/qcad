@@ -190,17 +190,17 @@ bool RToleranceData::flipVertical() {
     return mirror(RLine(RVector(0,0), RVector(1,0)));
 }
 
-QList<QSharedPointer<RShape> > RToleranceData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment) const {
-    Q_UNUSED(queryBox)
+QList<QSharedPointer<RShape> > RToleranceData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment, QList<RObject::Id>* entityIds) const {
+    //Q_UNUSED(queryBox)
     //Q_UNUSED(ignoreComplex)
-    Q_UNUSED(segment)
+    //Q_UNUSED(segment)
 
     QList<QSharedPointer<RShape> > ret;
 
     QList<RTextData> labels = getTextLabels();
     if (!ignoreComplex) {
         for (int i=0; i<labels.length(); i++) {
-            ret.append(labels[i].getShapes(queryBox, ignoreComplex, segment));
+            ret.append(labels[i].getShapes(queryBox, ignoreComplex, segment, entityIds));
         }
     }
 

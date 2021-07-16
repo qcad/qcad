@@ -658,7 +658,7 @@ RBox RBlockReferenceData::getQueryBoxInBlockCoordinates(const RBox& box) const {
 /**
  * Block shapes, transformed.
  */
-QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment) const {
+QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment, QList<REntity::Id>* entityIds) const {
     Q_UNUSED(segment)
 
     QList<QSharedPointer<RShape> > ret;
@@ -739,7 +739,14 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
                         applyColumnRowOffsetTo(*entity, col, row, true);
                     }
                 }
-                ret.append(entity->getShapes(queryBox, ignoreComplex));
+                QList<QSharedPointer<RShape> > shapes = entity->getShapes(queryBox, ignoreComplex);
+                ret.append(shapes);
+                if (entityIds!=NULL) {
+                    for (int c=0; c<shapes.length(); c++) {
+                        // make sure the indices in ret and entityIds match, insert duplicates if necessary:
+                        entityIds->append(entity->getId());
+                    }
+                }
             }
         }
     }

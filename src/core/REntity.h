@@ -390,15 +390,15 @@ public:
     /**
      * \copydoc REntityData::getShapes
      */
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false) const {
-        return getData().getShapes(queryBox, ignoreComplex, segment);
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false, QList<RObject::Id>* entityIds = NULL) const {
+        return getData().getShapes(queryBox, ignoreComplex, segment, entityIds);
     }
 
     /**
      * \copydoc REntityData::getClosestShape
      */
-    virtual QSharedPointer<RShape> getClosestShape(const RVector& pos, double range = RNANDOUBLE, bool ignoreComplex = false) const {
-        return getData().getClosestShape(pos, range, ignoreComplex);
+    virtual QSharedPointer<RShape> getClosestShape(const RVector& pos, double range = RNANDOUBLE, bool ignoreComplex = false, RObject::Id* subEntityId = NULL) const {
+        return getData().getClosestShape(pos, range, ignoreComplex, subEntityId);
     }
 
     /**
@@ -467,31 +467,31 @@ public:
     /**
      * \copydoc REntityData::getEndPoints
      */
-    virtual QList<RVector> getEndPoints(const RBox& queryBox = RDEFAULT_RBOX) const {
-        return getData().getEndPoints(queryBox);
+    virtual QList<RVector> getEndPoints(const RBox& queryBox = RDEFAULT_RBOX, QList<RObject::Id>* subEntityIds = NULL) const {
+        return getData().getEndPoints(queryBox, subEntityIds);
     }
 
     /**
      * \copydoc REntityData::getMiddlePoints
      */
-    virtual QList<RVector> getMiddlePoints(const RBox& queryBox = RDEFAULT_RBOX) const {
-        return getData().getMiddlePoints(queryBox);
+    virtual QList<RVector> getMiddlePoints(const RBox& queryBox = RDEFAULT_RBOX, QList<RObject::Id>* subEntityIds = NULL) const {
+        return getData().getMiddlePoints(queryBox, subEntityIds);
     }
 
     /**
      * \copydoc REntityData::getCenterPoints
      */
-    virtual QList<RVector> getCenterPoints(const RBox& queryBox = RDEFAULT_RBOX) const {
-        return getData().getCenterPoints(queryBox);
+    virtual QList<RVector> getCenterPoints(const RBox& queryBox = RDEFAULT_RBOX, QList<REntity::Id>* subEntityIds = NULL) const {
+        return getData().getCenterPoints(queryBox, subEntityIds);
     }
 
     /**
      * \copydoc REntityData::getClosestPointOnEntity
      */
     virtual RVector getClosestPointOnEntity(const RVector& point,
-        double range=RNANDOUBLE, bool limited=true) const {
+        double range=RNANDOUBLE, bool limited=true, REntity::Id* subEntityId = NULL) const {
 
-        return getData().getClosestPointOnEntity(point, range, limited);
+        return getData().getClosestPointOnEntity(point, range, limited, subEntityId);
     }
 
     /**
@@ -500,15 +500,14 @@ public:
     virtual QList<RVector> getPointsWithDistanceToEnd(
             double distance,
             int from = RS::FromAny,
-            const RBox& queryBox = RDEFAULT_RBOX) const {
-        return getData().getPointsWithDistanceToEnd(distance, from, queryBox);
+            const RBox& queryBox = RDEFAULT_RBOX, QList<RObject::Id>* subEntityIds = NULL) const {
+        return getData().getPointsWithDistanceToEnd(distance, from, queryBox, subEntityIds);
     }
 
     /**
      * \copydoc REntityData::getIntersectionPoints(const REntity&, bool)
      */
-    virtual QList<RVector> getIntersectionPoints(
-            const REntity& other, bool limited = true, const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = true) const;
+    virtual QList<RVector> getIntersectionPoints(const REntity& other, bool limited = true, const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = true, QList<QPair<REntity::Id, REntity::Id> >* entityIds = NULL) const;
 
     /**
      * \copydoc REntityData::getIntersectionPoints(const RShape&, bool)

@@ -99,8 +99,8 @@ public:
         return getData().getPainterPaths(draft);
     }
 
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false) const {
-        return getData().getShapes(queryBox, ignoreComplex, segment);
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false, QList<RObject::Id>* entityIds = NULL) const {
+        return getData().getShapes(queryBox, ignoreComplex, segment, entityIds);
     }
 
     virtual QList<QSharedPointer<RShape> > getExploded() const {

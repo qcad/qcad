@@ -162,8 +162,9 @@ double RViewportData::getDistanceTo(const RVector& point, bool limited, double r
     return qMin(ret, REntityData::getDistanceTo(point, limited, range, draft, strictRange));
 }
 
-QList<QSharedPointer<RShape> > RViewportData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment) const {
+QList<QSharedPointer<RShape> > RViewportData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment, QList<RObject::Id>* entityIds) const {
     Q_UNUSED(segment)
+    Q_UNUSED(entityIds)
 
     QList<QSharedPointer<RShape> > ret;
 
