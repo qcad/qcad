@@ -147,6 +147,9 @@ int main(int argc, char *argv[]) {
         qDebug() << "enable high dpi scaling";
         QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     }
+    else {
+        QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling, false);
+    }
     double qsf = RSettings::getDoubleValue("Ui/QT_SCALE_FACTOR", -1.0);
     if (qsf>0.0) {
 #ifdef Q_OS_WIN
