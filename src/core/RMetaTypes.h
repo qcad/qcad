@@ -312,12 +312,16 @@ Q_DECLARE_METATYPE(QFlags<Qt::Orientation>)
 Q_DECLARE_METATYPE(QFlags<QDir::Filter>*)
 
 Q_DECLARE_METATYPE(QList<int>)
+Q_DECLARE_METATYPE(QList<int>*)
 Q_DECLARE_METATYPE(QList<double>)
 Q_DECLARE_METATYPE(QList<QGraphicsItem*>)
 Q_DECLARE_METATYPE(QList<QString>)
 Q_DECLARE_METATYPE(QList<QKeySequence>)
 typedef QPair<int, double> _RPairIntDouble;
 Q_DECLARE_METATYPE(QList<_RPairIntDouble>)
+typedef QPair<int, int> _RPairIntInt;
+Q_DECLARE_METATYPE(QList<_RPairIntInt>)
+Q_DECLARE_METATYPE(QList<_RPairIntInt>*)
 
 Q_DECLARE_METATYPE(QSet<QString>)
 typedef QMap<int, QVariant> _RMapIntVariant;
