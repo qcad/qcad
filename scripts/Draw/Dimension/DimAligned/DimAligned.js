@@ -157,6 +157,14 @@ DimAligned.prototype.pickCoordinate = function(event, preview) {
 };
 
 DimAligned.prototype.getOperation = function(preview) {
+    var entity = this.getEntity(preview);
+    if (isNull(entity)) {
+        return undefined;
+    }
+    return new RAddObjectOperation(entity, this.getToolTitle());
+};
+
+DimAligned.prototype.getEntity = function(preview) {
     if (!this.data.isValid()) {
         return undefined;
     }
@@ -172,6 +180,7 @@ DimAligned.prototype.getOperation = function(preview) {
         return undefined;
     }
 
-    return new RAddObjectOperation(entity, this.getToolTitle());
-};
+    this.initEntity(entity, preview);
 
+    return entity;
+};
