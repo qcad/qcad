@@ -628,7 +628,6 @@ QList<RVector> REntityData::getIntersectionPoints(
             if (entityIds!=NULL && i<entityIds1.length() && k<entityIds2.length()) {
                 // make sure the indices in ret and entityIds match, insert duplicates if necessary:
                 for (int c=0; c<ips.length(); c++) {
-                    qDebug() << "intersection between: " << entityIds1.at(i) << entityIds2.at(k) << " c:" << c << " same:" << same;
                     entityIds->append(QPair<RObject::Id, RObject::Id>(entityIds1.at(i), entityIds2.at(k)));
                 }
             }
