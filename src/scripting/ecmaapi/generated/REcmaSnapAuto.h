@@ -54,7 +54,13 @@
         init
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getGridPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setGridPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getFreePositioning
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setFreePositioning

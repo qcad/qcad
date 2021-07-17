@@ -306,7 +306,8 @@
         
     
       RVector snap(
-                RMouseEvent & event
+                RMouseEvent & event, bool preview
+        = false
             );
         
     

@@ -29,6 +29,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
+    <method name="getGridPoints" cppName="getGridPoints"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="setGridPoints" cppName="setGridPoints"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
@@ -36,6 +41,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="bool" typeName="bool" name="on"
         isConst="false" />
       </variant>
+    </method>
+    <method name="getFreePositioning" cppName="getFreePositioning"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="setFreePositioning" cppName="setFreePositioning"
     specifier="public" isStatic="true" isVirtual="false"

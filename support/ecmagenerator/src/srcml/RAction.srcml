@@ -252,7 +252,7 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>updatePreview</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>applyOperation</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
-    <function_decl><type><name>RVector</name></type> <name>snap</name><parameter_list>(<param><decl><type><name>RMouseEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>snap</name><parameter_list>(<param><decl><type><name>RMouseEvent</name>&amp;</type> <name>event</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
 </public><protected>protected:
     <decl_stmt><decl><type><name>bool</name></type> <name>terminated</name></decl>;</decl_stmt>

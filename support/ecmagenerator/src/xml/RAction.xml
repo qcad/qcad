@@ -349,10 +349,12 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="true" />
     </method>
     <method name="snap" cppName="snap" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false">
         <arg type="RMouseEvent &amp;" typeName="RMouseEvent"
         name="event" isConst="false" />
+        <arg type="bool" typeName="bool" name="preview"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
   </class>

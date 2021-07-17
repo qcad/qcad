@@ -3145,7 +3145,7 @@
         
     
       RVector REcmaShellActionAdapter::snap(
-                RMouseEvent & event
+                RMouseEvent & event, bool preview
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellActionAdapter::snap", engine);
@@ -3158,7 +3158,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=1*/
+                    || _q_function.property("length").toInt32()!=2*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RActionAdapter::snap";
@@ -3172,7 +3172,7 @@
                         //}
                         RVector ret =
                         RActionAdapter::snap(
-                            event
+                            event, preview
                         );
 
                         // block recursion again:
@@ -3204,6 +3204,15 @@
         << qScriptValueFromValue(engine, 
 
         &event
+        )
+      
+
+
+
+    // type: bool, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        preview
         )
       
                             )

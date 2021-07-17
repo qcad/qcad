@@ -85,7 +85,11 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, init, "init");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getGridPoints, "getGridPoints");
+            
             REcmaHelper::registerFunction(&engine, &ctor, setGridPoints, "setGridPoints");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getFreePositioning, "getFreePositioning");
             
             REcmaHelper::registerFunction(&engine, &ctor, setFreePositioning, "setFreePositioning");
             
@@ -427,6 +431,45 @@
             return result;
         }
          QScriptValue
+        REcmaSnapAuto::getGridPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnapAuto::getGridPoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::getGridPoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSnapAuto::
+       getGridPoints();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.getGridPoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnapAuto::getGridPoints", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSnapAuto::setGridPoints
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -469,6 +512,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSnapAuto::setGridPoints", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnapAuto::getFreePositioning
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnapAuto::getFreePositioning", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::getFreePositioning";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSnapAuto::
+       getFreePositioning();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.getFreePositioning().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnapAuto::getFreePositioning", context, engine);
             return result;
         }
          QScriptValue
