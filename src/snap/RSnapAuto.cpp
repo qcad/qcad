@@ -107,7 +107,20 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
     // interrupted by mouse move:
     if (RMouseEvent::hasMouseMoved()) {
         if (!freePositioning) {
-            return RVector::invalid;
+            // no free positioning, try grid as fallback:
+            if (gridPoints) {
+                RSnapGrid snapGrid;
+                lastSnap = snapGrid.snap(position, view, range);
+                if (lastSnap.isValid() && lastSnap.getDistanceTo2D(position) < range) {
+                    status = RSnap::Grid;
+                    return lastSnap;
+                }
+                lastSnap = RVector::invalid;
+            }
+            else {
+                // no grid, no free positioning:
+                return RVector::invalid;
+            }
         }
         status = RSnap::Free;
         return position;
