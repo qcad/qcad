@@ -251,7 +251,7 @@ public:
     virtual void updatePreview() = 0;
     virtual void applyOperation() = 0;
 
-    RVector snap(RMouseEvent& event);
+    virtual RVector snap(RMouseEvent& event, bool preview = false);
 
 protected:
     bool terminated;
