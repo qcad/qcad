@@ -22,7 +22,7 @@
      <x>0</x>
      <y>0</y>
      <width>635</width>
-     <height>1109</height>
+     <height>1132</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -399,6 +399,13 @@
           </spacer>
          </item>
         </layout>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="ApplyLineweightToPoints">
+         <property name="text">
+          <string>Apply line weight to points</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>

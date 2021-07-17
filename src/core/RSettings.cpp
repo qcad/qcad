@@ -73,6 +73,7 @@ int RSettings::highResolutionGraphicsView = -1;
 int RSettings::previewEntities = -1;
 int RSettings::limitZoomAndScroll = -1;
 int RSettings::autoScaleLinetypePattern = -1;
+int RSettings::applyLineweightToPoints = -1;
 int RSettings::useSecondarySelectionColor = -1;
 int RSettings::mouseThreshold = -1;
 int RSettings::positionByMousePress = -1;
@@ -1650,6 +1651,13 @@ bool RSettings::getAutoScaleLinetypePatterns() {
     return (bool)autoScaleLinetypePattern;
 }
 
+bool RSettings::getApplyLineweightToPoints() {
+    if (applyLineweightToPoints==-1) {
+        applyLineweightToPoints = getValue("GraphicsView/ApplyLineweightToPoints", QVariant(false)).toBool();
+    }
+    return (bool)applyLineweightToPoints;
+}
+
 bool RSettings::getUseSecondarySelectionColor() {
     if (useSecondarySelectionColor==-1) {
         useSecondarySelectionColor = getValue("GraphicsViewColors/UseSecondarySelectionColor", QVariant(false)).toBool();
@@ -1728,6 +1736,7 @@ void RSettings::resetCache() {
     previewEntities = -1;
     limitZoomAndScroll = -1;
     autoScaleLinetypePattern = -1;
+    applyLineweightToPoints = -1;
     useSecondarySelectionColor = -1;
     useSolidLineSelection = -1;
     arcAngleLengthThreshold = -1;

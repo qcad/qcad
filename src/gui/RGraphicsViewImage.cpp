@@ -1688,6 +1688,7 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
 
         // draw points:
         if (path.hasPoints()) {
+            // simple point display for hatches (don't apply point styles):
             if (path.getSimplePointDisplay()) {
                 double ps = getScene()->getPixelSizeHint();
                 // simple point mode for hatch patterns:
@@ -1718,7 +1719,9 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
                 // the lines don't turn into a blob
                 // This also applies when exporting (e.g. to bitmap):
                 QPen pen = painter->pen();
-                pen.setWidth(0);
+                if (!RSettings::getApplyLineweightToPoints()) {
+                    pen.setWidth(0);
+                }
                 painter->setPen(pen);
             }
 

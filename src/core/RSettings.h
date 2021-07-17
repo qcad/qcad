@@ -261,6 +261,7 @@ public:
     static bool isNextVersionEnabled();
 
     static bool getAutoScaleLinetypePatterns();
+    static bool getApplyLineweightToPoints();
     static bool getUseSecondarySelectionColor();
     static bool getUseSolidLineSelection();
 
@@ -325,6 +326,7 @@ private:
     static int previewEntities;
     static int limitZoomAndScroll;
     static int autoScaleLinetypePattern;
+    static int applyLineweightToPoints;
     static int useSolidLineSelection;
     static int useSecondarySelectionColor;
     static int mouseThreshold;
