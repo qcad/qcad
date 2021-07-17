@@ -181,8 +181,6 @@ void RDimLinearData::updateTextData() const {
         }
     }
 
-    if (false) {
-        textData.rotate(defaultAngle, RVector(0,0));
-    }
+    textData.rotate(defaultAngle, RVector(0,0));
     textData.move(getTextPosition());
 }
