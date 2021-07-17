@@ -47,6 +47,22 @@ public:
 
     static void init(bool force = false);
 
+    static bool getGridPoints() {
+        return gridPoints;
+    }
+
+    static void setGridPoints(bool on) {
+        gridPoints = on;
+    }
+
+    static bool getFreePositioning() {
+        return freePositioning;
+    }
+
+    static void setFreePositioning(bool on) {
+        freePositioning = on;
+    }
+
     virtual void reset() {
         status = RSnap::Unknown;
     }
