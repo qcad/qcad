@@ -10940,7 +10940,7 @@ nos resultados de busca:</translation>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>
-        <translation>Editor do imóvel</translation>
+        <translation>Editor de propriedade</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40"/>
