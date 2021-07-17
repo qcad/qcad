@@ -66,7 +66,8 @@ RVector RSnapEntityBase::snap(
         return lastSnap;
     }
 
-    REntity::Id entityId;
+    REntity::Id mainEntityId = REntity::INVALID_ID;
+    REntity::Id subEntityId = REntity::INVALID_ID;
     double minDist = RMAXDOUBLE;
     double dist;
 
@@ -86,17 +87,25 @@ RVector RSnapEntityBase::snap(
             continue;
         }
 
-        RVector candidate =
-            position.getClosest2D(
-                snapEntity(e, position, queryBox, view)
-            );
-
-        dist = candidate.getDistanceTo2D(position);
-        if (dist<minDist) {
-            lastSnap = candidate;
-            minDist = dist;
-            entityId = e->getId();
+        QList<REntity::Id> subEntityIdsCandidates;
+        QList<RVector> candidates = snapEntity(e, position, queryBox, view, &subEntityIdsCandidates);
+        RVector candidate;
+        for (int i=0; i<candidates.length(); i++) {
+            candidate = candidates[i];
+            dist = candidate.getDistanceTo2D(position);
+            if (dist<minDist) {
+                lastSnap = candidate;
+                minDist = dist;
+                mainEntityId = e->getId();
+                if (i<subEntityIdsCandidates.length()) {
+                    subEntityId = subEntityIdsCandidates[i];
+                }
+            }
         }
+//        RVector candidate =
+//            position.getClosest2D(
+//            );
+
     }
 
     if (!lastSnap.isValid()) {
@@ -105,7 +114,11 @@ RVector RSnapEntityBase::snap(
         return lastSnap;
     }
     else {
-        entityIds.insert(entityId);
+        entityIds.append(mainEntityId);
+        if (subEntityId!=REntity::INVALID_ID) {
+            // add sub entity ID (entity inside block):
+            entityIds.append(-subEntityId);
+        }
         return lastSnap;
     }
 }

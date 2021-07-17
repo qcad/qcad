@@ -24,7 +24,8 @@ QList<RVector> RSnapPerpendicular::snapEntity(
         QSharedPointer<REntity> entity,
         const RVector& point,
         const RBox& queryBox,
-        RGraphicsView& view) {
+        RGraphicsView& view,
+        QList<REntity::Id>* subEntityIds) {
 
     QList<RVector> ret;
 
@@ -33,12 +34,16 @@ QList<RVector> RSnapPerpendicular::snapEntity(
         return ret;
     }
 
-    QSharedPointer<RShape> shape = entity->getClosestShape(point, queryBox.getWidth()/2, true);
+    RObject::Id subEntityId = REntity::INVALID_ID;
+    QSharedPointer<RShape> shape = entity->getClosestShape(point, queryBox.getWidth()/2, true, &subEntityId);
     if (shape.isNull()) {
         return ret;
     }
 
     ret.append(shape->getClosestPointOnShape(di->getLastPosition(), false));
+    if (subEntityIds!=NULL) {
+        subEntityIds->append(subEntityId);
+    }
 
     return ret;
 }

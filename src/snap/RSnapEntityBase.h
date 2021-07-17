@@ -55,7 +55,8 @@ protected:
             QSharedPointer<REntity> entity,
             const RVector& point,
             const RBox& queryBox,
-            RGraphicsView& view) = 0;
+            RGraphicsView& view,
+            QList<REntity::Id>* subEntityIds = NULL) = 0;
 };
 
 Q_DECLARE_METATYPE(RSnapEntityBase*)

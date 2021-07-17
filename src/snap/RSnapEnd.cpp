@@ -21,10 +21,11 @@
 QList<RVector> RSnapEnd::snapEntity(QSharedPointer<REntity> entity,
                                     const RVector& point,
                                     const RBox& queryBox,
-                                    RGraphicsView& view) {
+                                    RGraphicsView& view,
+                                    QList<REntity::Id>* subEntityIds) {
 
     Q_UNUSED(view)
     Q_UNUSED(point)
 
-    return entity->getEndPoints(queryBox);
+    return entity->getEndPoints(queryBox, subEntityIds);
 }

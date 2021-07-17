@@ -61,8 +61,14 @@ RVector RSnapIntersection::snap(
         return lastSnap;
     }
 
-    REntity::Id entityId1 = REntity::INVALID_ID;
-    REntity::Id entityId2 = REntity::INVALID_ID;
+    // main entity Ids (e.g. line or block reference):
+    REntity::Id mainEntityId1 = REntity::INVALID_ID;
+    REntity::Id mainEntityId2 = REntity::INVALID_ID;
+
+    // sub entity Ids (e.g. line in block):
+    REntity::Id subEntityId1 = REntity::INVALID_ID;
+    REntity::Id subEntityId2 = REntity::INVALID_ID;
+
     lastSnap = RVector::invalid;
     double minDist = RMAXDOUBLE;
     double dist;
@@ -113,20 +119,41 @@ RVector RSnapIntersection::snap(
                 continue;
             }
 
-            QList<RVector> ipsCandidates = e1->getIntersectionPoints(*e2, true, queryBox);
+            // list of sub entity Ids of candidates:
+            QList<QPair<REntity::Id, REntity::Id> > subEntityIdsCandidates;
+            QList<RVector> ipsCandidates = e1->getIntersectionPoints(*e2, true, queryBox, true, &subEntityIdsCandidates);
 
             if (ipsCandidates.isEmpty()) {
                 continue;
             }
 
-            RVector ipCandidate = position.getClosest(ipsCandidates);
+            // find closest intersection point:
+            int idx = position.getClosestIndex(ipsCandidates);
+            if (idx<0) {
+                continue;
+            }
+            RVector ipCandidate = ipsCandidates[idx];
+
+            // choose matching pair of sub entity Ids:
+            QPair<REntity::Id, REntity::Id> subEntityIds(REntity::INVALID_ID, REntity::INVALID_ID);
+            if (idx<subEntityIdsCandidates.length()) {
+                subEntityIds = subEntityIdsCandidates[idx];
+            }
 
             dist = ipCandidate.getDistanceTo(position);
             if (dist<minDist) {
                 lastSnap = ipCandidate;
                 minDist = dist;
-                entityId1 = e1->getId();
-                entityId2 = e2->getId();
+
+                mainEntityId1 = e1->getId();
+                if (subEntityIds.first!=REntity::INVALID_ID) {
+                    subEntityId1 = subEntityIds.first;
+                }
+
+                mainEntityId2 = e2->getId();
+                if (subEntityIds.second!=REntity::INVALID_ID) {
+                    subEntityId2 = subEntityIds.second;
+                }
             }
         }
     }
@@ -137,11 +164,13 @@ RVector RSnapIntersection::snap(
         return lastSnap;
     }
     else {
-        if (entityId1!=REntity::INVALID_ID) {
-            entityIds.insert(entityId1);
+        entityIds.append(mainEntityId1);
+        if (subEntityId1!=REntity::INVALID_ID) {
+            entityIds.append(-subEntityId1);
         }
-        if (entityId2!=REntity::INVALID_ID) {
-            entityIds.insert(entityId2);
+        entityIds.append(mainEntityId2);
+        if (subEntityId2!=REntity::INVALID_ID) {
+            entityIds.append(-subEntityId2);
         }
         return lastSnap;
     }

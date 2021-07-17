@@ -43,7 +43,8 @@ protected:
             QSharedPointer<REntity> entity,
             const RVector& point,
             const RBox& queryBox,
-            RGraphicsView& view);
+            RGraphicsView& view,
+            QList<REntity::Id>* subEntityId = NULL);
 };
 
 Q_DECLARE_METATYPE(RSnapTangential*)

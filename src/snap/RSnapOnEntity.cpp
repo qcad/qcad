@@ -21,11 +21,16 @@
 QList<RVector> RSnapOnEntity::snapEntity(QSharedPointer<REntity> entity,
                                          const RVector& point,
                                          const RBox& queryBox,
-                                         RGraphicsView& view) {
+                                         RGraphicsView& view,
+                                         QList<REntity::Id>* subEntityIds) {
 
-    Q_UNUSED(view);
+    Q_UNUSED(view)
 
     QList<RVector> ret;
-    ret.append(entity->getClosestPointOnEntity(point, queryBox.getWidth()/2));
+    REntity::Id subEntityId;
+    ret.append(entity->getClosestPointOnEntity(point, queryBox.getWidth()/2, true, &subEntityId));
+    if (subEntityIds!=NULL) {
+        subEntityIds->append(subEntityId);
+    }
     return ret;
 }

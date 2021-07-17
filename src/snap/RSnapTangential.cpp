@@ -27,7 +27,8 @@ QList<RVector> RSnapTangential::snapEntity(
         QSharedPointer<REntity> entity,
         const RVector& point,
         const RBox& queryBox,
-        RGraphicsView& view) {
+        RGraphicsView& view,
+        QList<REntity::Id>* subEntityIds) {
 
     QList<RVector> ret;
 
@@ -36,7 +37,8 @@ QList<RVector> RSnapTangential::snapEntity(
         return ret;
     }
 
-    QSharedPointer<RShape> shape = entity->getClosestShape(point, queryBox.getWidth()/2, true);
+    REntity::Id subEntityId = REntity::INVALID_ID;
+    QSharedPointer<RShape> shape = entity->getClosestShape(point, queryBox.getWidth()/2, true, &subEntityId);
     if (shape.isNull()) {
         return ret;
     }
@@ -46,6 +48,9 @@ QList<RVector> RSnapTangential::snapEntity(
         QList<RLine> lines = circle->getTangents(di->getLastPosition());
         for (int i=0; i<lines.length(); i++) {
             ret.append(lines[i].getEndPoint());
+            if (subEntityIds!=NULL) {
+                subEntityIds->append(subEntityId);
+            }
         }
     }
 
@@ -54,6 +59,9 @@ QList<RVector> RSnapTangential::snapEntity(
         QList<RLine> lines = arc->getTangents(di->getLastPosition());
         for (int i=0; i<lines.length(); i++) {
             ret.append(lines[i].getEndPoint());
+            if (subEntityIds!=NULL) {
+                subEntityIds->append(subEntityId);
+            }
         }
     }
 
@@ -62,6 +70,9 @@ QList<RVector> RSnapTangential::snapEntity(
         QList<RLine> lines = ellipse->getTangents(di->getLastPosition());
         for (int i=0; i<lines.length(); i++) {
             ret.append(lines[i].getEndPoint());
+            if (subEntityIds!=NULL) {
+                subEntityIds->append(subEntityId);
+            }
         }
     }
 
