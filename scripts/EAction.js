@@ -1766,6 +1766,13 @@ EAction.prototype.pickCoordinate = function(event, preview) {
  * Default implementation. Calls pickCoordinate(event, false)
  */
 EAction.prototype.coordinateEvent = function(event) {
+    // don't let invalid positions go through for most cases (this is overridden for DefaultAction):
+    var pos = event.getModelPosition();
+    if (!isValidVector(pos)) {
+        EAction.handleUserWarning(qsTr("Invalid position"));
+        return;
+    }
+
     this.pickCoordinate(event, false);
 };
 

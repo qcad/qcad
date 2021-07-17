@@ -470,6 +470,11 @@ DefaultAction.prototype.escapeEvent = function(event) {
     this.setState(DefaultAction.State.Neutral);
 };
 
+DefaultAction.prototype.coordinateEvent = function(event) {
+    // required to make sure invalid coordinate event goes through (needed for drag and drop):
+    this.pickCoordinate(event, false);
+};
+
 DefaultAction.prototype.pickCoordinate = function(event, preview) {
     var op;
 
