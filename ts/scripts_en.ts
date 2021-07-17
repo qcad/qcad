@@ -2670,7 +2670,7 @@ Do you wish to recover it?</translation>
         <translation>Move entity to desired location</translation>
     </message>
     <message>
-        <location line="+394"/>
+        <location line="+399"/>
         <source>Move Reference Point</source>
         <translation>Move Reference Point</translation>
     </message>
@@ -4311,12 +4311,12 @@ is already in the list.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2108"/>
+        <location line="+2115"/>
         <source>Cancel</source>
         <translation>Cancel</translation>
     </message>
     <message>
-        <location line="-2107"/>
+        <location line="-2114"/>
         <source>Done</source>
         <translation>Done</translation>
     </message>
@@ -4347,7 +4347,12 @@ is already in the list.</translation>
         <translation>CAD Tools</translation>
     </message>
     <message>
-        <location line="+738"/>
+        <location line="+568"/>
+        <source>Invalid position</source>
+        <translation>Invalid position</translation>
+    </message>
+    <message>
+        <location line="+177"/>
         <source>Entity is not in working set.</source>
         <translation>Entity is not in working set.</translation>
     </message>
@@ -6161,7 +6166,12 @@ BUG: Interferes with group castings.</translation>
         <translation>Default lineweight:</translation>
     </message>
     <message>
-        <location line="+124"/>
+        <location line="+108"/>
+        <source>Apply line weight to points</source>
+        <translation>Apply line weight to points</translation>
+    </message>
+    <message>
+        <location line="+23"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation>Use full resolution for Retina / high resolution display</translation>
     </message>
@@ -6199,7 +6209,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Linetypes</translation>
     </message>
     <message>
-        <location line="-734"/>
+        <location line="-741"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatically use screen based linetypes in model view</translation>
     </message>
@@ -6219,7 +6229,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Pattern scale for lineweight 0.00mm:</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+45"/>
         <source>Display and Performance</source>
         <translation>Display and Performance</translation>
     </message>
@@ -13844,12 +13854,12 @@ shown in search results:</translation>
         <translation>Auto screen scale factor</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>Enable high DPI scaling</source>
         <translation>Enable high DPI scaling</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+12"/>
         <source>Scale factor:</source>
         <translation>Scale factor:</translation>
     </message>

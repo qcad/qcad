@@ -2743,7 +2743,7 @@ Do you wish to recover it?</source>
         <translation>Premakni entiteto na željeno lokacijo</translation>
     </message>
     <message>
-        <location line="+394"/>
+        <location line="+399"/>
         <source>Move Reference Point</source>
         <translation>Premakni referenčno točko</translation>
     </message>
@@ -4433,12 +4433,12 @@ je že na seznamu.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2108"/>
+        <location line="+2115"/>
         <source>Cancel</source>
         <translation>Prekliči</translation>
     </message>
     <message>
-        <location line="-2107"/>
+        <location line="-2114"/>
         <source>Done</source>
         <translation>Končano</translation>
     </message>
@@ -4473,7 +4473,12 @@ je že na seznamu.</translation>
         <translation>CAD orodja</translation>
     </message>
     <message>
-        <location line="+738"/>
+        <location line="+568"/>
+        <source>Invalid position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+177"/>
         <source>Entity is not in working set.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6308,7 +6313,12 @@ BUG: Interferes with group castings.</source>
         <translation>Privzeta debelina črte:</translation>
     </message>
     <message>
-        <location line="+124"/>
+        <location line="+108"/>
+        <source>Apply line weight to points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6342,7 +6352,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Uporabi večnitnost</translation>
     </message>
     <message>
-        <location line="-826"/>
+        <location line="-833"/>
         <source>Color lightness threshold:</source>
         <translation>Prag svetlosti barv:</translation>
     </message>
@@ -6371,7 +6381,7 @@ BUG: Interferes with group castings.</source>
         <translation>Povečava vzorca ko je debelina črte 0.00mm:</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+45"/>
         <source>Display and Performance</source>
         <translation>Prikaz in optimizacija</translation>
     </message>
@@ -6405,7 +6415,7 @@ BUG: Interferes with group castings.</source>
         <translation>Iztek časa za izris šrafur:</translation>
     </message>
     <message>
-        <location line="-453"/>
+        <location line="-460"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Samodejno uporabi zaslonske črte v prikazu modela</translation>
     </message>
@@ -6418,7 +6428,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Optimizacija</translation>
     </message>
     <message>
-        <location line="+202"/>
+        <location line="+209"/>
         <source>Number of preview entities:</source>
         <translation>Število entitet v predogledu:</translation>
     </message>
@@ -14385,12 +14395,12 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>Enable high DPI scaling</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+12"/>
         <source>Scale factor:</source>
         <translation type="unfinished"></translation>
     </message>

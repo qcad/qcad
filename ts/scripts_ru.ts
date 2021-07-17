@@ -2692,7 +2692,7 @@ Do you wish to recover it?</source>
         <translation>Переместить объект в нужное место</translation>
     </message>
     <message>
-        <location line="+394"/>
+        <location line="+399"/>
         <source>Move Reference Point</source>
         <translation>Переместить точку привязки</translation>
     </message>
@@ -4329,12 +4329,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2108"/>
+        <location line="+2115"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location line="-2107"/>
+        <location line="-2114"/>
         <source>Done</source>
         <translation>Готово</translation>
     </message>
@@ -4369,7 +4369,12 @@ is already in the list.</source>
         <translation>Инструменты САПР</translation>
     </message>
     <message>
-        <location line="+738"/>
+        <location line="+568"/>
+        <source>Invalid position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+177"/>
         <source>Entity is not in working set.</source>
         <translation>Объект не входит в рабочий набор.</translation>
     </message>
@@ -6168,7 +6173,12 @@ BUG: Interferes with group castings.</source>
         <translation>Предотвратить белый на белом/чёрный на чёрном дисплее</translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+136"/>
+        <source>Apply line weight to points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation>Использовать полное разрешение для дисплея Retina / дисплея с высоким разрешением</translation>
     </message>
@@ -6198,7 +6208,7 @@ BUG: Interferes with group castings.</source>
         <translation>Постоянное выделение</translation>
     </message>
     <message>
-        <location line="-826"/>
+        <location line="-833"/>
         <source>Color lightness threshold:</source>
         <translation>Порог светлоты цвета:</translation>
     </message>
@@ -6227,7 +6237,7 @@ BUG: Interferes with group castings.</source>
         <translation>Шаблон масштаба для толщины линии в 0.00 мм:</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+45"/>
         <source>Display and Performance</source>
         <translation>Отображение и производительность</translation>
     </message>
@@ -6246,7 +6256,7 @@ BUG: Interferes with group castings.</source>
         <translation>Сглаживание по умолчанию</translation>
     </message>
     <message>
-        <location line="-125"/>
+        <location line="-132"/>
         <source>Linetypes and Lineweights</source>
         <translation>Типы и вес линий</translation>
     </message>
@@ -6261,7 +6271,7 @@ BUG: Interferes with group castings.</source>
         <translation>Автоматически использовать типы линий, оптимизированные для экрана, в просмотре моделей</translation>
     </message>
     <message>
-        <location line="+202"/>
+        <location line="+209"/>
         <source>Number of preview entities:</source>
         <translation>Количество объектов при предпросмотре:</translation>
     </message>
@@ -13793,12 +13803,12 @@ shown in search results:</source>
         <translation>Автоматический коэффициент масштабирования экрана</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>Enable high DPI scaling</source>
         <translation>Включить масштабирование высокого разрешения</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+12"/>
         <source>Scale factor:</source>
         <translation>Коэффициент масштабирования:</translation>
     </message>

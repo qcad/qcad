@@ -2583,7 +2583,7 @@ Odzyskać ją?</translation>
         <translation>Przenieś obiekt do określonego położenia</translation>
     </message>
     <message>
-        <location line="+394"/>
+        <location line="+399"/>
         <source>Move Reference Point</source>
         <translation>Przenieś punkt odniesienia</translation>
     </message>
@@ -4203,12 +4203,12 @@ jest już na liście.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2108"/>
+        <location line="+2115"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-2107"/>
+        <location line="-2114"/>
         <source>Done</source>
         <translation type="unfinished">Gotowe</translation>
     </message>
@@ -4239,7 +4239,12 @@ jest już na liście.</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+738"/>
+        <location line="+568"/>
+        <source>Invalid position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+177"/>
         <source>Entity is not in working set.</source>
         <translation type="unfinished">Podmiot nie znajduje się w zestawie roboczym.</translation>
     </message>
@@ -5911,7 +5916,12 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+136"/>
+        <source>Apply line weight to points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation type="unfinished">Użyj pełnej rozdzielczości dla wyświetlacza Retina / wysokiej rozdzielczości</translation>
     </message>
@@ -5941,7 +5951,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">Trwała selekcja</translation>
     </message>
     <message>
-        <location line="-826"/>
+        <location line="-833"/>
         <source>Color lightness threshold:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5970,7 +5980,7 @@ BUG: Interferes with group castings.</source>
         <translation>Skala wzoru dla grubości linii 0,00 mm:</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+45"/>
         <source>Display and Performance</source>
         <translation>Wyświetlanie i wydajność</translation>
     </message>
@@ -5985,7 +5995,7 @@ BUG: Interferes with group castings.</source>
         <translation>Minimalny krok kątowy dla renderowania łuków (stopnie):</translation>
     </message>
     <message>
-        <location line="-372"/>
+        <location line="-379"/>
         <source>Linetypes and Lineweights</source>
         <translation type="unfinished">Rodzaje linii i wagi linii</translation>
     </message>
@@ -5999,7 +6009,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Użycie pełnej rozdzielczości dla wyświetlaczy Retina</translation>
     </message>
     <message>
-        <location line="+117"/>
+        <location line="+124"/>
         <source>Anti-aliasing on by default</source>
         <translation>Domyślnie włączony antyaliasing</translation>
     </message>
@@ -6014,12 +6024,12 @@ BUG: Interferes with group castings.</source>
         <translation>Czas renderowania kreskowania:</translation>
     </message>
     <message>
-        <location line="-453"/>
+        <location line="-460"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatyczne użycie linii ekranowych w widoku modelu</translation>
     </message>
     <message>
-        <location line="+202"/>
+        <location line="+209"/>
         <source>Number of preview entities:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13219,12 +13229,12 @@ shown in search results:</source>
         <translation type="unfinished">Automatyczny współczynnik skali ekranu</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>Enable high DPI scaling</source>
         <translation type="unfinished">Włącz skalowanie wysokiego DPI</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+12"/>
         <source>Scale factor:</source>
         <translation type="unfinished">Współczynnik skali:</translation>
     </message>

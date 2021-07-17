@@ -2547,7 +2547,7 @@ Vill du återställa den?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+394"/>
+        <location line="+399"/>
         <source>Move Reference Point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4128,12 +4128,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2108"/>
+        <location line="+2115"/>
         <source>Cancel</source>
         <translation type="unfinished">Avbryt</translation>
     </message>
     <message>
-        <location line="-2107"/>
+        <location line="-2114"/>
         <source>Done</source>
         <translation type="unfinished">Klar</translation>
     </message>
@@ -4164,7 +4164,12 @@ is already in the list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+738"/>
+        <location line="+568"/>
+        <source>Invalid position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+177"/>
         <source>Entity is not in working set.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5822,7 +5827,12 @@ BUG: Interferes with group castings.</source>
         <translation>mönsterskala för linjetjocklek 0.00mm:</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+35"/>
+        <source>Apply line weight to points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Display and Performance</source>
         <translation>Visning och Prestanda</translation>
     </message>
@@ -12992,12 +13002,12 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>Enable high DPI scaling</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+12"/>
         <source>Scale factor:</source>
         <translation type="unfinished"></translation>
     </message>

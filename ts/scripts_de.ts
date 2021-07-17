@@ -3086,7 +3086,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Objekt verschieben</translation>
     </message>
     <message>
-        <location line="+394"/>
+        <location line="+399"/>
         <source>Move Reference Point</source>
         <translation>Referenzpunkt verschieben</translation>
     </message>
@@ -4834,12 +4834,12 @@ ist bereits in der Liste.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2108"/>
+        <location line="+2115"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="-2107"/>
+        <location line="-2114"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
@@ -4878,7 +4878,12 @@ ist bereits in der Liste.</translation>
         <translation>CAD Werkzeuge</translation>
     </message>
     <message>
-        <location line="+738"/>
+        <location line="+568"/>
+        <source>Invalid position</source>
+        <translation>Ungültige Position</translation>
+    </message>
+    <message>
+        <location line="+177"/>
         <source>Entity is not in working set.</source>
         <translation>Objekt befindet sich nicht im Bearbeitungssatz.</translation>
     </message>
@@ -6899,7 +6904,12 @@ BUG: Interferes with group castings.</translation>
         <translation>Schwarz / weiss automatisch anpassen</translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+136"/>
+        <source>Apply line weight to points</source>
+        <translation>Linienstärke auf Punkte anwenden</translation>
+    </message>
+    <message>
+        <location line="+23"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation>Volle Auflösung benutzen für Retina-Anzeige (hochauflösende Anzeige)</translation>
     </message>
@@ -6933,7 +6943,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Persistente Selektion</translation>
     </message>
     <message>
-        <location line="-826"/>
+        <location line="-833"/>
         <source>Color lightness threshold:</source>
         <translation>Farbgrenzwert:</translation>
     </message>
@@ -6962,7 +6972,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Linientypskalierung für Linienbreite 0.00mm:</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+45"/>
         <source>Display and Performance</source>
         <translation>Anzeige und Leistung</translation>
     </message>
@@ -6981,7 +6991,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Minimaler Winkel für Bogensegmentierung in Anzeige (Grad):</translation>
     </message>
     <message>
-        <location line="-372"/>
+        <location line="-379"/>
         <source>Linetypes and Lineweights</source>
         <translation>Linientypen und Linienbreiten</translation>
     </message>
@@ -6995,7 +7005,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Volle Auflösung benutzen für Retina-Display</translation>
     </message>
     <message>
-        <location line="+117"/>
+        <location line="+124"/>
         <source>Anti-aliasing on by default</source>
         <translation>Kantenglättung standardmässig an</translation>
     </message>
@@ -7018,7 +7028,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="obsolete">Gestrichelte Objekte mit mehr als N Strichen ausgezogen darstellen:</translation>
     </message>
     <message>
-        <location line="-453"/>
+        <location line="-460"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatisch Bildschirmbasierte Linientypen verwenden in Modellansicht</translation>
     </message>
@@ -7031,7 +7041,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Leistung</translation>
     </message>
     <message>
-        <location line="+202"/>
+        <location line="+209"/>
         <source>Number of preview entities:</source>
         <translation>Anzahl Vorschau Objekte:</translation>
     </message>
@@ -16514,12 +16524,12 @@ nicht öffnen.
         <translation>Skalierung für alle Grössen:</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>Enable high DPI scaling</source>
         <translation>Startbild anzeigen</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+12"/>
         <source>Scale factor:</source>
         <translation>Skalierung für alle Grössen:</translation>
     </message>

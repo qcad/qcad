@@ -2921,7 +2921,7 @@ Vuoi recuperarlo?</translation>
         <translation>Spostare entità</translation>
     </message>
     <message>
-        <location line="+394"/>
+        <location line="+399"/>
         <source>Move Reference Point</source>
         <translation>Spostare riferimento</translation>
     </message>
@@ -4654,12 +4654,12 @@ is already in the list.</source>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2108"/>
+        <location line="+2115"/>
         <source>Cancel</source>
         <translation>Annulla</translation>
     </message>
     <message>
-        <location line="-2107"/>
+        <location line="-2114"/>
         <source>Done</source>
         <translation>Fatto</translation>
     </message>
@@ -4694,7 +4694,12 @@ is already in the list.</source>
         <translation>Strumenti CAD</translation>
     </message>
     <message>
-        <location line="+738"/>
+        <location line="+568"/>
+        <source>Invalid position</source>
+        <translation>Posizione non valida</translation>
+    </message>
+    <message>
+        <location line="+177"/>
         <source>Entity is not in working set.</source>
         <translation>L&apos;entità non è nell&apos;attuale gruppo di lavoro.</translation>
     </message>
@@ -6662,7 +6667,12 @@ BUG: Interferes with group castings.</source>
         <translation>Auto corretti colori bianco e nero</translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+136"/>
+        <source>Apply line weight to points</source>
+        <translation>Applicare il peso della linea ai punti</translation>
+    </message>
+    <message>
+        <location line="+23"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation>Utilizzare piena risoluzione per il display Retina / alta risoluzione</translation>
     </message>
@@ -6696,7 +6706,7 @@ BUG: Interferes with group castings.</source>
         <translation>Selezione permanente</translation>
     </message>
     <message>
-        <location line="-826"/>
+        <location line="-833"/>
         <source>Color lightness threshold:</source>
         <translation>Soglia per la leggerezza del colore:</translation>
     </message>
@@ -6725,7 +6735,7 @@ BUG: Interferes with group castings.</source>
         <translation>Scala del modello per lo spessore di linea 0,00mm:</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+45"/>
         <source>Display and Performance</source>
         <translation>Visualizzazione e prestazioni</translation>
     </message>
@@ -6744,7 +6754,7 @@ BUG: Interferes with group castings.</source>
         <translation>Passo angolo minimo per rendere archi (gradi):</translation>
     </message>
     <message>
-        <location line="-372"/>
+        <location line="-379"/>
         <source>Linetypes and Lineweights</source>
         <translation>Tipi di linee e pesi di linee</translation>
     </message>
@@ -6758,7 +6768,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Utilizzare piena risoluzione per il display Retina</translation>
     </message>
     <message>
-        <location line="+117"/>
+        <location line="+124"/>
         <source>Anti-aliasing on by default</source>
         <translation>Antialiasing di default</translation>
     </message>
@@ -6777,7 +6787,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Antialiasing di default</translation>
     </message>
     <message>
-        <location line="-453"/>
+        <location line="-460"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Utilizzare automaticamente i tipi di linea a base di schermo in vista del modello</translation>
     </message>
@@ -6790,7 +6800,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Performance</translation>
     </message>
     <message>
-        <location line="+202"/>
+        <location line="+209"/>
         <source>Number of preview entities:</source>
         <translation>Numero di entità in anteprima:</translation>
     </message>
@@ -15425,12 +15435,12 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Fattore di scala:</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>Enable high DPI scaling</source>
         <translation>Abilita splash screen</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+12"/>
         <source>Scale factor:</source>
         <translation>Fattore di scala:</translation>
     </message>

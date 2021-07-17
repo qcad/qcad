@@ -2659,7 +2659,7 @@ Přejete si ho obnovit?</translation>
         <translation>Přesuňte prvek na požadované umístění</translation>
     </message>
     <message>
-        <location line="+394"/>
+        <location line="+399"/>
         <source>Move Reference Point</source>
         <translation>Přesuňte referenční bod</translation>
     </message>
@@ -4303,12 +4303,12 @@ již v seznamu je.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2108"/>
+        <location line="+2115"/>
         <source>Cancel</source>
         <translation>Storno</translation>
     </message>
     <message>
-        <location line="-2107"/>
+        <location line="-2114"/>
         <source>Done</source>
         <translation type="unfinished">Hotovo</translation>
     </message>
@@ -4339,7 +4339,12 @@ již v seznamu je.</translation>
         <translation>CAD nástroje</translation>
     </message>
     <message>
-        <location line="+738"/>
+        <location line="+568"/>
+        <source>Invalid position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+177"/>
         <source>Entity is not in working set.</source>
         <translation type="unfinished">Entita není v pracovní sadě.</translation>
     </message>
@@ -6013,7 +6018,12 @@ BUG: Interferes with group castings.</source>
         <translation>Zabránit bílé barvě na bílém / černé barvě na černém displeji</translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+136"/>
+        <source>Apply line weight to points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation type="unfinished">Použití plného rozlišení pro displej Retina / vysoké rozlišení</translation>
     </message>
@@ -6038,7 +6048,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">Trvalý výběr</translation>
     </message>
     <message>
-        <location line="-826"/>
+        <location line="-833"/>
         <source>Color lightness threshold:</source>
         <translation>Prahová hodnota světla barvy:</translation>
     </message>
@@ -6072,7 +6082,7 @@ BUG: Interferes with group castings.</source>
         <translation>Měřítko vzoru pro tloušťku čáry 0.00mm:</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+45"/>
         <source>Display and Performance</source>
         <translation>Displej a výkon</translation>
     </message>
@@ -6106,7 +6116,7 @@ BUG: Interferes with group castings.</source>
         <translation>Vyhlazování hran je standardně zapnuto</translation>
     </message>
     <message>
-        <location line="-125"/>
+        <location line="-132"/>
         <source>Linetypes and Lineweights</source>
         <translation type="unfinished">Typy a váhy čar</translation>
     </message>
@@ -6116,7 +6126,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">Výchozí váha řádku:</translation>
     </message>
     <message>
-        <location line="+488"/>
+        <location line="+495"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Časový limit pro vykreslení šrafování:</translation>
     </message>
@@ -13494,12 +13504,12 @@ ve výsledcích vyhledávání:</translation>
         <translation type="unfinished">Automatický faktor měřítka obrazovky</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>Enable high DPI scaling</source>
         <translation type="unfinished">Povolení vysokého škálování DPI</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+12"/>
         <source>Scale factor:</source>
         <translation type="unfinished">Faktor měřítka:</translation>
     </message>

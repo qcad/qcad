@@ -2694,7 +2694,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Siirrä kokonaisuus haluttuun sijaintiin</translation>
     </message>
     <message>
-        <location line="+394"/>
+        <location line="+399"/>
         <source>Move Reference Point</source>
         <translation>Siirrä viitepiste</translation>
     </message>
@@ -4368,12 +4368,12 @@ on jo luettelossa.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2108"/>
+        <location line="+2115"/>
         <source>Cancel</source>
         <translation>Peruuta</translation>
     </message>
     <message>
-        <location line="-2107"/>
+        <location line="-2114"/>
         <source>Done</source>
         <translation>Valmis</translation>
     </message>
@@ -4408,7 +4408,12 @@ on jo luettelossa.</translation>
         <translation>CAD työkalut</translation>
     </message>
     <message>
-        <location line="+738"/>
+        <location line="+568"/>
+        <source>Invalid position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+177"/>
         <source>Entity is not in working set.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6189,7 +6194,12 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+117"/>
+        <location line="+108"/>
+        <source>Apply line weight to points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Anti-aliasing on by default</source>
         <translation>Pehmennys päällä on oletuksena</translation>
     </message>
@@ -6228,7 +6238,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-188"/>
+        <location line="-195"/>
         <source>Color lightness threshold:</source>
         <translation>Värivaaleuden kynnys:</translation>
     </message>
@@ -6257,12 +6267,12 @@ BUG: Interferes with group castings.</source>
         <translation>Kuvion mitta viivapaksuudella 0.00 mm:</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+45"/>
         <source>Display and Performance</source>
         <translation>Näyttötila ja suorituskyky</translation>
     </message>
     <message>
-        <location line="-76"/>
+        <location line="-83"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automaattisesti käytä kuvaruudun viivoja muotoilunäkymässä</translation>
     </message>
@@ -6275,7 +6285,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Suorituskyky</translation>
     </message>
     <message>
-        <location line="+202"/>
+        <location line="+209"/>
         <source>Number of preview entities:</source>
         <translation>Esikatseltavien kohteiden määrä:</translation>
     </message>
@@ -13906,12 +13916,12 @@ näkyy hakutuloksissa:</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>Enable high DPI scaling</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+12"/>
         <source>Scale factor:</source>
         <translation type="unfinished"></translation>
     </message>

@@ -2708,7 +2708,7 @@ Wilt u het herstellen?</translation>
         <translation>Object verplaatsen</translation>
     </message>
     <message>
-        <location line="+394"/>
+        <location line="+399"/>
         <source>Move Reference Point</source>
         <translation>Referentiepunt verplaatsen</translation>
     </message>
@@ -4358,12 +4358,12 @@ is al in de lijst.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2108"/>
+        <location line="+2115"/>
         <source>Cancel</source>
         <translation>Annuleer</translation>
     </message>
     <message>
-        <location line="-2107"/>
+        <location line="-2114"/>
         <source>Done</source>
         <translation>Klaar</translation>
     </message>
@@ -4394,7 +4394,12 @@ is al in de lijst.</translation>
         <translation>CAD-gereedschappen</translation>
     </message>
     <message>
-        <location line="+738"/>
+        <location line="+568"/>
+        <source>Invalid position</source>
+        <translation>Ongeldige positie</translation>
+    </message>
+    <message>
+        <location line="+177"/>
         <source>Entity is not in working set.</source>
         <translation>Entiteit zit niet in de werkset.</translation>
     </message>
@@ -6203,7 +6208,12 @@ BUG: Interferes with group castings.</source>
         <translation>Voorkom wit op wit / zwart op zwart weergave</translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+136"/>
+        <source>Apply line weight to points</source>
+        <translation>Pas lijndikte toe op punten</translation>
+    </message>
+    <message>
+        <location line="+23"/>
         <source>Use full resolution for Retina / high resolution display</source>
         <translation>Gebruik volledige resolutie voor Retina-display (hoge resolutie)</translation>
     </message>
@@ -6237,7 +6247,7 @@ BUG: Interferes with group castings.</source>
         <translation>Blijvende selectie</translation>
     </message>
     <message>
-        <location line="-826"/>
+        <location line="-833"/>
         <source>Color lightness threshold:</source>
         <translation>Kleur lichtheid drempel:</translation>
     </message>
@@ -6266,7 +6276,7 @@ BUG: Interferes with group castings.</source>
         <translation>Patroon schaal voor lijndikte 0.00mm:</translation>
     </message>
     <message>
-        <location line="+38"/>
+        <location line="+45"/>
         <source>Display and Performance</source>
         <translation>Weergave en prestatie</translation>
     </message>
@@ -6280,7 +6290,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Gebruik volledige resolutie voor Retina-display</translation>
     </message>
     <message>
-        <location line="-454"/>
+        <location line="-461"/>
         <source>Linetypes and Lineweights</source>
         <translation>Lijntypen en lijnbreedtes</translation>
     </message>
@@ -6290,17 +6300,17 @@ BUG: Interferes with group castings.</source>
         <translation>Standaard lijnbreedte:</translation>
     </message>
     <message>
-        <location line="+117"/>
+        <location line="+124"/>
         <source>Anti-aliasing on by default</source>
         <translation>Anti-aliasing altijd aan</translation>
     </message>
     <message>
-        <location line="-82"/>
+        <location line="-89"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatisch scherm gebaseerde lijntypen gebruiken in model weergave</translation>
     </message>
     <message>
-        <location line="+202"/>
+        <location line="+209"/>
         <source>Number of preview entities:</source>
         <translation>Aantal voorbeeld objecten:</translation>
     </message>
@@ -13969,12 +13979,12 @@ getoond in zoekresultaten:</translation>
         <translation>Schaalfactor voor grootte:</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>Enable high DPI scaling</source>
         <translation>Splash Screen toonen</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+12"/>
         <source>Scale factor:</source>
         <translation>Schaalfactor voor grootte:</translation>
     </message>
