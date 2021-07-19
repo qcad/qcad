@@ -184,3 +184,9 @@ DimAligned.prototype.getEntity = function(preview) {
 
     return entity;
 };
+
+/**
+ * Can be overwritten to initialize the added entity.
+ */
+DimAligned.prototype.initEntity = function(entity, preview) {
+};
