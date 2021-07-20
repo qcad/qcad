@@ -56,7 +56,7 @@ public:
         Q_UNUSED(point)
     }
     virtual void exportTriangle(const RTriangle& triangle) {
-        Q_UNUSED(triangle)
+        //Q_UNUSED(triangle)
     }
 
     //void clear();
