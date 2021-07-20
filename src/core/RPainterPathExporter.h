@@ -28,6 +28,8 @@
 #include "RRay.h"
 #include "RXLine.h"
 
+class RTriangle;
+
 /**
  * Exports all exported geometry into one painter path.
  */
