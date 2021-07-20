@@ -34,8 +34,6 @@
 typedef QMap<QString, QString> RQMapQStringQString;
 #endif
 
-#define RDEFAULT_QMAP_QSTRING_QSTRING RQMapQStringQString()
-
 /**
  * Base class for clipboard related operations (copy, cut, paste).
  * 
@@ -51,6 +49,46 @@ public:
         Q_UNUSED(document)
         Q_UNUSED(preview)
         return RTransaction();
+    }
+
+    void copy(RDocument& src, RDocument& dest,
+        const RVector& offset,
+        double scale,
+        double rotation,
+        const RVector& center,
+        bool flipHorizontal,
+        bool flipVertical,
+        bool toCurrentLayer,
+        bool toCurrentBlock,
+        bool overwriteLayers,
+        bool overwriteBlocks,
+        const QString& blockName,
+        const QString& layerName,
+        RTransaction& transaction,
+        bool selectionOnly, bool clear,
+        bool toModelSpaceBlock,
+        bool preview) {
+
+        copy(src, dest,
+                offset,
+                scale,
+                rotation,
+                center,
+                flipHorizontal,
+                flipVertical,
+                toCurrentLayer,
+                toCurrentBlock,
+                overwriteLayers,
+                overwriteBlocks,
+                blockName,
+                layerName,
+                transaction,
+                selectionOnly, clear,
+                toModelSpaceBlock,
+                preview,
+                RQMapQStringQString(),
+                RQMapQStringQString(),
+                RQMapQStringQString());
     }
     
     /**
@@ -73,10 +111,51 @@ public:
         bool selectionOnly, bool clear,
         bool toModelSpaceBlock,
         bool preview,
-        const RQMapQStringQString& attributes = RDEFAULT_QMAP_QSTRING_QSTRING,
-        const RQMapQStringQString& properties = RDEFAULT_QMAP_QSTRING_QSTRING,
-        const RQMapQStringQString& blockProperties = RDEFAULT_QMAP_QSTRING_QSTRING
+        const RQMapQStringQString& attributes,
+        const RQMapQStringQString& properties,
+        const RQMapQStringQString& blockProperties
     );
+
+    void copyEntity(
+            REntity& entity,
+            RDocument& src, RDocument& dest,
+            const RVector& offset,
+            double scale,
+            double unitScale,
+            double rotation,
+            const RVector& center,
+            bool flipHorizontal,
+            bool flipVertical,
+            bool toCurrentLayer,
+            bool toCurrentBlock,
+            bool overwriteLayers,
+            bool overwriteBlocks,
+            const QString& blockName,
+            const QString& layerName,
+            RTransaction& transaction,
+            bool toModelSpaceBlock) {
+
+        copyEntity(
+                entity,
+                src, dest,
+                offset,
+                scale,
+                unitScale,
+                rotation,
+                center,
+                flipHorizontal,
+                flipVertical,
+                toCurrentLayer,
+                toCurrentBlock,
+                overwriteLayers,
+                overwriteBlocks,
+                blockName,
+                layerName,
+                transaction,
+                toModelSpaceBlock,
+                RQMapQStringQString()
+        );
+    }
 
     /**
      * \nonscriptable
@@ -99,7 +178,7 @@ public:
         const QString& layerName,
         RTransaction& transaction,
         bool toModelSpaceBlock,
-        const RQMapQStringQString& attributes = RDEFAULT_QMAP_QSTRING_QSTRING
+        const RQMapQStringQString& attributes
     );
 
     QSharedPointer<RBlock> copyEntityBlock(
