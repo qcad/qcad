@@ -128,7 +128,7 @@ public:
     }
 
     virtual void exportTriangle(const RTriangle& triangle) {
-        Q_UNUSED(triangle)
+        //Q_UNUSED(triangle)
     }
 
     static QByteArray escapeUnicode(const QString& str);
