@@ -145,6 +145,19 @@ bool RLeaderData::stretch(const RPolyline &area, const RVector &offset) {
     return ret;
 }
 
+QList<QSharedPointer<RShape> > RLeaderData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment, QList<RObject::Id>* entityIds) const {
+    Q_UNUSED(queryBox)
+    Q_UNUSED(ignoreComplex)
+    Q_UNUSED(segment)
+
+    QList<QSharedPointer<RShape> > ret;
+    ret << QSharedPointer<RShape>(new RPolyline(*this));
+    if (arrowHead) {
+        ret << QSharedPointer<RShape>(new RTriangle(getArrowShape()));
+    }
+    return ret;
+}
+
 RTriangle RLeaderData::getArrowShape() const {
     RVector p = getStartPoint();
     double direction = getDirection1() + M_PI;

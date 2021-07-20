@@ -103,19 +103,7 @@ public:
     virtual bool scale(const RVector& scaleFactors, const RVector& center);
     virtual bool stretch(const RPolyline& area, const RVector& offset);
 
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false, QList<RObject::Id>* entityIds = NULL) const {
-        Q_UNUSED(queryBox)
-        Q_UNUSED(ignoreComplex)
-        Q_UNUSED(segment)
-
-        QList<QSharedPointer<RShape> > ret;
-        ret << QSharedPointer<RShape>(new RPolyline(*this));
-        if (arrowHead) {
-            ret << QSharedPointer<RShape>(new RTriangle(getArrowShape()));
-        }
-        return ret;
-    }
-
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false, QList<RObject::Id>* entityIds = NULL) const;
     RTriangle getArrowShape() const;
 
     REntity::Id getDimLeaderBlockId() const;
