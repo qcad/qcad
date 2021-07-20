@@ -262,6 +262,7 @@
     <function_decl><type><name>static</name> <name>bool</name></type> <name>isNextVersionEnabled</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getAutoScaleLinetypePatterns</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>getApplyLineweightToPoints</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getUseSecondarySelectionColor</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getUseSolidLineSelection</name><parameter_list>()</parameter_list>;</function_decl>
 
@@ -326,6 +327,7 @@
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>previewEntities</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>limitZoomAndScroll</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>autoScaleLinetypePattern</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>applyLineweightToPoints</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>useSolidLineSelection</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>useSecondarySelectionColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>mouseThreshold</name></decl>;</decl_stmt>

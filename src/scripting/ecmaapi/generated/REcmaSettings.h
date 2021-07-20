@@ -418,6 +418,9 @@
         getAutoScaleLinetypePatterns
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getApplyLineweightToPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getUseSecondarySelectionColor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

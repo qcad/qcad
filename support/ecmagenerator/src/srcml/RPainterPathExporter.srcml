@@ -29,6 +29,8 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RRay.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RXLine.h"</cpp:file></cpp:include>
 
+<class_decl>class <name>RTriangle</name>;</class_decl>
+
 <comment type="block">/**
  * Exports all exported geometry into one painter path.
  */</comment>
@@ -55,7 +57,7 @@
         <macro><name>Q_UNUSED</name><argument_list>(<argument>point</argument>)</argument_list></macro>
     }</block></function>
     <function><type><name>virtual</name> <name>void</name></type> <name>exportTriangle</name><parameter_list>(<param><decl><type><name>const</name> <name>RTriangle</name>&amp;</type> <name>triangle</name></decl></param>)</parameter_list> <block>{
-        <macro><name>Q_UNUSED</name><argument_list>(<argument>triangle</argument>)</argument_list></macro>
+        <comment type="line">//Q_UNUSED(triangle)</comment>
     }</block></function>
 
     <comment type="line">//void clear();</comment>

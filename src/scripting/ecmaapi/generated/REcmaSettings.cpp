@@ -305,6 +305,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getAutoScaleLinetypePatterns, "getAutoScaleLinetypePatterns");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getApplyLineweightToPoints, "getApplyLineweightToPoints");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getUseSecondarySelectionColor, "getUseSecondarySelectionColor");
             
             REcmaHelper::registerFunction(&engine, &ctor, getUseSolidLineSelection, "getUseSolidLineSelection");
@@ -6721,6 +6723,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getAutoScaleLinetypePatterns", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getApplyLineweightToPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getApplyLineweightToPoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getApplyLineweightToPoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       getApplyLineweightToPoints();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getApplyLineweightToPoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getApplyLineweightToPoints", context, engine);
             return result;
         }
          QScriptValue
