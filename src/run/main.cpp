@@ -164,7 +164,7 @@ int main(int argc, char *argv[]) {
 #ifdef Q_OS_WIN
     _putenv_s("QT_DEVICE_PIXEL_RATIO", "auto");
 #else
-    setenv("QT_DEVICE_PIXEL_RATIO", "auto");
+    setenv("QT_DEVICE_PIXEL_RATIO", "auto", 1);
 #endif
 #endif
 //#endif
