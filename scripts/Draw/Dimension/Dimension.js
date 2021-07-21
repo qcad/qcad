@@ -330,5 +330,5 @@ Dimension.prototype.autoAdjustScale = function(pos) {
         return;
     }
 
-    scaleCombo.currentText = RUnit.doubleToStringDec(scale, 3);
+    scaleCombo.currentText = RUnit.doubleToStringDec(scale, 12);
 };
