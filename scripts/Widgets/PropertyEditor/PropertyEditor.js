@@ -987,7 +987,9 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
                 !attributes.isAngleType() &&
                 !attributes.isAreaType() &&
                 !attributes.isUnitLess() &&
-                !attributes.isPercentage() /*&&
+                !attributes.isPercentage() &&
+                !attributes.isScaleType()
+                /*&&
                 (document.getLinearFormat()===RS.Fractional ||
                  document.getLinearFormat()===RS.FractionalStacked)*/) {
 
