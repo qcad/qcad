@@ -693,7 +693,14 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool
     // if this exporter exports a visual
     // representation of the drawing (scene, view, print)...
     if (isVisualExporter()) {
-        skip = !getExportInvisible() && !isVisible(entity);
+        if (getCurrentViewport()!=NULL) {
+            // entity in viewport context, don't export invisible entities:
+            skip = !isVisible(entity);
+        }
+        else {
+            // regular entity, export invisible if needed (update selection status when switching off layer):
+            skip = !getExportInvisible() && !isVisible(entity);
+        }
     }
 
     if (!skip) {
