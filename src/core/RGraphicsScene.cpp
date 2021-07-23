@@ -169,6 +169,7 @@ void RGraphicsScene::regenerate(QSet<REntity::Id>& affectedEntities, bool update
  * exports the entities again. May be overridden for performance reasons.
  */
 void RGraphicsScene::updateSelectionStatus(QSet<REntity::Id>& affectedEntities, bool updateViews) {
+    // make sure selection status is updated, for example when switching off a layer:
     setExportInvisible(true);
     exportEntities(affectedEntities, false);
     setExportInvisible(false);
