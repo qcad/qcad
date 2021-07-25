@@ -4177,7 +4177,7 @@ ya está en la lista.</translation>
     <message>
         <location line="-308"/>
         <source>Arc Invalid !</source>
-        <translation>Arco inválido!</translation>
+        <translation>Arco inválido.</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -4188,7 +4188,7 @@ ya está en la lista.</translation>
     <message>
         <location line="-21"/>
         <source>Radius too small !</source>
-        <translation>Radio demasiado pequeño</translation>
+        <translation>Radio demasiado pequeño.</translation>
     </message>
     <message>
         <location line="+88"/>
@@ -4405,7 +4405,7 @@ ya está en la lista.</translation>
     <message>
         <location line="+9"/>
         <source>Not a correct Lineweight ! Text line %1 weight: %2</source>
-        <translation>El peso de la línea no es correcto Línea de texto %1 peso: %2</translation>
+        <translation>El peso de la línea no es correcto. Línea de texto %1 peso: %2</translation>
     </message>
     <message>
         <location line="+9"/>
