@@ -3801,52 +3801,52 @@ já se encontra na lista.</translation>
     <message>
         <location line="+4"/>
         <source>Not a correct  layer switch, ignored ! Text line %1</source>
-        <translation>Não é um interruptor de camadas correcto, ignorado! Linha de texto %1</translation>
+        <translation>Não é um interruptor de camadas correcto, ignorado. Linha de texto %1</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Not a correct  new layer switch, ignored ! Text line %1</source>
-        <translation>Não é um novo interruptor de camadas correcto, ignorado! Linha de texto %1</translation>
+        <translation>Não é um novo interruptor de camadas correcto, ignorado. Linha de texto %1</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Can not hide layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Não pode esconder camada, ignorada! Linha de texto %1 camada: %2</translation>
+        <translation>Não pode esconder camada, ignorada. Linha de texto %1 camada: %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  hide layer switch, ignored ! Text line %1</source>
-        <translation>Não é um interruptor de ocultação correcto, ignorado! Linha de texto %1</translation>
+        <translation>Não é um interruptor de ocultação correcto, ignorado. Linha de texto %1</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Can not freeze layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Não pode congelar camada, ignorado! Linha de texto %1 camada: %2</translation>
+        <translation>Não pode congelar camada, ignorado. Linha de texto %1 camada: %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  freeze layer switch, ignored ! Text line %1</source>
-        <translation>Não é um interruptor de congelamento correcto, ignorado! Linha de texto %1</translation>
+        <translation>Não é um interruptor de congelamento correcto, ignorado. Linha de texto %1</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Can not lock layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Não pode bloquear a camada, ignorada! Linha de texto %1 camada: %2</translation>
+        <translation>Não pode bloquear a camada, ignorada. Linha de texto %1 camada: %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  lock layer switch, ignored ! Text line %1</source>
-        <translation>Não é um interruptor de bloqueio correcto, ignorado! Linha de texto %1</translation>
+        <translation>Não é um interruptor de bloqueio correcto, ignorado. Linha de texto %1</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Can not allow layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Não pode permitir camadas, ignoradas! Linha de texto %1 camada: %2</translation>
+        <translation>Não pode permitir camadas, ignoradas. Linha de texto %1 camada: %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  allow layer switch, ignored ! Text line %1</source>
-        <translation>Não é um interruptor de camadas correto, ignorado! Linha de texto %1</translation>
+        <translation>Não é um interruptor de camadas correto, ignorado. Linha de texto %1</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -3870,7 +3870,7 @@ já se encontra na lista.</translation>
         <location line="+23"/>
         <location line="+32"/>
         <source>Low field count !</source>
-        <translation>Baixa contagem de campos !</translation>
+        <translation>Baixa contagem de campos.</translation>
     </message>
     <message>
         <location line="-469"/>
@@ -3898,7 +3898,7 @@ já se encontra na lista.</translation>
         <location line="+29"/>
         <location line="+25"/>
         <source>Odd field count !</source>
-        <translation>Contagem de campos estranha!</translation>
+        <translation>Contagem de campos estranha.</translation>
     </message>
     <message>
         <location line="-579"/>
@@ -3910,7 +3910,7 @@ já se encontra na lista.</translation>
         <location line="+156"/>
         <location line="+166"/>
         <source>Rv Invalid !</source>
-        <translation>Rv Inválido!</translation>
+        <translation>Rv Inválido.</translation>
     </message>
     <message>
         <location line="-587"/>
@@ -3926,7 +3926,7 @@ já se encontra na lista.</translation>
         <location line="+26"/>
         <location line="+55"/>
         <source>Rv1 Invalid !</source>
-        <translation>Rv1 Inválido!</translation>
+        <translation>Rv1 Inválido.</translation>
     </message>
     <message>
         <location line="-451"/>
@@ -3944,7 +3944,7 @@ já se encontra na lista.</translation>
         <location line="+27"/>
         <location line="+34"/>
         <source>Rv2 Invalid !</source>
-        <translation>Rv2 Inválido!</translation>
+        <translation>Rv2 Inválido.</translation>
     </message>
     <message>
         <location line="-422"/>
@@ -3955,7 +3955,7 @@ já se encontra na lista.</translation>
         <location line="+45"/>
         <location line="+21"/>
         <source>Radius Invalid !</source>
-        <translation>Radius Invalid !</translation>
+        <translation>Radius Invalid.</translation>
     </message>
     <message>
         <location line="-247"/>
@@ -3965,22 +3965,22 @@ já se encontra na lista.</translation>
         <location line="+34"/>
         <location line="+149"/>
         <source>Angle Invalid !</source>
-        <translation>Angle Invalid !</translation>
+        <translation>Angle Invalid.</translation>
     </message>
     <message>
         <location line="-480"/>
         <source>Angle1 Invalid !</source>
-        <translation>Angle1 Inválido!</translation>
+        <translation>Angle1 Inválido.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angle2 Invalid !</source>
-        <translation>Angle2 Inválido !</translation>
+        <translation>Angle2 Inválido.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Equal angles !</source>
-        <translation>Ângulos iguais !</translation>
+        <translation>Ângulos iguais.</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -3992,12 +3992,12 @@ já se encontra na lista.</translation>
         <location line="+27"/>
         <location line="+34"/>
         <source>Rv3 Invalid !</source>
-        <translation>Rv3 Inválido!</translation>
+        <translation>Rv3 Inválido.</translation>
     </message>
     <message>
         <location line="-308"/>
         <source>Arc Invalid !</source>
-        <translation>Arco Inválido!</translation>
+        <translation>Arco Inválido.</translation>
     </message>
     <message>
         <location line="+43"/>
