@@ -12603,12 +12603,12 @@ nicht öffnen.
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1470"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1472"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="-1277"/>
+        <location line="-1279"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -12657,7 +12657,7 @@ nicht öffnen.
         <translation>Alle Eigenschaften anzeigen</translation>
     </message>
     <message>
-        <location line="+663"/>
+        <location line="+665"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -12694,7 +12694,7 @@ nicht öffnen.
         <translation type="obsolete">Mittelpunkt</translation>
     </message>
     <message>
-        <location line="-709"/>
+        <location line="-711"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
@@ -12712,7 +12712,7 @@ nicht öffnen.
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+145"/>
+        <location line="+147"/>
         <source>Use auto measurement</source>
         <translation>Automatisch</translation>
     </message>
@@ -12792,7 +12792,7 @@ nicht öffnen.
         <translation type="vanished">Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1146"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1148"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>

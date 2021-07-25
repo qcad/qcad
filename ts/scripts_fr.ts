@@ -11696,7 +11696,7 @@ dans les résultats de recherche :</translation>
         <translation>Afficher toutes les propriétés</translation>
     </message>
     <message>
-        <location line="+663"/>
+        <location line="+665"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -11730,7 +11730,7 @@ dans les résultats de recherche :</translation>
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1277"/>
+        <location line="-1279"/>
         <source>:</source>
         <translation> :</translation>
     </message>
@@ -11764,7 +11764,7 @@ dans les résultats de recherche :</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+145"/>
+        <location line="+147"/>
         <source>Use auto measurement</source>
         <translation>Utiliser la mesure automatique</translation>
     </message>

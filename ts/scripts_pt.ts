@@ -10861,12 +10861,12 @@ nos resultados de busca:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1470"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1472"/>
         <source>*VARIES*</source>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1277"/>
+        <location line="-1279"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10916,12 +10916,12 @@ nos resultados de busca:</translation>
         <translation>Mostrar todas as propriedades</translation>
     </message>
     <message>
-        <location line="+663"/>
+        <location line="+665"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="-709"/>
+        <location line="-711"/>
         <source>Add custom property to selected objects</source>
         <translation>Adicione uma propriedade personalizada aos objetos selecionados</translation>
     </message>
@@ -10931,7 +10931,7 @@ nos resultados de busca:</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+145"/>
+        <location line="+147"/>
         <source>Use auto measurement</source>
         <translation>Use a medição automática</translation>
     </message>

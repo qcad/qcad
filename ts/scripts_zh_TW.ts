@@ -9771,7 +9771,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+145"/>
+        <location line="+147"/>
         <source>Use auto measurement</source>
         <translation type="unfinished"></translation>
     </message>

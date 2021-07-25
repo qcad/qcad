@@ -10944,12 +10944,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1470"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1472"/>
         <source>*VARIES*</source>
         <translation>*RAZLIČNO*</translation>
     </message>
     <message>
-        <location line="-1277"/>
+        <location line="-1279"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -11008,7 +11008,7 @@ shown in search results:</source>
         <translation>Prikaži vse lasnosti</translation>
     </message>
     <message>
-        <location line="+663"/>
+        <location line="+665"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -11049,12 +11049,12 @@ shown in search results:</source>
         <translation type="obsolete">Dno</translation>
     </message>
     <message>
-        <location line="-546"/>
+        <location line="-548"/>
         <source>Auto</source>
         <translation>Samodejno</translation>
     </message>
     <message>
-        <location line="+145"/>
+        <location line="+147"/>
         <source>Use auto measurement</source>
         <translation>Uporabi samodejne meritve</translation>
     </message>

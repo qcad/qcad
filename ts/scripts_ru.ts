@@ -10513,12 +10513,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1470"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1472"/>
         <source>*VARIES*</source>
         <translation>*ВАРЬИРОВАНИЕ*</translation>
     </message>
     <message>
-        <location line="-1277"/>
+        <location line="-1279"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10578,7 +10578,7 @@ shown in search results:</source>
         <translation>Автоматический</translation>
     </message>
     <message>
-        <location line="+145"/>
+        <location line="+147"/>
         <source>Use auto measurement</source>
         <translation>Использовать автоматическое измерение</translation>
     </message>

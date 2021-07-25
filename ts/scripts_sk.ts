@@ -10562,12 +10562,12 @@ vo výsledku vyhľadania:</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1470"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1472"/>
         <source>*VARIES*</source>
         <translation>*Rôzne*</translation>
     </message>
     <message>
-        <location line="-1277"/>
+        <location line="-1279"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10631,7 +10631,7 @@ vo výsledku vyhľadania:</translation>
         <translation>automatický</translation>
     </message>
     <message>
-        <location line="+145"/>
+        <location line="+147"/>
         <source>Use auto measurement</source>
         <translation>Použiť automatické meranie</translation>
     </message>
