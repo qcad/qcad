@@ -107,6 +107,7 @@
 #include "REcmaDimRotatedEntity.h"
 #include "REcmaDimensionData.h"
 #include "REcmaDimensionEntity.h"
+#include "REcmaDimStyle.h"
 #include "REcmaDocument.h"
 #include "REcmaDocumentInterface.h"
 #include "REcmaDocumentVariables.h"
@@ -273,6 +274,7 @@
 #include "REcmaSharedPointerDimOrdinateEntity.h"
 #include "REcmaSharedPointerDimRadialEntity.h"
 #include "REcmaSharedPointerDimRotatedEntity.h"
+#include "REcmaSharedPointerDimStyle.h"
 #include "REcmaSharedPointerDimensionEntity.h"
 #include "REcmaSharedPointerDocumentVariables.h"
 #include "REcmaSharedPointerEllipse.h"
@@ -858,6 +860,9 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaImageData::initEcma(*engine);
     REcmaImageEntity::initEcma(*engine);
     REcmaSharedPointerImageEntity::initEcma(*engine);
+
+    REcmaDimStyle::initEcma(*engine);
+    REcmaSharedPointerDimStyle::initEcma(*engine);
 
     REcmaDimensionData::initEcma(*engine);
     REcmaDimensionEntity::initEcma(*engine);
