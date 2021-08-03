@@ -30,14 +30,16 @@ DimensionSettings.getPreferencesCategory = function(appPreferences) {
 };
 
 DimensionSettings.dimx = [
-            // widget name, dxf variable, factor relative to dimtxt
-            ["DIMTXT", RS.DIMTXT, 1.0],
-            ["DIMEXE", RS.DIMEXE, 0.5],
-            ["DIMEXO", RS.DIMEXO, 0.25],
-            ["DIMGAP", RS.DIMGAP, 0.25],
-            ["DIMASZ", RS.DIMASZ, 1.0],
-            ["DIMSCALE", RS.DIMSCALE, undefined],
-            ["DIMDLI", RS.DIMDLI, 2.0],
+            // widget name, dxf variable, factor relative to dimtxt, default value
+            ["DIMTXT", RS.DIMTXT, 1.0, undefined],
+            ["DIMEXE", RS.DIMEXE, 0.5, undefined],
+            ["DIMEXO", RS.DIMEXO, 0.25, undefined],
+            ["DIMGAP", RS.DIMGAP, 0.25, undefined],
+            ["DIMASZ", RS.DIMASZ, 1.0, undefined],
+            ["DIMSCALE", RS.DIMSCALE, undefined, undefined],
+            ["DIMDLI", RS.DIMDLI, 2.0, undefined],
+            ["DIMTIH", RS.DIMTIH, undefined, false],
+            ["DIMTAD", RS.DIMTAD, undefined, true],
         ];
 
 /**
@@ -242,9 +244,19 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
             }
         }
         else {
-            if (!isNull(wfg)) {
-                wfg.visible = false;
+//            if (!isNull(wfg)) {
+//                wfg.visible = false;
+//            }
+
+            var hiddenWidgetNames = [ "DIMTIH", "DIMTAD", "FontGroup" ];
+            for (var i=0; i<hiddenWidgetNames.length; i++) {
+                var hiddenWidgetName = hiddenWidgetNames[i];
+                if (isNull(widgets[hiddenWidgetName])) {
+                    continue;
+                }
+                widgets[hiddenWidgetName].visible = false;
             }
+
         }
 
         // other global preferences are initialized automatically
@@ -272,8 +284,14 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
             }
         }
         //w.defaultValue = [w.text, w.getDefaultUnit()];
-        w.defaultValue = w.text;
-        w.setValue(dimprop);
+        if (isOfType(w, QCheckBox)) {
+            w.defaultValue = w.checked;
+            w.checked = document.getKnownVariable(item[1], item[3]);
+        }
+        else {
+            w.defaultValue = w.text;
+            w.setValue(dimprop);
+        }
         w.setProperty("Loaded", true);
     }
 
@@ -664,8 +682,14 @@ DimensionSettings.savePreferences = function(pageWidget, calledByPrefDialog, doc
 
     for (var i=0; i<DimensionSettings.dimx.length; i++) {
         var item = DimensionSettings.dimx[i];
-        document.setKnownVariable(item[1], widgets[item[0]].getValue(), transaction);
-        widgets[item[0]].setProperty("Saved", true);
+        var w = widgets[item[0]];
+        if (isOfType(w, QCheckBox)) {
+            document.setKnownVariable(item[1], w.checked ? 1 : 0, transaction);
+        }
+        else {
+            document.setKnownVariable(item[1], w.getValue(), transaction);
+        }
+        w.setProperty("Saved", true);
     }
 
     // dimension arrow type:

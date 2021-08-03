@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>656</width>
-    <height>870</height>
+    <height>920</height>
    </rect>
   </property>
   <property name="widgetResizable">
@@ -19,10 +19,36 @@
      <x>0</x>
      <y>0</y>
      <width>654</width>
-     <height>868</height>
+     <height>918</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout_2">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="title">
+       <string>Dimension Style</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QCheckBox" name="DIMTIH">
+         <property name="text">
+          <string>Horizontal text labels</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="DIMTAD">
+         <property name="text">
+          <string>Text above dimension line</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
     <item>
      <widget class="QGroupBox" name="DimensionSizes">
       <property name="title">
