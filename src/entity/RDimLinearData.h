@@ -95,7 +95,7 @@ public:
     virtual bool mirror(const RLine& axis);
     virtual bool stretch(const RPolyline& area, const RVector& offset);
 
-    virtual void updateTextData() const;
+    //virtual void updateTextData() const;
 
 protected:
     /** Definition point. Startpoint of the first extension line. */

@@ -69,7 +69,7 @@ public:
     virtual bool mirror(const RLine& axis);
     */
 
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false, QList<RObject::Id>* entityIds = NULL) const;
+    //virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false, QList<RObject::Id>* entityIds = NULL) const;
     double getAngle() const;
     virtual bool getAngles(double& ang1, double& ang2,
                    bool& reversed,

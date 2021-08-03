@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RDimensionEntity.h"
+#include "RDimStyleProxyBasic.h";
 #include "RExporter.h"
 #include "RPluginLoader.h"
 #include "RStorage.h"
@@ -118,6 +119,9 @@ void RDimensionEntity::init() {
     RDimensionEntity::PropertyDimScale.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Scale"));
     RDimensionEntity::PropertyDimBlockName.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Block Name"));
     RDimensionEntity::PropertyAutoTextPos.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Auto Label Position"));
+
+    // initialize basic dimension rendering:
+    RDimStyle::setDimStyleProxy(new RDimStyleProxyBasic());
 }
 
 bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -280,14 +284,14 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
 }
 
 void RDimensionEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
-    Q_UNUSED(preview);
 
-    // make sure text data is removed:
-    //e.unexportEntity(e.getBlockRefOrEntity()->getId());
+    const RDocument* doc = getDocument();
+    if (doc==NULL) {
+        return;
+    }
 
+    // if a block is associated with this dimension, look up and export block:
     const RDimensionData& data = getData();
-
-    // if a block is assiciated with this dimension, look up and export block:
     QSharedPointer<RBlockReferenceEntity> dimBlockReference = data.getDimensionBlockReference();
     if (!dimBlockReference.isNull()) {
         getDocument()->getStorage().setObjectId(*dimBlockReference, getId());
@@ -295,10 +299,104 @@ void RDimensionEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
         return;
     }
 
-    data.dirty = true;
+    // update textData and shapes:
+    data.render();
+
+    // get dimension style to export dimesion:
+//    QSharedPointer<RDimStyle> dimStyle = doc->queryDimStyleDirect();
+//    if (dimStyle.isNull()) {
+//        qDebug() << "no dimension style";
+//        return;
+//    }
+
+    //const RDimensionData& d = getData();
+    //dimStyle->render(d, e, preview, forceSelected);
+
+    RTextData& textData = data.textData;
+    if (!textData.isSane()) {
+        return;
+    }
+    textData.setSelected(isSelected());
+
+    //QVariant v = getDocument()->getKnownVariable(RS::DIMCLRT, RColor(RColor::ByBlock));
+    //RColor textColor = v.value<RColor>();
+    if (e.isTextRenderedAsText()) {
+        //textData.setColor(textColor);
+        QList<RPainterPath> paths = e.exportText(textData, forceSelected);
+        e.exportPainterPaths(paths);
+    }
+    else {
+        if (!data.isSelected()) {
+            // render text as paths:
+            // set brush explicitly:
+            QVariant v = doc->getKnownVariable(RS::DIMCLRT, RColor(RColor::ByBlock));
+            RColor textColor = v.value<RColor>();
+            if (textColor.isByLayer()) {
+                QSharedPointer<RLayer> layer = doc->queryLayerDirect(data.getLayerId());
+                if (!layer.isNull()) {
+                    textColor = layer->getColor();
+                }
+            }
+
+            QBrush brush = e.getBrush();
+            if (!textColor.isByBlock()) {
+                brush.setColor(textColor);
+                QPen p = e.getPen();
+                p.setColor(textColor);
+                e.setPen(p);
+            }
+            e.setBrush(brush);
+        }
+        e.exportPainterPathSource(textData);
+        e.setBrush(Qt::NoBrush);
+    }
+
+    QBrush brush = e.getBrush();
+
+    QList<QSharedPointer<RShape> >& shapes = data.shapes;
+    for (int i=0; i<shapes.size(); i++) {
+        QSharedPointer<RShape> s = shapes.at(i);
+        if (s.isNull()) {
+            continue;
+        }
+
+        // triangles (arrows) are filled:
+        if (!s.dynamicCast<RTriangle>().isNull()) {
+            e.setBrush(brush);
+        }
+
+        // lines are not filled:
+        else {
+            e.setBrush(Qt::NoBrush);
+        }
+
+        e.exportShape(s);
+    }
+
+    return;
+
+
+
+
+
+/*
+    // make sure text data is removed:
+    //e.unexportEntity(e.getBlockRefOrEntity()->getId());
+
+    const RDimensionData& data = getData();
+
+    // if a block is associated with this dimension, look up and export block:
+    QSharedPointer<RBlockReferenceEntity> dimBlockReference = data.getDimensionBlockReference();
+    if (!dimBlockReference.isNull()) {
+        getDocument()->getStorage().setObjectId(*dimBlockReference, getId());
+        e.exportEntity(*dimBlockReference, preview, false, isSelected());
+        return;
+    }
+
+    //data.dirty = true;
 
     // export shapes:
-    QList<QSharedPointer<RShape> > shapes = getShapes();
+    QList<QSharedPointer<RShape> > shapes = data.getShapes();
     //e.setBrush(Qt::NoBrush);
     //e.exportShapes(shapes);
     QBrush brush = e.getBrush();
@@ -359,7 +457,8 @@ void RDimensionEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
 
     e.setBrush(Qt::NoBrush);
 
-    data.dirty = false;
+    //data.dirty = false;
+    */
 }
 
 void RDimensionEntity::print(QDebug dbg) const {

@@ -30,6 +30,7 @@ SOURCES = \
     RDimRotatedEntity.cpp \
     RDimensionData.cpp \
     RDimensionEntity.cpp \
+    RDimStyleProxyBasic.cpp \
     REllipseData.cpp \
     REllipseEntity.cpp \
     RFaceData.cpp \
@@ -92,6 +93,7 @@ HEADERS = \
     RDimRotatedEntity.h \
     RDimensionData.h \
     RDimensionEntity.h \
+    RDimStyleProxyBasic.h \
     REllipseData.h \
     REllipseEntity.h \
     RFaceData.h \

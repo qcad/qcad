@@ -132,6 +132,7 @@ bool RDimRadialData::mirror(const RLine& axis) {
     return true;
 }
 
+/*
 QList<QSharedPointer<RShape> > RDimRadialData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment, QList<RObject::Id>* entityIds) const {
     Q_UNUSED(queryBox)
     Q_UNUSED(ignoreComplex)
@@ -253,6 +254,7 @@ QList<QSharedPointer<RShape> > RDimRadialData::getShapes(const RBox& queryBox, b
 
     return ret;
 }
+*/
 
 double RDimRadialData::getMeasuredValue() const {
     return definitionPoint.getDistanceTo(chordPoint);

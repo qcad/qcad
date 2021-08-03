@@ -140,6 +140,7 @@ bool RDimOrdinateData::stretch(const RPolyline& area, const RVector& offset) {
     return true;
 }
 
+/*
 QList<QSharedPointer<RShape> > RDimOrdinateData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment, QList<RObject::Id>* entityIds) const {
     Q_UNUSED(queryBox)
     Q_UNUSED(ignoreComplex)
@@ -244,7 +245,7 @@ QList<QSharedPointer<RShape> > RDimOrdinateData::getShapes(const RBox& queryBox,
     //textData.getBoundingBox();
 
     RVector textPos;
-    //if (textPosition.isValid() /*&& !autoText*/) {
+    //if (textPosition.isValid() / *&& !autoText * /) {
     if (!autoTextPos) {
         textPos = textPositionCenter;
         //autoTextPos = false;
@@ -264,6 +265,7 @@ QList<QSharedPointer<RShape> > RDimOrdinateData::getShapes(const RBox& queryBox,
 
     return ret;
 }
+*/
 
 double RDimOrdinateData::getMeasuredValue() const {
     if (isMeasuringXAxis()) {

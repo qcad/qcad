@@ -58,10 +58,16 @@ public:
         const RVector& oldExtPoint1, const RVector& oldExtPoint2,
         const RVector& newExtPoint1, const RVector& newExtPoint2);
 
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false, QList<RObject::Id>* entityIds = NULL) const;
     virtual double getMeasuredValue() const;
     virtual QString getAutoLabel() const;
     double getAngle() const;
+
+    void updateRefDefinitionPoint1(const RVector& v) const {
+        refDefinitionPoint1 = v;
+    }
+    void updateRefDefinitionPoint2(const RVector& v) const {
+        refDefinitionPoint2 = v;
+    }
 
 private:
     // for caching only:

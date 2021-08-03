@@ -58,6 +58,34 @@ public:
     }
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
+    void render() const;
+
+    void updateBoundingBox(const RBox& box) const {
+        boundingBox = box;
+    }
+    void updateTextPositionCenter(const RVector& p) const {
+        textPositionCenter = p;
+    }
+    void updateTextPositionSide(const RVector& p) const {
+        textPositionSide = p;
+    }
+    void updateTextData(const RTextData& d) const {
+        textData = d;
+    }
+    void updateShapes(const QList<QSharedPointer<RShape> >& s) const {
+        shapes = s;
+    }
+    void updateArrowPos1(const RVector& p) const {
+        arrow1Pos = p;
+    }
+    void updateArrowPos2(const RVector& p) const {
+        arrow2Pos = p;
+    }
+
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false, QList<RObject::Id>* entityIds = NULL) const {
+        return shapes;
+    }
+
     virtual RVector getPointOnEntity() const;
 
     virtual bool isValid() const;
@@ -89,6 +117,7 @@ public:
         lowerTolerance = t;
     }
 
+
     void setTextPosition(const RVector& p) {
         if (p.isSane()) {
             textPositionCenter = p;
@@ -97,7 +126,9 @@ public:
         update();
     }
 
-    RVector getTextPosition() const {
+    //virtual RVector getTextPosition() const = 0;
+
+    virtual RVector getTextPosition() const {
         if (textPositionSide.isValid()) {
             return textPositionSide;
         }
@@ -207,6 +238,9 @@ public:
         dimlunitOverride = l;
         update();
     }
+    int getDimjust() const;
+    int getDimtad() const;
+    int getDimtih() const;
     bool useArchTick() const;
     bool hasCustomTextPosition() const;
     void setCustomTextPosition(bool on);
@@ -223,14 +257,14 @@ public:
         return textAngle;
     }
 
-    QList<QSharedPointer<RShape> > getDimensionLineShapes(
-        const RVector& p1, const RVector& p2,
-        bool arrow1, bool arrow2) const;
+//    QList<QSharedPointer<RShape> > getDimensionLineShapes(
+//        const RVector& p1, const RVector& p2,
+//        bool arrow1, bool arrow2) const;
     virtual QList<QSharedPointer<RShape> > getArrow(
         const RVector& position, double direction) const;
-    RTextData& getTextData() const;
-    void initTextData() const;
-    virtual void updateTextData() const;
+    RTextData& getTextData(bool noRender = false) const;
+    RTextData& initTextData() const;
+    //virtual void updateTextData() const;
     virtual QString getMeasurement(bool resolveAutoMeasurement = true) const;
     virtual double getMeasuredValue() const { return 0.0; }
     virtual QString getAutoLabel() const { return ""; }
@@ -295,12 +329,15 @@ protected:
     mutable bool dirty;
     mutable RTextData textData;
     mutable RBox boundingBox;
+
     mutable double dimLineLength;
     mutable RVector arrow1Pos;
     mutable RVector arrow2Pos;
 
     /** True if the textPosition should be automatically calculated. */
     mutable bool autoTextPos;
+
+    mutable QList<QSharedPointer<RShape> > shapes;
 };
 
 Q_DECLARE_METATYPE(RDimensionData*)

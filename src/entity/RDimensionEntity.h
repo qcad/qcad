@@ -130,6 +130,19 @@ public:
         return getData().getTextData();
     }
 
+    void updateBoundingBox(const RBox& b) const {
+        getData().updateBoundingBox(b);
+    }
+    void updateTextPositionCenter(const RVector& p) const {
+        getData().updateTextPositionCenter(p);
+    }
+    void updateTextData(const RTextData& d) const {
+        getData().updateTextData(d);
+    }
+    void updateShapes(const QList<QSharedPointer<RShape> >& s) const {
+        getData().updateShapes(s);
+    }
+
     void setTextPosition(const RVector& p) {
         getData().setTextPosition(p);
     }

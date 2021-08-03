@@ -143,24 +143,6 @@ void RDimRotatedData::recomputeDefinitionPoint(
     }
 }
 
-/**
- * Recompute definition point if
- */
-//void RDimRotatedData::recomputeDefinitionPoint(const RVector& oldDimLineGrip, const RVector& newDimLineGrip) {
-//    Q_UNUSED(oldDimLineGrip)
-
-//    RVector extDir = RVector::createPolar(1.0, rotation);
-
-//    // construction line for dimension line
-//    RLine extLine1(extensionPoint1, extensionPoint1 + extDir);
-
-//    RVector dimP1 = extLine1.getClosestPointOnShape(newDimLineGrip, false);
-
-//    if (dimP1.isValid()) {
-//        definitionPoint = dimP1;
-//    }
-//}
-
 bool RDimRotatedData::rotate(double rotation, const RVector& center) {
     RDimLinearData::rotate(rotation, center);
     //extensionPoint1.rotate(rotation, center);
@@ -185,11 +167,14 @@ bool RDimRotatedData::mirror(const RLine& axis) {
     return true;
 }
 
+/*
 QList<QSharedPointer<RShape> > RDimRotatedData::getShapes(const RBox& queryBox, bool ignoreComplex, bool segment, QList<RObject::Id>* entityIds) const {
     //Q_UNUSED(queryBox)
     //Q_UNUSED(ignoreComplex)
     Q_UNUSED(segment)
     Q_UNUSED(entityIds)
+
+    // TODO: delegate to RDimStyle
 
     QSharedPointer<RBlockReferenceEntity> dimBlockReference = getDimensionBlockReference();
     if (!dimBlockReference.isNull()) {
@@ -243,6 +228,7 @@ QList<QSharedPointer<RShape> > RDimRotatedData::getShapes(const RBox& queryBox, 
 
     return ret;
 }
+*/
 
 double RDimRotatedData::getMeasuredValue() const {
     // direction of dimension line

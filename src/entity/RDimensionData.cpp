@@ -109,13 +109,26 @@ RDimensionData::RDimensionData(const RVector& definitionPoint,
 
 RBox RDimensionData::getBoundingBox(bool ignoreEmpty) const {
     if (dirty || !boundingBox.isValid()) {
-        boundingBox = REntityData::getBoundingBox(ignoreEmpty);
-        getTextData();
-        boundingBox.growToInclude(textData.getBoundingBox(ignoreEmpty));
-        dirty = false;
+        render();
+//        boundingBox = REntityData::getBoundingBox(ignoreEmpty);
+//        getTextData();
+//        boundingBox.growToInclude(textData.getBoundingBox(ignoreEmpty));
+//        dirty = false;
     }
 
     return boundingBox;
+}
+
+void RDimensionData::render() const {
+    if (dirty) {
+        QSharedPointer<RDimStyle> dimStyle = getDocument()->queryDimStyleDirect();
+        if (dimStyle.isNull()) {
+            qWarning() << "no dim style";
+            return;
+        }
+        dimStyle->render(*this, false, false);
+        dirty = false;
+    }
 }
 
 RVector RDimensionData::getPointOnEntity() const {
@@ -366,8 +379,16 @@ double RDimensionData::getDimtxt() const {
     double dimtxt = dimtxtOverride;
 
     if (document!=NULL) {
+        // get value from dimension style:
         if (RMath::fuzzyCompare(dimtxt, 0.0)) {
-            // no override, use value from document settings:
+            QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+            if (!dimStyle.isNull()) {
+                dimtxt = dimStyle->getDimtxt();
+            }
+        }
+
+        // no override, use value from document settings:
+        if (RMath::fuzzyCompare(dimtxt, 0.0)) {
             dimtxt = document->getKnownVariable(RS::DIMTXT, 2.5).toDouble();
         }
     }
@@ -392,6 +413,51 @@ int RDimensionData::getDimlunit() const {
     }
 
     return dimlunit;
+}
+
+int RDimensionData::getDimjust() const {
+    int dimjust = 0;
+
+    if (document!=NULL) {
+        dimjust = document->getKnownVariable(RS::DIMJUST, 0).toInt();
+    }
+    else {
+        qWarning() << "RDimensionData::getDimjust: no document";
+    }
+
+    return dimjust;
+}
+
+/**
+ * \return 0 for text above dimension line, otherwise text on dimension line.
+ */
+int RDimensionData::getDimtad() const {
+    int dimtad = 0;
+
+    if (document!=NULL) {
+        dimtad = document->getKnownVariable(RS::DIMTAD, 0).toInt();
+    }
+    else {
+        qWarning() << "RDimensionData::getDimtad: no document";
+    }
+
+    return dimtad;
+}
+
+/**
+ * \return 0 for aligned, other for horizontal text label.
+ */
+int RDimensionData::getDimtih() const {
+    int dimtih = 0;
+
+    if (document!=NULL) {
+        dimtih = document->getKnownVariable(RS::DIMTIH, 0).toInt();
+    }
+    else {
+        qWarning() << "RDimensionData::getDimtih: no document";
+    }
+
+    return dimtih;
 }
 
 bool RDimensionData::useArchTick() const {
@@ -419,6 +485,7 @@ void RDimensionData::setCustomTextPosition(bool on) {
 /**
  * Creates a dimensioning line (line with one, two or no arrows).
  */
+/*
 QList<QSharedPointer<RShape> > RDimensionData::getDimensionLineShapes(
     const RVector& p1, const RVector& p2,
     bool arrow1, bool arrow2) const {
@@ -501,6 +568,10 @@ QList<QSharedPointer<RShape> > RDimensionData::getDimensionLineShapes(
     double dimAngle1 = dimensionLine.getDirection1();
     bool corrected=false;
     defaultAngle = RMath::makeAngleReadable(dimAngle1, true, &corrected);
+    if (getDimtih()!=0) {
+        // horizontal label:
+        defaultAngle = 0.0;
+    }
 
     if (autoTextPos) {
         RVector newTextPos = dimensionLine.getMiddlePoint();
@@ -516,17 +587,24 @@ QList<QSharedPointer<RShape> > RDimensionData::getDimensionLineShapes(
 
         // move text away from dimension line:
         if (!text.contains("\\X")) {
-            newTextPos+=distV;
+            if (getDimtad()!=0 && getDimtih()==0) {
+                // text above dimension line:
+                newTextPos+=distV;
+            }
         }
 
         textPositionCenter = newTextPos;
     }
 
+    qDebug() << "dimjust:" << getDimjust();
+    qDebug() << "dimtad:" << getDimtad();
+    qDebug() << "dimtih:" << getDimtih();
+
     return ret;
 }
+*/
 
-QList<QSharedPointer<RShape> > RDimensionData::getArrow(
-    const RVector& position, double direction) const {
+QList<QSharedPointer<RShape> > RDimensionData::getArrow(const RVector& position, double direction) const {
 
     QList<QSharedPointer<RShape> > ret;
     double dimasz = getDimasz();
@@ -553,9 +631,12 @@ QList<QSharedPointer<RShape> > RDimensionData::getArrow(
 /**
  * \return Text data of the text label.
  */
-RTextData& RDimensionData::getTextData() const {
-    if (dirty || textData.isDirty()) {
-        updateTextData();
+RTextData& RDimensionData::getTextData(bool noRender) const {
+    if (!noRender) {
+        if (dirty || textData.isDirty()) {
+            render();
+            //updateTextData();
+        }
     }
 
     return textData;
@@ -567,7 +648,7 @@ RTextData& RDimensionData::getTextData() const {
  * label to the right position at the right angle is up to the
  * particular dimension implementation.
  */
-void RDimensionData::initTextData() const {
+RTextData& RDimensionData::initTextData() const {
     double dimtxt = getDimtxt();
 
     QString label = getMeasurement();
@@ -594,7 +675,7 @@ void RDimensionData::initTextData() const {
     textData.setBlockId(getBlockId());
     textData.setColor(getColor());
     textData.setLineweight(getLineweight());
-    textData.setSelected(isSelected());
+    //textData.setSelected(isSelected());
     textData.setDimensionLabel(true);
 
     // override text color from dimension settings:
@@ -607,7 +688,8 @@ void RDimensionData::initTextData() const {
     //qDebug() << "label color: " << textData.getColor();
     //qDebug() << "textData: " << textData;
 
-    dirty = true;
+    //dirty = true;
+    return textData;
 }
 
 void RDimensionData::update() const {
@@ -701,15 +783,17 @@ QString RDimensionData::formatAngleLabel(double angle) const {
     return ret;
 }
 
-void RDimensionData::updateTextData() const {
-    initTextData();
-    if (RMath::isNaN(defaultAngle)) {
-        // updates default angle:
-        getShapes();
-    }
-    textData.rotate(defaultAngle, RVector(0,0));
-    textData.move(getTextPosition());
-}
+//void RDimensionData::updateTextData() const {
+//    initTextData();
+////    return;
+
+////    if (RMath::isNaN(defaultAngle)) {
+////        // updates default angle:
+////        getShapes();
+////    }
+//    //textData.rotate(angle, RVector(0,0));
+//    //textData.move(pos);
+//}
 
 bool RDimensionData::hasDimensionBlockReference() const {
     QString dimBlockName = getDimBlockName();

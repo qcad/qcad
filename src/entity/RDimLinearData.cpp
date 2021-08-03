@@ -136,51 +136,55 @@ bool RDimLinearData::stretch(const RPolyline& area, const RVector& offset) {
     return true;
 }
 
-void RDimLinearData::updateTextData() const {
-    initTextData();
+//void RDimLinearData::updateTextData() const {
+//    initTextData();
+//    return;
 
-    double dimgap = getDimgap();
 
-    if (RMath::isNaN(defaultAngle)) {
-        // updates default angle:
-        getShapes();
-    }
 
-    // move text to the side if appropriate:
-    if (!hasCustomTextPosition()) {
-//        RVector newTextPos = dimensionLine.getMiddlePoint();
-//        RVector distV;
 
-//        // rotate text so it's readable from the bottom or right (ISO)
-//        // quadrant 1 & 4
-//        if (corrected) {
-//            distV.setPolar(dimgap + dimtxt/2.0, dimAngle1-M_PI/2.0);
-//        } else {
-//            distV.setPolar(dimgap + dimtxt/2.0, dimAngle1+M_PI/2.0);
+//    double dimgap = getDimgap();
+
+//    if (RMath::isNaN(defaultAngle)) {
+//        // updates default angle:
+//        getShapes();
+//    }
+
+//    // move text to the side if appropriate:
+//    if (!hasCustomTextPosition()) {
+////        RVector newTextPos = dimensionLine.getMiddlePoint();
+////        RVector distV;
+
+////        // rotate text so it's readable from the bottom or right (ISO)
+////        // quadrant 1 & 4
+////        if (corrected) {
+////            distV.setPolar(dimgap + dimtxt/2.0, dimAngle1-M_PI/2.0);
+////        } else {
+////            distV.setPolar(dimgap + dimtxt/2.0, dimAngle1+M_PI/2.0);
+////        }
+
+////        // move text away from dimension line:
+////        newTextPos+=distV;
+
+////        // TODO: resets textPosition if text was moved to the side for lack of space:
+////        textPosition = newTextPos;
+////        qDebug() << "RDimensionData::getDimensionLineShapes(): 1: textPosition: " << textPosition;
+////        //updateTextData();
+////        qDebug() << "RDimensionData::getDimensionLineShapes(): 2: textPosition: " << textPosition;
+
+
+//        if (!RMath::isNaN(dimLineLength) && textData.getWidth()>dimLineLength) {
+//            RVector distH;
+//            distH.setPolar(textData.getWidth()/2.0+dimLineLength/2.0+dimgap, defaultAngle);
+//            textPositionSide = textPositionCenter;
+//            textPositionSide+=distH;
+//            //qDebug() << "RDimLinearData::updateTextData(): textPosition (side): " << textPositionCenter;
 //        }
+//        else {
+//            textPositionSide = RVector::invalid;
+//        }
+//    }
 
-//        // move text away from dimension line:
-//        newTextPos+=distV;
-
-//        // TODO: resets textPosition if text was moved to the side for lack of space:
-//        textPosition = newTextPos;
-//        qDebug() << "RDimensionData::getDimensionLineShapes(): 1: textPosition: " << textPosition;
-//        //updateTextData();
-//        qDebug() << "RDimensionData::getDimensionLineShapes(): 2: textPosition: " << textPosition;
-
-
-        if (!RMath::isNaN(dimLineLength) && textData.getWidth()>dimLineLength) {
-            RVector distH;
-            distH.setPolar(textData.getWidth()/2.0+dimLineLength/2.0+dimgap, defaultAngle);
-            textPositionSide = textPositionCenter;
-            textPositionSide+=distH;
-            //qDebug() << "RDimLinearData::updateTextData(): textPosition (side): " << textPositionCenter;
-        }
-        else {
-            textPositionSide = RVector::invalid;
-        }
-    }
-
-    textData.rotate(defaultAngle, RVector(0,0));
-    textData.move(getTextPosition());
-}
+//    textData.rotate(defaultAngle, RVector(0,0));
+//    textData.move(getTextPosition());
+//}
