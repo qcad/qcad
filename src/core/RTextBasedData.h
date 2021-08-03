@@ -198,7 +198,7 @@ public:
     }
 
     /**
-     * Width of the text box used for line wrapping (not supported).
+     * Width of the text box used for line wrapping.
      */
     double getTextWidth() const {
         return textWidth;
