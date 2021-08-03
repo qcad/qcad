@@ -46,6 +46,82 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
+    <method name="render" cppName="render" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="updateBoundingBox" cppName="updateBoundingBox"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RBox &amp;" typeName="RBox" name="box"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="updateTextPositionCenter"
+    cppName="updateTextPositionCenter" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="updateTextPositionSide"
+    cppName="updateTextPositionSide" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="updateTextData" cppName="updateTextData"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RTextData &amp;" typeName="RTextData" name="d"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="updateShapes" cppName="updateShapes"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QList &lt; QSharedPointer &lt; RShape &gt; &gt; &amp;"
+        typeName="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
+        name="s" isConst="true" />
+      </variant>
+    </method>
+    <method name="updateArrowPos1" cppName="updateArrowPos1"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="updateArrowPos2" cppName="updateArrowPos2"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getShapes" cppName="getShapes" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="RBox &amp;" typeName="RBox" name="queryBox"
+        hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
+        <arg type="bool" typeName="bool" name="ignoreComplex"
+        hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="segment"
+        hasDefault="true" default="false" isConst="false" />
+        <arg type="QList &lt; RObject::Id &gt; *"
+        typeName="QList &lt; RObject::Id &gt; *" name="entityIds"
+        hasDefault="true" default="NULL" isConst="false" />
+      </variant>
+    </method>
     <method name="getPointOnEntity" cppName="getPointOnEntity"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
@@ -108,7 +184,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="getTextPosition" cppName="getTextPosition"
-    specifier="public" isStatic="false" isVirtual="false"
+    specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
     </method>
@@ -372,6 +448,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="l" isConst="false" />
       </variant>
     </method>
+    <method name="getDimjust" cppName="getDimjust"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="getDimtad" cppName="getDimtad" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="getDimtih" cppName="getDimtih" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
     <method name="useArchTick" cppName="useArchTick"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -406,21 +495,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
     </method>
-    <method name="getDimensionLineShapes"
-    cppName="getDimensionLineShapes" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
-      isPureVirtual="false">
-        <arg type="RVector &amp;" typeName="RVector" name="p1"
-        isConst="true" />
-        <arg type="RVector &amp;" typeName="RVector" name="p2"
-        isConst="true" />
-        <arg type="bool" typeName="bool" name="arrow1"
-        isConst="false" />
-        <arg type="bool" typeName="bool" name="arrow2"
-        isConst="false" />
-      </variant>
-    </method>
     <method name="getArrow" cppName="getArrow" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
@@ -434,18 +508,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getTextData" cppName="getTextData"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="RTextData &amp;"
-      isPureVirtual="false" />
+      <variant returnType="RTextData &amp;" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="noRender"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
     </method>
     <method name="initTextData" cppName="initTextData"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
-    </method>
-    <method name="updateTextData" cppName="updateTextData"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
+      <variant returnType="RTextData &amp;"
+      isPureVirtual="false" />
     </method>
     <method name="getMeasurement" cppName="getMeasurement"
     specifier="public" isStatic="false" isVirtual="true"

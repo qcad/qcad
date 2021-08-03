@@ -25,6 +25,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="ObjectView" />
       <value name="ObjectUcs" />
       <value name="ObjectDocumentVariable" />
+      <value name="ObjectDimStyle" />
       <value name="EntityAll" />
       <value name="EntityUnknown" />
       <value name="EntityAttribute" />

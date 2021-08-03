@@ -58,6 +58,7 @@ HEADERS += \
     $$PWD/REcmaDimRadialEntity.h \
     $$PWD/REcmaDimRotatedData.h \
     $$PWD/REcmaDimRotatedEntity.h \
+    $$PWD/REcmaDimStyle.h \
     $$PWD/REcmaDimensionData.h \
     $$PWD/REcmaDimensionEntity.h \
     $$PWD/REcmaDirected.h \
@@ -240,6 +241,7 @@ HEADERS += \
     $$PWD/REcmaSharedPointerDimOrdinateEntity.h \
     $$PWD/REcmaSharedPointerDimRadialEntity.h \
     $$PWD/REcmaSharedPointerDimRotatedEntity.h \
+    $$PWD/REcmaSharedPointerDimStyle.h \
     $$PWD/REcmaSharedPointerDimensionEntity.h \
     $$PWD/REcmaSharedPointerDirected.h \
     $$PWD/REcmaSharedPointerDocumentVariables.h \
@@ -439,6 +441,7 @@ SOURCES += \
     $$PWD/REcmaDimRadialEntity.cpp \
     $$PWD/REcmaDimRotatedData.cpp \
     $$PWD/REcmaDimRotatedEntity.cpp \
+    $$PWD/REcmaDimStyle.cpp \
     $$PWD/REcmaDimensionData.cpp \
     $$PWD/REcmaDimensionEntity.cpp \
     $$PWD/REcmaDirected.cpp \
@@ -621,6 +624,7 @@ SOURCES += \
     $$PWD/REcmaSharedPointerDimOrdinateEntity.cpp \
     $$PWD/REcmaSharedPointerDimRadialEntity.cpp \
     $$PWD/REcmaSharedPointerDimRotatedEntity.cpp \
+    $$PWD/REcmaSharedPointerDimStyle.cpp \
     $$PWD/REcmaSharedPointerDimensionEntity.cpp \
     $$PWD/REcmaSharedPointerDirected.cpp \
     $$PWD/REcmaSharedPointerDocumentVariables.cpp \

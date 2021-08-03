@@ -54,6 +54,33 @@
         getBoundingBox
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        render
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateBoundingBox
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateTextPositionCenter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateTextPositionSide
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateTextData
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateShapes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateArrowPos1
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateArrowPos2
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getShapes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPointOnEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -195,6 +222,15 @@
         setDimlunit
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDimjust
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimtad
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimtih
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         useArchTick
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -213,9 +249,6 @@
         getTextAngle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getDimensionLineShapes
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         getArrow
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -223,9 +256,6 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         initTextData
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        updateTextData
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getMeasurement

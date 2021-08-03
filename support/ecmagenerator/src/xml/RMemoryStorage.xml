@@ -267,6 +267,18 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QSharedPointer &lt; RDocumentVariables &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="queryDimStyle" cppName="queryDimStyle"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RDimStyle &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="queryDimStyleDirect"
+    cppName="queryDimStyleDirect" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RDimStyle &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="queryObject" cppName="queryObject"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

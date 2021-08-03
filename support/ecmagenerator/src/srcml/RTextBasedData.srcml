@@ -199,7 +199,7 @@
     }</block></function>
 
     <comment type="block">/**
-     * Width of the text box used for line wrapping (not supported).
+     * Width of the text box used for line wrapping.
      */</comment>
     <function><type><name>double</name></type> <name>getTextWidth</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>textWidth</name></expr>;</return>

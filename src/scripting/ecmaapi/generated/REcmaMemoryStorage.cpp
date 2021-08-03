@@ -132,6 +132,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryDocumentVariablesDirect, "queryDocumentVariablesDirect");
             
+            REcmaHelper::registerFunction(&engine, proto, queryDimStyle, "queryDimStyle");
+            
+            REcmaHelper::registerFunction(&engine, proto, queryDimStyleDirect, "queryDimStyleDirect");
+            
             REcmaHelper::registerFunction(&engine, proto, queryObject, "queryObject");
             
             REcmaHelper::registerFunction(&engine, proto, queryObjectByHandle, "queryObjectByHandle");
@@ -2660,6 +2664,104 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMemoryStorage::queryDocumentVariablesDirect", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMemoryStorage::queryDimStyle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::queryDimStyle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::queryDimStyle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("queryDimStyle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RDimStyle >'
+    QSharedPointer < RDimStyle > cppResult =
+        
+               self->queryDimStyle();
+        // return type: QSharedPointer < RDimStyle >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.queryDimStyle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::queryDimStyle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMemoryStorage::queryDimStyleDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::queryDimStyleDirect", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::queryDimStyleDirect";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("queryDimStyleDirect", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RDimStyle >'
+    QSharedPointer < RDimStyle > cppResult =
+        
+               self->queryDimStyleDirect();
+        // return type: QSharedPointer < RDimStyle >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.queryDimStyleDirect().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::queryDimStyleDirect", context, engine);
             return result;
         }
          QScriptValue

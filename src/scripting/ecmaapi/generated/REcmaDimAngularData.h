@@ -83,9 +83,6 @@
         moveReferencePoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getShapes
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         getAngle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

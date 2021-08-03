@@ -129,7 +129,7 @@
     }</block></function>
 
     <function><type><name>virtual</name> <name>void</name></type> <name>exportTriangle</name><parameter_list>(<param><decl><type><name>const</name> <name>RTriangle</name>&amp;</type> <name>triangle</name></decl></param>)</parameter_list> <block>{
-        <macro><name>Q_UNUSED</name><argument_list>(<argument>triangle</argument>)</argument_list></macro>
+        <comment type="line">//Q_UNUSED(triangle)</comment>
     }</block></function>
 
     <function_decl><type><name>static</name> <name>QByteArray</name></type> <name>escapeUnicode</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>str</name></decl></param>)</parameter_list>;</function_decl>

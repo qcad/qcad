@@ -94,9 +94,6 @@
         ;static  QScriptValue
         stretch
         (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        updateTextData
-        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

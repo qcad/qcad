@@ -92,6 +92,14 @@
             
             REcmaHelper::registerFunction(&engine, proto, getTextData, "getTextData");
             
+            REcmaHelper::registerFunction(&engine, proto, updateBoundingBox, "updateBoundingBox");
+            
+            REcmaHelper::registerFunction(&engine, proto, updateTextPositionCenter, "updateTextPositionCenter");
+            
+            REcmaHelper::registerFunction(&engine, proto, updateTextData, "updateTextData");
+            
+            REcmaHelper::registerFunction(&engine, proto, updateShapes, "updateShapes");
+            
             REcmaHelper::registerFunction(&engine, proto, setTextPosition, "setTextPosition");
             
             REcmaHelper::registerFunction(&engine, proto, getTextPosition, "getTextPosition");
@@ -1561,6 +1569,263 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimensionEntity::getTextData", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionEntity::updateBoundingBox
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionEntity::updateBoundingBox", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionEntity::updateBoundingBox";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionEntity* self = 
+                        getSelf("updateBoundingBox", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RBox */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RBox*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RBox*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimensionEntity: Argument 0 is not of type RBox.",
+                               context);                    
+                    }
+                    RBox 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->updateBoundingBox(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.updateBoundingBox().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionEntity::updateBoundingBox", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionEntity::updateTextPositionCenter
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionEntity::updateTextPositionCenter", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionEntity::updateTextPositionCenter";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionEntity* self = 
+                        getSelf("updateTextPositionCenter", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimensionEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->updateTextPositionCenter(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.updateTextPositionCenter().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionEntity::updateTextPositionCenter", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionEntity::updateTextData
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionEntity::updateTextData", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionEntity::updateTextData";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionEntity* self = 
+                        getSelf("updateTextData", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RTextData */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTextData*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RTextData*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimensionEntity: Argument 0 is not of type RTextData.",
+                               context);                    
+                    }
+                    RTextData 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->updateTextData(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.updateTextData().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionEntity::updateTextData", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionEntity::updateShapes
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionEntity::updateShapes", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionEntity::updateShapes";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionEntity* self = 
+                        getSelf("updateShapes", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < QSharedPointer < RShape > > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < QSharedPointer < RShape > >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->updateShapes(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.updateShapes().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionEntity::updateShapes", context, engine);
             return result;
         }
          QScriptValue

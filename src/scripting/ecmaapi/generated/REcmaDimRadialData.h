@@ -89,9 +89,6 @@
         mirror
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getShapes
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         getMeasuredValue
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

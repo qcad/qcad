@@ -88,6 +88,18 @@
         getTextData
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        updateBoundingBox
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateTextPositionCenter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateTextData
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateShapes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setTextPosition
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

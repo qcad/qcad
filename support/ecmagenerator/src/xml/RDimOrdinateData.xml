@@ -155,21 +155,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="getShapes" cppName="getShapes" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
-      isPureVirtual="false">
-        <arg type="RBox &amp;" typeName="RBox" name="queryBox"
-        hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
-        <arg type="bool" typeName="bool" name="ignoreComplex"
-        hasDefault="true" default="false" isConst="false" />
-        <arg type="bool" typeName="bool" name="segment"
-        hasDefault="true" default="false" isConst="false" />
-        <arg type="QList &lt; RObject::Id &gt; *"
-        typeName="QList &lt; RObject::Id &gt; *" name="entityIds"
-        hasDefault="true" default="NULL" isConst="false" />
-      </variant>
-    </method>
     <method name="getMeasuredValue" cppName="getMeasuredValue"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

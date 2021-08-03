@@ -84,13 +84,15 @@
             
             REcmaHelper::registerFunction(&engine, proto, recomputeDefinitionPoint, "recomputeDefinitionPoint");
             
-            REcmaHelper::registerFunction(&engine, proto, getShapes, "getShapes");
-            
             REcmaHelper::registerFunction(&engine, proto, getMeasuredValue, "getMeasuredValue");
             
             REcmaHelper::registerFunction(&engine, proto, getAutoLabel, "getAutoLabel");
             
             REcmaHelper::registerFunction(&engine, proto, getAngle, "getAngle");
+            
+            REcmaHelper::registerFunction(&engine, proto, updateRefDefinitionPoint1, "updateRefDefinitionPoint1");
+            
+            REcmaHelper::registerFunction(&engine, proto, updateRefDefinitionPoint2, "updateRefDefinitionPoint2");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RDimAlignedData*>(), *proto);
@@ -886,314 +888,6 @@
             return result;
         }
          QScriptValue
-        REcmaDimAlignedData::getShapes
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDimAlignedData::getShapes", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimAlignedData::getShapes";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimAlignedData* self = 
-                        getSelf("getShapes", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QList < QSharedPointer < RShape > >'
-    QList < QSharedPointer < RShape > > cppResult =
-        
-               self->getShapes();
-        // return type: QList < QSharedPointer < RShape > >
-                // List of ...:
-                result = REcmaHelper::listToScriptValue(engine, cppResult);
-            
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RBox */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RBox*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RBox*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RDimAlignedData: Argument 0 is not of type RBox.",
-                               context);                    
-                    }
-                    RBox 
-                    a0 = 
-                    *ap0;
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QList < QSharedPointer < RShape > >'
-    QList < QSharedPointer < RShape > > cppResult =
-        
-               self->getShapes(a0);
-        // return type: QList < QSharedPointer < RShape > >
-                // List of ...:
-                result = REcmaHelper::listToScriptValue(engine, cppResult);
-            
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    2 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RBox */
-     && (
-            context->argument(1).isBool()
-        ) /* type: bool */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RBox*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RBox*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RDimAlignedData: Argument 0 is not of type RBox.",
-                               context);                    
-                    }
-                    RBox 
-                    a0 = 
-                    *ap0;
-                
-                    // argument isStandardType
-                    bool
-                    a1 =
-                    (bool)
-                    
-                    context->argument( 1 ).
-                    toBool();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QList < QSharedPointer < RShape > >'
-    QList < QSharedPointer < RShape > > cppResult =
-        
-               self->getShapes(a0
-        ,
-    a1);
-        // return type: QList < QSharedPointer < RShape > >
-                // List of ...:
-                result = REcmaHelper::listToScriptValue(engine, cppResult);
-            
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    3 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RBox */
-     && (
-            context->argument(1).isBool()
-        ) /* type: bool */
-     && (
-            context->argument(2).isBool()
-        ) /* type: bool */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RBox*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RBox*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RDimAlignedData: Argument 0 is not of type RBox.",
-                               context);                    
-                    }
-                    RBox 
-                    a0 = 
-                    *ap0;
-                
-                    // argument isStandardType
-                    bool
-                    a1 =
-                    (bool)
-                    
-                    context->argument( 1 ).
-                    toBool();
-                
-                    // argument isStandardType
-                    bool
-                    a2 =
-                    (bool)
-                    
-                    context->argument( 2 ).
-                    toBool();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QList < QSharedPointer < RShape > >'
-    QList < QSharedPointer < RShape > > cppResult =
-        
-               self->getShapes(a0
-        ,
-    a1
-        ,
-    a2);
-        // return type: QList < QSharedPointer < RShape > >
-                // List of ...:
-                result = REcmaHelper::listToScriptValue(engine, cppResult);
-            
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    4 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RBox */
-     && (
-            context->argument(1).isBool()
-        ) /* type: bool */
-     && (
-            context->argument(2).isBool()
-        ) /* type: bool */
-     && (
-            context->argument(3).isArray()
-        ) /* type: QList < RObject::Id > * */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RBox*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RBox*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RDimAlignedData: Argument 0 is not of type RBox.",
-                               context);                    
-                    }
-                    RBox 
-                    a0 = 
-                    *ap0;
-                
-                    // argument isStandardType
-                    bool
-                    a1 =
-                    (bool)
-                    
-                    context->argument( 1 ).
-                    toBool();
-                
-                    // argument isStandardType
-                    bool
-                    a2 =
-                    (bool)
-                    
-                    context->argument( 2 ).
-                    toBool();
-                
-                    // argument is pointer
-                    QList < RObject::Id > * a3 = NULL;
-
-                    a3 = 
-                        REcmaHelper::scriptValueTo<QList < RObject::Id > >(
-                            context->argument(3)
-                        );
-                    
-                    if (a3==NULL && 
-                        !context->argument(3).isNull()) {
-                        return REcmaHelper::throwError("RDimAlignedData: Argument 3 is not of type QList < RObject::Id > *QList < RObject::Id > *.", context);                    
-                    }
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QList < QSharedPointer < RShape > >'
-    QList < QSharedPointer < RShape > > cppResult =
-        
-               self->getShapes(a0
-        ,
-    a1
-        ,
-    a2
-        ,
-    a3);
-        // return type: QList < QSharedPointer < RShape > >
-                // List of ...:
-                result = REcmaHelper::listToScriptValue(engine, cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedData.getShapes().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDimAlignedData::getShapes", context, engine);
-            return result;
-        }
-         QScriptValue
         REcmaDimAlignedData::getMeasuredValue
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1338,6 +1032,140 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimAlignedData::getAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimAlignedData::updateRefDefinitionPoint1
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimAlignedData::updateRefDefinitionPoint1", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimAlignedData::updateRefDefinitionPoint1";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAlignedData* self = 
+                        getSelf("updateRefDefinitionPoint1", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimAlignedData: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->updateRefDefinitionPoint1(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedData.updateRefDefinitionPoint1().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimAlignedData::updateRefDefinitionPoint1", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimAlignedData::updateRefDefinitionPoint2
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimAlignedData::updateRefDefinitionPoint2", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimAlignedData::updateRefDefinitionPoint2";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAlignedData* self = 
+                        getSelf("updateRefDefinitionPoint2", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimAlignedData: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->updateRefDefinitionPoint2(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedData.updateRefDefinitionPoint2().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimAlignedData::updateRefDefinitionPoint2", context, engine);
             return result;
         }
          QScriptValue REcmaDimAlignedData::toString

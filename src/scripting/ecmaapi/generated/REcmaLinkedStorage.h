@@ -133,6 +133,12 @@
         queryDocumentVariables
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryDimStyle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        queryDimStyleDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryObjectDirect
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

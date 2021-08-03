@@ -141,6 +141,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryDocumentVariablesDirect, "queryDocumentVariablesDirect");
             
+            REcmaHelper::registerFunction(&engine, proto, queryDimStyle, "queryDimStyle");
+            
+            REcmaHelper::registerFunction(&engine, proto, queryDimStyleDirect, "queryDimStyleDirect");
+            
             REcmaHelper::registerFunction(&engine, proto, queryObject, "queryObject");
             
             REcmaHelper::registerFunction(&engine, proto, queryObjectDirect, "queryObjectDirect");
@@ -3010,6 +3014,104 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::queryDocumentVariablesDirect", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::queryDimStyle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::queryDimStyle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::queryDimStyle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("queryDimStyle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RDimStyle >'
+    QSharedPointer < RDimStyle > cppResult =
+        
+               self->queryDimStyle();
+        // return type: QSharedPointer < RDimStyle >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.queryDimStyle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::queryDimStyle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::queryDimStyleDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::queryDimStyleDirect", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::queryDimStyleDirect";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("queryDimStyleDirect", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RDimStyle >'
+    QSharedPointer < RDimStyle > cppResult =
+        
+               self->queryDimStyleDirect();
+        // return type: QSharedPointer < RDimStyle >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.queryDimStyleDirect().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::queryDimStyleDirect", context, engine);
             return result;
         }
          QScriptValue

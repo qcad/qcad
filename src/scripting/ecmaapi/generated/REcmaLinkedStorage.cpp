@@ -125,6 +125,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryDocumentVariables, "queryDocumentVariables");
             
+            REcmaHelper::registerFunction(&engine, proto, queryDimStyle, "queryDimStyle");
+            
+            REcmaHelper::registerFunction(&engine, proto, queryDimStyleDirect, "queryDimStyleDirect");
+            
             REcmaHelper::registerFunction(&engine, proto, queryObjectDirect, "queryObjectDirect");
             
             REcmaHelper::registerFunction(&engine, proto, queryObject, "queryObject");
@@ -2416,6 +2420,104 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLinkedStorage::queryDocumentVariables", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinkedStorage::queryDimStyle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryDimStyle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryDimStyle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinkedStorage* self = 
+                        getSelf("queryDimStyle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RDimStyle >'
+    QSharedPointer < RDimStyle > cppResult =
+        
+               self->queryDimStyle();
+        // return type: QSharedPointer < RDimStyle >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryDimStyle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryDimStyle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinkedStorage::queryDimStyleDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryDimStyleDirect", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryDimStyleDirect";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinkedStorage* self = 
+                        getSelf("queryDimStyleDirect", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RDimStyle >'
+    QSharedPointer < RDimStyle > cppResult =
+        
+               self->queryDimStyleDirect();
+        // return type: QSharedPointer < RDimStyle >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryDimStyleDirect().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryDimStyleDirect", context, engine);
             return result;
         }
          QScriptValue

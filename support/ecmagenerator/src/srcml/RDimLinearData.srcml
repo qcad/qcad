@@ -96,7 +96,7 @@
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>mirror</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>axis</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>stretch</name><parameter_list>(<param><decl><type><name>const</name> <name>RPolyline</name>&amp;</type> <name>area</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>)</parameter_list>;</function_decl>
 
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateTextData</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <comment type="line">//virtual void updateTextData() const;</comment>
 
 </public><protected>protected:
     <comment type="block">/** Definition point. Startpoint of the first extension line. */</comment>

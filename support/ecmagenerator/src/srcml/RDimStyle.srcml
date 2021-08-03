@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RDimStyle.h"><comment type="block">/**
+ * Copyright (c) 2011-2021 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDIMSTYLE_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDIMSTYLE_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"entity_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDimStyleProxy.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RObject.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyTypeId.h"</cpp:file></cpp:include>
+<comment type="line">//#include "RDocument.h"</comment>
+
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>REntityData</name>;</class_decl>
+<class_decl>class <name>RExporter</name>;</class_decl>
+
+<comment type="block">/**
+ * Dimension style class.
+ * This is responsible for rendering dimensions depending on style settings.
+ *
+ * \ingroup entity
+ * \scriptable
+ * \sharedPointerSupport
+ */</comment>
+<class>class <macro><name>QCADENTITY_EXPORT</name></macro> <name>RDimStyle</name><super>: <specifier>public</specifier> <name>RObject</name></super> <block>{<private type="default">
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyCustom</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyHandle</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyProtected</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDimtxt</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDimgap</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDimtad</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDimtih</name></decl>;</decl_stmt>
+
+</private><public>public:
+    <constructor_decl><name>RDimStyle</name><parameter_list>()</parameter_list>;</constructor_decl>
+
+    <constructor_decl><name>RDimStyle</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>)</parameter_list>;</constructor_decl>
+    <destructor_decl><specifier>virtual</specifier> <name>~RDimStyle</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>clear</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name><name>RS</name>::<name>ObjectDimStyle</name></name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>RDimStyle</name>*</type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr>new <call><name>RDimStyle</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>QPair<argument_list>&lt;<argument><name>QVariant</name></argument>, <argument><name>RPropertyAttributes</name></argument>&gt;</argument_list></name></type> <name>getProperty</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name>&amp;</type> <name>propertyTypeId</name></decl></param>, <param><decl><type><name>bool</name></type> <name>humanReadable</name></decl></param>, <param><decl><type><name>bool</name></type> <name>noAttributes</name></decl></param>, <param><decl><type><name>bool</name></type> <name>showOnRequest</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>setProperty</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>double</name></type> <name>getDimtxt</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>dimtxt</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setDimtxt</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>dimtxt</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getDimgap</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>dimgap</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setDimgap</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>dimgap</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getDimasz</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>dimasz</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setDimasz</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>dimasz</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getDimexe</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>dimexe</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setDimexe</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>dimexe</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getDimexo</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>dimexo</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setDimexo</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>dimexo</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>int</name></type> <name>getDimtad</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>dimtad</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setDimtad</name><parameter_list>(<param><decl><type><name>int</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>dimtad</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>int</name></type> <name>getDimtih</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>dimtih</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setDimtih</name><parameter_list>(<param><decl><type><name>int</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>dimtih</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>useArchTick</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>archTick</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setArchTick</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>archTick</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>render</name><parameter_list>(<param><decl><type><name>const</name> <name>REntityData</name>&amp;</type> <name>entityData</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr><call><name>hasProxy</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <expr_stmt><expr><call><name>getDimStyleProxy</name><argument_list>()</argument_list></call>-&gt;<call><name>render</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>, <argument><expr><name>entityData</name></expr></argument>, <argument><expr><name>preview</name></expr></argument>, <argument><expr><name>forceSelected</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></then>
+        <else>else <block>{
+            <expr_stmt><expr><call><name>qWarning</name><argument_list>()</argument_list></call> &lt;&lt; "no dimension style proxy registered"</expr>;</expr_stmt>
+        }</block></else></if>
+    }</block></function>
+
+    <function><type><name>static</name> <name>bool</name></type> <name>hasProxy</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>dimStyleProxy</name>!=<name>NULL</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function><type><name>static</name> <name>void</name></type> <name>setDimStyleProxy</name><parameter_list>(<param><decl><type><name>RDimStyleProxy</name>*</type> <name>p</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr><name>dimStyleProxy</name>!=<name>NULL</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr>delete <name>dimStyleProxy</name></expr>;</expr_stmt>
+        }</block></then></if>
+        <expr_stmt><expr><name>dimStyleProxy</name> = <name>p</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function><type><name>static</name> <name>RDimStyleProxy</name>*</type> <name>getDimStyleProxy</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>dimStyleProxy</name></expr>;</return>
+    }</block></function>
+
+</public><private>private:
+    <decl_stmt><decl><type><name>double</name></type> <name>dimtxt</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>dimgap</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>dimasz</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>dimexe</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>dimexo</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>dimtad</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>dimtih</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>archTick</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>static</name> <name>RDimStyleProxy</name>*</type> <name>dimStyleProxy</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RDimStyle</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RDimStyle*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>const RDimStyle*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;RDimStyle&gt;</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;RDimStyle&gt;*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

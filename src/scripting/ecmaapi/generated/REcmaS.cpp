@@ -185,6 +185,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("ObjectDimStyle",
+    QScriptValue(RS::ObjectDimStyle),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("EntityAll",
     QScriptValue(RS::EntityAll),
     QScriptValue::ReadOnly);
