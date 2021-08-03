@@ -8,6 +8,7 @@ SOURCES += \
     RColor.cpp \
     RCoordinateEvent.cpp \
     RDebug.cpp \
+    RDimStyle.cpp \
     RDocument.cpp \
     RDocumentVariables.cpp \
     RDocumentInterface.cpp \
@@ -132,6 +133,8 @@ HEADERS = \
     RCoordinateEvent.h \
     RCoordinateListener.h \
     RDebug.h \
+    RDimStyle.h \
+    RDimStyleProxy.h \
     RDocument.h \
     RDocumentVariables.h \
     RDocumentInterface.h \

@@ -351,6 +351,9 @@ void RDocument::init(bool beforeLoad) {
 
     transaction.addObject(docVars);
 
+    QSharedPointer<RDimStyle> dimStyle = QSharedPointer<RDimStyle>(new RDimStyle(this));
+    transaction.addObject(dimStyle);
+
     transaction.end();
     resetTransactionStack();
     storage.setModified(false);
@@ -2031,6 +2034,14 @@ QSharedPointer<RDocumentVariables> RDocument::queryDocumentVariables() const {
 
 QSharedPointer<RDocumentVariables> RDocument::queryDocumentVariablesDirect() const {
     return storage.queryDocumentVariablesDirect();
+}
+
+QSharedPointer<RDimStyle> RDocument::queryDimStyle() const {
+    return storage.queryDimStyle();
+}
+
+QSharedPointer<RDimStyle> RDocument::queryDimStyleDirect() const {
+    return storage.queryDimStyleDirect();
 }
 
 /**

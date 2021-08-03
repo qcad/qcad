@@ -67,11 +67,13 @@ void RMemoryStorage::clear() {
     linetypeMap.clear();
     childMap.clear();
     transactionMap.clear();
-    documentVariables.clear();
     variables.clear();
     variableCaseMap.clear();
     if (!documentVariables.isNull()) {
         documentVariables->clear();
+    }
+    if (!dimStyle.isNull()) {
+        dimStyle.clear();
     }
     //linetypeScale = 1.0;
     setLastTransactionId(-1);
@@ -769,6 +771,21 @@ QSharedPointer<RDocumentVariables> RMemoryStorage::queryDocumentVariablesDirect(
         //qWarning() << "RMemoryStorage::queryDocumentVariablesDirect: document variables is NULL";
     }
     return documentVariables;
+}
+
+QSharedPointer<RDimStyle> RMemoryStorage::queryDimStyle() const {
+    if (dimStyle.isNull()) {
+        //qWarning() << "RMemoryStorage::queryDimStyle: document variables is NULL";
+        return QSharedPointer<RDimStyle>();
+    }
+    return QSharedPointer<RDimStyle>(dimStyle->clone());
+}
+
+QSharedPointer<RDimStyle> RMemoryStorage::queryDimStyleDirect() const {
+    if (dimStyle.isNull()) {
+        //qWarning() << "RMemoryStorage::queryDimStyleDirect: document variables is NULL";
+    }
+    return dimStyle;
 }
 
 QSharedPointer<RObject> RMemoryStorage::queryObject(RObject::Id objectId) const {
@@ -1692,9 +1709,20 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
 //        }
 //    }
 
-    QSharedPointer<RDocumentVariables> docVars = object.dynamicCast<RDocumentVariables> ();
-    if (!docVars.isNull()) {
-        documentVariables = docVars;
+    // cache pointer to unique document variables object:
+    if (object->getType()==RS::ObjectDocumentVariable) {
+        QSharedPointer<RDocumentVariables> docVars = object.dynamicCast<RDocumentVariables> ();
+        if (!docVars.isNull()) {
+            documentVariables = docVars;
+        }
+    }
+
+    // cache pointer to unique dim style object:
+    if (object->getType()==RS::ObjectDimStyle) {
+        QSharedPointer<RDimStyle> ds = object.dynamicCast<RDimStyle> ();
+        if (!ds.isNull()) {
+            dimStyle = ds;
+        }
     }
 
     // entity changed:

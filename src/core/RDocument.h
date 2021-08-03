@@ -27,6 +27,7 @@
 
 #include "RBlock.h"
 #include "RBlockReferenceEntity.h"
+#include "RDimStyle.h"
 #include "RDocumentVariables.h"
 #include "REntity.h"
 #include "RNonCopyable.h"
@@ -163,6 +164,8 @@ public:
 
     QSharedPointer<RDocumentVariables> queryDocumentVariables() const;
     QSharedPointer<RDocumentVariables> queryDocumentVariablesDirect() const;
+    QSharedPointer<RDimStyle> queryDimStyle() const;
+    QSharedPointer<RDimStyle> queryDimStyleDirect() const;
     QSharedPointer<RObject> queryObject(RObject::Id objectId) const;
     QSharedPointer<RObject> queryObjectDirect(RObject::Id objectId) const;
     QSharedPointer<RObject> queryObjectByHandle(RObject::Handle objectHandle) const;

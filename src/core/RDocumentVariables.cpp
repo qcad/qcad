@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RDocumentVariables.h"
+#include "RDocument.h"
 #include "RDxfServices.h"
 
 RPropertyTypeId RDocumentVariables::PropertyCustom;
@@ -156,11 +157,59 @@ void RDocumentVariables::setKnownVariable(RS::KnownVariable key, const QVariant&
     case RS::LTSCALE:
         setLinetypeScale(value.toDouble());
         break;
+    case RS::DIMTXT:
+    case RS::DIMGAP:
+    case RS::DIMASZ:
+    case RS::DIMEXE:
+    case RS::DIMEXO:
+    case RS::DIMTAD:
+    case RS::DIMTIH:
+        setDimVariable(key, value);
+        break;
     default:
         break;
     }
 
     knownVariables.insert(key, value);
+}
+
+void RDocumentVariables::setDimVariable(RS::KnownVariable key, const QVariant& value) {
+    RDocument* document = getDocument();
+    if (document==NULL) {
+        return;
+    }
+
+    // TODO: this should happen in a transaction instead:
+    QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+    if (dimStyle.isNull()) {
+        return;
+    }
+
+    switch (key) {
+    case RS::DIMTXT:
+        dimStyle->setDimtxt(value.toDouble());
+        break;
+    case RS::DIMGAP:
+        dimStyle->setDimgap(value.toDouble());
+        break;
+    case RS::DIMASZ:
+        dimStyle->setDimasz(value.toDouble());
+        break;
+    case RS::DIMEXE:
+        dimStyle->setDimexe(value.toDouble());
+        break;
+    case RS::DIMEXO:
+        dimStyle->setDimexo(value.toDouble());
+        break;
+    case RS::DIMTAD:
+        dimStyle->setDimtad(value.toInt());
+        break;
+    case RS::DIMTIH:
+        dimStyle->setDimtih(value.toInt());
+        break;
+    default:
+        break;
+    }
 }
 
 QVariant RDocumentVariables::getKnownVariable(RS::KnownVariable key) const {

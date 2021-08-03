@@ -80,6 +80,8 @@ public:
 
     virtual QSharedPointer<RDocumentVariables> queryDocumentVariables() const;
     virtual QSharedPointer<RDocumentVariables> queryDocumentVariablesDirect() const;
+    virtual QSharedPointer<RDimStyle> queryDimStyle() const;
+    virtual QSharedPointer<RDimStyle> queryDimStyleDirect() const;
     virtual QSharedPointer<RObject> queryObject(RObject::Id objectId) const;
     virtual QSharedPointer<RObject> queryObjectByHandle(RObject::Handle objectHandle) const;
     virtual QSharedPointer<RObject> queryObjectByHandleDirect(RObject::Handle objectHandle) const;
@@ -254,6 +256,7 @@ protected:
 
     // document wide variables are stored as custom properties in this object:
     QSharedPointer<RDocumentVariables> documentVariables;
+    QSharedPointer<RDimStyle> dimStyle;
 
     QHash<QString, QVariant> variables;
     QMap<QString, QString> variableCaseMap;

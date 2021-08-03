@@ -134,6 +134,7 @@ public:
         ObjectView,
         ObjectUcs,
         ObjectDocumentVariable,
+        ObjectDimStyle,
 
         EntityAll,          /**< All entities (for filters) */
         EntityUnknown,      /**< Unknown entity */

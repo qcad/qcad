@@ -70,8 +70,11 @@ public:
     virtual QSet<REntity::Id> queryAllBlockReferences() const;
     virtual QSet<REntity::Id> queryAllViewports() const;
 
-    QSharedPointer<RDocumentVariables> queryDocumentVariablesDirect() const;
-    QSharedPointer<RDocumentVariables> queryDocumentVariables() const;
+    virtual QSharedPointer<RDocumentVariables> queryDocumentVariablesDirect() const;
+    virtual QSharedPointer<RDocumentVariables> queryDocumentVariables() const;
+
+    virtual QSharedPointer<RDimStyle> queryDimStyle() const;
+    virtual QSharedPointer<RDimStyle> queryDimStyleDirect() const;
 
     //virtual QSharedPointer<RDocumentVariables> queryDocumentVariables() const;
     virtual QSharedPointer<RObject> queryObjectDirect(RObject::Id objectId) const;

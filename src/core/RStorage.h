@@ -239,6 +239,9 @@ public:
     virtual QSharedPointer<RDocumentVariables> queryDocumentVariables() const = 0;
     virtual QSharedPointer<RDocumentVariables> queryDocumentVariablesDirect() const = 0;
 
+    virtual QSharedPointer<RDimStyle> queryDimStyle() const = 0;
+    virtual QSharedPointer<RDimStyle> queryDimStyleDirect() const = 0;
+
     /**
      * \return A shared pointer to the object with the given \c objectId
      *      or null pointer if the object is no available in this storage.

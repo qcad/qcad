@@ -186,6 +186,16 @@ QSharedPointer<RDocumentVariables> RLinkedStorage::queryDocumentVariables() cons
     return RMemoryStorage::queryDocumentVariables();
 }
 
+QSharedPointer<RDimStyle> RLinkedStorage::queryDimStyleDirect() const {
+    return backStorage->queryDimStyleDirect();
+    //return RMemoryStorage::queryDimStyleDirect();
+}
+
+QSharedPointer<RDimStyle> RLinkedStorage::queryDimStyle() const {
+    return backStorage->queryDimStyle();
+    //return RMemoryStorage::queryDimStyle();
+}
+
 QSharedPointer<RObject> RLinkedStorage::queryObject(RObject::Id objectId) const {
     if (!objectMap.contains(objectId)) {
         return backStorage->queryObject(objectId);
