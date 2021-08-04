@@ -174,6 +174,10 @@ private:
     int dimtih;
     bool archTick;
 
+    // TODO:
+    // Dimension text movement rules
+    //int dimtmove;
+
     static RDimStyleProxy* dimStyleProxy;
 };
 
