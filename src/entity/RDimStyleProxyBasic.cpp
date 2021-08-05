@@ -805,6 +805,7 @@ void RDimStyleProxyBasic::updateTextPosition(const QString& text, double textWid
     if (!dimensionData->hasCustomTextPosition()) {
         double dimtxt = dimStyle->getDimtxt();
         double dimgap = dimStyle->getDimgap();
+        double dimasz = dimStyle->getDimasz();
         int dimtad = dimStyle->getDimtad();
         int dimtih = dimStyle->getDimtih();
 
@@ -825,7 +826,7 @@ void RDimStyleProxyBasic::updateTextPosition(const QString& text, double textWid
         // move text away from dimension line:
         if (!text.contains("\\X")) {
             if (dimtad!=0 && dimtih==0) {
-                // text above dimension line:
+                // text above dimension line (dimtad is 1):
                 newTextPos+=distV;
             }
         }
@@ -833,7 +834,7 @@ void RDimStyleProxyBasic::updateTextPosition(const QString& text, double textWid
         double dimLineLength = dimLine1.getDistanceTo(dimLine2);
         double angle = dimLine1.getAngleTo(dimLine2);
         RVector textPositionSide;
-        if (!RMath::isNaN(dimLineLength) && textWidth>dimLineLength) {
+        if (!RMath::isNaN(dimLineLength) && textWidth>dimLineLength-2*dimasz) {
             RVector distH;
             distH.setPolar(textWidth/2.0+dimLineLength/2.0+dimgap, angle);
             textPositionSide = newTextPos;
