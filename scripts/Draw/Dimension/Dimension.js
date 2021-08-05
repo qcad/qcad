@@ -32,6 +32,8 @@ include("scripts/Draw/Draw.js");
  */
 function Dimension(guiAction) {
     EAction.call(this, guiAction);
+
+    this.data = undefined;
 }
 
 Dimension.prototype = new EAction();
