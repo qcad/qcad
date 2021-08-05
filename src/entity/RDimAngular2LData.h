@@ -57,6 +57,7 @@ public:
 
     void setExtensionLine1Start(const RVector& p) {
         extensionLine1Start = p;
+        update();
     }
 
     RVector getExtensionLine1Start() const {
@@ -65,6 +66,7 @@ public:
 
     void setExtensionLine1End(const RVector& p) {
         extensionLine1End = p;
+        update();
     }
 
     RVector getExtensionLine1End() const {
@@ -73,6 +75,7 @@ public:
 
     void setExtensionLine2Start(const RVector& p) {
         extensionLine2Start = p;
+        update();
     }
 
     RVector getExtensionLine2Start() const {
@@ -89,6 +92,7 @@ public:
 
     void setDimArcPosition(const RVector& p) {
         dimArcPosition = p;
+        update();
     }
 
     RVector getDimArcPosition() const {

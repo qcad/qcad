@@ -55,6 +55,7 @@ public:
 
     void setLeaderEndPoint(const RVector& p) {
         leaderEndPoint = p;
+        update();
     }
 
     RVector getLeaderEndPoint() const {
@@ -71,6 +72,7 @@ public:
 
     void setDefiningPoint(const RVector& p) {
         definingPoint = p;
+        update();
     }
 
     RVector getDefiningPoint() const {
@@ -79,10 +81,12 @@ public:
 
     void setMeasuringXAxis() {
         xType = true;
+        update();
     }
 
     void setMeasuringYAxis() {
         xType = false;
+        update();
     }
 
     bool isMeasuringXAxis() const {
