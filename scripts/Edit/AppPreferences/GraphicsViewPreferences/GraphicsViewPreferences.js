@@ -65,7 +65,9 @@ GraphicsViewPreferences.applyPreferences = function(doc, mdiChild) {
                 view.setBackgroundColor(new QColor());
             }
 
-            view.setNumThreads(numThreads);
+            if (isFunction(view.setNumThreads)) {
+                view.setNumThreads(numThreads);
+            }
 
             view.regenerate(false);
         }
