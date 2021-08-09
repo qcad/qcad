@@ -44,6 +44,7 @@ class QCADENTITY_EXPORT RDimStyle: public RObject {
     static RPropertyTypeId PropertyHandle;
     static RPropertyTypeId PropertyProtected;
 
+    static RPropertyTypeId PropertyDimscale;
     static RPropertyTypeId PropertyDimtxt;
     static RPropertyTypeId PropertyDimgap;
     static RPropertyTypeId PropertyDimtad;
@@ -69,6 +70,14 @@ public:
 
     QPair<QVariant, RPropertyAttributes> getProperty(RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes, bool showOnRequest);
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, RTransaction* transaction);
+
+    double getDimscale() const {
+        return dimscale;
+    }
+
+    void setDimscale(double v) {
+        dimscale = v;
+    }
 
     double getDimtxt() const {
         return dimtxt;
@@ -165,6 +174,7 @@ public:
     }
 
 private:
+    double dimscale;
     double dimtxt;
     double dimgap;
     double dimasz;

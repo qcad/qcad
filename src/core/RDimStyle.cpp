@@ -23,6 +23,7 @@ RPropertyTypeId RDimStyle::PropertyCustom;
 RPropertyTypeId RDimStyle::PropertyHandle;
 RPropertyTypeId RDimStyle::PropertyProtected;
 
+RPropertyTypeId RDimStyle::PropertyDimscale;
 RPropertyTypeId RDimStyle::PropertyDimtxt;
 RPropertyTypeId RDimStyle::PropertyDimgap;
 RPropertyTypeId RDimStyle::PropertyDimtad;
@@ -35,6 +36,7 @@ RDimStyle::RDimStyle() : RObject() {
 
 RDimStyle::RDimStyle(RDocument* document)
     : RObject(document),
+      dimscale(1.0),
       dimtxt(0.0),
       dimgap(0.0),
       dimasz(0.0),
@@ -44,6 +46,7 @@ RDimStyle::RDimStyle(RDocument* document)
       dimtih(0),
       archTick(false){
 
+    dimscale = RSettings::getDoubleValue("DimensionSettings/DIMSCALE", 1.0);
     dimtxt = RSettings::getDoubleValue("DimensionSettings/DIMTXT", 2.5);
     dimgap = RSettings::getDoubleValue("DimensionSettings/DIMGAP", 0.625);
     dimasz = RSettings::getDoubleValue("DimensionSettings/DIMASZ", 2.5);
@@ -106,6 +109,7 @@ void RDimStyle::init() {
     RDimStyle::PropertyHandle.generateId(typeid(RDimStyle), RObject::PropertyHandle);
     RDimStyle::PropertyProtected.generateId(typeid(RDimStyle), RObject::PropertyProtected);
 
+    RDimStyle::PropertyDimscale.generateId(typeid(RDimStyle), "", QT_TRANSLATE_NOOP("RDimStyle", "Overall dimension scale"));
     RDimStyle::PropertyDimtxt.generateId(typeid(RDimStyle), "", QT_TRANSLATE_NOOP("RDimStyle", "Text height"));
     RDimStyle::PropertyDimgap.generateId(typeid(RDimStyle), "", QT_TRANSLATE_NOOP("RDimStyle", "Dimension line gap"));
     RDimStyle::PropertyDimtad.generateId(typeid(RDimStyle), "", QT_TRANSLATE_NOOP("RDimStyle", "Text above dimension line"));
@@ -117,6 +121,10 @@ void RDimStyle::clear() {
 }
 
 QPair<QVariant, RPropertyAttributes> RDimStyle::getProperty(RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes, bool showOnRequest) {
+
+    if (propertyTypeId == PropertyDimscale) {
+        return qMakePair(QVariant(dimscale), RPropertyAttributes());
+    }
 
     if (propertyTypeId == PropertyDimtxt) {
         return qMakePair(QVariant(dimtxt), RPropertyAttributes());
@@ -141,6 +149,7 @@ bool RDimStyle::setProperty(RPropertyTypeId propertyTypeId, const QVariant& valu
 
     bool ret = false;
 
+    ret = ret || RObject::setMember(dimscale, value, PropertyDimscale == propertyTypeId);
     ret = ret || RObject::setMember(dimtxt, value, PropertyDimtxt == propertyTypeId);
     ret = ret || RObject::setMember(dimgap, value, PropertyDimgap == propertyTypeId);
     ret = ret || RObject::setMember(dimtad, value, PropertyDimtad == propertyTypeId);
