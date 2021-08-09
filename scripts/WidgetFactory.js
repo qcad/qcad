@@ -585,7 +585,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
                 c.setPlainText(value);
             }
             continue;
-        }        
+        }
         if (isOfType(c, RMathLineEdit)) {
             WidgetFactory.connect(c.valueChanged, signalReceiver, c.objectName);
             c.valueChanged.connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
