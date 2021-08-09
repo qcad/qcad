@@ -33,6 +33,7 @@ class RShape;
 class RTextData;
 class RVector;
 class RDimensionData;
+class RArc;
 class RLine;
 
 /**
@@ -48,19 +49,24 @@ public:
     virtual void render(const RDimStyle& dimStyle, const REntityData& entity, bool preview, bool forceSelected);
 
 protected:
-    void renderDimRotated();
-    void renderDimAligned();
-    void renderDimOrdinate();
-    void renderDimRadial();
-    void renderDimDiametric();
-    void renderDimAngular2L();
+    virtual void renderDimRotated();
+    virtual void renderDimAligned();
+    virtual void renderDimOrdinate();
+    virtual void renderDimRadial();
+    virtual void renderDimDiametric();
+    virtual void renderDimAngular();
 
-    void updateTextPosition(const QString& text, double textWidth, const RVector& dimLine1, const RVector& dimLine2, bool corrected);
+    virtual void breakUpDimArc(QList<QSharedPointer<RShape> >& shapes, QSharedPointer<RArc> dimArc) {
+        Q_UNUSED(shapes)
+        Q_UNUSED(dimArc)
+    }
+
+    virtual void updateTextPosition(const QString& text, double textWidth, const RVector& dimLine1, const RVector& dimLine2, bool corrected);
 
     virtual QList<QSharedPointer<RShape> > getDimensionLineShapes(const RVector& p1, const RVector& p2, bool arrow1, bool arrow2) const;
-    bool hasSpaceForArrows(double dimLineLength) const;
-    QList<QSharedPointer<RShape> > getArrow(const RVector& position, double direction) const;
-    void adjustExtensionLineFixLength(RLine& extLine1, RLine& extLine2, bool addDimExe = true) const;
+    virtual bool hasSpaceForArrows(double dimLineLength) const;
+    virtual QList<QSharedPointer<RShape> > getArrow(const RVector& position, double direction) const;
+    virtual void adjustExtensionLineFixLength(RLine& extLine1, RLine& extLine2, bool addDimExe = true) const;
 
 protected:
     const RDocument* document;
