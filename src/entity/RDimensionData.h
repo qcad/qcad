@@ -111,10 +111,12 @@ public:
 
     void setUpperTolerance(const QString& t) {
         upperTolerance = t;
+        update();
     }
 
     void setLowerTolerance(const QString& t) {
         lowerTolerance = t;
+        update();
     }
 
 

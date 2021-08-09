@@ -317,7 +317,15 @@ double RDimensionData::getDimScale(bool fromDocument) const {
 
     // dimScale is 0.0 (not set): use dimScale of document
     if (fromDocument && document!=NULL && RMath::fuzzyCompare(ret, 0.0)) {
-        ret = document->getKnownVariable(RS::DIMSCALE, 1.0).toDouble();
+
+        // get value from dimension style:
+        QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+        if (!dimStyle.isNull()) {
+            ret = dimStyle->getDimscale();
+        }
+        else {
+            ret = document->getKnownVariable(RS::DIMSCALE, 1.0).toDouble();
+        }
     }
 
     return ret;
@@ -327,7 +335,14 @@ double RDimensionData::getDimexo() const {
     double dimexo = 0.625;
 
     if (document!=NULL) {
-        dimexo = document->getKnownVariable(RS::DIMEXO, dimexo).toDouble();
+        // get value from dimension style:
+        QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+        if (!dimStyle.isNull()) {
+            dimexo = dimStyle->getDimexo();
+        }
+        else {
+            dimexo = document->getKnownVariable(RS::DIMEXO, dimexo).toDouble();
+        }
     }
     else {
         qWarning() << "RDimensionData::getDimexo: no document";
@@ -340,7 +355,14 @@ double RDimensionData::getDimexe() const {
     double dimexe = 1.25;
 
     if (document!=NULL) {
-        dimexe = document->getKnownVariable(RS::DIMEXE, dimexe).toDouble();
+        // get value from dimension style:
+        QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+        if (!dimStyle.isNull()) {
+            dimexe = dimStyle->getDimexe();
+        }
+        else {
+            dimexe = document->getKnownVariable(RS::DIMEXE, dimexe).toDouble();
+        }
     }
     else {
         qWarning() << "RDimensionData::getDimexe: no document";
@@ -353,7 +375,14 @@ double RDimensionData::getDimasz() const {
     double dimasz = 2.5;
 
     if (document!=NULL) {
-        dimasz = document->getKnownVariable(RS::DIMASZ, dimasz).toDouble();
+        // get value from dimension style:
+        QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+        if (!dimStyle.isNull()) {
+            dimasz = dimStyle->getDimasz();
+        }
+        else {
+            dimasz = document->getKnownVariable(RS::DIMASZ, dimasz).toDouble();
+        }
     }
     else {
         qWarning() << "RDimensionData::getDimasz: no document";
@@ -366,7 +395,14 @@ double RDimensionData::getDimgap() const {
     double dimgap = 0.625;
 
     if (document!=NULL) {
-        dimgap = document->getKnownVariable(RS::DIMGAP, dimgap).toDouble();
+        // get value from dimension style:
+        QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+        if (!dimStyle.isNull()) {
+            dimgap = dimStyle->getDimgap();
+        }
+        else {
+            dimgap = document->getKnownVariable(RS::DIMGAP, dimgap).toDouble();
+        }
     }
     else {
         qWarning() << "RDimensionData::getDimgap: no document";
@@ -435,7 +471,14 @@ int RDimensionData::getDimtad() const {
     int dimtad = 0;
 
     if (document!=NULL) {
-        dimtad = document->getKnownVariable(RS::DIMTAD, 0).toInt();
+        // get value from dimension style:
+        QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+        if (!dimStyle.isNull()) {
+            dimtad = dimStyle->getDimtad();
+        }
+        else {
+            dimtad = document->getKnownVariable(RS::DIMTAD, 0).toInt();
+        }
     }
     else {
         qWarning() << "RDimensionData::getDimtad: no document";
@@ -451,7 +494,14 @@ int RDimensionData::getDimtih() const {
     int dimtih = 0;
 
     if (document!=NULL) {
-        dimtih = document->getKnownVariable(RS::DIMTIH, 0).toInt();
+        // get value from dimension style:
+        QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+        if (!dimStyle.isNull()) {
+            dimtih = dimStyle->getDimtih();
+        }
+        else {
+            dimtih = document->getKnownVariable(RS::DIMTIH, 0).toInt();
+        }
     }
     else {
         qWarning() << "RDimensionData::getDimtih: no document";
