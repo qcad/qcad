@@ -611,7 +611,10 @@ TextDialog.prototype.getMainFont = function() {
     var font = comboMainFont.currentFont;
 
     var editMainHeight = this.dialog.findChild("MainHeight");
-    font.setPointSizeF(editMainHeight.getValue());
+    var h = editMainHeight.getValue();
+    if (isNumber(h) && h>0.0) {
+        font.setPointSizeF(h);
+    }
 
     var checkMainBold = this.dialog.findChild("MainBold");
     font.setBold(checkMainBold.checked);
