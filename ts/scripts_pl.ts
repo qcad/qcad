@@ -2998,7 +2998,7 @@ Odzyskać ją?</translation>
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+63"/>
+        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+65"/>
         <source>No prefix</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3135,7 +3135,7 @@ Odzyskać ją?</translation>
         <translation type="unfinished">Wymiar</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+112"/>
         <source>point</source>
         <translation>kropka</translation>
     </message>
@@ -3200,7 +3200,7 @@ Odzyskać ją?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+228"/>
+        <location line="+244"/>
         <source>Unit / Format</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3214,7 +3214,7 @@ Odzyskać ją?</translation>
         <translation type="vanished">Aby wyświetlać etykiety wymiarów w formacie „architektonicznym” lub „inżynierskim”, jednostką rysunku musi być „cal” lub „stopa”. Zmieniono format na „dziesiętny”.</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+29"/>
+        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
         <source>Sizes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3239,7 +3239,22 @@ Odzyskać ją?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-52"/>
+        <location line="-115"/>
+        <source>Dimension Style</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Horizontal text labels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Text above dimension line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+50"/>
         <source>Dimension line gap:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12523,7 +12538,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+316"/>
+        <location line="+319"/>
         <source>Others...</source>
         <translation type="unfinished"></translation>
     </message>

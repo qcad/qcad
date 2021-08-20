@@ -3347,7 +3347,7 @@ Vuoi recuperarlo?</translation>
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+63"/>
+        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+65"/>
         <source>No prefix</source>
         <translation>Nessun prefisso</translation>
     </message>
@@ -3496,7 +3496,7 @@ Vuoi recuperarlo?</translation>
         <translation>Predefiniti per nuovi disegni</translation>
     </message>
     <message>
-        <location line="+112"/>
+        <location line="+114"/>
         <source>point</source>
         <translation>Punto</translation>
     </message>
@@ -3561,7 +3561,7 @@ Vuoi recuperarlo?</translation>
         <translation>Unità topografiche</translation>
     </message>
     <message>
-        <location line="+228"/>
+        <location line="+244"/>
         <source>Unit / Format</source>
         <translation>Unità / formato</translation>
     </message>
@@ -3579,7 +3579,7 @@ Vuoi recuperarlo?</translation>
         <translation type="vanished">L&apos;unità di disegno deve essere &apos;Inch&apos; per visualizzare le etichette in formati di dimensione &apos;architettonica&apos; o &apos;Engineering&apos;. Formato cambiato in &apos;decimale&apos;.</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+29"/>
+        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
         <source>Sizes</source>
         <translation>Misure</translation>
     </message>
@@ -3604,7 +3604,22 @@ Vuoi recuperarlo?</translation>
         <translation>Estensione della linea di estensione:</translation>
     </message>
     <message>
-        <location line="-52"/>
+        <location line="-115"/>
+        <source>Dimension Style</source>
+        <translation>Stile di quota</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Horizontal text labels</source>
+        <translation>Etichette di testo orizzontali</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Text above dimension line</source>
+        <translation>Testo sopra la linea della dimensione</translation>
+    </message>
+    <message>
+        <location line="+50"/>
         <source>Dimension line gap:</source>
         <translation>Distanza del testo dalla linea:</translation>
     </message>
@@ -14662,7 +14677,7 @@ mostrati nei risultati di ricerca:</translation>
         <translation>&amp;Carattere speciale...</translation>
     </message>
     <message>
-        <location line="+316"/>
+        <location line="+319"/>
         <source>Others...</source>
         <translation>Altri...</translation>
     </message>

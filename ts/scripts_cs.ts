@@ -3074,7 +3074,7 @@ Přejete si ho obnovit?</translation>
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+63"/>
+        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+65"/>
         <source>No prefix</source>
         <translation>Bez prefixu</translation>
     </message>
@@ -3211,7 +3211,7 @@ Přejete si ho obnovit?</translation>
         <translation>Kóta</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+112"/>
         <source>point</source>
         <translation>tečka</translation>
     </message>
@@ -3276,7 +3276,7 @@ Přejete si ho obnovit?</translation>
         <translation>Geometrické jednotky</translation>
     </message>
     <message>
-        <location line="+228"/>
+        <location line="+244"/>
         <source>Unit / Format</source>
         <translation>Jednotka/Formát</translation>
     </message>
@@ -3290,7 +3290,7 @@ Přejete si ho obnovit?</translation>
         <translation type="vanished">Pro zobrazení formátů &apos;Stavitelský&apos; nebo &apos;Inženýrský&apos; musí být vybraná jednotka výkresu &apos;Palec&apos;. Formát byl změněn na &apos;Desetinný&apos;.</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+29"/>
+        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
         <source>Sizes</source>
         <translation>Rozměry</translation>
     </message>
@@ -3315,7 +3315,22 @@ Přejete si ho obnovit?</translation>
         <translation>Přesah vynášecí čáry:</translation>
     </message>
     <message>
-        <location line="-52"/>
+        <location line="-115"/>
+        <source>Dimension Style</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Horizontal text labels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Text above dimension line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+50"/>
         <source>Dimension line gap:</source>
         <translation>Odsazení kótovacího textu:</translation>
     </message>
@@ -12804,7 +12819,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>&amp;Speciální znaky...</translation>
     </message>
     <message>
-        <location line="+316"/>
+        <location line="+319"/>
         <source>Others...</source>
         <translation>Další...</translation>
     </message>

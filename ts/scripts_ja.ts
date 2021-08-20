@@ -3147,7 +3147,7 @@ Do you wish to recover it?</source>
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+63"/>
+        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+65"/>
         <source>No prefix</source>
         <translation>接頭辞なし</translation>
     </message>
@@ -3288,7 +3288,7 @@ Do you wish to recover it?</source>
         <translation>寸法</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+112"/>
         <source>point</source>
         <translation>点</translation>
     </message>
@@ -3353,7 +3353,7 @@ Do you wish to recover it?</source>
         <translation>測量</translation>
     </message>
     <message>
-        <location line="+228"/>
+        <location line="+244"/>
         <source>Unit / Format</source>
         <translation>ユニット/フォーマット</translation>
     </message>
@@ -3371,7 +3371,7 @@ Do you wish to recover it?</source>
         <translation type="vanished">寸法ラベルを’建築’または’エンジニアリング’フォーマットで表示するには、図面単位は’インチ’でなければなりません。フォーマットは’小数’に変更されました。</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+29"/>
+        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
         <source>Sizes</source>
         <translation>サイズ</translation>
     </message>
@@ -3396,7 +3396,22 @@ Do you wish to recover it?</source>
         <translation>延長線の拡張:</translation>
     </message>
     <message>
-        <location line="-52"/>
+        <location line="-115"/>
+        <source>Dimension Style</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Horizontal text labels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Text above dimension line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+50"/>
         <source>Dimension line gap:</source>
         <translation>寸法線のギャップ:</translation>
     </message>
@@ -13524,7 +13539,7 @@ shown in search results:</source>
         <translation>&amp;S 特殊文字...</translation>
     </message>
     <message>
-        <location line="+316"/>
+        <location line="+319"/>
         <source>Others...</source>
         <translation>その他...</translation>
     </message>

@@ -2995,7 +2995,7 @@ Onu kurtarmak ister misiniz?</translation>
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+63"/>
+        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+65"/>
         <source>No prefix</source>
         <translation>Önek yok</translation>
     </message>
@@ -3136,7 +3136,7 @@ Onu kurtarmak ister misiniz?</translation>
         <translation>Boyut</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+112"/>
         <source>point</source>
         <translation>nokta</translation>
     </message>
@@ -3201,7 +3201,7 @@ Onu kurtarmak ister misiniz?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+228"/>
+        <location line="+244"/>
         <source>Unit / Format</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3215,7 +3215,7 @@ Onu kurtarmak ister misiniz?</translation>
         <translation type="vanished">Ölçü birimi, &apos;Mimari&apos; veya &apos;Mühendislik&apos; formatlarında boyut etiketleri görüntülemek için &apos;İnç&apos; olmalıdır. Biçim &apos;Ondalık&apos; olarak değiştirildi.</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+29"/>
+        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
         <source>Sizes</source>
         <translation>Boyutlar</translation>
     </message>
@@ -3230,7 +3230,22 @@ Onu kurtarmak ister misiniz?</translation>
         <translation type="unfinished">Boyut çizgi aralığı:</translation>
     </message>
     <message>
-        <location line="-31"/>
+        <location line="-63"/>
+        <source>Dimension Style</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Horizontal text labels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Text above dimension line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>Keep proportions</source>
         <translation type="unfinished">Oranları koru</translation>
     </message>
@@ -12481,7 +12496,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+316"/>
+        <location line="+319"/>
         <source>Others...</source>
         <translation type="unfinished"></translation>
     </message>

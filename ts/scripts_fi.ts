@@ -3104,7 +3104,7 @@ Haluatko palauttaa sen?</translation>
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+63"/>
+        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+65"/>
         <source>No prefix</source>
         <translation>Ei etuliitettä</translation>
     </message>
@@ -3245,7 +3245,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Mitta</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+112"/>
         <source>point</source>
         <translation>piste</translation>
     </message>
@@ -3310,7 +3310,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Maanmittausyksiköt</translation>
     </message>
     <message>
-        <location line="+228"/>
+        <location line="+244"/>
         <source>Unit / Format</source>
         <translation>Yksikkö/muoto</translation>
     </message>
@@ -3324,7 +3324,7 @@ Haluatko palauttaa sen?</translation>
         <translation type="vanished">Piirroksen yksikön pitää olla &apos;tuuma&apos; tai &apos;jalka&apos; jotta näytetään mittaselitteet muodossa &apos;arkkitehtuurinen&apos; tai &apos;tekninen&apos;. Muoto vaihdettu &apos;desimaaliseksi&apos;.</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+29"/>
+        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
         <source>Sizes</source>
         <translation>Koot</translation>
     </message>
@@ -3349,7 +3349,22 @@ Haluatko palauttaa sen?</translation>
         <translation>Jatkolinjan pidennys:</translation>
     </message>
     <message>
-        <location line="-52"/>
+        <location line="-115"/>
+        <source>Dimension Style</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Horizontal text labels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Text above dimension line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+50"/>
         <source>Dimension line gap:</source>
         <translation>Mittaviivan väli:</translation>
     </message>
@@ -13204,7 +13219,7 @@ näkyy hakutuloksissa:</translation>
         <translation>&amp;Erikoismerkit ...</translation>
     </message>
     <message>
-        <location line="+316"/>
+        <location line="+319"/>
         <source>Others...</source>
         <translation>Muut ...</translation>
     </message>

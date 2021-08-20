@@ -3126,7 +3126,7 @@ Wilt u het herstellen?</translation>
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+63"/>
+        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+65"/>
         <source>No prefix</source>
         <translation>Geen prefix</translation>
     </message>
@@ -3267,7 +3267,7 @@ Wilt u het herstellen?</translation>
         <translation>Bemating</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+112"/>
         <source>point</source>
         <translation>Punt</translation>
     </message>
@@ -3332,7 +3332,7 @@ Wilt u het herstellen?</translation>
         <translation>Te meten eenheid</translation>
     </message>
     <message>
-        <location line="+228"/>
+        <location line="+244"/>
         <source>Unit / Format</source>
         <translation>Eenheid / Formaat</translation>
     </message>
@@ -3350,7 +3350,7 @@ Wilt u het herstellen?</translation>
         <translation type="vanished">De tekening eenheid moet &apos;Inch&apos; of &apos;Foot&apos; zijn dat bematingen in het format &apos;Architectuur&apos; of &apos;Technisch&apos; kunnen worden weergegeven. Format teruggezet op &apos;Decimaal&apos;.</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+29"/>
+        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
         <source>Sizes</source>
         <translation>Maten</translation>
     </message>
@@ -3375,7 +3375,22 @@ Wilt u het herstellen?</translation>
         <translation>Extensielijnverlenging:</translation>
     </message>
     <message>
-        <location line="-52"/>
+        <location line="-115"/>
+        <source>Dimension Style</source>
+        <translation>Bematingsstijl</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Horizontal text labels</source>
+        <translation>Horizontale tekstlabels</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Text above dimension line</source>
+        <translation>Tekst boven de bematingslijn</translation>
+    </message>
+    <message>
+        <location line="+50"/>
         <source>Dimension line gap:</source>
         <translation>Maatlijnafzet:</translation>
     </message>
@@ -13272,7 +13287,7 @@ getoond in zoekresultaten:</translation>
         <translation>&amp;Speciale tekens...</translation>
     </message>
     <message>
-        <location line="+316"/>
+        <location line="+319"/>
         <source>Others...</source>
         <translation>Andere...</translation>
     </message>

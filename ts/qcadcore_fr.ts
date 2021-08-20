@@ -213,9 +213,37 @@
     </message>
 </context>
 <context>
+    <name>RDimStyle</name>
+    <message>
+        <location filename="../src/core/RDimStyle.cpp" line="+112"/>
+        <source>Overall dimension scale</source>
+        <translation>Échelle de cote globale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text height</source>
+        <translation>Hauteur du texte</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dimension line gap</source>
+        <translation>Espacement du texte / ligne de cote</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text above dimension line</source>
+        <translation>Texte au-dessus de la ligne de cote</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text inside horizontal</source>
+        <translation>Texte intérieur horizontale</translation>
+    </message>
+</context>
+<context>
     <name>RDocumentVariables</name>
     <message>
-        <location filename="../src/core/RDocumentVariables.cpp" line="+47"/>
+        <location filename="../src/core/RDocumentVariables.cpp" line="+48"/>
         <source>Current Layer ID</source>
         <translation>ID du calque actuel</translation>
     </message>

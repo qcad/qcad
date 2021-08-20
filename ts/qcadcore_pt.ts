@@ -213,9 +213,37 @@
     </message>
 </context>
 <context>
+    <name>RDimStyle</name>
+    <message>
+        <location filename="../src/core/RDimStyle.cpp" line="+112"/>
+        <source>Overall dimension scale</source>
+        <translation>Escala de dimensão geral</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text height</source>
+        <translation>Altura do Texto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dimension line gap</source>
+        <translation>Dimensione a linha de brecha</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text above dimension line</source>
+        <translation>Texto acima da linha de dimensão</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text inside horizontal</source>
+        <translation>Texto interior horizontal</translation>
+    </message>
+</context>
+<context>
     <name>RDocumentVariables</name>
     <message>
-        <location filename="../src/core/RDocumentVariables.cpp" line="+47"/>
+        <location filename="../src/core/RDocumentVariables.cpp" line="+48"/>
         <source>Current Layer ID</source>
         <translation>ID da Camada Atual</translation>
     </message>

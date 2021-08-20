@@ -3111,7 +3111,7 @@ Do you wish to recover it?</source>
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+63"/>
+        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+65"/>
         <source>No prefix</source>
         <translation>Без префикса</translation>
     </message>
@@ -3252,7 +3252,7 @@ Do you wish to recover it?</source>
         <translation>Размер</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+112"/>
         <source>point</source>
         <translation>точка</translation>
     </message>
@@ -3317,7 +3317,7 @@ Do you wish to recover it?</source>
         <translation>Геодезические единицы</translation>
     </message>
     <message>
-        <location line="+228"/>
+        <location line="+244"/>
         <source>Unit / Format</source>
         <translation>Единица измерения/Формат</translation>
     </message>
@@ -3331,7 +3331,7 @@ Do you wish to recover it?</source>
         <translation type="vanished">Единицы измерения чертежа должны быть дюймами или футами для отображения меток в форматах Архитектуры или Инженеринга. Формат был изменён на десятичный.</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+29"/>
+        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
         <source>Sizes</source>
         <translation>Размеры</translation>
     </message>
@@ -3356,7 +3356,22 @@ Do you wish to recover it?</source>
         <translation>Выступ линии-выноски:</translation>
     </message>
     <message>
-        <location line="-52"/>
+        <location line="-115"/>
+        <source>Dimension Style</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Horizontal text labels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Text above dimension line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+50"/>
         <source>Dimension line gap:</source>
         <translation>Зазор размерной линии:</translation>
     </message>
@@ -13103,7 +13118,7 @@ shown in search results:</source>
         <translation>&amp;Специальные символы...</translation>
     </message>
     <message>
-        <location line="+316"/>
+        <location line="+319"/>
         <source>Others...</source>
         <translation>Другие...</translation>
     </message>

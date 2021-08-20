@@ -3149,7 +3149,7 @@ Prajete si ho obnoviť?</translation>
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+63"/>
+        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+65"/>
         <source>No prefix</source>
         <translation>Bez predpony</translation>
     </message>
@@ -3290,7 +3290,7 @@ Prajete si ho obnoviť?</translation>
         <translation>Kótovanie</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+112"/>
         <source>point</source>
         <translation>bodka</translation>
     </message>
@@ -3355,7 +3355,7 @@ Prajete si ho obnoviť?</translation>
         <translation>Prehľad</translation>
     </message>
     <message>
-        <location line="+228"/>
+        <location line="+244"/>
         <source>Unit / Format</source>
         <translation>Jednotka / Formát</translation>
     </message>
@@ -3373,7 +3373,7 @@ Prajete si ho obnoviť?</translation>
         <translation type="vanished">Pre zobrazenie kót vo formátoch &apos;Architektonický&apos; alebo &apos;Strojársky&apos; musia byť nastavené jednotky v &apos;Palcoch&apos; alebo &apos;Stopách&apos;. Formát zmenený na &apos;Desatinný&apos;.</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+29"/>
+        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
         <source>Sizes</source>
         <translation>Veľkosti</translation>
     </message>
@@ -3398,7 +3398,22 @@ Prajete si ho obnoviť?</translation>
         <translation>Presah vynášacej čiary:</translation>
     </message>
     <message>
-        <location line="-52"/>
+        <location line="-115"/>
+        <source>Dimension Style</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Horizontal text labels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Text above dimension line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+50"/>
         <source>Dimension line gap:</source>
         <translation>Vzdialenosť textu od kótovacej čiary:</translation>
     </message>
@@ -13135,7 +13150,7 @@ vo výsledku vyhľadania:</translation>
         <translation>&amp;Špeciálne Znaky...</translation>
     </message>
     <message>
-        <location line="+316"/>
+        <location line="+319"/>
         <source>Others...</source>
         <translation>Ďalšie...</translation>
     </message>

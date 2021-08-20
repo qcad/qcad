@@ -217,9 +217,37 @@
     </message>
 </context>
 <context>
+    <name>RDimStyle</name>
+    <message>
+        <location filename="../src/core/RDimStyle.cpp" line="+112"/>
+        <source>Overall dimension scale</source>
+        <translation>Globale Skalierung der Bemassung</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text height</source>
+        <translation>Texthöhe</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dimension line gap</source>
+        <translation>Bemassungslinienabstand</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text above dimension line</source>
+        <translation>Text über Bemassungslinie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text inside horizontal</source>
+        <translation>Text innen horizontal</translation>
+    </message>
+</context>
+<context>
     <name>RDocumentVariables</name>
     <message>
-        <location filename="../src/core/RDocumentVariables.cpp" line="+47"/>
+        <location filename="../src/core/RDocumentVariables.cpp" line="+48"/>
         <source>Current Layer ID</source>
         <translation>ID des aktuellen Layers</translation>
     </message>

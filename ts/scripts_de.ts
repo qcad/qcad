@@ -3516,7 +3516,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+63"/>
+        <location filename="../scripts/Draw/Dimension/Dimension.js" line="+65"/>
         <source>No prefix</source>
         <translation>Kein Präfix</translation>
     </message>
@@ -3665,7 +3665,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Standards für neue Zeichnungen</translation>
     </message>
     <message>
-        <location line="+112"/>
+        <location line="+114"/>
         <source>point</source>
         <translation>Punkt</translation>
     </message>
@@ -3730,7 +3730,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Vermessung</translation>
     </message>
     <message>
-        <location line="+229"/>
+        <location line="+245"/>
         <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
         <translation>Die Zeichnungseinheit muss &quot;Inch&quot; sein, damit Bemassungsbeschriftungen in den Formaten &quot;Architektur&quot; oder &quot;Technisch&quot; angezeigt werden können. Format zurückgesetzt auf &quot;Dezimal&quot;.</translation>
     </message>
@@ -3739,7 +3739,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation type="vanished">Die Zeichnungseinheit muss &apos;Inch&apos; oder &apos;Foot&apos; sein, damit Bemassungsbeschriftungen in den Formaten &apos;Architektur&apos; oder &apos;Technisch&apos; angezeigt werden können. Format zurückgesetzt auf &apos;Dezimal&apos;.</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+29"/>
+        <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
         <source>Sizes</source>
         <translation>Grössen</translation>
     </message>
@@ -3764,7 +3764,22 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Verlängerung der Begrenzungslinie:</translation>
     </message>
     <message>
-        <location line="-52"/>
+        <location line="-115"/>
+        <source>Dimension Style</source>
+        <translation>Bemassungsstil</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Horizontal text labels</source>
+        <translation>Horizontale Textbeschriftungen</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Text above dimension line</source>
+        <translation>Text über Bemassungslinie</translation>
+    </message>
+    <message>
+        <location line="+50"/>
         <source>Dimension line gap:</source>
         <translation>Bemassungslinien Abstand:</translation>
     </message>
@@ -15633,7 +15648,7 @@ nicht öffnen.
         <translation>&amp;Unterstreichen</translation>
     </message>
     <message>
-        <location line="+491"/>
+        <location line="+494"/>
         <source>Degree</source>
         <translation>Grad</translation>
     </message>
@@ -15819,7 +15834,7 @@ nicht öffnen.
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="-524"/>
+        <location filename="../scripts/Draw/Text/TextDialog/TextDialog.js" line="-527"/>
         <source>&amp;Bold</source>
         <translation>&amp;Fett</translation>
     </message>
@@ -15849,7 +15864,7 @@ nicht öffnen.
         <translation>&amp;Sonderzeichen...</translation>
     </message>
     <message>
-        <location line="+316"/>
+        <location line="+319"/>
         <source>Others...</source>
         <translation>Andere...</translation>
     </message>
