@@ -20,7 +20,7 @@
 #ifndef RDIMSTYLE_H
 #define RDIMSTYLE_H
 
-#include "entity_global.h"
+#include "core_global.h"
 
 #include "RDimStyleProxy.h"
 #include "RObject.h"
@@ -39,7 +39,7 @@ class RExporter;
  * \scriptable
  * \sharedPointerSupport
  */
-class QCADENTITY_EXPORT RDimStyle: public RObject {
+class QCADCORE_EXPORT RDimStyle: public RObject {
     static RPropertyTypeId PropertyCustom;
     static RPropertyTypeId PropertyHandle;
     static RPropertyTypeId PropertyProtected;
