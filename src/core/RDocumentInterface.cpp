@@ -2205,6 +2205,7 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
         }
     }
 
+    bool dimStyleHasChanged = false;
     bool ucsHasChanged = false;
     bool linetypeHasChanged = false;
     //bool layerHasChanged = false;
@@ -2226,15 +2227,76 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
             continue;
         }
 
-        QSharedPointer<RDocumentVariables> docVars = object.dynamicCast<RDocumentVariables> ();
-        if (!docVars.isNull()) {
-            ucsHasChanged = true;
-            linetypeHasChanged = true;
-            //layerHasChanged = true;
-            blockHasChanged = true;
-            layoutHasChanged = true;
-            viewHasChanged = true;
-            continue;
+        RS::EntityType type = object->getType();
+
+        switch (type) {
+        case RS::ObjectDocumentVariable:
+            {
+                QSharedPointer<RDocumentVariables> docVars = object.dynamicCast<RDocumentVariables> ();
+                if (!docVars.isNull()) {
+                    ucsHasChanged = true;
+                    linetypeHasChanged = true;
+                    //layerHasChanged = true;
+                    blockHasChanged = true;
+                    layoutHasChanged = true;
+                    viewHasChanged = true;
+                    continue;
+                }
+            }
+            break;
+
+        case RS::ObjectDimStyle:
+            if (!dimStyleHasChanged) {
+                QSharedPointer<RDimStyle> dimStyle = object.dynamicCast<RDimStyle> ();
+                if (!dimStyle.isNull()) {
+                    dimStyleHasChanged = true;
+                    continue;
+                }
+            }
+            break;
+
+        case RS::ObjectUcs:
+            if (!ucsHasChanged) {
+                QSharedPointer<RUcs> ucs = object.dynamicCast<RUcs> ();
+                if (!ucs.isNull()) {
+                    ucsHasChanged = true;
+                    continue;
+                }
+            }
+            break;
+
+        case RS::ObjectLinetype:
+            if (!linetypeHasChanged) {
+                QSharedPointer<RLinetype> linetype = object.dynamicCast<RLinetype> ();
+                if (!linetype.isNull()) {
+                    linetypeHasChanged = true;
+                    continue;
+                }
+            }
+            break;
+
+        case RS::ObjectLayout:
+            if (!layoutHasChanged) {
+                QSharedPointer<RLayout> layout = object.dynamicCast<RLayout> ();
+                if (!layout.isNull()) {
+                    layoutHasChanged = true;
+                    continue;
+                }
+            }
+            break;
+
+        case RS::ObjectView:
+            if (!viewHasChanged) {
+                QSharedPointer<RView> view = object.dynamicCast<RView> ();
+                if (!view.isNull()) {
+                    viewHasChanged = true;
+                    continue;
+                }
+            }
+            break;
+
+        default:
+            break;
         }
 
         QSharedPointer<REntity> entity = object.dynamicCast<REntity> ();
@@ -2244,91 +2306,58 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
             continue;
         }
 
-        QSharedPointer<RUcs> ucs = object.dynamicCast<RUcs> ();
-        if (!ucs.isNull()) {
-            ucsHasChanged = true;
-            continue;
-        }
+        if (type==RS::ObjectLayer) {
+            QSharedPointer<RLayer> layer = object.dynamicCast<RLayer> ();
+            if (!layer.isNull()) {
+                changedLayerIds.insert(objectId);
 
-        QSharedPointer<RLinetype> linetype = object.dynamicCast<RLinetype> ();
-        if (!linetype.isNull()) {
-            linetypeHasChanged = true;
-            continue;
-        }
+                // deselect entities on locked or invisible layer:
+                if (layer->isLocked() || layer->isOffOrFrozen()) {
+                    if (document.hasSelection()) {
+                        QSet<RObject::Id> ids = document.querySelectedLayerEntities(*it);
 
-        QSharedPointer<RLayer> layer = object.dynamicCast<RLayer> ();
-        if (!layer.isNull()) {
-            //layerHasChanged = true;
-            changedLayerIds.insert(objectId);
-
-            // deselect entities on locked or invisible layer:
-            if (layer->isLocked() || layer->isOffOrFrozen()) {
-                if (document.hasSelection()) {
-                    QSet<RObject::Id> ids = document.querySelectedLayerEntities(*it);
-
-                    deselectEntities(ids);
-                }
-            }
-
-            if (transaction.isType(RTransaction::LayerVisibilityStatusChange)) {
-                //qDebug() << "layer visibility changed";
-                // tag all block references as changed as they might contain entities on that layer:
-                // TODO: only tag if they do contain entities on that layer
-                QSet<RObject::Id> blockReferenceIds = document.queryAllBlockReferences();
-                //qDebug() << "blockReferenceIds:" << blockReferenceIds;
-                entityIdsToRegenerate.unite(blockReferenceIds);
-
-                QSet<RObject::Id> viewportIds = document.queryAllViewports();
-                entityIdsToRegenerate.unite(viewportIds);
-    //            QSet<RObject::Id>::iterator it;
-    //            for (it=blockReferenceIds.begin(); it!=blockReferenceIds.end(); it++) {
-    //                RObject::Id id = *it;
-    //                QSharedPointer<REntity> e = document.queryEntityDirect(id);
-    //                if (e.isNull()) {
-    //                    continue;
-    //                }
-    //                QSharedPointer<RBlockReferenceEntity> blockRef = e.dynamicCast<RBlockReferenceEntity>();
-    //                QSet<REntity::Id> blockEntityIds = document.queryBlockEntities(blockRef->getReferencedBlockId());
-    //            }
-            }
-            continue;
-        }
-
-        QSharedPointer<RBlock> block = object.dynamicCast<RBlock> ();
-        if (!block.isNull()) {
-            //if (block->getId()!=document.getModelSpaceBlockId()) {
-            if (block->getId()!=document.getCurrentBlockId()) {
-                blockHasChanged = true;
-                //document.queryBlockReferences(block->getId());
-            }
-            else {
-                QList<RPropertyChange> propertyChanges = transaction.getPropertyChanges(objectId);
-                for (int i=0; i<propertyChanges.length(); i++) {
-                    if (propertyChanges[i].getPropertyTypeId()==RBlock::PropertyName) {
-                        // current block renamed (needs block list update):
-                        blockHasChanged = true;
+                        deselectEntities(ids);
                     }
                 }
-            }
 
-            // deselect block reference entities of hidden block:
-            if (block->isFrozen()) {
-                QSet<RObject::Id> ids = document.queryBlockReferences(*it);
-                deselectEntities(ids);
+                if (transaction.isType(RTransaction::LayerVisibilityStatusChange)) {
+                    // tag all block references as changed as they might contain entities on that layer:
+                    // TODO: only tag if they do contain entities on that layer
+                    QSet<RObject::Id> blockReferenceIds = document.queryAllBlockReferences();
+                    entityIdsToRegenerate.unite(blockReferenceIds);
+
+                    QSet<RObject::Id> viewportIds = document.queryAllViewports();
+                    entityIdsToRegenerate.unite(viewportIds);
+                }
+                continue;
             }
-            continue;
         }
 
-        QSharedPointer<RLayout> layout = object.dynamicCast<RLayout> ();
-        if (!layout.isNull()) {
-            layoutHasChanged = true;
-            continue;
-        }
+        if (type==RS::ObjectBlock) {
+            QSharedPointer<RBlock> block = object.dynamicCast<RBlock> ();
+            if (!block.isNull()) {
+                //if (block->getId()!=document.getModelSpaceBlockId()) {
+                if (block->getId()!=document.getCurrentBlockId()) {
+                    blockHasChanged = true;
+                    //document.queryBlockReferences(block->getId());
+                }
+                else {
+                    QList<RPropertyChange> propertyChanges = transaction.getPropertyChanges(objectId);
+                    for (int i=0; i<propertyChanges.length(); i++) {
+                        if (propertyChanges[i].getPropertyTypeId()==RBlock::PropertyName) {
+                            // current block renamed (needs block list update):
+                            blockHasChanged = true;
+                        }
+                    }
+                }
 
-        QSharedPointer<RView> view = object.dynamicCast<RView> ();
-        if (!view.isNull()) {
-            viewHasChanged = true;
-            continue;
+                // deselect block reference entities of hidden block:
+                if (block->isFrozen()) {
+                    QSet<RObject::Id> ids = document.queryBlockReferences(*it);
+                    deselectEntities(ids);
+                }
+                continue;
+            }
         }
     }
 
@@ -2372,6 +2401,26 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
         regenerateScenes(entityIdsToRegenerate, false);
         regenerateViews(entityIdsToRegenerate);
         return;
+    }
+
+    if (dimStyleHasChanged) {
+        RTransaction* t = new RTransaction(getStorage(), "Change document setting", true);
+        t->setType(RTransaction::ChangeDocumentSetting);
+
+        // update global document settings based on dim style:
+        QSharedPointer<RDimStyle> dimStyle = document.queryDimStyleDirect();
+        document.setKnownVariable(RS::DIMSCALE, dimStyle->getDimscale(), t);
+        document.setKnownVariable(RS::DIMTXT, dimStyle->getDimtxt(), t);
+        document.setKnownVariable(RS::DIMGAP, dimStyle->getDimgap(), t);
+        document.setKnownVariable(RS::DIMASZ, dimStyle->getDimasz(), t);
+        document.setKnownVariable(RS::DIMEXE, dimStyle->getDimexe(), t);
+        document.setKnownVariable(RS::DIMEXO, dimStyle->getDimexo(), t);
+        document.setKnownVariable(RS::DIMTAD, dimStyle->getDimtad(), t);
+        document.setKnownVariable(RS::DIMTIH, dimStyle->getDimtih(), t);
+
+        //t->addObject(docVars);
+        t->end();
+        delete t;
     }
 
     if (/*layerHasChanged ||*/ !changedLayerIds.isEmpty() || blockHasChanged || linetypeHasChanged) {
