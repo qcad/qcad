@@ -159,3 +159,75 @@ bool RDimStyle::setProperty(RPropertyTypeId propertyTypeId, const QVariant& valu
 
     return ret;
 }
+
+double RDimStyle::getDimscale() const {
+    return dimscale;
+}
+
+void RDimStyle::setDimscale(double v) {
+    dimscale = v;
+}
+
+double RDimStyle::getDimtxt() const {
+    return dimtxt;
+}
+
+void RDimStyle::setDimtxt(double v) {
+    dimtxt = v;
+}
+
+double RDimStyle::getDimgap() const {
+    return dimgap;
+}
+
+void RDimStyle::setDimgap(double v) {
+    dimgap = v;
+}
+
+double RDimStyle::getDimasz() const {
+    return dimasz;
+}
+
+void RDimStyle::setDimasz(double v) {
+    dimasz = v;
+}
+
+double RDimStyle::getDimexe() const {
+    return dimexe;
+}
+
+void RDimStyle::setDimexe(double v) {
+    dimexe = v;
+}
+
+double RDimStyle::getDimexo() const {
+    return dimexo;
+}
+
+void RDimStyle::setDimexo(double v) {
+    dimexo = v;
+}
+
+int RDimStyle::getDimtad() const {
+    return dimtad;
+}
+
+void RDimStyle::setDimtad(int v) {
+    dimtad = v;
+}
+
+int RDimStyle::getDimtih() const {
+    return dimtih;
+}
+
+void RDimStyle::setDimtih(int v) {
+    dimtih = v;
+}
+
+bool RDimStyle::useArchTick() const {
+    return archTick;
+}
+
+void RDimStyle::setArchTick(bool on) {
+    archTick = on;
+}

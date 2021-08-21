@@ -25,7 +25,6 @@
 #include "RDimStyleProxy.h"
 #include "RObject.h"
 #include "RPropertyTypeId.h"
-//#include "RDocument.h"
 
 class RDocument;
 class REntityData;
@@ -71,77 +70,24 @@ public:
     QPair<QVariant, RPropertyAttributes> getProperty(RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes, bool showOnRequest);
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, RTransaction* transaction);
 
-    double getDimscale() const {
-        return dimscale;
-    }
-
-    void setDimscale(double v) {
-        dimscale = v;
-    }
-
-    double getDimtxt() const {
-        return dimtxt;
-    }
-
-    void setDimtxt(double v) {
-        dimtxt = v;
-    }
-
-    double getDimgap() const {
-        return dimgap;
-    }
-
-    void setDimgap(double v) {
-        dimgap = v;
-    }
-
-    double getDimasz() const {
-        return dimasz;
-    }
-
-    void setDimasz(double v) {
-        dimasz = v;
-    }
-
-    double getDimexe() const {
-        return dimexe;
-    }
-
-    void setDimexe(double v) {
-        dimexe = v;
-    }
-
-    double getDimexo() const {
-        return dimexo;
-    }
-
-    void setDimexo(double v) {
-        dimexo = v;
-    }
-
-    int getDimtad() const {
-        return dimtad;
-    }
-
-    void setDimtad(int v) {
-        dimtad = v;
-    }
-
-    int getDimtih() const {
-        return dimtih;
-    }
-
-    void setDimtih(int v) {
-        dimtih = v;
-    }
-
-    bool useArchTick() const {
-        return archTick;
-    }
-
-    void setArchTick(bool on) {
-        archTick = on;
-    }
+    double getDimscale() const;
+    void setDimscale(double v);
+    double getDimtxt() const;
+    void setDimtxt(double v);
+    double getDimgap() const;
+    void setDimgap(double v);
+    double getDimasz() const;
+    void setDimasz(double v);
+    double getDimexe() const;
+    void setDimexe(double v);
+    double getDimexo() const;
+    void setDimexo(double v);
+    int getDimtad() const;
+    void setDimtad(int v);
+    int getDimtih() const;
+    void setDimtih(int v);
+    bool useArchTick() const;
+    void setArchTick(bool on);
 
     void render(const REntityData& entityData, bool preview, bool forceSelected) {
         if (hasProxy()) {
