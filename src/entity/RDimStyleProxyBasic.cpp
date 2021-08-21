@@ -243,10 +243,10 @@ void RDimStyleProxyBasic::renderDimAligned() {
     textData.rotate(textAngle, RVector(0,0));
     textData.move(data.getTextPosition());
 
-    QList<QSharedPointer<RShape> > shapes = getDimensionLineShapes(extensionPoint1 + e1*extLength, extensionPoint2 + e1*extLength, true, true);
-
+    QList<QSharedPointer<RShape> > shapes;
     shapes.append(QSharedPointer<RLine>(new RLine(extLine1)));
     shapes.append(QSharedPointer<RLine>(new RLine(extLine2)));
+    shapes.append(getDimensionLineShapes(extensionPoint1 + e1*extLength, extensionPoint2 + e1*extLength, true, true));
 
     data.updateRefDefinitionPoint1(refDefinitionPoint1);
     data.updateRefDefinitionPoint2(refDefinitionPoint2);
