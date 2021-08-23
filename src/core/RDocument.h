@@ -97,6 +97,15 @@ public:
         bool includeLockedLayers = true,
         bool selectedOnly = false
     );
+    QPair<REntity::Id, QSet<int> > queryClosestXYWithIndices(
+        const RVector& wcsPosition,
+        double range,
+        bool draft,
+        double strictRange = RMAXDOUBLE,
+        bool includeLockedLayers = true,
+        bool selectedOnly = false
+    );
+
     REntity::Id queryClosestXY(
         QSet<REntity::Id>& candidates,
         const RVector& wcsPosition,
@@ -104,6 +113,12 @@ public:
         bool draft,
         double strictRange = RMAXDOUBLE
     );
+    QPair<REntity::Id, QSet<int> > queryClosestXYWithIndices(
+            QMap<REntity::Id, QSet<int> >& candidates,
+            const RVector& wcsPosition,
+            double range,
+            bool draft,
+            double strictRange = RMAXDOUBLE);
 
     QSet<RObject::Id> queryAllObjects() const;
     QSet<RObject::Id> querySelectedLayers() const;
@@ -145,6 +160,14 @@ public:
         const QList<RS::EntityType>& filter = RDEFAULT_QLIST_RS_ENTITYTYPE,
         bool selectedOnly = false,
         RLayer::Id layerId = RLayer::INVALID_ID) const;
+
+    QMap<REntity::Id, QSet<int> > queryIntersectedEntitiesXYWithIndex(const RBox& box,
+         bool checkBoundingBoxOnly=false,
+         bool includeLockedLayers=true,
+         RBlock::Id blockId = RBlock::INVALID_ID,
+         const QList<RS::EntityType>& filter = RDEFAULT_QLIST_RS_ENTITYTYPE,
+         bool selectedOnly = false,
+         RLayer::Id layerId = RLayer::INVALID_ID) const;
 
     QMap<REntity::Id, QSet<int> > queryIntersectedShapesXY(const RBox& box,
         bool checkBoundingBoxOnly=false,

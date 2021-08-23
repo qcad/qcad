@@ -1457,6 +1457,39 @@ REntity::Id RDocument::queryClosestXY(
     return queryClosestXY(candidates, wcsPosition, range, draft, strictRange);
 }
 
+QPair<REntity::Id, QSet<int> > RDocument::queryClosestXYWithIndices(
+        const RVector& wcsPosition,
+        double range,
+        bool draft,
+        double strictRange,
+        bool includeLockedLayers,
+        bool selectedOnly) {
+
+    RVector rangeV(
+                range,
+                range
+                );
+
+    // find entities that are within given maximum distance
+    //   (approximation based on bounding boxes):
+    QMap<REntity::Id, QSet<int> > candidates =
+            queryIntersectedEntitiesXYWithIndex(
+                RBox(
+                    wcsPosition - rangeV,
+                    wcsPosition + rangeV
+                    ),
+                true, includeLockedLayers,
+                RBlock::INVALID_ID, RDEFAULT_QLIST_RS_ENTITYTYPE,
+                selectedOnly
+                );
+
+    if (candidates.isEmpty()) {
+        return QPair<REntity::Id, QSet<int> >(REntity::INVALID_ID, QSet<int>());
+    }
+
+    return queryClosestXYWithIndices(candidates, wcsPosition, range, draft, strictRange);
+}
+
 /**
  * Queries the entity that is closest to the given position \c wcsPosition.
  * Only entities in the given set of \c candidates are considered.
@@ -1496,6 +1529,44 @@ REntity::Id RDocument::queryClosestXY(
         if (!RMath::isNaN(dist) && dist < minDist && dist < range+RS::PointTolerance) {
             minDist = dist;
             ret = *it;
+        }
+    }
+
+    return ret;
+}
+
+QPair<REntity::Id, QSet<int> > RDocument::queryClosestXYWithIndices(
+        QMap<REntity::Id, QSet<int> >& candidates,
+        const RVector& wcsPosition,
+        double range,
+        bool draft,
+        double strictRange) {
+
+    double minDist = RMAXDOUBLE;
+    QPair<REntity::Id, QSet<int> > ret = QPair<REntity::Id, QSet<int> >(REntity::INVALID_ID, QSet<int>());
+
+    QMap<REntity::Id, QSet<int> >::iterator it;
+    for (it=candidates.begin(); it!=candidates.end(); it++) {
+        if (RMouseEvent::hasMouseMoved()) {
+            return QPair<REntity::Id, QSet<int> >(REntity::INVALID_ID, QSet<int>());
+        }
+        QSharedPointer<REntity> e = queryEntityDirect(it.key());
+        if (e.isNull()) {
+            continue;
+        }
+        double dist = e->getDistanceTo(wcsPosition, true, range, draft, strictRange);
+
+        if (e->isPointType() && dist<strictRange*1.1) {
+            // make point type entities easier to select:
+            dist/=100.0;
+        }
+
+        if (!RMath::isNaN(dist) && dist < minDist && dist < range+RS::PointTolerance) {
+            minDist = dist;
+            //QSet<int> val = it.value();
+            //ret = QPair<REntity::Id, QSet<int> >(it.key(), val);
+            ret.first = it.key();
+            ret.second = it.value();
         }
     }
 
@@ -1588,6 +1659,13 @@ QSet<REntity::Id> RDocument::queryIntersectedEntitiesXY(
         const RBox& box, bool checkBoundingBoxOnly, bool includeLockedLayers, RBlock::Id blockId,
         const QList<RS::EntityType>& filter, bool selectedOnly, RLayer::Id layerId) const {
 
+    return queryIntersectedEntitiesXYWithIndex(box, checkBoundingBoxOnly, includeLockedLayers, blockId, filter, selectedOnly, layerId).keys().toSet();
+}
+
+QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedEntitiesXYWithIndex(
+        const RBox& box, bool checkBoundingBoxOnly, bool includeLockedLayers, RBlock::Id blockId,
+        const QList<RS::EntityType>& filter, bool selectedOnly, RLayer::Id layerId) const {
+
     bool onlyVisible = false;
 
     RBox boxExpanded = box;
@@ -1614,10 +1692,16 @@ QSet<REntity::Id> RDocument::queryIntersectedEntitiesXY(
             ids = queryAllEntities(false, false);
         }
 
-        return ids;
+        QMap<REntity::Id, QSet<int> > ret;
+        QSet<REntity::Id>::iterator it;
+        for (it=ids.begin(); it!=ids.end(); it++) {
+            QSet<int> val;
+            ret.insert(*it, val);
+        }
+        return ret;
     }
 
-    return queryIntersectedShapesXY(box, checkBoundingBoxOnly, includeLockedLayers, blockId, filter, selectedOnly, layerId).keys().toSet();
+    return queryIntersectedShapesXY(box, checkBoundingBoxOnly, includeLockedLayers, blockId, filter, selectedOnly, layerId);
 }
 
 QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
