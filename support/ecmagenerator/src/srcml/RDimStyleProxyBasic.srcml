@@ -34,6 +34,7 @@
 <class_decl>class <name>RTextData</name>;</class_decl>
 <class_decl>class <name>RVector</name>;</class_decl>
 <class_decl>class <name>RDimensionData</name>;</class_decl>
+<class_decl>class <name>RArc</name>;</class_decl>
 <class_decl>class <name>RLine</name>;</class_decl>
 
 <comment type="block">/**
@@ -49,19 +50,24 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>render</name><parameter_list>(<param><decl><type><name>const</name> <name>RDimStyle</name>&amp;</type> <name>dimStyle</name></decl></param>, <param><decl><type><name>const</name> <name>REntityData</name>&amp;</type> <name>entity</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name></decl></param>)</parameter_list>;</function_decl>
 
 </public><protected>protected:
-    <function_decl><type><name>void</name></type> <name>renderDimRotated</name><parameter_list>()</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>renderDimAligned</name><parameter_list>()</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>renderDimOrdinate</name><parameter_list>()</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>renderDimRadial</name><parameter_list>()</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>renderDimDiametric</name><parameter_list>()</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>renderDimAngular2L</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>renderDimRotated</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>renderDimAligned</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>renderDimOrdinate</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>renderDimRadial</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>renderDimDiametric</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>renderDimAngular</name><parameter_list>()</parameter_list>;</function_decl>
 
-    <function_decl><type><name>void</name></type> <name>updateTextPosition</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name></decl></param>, <param><decl><type><name>double</name></type> <name>textWidth</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>dimLine1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>dimLine2</name></decl></param>, <param><decl><type><name>bool</name></type> <name>corrected</name></decl></param>)</parameter_list>;</function_decl>
+    <function><type><name>virtual</name> <name>void</name></type> <name>breakUpDimArc</name><parameter_list>(<param><decl><type><name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>shapes</name></decl></param>, <param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RArc</name></argument>&gt;</argument_list></name></type> <name>dimArc</name></decl></param>)</parameter_list> <block>{
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>shapes</argument>)</argument_list></macro>
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>dimArc</argument>)</argument_list></macro>
+    }</block></function>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateTextPosition</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name></decl></param>, <param><decl><type><name>double</name></type> <name>textWidth</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>dimLine1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>dimLine2</name></decl></param>, <param><decl><type><name>bool</name></type> <name>corrected</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getDimensionLineShapes</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p2</name></decl></param>, <param><decl><type><name>bool</name></type> <name>arrow1</name></decl></param>, <param><decl><type><name>bool</name></type> <name>arrow2</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>bool</name></type> <name>hasSpaceForArrows</name><parameter_list>(<param><decl><type><name>double</name></type> <name>dimLineLength</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getArrow</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>position</name></decl></param>, <param><decl><type><name>double</name></type> <name>direction</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>adjustExtensionLineFixLength</name><parameter_list>(<param><decl><type><name>RLine</name>&amp;</type> <name>extLine1</name></decl></param>, <param><decl><type><name>RLine</name>&amp;</type> <name>extLine2</name></decl></param>, <param><decl><type><name>bool</name></type> <name>addDimExe</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>hasSpaceForArrows</name><parameter_list>(<param><decl><type><name>double</name></type> <name>dimLineLength</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getArrow</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>position</name></decl></param>, <param><decl><type><name>double</name></type> <name>direction</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>adjustExtensionLineFixLength</name><parameter_list>(<param><decl><type><name>RLine</name>&amp;</type> <name>extLine1</name></decl></param>, <param><decl><type><name>RLine</name>&amp;</type> <name>extLine2</name></decl></param>, <param><decl><type><name>bool</name></type> <name>addDimExe</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
 </protected><protected>protected:
     <decl_stmt><decl><type><name>const</name> <name>RDocument</name>*</type> <name>document</name></decl>;</decl_stmt>

@@ -396,6 +396,13 @@
     }</block></function>
 
     <comment type="block">/**
+     * Convenience function for scripts.
+     */</comment>
+    <function><type><name><name>RObject</name>::<name>Id</name></name></type> <name>getClosestSubEntityId</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pos</name></decl></param>, <param><decl><type><name>double</name></type> <name>range</name> =<init> <expr><name>RNANDOUBLE</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>ignoreComplex</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getClosestSubEntityId</name><argument_list>(<argument><expr><name>pos</name></expr></argument>, <argument><expr><name>range</name></expr></argument>, <argument><expr><name>ignoreComplex</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
      * \copydoc REntityData::getClosestShape
      */</comment>
     <function><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>getClosestShape</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pos</name></decl></param>, <param><decl><type><name>double</name></type> <name>range</name> =<init> <expr><name>RNANDOUBLE</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>ignoreComplex</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name><name>RObject</name>::<name>Id</name></name>*</type> <name>subEntityId</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{

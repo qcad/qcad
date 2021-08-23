@@ -58,6 +58,7 @@
 
     <function><type><name>void</name></type> <name>setExtensionLine1Start</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>extensionLine1Start</name> = <name>p</name></expr>;</expr_stmt>
+        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>RVector</name></type> <name>getExtensionLine1Start</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
@@ -66,6 +67,7 @@
 
     <function><type><name>void</name></type> <name>setExtensionLine1End</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>extensionLine1End</name> = <name>p</name></expr>;</expr_stmt>
+        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>RVector</name></type> <name>getExtensionLine1End</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
@@ -74,6 +76,7 @@
 
     <function><type><name>void</name></type> <name>setExtensionLine2Start</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>extensionLine2Start</name> = <name>p</name></expr>;</expr_stmt>
+        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>RVector</name></type> <name>getExtensionLine2Start</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
@@ -90,6 +93,7 @@
 
     <function><type><name>void</name></type> <name>setDimArcPosition</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>dimArcPosition</name> = <name>p</name></expr>;</expr_stmt>
+        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>RVector</name></type> <name>getDimArcPosition</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{

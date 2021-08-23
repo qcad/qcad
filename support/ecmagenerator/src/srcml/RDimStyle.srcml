@@ -21,12 +21,11 @@
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDIMSTYLE_H</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDIMSTYLE_H</name></cpp:define>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"entity_global.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDimStyleProxy.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RObject.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyTypeId.h"</cpp:file></cpp:include>
-<comment type="line">//#include "RDocument.h"</comment>
 
 <class_decl>class <name>RDocument</name>;</class_decl>
 <class_decl>class <name>REntityData</name>;</class_decl>
@@ -40,11 +39,12 @@
  * \scriptable
  * \sharedPointerSupport
  */</comment>
-<class>class <macro><name>QCADENTITY_EXPORT</name></macro> <name>RDimStyle</name><super>: <specifier>public</specifier> <name>RObject</name></super> <block>{<private type="default">
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RDimStyle</name><super>: <specifier>public</specifier> <name>RObject</name></super> <block>{<private type="default">
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyCustom</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyHandle</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyProtected</name></decl>;</decl_stmt>
 
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDimscale</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDimtxt</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDimgap</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDimtad</name></decl>;</decl_stmt>
@@ -71,69 +71,24 @@
     <function_decl><type><name>QPair<argument_list>&lt;<argument><name>QVariant</name></argument>, <argument><name>RPropertyAttributes</name></argument>&gt;</argument_list></name></type> <name>getProperty</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name>&amp;</type> <name>propertyTypeId</name></decl></param>, <param><decl><type><name>bool</name></type> <name>humanReadable</name></decl></param>, <param><decl><type><name>bool</name></type> <name>noAttributes</name></decl></param>, <param><decl><type><name>bool</name></type> <name>showOnRequest</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>setProperty</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name></decl></param>)</parameter_list>;</function_decl>
 
-    <function><type><name>double</name></type> <name>getDimtxt</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>dimtxt</name></expr>;</return>
-    }</block></function>
-
-    <function><type><name>void</name></type> <name>setDimtxt</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>dimtxt</name> = <name>v</name></expr>;</expr_stmt>
-    }</block></function>
-
-    <function><type><name>double</name></type> <name>getDimgap</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>dimgap</name></expr>;</return>
-    }</block></function>
-
-    <function><type><name>void</name></type> <name>setDimgap</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>dimgap</name> = <name>v</name></expr>;</expr_stmt>
-    }</block></function>
-
-    <function><type><name>double</name></type> <name>getDimasz</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>dimasz</name></expr>;</return>
-    }</block></function>
-
-    <function><type><name>void</name></type> <name>setDimasz</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>dimasz</name> = <name>v</name></expr>;</expr_stmt>
-    }</block></function>
-
-    <function><type><name>double</name></type> <name>getDimexe</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>dimexe</name></expr>;</return>
-    }</block></function>
-
-    <function><type><name>void</name></type> <name>setDimexe</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>dimexe</name> = <name>v</name></expr>;</expr_stmt>
-    }</block></function>
-
-    <function><type><name>double</name></type> <name>getDimexo</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>dimexo</name></expr>;</return>
-    }</block></function>
-
-    <function><type><name>void</name></type> <name>setDimexo</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>dimexo</name> = <name>v</name></expr>;</expr_stmt>
-    }</block></function>
-
-    <function><type><name>int</name></type> <name>getDimtad</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>dimtad</name></expr>;</return>
-    }</block></function>
-
-    <function><type><name>void</name></type> <name>setDimtad</name><parameter_list>(<param><decl><type><name>int</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>dimtad</name> = <name>v</name></expr>;</expr_stmt>
-    }</block></function>
-
-    <function><type><name>int</name></type> <name>getDimtih</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>dimtih</name></expr>;</return>
-    }</block></function>
-
-    <function><type><name>void</name></type> <name>setDimtih</name><parameter_list>(<param><decl><type><name>int</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>dimtih</name> = <name>v</name></expr>;</expr_stmt>
-    }</block></function>
-
-    <function><type><name>bool</name></type> <name>useArchTick</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>archTick</name></expr>;</return>
-    }</block></function>
-
-    <function><type><name>void</name></type> <name>setArchTick</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>archTick</name> = <name>on</name></expr>;</expr_stmt>
-    }</block></function>
+    <function_decl><type><name>double</name></type> <name>getDimscale</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setDimscale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getDimtxt</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setDimtxt</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getDimgap</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setDimgap</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getDimasz</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setDimasz</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getDimexe</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setDimexe</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getDimexo</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setDimexo</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>int</name></type> <name>getDimtad</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setDimtad</name><parameter_list>(<param><decl><type><name>int</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>int</name></type> <name>getDimtih</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setDimtih</name><parameter_list>(<param><decl><type><name>int</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>useArchTick</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setArchTick</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
 
     <function><type><name>void</name></type> <name>render</name><parameter_list>(<param><decl><type><name>const</name> <name>REntityData</name>&amp;</type> <name>entityData</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name></decl></param>)</parameter_list> <block>{
         <if>if <condition>(<expr><call><name>hasProxy</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
@@ -166,6 +121,7 @@
     }</block></function>
 
 </public><private>private:
+    <decl_stmt><decl><type><name>double</name></type> <name>dimscale</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>dimtxt</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>dimgap</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>dimasz</name></decl>;</decl_stmt>
@@ -174,6 +130,10 @@
     <decl_stmt><decl><type><name>int</name></type> <name>dimtad</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>int</name></type> <name>dimtih</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>archTick</name></decl>;</decl_stmt>
+
+    <comment type="line">// TODO:</comment>
+    <comment type="line">// Dimension text movement rules</comment>
+    <comment type="line">//int dimtmove;</comment>
 
     <decl_stmt><decl><type><name>static</name> <name>RDimStyleProxy</name>*</type> <name>dimStyleProxy</name></decl>;</decl_stmt>
 </private>}</block>;</class>

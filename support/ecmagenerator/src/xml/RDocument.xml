@@ -112,6 +112,39 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="RMAXDOUBLE" isConst="false" />
       </variant>
     </method>
+    <method name="queryClosestXYWithIndices"
+    cppName="queryClosestXYWithIndices" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QPair &lt; REntity::Id , QSet &lt; int &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="wcsPosition" isConst="true" />
+        <arg type="double" typeName="double" name="range"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="draft"
+        isConst="false" />
+        <arg type="double" typeName="double" name="strictRange"
+        hasDefault="true" default="RMAXDOUBLE" isConst="false" />
+        <arg type="bool" typeName="bool" name="includeLockedLayers"
+        hasDefault="true" default="true" isConst="false" />
+        <arg type="bool" typeName="bool" name="selectedOnly"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
+      <variant returnType="QPair &lt; REntity::Id , QSet &lt; int &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="QMap &lt; REntity::Id , QSet &lt; int &gt; &gt; &amp;"
+        typeName="QMap &lt; REntity::Id , QSet &lt; int &gt; &gt;"
+        name="candidates" isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="wcsPosition" isConst="true" />
+        <arg type="double" typeName="double" name="range"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="draft"
+        isConst="false" />
+        <arg type="double" typeName="double" name="strictRange"
+        hasDefault="true" default="RMAXDOUBLE" isConst="false" />
+      </variant>
+    </method>
     <method name="queryAllObjects" cppName="queryAllObjects"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -341,6 +374,33 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="queryIntersectedEntitiesXY" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QSet &lt; REntity::Id &gt;"
+      isPureVirtual="false">
+        <arg type="RBox &amp;" typeName="RBox" name="box"
+        isConst="true" />
+        <arg type="bool" typeName="bool"
+        name="checkBoundingBoxOnly" hasDefault="true"
+        default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="includeLockedLayers"
+        hasDefault="true" default="true" isConst="false" />
+        <arg type="RBlock::Id" typeName="RBlock::Id" name="blockId"
+        hasDefault="true" default="RBlock :: INVALID_ID"
+        isConst="false" />
+        <arg type="QList &lt; RS::EntityType &gt; &amp;"
+        typeName="QList &lt; RS::EntityType &gt;" name="filter"
+        hasDefault="true" default="RDEFAULT_QLIST_RS_ENTITYTYPE"
+        isConst="true" />
+        <arg type="bool" typeName="bool" name="selectedOnly"
+        hasDefault="true" default="false" isConst="false" />
+        <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
+        hasDefault="true" default="RLayer :: INVALID_ID"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="queryIntersectedEntitiesXYWithIndex"
+    cppName="queryIntersectedEntitiesXYWithIndex"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QMap &lt; REntity::Id , QSet &lt; int &gt; &gt;"
       isPureVirtual="false">
         <arg type="RBox &amp;" typeName="RBox" name="box"
         isConst="true" />

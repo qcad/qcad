@@ -194,6 +194,9 @@
         getShapes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getClosestSubEntityId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getClosestShape
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
