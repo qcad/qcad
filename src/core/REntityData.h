@@ -120,6 +120,15 @@ public:
     }
 
     /**
+     * Convenience function for scripts.
+     */
+    RObject::Id getClosestSubEntityId(const RVector& pos, double range, bool ignoreComplex) const {
+        RObject::Id ret;
+        QSharedPointer<RShape> shape = getClosestShape(pos, range, ignoreComplex, &ret);
+        return ret;
+    }
+
+    /**
      * \return The one shape that is part of this entity which is the
      *      closest to the given position.
      */

@@ -395,6 +395,13 @@ public:
     }
 
     /**
+     * Convenience function for scripts.
+     */
+    RObject::Id getClosestSubEntityId(const RVector& pos, double range = RNANDOUBLE, bool ignoreComplex = false) const {
+        return getData().getClosestSubEntityId(pos, range, ignoreComplex);
+    }
+
+    /**
      * \copydoc REntityData::getClosestShape
      */
     virtual QSharedPointer<RShape> getClosestShape(const RVector& pos, double range = RNANDOUBLE, bool ignoreComplex = false, RObject::Id* subEntityId = NULL) const {
