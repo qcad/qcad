@@ -2477,7 +2477,7 @@
     // return type 'double'
     double cppResult =
         
-               self->getDimScale();
+               self->getDimscale();
         // return type: double
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -2509,7 +2509,7 @@
     // return type 'double'
     double cppResult =
         
-               self->getDimScale(a0);
+               self->getDimscale(a0);
         // return type: double
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -2568,7 +2568,7 @@
     // call C++ function:
     // return type 'void'
     
-               self->setDimScale(a0);
+               self->setDimscale(a0);
     } else
 
 
