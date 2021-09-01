@@ -55,6 +55,8 @@ public:
     static RPropertyTypeId PropertyDisplayedColor;
     static RPropertyTypeId PropertyDrawOrder;
 
+    static RPropertyTypeId PropertyParentId;
+
     static RPropertyTypeId PropertyAngle;
     static RPropertyTypeId PropertyXScale;
     static RPropertyTypeId PropertyBold;

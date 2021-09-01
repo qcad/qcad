@@ -33,6 +33,8 @@ RPropertyTypeId RAttributeEntity::PropertyColor;
 RPropertyTypeId RAttributeEntity::PropertyDisplayedColor;
 RPropertyTypeId RAttributeEntity::PropertyDrawOrder;
 
+RPropertyTypeId RAttributeEntity::PropertyParentId;
+
 RPropertyTypeId RAttributeEntity::PropertyPositionX;
 RPropertyTypeId RAttributeEntity::PropertyPositionY;
 RPropertyTypeId RAttributeEntity::PropertyPositionZ;
@@ -75,6 +77,8 @@ void RAttributeEntity::init() {
     RAttributeEntity::PropertyColor.generateId(typeid(RAttributeEntity), REntity::PropertyColor);
     RAttributeEntity::PropertyDisplayedColor.generateId(typeid(RAttributeEntity), REntity::PropertyDisplayedColor);
     RAttributeEntity::PropertyDrawOrder.generateId(typeid(RAttributeEntity), REntity::PropertyDrawOrder);
+
+    RAttributeEntity::PropertyParentId.generateId(typeid(RAttributeEntity), REntity::PropertyParentId);
 
     RAttributeEntity::PropertyPositionX.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyPositionX);
     RAttributeEntity::PropertyPositionY.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyPositionY);
