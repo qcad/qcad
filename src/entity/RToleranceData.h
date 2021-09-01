@@ -83,7 +83,7 @@ public:
 
     double getDimtxt() const;
 
-    double getDimScale(bool fromDocument=true) const;
+    double getDimscale(bool fromDocument=true) const;
     void setDimScaleOverride(double v);
 
     virtual void scaleVisualProperties(double scaleFactor);

@@ -22,6 +22,7 @@
 
 #include "entity_global.h"
 
+#include "RColor.h"
 #include "RDocument.h"
 #include "REntityData.h"
 #include "RTextData.h"
@@ -52,6 +53,55 @@ public:
                    const QString& text,
                    const QString& fontName,
                    double textAngle);
+
+//    ~RDimensionData() {
+//        if (overrides!=NULL) {
+//            delete overrides;
+//            overrides = NULL;
+//        }
+//    }
+
+//    RDimensionData(const RDimensionData& other) {
+//        *this = other;
+//    }
+
+//    RDimensionData& operator =(const RDimensionData& other) {
+//        //*this = other;
+
+//        definitionPoint = other.definitionPoint;
+//        textPositionCenter = other.textPositionCenter;
+//        textPositionSide = other.textPositionSide;
+//        valign = other.valign;
+//        halign = other.halign;
+//        lineSpacingStyle = other.lineSpacingStyle;
+//        lineSpacingFactor = other.lineSpacingFactor;
+//        text = other.text;
+//        upperTolerance = other.upperTolerance;
+//        lowerTolerance = other.lowerTolerance;
+//        fontName = other.fontName;
+//        dimBlockName = other.dimBlockName;
+//        defaultAngle = other.defaultAngle;
+//        textAngle = other.textAngle;
+//        dimlunitOverride = other.dimlunitOverride;
+//        arrow1Flipped = other.arrow1Flipped;
+//        arrow2Flipped = other.arrow2Flipped;
+//        extLineFix = other.extLineFix;
+//        extLineFixLength = other.extLineFixLength;
+//        dirty = other.dirty;
+//        textData = other.textData;
+//        boundingBox = other.boundingBox;
+//        dimLineLength = other.dimLineLength;
+//        arrow1Pos = other.arrow1Pos;
+//        arrow2Pos = other.arrow2Pos;
+//        autoTextPos = other.autoTextPos;
+//        shapes = other.shapes;
+
+//        overrides = NULL;
+//        if (other.hasOverrides()) {
+//            this->makeOverrides();
+//            *this->overrides = *other.overrides;
+//        }
+//    }
 
     virtual RS::EntityType getType() const {
         return RS::EntityDimension;
@@ -166,19 +216,61 @@ public:
         return dimBlockName;
     }
 
-    double getLinearFactor() const {
-        return linearFactor;
+    bool hasOverrides() const {
+        return overrides.isValid();
     }
 
-    void setLinearFactor(double f) {
-        linearFactor = f;
+    bool hasOverride(RS::KnownVariable key) const {
+        return overrides.hasOverride(key);
     }
 
-    double getDimScale(bool fromDocument=true) const;
+//    void makeOverrides() {
+//        if (overrides==NULL) {
+//            overrides = new RDimStyleData();
+//        }
+//    }
 
-    void setDimScale(double f) {
-        dimScaleOverride = f;
+    void setDimXDouble(RS::KnownVariable key, double v) {
+        overrides.setDouble(key, v);
         update();
+    }
+
+    void setDimXInt(RS::KnownVariable key, int v) {
+        overrides.setInt(key, v);
+        update();
+    }
+
+    void setDimXBool(RS::KnownVariable key, bool v) {
+        overrides.setBool(key, v);
+        update();
+    }
+
+    void setDimXColor(RS::KnownVariable key, const RColor& v) {
+        overrides.setColor(key, v);
+        update();
+    }
+
+    double getDimlfac() const {
+        return getDimXDouble(RS::DIMLFAC);
+    }
+
+    void setDimlfac(double f) {
+        setDimXDouble(RS::DIMLFAC, f);
+    }
+
+    double getLinearFactor() const {
+        return getDimlfac();
+    }
+    void setLinearFactor(double f) {
+        setDimlfac(f);
+    }
+
+    double getDimscale() const {
+        return getDimXDouble(RS::DIMSCALE);
+    }
+
+    void setDimscale(double f) {
+        setDimXDouble(RS::DIMSCALE, f);
     }
 
     bool isArrow1Flipped() const {
@@ -226,24 +318,349 @@ public:
     virtual void scaleVisualProperties(double scaleFactor);
     virtual bool mirror(const RLine& axis);
 
-    double getDimexo() const;
-    double getDimexe() const;
-    double getDimasz() const;
-    double getDimgap() const;
-    double getDimtxt() const;
+    double getDimexo() const {
+        return getDimXDouble(RS::DIMEXO) * getDimscale();
+    }
+    void setDimexo(double v) {
+        setDimXDouble(RS::DIMEXO, v);
+    }
+    double getDimexe() const {
+        return getDimXDouble(RS::DIMEXE) * getDimscale();
+    }
+    void setDimexe(double v) {
+        setDimXDouble(RS::DIMEXE, v);
+    }
+    double getDimasz() const {
+        return getDimXDouble(RS::DIMASZ) * getDimscale();
+    }
+    void setDimasz(double v) {
+        setDimXDouble(RS::DIMASZ, v);
+    }
+    double getDimdli() const {
+        return getDimXDouble(RS::DIMDLI) * getDimscale();
+    }
+    void setDimdli(double v) {
+        setDimXDouble(RS::DIMDLI, v);
+    }
+    double getDimgap() const {
+        return getDimXDouble(RS::DIMGAP) * getDimscale();
+    }
+    void setDimgap(double v) {
+        setDimXDouble(RS::DIMGAP, v);
+    }
+    double getDimtxt() const {
+        return getDimXDouble(RS::DIMTXT) * getDimscale();
+    }
     void setDimtxt(double t) {
-        dimtxtOverride = t;
-        update();
+        setDimXDouble(RS::DIMTXT, t);
     }
-    int getDimlunit() const;
+    int getDimlunit() const {
+        return getDimXInt(RS::DIMLUNIT);
+    }
     void setDimlunit(int l) {
-        dimlunitOverride = l;
-        update();
+        setDimXInt(RS::DIMLUNIT, l);
+
+        //makeOverrides();
+        //overrides.setDimlunit(l);
+        //update();
+
+//        dimlunitOverride = l;
+//        update();
     }
-    int getDimjust() const;
-    int getDimtad() const;
-    int getDimtih() const;
-    bool useArchTick() const;
+    int getDimjust() const {
+        return getDimXInt(RS::DIMJUST);
+    }
+    /**
+     * \return 0 for text above dimension line, otherwise text on dimension line.
+     */
+    int getDimtad() const {
+        return getDimXInt(RS::DIMTAD);
+    }
+    void setDimtad(int v) {
+        setDimXInt(RS::DIMTAD, v);
+    }
+    /**
+     * \return 0 for aligned, other for horizontal text label.
+     */
+    bool getDimtih() const {
+        return getDimXBool(RS::DIMTIH);
+    }
+    void setDimtih(bool v) {
+        setDimXBool(RS::DIMTIH, v);
+    }
+    double getDimtsz() const {
+        return getDimXDouble(RS::DIMTSZ) * getDimscale();
+    }
+    void setDimtsz(double t) {
+        setDimXDouble(RS::DIMTSZ, t);
+    }
+    int getDimzin() const {
+        return getDimXInt(RS::DIMZIN);
+    }
+    void setDimzin(int v) {
+        setDimXInt(RS::DIMZIN, v);
+    }
+    int getDimaunit() const {
+        return getDimXInt(RS::DIMAUNIT);
+    }
+    void setDimaunit(int v) {
+        setDimXInt(RS::DIMAUNIT, v);
+    }
+    int getDimadec() const {
+        return getDimXInt(RS::DIMADEC);
+    }
+    void setDimadec(int v) {
+        setDimXInt(RS::DIMADEC, v);
+    }
+    int getDimdec() const {
+        return getDimXInt(RS::DIMDEC);
+    }
+    void setDimdec(int v) {
+        setDimXInt(RS::DIMDEC, v);
+    }
+    int getDimazin() const {
+        return getDimXInt(RS::DIMAZIN);
+    }
+    void setDimazin(int v) {
+        setDimXInt(RS::DIMAZIN, v);
+    }
+    int getDimdsep() const {
+        return getDimXInt(RS::DIMDSEP);
+    }
+    void setDimdsep(int v) {
+        setDimXInt(RS::DIMDSEP, v);
+    }
+    RColor getDimclrt() const {
+        return getDimXColor(RS::DIMCLRT);
+    }
+    void setDimclrt(const RColor& v) {
+        setDimXColor(RS::DIMCLRT, v);
+    }
+
+    bool useArchTick() const {
+        return getDimXBool(RS::QCADARCHTICK);
+    }
+
+    double getDimXDouble(RS::KnownVariable key) const {
+        double dimX = 0.0;
+
+        // get value from override:
+        if (hasOverride(key)) {
+            return getDoubleOverride(key);
+        }
+
+        if (document!=NULL) {
+            QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+            if (!dimStyle.isNull()) {
+                // get value from dimension style:
+                dimX = dimStyle->getDouble(key);
+            }
+            else {
+                // TODO: get value from document (should never happen):
+                Q_ASSERT(false);
+            }
+        }
+        else {
+            qWarning() << "RDimensionData::getDimXDouble: no document";
+        }
+
+        return dimX;
+    }
+
+    double getDoubleOverride(RS::KnownVariable key) const {
+        double def = RDimStyle::getDoubleDefault(key);
+
+        if (hasOverrides()) {
+            return overrides.getDouble(key);
+        }
+        else {
+            if (document!=NULL) {
+                return document->getKnownVariable(key, def).toDouble();
+            }
+        }
+        return def;
+    }
+
+    int getDimXInt(RS::KnownVariable key) const {
+        int dimX = 0;
+
+        // get value from override:
+        if (hasOverride(key)) {
+            return getIntOverride(key);
+        }
+
+        if (document!=NULL) {
+            QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+            if (!dimStyle.isNull()) {
+                // get value from dimension style:
+                dimX = dimStyle->getInt(key);
+            }
+            else {
+                // TODO: get value from document (should never happen):
+                Q_ASSERT(false);
+            }
+        }
+        else {
+            qWarning() << "RDimensionData::getDimXInt: no document";
+        }
+
+        return dimX;
+    }
+
+    int getIntOverride(RS::KnownVariable key) const {
+        int def = RDimStyle::getIntDefault(key);
+
+        if (hasOverrides()) {
+            return overrides.getInt(key);
+        }
+        else {
+            if (document!=NULL) {
+                return document->getKnownVariable(key, def).toInt();
+            }
+        }
+        return def;
+    }
+
+    bool getDimXBool(RS::KnownVariable key) const {
+        bool dimX = 0;
+
+        // get value from override:
+        if (hasOverride(key)) {
+            return getBoolOverride(key);
+        }
+
+        if (document!=NULL) {
+            QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+            if (!dimStyle.isNull()) {
+                // get value from dimension style:
+                dimX = dimStyle->getBool(key);
+            }
+            else {
+                // TODO: get value from document (should never happen):
+                Q_ASSERT(false);
+            }
+        }
+        else {
+            qWarning() << "RDimensionData::getDimXBool: no document";
+        }
+
+        return dimX;
+    }
+
+    bool getBoolOverride(RS::KnownVariable key) const {
+        bool def = RDimStyle::getBoolDefault(key);
+
+        if (hasOverrides()) {
+            return overrides.getBool(key);
+        }
+        else {
+            if (document!=NULL) {
+                return document->getKnownVariable(key, def).toBool();
+            }
+        }
+        return def;
+    }
+
+    RColor getDimXColor(RS::KnownVariable key) const {
+        RColor dimX;
+
+        // get value from override:
+        if (hasOverride(key)) {
+            return getColorOverride(key);
+        }
+
+        if (document!=NULL) {
+            QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+            if (!dimStyle.isNull()) {
+                // get value from dimension style:
+                dimX = dimStyle->getColor(key);
+            }
+            else {
+                // TODO: get value from document (should never happen):
+                Q_ASSERT(false);
+            }
+        }
+        else {
+            qWarning() << "RDimensionData::getDimXColor: no document";
+        }
+
+        return dimX;
+    }
+
+    RColor getColorOverride(RS::KnownVariable key) const {
+        RColor def = RDimStyle::getColorDefault(key);
+
+        if (hasOverrides()) {
+            return overrides.getColor(key);
+        }
+        else {
+            if (document!=NULL) {
+                QVariant v = document->getKnownVariable(key, def);
+                return v.value<RColor>();
+            }
+        }
+        return def;
+    }
+
+
+//    template<class T>
+//    T getDimX(RS::KnownVariable key, T def) const {
+//        T dimX = 0;
+
+//        // get value from override:
+//        if (hasOverride(key)) {
+//            if (typeid(T) == typeid(double)) {
+//                return getDoubleOverride(key);
+//            }
+//            else if (typeid(T) == typeid(int)) {
+//                return getIntOverride(key);
+//            }
+//            else if (typeid(T) == typeid(RColor)) {
+//                return getColorOverride(key);
+//            }
+//        }
+
+//        if (document!=NULL) {
+//            QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+//            if (!dimStyle.isNull()) {
+//                // get value from dimension style:
+//                if (typeid(T) == typeid(double)) {
+//                    dimX = dimStyle->getDouble(key);
+//                }
+//                if (typeid(T) == typeid(int)) {
+//                    dimX = dimStyle->getInt(key);
+//                }
+//            }
+//            else {
+//                // TODO: get value from document (should never happen):
+//                Q_ASSERT(false);
+////                QVariant v = document->getKnownVariable(key, dimX);
+////                if (typeid(T) == typeid(double)) {
+////                    dimX = v.toDouble();
+////                }
+////                else if (typeid(T) == typeid(int)) {
+////                    dimX = v.toInt();
+////                }
+////                if (isDimXScaled(key)) {
+////                    dimX *= getDimscale();
+////                }
+//            }
+//        }
+//        else {
+//            qWarning() << "RDimensionData::getDimexo: no document";
+//        }
+
+//        return dimX;
+//    }
+
+    bool isDimXScaled(RS::KnownVariable var) const {
+        if (var==RS::DIMEXO) {
+            return true;
+        }
+
+        return false;
+    }
+
     bool hasCustomTextPosition() const;
     void setCustomTextPosition(bool on);
 
@@ -262,8 +679,8 @@ public:
 //    QList<QSharedPointer<RShape> > getDimensionLineShapes(
 //        const RVector& p1, const RVector& p2,
 //        bool arrow1, bool arrow2) const;
-    virtual QList<QSharedPointer<RShape> > getArrow(
-        const RVector& position, double direction) const;
+//    virtual QList<QSharedPointer<RShape> > getArrow(
+//        const RVector& position, double direction) const;
     RTextData& getTextData(bool noRender = false) const;
     RTextData& initTextData() const;
     //virtual void updateTextData() const;
@@ -318,10 +735,14 @@ protected:
     /** Rotation angle of dimension text away from default orientation */
     double textAngle;
 
-    double linearFactor;
-    double dimScaleOverride;
-    double dimtxtOverride;
-    int dimlunitOverride;
+    // RDimStyleData for overrides:
+    RDimStyleData overrides;
+
+    //double linearFactor;
+    //double dimScaleOverride;
+    //double dimtxtOverride;
+    //int dimlunitOverride;
+
     bool arrow1Flipped;
     bool arrow2Flipped;
 

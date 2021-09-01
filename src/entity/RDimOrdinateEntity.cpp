@@ -47,7 +47,7 @@ RPropertyTypeId RDimOrdinateEntity::PropertyArrow2Flipped;
 RPropertyTypeId RDimOrdinateEntity::PropertyExtLineFix;
 RPropertyTypeId RDimOrdinateEntity::PropertyExtLineFixLength;
 
-RPropertyTypeId RDimOrdinateEntity::PropertyDimScale;
+//RPropertyTypeId RDimOrdinateEntity::PropertyDimScale;
 RPropertyTypeId RDimOrdinateEntity::PropertyDimBlockName;
 
 RPropertyTypeId RDimOrdinateEntity::PropertyOriginX;
@@ -101,7 +101,7 @@ void RDimOrdinateEntity::init() {
     RDimOrdinateEntity::PropertyExtLineFix.generateId(typeid(RDimOrdinateEntity), RDimensionEntity::PropertyExtLineFix);
     RDimOrdinateEntity::PropertyExtLineFixLength.generateId(typeid(RDimOrdinateEntity), RDimensionEntity::PropertyExtLineFixLength);
 
-    RDimOrdinateEntity::PropertyDimScale.generateId(typeid(RDimOrdinateEntity), RDimensionEntity::PropertyDimScale);
+    //RDimOrdinateEntity::PropertyDimScale.generateId(typeid(RDimOrdinateEntity), RDimensionEntity::PropertyDimScale);
     RDimOrdinateEntity::PropertyDimBlockName.generateId(typeid(RDimOrdinateEntity), RDimensionEntity::PropertyDimBlockName);
 
     RDimOrdinateEntity::PropertyOriginX.generateId(typeid(RDimOrdinateEntity), QT_TRANSLATE_NOOP("REntity", "Origin"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);

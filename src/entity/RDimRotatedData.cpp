@@ -246,7 +246,7 @@ double RDimRotatedData::getMeasuredValue() const {
 
 QString RDimRotatedData::getAutoLabel() const {
     double distance = getMeasuredValue();
-    distance *= linearFactor;
+    distance *= getDimlfac();
 
     return formatLabel(distance);
 }

@@ -262,6 +262,6 @@ double RDimRadialData::getMeasuredValue() const {
 
 QString RDimRadialData::getAutoLabel() const {
     double distance = getMeasuredValue();
-    distance *= linearFactor;
+    distance *= getDimlfac();
     return formatLabel(distance);
 }

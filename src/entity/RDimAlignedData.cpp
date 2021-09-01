@@ -136,7 +136,7 @@ double RDimAlignedData::getMeasuredValue() const {
 
 QString RDimAlignedData::getAutoLabel() const {
     double distance = getMeasuredValue();
-    distance *= linearFactor;
+    distance *= getDimlfac();
     return formatLabel(distance);
 }
 

@@ -51,7 +51,7 @@ double RToleranceData::getDimtxt() const {
         qWarning() << "RDimensionData::getDimtxt: no document";
     }
 
-    return dimtxt * getDimScale();
+    return dimtxt * getDimscale();
 }
 
 
@@ -59,7 +59,7 @@ void RToleranceData::setDimScaleOverride(double v) {
     dimScaleOverride = v;
 }
 
-double RToleranceData::getDimScale(bool fromDocument) const {
+double RToleranceData::getDimscale(bool fromDocument) const {
     double ret = dimScaleOverride;
 
     if (document!=NULL && fromDocument && RMath::fuzzyCompare(ret, 0.0)) {
@@ -74,7 +74,7 @@ void RToleranceData::scaleVisualProperties(double scaleFactor) {
         setDimScaleOverride(dimScaleOverride * scaleFactor);
     }
     else {
-        double s = getDimScale();
+        double s = getDimscale();
         setDimScaleOverride(scaleFactor * s);
     }
 }

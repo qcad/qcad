@@ -32,10 +32,11 @@ RDimensionData::RDimensionData(RDocument* document) :
     lineSpacingFactor(1.0),
     defaultAngle(RNANDOUBLE),
     textAngle(0.0),
-    linearFactor(1.0),
-    dimScaleOverride(0.0),
-    dimtxtOverride(0.0),
-    dimlunitOverride(-1),
+    overrides(true),
+//    linearFactor(1.0),
+//    dimScaleOverride(0.0),
+//    dimtxtOverride(0.0),
+//    dimlunitOverride(-1),
     arrow1Flipped(false),
     arrow2Flipped(false),
     extLineFix(false),
@@ -91,10 +92,11 @@ RDimensionData::RDimensionData(const RVector& definitionPoint,
       fontName(style),
       defaultAngle(RNANDOUBLE),
       textAngle(angle),
-      linearFactor(1.0),
-      dimScaleOverride(0.0),
-      dimtxtOverride(0.0),
-      dimlunitOverride(-1),
+      overrides(true),
+      //linearFactor(1.0),
+      //dimScaleOverride(0.0),
+      //dimtxtOverride(0.0),
+      //dimlunitOverride(-1),
       arrow1Flipped(false),
       arrow2Flipped(false),
       extLineFix(false),
@@ -287,18 +289,23 @@ bool RDimensionData::scale(const RVector& scaleFactors, const RVector& center) {
 }
 
 void RDimensionData::scaleVisualProperties(double scaleFactor) {
+    double dimScaleOverride = 0.0;
+    if (hasOverrides()) {
+        dimScaleOverride = overrides.getDouble(RS::DIMSCALE);
+    }
+
     if (dimScaleOverride>RS::PointTolerance) {
-        setDimScale(dimScaleOverride * scaleFactor);
+        setDimscale(dimScaleOverride * scaleFactor);
     }
     else {
-        double s = getDimScale();
-        setDimScale(scaleFactor * s);
+        double s = getDimscale();
+        setDimscale(scaleFactor * s);
     }
 
     extLineFixLength *= scaleFactor;
 
     if (!RMath::fuzzyCompare(scaleFactor, 0.0) && !RMath::fuzzyCompare(scaleFactor, 1.0)) {
-        setLinearFactor(linearFactor / scaleFactor);
+        setLinearFactor(getDimlfac() / scaleFactor);
     }
 }
 
@@ -310,218 +317,6 @@ bool RDimensionData::mirror(const RLine& axis) {
     }
     update();
     return true;
-}
-
-double RDimensionData::getDimScale(bool fromDocument) const {
-    double ret = dimScaleOverride;
-
-    // dimScale is 0.0 (not set): use dimScale of document
-    if (fromDocument && document!=NULL && RMath::fuzzyCompare(ret, 0.0)) {
-
-        // get value from dimension style:
-        QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
-        if (!dimStyle.isNull()) {
-            ret = dimStyle->getDimscale();
-        }
-        else {
-            ret = document->getKnownVariable(RS::DIMSCALE, 1.0).toDouble();
-        }
-    }
-
-    return ret;
-}
-
-double RDimensionData::getDimexo() const {
-    double dimexo = 0.625;
-
-    if (document!=NULL) {
-        // get value from dimension style:
-        QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
-        if (!dimStyle.isNull()) {
-            dimexo = dimStyle->getDimexo();
-        }
-        else {
-            dimexo = document->getKnownVariable(RS::DIMEXO, dimexo).toDouble();
-        }
-    }
-    else {
-        qWarning() << "RDimensionData::getDimexo: no document";
-    }
-
-    return dimexo * getDimScale();
-}
-
-double RDimensionData::getDimexe() const {
-    double dimexe = 1.25;
-
-    if (document!=NULL) {
-        // get value from dimension style:
-        QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
-        if (!dimStyle.isNull()) {
-            dimexe = dimStyle->getDimexe();
-        }
-        else {
-            dimexe = document->getKnownVariable(RS::DIMEXE, dimexe).toDouble();
-        }
-    }
-    else {
-        qWarning() << "RDimensionData::getDimexe: no document";
-    }
-
-    return dimexe * getDimScale();
-}
-
-double RDimensionData::getDimasz() const {
-    double dimasz = 2.5;
-
-    if (document!=NULL) {
-        // get value from dimension style:
-        QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
-        if (!dimStyle.isNull()) {
-            dimasz = dimStyle->getDimasz();
-        }
-        else {
-            dimasz = document->getKnownVariable(RS::DIMASZ, dimasz).toDouble();
-        }
-    }
-    else {
-        qWarning() << "RDimensionData::getDimasz: no document";
-    }
-
-    return dimasz * getDimScale();
-}
-
-double RDimensionData::getDimgap() const {
-    double dimgap = 0.625;
-
-    if (document!=NULL) {
-        // get value from dimension style:
-        QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
-        if (!dimStyle.isNull()) {
-            dimgap = dimStyle->getDimgap();
-        }
-        else {
-            dimgap = document->getKnownVariable(RS::DIMGAP, dimgap).toDouble();
-        }
-    }
-    else {
-        qWarning() << "RDimensionData::getDimgap: no document";
-    }
-
-    return dimgap * getDimScale();
-}
-
-double RDimensionData::getDimtxt() const {
-    double dimtxt = dimtxtOverride;
-
-    if (document!=NULL) {
-        // get value from dimension style:
-        if (RMath::fuzzyCompare(dimtxt, 0.0)) {
-            QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
-            if (!dimStyle.isNull()) {
-                dimtxt = dimStyle->getDimtxt();
-            }
-        }
-
-        // no override, use value from document settings:
-        if (RMath::fuzzyCompare(dimtxt, 0.0)) {
-            dimtxt = document->getKnownVariable(RS::DIMTXT, 2.5).toDouble();
-        }
-    }
-    else {
-        qWarning() << "RDimensionData::getDimtxt: no document";
-    }
-
-    return dimtxt * getDimScale();
-}
-
-int RDimensionData::getDimlunit() const {
-    int dimlunit = dimlunitOverride;
-
-    if (document!=NULL) {
-        if (RMath::fuzzyCompare(dimlunit, -1)) {
-            // no override, use value from document settings:
-            dimlunit = document->getLinearFormat();
-        }
-    }
-    else {
-        qWarning() << "RDimensionData::getDimlunit: no document";
-    }
-
-    return dimlunit;
-}
-
-int RDimensionData::getDimjust() const {
-    int dimjust = 0;
-
-    if (document!=NULL) {
-        dimjust = document->getKnownVariable(RS::DIMJUST, 0).toInt();
-    }
-    else {
-        qWarning() << "RDimensionData::getDimjust: no document";
-    }
-
-    return dimjust;
-}
-
-/**
- * \return 0 for text above dimension line, otherwise text on dimension line.
- */
-int RDimensionData::getDimtad() const {
-    int dimtad = 0;
-
-    if (document!=NULL) {
-        // get value from dimension style:
-        QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
-        if (!dimStyle.isNull()) {
-            dimtad = dimStyle->getDimtad();
-        }
-        else {
-            dimtad = document->getKnownVariable(RS::DIMTAD, 0).toInt();
-        }
-    }
-    else {
-        qWarning() << "RDimensionData::getDimtad: no document";
-    }
-
-    return dimtad;
-}
-
-/**
- * \return 0 for aligned, other for horizontal text label.
- */
-int RDimensionData::getDimtih() const {
-    int dimtih = 0;
-
-    if (document!=NULL) {
-        // get value from dimension style:
-        QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
-        if (!dimStyle.isNull()) {
-            dimtih = dimStyle->getDimtih();
-        }
-        else {
-            dimtih = document->getKnownVariable(RS::DIMTIH, 0).toInt();
-        }
-    }
-    else {
-        qWarning() << "RDimensionData::getDimtih: no document";
-    }
-
-    return dimtih;
-}
-
-bool RDimensionData::useArchTick() const {
-    bool ret = false;
-
-    if (document!=NULL) {
-        ret = document->getKnownVariable(RS::DIMBLK, "").toString().toLower()=="archtick" ||
-              document->getKnownVariable(RS::DIMTSZ, 0.0).toDouble() > RS::PointTolerance;
-    }
-    else {
-        qWarning() << "RDimensionData::useArchTick: no document";
-    }
-
-    return ret;
 }
 
 bool RDimensionData::hasCustomTextPosition() const {
@@ -654,29 +449,30 @@ QList<QSharedPointer<RShape> > RDimensionData::getDimensionLineShapes(
 }
 */
 
-QList<QSharedPointer<RShape> > RDimensionData::getArrow(const RVector& position, double direction) const {
+//QList<QSharedPointer<RShape> > RDimensionData::getArrow(const RVector& position, double direction) const {
 
-    QList<QSharedPointer<RShape> > ret;
-    double dimasz = getDimasz();
+//    QList<QSharedPointer<RShape> > ret;
+//    double dimasz = getDimasz();
 
-    // architecture tick:
-    if (useArchTick()) {
-        RVector p1(dimasz/2, dimasz/2);
+//    // architecture tick:
+//    if (useArchTick()) {
+//        qDebug() << "getArrow: arch tick";
+//        RVector p1(dimasz/2, dimasz/2);
 
-        RLine line(p1, -p1);
-        line.rotate(direction, RVector(0,0));
-        line.move(position);
-        ret.append(QSharedPointer<RLine>(new RLine(line)));
-    }
+//        RLine line(p1, -p1);
+//        line.rotate(direction, RVector(0,0));
+//        line.move(position);
+//        ret.append(QSharedPointer<RLine>(new RLine(line)));
+//    }
 
-    // standard arrow:
-    else {
-        RTriangle arrow = RTriangle::createArrow(position, direction, dimasz);
-        ret.append(QSharedPointer<RTriangle>(new RTriangle(arrow)));
-    }
+//    // standard arrow:
+//    else {
+//        RTriangle arrow = RTriangle::createArrow(position, direction, dimasz);
+//        ret.append(QSharedPointer<RTriangle>(new RTriangle(arrow)));
+//    }
 
-    return ret;
-}
+//    return ret;
+//}
 
 /**
  * \return Text data of the text label.
@@ -729,8 +525,16 @@ RTextData& RDimensionData::initTextData() const {
     textData.setDimensionLabel(true);
 
     // override text color from dimension settings:
-    QVariant v = document->getKnownVariable(RS::DIMCLRT, RColor(RColor::ByBlock));
-    RColor textColor = v.value<RColor>();
+    //QVariant def;
+    //def.setValue<RColor>(RColor(RColor::ByBlock));
+    //QVariant v = document->getKnownVariable(RS::DIMCLRT, def);
+    //RColor textColor = v.value<RColor>();
+
+    RColor textColor = RColor(RColor::ByBlock);
+    QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+    if (!dimStyle.isNull()) {
+        textColor = dimStyle->getColor(RS::DIMCLRT);
+    }
     if (textColor!=RColor::ByBlock) {
         textData.setColor(textColor);
     }
@@ -804,11 +608,11 @@ QString RDimensionData::formatLabel(double distance) const {
 
     if (document!=NULL) {
         ret = RUnit::formatLinear(distance, document->getUnit(),
-            (RS::LinearFormat)getDimlunit(), document->getLinearPrecision(),
+            (RS::LinearFormat)getDimlunit(), getDimdec(),
             false,
-            document->showLeadingZeroes(), document->showTrailingZeroes(),
+            (getDimzin()&4)!=4, (getDimzin()&8)!=8,
             false,
-            document->getDecimalSeparator());
+            getDimdsep());
     }
     else {
         ret = QString("%1").arg(distance);

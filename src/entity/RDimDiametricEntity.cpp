@@ -42,8 +42,8 @@ RPropertyTypeId RDimDiametricEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimDiametricEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimDiametricEntity::PropertyMeasuredValue;
 
-RPropertyTypeId RDimDiametricEntity::PropertyLinearFactor;
-RPropertyTypeId RDimDiametricEntity::PropertyDimScale;
+//RPropertyTypeId RDimDiametricEntity::PropertyLinearFactor;
+//RPropertyTypeId RDimDiametricEntity::PropertyDimScale;
 RPropertyTypeId RDimDiametricEntity::PropertyDimBlockName;
 RPropertyTypeId RDimDiametricEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimDiametricEntity::PropertyFontName;
@@ -93,8 +93,8 @@ void RDimDiametricEntity::init() {
     RDimDiametricEntity::PropertyLowerTolerance.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyLowerTolerance);
     RDimDiametricEntity::PropertyMeasuredValue.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyMeasuredValue);
 
-    RDimDiametricEntity::PropertyLinearFactor.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyLinearFactor);
-    RDimDiametricEntity::PropertyDimScale.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimScale);
+//    RDimDiametricEntity::PropertyLinearFactor.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyLinearFactor);
+//    RDimDiametricEntity::PropertyDimScale.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimScale);
     RDimDiametricEntity::PropertyDimBlockName.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimBlockName);
     RDimDiametricEntity::PropertyAutoTextPos.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyAutoTextPos);
     RDimDiametricEntity::PropertyFontName.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyFontName);

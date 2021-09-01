@@ -160,7 +160,7 @@ double RDimDiametricData::getMeasuredValue() const {
 
 QString RDimDiametricData::getAutoLabel() const {
     double distance = getMeasuredValue();
-    distance *= linearFactor;
+    distance *= getDimlfac();
     return formatLabel(distance);
 }
 

@@ -42,7 +42,7 @@ RPropertyTypeId RToleranceEntity::PropertyDirectionX;
 RPropertyTypeId RToleranceEntity::PropertyDirectionY;
 RPropertyTypeId RToleranceEntity::PropertyDirectionZ;
 RPropertyTypeId RToleranceEntity::PropertyText;
-RPropertyTypeId RToleranceEntity::PropertyDimScale;
+//RPropertyTypeId RToleranceEntity::PropertyDimScale;
 
 
 RToleranceEntity::RToleranceEntity(RDocument* document, const RToleranceData& data) :
@@ -81,7 +81,7 @@ void RToleranceEntity::init() {
     RToleranceEntity::PropertyDirectionY.generateId(typeid(RToleranceEntity), QT_TRANSLATE_NOOP("REntity", "Direction"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
     RToleranceEntity::PropertyDirectionZ.generateId(typeid(RToleranceEntity), QT_TRANSLATE_NOOP("REntity", "Direction"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
     RToleranceEntity::PropertyText.generateId(typeid(RToleranceEntity), "", QT_TRANSLATE_NOOP("REntity", "Text"));
-    RToleranceEntity::PropertyDimScale.generateId(typeid(RToleranceEntity), "", QT_TRANSLATE_NOOP("REntity", "Scale"), false, RPropertyAttributes::Geometry);
+//    RToleranceEntity::PropertyDimScale.generateId(typeid(RToleranceEntity), "", QT_TRANSLATE_NOOP("REntity", "Scale"), false, RPropertyAttributes::Geometry);
 }
 
 bool RToleranceEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -96,9 +96,9 @@ bool RToleranceEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(data.direction.z, value, PropertyDirectionZ == propertyTypeId);
     ret = ret || RObject::setMember(getData().text, value, PropertyText == propertyTypeId);
 
-    if (PropertyDimScale == propertyTypeId) {
-        ret = ret || RObject::setMember(data.dimScaleOverride, value, PropertyDimScale == propertyTypeId);
-    }
+//    if (PropertyDimScale == propertyTypeId) {
+//        ret = ret || RObject::setMember(data.dimScaleOverride, value, PropertyDimScale == propertyTypeId);
+//    }
 
     return ret;
 }
@@ -121,9 +121,9 @@ QPair<QVariant, RPropertyAttributes> RToleranceEntity::getProperty(
     } else if (propertyTypeId == PropertyText) {
         return qMakePair(QVariant(getData().text), RPropertyAttributes(RPropertyAttributes::RichText|RPropertyAttributes::Label));
     }
-    else if (propertyTypeId == PropertyDimScale) {
-        return qMakePair(QVariant(data.dimScaleOverride), RPropertyAttributes());
-    }
+//    else if (propertyTypeId == PropertyDimScale) {
+//        return qMakePair(QVariant(data.dimScaleOverride), RPropertyAttributes());
+//    }
 
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }

@@ -270,6 +270,7 @@ int main(int argc, char *argv[]) {
     }
     app->setLibraryPaths(pluginPaths);
 
+    RDimStyleData::initDefaults();
     RMath::init();
     RFontList::init();
     RPatternListMetric::init();

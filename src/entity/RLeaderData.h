@@ -55,7 +55,7 @@ public:
     double getDimasz() const;
     void setDimaszOverride(double v);
 
-    double getDimScale(bool fromDocument=true) const;
+    double getDimscale(bool fromDocument=true) const;
     void setDimScaleOverride(double v);
 
     virtual void scaleVisualProperties(double scaleFactor);

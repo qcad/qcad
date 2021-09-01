@@ -63,8 +63,8 @@ public:
     static RPropertyTypeId PropertyLowerTolerance;
     static RPropertyTypeId PropertyMeasuredValue;
 
-    static RPropertyTypeId PropertyLinearFactor;
-    static RPropertyTypeId PropertyDimScale;
+//    static RPropertyTypeId PropertyLinearFactor;
+//    static RPropertyTypeId PropertyDimScale;
     static RPropertyTypeId PropertyDimBlockName;
     static RPropertyTypeId PropertyAutoTextPos;
     static RPropertyTypeId PropertyFontName;

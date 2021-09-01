@@ -41,7 +41,7 @@ RPropertyTypeId RDimAngularEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimAngularEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimAngularEntity::PropertyMeasuredValue;
 
-RPropertyTypeId RDimAngularEntity::PropertyDimScale;
+//RPropertyTypeId RDimAngularEntity::PropertyDimScale;
 RPropertyTypeId RDimAngularEntity::PropertyDimBlockName;
 RPropertyTypeId RDimAngularEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimAngularEntity::PropertyFontName;

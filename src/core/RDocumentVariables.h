@@ -74,7 +74,7 @@ public:
     void setKnownVariable(RS::KnownVariable key, const RVector& value);
     void setKnownVariable(RS::KnownVariable key, const RColor& value);
     void setKnownVariable(RS::KnownVariable key, const QVariant& value);
-    void setDimVariable(RS::KnownVariable key, const QVariant& value);
+    //void setDimVariable(RS::KnownVariable key, const QVariant& value);
     QVariant getKnownVariable(RS::KnownVariable key) const;
     bool hasKnownVariable(RS::KnownVariable key) const;
 

@@ -64,8 +64,8 @@ public:
     static RPropertyTypeId PropertyUpperTolerance;
     static RPropertyTypeId PropertyLowerTolerance;
 
-    static RPropertyTypeId PropertyLinearFactor;
-    static RPropertyTypeId PropertyDimScale;
+    //static RPropertyTypeId PropertyLinearFactor;
+    //static RPropertyTypeId PropertyDimScale;
     static RPropertyTypeId PropertyDimBlockName;
     static RPropertyTypeId PropertyAutoTextPos;
     static RPropertyTypeId PropertyFontName;
@@ -83,6 +83,27 @@ public:
 
     static RPropertyTypeId PropertyAutoLabel;
     static RPropertyTypeId PropertyMeasuredValue;
+
+    static RPropertyTypeId PropertyDimscale;
+    static RPropertyTypeId PropertyDimlfac;
+    static RPropertyTypeId PropertyDimtxt;
+    static RPropertyTypeId PropertyDimgap;
+    static RPropertyTypeId PropertyDimasz;
+    //static RPropertyTypeId PropertyDimdli;
+    static RPropertyTypeId PropertyDimexe;
+    static RPropertyTypeId PropertyDimexo;
+    static RPropertyTypeId PropertyDimtad;
+    static RPropertyTypeId PropertyDimtih;
+    static RPropertyTypeId PropertyDimtsz;
+    static RPropertyTypeId PropertyDimlunit;
+    static RPropertyTypeId PropertyDimdec;
+    static RPropertyTypeId PropertyDimdsep;
+    static RPropertyTypeId PropertyDimzin;
+    static RPropertyTypeId PropertyDimaunit;
+    static RPropertyTypeId PropertyDimadec;
+    static RPropertyTypeId PropertyDimazin;
+    static RPropertyTypeId PropertyArchTick;
+    static RPropertyTypeId PropertyDimclrt;
 
 public:
     RDimensionEntity(RDocument* document);
@@ -195,12 +216,12 @@ public:
         getData().setLinearFactor(f);
     }
 
-    double getDimScale(bool fromDocument=true) const {
-        return getData().getDimScale(fromDocument);
+    double getDimScale() const {
+        return getData().getDimscale();
     }
 
     void setDimScale(double f) {
-        getData().setDimScale(f);
+        getData().setDimscale(f);
     }
 
     QString getDimBlockName() const {

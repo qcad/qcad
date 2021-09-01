@@ -1344,7 +1344,7 @@ void RDxfExporter::writeLeader(const RLeaderEntity& l) {
                       1.0,
                       10.0,
                       l.countVertices(),
-                      l.getDimScale());
+                      l.getDimscale());
 
         dxf.writeLeader(
             *dw,

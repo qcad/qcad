@@ -22,6 +22,7 @@
 
 #include "core_global.h"
 
+#include "RDimStyleData.h"
 #include "RDimStyleProxy.h"
 #include "RObject.h"
 #include "RPropertyTypeId.h"
@@ -38,16 +39,31 @@ class RExporter;
  * \scriptable
  * \sharedPointerSupport
  */
-class QCADCORE_EXPORT RDimStyle: public RObject {
+class QCADCORE_EXPORT RDimStyle: public RObject, public RDimStyleData {
     static RPropertyTypeId PropertyCustom;
     static RPropertyTypeId PropertyHandle;
     static RPropertyTypeId PropertyProtected;
 
     static RPropertyTypeId PropertyDimscale;
+    static RPropertyTypeId PropertyDimlfac;
     static RPropertyTypeId PropertyDimtxt;
     static RPropertyTypeId PropertyDimgap;
+    static RPropertyTypeId PropertyDimasz;
+    static RPropertyTypeId PropertyDimdli;
+    static RPropertyTypeId PropertyDimexe;
+    static RPropertyTypeId PropertyDimexo;
     static RPropertyTypeId PropertyDimtad;
     static RPropertyTypeId PropertyDimtih;
+    static RPropertyTypeId PropertyDimtsz;
+    static RPropertyTypeId PropertyDimlunit;
+    static RPropertyTypeId PropertyDimdec;
+    static RPropertyTypeId PropertyDimdsep;
+    static RPropertyTypeId PropertyDimzin;
+    static RPropertyTypeId PropertyDimaunit;
+    static RPropertyTypeId PropertyDimadec;
+    static RPropertyTypeId PropertyDimazin;
+    static RPropertyTypeId PropertyArchTick;
+    static RPropertyTypeId PropertyDimclrt;
 
 public:
     RDimStyle();
@@ -56,6 +72,7 @@ public:
     virtual ~RDimStyle();
 
     static void init();
+    static void initDimX(const RPropertyTypeId& propertyTypeId, RS::KnownVariable var, RS::KnownVariableType type);
 
     void clear();
 
@@ -67,27 +84,15 @@ public:
         return new RDimStyle(*this);
     }
 
+    void updateDocumentVariables();
+
+//    virtual void setDouble(RS::KnownVariable key, double val);
+//    virtual void setInt(RS::KnownVariable key, int val);
+//    virtual void setBool(RS::KnownVariable key, bool val);
+//    virtual void setColor(RS::KnownVariable key, const RColor& val);
+
     QPair<QVariant, RPropertyAttributes> getProperty(RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes, bool showOnRequest);
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, RTransaction* transaction);
-
-    double getDimscale() const;
-    void setDimscale(double v);
-    double getDimtxt() const;
-    void setDimtxt(double v);
-    double getDimgap() const;
-    void setDimgap(double v);
-    double getDimasz() const;
-    void setDimasz(double v);
-    double getDimexe() const;
-    void setDimexe(double v);
-    double getDimexo() const;
-    void setDimexo(double v);
-    int getDimtad() const;
-    void setDimtad(int v);
-    int getDimtih() const;
-    void setDimtih(int v);
-    bool useArchTick() const;
-    void setArchTick(bool on);
 
     void render(const REntityData& entityData, bool preview, bool forceSelected) {
         if (hasProxy()) {
@@ -119,21 +124,15 @@ public:
         return dimStyleProxy;
     }
 
+    /**
+     * \nonscriptable
+     */
+    friend QDebug operator<<(QDebug dbg, const RDimStyle& s);
+
+public:
+    static QList<QPair<RPropertyTypeId, RS::KnownVariable> > propertyVariables;
+
 private:
-    double dimscale;
-    double dimtxt;
-    double dimgap;
-    double dimasz;
-    double dimexe;
-    double dimexo;
-    int dimtad;
-    int dimtih;
-    bool archTick;
-
-    // TODO:
-    // Dimension text movement rules
-    //int dimtmove;
-
     static RDimStyleProxy* dimStyleProxy;
 };
 
@@ -142,5 +141,7 @@ Q_DECLARE_METATYPE(RDimStyle*)
 Q_DECLARE_METATYPE(const RDimStyle*)
 Q_DECLARE_METATYPE(QSharedPointer<RDimStyle>)
 Q_DECLARE_METATYPE(QSharedPointer<RDimStyle>*)
+//Q_DECLARE_METATYPE(RDimStyle::RDimVar)
+//Q_DECLARE_METATYPE(QList<RDimStyle::RDimVar>)
 
 #endif

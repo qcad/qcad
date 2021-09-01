@@ -41,8 +41,29 @@ RPropertyTypeId RDimRotatedEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimRotatedEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimRotatedEntity::PropertyMeasuredValue;
 
-RPropertyTypeId RDimRotatedEntity::PropertyLinearFactor;
-RPropertyTypeId RDimRotatedEntity::PropertyDimScale;
+RPropertyTypeId RDimRotatedEntity::PropertyDimscale;
+RPropertyTypeId RDimRotatedEntity::PropertyDimlfac;
+RPropertyTypeId RDimRotatedEntity::PropertyDimtxt;
+RPropertyTypeId RDimRotatedEntity::PropertyDimgap;
+RPropertyTypeId RDimRotatedEntity::PropertyDimasz;
+//RPropertyTypeId RDimRotatedEntity::PropertyDimdli;
+RPropertyTypeId RDimRotatedEntity::PropertyDimexe;
+RPropertyTypeId RDimRotatedEntity::PropertyDimexo;
+RPropertyTypeId RDimRotatedEntity::PropertyDimtad;
+RPropertyTypeId RDimRotatedEntity::PropertyDimtih;
+RPropertyTypeId RDimRotatedEntity::PropertyDimtsz;
+RPropertyTypeId RDimRotatedEntity::PropertyDimlunit;
+RPropertyTypeId RDimRotatedEntity::PropertyDimdec;
+RPropertyTypeId RDimRotatedEntity::PropertyDimdsep;
+RPropertyTypeId RDimRotatedEntity::PropertyDimzin;
+RPropertyTypeId RDimRotatedEntity::PropertyDimaunit;
+RPropertyTypeId RDimRotatedEntity::PropertyDimadec;
+RPropertyTypeId RDimRotatedEntity::PropertyDimazin;
+RPropertyTypeId RDimRotatedEntity::PropertyArchTick;
+RPropertyTypeId RDimRotatedEntity::PropertyDimclrt;
+
+//RPropertyTypeId RDimRotatedEntity::PropertyLinearFactor;
+//RPropertyTypeId RDimRotatedEntity::PropertyDimScale;
 RPropertyTypeId RDimRotatedEntity::PropertyDimBlockName;
 RPropertyTypeId RDimRotatedEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimRotatedEntity::PropertyFontName;
@@ -97,8 +118,31 @@ void RDimRotatedEntity::init() {
     RDimRotatedEntity::PropertyLowerTolerance.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyLowerTolerance);
     RDimRotatedEntity::PropertyMeasuredValue.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyMeasuredValue);
 
-    RDimRotatedEntity::PropertyLinearFactor.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyLinearFactor);
-    RDimRotatedEntity::PropertyDimScale.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimScale);
+    //RDimRotatedEntity::PropertyDimtxt.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimtxt);
+
+    RDimRotatedEntity::PropertyDimscale.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimscale);
+    RDimRotatedEntity::PropertyDimlfac.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimlfac);
+    RDimRotatedEntity::PropertyDimtxt.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimtxt);
+    RDimRotatedEntity::PropertyDimgap.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimgap);
+    RDimRotatedEntity::PropertyDimasz.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimasz);
+    //RDimRotatedEntity::PropertyDimdli.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimdli);
+    RDimRotatedEntity::PropertyDimexe.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimexe);
+    RDimRotatedEntity::PropertyDimexo.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimexo);
+    RDimRotatedEntity::PropertyDimtad.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimtad);
+    RDimRotatedEntity::PropertyDimtih.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimtih);
+    RDimRotatedEntity::PropertyDimtsz.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimtsz);
+    RDimRotatedEntity::PropertyDimlunit.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimlunit);
+    RDimRotatedEntity::PropertyDimdec.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimdec);
+    RDimRotatedEntity::PropertyDimdsep.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimdsep);
+    RDimRotatedEntity::PropertyDimzin.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimzin);
+    RDimRotatedEntity::PropertyDimaunit.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimaunit);
+    RDimRotatedEntity::PropertyDimadec.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimadec);
+    RDimRotatedEntity::PropertyDimazin.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimazin);
+    RDimRotatedEntity::PropertyArchTick.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyArchTick);
+    RDimRotatedEntity::PropertyDimclrt.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimclrt);
+
+//    RDimRotatedEntity::PropertyLinearFactor.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyLinearFactor);
+//    RDimRotatedEntity::PropertyDimScale.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimScale);
     RDimRotatedEntity::PropertyDimBlockName.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimBlockName);
     RDimRotatedEntity::PropertyAutoTextPos.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyAutoTextPos);
     RDimRotatedEntity::PropertyFontName.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyFontName);
@@ -178,7 +222,11 @@ QPair<QVariant, RPropertyAttributes> RDimRotatedEntity::getProperty(
         return qMakePair(QVariant(data.rotation), RPropertyAttributes(RPropertyAttributes::Angle));
     }
 
-    return RDimLinearEntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
+    qDebug() << "getProperty:" << propertyTypeId.getPropertyTitle();
+
+    QPair<QVariant, RPropertyAttributes> ret = RDimLinearEntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
+    qDebug() << "  val:" << ret.first;
+    return ret;
 }
 
 void RDimRotatedEntity::print(QDebug dbg) const {

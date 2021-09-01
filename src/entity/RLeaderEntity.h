@@ -59,7 +59,7 @@ public:
     static RPropertyTypeId PropertyVertexNY;
     static RPropertyTypeId PropertyVertexNZ;
 
-    static RPropertyTypeId PropertyDimScale;
+    //static RPropertyTypeId PropertyDimScale;
 
 public:
     RLeaderEntity(RDocument* document, const RLeaderData& data);
@@ -184,8 +184,8 @@ public:
         return data.isClosed();
     }
 
-    double getDimScale(bool fromDocument=true) const {
-        return data.getDimScale(fromDocument);
+    double getDimscale(bool fromDocument=true) const {
+        return data.getDimscale(fromDocument);
     }
 
     QList<QSharedPointer<RShape> > getExploded() const {

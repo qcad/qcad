@@ -164,7 +164,11 @@ void RDocumentVariables::setKnownVariable(RS::KnownVariable key, const QVariant&
     case RS::DIMEXO:
     case RS::DIMTAD:
     case RS::DIMTIH:
-        setDimVariable(key, value);
+        // update dim style based on a modified document setting:
+//        setDimVariable(key, value);
+//        if (key==RS::DIMTAD) {
+//            qDebug() << "dimtad changed based on doc var:" << value.toInt();
+//        }
         break;
     default:
         break;
@@ -173,44 +177,37 @@ void RDocumentVariables::setKnownVariable(RS::KnownVariable key, const QVariant&
     knownVariables.insert(key, value);
 }
 
-void RDocumentVariables::setDimVariable(RS::KnownVariable key, const QVariant& value) {
-    RDocument* document = getDocument();
-    if (document==NULL) {
-        return;
-    }
+//void RDocumentVariables::setDimVariable(RS::KnownVariable key, const QVariant& value) {
+//    RDocument* document = getDocument();
+//    if (document==NULL) {
+//        return;
+//    }
 
-    // TODO: this should happen in a transaction instead:
-    QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
-    if (dimStyle.isNull()) {
-        return;
-    }
+//    // TODO: this should happen in a transaction instead:
+//    QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+//    if (dimStyle.isNull()) {
+//        return;
+//    }
 
-    switch (key) {
-    case RS::DIMTXT:
-        dimStyle->setDimtxt(value.toDouble());
-        break;
-    case RS::DIMGAP:
-        dimStyle->setDimgap(value.toDouble());
-        break;
-    case RS::DIMASZ:
-        dimStyle->setDimasz(value.toDouble());
-        break;
-    case RS::DIMEXE:
-        dimStyle->setDimexe(value.toDouble());
-        break;
-    case RS::DIMEXO:
-        dimStyle->setDimexo(value.toDouble());
-        break;
-    case RS::DIMTAD:
-        dimStyle->setDimtad(value.toInt());
-        break;
-    case RS::DIMTIH:
-        dimStyle->setDimtih(value.toInt());
-        break;
-    default:
-        break;
-    }
-}
+//    switch (key) {
+//    case RS::DIMTXT:
+//    case RS::DIMGAP:
+//    case RS::DIMASZ:
+//    case RS::DIMEXO:
+//    case RS::DIMEXE:
+//        dimStyle->setDouble(key, value.toDouble());
+//        break;
+
+//    case RS::DIMTAD:
+//    case RS::DIMTIH:
+//        dimStyle->setInt(key, value.toInt());
+//        break;
+
+//    default:
+//        qWarning() << "unknown dim variable:" << key << value.toString();
+//        break;
+//    }
+//}
 
 QVariant RDocumentVariables::getKnownVariable(RS::KnownVariable key) const {
     switch (key) {

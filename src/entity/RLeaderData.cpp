@@ -55,7 +55,7 @@ double RLeaderData::getDimasz() const {
         qWarning() << "RLeaderData::getDimasz: no document set";
     }
 
-    return dimasz * getDimScale();
+    return dimasz * getDimscale();
 }
 
 void RLeaderData::setDimScaleOverride(double v) {
@@ -63,7 +63,7 @@ void RLeaderData::setDimScaleOverride(double v) {
     updateArrowHead();
 }
 
-double RLeaderData::getDimScale(bool fromDocument) const {
+double RLeaderData::getDimscale(bool fromDocument) const {
     double ret = dimScaleOverride;
 
     if (document!=NULL && fromDocument && RMath::fuzzyCompare(ret, 0.0)) {
@@ -78,7 +78,7 @@ void RLeaderData::scaleVisualProperties(double scaleFactor) {
         setDimScaleOverride(dimScaleOverride * scaleFactor);
     }
     else {
-        double s = getDimScale();
+        double s = getDimscale();
         setDimScaleOverride(scaleFactor * s);
     }
 }

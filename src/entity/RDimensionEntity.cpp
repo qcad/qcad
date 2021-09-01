@@ -46,8 +46,8 @@ RPropertyTypeId RDimensionEntity::PropertyMiddleOfTextZ;
 RPropertyTypeId RDimensionEntity::PropertyText;
 RPropertyTypeId RDimensionEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimensionEntity::PropertyLowerTolerance;
-RPropertyTypeId RDimensionEntity::PropertyLinearFactor;
-RPropertyTypeId RDimensionEntity::PropertyDimScale;
+//RPropertyTypeId RDimensionEntity::PropertyLinearFactor;
+//RPropertyTypeId RDimensionEntity::PropertyDimScale;
 RPropertyTypeId RDimensionEntity::PropertyDimBlockName;
 RPropertyTypeId RDimensionEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimensionEntity::PropertyFontName;
@@ -66,6 +66,27 @@ RPropertyTypeId RDimensionEntity::PropertyExtLineFixLength;
 
 RPropertyTypeId RDimensionEntity::PropertyAutoLabel;
 RPropertyTypeId RDimensionEntity::PropertyMeasuredValue;
+
+RPropertyTypeId RDimensionEntity::PropertyDimscale;
+RPropertyTypeId RDimensionEntity::PropertyDimlfac;
+RPropertyTypeId RDimensionEntity::PropertyDimtxt;
+RPropertyTypeId RDimensionEntity::PropertyDimgap;
+RPropertyTypeId RDimensionEntity::PropertyDimasz;
+//RPropertyTypeId RDimensionEntity::PropertyDimdli;
+RPropertyTypeId RDimensionEntity::PropertyDimexe;
+RPropertyTypeId RDimensionEntity::PropertyDimexo;
+RPropertyTypeId RDimensionEntity::PropertyDimtad;
+RPropertyTypeId RDimensionEntity::PropertyDimtih;
+RPropertyTypeId RDimensionEntity::PropertyDimtsz;
+RPropertyTypeId RDimensionEntity::PropertyDimlunit;
+RPropertyTypeId RDimensionEntity::PropertyDimdec;
+RPropertyTypeId RDimensionEntity::PropertyDimdsep;
+RPropertyTypeId RDimensionEntity::PropertyDimzin;
+RPropertyTypeId RDimensionEntity::PropertyDimaunit;
+RPropertyTypeId RDimensionEntity::PropertyDimadec;
+RPropertyTypeId RDimensionEntity::PropertyDimazin;
+RPropertyTypeId RDimensionEntity::PropertyArchTick;
+RPropertyTypeId RDimensionEntity::PropertyDimclrt;
 
 
 RDimensionEntity::RDimensionEntity(RDocument* document) :
@@ -115,10 +136,34 @@ void RDimensionEntity::init() {
 
     RDimensionEntity::PropertyAutoLabel.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Auto Label"));
     RDimensionEntity::PropertyMeasuredValue.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Measured Value"));
-    RDimensionEntity::PropertyLinearFactor.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Linear Factor"));
-    RDimensionEntity::PropertyDimScale.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Scale"));
+//    RDimensionEntity::PropertyLinearFactor.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Linear Factor"));
+//    RDimensionEntity::PropertyDimScale.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Scale"));
     RDimensionEntity::PropertyDimBlockName.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Block Name"));
     RDimensionEntity::PropertyAutoTextPos.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Auto Label Position"));
+
+    //RDimensionEntity::PropertyDimtxt.generateId(typeid(RDimensionEntity), QT_TRANSLATE_NOOP("REntity", "Style Override"), QT_TRANSLATE_NOOP("REntity", "Text height"));
+
+    QString tsOverride = QT_TRANSLATE_NOOP("REntity", "Style");
+    RDimensionEntity::PropertyDimscale.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Overall dimension scale"));
+    RDimensionEntity::PropertyDimlfac.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Linear measurement factor"));
+    RDimensionEntity::PropertyDimtxt.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text height"));
+    RDimensionEntity::PropertyDimgap.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Dimension line gap"));
+    RDimensionEntity::PropertyDimasz.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Arrow size"));
+    //RDimensionEntity::PropertyDimdli.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Dimension line increment"));
+    RDimensionEntity::PropertyDimexe.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Extension line extension"));
+    RDimensionEntity::PropertyDimexo.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Extension line offset"));
+    RDimensionEntity::PropertyDimtad.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text above dimension line"));
+    RDimensionEntity::PropertyDimtih.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text inside horizontal"));
+    RDimensionEntity::PropertyDimtsz.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Tick size"));
+    RDimensionEntity::PropertyDimlunit.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Linear unit"));
+    RDimensionEntity::PropertyDimdec.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Decimal places"));
+    RDimensionEntity::PropertyDimdsep.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Decimal separator"));
+    RDimensionEntity::PropertyDimzin.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Zero suppression"));
+    RDimensionEntity::PropertyDimaunit.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Angular unit"));
+    RDimensionEntity::PropertyDimadec.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Angular decimal places"));
+    RDimensionEntity::PropertyDimazin.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Angular zero suppression"));
+    RDimensionEntity::PropertyArchTick.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Architectur tick"));
+    RDimensionEntity::PropertyDimclrt.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text color"));
 
     // initialize basic dimension rendering:
     RDimStyle::setDimStyleProxy(new RDimStyleProxyBasic());
@@ -152,8 +197,17 @@ bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(getData().text, value, PropertyText == propertyTypeId);
     ret = ret || RObject::setMember(getData().upperTolerance, value, PropertyUpperTolerance == propertyTypeId);
     ret = ret || RObject::setMember(getData().lowerTolerance, value, PropertyLowerTolerance == propertyTypeId);
-    ret = ret || RObject::setMember(getData().linearFactor, value, PropertyLinearFactor == propertyTypeId);
-    ret = ret || RObject::setMember(getData().dimScaleOverride, value, PropertyDimScale == propertyTypeId);
+
+    if (PropertyDimlfac == propertyTypeId) {
+        getData().setDimlfac(value.toDouble());
+        ret = true;
+    }
+
+    if (PropertyDimscale == propertyTypeId) {
+        getData().setDimscale(value.toDouble());
+        ret = true;
+    }
+
     ret = ret || RObject::setMember(getData().dimBlockName, value, PropertyDimBlockName == propertyTypeId);
     ret = ret || RObject::setMember(getData().autoTextPos, value, PropertyAutoTextPos == propertyTypeId);
     if (RPluginLoader::hasPlugin("DWG")) {
@@ -170,6 +224,19 @@ bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
 //    ret = ret || RObject::setMember(getData().lineSpacingFactor, value, PropertyLineSpacingFactor == propertyTypeId);
 //    ret = ret || RObject::setMember((int&)getData().horizontalAlignment, value.value<int>(), PropertyHAlign == propertyTypeId);
 //    ret = ret || RObject::setMember((int&)getData().verticalAlignment, value.value<int>(), PropertyVAlign == propertyTypeId);
+
+    if (PropertyDimtxt == propertyTypeId) {
+        getData().setDimtxt(value.toDouble());
+        ret = true;
+    }
+
+    for (int i=0; i<RDimStyle::propertyVariables.length(); i++) {
+        //RDimStyle::RDimXVar p = RDimStyle::propertyVariables[i];
+        if (RDimStyle::propertyVariables[i].first==propertyTypeId) {
+            getData().overrides.setVariant(RDimStyle::propertyVariables[i].second, value);
+            ret = true;
+        }
+    }
 
     if (ret) {
         getData().update();
@@ -234,10 +301,10 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
             return qMakePair(QVariant(getData().getMeasuredValue()),
                              RPropertyAttributes(RPropertyAttributes::ReadOnly));
         }
-    } else if (propertyTypeId == PropertyLinearFactor) {
-        return qMakePair(QVariant(getData().linearFactor), RPropertyAttributes(RPropertyAttributes::UnitLess));
-    } else if (propertyTypeId == PropertyDimScale) {
-        return qMakePair(QVariant(getData().dimScaleOverride), RPropertyAttributes(RPropertyAttributes::UnitLess));
+//    } else if (propertyTypeId == PropertyDimlfac) {
+//        return qMakePair(QVariant(getData().getDimlfac()), RPropertyAttributes(RPropertyAttributes::UnitLess));
+//    } else if (propertyTypeId == PropertyDimscale) {
+//        return qMakePair(QVariant(getData().getDimscale()), RPropertyAttributes(RPropertyAttributes::UnitLess));
     } else if (propertyTypeId == PropertyDimBlockName) {
         return qMakePair(QVariant(getData().dimBlockName), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     } else if (propertyTypeId == PropertyAutoTextPos) {
@@ -279,6 +346,22 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
     } else if (propertyTypeId == PropertyVAlign) {
         return qMakePair(QVariant(getData().verticalAlignment), RPropertyAttributes());
     }*/
+
+//    else if (propertyTypeId == PropertyDimtxt) {
+//        return qMakePair(QVariant(getData().getDimtxt()), RPropertyAttributes());
+//    }
+
+    for (int i=0; i<RDimStyle::propertyVariables.length(); i++) {
+        //RDimStyle::RDimXVar p = RDimStyle::propertyVariables[i];
+        if (RDimStyle::propertyVariables[i].first==propertyTypeId) {
+            RPropertyAttributes attr;
+            if (RDimStyleData::getType(RDimStyle::propertyVariables[i].second)==RS::VarTypeInt) {
+                attr.setInteger(true);
+            }
+            // TODO: add advanced attribute to hide in PE
+            return qMakePair(getData().overrides.getVariant(RDimStyle::propertyVariables[i].second), attr);
+        }
+    }
 
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
@@ -472,7 +555,7 @@ void RDimensionEntity::print(QDebug dbg) const {
                   << ", lower tolerance: " << getData().lowerTolerance
                   << ", measurement (label): " << getData().getMeasurement(true)
                   << ", measurement (stored): " << getData().getMeasurement(false)
-                  << ", dimscale: " << getData().getDimScale(false)
+                  << ", dimscale: " << getData().getDimscale()
                   << ")";
 }
 

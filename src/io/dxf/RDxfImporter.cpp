@@ -1071,7 +1071,7 @@ RDimensionData RDxfImporter::convDimensionData(const DL_DimensionData& data) {
             if (tuple.first==1070 && tuple.second==40 && i<list.size()-1) {
                 tuple = list[i+1];
                 if (tuple.first==1040) {
-                    ret.setDimScale(tuple.second.toDouble());
+                    ret.setDimscale(tuple.second.toDouble());
                 }
             }
         }

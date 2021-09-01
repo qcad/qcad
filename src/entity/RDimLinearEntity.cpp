@@ -41,8 +41,29 @@ RPropertyTypeId RDimLinearEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimLinearEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimLinearEntity::PropertyMeasuredValue;
 
-RPropertyTypeId RDimLinearEntity::PropertyLinearFactor;
-RPropertyTypeId RDimLinearEntity::PropertyDimScale;
+RPropertyTypeId RDimLinearEntity::PropertyDimscale;
+RPropertyTypeId RDimLinearEntity::PropertyDimlfac;
+RPropertyTypeId RDimLinearEntity::PropertyDimtxt;
+RPropertyTypeId RDimLinearEntity::PropertyDimgap;
+RPropertyTypeId RDimLinearEntity::PropertyDimasz;
+//RPropertyTypeId RDimLinearEntity::PropertyDimdli;
+RPropertyTypeId RDimLinearEntity::PropertyDimexe;
+RPropertyTypeId RDimLinearEntity::PropertyDimexo;
+RPropertyTypeId RDimLinearEntity::PropertyDimtad;
+RPropertyTypeId RDimLinearEntity::PropertyDimtih;
+RPropertyTypeId RDimLinearEntity::PropertyDimtsz;
+RPropertyTypeId RDimLinearEntity::PropertyDimlunit;
+RPropertyTypeId RDimLinearEntity::PropertyDimdec;
+RPropertyTypeId RDimLinearEntity::PropertyDimdsep;
+RPropertyTypeId RDimLinearEntity::PropertyDimzin;
+RPropertyTypeId RDimLinearEntity::PropertyDimaunit;
+RPropertyTypeId RDimLinearEntity::PropertyDimadec;
+RPropertyTypeId RDimLinearEntity::PropertyDimazin;
+RPropertyTypeId RDimLinearEntity::PropertyArchTick;
+RPropertyTypeId RDimLinearEntity::PropertyDimclrt;
+
+//RPropertyTypeId RDimLinearEntity::PropertyLinearFactor;
+//RPropertyTypeId RDimLinearEntity::PropertyDimScale;
 RPropertyTypeId RDimLinearEntity::PropertyDimBlockName;
 RPropertyTypeId RDimLinearEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimLinearEntity::PropertyFontName;
@@ -91,9 +112,33 @@ void RDimLinearEntity::init() {
     RDimLinearEntity::PropertyText.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyText);
     RDimLinearEntity::PropertyUpperTolerance.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyUpperTolerance);
     RDimLinearEntity::PropertyLowerTolerance.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyLowerTolerance);
+    RDimLinearEntity::PropertyMeasuredValue.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyMeasuredValue);
 
-    RDimLinearEntity::PropertyLinearFactor.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyLinearFactor);
-    RDimLinearEntity::PropertyDimScale.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyDimScale);
+    //RDimLinearEntity::PropertyDimtxt.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyDimtxt);
+
+    RDimLinearEntity::PropertyDimscale.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyDimscale);
+    RDimLinearEntity::PropertyDimlfac.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyDimlfac);
+    RDimLinearEntity::PropertyDimtxt.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyDimtxt);
+    RDimLinearEntity::PropertyDimgap.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyDimgap);
+    RDimLinearEntity::PropertyDimasz.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyDimasz);
+    //RDimLinearEntity::PropertyDimdli.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyDimdli);
+    RDimLinearEntity::PropertyDimexe.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyDimexe);
+    RDimLinearEntity::PropertyDimexo.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyDimexo);
+    RDimLinearEntity::PropertyDimtad.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyDimtad);
+    RDimLinearEntity::PropertyDimtih.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyDimtih);
+    RDimLinearEntity::PropertyDimtsz.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyDimtsz);
+    RDimLinearEntity::PropertyDimlunit.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyDimlunit);
+    RDimLinearEntity::PropertyDimdec.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyDimdec);
+    RDimLinearEntity::PropertyDimdsep.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyDimdsep);
+    RDimLinearEntity::PropertyDimzin.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyDimzin);
+    RDimLinearEntity::PropertyDimaunit.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyDimaunit);
+    RDimLinearEntity::PropertyDimadec.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyDimadec);
+    RDimLinearEntity::PropertyDimazin.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyDimazin);
+    RDimLinearEntity::PropertyArchTick.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyArchTick);
+    RDimLinearEntity::PropertyDimclrt.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyDimclrt);
+
+//    RDimLinearEntity::PropertyLinearFactor.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyLinearFactor);
+//    RDimLinearEntity::PropertyDimScale.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyDimScale);
     RDimLinearEntity::PropertyDimBlockName.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyDimBlockName);
     RDimLinearEntity::PropertyAutoTextPos.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyAutoTextPos);
     RDimLinearEntity::PropertyFontName.generateId(typeid(RDimLinearEntity), RDimensionEntity::PropertyFontName);

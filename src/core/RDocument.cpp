@@ -207,52 +207,53 @@ void RDocument::init(bool beforeLoad) {
         docVars->setKnownVariable(RS::PDSIZE, RSettings::getDoubleValue("PointDisplaySettings/Size", 0.0));
 
         // dimension properties:
-        docVars->setKnownVariable(RS::DIMTXT, RSettings::getDoubleValue("DimensionSettings/DIMTXT", 2.5));
-        docVars->setKnownVariable(RS::DIMEXE, RSettings::getDoubleValue("DimensionSettings/DIMEXE", 1.25));
-        docVars->setKnownVariable(RS::DIMEXO, RSettings::getDoubleValue("DimensionSettings/DIMEXO", 0.625));
-        docVars->setKnownVariable(RS::DIMGAP, RSettings::getDoubleValue("DimensionSettings/DIMGAP", 0.625));
-        docVars->setKnownVariable(RS::DIMASZ, RSettings::getDoubleValue("DimensionSettings/DIMASZ", 2.5));
-        docVars->setKnownVariable(RS::DIMSCALE, RSettings::getDoubleValue("DimensionSettings/DIMSCALE", 1.0));
-        docVars->setKnownVariable(RS::DIMDLI, RSettings::getDoubleValue("DimensionSettings/DIMDLI", 5.0));
-        docVars->setKnownVariable(RS::DIMCLRT, RSettings::getColorValue("DimensionSettings/DimensionTextColor", RColor(RColor::ByBlock)));
+        // TODO: change defaults to defaults from RDimStyle::getDoubleDefault...
+//        docVars->setKnownVariable(RS::DIMTXT, RSettings::getDoubleValue("DimensionSettings/DIMTXT", 2.5));
+//        docVars->setKnownVariable(RS::DIMEXE, RSettings::getDoubleValue("DimensionSettings/DIMEXE", 1.25));
+//        docVars->setKnownVariable(RS::DIMEXO, RSettings::getDoubleValue("DimensionSettings/DIMEXO", 0.625));
+//        docVars->setKnownVariable(RS::DIMGAP, RSettings::getDoubleValue("DimensionSettings/DIMGAP", 0.625));
+//        docVars->setKnownVariable(RS::DIMASZ, RSettings::getDoubleValue("DimensionSettings/DIMASZ", 2.5));
+//        docVars->setKnownVariable(RS::DIMSCALE, RSettings::getDoubleValue("DimensionSettings/DIMSCALE", 1.0));
+//        docVars->setKnownVariable(RS::DIMDLI, RSettings::getDoubleValue("DimensionSettings/DIMDLI", 5.0));
+//        docVars->setKnownVariable(RS::DIMCLRT, RSettings::getColorValue("DimensionSettings/DimensionTextColor", RColor(RColor::ByBlock)));
 
         // arrow head:
-        if (RSettings::getStringValue("DimensionSettings/ArrowStyle", "Arrow")=="Arrow") {
-            // tick size is 0 for arrows:
-            docVars->setKnownVariable(RS::DIMTSZ, 0.0);
-        }
+//        if (RSettings::getStringValue("DimensionSettings/ArrowStyle", "Arrow")=="Arrow") {
+//            // tick size is 0 for arrows:
+//            docVars->setKnownVariable(RS::DIMTSZ, 0.0);
+//        }
 
-        // arch tick head:
-        else {
-            docVars->setKnownVariable(RS::DIMTSZ, RSettings::getDoubleValue("DimensionSettings/DIMASZ", 2.5));
-        }
+//        // arch tick head:
+//        else {
+//            docVars->setKnownVariable(RS::DIMTSZ, RSettings::getDoubleValue("DimensionSettings/DIMASZ", 2.5));
+//        }
 
-        docVars->setKnownVariable(RS::DIMLUNIT, RSettings::getIntValue("DimensionSettings/LinearFormat", RS::Decimal));
-        docVars->setKnownVariable(RS::DIMDEC, RSettings::getIntValue("DimensionSettings/LinearPrecision", 4));
-        docVars->setKnownVariable(RS::DIMDSEP, RSettings::getIntValue("DimensionSettings/DecimalPoint", '.'));
-
-        // show trailing zeroes:
-        if (RSettings::getBoolValue("DimensionSettings/LinearShowTrailingZeros", false)) {
-            docVars->setKnownVariable(RS::DIMZIN, 0);
-        }
-
-        // suppress trailing zeroes:
-        else {
-            docVars->setKnownVariable(RS::DIMZIN, 8);
-        }
-
-        docVars->setKnownVariable(RS::DIMAUNIT, RSettings::getIntValue("DimensionSettings/AngularFormat", RS::DegreesDecimal));
-        docVars->setKnownVariable(RS::DIMADEC, RSettings::getIntValue("DimensionSettings/AngularPrecision", 0));
+//        docVars->setKnownVariable(RS::DIMLUNIT, RSettings::getIntValue("DimensionSettings/LinearFormat", RS::Decimal));
+//        docVars->setKnownVariable(RS::DIMDEC, RSettings::getIntValue("DimensionSettings/LinearPrecision", 4));
+//        docVars->setKnownVariable(RS::DIMDSEP, RSettings::getIntValue("DimensionSettings/DecimalPoint", '.'));
 
         // show trailing zeroes:
-        if (RSettings::getBoolValue("DimensionSettings/AngularShowTrailingZeros", false)) {
-            docVars->setKnownVariable(RS::DIMAZIN, 0);
-        }
+//        if (RSettings::getBoolValue("DimensionSettings/LinearShowTrailingZeros", false)) {
+//            docVars->setKnownVariable(RS::DIMZIN, 0);
+//        }
 
-        // suppress trailing zeroes:
-        else {
-            docVars->setKnownVariable(RS::DIMAZIN, 2);
-        }
+//        // suppress trailing zeroes:
+//        else {
+//            docVars->setKnownVariable(RS::DIMZIN, 8);
+//        }
+
+//        docVars->setKnownVariable(RS::DIMAUNIT, RSettings::getIntValue("DimensionSettings/AngularFormat", RS::DegreesDecimal));
+//        docVars->setKnownVariable(RS::DIMADEC, RSettings::getIntValue("DimensionSettings/AngularPrecision", 0));
+
+        // show trailing zeroes:
+//        if (RSettings::getBoolValue("DimensionSettings/AngularShowTrailingZeros", false)) {
+//            docVars->setKnownVariable(RS::DIMAZIN, 0);
+//        }
+
+//        // suppress trailing zeroes:
+//        else {
+//            docVars->setKnownVariable(RS::DIMAZIN, 2);
+//        }
 
         // max number of active viewports:
         docVars->setKnownVariable(RS::MAXACTVP, 64);

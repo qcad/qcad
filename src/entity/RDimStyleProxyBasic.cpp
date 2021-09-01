@@ -830,7 +830,7 @@ void RDimStyleProxyBasic::updateTextPosition(const QString& text, double textWid
         double dimgap = dimensionData->getDimgap();
         double dimasz = dimensionData->getDimasz();
         int dimtad = dimensionData->getDimtad();
-        int dimtih = dimensionData->getDimtih();
+        bool dimtih = dimensionData->getDimtih();
 
         RVector newTextPos = RVector::getAverage(dimLine1, dimLine2);
         double dimAngle1 = dimLine1.getAngleTo(dimLine2);
@@ -848,7 +848,7 @@ void RDimStyleProxyBasic::updateTextPosition(const QString& text, double textWid
 
         // move text away from dimension line:
         if (!text.contains("\\X")) {
-            if (dimtad!=0 && dimtih==0) {
+            if (dimtad!=0 && dimtih==false) {
                 // text above dimension line (dimtad is 1):
                 newTextPos+=distV;
             }
@@ -964,8 +964,10 @@ QList<QSharedPointer<RShape> > RDimStyleProxyBasic::getArrow(const RVector& posi
     double dimasz = dimensionData->getDimasz();
 
     // architecture tick:
-    if (dimStyle->useArchTick()) {
+    if (dimensionData->useArchTick()) {
         RVector p1(dimasz/2, dimasz/2);
+
+        // TODO: replace with block reference to arrow symbol
 
         RLine line(p1, -p1);
         line.rotate(direction, RVector(0,0));

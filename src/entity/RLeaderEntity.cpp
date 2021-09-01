@@ -41,7 +41,7 @@ RPropertyTypeId RLeaderEntity::PropertyVertexNX;
 RPropertyTypeId RLeaderEntity::PropertyVertexNY;
 RPropertyTypeId RLeaderEntity::PropertyVertexNZ;
 
-RPropertyTypeId RLeaderEntity::PropertyDimScale;
+//RPropertyTypeId RLeaderEntity::PropertyDimScale;
 
 
 RLeaderEntity::RLeaderEntity(RDocument* document, const RLeaderData& data) :
@@ -79,7 +79,7 @@ void RLeaderEntity::init() {
     RLeaderEntity::PropertyVertexNY.generateId(typeid(RLeaderEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
     RLeaderEntity::PropertyVertexNZ.generateId(typeid(RLeaderEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
 
-    RLeaderEntity::PropertyDimScale.generateId(typeid(RLeaderEntity), "", QT_TRANSLATE_NOOP("REntity", "Scale"));
+    //RLeaderEntity::PropertyDimScale.generateId(typeid(RLeaderEntity), "", QT_TRANSLATE_NOOP("REntity", "Scale"));
 }
 
 bool RLeaderEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -112,10 +112,10 @@ bool RLeaderEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMemberY(data.vertices, value, PropertyVertexNY == propertyTypeId);
     ret = ret || RObject::setMemberZ(data.vertices, value, PropertyVertexNZ == propertyTypeId);
 
-    if (PropertyDimScale == propertyTypeId) {
-        ret = ret || RObject::setMember(data.dimScaleOverride, value, PropertyDimScale == propertyTypeId);
-        data.updateArrowHead();
-    }
+//    if (PropertyDimScale == propertyTypeId) {
+//        ret = ret || RObject::setMember(data.dimScaleOverride, value, PropertyDimScale == propertyTypeId);
+//        data.updateArrowHead();
+//    }
 
     return ret;
 }
@@ -169,9 +169,9 @@ QPair<QVariant, RPropertyAttributes> RLeaderEntity::getProperty(
         v.setValue(RVector::getZList(data.vertices));
         return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List));
     }
-    else if (propertyTypeId == PropertyDimScale) {
-        return qMakePair(QVariant(data.dimScaleOverride), RPropertyAttributes());
-    }
+//    else if (propertyTypeId == PropertyDimScale) {
+//        return qMakePair(QVariant(data.dimScaleOverride), RPropertyAttributes());
+//    }
 
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }

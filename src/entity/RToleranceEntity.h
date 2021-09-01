@@ -62,7 +62,7 @@ public:
     static RPropertyTypeId PropertyDirectionY;
     static RPropertyTypeId PropertyDirectionZ;
     static RPropertyTypeId PropertyText;
-    static RPropertyTypeId PropertyDimScale;
+//    static RPropertyTypeId PropertyDimScale;
 
 public:
     RToleranceEntity(RDocument* document, const RToleranceData& data);
@@ -125,8 +125,8 @@ public:
         return data.getDimtxt();
     }
 
-    double getDimScale(bool fromDocument=true) const {
-        return data.getDimScale(fromDocument);
+    double getDimscale(bool fromDocument=true) const {
+        return data.getDimscale(fromDocument);
     }
 
     QList<QSharedPointer<RShape> > getExploded() const {

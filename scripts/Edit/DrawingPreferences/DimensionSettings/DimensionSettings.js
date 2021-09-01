@@ -39,7 +39,7 @@ DimensionSettings.dimx = [
             ["DIMSCALE", RS.DIMSCALE, undefined, undefined],
             ["DIMDLI", RS.DIMDLI, 2.0, undefined],
             ["DIMTIH", RS.DIMTIH, undefined, false],
-            ["DIMTAD", RS.DIMTAD, undefined, true],
+            ["DIMTAD", RS.DIMTAD, undefined, 1],
         ];
 
 /**
@@ -264,6 +264,7 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
     }
 
     // init dimension settings from document:
+    var dimStyle = document.queryDimStyleDirect();
     var keepProportions = true;
     var dimtxt = 0.0;
     var w;
@@ -274,19 +275,28 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
             continue;
         }
 
-        var dimprop = document.getKnownVariable(item[1], 2.5*item[2]);
+        var dimprop = dimStyle.getVariant(item[1]);
+        //var dimprop = document.getKnownVariable(item[1], 2.5*item[2]);
         if (item[1]===RS.DIMTXT) {
             dimtxt = dimprop;
         }
         else {
             if (Math.abs(dimprop-dimtxt*item[2]) > RS.PointTolerance) {
+                // detect that proportions are not kept:
                 keepProportions = false;
             }
         }
         //w.defaultValue = [w.text, w.getDefaultUnit()];
         if (isOfType(w, QCheckBox)) {
             w.defaultValue = w.checked;
-            w.checked = document.getKnownVariable(item[1], item[3]);
+            if (item[1]===RS.DIMTAD) {
+                // DIMTAD is an int but shown as checkbox:
+                w.checked = dimStyle.getInt(item[1])===1;
+            }
+            else {
+                w.checked = dimStyle.getBool(item[1]);
+            }
+            // document.getKnownVariable(item[1], item[3]);
         }
         else {
             w.defaultValue = w.text;
@@ -302,9 +312,11 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
     }
 
     // init dimension arrow type:
-    var dimblk = document.getKnownVariable(RS.DIMBLK, "");
-    var dimtsz = document.getKnownVariable(RS.DIMTSZ, 0.0);
-    if (dimblk.toUpperCase()==="ARCHTICK" || dimtsz > RS.PointTolerance) {
+    //var dimblk = document.getKnownVariable(RS.DIMBLK, "");
+    var dimblk = dimStyle.getVariant(RS.DIMBLK);
+    //var dimtsz = document.getKnownVariable(RS.DIMTSZ, 0.0);
+    var dimtsz = dimStyle.getVariant(RS.DIMTSZ);
+    if ((!isNull(dimblk) && dimblk.toUpperCase()==="ARCHTICK") || dimtsz > RS.PointTolerance) {
         if (!isNull(widgets["ArchitecturalTick"])) {
             widgets["ArchitecturalTick"].checked = true;
         }
@@ -322,7 +334,8 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
     }
 
     // init linear dimension format:
-    var dimlunit = document.getKnownVariable(RS.DIMLUNIT, RS.Decimal);
+    //var dimlunit = document.getKnownVariable(RS.DIMLUNIT, RS.Decimal);
+    var dimlunit = dimStyle.getInt(RS.DIMLUNIT);
     //widgets["LinearFormat"].currentIndex = dimlunit-1;
     if (!isNull(wlf)) {
         wlf.currentIndex = wlf.findData(dimlunit);
@@ -335,14 +348,16 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
     }
 
     // init linear dimension precision:
-    var dimdec = document.getKnownVariable(RS.DIMDEC, 4);
+    //var dimdec = document.getKnownVariable(RS.DIMDEC, 4);
+    var dimdec = dimStyle.getInt(RS.DIMDEC);
     if (!isNull(wlp)) {
         wlp.currentIndex = dimdec;
         wlp.setProperty("Loaded", true);
     }
 
     // init angular dimension format:
-    var dimaunit = document.getKnownVariable(RS.DIMAUNIT, RS.DegreesDecimal);
+    //var dimaunit = document.getKnownVariable(RS.DIMAUNIT, RS.DegreesDecimal);
+    var dimaunit = dimStyle.getInt(RS.DIMAUNIT);
     if (!isNull(waf)) {
         //waf.currentIndex = dimaunit;
         waf.currentIndex = widgets["AngularFormat"].findData(dimaunit);
@@ -351,19 +366,22 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
     }
 
     // init angular dimension precision:
-    var dimadec = document.getKnownVariable(RS.DIMADEC, 0);
+    //var dimadec = document.getKnownVariable(RS.DIMADEC, 0);
+    var dimadec = dimStyle.getInt(RS.DIMADEC);
     if (!isNull(wap)) {
         wap.currentIndex = dimadec;
         wap.setProperty("Loaded", true);
     }
 
     // show leading / trailing zeroes:
-    var dimzin = document.getKnownVariable(RS.DIMZIN, 12);
+    //var dimzin = document.getKnownVariable(RS.DIMZIN, 12);
+    var dimzin = dimStyle.getInt(RS.DIMZIN);
     if (!isNull(wlstz)) {
         wlstz.checked = !((dimzin & 8) === 8);
         wlstz.setProperty("Loaded", true);
     }
-    var dimazin = document.getKnownVariable(RS.DIMAZIN, 3);
+    //var dimazin = document.getKnownVariable(RS.DIMAZIN, 3);
+    var dimazin = dimStyle.getInt(RS.DIMAZIN);
     if (!isNull(wastz)) {
         wastz.checked = !((dimazin & 2) === 2);
         wastz.setProperty("Loaded", true);
@@ -371,7 +389,8 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
 
     // decimal separator:
     if (!isNull(wdp)) {
-        var dimdsep = document.getKnownVariable(RS.DIMDSEP, '.');
+        //var dimdsep = document.getKnownVariable(RS.DIMDSEP, '.');
+        var dimdsep = dimStyle.getInt(RS.DIMDSEP);
         if (dimdsep===0) {
             dimdsep = '.'.charCodeAt(0);
         }
@@ -397,7 +416,8 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
         // text color:
         if (!isNull(wdtc)) {
             wdtc.setProperty("Loaded", true);
-            var dimTextColor = document.getKnownVariable(RS.DIMCLRT, new RColor(RColor.ByBlock));
+            //var dimTextColor = document.getKnownVariable(RS.DIMCLRT, new RColor(RColor.ByBlock));
+            var dimTextColor = dimStyle.getColor(RS.DIMCLRT);
             if (isValidColor(dimTextColor)) {
                 wdtc.setColor(dimTextColor);
             }
@@ -680,57 +700,85 @@ DimensionSettings.savePreferences = function(pageWidget, calledByPrefDialog, doc
         return;
     }
 
+    var dimStyle = document.queryDimStyle();
+
     for (var i=0; i<DimensionSettings.dimx.length; i++) {
         var item = DimensionSettings.dimx[i];
         var w = widgets[item[0]];
         if (isOfType(w, QCheckBox)) {
-            document.setKnownVariable(item[1], w.checked ? 1 : 0, transaction);
+
+            dimStyle.setVariant(item[1], w.checked);
+//            if (item[1]===RS.DIMTAD) {
+//                //document.setKnownVariable(item[1], w.checked ? 1 : 0, transaction);
+//                qDebug("checkbox " + w.objectName + " is checked:" + w.checked);
+//            }
+//            else {
+//                dimStyle.setVariant(item[1], w.checked);
+//            }
         }
         else {
-            document.setKnownVariable(item[1], w.getValue(), transaction);
+            //document.setKnownVariable(item[1], w.getValue(), transaction);
+            dimStyle.setVariant(item[1], w.getValue());
         }
         w.setProperty("Saved", true);
     }
 
     // dimension arrow type:
     if (widgets["ArchitecturalTick"].checked) {
-        document.setKnownVariable(RS.DIMTSZ, document.getKnownVariable(RS.DIMASZ), transaction);
+        dimStyle.setBool(RS.QCADARCHTICK, true);
+        dimStyle.setDouble(RS.DIMTSZ, dimStyle.getDouble(RS.DIMASZ));
+        //document.setKnownVariable(RS.DIMTSZ, document.getKnownVariable(RS.DIMASZ), transaction);
         //document.setKnownVariable(RS.DIMBLK, "ArchTick", transaction);
     }
     else {
-        document.setKnownVariable(RS.DIMTSZ, 0.0, transaction);
+        dimStyle.setBool(RS.QCADARCHTICK, false);
+        dimStyle.setDouble(RS.DIMTSZ, 0.0);
+        //document.setKnownVariable(RS.DIMTSZ, 0.0, transaction);
         //document.setKnownVariable(RS.DIMBLK, "", transaction);
     }
+
     widgets["ArchitecturalTick"].setProperty("Saved", true);
     widgets["Arrow"].setProperty("Saved", true);
 
     // decimal point:
-    document.setKnownVariable(RS.DIMDSEP, widgets["DecimalPoint"].itemData(widgets["DecimalPoint"].currentIndex), transaction);
+    //document.setKnownVariable(RS.DIMDSEP, widgets["DecimalPoint"].itemData(widgets["DecimalPoint"].currentIndex), transaction);
+    dimStyle.setInt(RS.DIMDSEP, widgets["DecimalPoint"].itemData(widgets["DecimalPoint"].currentIndex));
 
     // dimension format / precision:
-    document.setKnownVariable(RS.DIMLUNIT, widgets["LinearFormat"].currentIndex+1, transaction);
-    document.setKnownVariable(RS.DIMDEC, widgets["LinearPrecision"].currentIndex, transaction);
-    document.setKnownVariable(RS.DIMAUNIT, widgets["AngularFormat"].currentIndex, transaction);
-    document.setKnownVariable(RS.DIMADEC, widgets["AngularPrecision"].currentIndex, transaction);
-    document.setKnownVariable(RS.DIMCLRT, widgets["DimensionTextColor"].getColor(), transaction);
+    dimStyle.setInt(RS.DIMLUNIT, widgets["LinearFormat"].currentIndex+1);
+    dimStyle.setInt(RS.DIMDEC, widgets["LinearPrecision"].currentIndex);
+    dimStyle.setInt(RS.DIMAUNIT, widgets["AngularFormat"].currentIndex);
+    dimStyle.setInt(RS.DIMADEC, widgets["AngularPrecision"].currentIndex);
+    dimStyle.setColor(RS.DIMCLRT, widgets["DimensionTextColor"].getColor());
+
+//    document.setKnownVariable(RS.DIMLUNIT, widgets["LinearFormat"].currentIndex+1, transaction);
+//    document.setKnownVariable(RS.DIMDEC, widgets["LinearPrecision"].currentIndex, transaction);
+//    document.setKnownVariable(RS.DIMAUNIT, widgets["AngularFormat"].currentIndex, transaction);
+//    document.setKnownVariable(RS.DIMADEC, widgets["AngularPrecision"].currentIndex, transaction);
+//    document.setKnownVariable(RS.DIMCLRT, widgets["DimensionTextColor"].getColor(), transaction);
     document.setDimensionFont(widgets["DimensionFont"].currentText, transaction);
 
     // show leading / trailing zeroes:
     if (widgets["LinearShowTrailingZeros"].checked) {
-        document.setKnownVariable(RS.DIMZIN, 0, transaction);
+        dimStyle.setInt(RS.DIMZIN, 0);
+        //document.setKnownVariable(RS.DIMZIN, 0, transaction);
     }
     else {
-        document.setKnownVariable(RS.DIMZIN, 8, transaction);
+        dimStyle.setInt(RS.DIMZIN, 8);
+        //document.setKnownVariable(RS.DIMZIN, 8, transaction);
     }
     widgets["LinearShowTrailingZeros"].setProperty("Saved", true);
 
     if (widgets["AngularShowTrailingZeros"].checked) {
-        document.setKnownVariable(RS.DIMAZIN, 0, transaction);
+        dimStyle.setInt(RS.DIMAZIN, 0);
+        //document.setKnownVariable(RS.DIMAZIN, 0, transaction);
     }
     else {
-        document.setKnownVariable(RS.DIMAZIN, 2, transaction);
+        dimStyle.setInt(RS.DIMAZIN, 2);
+        //document.setKnownVariable(RS.DIMAZIN, 2, transaction);
     }
     widgets["AngularShowTrailingZeros"].setProperty("Saved", true);
+    transaction.addObject(dimStyle);
 
 
     // force update of bounding box of dimension entities:
