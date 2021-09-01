@@ -783,7 +783,7 @@ QSharedPointer<RDimStyle> RMemoryStorage::queryDimStyle() const {
 
 QSharedPointer<RDimStyle> RMemoryStorage::queryDimStyleDirect() const {
     if (dimStyle.isNull()) {
-        //qWarning() << "RMemoryStorage::queryDimStyleDirect: document variables is NULL";
+        qWarning() << "RMemoryStorage::queryDimStyleDirect: dim style is NULL";
     }
     return dimStyle;
 }
