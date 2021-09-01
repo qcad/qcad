@@ -77,7 +77,8 @@ RDocumentInterface::RDocumentInterface(RDocument& document)
     deleting(false),
     cursorOverride(false),
     keepPreviewOnce(false),
-    mouseTrackingEnabled(true) {
+    mouseTrackingEnabled(true),
+    previewDocument(NULL) {
     //pressEvent(NULL) {
 
     RDebug::incCounter("RDocumentInterface");
@@ -136,6 +137,10 @@ RDocumentInterface::~RDocumentInterface() {
     }
     scriptHandlers.clear();
 
+    if (previewDocument!=NULL) {
+        delete previewDocument;
+        previewDocument = NULL;
+    }
     delete &document;
 }
 
@@ -2099,9 +2104,21 @@ void RDocumentInterface::previewOperation(ROperation* operation) {
         return;
     }
 
-    RSpatialIndexSimple* si = new RSpatialIndexSimple();
-    RLinkedStorage* ls = new RLinkedStorage(document.getStorage());
-    RDocument* previewDocument = new RDocument(*ls, *si);
+    RDebug::startTimer();
+
+    // reuse preview document:
+    RLinkedStorage* ls = NULL;
+    if (previewDocument==NULL) {
+        RSpatialIndexSimple* si = new RSpatialIndexSimple();
+        ls = new RLinkedStorage(document.getStorage());
+        previewDocument = new RDocument(*ls, *si);
+    }
+    else {
+        RStorage* s = &previewDocument->getStorage();
+        ls = (RLinkedStorage*)s;
+        ls->clearLinked();
+    }
+
     //previewDocument->setUnit(document.getUnit());
 
     // copy document settings (unit, current layer, etc) from source doc:
@@ -2147,7 +2164,11 @@ void RDocumentInterface::previewOperation(ROperation* operation) {
         (*it)->endPreview();
     }
 
-    delete previewDocument;
+    // 20210829: keep same preview document:
+    //delete previewDocument;
+    //previewDocument = NULL;
+
+    RDebug::stopTimer("previewOp");
 }
 
 /**
@@ -2407,16 +2428,16 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
         RTransaction* t = new RTransaction(getStorage(), "Change document setting", true);
         t->setType(RTransaction::ChangeDocumentSetting);
 
-        // update global document settings based on dim style:
+        // update global document settings based on a modified dim style:
         QSharedPointer<RDimStyle> dimStyle = document.queryDimStyleDirect();
-        document.setKnownVariable(RS::DIMSCALE, dimStyle->getDimscale(), t);
-        document.setKnownVariable(RS::DIMTXT, dimStyle->getDimtxt(), t);
-        document.setKnownVariable(RS::DIMGAP, dimStyle->getDimgap(), t);
-        document.setKnownVariable(RS::DIMASZ, dimStyle->getDimasz(), t);
-        document.setKnownVariable(RS::DIMEXE, dimStyle->getDimexe(), t);
-        document.setKnownVariable(RS::DIMEXO, dimStyle->getDimexo(), t);
-        document.setKnownVariable(RS::DIMTAD, dimStyle->getDimtad(), t);
-        document.setKnownVariable(RS::DIMTIH, dimStyle->getDimtih(), t);
+        document.setKnownVariable(RS::DIMSCALE, dimStyle->getDouble(RS::DIMSCALE), t);
+        document.setKnownVariable(RS::DIMTXT, dimStyle->getDouble(RS::DIMTXT), t);
+        document.setKnownVariable(RS::DIMGAP, dimStyle->getDouble(RS::DIMGAP), t);
+        document.setKnownVariable(RS::DIMASZ, dimStyle->getDouble(RS::DIMASZ), t);
+        document.setKnownVariable(RS::DIMEXE, dimStyle->getDouble(RS::DIMEXE), t);
+        document.setKnownVariable(RS::DIMEXO, dimStyle->getDouble(RS::DIMEXO), t);
+        document.setKnownVariable(RS::DIMTAD, dimStyle->getInt(RS::DIMTAD), t);
+        document.setKnownVariable(RS::DIMTIH, dimStyle->getBool(RS::DIMTIH), t);
 
         //t->addObject(docVars);
         t->end();

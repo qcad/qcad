@@ -403,6 +403,8 @@ private:
 
     QMap<QString, int> tags;
 
+    RDocument* previewDocument;
+
     // transform for all input coordinates:
 //    QTransform inputTransform;
 
