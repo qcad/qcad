@@ -510,6 +510,7 @@ AbstractPreferences.prototype.showPage = function() {
             this.load(addOn);
             var treeWidget = this.treeWidget;
             widget.settingChangedEvent = function() {
+                // mark changed category in bold:
                 var font = treeWidget.currentItem().font(0);
                 font.setBold(true);
                 treeWidget.currentItem().setFont(0, font);
