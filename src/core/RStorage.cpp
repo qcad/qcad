@@ -440,6 +440,7 @@ QDebug operator<<(QDebug dbg, RStorage& s) {
     }
     dbg.nospace() << "drawing unit: " << s.getUnit() << "\n";
     dbg.nospace() << "dimension font: " << s.getDimensionFont() << "\n";
+    dbg.nospace() << "dim style: " << *s.queryDimStyleDirect() << "\n";
     dbg.nospace() << "bounding box: " << s.getBoundingBox() << "\n";
     dbg.nospace() << "document variables: " << *s.queryDocumentVariables() << "\n";
 
