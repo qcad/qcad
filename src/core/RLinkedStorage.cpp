@@ -514,6 +514,13 @@ void RLinkedStorage::clear() {
 }
 
 /**
+ * Clears only contents of this linkes storage, essentailly resetting the linked storage to the back storage.
+ */
+void RLinkedStorage::clearLinked() {
+    RMemoryStorage::clear();
+}
+
+/**
  * IDs are handled by the back storage exclusively.
  */
 RObject::Id RLinkedStorage::getNewObjectId() {

@@ -42,6 +42,7 @@ public:
     virtual ~RLinkedStorage();
 
     virtual void clear();
+    virtual void clearLinked();
 
     virtual QSet<RObject::Id> queryAllObjects() const;
     virtual QSet<RObject::Id> querySelectedLayers() const;
