@@ -224,31 +224,31 @@ public:
         return overrides.hasOverride(key);
     }
 
+    RDimStyleData getOverrides() const {
+        return overrides;
+    }
+
 //    void makeOverrides() {
 //        if (overrides==NULL) {
 //            overrides = new RDimStyleData();
 //        }
 //    }
 
-    void setDimXDouble(RS::KnownVariable key, double v) {
-        overrides.setDouble(key, v);
-        update();
-    }
+    void setDimXDouble(RS::KnownVariable key, double v);
+    void setDimXInt(RS::KnownVariable key, int v);
+    void setDimXBool(RS::KnownVariable key, bool v);
+    void setDimXColor(RS::KnownVariable key, const RColor& v);
 
-    void setDimXInt(RS::KnownVariable key, int v) {
-        overrides.setInt(key, v);
-        update();
-    }
-
-    void setDimXBool(RS::KnownVariable key, bool v) {
-        overrides.setBool(key, v);
-        update();
-    }
-
-    void setDimXColor(RS::KnownVariable key, const RColor& v) {
-        overrides.setColor(key, v);
-        update();
-    }
+    QVariant getDimXVariant(RS::KnownVariable key) const;
+    QVariant getVariantOverride(RS::KnownVariable key) const;
+    double getDimXDouble(RS::KnownVariable key) const;
+    double getDoubleOverride(RS::KnownVariable key) const;
+    int getDimXInt(RS::KnownVariable key) const;
+    int getIntOverride(RS::KnownVariable key) const;
+    bool getDimXBool(RS::KnownVariable key) const;
+    bool getBoolOverride(RS::KnownVariable key) const;
+    RColor getDimXColor(RS::KnownVariable key) const;
+    RColor getColorOverride(RS::KnownVariable key) const;
 
     double getDimlfac() const {
         return getDimXDouble(RS::DIMLFAC);
@@ -441,166 +441,7 @@ public:
         return getDimXBool(RS::QCADARCHTICK);
     }
 
-    double getDimXDouble(RS::KnownVariable key) const {
-        double dimX = 0.0;
 
-        // get value from override:
-        if (hasOverride(key)) {
-            return getDoubleOverride(key);
-        }
-
-        if (document!=NULL) {
-            QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
-            if (!dimStyle.isNull()) {
-                // get value from dimension style:
-                dimX = dimStyle->getDouble(key);
-            }
-            else {
-                // TODO: get value from document (should never happen):
-                Q_ASSERT(false);
-            }
-        }
-        else {
-            qWarning() << "RDimensionData::getDimXDouble: no document";
-        }
-
-        return dimX;
-    }
-
-    double getDoubleOverride(RS::KnownVariable key) const {
-        double def = RDimStyle::getDoubleDefault(key);
-
-        if (hasOverrides()) {
-            return overrides.getDouble(key);
-        }
-        else {
-            if (document!=NULL) {
-                return document->getKnownVariable(key, def).toDouble();
-            }
-        }
-        return def;
-    }
-
-    int getDimXInt(RS::KnownVariable key) const {
-        int dimX = 0;
-
-        // get value from override:
-        if (hasOverride(key)) {
-            return getIntOverride(key);
-        }
-
-        if (document!=NULL) {
-            QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
-            if (!dimStyle.isNull()) {
-                // get value from dimension style:
-                dimX = dimStyle->getInt(key);
-            }
-            else {
-                // TODO: get value from document (should never happen):
-                Q_ASSERT(false);
-            }
-        }
-        else {
-            qWarning() << "RDimensionData::getDimXInt: no document";
-        }
-
-        return dimX;
-    }
-
-    int getIntOverride(RS::KnownVariable key) const {
-        int def = RDimStyle::getIntDefault(key);
-
-        if (hasOverrides()) {
-            return overrides.getInt(key);
-        }
-        else {
-            if (document!=NULL) {
-                return document->getKnownVariable(key, def).toInt();
-            }
-        }
-        return def;
-    }
-
-    bool getDimXBool(RS::KnownVariable key) const {
-        bool dimX = 0;
-
-        // get value from override:
-        if (hasOverride(key)) {
-            return getBoolOverride(key);
-        }
-
-        if (document!=NULL) {
-            QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
-            if (!dimStyle.isNull()) {
-                // get value from dimension style:
-                dimX = dimStyle->getBool(key);
-            }
-            else {
-                // TODO: get value from document (should never happen):
-                Q_ASSERT(false);
-            }
-        }
-        else {
-            qWarning() << "RDimensionData::getDimXBool: no document";
-        }
-
-        return dimX;
-    }
-
-    bool getBoolOverride(RS::KnownVariable key) const {
-        bool def = RDimStyle::getBoolDefault(key);
-
-        if (hasOverrides()) {
-            return overrides.getBool(key);
-        }
-        else {
-            if (document!=NULL) {
-                return document->getKnownVariable(key, def).toBool();
-            }
-        }
-        return def;
-    }
-
-    RColor getDimXColor(RS::KnownVariable key) const {
-        RColor dimX;
-
-        // get value from override:
-        if (hasOverride(key)) {
-            return getColorOverride(key);
-        }
-
-        if (document!=NULL) {
-            QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
-            if (!dimStyle.isNull()) {
-                // get value from dimension style:
-                dimX = dimStyle->getColor(key);
-            }
-            else {
-                // TODO: get value from document (should never happen):
-                Q_ASSERT(false);
-            }
-        }
-        else {
-            qWarning() << "RDimensionData::getDimXColor: no document";
-        }
-
-        return dimX;
-    }
-
-    RColor getColorOverride(RS::KnownVariable key) const {
-        RColor def = RDimStyle::getColorDefault(key);
-
-        if (hasOverrides()) {
-            return overrides.getColor(key);
-        }
-        else {
-            if (document!=NULL) {
-                QVariant v = document->getKnownVariable(key, def);
-                return v.value<RColor>();
-            }
-        }
-        return def;
-    }
 
 
 //    template<class T>

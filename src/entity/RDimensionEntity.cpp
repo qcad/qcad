@@ -144,8 +144,8 @@ void RDimensionEntity::init() {
     //RDimensionEntity::PropertyDimtxt.generateId(typeid(RDimensionEntity), QT_TRANSLATE_NOOP("REntity", "Style Override"), QT_TRANSLATE_NOOP("REntity", "Text height"));
 
     QString tsOverride = QT_TRANSLATE_NOOP("REntity", "Style");
-    RDimensionEntity::PropertyDimscale.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Overall dimension scale"));
-    RDimensionEntity::PropertyDimlfac.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Linear measurement factor"));
+    RDimensionEntity::PropertyDimscale.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Overall dimension scale"));
+    RDimensionEntity::PropertyDimlfac.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Linear measurement factor"));
     RDimensionEntity::PropertyDimtxt.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text height"));
     RDimensionEntity::PropertyDimgap.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Dimension line gap"));
     RDimensionEntity::PropertyDimasz.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Arrow size"));
@@ -358,8 +358,8 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
             if (RDimStyleData::getType(RDimStyle::propertyVariables[i].second)==RS::VarTypeInt) {
                 attr.setInteger(true);
             }
-            // TODO: add advanced attribute to hide in PE
-            return qMakePair(getData().overrides.getVariant(RDimStyle::propertyVariables[i].second), attr);
+            // TODO: add advanced attribute to show / hide in PE
+            return qMakePair(getData().getDimXVariant(RDimStyle::propertyVariables[i].second), attr);
         }
     }
 
@@ -557,6 +557,7 @@ void RDimensionEntity::print(QDebug dbg) const {
                   << ", measurement (stored): " << getData().getMeasurement(false)
                   << ", dimscale: " << getData().getDimscale()
                   << ")";
+    dbg.nospace() << "Overrides:\n" << getData().getOverrides() << "\n";
 }
 
 /**

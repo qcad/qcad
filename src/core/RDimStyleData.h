@@ -133,6 +133,10 @@ public:
         mapDouble[key] = val;
     }
 
+    void removeDouble(RS::KnownVariable key) {
+        mapDouble.remove(key);
+    }
+
     int getInt(RS::KnownVariable key) const {
         if (mapInt.contains(key)) {
             return mapInt[key];
@@ -144,6 +148,10 @@ public:
 
     virtual void setInt(RS::KnownVariable key, int val) {
         mapInt[key] = val;
+    }
+
+    void removeInt(RS::KnownVariable key) {
+        mapInt.remove(key);
     }
 
     bool getBool(RS::KnownVariable key) const {
@@ -159,6 +167,10 @@ public:
         mapBool[key] = val;
     }
 
+    void removeBool(RS::KnownVariable key) {
+        mapBool.remove(key);
+    }
+
     RColor getColor(RS::KnownVariable key) const {
         if (mapColor.contains(key)) {
             return mapColor[key];
@@ -170,6 +182,10 @@ public:
 
     virtual void setColor(RS::KnownVariable key, const RColor& val) {
         mapColor[key] = val;
+    }
+
+    void removeColor(RS::KnownVariable key) {
+        mapColor.remove(key);
     }
 
 //    double getDimscale() const {
@@ -356,6 +372,8 @@ public:
     //static QList<RDimXVar> propertyVariables;
     static QMap<RS::KnownVariable, RS::KnownVariableType> dimXTypes;
 
+    friend QDebug operator<<(QDebug dbg, const RDimStyleData& d);
+
 protected:
     QMap<RS::KnownVariable, double> mapDouble;
     QMap<RS::KnownVariable, int> mapInt;
@@ -392,5 +410,6 @@ protected:
 
 Q_DECLARE_METATYPE(RDimStyleData)
 Q_DECLARE_METATYPE(RDimStyleData*)
+
 
 #endif

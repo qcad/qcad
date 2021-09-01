@@ -58,6 +58,7 @@ void RDimStyleData::initDefaults() {
     qDebug() << "RDimStyleData::initDefaults()";
 
     mapDefaults[RS::DIMSCALE] = 1.0;
+    mapDefaults[RS::DIMLFAC] = 1.0;
     mapDefaults[RS::DIMTXT] = 2.5;
     mapDefaults[RS::DIMGAP] = 0.625;
     mapDefaults[RS::DIMASZ] = 2.5;
@@ -204,3 +205,20 @@ void RDimStyleData::initFromSettings() {
     }
 }
 
+
+/**
+ * Stream operator for QDebug
+ */
+QDebug operator<<(QDebug dbg, const RDimStyleData& d) {
+    dbg.nospace() << "RDimSyleData(";
+//    QMap<RS::KnownVariable, bool>::iterator it;
+//    for (it=d.mapBool.begin(); it!=d.mapBool.end(); it++) {
+//        dbg.nospace() << "bool: " << it.key() << ": " << it.value();
+//    }
+    dbg.nospace() << d.mapBool;
+    dbg.nospace() << d.mapInt;
+    dbg.nospace() << d.mapDouble;
+    dbg.nospace() << d.mapColor;
+    dbg.nospace() << ")";
+    return dbg;
+}
