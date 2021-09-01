@@ -231,6 +231,10 @@ public:
         return options.testFlag(DimensionLabel);
     }
 
+    void setInteger(bool i) {
+        setOption(Integer, i);
+    }
+
     bool isInteger() const {
         return options.testFlag(Integer);
     }
