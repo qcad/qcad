@@ -222,10 +222,10 @@ QPair<QVariant, RPropertyAttributes> RDimRotatedEntity::getProperty(
         return qMakePair(QVariant(data.rotation), RPropertyAttributes(RPropertyAttributes::Angle));
     }
 
-    qDebug() << "getProperty:" << propertyTypeId.getPropertyTitle();
+    //qDebug() << "getProperty:" << propertyTypeId.getPropertyTitle();
 
     QPair<QVariant, RPropertyAttributes> ret = RDimLinearEntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
-    qDebug() << "  val:" << ret.first;
+    //qDebug() << "  val:" << ret.first;
     return ret;
 }
 
