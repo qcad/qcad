@@ -639,6 +639,9 @@ RS::KnownVariable RDxfServices::stringToVariable(const QString& s) {
     if (u=="CHAMFERD") {
         return RS::CHAMFERD;
     }
+    if (u=="CLAYER") {
+        return RS::CLAYER;
+    }
     if (u=="CMLJUST") {
         return RS::CMLJUST;
     }
@@ -1099,6 +1102,8 @@ QString RDxfServices::variableToString(RS::KnownVariable v) {
         return "CHAMFERC";
     case RS::CHAMFERD:
         return "CHAMFERD";
+    case RS::CLAYER:
+        return "CLAYER";
     case RS::CMLJUST:
         return "CMLJUST";
     case RS::CMLSCALE:
