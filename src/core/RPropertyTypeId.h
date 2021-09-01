@@ -98,8 +98,7 @@ public:
     /**
      * \nonscriptable
      */
-    void generateId(const std::type_info& classInfo, 
-        const RPropertyTypeId& other);
+    void generateId(const std::type_info& classInfo,  const RPropertyTypeId& other);
 
     /**
      * \nonscriptable
@@ -112,8 +111,7 @@ public:
             RPropertyTypeId propertyTypeId);
     QString getPropertyGroupTitle() const;
     QString getPropertyTitle() const;
-    static RPropertyTypeId getPropertyTypeId(const QString& groupTitle,
-            const QString& title);
+    static RPropertyTypeId getPropertyTypeId(const QString& groupTitle, const QString& title);
 
     bool operator ==(const RPropertyTypeId& other) const;
     bool operator !=(const RPropertyTypeId& other) const;
