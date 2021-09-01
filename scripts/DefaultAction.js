@@ -324,6 +324,7 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
             entityId = this.getEntityId(event, false, true);
 
             //qDebug("entityId: ", entityId);
+            //if (entityId!==RObject.INVALID_ID) qDebug("  parentId: ", this.document.queryEntityDirect(entityId).getParentId());
 
             if (entityId !== -1) {
                 if (addToSelection && (this.document.isSelected(entityId) || this.document.isSelectedWorkingSet(entityId))) {
