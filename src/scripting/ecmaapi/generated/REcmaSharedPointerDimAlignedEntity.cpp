@@ -196,14 +196,6 @@
                 qScriptValueFromValue(&engine, RDimAlignedEntity::PropertyMeasuredValue),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
-            ctor.setProperty("PropertyLinearFactor",
-                qScriptValueFromValue(&engine, RDimAlignedEntity::PropertyLinearFactor),
-                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
-            
-            ctor.setProperty("PropertyDimScale",
-                qScriptValueFromValue(&engine, RDimAlignedEntity::PropertyDimScale),
-                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
-            
             ctor.setProperty("PropertyDimBlockName",
                 qScriptValueFromValue(&engine, RDimAlignedEntity::PropertyDimBlockName),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

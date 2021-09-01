@@ -172,8 +172,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyExtLineFixLength"
     type="RPropertyTypeId" isConst="false" isStatic="true" />
-    <property name="PropertyDimScale" type="RPropertyTypeId"
-    isConst="false" isStatic="true" />
     <property name="PropertyDimBlockName" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyOriginX" type="RPropertyTypeId"

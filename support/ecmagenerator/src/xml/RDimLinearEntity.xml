@@ -127,9 +127,43 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyMeasuredValue" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
-    <property name="PropertyLinearFactor" type="RPropertyTypeId"
+    <property name="PropertyDimscale" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
-    <property name="PropertyDimScale" type="RPropertyTypeId"
+    <property name="PropertyDimlfac" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimtxt" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimgap" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimasz" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimexe" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimexo" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimtad" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimtih" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimtsz" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimlunit" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimdec" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimdsep" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimzin" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimaunit" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimadec" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimazin" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyArchTick" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimclrt" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyDimBlockName" type="RPropertyTypeId"
     isConst="false" isStatic="true" />

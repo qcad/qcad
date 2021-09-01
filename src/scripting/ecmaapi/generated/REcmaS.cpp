@@ -1655,8 +1655,38 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("QCADARCHTICK",
+    QScriptValue(RS::QCADARCHTICK),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("INVALID",
     QScriptValue(RS::INVALID),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("VarTypeBool",
+    QScriptValue(RS::VarTypeBool),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("VarTypeInt",
+    QScriptValue(RS::VarTypeInt),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("VarTypeDouble",
+    QScriptValue(RS::VarTypeDouble),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("VarTypeColor",
+    QScriptValue(RS::VarTypeColor),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("VarTypeUnknown",
+    QScriptValue(RS::VarTypeUnknown),
     QScriptValue::ReadOnly);
 
 
@@ -2095,6 +2125,13 @@
         &engine,
         toScriptValueEnumKnownVariable,
         fromScriptValueEnumKnownVariable,
+        ctor.property(QString::fromLatin1("prototype"))
+    );
+
+    qScriptRegisterMetaType<RS::KnownVariableType>(
+        &engine,
+        toScriptValueEnumKnownVariableType,
+        fromScriptValueEnumKnownVariableType,
         ctor.property(QString::fromLatin1("prototype"))
     );
 
@@ -3544,6 +3581,16 @@
     
         {
             out = qvariant_cast<RS::KnownVariable>(value.toVariant());
+        }
+         QScriptValue REcmaS::toScriptValueEnumKnownVariableType(QScriptEngine* engine, const RS::KnownVariableType& value)
+    
+        {
+            return QScriptValue(engine, (int)value);
+        }
+         void REcmaS::fromScriptValueEnumKnownVariableType(const QScriptValue& value, RS::KnownVariableType& out)
+    
+        {
+            out = qvariant_cast<RS::KnownVariableType>(value.toVariant());
         }
          QScriptValue REcmaS::toScriptValueEnumBooleanOperation(QScriptEngine* engine, const RS::BooleanOperation& value)
     

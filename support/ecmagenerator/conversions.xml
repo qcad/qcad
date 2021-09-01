@@ -53,6 +53,7 @@
 	<entry key="RS::HAlign" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RS::IsoProjectionType" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RS::KnownVariable" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RS::KnownVariableType" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RS::LinearFormat" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RS::MessageType" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RS::ProjectionRenderingHint" value="toNumber()" testFunction="isNumber()" cast="int" />

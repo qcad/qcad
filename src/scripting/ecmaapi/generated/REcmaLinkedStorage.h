@@ -55,6 +55,9 @@
         clear
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        clearLinked
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryAllObjects
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

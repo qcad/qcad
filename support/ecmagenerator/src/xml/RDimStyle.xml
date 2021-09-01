@@ -9,6 +9,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   hasShell="false" sharedPointerSupport="true" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="RObject" specifier="public" />
+    <baseClass name="RDimStyleData" specifier="public" />
     <constructor>
       <variant />
       <variant>
@@ -19,6 +20,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="init" cppName="init" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="initDimX" cppName="initDimX" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPropertyTypeId &amp;"
+        typeName="RPropertyTypeId" name="propertyTypeId"
+        isConst="true" />
+        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
+        name="var" isConst="false" />
+        <arg type="RS::KnownVariableType"
+        typeName="RS::KnownVariableType" name="type"
+        isConst="false" />
+      </variant>
     </method>
     <method name="clear" cppName="clear" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -31,6 +45,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="clone" cppName="clone" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RDimStyle *" isPureVirtual="false" />
+    </method>
+    <method name="updateDocumentVariables"
+    cppName="updateDocumentVariables" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
     </method>
     <method name="getProperty" cppName="getProperty"
     specifier="public" isStatic="false" isVirtual="false"
@@ -60,107 +79,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="transaction" isConst="false" />
       </variant>
     </method>
-    <method name="getDimscale" cppName="getDimscale"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false" />
-    </method>
-    <method name="setDimscale" cppName="setDimscale"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="double" typeName="double" name="v"
-        isConst="false" />
-      </variant>
-    </method>
-    <method name="getDimtxt" cppName="getDimtxt" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false" />
-    </method>
-    <method name="setDimtxt" cppName="setDimtxt" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="double" typeName="double" name="v"
-        isConst="false" />
-      </variant>
-    </method>
-    <method name="getDimgap" cppName="getDimgap" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false" />
-    </method>
-    <method name="setDimgap" cppName="setDimgap" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="double" typeName="double" name="v"
-        isConst="false" />
-      </variant>
-    </method>
-    <method name="getDimasz" cppName="getDimasz" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false" />
-    </method>
-    <method name="setDimasz" cppName="setDimasz" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="double" typeName="double" name="v"
-        isConst="false" />
-      </variant>
-    </method>
-    <method name="getDimexe" cppName="getDimexe" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false" />
-    </method>
-    <method name="setDimexe" cppName="setDimexe" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="double" typeName="double" name="v"
-        isConst="false" />
-      </variant>
-    </method>
-    <method name="getDimexo" cppName="getDimexo" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false" />
-    </method>
-    <method name="setDimexo" cppName="setDimexo" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="double" typeName="double" name="v"
-        isConst="false" />
-      </variant>
-    </method>
-    <method name="getDimtad" cppName="getDimtad" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="int" isPureVirtual="false" />
-    </method>
-    <method name="setDimtad" cppName="setDimtad" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="int" typeName="int" name="v" isConst="false" />
-      </variant>
-    </method>
-    <method name="getDimtih" cppName="getDimtih" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="int" isPureVirtual="false" />
-    </method>
-    <method name="setDimtih" cppName="setDimtih" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="int" typeName="int" name="v" isConst="false" />
-      </variant>
-    </method>
-    <method name="useArchTick" cppName="useArchTick"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false" />
-    </method>
-    <method name="setArchTick" cppName="setArchTick"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="bool" typeName="bool" name="on"
-        isConst="false" />
-      </variant>
-    </method>
     <method name="render" cppName="render" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -176,5 +94,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <property name="propertyVariables"
+    type="QList &lt; QPair &lt; RPropertyTypeId , RS :: KnownVariable &gt; &gt;"
+    isConst="false" isStatic="true" />
   </class>
 </unit>

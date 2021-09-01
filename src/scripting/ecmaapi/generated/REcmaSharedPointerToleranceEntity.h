@@ -94,7 +94,7 @@
         getDimtxt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getDimScale
+        getDimscale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getExploded

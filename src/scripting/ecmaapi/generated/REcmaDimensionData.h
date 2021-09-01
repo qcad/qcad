@@ -126,16 +126,40 @@
         getDimBlockName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        hasOverrides
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimXDouble
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimXInt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimXBool
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimXColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimlfac
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimlfac
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLinearFactor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setLinearFactor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getDimScale
+        getDimscale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setDimScale
+        setDimscale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isArrow1Flipped
@@ -201,13 +225,31 @@
         getDimexo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setDimexo
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDimexe
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimexe
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getDimasz
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setDimasz
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimdli
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimdli
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDimgap
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimgap
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getDimtxt
@@ -228,10 +270,91 @@
         getDimtad
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setDimtad
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDimtih
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setDimtih
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimtsz
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimtsz
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimzin
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimzin
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimaunit
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimaunit
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimadec
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimadec
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimdec
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimdec
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimazin
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimazin
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimdsep
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimdsep
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimclrt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimclrt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         useArchTick
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimXDouble
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDoubleOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimXInt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getIntOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimXBool
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getBoolOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimXColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getColorOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isDimXScaled
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         hasCustomTextPosition
@@ -247,9 +370,6 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getTextAngle
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getArrow
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getTextData

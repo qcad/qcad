@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RDimStyleData.h"><comment type="block">/**
+ * Copyright (c) 2011-2021 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDIMSTYLEDATA_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDIMSTYLEDATA_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RS.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RColor.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyTypeId.h"</cpp:file></cpp:include>
+<comment type="line">//#include "RDocument.h"</comment>
+
+<comment type="block">/**
+ * Dimension style data class.
+ *
+ * \ingroup entity
+ * \scriptable
+ * \copyable
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RDimStyleData</name> <block>{<private type="default">
+
+</private><public>public:
+    <constructor_decl><name>RDimStyleData</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>override</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+
+    <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>initDefaults</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QVariant</name></type> <name>getVariantDefault</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>double</name></type> <name>getDoubleDefault</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>int</name></type> <name>getIntDefault</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>getBoolDefault</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RColor</name></type> <name>getColorDefault</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>initFromSettings</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function><type><name>bool</name></type> <name>hasOverride</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>mapBool</name>.<call><name>contains</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call> || <name>mapDouble</name>.<call><name>contains</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call> || <name>mapInt</name>.<call><name>contains</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call> || <name>mapColor</name>.<call><name>contains</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isValid</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr>!<name>mapBool</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call> || !<name>mapDouble</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call> || !<name>mapInt</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call> || !<name>mapColor</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>static</name> <name><name>RS</name>::<name>KnownVariableType</name></name></type> <name>getType</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr><name>dimXTypes</name>.<call><name>contains</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name><name>dimXTypes</name><index>[<expr><name>key</name></expr>]</index></name></expr>;</return>
+        }</block></then>
+        <else>else <block>{
+            <return>return <expr><name><name>RS</name>::<name>VarTypeUnknown</name></name></expr>;</return>
+        }</block></else></if>
+    }</block></function>
+
+    <function><type><name>QVariant</name></type> <name>getVariant</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <if>if <condition>(<expr><name>mapDouble</name>.<call><name>contains</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name><name>mapDouble</name><index>[<expr><name>key</name></expr>]</index></name></expr>;</return>
+        }</block></then>
+        <else>else <if>if <condition>(<expr><name>mapInt</name>.<call><name>contains</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name><name>mapInt</name><index>[<expr><name>key</name></expr>]</index></name></expr>;</return>
+        }</block></then>
+        <else>else <if>if <condition>(<expr><name>mapBool</name>.<call><name>contains</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name><name>mapBool</name><index>[<expr><name>key</name></expr>]</index></name></expr>;</return>
+        }</block></then>
+        <else>else <if>if <condition>(<expr><name>mapColor</name>.<call><name>contains</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+            <decl_stmt><decl><type><name>QVariant</name></type> <name>v</name></decl>;</decl_stmt>
+            <expr_stmt><expr><name>v</name>.<call><name>setValue<argument_list>&lt;<argument><name>RColor</name></argument>&gt;</argument_list></name><argument_list>(<argument><expr><name><name>mapColor</name><index>[<expr><name>key</name></expr>]</index></name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <return>return <expr><name>v</name></expr>;</return>
+        }</block></then>
+        <else>else <block>{
+            <return>return <expr><call><name>getVariantDefault</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</return>
+        }</block></else></if></else></if></else></if></else></if>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setVariant</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>val</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr>!<name>dimXTypes</name>.<call><name>contains</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+            <expr_stmt><expr><call><name>qWarning</name><argument_list>()</argument_list></call> &lt;&lt; "unregistered dim x type:" &lt;&lt; <name>key</name></expr>;</expr_stmt>
+            <return>return;</return>
+        }</block></then></if>
+
+        <decl_stmt><decl><type><name><name>RS</name>::<name>KnownVariableType</name></name></type> <name>type</name> =<init> <expr><name><name>dimXTypes</name><index>[<expr><name>key</name></expr>]</index></name></expr></init></decl>;</decl_stmt>
+        <switch>switch <condition>(<expr><name>type</name></expr>)</condition> <block>{
+        <case>case <expr><name><name>RS</name>::<name>VarTypeDouble</name></name></expr>:
+            <expr_stmt><expr><call><name>setDouble</name><argument_list>(<argument><expr><name>key</name></expr></argument>, <argument><expr><name>val</name>.<call><name>toDouble</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <break>break;</break>
+
+        </case><case>case <expr><name><name>RS</name>::<name>VarTypeInt</name></name></expr>:
+            <expr_stmt><expr><call><name>setInt</name><argument_list>(<argument><expr><name>key</name></expr></argument>, <argument><expr><name>val</name>.<call><name>toInt</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <break>break;</break>
+
+        </case><case>case <expr><name><name>RS</name>::<name>VarTypeBool</name></name></expr>:
+            <expr_stmt><expr><call><name>qDebug</name><argument_list>()</argument_list></call> &lt;&lt; "set bool:" &lt;&lt; <name>val</name>.<call><name>toBool</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+            <expr_stmt><expr><call><name>setBool</name><argument_list>(<argument><expr><name>key</name></expr></argument>, <argument><expr><name>val</name>.<call><name>toBool</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <break>break;</break>
+
+        </case><case>case <expr><name><name>RS</name>::<name>VarTypeColor</name></name></expr>:
+            <block>{
+                <decl_stmt><decl><type><name>RColor</name></type> <name>col</name> =<init> <expr><name>val</name>.<call><name>value<argument_list>&lt;<argument><name>RColor</name></argument>&gt;</argument_list></name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
+                <constructor_decl><name>setColor</name><parameter_list>(<param><decl><type><name>key</name></type></decl></param>, <param><decl><type><name>col</name></type></decl></param>)</parameter_list>;</constructor_decl>
+            }</block>
+            <break>break;</break>
+
+        </case><default>default:
+            <expr_stmt><expr><call><name>qWarning</name><argument_list>()</argument_list></call> &lt;&lt; "unknown type:" &lt;&lt; <name>type</name></expr>;</expr_stmt>
+            <break>break;</break>
+        </default>}</block></switch>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getDouble</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <if>if <condition>(<expr><name>mapDouble</name>.<call><name>contains</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name><name>mapDouble</name><index>[<expr><name>key</name></expr>]</index></name></expr>;</return>
+        }</block></then>
+        <else>else <block>{
+            <return>return <expr><call><name>getDoubleDefault</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</return>
+        }</block></else></if>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>setDouble</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>, <param><decl><type><name>double</name></type> <name>val</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name><name>mapDouble</name><index>[<expr><name>key</name></expr>]</index></name> = <name>val</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>int</name></type> <name>getInt</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <if>if <condition>(<expr><name>mapInt</name>.<call><name>contains</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name><name>mapInt</name><index>[<expr><name>key</name></expr>]</index></name></expr>;</return>
+        }</block></then>
+        <else>else <block>{
+            <return>return <expr><call><name>getIntDefault</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</return>
+        }</block></else></if>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>setInt</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>, <param><decl><type><name>int</name></type> <name>val</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name><name>mapInt</name><index>[<expr><name>key</name></expr>]</index></name> = <name>val</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>getBool</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <if>if <condition>(<expr><name>mapBool</name>.<call><name>contains</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name><name>mapBool</name><index>[<expr><name>key</name></expr>]</index></name></expr>;</return>
+        }</block></then>
+        <else>else <block>{
+            <return>return <expr><call><name>getBoolDefault</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</return>
+        }</block></else></if>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>setBool</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>, <param><decl><type><name>bool</name></type> <name>val</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name><name>mapBool</name><index>[<expr><name>key</name></expr>]</index></name> = <name>val</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>RColor</name></type> <name>getColor</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <if>if <condition>(<expr><name>mapColor</name>.<call><name>contains</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name><name>mapColor</name><index>[<expr><name>key</name></expr>]</index></name></expr>;</return>
+        }</block></then>
+        <else>else <block>{
+            <return>return <expr><call><name>getColorDefault</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</return>
+        }</block></else></if>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>setColor</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>, <param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>val</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name><name>mapColor</name><index>[<expr><name>key</name></expr>]</index></name> = <name>val</name></expr>;</expr_stmt>
+    }</block></function>
+
+<comment type="line">//    double getDimscale() const {</comment>
+<comment type="line">//        if (mapDouble.contains(RS::DIMSCALE)) {</comment>
+<comment type="line">//            return mapDouble[RS::DIMSCALE];</comment>
+<comment type="line">//        }</comment>
+<comment type="line">//        return dimscale;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    void setDimscale(double v) {</comment>
+<comment type="line">//        dimscale = v;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    double getDimlfac() const {</comment>
+<comment type="line">//        return dimlfac;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    void setDimlfac(double v) {</comment>
+<comment type="line">//        dimlfac = v;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    double getDimtxt() const {</comment>
+<comment type="line">//        return dimtxt;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    void setDimtxt(double v) {</comment>
+<comment type="line">//        dimtxt = v;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    double getDimgap() const {</comment>
+<comment type="line">//        return dimgap;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    void setDimgap(double v) {</comment>
+<comment type="line">//        dimgap = v;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    double getDimasz() const {</comment>
+<comment type="line">//        return dimasz;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    void setDimasz(double v) {</comment>
+<comment type="line">//        dimasz = v;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    double getDimdli() const {</comment>
+<comment type="line">//        return dimdli;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    void setDimdli(double v) {</comment>
+<comment type="line">//        dimdli = v;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    double getDimexe() const {</comment>
+<comment type="line">//        return dimexe;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    void setDimexe(double v) {</comment>
+<comment type="line">//        dimexe = v;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    double getDimexo() const {</comment>
+<comment type="line">//        return dimexo;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    void setDimexo(double v) {</comment>
+<comment type="line">//        dimexo = v;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    int getDimtad() const {</comment>
+<comment type="line">//        return dimtad;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    void setDimtad(int v) {</comment>
+<comment type="line">//        dimtad = v;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    int getDimtih() const {</comment>
+<comment type="line">//        return dimtih;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    void setDimtih(int v) {</comment>
+<comment type="line">//        dimtih = v;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    double getDimtsz() const {</comment>
+<comment type="line">//        return dimtsz;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    void setDimtsz(double v) {</comment>
+<comment type="line">//        dimtsz = v;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    int getDimlunit() const {</comment>
+<comment type="line">//        return dimlunit;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    void setDimlunit(int v) {</comment>
+<comment type="line">//        dimlunit = v;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    int getDimdec() const {</comment>
+<comment type="line">//        return dimdec;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    void setDimdec(int v) {</comment>
+<comment type="line">//        dimdec = v;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    int getDimdsep() const {</comment>
+<comment type="line">//        return dimdsep;</comment>
+<comment type="line">//    }</comment>
+<comment type="line">//    void setDimdsep(int v) {</comment>
+<comment type="line">//        dimdsep = v;</comment>
+<comment type="line">//    }</comment>
+<comment type="line">//    int getDimzin() const {</comment>
+<comment type="line">//        return dimzin;</comment>
+<comment type="line">//    }</comment>
+<comment type="line">//    void setDimzin(int v) {</comment>
+<comment type="line">//        dimzin = v;</comment>
+<comment type="line">//    }</comment>
+<comment type="line">//    int getDimaunit() const {</comment>
+<comment type="line">//        return dimaunit;</comment>
+<comment type="line">//    }</comment>
+<comment type="line">//    void setDimaunit(int v) {</comment>
+<comment type="line">//        dimaunit = v;</comment>
+<comment type="line">//    }</comment>
+<comment type="line">//    int getDimadec() const {</comment>
+<comment type="line">//        return dimadec;</comment>
+<comment type="line">//    }</comment>
+<comment type="line">//    void setDimadec(int v) {</comment>
+<comment type="line">//        dimadec = v;</comment>
+<comment type="line">//    }</comment>
+<comment type="line">//    int getDimazin() const {</comment>
+<comment type="line">//        return dimazin;</comment>
+<comment type="line">//    }</comment>
+<comment type="line">//    void setDimazin(int v) {</comment>
+<comment type="line">//        dimazin = v;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    bool useArchTick() const {</comment>
+<comment type="line">//        return archTick;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    void setArchTick(bool on) {</comment>
+<comment type="line">//        archTick = on;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    RColor getDimclrt() const {</comment>
+<comment type="line">//        return dimclrt;</comment>
+<comment type="line">//    }</comment>
+<comment type="line">//    void setDimclrt(const RColor&amp; v) {</comment>
+<comment type="line">//        dimclrt = v;</comment>
+<comment type="line">//    }</comment>
+
+<comment type="line">//    template&lt;class T&gt;</comment>
+<comment type="line">//    T getDimX(RS::KnownVariable var) {</comment>
+<comment type="line">//        switch (var) {</comment>
+<comment type="line">//        case RS::DIMEXO:</comment>
+<comment type="line">//            return dimexo * dimscale;</comment>
+
+<comment type="line">//        default:</comment>
+<comment type="line">//            qWarning() &lt;&lt; "unhandled dimesion variable:" &lt;&lt; var;</comment>
+<comment type="line">//            break;</comment>
+<comment type="line">//        }</comment>
+<comment type="line">//    }</comment>
+
+</public><public>public:
+<comment type="line">//    struct RDimXVar {</comment>
+<comment type="line">//        RDimXVar() : propertyTypeId(), var(RS::INVALID), type(RS::VarInt) {}</comment>
+
+<comment type="line">//        RDimXVar(RPropertyTypeId propertyTypeId, RS::KnownVariable var, RS::KnownVariableType type) :</comment>
+<comment type="line">//            propertyTypeId(propertyTypeId),</comment>
+<comment type="line">//            var(var),</comment>
+<comment type="line">//            type(type) {</comment>
+
+<comment type="line">//            dimXTypes[var] = type;</comment>
+<comment type="line">//        }</comment>
+
+<comment type="line">//        RPropertyTypeId propertyTypeId;</comment>
+<comment type="line">//        RS::KnownVariable var;</comment>
+<comment type="line">//        RS::KnownVariableType type;</comment>
+<comment type="line">//    };</comment>
+    <comment type="line">//static QList&lt;RDimXVar&gt; propertyVariables;</comment>
+    <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name><name>RS</name>::<name>KnownVariable</name></name></argument>, <argument><name><name>RS</name>::<name>KnownVariableType</name></name></argument>&gt;</argument_list></name></type> <name>dimXTypes</name></decl>;</decl_stmt>
+
+</public><protected>protected:
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>RS</name>::<name>KnownVariable</name></name></argument>, <argument><name>double</name></argument>&gt;</argument_list></name></type> <name>mapDouble</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>RS</name>::<name>KnownVariable</name></name></argument>, <argument><name>int</name></argument>&gt;</argument_list></name></type> <name>mapInt</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>RS</name>::<name>KnownVariable</name></name></argument>, <argument><name>bool</name></argument>&gt;</argument_list></name></type> <name>mapBool</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>RS</name>::<name>KnownVariable</name></name></argument>, <argument><name>RColor</name></argument>&gt;</argument_list></name></type> <name>mapColor</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name><name>RS</name>::<name>KnownVariable</name></name></argument>, <argument><name>QVariant</name></argument>&gt;</argument_list></name></type> <name>mapDefaults</name></decl>;</decl_stmt>
+
+<comment type="line">//    double dimscale;</comment>
+<comment type="line">//    double dimlfac;</comment>
+<comment type="line">//    double dimtxt;</comment>
+<comment type="line">//    double dimgap;</comment>
+<comment type="line">//    double dimasz;</comment>
+<comment type="line">//    double dimdli;</comment>
+<comment type="line">//    double dimexe;</comment>
+<comment type="line">//    double dimexo;</comment>
+<comment type="line">//    int dimtad;</comment>
+<comment type="line">//    int dimtih;</comment>
+<comment type="line">//    double dimtsz;</comment>
+<comment type="line">//    int dimlunit;</comment>
+<comment type="line">//    int dimdec;</comment>
+<comment type="line">//    int dimdsep;</comment>
+<comment type="line">//    int dimzin;</comment>
+<comment type="line">//    int dimaunit;</comment>
+<comment type="line">//    int dimadec;</comment>
+<comment type="line">//    int dimazin;</comment>
+<comment type="line">//    bool archTick;</comment>
+<comment type="line">//    RColor dimclrt;</comment>
+
+    <comment type="line">// TODO:</comment>
+    <comment type="line">// Dimension text movement rules</comment>
+    <comment type="line">//int dimtmove;</comment>
+</protected>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RDimStyleData</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RDimStyleData*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

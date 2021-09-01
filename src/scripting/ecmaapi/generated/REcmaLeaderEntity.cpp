@@ -126,7 +126,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, isClosed, "isClosed");
             
-            REcmaHelper::registerFunction(&engine, proto, getDimScale, "getDimScale");
+            REcmaHelper::registerFunction(&engine, proto, getDimscale, "getDimscale");
             
             REcmaHelper::registerFunction(&engine, proto, getExploded, "getExploded");
             
@@ -223,10 +223,6 @@
             
             ctor.setProperty("PropertyVertexNZ",
                 qScriptValueFromValue(&engine, RLeaderEntity::PropertyVertexNZ),
-                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
-            
-            ctor.setProperty("PropertyDimScale",
-                qScriptValueFromValue(&engine, RLeaderEntity::PropertyDimScale),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
 
@@ -2589,19 +2585,19 @@
             return result;
         }
          QScriptValue
-        REcmaLeaderEntity::getDimScale
+        REcmaLeaderEntity::getDimscale
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLeaderEntity::getDimScale", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaLeaderEntity::getDimScale";
+            //REcmaHelper::functionStart("REcmaLeaderEntity::getDimscale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLeaderEntity::getDimscale";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RLeaderEntity* self = 
-                        getSelf("getDimScale", context);
+                        getSelf("getDimscale", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -2621,7 +2617,7 @@
     // return type 'double'
     double cppResult =
         
-               self->getDimScale();
+               self->getDimscale();
         // return type: double
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -2653,7 +2649,7 @@
     // return type 'double'
     double cppResult =
         
-               self->getDimScale(a0);
+               self->getDimscale(a0);
         // return type: double
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -2663,10 +2659,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderEntity.getDimScale().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderEntity.getDimscale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLeaderEntity::getDimScale", context, engine);
+            //REcmaHelper::functionEnd("REcmaLeaderEntity::getDimscale", context, engine);
             return result;
         }
          QScriptValue

@@ -564,7 +564,16 @@
         <expr><name>VISRETAIN</name></expr>,
         <expr><name>WORLDVIEW</name></expr>,
         <expr><name>MaxKnownVariable</name> = <name>WORLDVIEW</name></expr>,
-        <expr><name>INVALID</name> = -1</expr>
+        <expr><name>QCADARCHTICK</name></expr>,
+        <expr><name>INVALID</name> = -1</expr>,
+    }</block>;</enum>
+
+    <enum>enum <name>KnownVariableType</name> <block>{
+        <expr><name>VarTypeBool</name> = 1</expr>,
+        <expr><name>VarTypeInt</name> = 2</expr>,
+        <expr><name>VarTypeDouble</name> = 3</expr>,
+        <expr><name>VarTypeColor</name> = 4</expr>,
+        <expr><name>VarTypeUnknown</name> = -1</expr>
     }</block>;</enum>
 
     <enum>enum <name>BooleanOperation</name> <block>{
@@ -718,6 +727,8 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::OrthoMode*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::KnownVariable</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::KnownVariable*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::KnownVariableType</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::KnownVariableType*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::LinearFormat</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::LinearFormat*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::MessageType</argument>)</argument_list></macro>

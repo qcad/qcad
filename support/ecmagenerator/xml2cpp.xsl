@@ -221,7 +221,7 @@
             
         // includes for base ecma wrapper classes
         <xsl:for-each select="/unit/class/baseClass">
-          <xsl:if test="starts-with(@name , 'R')">
+          <xsl:if test="starts-with(@name , 'R') and @name!='RDimStyleData'">
             <xsl:variable name="name">
               <xsl:choose>
                 <xsl:when test="contains(@name , '&lt;')">

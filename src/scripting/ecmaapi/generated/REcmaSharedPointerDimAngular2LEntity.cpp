@@ -196,10 +196,6 @@
                 qScriptValueFromValue(&engine, RDimAngular2LEntity::PropertyMeasuredValue),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
-            ctor.setProperty("PropertyDimScale",
-                qScriptValueFromValue(&engine, RDimAngular2LEntity::PropertyDimScale),
-                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
-            
             ctor.setProperty("PropertyDimBlockName",
                 qScriptValueFromValue(&engine, RDimAngular2LEntity::PropertyDimBlockName),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

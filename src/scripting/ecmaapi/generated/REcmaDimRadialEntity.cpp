@@ -186,14 +186,6 @@
                 qScriptValueFromValue(&engine, RDimRadialEntity::PropertyMeasuredValue),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
-            ctor.setProperty("PropertyLinearFactor",
-                qScriptValueFromValue(&engine, RDimRadialEntity::PropertyLinearFactor),
-                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
-            
-            ctor.setProperty("PropertyDimScale",
-                qScriptValueFromValue(&engine, RDimRadialEntity::PropertyDimScale),
-                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
-            
             ctor.setProperty("PropertyDimBlockName",
                 qScriptValueFromValue(&engine, RDimRadialEntity::PropertyDimBlockName),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

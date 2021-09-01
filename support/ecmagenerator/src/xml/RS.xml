@@ -351,7 +351,15 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="VISRETAIN" />
       <value name="WORLDVIEW" />
       <value name="MaxKnownVariable" />
+      <value name="QCADARCHTICK" />
       <value name="INVALID" />
+    </enum>
+    <enum name="KnownVariableType">
+      <value name="VarTypeBool" />
+      <value name="VarTypeInt" />
+      <value name="VarTypeDouble" />
+      <value name="VarTypeColor" />
+      <value name="VarTypeUnknown" />
     </enum>
     <enum name="BooleanOperation">
       <value name="Intersection" />

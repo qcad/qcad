@@ -96,7 +96,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, getDimtxt, "getDimtxt");
             
-            REcmaHelper::registerFunction(&engine, proto, getDimScale, "getDimScale");
+            REcmaHelper::registerFunction(&engine, proto, getDimscale, "getDimscale");
             
             REcmaHelper::registerFunction(&engine, proto, getExploded, "getExploded");
             
@@ -201,10 +201,6 @@
             
             ctor.setProperty("PropertyText",
                 qScriptValueFromValue(&engine, RToleranceEntity::PropertyText),
-                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
-            
-            ctor.setProperty("PropertyDimScale",
-                qScriptValueFromValue(&engine, RToleranceEntity::PropertyDimScale),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
 
@@ -1617,19 +1613,19 @@
             return result;
         }
          QScriptValue
-        REcmaToleranceEntity::getDimScale
+        REcmaToleranceEntity::getDimscale
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaToleranceEntity::getDimScale", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaToleranceEntity::getDimScale";
+            //REcmaHelper::functionStart("REcmaToleranceEntity::getDimscale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaToleranceEntity::getDimscale";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RToleranceEntity* self = 
-                        getSelf("getDimScale", context);
+                        getSelf("getDimscale", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1649,7 +1645,7 @@
     // return type 'double'
     double cppResult =
         
-               self->getDimScale();
+               self->getDimscale();
         // return type: double
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -1681,7 +1677,7 @@
     // return type 'double'
     double cppResult =
         
-               self->getDimScale(a0);
+               self->getDimscale(a0);
         // return type: double
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -1691,10 +1687,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RToleranceEntity.getDimScale().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RToleranceEntity.getDimscale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaToleranceEntity::getDimScale", context, engine);
+            //REcmaHelper::functionEnd("REcmaToleranceEntity::getDimscale", context, engine);
             return result;
         }
          QScriptValue

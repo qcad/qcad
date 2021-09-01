@@ -59,6 +59,7 @@ HEADERS += \
     $$PWD/REcmaDimRotatedData.h \
     $$PWD/REcmaDimRotatedEntity.h \
     $$PWD/REcmaDimStyle.h \
+    $$PWD/REcmaDimStyleData.h \
     $$PWD/REcmaDimensionData.h \
     $$PWD/REcmaDimensionEntity.h \
     $$PWD/REcmaDirected.h \
@@ -442,6 +443,7 @@ SOURCES += \
     $$PWD/REcmaDimRotatedData.cpp \
     $$PWD/REcmaDimRotatedEntity.cpp \
     $$PWD/REcmaDimStyle.cpp \
+    $$PWD/REcmaDimStyleData.cpp \
     $$PWD/REcmaDimensionData.cpp \
     $$PWD/REcmaDimensionEntity.cpp \
     $$PWD/REcmaDirected.cpp \

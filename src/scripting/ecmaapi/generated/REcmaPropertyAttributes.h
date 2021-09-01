@@ -148,6 +148,9 @@
         isDimensionLabel
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setInteger
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isInteger
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

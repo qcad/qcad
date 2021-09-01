@@ -87,16 +87,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="setDimVariable" cppName="setDimVariable"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
-        name="key" isConst="false" />
-        <arg type="QVariant &amp;" typeName="QVariant" name="value"
-        isConst="true" />
-      </variant>
-    </method>
     <method name="getKnownVariable" cppName="getKnownVariable"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

@@ -72,9 +72,6 @@
         setKnownVariable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setDimVariable
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         getKnownVariable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

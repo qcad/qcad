@@ -117,13 +117,29 @@
             
             REcmaHelper::registerFunction(&engine, proto, getDimBlockName, "getDimBlockName");
             
+            REcmaHelper::registerFunction(&engine, proto, hasOverrides, "hasOverrides");
+            
+            REcmaHelper::registerFunction(&engine, proto, hasOverride, "hasOverride");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDimXDouble, "setDimXDouble");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDimXInt, "setDimXInt");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDimXBool, "setDimXBool");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDimXColor, "setDimXColor");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDimlfac, "getDimlfac");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDimlfac, "setDimlfac");
+            
             REcmaHelper::registerFunction(&engine, proto, getLinearFactor, "getLinearFactor");
             
             REcmaHelper::registerFunction(&engine, proto, setLinearFactor, "setLinearFactor");
             
-            REcmaHelper::registerFunction(&engine, proto, getDimScale, "getDimScale");
+            REcmaHelper::registerFunction(&engine, proto, getDimscale, "getDimscale");
             
-            REcmaHelper::registerFunction(&engine, proto, setDimScale, "setDimScale");
+            REcmaHelper::registerFunction(&engine, proto, setDimscale, "setDimscale");
             
             REcmaHelper::registerFunction(&engine, proto, isArrow1Flipped, "isArrow1Flipped");
             
@@ -167,11 +183,23 @@
             
             REcmaHelper::registerFunction(&engine, proto, getDimexo, "getDimexo");
             
+            REcmaHelper::registerFunction(&engine, proto, setDimexo, "setDimexo");
+            
             REcmaHelper::registerFunction(&engine, proto, getDimexe, "getDimexe");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDimexe, "setDimexe");
             
             REcmaHelper::registerFunction(&engine, proto, getDimasz, "getDimasz");
             
+            REcmaHelper::registerFunction(&engine, proto, setDimasz, "setDimasz");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDimdli, "getDimdli");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDimdli, "setDimdli");
+            
             REcmaHelper::registerFunction(&engine, proto, getDimgap, "getDimgap");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDimgap, "setDimgap");
             
             REcmaHelper::registerFunction(&engine, proto, getDimtxt, "getDimtxt");
             
@@ -185,9 +213,63 @@
             
             REcmaHelper::registerFunction(&engine, proto, getDimtad, "getDimtad");
             
+            REcmaHelper::registerFunction(&engine, proto, setDimtad, "setDimtad");
+            
             REcmaHelper::registerFunction(&engine, proto, getDimtih, "getDimtih");
             
+            REcmaHelper::registerFunction(&engine, proto, setDimtih, "setDimtih");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDimtsz, "getDimtsz");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDimtsz, "setDimtsz");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDimzin, "getDimzin");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDimzin, "setDimzin");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDimaunit, "getDimaunit");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDimaunit, "setDimaunit");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDimadec, "getDimadec");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDimadec, "setDimadec");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDimdec, "getDimdec");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDimdec, "setDimdec");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDimazin, "getDimazin");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDimazin, "setDimazin");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDimdsep, "getDimdsep");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDimdsep, "setDimdsep");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDimclrt, "getDimclrt");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDimclrt, "setDimclrt");
+            
             REcmaHelper::registerFunction(&engine, proto, useArchTick, "useArchTick");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDimXDouble, "getDimXDouble");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDoubleOverride, "getDoubleOverride");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDimXInt, "getDimXInt");
+            
+            REcmaHelper::registerFunction(&engine, proto, getIntOverride, "getIntOverride");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDimXBool, "getDimXBool");
+            
+            REcmaHelper::registerFunction(&engine, proto, getBoolOverride, "getBoolOverride");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDimXColor, "getDimXColor");
+            
+            REcmaHelper::registerFunction(&engine, proto, getColorOverride, "getColorOverride");
+            
+            REcmaHelper::registerFunction(&engine, proto, isDimXScaled, "isDimXScaled");
             
             REcmaHelper::registerFunction(&engine, proto, hasCustomTextPosition, "hasCustomTextPosition");
             
@@ -198,8 +280,6 @@
             REcmaHelper::registerFunction(&engine, proto, getLineSpacingFactor, "getLineSpacingFactor");
             
             REcmaHelper::registerFunction(&engine, proto, getTextAngle, "getTextAngle");
-            
-            REcmaHelper::registerFunction(&engine, proto, getArrow, "getArrow");
             
             REcmaHelper::registerFunction(&engine, proto, getTextData, "getTextData");
             
@@ -2341,6 +2421,503 @@
             return result;
         }
          QScriptValue
+        REcmaDimensionData::hasOverrides
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::hasOverrides", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::hasOverrides";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("hasOverrides", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasOverrides();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.hasOverrides().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::hasOverrides", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::hasOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::hasOverride", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::hasOverride";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("hasOverride", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasOverride(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.hasOverride().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::hasOverride", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::setDimXDouble
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setDimXDouble", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setDimXDouble";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setDimXDouble", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimXDouble(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setDimXDouble().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setDimXDouble", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::setDimXInt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setDimXInt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setDimXInt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setDimXInt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimXInt(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setDimXInt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setDimXInt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::setDimXBool
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setDimXBool", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setDimXBool";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setDimXBool", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimXBool(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setDimXBool().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setDimXBool", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::setDimXColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setDimXColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setDimXColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setDimXColor", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RColor */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RColor*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RColor*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RDimensionData: Argument 1 is not of type RColor.",
+                               context);                    
+                    }
+                    RColor 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimXColor(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setDimXColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setDimXColor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getDimlfac
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getDimlfac", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getDimlfac";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getDimlfac", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getDimlfac();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getDimlfac().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getDimlfac", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::setDimlfac
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setDimlfac", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setDimlfac";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setDimlfac", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimlfac(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setDimlfac().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setDimlfac", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDimensionData::getLinearFactor
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -2445,19 +3022,19 @@
             return result;
         }
          QScriptValue
-        REcmaDimensionData::getDimScale
+        REcmaDimensionData::getDimscale
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimensionData::getDimScale", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getDimScale";
+            //REcmaHelper::functionStart("REcmaDimensionData::getDimscale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getDimscale";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDimensionData* self = 
-                        getSelf("getDimScale", context);
+                        getSelf("getDimscale", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -2486,59 +3063,27 @@
 
 
         
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isBool()
-        ) /* type: bool */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    bool
-                    a0 =
-                    (bool)
-                    
-                    context->argument( 0 ).
-                    toBool();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'double'
-    double cppResult =
-        
-               self->getDimscale(a0);
-        // return type: double
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getDimScale().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getDimscale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimensionData::getDimScale", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimensionData::getDimscale", context, engine);
             return result;
         }
          QScriptValue
-        REcmaDimensionData::setDimScale
+        REcmaDimensionData::setDimscale
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimensionData::setDimScale", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setDimScale";
+            //REcmaHelper::functionStart("REcmaDimensionData::setDimscale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setDimscale";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDimensionData* self = 
-                        getSelf("setDimScale", context);
+                        getSelf("setDimscale", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -2574,10 +3119,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setDimScale().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setDimscale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimensionData::setDimScale", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimensionData::setDimscale", context, engine);
             return result;
         }
          QScriptValue
@@ -4425,6 +4970,61 @@
             return result;
         }
          QScriptValue
+        REcmaDimensionData::setDimexo
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setDimexo", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setDimexo";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setDimexo", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimexo(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setDimexo().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setDimexo", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDimensionData::getDimexe
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -4471,6 +5071,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimensionData::getDimexe", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::setDimexe
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setDimexe", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setDimexe";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setDimexe", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimexe(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setDimexe().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setDimexe", context, engine);
             return result;
         }
          QScriptValue
@@ -4523,6 +5178,165 @@
             return result;
         }
          QScriptValue
+        REcmaDimensionData::setDimasz
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setDimasz", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setDimasz";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setDimasz", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimasz(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setDimasz().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setDimasz", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getDimdli
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getDimdli", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getDimdli";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getDimdli", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getDimdli();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getDimdli().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getDimdli", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::setDimdli
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setDimdli", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setDimdli";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setDimdli", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimdli(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setDimdli().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setDimdli", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDimensionData::getDimgap
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -4569,6 +5383,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimensionData::getDimgap", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::setDimgap
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setDimgap", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setDimgap";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setDimgap", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimgap(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setDimgap().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setDimgap", context, engine);
             return result;
         }
          QScriptValue
@@ -4878,6 +5747,61 @@
             return result;
         }
          QScriptValue
+        REcmaDimensionData::setDimtad
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setDimtad", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setDimtad";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setDimtad", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimtad(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setDimtad().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setDimtad", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDimensionData::getDimtih
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -4907,11 +5831,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'int'
-    int cppResult =
+    // return type 'bool'
+    bool cppResult =
         
                self->getDimtih();
-        // return type: int
+        // return type: bool
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -4924,6 +5848,905 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimensionData::getDimtih", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::setDimtih
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setDimtih", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setDimtih";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setDimtih", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimtih(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setDimtih().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setDimtih", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getDimtsz
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getDimtsz", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getDimtsz";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getDimtsz", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getDimtsz();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getDimtsz().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getDimtsz", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::setDimtsz
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setDimtsz", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setDimtsz";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setDimtsz", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimtsz(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setDimtsz().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setDimtsz", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getDimzin
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getDimzin", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getDimzin";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getDimzin", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getDimzin();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getDimzin().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getDimzin", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::setDimzin
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setDimzin", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setDimzin";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setDimzin", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimzin(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setDimzin().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setDimzin", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getDimaunit
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getDimaunit", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getDimaunit";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getDimaunit", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getDimaunit();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getDimaunit().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getDimaunit", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::setDimaunit
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setDimaunit", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setDimaunit";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setDimaunit", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimaunit(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setDimaunit().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setDimaunit", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getDimadec
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getDimadec", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getDimadec";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getDimadec", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getDimadec();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getDimadec().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getDimadec", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::setDimadec
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setDimadec", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setDimadec";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setDimadec", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimadec(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setDimadec().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setDimadec", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getDimdec
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getDimdec", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getDimdec";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getDimdec", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getDimdec();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getDimdec().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getDimdec", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::setDimdec
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setDimdec", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setDimdec";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setDimdec", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimdec(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setDimdec().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setDimdec", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getDimazin
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getDimazin", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getDimazin";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getDimazin", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getDimazin();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getDimazin().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getDimazin", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::setDimazin
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setDimazin", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setDimazin";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setDimazin", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimazin(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setDimazin().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setDimazin", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getDimdsep
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getDimdsep", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getDimdsep";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getDimdsep", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getDimdsep();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getDimdsep().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getDimdsep", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::setDimdsep
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setDimdsep", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setDimdsep";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setDimdsep", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimdsep(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setDimdsep().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setDimdsep", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getDimclrt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getDimclrt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getDimclrt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getDimclrt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RColor'
+    RColor cppResult =
+        
+               self->getDimclrt();
+        // return type: RColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getDimclrt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getDimclrt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::setDimclrt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setDimclrt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setDimclrt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setDimclrt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RColor */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RColor*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RColor*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimensionData: Argument 0 is not of type RColor.",
+                               context);                    
+                    }
+                    RColor 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimclrt(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setDimclrt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setDimclrt", context, engine);
             return result;
         }
          QScriptValue
@@ -4973,6 +6796,546 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimensionData::useArchTick", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getDimXDouble
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getDimXDouble", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getDimXDouble";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getDimXDouble", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getDimXDouble(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getDimXDouble().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getDimXDouble", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getDoubleOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getDoubleOverride", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getDoubleOverride";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getDoubleOverride", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getDoubleOverride(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getDoubleOverride().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getDoubleOverride", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getDimXInt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getDimXInt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getDimXInt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getDimXInt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getDimXInt(a0);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getDimXInt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getDimXInt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getIntOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getIntOverride", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getIntOverride";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getIntOverride", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getIntOverride(a0);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getIntOverride().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getIntOverride", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getDimXBool
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getDimXBool", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getDimXBool";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getDimXBool", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getDimXBool(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getDimXBool().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getDimXBool", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getBoolOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getBoolOverride", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getBoolOverride";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getBoolOverride", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getBoolOverride(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getBoolOverride().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getBoolOverride", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getDimXColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getDimXColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getDimXColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getDimXColor", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RColor'
+    RColor cppResult =
+        
+               self->getDimXColor(a0);
+        // return type: RColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getDimXColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getDimXColor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getColorOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getColorOverride", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getColorOverride";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getColorOverride", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RColor'
+    RColor cppResult =
+        
+               self->getColorOverride(a0);
+        // return type: RColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getColorOverride().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getColorOverride", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::isDimXScaled
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::isDimXScaled", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::isDimXScaled";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("isDimXScaled", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isDimXScaled(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.isDimXScaled().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::isDimXScaled", context, engine);
             return result;
         }
          QScriptValue
@@ -5224,91 +7587,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimensionData::getTextAngle", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDimensionData::getArrow
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDimensionData::getArrow", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getArrow";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimensionData* self = 
-                        getSelf("getArrow", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    2 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RVector */
-     && (
-            context->argument(1).isNumber()
-        ) /* type: double */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RVector*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RVector*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RDimensionData: Argument 0 is not of type RVector.",
-                               context);                    
-                    }
-                    RVector 
-                    a0 = 
-                    *ap0;
-                
-                    // argument isStandardType
-                    double
-                    a1 =
-                    (double)
-                    
-                    context->argument( 1 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QList < QSharedPointer < RShape > >'
-    QList < QSharedPointer < RShape > > cppResult =
-        
-               self->getArrow(a0
-        ,
-    a1);
-        // return type: QList < QSharedPointer < RShape > >
-                // List of ...:
-                result = REcmaHelper::listToScriptValue(engine, cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getArrow().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDimensionData::getArrow", context, engine);
             return result;
         }
          QScriptValue

@@ -83,8 +83,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, setKnownVariable, "setKnownVariable");
             
-            REcmaHelper::registerFunction(&engine, proto, setDimVariable, "setDimVariable");
-            
             REcmaHelper::registerFunction(&engine, proto, getKnownVariable, "getKnownVariable");
             
             REcmaHelper::registerFunction(&engine, proto, hasKnownVariable, "hasKnownVariable");
@@ -1225,84 +1223,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerDocumentVariables::setKnownVariable", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaSharedPointerDocumentVariables::setDimVariable
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaSharedPointerDocumentVariables::setDimVariable", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDocumentVariables::setDimVariable";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDocumentVariables* self = 
-                        getSelf("setDimVariable", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    2 && (
-            context->argument(0).isNumber()
-        ) /* type: RS::KnownVariable */
-     && (
-            context->argument(1).isVariant() || 
-            context->argument(1).isQObject() || 
-            context->argument(1).isNumber() || 
-            context->argument(1).isString() || 
-            context->argument(1).isBool() || 
-            context->argument(1).isArray() || 
-            context->argument(1).isNull() || 
-            context->argument(1).isUndefined()
-        ) /* type: QVariant */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    RS::KnownVariable
-                    a0 =
-                    (RS::KnownVariable)
-                    (int)
-                    context->argument( 0 ).
-                    toNumber();
-                
-                    // argument isCopyable or pointer
-                    QVariant
-                    a1 =
-                    qscriptvalue_cast<
-                    QVariant
-                        >(
-                        context->argument(
-                        1
-                        )
-                    );
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setDimVariable(a0
-        ,
-    a1);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.setDimVariable().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaSharedPointerDocumentVariables::setDimVariable", context, engine);
             return result;
         }
          QScriptValue

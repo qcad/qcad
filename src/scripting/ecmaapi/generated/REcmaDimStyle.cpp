@@ -41,7 +41,8 @@
             }
           
         /*
-        
+        REcmaDimStyleData::initEcma(engine, proto);
+          
         */
     
 
@@ -57,6 +58,9 @@
         // conversion for base class RObject
         REcmaHelper::registerFunction(&engine, proto, getRObject, "getRObject");
         
+        // conversion for base class RDimStyleData
+        REcmaHelper::registerFunction(&engine, proto, getRDimStyleData, "getRDimStyleData");
+        
 
     // get class name
     REcmaHelper::registerFunction(&engine, proto, getClassName, "getClassName");
@@ -65,6 +69,38 @@
     // conversion to all base classes (multiple inheritance):
     REcmaHelper::registerFunction(&engine, proto, getBaseClasses, "getBaseClasses");
     
+
+        // properties of secondary base class RDimStyleData:
+        
+
+        // methods of secondary base class RDimStyleData:
+        
+            REcmaHelper::registerFunction(&engine, proto, initFromSettings, "initFromSettings");
+            
+            REcmaHelper::registerFunction(&engine, proto, hasOverride, "hasOverride");
+            
+            REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
+            
+            REcmaHelper::registerFunction(&engine, proto, getVariant, "getVariant");
+            
+            REcmaHelper::registerFunction(&engine, proto, setVariant, "setVariant");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDouble, "getDouble");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDouble, "setDouble");
+            
+            REcmaHelper::registerFunction(&engine, proto, getInt, "getInt");
+            
+            REcmaHelper::registerFunction(&engine, proto, setInt, "setInt");
+            
+            REcmaHelper::registerFunction(&engine, proto, getBool, "getBool");
+            
+            REcmaHelper::registerFunction(&engine, proto, setBool, "setBool");
+            
+            REcmaHelper::registerFunction(&engine, proto, getColor, "getColor");
+            
+            REcmaHelper::registerFunction(&engine, proto, setColor, "setColor");
+            
 
     // properties:
     
@@ -77,45 +113,11 @@
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, updateDocumentVariables, "updateDocumentVariables");
+            
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
             
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
-            
-            REcmaHelper::registerFunction(&engine, proto, getDimscale, "getDimscale");
-            
-            REcmaHelper::registerFunction(&engine, proto, setDimscale, "setDimscale");
-            
-            REcmaHelper::registerFunction(&engine, proto, getDimtxt, "getDimtxt");
-            
-            REcmaHelper::registerFunction(&engine, proto, setDimtxt, "setDimtxt");
-            
-            REcmaHelper::registerFunction(&engine, proto, getDimgap, "getDimgap");
-            
-            REcmaHelper::registerFunction(&engine, proto, setDimgap, "setDimgap");
-            
-            REcmaHelper::registerFunction(&engine, proto, getDimasz, "getDimasz");
-            
-            REcmaHelper::registerFunction(&engine, proto, setDimasz, "setDimasz");
-            
-            REcmaHelper::registerFunction(&engine, proto, getDimexe, "getDimexe");
-            
-            REcmaHelper::registerFunction(&engine, proto, setDimexe, "setDimexe");
-            
-            REcmaHelper::registerFunction(&engine, proto, getDimexo, "getDimexo");
-            
-            REcmaHelper::registerFunction(&engine, proto, setDimexo, "setDimexo");
-            
-            REcmaHelper::registerFunction(&engine, proto, getDimtad, "getDimtad");
-            
-            REcmaHelper::registerFunction(&engine, proto, setDimtad, "setDimtad");
-            
-            REcmaHelper::registerFunction(&engine, proto, getDimtih, "getDimtih");
-            
-            REcmaHelper::registerFunction(&engine, proto, setDimtih, "setDimtih");
-            
-            REcmaHelper::registerFunction(&engine, proto, useArchTick, "useArchTick");
-            
-            REcmaHelper::registerFunction(&engine, proto, setArchTick, "setArchTick");
             
             REcmaHelper::registerFunction(&engine, proto, render, "render");
             
@@ -131,11 +133,17 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, init, "init");
             
+            REcmaHelper::registerFunction(&engine, &ctor, initDimX, "initDimX");
+            
             REcmaHelper::registerFunction(&engine, &ctor, hasProxy, "hasProxy");
             
 
     // static properties:
     
+            ctor.setProperty("propertyVariables",
+                qScriptValueFromValue(&engine, RDimStyle::propertyVariables),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
 
     // enum values:
     
@@ -260,6 +268,15 @@
                 QScriptValue result = qScriptValueFromValue(engine, cppResult);
                 return result;
             }
+             QScriptValue REcmaDimStyle::getRDimStyleData(QScriptContext *context,
+            QScriptEngine *engine)
+        
+            {
+                RDimStyleData* cppResult =
+                    qscriptvalue_cast<RDimStyle*> (context->thisObject());
+                QScriptValue result = qScriptValueFromValue(engine, cppResult);
+                return result;
+            }
             
 
     // returns class name:
@@ -278,10 +295,1116 @@
         
         list.append("RObject");
     
+        list.append("RDimStyleData");
+    
 
         return qScriptValueFromSequence(engine, list);
     }
     
+        // properties of secondary base class RDimStyleData:
+        
+
+        // methods of secondary base class RDimStyleData:
+         QScriptValue
+        REcmaDimStyle::initDefaults
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::initDefaults", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::initDefaults";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RDimStyleData::
+       initDefaults();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.initDefaults().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::initDefaults", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimStyle::getVariantDefault
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::getVariantDefault", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::getVariantDefault";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QVariant'
+    QVariant cppResult =
+        RDimStyleData::
+       getVariantDefault(a0);
+        // return type: QVariant
+                // QVariant:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.getVariantDefault().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::getVariantDefault", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimStyle::getDoubleDefault
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::getDoubleDefault", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::getDoubleDefault";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        RDimStyleData::
+       getDoubleDefault(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.getDoubleDefault().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::getDoubleDefault", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimStyle::getIntDefault
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::getIntDefault", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::getIntDefault";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RDimStyleData::
+       getIntDefault(a0);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.getIntDefault().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::getIntDefault", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimStyle::getBoolDefault
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::getBoolDefault", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::getBoolDefault";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RDimStyleData::
+       getBoolDefault(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.getBoolDefault().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::getBoolDefault", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimStyle::getColorDefault
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::getColorDefault", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::getColorDefault";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RColor'
+    RColor cppResult =
+        RDimStyleData::
+       getColorDefault(a0);
+        // return type: RColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.getColorDefault().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::getColorDefault", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimStyle::initFromSettings
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::initFromSettings", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::initFromSettings";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimStyle* self = 
+                        getSelf("initFromSettings", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->initFromSettings();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.initFromSettings().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::initFromSettings", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimStyle::hasOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::hasOverride", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::hasOverride";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimStyle* self = 
+                        getSelf("hasOverride", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasOverride(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.hasOverride().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::hasOverride", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimStyle::isValid
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::isValid", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::isValid";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimStyle* self = 
+                        getSelf("isValid", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isValid();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.isValid().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::isValid", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimStyle::getVariant
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::getVariant", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::getVariant";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimStyle* self = 
+                        getSelf("getVariant", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QVariant'
+    QVariant cppResult =
+        
+               self->getVariant(a0);
+        // return type: QVariant
+                // QVariant:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.getVariant().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::getVariant", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimStyle::setVariant
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::setVariant", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::setVariant";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimStyle* self = 
+                        getSelf("setVariant", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNumber() || 
+            context->argument(1).isString() || 
+            context->argument(1).isBool() || 
+            context->argument(1).isArray() || 
+            context->argument(1).isNull() || 
+            context->argument(1).isUndefined()
+        ) /* type: QVariant */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isCopyable or pointer
+                    QVariant
+                    a1 =
+                    qscriptvalue_cast<
+                    QVariant
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setVariant(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.setVariant().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::setVariant", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimStyle::getDouble
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::getDouble", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::getDouble";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimStyle* self = 
+                        getSelf("getDouble", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getDouble(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.getDouble().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::getDouble", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimStyle::setDouble
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::setDouble", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::setDouble";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimStyle* self = 
+                        getSelf("setDouble", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDouble(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.setDouble().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::setDouble", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimStyle::getInt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::getInt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::getInt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimStyle* self = 
+                        getSelf("getInt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getInt(a0);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.getInt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::getInt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimStyle::setInt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::setInt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::setInt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimStyle* self = 
+                        getSelf("setInt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setInt(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.setInt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::setInt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimStyle::getBool
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::getBool", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::getBool";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimStyle* self = 
+                        getSelf("getBool", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getBool(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.getBool().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::getBool", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimStyle::setBool
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::setBool", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::setBool";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimStyle* self = 
+                        getSelf("setBool", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setBool(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.setBool().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::setBool", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimStyle::getColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::getColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::getColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimStyle* self = 
+                        getSelf("getColor", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RColor'
+    RColor cppResult =
+        
+               self->getColor(a0);
+        // return type: RColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.getColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::getColor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimStyle::setColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::setColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::setColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimStyle* self = 
+                        getSelf("setColor", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RColor */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RColor*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RColor*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RDimStyleData: Argument 1 is not of type RColor.",
+                               context);                    
+                    }
+                    RColor 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setColor(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.setColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::setColor", context, engine);
+            return result;
+        }
+        
 
     // properties:
     
@@ -319,6 +1442,89 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimStyle::init", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimStyle::initDimX
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::initDimX", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::initDimX";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RPropertyTypeId */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: RS::KnownVariable */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: RS::KnownVariableType */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RPropertyTypeId*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RPropertyTypeId*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimStyle: Argument 0 is not of type RPropertyTypeId.",
+                               context);                    
+                    }
+                    RPropertyTypeId 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a1 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    RS::KnownVariableType
+                    a2 =
+                    (RS::KnownVariableType)
+                    (int)
+                    context->argument( 2 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RDimStyle::
+       initDimX(a0
+        ,
+    a1
+        ,
+    a2);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.initDimX().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::initDimX", context, engine);
             return result;
         }
          QScriptValue
@@ -461,6 +1667,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimStyle::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimStyle::updateDocumentVariables
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::updateDocumentVariables", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::updateDocumentVariables";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimStyle* self = 
+                        getSelf("updateDocumentVariables", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->updateDocumentVariables();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.updateDocumentVariables().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::updateDocumentVariables", context, engine);
             return result;
         }
          QScriptValue
@@ -703,942 +1953,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimStyle::setProperty", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDimStyle::getDimscale
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDimStyle::getDimscale", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::getDimscale";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimStyle* self = 
-                        getSelf("getDimscale", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'double'
-    double cppResult =
-        
-               self->getDimscale();
-        // return type: double
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.getDimscale().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDimStyle::getDimscale", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDimStyle::setDimscale
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDimStyle::setDimscale", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::setDimscale";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimStyle* self = 
-                        getSelf("setDimscale", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isNumber()
-        ) /* type: double */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    double
-                    a0 =
-                    (double)
-                    
-                    context->argument( 0 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setDimscale(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.setDimscale().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDimStyle::setDimscale", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDimStyle::getDimtxt
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDimStyle::getDimtxt", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::getDimtxt";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimStyle* self = 
-                        getSelf("getDimtxt", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'double'
-    double cppResult =
-        
-               self->getDimtxt();
-        // return type: double
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.getDimtxt().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDimStyle::getDimtxt", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDimStyle::setDimtxt
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDimStyle::setDimtxt", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::setDimtxt";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimStyle* self = 
-                        getSelf("setDimtxt", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isNumber()
-        ) /* type: double */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    double
-                    a0 =
-                    (double)
-                    
-                    context->argument( 0 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setDimtxt(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.setDimtxt().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDimStyle::setDimtxt", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDimStyle::getDimgap
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDimStyle::getDimgap", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::getDimgap";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimStyle* self = 
-                        getSelf("getDimgap", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'double'
-    double cppResult =
-        
-               self->getDimgap();
-        // return type: double
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.getDimgap().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDimStyle::getDimgap", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDimStyle::setDimgap
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDimStyle::setDimgap", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::setDimgap";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimStyle* self = 
-                        getSelf("setDimgap", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isNumber()
-        ) /* type: double */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    double
-                    a0 =
-                    (double)
-                    
-                    context->argument( 0 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setDimgap(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.setDimgap().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDimStyle::setDimgap", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDimStyle::getDimasz
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDimStyle::getDimasz", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::getDimasz";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimStyle* self = 
-                        getSelf("getDimasz", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'double'
-    double cppResult =
-        
-               self->getDimasz();
-        // return type: double
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.getDimasz().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDimStyle::getDimasz", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDimStyle::setDimasz
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDimStyle::setDimasz", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::setDimasz";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimStyle* self = 
-                        getSelf("setDimasz", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isNumber()
-        ) /* type: double */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    double
-                    a0 =
-                    (double)
-                    
-                    context->argument( 0 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setDimasz(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.setDimasz().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDimStyle::setDimasz", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDimStyle::getDimexe
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDimStyle::getDimexe", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::getDimexe";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimStyle* self = 
-                        getSelf("getDimexe", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'double'
-    double cppResult =
-        
-               self->getDimexe();
-        // return type: double
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.getDimexe().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDimStyle::getDimexe", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDimStyle::setDimexe
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDimStyle::setDimexe", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::setDimexe";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimStyle* self = 
-                        getSelf("setDimexe", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isNumber()
-        ) /* type: double */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    double
-                    a0 =
-                    (double)
-                    
-                    context->argument( 0 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setDimexe(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.setDimexe().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDimStyle::setDimexe", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDimStyle::getDimexo
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDimStyle::getDimexo", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::getDimexo";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimStyle* self = 
-                        getSelf("getDimexo", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'double'
-    double cppResult =
-        
-               self->getDimexo();
-        // return type: double
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.getDimexo().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDimStyle::getDimexo", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDimStyle::setDimexo
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDimStyle::setDimexo", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::setDimexo";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimStyle* self = 
-                        getSelf("setDimexo", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isNumber()
-        ) /* type: double */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    double
-                    a0 =
-                    (double)
-                    
-                    context->argument( 0 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setDimexo(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.setDimexo().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDimStyle::setDimexo", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDimStyle::getDimtad
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDimStyle::getDimtad", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::getDimtad";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimStyle* self = 
-                        getSelf("getDimtad", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'int'
-    int cppResult =
-        
-               self->getDimtad();
-        // return type: int
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.getDimtad().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDimStyle::getDimtad", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDimStyle::setDimtad
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDimStyle::setDimtad", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::setDimtad";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimStyle* self = 
-                        getSelf("setDimtad", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isNumber()
-        ) /* type: int */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    int
-                    a0 =
-                    (int)
-                    
-                    context->argument( 0 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setDimtad(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.setDimtad().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDimStyle::setDimtad", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDimStyle::getDimtih
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDimStyle::getDimtih", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::getDimtih";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimStyle* self = 
-                        getSelf("getDimtih", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'int'
-    int cppResult =
-        
-               self->getDimtih();
-        // return type: int
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.getDimtih().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDimStyle::getDimtih", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDimStyle::setDimtih
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDimStyle::setDimtih", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::setDimtih";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimStyle* self = 
-                        getSelf("setDimtih", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isNumber()
-        ) /* type: int */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    int
-                    a0 =
-                    (int)
-                    
-                    context->argument( 0 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setDimtih(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.setDimtih().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDimStyle::setDimtih", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDimStyle::useArchTick
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDimStyle::useArchTick", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::useArchTick";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimStyle* self = 
-                        getSelf("useArchTick", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        
-               self->useArchTick();
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.useArchTick().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDimStyle::useArchTick", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDimStyle::setArchTick
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDimStyle::setArchTick", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::setArchTick";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimStyle* self = 
-                        getSelf("setArchTick", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isBool()
-        ) /* type: bool */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    bool
-                    a0 =
-                    (bool)
-                    
-                    context->argument( 0 ).
-                    toBool();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setArchTick(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.setArchTick().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDimStyle::setArchTick", context, engine);
             return result;
         }
          QScriptValue

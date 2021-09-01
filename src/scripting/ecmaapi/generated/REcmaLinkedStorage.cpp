@@ -73,6 +73,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, clear, "clear");
             
+            REcmaHelper::registerFunction(&engine, proto, clearLinked, "clearLinked");
+            
             REcmaHelper::registerFunction(&engine, proto, queryAllObjects, "queryAllObjects");
             
             REcmaHelper::registerFunction(&engine, proto, querySelectedLayers, "querySelectedLayers");
@@ -443,6 +445,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLinkedStorage::clear", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinkedStorage::clearLinked
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinkedStorage::clearLinked", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::clearLinked";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinkedStorage* self = 
+                        getSelf("clearLinked", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clearLinked();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.clearLinked().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::clearLinked", context, engine);
             return result;
         }
          QScriptValue

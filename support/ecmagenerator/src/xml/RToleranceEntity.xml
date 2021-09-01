@@ -119,7 +119,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
     </method>
-    <method name="getDimScale" cppName="getDimScale"
+    <method name="getDimscale" cppName="getDimscale"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false">
@@ -202,8 +202,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyDirectionZ" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyText" type="RPropertyTypeId"
-    isConst="false" isStatic="true" />
-    <property name="PropertyDimScale" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
   </class>
 </unit>

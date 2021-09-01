@@ -35,6 +35,8 @@
     // conversion functions for base classes:
     static  QScriptValue getRObject(QScriptContext *context,
             QScriptEngine *engine)
+        ;static  QScriptValue getRDimStyleData(QScriptContext *context,
+            QScriptEngine *engine)
         ;
 
     // returns class name:
@@ -44,6 +46,68 @@
     // returns all base classes (in case of multiple inheritance):
     static  QScriptValue getBaseClasses(QScriptContext *context, QScriptEngine *engine) 
         ;
+        // properties of secondary base class RDimStyleData:
+        
+
+        // methods of secondary base class RDimStyleData:
+        static  QScriptValue
+        initDefaults
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getVariantDefault
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDoubleDefault
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getIntDefault
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getBoolDefault
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getColorDefault
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        initFromSettings
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isValid
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getVariant
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setVariant
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDouble
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDouble
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getInt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setInt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getBool
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setBool
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;
 
     // properties:
     
@@ -51,6 +115,9 @@
     // public methods:
     static  QScriptValue
         init
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        initDimX
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         clear
@@ -62,64 +129,13 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        updateDocumentVariables
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setProperty
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getDimscale
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setDimscale
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getDimtxt
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setDimtxt
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getDimgap
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setDimgap
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getDimasz
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setDimasz
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getDimexe
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setDimexe
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getDimexo
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setDimexo
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getDimtad
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setDimtad
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getDimtih
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setDimtih
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        useArchTick
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setArchTick
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         render

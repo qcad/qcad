@@ -118,6 +118,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isDimensionLabel, "isDimensionLabel");
             
+            REcmaHelper::registerFunction(&engine, proto, setInteger, "setInteger");
+            
             REcmaHelper::registerFunction(&engine, proto, isInteger, "isInteger");
             
             REcmaHelper::registerFunction(&engine, proto, isRedundant, "isRedundant");
@@ -2260,6 +2262,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPropertyAttributes::isDimensionLabel", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyAttributes::setInteger
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyAttributes::setInteger", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyAttributes::setInteger";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyAttributes* self = 
+                        getSelf("setInteger", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setInteger(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyAttributes.setInteger().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyAttributes::setInteger", context, engine);
             return result;
         }
          QScriptValue
