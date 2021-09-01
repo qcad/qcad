@@ -563,7 +563,16 @@ public:
         VISRETAIN,
         WORLDVIEW,
         MaxKnownVariable = WORLDVIEW,
-        INVALID = -1
+        QCADARCHTICK,
+        INVALID = -1,
+    };
+
+    enum KnownVariableType {
+        VarTypeBool = 1,
+        VarTypeInt = 2,
+        VarTypeDouble = 3,
+        VarTypeColor = 4,
+        VarTypeUnknown = -1
     };
 
     enum BooleanOperation {
@@ -717,6 +726,8 @@ Q_DECLARE_METATYPE(RS::OrthoMode)
 Q_DECLARE_METATYPE(RS::OrthoMode*)
 Q_DECLARE_METATYPE(RS::KnownVariable)
 Q_DECLARE_METATYPE(RS::KnownVariable*)
+Q_DECLARE_METATYPE(RS::KnownVariableType)
+Q_DECLARE_METATYPE(RS::KnownVariableType*)
 Q_DECLARE_METATYPE(RS::LinearFormat)
 Q_DECLARE_METATYPE(RS::LinearFormat*)
 Q_DECLARE_METATYPE(RS::MessageType)
