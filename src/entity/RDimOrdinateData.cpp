@@ -269,10 +269,10 @@ QList<QSharedPointer<RShape> > RDimOrdinateData::getShapes(const RBox& queryBox,
 
 double RDimOrdinateData::getMeasuredValue() const {
     if (isMeasuringXAxis()) {
-        return qAbs(definingPoint.x-definitionPoint.x);
+        return qAbs(definingPoint.x-definitionPoint.x) * getDimlfac();
     }
     else {
-        return qAbs(definingPoint.y-definitionPoint.y);
+        return qAbs(definingPoint.y-definitionPoint.y) * getDimlfac();
     }
 }
 

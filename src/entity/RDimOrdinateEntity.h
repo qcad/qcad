@@ -69,7 +69,9 @@ public:
     static RPropertyTypeId PropertyExtLineFix;
     static RPropertyTypeId PropertyExtLineFixLength;
 
-//    static RPropertyTypeId PropertyDimScale;
+    static RPropertyTypeId PropertyDimscale;
+    static RPropertyTypeId PropertyDimlfac;
+
     static RPropertyTypeId PropertyDimBlockName;
 
     static RPropertyTypeId PropertyOriginX;
