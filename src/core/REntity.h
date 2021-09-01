@@ -83,6 +83,8 @@ public:
     static RPropertyTypeId PropertyDisplayedColor;
     static RPropertyTypeId PropertyDrawOrder;
 
+    static RPropertyTypeId PropertyParentId;
+
     static RPropertyTypeId PropertyMinX;
     static RPropertyTypeId PropertyMinY;
     static RPropertyTypeId PropertyMaxX;

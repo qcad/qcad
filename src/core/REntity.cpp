@@ -22,6 +22,7 @@
 #include "RExplodable.h"
 #include "RShape.h"
 #include "RSpline.h"
+#include "RStorage.h"
 
 RPropertyTypeId REntity::PropertyCustom;
 RPropertyTypeId REntity::PropertyHandle;
@@ -36,6 +37,8 @@ RPropertyTypeId REntity::PropertyLineweight;
 RPropertyTypeId REntity::PropertyColor;
 RPropertyTypeId REntity::PropertyDisplayedColor;
 RPropertyTypeId REntity::PropertyDrawOrder;
+
+RPropertyTypeId REntity::PropertyParentId;
 
 RPropertyTypeId REntity::PropertyMinX;
 RPropertyTypeId REntity::PropertyMaxX;
@@ -99,6 +102,8 @@ void REntity::init() {
     REntity::PropertyColor.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Color"));
     REntity::PropertyDisplayedColor.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Displayed Color"));
     REntity::PropertyDrawOrder.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Draw Order"));
+
+    REntity::PropertyParentId.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Parent Id"));
 
     REntity::PropertyMinX.generateId(typeid(REntity), QT_TRANSLATE_NOOP("REntity", "Boundary"), QT_TRANSLATE_NOOP("REntity", "Left"));
     REntity::PropertyMinY.generateId(typeid(REntity), QT_TRANSLATE_NOOP("REntity", "Boundary"), QT_TRANSLATE_NOOP("REntity", "Bottom"));
@@ -289,6 +294,9 @@ QPair<QVariant, RPropertyAttributes> REntity::getProperty(
     else if (propertyTypeId == PropertyDrawOrder) {
         return qMakePair(QVariant(getData().getDrawOrder()), RPropertyAttributes(RPropertyAttributes::UnitLess));
     }
+    else if (propertyTypeId == PropertyParentId) {
+        return qMakePair(QVariant(getData().getParentId()), RPropertyAttributes(RPropertyAttributes::UnitLess));
+    }
 
     // human readable properties (not relevant for transactions):
     if (humanReadable) {
@@ -362,6 +370,11 @@ bool REntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         ret = ret || RObject::setMember(getData().color, value, true);
     } else if (propertyTypeId == PropertyDrawOrder) {
         ret = ret || RObject::setMember(getData().drawOrder, value, true);
+    } else if (propertyTypeId == PropertyParentId) {
+        RDocument* doc = getDocument();
+        if (doc!=NULL) {
+            doc->getStorage().setEntityParentId(*this, value.toInt());
+        }
     }
 
     return ret;
