@@ -155,11 +155,11 @@ void RDimensionEntity::init() {
     RDimensionEntity::PropertyDimtad.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text above dimension line"));
     RDimensionEntity::PropertyDimtih.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text inside horizontal"));
     RDimensionEntity::PropertyDimtsz.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Tick size"));
-    RDimensionEntity::PropertyDimlunit.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Linear unit"));
+    RDimensionEntity::PropertyDimlunit.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Linear format"));
     RDimensionEntity::PropertyDimdec.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Decimal places"));
     RDimensionEntity::PropertyDimdsep.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Decimal separator"));
     RDimensionEntity::PropertyDimzin.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Zero suppression"));
-    RDimensionEntity::PropertyDimaunit.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Angular unit"));
+    RDimensionEntity::PropertyDimaunit.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Angular format"));
     RDimensionEntity::PropertyDimadec.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Angular decimal places"));
     RDimensionEntity::PropertyDimazin.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Angular zero suppression"));
     RDimensionEntity::PropertyArchTick.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Architectur tick"));
@@ -231,10 +231,22 @@ bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
     }
 
     for (int i=0; i<RDimStyle::propertyVariables.length(); i++) {
-        //RDimStyle::RDimXVar p = RDimStyle::propertyVariables[i];
         if (RDimStyle::propertyVariables[i].first==propertyTypeId) {
-            getData().overrides.setVariant(RDimStyle::propertyVariables[i].second, value);
+
+            if (propertyTypeId==RDimensionEntity::PropertyDimdsep) {
+                if (value.type()==QVariant::String) {
+                    QString str = value.toString();
+                    if (str.length()>=1) {
+                        getData().setDimXVariant(RDimStyle::propertyVariables[i].second, str.at(0).unicode());
+                        ret = true;
+                    }
+                    break;
+                }
+            }
+
+            getData().setDimXVariant(RDimStyle::propertyVariables[i].second, value);
             ret = true;
+            break;
         }
     }
 
@@ -355,9 +367,18 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
         //RDimStyle::RDimXVar p = RDimStyle::propertyVariables[i];
         if (RDimStyle::propertyVariables[i].first==propertyTypeId) {
             RPropertyAttributes attr;
+
             if (RDimStyleData::getType(RDimStyle::propertyVariables[i].second)==RS::VarTypeInt) {
                 attr.setInteger(true);
             }
+            if (propertyTypeId==RDimensionEntity::PropertyDimdsep) {
+                // show DIMDESP as string
+                QVariant v = getData().getDimXVariant(RDimStyle::propertyVariables[i].second);
+                QString str;
+                str.append(QChar(v.toInt()));
+                return qMakePair(str, RPropertyAttributes());
+            }
+
             // TODO: add advanced attribute to show / hide in PE
             return qMakePair(getData().getDimXVariant(RDimStyle::propertyVariables[i].second), attr);
         }

@@ -1315,6 +1315,88 @@ WidgetFactory.initVAlignCombo = function(comboBox) {
     comboBox.addItem(qsTr("Bottom"), RS.VAlignBottom);
 };
 
+WidgetFactory.initDimlunitCombo = function(comboBox) {
+    comboBox.clear();
+    comboBox.addItem(qsTr("Scientific"), RS.Scientific);
+    comboBox.addItem(qsTr("Decimal"), RS.Decimal);
+    comboBox.addItem(qsTr("Engineering"), RS.Engineering);
+    comboBox.addItem(qsTr("Architectural"), RS.ArchitecturalStacked);
+    comboBox.addItem(qsTr("Fractional"), RS.FractionalStacked);
+};
+
+WidgetFactory.initDimtadCombo = function(comboBox) {
+    comboBox.clear();
+    comboBox.addItem(qsTr("On"), 0);
+    comboBox.addItem(qsTr("Above"), 1);
+};
+
+WidgetFactory.initDimdsepCombo = function(comboBox) {
+    comboBox.clear();
+    comboBox.addItem(qsTr("."), '.');
+    comboBox.addItem(qsTr(","), ',');
+};
+
+WidgetFactory.initDimzinCombo = function(comboBox) {
+    comboBox.clear();
+    //comboBox.addItem(qsTr("Suppress 0'0\" (unsupported)"), 0);
+    comboBox.addItem(qsTr("Show trailing zeroes"), 0);
+    comboBox.addItem(qsTr("Include 0'0\" (unsupported)"), 1);
+    comboBox.addItem(qsTr("Include 0', suppress 0\" (unsupported)"), 2);
+    comboBox.addItem(qsTr("Include 0\", suppress 0' (unsupported)"), 3);
+    comboBox.addItem(qsTr("Suppress leading zeros (unsupported)"), 4);
+    comboBox.addItem(qsTr("Suppress trailing zeros"), 8);
+    comboBox.addItem(qsTr("Suppress leading / trailing zeros (unsupported)"), 12);
+
+//    comboBox.addItem(qsTr("Suppress 0'0\""), 0);
+//    comboBox.addItem(qsTr("Include 0'0\""), 1);
+//    comboBox.addItem(qsTr("Include 0', suppress 0\""), 2);
+//    comboBox.addItem(qsTr("Include 0\", suppress 0'"), 3);
+};
+
+WidgetFactory.initDimdecCombo = function(comboBox) {
+    comboBox.clear();
+    comboBox.addItem(qsTr("0"), 0);
+    comboBox.addItem(qsTr("1"), 1);
+    comboBox.addItem(qsTr("2"), 2);
+    comboBox.addItem(qsTr("3"), 3);
+    comboBox.addItem(qsTr("4"), 4);
+    comboBox.addItem(qsTr("5"), 5);
+    comboBox.addItem(qsTr("6"), 6);
+    comboBox.addItem(qsTr("7"), 7);
+    comboBox.addItem(qsTr("8"), 8);
+
+};
+WidgetFactory.initDimaunitCombo = function(comboBox) {
+    comboBox.clear();
+    comboBox.addItem(qsTr("Decimal Degrees"), RS.DegreesDecimal);
+    comboBox.addItem(qsTr("Deg/min/sec"), RS.DegreesMinutesSeconds);
+    comboBox.addItem(qsTr("Gradians"), RS.Gradians);
+    comboBox.addItem(qsTr("Radians"), RS.Radians);
+    comboBox.addItem(qsTr("Surveyor's units"), RS.Surveyors);
+};
+
+WidgetFactory.initDimazinCombo = function(comboBox) {
+    comboBox.clear();
+    comboBox.addItem(qsTr("Show trailing zeroes"), 0);
+    comboBox.addItem(qsTr("Suppress leading zeroes (unsupported)"), 1);
+    comboBox.addItem(qsTr("Suppress trailing zeroes"), 2);
+    comboBox.addItem(qsTr("Suppress leading / trailing zeroes (unsupported)"), 3);
+};
+
+WidgetFactory.initDimadecCombo = function(comboBox) {
+    comboBox.clear();
+    comboBox.addItem(qsTr("0"), 0);
+    comboBox.addItem(qsTr("1"), 1);
+    comboBox.addItem(qsTr("2"), 2);
+    comboBox.addItem(qsTr("3"), 3);
+    comboBox.addItem(qsTr("4"), 4);
+    comboBox.addItem(qsTr("5"), 5);
+    comboBox.addItem(qsTr("6"), 6);
+    comboBox.addItem(qsTr("7"), 7);
+    comboBox.addItem(qsTr("8"), 8);
+};
+
+
 WidgetFactory.initOrientationCombo = function(comboBox) {
     comboBox.clear();
 

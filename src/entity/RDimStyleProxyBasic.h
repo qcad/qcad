@@ -44,6 +44,9 @@ class RLine;
  */
 class QCADENTITY_EXPORT RDimStyleProxyBasic : public RDimStyleProxy {
 public:
+    RDimStyleProxyBasic() :
+        document(NULL), dimensionData(NULL), dimStyle(NULL), preview(false), forceSelected(false), outsideArrow1(false), outsideArrow2(false) {}
+
     virtual ~RDimStyleProxyBasic() {}
 
     virtual void render(const RDimStyle& dimStyle, const REntityData& entity, bool preview, bool forceSelected);
@@ -63,6 +66,7 @@ protected:
 
     virtual void updateTextPosition(const QString& text, double textWidth, const RVector& dimLine1, const RVector& dimLine2, bool corrected);
 
+    virtual void updateOutsideArrow(const RVector& p1, const RVector& p2);
     virtual QList<QSharedPointer<RShape> > getDimensionLineShapes(const RVector& p1, const RVector& p2, bool arrow1, bool arrow2) const;
     virtual bool hasSpaceForArrows(double dimLineLength) const;
     virtual QList<QSharedPointer<RShape> > getArrow(const RVector& position, double direction) const;
@@ -74,6 +78,8 @@ protected:
     const RDimStyle* dimStyle;
     bool preview;
     bool forceSelected;
+    mutable bool outsideArrow1;
+    mutable bool outsideArrow2;
 };
 
 #endif

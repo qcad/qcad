@@ -234,6 +234,7 @@ public:
 //        }
 //    }
 
+    void setDimXVariant(RS::KnownVariable key, const QVariant& v);
     void setDimXDouble(RS::KnownVariable key, double v);
     void setDimXInt(RS::KnownVariable key, int v);
     void setDimXBool(RS::KnownVariable key, bool v);
@@ -241,12 +242,16 @@ public:
 
     QVariant getDimXVariant(RS::KnownVariable key) const;
     QVariant getVariantOverride(RS::KnownVariable key) const;
+
     double getDimXDouble(RS::KnownVariable key) const;
     double getDoubleOverride(RS::KnownVariable key) const;
+
     int getDimXInt(RS::KnownVariable key) const;
     int getIntOverride(RS::KnownVariable key) const;
+
     bool getDimXBool(RS::KnownVariable key) const;
     bool getBoolOverride(RS::KnownVariable key) const;
+
     RColor getDimXColor(RS::KnownVariable key) const;
     RColor getColorOverride(RS::KnownVariable key) const;
 

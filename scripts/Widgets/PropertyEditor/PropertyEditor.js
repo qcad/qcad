@@ -845,6 +845,23 @@ PropertyEditorImpl.prototype.initControls = function(propertyTypeId, onlyChanges
                     objectName, propertyTypeId, onlyChanges, control, false, true);
     }
 
+    // DIMLUNIT: combo box with DIMLUNIT choices:
+    else if (propertyTypeId.getId()===RDimensionEntity.PropertyDimlunit.getId() ||
+             propertyTypeId.getId()===RDimensionEntity.PropertyDimtad.getId() ||
+             //propertyTypeId.getId()===RDimensionEntity.PropertyDimdsep.getId() ||
+             propertyTypeId.getId()===RDimensionEntity.PropertyDimzin.getId() ||
+             propertyTypeId.getId()===RDimensionEntity.PropertyDimdec.getId() ||
+             propertyTypeId.getId()===RDimensionEntity.PropertyDimaunit.getId() ||
+             propertyTypeId.getId()===RDimensionEntity.PropertyDimazin.getId() ||
+             propertyTypeId.getId()===RDimensionEntity.PropertyDimadec.getId()) {
+        controls = this.initChoiceControls(
+                    objectName, propertyTypeId, onlyChanges, control, false, true);
+    }
+
+    else if (propertyTypeId.getId()===RDimensionEntity.PropertyDimdsep.getId()) {
+        controls = this.initStringControls(objectName, propertyTypeId, onlyChanges, control);
+        //controls[0].maxLength = 1;
+    }
 
     // Hatch pattern: combo box with hatch names:
     else if (propertyTypeId.getId()===RHatchEntity.PropertyPatternName.getId()) {
@@ -1198,6 +1215,27 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
     }
     else if (propertyTypeId.getId()===RTextEntity.PropertyVAlign.getId()) {
         WidgetFactory.initVAlignCombo(control);
+    }
+    else if (propertyTypeId.getId()===RDimensionEntity.PropertyDimlunit.getId()) {
+        WidgetFactory.initDimlunitCombo(control);
+    }
+    else if (propertyTypeId.getId()===RDimensionEntity.PropertyDimtad.getId()) {
+        WidgetFactory.initDimtadCombo(control);
+    }
+    else if (propertyTypeId.getId()===RDimensionEntity.PropertyDimzin.getId()) {
+        WidgetFactory.initDimzinCombo(control);
+    }
+    else if (propertyTypeId.getId()===RDimensionEntity.PropertyDimdec.getId()) {
+        WidgetFactory.initDimdecCombo(control);
+    }
+    else if (propertyTypeId.getId()===RDimensionEntity.PropertyDimaunit.getId()) {
+        WidgetFactory.initDimaunitCombo(control);
+    }
+    else if (propertyTypeId.getId()===RDimensionEntity.PropertyDimazin.getId()) {
+        WidgetFactory.initDimazinCombo(control);
+    }
+    else if (propertyTypeId.getId()===RDimensionEntity.PropertyDimadec.getId()) {
+        WidgetFactory.initDimadecCombo(control);
     }
     else if (propertyTypeId.getId()===RPolylineEntity.PropertyOrientation.getId()) {
         WidgetFactory.initOrientationCombo(control);

@@ -169,11 +169,11 @@ void RDimStyle::init() {
     RDimStyle::PropertyDimtad.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Text above dimension line"));
     RDimStyle::PropertyDimtih.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Text inside horizontal"));
     RDimStyle::PropertyDimtsz.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Tick size"));
-    RDimStyle::PropertyDimlunit.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Linear unit"));
+    RDimStyle::PropertyDimlunit.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Linear format"));
     RDimStyle::PropertyDimdec.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Decimal places"));
     RDimStyle::PropertyDimdsep.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Decimal separator"));
     RDimStyle::PropertyDimzin.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Zero suppression"));
-    RDimStyle::PropertyDimaunit.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Angular unit"));
+    RDimStyle::PropertyDimaunit.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Angular format"));
     RDimStyle::PropertyDimadec.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Angular decimal places"));
     RDimStyle::PropertyDimazin.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Angular zero suppression"));
     RDimStyle::PropertyArchTick.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Architectur tick"));

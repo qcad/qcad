@@ -110,6 +110,8 @@ void RDimStyleProxyBasic::renderDimRotated() {
         textAngle = RMath::makeAngleReadable(definitionPoint1.getAngleTo(definitionPoint2), true, &corrected);
     }
 
+    updateOutsideArrow(definitionPoint1, definitionPoint2);
+
     // export text label:
     RTextData& textData = data.initTextData();
     double textWidth = textData.getWidth();
@@ -686,8 +688,8 @@ void RDimStyleProxyBasic::renderDimAngular() {
     double distance = dimArc.getLength();
 
     // do we have to put the arrows outside of the arc?
-    bool outsideArrow1 = (distance<dimasz*2);
-    bool outsideArrow2 = outsideArrow1;
+    outsideArrow1 = (distance<dimasz*2);
+    outsideArrow2 = outsideArrow1;
 
     // force flipping arrows (against logic above):
     if (data.isArrow1Flipped()) {
@@ -825,6 +827,7 @@ void RDimStyleProxyBasic::renderDimAngular() {
  * \return Text position
  */
 void RDimStyleProxyBasic::updateTextPosition(const QString& text, double textWidth, const RVector& dimLine1, const RVector& dimLine2, bool corrected) {
+    qDebug() << "updateTextPosition: outsideArrow1:" << outsideArrow1;
     if (!dimensionData->hasCustomTextPosition()) {
         double dimtxt = dimensionData->getDimtxt();
         double dimgap = dimensionData->getDimgap();
@@ -857,9 +860,38 @@ void RDimStyleProxyBasic::updateTextPosition(const QString& text, double textWid
         double dimLineLength = dimLine1.getDistanceTo(dimLine2);
         double angle = dimLine1.getAngleTo(dimLine2);
         RVector textPositionSide;
-        if (!RMath::isNaN(dimLineLength) && textWidth>dimLineLength-2*dimasz) {
+
+        // minimum space required for text:
+        double minSpace = dimLineLength;
+        qDebug() << "outsideArrow1:" << outsideArrow1;
+        if (!outsideArrow1) {
+            minSpace -= dimasz;
+        }
+        if (!outsideArrow2) {
+            minSpace -= dimasz;
+        }
+        if (dimtad==0 || dimtih==true) {
+            // if text is centered on dim line, we need more space:
+            minSpace -= dimgap*2;
+        }
+        else {
+            if (outsideArrow1 && outsideArrow2) {
+                minSpace -= dimgap*2;
+            }
+        }
+        qDebug() << "minSpace:" << minSpace;
+
+        if (!RMath::isNaN(minSpace) && textWidth>minSpace) {
+            double h = textWidth/2.0+dimLineLength/2.0+dimgap;
+            if (dimtad==0 || dimtih==true) {
+                // text in line with dimension line:
+                // move further away to move away from arrows:
+                if (outsideArrow2) {
+                    h += dimasz;
+                }
+            }
             RVector distH;
-            distH.setPolar(textWidth/2.0+dimLineLength/2.0+dimgap, angle);
+            distH.setPolar(h, angle);
             textPositionSide = newTextPos;
             textPositionSide+=distH;
             qDebug() << "textPositionSide: " << textPositionSide;
@@ -873,22 +905,13 @@ void RDimStyleProxyBasic::updateTextPosition(const QString& text, double textWid
     }
 }
 
-/**
- * Creates a dimensioning line (line with one, two or no arrows).
- */
-QList<QSharedPointer<RShape> > RDimStyleProxyBasic::getDimensionLineShapes(const RVector& p1, const RVector& p2, bool arrow1, bool arrow2) const {
-    QList<QSharedPointer<RShape> > ret;
-
-    // arrow size:
-    double dimasz = dimensionData->getDimasz();
-    bool archTick = dimensionData->useArchTick();
-
+void RDimStyleProxyBasic::updateOutsideArrow(const RVector& p1, const RVector& p2) {
     // length of dimension line:
     double dimLineLength = p1.getDistanceTo(p2);
 
     // do we have to put the arrows outside of the line?
-    bool outsideArrow1 = !hasSpaceForArrows(dimLineLength);
-    bool outsideArrow2 = outsideArrow1;
+    outsideArrow1 = !hasSpaceForArrows(dimLineLength);
+    outsideArrow2 = outsideArrow1;
 
     // force flipping arrows (against logic above):
     if (dimensionData->isArrow1Flipped()) {
@@ -897,6 +920,37 @@ QList<QSharedPointer<RShape> > RDimStyleProxyBasic::getDimensionLineShapes(const
     if (dimensionData->isArrow2Flipped()) {
         outsideArrow2 = !outsideArrow2;
     }
+
+    qDebug() << "outsideArrow1:" << outsideArrow1;
+}
+
+/**
+ * Creates a dimensioning line (line with one, two or no arrows).
+ */
+QList<QSharedPointer<RShape> > RDimStyleProxyBasic::getDimensionLineShapes(const RVector& p1, const RVector& p2, bool arrow1, bool arrow2) const {
+    qDebug() << "getDimensionLineShapes";
+    QList<QSharedPointer<RShape> > ret;
+
+    // arrow size:
+    double dimasz = dimensionData->getDimasz();
+    bool archTick = dimensionData->useArchTick();
+
+    // length of dimension line:
+//    double dimLineLength = p1.getDistanceTo(p2);
+
+    // do we have to put the arrows outside of the line?
+//    outsideArrow1 = !hasSpaceForArrows(dimLineLength);
+//    outsideArrow2 = outsideArrow1;
+
+    // force flipping arrows (against logic above):
+//    if (dimensionData->isArrow1Flipped()) {
+//        outsideArrow1 = !outsideArrow1;
+//    }
+//    if (dimensionData->isArrow2Flipped()) {
+//        outsideArrow2 = !outsideArrow2;
+//    }
+
+//    qDebug() << "outsideArrow1:" << outsideArrow1;
 
     // arrow angles:
     double arrowAngle1, arrowAngle2;

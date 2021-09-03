@@ -133,29 +133,43 @@ void RDimensionData::render() const {
     }
 }
 
-void RDimensionData::setDimXDouble(RS::KnownVariable key, double v) {
-    bool match = key==RS::DIMTXT;
-    if (match) qDebug() << "setting DIMTXT";
+void RDimensionData::setDimXVariant(RS::KnownVariable key, const QVariant& v) {
+    if (!RDimStyleData::dimXTypes.contains(key)) {
+        qWarning() << "type of variable not known:" << key;
+        return;
+    }
 
+    RS::KnownVariableType type = RDimStyleData::dimXTypes[key];
+    switch (type) {
+    case RS::VarTypeBool:
+        setDimXBool(key, v.toBool());
+        break;
+    case RS::VarTypeInt:
+        setDimXInt(key, v.toInt());
+        break;
+    case RS::VarTypeDouble:
+        setDimXDouble(key, v.toInt());
+        break;
+    case RS::VarTypeColor:
+        setDimXColor(key, v.value<RColor>());
+        break;
+    default:
+        qWarning() << "unkown variable type:" << type;
+        break;
+    }
+}
+
+void RDimensionData::setDimXDouble(RS::KnownVariable key, double v) {
     if (document!=NULL) {
         QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
         if (!dimStyle.isNull()) {
-            if (match) qDebug() << "got dimstyle";
             double vStyle = dimStyle->getDouble(key);
             if (RMath::fuzzyCompare(v, vStyle)) {
-                if (match) qDebug() << "dimtxt same as style: remove or ignore";
                 overrides.removeDouble(key);
                 update();
                 return;
             }
         }
-        else {
-            if (match) qDebug() << "dimstyle is NULL";
-        }
-    }
-    else {
-        if (match) qDebug() << "document is NULL";
-        if (match) RDebug::printBacktrace();
     }
     overrides.setDouble(key, v);
     update();
