@@ -402,7 +402,7 @@ public:
         CHAMFERA,
         CHAMFERB,
         CHAMFERC,
-        CHAMFERD,
+        CHAMFERD,  // 10
         CLAYER,
         CMLJUST,
         CMLSCALE,
@@ -413,7 +413,7 @@ public:
         DIMALTF,
         DIMALTRND,
         DIMALTTD,
-        DIMALTTZ,
+        DIMALTTZ,  // 20
         DIMALTU,
         DIMALTZ,
         DIMAPOST,
@@ -425,7 +425,7 @@ public:
         DIMAZIN,
         DIMBLK,
         DIMBLK1,
-        DIMBLK2,
+        DIMBLK2,  // 30
         DIMCEN,
         DIMCLRD,
         DIMCLRE,
@@ -437,7 +437,7 @@ public:
         /** Decimal separator in dimensions */
         DIMDSEP,
         DIMEXE,
-        DIMEXO,
+        DIMEXO,  // 40
         DIMFRAC,
         /** Distance between dimension text and dimension lines, negative for box */
         DIMGAP,
@@ -450,7 +450,7 @@ public:
         DIMLUNIT,
         DIMLWD,
         DIMLWE,
-        DIMPOST,
+        DIMPOST,  // 50
         DIMRND,
         DIMSAH,
         DIMSCALE,
@@ -461,7 +461,7 @@ public:
         DIMSOXD,
         /** Vertical position of dimension label */
         DIMTAD,
-        DIMTDEC,
+        DIMTDEC,  // 60
         DIMTFAC,
         DIMTIH,
         DIMTIX,
@@ -472,7 +472,7 @@ public:
         DIMTOLJ,
         DIMTP,
         /** Archtick size or 0 for arrows */
-        DIMTSZ,
+        DIMTSZ,  // 70
         DIMTVP,
         DIMTXSTY,
         /** Dimension text size */
@@ -484,7 +484,7 @@ public:
         DISPSILH,
         DWGCODEPAGE,
         DRAWORDERCTL,
-        ELEVATION,
+        ELEVATION,  // 80
         EXTMAX,
         EXTMIN,
         FACETRES,
