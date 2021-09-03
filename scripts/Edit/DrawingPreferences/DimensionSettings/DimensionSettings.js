@@ -156,11 +156,7 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
 
     // init linear dimension format combo boxes:
     if (!isNull(wlf)) {
-        wlf.addItem(qsTr("Scientific"), RS.Scientific);
-        wlf.addItem(qsTr("Decimal"), RS.Decimal);
-        wlf.addItem(qsTr("Engineering"), RS.Engineering);
-        wlf.addItem(qsTr("Architectural"), RS.ArchitecturalStacked);
-        wlf.addItem(qsTr("Fractional"), RS.FractionalStacked);
+        WidgetFactory.initDimlunitCombo(wlf);
         var defaultFormat = RUnit.isMetric(unit) ? RS.Decimal : RS.FractionalStacked;
         wlf.currentIndex = wlf.findData(RSettings.getIntValue(settingsName + "/LinearFormat", defaultFormat));
         // unsupported:
@@ -192,11 +188,7 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
 
     // init angular dimension format combo boxes:
     if (!isNull(waf)) {
-        waf.addItem(qsTr("Decimal Degrees"), RS.DegreesDecimal);
-        waf.addItem(qsTr("Deg/min/sec"), RS.DegreesMinutesSeconds);
-        waf.addItem(qsTr("Gradians"), RS.Gradians);
-        waf.addItem(qsTr("Radians"), RS.Radians);
-        waf.addItem(qsTr("Surveyor's units"), RS.Surveyors);
+        WidgetFactory.initDimaunitCombo(waf);
         waf.currentIndex = waf.findData(RSettings.getIntValue(settingsName + "/AngularFormat", RS.DegreesDecimal));
 
         waf["activated(int)"].connect(function() {
