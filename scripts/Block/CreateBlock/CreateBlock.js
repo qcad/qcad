@@ -86,8 +86,9 @@ CreateBlock.prototype.coordinateEvent = function(event) {
  * \param select True to select created block reference.
  * \param copy True to copy the entities into the new block, false to move entities.
  * \param createReference True to create a block reference in place of the entities.
+ * \param startTransactionGroup True to start a transaction group, reuse current transaction group otherwise
  */
-CreateBlock.createBlock = function(di, block, referencePoint, entityIds, title, select, copy, createReference) {
+CreateBlock.createBlock = function(di, block, referencePoint, entityIds, title, select, copy, createReference, startTransactionGroup) {
     if (isNull(select)) {
         select = false;
     }
@@ -97,12 +98,17 @@ CreateBlock.createBlock = function(di, block, referencePoint, entityIds, title, 
     if (isNull(createReference)) {
         createReference = true;
     }
+    if (isNull(startTransactionGroup)) {
+        startTransactionGroup = true;
+    }
 
     var i, entity, op;
     var doc = di.getDocument();
     var storage = doc.getStorage();
 
-    doc.startTransactionGroup();
+    if (startTransactionGroup) {
+        doc.startTransactionGroup();
+    }
 
     op = new RAddObjectsOperation();
     op.setTransactionGroup(doc.getTransactionGroup());
