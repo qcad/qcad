@@ -317,6 +317,10 @@
                 qScriptValueFromValue(&engine, REntity::PropertyDrawOrder),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyParentId",
+                qScriptValueFromValue(&engine, REntity::PropertyParentId),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyMinX",
                 qScriptValueFromValue(&engine, REntity::PropertyMinX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

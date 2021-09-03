@@ -99,8 +99,7 @@
     <comment type="block">/**
      * \nonscriptable
      */</comment>
-    <function_decl><type><name>void</name></type> <name>generateId</name><parameter_list>(<param><decl><type><name>const</name> <name><name>std</name>::<name>type_info</name></name>&amp;</type> <name>classInfo</name></decl></param>, 
-        <param><decl><type><name>const</name> <name>RPropertyTypeId</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>generateId</name><parameter_list>(<param><decl><type><name>const</name> <name><name>std</name>::<name>type_info</name></name>&amp;</type> <name>classInfo</name></decl></param>,  <param><decl><type><name>const</name> <name>RPropertyTypeId</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="block">/**
      * \nonscriptable
@@ -113,8 +112,7 @@
             <param><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>QString</name></type> <name>getPropertyGroupTitle</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QString</name></type> <name>getPropertyTitle</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>getPropertyTypeId</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>groupTitle</name></decl></param>,
-            <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>getPropertyTypeId</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>groupTitle</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>bool</name></type> <name>operator ==</name><parameter_list>(<param><decl><type><name>const</name> <name>RPropertyTypeId</name>&amp;</type> <name>other</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>operator !=</name><parameter_list>(<param><decl><type><name>const</name> <name>RPropertyTypeId</name>&amp;</type> <name>other</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>

@@ -227,6 +227,21 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="key" isConst="false" />
       </variant>
     </method>
+    <method name="getOverrides" cppName="getOverrides"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RDimStyleData" isPureVirtual="false" />
+    </method>
+    <method name="setDimXVariant" cppName="setDimXVariant"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
+        name="key" isConst="false" />
+        <arg type="QVariant &amp;" typeName="QVariant" name="v"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="setDimXDouble" cppName="setDimXDouble"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -264,6 +279,86 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="key" isConst="false" />
         <arg type="RColor &amp;" typeName="RColor" name="v"
         isConst="true" />
+      </variant>
+    </method>
+    <method name="getDimXVariant" cppName="getDimXVariant"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QVariant" isPureVirtual="false">
+        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
+        name="key" isConst="false" />
+      </variant>
+    </method>
+    <method name="getVariantOverride" cppName="getVariantOverride"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QVariant" isPureVirtual="false">
+        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
+        name="key" isConst="false" />
+      </variant>
+    </method>
+    <method name="getDimXDouble" cppName="getDimXDouble"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
+        name="key" isConst="false" />
+      </variant>
+    </method>
+    <method name="getDoubleOverride" cppName="getDoubleOverride"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
+        name="key" isConst="false" />
+      </variant>
+    </method>
+    <method name="getDimXInt" cppName="getDimXInt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
+        name="key" isConst="false" />
+      </variant>
+    </method>
+    <method name="getIntOverride" cppName="getIntOverride"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
+        name="key" isConst="false" />
+      </variant>
+    </method>
+    <method name="getDimXBool" cppName="getDimXBool"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
+        name="key" isConst="false" />
+      </variant>
+    </method>
+    <method name="getBoolOverride" cppName="getBoolOverride"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
+        name="key" isConst="false" />
+      </variant>
+    </method>
+    <method name="getDimXColor" cppName="getDimXColor"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false">
+        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
+        name="key" isConst="false" />
+      </variant>
+    </method>
+    <method name="getColorOverride" cppName="getColorOverride"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false">
+        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
+        name="key" isConst="false" />
       </variant>
     </method>
     <method name="getDimlfac" cppName="getDimlfac"
@@ -671,70 +766,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
-    </method>
-    <method name="getDimXDouble" cppName="getDimXDouble"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false">
-        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
-        name="key" isConst="false" />
-      </variant>
-    </method>
-    <method name="getDoubleOverride" cppName="getDoubleOverride"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false">
-        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
-        name="key" isConst="false" />
-      </variant>
-    </method>
-    <method name="getDimXInt" cppName="getDimXInt"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="int" isPureVirtual="false">
-        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
-        name="key" isConst="false" />
-      </variant>
-    </method>
-    <method name="getIntOverride" cppName="getIntOverride"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="int" isPureVirtual="false">
-        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
-        name="key" isConst="false" />
-      </variant>
-    </method>
-    <method name="getDimXBool" cppName="getDimXBool"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false">
-        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
-        name="key" isConst="false" />
-      </variant>
-    </method>
-    <method name="getBoolOverride" cppName="getBoolOverride"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false">
-        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
-        name="key" isConst="false" />
-      </variant>
-    </method>
-    <method name="getDimXColor" cppName="getDimXColor"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="RColor" isPureVirtual="false">
-        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
-        name="key" isConst="false" />
-      </variant>
-    </method>
-    <method name="getColorOverride" cppName="getColorOverride"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="RColor" isPureVirtual="false">
-        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
-        name="key" isConst="false" />
-      </variant>
     </method>
     <method name="isDimXScaled" cppName="isDimXScaled"
     specifier="public" isStatic="false" isVirtual="false"

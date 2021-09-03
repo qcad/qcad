@@ -225,31 +225,36 @@
         <return>return <expr><name>overrides</name>.<call><name>hasOverride</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name>RDimStyleData</name></type> <name>getOverrides</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>overrides</name></expr>;</return>
+    }</block></function>
+
 <comment type="line">//    void makeOverrides() {</comment>
 <comment type="line">//        if (overrides==NULL) {</comment>
 <comment type="line">//            overrides = new RDimStyleData();</comment>
 <comment type="line">//        }</comment>
 <comment type="line">//    }</comment>
 
-    <function><type><name>void</name></type> <name>setDimXDouble</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>, <param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>overrides</name>.<call><name>setDouble</name><argument_list>(<argument><expr><name>key</name></expr></argument>, <argument><expr><name>v</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
-    }</block></function>
+    <function_decl><type><name>void</name></type> <name>setDimXVariant</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setDimXDouble</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>, <param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setDimXInt</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>, <param><decl><type><name>int</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setDimXBool</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>, <param><decl><type><name>bool</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setDimXColor</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>, <param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
 
-    <function><type><name>void</name></type> <name>setDimXInt</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>, <param><decl><type><name>int</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>overrides</name>.<call><name>setInt</name><argument_list>(<argument><expr><name>key</name></expr></argument>, <argument><expr><name>v</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
-    }</block></function>
+    <function_decl><type><name>QVariant</name></type> <name>getDimXVariant</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QVariant</name></type> <name>getVariantOverride</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
-    <function><type><name>void</name></type> <name>setDimXBool</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>, <param><decl><type><name>bool</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>overrides</name>.<call><name>setBool</name><argument_list>(<argument><expr><name>key</name></expr></argument>, <argument><expr><name>v</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
-    }</block></function>
+    <function_decl><type><name>double</name></type> <name>getDimXDouble</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getDoubleOverride</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
-    <function><type><name>void</name></type> <name>setDimXColor</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>, <param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <block>{
-        <expr_stmt><expr><name>overrides</name>.<call><name>setColor</name><argument_list>(<argument><expr><name>key</name></expr></argument>, <argument><expr><name>v</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
-    }</block></function>
+    <function_decl><type><name>int</name></type> <name>getDimXInt</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>int</name></type> <name>getIntOverride</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>bool</name></type> <name>getDimXBool</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>getBoolOverride</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>RColor</name></type> <name>getDimXColor</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RColor</name></type> <name>getColorOverride</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function><type><name>double</name></type> <name>getDimlfac</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><call><name>getDimXDouble</name><argument_list>(<argument><expr><name><name>RS</name>::<name>DIMLFAC</name></name></expr></argument>)</argument_list></call></expr>;</return>
@@ -442,166 +447,7 @@
         <return>return <expr><call><name>getDimXBool</name><argument_list>(<argument><expr><name><name>RS</name>::<name>QCADARCHTICK</name></name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>double</name></type> <name>getDimXDouble</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
-        <decl_stmt><decl><type><name>double</name></type> <name>dimX</name> =<init> <expr>0.0</expr></init></decl>;</decl_stmt>
 
-        <comment type="line">// get value from override:</comment>
-        <if>if <condition>(<expr><call><name>hasOverride</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
-            <return>return <expr><call><name>getDoubleOverride</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</return>
-        }</block></then></if>
-
-        <if>if <condition>(<expr><name>document</name>!=<name>NULL</name></expr>)</condition><then> <block>{
-            <decl_stmt><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RDimStyle</name></argument>&gt;</argument_list></name></type> <name>dimStyle</name> =<init> <expr><name>document</name>-&gt;<call><name>queryDimStyleDirect</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
-            <if>if <condition>(<expr>!<name>dimStyle</name>.<call><name>isNull</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
-                <comment type="line">// get value from dimension style:</comment>
-                <expr_stmt><expr><name>dimX</name> = <name>dimStyle</name>-&gt;<call><name>getDouble</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-            }</block></then>
-            <else>else <block>{
-                <comment type="line">// TODO: get value from document (should never happen):</comment>
-                <constructor_decl><name>Q_ASSERT</name><parameter_list>(<param><decl><type><name>false</name></type></decl></param>)</parameter_list>;</constructor_decl>
-            }</block></else></if>
-        }</block></then>
-        <else>else <block>{
-            <expr_stmt><expr><call><name>qWarning</name><argument_list>()</argument_list></call> &lt;&lt; "RDimensionData::getDimXDouble: no document"</expr>;</expr_stmt>
-        }</block></else></if>
-
-        <return>return <expr><name>dimX</name></expr>;</return>
-    }</block></function>
-
-    <function><type><name>double</name></type> <name>getDoubleOverride</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
-        <decl_stmt><decl><type><name>double</name></type> <name>def</name> =<init> <expr><call><name><name>RDimStyle</name>::<name>getDoubleDefault</name></name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
-
-        <if>if <condition>(<expr><call><name>hasOverrides</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
-            <return>return <expr><name>overrides</name>.<call><name>getDouble</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</return>
-        }</block></then>
-        <else>else <block>{
-            <if>if <condition>(<expr><name>document</name>!=<name>NULL</name></expr>)</condition><then> <block>{
-                <return>return <expr><name>document</name>-&gt;<call><name>getKnownVariable</name><argument_list>(<argument><expr><name>key</name></expr></argument>, <argument><expr><name>def</name></expr></argument>)</argument_list></call>.<call><name>toDouble</name><argument_list>()</argument_list></call></expr>;</return>
-            }</block></then></if>
-        }</block></else></if>
-        <return>return <expr><name>def</name></expr>;</return>
-    }</block></function>
-
-    <function><type><name>int</name></type> <name>getDimXInt</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
-        <decl_stmt><decl><type><name>int</name></type> <name>dimX</name> =<init> <expr>0</expr></init></decl>;</decl_stmt>
-
-        <comment type="line">// get value from override:</comment>
-        <if>if <condition>(<expr><call><name>hasOverride</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
-            <return>return <expr><call><name>getIntOverride</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</return>
-        }</block></then></if>
-
-        <if>if <condition>(<expr><name>document</name>!=<name>NULL</name></expr>)</condition><then> <block>{
-            <decl_stmt><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RDimStyle</name></argument>&gt;</argument_list></name></type> <name>dimStyle</name> =<init> <expr><name>document</name>-&gt;<call><name>queryDimStyleDirect</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
-            <if>if <condition>(<expr>!<name>dimStyle</name>.<call><name>isNull</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
-                <comment type="line">// get value from dimension style:</comment>
-                <expr_stmt><expr><name>dimX</name> = <name>dimStyle</name>-&gt;<call><name>getInt</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-            }</block></then>
-            <else>else <block>{
-                <comment type="line">// TODO: get value from document (should never happen):</comment>
-                <constructor_decl><name>Q_ASSERT</name><parameter_list>(<param><decl><type><name>false</name></type></decl></param>)</parameter_list>;</constructor_decl>
-            }</block></else></if>
-        }</block></then>
-        <else>else <block>{
-            <expr_stmt><expr><call><name>qWarning</name><argument_list>()</argument_list></call> &lt;&lt; "RDimensionData::getDimXInt: no document"</expr>;</expr_stmt>
-        }</block></else></if>
-
-        <return>return <expr><name>dimX</name></expr>;</return>
-    }</block></function>
-
-    <function><type><name>int</name></type> <name>getIntOverride</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
-        <decl_stmt><decl><type><name>int</name></type> <name>def</name> =<init> <expr><call><name><name>RDimStyle</name>::<name>getIntDefault</name></name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
-
-        <if>if <condition>(<expr><call><name>hasOverrides</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
-            <return>return <expr><name>overrides</name>.<call><name>getInt</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</return>
-        }</block></then>
-        <else>else <block>{
-            <if>if <condition>(<expr><name>document</name>!=<name>NULL</name></expr>)</condition><then> <block>{
-                <return>return <expr><name>document</name>-&gt;<call><name>getKnownVariable</name><argument_list>(<argument><expr><name>key</name></expr></argument>, <argument><expr><name>def</name></expr></argument>)</argument_list></call>.<call><name>toInt</name><argument_list>()</argument_list></call></expr>;</return>
-            }</block></then></if>
-        }</block></else></if>
-        <return>return <expr><name>def</name></expr>;</return>
-    }</block></function>
-
-    <function><type><name>bool</name></type> <name>getDimXBool</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
-        <decl_stmt><decl><type><name>bool</name></type> <name>dimX</name> =<init> <expr>0</expr></init></decl>;</decl_stmt>
-
-        <comment type="line">// get value from override:</comment>
-        <if>if <condition>(<expr><call><name>hasOverride</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
-            <return>return <expr><call><name>getBoolOverride</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</return>
-        }</block></then></if>
-
-        <if>if <condition>(<expr><name>document</name>!=<name>NULL</name></expr>)</condition><then> <block>{
-            <decl_stmt><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RDimStyle</name></argument>&gt;</argument_list></name></type> <name>dimStyle</name> =<init> <expr><name>document</name>-&gt;<call><name>queryDimStyleDirect</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
-            <if>if <condition>(<expr>!<name>dimStyle</name>.<call><name>isNull</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
-                <comment type="line">// get value from dimension style:</comment>
-                <expr_stmt><expr><name>dimX</name> = <name>dimStyle</name>-&gt;<call><name>getBool</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-            }</block></then>
-            <else>else <block>{
-                <comment type="line">// TODO: get value from document (should never happen):</comment>
-                <constructor_decl><name>Q_ASSERT</name><parameter_list>(<param><decl><type><name>false</name></type></decl></param>)</parameter_list>;</constructor_decl>
-            }</block></else></if>
-        }</block></then>
-        <else>else <block>{
-            <expr_stmt><expr><call><name>qWarning</name><argument_list>()</argument_list></call> &lt;&lt; "RDimensionData::getDimXBool: no document"</expr>;</expr_stmt>
-        }</block></else></if>
-
-        <return>return <expr><name>dimX</name></expr>;</return>
-    }</block></function>
-
-    <function><type><name>bool</name></type> <name>getBoolOverride</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
-        <decl_stmt><decl><type><name>bool</name></type> <name>def</name> =<init> <expr><call><name><name>RDimStyle</name>::<name>getBoolDefault</name></name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
-
-        <if>if <condition>(<expr><call><name>hasOverrides</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
-            <return>return <expr><name>overrides</name>.<call><name>getBool</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</return>
-        }</block></then>
-        <else>else <block>{
-            <if>if <condition>(<expr><name>document</name>!=<name>NULL</name></expr>)</condition><then> <block>{
-                <return>return <expr><name>document</name>-&gt;<call><name>getKnownVariable</name><argument_list>(<argument><expr><name>key</name></expr></argument>, <argument><expr><name>def</name></expr></argument>)</argument_list></call>.<call><name>toBool</name><argument_list>()</argument_list></call></expr>;</return>
-            }</block></then></if>
-        }</block></else></if>
-        <return>return <expr><name>def</name></expr>;</return>
-    }</block></function>
-
-    <function><type><name>RColor</name></type> <name>getDimXColor</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
-        <decl_stmt><decl><type><name>RColor</name></type> <name>dimX</name></decl>;</decl_stmt>
-
-        <comment type="line">// get value from override:</comment>
-        <if>if <condition>(<expr><call><name>hasOverride</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
-            <return>return <expr><call><name>getColorOverride</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</return>
-        }</block></then></if>
-
-        <if>if <condition>(<expr><name>document</name>!=<name>NULL</name></expr>)</condition><then> <block>{
-            <decl_stmt><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RDimStyle</name></argument>&gt;</argument_list></name></type> <name>dimStyle</name> =<init> <expr><name>document</name>-&gt;<call><name>queryDimStyleDirect</name><argument_list>()</argument_list></call></expr></init></decl>;</decl_stmt>
-            <if>if <condition>(<expr>!<name>dimStyle</name>.<call><name>isNull</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
-                <comment type="line">// get value from dimension style:</comment>
-                <expr_stmt><expr><name>dimX</name> = <name>dimStyle</name>-&gt;<call><name>getColor</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
-            }</block></then>
-            <else>else <block>{
-                <comment type="line">// TODO: get value from document (should never happen):</comment>
-                <constructor_decl><name>Q_ASSERT</name><parameter_list>(<param><decl><type><name>false</name></type></decl></param>)</parameter_list>;</constructor_decl>
-            }</block></else></if>
-        }</block></then>
-        <else>else <block>{
-            <expr_stmt><expr><call><name>qWarning</name><argument_list>()</argument_list></call> &lt;&lt; "RDimensionData::getDimXColor: no document"</expr>;</expr_stmt>
-        }</block></else></if>
-
-        <return>return <expr><name>dimX</name></expr>;</return>
-    }</block></function>
-
-    <function><type><name>RColor</name></type> <name>getColorOverride</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
-        <decl_stmt><decl><type><name>RColor</name></type> <name>def</name> =<init> <expr><call><name><name>RDimStyle</name>::<name>getColorDefault</name></name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
-
-        <if>if <condition>(<expr><call><name>hasOverrides</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
-            <return>return <expr><name>overrides</name>.<call><name>getColor</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</return>
-        }</block></then>
-        <else>else <block>{
-            <if>if <condition>(<expr><name>document</name>!=<name>NULL</name></expr>)</condition><then> <block>{
-                <decl_stmt><decl><type><name>QVariant</name></type> <name>v</name> =<init> <expr><name>document</name>-&gt;<call><name>getKnownVariable</name><argument_list>(<argument><expr><name>key</name></expr></argument>, <argument><expr><name>def</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
-                <return>return <expr><name>v</name>.<call><name>value<argument_list>&lt;<argument><name>RColor</name></argument>&gt;</argument_list></name><argument_list>()</argument_list></call></expr>;</return>
-            }</block></then></if>
-        }</block></else></if>
-        <return>return <expr><name>def</name></expr>;</return>
-    }</block></function>
 
 
 <comment type="line">//    template&lt;class T&gt;</comment>

@@ -89,17 +89,25 @@
             
             REcmaHelper::registerFunction(&engine, proto, setDouble, "setDouble");
             
+            REcmaHelper::registerFunction(&engine, proto, removeDouble, "removeDouble");
+            
             REcmaHelper::registerFunction(&engine, proto, getInt, "getInt");
             
             REcmaHelper::registerFunction(&engine, proto, setInt, "setInt");
+            
+            REcmaHelper::registerFunction(&engine, proto, removeInt, "removeInt");
             
             REcmaHelper::registerFunction(&engine, proto, getBool, "getBool");
             
             REcmaHelper::registerFunction(&engine, proto, setBool, "setBool");
             
+            REcmaHelper::registerFunction(&engine, proto, removeBool, "removeBool");
+            
             REcmaHelper::registerFunction(&engine, proto, getColor, "getColor");
             
             REcmaHelper::registerFunction(&engine, proto, setColor, "setColor");
+            
+            REcmaHelper::registerFunction(&engine, proto, removeColor, "removeColor");
             
 
     // properties:
@@ -1009,6 +1017,61 @@
             return result;
         }
          QScriptValue
+        REcmaDimStyle::removeDouble
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::removeDouble", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::removeDouble";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimStyle* self = 
+                        getSelf("removeDouble", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeDouble(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.removeDouble().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::removeDouble", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDimStyle::getInt
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1137,6 +1200,61 @@
             return result;
         }
          QScriptValue
+        REcmaDimStyle::removeInt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::removeInt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::removeInt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimStyle* self = 
+                        getSelf("removeInt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeInt(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.removeInt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::removeInt", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDimStyle::getBool
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1262,6 +1380,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimStyle::setBool", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimStyle::removeBool
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::removeBool", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::removeBool";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimStyle* self = 
+                        getSelf("removeBool", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeBool(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.removeBool().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::removeBool", context, engine);
             return result;
         }
          QScriptValue
@@ -1402,6 +1575,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimStyle::setColor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimStyle::removeColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::removeColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::removeColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimStyle* self = 
+                        getSelf("removeColor", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeColor(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.removeColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::removeColor", context, engine);
             return result;
         }
         

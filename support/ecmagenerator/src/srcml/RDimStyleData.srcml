@@ -134,6 +134,10 @@
         <expr_stmt><expr><name><name>mapDouble</name><index>[<expr><name>key</name></expr>]</index></name> = <name>val</name></expr>;</expr_stmt>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>removeDouble</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>mapDouble</name>.<call><name>remove</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
     <function><type><name>int</name></type> <name>getInt</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
         <if>if <condition>(<expr><name>mapInt</name>.<call><name>contains</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
             <return>return <expr><name><name>mapInt</name><index>[<expr><name>key</name></expr>]</index></name></expr>;</return>
@@ -145,6 +149,10 @@
 
     <function><type><name>virtual</name> <name>void</name></type> <name>setInt</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>, <param><decl><type><name>int</name></type> <name>val</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name><name>mapInt</name><index>[<expr><name>key</name></expr>]</index></name> = <name>val</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>removeInt</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>mapInt</name>.<call><name>remove</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
     <function><type><name>bool</name></type> <name>getBool</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
@@ -160,6 +168,10 @@
         <expr_stmt><expr><name><name>mapBool</name><index>[<expr><name>key</name></expr>]</index></name> = <name>val</name></expr>;</expr_stmt>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>removeBool</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>mapBool</name>.<call><name>remove</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
     <function><type><name>RColor</name></type> <name>getColor</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
         <if>if <condition>(<expr><name>mapColor</name>.<call><name>contains</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
             <return>return <expr><name><name>mapColor</name><index>[<expr><name>key</name></expr>]</index></name></expr>;</return>
@@ -171,6 +183,10 @@
 
     <function><type><name>virtual</name> <name>void</name></type> <name>setColor</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>, <param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>val</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name><name>mapColor</name><index>[<expr><name>key</name></expr>]</index></name> = <name>val</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>removeColor</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>mapColor</name>.<call><name>remove</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
 <comment type="line">//    double getDimscale() const {</comment>
@@ -357,6 +373,8 @@
     <comment type="line">//static QList&lt;RDimXVar&gt; propertyVariables;</comment>
     <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name><name>RS</name>::<name>KnownVariable</name></name></argument>, <argument><name><name>RS</name>::<name>KnownVariableType</name></name></argument>&gt;</argument_list></name></type> <name>dimXTypes</name></decl>;</decl_stmt>
 
+    <function_decl><type><name>friend</name> <name>QDebug</name></type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>, <param><decl><type><name>const</name> <name>RDimStyleData</name>&amp;</type> <name>d</name></decl></param>)</parameter_list>;</function_decl>
+
 </public><protected>protected:
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>RS</name>::<name>KnownVariable</name></name></argument>, <argument><name>double</name></argument>&gt;</argument_list></name></type> <name>mapDouble</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>RS</name>::<name>KnownVariable</name></name></argument>, <argument><name>int</name></argument>&gt;</argument_list></name></type> <name>mapInt</name></decl>;</decl_stmt>
@@ -393,6 +411,7 @@
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RDimStyleData</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RDimStyleData*</argument>)</argument_list></macro>
+
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

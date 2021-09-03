@@ -17,6 +17,7 @@ HEADERS += \
     $$PWD/RPaletteListenerAdapter.h \
     $$PWD/RPenListenerAdapter.h \
     $$PWD/RPreferencesListenerAdapter.h \
+    $$PWD/RPropertyListenerAdapter.h \
     $$PWD/RSelectionListenerAdapter.h \
     $$PWD/RSpatialIndexVisitorAdapter.h \
     $$PWD/RTransactionListenerAdapter.h \

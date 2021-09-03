@@ -234,6 +234,7 @@
 #include "REcmaPropertyEditor.h"
 #include "REcmaPropertyEvent.h"
 #include "REcmaPropertyListener.h"
+#include "REcmaPropertyListenerAdapter.h"
 #include "REcmaPropertyTypeId.h"
 #include "REcmaRay.h"
 #include "REcmaRayData.h"
@@ -964,6 +965,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaToolButton::initEcma(*engine);
 
     REcmaPropertyListener::initEcma(*engine);
+    REcmaPropertyListenerAdapter::initEcma(*engine);
     REcmaPropertyEditor::initEcma(*engine);
 
     REcmaToolMatrixItemDelegate::initEcma(*engine);

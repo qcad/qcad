@@ -403,7 +403,7 @@
         <expr><name>CHAMFERA</name></expr>,
         <expr><name>CHAMFERB</name></expr>,
         <expr><name>CHAMFERC</name></expr>,
-        <expr><name>CHAMFERD</name></expr>,
+        <expr><name>CHAMFERD</name></expr>,  <comment type="line">// 10</comment>
         <expr><name>CLAYER</name></expr>,
         <expr><name>CMLJUST</name></expr>,
         <expr><name>CMLSCALE</name></expr>,
@@ -414,7 +414,7 @@
         <expr><name>DIMALTF</name></expr>,
         <expr><name>DIMALTRND</name></expr>,
         <expr><name>DIMALTTD</name></expr>,
-        <expr><name>DIMALTTZ</name></expr>,
+        <expr><name>DIMALTTZ</name></expr>,  <comment type="line">// 20</comment>
         <expr><name>DIMALTU</name></expr>,
         <expr><name>DIMALTZ</name></expr>,
         <expr><name>DIMAPOST</name></expr>,
@@ -426,7 +426,7 @@
         <expr><name>DIMAZIN</name></expr>,
         <expr><name>DIMBLK</name></expr>,
         <expr><name>DIMBLK1</name></expr>,
-        <expr><name>DIMBLK2</name></expr>,
+        <expr><name>DIMBLK2</name></expr>,  <comment type="line">// 30</comment>
         <expr><name>DIMCEN</name></expr>,
         <expr><name>DIMCLRD</name></expr>,
         <expr><name>DIMCLRE</name></expr>,
@@ -438,7 +438,7 @@
         <comment type="block">/** Decimal separator in dimensions */</comment>
         <expr><name>DIMDSEP</name></expr>,
         <expr><name>DIMEXE</name></expr>,
-        <expr><name>DIMEXO</name></expr>,
+        <expr><name>DIMEXO</name></expr>,  <comment type="line">// 40</comment>
         <expr><name>DIMFRAC</name></expr>,
         <comment type="block">/** Distance between dimension text and dimension lines, negative for box */</comment>
         <expr><name>DIMGAP</name></expr>,
@@ -451,7 +451,7 @@
         <expr><name>DIMLUNIT</name></expr>,
         <expr><name>DIMLWD</name></expr>,
         <expr><name>DIMLWE</name></expr>,
-        <expr><name>DIMPOST</name></expr>,
+        <expr><name>DIMPOST</name></expr>,  <comment type="line">// 50</comment>
         <expr><name>DIMRND</name></expr>,
         <expr><name>DIMSAH</name></expr>,
         <expr><name>DIMSCALE</name></expr>,
@@ -462,7 +462,7 @@
         <expr><name>DIMSOXD</name></expr>,
         <comment type="block">/** Vertical position of dimension label */</comment>
         <expr><name>DIMTAD</name></expr>,
-        <expr><name>DIMTDEC</name></expr>,
+        <expr><name>DIMTDEC</name></expr>,  <comment type="line">// 60</comment>
         <expr><name>DIMTFAC</name></expr>,
         <expr><name>DIMTIH</name></expr>,
         <expr><name>DIMTIX</name></expr>,
@@ -473,7 +473,7 @@
         <expr><name>DIMTOLJ</name></expr>,
         <expr><name>DIMTP</name></expr>,
         <comment type="block">/** Archtick size or 0 for arrows */</comment>
-        <expr><name>DIMTSZ</name></expr>,
+        <expr><name>DIMTSZ</name></expr>,  <comment type="line">// 70</comment>
         <expr><name>DIMTVP</name></expr>,
         <expr><name>DIMTXSTY</name></expr>,
         <comment type="block">/** Dimension text size */</comment>
@@ -485,7 +485,7 @@
         <expr><name>DISPSILH</name></expr>,
         <expr><name>DWGCODEPAGE</name></expr>,
         <expr><name>DRAWORDERCTL</name></expr>,
-        <expr><name>ELEVATION</name></expr>,
+        <expr><name>ELEVATION</name></expr>,  <comment type="line">// 80</comment>
         <expr><name>EXTMAX</name></expr>,
         <expr><name>EXTMIN</name></expr>,
         <expr><name>FACETRES</name></expr>,

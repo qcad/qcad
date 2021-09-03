@@ -199,6 +199,7 @@ HEADERS += \
     $$PWD/REcmaPropertyEditor.h \
     $$PWD/REcmaPropertyEvent.h \
     $$PWD/REcmaPropertyListener.h \
+    $$PWD/REcmaPropertyListenerAdapter.h \
     $$PWD/REcmaPropertyTypeId.h \
     $$PWD/REcmaRay.h \
     $$PWD/REcmaRayData.h \
@@ -583,6 +584,7 @@ SOURCES += \
     $$PWD/REcmaPropertyEditor.cpp \
     $$PWD/REcmaPropertyEvent.cpp \
     $$PWD/REcmaPropertyListener.cpp \
+    $$PWD/REcmaPropertyListenerAdapter.cpp \
     $$PWD/REcmaPropertyTypeId.cpp \
     $$PWD/REcmaRay.cpp \
     $$PWD/REcmaRayData.cpp \

@@ -45,6 +45,9 @@
  */</comment>
 <class>class <macro><name>QCADENTITY_EXPORT</name></macro> <name>RDimStyleProxyBasic</name> <super>: <specifier>public</specifier> <name>RDimStyleProxy</name></super> <block>{<private type="default">
 </private><public>public:
+    <constructor><name>RDimStyleProxyBasic</name><parameter_list>()</parameter_list> <member_list>:
+        <call><name>document</name><argument_list>(<argument><expr><name>NULL</name></expr></argument>)</argument_list></call>, <call><name>dimensionData</name><argument_list>(<argument><expr><name>NULL</name></expr></argument>)</argument_list></call>, <call><name>dimStyle</name><argument_list>(<argument><expr><name>NULL</name></expr></argument>)</argument_list></call>, <call><name>preview</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call>, <call><name>forceSelected</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call>, <call><name>outsideArrow1</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call>, <call><name>outsideArrow2</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
+
     <destructor><specifier>virtual</specifier> <name>~RDimStyleProxyBasic</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>render</name><parameter_list>(<param><decl><type><name>const</name> <name>RDimStyle</name>&amp;</type> <name>dimStyle</name></decl></param>, <param><decl><type><name>const</name> <name>REntityData</name>&amp;</type> <name>entity</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name></decl></param>)</parameter_list>;</function_decl>
@@ -64,6 +67,7 @@
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateTextPosition</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name></decl></param>, <param><decl><type><name>double</name></type> <name>textWidth</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>dimLine1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>dimLine2</name></decl></param>, <param><decl><type><name>bool</name></type> <name>corrected</name></decl></param>)</parameter_list>;</function_decl>
 
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateOutsideArrow</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p2</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getDimensionLineShapes</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p2</name></decl></param>, <param><decl><type><name>bool</name></type> <name>arrow1</name></decl></param>, <param><decl><type><name>bool</name></type> <name>arrow2</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>hasSpaceForArrows</name><parameter_list>(<param><decl><type><name>double</name></type> <name>dimLineLength</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getArrow</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>position</name></decl></param>, <param><decl><type><name>double</name></type> <name>direction</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
@@ -75,6 +79,8 @@
     <decl_stmt><decl><type><name>const</name> <name>RDimStyle</name>*</type> <name>dimStyle</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>preview</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>forceSelected</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>bool</name></type> <name>outsideArrow1</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>bool</name></type> <name>outsideArrow2</name></decl>;</decl_stmt>
 </protected>}</block>;</class>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>

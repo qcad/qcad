@@ -119,6 +119,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="removeDouble" cppName="removeDouble"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
+        name="key" isConst="false" />
+      </variant>
+    </method>
     <method name="getInt" cppName="getInt" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false">
@@ -133,6 +141,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="key" isConst="false" />
         <arg type="int" typeName="int" name="val"
         isConst="false" />
+      </variant>
+    </method>
+    <method name="removeInt" cppName="removeInt" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
+        name="key" isConst="false" />
       </variant>
     </method>
     <method name="getBool" cppName="getBool" specifier="public"
@@ -151,6 +166,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="removeBool" cppName="removeBool"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
+        name="key" isConst="false" />
+      </variant>
+    </method>
     <method name="getColor" cppName="getColor" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RColor" isPureVirtual="false">
@@ -165,6 +188,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="key" isConst="false" />
         <arg type="RColor &amp;" typeName="RColor" name="val"
         isConst="true" />
+      </variant>
+    </method>
+    <method name="removeColor" cppName="removeColor"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
+        name="key" isConst="false" />
       </variant>
     </method>
     <property name="dimXTypes"

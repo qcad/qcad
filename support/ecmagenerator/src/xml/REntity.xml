@@ -850,6 +850,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyDrawOrder" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyParentId" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyMinX" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyMinY" type="RPropertyTypeId"

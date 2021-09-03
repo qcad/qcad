@@ -90,10 +90,16 @@
         setDouble
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        removeDouble
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getInt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setInt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removeInt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getBool
@@ -102,10 +108,16 @@
         setBool
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        removeBool
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getColor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removeColor
         (QScriptContext* context, QScriptEngine* engine) 
         ;
 

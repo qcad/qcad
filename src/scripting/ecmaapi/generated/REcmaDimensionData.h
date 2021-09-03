@@ -132,6 +132,12 @@
         hasOverride
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getOverrides
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimXVariant
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setDimXDouble
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -142,6 +148,36 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setDimXColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimXVariant
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getVariantOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimXDouble
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDoubleOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimXInt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getIntOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimXBool
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getBoolOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimXColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getColorOverride
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getDimlfac
@@ -328,30 +364,6 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         useArchTick
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getDimXDouble
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getDoubleOverride
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getDimXInt
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getIntOverride
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getDimXBool
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getBoolOverride
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getDimXColor
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getColorOverride
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isDimXScaled
