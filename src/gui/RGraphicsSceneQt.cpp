@@ -512,18 +512,20 @@ void RGraphicsSceneQt::exportArcSegment(const RArc& arc, bool allowForZeroLength
             currentPainterPath.lineTo(arc.getEndPoint());
         }
         else {
-            if (getLinetypePattern().getNumDashes()<=1) {
-                // this is faster for continuous arcs:
-                currentPainterPath.setAutoRegen(true);
-                RGraphicsScene::exportArcSegment(arc, allowForZeroLength);
-            }
-            else {
-                // slower:
-                currentPainterPath.setAutoRegen(true);
-                QList<RSpline> splines = RSpline::createSplinesFromArc(arc);
-                for (int i=0; i<splines.length(); i++) {
-                    currentPainterPath.addSpline(splines[i]);
-                }
+            // this is faster for continuous arcs:
+            // 20210903: also use this for arcs with patterns for screen-based linetypes:
+            currentPainterPath.setAutoRegen(true);
+            RGraphicsScene::exportArcSegment(arc, allowForZeroLength);
+
+//            if (getLinetypePattern().getNumDashes()<=1) {
+//            }
+//            else {
+//                // slower:
+//                currentPainterPath.setAutoRegen(true);
+//                QList<RSpline> splines = RSpline::createSplinesFromArc(arc);
+//                for (int i=0; i<splines.length(); i++) {
+//                    currentPainterPath.addSpline(splines[i]);
+//                }
 
                 // this is not precise enough:
 //                currentPainterPath.arcTo(
@@ -533,7 +535,7 @@ void RGraphicsSceneQt::exportArcSegment(const RArc& arc, bool allowForZeroLength
 //                    RMath::rad2deg(-arc.getStartAngle()),
 //                    RMath::rad2deg(-arc.getSweep())
 //                );
-            }
+//            }
         }
     }
     else {
