@@ -536,6 +536,12 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     classQLayout.property("prototype").setProperty("getWidth",
             engine->newFunction(ecmaQLayoutGetWidth));
 
+    QScriptValue classQGridLayout = globalObject.property("QGridLayout");
+    classQGridLayout.property("prototype").setProperty("getItemRow",
+            engine->newFunction(ecmaQGridLayoutGetItemRow));
+    classQGridLayout.property("prototype").setProperty("getItemColumn",
+            engine->newFunction(ecmaQGridLayoutGetItemColumn));
+
     QScriptValue classQByteArray = globalObject.property("QByteArray");
     classQByteArray.property("prototype").setProperty("toString",
             engine->newFunction(ecmaQByteArrayToString));
@@ -1945,6 +1951,46 @@ QScriptValue RScriptHandlerEcma::ecmaQLayoutGetWidth(QScriptContext* context,
     return qScriptValueFromValue(engine, cppResult);
 }
 
+QScriptValue RScriptHandlerEcma::ecmaQGridLayoutGetItemRow(QScriptContext* context, QScriptEngine* engine) {
+    QGridLayout* self = REcmaHelper::scriptValueTo<QGridLayout>(context->thisObject());
+    if (self == NULL) {
+        return throwError("QGridLayout.getItemRow(): Object is NULL", context);
+    }
+
+    if (context->argumentCount() != 1) {
+        return throwError("Wrong number/types of arguments for QGridLayout::getItemRow.", context);
+    }
+
+    int idx = context->argument(0).toInt32();
+    if (idx<0) {
+        return qScriptValueFromValue(engine, -1);
+    }
+
+    int r, c, rs, cs;
+    self->getItemPosition(idx, &r, &c, &rs, &cs);
+    return qScriptValueFromValue(engine, r);
+}
+
+QScriptValue RScriptHandlerEcma::ecmaQGridLayoutGetItemColumn(QScriptContext* context, QScriptEngine* engine) {
+    QGridLayout* self = REcmaHelper::scriptValueTo<QGridLayout>(context->thisObject());
+    if (self == NULL) {
+        return throwError("QGridLayout.getItemColumn(): Object is NULL", context);
+    }
+
+    if (context->argumentCount() != 1) {
+        return throwError("Wrong number/types of arguments for QGridLayout::getItemColumn.", context);
+    }
+
+    int idx = context->argument(0).toInt32();
+    if (idx<0) {
+        return qScriptValueFromValue(engine, -1);
+    }
+
+    int r, c, rs, cs;
+    self->getItemPosition(idx, &r, &c, &rs, &cs);
+    return qScriptValueFromValue(engine, c);
+}
+
 QScriptValue RScriptHandlerEcma::ecmaQByteArrayToString(QScriptContext* context,
         QScriptEngine* engine) {
 
@@ -2061,7 +2107,7 @@ QScriptValue RScriptHandlerEcma::ecmaQItemSelectionModelSelectedRow(QScriptConte
         return throwError("Wrong number/types of arguments for QItemSelectionModel.selectedRow.", context);
     }
 
-    int idx = context->argument(0).toInteger();
+    int idx = context->argument(0).toInt32();
 
     const QModelIndex cppResult = self->selectedRows().at(idx);
     return qScriptValueFromValue(engine, cppResult);
@@ -2087,7 +2133,7 @@ QScriptValue RScriptHandlerEcma::ecmaMSleep(QScriptContext* context,
         QScriptEngine* engine) {
 
     if (context->argumentCount() == 1 && context->argument(0).isNumber()) {
-        int val = context->argument(0).toInteger();
+        int val = context->argument(0).toInt32();
         QTime dieTime = QTime::currentTime().addMSecs(val);
         int c=0;
         QTime t = QTime::currentTime();
@@ -2190,7 +2236,7 @@ QScriptValue RScriptHandlerEcma::ecmaDownload(QScriptContext* context,
 
     if (context->argumentCount() == 2 && context->argument(0).isString() && context->argument(1).isNumber()) {
         QString url = context->argument(0).toString();
-        int timeout = context->argument(1).toInteger();
+        int timeout = context->argument(1).toInt32();
 
         QNetworkAccessManager manager;
         QEventLoop loop;
@@ -2232,7 +2278,7 @@ QScriptValue RScriptHandlerEcma::ecmaDownloadToFile(QScriptContext* context, QSc
         QString url = context->argument(0).toString();
         QString path = context->argument(1).toString();
         QString fileName = context->argument(2).toString();
-        int timeout = context->argument(3).toInteger();
+        int timeout = context->argument(3).toInt32();
 
         QNetworkAccessManager manager;
         QEventLoop loop;

@@ -103,6 +103,8 @@ public:
     static QScriptValue ecmaDetachDebugger(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaCollectGarbage(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQLayoutGetWidth(QScriptContext* context, QScriptEngine* engine);
+    static QScriptValue ecmaQGridLayoutGetItemRow(QScriptContext* context, QScriptEngine* engine);
+    static QScriptValue ecmaQGridLayoutGetItemColumn(QScriptContext* context, QScriptEngine* engine);
     static QScriptValue ecmaQByteArrayToString(QScriptContext *context, QScriptEngine *engine);
     static QScriptValue ecmaQUrlQueryItems(QScriptContext *context, QScriptEngine *engine);
     static QScriptValue ecmaQLocaleScript(QScriptContext* context, QScriptEngine* engine);
