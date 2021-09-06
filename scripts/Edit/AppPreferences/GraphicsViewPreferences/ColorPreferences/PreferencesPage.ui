@@ -20,7 +20,7 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>-205</y>
+     <y>0</y>
      <width>556</width>
      <height>1193</height>
     </rect>
@@ -352,9 +352,9 @@
          </property>
          <property name="color" stdset="0">
           <color alpha="128">
-           <red>164</red>
-           <green>70</green>
-           <blue>70</blue>
+           <red>209</red>
+           <green>90</green>
+           <blue>90</blue>
           </color>
          </property>
          <property name="blackWhite" stdset="0">

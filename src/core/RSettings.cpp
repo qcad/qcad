@@ -780,7 +780,8 @@ QFont RSettings::getStatusBarFont() {
 
 RColor RSettings::getSelectionColor() {
     if (selectionColor==NULL) {
-        selectionColor = new RColor(getColor("GraphicsViewColors/SelectionColor", RColor(164,70,70,128)));
+        //selectionColor = new RColor(getColor("GraphicsViewColors/SelectionColor", RColor(164,70,70,128)));
+        selectionColor = new RColor(getColor("GraphicsViewColors/SelectionColor", RColor(209,90,90,128)));
     }
     return *selectionColor;
 }
