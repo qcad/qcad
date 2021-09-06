@@ -362,13 +362,18 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
     if (!onlyChanges) {
         // create geometry group box with grid layout:
         this.geometryGroup = new QGroupBox(qsTr("Specific Properties"), this.widget);
+        this.geometryGroup.objectName = "GeometryGroup";
         layout.insertWidget(2, this.geometryGroup);
 
         // grid layout with three columns and N rows for N property controls:
         gridLayoutGeometry = new QGridLayout(this.geometryGroup);
         gridLayoutGeometry.setVerticalSpacing(2);
+        gridLayoutGeometry.setHorizontalSpacing(2);
+        // label:
         gridLayoutGeometry.setColumnStretch(0,0);
+        // control:
         gridLayoutGeometry.setColumnStretch(1,1);
+        // control or additional controls (e.g. clear button for dimension label):
         gridLayoutGeometry.setColumnStretch(2,0);
         this.geometryGroup.setLayout(gridLayoutGeometry);
 
@@ -376,6 +381,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
         // (block attributes shown when block reference is selected):
         // create child property group box with grid layout:
         this.childGroup = new QGroupBox(qsTr("Dependent Entities"), this.widget);
+        this.childGroup.objectName = "ChildGroup";
         layout.insertWidget(3, this.childGroup);
 
         // grid layout with four columns and N rows for N property controls:
