@@ -77,9 +77,9 @@ public:
     static RPropertyTypeId PropertyDimdec;
     static RPropertyTypeId PropertyDimdsep;
     static RPropertyTypeId PropertyDimzin;
-    static RPropertyTypeId PropertyDimaunit;
-    static RPropertyTypeId PropertyDimadec;
-    static RPropertyTypeId PropertyDimazin;
+//    static RPropertyTypeId PropertyDimaunit;
+//    static RPropertyTypeId PropertyDimadec;
+//    static RPropertyTypeId PropertyDimazin;
     static RPropertyTypeId PropertyArchTick;
     static RPropertyTypeId PropertyDimclrt;
 

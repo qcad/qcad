@@ -62,6 +62,27 @@ public:
     static RPropertyTypeId PropertyLowerTolerance;
     static RPropertyTypeId PropertyMeasuredValue;
 
+    static RPropertyTypeId PropertyDimscale;
+    static RPropertyTypeId PropertyDimlfac;
+    static RPropertyTypeId PropertyDimtxt;
+    static RPropertyTypeId PropertyDimgap;
+    static RPropertyTypeId PropertyDimasz;
+    //static RPropertyTypeId PropertyDimdli;
+    static RPropertyTypeId PropertyDimexe;
+    static RPropertyTypeId PropertyDimexo;
+    static RPropertyTypeId PropertyDimtad;
+    static RPropertyTypeId PropertyDimtih;
+    static RPropertyTypeId PropertyDimtsz;
+    static RPropertyTypeId PropertyDimlunit;
+    static RPropertyTypeId PropertyDimdec;
+    static RPropertyTypeId PropertyDimdsep;
+    static RPropertyTypeId PropertyDimzin;
+//    static RPropertyTypeId PropertyDimaunit;
+//    static RPropertyTypeId PropertyDimadec;
+//    static RPropertyTypeId PropertyDimazin;
+    static RPropertyTypeId PropertyArchTick;
+    static RPropertyTypeId PropertyDimclrt;
+
     //static RPropertyTypeId PropertyLinearFactor;
     //static RPropertyTypeId PropertyDimScale;
     static RPropertyTypeId PropertyDimBlockName;

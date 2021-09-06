@@ -42,6 +42,27 @@ RPropertyTypeId RDimDiametricEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimDiametricEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimDiametricEntity::PropertyMeasuredValue;
 
+RPropertyTypeId RDimDiametricEntity::PropertyDimscale;
+RPropertyTypeId RDimDiametricEntity::PropertyDimlfac;
+RPropertyTypeId RDimDiametricEntity::PropertyDimtxt;
+RPropertyTypeId RDimDiametricEntity::PropertyDimgap;
+RPropertyTypeId RDimDiametricEntity::PropertyDimasz;
+//RPropertyTypeId RDimDiametricEntity::PropertyDimdli;
+RPropertyTypeId RDimDiametricEntity::PropertyDimexe;
+RPropertyTypeId RDimDiametricEntity::PropertyDimexo;
+RPropertyTypeId RDimDiametricEntity::PropertyDimtad;
+RPropertyTypeId RDimDiametricEntity::PropertyDimtih;
+RPropertyTypeId RDimDiametricEntity::PropertyDimtsz;
+RPropertyTypeId RDimDiametricEntity::PropertyDimlunit;
+RPropertyTypeId RDimDiametricEntity::PropertyDimdec;
+RPropertyTypeId RDimDiametricEntity::PropertyDimdsep;
+RPropertyTypeId RDimDiametricEntity::PropertyDimzin;
+//RPropertyTypeId RDimDiametricEntity::PropertyDimaunit;
+//RPropertyTypeId RDimDiametricEntity::PropertyDimadec;
+//RPropertyTypeId RDimDiametricEntity::PropertyDimazin;
+RPropertyTypeId RDimDiametricEntity::PropertyArchTick;
+RPropertyTypeId RDimDiametricEntity::PropertyDimclrt;
+
 //RPropertyTypeId RDimDiametricEntity::PropertyLinearFactor;
 //RPropertyTypeId RDimDiametricEntity::PropertyDimScale;
 RPropertyTypeId RDimDiametricEntity::PropertyDimBlockName;
@@ -92,6 +113,27 @@ void RDimDiametricEntity::init() {
     RDimDiametricEntity::PropertyUpperTolerance.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyUpperTolerance);
     RDimDiametricEntity::PropertyLowerTolerance.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyLowerTolerance);
     RDimDiametricEntity::PropertyMeasuredValue.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyMeasuredValue);
+
+    RDimDiametricEntity::PropertyDimscale.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimscale);
+    RDimDiametricEntity::PropertyDimlfac.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimlfac);
+    RDimDiametricEntity::PropertyDimtxt.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimtxt);
+    RDimDiametricEntity::PropertyDimgap.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimgap);
+    RDimDiametricEntity::PropertyDimasz.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimasz);
+    //RDimDiametricEntity::PropertyDimdli.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimdli);
+    RDimDiametricEntity::PropertyDimexe.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimexe);
+    RDimDiametricEntity::PropertyDimexo.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimexo);
+    RDimDiametricEntity::PropertyDimtad.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimtad);
+    RDimDiametricEntity::PropertyDimtih.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimtih);
+    RDimDiametricEntity::PropertyDimtsz.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimtsz);
+    RDimDiametricEntity::PropertyDimlunit.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimlunit);
+    RDimDiametricEntity::PropertyDimdec.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimdec);
+    RDimDiametricEntity::PropertyDimdsep.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimdsep);
+    RDimDiametricEntity::PropertyDimzin.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimzin);
+//    RDimDiametricEntity::PropertyDimaunit.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimaunit);
+//    RDimDiametricEntity::PropertyDimadec.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimadec);
+//    RDimDiametricEntity::PropertyDimazin.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimazin);
+    RDimDiametricEntity::PropertyArchTick.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyArchTick);
+    RDimDiametricEntity::PropertyDimclrt.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimclrt);
 
 //    RDimDiametricEntity::PropertyLinearFactor.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyLinearFactor);
 //    RDimDiametricEntity::PropertyDimScale.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimScale);

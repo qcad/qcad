@@ -534,11 +534,19 @@ void RDimStyleProxyBasic::renderDimDiametric() {
     QString text = data.getText();
     RVector chordPoint = data.getChordPoint();
     RVector definitionPoint = data.getDefinitionPoint();
+    int dimtih = dimensionData->getDimtih();
 
     // rotate text so it's readable from the bottom or right (ISO)
     // quadrant 1 & 4
     bool corrected=false;
-    double textAngle = RMath::makeAngleReadable(chordPoint.getAngleTo(definitionPoint), true, &corrected);
+
+    double textAngle;
+    if (dimtih!=0) {
+        textAngle = 0.0;
+    }
+    else {
+        textAngle = RMath::makeAngleReadable(chordPoint.getAngleTo(definitionPoint), true, &corrected);
+    }
 
     // export text label:
     RTextData& textData = data.initTextData();

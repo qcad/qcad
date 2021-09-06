@@ -41,6 +41,27 @@ RPropertyTypeId RDimRadialEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimRadialEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimRadialEntity::PropertyMeasuredValue;
 
+RPropertyTypeId RDimRadialEntity::PropertyDimscale;
+RPropertyTypeId RDimRadialEntity::PropertyDimlfac;
+RPropertyTypeId RDimRadialEntity::PropertyDimtxt;
+RPropertyTypeId RDimRadialEntity::PropertyDimgap;
+RPropertyTypeId RDimRadialEntity::PropertyDimasz;
+//RPropertyTypeId RDimRadialEntity::PropertyDimdli;
+RPropertyTypeId RDimRadialEntity::PropertyDimexe;
+RPropertyTypeId RDimRadialEntity::PropertyDimexo;
+RPropertyTypeId RDimRadialEntity::PropertyDimtad;
+RPropertyTypeId RDimRadialEntity::PropertyDimtih;
+RPropertyTypeId RDimRadialEntity::PropertyDimtsz;
+RPropertyTypeId RDimRadialEntity::PropertyDimlunit;
+RPropertyTypeId RDimRadialEntity::PropertyDimdec;
+RPropertyTypeId RDimRadialEntity::PropertyDimdsep;
+RPropertyTypeId RDimRadialEntity::PropertyDimzin;
+//RPropertyTypeId RDimRadialEntity::PropertyDimaunit;
+//RPropertyTypeId RDimRadialEntity::PropertyDimadec;
+//RPropertyTypeId RDimRadialEntity::PropertyDimazin;
+RPropertyTypeId RDimRadialEntity::PropertyArchTick;
+RPropertyTypeId RDimRadialEntity::PropertyDimclrt;
+
 //RPropertyTypeId RDimRadialEntity::PropertyLinearFactor;
 //RPropertyTypeId RDimRadialEntity::PropertyDimScale;
 RPropertyTypeId RDimRadialEntity::PropertyDimBlockName;
@@ -90,6 +111,27 @@ void RDimRadialEntity::init() {
     RDimRadialEntity::PropertyUpperTolerance.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyUpperTolerance);
     RDimRadialEntity::PropertyLowerTolerance.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyLowerTolerance);
     RDimRadialEntity::PropertyMeasuredValue.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyMeasuredValue);
+
+    RDimRadialEntity::PropertyDimscale.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyDimscale);
+    RDimRadialEntity::PropertyDimlfac.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyDimlfac);
+    RDimRadialEntity::PropertyDimtxt.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyDimtxt);
+    RDimRadialEntity::PropertyDimgap.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyDimgap);
+    RDimRadialEntity::PropertyDimasz.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyDimasz);
+    //RDimRadialEntity::PropertyDimdli.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyDimdli);
+    RDimRadialEntity::PropertyDimexe.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyDimexe);
+    RDimRadialEntity::PropertyDimexo.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyDimexo);
+    RDimRadialEntity::PropertyDimtad.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyDimtad);
+    RDimRadialEntity::PropertyDimtih.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyDimtih);
+    RDimRadialEntity::PropertyDimtsz.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyDimtsz);
+    RDimRadialEntity::PropertyDimlunit.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyDimlunit);
+    RDimRadialEntity::PropertyDimdec.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyDimdec);
+    RDimRadialEntity::PropertyDimdsep.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyDimdsep);
+    RDimRadialEntity::PropertyDimzin.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyDimzin);
+//    RDimRadialEntity::PropertyDimaunit.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyDimaunit);
+//    RDimRadialEntity::PropertyDimadec.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyDimadec);
+//    RDimRadialEntity::PropertyDimazin.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyDimazin);
+    RDimRadialEntity::PropertyArchTick.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyArchTick);
+    RDimRadialEntity::PropertyDimclrt.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyDimclrt);
 
 //    RDimRadialEntity::PropertyLinearFactor.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyLinearFactor);
 //    RDimRadialEntity::PropertyDimScale.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyDimScale);

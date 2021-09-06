@@ -41,6 +41,28 @@ RPropertyTypeId RDimAlignedEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimAlignedEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimAlignedEntity::PropertyMeasuredValue;
 
+RPropertyTypeId RDimAlignedEntity::PropertyDimscale;
+RPropertyTypeId RDimAlignedEntity::PropertyDimlfac;
+RPropertyTypeId RDimAlignedEntity::PropertyDimtxt;
+RPropertyTypeId RDimAlignedEntity::PropertyDimgap;
+RPropertyTypeId RDimAlignedEntity::PropertyDimasz;
+//RPropertyTypeId RDimAlignedEntity::PropertyDimdli;
+RPropertyTypeId RDimAlignedEntity::PropertyDimexe;
+RPropertyTypeId RDimAlignedEntity::PropertyDimexo;
+RPropertyTypeId RDimAlignedEntity::PropertyDimtad;
+RPropertyTypeId RDimAlignedEntity::PropertyDimtih;
+RPropertyTypeId RDimAlignedEntity::PropertyDimtsz;
+RPropertyTypeId RDimAlignedEntity::PropertyDimlunit;
+RPropertyTypeId RDimAlignedEntity::PropertyDimdec;
+RPropertyTypeId RDimAlignedEntity::PropertyDimdsep;
+RPropertyTypeId RDimAlignedEntity::PropertyDimzin;
+//RPropertyTypeId RDimAlignedEntity::PropertyDimaunit;
+//RPropertyTypeId RDimAlignedEntity::PropertyDimadec;
+//RPropertyTypeId RDimAlignedEntity::PropertyDimazin;
+RPropertyTypeId RDimAlignedEntity::PropertyArchTick;
+RPropertyTypeId RDimAlignedEntity::PropertyDimclrt;
+
+
 //RPropertyTypeId RDimAlignedEntity::PropertyLinearFactor;
 //RPropertyTypeId RDimAlignedEntity::PropertyDimScale;
 RPropertyTypeId RDimAlignedEntity::PropertyDimBlockName;
@@ -92,6 +114,27 @@ void RDimAlignedEntity::init() {
     RDimAlignedEntity::PropertyUpperTolerance.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyUpperTolerance);
     RDimAlignedEntity::PropertyLowerTolerance.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyLowerTolerance);
     RDimAlignedEntity::PropertyMeasuredValue.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyMeasuredValue);
+
+    RDimAlignedEntity::PropertyDimscale.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyDimscale);
+    RDimAlignedEntity::PropertyDimlfac.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyDimlfac);
+    RDimAlignedEntity::PropertyDimtxt.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyDimtxt);
+    RDimAlignedEntity::PropertyDimgap.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyDimgap);
+    RDimAlignedEntity::PropertyDimasz.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyDimasz);
+    //RDimAlignedEntity::PropertyDimdli.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyDimdli);
+    RDimAlignedEntity::PropertyDimexe.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyDimexe);
+    RDimAlignedEntity::PropertyDimexo.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyDimexo);
+    RDimAlignedEntity::PropertyDimtad.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyDimtad);
+    RDimAlignedEntity::PropertyDimtih.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyDimtih);
+    RDimAlignedEntity::PropertyDimtsz.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyDimtsz);
+    RDimAlignedEntity::PropertyDimlunit.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyDimlunit);
+    RDimAlignedEntity::PropertyDimdec.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyDimdec);
+    RDimAlignedEntity::PropertyDimdsep.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyDimdsep);
+    RDimAlignedEntity::PropertyDimzin.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyDimzin);
+//    RDimAlignedEntity::PropertyDimaunit.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyDimaunit);
+//    RDimAlignedEntity::PropertyDimadec.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyDimadec);
+//    RDimAlignedEntity::PropertyDimazin.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyDimazin);
+    RDimAlignedEntity::PropertyArchTick.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyArchTick);
+    RDimAlignedEntity::PropertyDimclrt.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyDimclrt);
 
     //RDimAlignedEntity::PropertyLinearFactor.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyLinearFactor);
     //RDimAlignedEntity::PropertyDimScale.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyDimScale);

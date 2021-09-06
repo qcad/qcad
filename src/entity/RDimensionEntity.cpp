@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 #include "RDimensionEntity.h"
-#include "RDimStyleProxyBasic.h";
+#include "RDimStyleProxyBasic.h"
 #include "RExporter.h"
 #include "RPluginLoader.h"
 #include "RStorage.h"
@@ -143,27 +143,29 @@ void RDimensionEntity::init() {
 
     //RDimensionEntity::PropertyDimtxt.generateId(typeid(RDimensionEntity), QT_TRANSLATE_NOOP("REntity", "Style Override"), QT_TRANSLATE_NOOP("REntity", "Text height"));
 
-    QString tsOverride = QT_TRANSLATE_NOOP("REntity", "Style");
-    RDimensionEntity::PropertyDimscale.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Overall dimension scale"));
-    RDimensionEntity::PropertyDimlfac.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Linear measurement factor"));
-    RDimensionEntity::PropertyDimtxt.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text height"));
-    RDimensionEntity::PropertyDimgap.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Dimension line gap"));
-    RDimensionEntity::PropertyDimasz.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Arrow size"));
-    //RDimensionEntity::PropertyDimdli.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Dimension line increment"));
-    RDimensionEntity::PropertyDimexe.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Extension line extension"));
-    RDimensionEntity::PropertyDimexo.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Extension line offset"));
-    RDimensionEntity::PropertyDimtad.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text above dimension line"));
-    RDimensionEntity::PropertyDimtih.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text inside horizontal"));
-    RDimensionEntity::PropertyDimtsz.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Tick size"));
-    RDimensionEntity::PropertyDimlunit.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Linear format"));
-    RDimensionEntity::PropertyDimdec.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Decimal places"));
-    RDimensionEntity::PropertyDimdsep.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Decimal separator"));
-    RDimensionEntity::PropertyDimzin.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Zero suppression"));
-    RDimensionEntity::PropertyDimaunit.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Angular format"));
-    RDimensionEntity::PropertyDimadec.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Angular decimal places"));
-    RDimensionEntity::PropertyDimazin.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Angular zero suppression"));
-    RDimensionEntity::PropertyArchTick.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Architectur tick"));
-    RDimensionEntity::PropertyDimclrt.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text color"));
+    if (RPluginLoader::hasPlugin("DWG")) {
+        QString tsOverride = QT_TRANSLATE_NOOP("REntity", "Style");
+        RDimensionEntity::PropertyDimscale.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Overall dimension scale"));
+        RDimensionEntity::PropertyDimlfac.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Linear measurement factor"));
+        RDimensionEntity::PropertyDimtxt.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text height"));
+        RDimensionEntity::PropertyDimgap.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Dimension line gap"));
+        RDimensionEntity::PropertyDimasz.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Arrow size"));
+        //RDimensionEntity::PropertyDimdli.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Dimension line increment"));
+        RDimensionEntity::PropertyDimexe.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Extension line extension"));
+        RDimensionEntity::PropertyDimexo.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Extension line offset"));
+        RDimensionEntity::PropertyDimtad.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text above dimension line"));
+        RDimensionEntity::PropertyDimtih.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text inside horizontal"));
+        RDimensionEntity::PropertyDimtsz.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Tick size"));
+        RDimensionEntity::PropertyDimlunit.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Linear format"));
+        RDimensionEntity::PropertyDimdec.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Decimal places"));
+        RDimensionEntity::PropertyDimdsep.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Decimal separator"));
+        RDimensionEntity::PropertyDimzin.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Zero suppression"));
+        RDimensionEntity::PropertyDimaunit.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Angular format"));
+        RDimensionEntity::PropertyDimadec.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Angular decimal places"));
+        RDimensionEntity::PropertyDimazin.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Angular zero suppression"));
+        RDimensionEntity::PropertyArchTick.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Architectur tick"));
+        RDimensionEntity::PropertyDimclrt.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text color"));
+    }
 
     // initialize basic dimension rendering:
     RDimStyle::setDimStyleProxy(new RDimStyleProxyBasic());

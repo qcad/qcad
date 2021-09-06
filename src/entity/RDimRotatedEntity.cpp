@@ -56,9 +56,9 @@ RPropertyTypeId RDimRotatedEntity::PropertyDimlunit;
 RPropertyTypeId RDimRotatedEntity::PropertyDimdec;
 RPropertyTypeId RDimRotatedEntity::PropertyDimdsep;
 RPropertyTypeId RDimRotatedEntity::PropertyDimzin;
-RPropertyTypeId RDimRotatedEntity::PropertyDimaunit;
-RPropertyTypeId RDimRotatedEntity::PropertyDimadec;
-RPropertyTypeId RDimRotatedEntity::PropertyDimazin;
+//RPropertyTypeId RDimRotatedEntity::PropertyDimaunit;
+//RPropertyTypeId RDimRotatedEntity::PropertyDimadec;
+//RPropertyTypeId RDimRotatedEntity::PropertyDimazin;
 RPropertyTypeId RDimRotatedEntity::PropertyArchTick;
 RPropertyTypeId RDimRotatedEntity::PropertyDimclrt;
 
@@ -135,9 +135,9 @@ void RDimRotatedEntity::init() {
     RDimRotatedEntity::PropertyDimdec.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimdec);
     RDimRotatedEntity::PropertyDimdsep.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimdsep);
     RDimRotatedEntity::PropertyDimzin.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimzin);
-    RDimRotatedEntity::PropertyDimaunit.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimaunit);
-    RDimRotatedEntity::PropertyDimadec.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimadec);
-    RDimRotatedEntity::PropertyDimazin.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimazin);
+//    RDimRotatedEntity::PropertyDimaunit.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimaunit);
+//    RDimRotatedEntity::PropertyDimadec.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimadec);
+//    RDimRotatedEntity::PropertyDimazin.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimazin);
     RDimRotatedEntity::PropertyArchTick.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyArchTick);
     RDimRotatedEntity::PropertyDimclrt.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimclrt);
 
