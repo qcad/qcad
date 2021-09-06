@@ -168,7 +168,10 @@ void RDimensionEntity::init() {
     }
 
     // initialize basic dimension rendering:
-    RDimStyle::setDimStyleProxy(new RDimStyleProxyBasic());
+    if (RDimStyle::getDimStyleProxy()==NULL) {
+        // no other proxy defined by plugins, use simple proxy:
+        RDimStyle::setDimStyleProxy(new RDimStyleProxyBasic());
+    }
 }
 
 bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
