@@ -270,6 +270,7 @@ int main(int argc, char *argv[]) {
     }
     app->setLibraryPaths(pluginPaths);
 
+    // make sure basic entities are initialized before loading plugins:
     RDimStyleData::initDefaults();
     RMath::init();
     RFontList::init();
@@ -285,17 +286,7 @@ int main(int argc, char *argv[]) {
     RArcEntity::init();
     RBlockReferenceEntity::init();
     RCircleEntity::init();
-    RDimensionEntity::init();
-    RDimLinearEntity::init();
-    RDimAlignedEntity::init();
-    RDimAngularEntity::init();
-    RDimAngular2LEntity::init();
-    RDimAngular3PEntity::init();
-    RDimArcLengthEntity::init();
-    RDimDiametricEntity::init();
-    RDimOrdinateEntity::init();
-    RDimRadialEntity::init();
-    RDimRotatedEntity::init();
+
     REllipseEntity::init();
     RImageEntity::init();
     RHatchEntity::init();
@@ -328,6 +319,19 @@ int main(int argc, char *argv[]) {
     // make sure plugins can find plugin related settings:
     // these are always stored in "QCAD3.ini/conf":
     RPluginLoader::loadPlugins(true);
+
+    // dimension initialization (properties) may depend on available plugins:
+    RDimensionEntity::init();
+    RDimLinearEntity::init();
+    RDimAlignedEntity::init();
+    RDimAngularEntity::init();
+    RDimAngular2LEntity::init();
+    RDimAngular3PEntity::init();
+    RDimArcLengthEntity::init();
+    RDimDiametricEntity::init();
+    RDimOrdinateEntity::init();
+    RDimRadialEntity::init();
+    RDimRotatedEntity::init();
 
     RLinetypeListMetric::init();
     RLinetypeListImperial::init();
