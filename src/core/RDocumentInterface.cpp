@@ -2104,8 +2104,6 @@ void RDocumentInterface::previewOperation(ROperation* operation) {
         return;
     }
 
-    RDebug::startTimer();
-
     // reuse preview document:
     RLinkedStorage* ls = NULL;
     if (previewDocument==NULL) {
@@ -2167,8 +2165,6 @@ void RDocumentInterface::previewOperation(ROperation* operation) {
     // 20210829: keep same preview document:
     //delete previewDocument;
     //previewDocument = NULL;
-
-    RDebug::stopTimer("previewOp");
 }
 
 /**
