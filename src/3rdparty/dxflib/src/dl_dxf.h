@@ -350,9 +350,10 @@ public:
     void writeStyle(DL_WriterA& dw, const DL_StyleData& style);
     void writeView(DL_WriterA& dw);
     void writeUcs(DL_WriterA& dw);
-    void writeDimStyle(DL_WriterA& dw, 
+    void writeDimStyle(DL_WriterA& dw,
                        double dimasz, double dimexe, double dimexo,
-                       double dimgap, double dimtxt);
+                       double dimgap, double dimtxt,
+                       int dimtad = 1, bool dimtih = false);
     void writeBlockRecord(DL_WriterA& dw);
     void writeBlockRecord(DL_WriterA& dw, const std::string& name);
     void writeObjects(DL_WriterA& dw, const std::string& appDictionaryName = "");
