@@ -871,13 +871,12 @@ void RDimStyleProxyBasic::updateTextPosition(const QString& text, double textWid
 
         // minimum space required for text:
         double minSpace = dimLineLength;
-        qDebug() << "outsideArrow1:" << outsideArrow1;
-        if (!outsideArrow1) {
-            minSpace -= dimasz;
-        }
-        if (!outsideArrow2) {
-            minSpace -= dimasz;
-        }
+//        if (!outsideArrow1) {
+//            minSpace -= dimasz;
+//        }
+//        if (!outsideArrow2) {
+//            minSpace -= dimasz;
+//        }
         if (dimtad==0 || dimtih==true) {
             // if text is centered on dim line, we need more space:
             minSpace -= dimgap*2;
@@ -887,7 +886,6 @@ void RDimStyleProxyBasic::updateTextPosition(const QString& text, double textWid
                 minSpace -= dimgap*2;
             }
         }
-        qDebug() << "minSpace:" << minSpace;
 
         if (!RMath::isNaN(minSpace) && textWidth>minSpace) {
             double h = textWidth/2.0+dimLineLength/2.0+dimgap;
