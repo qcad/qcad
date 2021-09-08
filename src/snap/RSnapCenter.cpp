@@ -27,7 +27,7 @@ QList<RVector> RSnapCenter::snapEntity(QSharedPointer<REntity> entity,
 
     QSharedPointer<RPolylineEntity> pl = entity.dynamicCast<RPolylineEntity>();
     if (!pl.isNull()) {
-        QSharedPointer<RShape> shape = pl->getClosestShape(point);
+        QSharedPointer<RShape> shape = pl->getClosestSimpleShape(point);
         if (!shape.isNull()) {
             return shape->getCenterPoints();
         }
