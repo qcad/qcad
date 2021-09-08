@@ -443,7 +443,7 @@ public:
     }
 
     bool useArchTick() const {
-        return getDimXBool(RS::QCADARCHTICK);
+        return getDimXDouble(RS::DIMTSZ) > 0.0;
     }
 
 

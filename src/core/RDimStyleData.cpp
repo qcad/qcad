@@ -78,7 +78,7 @@ void RDimStyleData::initDefaults() {
     mapDefaults[RS::DIMAUNIT] = RS::DegreesDecimal;
     mapDefaults[RS::DIMADEC] = 0;
     mapDefaults[RS::DIMAZIN] = 2;
-    mapDefaults[RS::QCADARCHTICK] = false;
+    //mapDefaults[RS::QCADARCHTICK] = false;
 
     mapDefaults[RS::DIMBLK] = "";
 }
@@ -191,17 +191,19 @@ void RDimStyleData::initFromSettings() {
     if (RSettings::getStringValue("DimensionSettings/ArrowStyle", "Arrow")=="Arrow") {
         // tick size is 0 for arrows:
         //docVars->setKnownVariable(RS::DIMTSZ, 0.0);
-        setBool(RS::QCADARCHTICK, false);
-        qDebug() << "QCADARCHTICK: 0";
+        //setBool(RS::QCADARCHTICK, false);
+        //qDebug() << "QCADARCHTICK: 0";
         //archTick = false;
+        setDouble(RS::DIMTSZ, 0.0);
     }
 
     // arch tick head:
     else {
         //docVars->setKnownVariable(RS::DIMTSZ, RSettings::getDoubleValue("DimensionSettings/DIMASZ", 2.5));
-        setBool(RS::QCADARCHTICK, true);
-        qDebug() << "QCADARCHTICK: 1";
+        //setBool(RS::QCADARCHTICK, true);
+        //qDebug() << "QCADARCHTICK: 1";
         //archTick = true;
+        setDouble(RS::DIMTSZ, getDouble(RS::DIMASZ));
     }
 }
 

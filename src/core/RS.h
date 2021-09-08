@@ -563,7 +563,7 @@ public:
         VISRETAIN,
         WORLDVIEW,
         MaxKnownVariable = WORLDVIEW,
-        QCADARCHTICK,
+        //QCADARCHTICK,
         INVALID = -1,
     };
 

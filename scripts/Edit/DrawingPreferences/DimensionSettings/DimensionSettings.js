@@ -717,13 +717,13 @@ DimensionSettings.savePreferences = function(pageWidget, calledByPrefDialog, doc
 
     // dimension arrow type:
     if (widgets["ArchitecturalTick"].checked) {
-        dimStyle.setBool(RS.QCADARCHTICK, true);
+        //dimStyle.setBool(RS.QCADARCHTICK, true);
         dimStyle.setDouble(RS.DIMTSZ, dimStyle.getDouble(RS.DIMASZ));
         //document.setKnownVariable(RS.DIMTSZ, document.getKnownVariable(RS.DIMASZ), transaction);
         //document.setKnownVariable(RS.DIMBLK, "ArchTick", transaction);
     }
     else {
-        dimStyle.setBool(RS.QCADARCHTICK, false);
+        //dimStyle.setBool(RS.QCADARCHTICK, false);
         dimStyle.setDouble(RS.DIMTSZ, 0.0);
         //document.setKnownVariable(RS.DIMTSZ, 0.0, transaction);
         //document.setKnownVariable(RS.DIMBLK, "", transaction);
