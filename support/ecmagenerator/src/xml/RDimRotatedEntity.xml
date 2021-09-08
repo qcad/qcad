@@ -188,12 +188,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyDimzin" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
-    <property name="PropertyDimaunit" type="RPropertyTypeId"
-    isConst="false" isStatic="true" />
-    <property name="PropertyDimadec" type="RPropertyTypeId"
-    isConst="false" isStatic="true" />
-    <property name="PropertyDimazin" type="RPropertyTypeId"
-    isConst="false" isStatic="true" />
     <property name="PropertyArchTick" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyDimclrt" type="RPropertyTypeId"

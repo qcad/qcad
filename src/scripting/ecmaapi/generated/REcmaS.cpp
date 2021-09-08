@@ -1655,11 +1655,6 @@
     QScriptValue::ReadOnly);
 
 
-    ctor.setProperty("QCADARCHTICK",
-    QScriptValue(RS::QCADARCHTICK),
-    QScriptValue::ReadOnly);
-
-
     ctor.setProperty("INVALID",
     QScriptValue(RS::INVALID),
     QScriptValue::ReadOnly);

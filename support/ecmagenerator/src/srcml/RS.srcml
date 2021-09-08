@@ -564,7 +564,7 @@
         <expr><name>VISRETAIN</name></expr>,
         <expr><name>WORLDVIEW</name></expr>,
         <expr><name>MaxKnownVariable</name> = <name>WORLDVIEW</name></expr>,
-        <expr><name>QCADARCHTICK</name></expr>,
+        <comment type="line">//QCADARCHTICK,</comment>
         <expr><name>INVALID</name> = -1</expr>,
     }</block>;</enum>
 

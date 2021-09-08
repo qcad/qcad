@@ -444,7 +444,8 @@
     }</block></function>
 
     <function><type><name>bool</name></type> <name>useArchTick</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><call><name>getDimXBool</name><argument_list>(<argument><expr><name><name>RS</name>::<name>QCADARCHTICK</name></name></expr></argument>)</argument_list></call></expr>;</return>
+        <comment type="line">//return getDimXBool(RS::QCADARCHTICK);</comment>
+        <return>return <expr><call><name>getDimXDouble</name><argument_list>(<argument><expr><name><name>RS</name>::<name>DIMTSZ</name></name></expr></argument>)</argument_list></call> &gt; 0.0</expr>;</return>
     }</block></function>
 
 

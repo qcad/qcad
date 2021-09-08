@@ -78,8 +78,6 @@
         <expr><name>Scale</name> = 0x2000000</expr>,               <comment type="line">//!&lt; Property is scale (1:2, 5"=1", ...)</comment>
         <expr><name>Area</name> = 0x4000000</expr>,                <comment type="line">//!&lt; Property is area (relevant for formatting of value)</comment>
         <expr><name>UnitLess</name> = 0x8000000</expr>             <comment type="line">//!&lt; Property has no unit (linetype scale, draw order, ...)</comment>
-        <comment type="line">//Dimlunit = 0x10000000,           //!&lt; DIMLUNIT type</comment>
-        <comment type="line">//Dimaunit = 0x20000000            //!&lt; DIMAUNIT type</comment>
     }</block>;</enum>
     <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Options</argument>, <argument>Option</argument>)</argument_list></macro>
 
@@ -297,14 +295,6 @@
     <function><type><name>void</name></type> <name>setLabel</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>l</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>label</name> = <name>l</name></expr>;</expr_stmt>
     }</block></function>
-
-<comment type="line">//    void setDimlunit(bool v) {</comment>
-<comment type="line">//        setOption(Dimlunit, v);</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    bool isDimlunit() const {</comment>
-<comment type="line">//        return options.testFlag(Dimlunit);</comment>
-<comment type="line">//    }</comment>
 
     <function><type><name>bool</name></type> <name>operator ==</name> <parameter_list>(<param><decl><type><name>const</name> <name>RPropertyAttributes</name>&amp;</type> <name>other</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
         <if>if <condition>(<expr><call><name>isInvisible</name><argument_list>()</argument_list></call> != <name>other</name>.<call><name>isInvisible</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{

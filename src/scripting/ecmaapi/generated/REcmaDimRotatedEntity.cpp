@@ -253,18 +253,6 @@
                 qScriptValueFromValue(&engine, RDimRotatedEntity::PropertyDimzin),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
-            ctor.setProperty("PropertyDimaunit",
-                qScriptValueFromValue(&engine, RDimRotatedEntity::PropertyDimaunit),
-                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
-            
-            ctor.setProperty("PropertyDimadec",
-                qScriptValueFromValue(&engine, RDimRotatedEntity::PropertyDimadec),
-                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
-            
-            ctor.setProperty("PropertyDimazin",
-                qScriptValueFromValue(&engine, RDimRotatedEntity::PropertyDimazin),
-                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
-            
             ctor.setProperty("PropertyArchTick",
                 qScriptValueFromValue(&engine, RDimRotatedEntity::PropertyArchTick),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
