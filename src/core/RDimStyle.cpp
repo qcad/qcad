@@ -199,7 +199,7 @@ void RDimStyle::init() {
     initDimX(PropertyDimaunit, RS::DIMAUNIT, RS::VarTypeInt);
     initDimX(PropertyDimadec, RS::DIMADEC, RS::VarTypeInt);
     initDimX(PropertyDimazin, RS::DIMAZIN, RS::VarTypeInt);
-    initDimX(PropertyArchTick, RS::QCADARCHTICK, RS::VarTypeBool);
+    //initDimX(PropertyArchTick, RS::QCADARCHTICK, RS::VarTypeBool);
     initDimX(PropertyDimclrt, RS::DIMCLRT, RS::VarTypeColor);
 }
 
@@ -226,6 +226,15 @@ void RDimStyle::updateDocumentVariables() {
 //        }
 
         doc->setKnownVariable(propertyVariables[i].second, getVariant(propertyVariables[i].second));
+    }
+}
+
+void RDimStyle::updateFromDocumentVariables() {
+    RDocument* doc = getDocument();
+
+    for (int i=0; i<propertyVariables.length(); i++) {
+        QVariant v = doc->getKnownVariable(propertyVariables[i].second);
+        setVariant(propertyVariables[i].second, v);
     }
 }
 

@@ -85,6 +85,7 @@ public:
     }
 
     void updateDocumentVariables();
+    void updateFromDocumentVariables();
 
 //    virtual void setDouble(RS::KnownVariable key, double val);
 //    virtual void setInt(RS::KnownVariable key, int val);
