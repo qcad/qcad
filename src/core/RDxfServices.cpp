@@ -19,6 +19,7 @@
 #include <QFileInfo>
 #include <QTemporaryFile>
 
+#include "RDocument.h"
 #include "RDxfServices.h"
 #include "REllipse.h"
 #include "RLinetypeListImperial.h"
@@ -582,20 +583,24 @@ QString RDxfServices::fixFontName(const QString& fontName) const {
 
     // CSS in QTextEdit cannot handle a font called "normal":
     if (ret.toLower()=="normal") {
-        ret = "standard";
+        return "Standard";
     }
 
     // txt is an a*cad font
     if (ret.toLower()=="txt") {
-        ret = "standard";
+        return "Standard";
+    }
+
+    if (ret.toLower()=="standard") {
+        return "Standard";
     }
 
     if (getVersion2Compatibility() && ret.toLower()=="courier") {
-        ret = "courier_2";
+        return "CourierCad";
     }
 
     if (ret=="") {
-        ret = "standard";
+        return "Standard";
     }
 
     return ret;
@@ -2237,4 +2242,21 @@ void RDxfServices::autoFixLinetypePattern(RLinetypePattern& pattern) {
     if (pattern.getPatternLength()>pat->getPatternLength()*(25.4/2) || pattern.getName().startsWith("ACAD_ISO")) {
         pattern.setMetric(true);
     }
+}
+
+int RDxfServices::getFileQCADVersion(const RDocument& doc) {
+    QString fileVersionStr = doc.getVariable("QCADVersion", "").toString();
+    QRegExp re("(\\d+)\\.(\\d+)\\.(\\d+)(?:\\.(\\d+))?");
+    int idx = re.indexIn(fileVersionStr);
+    if (idx!=0) {
+        return -1;
+    }
+    int fileVersionMajor = re.cap(1).toInt();
+    int fileVersionMinor = re.cap(2).toInt();
+    int fileVersionPatch = re.cap(3).toInt();
+    int fileVersionRev = 0;
+    if (re.captureCount()==4) {
+        fileVersionRev = re.cap(4).toInt();
+    }
+    return fileVersionMajor*100*100*100 + fileVersionMinor*100*100 + fileVersionPatch*100 + fileVersionRev;
 }

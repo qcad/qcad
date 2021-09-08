@@ -36,6 +36,7 @@
 #include "RDimOrdinateEntity.h"
 #include "RDimRadialEntity.h"
 #include "RDimRotatedEntity.h"
+#include "RDimStyle.h"
 #include "RDimensionEntity.h"
 #include "RDxfExporter.h"
 #include "REllipseEntity.h"
@@ -117,6 +118,9 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
 
         // Variables
         //qDebug() << "RDxfExporter::exportFile: variables";
+        QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+        dimStyle->updateDocumentVariables();
+
         writeVariables();
 
         // end header
@@ -271,7 +275,9 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
                           document->getKnownVariable(RS::DIMEXE, 0.625).toDouble(),
                           document->getKnownVariable(RS::DIMEXO, 0.625).toDouble(),
                           document->getKnownVariable(RS::DIMGAP, 0.625).toDouble(),
-                          document->getKnownVariable(RS::DIMTXT, 2.5).toDouble()
+                          document->getKnownVariable(RS::DIMTXT, 2.5).toDouble(),
+                          document->getKnownVariable(RS::DIMTAD, 1).toInt(),
+                          document->getKnownVariable(RS::DIMTIH, false).toBool()
         );
     }
 

@@ -161,6 +161,23 @@ bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter
         op.apply(*document, false);
     }
 
+    // update dimension style from document variables:
+    QSharedPointer<RDimStyle> dimStyle = document->queryDimStyle();
+    if (!dimStyle.isNull()) {
+        RAddObjectsOperation op;
+        dimStyle->updateFromDocumentVariables();
+
+        // force text above dimension line as dxflib does not support anything else:
+        int fileQCADVersion = RDxfServices::getFileQCADVersion(*document);
+        if (fileQCADVersion!=-1 && fileQCADVersion<=3260406) {
+            dimStyle->setBool(RS::DIMTIH, false);
+            dimStyle->setInt(RS::DIMTAD, 1);
+        }
+
+        op.addObject(dimStyle);
+        op.apply(*document, false);
+    }
+
     RImporter::endImport();
 
     // set block reference IDs in the end to support nested blocks (FS#1016):
@@ -730,7 +747,7 @@ void RDxfImporter::addTextStyle(const DL_StyleData& data) {
     s.italic = xDataFlags&0x1000000;
     s.bold = xDataFlags&0x2000000;
 
-    textStyles.insert(decode(data.name.c_str()), s);
+    textStyles.insert(dxfServices.fixFontName(decode(data.name.c_str())), s);
 }
 
 void RDxfImporter::addMTextChunk(const std::string& text) {
@@ -820,7 +837,7 @@ void RDxfImporter::addMText(const DL_MTextData& data) {
         valign, halign,
         dir, lss,
         data.lineSpacingFactor,
-        mtextString, s.font,
+        mtextString, dxfServices.fixFontName(s.font),
         s.bold,
         s.italic,
         data.angle,
@@ -923,7 +940,7 @@ RTextBasedData RDxfImporter::getTextBasedData(const DL_TextData& data) {
         RS::LeftToRight, RS::Exact,
         1.0,
         data.text.c_str(),
-        s.font,
+        dxfServices.fixFontName(s.font),
         s.bold,                      // bold
         s.italic,                    // italic
         data.angle,
@@ -1502,6 +1519,8 @@ void RDxfImporter::addDictionaryEntry(const DL_DictionaryEntryData& data) {
 
     if (inDict) {
         qcadDict[data.handle.c_str()] = data.name.c_str();
+        qDebug() << "data.handle.c_str():" << data.handle.c_str();
+        qDebug() << "data.name.c_str():" << data.name.c_str();
     }
 }
 
@@ -1535,6 +1554,7 @@ void RDxfImporter::setVariableInt(const std::string& key, int value, int code) {
 }
 
 void RDxfImporter::setVariableDouble(const std::string& key, double value, int code) {
+    qDebug() << "RDxfImporter::setVariableDouble";
     Q_UNUSED(code)
 
     RS::KnownVariable v = dxfServices.stringToVariable(key.c_str());

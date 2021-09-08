@@ -29,6 +29,8 @@
 #include "RLineweight.h"
 #include "RLinetypePattern.h"
 
+class RDocument;
+
 /**
  * \brief DXF support tools, mainly for QCAD 2 DXF imports.
  *
@@ -136,6 +138,8 @@ public:
     static QString parseUnicode(const QString& str);
 
     static void autoFixLinetypePattern(RLinetypePattern& pattern);
+
+    static int getFileQCADVersion(const RDocument& doc);
 
 private:
     bool version2GotDIMZIN;
