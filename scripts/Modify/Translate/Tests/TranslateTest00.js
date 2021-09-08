@@ -36,14 +36,12 @@ TranslateTest00.prototype.test00 = function() {
     this.setZoom(2, new RVector(160.055, 63.2973, 0) );
     var p = new RVector(-140,-20);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
-    var p = new RVector(85,15);
+    var p = new RVector(85,20);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.triggerCommand('move');
-    this.setZoom(2.0813704496788006, new RVector(160.055, 63.2973, 0) );
     var p = new RVector(-0.544239, 0.122428);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    this.setZoom(2.0813704496788006, new RVector(160.055, 63.2973, 0) );
     var p = new RVector(-25.047325, 78.916667);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.dlgStart();

@@ -36,7 +36,7 @@ TranslateTest02.prototype.test00 = function() {
     this.setZoom(2.0813704496788006, new RVector(160.055, 63.2973, 0) );
     var p = new RVector(-140,-20);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
-    var p = new RVector(85,15);
+    var p = new RVector(85,20);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.triggerCommand('move');
     this.setZoom(2.0813704496788006, new RVector(160.055, 63.2973, 0) );
