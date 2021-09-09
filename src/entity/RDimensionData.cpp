@@ -308,6 +308,7 @@ int RDimensionData::getDimXInt(RS::KnownVariable key) const {
 
     // get value from override:
     if (hasOverride(key)) {
+        if (key==RS::DIMBLK) qDebug() << "DIMBLK from override";
         return getIntOverride(key);
     }
 
@@ -316,6 +317,7 @@ int RDimensionData::getDimXInt(RS::KnownVariable key) const {
         if (!dimStyle.isNull()) {
             // get value from dimension style:
             dimX = dimStyle->getInt(key);
+            if (key==RS::DIMBLK) qDebug() << "DIMBLK from dimstyle:" << dimX;
         }
         else {
             // TODO: get value from document (should never happen):
@@ -939,6 +941,16 @@ QString RDimensionData::formatAngleLabel(double angle) const {
 //    //textData.rotate(angle, RVector(0,0));
 //    //textData.move(pos);
 //}
+
+QString RDimensionData::getDimblkName() const {
+    const RDocument* doc = getDocument();
+    if (doc==NULL) {
+        return QString();
+    }
+
+    RObject::Handle h = getDimblk();
+    return doc->getBlockNameFromHandle(h);
+}
 
 bool RDimensionData::hasDimensionBlockReference() const {
     QString dimBlockName = getDimBlockName();

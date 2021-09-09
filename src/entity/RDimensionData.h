@@ -451,6 +451,11 @@ public:
         return getDimXDouble(RS::DIMTSZ) > 0.0;
     }
 
+    int getDimblk() const {
+        return getDimXInt(RS::DIMBLK);
+    }
+
+    QString getDimblkName() const;
 
 
 

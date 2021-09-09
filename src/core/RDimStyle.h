@@ -64,6 +64,9 @@ class QCADCORE_EXPORT RDimStyle: public RObject, public RDimStyleData {
     static RPropertyTypeId PropertyDimazin;
     static RPropertyTypeId PropertyArchTick;
     static RPropertyTypeId PropertyDimclrt;
+    static RPropertyTypeId PropertyDimblk;
+    static RPropertyTypeId PropertyDimblk1;
+    static RPropertyTypeId PropertyDimblk2;
 
 public:
     RDimStyle();

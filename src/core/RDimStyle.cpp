@@ -45,6 +45,9 @@ RPropertyTypeId RDimStyle::PropertyDimadec;
 RPropertyTypeId RDimStyle::PropertyDimazin;
 RPropertyTypeId RDimStyle::PropertyArchTick;
 RPropertyTypeId RDimStyle::PropertyDimclrt;
+RPropertyTypeId RDimStyle::PropertyDimblk;
+RPropertyTypeId RDimStyle::PropertyDimblk1;
+RPropertyTypeId RDimStyle::PropertyDimblk2;
 
 QList<QPair<RPropertyTypeId, RS::KnownVariable> > RDimStyle::propertyVariables;
 
@@ -87,6 +90,9 @@ void RDimStyle::init() {
     RDimStyle::PropertyDimazin.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Angular zero suppression"));
     RDimStyle::PropertyArchTick.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Architectur tick"));
     RDimStyle::PropertyDimclrt.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Text color"));
+    RDimStyle::PropertyDimblk.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Arrow block"));
+    RDimStyle::PropertyDimblk1.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Arrow block 1"));
+    RDimStyle::PropertyDimblk2.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Arrow block 2"));
 
     RDimStyleData::init();
 
@@ -109,6 +115,9 @@ void RDimStyle::init() {
     initDimX(PropertyDimadec, RS::DIMADEC, RS::VarTypeInt);
     initDimX(PropertyDimazin, RS::DIMAZIN, RS::VarTypeInt);
     initDimX(PropertyDimclrt, RS::DIMCLRT, RS::VarTypeColor);
+    initDimX(PropertyDimblk, RS::DIMBLK, RS::VarTypeInt);
+    initDimX(PropertyDimblk1, RS::DIMBLK1, RS::VarTypeInt);
+    initDimX(PropertyDimblk2, RS::DIMBLK2, RS::VarTypeInt);
 }
 
 void RDimStyle::initDimX(const RPropertyTypeId& propertyTypeId, RS::KnownVariable var, RS::KnownVariableType type) {
@@ -141,6 +150,10 @@ QPair<QVariant, RPropertyAttributes> RDimStyle::getProperty(RPropertyTypeId& pro
         }
     }
 
+    if (propertyTypeId==PropertyArchTick) {
+        return qMakePair(getDouble(RS::DIMTSZ) > 0.0, RPropertyAttributes());
+    }
+
     return RObject::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
 
@@ -152,6 +165,15 @@ bool RDimStyle::setProperty(RPropertyTypeId propertyTypeId, const QVariant& valu
         if (propertyTypeId==propertyVariables[i].first) {
             setVariant(propertyVariables[i].second, value);
             ret = true;
+        }
+    }
+
+    if (propertyTypeId==PropertyArchTick) {
+        if (value.toBool()==true) {
+            setDouble(RS::DIMTSZ, getDouble(RS::DIMASZ));
+        }
+        else {
+            setDouble(RS::DIMTSZ, 0.0);
         }
     }
 
