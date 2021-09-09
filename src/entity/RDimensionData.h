@@ -132,6 +132,10 @@ public:
         arrow2Pos = p;
     }
 
+    void clearStyleOverrides() {
+        overrides.clear();
+    }
+
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false, QList<RObject::Id>* entityIds = NULL) const {
         return shapes;
     }

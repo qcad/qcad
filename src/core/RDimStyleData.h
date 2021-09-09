@@ -57,6 +57,13 @@ public:
         return !mapBool.isEmpty() || !mapDouble.isEmpty() || !mapInt.isEmpty() || !mapColor.isEmpty();
     }
 
+    void clear() {
+        mapBool.clear();
+        mapInt.clear();
+        mapDouble.clear();
+        mapColor.clear();
+    }
+
     static RS::KnownVariableType getType(RS::KnownVariable key) {
         if (dimXTypes.contains(key)) {
             return dimXTypes[key];

@@ -127,6 +127,10 @@ public:
 
     virtual const RDimensionData& getData() const = 0;
 
+    void clearStyleOverrides() {
+        getData().clearStyleOverrides();
+    }
+
     void setDefinitionPoint(const RVector& p) {
         getData().setDefinitionPoint(p);
     }
