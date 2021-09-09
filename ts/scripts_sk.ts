@@ -2730,7 +2730,7 @@ Prajete si ho obnoviť?</translation>
         <translation>Presunúť prvok na požadované miesto</translation>
     </message>
     <message>
-        <location line="+399"/>
+        <location line="+400"/>
         <source>Move Reference Point</source>
         <translation>Presunúť referenčný bod</translation>
     </message>
@@ -3305,57 +3305,47 @@ Prajete si ho obnoviť?</translation>
         <translation>medzera</translation>
     </message>
     <message>
-        <location line="+16"/>
         <source>Scientific</source>
-        <translation>Vedecký</translation>
+        <translation type="vanished">Vedecký</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Decimal</source>
-        <translation>Desatinný</translation>
+        <translation type="vanished">Desatinný</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Engineering</source>
-        <translation>Strojársky</translation>
+        <translation type="vanished">Strojársky</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Architectural</source>
-        <translation>Architektonický</translation>
+        <translation type="vanished">Architektonický</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Fractional</source>
-        <translation>Zlomkový</translation>
+        <translation type="vanished">Zlomkový</translation>
     </message>
     <message>
-        <location line="+32"/>
         <source>Decimal Degrees</source>
-        <translation>Stupne</translation>
+        <translation type="vanished">Stupne</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Deg/min/sec</source>
-        <translation>Stupne/min/sek</translation>
+        <translation type="vanished">Stupne/min/sek</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Gradians</source>
-        <translation>Gradiány</translation>
+        <translation type="vanished">Gradiány</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Radians</source>
-        <translation>Radiány</translation>
+        <translation type="vanished">Radiány</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Surveyor&apos;s units</source>
-        <translation>Prehľad</translation>
+        <translation type="vanished">Prehľad</translation>
     </message>
     <message>
-        <location line="+244"/>
+        <location line="+309"/>
         <source>Unit / Format</source>
         <translation>Jednotka / Formát</translation>
     </message>
@@ -4502,6 +4492,11 @@ už existuje v zozname.</translation>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
         <translation>Prvok nie je čiara, oblúk alebo kružnica.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -5787,7 +5782,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+16"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rozostup medzi písmenami {0?}</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -10577,12 +10572,12 @@ vo výsledku vyhľadania:</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1472"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1521"/>
         <source>*VARIES*</source>
         <translation>*Rôzne*</translation>
     </message>
     <message>
-        <location line="-1279"/>
+        <location line="-1323"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10601,12 +10596,12 @@ vo výsledku vyhľadania:</translation>
         <translation>Špeciálne vlastnosti</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+19"/>
         <source>Dependent Entities</source>
         <translation>Závislé prvky</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>Custom</source>
         <translation>Vlastné</translation>
     </message>
@@ -10641,7 +10636,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Zobraziť všetky vlastnosti</translation>
     </message>
     <message>
-        <location line="+117"/>
+        <location line="+134"/>
         <source>Auto</source>
         <translation>automatický</translation>
     </message>
@@ -10661,7 +10656,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Nie</translation>
     </message>
     <message>
-        <location line="+361"/>
+        <location line="+382"/>
         <source>Widgets</source>
         <translation>Pomôcky</translation>
     </message>
@@ -14369,7 +14364,106 @@ vo výsledku vyhľadania:</translation>
         <translation>Dole</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+5"/>
+        <source>Scientific</source>
+        <translation type="unfinished">Vedecký</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Decimal</source>
+        <translation type="unfinished">Desatinný</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Engineering</source>
+        <translation type="unfinished">Strojársky</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Architectural</source>
+        <translation type="unfinished">Architektonický</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fractional</source>
+        <translation type="unfinished">Zlomkový</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Centered</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location line="+38"/>
+        <source>Show trailing zeroes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>1</source>
+        <translation type="obsolete">Rozostup medzi písmenami {1?}</translation>
+    </message>
+    <message>
+        <source>2</source>
+        <translation type="obsolete">Rozostup medzi písmenami {2?}</translation>
+    </message>
+    <message>
+        <source>3</source>
+        <translation type="obsolete">Rozostup medzi písmenami {3?}</translation>
+    </message>
+    <message>
+        <source>4</source>
+        <translation type="obsolete">Rozostup medzi písmenami {4?}</translation>
+    </message>
+    <message>
+        <source>5</source>
+        <translation type="obsolete">Rozostup medzi písmenami {5?}</translation>
+    </message>
+    <message>
+        <source>6</source>
+        <translation type="obsolete">Rozostup medzi písmenami {6?}</translation>
+    </message>
+    <message>
+        <source>7</source>
+        <translation type="obsolete">Rozostup medzi písmenami {7?}</translation>
+    </message>
+    <message>
+        <source>8</source>
+        <translation type="obsolete">Rozostup medzi písmenami {8?}</translation>
+    </message>
+    <message>
+        <location line="-9"/>
+        <source>Decimal Degrees</source>
+        <translation type="unfinished">Stupne</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Deg/min/sec</source>
+        <translation type="unfinished">Stupne/min/sek</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Gradians</source>
+        <translation type="unfinished">Gradiány</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Radians</source>
+        <translation type="unfinished">Radiány</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Surveyor&apos;s units</source>
+        <translation type="unfinished">Prehľad</translation>
+    </message>
+    <message>
+        <location line="-28"/>
+        <location line="+35"/>
+        <source>Suppress trailing zeroes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
         <location line="+4"/>
         <source>Clockwise</source>
         <translation>V smere hodinových ručičiek</translation>
@@ -14386,12 +14480,51 @@ vo výsledku vyhľadania:</translation>
         <translation>Predchádzajúce</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-86"/>
+        <location line="+87"/>
         <source>Above</source>
         <translation>Hore</translation>
     </message>
     <message>
+        <location line="-74"/>
+        <source>Include 0&apos;0&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
         <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+2"/>
+        <location line="+33"/>
+        <location line="+2"/>
+        <source>(unsupported)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-39"/>
+        <source>Include 0&apos;, suppress 0&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Include 0&quot;, suppress 0&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+35"/>
+        <source>Suppress leading zeroes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-33"/>
+        <location line="+35"/>
+        <source>Suppress leading / trailing zeroes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+35"/>
         <source>None</source>
         <translation>Žiadne</translation>
     </message>
@@ -14532,7 +14665,7 @@ vo výsledku vyhľadania:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+959"/>
+        <location filename="../scripts/library.js" line="+968"/>
         <source>Objects</source>
         <translation>Objekty</translation>
     </message>

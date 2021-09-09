@@ -64,17 +64,17 @@
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+107"/>
+        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+149"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="+106"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="+151"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+107"/>
+        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+111"/>
         <location line="+5"/>
         <location line="+3"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="+105"/>
+        <location filename="../src/entity/RDimRadialEntity.cpp" line="+147"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+96"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+117"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+82"/>
         <location line="+3"/>
@@ -373,10 +373,7 @@
         <translation>No</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+18"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-196"/>
-        <location filename="../src/entity/RLeaderEntity.cpp" line="+2"/>
-        <location filename="../src/entity/RToleranceEntity.cpp" line="+2"/>
+        <location line="-196"/>
         <source>Scale</source>
         <translation>Escalar</translation>
     </message>
@@ -385,7 +382,7 @@
         <translation type="vanished">Simple</translation>
     </message>
     <message>
-        <location filename="../src/entity/RToleranceEntity.cpp" line="-7"/>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="-5"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Location</source>
@@ -576,7 +573,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="+5"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RLeaderEntity.cpp" line="-4"/>
+        <location filename="../src/entity/RLeaderEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-21"/>
@@ -754,12 +751,12 @@
         <translation>Guia punto final</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+123"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+167"/>
         <source>Dimension Angle</source>
         <translation>Ángulo cota</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="-26"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>
         <source>Label</source>
         <translation>Etiqueta</translation>
     </message>
@@ -824,12 +821,111 @@
         <translation>Valor medido</translation>
     </message>
     <message>
+        <location line="+9"/>
+        <source>Style</source>
+        <translation>Estilo</translation>
+    </message>
+    <message>
         <location line="+1"/>
-        <source>Linear Factor</source>
-        <translation>Factor</translation>
+        <source>Overall dimension scale</source>
+        <translation>Escala de dimensión global</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linear measurement factor</source>
+        <translation>Factor de medición lineal</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text height</source>
+        <translation>Altura del texto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dimension line gap</source>
+        <translation>Distancia de la línea de cota</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arrow size</source>
+        <translation>Tamaño de la flecha</translation>
     </message>
     <message>
         <location line="+2"/>
+        <source>Extension line extension</source>
+        <translation>Extensión línea de referencia</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Extension line offset</source>
+        <translation>Desfase línea de referencia</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text position vertical</source>
+        <translation>Posición del texto en vertical</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text inside horizontal</source>
+        <translation>Texto dentro de la horizontal</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Tick size</source>
+        <translation>Tamaño de la garrapata</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linear format</source>
+        <translation>Formato lineal</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Decimal places</source>
+        <translation>Decimales</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Decimal separator</source>
+        <translation>Separador decimal</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Zero suppression</source>
+        <translation>Supresión cero</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Angular format</source>
+        <translation>Formato angular</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Angular decimal places</source>
+        <translation>Decimales angulares</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Angular zero suppression</source>
+        <translation>Supresión del cero angular</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Architectur tick</source>
+        <translation>Garrapata de la arquitectura</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text color</source>
+        <translation>Color del texto</translation>
+    </message>
+    <message>
+        <source>Linear Factor</source>
+        <translation type="vanished">Factor</translation>
+    </message>
+    <message>
+        <location line="-26"/>
         <source>Block Name</source>
         <translation>Nombre del bloque</translation>
     </message>
@@ -902,7 +998,7 @@
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+93"/>
-        <location filename="../src/entity/RAttributeEntity.cpp" line="+97"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+101"/>
         <source>Tag</source>
         <translation>Etiqueta</translation>
     </message>

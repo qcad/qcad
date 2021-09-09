@@ -219,29 +219,24 @@
 <context>
     <name>RDimStyle</name>
     <message>
-        <location filename="../src/core/RDimStyle.cpp" line="+112"/>
         <source>Overall dimension scale</source>
-        <translation>Globale Skalierung der Bemassung</translation>
+        <translation type="vanished">Globale Skalierung der Bemassung</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text height</source>
-        <translation>Texthöhe</translation>
+        <translation type="vanished">Texthöhe</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation>Bemassungslinienabstand</translation>
+        <translation type="vanished">Bemassungslinienabstand</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text above dimension line</source>
-        <translation>Text über Bemassungslinie</translation>
+        <translation type="vanished">Text über Bemassungslinie</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text inside horizontal</source>
-        <translation>Text innen horizontal</translation>
+        <translation type="vanished">Text innen horizontal</translation>
     </message>
 </context>
 <context>
@@ -270,7 +265,7 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+94"/>
+        <location filename="../src/core/REntity.cpp" line="+97"/>
         <source>Block</source>
         <translation>Block</translation>
     </message>
@@ -438,6 +433,11 @@
         <location line="+1"/>
         <source>Draw Order</source>
         <translation>Reihenfolge</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Parent Id</source>
+        <translation>Parent Id</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -743,6 +743,126 @@
         <location line="+2"/>
         <source>Block name:</source>
         <translation>Blockname:</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RDimStyle.cpp" line="+72"/>
+        <source>Style</source>
+        <translation>Stil</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Overall dimension scale</source>
+        <translation>Globale Skalierung der Bemassung</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linear measurement factor</source>
+        <translation>Linearfaktor</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text height</source>
+        <translation>Höhe des Textes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dimension line gap</source>
+        <translation>Abstand zu Bemassungslinien</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arrow size</source>
+        <translation>Pfeilgrösse</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dimension line increment</source>
+        <translation>Schrittweite der Masslinien</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Extension line extension</source>
+        <translation>Verlängerung der Bemassungslinie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Extension line offset</source>
+        <translation>Begrenzungslinien Abstand</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text above dimension line</source>
+        <translation>Text über der Masslinie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text inside horizontal</source>
+        <translation>Text innen horizontal</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Tick size</source>
+        <translation>Tick-Grösse</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linear format</source>
+        <translation>Linearformat</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Decimal places</source>
+        <translation>Dezimalstellen</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Decimal separator</source>
+        <translation>Dezimaltrennzeichen</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Zero suppression</source>
+        <translation>Nullunterdrückung</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Angular format</source>
+        <translation>Winkelformat</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Angular decimal places</source>
+        <translation>Winkelnachkommastellen</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Angular zero suppression</source>
+        <translation>Unterdrückung von Nullen Winkelmass</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Architectur tick</source>
+        <translation>Architektur-Tick</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text color</source>
+        <translation>Textfarbe</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arrow block</source>
+        <translation>Pfeilblock</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arrow block 1</source>
+        <translation>Pfeilblock 1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arrow block 2</source>
+        <translation>Pfeilblock 2</translation>
     </message>
 </context>
 <context>

@@ -2743,7 +2743,7 @@ Do you wish to recover it?</source>
         <translation>Premakni entiteto na željeno lokacijo</translation>
     </message>
     <message>
-        <location line="+399"/>
+        <location line="+400"/>
         <source>Move Reference Point</source>
         <translation>Premakni referenčno točko</translation>
     </message>
@@ -3315,57 +3315,47 @@ Do you wish to recover it?</source>
         <translation>presledek</translation>
     </message>
     <message>
-        <location line="+16"/>
         <source>Scientific</source>
-        <translation>Znanstveno</translation>
+        <translation type="vanished">Znanstveno</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Decimal</source>
-        <translation>Desetiški</translation>
+        <translation type="vanished">Desetiški</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Engineering</source>
-        <translation>Inženirski</translation>
+        <translation type="vanished">Inženirski</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Architectural</source>
-        <translation>Arhitekturen</translation>
+        <translation type="vanished">Arhitekturen</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Fractional</source>
-        <translation>Frakcijski</translation>
+        <translation type="vanished">Frakcijski</translation>
     </message>
     <message>
-        <location line="+32"/>
         <source>Decimal Degrees</source>
-        <translation>Stopinje v desetiškem</translation>
+        <translation type="vanished">Stopinje v desetiškem</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Deg/min/sec</source>
-        <translation>Stopinj/Minut/sekund</translation>
+        <translation type="vanished">Stopinj/Minut/sekund</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Gradians</source>
-        <translation>Gradiani</translation>
+        <translation type="vanished">Gradiani</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Radians</source>
-        <translation>Radiani</translation>
+        <translation type="vanished">Radiani</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Surveyor&apos;s units</source>
-        <translation>Geodetske enote</translation>
+        <translation type="vanished">Geodetske enote</translation>
     </message>
     <message>
-        <location line="+244"/>
+        <location line="+309"/>
         <source>Unit / Format</source>
         <translation>Enota / Zapis</translation>
     </message>
@@ -4541,6 +4531,11 @@ je že na seznamu.</translation>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
         <translation>Entiteta ni črta, lok ali krog.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -10959,12 +10954,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1472"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1521"/>
         <source>*VARIES*</source>
         <translation>*RAZLIČNO*</translation>
     </message>
     <message>
-        <location line="-1279"/>
+        <location line="-1323"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10983,12 +10978,12 @@ shown in search results:</source>
         <translation>Specifične lastnosti</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+19"/>
         <source>Dependent Entities</source>
         <translation>Odvisne entitete</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>Custom</source>
         <translation>Dodatno</translation>
     </message>
@@ -11023,7 +11018,7 @@ shown in search results:</source>
         <translation>Prikaži vse lasnosti</translation>
     </message>
     <message>
-        <location line="+665"/>
+        <location line="+703"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -11064,7 +11059,7 @@ shown in search results:</source>
         <translation type="obsolete">Dno</translation>
     </message>
     <message>
-        <location line="-548"/>
+        <location line="-569"/>
         <source>Auto</source>
         <translation>Samodejno</translation>
     </message>
@@ -11084,7 +11079,7 @@ shown in search results:</source>
         <translation>Ne</translation>
     </message>
     <message>
-        <location line="+361"/>
+        <location line="+382"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>
@@ -14922,7 +14917,110 @@ shown in search results:</source>
         <translation>Spodaj</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+5"/>
+        <source>Scientific</source>
+        <translation type="unfinished">Znanstveno</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Decimal</source>
+        <translation type="unfinished">Desetiški</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Engineering</source>
+        <translation type="unfinished">Inženirski</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Architectural</source>
+        <translation type="unfinished">Arhitekturen</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fractional</source>
+        <translation type="unfinished">Frakcijski</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Centered</source>
+        <translation type="unfinished">Usredinjeno</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location line="+38"/>
+        <source>Show trailing zeroes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0</source>
+        <translation type="obsolete">0</translation>
+    </message>
+    <message>
+        <source>1</source>
+        <translation type="obsolete">1</translation>
+    </message>
+    <message>
+        <source>2</source>
+        <translation type="obsolete">2</translation>
+    </message>
+    <message>
+        <source>3</source>
+        <translation type="obsolete">3</translation>
+    </message>
+    <message>
+        <source>4</source>
+        <translation type="obsolete">4</translation>
+    </message>
+    <message>
+        <source>5</source>
+        <translation type="obsolete">5</translation>
+    </message>
+    <message>
+        <source>6</source>
+        <translation type="obsolete">6</translation>
+    </message>
+    <message>
+        <source>7</source>
+        <translation type="obsolete">7</translation>
+    </message>
+    <message>
+        <source>8</source>
+        <translation type="obsolete">8</translation>
+    </message>
+    <message>
+        <location line="-9"/>
+        <source>Decimal Degrees</source>
+        <translation type="unfinished">Stopinje v desetiškem</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Deg/min/sec</source>
+        <translation type="unfinished">Stopinj/Minut/sekund</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Gradians</source>
+        <translation type="unfinished">Gradiani</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Radians</source>
+        <translation type="unfinished">Radiani</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Surveyor&apos;s units</source>
+        <translation type="unfinished">Geodetske enote</translation>
+    </message>
+    <message>
+        <location line="-28"/>
+        <location line="+35"/>
+        <source>Suppress trailing zeroes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+22"/>
         <location line="+4"/>
         <source>Clockwise</source>
         <translation>Smer ure</translation>
@@ -14939,12 +15037,51 @@ shown in search results:</source>
         <translation>Pred</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-86"/>
+        <location line="+87"/>
         <source>Above</source>
         <translation>Nad</translation>
     </message>
     <message>
+        <location line="-74"/>
+        <source>Include 0&apos;0&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
         <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+2"/>
+        <location line="+33"/>
+        <location line="+2"/>
+        <source>(unsupported)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-39"/>
+        <source>Include 0&apos;, suppress 0&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Include 0&quot;, suppress 0&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+35"/>
+        <source>Suppress leading zeroes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-33"/>
+        <location line="+35"/>
+        <source>Suppress leading / trailing zeroes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+35"/>
         <source>None</source>
         <translation>Brez</translation>
     </message>
@@ -15085,7 +15222,7 @@ shown in search results:</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+959"/>
+        <location filename="../scripts/library.js" line="+968"/>
         <source>Objects</source>
         <translation>Objekti</translation>
     </message>

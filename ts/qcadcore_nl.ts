@@ -215,29 +215,24 @@
 <context>
     <name>RDimStyle</name>
     <message>
-        <location filename="../src/core/RDimStyle.cpp" line="+112"/>
         <source>Overall dimension scale</source>
-        <translation>Algemene bematingsschaal</translation>
+        <translation type="vanished">Algemene bematingsschaal</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text height</source>
-        <translation>Teksthoogte</translation>
+        <translation type="vanished">Teksthoogte</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation>Maatlijn uitsparing</translation>
+        <translation type="vanished">Maatlijn uitsparing</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text above dimension line</source>
-        <translation>Tekst boven de bematingslijn</translation>
+        <translation type="vanished">Tekst boven de bematingslijn</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text inside horizontal</source>
-        <translation>Tekst binnen horizontaal</translation>
+        <translation type="vanished">Tekst binnen horizontaal</translation>
     </message>
 </context>
 <context>
@@ -266,7 +261,7 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+94"/>
+        <location filename="../src/core/REntity.cpp" line="+97"/>
         <source>Block</source>
         <translation>Blok</translation>
     </message>
@@ -434,6 +429,11 @@
         <location line="+1"/>
         <source>Draw Order</source>
         <translation>Tekenvolgorde</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Parent Id</source>
+        <translation>Parent Id</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -735,6 +735,126 @@
         <location line="+2"/>
         <source>Block name:</source>
         <translation>Bloknaam:</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RDimStyle.cpp" line="+72"/>
+        <source>Style</source>
+        <translation>Stijl</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Overall dimension scale</source>
+        <translation>Algemene bematingsschaal</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linear measurement factor</source>
+        <translation>Lineaire meetfactor</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text height</source>
+        <translation>Hoogte van de tekst</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dimension line gap</source>
+        <translation>Maat lijn uitsparing</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arrow size</source>
+        <translation>Pijlgrootte</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dimension line increment</source>
+        <translation>Dimensie lijn toename</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Extension line extension</source>
+        <translation>Hulplijn extentie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Extension line offset</source>
+        <translation>Hulplijn afzet</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text above dimension line</source>
+        <translation>Tekst boven de maatlijn</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text inside horizontal</source>
+        <translation>Tekst binnen horizontaal</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Tick size</source>
+        <translation>Tikgrootte</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linear format</source>
+        <translation>Lineair formaat</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Decimal places</source>
+        <translation>Decimalplaatsen</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Decimal separator</source>
+        <translation>Decimaalscheidingsteken</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Zero suppression</source>
+        <translation>Nul onderdrukking</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Angular format</source>
+        <translation>Hoekformaat</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Angular decimal places</source>
+        <translation>Hoek decimale plaatsen</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Angular zero suppression</source>
+        <translation>Onderdrukking van nul hoekmaat</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Architectur tick</source>
+        <translation>Architectur tick</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text color</source>
+        <translation>Tekst kleur</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arrow block</source>
+        <translation>Pijlblok</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arrow block 1</source>
+        <translation>Pijlblok 1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arrow block 2</source>
+        <translation>Pijlblok 2</translation>
     </message>
 </context>
 <context>

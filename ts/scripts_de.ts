@@ -3086,7 +3086,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Objekt verschieben</translation>
     </message>
     <message>
-        <location line="+399"/>
+        <location line="+400"/>
         <source>Move Reference Point</source>
         <translation>Referenzpunkt verschieben</translation>
     </message>
@@ -3680,57 +3680,47 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Leerzeichen</translation>
     </message>
     <message>
-        <location line="+16"/>
         <source>Scientific</source>
-        <translation>Wissenschaftlich</translation>
+        <translation type="vanished">Wissenschaftlich</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Decimal</source>
-        <translation>Dezimal</translation>
+        <translation type="vanished">Dezimal</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Engineering</source>
-        <translation>Technisch</translation>
+        <translation type="vanished">Technisch</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Architectural</source>
-        <translation>Architektur</translation>
+        <translation type="vanished">Architektur</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Fractional</source>
-        <translation>Bruchdarstellung</translation>
+        <translation type="vanished">Bruchdarstellung</translation>
     </message>
     <message>
-        <location line="+32"/>
         <source>Decimal Degrees</source>
-        <translation>Dezimal Grad</translation>
+        <translation type="vanished">Dezimal Grad</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Deg/min/sec</source>
-        <translation>Grad/Min/sec</translation>
+        <translation type="vanished">Grad/Min/sec</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Gradians</source>
-        <translation>Gradianten</translation>
+        <translation type="vanished">Gradianten</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Radians</source>
-        <translation>Radiant</translation>
+        <translation type="vanished">Radiant</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Surveyor&apos;s units</source>
-        <translation>Vermessung</translation>
+        <translation type="vanished">Vermessung</translation>
     </message>
     <message>
-        <location line="+245"/>
+        <location line="+310"/>
         <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
         <translation>Die Zeichnungseinheit muss &quot;Inch&quot; sein, damit Bemassungsbeschriftungen in den Formaten &quot;Architektur&quot; oder &quot;Technisch&quot; angezeigt werden können. Format zurückgesetzt auf &quot;Dezimal&quot;.</translation>
     </message>
@@ -4946,6 +4936,11 @@ ist bereits in der Liste.</translation>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
         <translation>Element ist keine Linie und kein Bogen oder Kreis.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
+        <translation>Element ist keine Linie, kein Bogen, keine Spline, kein Ellipsenbogen und keine Polyline.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -12618,12 +12613,12 @@ nicht öffnen.
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1472"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1521"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="-1279"/>
+        <location line="-1323"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -12642,12 +12637,12 @@ nicht öffnen.
         <translation>Spezifische Eigenschaften</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+19"/>
         <source>Dependent Entities</source>
         <translation>Abhängige Objekte</translation>
     </message>
     <message>
-        <location line="+214"/>
+        <location line="+215"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -12672,7 +12667,7 @@ nicht öffnen.
         <translation>Alle Eigenschaften anzeigen</translation>
     </message>
     <message>
-        <location line="+665"/>
+        <location line="+703"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -12709,7 +12704,7 @@ nicht öffnen.
         <translation type="obsolete">Mittelpunkt</translation>
     </message>
     <message>
-        <location line="-711"/>
+        <location line="-749"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
@@ -12722,7 +12717,7 @@ nicht öffnen.
         <translation type="obsolete">Basis</translation>
     </message>
     <message>
-        <location line="+163"/>
+        <location line="+180"/>
         <source>Auto</source>
         <translation>auto</translation>
     </message>
@@ -12746,7 +12741,7 @@ nicht öffnen.
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+361"/>
+        <location line="+382"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>
@@ -12807,7 +12802,7 @@ nicht öffnen.
         <translation type="vanished">Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1148"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1186"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>
@@ -17086,7 +17081,118 @@ nicht öffnen.
         <translation>Unten</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+5"/>
+        <source>Scientific</source>
+        <translation>Wissenschaftlich</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Decimal</source>
+        <translation>Dezimal</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Engineering</source>
+        <translation>Technisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Architectural</source>
+        <translation>Architektur</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fractional</source>
+        <translation>Bruchdarstellung</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Centered</source>
+        <translation>Zentriert</translation>
+    </message>
+    <message>
+        <source>.</source>
+        <translation type="vanished">.</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location line="+38"/>
+        <source>Show trailing zeroes</source>
+        <translation>Nachfolgende Nullen anzeigen</translation>
+    </message>
+    <message>
+        <source>Suppress trailing zeros</source>
+        <translation type="vanished">Nachstehende Nullen unterdrücken</translation>
+    </message>
+    <message>
+        <source>0</source>
+        <translation type="obsolete">0</translation>
+    </message>
+    <message>
+        <source>1</source>
+        <translation type="obsolete">1</translation>
+    </message>
+    <message>
+        <source>2</source>
+        <translation type="obsolete">2</translation>
+    </message>
+    <message>
+        <source>3</source>
+        <translation type="obsolete">3</translation>
+    </message>
+    <message>
+        <source>4</source>
+        <translation type="obsolete">4</translation>
+    </message>
+    <message>
+        <source>5</source>
+        <translation type="obsolete">5</translation>
+    </message>
+    <message>
+        <source>6</source>
+        <translation type="obsolete">6</translation>
+    </message>
+    <message>
+        <source>7</source>
+        <translation type="obsolete">7</translation>
+    </message>
+    <message>
+        <source>8</source>
+        <translation type="obsolete">8</translation>
+    </message>
+    <message>
+        <location line="-9"/>
+        <source>Decimal Degrees</source>
+        <translation>Dezimal Grad</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Deg/min/sec</source>
+        <translation>Grad/Min/sec</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Gradians</source>
+        <translation>Gradianten</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Radians</source>
+        <translation>Radiant</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Surveyor&apos;s units</source>
+        <translation>Vermessung</translation>
+    </message>
+    <message>
+        <location line="-28"/>
+        <location line="+35"/>
+        <source>Suppress trailing zeroes</source>
+        <translation>Nachstehende Nullen unterdrücken</translation>
+    </message>
+    <message>
+        <location line="+22"/>
         <location line="+4"/>
         <source>Clockwise</source>
         <translation>Uhrzeigersinn</translation>
@@ -17103,12 +17209,59 @@ nicht öffnen.
         <translation>Vorangehend</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-86"/>
+        <location line="+87"/>
         <source>Above</source>
         <translation>Über</translation>
     </message>
     <message>
+        <location line="-74"/>
+        <source>Include 0&apos;0&quot;</source>
+        <translation>0&apos;0&quot; einbeziehen</translation>
+    </message>
+    <message>
+        <location line="+0"/>
         <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+2"/>
+        <location line="+33"/>
+        <location line="+2"/>
+        <source>(unsupported)</source>
+        <translation>(nicht unterstützt)</translation>
+    </message>
+    <message>
+        <location line="-39"/>
+        <source>Include 0&apos;, suppress 0&quot;</source>
+        <translation>0&apos; einbeziehen, 0&quot; unterdrücken</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Include 0&quot;, suppress 0&apos;</source>
+        <translation>0&quot; einbeziehen, 0&apos; unterdrücken</translation>
+    </message>
+    <message>
+        <source>Suppress leading zeros</source>
+        <translation type="obsolete">Führende Nullen unterdrücken</translation>
+    </message>
+    <message>
+        <source>Suppress leading / trailing zeros</source>
+        <translation type="vanished">Führende/nachstehende Nullen unterdrücken</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+35"/>
+        <source>Suppress leading zeroes</source>
+        <translation>Führende Nullen unterdrücken</translation>
+    </message>
+    <message>
+        <location line="-33"/>
+        <location line="+35"/>
+        <source>Suppress leading / trailing zeroes</source>
+        <translation>Führende/nachstehende Nullen unterdrücken</translation>
+    </message>
+    <message>
+        <location line="+35"/>
         <source>None</source>
         <translation>Kein</translation>
     </message>
@@ -17316,7 +17469,7 @@ nicht öffnen.
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+959"/>
+        <location filename="../scripts/library.js" line="+968"/>
         <source>Objects</source>
         <translation>Objekte</translation>
     </message>

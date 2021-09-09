@@ -2708,7 +2708,7 @@ Wilt u het herstellen?</translation>
         <translation>Object verplaatsen</translation>
     </message>
     <message>
-        <location line="+399"/>
+        <location line="+400"/>
         <source>Move Reference Point</source>
         <translation>Referentiepunt verplaatsen</translation>
     </message>
@@ -3282,57 +3282,47 @@ Wilt u het herstellen?</translation>
         <translation>Spatie</translation>
     </message>
     <message>
-        <location line="+16"/>
         <source>Scientific</source>
-        <translation>Wetenschappelijk</translation>
+        <translation type="vanished">Wetenschappelijk</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Decimal</source>
-        <translation>Decimaal</translation>
+        <translation type="vanished">Decimaal</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Engineering</source>
-        <translation>Technisch</translation>
+        <translation type="vanished">Technisch</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Architectural</source>
-        <translation>Bouwkunde</translation>
+        <translation type="vanished">Bouwkunde</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Fractional</source>
-        <translation>Breuken</translation>
+        <translation type="vanished">Breuken</translation>
     </message>
     <message>
-        <location line="+32"/>
         <source>Decimal Degrees</source>
-        <translation>Decimale Graden</translation>
+        <translation type="vanished">Decimale Graden</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Deg/min/sec</source>
-        <translation>Deg/min/sec</translation>
+        <translation type="vanished">Deg/min/sec</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Gradians</source>
-        <translation>Graden</translation>
+        <translation type="vanished">Graden</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Radians</source>
-        <translation>Radialen</translation>
+        <translation type="vanished">Radialen</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Surveyor&apos;s units</source>
-        <translation>Te meten eenheid</translation>
+        <translation type="vanished">Te meten eenheid</translation>
     </message>
     <message>
-        <location line="+244"/>
+        <location line="+309"/>
         <source>Unit / Format</source>
         <translation>Eenheid / Formaat</translation>
     </message>
@@ -4462,6 +4452,11 @@ is al in de lijst.</translation>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
         <translation>Object is niet een lijn, boog of cirkel.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
+        <translation>Object is geen lijn, boog, spline, ellipsboog of polylijn.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -10680,12 +10675,12 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1472"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1521"/>
         <source>*VARIES*</source>
         <translation>*VARIEERT*</translation>
     </message>
     <message>
-        <location line="-1279"/>
+        <location line="-1323"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10700,12 +10695,12 @@ getoond in zoekresultaten:</translation>
         <translation>Specifieke eigenschappen</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+19"/>
         <source>Dependent Entities</source>
         <translation>Afhankelijke objecten</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>Custom</source>
         <translation>Gebruiker gedefinieerd</translation>
     </message>
@@ -10740,7 +10735,7 @@ getoond in zoekresultaten:</translation>
         <translation>Toon alle eigenschappen</translation>
     </message>
     <message>
-        <location line="+117"/>
+        <location line="+134"/>
         <source>Auto</source>
         <translation>auto</translation>
     </message>
@@ -10760,7 +10755,7 @@ getoond in zoekresultaten:</translation>
         <translation>Nee</translation>
     </message>
     <message>
-        <location line="+361"/>
+        <location line="+382"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>
@@ -14502,7 +14497,118 @@ getoond in zoekresultaten:</translation>
         <translation>Onderkant</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+5"/>
+        <source>Scientific</source>
+        <translation>Wetenschappelijk</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Decimal</source>
+        <translation>Decimaal</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Engineering</source>
+        <translation>Technisch</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Architectural</source>
+        <translation>Bouwkunde</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fractional</source>
+        <translation>Breuken</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Centered</source>
+        <translation>Gecentreerd</translation>
+    </message>
+    <message>
+        <source>.</source>
+        <translation type="obsolete">.</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location line="+38"/>
+        <source>Show trailing zeroes</source>
+        <translation>Toon afsluitende nullen</translation>
+    </message>
+    <message>
+        <source>Suppress trailing zeros</source>
+        <translation type="vanished">Nullen achteraan onderdrukken</translation>
+    </message>
+    <message>
+        <source>0</source>
+        <translation type="obsolete">0</translation>
+    </message>
+    <message>
+        <source>1</source>
+        <translation type="obsolete">1</translation>
+    </message>
+    <message>
+        <source>2</source>
+        <translation type="obsolete">2</translation>
+    </message>
+    <message>
+        <source>3</source>
+        <translation type="obsolete">3</translation>
+    </message>
+    <message>
+        <source>4</source>
+        <translation type="obsolete">4</translation>
+    </message>
+    <message>
+        <source>5</source>
+        <translation type="obsolete">5</translation>
+    </message>
+    <message>
+        <source>6</source>
+        <translation type="obsolete">6</translation>
+    </message>
+    <message>
+        <source>7</source>
+        <translation type="obsolete">7</translation>
+    </message>
+    <message>
+        <source>8</source>
+        <translation type="obsolete">8</translation>
+    </message>
+    <message>
+        <location line="-9"/>
+        <source>Decimal Degrees</source>
+        <translation>Decimale Graden</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Deg/min/sec</source>
+        <translation>Deg/min/sec</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Gradians</source>
+        <translation>Graden</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Radians</source>
+        <translation>Radialen</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Surveyor&apos;s units</source>
+        <translation>Te meten eenheid</translation>
+    </message>
+    <message>
+        <location line="-28"/>
+        <location line="+35"/>
+        <source>Suppress trailing zeroes</source>
+        <translation>Nullen achteraan onderdrukken</translation>
+    </message>
+    <message>
+        <location line="+22"/>
         <location line="+4"/>
         <source>Clockwise</source>
         <translation>Rechtsom</translation>
@@ -14519,12 +14625,59 @@ getoond in zoekresultaten:</translation>
         <translation>Voorafgaand</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-86"/>
+        <location line="+87"/>
         <source>Above</source>
         <translation>Boven</translation>
     </message>
     <message>
+        <location line="-74"/>
+        <source>Include 0&apos;0&quot;</source>
+        <translation>0&apos;0&quot; omvatten</translation>
+    </message>
+    <message>
+        <location line="+0"/>
         <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+2"/>
+        <location line="+33"/>
+        <location line="+2"/>
+        <source>(unsupported)</source>
+        <translation>(niet ondersteund)</translation>
+    </message>
+    <message>
+        <location line="-39"/>
+        <source>Include 0&apos;, suppress 0&quot;</source>
+        <translation>0&apos; omvatten, 0&quot; onderdrukken</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Include 0&quot;, suppress 0&apos;</source>
+        <translation>0&quot; omvatten, 0&apos; onderdrukken</translation>
+    </message>
+    <message>
+        <source>Suppress leading zeros</source>
+        <translation type="vanished">Voorloopnullen onderdrukken</translation>
+    </message>
+    <message>
+        <source>Suppress leading / trailing zeros</source>
+        <translation type="vanished">Onderdruk voorloopnullen / naloopnullen</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+35"/>
+        <source>Suppress leading zeroes</source>
+        <translation>Onderdruk voorloopnullen</translation>
+    </message>
+    <message>
+        <location line="-33"/>
+        <location line="+35"/>
+        <source>Suppress leading / trailing zeroes</source>
+        <translation>Onderdruk voorloopnullen / naloopnullen</translation>
+    </message>
+    <message>
+        <location line="+35"/>
         <source>None</source>
         <translation>Geen</translation>
     </message>
@@ -14665,7 +14818,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+959"/>
+        <location filename="../scripts/library.js" line="+968"/>
         <source>Objects</source>
         <translation>Objecten</translation>
     </message>

@@ -215,29 +215,24 @@
 <context>
     <name>RDimStyle</name>
     <message>
-        <location filename="../src/core/RDimStyle.cpp" line="+112"/>
         <source>Overall dimension scale</source>
-        <translation>Escala de dimensão geral</translation>
+        <translation type="vanished">Escala de dimensão geral</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text height</source>
-        <translation>Altura do Texto</translation>
+        <translation type="vanished">Altura do Texto</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation>Dimensione a linha de brecha</translation>
+        <translation type="vanished">Dimensione a linha de brecha</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text above dimension line</source>
-        <translation>Texto acima da linha de dimensão</translation>
+        <translation type="vanished">Texto acima da linha de dimensão</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text inside horizontal</source>
-        <translation>Texto interior horizontal</translation>
+        <translation type="vanished">Texto interior horizontal</translation>
     </message>
 </context>
 <context>
@@ -383,7 +378,7 @@
         <translation>Atributos</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+93"/>
+        <location filename="../src/core/REntity.cpp" line="+96"/>
         <location filename="../src/core/RObject.cpp" line="+69"/>
         <source>Type</source>
         <translation>Tipo</translation>
@@ -434,6 +429,11 @@
         <location line="+1"/>
         <source>Draw Order</source>
         <translation>Ordem do Desenho</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Parent Id</source>
+        <translation>Parent Id</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -735,6 +735,126 @@
         <location line="+2"/>
         <source>Block name:</source>
         <translation>Nome do bloco:</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RDimStyle.cpp" line="+72"/>
+        <source>Style</source>
+        <translation>Estilo</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Overall dimension scale</source>
+        <translation>Escala de dimensão geral</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linear measurement factor</source>
+        <translation>Fator de medição linear</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text height</source>
+        <translation>Altura do texto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dimension line gap</source>
+        <translation>Distância da linha de dimensão</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arrow size</source>
+        <translation>Tamanho das setas</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dimension line increment</source>
+        <translation>Incremento da linha de dimensão</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Extension line extension</source>
+        <translation>Extensão da linha de extensionamento</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Extension line offset</source>
+        <translation>Extensão da linha de deslocamento</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text above dimension line</source>
+        <translation>Texto acima da linha de dimensão</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text inside horizontal</source>
+        <translation>Texto dentro da horizontal</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Tick size</source>
+        <translation>Tamanho do tick</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linear format</source>
+        <translation>Formato Linear</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Decimal places</source>
+        <translation>Lugares decimais</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Decimal separator</source>
+        <translation>Separador decimal</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Zero suppression</source>
+        <translation>Supressão do zero</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Angular format</source>
+        <translation>Formato angular</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Angular decimal places</source>
+        <translation>Casas decimais angulares</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Angular zero suppression</source>
+        <translation>Supressão do zero angular</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Architectur tick</source>
+        <translation>Carrapato de Arquiteto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text color</source>
+        <translation>Cor do texto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arrow block</source>
+        <translation>Bloco de flechas</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arrow block 1</source>
+        <translation>Bloco de setas 1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arrow block 2</source>
+        <translation>Bloco de setas 2</translation>
     </message>
 </context>
 <context>

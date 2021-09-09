@@ -215,29 +215,24 @@
 <context>
     <name>RDimStyle</name>
     <message>
-        <location filename="../src/core/RDimStyle.cpp" line="+112"/>
         <source>Overall dimension scale</source>
-        <translation>Échelle de cote globale</translation>
+        <translation type="vanished">Échelle de cote globale</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text height</source>
-        <translation>Hauteur du texte</translation>
+        <translation type="vanished">Hauteur du texte</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation>Espacement du texte / ligne de cote</translation>
+        <translation type="vanished">Espacement du texte / ligne de cote</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text above dimension line</source>
-        <translation>Texte au-dessus de la ligne de cote</translation>
+        <translation type="vanished">Texte au-dessus de la ligne de cote</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text inside horizontal</source>
-        <translation>Texte intérieur horizontale</translation>
+        <translation type="vanished">Texte intérieur horizontale</translation>
     </message>
 </context>
 <context>
@@ -266,7 +261,7 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+94"/>
+        <location filename="../src/core/REntity.cpp" line="+97"/>
         <source>Block</source>
         <translation>Bloc</translation>
     </message>
@@ -434,6 +429,11 @@
         <location line="+1"/>
         <source>Draw Order</source>
         <translation>Ordre de dessin</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Parent Id</source>
+        <translation>Parent Id</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -735,6 +735,126 @@
         <location line="+2"/>
         <source>Block name:</source>
         <translation>Nom du bloc :</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RDimStyle.cpp" line="+72"/>
+        <source>Style</source>
+        <translation>Style</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Overall dimension scale</source>
+        <translation>Échelle de cote globale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linear measurement factor</source>
+        <translation>Facteur de mesure linéaire</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text height</source>
+        <translation>Hauteur du texte</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dimension line gap</source>
+        <translation>Écart entre les lignes de dimension</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arrow size</source>
+        <translation>Taille de la flèche</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dimension line increment</source>
+        <translation>Incrément de la ligne de dimension</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Extension line extension</source>
+        <translation>Extension de la ligne d&apos;attache</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Extension line offset</source>
+        <translation>Distance de la ligne d&apos;attache / objet</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text above dimension line</source>
+        <translation>Texte au-dessus de la ligne de dimension</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text inside horizontal</source>
+        <translation>Texte à l&apos;intérieur de l&apos;horizontale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Tick size</source>
+        <translation>Taille de la coche</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linear format</source>
+        <translation>Format linéaire</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Decimal places</source>
+        <translation>Décimales</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Decimal separator</source>
+        <translation>Séparateur décimal</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Zero suppression</source>
+        <translation>Suppression zéro</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Angular format</source>
+        <translation>Format angular</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Angular decimal places</source>
+        <translation>Décimales angulaires</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Angular zero suppression</source>
+        <translation>Suppression du zéro angulaire</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Architectur tick</source>
+        <translation>Architecte tique</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text color</source>
+        <translation>Couleur du texte</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arrow block</source>
+        <translation>Bloc flèche</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arrow block 1</source>
+        <translation>Bloc flèche 1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arrow block 2</source>
+        <translation>Bloc flèche 2</translation>
     </message>
 </context>
 <context>

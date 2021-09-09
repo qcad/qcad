@@ -13,7 +13,7 @@
         <location filename="../src/entity/RDimAngularEntity.cpp" line="+109"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="+105"/>
+        <location filename="../src/entity/RDimRadialEntity.cpp" line="+147"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+82"/>
@@ -31,17 +31,17 @@
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+107"/>
+        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+149"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="+106"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="+151"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+107"/>
+        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+111"/>
         <location line="+5"/>
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="-2"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+96"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+117"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-2"/>
         <location line="+3"/>
@@ -279,7 +279,7 @@
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+93"/>
-        <location filename="../src/entity/RAttributeEntity.cpp" line="+97"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+101"/>
         <source>Tag</source>
         <translation>Tag</translation>
     </message>
@@ -400,7 +400,7 @@
         <translation>Leader End Point</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+123"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+167"/>
         <source>Dimension Angle</source>
         <translation>Dimension Angle</translation>
     </message>
@@ -470,20 +470,116 @@
         <translation>Measured Value</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Linear Factor</source>
-        <translation>Linear Factor</translation>
+        <location line="+9"/>
+        <source>Style</source>
+        <translation>Style</translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>Overall dimension scale</source>
+        <translation>Overall dimension scale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linear measurement factor</source>
+        <translation>Linear measurement factor</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text height</source>
+        <translation>Text height</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dimension line gap</source>
+        <translation>Dimension line gap</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arrow size</source>
+        <translation>Arrow size</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Extension line extension</source>
+        <translation>Extension line extension</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Extension line offset</source>
+        <translation>Extension line offset</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text position vertical</source>
+        <translation>Text position vertical</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text inside horizontal</source>
+        <translation>Text inside horizontal</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Tick size</source>
+        <translation>Tick size</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linear format</source>
+        <translation>Linear format</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Decimal places</source>
+        <translation>Decimal places</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Decimal separator</source>
+        <translation>Decimal separator</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Zero suppression</source>
+        <translation>Zero suppression</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Angular format</source>
+        <translation>Angular format</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Angular decimal places</source>
+        <translation>Angular decimal places</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Angular zero suppression</source>
+        <translation>Angular zero suppression</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Architectur tick</source>
+        <translation>Architectur tick</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text color</source>
+        <translation>Text color</translation>
+    </message>
+    <message>
+        <source>Linear Factor</source>
+        <translation type="vanished">Linear Factor</translation>
+    </message>
+    <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-3"/>
-        <location filename="../src/entity/RLeaderEntity.cpp" line="+2"/>
-        <location filename="../src/entity/RToleranceEntity.cpp" line="+2"/>
         <source>Scale</source>
         <translation>Scale</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="-26"/>
         <source>Block Name</source>
         <translation>Block Name</translation>
     </message>
@@ -632,7 +728,7 @@
         <location line="+6"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RLeaderEntity.cpp" line="-4"/>
+        <location filename="../src/entity/RLeaderEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-4"/>
@@ -887,7 +983,7 @@
         <translation>Arc Symbol Type</translation>
     </message>
     <message>
-        <location filename="../src/entity/RToleranceEntity.cpp" line="-7"/>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="-5"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Location</source>

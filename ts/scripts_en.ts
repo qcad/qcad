@@ -2670,7 +2670,7 @@ Do you wish to recover it?</translation>
         <translation>Move entity to desired location</translation>
     </message>
     <message>
-        <location line="+399"/>
+        <location line="+400"/>
         <source>Move Reference Point</source>
         <translation>Move Reference Point</translation>
     </message>
@@ -3244,57 +3244,47 @@ Do you wish to recover it?</translation>
         <translation>space</translation>
     </message>
     <message>
-        <location line="+16"/>
         <source>Scientific</source>
-        <translation>Scientific</translation>
+        <translation type="vanished">Scientific</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Decimal</source>
-        <translation>Decimal</translation>
+        <translation type="vanished">Decimal</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Engineering</source>
-        <translation>Engineering</translation>
+        <translation type="vanished">Engineering</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Architectural</source>
-        <translation>Architectural</translation>
+        <translation type="vanished">Architectural</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Fractional</source>
-        <translation>Fractional</translation>
+        <translation type="vanished">Fractional</translation>
     </message>
     <message>
-        <location line="+32"/>
         <source>Decimal Degrees</source>
-        <translation>Decimal Degrees</translation>
+        <translation type="vanished">Decimal Degrees</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Deg/min/sec</source>
-        <translation>Deg/min/sec</translation>
+        <translation type="vanished">Deg/min/sec</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Gradians</source>
-        <translation>Gradians</translation>
+        <translation type="vanished">Gradians</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Radians</source>
-        <translation>Radians</translation>
+        <translation type="vanished">Radians</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Surveyor&apos;s units</source>
-        <translation>Surveyor&apos;s units</translation>
+        <translation type="vanished">Surveyor&apos;s units</translation>
     </message>
     <message>
-        <location line="+244"/>
+        <location line="+309"/>
         <source>Unit / Format</source>
         <translation>Unit / Format</translation>
     </message>
@@ -4415,6 +4405,11 @@ is already in the list.</translation>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
         <translation>Entity is not a line, arc or circle.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
+        <translation>Entity is not a line, arc, spline, ellipse arc or polyline.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -10572,7 +10567,7 @@ shown in search results:</translation>
         <translation>Always format property values as decimal numbers</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+193"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+198"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10587,12 +10582,12 @@ shown in search results:</translation>
         <translation>Specific Properties</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+19"/>
         <source>Dependent Entities</source>
         <translation>Dependent Entities</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>Custom</source>
         <translation>Custom</translation>
     </message>
@@ -10627,7 +10622,7 @@ shown in search results:</translation>
         <translation>Show all properties</translation>
     </message>
     <message>
-        <location line="+117"/>
+        <location line="+134"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -10647,7 +10642,7 @@ shown in search results:</translation>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+358"/>
+        <location line="+379"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
@@ -14334,7 +14329,122 @@ shown in search results:</translation>
         <translation>Bottom</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+5"/>
+        <source>Scientific</source>
+        <translation>Scientific</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Decimal</source>
+        <translation>Decimal</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Engineering</source>
+        <translation>Engineering</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Architectural</source>
+        <translation>Architectural</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fractional</source>
+        <translation>Fractional</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Centered</source>
+        <translation>Centered</translation>
+    </message>
+    <message>
+        <source>.</source>
+        <translation type="vanished">.</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location line="+38"/>
+        <source>Show trailing zeroes</source>
+        <translation>Show trailing zeroes</translation>
+    </message>
+    <message>
+        <source>Include 0&apos;0&quot; (unsupported)</source>
+        <translation type="vanished">Include 0&apos;0&quot; (unsupported)</translation>
+    </message>
+    <message>
+        <source>Suppress trailing zeros</source>
+        <translation type="vanished">Suppress trailing zeros</translation>
+    </message>
+    <message>
+        <source>0</source>
+        <translation type="obsolete">0</translation>
+    </message>
+    <message>
+        <source>1</source>
+        <translation type="obsolete">1</translation>
+    </message>
+    <message>
+        <source>2</source>
+        <translation type="obsolete">2</translation>
+    </message>
+    <message>
+        <source>3</source>
+        <translation type="obsolete">3</translation>
+    </message>
+    <message>
+        <source>4</source>
+        <translation type="obsolete">4</translation>
+    </message>
+    <message>
+        <source>5</source>
+        <translation type="obsolete">5</translation>
+    </message>
+    <message>
+        <source>6</source>
+        <translation type="obsolete">6</translation>
+    </message>
+    <message>
+        <source>7</source>
+        <translation type="obsolete">7</translation>
+    </message>
+    <message>
+        <source>8</source>
+        <translation type="obsolete">8</translation>
+    </message>
+    <message>
+        <location line="-9"/>
+        <source>Decimal Degrees</source>
+        <translation>Decimal Degrees</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Deg/min/sec</source>
+        <translation>Deg/min/sec</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Gradians</source>
+        <translation>Gradians</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Radians</source>
+        <translation>Radians</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Surveyor&apos;s units</source>
+        <translation>Surveyor&apos;s units</translation>
+    </message>
+    <message>
+        <location line="-28"/>
+        <location line="+35"/>
+        <source>Suppress trailing zeroes</source>
+        <translation>Suppress trailing zeroes</translation>
+    </message>
+    <message>
+        <location line="+22"/>
         <location line="+4"/>
         <source>Clockwise</source>
         <translation>Clockwise</translation>
@@ -14351,12 +14461,59 @@ shown in search results:</translation>
         <translation>Preceding</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-86"/>
+        <location line="+87"/>
         <source>Above</source>
         <translation>Above</translation>
     </message>
     <message>
+        <location line="-74"/>
+        <source>Include 0&apos;0&quot;</source>
+        <translation>Include 0&apos;0&quot;</translation>
+    </message>
+    <message>
+        <location line="+0"/>
         <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+2"/>
+        <location line="+33"/>
+        <location line="+2"/>
+        <source>(unsupported)</source>
+        <translation>(unsupported)</translation>
+    </message>
+    <message>
+        <location line="-39"/>
+        <source>Include 0&apos;, suppress 0&quot;</source>
+        <translation>Include 0&apos;, suppress 0&quot;</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Include 0&quot;, suppress 0&apos;</source>
+        <translation>Include 0&quot;, suppress 0&apos;</translation>
+    </message>
+    <message>
+        <source>Suppress leading zeros</source>
+        <translation type="vanished">Suppress leading zeros</translation>
+    </message>
+    <message>
+        <source>Suppress leading / trailing zeros</source>
+        <translation type="vanished">Suppress leading / trailing zeros</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+35"/>
+        <source>Suppress leading zeroes</source>
+        <translation>Suppress leading zeroes</translation>
+    </message>
+    <message>
+        <location line="-33"/>
+        <location line="+35"/>
+        <source>Suppress leading / trailing zeroes</source>
+        <translation>Suppress leading / trailing zeroes</translation>
+    </message>
+    <message>
+        <location line="+35"/>
         <source>None</source>
         <translation>None</translation>
     </message>
@@ -14493,7 +14650,7 @@ shown in search results:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+959"/>
+        <location filename="../scripts/library.js" line="+968"/>
         <source>Objects</source>
         <translation>Objects</translation>
     </message>

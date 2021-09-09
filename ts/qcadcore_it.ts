@@ -215,29 +215,24 @@
 <context>
     <name>RDimStyle</name>
     <message>
-        <location filename="../src/core/RDimStyle.cpp" line="+112"/>
         <source>Overall dimension scale</source>
-        <translation>Scala delle dimensioni globali</translation>
+        <translation type="vanished">Scala delle dimensioni globali</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text height</source>
-        <translation>Altezza testo</translation>
+        <translation type="vanished">Altezza testo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation>Distanza del testo dalla linea</translation>
+        <translation type="vanished">Distanza del testo dalla linea</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text above dimension line</source>
-        <translation>Testo sopra la linea della dimensione</translation>
+        <translation type="vanished">Testo sopra la linea della dimensione</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text inside horizontal</source>
-        <translation>Testo interno orizzontale</translation>
+        <translation type="vanished">Testo interno orizzontale</translation>
     </message>
 </context>
 <context>
@@ -266,7 +261,7 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+94"/>
+        <location filename="../src/core/REntity.cpp" line="+97"/>
         <source>Block</source>
         <translation>Blocco</translation>
     </message>
@@ -434,6 +429,11 @@
         <location line="+1"/>
         <source>Draw Order</source>
         <translation>Ordine di disegno</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Parent Id</source>
+        <translation>Parent Id</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -735,6 +735,126 @@
         <location line="+2"/>
         <source>Block name:</source>
         <translation>Nome del blocco:</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RDimStyle.cpp" line="+72"/>
+        <source>Style</source>
+        <translation>Stile</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Overall dimension scale</source>
+        <translation>Scala delle dimensioni globali</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linear measurement factor</source>
+        <translation>Fattore di misura lineare</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text height</source>
+        <translation>Altezza del testo</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dimension line gap</source>
+        <translation>Spazio tra le linee di dimensione</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arrow size</source>
+        <translation>Dimensione della freccia</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dimension line increment</source>
+        <translation>Incremento della linea di dimensione</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Extension line extension</source>
+        <translation>Estensione della linea di estensione</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Extension line offset</source>
+        <translation>Offset della linea di estensione</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text above dimension line</source>
+        <translation>Testo sopra la linea della dimensione</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text inside horizontal</source>
+        <translation>Testo all&apos;interno orizzontale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Tick size</source>
+        <translation>Dimensione del segno di spunta</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linear format</source>
+        <translation>Formato lineare</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Decimal places</source>
+        <translation>Posizioni decimali</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Decimal separator</source>
+        <translation>Separatore decimale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Zero suppression</source>
+        <translation>Soppressione zero</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Angular format</source>
+        <translation>Formato angolare</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Angular decimal places</source>
+        <translation>Decimali angolari</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Angular zero suppression</source>
+        <translation>Soppressione dello zero angolare</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Architectur tick</source>
+        <translation>Spunta l&apos;architettura</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text color</source>
+        <translation>Colore del testo</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arrow block</source>
+        <translation>Blocco della freccia</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arrow block 1</source>
+        <translation>Blocco freccia 1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arrow block 2</source>
+        <translation>Blocco freccia 2</translation>
     </message>
 </context>
 <context>

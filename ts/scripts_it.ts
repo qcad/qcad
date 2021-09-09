@@ -2921,7 +2921,7 @@ Vuoi recuperarlo?</translation>
         <translation>Spostare entità</translation>
     </message>
     <message>
-        <location line="+399"/>
+        <location line="+400"/>
         <source>Move Reference Point</source>
         <translation>Spostare riferimento</translation>
     </message>
@@ -3511,57 +3511,47 @@ Vuoi recuperarlo?</translation>
         <translation>Spazio</translation>
     </message>
     <message>
-        <location line="+16"/>
         <source>Scientific</source>
-        <translation>Scientifica</translation>
+        <translation type="vanished">Scientifica</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Decimal</source>
-        <translation>Decimale</translation>
+        <translation type="vanished">Decimale</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Engineering</source>
-        <translation>Ingegneristica</translation>
+        <translation type="vanished">Ingegneristica</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Architectural</source>
-        <translation>Architettonica</translation>
+        <translation type="vanished">Architettonica</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Fractional</source>
-        <translation>Frazionale</translation>
+        <translation type="vanished">Frazionale</translation>
     </message>
     <message>
-        <location line="+32"/>
         <source>Decimal Degrees</source>
-        <translation>Gradi Decimali</translation>
+        <translation type="vanished">Gradi Decimali</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Deg/min/sec</source>
-        <translation>Grad/min/sec</translation>
+        <translation type="vanished">Grad/min/sec</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Gradians</source>
-        <translation>Centesimali</translation>
+        <translation type="vanished">Centesimali</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Radians</source>
-        <translation>Radianti</translation>
+        <translation type="vanished">Radianti</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Surveyor&apos;s units</source>
-        <translation>Unità topografiche</translation>
+        <translation type="vanished">Unità topografiche</translation>
     </message>
     <message>
-        <location line="+244"/>
+        <location line="+309"/>
         <source>Unit / Format</source>
         <translation>Unità / formato</translation>
     </message>
@@ -4762,6 +4752,11 @@ is already in the list.</source>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
         <translation>Entità non è una linea, un arco o un cerchio.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
+        <translation>L&apos;entità non è una linea, un arco, una spline, un arco di ellisse o una polilinea.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -11773,7 +11768,7 @@ mostrati nei risultati di ricerca:</translation>
         <translation type="vanished">Geometria</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+764"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+775"/>
         <source>Add custom property to selected objects</source>
         <translation>Aggiungere una proprietà personalizzata per gli oggetti selezionati</translation>
     </message>
@@ -11802,12 +11797,12 @@ mostrati nei risultati di ricerca:</translation>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="+708"/>
+        <location line="+746"/>
         <source>*VARIES*</source>
         <translation>*VARIE*</translation>
     </message>
     <message>
-        <location line="-1279"/>
+        <location line="-1323"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -11822,12 +11817,12 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Proprietà specifiche</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+19"/>
         <source>Dependent Entities</source>
         <translation>Entità dipendenti</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>Custom</source>
         <translation>Personalizzato</translation>
     </message>
@@ -11857,7 +11852,7 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Mostra tutte le proprietà</translation>
     </message>
     <message>
-        <location line="+665"/>
+        <location line="+703"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -11870,7 +11865,7 @@ mostrati nei risultati di ricerca:</translation>
         <translation type="obsolete">Sotto</translation>
     </message>
     <message>
-        <location line="-548"/>
+        <location line="-569"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -11890,7 +11885,7 @@ mostrati nei risultati di ricerca:</translation>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+361"/>
+        <location line="+382"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>
@@ -15989,7 +15984,118 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Sotto</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+5"/>
+        <source>Scientific</source>
+        <translation>Scientifica</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Decimal</source>
+        <translation>Decimale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Engineering</source>
+        <translation>Ingegneristica</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Architectural</source>
+        <translation>Architettonica</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fractional</source>
+        <translation>Frazionale</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Centered</source>
+        <translation>Centrato</translation>
+    </message>
+    <message>
+        <source>.</source>
+        <translation type="vanished">.</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location line="+38"/>
+        <source>Show trailing zeroes</source>
+        <translation>Mostra zeri finali</translation>
+    </message>
+    <message>
+        <source>Suppress trailing zeros</source>
+        <translation type="vanished">Sopprimere gli zeri finali</translation>
+    </message>
+    <message>
+        <source>0</source>
+        <translation type="obsolete">0</translation>
+    </message>
+    <message>
+        <source>1</source>
+        <translation type="obsolete">1</translation>
+    </message>
+    <message>
+        <source>2</source>
+        <translation type="obsolete">2</translation>
+    </message>
+    <message>
+        <source>3</source>
+        <translation type="obsolete">3</translation>
+    </message>
+    <message>
+        <source>4</source>
+        <translation type="obsolete">4</translation>
+    </message>
+    <message>
+        <source>5</source>
+        <translation type="obsolete">5</translation>
+    </message>
+    <message>
+        <source>6</source>
+        <translation type="obsolete">6</translation>
+    </message>
+    <message>
+        <source>7</source>
+        <translation type="obsolete">7</translation>
+    </message>
+    <message>
+        <source>8</source>
+        <translation type="obsolete">8</translation>
+    </message>
+    <message>
+        <location line="-9"/>
+        <source>Decimal Degrees</source>
+        <translation>Gradi Decimali</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Deg/min/sec</source>
+        <translation>Grad/min/sec</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Gradians</source>
+        <translation>Centesimali</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Radians</source>
+        <translation>Radianti</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Surveyor&apos;s units</source>
+        <translation>Unità topografiche</translation>
+    </message>
+    <message>
+        <location line="-28"/>
+        <location line="+35"/>
+        <source>Suppress trailing zeroes</source>
+        <translation>Sopprimere gli zeri finali</translation>
+    </message>
+    <message>
+        <location line="+22"/>
         <location line="+4"/>
         <source>Clockwise</source>
         <translation>Senso orario</translation>
@@ -16006,12 +16112,59 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Precedente</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-86"/>
+        <location line="+87"/>
         <source>Above</source>
         <translation>Sopra</translation>
     </message>
     <message>
+        <location line="-74"/>
+        <source>Include 0&apos;0&quot;</source>
+        <translation>Includere 0&apos;0&quot;</translation>
+    </message>
+    <message>
+        <location line="+0"/>
         <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+2"/>
+        <location line="+33"/>
+        <location line="+2"/>
+        <source>(unsupported)</source>
+        <translation>(non supportato)</translation>
+    </message>
+    <message>
+        <location line="-39"/>
+        <source>Include 0&apos;, suppress 0&quot;</source>
+        <translation>Includere 0&apos;, sopprimere 0&quot;</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Include 0&quot;, suppress 0&apos;</source>
+        <translation>Includere 0&quot;, sopprimere 0&apos;</translation>
+    </message>
+    <message>
+        <source>Suppress leading zeros</source>
+        <translation type="obsolete">Sopprimere gli zeri iniziali</translation>
+    </message>
+    <message>
+        <source>Suppress leading / trailing zeros</source>
+        <translation type="vanished">Sopprimere gli zeri iniziali e finali</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+35"/>
+        <source>Suppress leading zeroes</source>
+        <translation>Sopprimere gli zeri iniziali</translation>
+    </message>
+    <message>
+        <location line="-33"/>
+        <location line="+35"/>
+        <source>Suppress leading / trailing zeroes</source>
+        <translation>Sopprimere gli zeri iniziali e finali</translation>
+    </message>
+    <message>
+        <location line="+35"/>
         <source>None</source>
         <translation>Niente</translation>
     </message>
@@ -16192,7 +16345,7 @@ mostrati nei risultati di ricerca:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+959"/>
+        <location filename="../scripts/library.js" line="+968"/>
         <source>Objects</source>
         <translation>Oggetti</translation>
     </message>
