@@ -898,6 +898,10 @@ QString RDocument::getBlockName(RBlock::Id blockId) const {
     return storage.getBlockName(blockId);
 }
 
+QString RDocument::getBlockNameFromHandle(RBlock::Handle blockHandle) const {
+    return storage.getBlockNameFromHandle(blockHandle);
+}
+
 QString RDocument::getBlockNameFromLayout(const QString& layoutName) const {
     return storage.getBlockNameFromLayout(layoutName);
 }

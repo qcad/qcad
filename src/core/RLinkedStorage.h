@@ -121,6 +121,7 @@ public:
     virtual RLayout::Id getLayoutId(const QString& layoutName) const;
 
     virtual QString getBlockName(RBlock::Id blockId) const;
+    virtual QString getBlockNameFromHandle(RBlock::Handle blockHandle) const;
     virtual QString getBlockNameFromLayout(const QString& layoutName) const;
     virtual QString getBlockNameFromLayout(RLayout::Id layoutId) const;
     virtual QSet<QString> getBlockNames(const QString& rxStr = RDEFAULT_QSTRING) const;

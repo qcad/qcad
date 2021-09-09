@@ -1050,6 +1050,15 @@ QString RMemoryStorage::getBlockName(RBlock::Id blockId) const {
     return l->getName();
 }
 
+QString RMemoryStorage::getBlockNameFromHandle(RBlock::Handle blockHandle) const {
+    QSharedPointer<RObject> obj = queryObjectByHandle(blockHandle);
+    if (obj.isNull()) {
+        return QString();
+    }
+
+    return getBlockName(obj->getId());
+}
+
 QString RMemoryStorage::getBlockNameFromLayout(const QString& layoutName) const {
     // look up layout:
     QSet<RBlock::Id> ids = queryAllLayoutBlocks();

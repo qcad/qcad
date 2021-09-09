@@ -369,6 +369,7 @@ public:
 
     QString getTempBlockName() const;
     QString getBlockName(RBlock::Id blockId) const;
+    QString getBlockNameFromHandle(RBlock::Handle blockHandle) const;
     QString getBlockNameFromLayout(const QString& layoutName) const;
     QString getBlockNameFromLayout(RLayout::Id layoutId) const;
     QSet<QString> getBlockNames(const QString& rxStr = RDEFAULT_QSTRING) const;
