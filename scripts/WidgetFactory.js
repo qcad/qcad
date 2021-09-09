@@ -1326,7 +1326,7 @@ WidgetFactory.initDimlunitCombo = function(comboBox) {
 
 WidgetFactory.initDimtadCombo = function(comboBox) {
     comboBox.clear();
-    comboBox.addItem(qsTr("On"), 0);
+    comboBox.addItem(qsTr("Centered"), 0);
     comboBox.addItem(qsTr("Above"), 1);
 };
 
