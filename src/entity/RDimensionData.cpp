@@ -148,7 +148,7 @@ void RDimensionData::setDimXVariant(RS::KnownVariable key, const QVariant& v) {
         setDimXInt(key, v.toInt());
         break;
     case RS::VarTypeDouble:
-        setDimXDouble(key, v.toInt());
+        setDimXDouble(key, v.toDouble());
         break;
     case RS::VarTypeColor:
         setDimXColor(key, v.value<RColor>());
