@@ -444,6 +444,15 @@ function isEllipseEntity(obj) {
 }
 
 /**
+ * Checks if the given object is an ellipse entity and represents an ellipse arc (not a full ellipse).
+ *
+ * \return true if the given object is an ellipse arc entity (REllipseEntity).
+ */
+function isEllipseArcEntity(obj) {
+    return (isOfType(obj, REllipseEntity) || isOfType(obj, REllipseEntityPointer)) && !obj.isFullEllipse();
+}
+
+/**
  * Checks if the given object is an ellipse entity and represents a full ellipse.
  *
  * \return true if the given object is an ellipse entity (REllipseEntity).
