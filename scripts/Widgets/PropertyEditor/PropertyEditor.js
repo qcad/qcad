@@ -187,7 +187,7 @@ function PropertyEditorImpl(basePath) {
     RPropertyEditor.call(this);
 
     if (isNull(basePath)) {
-        // only used to initialize prototype for derrived class:
+        // only used to initialize prototype for derived class:
         return;
     }
 
