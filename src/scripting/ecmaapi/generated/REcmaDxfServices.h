@@ -162,6 +162,9 @@
         ;static  QScriptValue
         autoFixLinetypePattern
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getFileQCADVersion
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

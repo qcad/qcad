@@ -76,6 +76,9 @@
         isValid
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        clear
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -125,6 +125,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, updateDocumentVariables, "updateDocumentVariables");
             
+            REcmaHelper::registerFunction(&engine, proto, updateFromDocumentVariables, "updateFromDocumentVariables");
+            
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
             
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
@@ -1940,6 +1942,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerDimStyle::updateDocumentVariables", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDimStyle::updateFromDocumentVariables
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDimStyle::updateFromDocumentVariables", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimStyle::updateFromDocumentVariables";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimStyle* self = 
+                        getSelf("updateFromDocumentVariables", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->updateFromDocumentVariables();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.updateFromDocumentVariables().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimStyle::updateFromDocumentVariables", context, engine);
             return result;
         }
          QScriptValue

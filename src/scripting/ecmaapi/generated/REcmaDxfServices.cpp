@@ -7,6 +7,8 @@
 
         // forwards declarations mapped to includes
         
+                #include "RDocument.h"
+            
             
         // includes for base ecma wrapper classes
          void REcmaDxfServices::initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -141,6 +143,8 @@
             REcmaHelper::registerFunction(&engine, &ctor, parseUnicode, "parseUnicode");
             
             REcmaHelper::registerFunction(&engine, &ctor, autoFixLinetypePattern, "autoFixLinetypePattern");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getFileQCADVersion, "getFileQCADVersion");
             
 
     // static properties:
@@ -2436,6 +2440,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDxfServices::autoFixLinetypePattern", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDxfServices::getFileQCADVersion
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDxfServices::getFileQCADVersion", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getFileQCADVersion";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RDocument */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RDocument*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RDocument*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RDxfServices: Argument 0 is not of type RDocument*.",
+                               context);                    
+                    }
+                    RDocument& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RDxfServices::
+       getFileQCADVersion(a0);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getFileQCADVersion().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDxfServices::getFileQCADVersion", context, engine);
             return result;
         }
          QScriptValue REcmaDxfServices::toString

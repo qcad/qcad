@@ -68,6 +68,9 @@
         getData
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        clearStyleOverrides
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setDefinitionPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

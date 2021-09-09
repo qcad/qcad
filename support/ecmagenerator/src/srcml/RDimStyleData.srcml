@@ -58,6 +58,13 @@
         <return>return <expr>!<name>mapBool</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call> || !<name>mapDouble</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call> || !<name>mapInt</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call> || !<name>mapColor</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>clear</name><parameter_list>()</parameter_list> <block>{
+        <expr_stmt><expr><name>mapBool</name>.<call><name>clear</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>mapInt</name>.<call><name>clear</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>mapDouble</name>.<call><name>clear</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>mapColor</name>.<call><name>clear</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
     <function><type><name>static</name> <name><name>RS</name>::<name>KnownVariableType</name></name></type> <name>getType</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>)</parameter_list> <block>{
         <if>if <condition>(<expr><name>dimXTypes</name>.<call><name>contains</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
             <return>return <expr><name><name>dimXTypes</name><index>[<expr><name>key</name></expr>]</index></name></expr>;</return>

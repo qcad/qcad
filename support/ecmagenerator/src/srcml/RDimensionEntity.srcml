@@ -128,6 +128,10 @@
 
     <function_decl><type><name>virtual</name> <name>const</name> <name>RDimensionData</name>&amp;</type> <name>getData</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
 
+    <function><type><name>void</name></type> <name>clearStyleOverrides</name><parameter_list>()</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>clearStyleOverrides</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
     <function><type><name>void</name></type> <name>setDefinitionPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setDefinitionPoint</name><argument_list>(<argument><expr><name>p</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>

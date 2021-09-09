@@ -51,6 +51,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="updateFromDocumentVariables"
+    cppName="updateFromDocumentVariables" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="getProperty" cppName="getProperty"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

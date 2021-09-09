@@ -30,6 +30,8 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLineweight.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLinetypePattern.h"</cpp:file></cpp:include>
 
+<class_decl>class <name>RDocument</name>;</class_decl>
+
 <comment type="block">/**
  * \brief DXF support tools, mainly for QCAD 2 DXF imports.
  *
@@ -137,6 +139,8 @@
     <function_decl><type><name>static</name> <name>QString</name></type> <name>parseUnicode</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>str</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>void</name></type> <name>autoFixLinetypePattern</name><parameter_list>(<param><decl><type><name>RLinetypePattern</name>&amp;</type> <name>pattern</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>int</name></type> <name>getFileQCADVersion</name><parameter_list>(<param><decl><type><name>const</name> <name>RDocument</name>&amp;</type> <name>doc</name></decl></param>)</parameter_list>;</function_decl>
 
 </public><private>private:
     <decl_stmt><decl><type><name>bool</name></type> <name>version2GotDIMZIN</name></decl>;</decl_stmt>

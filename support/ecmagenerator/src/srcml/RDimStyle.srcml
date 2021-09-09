@@ -86,6 +86,7 @@
     }</block></function>
 
     <function_decl><type><name>void</name></type> <name>updateDocumentVariables</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>updateFromDocumentVariables</name><parameter_list>()</parameter_list>;</function_decl>
 
 <comment type="line">//    virtual void setDouble(RS::KnownVariable key, double val);</comment>
 <comment type="line">//    virtual void setInt(RS::KnownVariable key, int val);</comment>

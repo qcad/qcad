@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="RDocument" />
   <class name="RDxfServices"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
@@ -310,6 +311,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RLinetypePattern &amp;"
         typeName="RLinetypePattern" name="pattern"
         isConst="false" />
+      </variant>
+    </method>
+    <method name="getFileQCADVersion" cppName="getFileQCADVersion"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="RDocument &amp;" typeName="RDocument" name="doc"
+        isConst="true" />
       </variant>
     </method>
   </class>

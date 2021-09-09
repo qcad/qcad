@@ -56,6 +56,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
             
+            REcmaHelper::registerFunction(&engine, proto, clear, "clear");
+            
             REcmaHelper::registerFunction(&engine, proto, getVariant, "getVariant");
             
             REcmaHelper::registerFunction(&engine, proto, setVariant, "setVariant");
@@ -709,6 +711,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimStyleData::isValid", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimStyleData::clear
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyleData::clear", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyleData::clear";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimStyleData* self = 
+                        getSelf("clear", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clear();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyleData.clear().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyleData::clear", context, engine);
             return result;
         }
          QScriptValue
