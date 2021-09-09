@@ -78,6 +78,9 @@
         isValid
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        clear
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getVariant
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -130,9 +133,6 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         initDimX
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        clear
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getType

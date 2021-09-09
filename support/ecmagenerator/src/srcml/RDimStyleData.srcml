@@ -26,7 +26,8 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RS.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RColor.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyTypeId.h"</cpp:file></cpp:include>
-<comment type="line">//#include "RDocument.h"</comment>
+
+<class_decl>class <name>RDocument</name>;</class_decl>
 
 <comment type="block">/**
  * Dimension style data class.
@@ -196,188 +197,9 @@
         <expr_stmt><expr><name>mapColor</name>.<call><name>remove</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
-<comment type="line">//    double getDimscale() const {</comment>
-<comment type="line">//        if (mapDouble.contains(RS::DIMSCALE)) {</comment>
-<comment type="line">//            return mapDouble[RS::DIMSCALE];</comment>
-<comment type="line">//        }</comment>
-<comment type="line">//        return dimscale;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    void setDimscale(double v) {</comment>
-<comment type="line">//        dimscale = v;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    double getDimlfac() const {</comment>
-<comment type="line">//        return dimlfac;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    void setDimlfac(double v) {</comment>
-<comment type="line">//        dimlfac = v;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    double getDimtxt() const {</comment>
-<comment type="line">//        return dimtxt;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    void setDimtxt(double v) {</comment>
-<comment type="line">//        dimtxt = v;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    double getDimgap() const {</comment>
-<comment type="line">//        return dimgap;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    void setDimgap(double v) {</comment>
-<comment type="line">//        dimgap = v;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    double getDimasz() const {</comment>
-<comment type="line">//        return dimasz;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    void setDimasz(double v) {</comment>
-<comment type="line">//        dimasz = v;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    double getDimdli() const {</comment>
-<comment type="line">//        return dimdli;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    void setDimdli(double v) {</comment>
-<comment type="line">//        dimdli = v;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    double getDimexe() const {</comment>
-<comment type="line">//        return dimexe;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    void setDimexe(double v) {</comment>
-<comment type="line">//        dimexe = v;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    double getDimexo() const {</comment>
-<comment type="line">//        return dimexo;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    void setDimexo(double v) {</comment>
-<comment type="line">//        dimexo = v;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    int getDimtad() const {</comment>
-<comment type="line">//        return dimtad;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    void setDimtad(int v) {</comment>
-<comment type="line">//        dimtad = v;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    int getDimtih() const {</comment>
-<comment type="line">//        return dimtih;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    void setDimtih(int v) {</comment>
-<comment type="line">//        dimtih = v;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    double getDimtsz() const {</comment>
-<comment type="line">//        return dimtsz;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    void setDimtsz(double v) {</comment>
-<comment type="line">//        dimtsz = v;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    int getDimlunit() const {</comment>
-<comment type="line">//        return dimlunit;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    void setDimlunit(int v) {</comment>
-<comment type="line">//        dimlunit = v;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    int getDimdec() const {</comment>
-<comment type="line">//        return dimdec;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    void setDimdec(int v) {</comment>
-<comment type="line">//        dimdec = v;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    int getDimdsep() const {</comment>
-<comment type="line">//        return dimdsep;</comment>
-<comment type="line">//    }</comment>
-<comment type="line">//    void setDimdsep(int v) {</comment>
-<comment type="line">//        dimdsep = v;</comment>
-<comment type="line">//    }</comment>
-<comment type="line">//    int getDimzin() const {</comment>
-<comment type="line">//        return dimzin;</comment>
-<comment type="line">//    }</comment>
-<comment type="line">//    void setDimzin(int v) {</comment>
-<comment type="line">//        dimzin = v;</comment>
-<comment type="line">//    }</comment>
-<comment type="line">//    int getDimaunit() const {</comment>
-<comment type="line">//        return dimaunit;</comment>
-<comment type="line">//    }</comment>
-<comment type="line">//    void setDimaunit(int v) {</comment>
-<comment type="line">//        dimaunit = v;</comment>
-<comment type="line">//    }</comment>
-<comment type="line">//    int getDimadec() const {</comment>
-<comment type="line">//        return dimadec;</comment>
-<comment type="line">//    }</comment>
-<comment type="line">//    void setDimadec(int v) {</comment>
-<comment type="line">//        dimadec = v;</comment>
-<comment type="line">//    }</comment>
-<comment type="line">//    int getDimazin() const {</comment>
-<comment type="line">//        return dimazin;</comment>
-<comment type="line">//    }</comment>
-<comment type="line">//    void setDimazin(int v) {</comment>
-<comment type="line">//        dimazin = v;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    bool useArchTick() const {</comment>
-<comment type="line">//        return archTick;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    void setArchTick(bool on) {</comment>
-<comment type="line">//        archTick = on;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    RColor getDimclrt() const {</comment>
-<comment type="line">//        return dimclrt;</comment>
-<comment type="line">//    }</comment>
-<comment type="line">//    void setDimclrt(const RColor&amp; v) {</comment>
-<comment type="line">//        dimclrt = v;</comment>
-<comment type="line">//    }</comment>
-
-<comment type="line">//    template&lt;class T&gt;</comment>
-<comment type="line">//    T getDimX(RS::KnownVariable var) {</comment>
-<comment type="line">//        switch (var) {</comment>
-<comment type="line">//        case RS::DIMEXO:</comment>
-<comment type="line">//            return dimexo * dimscale;</comment>
-
-<comment type="line">//        default:</comment>
-<comment type="line">//            qWarning() &lt;&lt; "unhandled dimesion variable:" &lt;&lt; var;</comment>
-<comment type="line">//            break;</comment>
-<comment type="line">//        }</comment>
-<comment type="line">//    }</comment>
+    <comment type="line">//QString getDimblkName(RDocument* doc) const;</comment>
 
 </public><public>public:
-<comment type="line">//    struct RDimXVar {</comment>
-<comment type="line">//        RDimXVar() : propertyTypeId(), var(RS::INVALID), type(RS::VarInt) {}</comment>
-
-<comment type="line">//        RDimXVar(RPropertyTypeId propertyTypeId, RS::KnownVariable var, RS::KnownVariableType type) :</comment>
-<comment type="line">//            propertyTypeId(propertyTypeId),</comment>
-<comment type="line">//            var(var),</comment>
-<comment type="line">//            type(type) {</comment>
-
-<comment type="line">//            dimXTypes[var] = type;</comment>
-<comment type="line">//        }</comment>
-
-<comment type="line">//        RPropertyTypeId propertyTypeId;</comment>
-<comment type="line">//        RS::KnownVariable var;</comment>
-<comment type="line">//        RS::KnownVariableType type;</comment>
-<comment type="line">//    };</comment>
-    <comment type="line">//static QList&lt;RDimXVar&gt; propertyVariables;</comment>
     <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name><name>RS</name>::<name>KnownVariable</name></name></argument>, <argument><name><name>RS</name>::<name>KnownVariableType</name></name></argument>&gt;</argument_list></name></type> <name>dimXTypes</name></decl>;</decl_stmt>
 
     <function_decl><type><name>friend</name> <name>QDebug</name></type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>, <param><decl><type><name>const</name> <name>RDimStyleData</name>&amp;</type> <name>d</name></decl></param>)</parameter_list>;</function_decl>
@@ -389,31 +211,6 @@
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>RS</name>::<name>KnownVariable</name></name></argument>, <argument><name>RColor</name></argument>&gt;</argument_list></name></type> <name>mapColor</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name><name>RS</name>::<name>KnownVariable</name></name></argument>, <argument><name>QVariant</name></argument>&gt;</argument_list></name></type> <name>mapDefaults</name></decl>;</decl_stmt>
-
-<comment type="line">//    double dimscale;</comment>
-<comment type="line">//    double dimlfac;</comment>
-<comment type="line">//    double dimtxt;</comment>
-<comment type="line">//    double dimgap;</comment>
-<comment type="line">//    double dimasz;</comment>
-<comment type="line">//    double dimdli;</comment>
-<comment type="line">//    double dimexe;</comment>
-<comment type="line">//    double dimexo;</comment>
-<comment type="line">//    int dimtad;</comment>
-<comment type="line">//    int dimtih;</comment>
-<comment type="line">//    double dimtsz;</comment>
-<comment type="line">//    int dimlunit;</comment>
-<comment type="line">//    int dimdec;</comment>
-<comment type="line">//    int dimdsep;</comment>
-<comment type="line">//    int dimzin;</comment>
-<comment type="line">//    int dimaunit;</comment>
-<comment type="line">//    int dimadec;</comment>
-<comment type="line">//    int dimazin;</comment>
-<comment type="line">//    bool archTick;</comment>
-<comment type="line">//    RColor dimclrt;</comment>
-
-    <comment type="line">// TODO:</comment>
-    <comment type="line">// Dimension text movement rules</comment>
-    <comment type="line">//int dimtmove;</comment>
 </protected>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RDimStyleData</argument>)</argument_list></macro>

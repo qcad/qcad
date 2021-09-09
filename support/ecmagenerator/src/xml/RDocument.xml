@@ -1313,6 +1313,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getBlockNameFromHandle"
+    cppName="getBlockNameFromHandle" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="RBlock::Handle" typeName="RBlock::Handle"
+        name="blockHandle" isConst="false" />
+      </variant>
+    </method>
     <method name="getBlockNameFromLayout"
     cppName="getBlockNameFromLayout" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

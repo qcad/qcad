@@ -369,6 +369,12 @@
         useArchTick
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDimblk
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimblkName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isDimXScaled
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

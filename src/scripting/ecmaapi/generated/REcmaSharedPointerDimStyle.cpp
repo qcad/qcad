@@ -83,6 +83,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
             
+            REcmaHelper::registerFunction(&engine, proto, clear, "clear");
+            
             REcmaHelper::registerFunction(&engine, proto, getVariant, "getVariant");
             
             REcmaHelper::registerFunction(&engine, proto, setVariant, "setVariant");
@@ -117,8 +119,6 @@
 
     // methods:
     
-            REcmaHelper::registerFunction(&engine, proto, clear, "clear");
-            
             REcmaHelper::registerFunction(&engine, proto, getType, "getType");
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
@@ -751,6 +751,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerDimStyle::isValid", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDimStyle::clear
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDimStyle::clear", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimStyle::clear";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimStyle* self = 
+                        getSelf("clear", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clear();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.clear().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimStyle::clear", context, engine);
             return result;
         }
          QScriptValue
@@ -1756,50 +1800,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerDimStyle::initDimX", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaSharedPointerDimStyle::clear
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaSharedPointerDimStyle::clear", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimStyle::clear";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDimStyle* self = 
-                        getSelf("clear", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->clear();
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.clear().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaSharedPointerDimStyle::clear", context, engine);
             return result;
         }
          QScriptValue
