@@ -230,9 +230,14 @@ bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
 //    ret = ret || RObject::setMember((int&)getData().horizontalAlignment, value.value<int>(), PropertyHAlign == propertyTypeId);
 //    ret = ret || RObject::setMember((int&)getData().verticalAlignment, value.value<int>(), PropertyVAlign == propertyTypeId);
 
-    if (PropertyDimtxt == propertyTypeId) {
-        getData().setDimtxt(value.toDouble());
-        ret = true;
+    if (propertyTypeId==PropertyArchTick) {
+        if (value.toBool()==true) {
+            getData().setDimtsz(getData().getDimasz());
+        }
+        else {
+            getData().setDimtsz(0.0);
+        }
+        return true;
     }
 
     for (int i=0; i<RDimStyle::propertyVariables.length(); i++) {
@@ -364,9 +369,9 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
         return qMakePair(QVariant(getData().verticalAlignment), RPropertyAttributes());
     }*/
 
-//    else if (propertyTypeId == PropertyDimtxt) {
-//        return qMakePair(QVariant(getData().getDimtxt()), RPropertyAttributes());
-//    }
+    if (propertyTypeId==PropertyArchTick) {
+        return qMakePair(getData().getDimtsz() > 0.0, RPropertyAttributes());
+    }
 
     for (int i=0; i<RDimStyle::propertyVariables.length(); i++) {
         //RDimStyle::RDimXVar p = RDimStyle::propertyVariables[i];

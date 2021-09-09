@@ -304,11 +304,8 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
     }
 
     // init dimension arrow type:
-    //var dimblk = document.getKnownVariable(RS.DIMBLK, "");
-    var dimblk = dimStyle.getVariant(RS.DIMBLK);
-    //var dimtsz = document.getKnownVariable(RS.DIMTSZ, 0.0);
     var dimtsz = dimStyle.getVariant(RS.DIMTSZ);
-    if ((!isNull(dimblk) && dimblk.toUpperCase()==="ARCHTICK") || dimtsz > RS.PointTolerance) {
+    if (dimtsz > RS.PointTolerance) {
         if (!isNull(widgets["ArchitecturalTick"])) {
             widgets["ArchitecturalTick"].checked = true;
         }
