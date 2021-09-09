@@ -24,27 +24,7 @@ QMap<RS::KnownVariable, QVariant> RDimStyleData::mapDefaults;
 //QList<RDimStyleData::RDimXVar> RDimStyleData::propertyVariables;
 QMap<RS::KnownVariable, RS::KnownVariableType> RDimStyleData::dimXTypes;
 
-RDimStyleData::RDimStyleData(bool override)
-    /*: dimscale(1.0),
-      dimtxt(0.0),
-      dimgap(0.0),
-      dimasz(0.0),
-      dimdli(5.0),
-      dimexe(0.0),
-      dimexo(0.0),
-      dimtad(1),
-      dimtih(0),
-      dimtsz(0.0),
-      dimlunit(RS::Decimal),
-      dimdec(4),
-      dimdsep('.'),
-      dimzin(8),
-      dimaunit(RS::DegreesDecimal),
-      dimadec(0),
-      dimazin(2),
-      archTick(false),
-      dimclrt(RColor(RColor::ByBlock))*/ {
-
+RDimStyleData::RDimStyleData(bool override) {
     if (!override) {
         initFromSettings();
     }
@@ -55,8 +35,6 @@ void RDimStyleData::init() {
 }
 
 void RDimStyleData::initDefaults() {
-    qDebug() << "RDimStyleData::initDefaults()";
-
     mapDefaults[RS::DIMSCALE] = 1.0;
     mapDefaults[RS::DIMLFAC] = 1.0;
     mapDefaults[RS::DIMTXT] = 2.5;
@@ -78,7 +56,6 @@ void RDimStyleData::initDefaults() {
     mapDefaults[RS::DIMAUNIT] = RS::DegreesDecimal;
     mapDefaults[RS::DIMADEC] = 0;
     mapDefaults[RS::DIMAZIN] = 2;
-    //mapDefaults[RS::QCADARCHTICK] = false;
 
     mapDefaults[RS::DIMBLK] = "";
 }
@@ -148,8 +125,8 @@ void RDimStyleData::initFromSettings() {
     setDouble(RS::DIMDLI, RSettings::getDoubleValue("DimensionSettings/DIMDLI", getDoubleDefault(RS::DIMDLI)));
 
     setColor(RS::DIMCLRT, RSettings::getColorValue("DimensionSettings/DimensionTextColor", getColorDefault(RS::DIMCLRT)));
-    qDebug() << "default dimclrt (def):" << getColorDefault(RS::DIMCLRT);
-    qDebug() << "default dimclrt (settings):" << RSettings::getColorValue("DimensionSettings/DimensionTextColor", getColorDefault(RS::DIMCLRT));
+    //qDebug() << "default dimclrt (def):" << getColorDefault(RS::DIMCLRT);
+    //qDebug() << "default dimclrt (settings):" << RSettings::getColorValue("DimensionSettings/DimensionTextColor", getColorDefault(RS::DIMCLRT));
     //RDebug::printBacktrace();
 
     if (RSettings::getStringValue("DimensionSettings/ArrowStyle", "Arrow")=="Arrow") {
@@ -190,19 +167,11 @@ void RDimStyleData::initFromSettings() {
     // arrow head:
     if (RSettings::getStringValue("DimensionSettings/ArrowStyle", "Arrow")=="Arrow") {
         // tick size is 0 for arrows:
-        //docVars->setKnownVariable(RS::DIMTSZ, 0.0);
-        //setBool(RS::QCADARCHTICK, false);
-        //qDebug() << "QCADARCHTICK: 0";
-        //archTick = false;
         setDouble(RS::DIMTSZ, 0.0);
     }
 
     // arch tick head:
     else {
-        //docVars->setKnownVariable(RS::DIMTSZ, RSettings::getDoubleValue("DimensionSettings/DIMASZ", 2.5));
-        //setBool(RS::QCADARCHTICK, true);
-        //qDebug() << "QCADARCHTICK: 1";
-        //archTick = true;
         setDouble(RS::DIMTSZ, getDouble(RS::DIMASZ));
     }
 }
@@ -213,10 +182,6 @@ void RDimStyleData::initFromSettings() {
  */
 QDebug operator<<(QDebug dbg, const RDimStyleData& d) {
     dbg.nospace() << "RDimSyleData(";
-//    QMap<RS::KnownVariable, bool>::iterator it;
-//    for (it=d.mapBool.begin(); it!=d.mapBool.end(); it++) {
-//        dbg.nospace() << "bool: " << it.key() << ": " << it.value();
-//    }
     dbg.nospace() << d.mapBool;
     dbg.nospace() << d.mapInt;
     dbg.nospace() << d.mapDouble;
