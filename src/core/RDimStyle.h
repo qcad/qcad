@@ -74,8 +74,6 @@ public:
     static void init();
     static void initDimX(const RPropertyTypeId& propertyTypeId, RS::KnownVariable var, RS::KnownVariableType type);
 
-    void clear();
-
     virtual RS::EntityType getType() const {
         return RS::ObjectDimStyle;
     }
@@ -86,11 +84,6 @@ public:
 
     void updateDocumentVariables();
     void updateFromDocumentVariables();
-
-//    virtual void setDouble(RS::KnownVariable key, double val);
-//    virtual void setInt(RS::KnownVariable key, int val);
-//    virtual void setBool(RS::KnownVariable key, bool val);
-//    virtual void setColor(RS::KnownVariable key, const RColor& val);
 
     QPair<QVariant, RPropertyAttributes> getProperty(RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes, bool showOnRequest);
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, RTransaction* transaction);
@@ -142,7 +135,5 @@ Q_DECLARE_METATYPE(RDimStyle*)
 Q_DECLARE_METATYPE(const RDimStyle*)
 Q_DECLARE_METATYPE(QSharedPointer<RDimStyle>)
 Q_DECLARE_METATYPE(QSharedPointer<RDimStyle>*)
-//Q_DECLARE_METATYPE(RDimStyle::RDimVar)
-//Q_DECLARE_METATYPE(QList<RDimStyle::RDimVar>)
 
 #endif

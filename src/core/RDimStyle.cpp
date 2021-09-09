@@ -56,97 +56,6 @@ RDimStyle::RDimStyle() : RObject(), RDimStyleData(false) {
 RDimStyle::RDimStyle(RDocument* document)
     : RObject(document), RDimStyleData(false) {
 
-//    dimscale = RSettings::getDoubleValue("DimensionSettings/DIMSCALE", 1.0);
-//    dimtxt = RSettings::getDoubleValue("DimensionSettings/DIMTXT", 2.5);
-//    dimgap = RSettings::getDoubleValue("DimensionSettings/DIMGAP", 0.625);
-//    dimasz = RSettings::getDoubleValue("DimensionSettings/DIMASZ", 2.5);
-//    dimexe = RSettings::getDoubleValue("DimensionSettings/DIMEXE", 1.25);
-//    dimexo = RSettings::getDoubleValue("DimensionSettings/DIMEXO", 0.625);
-
-//    dimtad = RSettings::getIntValue("DimensionSettings/DIMTAD", 1);
-//    dimtih = RSettings::getIntValue("DimensionSettings/DIMTIH", 0);
-
-//    dimdli = RSettings::getDoubleValue("DimensionSettings/DIMDLI", 5.0);
-//    dimclrt = RSettings::getColorValue("DimensionSettings/DimensionTextColor", RColor(RColor::ByBlock));
-
-//    if (RSettings::getStringValue("DimensionSettings/ArrowStyle", "Arrow")=="Arrow") {
-//        // tick size is 0 for arrows:
-//        dimtsz = RSettings::getIntValue("DimensionSettings/DIMTIH", 0);
-//    }
-//    else {
-//        // arch tick head:
-//        dimtsz = RSettings::getDoubleValue("DimensionSettings/DIMASZ", 2.5);
-//    }
-
-//    dimlunit = RSettings::getIntValue("DimensionSettings/LinearFormat", RS::Decimal);
-//    dimdec = RSettings::getIntValue("DimensionSettings/LinearPrecision", 4);
-//    dimdsep = RSettings::getIntValue("DimensionSettings/DecimalPoint", '.');
-
-//    if (RSettings::getBoolValue("DimensionSettings/LinearShowTrailingZeros", false)) {
-//        // show trailing zeroes:
-//        dimzin = 0;
-//    }
-//    else {
-//        // suppress trailing zeroes:
-//        dimzin = 8;
-//    }
-
-//    dimaunit = RSettings::getIntValue("DimensionSettings/AngularFormat", RS::DegreesDecimal);
-//    dimadec = RSettings::getIntValue("DimensionSettings/AngularPrecision", 0);
-
-//    // show trailing zeroes:
-//    if (RSettings::getBoolValue("DimensionSettings/AngularShowTrailingZeros", false)) {
-//        dimazin = 0;
-//    }
-
-//    // suppress trailing zeroes:
-//    else {
-//        dimazin = 2;
-//    }
-
-    //docVars->setKnownVariable(RS::DIMSCALE, RSettings::getDoubleValue("DimensionSettings/DIMSCALE", 1.0));
-    //docVars->setKnownVariable(RS::DIMDLI, RSettings::getDoubleValue("DimensionSettings/DIMDLI", 5.0));
-    //docVars->setKnownVariable(RS::DIMCLRT, RSettings::getColorValue("DimensionSettings/DimensionTextColor", RColor(RColor::ByBlock)));
-
-    // arrow head:
-//    if (RSettings::getStringValue("DimensionSettings/ArrowStyle", "Arrow")=="Arrow") {
-//        // tick size is 0 for arrows:
-//        //docVars->setKnownVariable(RS::DIMTSZ, 0.0);
-//        archTick = false;
-//    }
-
-//    // arch tick head:
-//    else {
-//        //docVars->setKnownVariable(RS::DIMTSZ, RSettings::getDoubleValue("DimensionSettings/DIMASZ", 2.5));
-//        archTick = true;
-//    }
-
-    //docVars->setKnownVariable(RS::DIMLUNIT, RSettings::getIntValue("DimensionSettings/LinearFormat", RS::Decimal));
-    //docVars->setKnownVariable(RS::DIMDEC, RSettings::getIntValue("DimensionSettings/LinearPrecision", 4));
-    //docVars->setKnownVariable(RS::DIMDSEP, RSettings::getIntValue("DimensionSettings/DecimalPoint", '.'));
-
-    // show trailing zeroes:
-//    if (RSettings::getBoolValue("DimensionSettings/LinearShowTrailingZeros", false)) {
-//        docVars->setKnownVariable(RS::DIMZIN, 0);
-//    }
-
-    // suppress trailing zeroes:
-//    else {
-//        docVars->setKnownVariable(RS::DIMZIN, 8);
-//    }
-
-//    docVars->setKnownVariable(RS::DIMAUNIT, RSettings::getIntValue("DimensionSettings/AngularFormat", RS::DegreesDecimal));
-//    docVars->setKnownVariable(RS::DIMADEC, RSettings::getIntValue("DimensionSettings/AngularPrecision", 0));
-
-    // show trailing zeroes:
-//    if (RSettings::getBoolValue("DimensionSettings/AngularShowTrailingZeros", false)) {
-//        docVars->setKnownVariable(RS::DIMAZIN, 0);
-//    }
-
-    // suppress trailing zeroes:
-//    else {
-//        docVars->setKnownVariable(RS::DIMAZIN, 2);
-//    }
 }
 
 RDimStyle::~RDimStyle() {
@@ -199,7 +108,6 @@ void RDimStyle::init() {
     initDimX(PropertyDimaunit, RS::DIMAUNIT, RS::VarTypeInt);
     initDimX(PropertyDimadec, RS::DIMADEC, RS::VarTypeInt);
     initDimX(PropertyDimazin, RS::DIMAZIN, RS::VarTypeInt);
-    //initDimX(PropertyArchTick, RS::QCADARCHTICK, RS::VarTypeBool);
     initDimX(PropertyDimclrt, RS::DIMCLRT, RS::VarTypeColor);
 }
 
@@ -208,23 +116,10 @@ void RDimStyle::initDimX(const RPropertyTypeId& propertyTypeId, RS::KnownVariabl
     RDimStyleData::dimXTypes[var] = type;
 }
 
-void RDimStyle::clear() {
-    //dimtxt = 0.0;
-    //*((RDimStyleData*)this) = RDimStyleData(false);
-}
-
 void RDimStyle::updateDocumentVariables() {
     RDocument* doc = getDocument();
 
-    //doc->setKnownVariable(RS::DIMTXT, getVariant(RS::DIMTXT));
-
     for (int i=0; i<propertyVariables.length(); i++) {
-        //RDimXVar p = propertyVariables[i];
-
-//        if (p.var==RS::DIMCLRT) {
-//            qDebug() << "update DIMCLRT to" << getVariant(p.var);
-//        }
-
         doc->setKnownVariable(propertyVariables[i].second, getVariant(propertyVariables[i].second));
     }
 }
@@ -238,110 +133,13 @@ void RDimStyle::updateFromDocumentVariables() {
     }
 }
 
-//void RDimStyle::setDouble(RS::KnownVariable key, double val) {
-//    RDimStyleData::setDouble(key, val);
-//    //getDocument()->setKnownVariable(key, val);
-//}
-
-//void RDimStyle::setInt(RS::KnownVariable key, int val) {
-//    RDimStyleData::setInt(key, val);
-//    //getDocument()->setKnownVariable(key, val);
-//}
-
-//void RDimStyle::setColor(RS::KnownVariable key, const RColor& val) {
-//    RDimStyleData::setColor(key, val);
-//    //getDocument()->setKnownVariable(key, val);
-//}
-
 QPair<QVariant, RPropertyAttributes> RDimStyle::getProperty(RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes, bool showOnRequest) {
 
     for (int i=0; i<propertyVariables.length(); i++) {
-        //RDimXVar p = propertyVariables[i];
-
         if (propertyTypeId==propertyVariables[i].first) {
             return qMakePair(getVariant(propertyVariables[i].second), RPropertyAttributes());
         }
     }
-
-//    if (propertyTypeId == PropertyDimscale) {
-//        return qMakePair(getVariant(RS::DIMSCALE), RPropertyAttributes());
-//    }
-
-//    if (propertyTypeId == PropertyDimlfac) {
-//        return qMakePair(getVariant(RS::DIMLFAC), RPropertyAttributes());
-//    }
-
-//    if (propertyTypeId == PropertyDimtxt) {
-//        return qMakePair(getVariant(RS::DIMTXT), RPropertyAttributes());
-//    }
-
-//    if (propertyTypeId == PropertyDimgap) {
-//        return qMakePair(getVariant(RS::DIMGAP), RPropertyAttributes());
-//    }
-
-//    if (propertyTypeId == PropertyDimasz) {
-//        return qMakePair(getVariant(RS::DIMASZ), RPropertyAttributes());
-//    }
-
-//    if (propertyTypeId == PropertyDimdli) {
-//        return qMakePair(getVariant(RS::DIMDLI), RPropertyAttributes());
-//    }
-
-//    if (propertyTypeId == PropertyDimexe) {
-//        return qMakePair(getVariant(RS::DIMEXE), RPropertyAttributes());
-//    }
-
-//    if (propertyTypeId == PropertyDimexo) {
-//        return qMakePair(getVariant(RS::DIMEXO), RPropertyAttributes());
-//    }
-
-//    if (propertyTypeId == PropertyDimtad) {
-//        return qMakePair(getVariant(RS::DIMTAD), RPropertyAttributes());
-//    }
-
-//    if (propertyTypeId == PropertyDimtih) {
-//        return qMakePair(getVariant(RS::DIMTIH), RPropertyAttributes());
-//    }
-
-//    if (propertyTypeId == PropertyDimtsz) {
-//        return qMakePair(getVariant(RS::DIMTSZ), RPropertyAttributes());
-//    }
-
-//    if (propertyTypeId == PropertyDimlunit) {
-//        return qMakePair(getVariant(RS::DIMLUNIT), RPropertyAttributes());
-//    }
-
-//    if (propertyTypeId == PropertyDimdec) {
-//        return qMakePair(getVariant(RS::DIMDEC), RPropertyAttributes());
-//    }
-
-//    if (propertyTypeId == PropertyDimdsep) {
-//        return qMakePair(getVariant(RS::DIMDSEP), RPropertyAttributes());
-//    }
-
-//    if (propertyTypeId == PropertyDimzin) {
-//        return qMakePair(getVariant(RS::DIMZIN), RPropertyAttributes());
-//    }
-
-//    if (propertyTypeId == PropertyDimaunit) {
-//        return qMakePair(getVariant(RS::DIMAUNIT), RPropertyAttributes());
-//    }
-
-//    if (propertyTypeId == PropertyDimadec) {
-//        return qMakePair(getVariant(RS::DIMADEC), RPropertyAttributes());
-//    }
-
-//    if (propertyTypeId == PropertyDimazin) {
-//        return qMakePair(getVariant(RS::DIMAZIN), RPropertyAttributes());
-//    }
-
-//    if (propertyTypeId == PropertyArchTick) {
-//        return qMakePair(getVariant(RS::QCADARCHTICK), RPropertyAttributes());
-//    }
-
-//    if (propertyTypeId == PropertyDimclrt) {
-//        return qMakePair(getVariant(RS::DIMCLRT), RPropertyAttributes());
-//    }
 
     return RObject::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
@@ -351,94 +149,11 @@ bool RDimStyle::setProperty(RPropertyTypeId propertyTypeId, const QVariant& valu
     bool ret = false;
 
     for (int i=0; i<propertyVariables.length(); i++) {
-        //RDimXVar p = propertyVariables[i];
-
         if (propertyTypeId==propertyVariables[i].first) {
             setVariant(propertyVariables[i].second, value);
             ret = true;
         }
     }
-
-//    if (PropertyDimscale == propertyTypeId) {
-//        setDouble(RS::DIMSCALE, value.toDouble());
-//    }
-////    ret = ret || RObject::setMember(dimscale, value, PropertyDimscale == propertyTypeId);
-//    if (PropertyDimlfac == propertyTypeId) {
-//        setDouble(RS::DIMLFAC, value.toDouble());
-//    }
-////    ret = ret || RObject::setMember(dimlfac, value, PropertyDimlfac == propertyTypeId);
-//    if (PropertyDimtxt == propertyTypeId) {
-//        setDouble(RS::DIMTXT, value.toDouble());
-//    }
-////    ret = ret || RObject::setMember(dimtxt, value, PropertyDimtxt == propertyTypeId);
-//    if (PropertyDimgap == propertyTypeId) {
-//        setDouble(RS::DIMGAP, value.toDouble());
-//    }
-////    ret = ret || RObject::setMember(dimgap, value, PropertyDimgap == propertyTypeId);
-//    if (PropertyDimasz == propertyTypeId) {
-//        setDouble(RS::DIMASZ, value.toDouble());
-//    }
-////    ret = ret || RObject::setMember(dimasz, value, PropertyDimasz == propertyTypeId);
-//    if (PropertyDimdli == propertyTypeId) {
-//        setDouble(RS::DIMDLI, value.toDouble());
-//    }
-////    ret = ret || RObject::setMember(dimdli, value, PropertyDimdli == propertyTypeId);
-//    if (PropertyDimexe == propertyTypeId) {
-//        setDouble(RS::DIMEXE, value.toDouble());
-//    }
-////    ret = ret || RObject::setMember(dimexe, value, PropertyDimexe == propertyTypeId);
-//    if (PropertyDimexo == propertyTypeId) {
-//        setDouble(RS::DIMEXO, value.toDouble());
-//    }
-////    ret = ret || RObject::setMember(dimexo, value, PropertyDimexo == propertyTypeId);
-//    if (PropertyDimtad == propertyTypeId) {
-//        setInt(RS::DIMTAD, value.toInt());
-//    }
-////    ret = ret || RObject::setMember(dimtad, value, PropertyDimtad == propertyTypeId);
-//    if (PropertyDimtih == propertyTypeId) {
-//        setInt(RS::DIMTIH, value.toInt());
-//    }
-////    ret = ret || RObject::setMember(dimtih, value, PropertyDimtih == propertyTypeId);
-//    if (PropertyDimtsz == propertyTypeId) {
-//        setDouble(RS::DIMTSZ, value.toDouble());
-//    }
-////    ret = ret || RObject::setMember(dimtsz, value, PropertyDimtsz == propertyTypeId);
-//    if (PropertyDimlunit == propertyTypeId) {
-//        setInt(RS::DIMLUNIT, value.toInt());
-//    }
-////    ret = ret || RObject::setMember(dimlunit, value, PropertyDimlunit == propertyTypeId);
-//    if (PropertyDimdec == propertyTypeId) {
-//        setInt(RS::DIMDEC, value.toInt());
-//    }
-////    ret = ret || RObject::setMember(dimdec, value, PropertyDimdec == propertyTypeId);
-//    if (PropertyDimdsep == propertyTypeId) {
-//        setInt(RS::DIMDSEP, value.toInt());
-//    }
-////    ret = ret || RObject::setMember(dimdsep, value, PropertyDimdsep == propertyTypeId);
-//    if (PropertyDimzin == propertyTypeId) {
-//        setInt(RS::DIMZIN, value.toInt());
-//    }
-////    ret = ret || RObject::setMember(dimzin, value, PropertyDimzin == propertyTypeId);
-//    if (PropertyDimaunit == propertyTypeId) {
-//        setInt(RS::DIMAUNIT, value.toInt());
-//    }
-////    ret = ret || RObject::setMember(dimaunit, value, PropertyDimaunit == propertyTypeId);
-//    if (PropertyDimadec == propertyTypeId) {
-//        setInt(RS::DIMADEC, value.toInt());
-//    }
-////    ret = ret || RObject::setMember(dimadec, value, PropertyDimadec == propertyTypeId);
-//    if (PropertyDimazin == propertyTypeId) {
-//        setInt(RS::DIMAZIN, value.toInt());
-//    }
-////    ret = ret || RObject::setMember(dimazin, value, PropertyDimazin == propertyTypeId);
-//    if (PropertyArchTick == propertyTypeId) {
-//        setInt(RS::QCADARCHTICK, value.toInt());
-//    }
-////    ret = ret || RObject::setMember(archTick, value, PropertyArchTick == propertyTypeId);
-//    if (PropertyDimclrt == propertyTypeId) {
-//        setColor(RS::DIMCLRT, value.value<RColor>());
-//    }
-//    ret = ret || RObject::setMember(dimclrt, value, PropertyDimclrt == propertyTypeId);
 
     ret = ret || RObject::setProperty(propertyTypeId, value, transaction);
 
