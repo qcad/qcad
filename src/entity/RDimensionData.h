@@ -134,6 +134,7 @@ public:
 
     void clearStyleOverrides() {
         overrides.clear();
+        update();
     }
 
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false, QList<RObject::Id>* entityIds = NULL) const {
