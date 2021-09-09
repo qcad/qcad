@@ -1332,8 +1332,8 @@ WidgetFactory.initDimtadCombo = function(comboBox) {
 
 WidgetFactory.initDimdsepCombo = function(comboBox) {
     comboBox.clear();
-    comboBox.addItem(qsTr("."), '.');
-    comboBox.addItem(qsTr(","), ',');
+    comboBox.addItem(".", '.');
+    comboBox.addItem(",", ',');
 };
 
 WidgetFactory.initDimzinCombo = function(comboBox) {
