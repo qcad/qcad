@@ -835,7 +835,6 @@ void RDimStyleProxyBasic::renderDimAngular() {
  * \return Text position
  */
 void RDimStyleProxyBasic::updateTextPosition(const QString& text, double textWidth, const RVector& dimLine1, const RVector& dimLine2, bool corrected) {
-    qDebug() << "updateTextPosition: outsideArrow1:" << outsideArrow1;
     if (!dimensionData->hasCustomTextPosition()) {
         double dimtxt = dimensionData->getDimtxt();
         double dimgap = dimensionData->getDimgap();
@@ -926,15 +925,12 @@ void RDimStyleProxyBasic::updateOutsideArrow(const RVector& p1, const RVector& p
     if (dimensionData->isArrow2Flipped()) {
         outsideArrow2 = !outsideArrow2;
     }
-
-    qDebug() << "outsideArrow1:" << outsideArrow1;
 }
 
 /**
  * Creates a dimensioning line (line with one, two or no arrows).
  */
 QList<QSharedPointer<RShape> > RDimStyleProxyBasic::getDimensionLineShapes(const RVector& p1, const RVector& p2, bool arrow1, bool arrow2) const {
-    qDebug() << "getDimensionLineShapes";
     QList<QSharedPointer<RShape> > ret;
 
     // arrow size:
