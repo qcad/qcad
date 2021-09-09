@@ -186,6 +186,11 @@ IndexWatcher.prototype.indexChanged = function(index) {
 function PropertyEditorImpl(basePath) {
     RPropertyEditor.call(this);
 
+    if (isNull(basePath)) {
+        // only used to initialize prototype for derrived class:
+        return;
+    }
+
     this.setEntityTypeFilter(RS.EntityAll);
     this.widget = WidgetFactory.createWidget(basePath, "PropertyEditor.ui");
     this.basePath = basePath;
