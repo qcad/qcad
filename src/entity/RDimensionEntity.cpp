@@ -153,7 +153,7 @@ void RDimensionEntity::init() {
         //RDimensionEntity::PropertyDimdli.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Dimension line increment"));
         RDimensionEntity::PropertyDimexe.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Extension line extension"));
         RDimensionEntity::PropertyDimexo.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Extension line offset"));
-        RDimensionEntity::PropertyDimtad.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text above dimension line"));
+        RDimensionEntity::PropertyDimtad.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text position vertical"));
         RDimensionEntity::PropertyDimtih.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text inside horizontal"));
         RDimensionEntity::PropertyDimtsz.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Tick size"));
         RDimensionEntity::PropertyDimlunit.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Linear format"));
