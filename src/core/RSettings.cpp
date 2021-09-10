@@ -1193,16 +1193,16 @@ QString RSettings::getOSVersion() {
     case QSysInfo::MV_10_7:
         return "Mac OS X 10.7 (Lion)";
     case QSysInfo::MV_10_8:
-        return "Mac OS X 10.8 (Mountain Lion)";
+        return "OS X 10.8 (Mountain Lion)";
     // QSysInfo::MV_10_9:
     case 0x000B:
-        return "Mac OS X 10.9 (Mavericks)";
+        return "OS X 10.9 (Mavericks)";
     // QSysInfo::MV_10_10:
     case 0x000C:
-        return "Mac OS X 10.10 (Yosemite)";
+        return "OS X 10.10 (Yosemite)";
     // QSysInfo::MV_10_11:
     case 0x000D:
-        return "Mac OS X 10.11 (El Capitan)";
+        return "OS X 10.11 (El Capitan)";
     // QSysInfo::MV_10_12:
     case 0x000E:
         return "macOS 10.12 (Sierra)";

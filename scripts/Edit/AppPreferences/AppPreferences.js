@@ -34,8 +34,8 @@ AppPreferences.init = function(basePath) {
     var action;
     var gotPrefMenu = false;
 
-    // OS X also has a preferences menu under the application menu
-    // (only if OS X is configured to use the same language as the application):
+    // macOS also has a preferences menu under the application menu
+    // (only if macOS is configured to use the same language as the application):
     if (RS.getSystemId() === "osx") {
         var sysLang = QLocale.system().name();
         if (sysLang.length>=2) {
@@ -49,7 +49,7 @@ AppPreferences.init = function(basePath) {
         if (sysLang===appLang) {
             action = new RGuiAction("Preferences", RMainWindowQt.getMainWindow());
             action.menuRole = QAction.PreferencesRole;
-            // preferences menu under Mac OS X has no icon:
+            // preferences menu under macOS has no icon:
             action.disableIcon();
             action.setDefaultShortcut(new QKeySequence(QKeySequence.Preferences));
             action.setRequiresDocument(false);

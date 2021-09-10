@@ -146,7 +146,7 @@ QStringList RS::getDirectoryList(const QString& subDirectory) {
     }
 
 #ifdef Q_OS_MAC
-    // Mac OS X app bundle:
+    // macOS app bundle:
     dirList.append(appDir + "/../Resources/" + subDirectory);
     dirList.append(appDir + "/../../../" + subDirectory);
     dirList.append(QDir::currentPath() + "/" + subDirectory);

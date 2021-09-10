@@ -135,7 +135,7 @@ void RGuiAction::initTexts() {
             textAndKeycode += " (" + shortcutText + ")";
         }
 #else
-        // tab does not work for Mac OS X:
+        // tab does not work for macOS:
         if (textAndKeycode.indexOf(QLatin1Char('\t'))!=-1) {
             textAndKeycode = textAndKeycode.left(textAndKeycode.indexOf('\t'));
         }

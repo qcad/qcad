@@ -176,7 +176,7 @@ Print.prototype.createPrinter = function(pdfFile, printerName, pdfVersion) {
                 Print.printDialog.open(this, "dummy");
             }
 
-            // Mac OS X, Linux, various other unices:
+            // macOS, Linux, various other unices:
             else {
                 Print.printDialog.exec();
             }

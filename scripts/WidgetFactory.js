@@ -1040,7 +1040,7 @@ WidgetFactory.moveChildren = function(sourceWidget, targetWidget, settingsGroup)
 
     // move child widgets of UI file based widget directly to
     // options toolbar. rendering of tool buttons greatly depends
-    // on this (especially on Mac OS X):
+    // on this (especially on macOS):
     var children = sourceWidget.children();
     for(var i=0;i<children.length;++i) {
         var w=children[i];

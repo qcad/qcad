@@ -88,7 +88,7 @@ macx {
     }
 }
 
-# settings for all Mac OS X builds:
+# settings for all macOS builds:
 macx {
     QMAKE_CXXFLAGS_X86 += -Werror=return-type
     #macx-clang* {
@@ -156,7 +156,7 @@ QT += core \
     xml \
     xmlpatterns
 
-# make sure that the QtHelp framework is included in the app bundle under Mac OS X:
+# make sure that the QtHelp framework is included in the app bundle under macOS:
 greaterThan(QT_MAJOR_VERSION, 4) {
     QT += help \
         uitools

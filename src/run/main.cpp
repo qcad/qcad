@@ -218,7 +218,7 @@ int main(int argc, char *argv[]) {
 #endif
 
 #ifdef Q_OS_MAC
-    // activate Mac OS X dock icon if desired:
+    // activate macOS dock icon if desired:
     if (!app->arguments().contains("-no-dock-icon") &&
             !app->arguments().contains("-help") && !app->arguments().contains("-h") &&
             !app->arguments().contains("-version") && !app->arguments().contains("-v")) {
