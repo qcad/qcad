@@ -1,7 +1,7 @@
 function init(basePath) {
     var title;
     if (RS.getSystemId()==="osx") {
-        // don't translate quit menu under OS X:
+        // don't translate quit menu under macOS:
         title = "&Quit";
     }
     else {
