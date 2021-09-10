@@ -341,6 +341,10 @@ ShapeAlgorithms.getIntersectingShapes = function(doc, entityId, shape, extend) {
     for (var i=0; i<otherEntityIds.length; i++) {
         var otherEntity = doc.queryEntityDirect(otherEntityIds[i]);
 
+        if (isTextBasedEntity(otherEntity)) {
+            continue;
+        }
+
         // ignore intersection points of same entity
         // self intersection points are handled elsewhere
         var same = otherEntityIds[i]===entityId;
