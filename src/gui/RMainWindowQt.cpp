@@ -277,12 +277,12 @@ void RMainWindowQt::updateScenes(QMdiSubWindow* mdiChild) {
 
 void RMainWindowQt::closeEvent(QCloseEvent* e) {
 
-    // workaround for Qt 5.6.1, 5.6.2 bug:
+    // Part 2 of workaround for Qt 5.6.1, 5.6.2, 5.15.0 bug:
     // dock widget closes before close dialog is shown
     // dock widget state not persistent between sessions
     // dock widget closes if user cancels close dialog
 #ifdef Q_OS_MAC
-#if QT_VERSION >= 0x050601 && QT_VERSION <= 0x050602
+#if (QT_VERSION >= 0x050601 && QT_VERSION <= 0x050602) || QT_VERSION >= 0x050F00
     // restore dock widgets that were already closed by the same event due to
     // a Qt bug:
     QString eventAddr = QString("0x%1").arg((qlonglong)e, 0, 16);
@@ -297,6 +297,7 @@ void RMainWindowQt::closeEvent(QCloseEvent* e) {
             }
         }
     }
+    setProperty("ClosedDocks", QStringList());
 #endif
 #endif
 
