@@ -375,11 +375,11 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
         gridLayoutGeometry.setVerticalSpacing(2);
         gridLayoutGeometry.setHorizontalSpacing(2);
         // label:
-        gridLayoutGeometry.setColumnStretch(0,0);
+        gridLayoutGeometry.setColumnStretch(0,1);
         // control:
         gridLayoutGeometry.setColumnStretch(1,1);
         // control or additional controls (e.g. clear button for dimension label):
-        gridLayoutGeometry.setColumnStretch(2,0);
+        gridLayoutGeometry.setColumnStretch(2,1);
         this.geometryGroup.setLayout(gridLayoutGeometry);
 
         // child properties
