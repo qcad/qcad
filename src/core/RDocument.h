@@ -469,6 +469,9 @@ public:
     bool isEditingWorkingSet() const;
     void setIgnoreWorkingSet(bool on);
 
+    void setNotifyListeners(bool on);
+    bool getNotifyListeners() const;
+
 //    RBlockReferenceEntity::Id getWorkingSetBlockReferenceId() const;
 //    void setWorkingSetBlockReferenceId(RBlockReferenceEntity::Id id, int group = RDEFAULT_MIN1, RTransaction* transaction = NULL);
 

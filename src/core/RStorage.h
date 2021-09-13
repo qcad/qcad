@@ -873,6 +873,13 @@ public:
      */
     virtual void update() {}
 
+    void setNotifyListeners(bool on) {
+        notifyGlobalListeners = on;
+    }
+    bool getNotifyListeners() const {
+        return notifyGlobalListeners;
+    }
+
 //    RBlockReferenceEntity::Id getWorkingSetBlockReferenceId() const;
 //    void setWorkingSetBlockReferenceId(RBlockReferenceEntity::Id id, int group = -1, RTransaction* transaction = NULL);
 
@@ -898,6 +905,7 @@ private:
     int lastTransactionGroup;
 
     QList<RModifiedListener*> modifiedListeners;
+    bool notifyGlobalListeners;
 };
 
 Q_DECLARE_METATYPE(RStorage*)

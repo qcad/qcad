@@ -40,7 +40,8 @@ RStorage::RStorage() :
     modelSpaceBlockId(RBlock::INVALID_ID),
     layer0Id(RLayer::INVALID_ID),
     lastTransactionId(-1),
-    lastTransactionGroup(1) {
+    lastTransactionGroup(1),
+    notifyGlobalListeners(true) {
 }
 
 void RStorage::clear() {
@@ -57,6 +58,7 @@ void RStorage::clear() {
     currentViewportId = RViewportEntity::INVALID_ID;
     lastTransactionId = -1;
     lastTransactionGroup = 1;
+    notifyGlobalListeners = true;
 }
 
 void RStorage::setObjectId(RObject& object, RObject::Id objectId) const {
@@ -327,7 +329,7 @@ QSharedPointer<RDocumentVariables> RStorage::startDocumentVariablesTransaction(R
 void RStorage::endDocumentVariablesTransaction(RTransaction* transaction, bool useLocalTransaction, QSharedPointer<RDocumentVariables> docVars) {
     transaction->addObject(docVars);
 
-    if (RMainWindow::hasMainWindow()) {
+    if (RMainWindow::hasMainWindow() && notifyGlobalListeners) {
         RMainWindow::getMainWindow()->postTransactionEvent(*transaction,
                     transaction->hasOnlyChanges());
     }

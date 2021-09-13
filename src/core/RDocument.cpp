@@ -3050,6 +3050,14 @@ void RDocument::setIgnoreWorkingSet(bool on) {
     }
 }
 
+void RDocument::setNotifyListeners(bool on) {
+    getStorage().setNotifyListeners(on);
+}
+
+bool RDocument::getNotifyListeners() const {
+    return getStorage().getNotifyListeners();
+}
+
 //RBlockReferenceEntity::Id RDocument::getWorkingSetBlockReferenceId() const {
 //    return storage.getWorkingSetBlockReferenceId();
 //}
