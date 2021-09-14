@@ -342,6 +342,7 @@ public:
     }
     void setNotifyListeners(bool on) {
         notifyGlobalListeners = on;
+        document.setNotifyListeners(on);
     }
     bool getNotifyListeners() const {
         return notifyGlobalListeners;

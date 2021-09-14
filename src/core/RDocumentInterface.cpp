@@ -1307,7 +1307,12 @@ bool RDocumentInterface::exportFile(const QString& fileName, const QString& file
         document.setVariable("ViewportHeight", b.getHeight());
     }
 
+    bool ngl = notifyGlobalListeners;
+    setNotifyListeners(false);
+
     bool success = fileExporter->exportFile(fileName, fileVersion, resetModified);
+
+    setNotifyListeners(ngl);
 
     document.removeVariable("ViewportCenter");
     document.removeVariable("ViewportWidth");
@@ -1372,8 +1377,10 @@ void RDocumentInterface::undo() {
         objectChangeEvent(t[i]);
 
         if (RMainWindow::hasMainWindow()) {
+            // notify global listeners:
             RMainWindow::getMainWindow()->postTransactionEvent(t[i]);
         }
+        // notify document specific listeners:
         notifyTransactionListeners(&t[i]);
 
         if (i==0 && mainWindow!=NULL) {
@@ -1398,8 +1405,10 @@ void RDocumentInterface::redo() {
         objectChangeEvent(t[i]);
 
         if (RMainWindow::hasMainWindow()) {
+            // notify global listeners:
             RMainWindow::getMainWindow()->postTransactionEvent(t[i]);
         }
+        // notify document specific listeners:
         notifyTransactionListeners(&t[i]);
 
         if (i==t.length()-1 && mainWindow!=NULL) {
@@ -2198,12 +2207,14 @@ RTransaction RDocumentInterface::applyOperation(ROperation* operation) {
     objectChangeEvent(transaction);
 
     if (RMainWindow::hasMainWindow() && notifyGlobalListeners) {
+        // notify global listeners:
         RMainWindow::getMainWindow()->postTransactionEvent(transaction,
                     transaction.hasOnlyChanges(), operation->getEntityTypeFilter());
     }
 
     delete operation;
 
+    // notify document specific listeners:
     notifyTransactionListeners(&transaction);
 
     return transaction;
