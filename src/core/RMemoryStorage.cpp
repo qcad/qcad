@@ -805,6 +805,13 @@ QSharedPointer<RObject> RMemoryStorage::queryObjectDirect(RObject::Id objectId) 
     return objectMap[objectId];
 }
 
+RObject* RMemoryStorage::queryObjectCC(RObject::Id objectId) const {
+    if (!objectMap.contains(objectId)) {
+        return NULL;
+    }
+    return objectMap[objectId].data();
+}
+
 QSharedPointer<RObject> RMemoryStorage::queryObjectByHandle(RObject::Handle objectHandle) const {
     if (!objectHandleMap.contains(objectHandle)) {
         return QSharedPointer<RObject> ();

@@ -210,6 +210,13 @@ QSharedPointer<RObject> RLinkedStorage::queryObjectDirect(RObject::Id objectId) 
     return RMemoryStorage::queryObjectDirect(objectId);
 }
 
+RObject* RLinkedStorage::queryObjectCC(RObject::Id objectId) const {
+    if (!objectMap.contains(objectId)) {
+        return backStorage->queryObjectCC(objectId);
+    }
+    return RMemoryStorage::queryObjectCC(objectId);
+}
+
 QSharedPointer<REntity> RLinkedStorage::queryEntity(REntity::Id objectId) const {
     if (!entityMap.contains(objectId)) {
         return backStorage->queryEntity(objectId);

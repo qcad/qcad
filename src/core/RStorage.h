@@ -251,6 +251,7 @@ public:
     virtual QSharedPointer<RObject> queryObjectDirect(RObject::Id objectId) const {
         return queryObject(objectId);
     }
+    virtual RObject* queryObjectCC(RObject::Id objectId) const = 0;
     virtual QSharedPointer<RObject> queryObjectByHandle(RObject::Handle objectHandle) const = 0;
 
     /**

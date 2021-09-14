@@ -79,6 +79,7 @@ public:
 
     //virtual QSharedPointer<RDocumentVariables> queryDocumentVariables() const;
     virtual QSharedPointer<RObject> queryObjectDirect(RObject::Id objectId) const;
+    virtual RObject* queryObjectCC(RObject::Id objectId) const;
     virtual QSharedPointer<RObject> queryObject(RObject::Id objectId) const;
     virtual QSharedPointer<RObject> queryObjectByHandle(RObject::Handle objectHandle) const;
 

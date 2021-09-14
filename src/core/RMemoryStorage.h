@@ -194,6 +194,7 @@ public:
     virtual RLinetype::Id getLinetypeId(const QString& linetypeName) const;
 
     virtual QSharedPointer<RObject> queryObjectDirect(RObject::Id objectId) const;
+    virtual RObject* queryObjectCC(RObject::Id objectId) const;
     virtual QSharedPointer<REntity> queryEntityDirect(REntity::Id objectId) const;
     virtual QSharedPointer<REntity> queryVisibleEntityDirect(REntity::Id objectId) const;
     virtual QSharedPointer<RUcs> queryUcsDirect(RUcs::Id ucsId) const;

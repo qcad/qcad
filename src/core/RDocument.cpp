@@ -2155,6 +2155,10 @@ QSharedPointer<RObject> RDocument::queryObjectDirect(RObject::Id objectId) const
     return storage.queryObjectDirect(objectId);
 }
 
+RObject* RDocument::queryObjectCC(RObject::Id objectId) const {
+    return storage.queryObjectCC(objectId);
+}
+
 QSharedPointer<RObject> RDocument::queryObjectByHandle(RObject::Handle objectHandle) const {
     return storage.queryObjectByHandle(objectHandle);
 }
