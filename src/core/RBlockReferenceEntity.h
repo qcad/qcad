@@ -72,6 +72,10 @@ public:
 
     static void init();
 
+    static RS::EntityType getRtti() {
+        return RS::EntityBlockRef;
+    }
+
     static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
         return RPropertyTypeId::getPropertyTypeIds(RBlockReferenceEntity::getRtti());
     }

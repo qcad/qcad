@@ -70,6 +70,10 @@ public:
     RViewportEntity(RDocument* document, const RViewportData& data);
     virtual ~RViewportEntity();
 
+    static RS::EntityType getRtti() {
+        return RS::EntityViewport;
+    }
+
     static void init();
 
     static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
