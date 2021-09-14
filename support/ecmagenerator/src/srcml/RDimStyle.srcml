@@ -78,6 +78,10 @@
     <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>void</name></type> <name>initDimX</name><parameter_list>(<param><decl><type><name>const</name> <name>RPropertyTypeId</name>&amp;</type> <name>propertyTypeId</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>var</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>KnownVariableType</name></name></type> <name>type</name></decl></param>)</parameter_list>;</function_decl>
 
+    <function><type><name>static</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getRtti</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name><name>RS</name>::<name>ObjectDimStyle</name></name></expr>;</return>
+    }</block></function>
+
     <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name><name>RS</name>::<name>ObjectDimStyle</name></name></expr>;</return>
     }</block></function>

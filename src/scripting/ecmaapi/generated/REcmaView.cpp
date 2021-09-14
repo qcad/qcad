@@ -107,6 +107,8 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, init, "init");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getRtti, "getRtti");
+            
 
     // static properties:
     
@@ -397,6 +399,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaView::init", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaView::getRtti
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaView::getRtti", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaView::getRtti";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::EntityType'
+    RS::EntityType cppResult =
+        RView::
+       getRtti();
+        // return type: RS::EntityType
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RView.getRtti().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaView::getRtti", context, engine);
             return result;
         }
          QScriptValue

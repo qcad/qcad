@@ -98,11 +98,17 @@
     <constructor_decl><name>REntity</name><parameter_list>(<param><decl><type><name>const</name> <name>REntity</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</constructor_decl>
     <destructor_decl><specifier>virtual</specifier> <name>~REntity</name><parameter_list>()</parameter_list>;</destructor_decl>
 
+    <function><type><name>static</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getRtti</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name><name>RS</name>::<name>EntityUnknown</name></name></expr>;</return>
+    }</block></function>
+
     <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function><type><name>static</name> <name>QSet<argument_list>&lt;<argument><name>RPropertyTypeId</name></argument>&gt;</argument_list></name></type> <name>getStaticPropertyTypeIds</name><parameter_list>()</parameter_list> <block>{
-        <return>return <expr><call><name><name>RPropertyTypeId</name>::<name>getPropertyTypeIds</name></name><argument_list>(<argument><expr><call><name>typeid</name><argument_list>(<argument><expr><name>REntity</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+        <return>return <expr><call><name><name>RPropertyTypeId</name>::<name>getPropertyTypeIds</name></name><argument_list>(<argument><expr><call><name><name>REntity</name>::<name>getRtti</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
+
+
 
     <function><type><name>void</name></type> <name>setDocument</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>)</parameter_list> <block>{
         <constructor_decl><name>RObject::setDocument</name><parameter_list>(<param><decl><type><name>document</name></type></decl></param>)</parameter_list>;</constructor_decl>

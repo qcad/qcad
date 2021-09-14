@@ -21,6 +21,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </constructor>
+    <method name="getRtti" cppName="getRtti" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RS::EntityType" isPureVirtual="false" />
+    </method>
     <method name="init" cppName="init" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />

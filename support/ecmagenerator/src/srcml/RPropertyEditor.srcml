@@ -90,7 +90,10 @@
     <function_decl><type><name>static</name> <name>bool</name></type> <name>checkType</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>type</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>filter</name></decl></param>)</parameter_list>;</function_decl>
 
 </public><protected>protected:
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateEditor</name><parameter_list>(<param><decl><type><name>RObject</name>&amp;</type> <name>object</name></decl></param>, <param><decl><type><name>bool</name></type> <name>doUpdateGui</name></decl></param>, <param><decl><type><name>RDocument</name>*</type> <name>document</name> =<init> <expr><name>NULL</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>showOnRequest</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateEditor</name><parameter_list>(<param><decl><type><name>RObject</name>&amp;</type> <name>object</name></decl></param>, <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RPropertyTypeId</name></argument>&gt;</argument_list></name>&amp;</type> <name>propertyTypeIds</name></decl></param>, <param><decl><type><name>bool</name></type> <name>doUpdateGui</name></decl></param>, <param><decl><type><name>RDocument</name>*</type> <name>document</name> =<init> <expr><name>NULL</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>showOnRequest</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="block">/**
      * Updates the user interface of this property editor. This is the
@@ -102,7 +105,7 @@
     }</block></function>
 
     <function_decl><type><name>void</name></type> <name>updateProperty</name><parameter_list>(<param><decl><type><name>const</name> <name>RPropertyTypeId</name>&amp;</type> <name>propertyTypeId</name></decl></param>, <param><decl><type><name>RObject</name>&amp;</type> <name>object</name></decl></param>, <param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>bool</name></type> <name>showOnRequest</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>removeAllButThese</name><parameter_list>(<param><decl><type><name>const</name> <name>QMultiMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name>&amp;</type> <name>propertyTitles</name></decl></param>, <param><decl><type><name>bool</name></type> <name>customOnly</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <comment type="line">//void removeAllButThese(const QMultiMap&lt;QString, QString&gt;&amp; propertyTitles, bool customOnly=false);</comment>
 
 </protected><protected>protected:
     <comment type="line">//! key / value / attributes</comment>

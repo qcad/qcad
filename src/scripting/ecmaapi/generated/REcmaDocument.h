@@ -693,6 +693,12 @@
         setIgnoreWorkingSet
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setNotifyListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getNotifyListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getClipboard
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

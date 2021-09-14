@@ -198,21 +198,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="filter" isConst="false" />
       </variant>
     </method>
-    <method name="updateEditor" cppName="updateEditor"
-    specifier="protected" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="RObject &amp;" typeName="RObject" name="object"
-        isConst="false" />
-        <arg type="bool" typeName="bool" name="doUpdateGui"
-        isConst="false" />
-        <arg type="RDocument *" typeName="RDocument *"
-        name="document" hasDefault="true" default="NULL"
-        isConst="false" />
-        <arg type="bool" typeName="bool" name="showOnRequest"
-        hasDefault="true" default="false" isConst="false" />
-      </variant>
-    </method>
     <method name="updateGui" cppName="updateGui"
     specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
@@ -233,17 +218,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RDocument *" typeName="RDocument *"
         name="document" isConst="false" />
         <arg type="bool" typeName="bool" name="showOnRequest"
-        hasDefault="true" default="false" isConst="false" />
-      </variant>
-    </method>
-    <method name="removeAllButThese" cppName="removeAllButThese"
-    specifier="protected" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QMultiMap &lt; QString , QString &gt; &amp;"
-        typeName="QMultiMap &lt; QString , QString &gt;"
-        name="propertyTitles" isConst="true" />
-        <arg type="bool" typeName="bool" name="customOnly"
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>

@@ -119,6 +119,8 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, init, "init");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getRtti, "getRtti");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getStaticPropertyTypeIds, "getStaticPropertyTypeIds");
             
 
@@ -442,6 +444,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerSolidEntity::init", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerSolidEntity::getRtti
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerSolidEntity::getRtti", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerSolidEntity::getRtti";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::EntityType'
+    RS::EntityType cppResult =
+        RSolidEntity::
+       getRtti();
+        // return type: RS::EntityType
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSolidEntity.getRtti().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerSolidEntity::getRtti", context, engine);
             return result;
         }
          QScriptValue

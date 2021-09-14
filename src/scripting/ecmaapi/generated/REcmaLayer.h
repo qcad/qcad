@@ -51,6 +51,9 @@
         init
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getRtti
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

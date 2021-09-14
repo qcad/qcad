@@ -7,8 +7,6 @@
 
         // forwards declarations mapped to includes
         
-                #include "RDocument.h"
-            
             
         // includes for base ecma wrapper classes
          void REcmaDimStyleData::initEcma(QScriptEngine& engine, QScriptValue* proto 

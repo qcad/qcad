@@ -445,6 +445,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, update, "update");
             
+            REcmaHelper::registerFunction(&engine, proto, setNotifyListeners, "setNotifyListeners");
+            
+            REcmaHelper::registerFunction(&engine, proto, getNotifyListeners, "getNotifyListeners");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RStorage*>(), *proto);
 
@@ -13909,6 +13913,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::update", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::setNotifyListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::setNotifyListeners", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::setNotifyListeners";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("setNotifyListeners", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setNotifyListeners(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.setNotifyListeners().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::setNotifyListeners", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::getNotifyListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::getNotifyListeners", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::getNotifyListeners";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("getNotifyListeners", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getNotifyListeners();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.getNotifyListeners().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::getNotifyListeners", context, engine);
             return result;
         }
          QScriptValue REcmaStorage::toString

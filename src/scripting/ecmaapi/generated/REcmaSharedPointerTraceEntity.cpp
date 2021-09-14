@@ -117,6 +117,8 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, init, "init");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getRtti, "getRtti");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getStaticPropertyTypeIds, "getStaticPropertyTypeIds");
             
 
@@ -440,6 +442,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::init", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerTraceEntity::getRtti
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::getRtti", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTraceEntity::getRtti";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::EntityType'
+    RS::EntityType cppResult =
+        RTraceEntity::
+       getRtti();
+        // return type: RS::EntityType
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTraceEntity.getRtti().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::getRtti", context, engine);
             return result;
         }
          QScriptValue

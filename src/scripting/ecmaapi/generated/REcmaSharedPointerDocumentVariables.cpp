@@ -124,6 +124,8 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, init, "init");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getRtti, "getRtti");
+            
 
     // static properties:
     
@@ -321,6 +323,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerDocumentVariables::init", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDocumentVariables::getRtti
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDocumentVariables::getRtti", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDocumentVariables::getRtti";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::EntityType'
+    RS::EntityType cppResult =
+        RDocumentVariables::
+       getRtti();
+        // return type: RS::EntityType
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.getRtti().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDocumentVariables::getRtti", context, engine);
             return result;
         }
          QScriptValue

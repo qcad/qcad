@@ -147,6 +147,8 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, init, "init");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getRtti, "getRtti");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getHierarchySeparator, "getHierarchySeparator");
             
             REcmaHelper::registerFunction(&engine, &ctor, hasChildLayersStatic, "hasChildLayersStatic");
@@ -1385,6 +1387,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLayer::init", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLayer::getRtti
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLayer::getRtti", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLayer::getRtti";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::EntityType'
+    RS::EntityType cppResult =
+        RLayer::
+       getRtti();
+        // return type: RS::EntityType
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getRtti().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLayer::getRtti", context, engine);
             return result;
         }
          QScriptValue

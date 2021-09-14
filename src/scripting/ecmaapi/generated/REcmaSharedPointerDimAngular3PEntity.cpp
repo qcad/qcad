@@ -105,6 +105,8 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, init, "init");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getRtti, "getRtti");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getStaticPropertyTypeIds, "getStaticPropertyTypeIds");
             
 
@@ -498,6 +500,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerDimAngular3PEntity::init", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDimAngular3PEntity::getRtti
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDimAngular3PEntity::getRtti", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimAngular3PEntity::getRtti";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::EntityType'
+    RS::EntityType cppResult =
+        RDimAngular3PEntity::
+       getRtti();
+        // return type: RS::EntityType
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAngular3PEntity.getRtti().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimAngular3PEntity::getRtti", context, engine);
             return result;
         }
          QScriptValue

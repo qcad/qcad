@@ -501,6 +501,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setIgnoreWorkingSet, "setIgnoreWorkingSet");
             
+            REcmaHelper::registerFunction(&engine, proto, setNotifyListeners, "setNotifyListeners");
+            
+            REcmaHelper::registerFunction(&engine, proto, getNotifyListeners, "getNotifyListeners");
+            
             REcmaHelper::registerFunction(&engine, proto, dump, "dump");
             
         engine.setDefaultPrototype(
@@ -18276,6 +18280,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::setIgnoreWorkingSet", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::setNotifyListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::setNotifyListeners", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::setNotifyListeners";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("setNotifyListeners", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setNotifyListeners(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.setNotifyListeners().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::setNotifyListeners", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::getNotifyListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::getNotifyListeners", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::getNotifyListeners";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("getNotifyListeners", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getNotifyListeners();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.getNotifyListeners().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::getNotifyListeners", context, engine);
             return result;
         }
          QScriptValue

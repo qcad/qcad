@@ -99,7 +99,13 @@
 
     <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>
 
-    <function_decl><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function><type><name>static</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getRtti</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name><name>RS</name>::<name>ObjectUnknown</name></name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name><name>RS</name>::<name>ObjectUnknown</name></name></expr>;</return>
+    }</block></function>
 
     <function_decl><type><name>virtual</name> <name>RObject</name>*</type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
 
@@ -193,6 +199,7 @@
         <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>WorkingSet</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
 
+
     <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name>RPropertyTypeId</name></argument>&gt;</argument_list></name></type> <name>getPropertyTypeIds</name><parameter_list>(<param><decl><type><name><name>RPropertyAttributes</name>::<name>Option</name></name></type> <name>option</name> =<init> <expr><name><name>RPropertyAttributes</name>::<name>NoOptions</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name>RPropertyTypeId</name></argument>&gt;</argument_list></name></type> <name>getCustomPropertyTypeIds</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
@@ -219,7 +226,7 @@
      *      false otherwise.
      */</comment>
     <function><type><name>virtual</name> <name>bool</name></type> <name>hasPropertyType</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl></param>)</parameter_list> <block>{
-        <return>return <expr><call><name><name>RPropertyTypeId</name>::<name>hasPropertyType</name></name><argument_list>(<argument><expr><call><name>typeid</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr></argument>, <argument><expr><name>propertyTypeId</name></expr></argument>)</argument_list></call></expr>;</return>
+        <return>return <expr><call><name><name>RPropertyTypeId</name>::<name>hasPropertyType</name></name><argument_list>(<argument><expr><call><name>getType</name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><name>propertyTypeId</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function_decl><type><name>bool</name></type> <name>hasCustomProperties</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>

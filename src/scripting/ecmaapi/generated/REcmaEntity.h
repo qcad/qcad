@@ -48,6 +48,9 @@
 
     // public methods:
     static  QScriptValue
+        getRtti
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         init
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -614,6 +614,12 @@
         ;static  QScriptValue
         update
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setNotifyListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getNotifyListeners
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

@@ -55,6 +55,10 @@
             <param><decl><type><name>int</name></type> <name>columnCount</name>=<init><expr>1</expr></init></decl></param>, <param><decl><type><name>int</name></type> <name>rowCount</name>=<init><expr>1</expr></init></decl></param>,
             <param><decl><type><name>double</name></type> <name>columnSpacing</name>=<init><expr>0</expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>rowSpacing</name>=<init><expr>0</expr></init></decl></param>)</parameter_list>;</constructor_decl>
 
+    <function><type><name>static</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getRtti</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name><name>RS</name>::<name>EntityBlockRef</name></name></expr>;</return>
+    }</block></function>
+
     <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name><name>RS</name>::<name>EntityBlockRef</name></name></expr>;</return>
     }</block></function>

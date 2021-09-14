@@ -145,6 +145,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, initDimX, "initDimX");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getRtti, "getRtti");
+            
             REcmaHelper::registerFunction(&engine, &ctor, hasProxy, "hasProxy");
             
 
@@ -1799,6 +1801,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimStyle::initDimX", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimStyle::getRtti
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimStyle::getRtti", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimStyle::getRtti";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::EntityType'
+    RS::EntityType cppResult =
+        RDimStyle::
+       getRtti();
+        // return type: RS::EntityType
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimStyle.getRtti().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimStyle::getRtti", context, engine);
             return result;
         }
          QScriptValue
