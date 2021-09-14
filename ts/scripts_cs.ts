@@ -6038,27 +6038,40 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">Použití plného rozlišení pro displej Retina / vysoké rozlišení</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+18"/>
         <source>auto</source>
         <translation type="unfinished">auto</translation>
     </message>
     <message>
-        <location line="-8"/>
+        <location line="+426"/>
+        <source>Maximum selected entities with reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>1000</source>
+        <translation type="obsolete">1000</translation>
+    </message>
+    <message>
+        <location line="-437"/>
         <source>Number of threads:</source>
         <translation type="unfinished">Počet vláken:</translation>
     </message>
     <message>
-        <location line="+486"/>
+        <source>100000</source>
+        <translation type="obsolete">100000</translation>
+    </message>
+    <message>
+        <location line="+507"/>
         <source>Reference point size (px):</source>
         <translation type="unfinished">Velikost referenčního bodu (px):</translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+228"/>
         <source>Persistent selection</source>
         <translation type="unfinished">Trvalý výběr</translation>
     </message>
     <message>
-        <location line="-833"/>
+        <location line="-930"/>
         <source>Color lightness threshold:</source>
         <translation>Prahová hodnota světla barvy:</translation>
     </message>
@@ -6097,22 +6110,22 @@ BUG: Interferes with group castings.</source>
         <translation>Displej a výkon</translation>
     </message>
     <message>
-        <location line="+126"/>
+        <location line="+129"/>
         <source>Number of preview entities:</source>
         <translation>Počet prvků náhledu:</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+61"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Zobrazit oblouky jako úsečky pod tímto úhlem (stupně):</translation>
     </message>
     <message>
-        <location line="+151"/>
+        <location line="+157"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Zobrazit prvky s více než N čárami jako spojité:</translation>
     </message>
     <message>
-        <location line="-82"/>
+        <location line="-85"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Minimální krok úhlu pro vykreslení oblouků (stupně):</translation>
     </message>
@@ -6121,7 +6134,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Použít plné rozlišení pro displej Retina</translation>
     </message>
     <message>
-        <location line="-247"/>
+        <location line="-256"/>
         <source>Anti-aliasing on by default</source>
         <translation>Vyhlazování hran je standardně zapnuto</translation>
     </message>
@@ -6136,22 +6149,26 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">Výchozí váha řádku:</translation>
     </message>
     <message>
-        <location line="+495"/>
+        <location line="+510"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Časový limit pro vykreslení šrafování:</translation>
     </message>
     <message>
-        <location line="+62"/>
         <source>Maximum number of reference points displayed:</source>
-        <translation>Zobrazit maximální počet referenčních bodů:</translation>
+        <translation type="vanished">Zobrazit maximální počet referenčních bodů:</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+212"/>
         <source>Text height threshold (px):</source>
         <translation type="unfinished">Práh výšky textu (px):</translation>
     </message>
     <message>
         <location line="+72"/>
+        <source>Maximum selected entities with displayed reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+73"/>
         <source>Selection</source>
         <translation>Výběr</translation>
     </message>
@@ -11746,7 +11763,7 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1426"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Alespoň 2 body jsou identické.</translation>

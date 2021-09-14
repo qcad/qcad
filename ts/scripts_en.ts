@@ -6186,12 +6186,34 @@ BUG: Interferes with group castings.</translation>
         <translation>Use full resolution for Retina / high resolution display</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+18"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
     <message>
-        <location line="-8"/>
+        <location line="+426"/>
+        <source>Maximum selected entities with reference points:</source>
+        <translation>Maximum selected entities with reference points:</translation>
+    </message>
+    <message>
+        <source>1000</source>
+        <translation type="vanished">1000</translation>
+    </message>
+    <message>
+        <location line="+219"/>
+        <source>Maximum selected entities with displayed reference points:</source>
+        <translation>Maximum selected entities with displayed reference points:</translation>
+    </message>
+    <message>
+        <source>Maximum number of entities with reference points:</source>
+        <translation type="vanished">Maximum number of entities with reference points:</translation>
+    </message>
+    <message>
+        <source>100000</source>
+        <translation type="obsolete">100000</translation>
+    </message>
+    <message>
+        <location line="-656"/>
         <source>Number of threads:</source>
         <translation>Number of threads:</translation>
     </message>
@@ -6200,17 +6222,17 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Text height threshold:</translation>
     </message>
     <message>
-        <location line="+486"/>
+        <location line="+507"/>
         <source>Reference point size (px):</source>
         <translation>Reference point size (px):</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+77"/>
         <source>Text height threshold (px):</source>
         <translation>Text height threshold (px):</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+151"/>
         <source>Persistent selection</source>
         <translation>Persistent selection</translation>
     </message>
@@ -6219,7 +6241,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Linetypes</translation>
     </message>
     <message>
-        <location line="-741"/>
+        <location line="-838"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatically use screen based linetypes in model view</translation>
     </message>
@@ -6253,34 +6275,33 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Use full resolution for Retina display</translation>
     </message>
     <message>
-        <location line="+120"/>
+        <location line="+123"/>
         <source>Number of preview entities:</source>
         <translation>Number of preview entities:</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+61"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Display arcs as lines below this angle (degrees):</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+72"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Minimum angle step for rendering arcs (degrees):</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+85"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Display entities with more than N dashes as continuous:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+45"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Timeout for hatch rendering:</translation>
     </message>
     <message>
-        <location line="+62"/>
         <source>Maximum number of reference points displayed:</source>
-        <translation>Maximum number of reference points displayed:</translation>
+        <translation type="vanished">Maximum number of reference points displayed:</translation>
     </message>
     <message>
         <source>Use multithreading</source>
@@ -6291,7 +6312,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="obsolete">Pen cap style:</translation>
     </message>
     <message>
-        <location line="+213"/>
+        <location line="+357"/>
         <source>Selection</source>
         <translation>Selection</translation>
     </message>
@@ -12073,7 +12094,7 @@ shown in search results:</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1426"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>At least two points are identical.</translation>

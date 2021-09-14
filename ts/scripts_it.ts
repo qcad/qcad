@@ -6687,12 +6687,30 @@ BUG: Interferes with group castings.</source>
         <translation>Utilizzare piena risoluzione per il display Retina / alta risoluzione</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+18"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
     <message>
-        <location line="-8"/>
+        <location line="+426"/>
+        <source>Maximum selected entities with reference points:</source>
+        <translation>Massimo di entità selezionate con punti di riferimento:</translation>
+    </message>
+    <message>
+        <source>1000</source>
+        <translation type="obsolete">1000</translation>
+    </message>
+    <message>
+        <location line="+219"/>
+        <source>Maximum selected entities with displayed reference points:</source>
+        <translation>Massimo di entità selezionate con punti di riferimento visualizzati:</translation>
+    </message>
+    <message>
+        <source>100000</source>
+        <translation type="obsolete">100000</translation>
+    </message>
+    <message>
+        <location line="-656"/>
         <source>Number of threads:</source>
         <translation>Numero di thread:</translation>
     </message>
@@ -6701,22 +6719,22 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Soglia di altezza del testo:</translation>
     </message>
     <message>
-        <location line="+486"/>
+        <location line="+507"/>
         <source>Reference point size (px):</source>
         <translation>Dimensione del punto di riferimento (px):</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+77"/>
         <source>Text height threshold (px):</source>
         <translation>Soglia di altezza del testo (px):</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+151"/>
         <source>Persistent selection</source>
         <translation>Selezione permanente</translation>
     </message>
     <message>
-        <location line="-833"/>
+        <location line="-930"/>
         <source>Color lightness threshold:</source>
         <translation>Soglia per la leggerezza del colore:</translation>
     </message>
@@ -6750,7 +6768,7 @@ BUG: Interferes with group castings.</source>
         <translation>Visualizzazione e prestazioni</translation>
     </message>
     <message>
-        <location line="+335"/>
+        <location line="+347"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Visualizza entità con più di N trattini come continuo:</translation>
     </message>
@@ -6759,12 +6777,12 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Utilizzare il multithreading</translation>
     </message>
     <message>
-        <location line="-82"/>
+        <location line="-85"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Passo angolo minimo per rendere archi (gradi):</translation>
     </message>
     <message>
-        <location line="-379"/>
+        <location line="-388"/>
         <source>Linetypes and Lineweights</source>
         <translation>Tipi di linee e pesi di linee</translation>
     </message>
@@ -6783,12 +6801,11 @@ BUG: Interferes with group castings.</source>
         <translation>Antialiasing di default</translation>
     </message>
     <message>
-        <location line="+433"/>
         <source>Maximum number of reference points displayed:</source>
-        <translation>Numero massimo di punti di riferimento visualizzati:</translation>
+        <translation type="vanished">Numero massimo di punti di riferimento visualizzati:</translation>
     </message>
     <message>
-        <location line="-62"/>
+        <location line="+386"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Timeout per la rappresentazione tratteggio:</translation>
     </message>
@@ -6797,7 +6814,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Antialiasing di default</translation>
     </message>
     <message>
-        <location line="-460"/>
+        <location line="-475"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Utilizzare automaticamente i tipi di linea a base di schermo in vista del modello</translation>
     </message>
@@ -6810,7 +6827,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Performance</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+212"/>
         <source>Number of preview entities:</source>
         <translation>Numero di entità in anteprima:</translation>
     </message>
@@ -6819,7 +6836,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Visualizzare limite per il testo (px):</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+61"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Mostra archi come linee di sotto di questo angolo (gradi):</translation>
     </message>
@@ -6828,7 +6845,7 @@ BUG: Interferes with group castings.</source>
         <translation type="obsolete">Visualizzare limite per il testo:</translation>
     </message>
     <message>
-        <location line="+468"/>
+        <location line="+559"/>
         <source>Selection</source>
         <translation>Selezione</translation>
     </message>
@@ -13481,7 +13498,7 @@ mostrati nei risultati di ricerca:</translation>
         <translation type="vanished">Raggio è sceso sotto 0,0 dopo %1 archi concentrici.</translation>
     </message>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1426"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Almeno due punti sono identici.</translation>

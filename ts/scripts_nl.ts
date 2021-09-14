@@ -6228,12 +6228,30 @@ BUG: Interferes with group castings.</source>
         <translation>Gebruik volledige resolutie voor Retina-display (hoge resolutie)</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+18"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
     <message>
-        <location line="-8"/>
+        <location line="+426"/>
+        <source>Maximum selected entities with reference points:</source>
+        <translation>Maximaal geselecteerde objecten met referentiepunten:</translation>
+    </message>
+    <message>
+        <source>1000</source>
+        <translation type="obsolete">1000</translation>
+    </message>
+    <message>
+        <location line="+219"/>
+        <source>Maximum selected entities with displayed reference points:</source>
+        <translation>Maximaal geselecteerde objecten met weergegeven referentiepunten:</translation>
+    </message>
+    <message>
+        <source>100000</source>
+        <translation type="obsolete">100000</translation>
+    </message>
+    <message>
+        <location line="-656"/>
         <source>Number of threads:</source>
         <translation>Aantal threads:</translation>
     </message>
@@ -6242,22 +6260,22 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Drempel voor teksthoogte:</translation>
     </message>
     <message>
-        <location line="+486"/>
+        <location line="+507"/>
         <source>Reference point size (px):</source>
         <translation>Referentiepuntgrootte (px):</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+77"/>
         <source>Text height threshold (px):</source>
         <translation>Drempel voor teksthoogte (px):</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+151"/>
         <source>Persistent selection</source>
         <translation>Blijvende selectie</translation>
     </message>
     <message>
-        <location line="-833"/>
+        <location line="-930"/>
         <source>Color lightness threshold:</source>
         <translation>Kleur lichtheid drempel:</translation>
     </message>
@@ -6291,7 +6309,7 @@ BUG: Interferes with group castings.</source>
         <translation>Weergave en prestatie</translation>
     </message>
     <message>
-        <location line="+335"/>
+        <location line="+347"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Objecten met meer dan N streepjes als doorlopend weergeven:</translation>
     </message>
@@ -6300,7 +6318,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Gebruik volledige resolutie voor Retina-display</translation>
     </message>
     <message>
-        <location line="-461"/>
+        <location line="-473"/>
         <source>Linetypes and Lineweights</source>
         <translation>Lijntypen en lijnbreedtes</translation>
     </message>
@@ -6320,7 +6338,7 @@ BUG: Interferes with group castings.</source>
         <translation>Automatisch scherm gebaseerde lijntypen gebruiken in model weergave</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+212"/>
         <source>Number of preview entities:</source>
         <translation>Aantal voorbeeld objecten:</translation>
     </message>
@@ -6329,31 +6347,30 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Drempel voor weergave van tekst (px):</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+61"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Weergave van bogen als lijnen onder deze hoek (graden):</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+72"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Minimale hoek voor weergave van bogens (graden):</translation>
     </message>
     <message>
-        <location line="+124"/>
+        <location line="+130"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Time-out voor weergave van arcering:</translation>
     </message>
     <message>
-        <location line="+62"/>
         <source>Maximum number of reference points displayed:</source>
-        <translation>Maximum aantal weergeven referentiepunten:</translation>
+        <translation type="vanished">Maximum aantal weergeven referentiepunten:</translation>
     </message>
     <message>
         <source>Use multithreading</source>
         <translation type="vanished">Multithreading gebruiken</translation>
     </message>
     <message>
-        <location line="+213"/>
+        <location line="+357"/>
         <source>Selection</source>
         <translation>Selectie</translation>
     </message>
@@ -12210,7 +12227,7 @@ getoond in zoekresultaten:</translation>
         <translation type="vanished">Radius gedaald tot onder 0 na %1 concentrische boog(en).</translation>
     </message>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1426"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Ten minste twee punten zijn identiek.</translation>

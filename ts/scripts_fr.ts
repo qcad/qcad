@@ -6667,12 +6667,30 @@ BUG: Interferes with group castings.</source>
         <translation>Utilisez pleine résolution pour affichage Retina / haute résolution</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+18"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
     <message>
-        <location line="-8"/>
+        <location line="+426"/>
+        <source>Maximum selected entities with reference points:</source>
+        <translation>Entités maximales sélectionnées avec des points de référence :</translation>
+    </message>
+    <message>
+        <source>1000</source>
+        <translation type="vanished">1000</translation>
+    </message>
+    <message>
+        <location line="+219"/>
+        <source>Maximum selected entities with displayed reference points:</source>
+        <translation>Maximum d&apos;entités sélectionnées avec les points de référence affichés :</translation>
+    </message>
+    <message>
+        <source>100000</source>
+        <translation type="obsolete">100000</translation>
+    </message>
+    <message>
+        <location line="-656"/>
         <source>Number of threads:</source>
         <translation>Le nombre de fils :</translation>
     </message>
@@ -6681,22 +6699,22 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Seuil de hauteur du texte :</translation>
     </message>
     <message>
-        <location line="+486"/>
+        <location line="+507"/>
         <source>Reference point size (px):</source>
         <translation>Taille du point de référence (px) :</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+77"/>
         <source>Text height threshold (px):</source>
         <translation>Seuil de hauteur du texte (px):</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+151"/>
         <source>Persistent selection</source>
         <translation>Sélection persistante</translation>
     </message>
     <message>
-        <location line="-833"/>
+        <location line="-930"/>
         <source>Color lightness threshold:</source>
         <translation>Seuil de couleur :</translation>
     </message>
@@ -6730,7 +6748,7 @@ BUG: Interferes with group castings.</source>
         <translation>Affichage et performance</translation>
     </message>
     <message>
-        <location line="+335"/>
+        <location line="+347"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Afficher les entités de plus de N tirets que continu:</translation>
     </message>
@@ -6739,12 +6757,12 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Utilisez multithreading</translation>
     </message>
     <message>
-        <location line="-82"/>
+        <location line="-85"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Incrément angulaire minimum pour rendre arcs (degrés):</translation>
     </message>
     <message>
-        <location line="-379"/>
+        <location line="-388"/>
         <source>Linetypes and Lineweights</source>
         <translation>Types et poids des lignes</translation>
     </message>
@@ -6763,12 +6781,11 @@ BUG: Interferes with group castings.</source>
         <translation>Antialiasing activé par défaut</translation>
     </message>
     <message>
-        <location line="+433"/>
         <source>Maximum number of reference points displayed:</source>
-        <translation>Nombre maximum de points de référence affichés :</translation>
+        <translation type="vanished">Nombre maximum de points de référence affichés :</translation>
     </message>
     <message>
-        <location line="-62"/>
+        <location line="+386"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Délai d&apos;attente pour hachure rendu :</translation>
     </message>
@@ -6781,7 +6798,7 @@ BUG: Interferes with group castings.</source>
         <translation type="obsolete">Afficher les entités avec N tirets que continu:</translation>
     </message>
     <message>
-        <location line="-460"/>
+        <location line="-475"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Utiliser automatiquement les types de lignes sur écran en vue du modèle</translation>
     </message>
@@ -6794,7 +6811,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Performance</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+212"/>
         <source>Number of preview entities:</source>
         <translation>Nombre d&apos;entités en aperçu :</translation>
     </message>
@@ -6803,7 +6820,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Afficher limite pour le texte (px):</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+61"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Afficher arcs que les lignes ci-dessous cet angle (degrés):</translation>
     </message>
@@ -6812,7 +6829,7 @@ BUG: Interferes with group castings.</source>
         <translation type="obsolete">Afficher limite pour le texte:</translation>
     </message>
     <message>
-        <location line="+468"/>
+        <location line="+559"/>
         <source>Selection</source>
         <translation>Sélection</translation>
     </message>
@@ -13329,7 +13346,7 @@ dans les résultats de recherche :</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1426"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Au moins deux points sont identiques.</translation>

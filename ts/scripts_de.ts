@@ -6924,12 +6924,30 @@ BUG: Interferes with group castings.</translation>
         <translation>Volle Auflösung benutzen für Retina-Anzeige (hochauflösende Anzeige)</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+18"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
     <message>
-        <location line="-8"/>
+        <location line="+426"/>
+        <source>Maximum selected entities with reference points:</source>
+        <translation>Maximal ausgewählte Objekte mit Referenzpunkten:</translation>
+    </message>
+    <message>
+        <source>1000</source>
+        <translation type="vanished">1000</translation>
+    </message>
+    <message>
+        <location line="+219"/>
+        <source>Maximum selected entities with displayed reference points:</source>
+        <translation>Maximal ausgewählte Objekte mit angezeigten Referenzpunkten:</translation>
+    </message>
+    <message>
+        <source>100000</source>
+        <translation type="obsolete">100000</translation>
+    </message>
+    <message>
+        <location line="-656"/>
         <source>Number of threads:</source>
         <translation>Anzahl Threads:</translation>
     </message>
@@ -6938,22 +6956,22 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Schwellenwert für Textgrösse:</translation>
     </message>
     <message>
-        <location line="+486"/>
+        <location line="+507"/>
         <source>Reference point size (px):</source>
         <translation>Referenzpunktgrösse (pix):</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+77"/>
         <source>Text height threshold (px):</source>
         <translation>Schwellenwert für Textgrösse (pix):</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+151"/>
         <source>Persistent selection</source>
         <translation>Persistente Selektion</translation>
     </message>
     <message>
-        <location line="-833"/>
+        <location line="-930"/>
         <source>Color lightness threshold:</source>
         <translation>Farbgrenzwert:</translation>
     </message>
@@ -6987,7 +7005,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Anzeige und Leistung</translation>
     </message>
     <message>
-        <location line="+335"/>
+        <location line="+347"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Gestrichelte Objekte mit mehr als N Strichen ausgezogen darstellen:</translation>
     </message>
@@ -6996,12 +7014,12 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Multithreading verwenden</translation>
     </message>
     <message>
-        <location line="-82"/>
+        <location line="-85"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Minimaler Winkel für Bogensegmentierung in Anzeige (Grad):</translation>
     </message>
     <message>
-        <location line="-379"/>
+        <location line="-388"/>
         <source>Linetypes and Lineweights</source>
         <translation>Linientypen und Linienbreiten</translation>
     </message>
@@ -7020,12 +7038,11 @@ BUG: Interferes with group castings.</translation>
         <translation>Kantenglättung standardmässig an</translation>
     </message>
     <message>
-        <location line="+433"/>
         <source>Maximum number of reference points displayed:</source>
-        <translation>Maximale Anzahl angezeigte Referenzpunkte:</translation>
+        <translation type="vanished">Maximale Anzahl angezeigte Referenzpunkte:</translation>
     </message>
     <message>
-        <location line="-62"/>
+        <location line="+386"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Timeout für Schraffurwiedergabe:</translation>
     </message>
@@ -7038,7 +7055,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="obsolete">Gestrichelte Objekte mit mehr als N Strichen ausgezogen darstellen:</translation>
     </message>
     <message>
-        <location line="-460"/>
+        <location line="-475"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatisch Bildschirmbasierte Linientypen verwenden in Modellansicht</translation>
     </message>
@@ -7051,7 +7068,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Leistung</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+212"/>
         <source>Number of preview entities:</source>
         <translation>Anzahl Vorschau Objekte:</translation>
     </message>
@@ -7060,7 +7077,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Anzeigegrenzwert für Texte (px):</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+61"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Bögen als Linien anzeigen falls Winkel kleiner als (Grad):</translation>
     </message>
@@ -7069,7 +7086,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="obsolete">Anzeigegrenzwert für Texte:</translation>
     </message>
     <message>
-        <location line="+468"/>
+        <location line="+559"/>
         <source>Selection</source>
         <translation>Selektion</translation>
     </message>
@@ -14435,7 +14452,7 @@ nicht öffnen.
         <translation type="vanished">Radius kleiner als 0.0 nach %1 konzentrischen Kreisbögen.</translation>
     </message>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1433"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1437"/>
         <source>No circle possible.</source>
         <translation>Kein Kreis möglich.</translation>
     </message>

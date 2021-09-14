@@ -6219,17 +6219,35 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+493"/>
+        <location line="+444"/>
+        <source>Maximum selected entities with reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>1000</source>
+        <translation type="obsolete">1000</translation>
+    </message>
+    <message>
+        <location line="+219"/>
+        <source>Maximum selected entities with displayed reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>100000</source>
+        <translation type="obsolete">100000</translation>
+    </message>
+    <message>
+        <location line="-149"/>
         <source>Reference point size (px):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+77"/>
         <source>Text height threshold (px):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+151"/>
         <source>Persistent selection</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6238,12 +6256,12 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Käytä täyttä tarkkuutta Retinanäytöissä</translation>
     </message>
     <message>
-        <location line="-630"/>
+        <location line="-724"/>
         <source>auto</source>
         <translation type="unfinished">automaattinen</translation>
     </message>
     <message>
-        <location line="-8"/>
+        <location line="-11"/>
         <source>Number of threads:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6295,7 +6313,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Suorituskyky</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+212"/>
         <source>Number of preview entities:</source>
         <translation>Esikatseltavien kohteiden määrä:</translation>
     </message>
@@ -6304,36 +6322,35 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Tekstin korkeuden kynnysarvo näytöllä (px):</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+61"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Näytä kaaret viivoina alle tämänmittaisen kulman (astetta):</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+72"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Pienin kulma-askel kaaria varten (astetta):</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+85"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Näytä sellaiset kohteet, joissa on enemmän kuin N viivaa, jatkuvina:</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+45"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Aikakatkaisu kuvioinnin rendröintiin:</translation>
     </message>
     <message>
-        <location line="+62"/>
         <source>Maximum number of reference points displayed:</source>
-        <translation>Näytettävien viitepisteiden enimmäismäärä:</translation>
+        <translation type="vanished">Näytettävien viitepisteiden enimmäismäärä:</translation>
     </message>
     <message>
         <source>Use multithreading</source>
         <translation type="obsolete">Käytä monisäkeistystä</translation>
     </message>
     <message>
-        <location line="+213"/>
+        <location line="+357"/>
         <source>Selection</source>
         <translation>Valinta</translation>
     </message>
@@ -12082,7 +12099,7 @@ näkyy hakutuloksissa:</translation>
         <translation type="vanished">Säde on pudonnut alle 0.0 arvon %1 samankeskisen kaaren (kaarien) jälkeen.</translation>
     </message>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1426"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vähintään kaksi pistettä ovat samat.</translation>

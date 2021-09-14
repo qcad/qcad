@@ -6225,32 +6225,50 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+18"/>
         <source>auto</source>
         <translation type="unfinished">自動</translation>
     </message>
     <message>
-        <location line="-8"/>
+        <location line="+426"/>
+        <source>Maximum selected entities with reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>1000</source>
+        <translation type="obsolete">1000</translation>
+    </message>
+    <message>
+        <location line="+219"/>
+        <source>Maximum selected entities with displayed reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-656"/>
         <source>Number of threads:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+486"/>
+        <source>100000</source>
+        <translation type="obsolete">100000</translation>
+    </message>
+    <message>
+        <location line="+507"/>
         <source>Reference point size (px):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+77"/>
         <source>Text height threshold (px):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+151"/>
         <source>Persistent selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-833"/>
+        <location line="-930"/>
         <source>Color lightness threshold:</source>
         <translation>色の明るさ閾値:</translation>
     </message>
@@ -6284,17 +6302,17 @@ BUG: Interferes with group castings.</source>
         <translation>表示と性能</translation>
     </message>
     <message>
-        <location line="+335"/>
+        <location line="+347"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>エンティティをこの数以上の連続点として表示する</translation>
     </message>
     <message>
-        <location line="-82"/>
+        <location line="-85"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>弧を描く時に分割する最小角度（度）</translation>
     </message>
     <message>
-        <location line="-379"/>
+        <location line="-388"/>
         <source>Linetypes and Lineweights</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6313,17 +6331,16 @@ BUG: Interferes with group castings.</source>
         <translation>デフォルトでアンチエイリアスする</translation>
     </message>
     <message>
-        <location line="+433"/>
         <source>Maximum number of reference points displayed:</source>
-        <translation>表示される参照点の最大数</translation>
+        <translation type="vanished">表示される参照点の最大数</translation>
     </message>
     <message>
-        <location line="-62"/>
+        <location line="+386"/>
         <source>Timeout for hatch rendering:</source>
         <translation>ハッチング表示のタイムアウト:</translation>
     </message>
     <message>
-        <location line="-460"/>
+        <location line="-475"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>自動的にモデルビューの基本線種を使用</translation>
     </message>
@@ -6336,7 +6353,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">パフォーマンス</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+212"/>
         <source>Number of preview entities:</source>
         <translation>プレビューエンティティの数:</translation>
     </message>
@@ -6345,7 +6362,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">テキスト高さの表示しきい値 (px):</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+61"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>この角度以下の弧を直線で表示 (度):</translation>
     </message>
@@ -6354,7 +6371,7 @@ BUG: Interferes with group castings.</source>
         <translation type="obsolete">テキスト高さの表示閾値:</translation>
     </message>
     <message>
-        <location line="+468"/>
+        <location line="+559"/>
         <source>Selection</source>
         <translation>選択</translation>
     </message>
@@ -12379,7 +12396,7 @@ shown in search results:</source>
         <translation type="vanished">%1同心弧の半径が0.0を下回りました。</translation>
     </message>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1426"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>少なくとも2点が同一です。</translation>

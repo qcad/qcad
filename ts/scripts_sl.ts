@@ -6333,27 +6333,45 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+18"/>
         <source>auto</source>
         <translation type="unfinished">samodejno</translation>
     </message>
     <message>
-        <location line="-8"/>
+        <location line="+426"/>
+        <source>Maximum selected entities with reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>1000</source>
+        <translation type="obsolete">1000</translation>
+    </message>
+    <message>
+        <location line="+219"/>
+        <source>Maximum selected entities with displayed reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-656"/>
         <source>Number of threads:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+486"/>
+        <source>100000</source>
+        <translation type="obsolete">100000</translation>
+    </message>
+    <message>
+        <location line="+507"/>
         <source>Reference point size (px):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+77"/>
         <source>Text height threshold (px):</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+151"/>
         <source>Persistent selection</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6362,7 +6380,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Uporabi večnitnost</translation>
     </message>
     <message>
-        <location line="-833"/>
+        <location line="-930"/>
         <source>Color lightness threshold:</source>
         <translation>Prag svetlosti barv:</translation>
     </message>
@@ -6396,12 +6414,12 @@ BUG: Interferes with group castings.</source>
         <translation>Prikaz in optimizacija</translation>
     </message>
     <message>
-        <location line="+335"/>
+        <location line="+347"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Prikaži entitete z več kot N pikami kot neprekinjene:</translation>
     </message>
     <message>
-        <location line="-82"/>
+        <location line="-85"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Najmanjši kot koraka za izris krivulje (stopinje):</translation>
     </message>
@@ -6410,22 +6428,21 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Uporabi polno resolucijo za Retina zaslone</translation>
     </message>
     <message>
-        <location line="-247"/>
+        <location line="-256"/>
         <source>Anti-aliasing on by default</source>
         <translation>Glajenje robov provzeto vklopljeno</translation>
     </message>
     <message>
-        <location line="+433"/>
         <source>Maximum number of reference points displayed:</source>
-        <translation>Največje število prikazanih referenčnih točk:</translation>
+        <translation type="vanished">Največje število prikazanih referenčnih točk:</translation>
     </message>
     <message>
-        <location line="-62"/>
+        <location line="+386"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Iztek časa za izris šrafur:</translation>
     </message>
     <message>
-        <location line="-460"/>
+        <location line="-475"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Samodejno uporabi zaslonske črte v prikazu modela</translation>
     </message>
@@ -6438,7 +6455,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Optimizacija</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+212"/>
         <source>Number of preview entities:</source>
         <translation>Število entitet v predogledu:</translation>
     </message>
@@ -6447,7 +6464,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Prag prikaza višine besedila (px):</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+61"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Prikaži loke kot črt, če je kot manjši od (stopinje): </translation>
     </message>
@@ -6456,7 +6473,7 @@ BUG: Interferes with group castings.</source>
         <translation type="obsolete">Prag prikaza višine besedila:</translation>
     </message>
     <message>
-        <location line="+468"/>
+        <location line="+559"/>
         <source>Selection</source>
         <translation>Izbor</translation>
     </message>
@@ -12534,7 +12551,7 @@ shown in search results:</source>
         <translation type="vanished">Polmer je padel pod 0.0 po %1 kocentričnih lokih.</translation>
     </message>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1426"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vsaj dve točki sta identični.</translation>

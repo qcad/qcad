@@ -6654,12 +6654,30 @@ BUG: Interferes with group castings.</source>
         <translation>Utilice la resolución completa de la pantalla Retina / alta resolución</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+18"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
     <message>
-        <location line="-8"/>
+        <location line="+426"/>
+        <source>Maximum selected entities with reference points:</source>
+        <translation>Máximo de entidades seleccionadas con puntos de referencia:</translation>
+    </message>
+    <message>
+        <source>1000</source>
+        <translation type="obsolete">1000</translation>
+    </message>
+    <message>
+        <location line="+219"/>
+        <source>Maximum selected entities with displayed reference points:</source>
+        <translation>Máximo de entidades seleccionadas con puntos de referencia mostrados:</translation>
+    </message>
+    <message>
+        <source>100000</source>
+        <translation type="obsolete">100000</translation>
+    </message>
+    <message>
+        <location line="-656"/>
         <source>Number of threads:</source>
         <translation>Número de hilos:</translation>
     </message>
@@ -6668,22 +6686,22 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Umbral de altura del texto:</translation>
     </message>
     <message>
-        <location line="+486"/>
+        <location line="+507"/>
         <source>Reference point size (px):</source>
         <translation>Tamaño del punto de referencia (px):</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+77"/>
         <source>Text height threshold (px):</source>
         <translation>Umbral de altura del texto (px):</translation>
     </message>
     <message>
-        <location line="+78"/>
+        <location line="+151"/>
         <source>Persistent selection</source>
         <translation>Selección persistente</translation>
     </message>
     <message>
-        <location line="-833"/>
+        <location line="-930"/>
         <source>Color lightness threshold:</source>
         <translation>Umbral para la claridad del color:</translation>
     </message>
@@ -6717,7 +6735,7 @@ BUG: Interferes with group castings.</source>
         <translation>Visualización y rendimiento</translation>
     </message>
     <message>
-        <location line="+335"/>
+        <location line="+347"/>
         <source>Display entities with more than N dashes as continuous:</source>
         <translation>Mostrar las entidades con más de N guiones como contínua:</translation>
     </message>
@@ -6726,12 +6744,12 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Usar multihilo</translation>
     </message>
     <message>
-        <location line="-82"/>
+        <location line="-85"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
         <translation>Paso ángulo mínimo para la prestación de arcos (grados):</translation>
     </message>
     <message>
-        <location line="-379"/>
+        <location line="-388"/>
         <source>Linetypes and Lineweights</source>
         <translation>Tipos de línea y luces de línea</translation>
     </message>
@@ -6750,12 +6768,11 @@ BUG: Interferes with group castings.</source>
         <translation>Antialiasing activado por defecto</translation>
     </message>
     <message>
-        <location line="+433"/>
         <source>Maximum number of reference points displayed:</source>
-        <translation>Número máximo de puntos de referencia muestran:</translation>
+        <translation type="vanished">Número máximo de puntos de referencia muestran:</translation>
     </message>
     <message>
-        <location line="-62"/>
+        <location line="+386"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Tiempo de espera para la representación rayado:</translation>
     </message>
@@ -6768,7 +6785,7 @@ BUG: Interferes with group castings.</source>
         <translation type="obsolete">Mostrar entidades con guiones N como contínua:</translation>
     </message>
     <message>
-        <location line="-460"/>
+        <location line="-475"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Usar automáticamente los tipos de línea base de la pantalla de visualización del modelo</translation>
     </message>
@@ -6781,7 +6798,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Rendimiento</translation>
     </message>
     <message>
-        <location line="+209"/>
+        <location line="+212"/>
         <source>Number of preview entities:</source>
         <translation>Número de entidades previsualizadas:</translation>
     </message>
@@ -6790,7 +6807,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Mostrar límite para el texto (px):</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+61"/>
         <source>Display arcs as lines below this angle (degrees):</source>
         <translation>Mostrar arcos como las líneas por debajo de este ángulo (grados):</translation>
     </message>
@@ -6799,7 +6816,7 @@ BUG: Interferes with group castings.</source>
         <translation type="obsolete">Mostrar límite para el texto:</translation>
     </message>
     <message>
-        <location line="+468"/>
+        <location line="+559"/>
         <source>Selection</source>
         <translation>Selección</translation>
     </message>
@@ -13302,7 +13319,7 @@ en los resultados de búsqueda:</translation>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../scripts/ShapeAlgorithms.js" line="+1426"/>
+        <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Al menos dos puntos son idénticos.</translation>
