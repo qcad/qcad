@@ -89,7 +89,10 @@ public:
     static bool checkType(RS::EntityType type, RS::EntityType filter);
 
 protected:
-    virtual void updateEditor(RObject& object, bool doUpdateGui, RDocument* document = NULL, bool showOnRequest = false);
+    /**
+     * \nonscriptable
+     */
+    virtual void updateEditor(RObject& object, const QList<RPropertyTypeId>& propertyTypeIds, bool doUpdateGui, RDocument* document = NULL, bool showOnRequest = false);
 
     /**
      * Updates the user interface of this property editor. This is the
@@ -101,7 +104,7 @@ protected:
     }
 
     void updateProperty(const RPropertyTypeId& propertyTypeId, RObject& object, RDocument* document, bool showOnRequest = false);
-    void removeAllButThese(const QMultiMap<QString, QString>& propertyTitles, bool customOnly=false);
+    //void removeAllButThese(const QMultiMap<QString, QString>& propertyTitles, bool customOnly=false);
 
 protected:
     //! key / value / attributes
