@@ -382,90 +382,36 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
     QList<RPropertyTypeId> combinedPropertyTypeIdsSorted = combinedPropertyTypeIds.toList();
     qSort(combinedPropertyTypeIdsSorted);
 
+    // list of property type IDs with values (to be filled in by concurrent mapping below):
+    QList<RProperty> ccProperties;
+    for (int i=0; i<combinedPropertyTypeIdsSorted.length(); i++) {
+        ccProperties.append(RProperty(*document, objectIds, combinedPropertyTypeIdsSorted[i], showOnRequest));
+    }
+
     // append custom properties common among all selected objects:
     for (int i=0; i<customPropertyNamesSorted.length(); i++) {
-        combinedPropertyTypeIdsSorted.append(RPropertyTypeId("QCAD", customPropertyNamesSorted[i]));
+        //combinedPropertyTypeIdsSorted.append(RPropertyTypeId("QCAD", customPropertyNamesSorted[i]));
+        ccProperties.append(RProperty(*document, objectIds, RPropertyTypeId("QCAD", customPropertyNamesSorted[i]), showOnRequest));
     }
 
 
-
     // for each property, find out value (either identical value or 'mixed'):
-    //QFutureWatcher<void> futureWatcher;
-    //QtConcurrent::blockingMap(combinedPropertyTypeIdsSorted, RPropertyEditor::computePropertyValue);
-//    do {
-//        QCoreApplication::processEvents();
-//    } while (!futureWatcher.isFinished() && !futureWatcher.isCanceled());
-//    futureWatcher.waitForFinished();
-
+    RDebug::startTimer(7);
+    QtConcurrent::blockingMap(ccProperties, RPropertyEditor::computePropertyValue);
+    RDebug::stopTimer(7, "blockingMap");
 
 
     RDebug::startTimer(7);
-    for (int i=0; i<combinedPropertyTypeIdsSorted.length(); i++) {
-        RPropertyTypeId pid = combinedPropertyTypeIdsSorted[i];
-
-        QVariant val;
-        RPropertyAttributes attr;
-        bool mixed = false;
-        bool invisible = false;
-
-        for (it = objectIds.begin(); it != objectIds.end(); ++it) {
-            QSharedPointer<RObject> obj = document->queryObjectDirect(*it);
-
-            QPair<QVariant, RPropertyAttributes> prop = obj->getProperty(pid, true, true, showOnRequest);
-
-            if (prop.second.isInvisible()) {
-                // property is invisible:
-                invisible = true;
-                break;
-            }
-
-            if (!val.isValid()) {
-                // first value:
-                val = prop.first;
-                attr = prop.second;
-            }
-            else {
-                // next value:
-                if (prop.second.isSum()) {
-                    // sum up all values:
-                    double v = val.toDouble();
-                    val.setValue(v + prop.first.toDouble());
-                }
-                else {
-                    // compare and set to mixed if values don't match:
-                    if (!RS::compare(val, prop.first)) {
-                        mixed = true;
-                        break;
-                    }
-                }
-            }
-        }
-        // value of property is now known (value or mixed):
-
-        if (invisible) {
-            // property is invisible:
-            continue;
-        }
+    for (int i=0; i<ccProperties.length(); i++) {
+        RProperty& p = ccProperties[i];
+        RPropertyTypeId& pid = p.propertyTypeId;
+        QVariant& val = p.value;
+        RPropertyAttributes& attr = p.attributes;
 
         // group title (e.g. "Center", "QCAD" for custom propertie, "" for group less):
         QString propertyGroupTitle = pid.getPropertyGroupTitle();
         // proerty title (e.g. "X", "myProp", "Text height", etc.):
         QString propertyTitle = pid.getPropertyTitle();
-
-        // retrieve custom property attributes from RObject as previously registered:
-        // this allows for custom properties to have attributes such as read-only, invisible, custom label, etc):
-        if (pid.isCustom()) {
-            attr = this->getCustomPropertyAttributes(propertyGroupTitle, propertyTitle);
-            if (attr.isInvisible()) {
-                continue;
-            }
-        }
-
-        if (mixed) {
-            // value is mixed:
-            //qDebug() << "value is mixed:" << propertyGroupTitle << propertyTitle;
-            attr.setMixed(true);
-        }
 
         if (combinedProperties.contains(propertyGroupTitle)) {
             RPropertyMap& propertyMap = combinedProperties[propertyGroupTitle];
@@ -495,6 +441,104 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
         }
     }
     RDebug::stopTimer(7, "collect prop");
+
+
+//    RDebug::startTimer(7);
+//    for (int i=0; i<combinedPropertyTypeIdsSorted.length(); i++) {
+//        RPropertyTypeId pid = combinedPropertyTypeIdsSorted[i];
+
+//        QVariant val;
+//        RPropertyAttributes attr;
+//        bool mixed = false;
+//        bool invisible = false;
+
+//        for (it = objectIds.begin(); it != objectIds.end(); ++it) {
+//            QSharedPointer<RObject> obj = document->queryObjectDirect(*it);
+
+//            QPair<QVariant, RPropertyAttributes> prop = obj->getProperty(pid, true, true, showOnRequest);
+
+//            if (prop.second.isInvisible()) {
+//                // property is invisible:
+//                invisible = true;
+//                break;
+//            }
+
+//            if (!val.isValid()) {
+//                // first value:
+//                val = prop.first;
+//                attr = prop.second;
+//            }
+//            else {
+//                // next value:
+//                if (prop.second.isSum()) {
+//                    // sum up all values:
+//                    double v = val.toDouble();
+//                    val.setValue(v + prop.first.toDouble());
+//                }
+//                else {
+//                    // compare and set to mixed if values don't match:
+//                    if (!RS::compare(val, prop.first)) {
+//                        mixed = true;
+//                        break;
+//                    }
+//                }
+//            }
+//        }
+//        // value of property is now known (value or mixed):
+
+//        if (invisible) {
+//            // property is invisible:
+//            continue;
+//        }
+
+//        // group title (e.g. "Center", "QCAD" for custom propertie, "" for group less):
+//        QString propertyGroupTitle = pid.getPropertyGroupTitle();
+//        // proerty title (e.g. "X", "myProp", "Text height", etc.):
+//        QString propertyTitle = pid.getPropertyTitle();
+
+//        // retrieve custom property attributes from RObject as previously registered:
+//        // this allows for custom properties to have attributes such as read-only, invisible, custom label, etc):
+//        if (pid.isCustom()) {
+//            attr = this->getCustomPropertyAttributes(propertyGroupTitle, propertyTitle);
+//            if (attr.isInvisible()) {
+//                continue;
+//            }
+//        }
+
+//        if (mixed) {
+//            // value is mixed:
+//            //qDebug() << "value is mixed:" << propertyGroupTitle << propertyTitle;
+//            attr.setMixed(true);
+//        }
+
+//        if (combinedProperties.contains(propertyGroupTitle)) {
+//            RPropertyMap& propertyMap = combinedProperties[propertyGroupTitle];
+
+//            if (propertyMap.contains(propertyTitle)) {
+//                // existing property in existing group:
+//                //propertyMap[propertyTitle].first = property.value;
+//                //propertyMap[propertyTitle].second.setMixed(true);
+//                qWarning() << "should not be reached";
+//            }
+
+//            else {
+//                // new property in existing group:
+//                propertyMap[propertyTitle] = QPair<QVariant, RPropertyAttributes>(val, attr);
+
+//                propertyOrder[propertyGroupTitle].push_back(propertyTitle);
+//            }
+//        }
+//        else {
+//            // new property in new group:
+//            RPropertyMap propertyMap;
+//            propertyMap[propertyTitle] = QPair<QVariant, RPropertyAttributes>(val, attr);
+//            combinedProperties[propertyGroupTitle] = propertyMap;
+
+//            groupOrder.push_back(propertyGroupTitle);
+//            propertyOrder[propertyGroupTitle].push_back(propertyTitle);
+//        }
+//    }
+//    RDebug::stopTimer(7, "collect prop");
 
 
 
@@ -590,6 +634,72 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
 
     updatesDisabled = false;
 
+}
+
+void RPropertyEditor::computePropertyValue(RProperty& ccProp) {
+    bool mixed = false;
+    bool invisible = false;
+
+    QSet<RObject::Id>::const_iterator it;
+    for (it = ccProp.objectIds->constBegin(); it != ccProp.objectIds->constEnd(); ++it) {
+        //QSharedPointer<RObject> obj = ccProp.document->queryObjectDirect(*it);
+        RObject* obj = ccProp.document->queryObjectCC(*it);
+        //QSharedPointer<RObject> obj = ccProp.document->queryObject(*it);
+
+        QPair<QVariant, RPropertyAttributes> prop = obj->getProperty(ccProp.propertyTypeId, true, true, ccProp.showOnRequest);
+
+        if (prop.second.isInvisible()) {
+            // property is invisible:
+            invisible = true;
+            break;
+        }
+
+        if (!ccProp.value.isValid()) {
+            // first value:
+            ccProp.value = prop.first;
+            ccProp.attributes = prop.second;
+        }
+        else {
+            // next value:
+            if (prop.second.isSum()) {
+                // sum up all values:
+                double v = ccProp.value.toDouble();
+                ccProp.value.setValue(v + prop.first.toDouble());
+            }
+            else {
+                // compare and set to mixed if values don't match:
+                if (!RS::compare(ccProp.value, prop.first)) {
+                    mixed = true;
+                    break;
+                }
+            }
+        }
+    }
+
+    if (invisible) {
+        // property is invisible:
+        return;
+    }
+
+    // group title (e.g. "Center", "QCAD" for custom propertie, "" for group less):
+    QString propertyGroupTitle = ccProp.propertyTypeId.getPropertyGroupTitle();
+    // proerty title (e.g. "X", "myProp", "Text height", etc.):
+    QString propertyTitle = ccProp.propertyTypeId.getPropertyTitle();
+
+    // retrieve custom property attributes from RObject as previously registered:
+    // this allows for custom properties to have attributes such as read-only, invisible, custom label, etc):
+    if (ccProp.propertyTypeId.isCustom()) {
+        ccProp.attributes = RObject::getCustomPropertyAttributes(propertyGroupTitle, propertyTitle);
+        if (ccProp.attributes.isInvisible()) {
+            return;
+        }
+    }
+
+    if (mixed) {
+        // value is mixed:
+        //qDebug() << "value is mixed:" << propertyGroupTitle << propertyTitle;
+        ccProp.attributes.setMixed(true);
+    }
 }
 
 /**

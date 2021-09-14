@@ -35,6 +35,39 @@
 #include "RPropertyListener.h"
 
 
+class RProperty {
+public:
+    RProperty(const RDocument& document,
+              const QSet<RObject::Id>& objectIds,
+              const RPropertyTypeId& propertyTypeId,
+              bool showOnRequest)
+        : document(&document),
+          objectIds(&objectIds),
+          propertyTypeId(propertyTypeId),
+          showOnRequest(showOnRequest) { }
+
+//    RProperty(const RProperty& other)
+//        : document(other.document),
+//          objectIds(other.objectIds),
+//          propertyTypeId(other.propertyTypeId),
+//          showOnRequest(other.showOnRequest),
+//          attributes(other.attributes),
+//          value(other.value) { }
+
+//    RProperty& operator = (const RProperty& other) {
+//        document = other.document;
+//        objectIds = other.objectIds;
+
+//    }
+
+    const RDocument* document;
+    const QSet<RObject::Id>* objectIds;
+    RPropertyTypeId propertyTypeId;
+    bool showOnRequest;
+    RPropertyAttributes attributes;
+    QVariant value;
+};
+
 /**
  * Base class for property editors. Provides basic functionality that
  * is common to any property editor implementation.
@@ -106,6 +139,14 @@ protected:
     void updateProperty(const RPropertyTypeId& propertyTypeId, RObject& object, RDocument* document, bool showOnRequest = false);
     //void removeAllButThese(const QMultiMap<QString, QString>& propertyTitles, bool customOnly=false);
 
+
+//    static void initConcurrent(const RDocument& document, const QSet<RObject::Id>& objectIds) {
+//        concurrentDocument = &document;
+//        concurrentObjectIds = &objectIds;
+//    }
+
+    static void computePropertyValue(RProperty& property);
+
 protected:
     //! key / value / attributes
     typedef QMap<QString, QPair<QVariant, RPropertyAttributes> > RPropertyMap;
@@ -122,6 +163,9 @@ protected:
     RS::EntityType entityTypeFilter;
 
     static RPropertyEditor* instance;
+
+    //static const RDocument* concurrentDocument;
+    //static const QSet<RObject::Id>* concurrentObjectIds;
 };
 
 Q_DECLARE_METATYPE(RPropertyEditor*)
