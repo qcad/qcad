@@ -160,7 +160,8 @@ QPair<QVariant, RPropertyAttributes> RObject::getProperty(RPropertyTypeId& prope
         QString appId = propertyTypeId.getCustomPropertyTitle();
         QString name = propertyTypeId.getCustomPropertyName();
         if (customProperties.contains(appId)) {
-            QVariantMap& vm = customProperties[appId];
+            // don't use [] here for thread safety:
+            QVariantMap vm = customProperties.value(appId);
             if (vm.contains(name)) {
                 if  (vm.value(name).type()==QVariant::Int) {
                     return qMakePair(vm.value(name), RPropertyAttributes(RPropertyAttributes::Custom|RPropertyAttributes::Integer));
