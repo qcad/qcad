@@ -65,41 +65,41 @@ REllipseEntity::~REllipseEntity() {
 }
 
 void REllipseEntity::init() {
-    REllipseEntity::PropertyCustom.generateId(typeid(REllipseEntity), RObject::PropertyCustom);
-    REllipseEntity::PropertyHandle.generateId(typeid(REllipseEntity), RObject::PropertyHandle);
-    REllipseEntity::PropertyProtected.generateId(typeid(REllipseEntity), RObject::PropertyProtected);
-    REllipseEntity::PropertyWorkingSet.generateId(typeid(REllipseEntity), RObject::PropertyWorkingSet);
-    REllipseEntity::PropertyType.generateId(typeid(REllipseEntity), REntity::PropertyType);
-    REllipseEntity::PropertyBlock.generateId(typeid(REllipseEntity), REntity::PropertyBlock);
-    REllipseEntity::PropertyLayer.generateId(typeid(REllipseEntity), REntity::PropertyLayer);
-    REllipseEntity::PropertyLinetype.generateId(typeid(REllipseEntity), REntity::PropertyLinetype);
-    REllipseEntity::PropertyLinetypeScale.generateId(typeid(REllipseEntity), REntity::PropertyLinetypeScale);
-    REllipseEntity::PropertyLineweight.generateId(typeid(REllipseEntity), REntity::PropertyLineweight);
-    REllipseEntity::PropertyColor.generateId(typeid(REllipseEntity), REntity::PropertyColor);
-    REllipseEntity::PropertyDisplayedColor.generateId(typeid(REllipseEntity), REntity::PropertyDisplayedColor);
-    REllipseEntity::PropertyDrawOrder.generateId(typeid(REllipseEntity), REntity::PropertyDrawOrder);
+    REllipseEntity::PropertyCustom.generateId(REllipseEntity::getRtti(), RObject::PropertyCustom);
+    REllipseEntity::PropertyHandle.generateId(REllipseEntity::getRtti(), RObject::PropertyHandle);
+    REllipseEntity::PropertyProtected.generateId(REllipseEntity::getRtti(), RObject::PropertyProtected);
+    REllipseEntity::PropertyWorkingSet.generateId(REllipseEntity::getRtti(), RObject::PropertyWorkingSet);
+    REllipseEntity::PropertyType.generateId(REllipseEntity::getRtti(), REntity::PropertyType);
+    REllipseEntity::PropertyBlock.generateId(REllipseEntity::getRtti(), REntity::PropertyBlock);
+    REllipseEntity::PropertyLayer.generateId(REllipseEntity::getRtti(), REntity::PropertyLayer);
+    REllipseEntity::PropertyLinetype.generateId(REllipseEntity::getRtti(), REntity::PropertyLinetype);
+    REllipseEntity::PropertyLinetypeScale.generateId(REllipseEntity::getRtti(), REntity::PropertyLinetypeScale);
+    REllipseEntity::PropertyLineweight.generateId(REllipseEntity::getRtti(), REntity::PropertyLineweight);
+    REllipseEntity::PropertyColor.generateId(REllipseEntity::getRtti(), REntity::PropertyColor);
+    REllipseEntity::PropertyDisplayedColor.generateId(REllipseEntity::getRtti(), REntity::PropertyDisplayedColor);
+    REllipseEntity::PropertyDrawOrder.generateId(REllipseEntity::getRtti(), REntity::PropertyDrawOrder);
 
-    REllipseEntity::PropertyCenterX.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
-    REllipseEntity::PropertyCenterY.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
-    REllipseEntity::PropertyCenterZ.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
-    REllipseEntity::PropertyMajorPointX.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Major Point"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
-    REllipseEntity::PropertyMajorPointY.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Major Point"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
-    REllipseEntity::PropertyMajorPointZ.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Major Point"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
-    REllipseEntity::PropertyRatio.generateId(typeid(REllipseEntity), "",QT_TRANSLATE_NOOP("REntity",  "Ratio"), false, RPropertyAttributes::Geometry);
-    REllipseEntity::PropertyStartParam.generateId(typeid(REllipseEntity), "", QT_TRANSLATE_NOOP("REntity", "Start Parameter"), false, RPropertyAttributes::Geometry);
-    REllipseEntity::PropertyEndParam.generateId(typeid(REllipseEntity), "", QT_TRANSLATE_NOOP("REntity", "End Parameter"), false, RPropertyAttributes::Geometry);
-    REllipseEntity::PropertyStartAngle.generateId(typeid(REllipseEntity), "", QT_TRANSLATE_NOOP("REntity", "Start Angle"), true, RPropertyAttributes::Geometry);
-    REllipseEntity::PropertyEndAngle.generateId(typeid(REllipseEntity), "", QT_TRANSLATE_NOOP("REntity", "End Angle"), true, RPropertyAttributes::Geometry);
-    REllipseEntity::PropertyReversed.generateId(typeid(REllipseEntity), "", QT_TRANSLATE_NOOP("REntity", "Reversed"), false, RPropertyAttributes::Geometry);
+    REllipseEntity::PropertyCenterX.generateId(REllipseEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
+    REllipseEntity::PropertyCenterY.generateId(REllipseEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
+    REllipseEntity::PropertyCenterZ.generateId(REllipseEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
+    REllipseEntity::PropertyMajorPointX.generateId(REllipseEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Major Point"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
+    REllipseEntity::PropertyMajorPointY.generateId(REllipseEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Major Point"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
+    REllipseEntity::PropertyMajorPointZ.generateId(REllipseEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Major Point"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
+    REllipseEntity::PropertyRatio.generateId(REllipseEntity::getRtti(), "",QT_TRANSLATE_NOOP("REntity",  "Ratio"), false, RPropertyAttributes::Geometry);
+    REllipseEntity::PropertyStartParam.generateId(REllipseEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Start Parameter"), false, RPropertyAttributes::Geometry);
+    REllipseEntity::PropertyEndParam.generateId(REllipseEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "End Parameter"), false, RPropertyAttributes::Geometry);
+    REllipseEntity::PropertyStartAngle.generateId(REllipseEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Start Angle"), true, RPropertyAttributes::Geometry);
+    REllipseEntity::PropertyEndAngle.generateId(REllipseEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "End Angle"), true, RPropertyAttributes::Geometry);
+    REllipseEntity::PropertyReversed.generateId(REllipseEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Reversed"), false, RPropertyAttributes::Geometry);
 
-    REllipseEntity::PropertyStartPointX.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Start Point"), QT_TRANSLATE_NOOP("REntity", "X"));
-    REllipseEntity::PropertyStartPointY.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Start Point"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    REllipseEntity::PropertyStartPointZ.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Start Point"), QT_TRANSLATE_NOOP("REntity", "Z"));
-    REllipseEntity::PropertyEndPointX.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "End Point"), QT_TRANSLATE_NOOP("REntity", "X"));
-    REllipseEntity::PropertyEndPointY.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "End Point"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    REllipseEntity::PropertyEndPointZ.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "End Point"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    REllipseEntity::PropertyStartPointX.generateId(REllipseEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Start Point"), QT_TRANSLATE_NOOP("REntity", "X"));
+    REllipseEntity::PropertyStartPointY.generateId(REllipseEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Start Point"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    REllipseEntity::PropertyStartPointZ.generateId(REllipseEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Start Point"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    REllipseEntity::PropertyEndPointX.generateId(REllipseEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "End Point"), QT_TRANSLATE_NOOP("REntity", "X"));
+    REllipseEntity::PropertyEndPointY.generateId(REllipseEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "End Point"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    REllipseEntity::PropertyEndPointZ.generateId(REllipseEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "End Point"), QT_TRANSLATE_NOOP("REntity", "Z"));
 
-    REllipseEntity::PropertyCircumference.generateId(typeid(REllipseEntity), "", QT_TRANSLATE_NOOP("REntity", "Length"));
+    REllipseEntity::PropertyCircumference.generateId(REllipseEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Length"));
 }
 
 bool REllipseEntity::setProperty(RPropertyTypeId propertyTypeId,

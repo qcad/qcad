@@ -50,11 +50,11 @@ bool RLinetype::operator!=(const RLinetype & linetype) const{
 }
 
 void RLinetype::init() {
-    RLinetype::PropertyType.generateId(typeid(RLinetype), RObject::PropertyType);
-    RLinetype::PropertyName.generateId(typeid(RLinetype), "", QT_TRANSLATE_NOOP("RLinetype", "Name"));
-    RLinetype::PropertyDescription.generateId(typeid(RLinetype), "", QT_TRANSLATE_NOOP("RLinetype", "Description"));
-    RLinetype::PropertyMetric.generateId(typeid(RLinetype), "", QT_TRANSLATE_NOOP("RLinetype", "Metric"));
-    RLinetype::PropertyPatternString.generateId(typeid(RLinetype), "", QT_TRANSLATE_NOOP("RLinetype", "Pattern"));
+    RLinetype::PropertyType.generateId(RLinetype::getRtti(), RObject::PropertyType);
+    RLinetype::PropertyName.generateId(RLinetype::getRtti(), "", QT_TRANSLATE_NOOP("RLinetype", "Name"));
+    RLinetype::PropertyDescription.generateId(RLinetype::getRtti(), "", QT_TRANSLATE_NOOP("RLinetype", "Description"));
+    RLinetype::PropertyMetric.generateId(RLinetype::getRtti(), "", QT_TRANSLATE_NOOP("RLinetype", "Metric"));
+    RLinetype::PropertyPatternString.generateId(RLinetype::getRtti(), "", QT_TRANSLATE_NOOP("RLinetype", "Pattern"));
 }
 
 bool RLinetype::setProperty(RPropertyTypeId propertyTypeId,

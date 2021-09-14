@@ -79,6 +79,10 @@ public:
               bool simple);
     virtual ~RTextBasedData() {}
 
+    static RS::EntityType getRtti() {
+        return RS::EntityTextBased;
+    }
+
     virtual RS::EntityType getType() const {
         return RS::EntityTextBased;
     }

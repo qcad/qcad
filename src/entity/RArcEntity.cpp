@@ -75,34 +75,34 @@ void RArcEntity::setShape(const RArc& a) {
 }
 
 void RArcEntity::init() {
-    RArcEntity::PropertyCustom.generateId(typeid(RArcEntity), RObject::PropertyCustom);
-    RArcEntity::PropertyHandle.generateId(typeid(RArcEntity), RObject::PropertyHandle);
-    RArcEntity::PropertyProtected.generateId(typeid(RArcEntity), RObject::PropertyProtected);
-    RArcEntity::PropertyWorkingSet.generateId(typeid(RArcEntity), RObject::PropertyWorkingSet);
-    RArcEntity::PropertyType.generateId(typeid(RArcEntity), REntity::PropertyType);
-    RArcEntity::PropertyBlock.generateId(typeid(RArcEntity), REntity::PropertyBlock);
-    RArcEntity::PropertyLayer.generateId(typeid(RArcEntity), REntity::PropertyLayer);
-    RArcEntity::PropertyLinetype.generateId(typeid(RArcEntity), REntity::PropertyLinetype);
-    RArcEntity::PropertyLinetypeScale.generateId(typeid(RArcEntity), REntity::PropertyLinetypeScale);
-    RArcEntity::PropertyLineweight.generateId(typeid(RArcEntity), REntity::PropertyLineweight);
-    RArcEntity::PropertyColor.generateId(typeid(RArcEntity), REntity::PropertyColor);
-    RArcEntity::PropertyDisplayedColor.generateId(typeid(RArcEntity), REntity::PropertyDisplayedColor);
-    RArcEntity::PropertyDrawOrder.generateId(typeid(RArcEntity), REntity::PropertyDrawOrder);
+    RArcEntity::PropertyCustom.generateId(RArcEntity::getRtti(), RObject::PropertyCustom);
+    RArcEntity::PropertyHandle.generateId(RArcEntity::getRtti(), RObject::PropertyHandle);
+    RArcEntity::PropertyProtected.generateId(RArcEntity::getRtti(), RObject::PropertyProtected);
+    RArcEntity::PropertyWorkingSet.generateId(RArcEntity::getRtti(), RObject::PropertyWorkingSet);
+    RArcEntity::PropertyType.generateId(RArcEntity::getRtti(), REntity::PropertyType);
+    RArcEntity::PropertyBlock.generateId(RArcEntity::getRtti(), REntity::PropertyBlock);
+    RArcEntity::PropertyLayer.generateId(RArcEntity::getRtti(), REntity::PropertyLayer);
+    RArcEntity::PropertyLinetype.generateId(RArcEntity::getRtti(), REntity::PropertyLinetype);
+    RArcEntity::PropertyLinetypeScale.generateId(RArcEntity::getRtti(), REntity::PropertyLinetypeScale);
+    RArcEntity::PropertyLineweight.generateId(RArcEntity::getRtti(), REntity::PropertyLineweight);
+    RArcEntity::PropertyColor.generateId(RArcEntity::getRtti(), REntity::PropertyColor);
+    RArcEntity::PropertyDisplayedColor.generateId(RArcEntity::getRtti(), REntity::PropertyDisplayedColor);
+    RArcEntity::PropertyDrawOrder.generateId(RArcEntity::getRtti(), REntity::PropertyDrawOrder);
 
-    RArcEntity::PropertyCenterX.generateId(typeid(RArcEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
-    RArcEntity::PropertyCenterY.generateId(typeid(RArcEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
-    RArcEntity::PropertyCenterZ.generateId(typeid(RArcEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
-    RArcEntity::PropertyRadius.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Radius"), false, RPropertyAttributes::Geometry);
-    RArcEntity::PropertyStartAngle.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Start Angle"), false, RPropertyAttributes::Geometry);
-    RArcEntity::PropertyEndAngle.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "End Angle"), false, RPropertyAttributes::Geometry);
-    RArcEntity::PropertyReversed.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Reversed"), false, RPropertyAttributes::Geometry);
+    RArcEntity::PropertyCenterX.generateId(RArcEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
+    RArcEntity::PropertyCenterY.generateId(RArcEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
+    RArcEntity::PropertyCenterZ.generateId(RArcEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
+    RArcEntity::PropertyRadius.generateId(RArcEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Radius"), false, RPropertyAttributes::Geometry);
+    RArcEntity::PropertyStartAngle.generateId(RArcEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Start Angle"), false, RPropertyAttributes::Geometry);
+    RArcEntity::PropertyEndAngle.generateId(RArcEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "End Angle"), false, RPropertyAttributes::Geometry);
+    RArcEntity::PropertyReversed.generateId(RArcEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Reversed"), false, RPropertyAttributes::Geometry);
 
-    RArcEntity::PropertyDiameter.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Diameter"));
-    RArcEntity::PropertyLength.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Length"));
-    RArcEntity::PropertyTotalLength.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Total Length"));
-    RArcEntity::PropertySweepAngle.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Sweep Angle"));
-    RArcEntity::PropertyArea.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Area"));
-    RArcEntity::PropertyTotalArea.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Total Area"));
+    RArcEntity::PropertyDiameter.generateId(RArcEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Diameter"));
+    RArcEntity::PropertyLength.generateId(RArcEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Length"));
+    RArcEntity::PropertyTotalLength.generateId(RArcEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Total Length"));
+    RArcEntity::PropertySweepAngle.generateId(RArcEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Sweep Angle"));
+    RArcEntity::PropertyArea.generateId(RArcEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Area"));
+    RArcEntity::PropertyTotalArea.generateId(RArcEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Total Area"));
 }
 
 bool RArcEntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, RTransaction* transaction) {

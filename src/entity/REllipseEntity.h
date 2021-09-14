@@ -81,8 +81,12 @@ public:
 
     static void init();
 
+    static RS::EntityType getRtti() {
+        return RS::EntityEllipse;
+    }
+
     static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
-        return RPropertyTypeId::getPropertyTypeIds(typeid(REllipseEntity));
+        return RPropertyTypeId::getPropertyTypeIds(REllipseEntity::getRtti());
     }
 
     virtual REllipseEntity* clone() const {

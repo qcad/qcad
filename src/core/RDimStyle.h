@@ -77,6 +77,10 @@ public:
     static void init();
     static void initDimX(const RPropertyTypeId& propertyTypeId, RS::KnownVariable var, RS::KnownVariableType type);
 
+    static RS::EntityType getRtti() {
+        return RS::ObjectDimStyle;
+    }
+
     virtual RS::EntityType getType() const {
         return RS::ObjectDimStyle;
     }

@@ -38,12 +38,12 @@ RLayerState::~RLayerState() {
 }
 
 void RLayerState::init() {
-    RLayerState::PropertyCustom.generateId(typeid(RLayerState), RObject::PropertyCustom);
-    RLayerState::PropertyType.generateId(typeid(RLayerState), RObject::PropertyType);
-    RLayerState::PropertyHandle.generateId(typeid(RLayerState), RObject::PropertyHandle);
-    RLayerState::PropertyProtected.generateId(typeid(RLayerState), RObject::PropertyProtected);
+    RLayerState::PropertyCustom.generateId(RLayerState::getRtti(), RObject::PropertyCustom);
+    RLayerState::PropertyType.generateId(RLayerState::getRtti(), RObject::PropertyType);
+    RLayerState::PropertyHandle.generateId(RLayerState::getRtti(), RObject::PropertyHandle);
+    RLayerState::PropertyProtected.generateId(RLayerState::getRtti(), RObject::PropertyProtected);
 
-    RLayerState::PropertyName.generateId(typeid(RLayerState), "", QT_TRANSLATE_NOOP("REntity", "Name"));
+    RLayerState::PropertyName.generateId(RLayerState::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Name"));
 }
 
 RLayerState* RLayerState::clone() const {

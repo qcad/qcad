@@ -54,6 +54,10 @@ public:
             int columnCount=1, int rowCount=1,
             double columnSpacing=0, double rowSpacing=0);
 
+    static RS::EntityType getRtti() {
+        return RS::EntityBlockRef;
+    }
+
     virtual RS::EntityType getType() const {
         return RS::EntityBlockRef;
     }

@@ -59,27 +59,27 @@ RLeaderEntity::~RLeaderEntity() {
 }
 
 void RLeaderEntity::init() {
-    RLeaderEntity::PropertyCustom.generateId(typeid(RLeaderEntity), RObject::PropertyCustom);
-    RLeaderEntity::PropertyHandle.generateId(typeid(RLeaderEntity), RObject::PropertyHandle);
-    RLeaderEntity::PropertyProtected.generateId(typeid(RLeaderEntity), RObject::PropertyProtected);
-    RLeaderEntity::PropertyWorkingSet.generateId(typeid(RLeaderEntity), RObject::PropertyWorkingSet);
-    RLeaderEntity::PropertyType.generateId(typeid(RLeaderEntity), REntity::PropertyType);
-    RLeaderEntity::PropertyBlock.generateId(typeid(RLeaderEntity), REntity::PropertyBlock);
-    RLeaderEntity::PropertyLayer.generateId(typeid(RLeaderEntity), REntity::PropertyLayer);
-    RLeaderEntity::PropertyLinetype.generateId(typeid(RLeaderEntity), REntity::PropertyLinetype);
-    RLeaderEntity::PropertyLinetypeScale.generateId(typeid(RLeaderEntity), REntity::PropertyLinetypeScale);
-    RLeaderEntity::PropertyLineweight.generateId(typeid(RLeaderEntity), REntity::PropertyLineweight);
-    RLeaderEntity::PropertyColor.generateId(typeid(RLeaderEntity), REntity::PropertyColor);
-    RLeaderEntity::PropertyDisplayedColor.generateId(typeid(RLeaderEntity), REntity::PropertyDisplayedColor);
-    RLeaderEntity::PropertyDrawOrder.generateId(typeid(RLeaderEntity), REntity::PropertyDrawOrder);
+    RLeaderEntity::PropertyCustom.generateId(RLeaderEntity::getRtti(), RObject::PropertyCustom);
+    RLeaderEntity::PropertyHandle.generateId(RLeaderEntity::getRtti(), RObject::PropertyHandle);
+    RLeaderEntity::PropertyProtected.generateId(RLeaderEntity::getRtti(), RObject::PropertyProtected);
+    RLeaderEntity::PropertyWorkingSet.generateId(RLeaderEntity::getRtti(), RObject::PropertyWorkingSet);
+    RLeaderEntity::PropertyType.generateId(RLeaderEntity::getRtti(), REntity::PropertyType);
+    RLeaderEntity::PropertyBlock.generateId(RLeaderEntity::getRtti(), REntity::PropertyBlock);
+    RLeaderEntity::PropertyLayer.generateId(RLeaderEntity::getRtti(), REntity::PropertyLayer);
+    RLeaderEntity::PropertyLinetype.generateId(RLeaderEntity::getRtti(), REntity::PropertyLinetype);
+    RLeaderEntity::PropertyLinetypeScale.generateId(RLeaderEntity::getRtti(), REntity::PropertyLinetypeScale);
+    RLeaderEntity::PropertyLineweight.generateId(RLeaderEntity::getRtti(), REntity::PropertyLineweight);
+    RLeaderEntity::PropertyColor.generateId(RLeaderEntity::getRtti(), REntity::PropertyColor);
+    RLeaderEntity::PropertyDisplayedColor.generateId(RLeaderEntity::getRtti(), REntity::PropertyDisplayedColor);
+    RLeaderEntity::PropertyDrawOrder.generateId(RLeaderEntity::getRtti(), REntity::PropertyDrawOrder);
 
-    RLeaderEntity::PropertyArrowHead.generateId(typeid(RLeaderEntity), "", QT_TRANSLATE_NOOP("REntity", "Arrow"));
-    RLeaderEntity::PropertyDimLeaderBlock.generateId(typeid(RLeaderEntity), "", QT_TRANSLATE_NOOP("REntity", "Arrow Block"));
-    RLeaderEntity::PropertyVertexNX.generateId(typeid(RLeaderEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
-    RLeaderEntity::PropertyVertexNY.generateId(typeid(RLeaderEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
-    RLeaderEntity::PropertyVertexNZ.generateId(typeid(RLeaderEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
+    RLeaderEntity::PropertyArrowHead.generateId(RLeaderEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Arrow"));
+    RLeaderEntity::PropertyDimLeaderBlock.generateId(RLeaderEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Arrow Block"));
+    RLeaderEntity::PropertyVertexNX.generateId(RLeaderEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
+    RLeaderEntity::PropertyVertexNY.generateId(RLeaderEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
+    RLeaderEntity::PropertyVertexNZ.generateId(RLeaderEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
 
-    //RLeaderEntity::PropertyDimScale.generateId(typeid(RLeaderEntity), "", QT_TRANSLATE_NOOP("REntity", "Scale"));
+    //RLeaderEntity::PropertyDimScale.generateId(RLeaderEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Scale"));
 }
 
 bool RLeaderEntity::setProperty(RPropertyTypeId propertyTypeId,

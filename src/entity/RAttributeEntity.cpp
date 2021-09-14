@@ -64,42 +64,42 @@ RAttributeEntity::~RAttributeEntity() {
 }
 
 void RAttributeEntity::init() {
-    RAttributeEntity::PropertyCustom.generateId(typeid(RAttributeEntity), RObject::PropertyCustom);
-    RAttributeEntity::PropertyHandle.generateId(typeid(RAttributeEntity), RObject::PropertyHandle);
-    RAttributeEntity::PropertyProtected.generateId(typeid(RAttributeEntity), RObject::PropertyProtected);
-    RAttributeEntity::PropertyWorkingSet.generateId(typeid(RAttributeEntity), RObject::PropertyWorkingSet);
-    RAttributeEntity::PropertyType.generateId(typeid(RAttributeEntity), REntity::PropertyType);
-    RAttributeEntity::PropertyBlock.generateId(typeid(RAttributeEntity), REntity::PropertyBlock);
-    RAttributeEntity::PropertyLayer.generateId(typeid(RAttributeEntity), REntity::PropertyLayer);
-    RAttributeEntity::PropertyLinetype.generateId(typeid(RAttributeEntity), REntity::PropertyLinetype);
-    RAttributeEntity::PropertyLinetypeScale.generateId(typeid(RAttributeEntity), REntity::PropertyLinetypeScale);
-    RAttributeEntity::PropertyLineweight.generateId(typeid(RAttributeEntity), REntity::PropertyLineweight);
-    RAttributeEntity::PropertyColor.generateId(typeid(RAttributeEntity), REntity::PropertyColor);
-    RAttributeEntity::PropertyDisplayedColor.generateId(typeid(RAttributeEntity), REntity::PropertyDisplayedColor);
-    RAttributeEntity::PropertyDrawOrder.generateId(typeid(RAttributeEntity), REntity::PropertyDrawOrder);
+    RAttributeEntity::PropertyCustom.generateId(RAttributeEntity::getRtti(), RObject::PropertyCustom);
+    RAttributeEntity::PropertyHandle.generateId(RAttributeEntity::getRtti(), RObject::PropertyHandle);
+    RAttributeEntity::PropertyProtected.generateId(RAttributeEntity::getRtti(), RObject::PropertyProtected);
+    RAttributeEntity::PropertyWorkingSet.generateId(RAttributeEntity::getRtti(), RObject::PropertyWorkingSet);
+    RAttributeEntity::PropertyType.generateId(RAttributeEntity::getRtti(), REntity::PropertyType);
+    RAttributeEntity::PropertyBlock.generateId(RAttributeEntity::getRtti(), REntity::PropertyBlock);
+    RAttributeEntity::PropertyLayer.generateId(RAttributeEntity::getRtti(), REntity::PropertyLayer);
+    RAttributeEntity::PropertyLinetype.generateId(RAttributeEntity::getRtti(), REntity::PropertyLinetype);
+    RAttributeEntity::PropertyLinetypeScale.generateId(RAttributeEntity::getRtti(), REntity::PropertyLinetypeScale);
+    RAttributeEntity::PropertyLineweight.generateId(RAttributeEntity::getRtti(), REntity::PropertyLineweight);
+    RAttributeEntity::PropertyColor.generateId(RAttributeEntity::getRtti(), REntity::PropertyColor);
+    RAttributeEntity::PropertyDisplayedColor.generateId(RAttributeEntity::getRtti(), REntity::PropertyDisplayedColor);
+    RAttributeEntity::PropertyDrawOrder.generateId(RAttributeEntity::getRtti(), REntity::PropertyDrawOrder);
 
-    RAttributeEntity::PropertyParentId.generateId(typeid(RAttributeEntity), REntity::PropertyParentId);
+    RAttributeEntity::PropertyParentId.generateId(RAttributeEntity::getRtti(), REntity::PropertyParentId);
 
-    RAttributeEntity::PropertyPositionX.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyPositionX);
-    RAttributeEntity::PropertyPositionY.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyPositionY);
-    RAttributeEntity::PropertyPositionZ.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyPositionZ);
-    RAttributeEntity::PropertyText.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyText);
-    RAttributeEntity::PropertyPlainText.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyPlainText);
-    RAttributeEntity::PropertyFontName.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyFontName);
-    RAttributeEntity::PropertyHeight.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyHeight);
-    RAttributeEntity::PropertyWidth.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyWidth);
-    RAttributeEntity::PropertyAngle.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyAngle);
-    RAttributeEntity::PropertyXScale.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyXScale);
-    RAttributeEntity::PropertyBold.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyBold);
-    RAttributeEntity::PropertyItalic.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyItalic);
-    RAttributeEntity::PropertyLineSpacingFactor.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyLineSpacingFactor);
-    RAttributeEntity::PropertyHAlign.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyHAlign);
-    RAttributeEntity::PropertyVAlign.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyVAlign);
-    RAttributeEntity::PropertyBackward.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyBackward);
-    RAttributeEntity::PropertyUpsideDown.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyUpsideDown);
+    RAttributeEntity::PropertyPositionX.generateId(RAttributeEntity::getRtti(), RTextBasedEntity::PropertyPositionX);
+    RAttributeEntity::PropertyPositionY.generateId(RAttributeEntity::getRtti(), RTextBasedEntity::PropertyPositionY);
+    RAttributeEntity::PropertyPositionZ.generateId(RAttributeEntity::getRtti(), RTextBasedEntity::PropertyPositionZ);
+    RAttributeEntity::PropertyText.generateId(RAttributeEntity::getRtti(), RTextBasedEntity::PropertyText);
+    RAttributeEntity::PropertyPlainText.generateId(RAttributeEntity::getRtti(), RTextBasedEntity::PropertyPlainText);
+    RAttributeEntity::PropertyFontName.generateId(RAttributeEntity::getRtti(), RTextBasedEntity::PropertyFontName);
+    RAttributeEntity::PropertyHeight.generateId(RAttributeEntity::getRtti(), RTextBasedEntity::PropertyHeight);
+    RAttributeEntity::PropertyWidth.generateId(RAttributeEntity::getRtti(), RTextBasedEntity::PropertyWidth);
+    RAttributeEntity::PropertyAngle.generateId(RAttributeEntity::getRtti(), RTextBasedEntity::PropertyAngle);
+    RAttributeEntity::PropertyXScale.generateId(RAttributeEntity::getRtti(), RTextBasedEntity::PropertyXScale);
+    RAttributeEntity::PropertyBold.generateId(RAttributeEntity::getRtti(), RTextBasedEntity::PropertyBold);
+    RAttributeEntity::PropertyItalic.generateId(RAttributeEntity::getRtti(), RTextBasedEntity::PropertyItalic);
+    RAttributeEntity::PropertyLineSpacingFactor.generateId(RAttributeEntity::getRtti(), RTextBasedEntity::PropertyLineSpacingFactor);
+    RAttributeEntity::PropertyHAlign.generateId(RAttributeEntity::getRtti(), RTextBasedEntity::PropertyHAlign);
+    RAttributeEntity::PropertyVAlign.generateId(RAttributeEntity::getRtti(), RTextBasedEntity::PropertyVAlign);
+    RAttributeEntity::PropertyBackward.generateId(RAttributeEntity::getRtti(), RTextBasedEntity::PropertyBackward);
+    RAttributeEntity::PropertyUpsideDown.generateId(RAttributeEntity::getRtti(), RTextBasedEntity::PropertyUpsideDown);
 
-    RAttributeEntity::PropertyTag.generateId(typeid(RAttributeEntity), "", QT_TRANSLATE_NOOP("REntity", "Tag"));
-    RAttributeEntity::PropertyInvisible.generateId(typeid(RAttributeEntity), "", QT_TRANSLATE_NOOP("REntity", "Invisible"));
+    RAttributeEntity::PropertyTag.generateId(RAttributeEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Tag"));
+    RAttributeEntity::PropertyInvisible.generateId(RAttributeEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Invisible"));
 }
 
 bool RAttributeEntity::setProperty(RPropertyTypeId propertyTypeId,

@@ -110,8 +110,12 @@ public:
 
     static void init();
 
+    static RS::EntityType getRtti() {
+        return RS::EntityDimAligned;
+    }
+
     static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
-        return RPropertyTypeId::getPropertyTypeIds(typeid(RDimAlignedEntity));
+        return RPropertyTypeId::getPropertyTypeIds(RDimAlignedEntity::getRtti());
     }
 
     virtual RDimAlignedEntity* clone() const {

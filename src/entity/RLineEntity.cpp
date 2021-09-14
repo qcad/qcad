@@ -67,30 +67,30 @@ void RLineEntity::setShape(const RLine& l) {
 }
 
 void RLineEntity::init() {
-    RLineEntity::PropertyCustom.generateId(typeid(RLineEntity), RObject::PropertyCustom);
-    RLineEntity::PropertyHandle.generateId(typeid(RLineEntity), RObject::PropertyHandle);
-    RLineEntity::PropertyProtected.generateId(typeid(RLineEntity), RObject::PropertyProtected);
-    RLineEntity::PropertyWorkingSet.generateId(typeid(RLineEntity), RObject::PropertyWorkingSet);
-    RLineEntity::PropertyType.generateId(typeid(RLineEntity), REntity::PropertyType);
-    RLineEntity::PropertyBlock.generateId(typeid(RLineEntity), REntity::PropertyBlock);
-    RLineEntity::PropertyLayer.generateId(typeid(RLineEntity), REntity::PropertyLayer);
-    RLineEntity::PropertyLinetype.generateId(typeid(RLineEntity), REntity::PropertyLinetype);
-    RLineEntity::PropertyLinetypeScale.generateId(typeid(RLineEntity), REntity::PropertyLinetypeScale);
-    RLineEntity::PropertyLineweight.generateId(typeid(RLineEntity), REntity::PropertyLineweight);
-    RLineEntity::PropertyColor.generateId(typeid(RLineEntity), REntity::PropertyColor);
-    RLineEntity::PropertyDisplayedColor.generateId(typeid(RLineEntity), REntity::PropertyDisplayedColor);
-    RLineEntity::PropertyDrawOrder.generateId(typeid(RLineEntity), REntity::PropertyDrawOrder);
+    RLineEntity::PropertyCustom.generateId(RLineEntity::getRtti(), RObject::PropertyCustom);
+    RLineEntity::PropertyHandle.generateId(RLineEntity::getRtti(), RObject::PropertyHandle);
+    RLineEntity::PropertyProtected.generateId(RLineEntity::getRtti(), RObject::PropertyProtected);
+    RLineEntity::PropertyWorkingSet.generateId(RLineEntity::getRtti(), RObject::PropertyWorkingSet);
+    RLineEntity::PropertyType.generateId(RLineEntity::getRtti(), REntity::PropertyType);
+    RLineEntity::PropertyBlock.generateId(RLineEntity::getRtti(), REntity::PropertyBlock);
+    RLineEntity::PropertyLayer.generateId(RLineEntity::getRtti(), REntity::PropertyLayer);
+    RLineEntity::PropertyLinetype.generateId(RLineEntity::getRtti(), REntity::PropertyLinetype);
+    RLineEntity::PropertyLinetypeScale.generateId(RLineEntity::getRtti(), REntity::PropertyLinetypeScale);
+    RLineEntity::PropertyLineweight.generateId(RLineEntity::getRtti(), REntity::PropertyLineweight);
+    RLineEntity::PropertyColor.generateId(RLineEntity::getRtti(), REntity::PropertyColor);
+    RLineEntity::PropertyDisplayedColor.generateId(RLineEntity::getRtti(), REntity::PropertyDisplayedColor);
+    RLineEntity::PropertyDrawOrder.generateId(RLineEntity::getRtti(), REntity::PropertyDrawOrder);
 
-    RLineEntity::PropertyStartPointX.generateId(typeid(RLineEntity), QT_TRANSLATE_NOOP("REntity", "Start Point"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
-    RLineEntity::PropertyStartPointY.generateId(typeid(RLineEntity), QT_TRANSLATE_NOOP("REntity", "Start Point"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
-    RLineEntity::PropertyStartPointZ.generateId(typeid(RLineEntity), QT_TRANSLATE_NOOP("REntity", "Start Point"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
-    RLineEntity::PropertyEndPointX.generateId(typeid(RLineEntity), QT_TRANSLATE_NOOP("REntity", "End Point"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
-    RLineEntity::PropertyEndPointY.generateId(typeid(RLineEntity), QT_TRANSLATE_NOOP("REntity", "End Point"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
-    RLineEntity::PropertyEndPointZ.generateId(typeid(RLineEntity), QT_TRANSLATE_NOOP("REntity", "End Point"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
+    RLineEntity::PropertyStartPointX.generateId(RLineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Start Point"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
+    RLineEntity::PropertyStartPointY.generateId(RLineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Start Point"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
+    RLineEntity::PropertyStartPointZ.generateId(RLineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Start Point"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
+    RLineEntity::PropertyEndPointX.generateId(RLineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "End Point"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
+    RLineEntity::PropertyEndPointY.generateId(RLineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "End Point"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
+    RLineEntity::PropertyEndPointZ.generateId(RLineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "End Point"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
 
-    RLineEntity::PropertyAngle.generateId(typeid(RLineEntity), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
-    RLineEntity::PropertyLength.generateId(typeid(RLineEntity), "", QT_TRANSLATE_NOOP("REntity", "Length"));
-    RLineEntity::PropertyTotalLength.generateId(typeid(RLineEntity), "", QT_TRANSLATE_NOOP("REntity", "Total Length"));
+    RLineEntity::PropertyAngle.generateId(RLineEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
+    RLineEntity::PropertyLength.generateId(RLineEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Length"));
+    RLineEntity::PropertyTotalLength.generateId(RLineEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Total Length"));
 }
 
 bool RLineEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -145,8 +145,8 @@ QPair<QVariant, RPropertyAttributes> RLineEntity::getProperty(
 
 
 void RLineEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
-    Q_UNUSED(preview);
-    Q_UNUSED(forceSelected);
+    Q_UNUSED(preview)
+    Q_UNUSED(forceSelected)
 
     e.setBrush(Qt::NoBrush);
     e.exportLine(data);

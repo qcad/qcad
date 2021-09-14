@@ -91,8 +91,12 @@ public:
 
     static void init();
 
+    static RS::EntityType getRtti() {
+        return RS::EntityPolyline;
+    }
+
     static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
-        return RPropertyTypeId::getPropertyTypeIds(typeid(RPolylineEntity));
+        return RPropertyTypeId::getPropertyTypeIds(RPolylineEntity::getRtti());
     }
 
     virtual RPolylineEntity* clone() const {

@@ -84,23 +84,23 @@ RLayer::~RLayer() {
 }
 
 void RLayer::init() {
-    RLayer::PropertyCustom.generateId(typeid(RLayer), RObject::PropertyCustom);
-    RLayer::PropertyType.generateId(typeid(RLayer), RObject::PropertyType);
-    RLayer::PropertyHandle.generateId(typeid(RLayer), RObject::PropertyHandle);
-    RLayer::PropertyProtected.generateId(typeid(RLayer), RObject::PropertyProtected);
-    RLayer::PropertySelected.generateId(typeid(RLayer), RObject::PropertySelected);
+    RLayer::PropertyCustom.generateId(RLayer::getRtti(), RObject::PropertyCustom);
+    RLayer::PropertyType.generateId(RLayer::getRtti(), RObject::PropertyType);
+    RLayer::PropertyHandle.generateId(RLayer::getRtti(), RObject::PropertyHandle);
+    RLayer::PropertyProtected.generateId(RLayer::getRtti(), RObject::PropertyProtected);
+    RLayer::PropertySelected.generateId(RLayer::getRtti(), RObject::PropertySelected);
 
-    RLayer::PropertyName.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Name"));
-    RLayer::PropertyOff.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Off"));
-    RLayer::PropertyFrozen.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Frozen"));
-    RLayer::PropertyLocked.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Locked"));
-    RLayer::PropertyCollapsed.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Collapsed"));
-    RLayer::PropertyPlottable.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Plottable"));
-    RLayer::PropertySnappable.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Snappable"));
-    RLayer::PropertyOffIsFreeze.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Off is Freeze"));
-    RLayer::PropertyColor.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Color"));
-    RLayer::PropertyLinetype.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Linetype"));
-    RLayer::PropertyLineweight.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Lineweight"));
+    RLayer::PropertyName.generateId(RLayer::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Name"));
+    RLayer::PropertyOff.generateId(RLayer::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Off"));
+    RLayer::PropertyFrozen.generateId(RLayer::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Frozen"));
+    RLayer::PropertyLocked.generateId(RLayer::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Locked"));
+    RLayer::PropertyCollapsed.generateId(RLayer::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Collapsed"));
+    RLayer::PropertyPlottable.generateId(RLayer::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Plottable"));
+    RLayer::PropertySnappable.generateId(RLayer::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Snappable"));
+    RLayer::PropertyOffIsFreeze.generateId(RLayer::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Off is Freeze"));
+    RLayer::PropertyColor.generateId(RLayer::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Color"));
+    RLayer::PropertyLinetype.generateId(RLayer::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Linetype"));
+    RLayer::PropertyLineweight.generateId(RLayer::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Lineweight"));
 }
 
 RLayer* RLayer::clone() const {

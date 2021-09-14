@@ -68,8 +68,12 @@ public:
 
     static void init();
 
+    static RS::EntityType getRtti() {
+        return RS::EntityLeader;
+    }
+
     static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
-        return RPropertyTypeId::getPropertyTypeIds(typeid(RLeaderEntity));
+        return RPropertyTypeId::getPropertyTypeIds(RLeaderEntity::getRtti());
     }
 
     virtual RLeaderEntity* clone() const {

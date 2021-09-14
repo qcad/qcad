@@ -38,10 +38,10 @@ RView::~RView() {
 }
 
 void RView::init() {
-    RView::PropertyName.generateId(typeid(RView), "", "Name");
-    RView::PropertyCenterPoint.generateId(typeid(RView), "", "Center Point");
-    RView::PropertyWidth.generateId(typeid(RView), "", "Width");
-    RView::PropertyHeight.generateId(typeid(RView), "", "Height");
+    RView::PropertyName.generateId(RView::getRtti(), "", "Name");
+    RView::PropertyCenterPoint.generateId(RView::getRtti(), "", "Center Point");
+    RView::PropertyWidth.generateId(RView::getRtti(), "", "Width");
+    RView::PropertyHeight.generateId(RView::getRtti(), "", "Height");
 }
 
 RView* RView::clone() const {

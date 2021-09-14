@@ -78,7 +78,7 @@ public:
     static void init();
 
     static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
-        return RPropertyTypeId::getPropertyTypeIds(typeid(RTextBasedEntity));
+        return RPropertyTypeId::getPropertyTypeIds(RTextBasedEntity::getRtti());
     }
 
     virtual RTextBasedData& getData() = 0;

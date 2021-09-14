@@ -68,13 +68,19 @@ public:
 
     static void init();
 
+    static RS::EntityType getRtti() {
+        return RS::EntityCircle;
+    }
+
     static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
-        return RPropertyTypeId::getPropertyTypeIds(typeid(RCircleEntity));
+        return RPropertyTypeId::getPropertyTypeIds(RCircleEntity::getRtti());
     }
 
     virtual RCircleEntity* clone() const {
         return new RCircleEntity(*this);
     }
+
+    
 
     virtual bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         RTransaction* transaction=NULL);

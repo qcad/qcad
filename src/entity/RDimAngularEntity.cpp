@@ -77,50 +77,50 @@ RDimAngularEntity::~RDimAngularEntity() {
 }
 
 void RDimAngularEntity::init() {
-    RDimAngularEntity::PropertyCustom.generateId(typeid(RDimAngularEntity), RObject::PropertyCustom);
-    RDimAngularEntity::PropertyHandle.generateId(typeid(RDimAngularEntity), RObject::PropertyHandle);
-    RDimAngularEntity::PropertyProtected.generateId(typeid(RDimAngularEntity), RObject::PropertyProtected);
-    RDimAngularEntity::PropertyWorkingSet.generateId(typeid(RDimAngularEntity), RObject::PropertyWorkingSet);
-    RDimAngularEntity::PropertyType.generateId(typeid(RDimAngularEntity), REntity::PropertyType);
-    RDimAngularEntity::PropertyBlock.generateId(typeid(RDimAngularEntity), REntity::PropertyBlock);
-    RDimAngularEntity::PropertyLayer.generateId(typeid(RDimAngularEntity), REntity::PropertyLayer);
-    RDimAngularEntity::PropertyLinetype.generateId(typeid(RDimAngularEntity), REntity::PropertyLinetype);
-    RDimAngularEntity::PropertyLinetypeScale.generateId(typeid(RDimAngularEntity), REntity::PropertyLinetypeScale);
-    RDimAngularEntity::PropertyLineweight.generateId(typeid(RDimAngularEntity), REntity::PropertyLineweight);
-    RDimAngularEntity::PropertyColor.generateId(typeid(RDimAngularEntity), REntity::PropertyColor);
-    RDimAngularEntity::PropertyDisplayedColor.generateId(typeid(RDimAngularEntity), REntity::PropertyDisplayedColor);
-    RDimAngularEntity::PropertyDrawOrder.generateId(typeid(RDimAngularEntity), REntity::PropertyDrawOrder);
+    RDimAngularEntity::PropertyCustom.generateId(RDimAngularEntity::getRtti(), RObject::PropertyCustom);
+    RDimAngularEntity::PropertyHandle.generateId(RDimAngularEntity::getRtti(), RObject::PropertyHandle);
+    RDimAngularEntity::PropertyProtected.generateId(RDimAngularEntity::getRtti(), RObject::PropertyProtected);
+    RDimAngularEntity::PropertyWorkingSet.generateId(RDimAngularEntity::getRtti(), RObject::PropertyWorkingSet);
+    RDimAngularEntity::PropertyType.generateId(RDimAngularEntity::getRtti(), REntity::PropertyType);
+    RDimAngularEntity::PropertyBlock.generateId(RDimAngularEntity::getRtti(), REntity::PropertyBlock);
+    RDimAngularEntity::PropertyLayer.generateId(RDimAngularEntity::getRtti(), REntity::PropertyLayer);
+    RDimAngularEntity::PropertyLinetype.generateId(RDimAngularEntity::getRtti(), REntity::PropertyLinetype);
+    RDimAngularEntity::PropertyLinetypeScale.generateId(RDimAngularEntity::getRtti(), REntity::PropertyLinetypeScale);
+    RDimAngularEntity::PropertyLineweight.generateId(RDimAngularEntity::getRtti(), REntity::PropertyLineweight);
+    RDimAngularEntity::PropertyColor.generateId(RDimAngularEntity::getRtti(), REntity::PropertyColor);
+    RDimAngularEntity::PropertyDisplayedColor.generateId(RDimAngularEntity::getRtti(), REntity::PropertyDisplayedColor);
+    RDimAngularEntity::PropertyDrawOrder.generateId(RDimAngularEntity::getRtti(), REntity::PropertyDrawOrder);
 
-    RDimAngularEntity::PropertyMiddleOfTextX.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyMiddleOfTextX);
-    RDimAngularEntity::PropertyMiddleOfTextY.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyMiddleOfTextY);
-    RDimAngularEntity::PropertyMiddleOfTextZ.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyMiddleOfTextZ);
+    RDimAngularEntity::PropertyMiddleOfTextX.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyMiddleOfTextX);
+    RDimAngularEntity::PropertyMiddleOfTextY.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyMiddleOfTextY);
+    RDimAngularEntity::PropertyMiddleOfTextZ.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyMiddleOfTextZ);
 
-    RDimAngularEntity::PropertyText.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyText);
-    RDimAngularEntity::PropertyUpperTolerance.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyUpperTolerance);
-    RDimAngularEntity::PropertyLowerTolerance.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyLowerTolerance);
-    RDimAngularEntity::PropertyMeasuredValue.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyMeasuredValue);
-    RDimAngularEntity::PropertyFontName.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyFontName);
-    RDimAngularEntity::PropertyArrow1Flipped.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyArrow1Flipped);
-    RDimAngularEntity::PropertyArrow2Flipped.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyArrow2Flipped);
+    RDimAngularEntity::PropertyText.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyText);
+    RDimAngularEntity::PropertyUpperTolerance.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyUpperTolerance);
+    RDimAngularEntity::PropertyLowerTolerance.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyLowerTolerance);
+    RDimAngularEntity::PropertyMeasuredValue.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyMeasuredValue);
+    RDimAngularEntity::PropertyFontName.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyFontName);
+    RDimAngularEntity::PropertyArrow1Flipped.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyArrow1Flipped);
+    RDimAngularEntity::PropertyArrow2Flipped.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyArrow2Flipped);
 
-    RDimAngularEntity::PropertyExtLineFix.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyExtLineFix);
-    RDimAngularEntity::PropertyExtLineFixLength.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyExtLineFixLength);
+    RDimAngularEntity::PropertyExtLineFix.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyExtLineFix);
+    RDimAngularEntity::PropertyExtLineFixLength.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyExtLineFixLength);
 
-    RDimAngularEntity::PropertyCenterX.generateId(typeid(RDimAngularEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
-    RDimAngularEntity::PropertyCenterY.generateId(typeid(RDimAngularEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
-    RDimAngularEntity::PropertyCenterZ.generateId(typeid(RDimAngularEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
+    RDimAngularEntity::PropertyCenterX.generateId(RDimAngularEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
+    RDimAngularEntity::PropertyCenterY.generateId(RDimAngularEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
+    RDimAngularEntity::PropertyCenterZ.generateId(RDimAngularEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
 
-    RDimAngularEntity::PropertyExtensionLine1EndX.generateId(typeid(RDimAngularEntity), QT_TRANSLATE_NOOP("REntity", "Line 1 End"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
-    RDimAngularEntity::PropertyExtensionLine1EndY.generateId(typeid(RDimAngularEntity), QT_TRANSLATE_NOOP("REntity", "Line 1 End"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
-    RDimAngularEntity::PropertyExtensionLine1EndZ.generateId(typeid(RDimAngularEntity), QT_TRANSLATE_NOOP("REntity", "Line 1 End"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
+    RDimAngularEntity::PropertyExtensionLine1EndX.generateId(RDimAngularEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Line 1 End"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
+    RDimAngularEntity::PropertyExtensionLine1EndY.generateId(RDimAngularEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Line 1 End"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
+    RDimAngularEntity::PropertyExtensionLine1EndZ.generateId(RDimAngularEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Line 1 End"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
 
-    RDimAngularEntity::PropertyExtensionLine2EndX.generateId(typeid(RDimAngularEntity), QT_TRANSLATE_NOOP("REntity", "Line 2 End"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
-    RDimAngularEntity::PropertyExtensionLine2EndY.generateId(typeid(RDimAngularEntity), QT_TRANSLATE_NOOP("REntity", "Line 2 End"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
-    RDimAngularEntity::PropertyExtensionLine2EndZ.generateId(typeid(RDimAngularEntity), QT_TRANSLATE_NOOP("REntity", "Line 2 End"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
+    RDimAngularEntity::PropertyExtensionLine2EndX.generateId(RDimAngularEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Line 2 End"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
+    RDimAngularEntity::PropertyExtensionLine2EndY.generateId(RDimAngularEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Line 2 End"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
+    RDimAngularEntity::PropertyExtensionLine2EndZ.generateId(RDimAngularEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Line 2 End"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
 
-    RDimAngularEntity::PropertyDimArcPositionX.generateId(typeid(RDimAngularEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
-    RDimAngularEntity::PropertyDimArcPositionY.generateId(typeid(RDimAngularEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
-    RDimAngularEntity::PropertyDimArcPositionZ.generateId(typeid(RDimAngularEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
+    RDimAngularEntity::PropertyDimArcPositionX.generateId(RDimAngularEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
+    RDimAngularEntity::PropertyDimArcPositionY.generateId(RDimAngularEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
+    RDimAngularEntity::PropertyDimArcPositionZ.generateId(RDimAngularEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
 }
 
 void RDimAngularEntity::print(QDebug dbg) const {

@@ -94,8 +94,12 @@ public:
 
     static void init();
 
+    static RS::EntityType getRtti() {
+        return RS::EntityDimOrdinate;
+    }
+
     static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
-        return RPropertyTypeId::getPropertyTypeIds(typeid(RDimOrdinateEntity));
+        return RPropertyTypeId::getPropertyTypeIds(RDimOrdinateEntity::getRtti());
     }
 
     virtual RDimOrdinateEntity* clone() const {

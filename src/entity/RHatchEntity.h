@@ -73,8 +73,12 @@ public:
 
     static void init();
 
+    static RS::EntityType getRtti() {
+        return RS::EntityHatch;
+    }
+
     static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
-        return RPropertyTypeId::getPropertyTypeIds(typeid(RHatchEntity));
+        return RPropertyTypeId::getPropertyTypeIds(RHatchEntity::getRtti());
     }
 
     virtual RHatchEntity* clone() const;

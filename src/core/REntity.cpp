@@ -89,29 +89,29 @@ bool REntity::isTextBased(const RS::EntityType type) {
 }
 
 void REntity::init() {
-    REntity::PropertyCustom.generateId(typeid(REntity), RObject::PropertyCustom);
-    REntity::PropertyHandle.generateId(typeid(REntity), RObject::PropertyHandle);
-    REntity::PropertyProtected.generateId(typeid(REntity), RObject::PropertyProtected);
-    REntity::PropertyWorkingSet.generateId(typeid(REntity), RObject::PropertyWorkingSet);
-    REntity::PropertyType.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Type"));
-    REntity::PropertyBlock.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Block"));
-    REntity::PropertyLayer.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Layer"));
-    REntity::PropertyLinetype.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Linetype"));
-    REntity::PropertyLinetypeScale.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Linetype Scale"));
-    REntity::PropertyLineweight.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Lineweight"));
-    REntity::PropertyColor.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Color"));
-    REntity::PropertyDisplayedColor.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Displayed Color"));
-    REntity::PropertyDrawOrder.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Draw Order"));
+    REntity::PropertyCustom.generateId(REntity::getRtti(), RObject::PropertyCustom);
+    REntity::PropertyHandle.generateId(REntity::getRtti(), RObject::PropertyHandle);
+    REntity::PropertyProtected.generateId(REntity::getRtti(), RObject::PropertyProtected);
+    REntity::PropertyWorkingSet.generateId(REntity::getRtti(), RObject::PropertyWorkingSet);
+    REntity::PropertyType.generateId(REntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Type"));
+    REntity::PropertyBlock.generateId(REntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Block"));
+    REntity::PropertyLayer.generateId(REntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Layer"));
+    REntity::PropertyLinetype.generateId(REntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Linetype"));
+    REntity::PropertyLinetypeScale.generateId(REntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Linetype Scale"));
+    REntity::PropertyLineweight.generateId(REntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Lineweight"));
+    REntity::PropertyColor.generateId(REntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Color"));
+    REntity::PropertyDisplayedColor.generateId(REntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Displayed Color"));
+    REntity::PropertyDrawOrder.generateId(REntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Draw Order"));
 
-    REntity::PropertyParentId.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Parent Id"));
+    REntity::PropertyParentId.generateId(REntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Parent Id"));
 
-    REntity::PropertyMinX.generateId(typeid(REntity), QT_TRANSLATE_NOOP("REntity", "Boundary"), QT_TRANSLATE_NOOP("REntity", "Left"));
-    REntity::PropertyMinY.generateId(typeid(REntity), QT_TRANSLATE_NOOP("REntity", "Boundary"), QT_TRANSLATE_NOOP("REntity", "Bottom"));
-    REntity::PropertyMaxX.generateId(typeid(REntity), QT_TRANSLATE_NOOP("REntity", "Boundary"), QT_TRANSLATE_NOOP("REntity", "Right"));
-    REntity::PropertyMaxY.generateId(typeid(REntity), QT_TRANSLATE_NOOP("REntity", "Boundary"), QT_TRANSLATE_NOOP("REntity", "Top"));
+    REntity::PropertyMinX.generateId(REntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Boundary"), QT_TRANSLATE_NOOP("REntity", "Left"));
+    REntity::PropertyMinY.generateId(REntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Boundary"), QT_TRANSLATE_NOOP("REntity", "Bottom"));
+    REntity::PropertyMaxX.generateId(REntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Boundary"), QT_TRANSLATE_NOOP("REntity", "Right"));
+    REntity::PropertyMaxY.generateId(REntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Boundary"), QT_TRANSLATE_NOOP("REntity", "Top"));
 
-    REntity::PropertySizeX.generateId(typeid(REntity), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Width"));
-    REntity::PropertySizeY.generateId(typeid(REntity), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Height"));
+    REntity::PropertySizeX.generateId(REntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Width"));
+    REntity::PropertySizeY.generateId(REntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Height"));
 }
 
 /**

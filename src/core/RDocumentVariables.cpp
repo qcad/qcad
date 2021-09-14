@@ -42,14 +42,14 @@ RDocumentVariables::~RDocumentVariables() {
 }
 
 void RDocumentVariables::init() {
-    RDocumentVariables::PropertyCustom.generateId(typeid(RDocumentVariables), RObject::PropertyCustom);
-    RDocumentVariables::PropertyHandle.generateId(typeid(RDocumentVariables), RObject::PropertyHandle);
-    RDocumentVariables::PropertyProtected.generateId(typeid(RDocumentVariables), RObject::PropertyProtected);
-    RDocumentVariables::PropertyCurrentLayerId.generateId(typeid(RDocumentVariables), "", QT_TRANSLATE_NOOP("RDocumentVariables", "Current Layer ID"));
-    RDocumentVariables::PropertyUnit.generateId(typeid(RDocumentVariables), "", QT_TRANSLATE_NOOP("RDocumentVariables", "Drawing Unit"));
-    RDocumentVariables::PropertyLinetypeScale.generateId(typeid(RDocumentVariables), "", QT_TRANSLATE_NOOP("RDocumentVariables", "Linetype Scale"));
-    RDocumentVariables::PropertyDimensionFont.generateId(typeid(RDocumentVariables), "", QT_TRANSLATE_NOOP("RDocumentVariables", "Dimension Font"));
-    RDocumentVariables::PropertyWorkingSetBlockReferenceId.generateId(typeid(RDocumentVariables), "", "Working Set Block Reference Id");
+    RDocumentVariables::PropertyCustom.generateId(RDocumentVariables::getRtti(), RObject::PropertyCustom);
+    RDocumentVariables::PropertyHandle.generateId(RDocumentVariables::getRtti(), RObject::PropertyHandle);
+    RDocumentVariables::PropertyProtected.generateId(RDocumentVariables::getRtti(), RObject::PropertyProtected);
+    RDocumentVariables::PropertyCurrentLayerId.generateId(RDocumentVariables::getRtti(), "", QT_TRANSLATE_NOOP("RDocumentVariables", "Current Layer ID"));
+    RDocumentVariables::PropertyUnit.generateId(RDocumentVariables::getRtti(), "", QT_TRANSLATE_NOOP("RDocumentVariables", "Drawing Unit"));
+    RDocumentVariables::PropertyLinetypeScale.generateId(RDocumentVariables::getRtti(), "", QT_TRANSLATE_NOOP("RDocumentVariables", "Linetype Scale"));
+    RDocumentVariables::PropertyDimensionFont.generateId(RDocumentVariables::getRtti(), "", QT_TRANSLATE_NOOP("RDocumentVariables", "Dimension Font"));
+    RDocumentVariables::PropertyWorkingSetBlockReferenceId.generateId(RDocumentVariables::getRtti(), "", "Working Set Block Reference Id");
 }
 
 QSet<RPropertyTypeId> RDocumentVariables::getCustomPropertyTypeIds() const {

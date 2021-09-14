@@ -59,35 +59,35 @@ RTraceEntity::~RTraceEntity() {
 }
 
 void RTraceEntity::init() {
-    RTraceEntity::PropertyCustom.generateId(typeid(RTraceEntity), RObject::PropertyCustom);
-    RTraceEntity::PropertyHandle.generateId(typeid(RTraceEntity), RObject::PropertyHandle);
-    RTraceEntity::PropertyProtected.generateId(typeid(RTraceEntity), RObject::PropertyProtected);
-    RTraceEntity::PropertyWorkingSet.generateId(typeid(RTraceEntity), RObject::PropertyWorkingSet);
-    RTraceEntity::PropertyType.generateId(typeid(RTraceEntity), REntity::PropertyType);
-    RTraceEntity::PropertyBlock.generateId(typeid(RTraceEntity), REntity::PropertyBlock);
-    RTraceEntity::PropertyLayer.generateId(typeid(RTraceEntity), REntity::PropertyLayer);
-    RTraceEntity::PropertyLinetype.generateId(typeid(RTraceEntity), REntity::PropertyLinetype);
-    RTraceEntity::PropertyLinetypeScale.generateId(typeid(RTraceEntity), REntity::PropertyLinetypeScale);
-    RTraceEntity::PropertyLineweight.generateId(typeid(RTraceEntity), REntity::PropertyLineweight);
-    RTraceEntity::PropertyColor.generateId(typeid(RTraceEntity), REntity::PropertyColor);
-    RTraceEntity::PropertyDisplayedColor.generateId(typeid(RTraceEntity), REntity::PropertyDisplayedColor);
-    RTraceEntity::PropertyDrawOrder.generateId(typeid(RTraceEntity), REntity::PropertyDrawOrder);
+    RTraceEntity::PropertyCustom.generateId(RTraceEntity::getRtti(), RObject::PropertyCustom);
+    RTraceEntity::PropertyHandle.generateId(RTraceEntity::getRtti(), RObject::PropertyHandle);
+    RTraceEntity::PropertyProtected.generateId(RTraceEntity::getRtti(), RObject::PropertyProtected);
+    RTraceEntity::PropertyWorkingSet.generateId(RTraceEntity::getRtti(), RObject::PropertyWorkingSet);
+    RTraceEntity::PropertyType.generateId(RTraceEntity::getRtti(), REntity::PropertyType);
+    RTraceEntity::PropertyBlock.generateId(RTraceEntity::getRtti(), REntity::PropertyBlock);
+    RTraceEntity::PropertyLayer.generateId(RTraceEntity::getRtti(), REntity::PropertyLayer);
+    RTraceEntity::PropertyLinetype.generateId(RTraceEntity::getRtti(), REntity::PropertyLinetype);
+    RTraceEntity::PropertyLinetypeScale.generateId(RTraceEntity::getRtti(), REntity::PropertyLinetypeScale);
+    RTraceEntity::PropertyLineweight.generateId(RTraceEntity::getRtti(), REntity::PropertyLineweight);
+    RTraceEntity::PropertyColor.generateId(RTraceEntity::getRtti(), REntity::PropertyColor);
+    RTraceEntity::PropertyDisplayedColor.generateId(RTraceEntity::getRtti(), REntity::PropertyDisplayedColor);
+    RTraceEntity::PropertyDrawOrder.generateId(RTraceEntity::getRtti(), REntity::PropertyDrawOrder);
 
-    RTraceEntity::PropertyPoint1X.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 1"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RTraceEntity::PropertyPoint1Y.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 1"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RTraceEntity::PropertyPoint1Z.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 1"), QT_TRANSLATE_NOOP("REntity", "Z"));
-    RTraceEntity::PropertyPoint2X.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 2"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RTraceEntity::PropertyPoint2Y.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 2"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RTraceEntity::PropertyPoint2Z.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 2"), QT_TRANSLATE_NOOP("REntity", "Z"));
-    RTraceEntity::PropertyPoint3X.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 3"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RTraceEntity::PropertyPoint3Y.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 3"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RTraceEntity::PropertyPoint3Z.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 3"), QT_TRANSLATE_NOOP("REntity", "Z"));
-    RTraceEntity::PropertyPoint4X.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 4"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RTraceEntity::PropertyPoint4Y.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 4"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RTraceEntity::PropertyPoint4Z.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 4"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RTraceEntity::PropertyPoint1X.generateId(RTraceEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Point 1"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RTraceEntity::PropertyPoint1Y.generateId(RTraceEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Point 1"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RTraceEntity::PropertyPoint1Z.generateId(RTraceEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Point 1"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RTraceEntity::PropertyPoint2X.generateId(RTraceEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Point 2"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RTraceEntity::PropertyPoint2Y.generateId(RTraceEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Point 2"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RTraceEntity::PropertyPoint2Z.generateId(RTraceEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Point 2"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RTraceEntity::PropertyPoint3X.generateId(RTraceEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Point 3"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RTraceEntity::PropertyPoint3Y.generateId(RTraceEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Point 3"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RTraceEntity::PropertyPoint3Z.generateId(RTraceEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Point 3"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RTraceEntity::PropertyPoint4X.generateId(RTraceEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Point 4"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RTraceEntity::PropertyPoint4Y.generateId(RTraceEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Point 4"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RTraceEntity::PropertyPoint4Z.generateId(RTraceEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Point 4"), QT_TRANSLATE_NOOP("REntity", "Z"));
 
-    RTraceEntity::PropertyLength.generateId(typeid(RTraceEntity), "", QT_TRANSLATE_NOOP("REntity", "Length"));
-    RTraceEntity::PropertyTotalLength.generateId(typeid(RTraceEntity), "", QT_TRANSLATE_NOOP("REntity", "Total Length"));
+    RTraceEntity::PropertyLength.generateId(RTraceEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Length"));
+    RTraceEntity::PropertyTotalLength.generateId(RTraceEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Total Length"));
 }
 
 bool RTraceEntity::setProperty(RPropertyTypeId propertyTypeId,

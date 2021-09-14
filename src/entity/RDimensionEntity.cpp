@@ -97,74 +97,74 @@ RDimensionEntity::~RDimensionEntity() {
 }
 
 void RDimensionEntity::init() {
-    RDimensionEntity::PropertyCustom.generateId(typeid(RDimensionEntity), RObject::PropertyCustom);
-    RDimensionEntity::PropertyHandle.generateId(typeid(RDimensionEntity), RObject::PropertyHandle);
-    RDimensionEntity::PropertyProtected.generateId(typeid(RDimensionEntity), RObject::PropertyProtected);
-    RDimensionEntity::PropertyWorkingSet.generateId(typeid(RDimensionEntity), RObject::PropertyWorkingSet);
-    RDimensionEntity::PropertyType.generateId(typeid(RDimensionEntity), REntity::PropertyType);
-    RDimensionEntity::PropertyBlock.generateId(typeid(RDimensionEntity), REntity::PropertyBlock);
-    RDimensionEntity::PropertyLayer.generateId(typeid(RDimensionEntity), REntity::PropertyLayer);
-    RDimensionEntity::PropertyLinetype.generateId(typeid(RDimensionEntity), REntity::PropertyLinetype);
-    RDimensionEntity::PropertyLinetypeScale.generateId(typeid(RDimensionEntity), REntity::PropertyLinetypeScale);
-    RDimensionEntity::PropertyLineweight.generateId(typeid(RDimensionEntity), REntity::PropertyLineweight);
-    RDimensionEntity::PropertyColor.generateId(typeid(RDimensionEntity), REntity::PropertyColor);
-    RDimensionEntity::PropertyDisplayedColor.generateId(typeid(RDimensionEntity), REntity::PropertyDisplayedColor);
-    RDimensionEntity::PropertyDrawOrder.generateId(typeid(RDimensionEntity), REntity::PropertyDrawOrder);
+    RDimensionEntity::PropertyCustom.generateId(RDimensionEntity::getRtti(), RObject::PropertyCustom);
+    RDimensionEntity::PropertyHandle.generateId(RDimensionEntity::getRtti(), RObject::PropertyHandle);
+    RDimensionEntity::PropertyProtected.generateId(RDimensionEntity::getRtti(), RObject::PropertyProtected);
+    RDimensionEntity::PropertyWorkingSet.generateId(RDimensionEntity::getRtti(), RObject::PropertyWorkingSet);
+    RDimensionEntity::PropertyType.generateId(RDimensionEntity::getRtti(), REntity::PropertyType);
+    RDimensionEntity::PropertyBlock.generateId(RDimensionEntity::getRtti(), REntity::PropertyBlock);
+    RDimensionEntity::PropertyLayer.generateId(RDimensionEntity::getRtti(), REntity::PropertyLayer);
+    RDimensionEntity::PropertyLinetype.generateId(RDimensionEntity::getRtti(), REntity::PropertyLinetype);
+    RDimensionEntity::PropertyLinetypeScale.generateId(RDimensionEntity::getRtti(), REntity::PropertyLinetypeScale);
+    RDimensionEntity::PropertyLineweight.generateId(RDimensionEntity::getRtti(), REntity::PropertyLineweight);
+    RDimensionEntity::PropertyColor.generateId(RDimensionEntity::getRtti(), REntity::PropertyColor);
+    RDimensionEntity::PropertyDisplayedColor.generateId(RDimensionEntity::getRtti(), REntity::PropertyDisplayedColor);
+    RDimensionEntity::PropertyDrawOrder.generateId(RDimensionEntity::getRtti(), REntity::PropertyDrawOrder);
 
-    RDimensionEntity::PropertyText.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Label"));
-    RDimensionEntity::PropertyUpperTolerance.generateId(typeid(RDimensionEntity), QT_TRANSLATE_NOOP("REntity", "Tolerance"), QT_TRANSLATE_NOOP("REntity", "Upper Limit"));
-    RDimensionEntity::PropertyLowerTolerance.generateId(typeid(RDimensionEntity), QT_TRANSLATE_NOOP("REntity", "Tolerance"), QT_TRANSLATE_NOOP("REntity", "Lower Limit"));
-    RDimensionEntity::PropertyDefinitionPointX.generateId(typeid(RDimensionEntity), QT_TRANSLATE_NOOP("REntity", "Definition Point"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
-    RDimensionEntity::PropertyDefinitionPointY.generateId(typeid(RDimensionEntity), QT_TRANSLATE_NOOP("REntity", "Definition Point"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
-    RDimensionEntity::PropertyDefinitionPointZ.generateId(typeid(RDimensionEntity), QT_TRANSLATE_NOOP("REntity", "Definition Point"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
-    RDimensionEntity::PropertyMiddleOfTextX.generateId(typeid(RDimensionEntity), QT_TRANSLATE_NOOP("REntity", "Text Position"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
-    RDimensionEntity::PropertyMiddleOfTextY.generateId(typeid(RDimensionEntity), QT_TRANSLATE_NOOP("REntity", "Text Position"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
-    RDimensionEntity::PropertyMiddleOfTextZ.generateId(typeid(RDimensionEntity), QT_TRANSLATE_NOOP("REntity", "Text Position"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
-//    RDimensionEntity::PropertyFontName.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Font"));
-//    RDimensionEntity::PropertyTextColor.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Text Color"));
-    RDimensionEntity::PropertyArrow1Flipped.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Flip First Arrow"));
-    RDimensionEntity::PropertyArrow2Flipped.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Flip Second Arrow"));
+    RDimensionEntity::PropertyText.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Label"));
+    RDimensionEntity::PropertyUpperTolerance.generateId(RDimensionEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Tolerance"), QT_TRANSLATE_NOOP("REntity", "Upper Limit"));
+    RDimensionEntity::PropertyLowerTolerance.generateId(RDimensionEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Tolerance"), QT_TRANSLATE_NOOP("REntity", "Lower Limit"));
+    RDimensionEntity::PropertyDefinitionPointX.generateId(RDimensionEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Definition Point"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
+    RDimensionEntity::PropertyDefinitionPointY.generateId(RDimensionEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Definition Point"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
+    RDimensionEntity::PropertyDefinitionPointZ.generateId(RDimensionEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Definition Point"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
+    RDimensionEntity::PropertyMiddleOfTextX.generateId(RDimensionEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Text Position"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
+    RDimensionEntity::PropertyMiddleOfTextY.generateId(RDimensionEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Text Position"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
+    RDimensionEntity::PropertyMiddleOfTextZ.generateId(RDimensionEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Text Position"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
+//    RDimensionEntity::PropertyFontName.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Font"));
+//    RDimensionEntity::PropertyTextColor.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Text Color"));
+    RDimensionEntity::PropertyArrow1Flipped.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Flip First Arrow"));
+    RDimensionEntity::PropertyArrow2Flipped.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Flip Second Arrow"));
 
-    RDimensionEntity::PropertyExtLineFix.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Fixed Extension Line"));
-    RDimensionEntity::PropertyExtLineFixLength.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Extension Line Length"));
+    RDimensionEntity::PropertyExtLineFix.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Fixed Extension Line"));
+    RDimensionEntity::PropertyExtLineFixLength.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Extension Line Length"));
 
-//    RDimensionEntity::PropertyHeight.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Height"));
-//    RDimensionEntity::PropertyAngle.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
-//    RDimensionEntity::PropertyLineSpacingFactor.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Line Spacing"));
-//    RDimensionEntity::PropertyHAlign.generateId(typeid(RDimensionEntity), QT_TRANSLATE_NOOP("REntity", "Alignment"), QT_TRANSLATE_NOOP("REntity", "Horizontal"));
-//    RDimensionEntity::PropertyVAlign.generateId(typeid(RDimensionEntity), QT_TRANSLATE_NOOP("REntity", "Alignment"), QT_TRANSLATE_NOOP("REntity", "Vertical"));
+//    RDimensionEntity::PropertyHeight.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Height"));
+//    RDimensionEntity::PropertyAngle.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
+//    RDimensionEntity::PropertyLineSpacingFactor.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Line Spacing"));
+//    RDimensionEntity::PropertyHAlign.generateId(RDimensionEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Alignment"), QT_TRANSLATE_NOOP("REntity", "Horizontal"));
+//    RDimensionEntity::PropertyVAlign.generateId(RDimensionEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Alignment"), QT_TRANSLATE_NOOP("REntity", "Vertical"));
 
-    RDimensionEntity::PropertyAutoLabel.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Auto Label"));
-    RDimensionEntity::PropertyMeasuredValue.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Measured Value"));
-//    RDimensionEntity::PropertyLinearFactor.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Linear Factor"));
-//    RDimensionEntity::PropertyDimScale.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Scale"));
-    RDimensionEntity::PropertyDimBlockName.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Block Name"));
-    RDimensionEntity::PropertyAutoTextPos.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Auto Label Position"));
+    RDimensionEntity::PropertyAutoLabel.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Auto Label"));
+    RDimensionEntity::PropertyMeasuredValue.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Measured Value"));
+//    RDimensionEntity::PropertyLinearFactor.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Linear Factor"));
+//    RDimensionEntity::PropertyDimScale.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Scale"));
+    RDimensionEntity::PropertyDimBlockName.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Block Name"));
+    RDimensionEntity::PropertyAutoTextPos.generateId(RDimensionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Auto Label Position"));
 
-    //RDimensionEntity::PropertyDimtxt.generateId(typeid(RDimensionEntity), QT_TRANSLATE_NOOP("REntity", "Style Override"), QT_TRANSLATE_NOOP("REntity", "Text height"));
+    //RDimensionEntity::PropertyDimtxt.generateId(RDimensionEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Style Override"), QT_TRANSLATE_NOOP("REntity", "Text height"));
 
     if (RPluginLoader::hasPlugin("DWG")) {
         QString tsOverride = QT_TRANSLATE_NOOP("REntity", "Style");
-        RDimensionEntity::PropertyDimscale.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Overall dimension scale"));
-        RDimensionEntity::PropertyDimlfac.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Linear measurement factor"));
-        RDimensionEntity::PropertyDimtxt.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text height"));
-        RDimensionEntity::PropertyDimgap.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Dimension line gap"));
-        RDimensionEntity::PropertyDimasz.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Arrow size"));
-        //RDimensionEntity::PropertyDimdli.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Dimension line increment"));
-        RDimensionEntity::PropertyDimexe.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Extension line extension"));
-        RDimensionEntity::PropertyDimexo.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Extension line offset"));
-        RDimensionEntity::PropertyDimtad.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text position vertical"));
-        RDimensionEntity::PropertyDimtih.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text inside horizontal"));
-        RDimensionEntity::PropertyDimtsz.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Tick size"));
-        RDimensionEntity::PropertyDimlunit.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Linear format"));
-        RDimensionEntity::PropertyDimdec.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Decimal places"));
-        RDimensionEntity::PropertyDimdsep.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Decimal separator"));
-        RDimensionEntity::PropertyDimzin.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Zero suppression"));
-        RDimensionEntity::PropertyDimaunit.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Angular format"));
-        RDimensionEntity::PropertyDimadec.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Angular decimal places"));
-        RDimensionEntity::PropertyDimazin.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Angular zero suppression"));
-        RDimensionEntity::PropertyArchTick.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Architectur tick"));
-        RDimensionEntity::PropertyDimclrt.generateId(typeid(RDimensionEntity), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text color"));
+        RDimensionEntity::PropertyDimscale.generateId(RDimensionEntity::getRtti(), tsOverride, QT_TRANSLATE_NOOP("REntity", "Overall dimension scale"));
+        RDimensionEntity::PropertyDimlfac.generateId(RDimensionEntity::getRtti(), tsOverride, QT_TRANSLATE_NOOP("REntity", "Linear measurement factor"));
+        RDimensionEntity::PropertyDimtxt.generateId(RDimensionEntity::getRtti(), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text height"));
+        RDimensionEntity::PropertyDimgap.generateId(RDimensionEntity::getRtti(), tsOverride, QT_TRANSLATE_NOOP("REntity", "Dimension line gap"));
+        RDimensionEntity::PropertyDimasz.generateId(RDimensionEntity::getRtti(), tsOverride, QT_TRANSLATE_NOOP("REntity", "Arrow size"));
+        //RDimensionEntity::PropertyDimdli.generateId(RDimensionEntity::getRtti(), tsOverride, QT_TRANSLATE_NOOP("REntity", "Dimension line increment"));
+        RDimensionEntity::PropertyDimexe.generateId(RDimensionEntity::getRtti(), tsOverride, QT_TRANSLATE_NOOP("REntity", "Extension line extension"));
+        RDimensionEntity::PropertyDimexo.generateId(RDimensionEntity::getRtti(), tsOverride, QT_TRANSLATE_NOOP("REntity", "Extension line offset"));
+        RDimensionEntity::PropertyDimtad.generateId(RDimensionEntity::getRtti(), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text position vertical"));
+        RDimensionEntity::PropertyDimtih.generateId(RDimensionEntity::getRtti(), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text inside horizontal"));
+        RDimensionEntity::PropertyDimtsz.generateId(RDimensionEntity::getRtti(), tsOverride, QT_TRANSLATE_NOOP("REntity", "Tick size"));
+        RDimensionEntity::PropertyDimlunit.generateId(RDimensionEntity::getRtti(), tsOverride, QT_TRANSLATE_NOOP("REntity", "Linear format"));
+        RDimensionEntity::PropertyDimdec.generateId(RDimensionEntity::getRtti(), tsOverride, QT_TRANSLATE_NOOP("REntity", "Decimal places"));
+        RDimensionEntity::PropertyDimdsep.generateId(RDimensionEntity::getRtti(), tsOverride, QT_TRANSLATE_NOOP("REntity", "Decimal separator"));
+        RDimensionEntity::PropertyDimzin.generateId(RDimensionEntity::getRtti(), tsOverride, QT_TRANSLATE_NOOP("REntity", "Zero suppression"));
+        RDimensionEntity::PropertyDimaunit.generateId(RDimensionEntity::getRtti(), tsOverride, QT_TRANSLATE_NOOP("REntity", "Angular format"));
+        RDimensionEntity::PropertyDimadec.generateId(RDimensionEntity::getRtti(), tsOverride, QT_TRANSLATE_NOOP("REntity", "Angular decimal places"));
+        RDimensionEntity::PropertyDimazin.generateId(RDimensionEntity::getRtti(), tsOverride, QT_TRANSLATE_NOOP("REntity", "Angular zero suppression"));
+        RDimensionEntity::PropertyArchTick.generateId(RDimensionEntity::getRtti(), tsOverride, QT_TRANSLATE_NOOP("REntity", "Architectur tick"));
+        RDimensionEntity::PropertyDimclrt.generateId(RDimensionEntity::getRtti(), tsOverride, QT_TRANSLATE_NOOP("REntity", "Text color"));
     }
 
     // initialize basic dimension rendering:

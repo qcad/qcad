@@ -93,6 +93,10 @@ public:
 
     static void init();
 
+    static RS::EntityType getRtti() {
+        return RS::ObjectLayer;
+    }
+
     virtual RS::EntityType getType() const {
         return RS::ObjectLayer;
     }

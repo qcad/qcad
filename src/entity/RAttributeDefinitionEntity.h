@@ -78,8 +78,12 @@ public:
 
     static void init();
 
+    static RS::EntityType getRtti() {
+        return RS::EntityAttributeDefinition;
+    }
+
     static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
-        return RPropertyTypeId::getPropertyTypeIds(typeid(RAttributeDefinitionEntity));
+        return RPropertyTypeId::getPropertyTypeIds(RAttributeDefinitionEntity::getRtti());
     }
 
     virtual RAttributeDefinitionEntity* clone() const {

@@ -109,8 +109,12 @@ public:
 
     static void init();
 
+    static RS::EntityType getRtti() {
+        return RS::EntityDimDiametric;
+    }
+
     static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
-        return RPropertyTypeId::getPropertyTypeIds(typeid(RDimDiametricEntity));
+        return RPropertyTypeId::getPropertyTypeIds(RDimDiametricEntity::getRtti());
     }
 
     virtual RDimDiametricEntity* clone() const {

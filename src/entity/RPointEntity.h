@@ -62,8 +62,12 @@ public:
 
     static void init();
 
+    static RS::EntityType getRtti() {
+        return RS::EntityPoint;
+    }
+
     static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
-        return RPropertyTypeId::getPropertyTypeIds(typeid(RPointEntity));
+        return RPropertyTypeId::getPropertyTypeIds(RPointEntity::getRtti());
     }
 
     virtual RPointEntity* clone() const {

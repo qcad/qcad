@@ -97,8 +97,12 @@ public:
 
     static void init();
 
+    static RS::EntityType getRtti() {
+        return RS::EntityDimArcLength;
+    }
+
     static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
-        return RPropertyTypeId::getPropertyTypeIds(typeid(RDimArcLengthEntity));
+        return RPropertyTypeId::getPropertyTypeIds(RDimArcLengthEntity::getRtti());
     }
 
     virtual RDimArcLengthEntity* clone() const {

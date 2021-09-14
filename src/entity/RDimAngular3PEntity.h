@@ -94,8 +94,12 @@ public:
 
     static void init();
 
+    static RS::EntityType getRtti() {
+        return RS::EntityDimAngular3P;
+    }
+
     static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
-        return RPropertyTypeId::getPropertyTypeIds(typeid(RDimAngular3PEntity));
+        return RPropertyTypeId::getPropertyTypeIds(RDimAngular3PEntity::getRtti());
     }
 
     virtual RDimAngular3PEntity* clone() const {

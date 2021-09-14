@@ -98,8 +98,12 @@ public:
 
     static void init();
 
+    static RS::EntityType getRtti() {
+        return RS::EntityDimAngular2L;
+    }
+
     static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
-        return RPropertyTypeId::getPropertyTypeIds(typeid(RDimAngular2LEntity));
+        return RPropertyTypeId::getPropertyTypeIds(RDimAngular2LEntity::getRtti());
     }
 
     virtual RDimAngular2LEntity* clone() const {

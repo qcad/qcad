@@ -65,34 +65,34 @@ RDimStyle::~RDimStyle() {
 }
 
 void RDimStyle::init() {
-    RDimStyle::PropertyCustom.generateId(typeid(RDimStyle), RObject::PropertyCustom);
-    RDimStyle::PropertyHandle.generateId(typeid(RDimStyle), RObject::PropertyHandle);
-    RDimStyle::PropertyProtected.generateId(typeid(RDimStyle), RObject::PropertyProtected);
+    RDimStyle::PropertyCustom.generateId(RDimStyle::getRtti(), RObject::PropertyCustom);
+    RDimStyle::PropertyHandle.generateId(RDimStyle::getRtti(), RObject::PropertyHandle);
+    RDimStyle::PropertyProtected.generateId(RDimStyle::getRtti(), RObject::PropertyProtected);
 
     QString tsStyle = QT_TRANSLATE_NOOP("REntity", "Style");
-    RDimStyle::PropertyDimscale.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Overall dimension scale"));
-    RDimStyle::PropertyDimlfac.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Linear measurement factor"));
-    RDimStyle::PropertyDimtxt.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Text height"));
-    RDimStyle::PropertyDimgap.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Dimension line gap"));
-    RDimStyle::PropertyDimasz.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Arrow size"));
-    RDimStyle::PropertyDimdli.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Dimension line increment"));
-    RDimStyle::PropertyDimexe.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Extension line extension"));
-    RDimStyle::PropertyDimexo.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Extension line offset"));
-    RDimStyle::PropertyDimtad.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Text above dimension line"));
-    RDimStyle::PropertyDimtih.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Text inside horizontal"));
-    RDimStyle::PropertyDimtsz.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Tick size"));
-    RDimStyle::PropertyDimlunit.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Linear format"));
-    RDimStyle::PropertyDimdec.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Decimal places"));
-    RDimStyle::PropertyDimdsep.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Decimal separator"));
-    RDimStyle::PropertyDimzin.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Zero suppression"));
-    RDimStyle::PropertyDimaunit.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Angular format"));
-    RDimStyle::PropertyDimadec.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Angular decimal places"));
-    RDimStyle::PropertyDimazin.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Angular zero suppression"));
-    RDimStyle::PropertyArchTick.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Architectur tick"));
-    RDimStyle::PropertyDimclrt.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Text color"));
-    RDimStyle::PropertyDimblk.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Arrow block"));
-    RDimStyle::PropertyDimblk1.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Arrow block 1"));
-    RDimStyle::PropertyDimblk2.generateId(typeid(RDimStyle), tsStyle, QT_TRANSLATE_NOOP("REntity", "Arrow block 2"));
+    RDimStyle::PropertyDimscale.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Overall dimension scale"));
+    RDimStyle::PropertyDimlfac.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Linear measurement factor"));
+    RDimStyle::PropertyDimtxt.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Text height"));
+    RDimStyle::PropertyDimgap.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Dimension line gap"));
+    RDimStyle::PropertyDimasz.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Arrow size"));
+    RDimStyle::PropertyDimdli.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Dimension line increment"));
+    RDimStyle::PropertyDimexe.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Extension line extension"));
+    RDimStyle::PropertyDimexo.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Extension line offset"));
+    RDimStyle::PropertyDimtad.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Text above dimension line"));
+    RDimStyle::PropertyDimtih.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Text inside horizontal"));
+    RDimStyle::PropertyDimtsz.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Tick size"));
+    RDimStyle::PropertyDimlunit.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Linear format"));
+    RDimStyle::PropertyDimdec.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Decimal places"));
+    RDimStyle::PropertyDimdsep.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Decimal separator"));
+    RDimStyle::PropertyDimzin.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Zero suppression"));
+    RDimStyle::PropertyDimaunit.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Angular format"));
+    RDimStyle::PropertyDimadec.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Angular decimal places"));
+    RDimStyle::PropertyDimazin.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Angular zero suppression"));
+    RDimStyle::PropertyArchTick.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Architectur tick"));
+    RDimStyle::PropertyDimclrt.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Text color"));
+    RDimStyle::PropertyDimblk.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Arrow block"));
+    RDimStyle::PropertyDimblk1.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Arrow block 1"));
+    RDimStyle::PropertyDimblk2.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Arrow block 2"));
 
     RDimStyleData::init();
 

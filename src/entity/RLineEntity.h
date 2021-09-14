@@ -70,8 +70,12 @@ public:
 
     static void init();
 
+    static RS::EntityType getRtti() {
+        return RS::EntityLine;
+    }
+
     static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
-        return RPropertyTypeId::getPropertyTypeIds(typeid(RLineEntity));
+        return RPropertyTypeId::getPropertyTypeIds(RLineEntity::getRtti());
     }
 
     virtual RLineEntity* clone() const {

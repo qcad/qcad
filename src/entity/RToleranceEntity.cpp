@@ -60,28 +60,28 @@ RToleranceEntity::~RToleranceEntity() {
 }
 
 void RToleranceEntity::init() {
-    RToleranceEntity::PropertyCustom.generateId(typeid(RToleranceEntity), RObject::PropertyCustom);
-    RToleranceEntity::PropertyHandle.generateId(typeid(RToleranceEntity), RObject::PropertyHandle);
-    RToleranceEntity::PropertyProtected.generateId(typeid(RToleranceEntity), RObject::PropertyProtected);
-    RToleranceEntity::PropertyWorkingSet.generateId(typeid(RToleranceEntity), RObject::PropertyWorkingSet);
-    RToleranceEntity::PropertyType.generateId(typeid(RToleranceEntity), REntity::PropertyType);
-    RToleranceEntity::PropertyBlock.generateId(typeid(RToleranceEntity), REntity::PropertyBlock);
-    RToleranceEntity::PropertyLayer.generateId(typeid(RToleranceEntity), REntity::PropertyLayer);
-    RToleranceEntity::PropertyLinetype.generateId(typeid(RToleranceEntity), REntity::PropertyLinetype);
-    RToleranceEntity::PropertyLinetypeScale.generateId(typeid(RToleranceEntity), REntity::PropertyLinetypeScale);
-    RToleranceEntity::PropertyLineweight.generateId(typeid(RToleranceEntity), REntity::PropertyLineweight);
-    RToleranceEntity::PropertyColor.generateId(typeid(RToleranceEntity), REntity::PropertyColor);
-    RToleranceEntity::PropertyDisplayedColor.generateId(typeid(RToleranceEntity), REntity::PropertyDisplayedColor);
-    RToleranceEntity::PropertyDrawOrder.generateId(typeid(RToleranceEntity), REntity::PropertyDrawOrder);
+    RToleranceEntity::PropertyCustom.generateId(RToleranceEntity::getRtti(), RObject::PropertyCustom);
+    RToleranceEntity::PropertyHandle.generateId(RToleranceEntity::getRtti(), RObject::PropertyHandle);
+    RToleranceEntity::PropertyProtected.generateId(RToleranceEntity::getRtti(), RObject::PropertyProtected);
+    RToleranceEntity::PropertyWorkingSet.generateId(RToleranceEntity::getRtti(), RObject::PropertyWorkingSet);
+    RToleranceEntity::PropertyType.generateId(RToleranceEntity::getRtti(), REntity::PropertyType);
+    RToleranceEntity::PropertyBlock.generateId(RToleranceEntity::getRtti(), REntity::PropertyBlock);
+    RToleranceEntity::PropertyLayer.generateId(RToleranceEntity::getRtti(), REntity::PropertyLayer);
+    RToleranceEntity::PropertyLinetype.generateId(RToleranceEntity::getRtti(), REntity::PropertyLinetype);
+    RToleranceEntity::PropertyLinetypeScale.generateId(RToleranceEntity::getRtti(), REntity::PropertyLinetypeScale);
+    RToleranceEntity::PropertyLineweight.generateId(RToleranceEntity::getRtti(), REntity::PropertyLineweight);
+    RToleranceEntity::PropertyColor.generateId(RToleranceEntity::getRtti(), REntity::PropertyColor);
+    RToleranceEntity::PropertyDisplayedColor.generateId(RToleranceEntity::getRtti(), REntity::PropertyDisplayedColor);
+    RToleranceEntity::PropertyDrawOrder.generateId(RToleranceEntity::getRtti(), REntity::PropertyDrawOrder);
 
-    RToleranceEntity::PropertyLocationX.generateId(typeid(RToleranceEntity), QT_TRANSLATE_NOOP("REntity", "Location"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
-    RToleranceEntity::PropertyLocationY.generateId(typeid(RToleranceEntity), QT_TRANSLATE_NOOP("REntity", "Location"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
-    RToleranceEntity::PropertyLocationZ.generateId(typeid(RToleranceEntity), QT_TRANSLATE_NOOP("REntity", "Location"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
-    RToleranceEntity::PropertyDirectionX.generateId(typeid(RToleranceEntity), QT_TRANSLATE_NOOP("REntity", "Direction"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
-    RToleranceEntity::PropertyDirectionY.generateId(typeid(RToleranceEntity), QT_TRANSLATE_NOOP("REntity", "Direction"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
-    RToleranceEntity::PropertyDirectionZ.generateId(typeid(RToleranceEntity), QT_TRANSLATE_NOOP("REntity", "Direction"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
-    RToleranceEntity::PropertyText.generateId(typeid(RToleranceEntity), "", QT_TRANSLATE_NOOP("REntity", "Text"));
-//    RToleranceEntity::PropertyDimScale.generateId(typeid(RToleranceEntity), "", QT_TRANSLATE_NOOP("REntity", "Scale"), false, RPropertyAttributes::Geometry);
+    RToleranceEntity::PropertyLocationX.generateId(RToleranceEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Location"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
+    RToleranceEntity::PropertyLocationY.generateId(RToleranceEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Location"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
+    RToleranceEntity::PropertyLocationZ.generateId(RToleranceEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Location"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
+    RToleranceEntity::PropertyDirectionX.generateId(RToleranceEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Direction"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
+    RToleranceEntity::PropertyDirectionY.generateId(RToleranceEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Direction"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
+    RToleranceEntity::PropertyDirectionZ.generateId(RToleranceEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Direction"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
+    RToleranceEntity::PropertyText.generateId(RToleranceEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Text"));
+//    RToleranceEntity::PropertyDimScale.generateId(RToleranceEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Scale"), false, RPropertyAttributes::Geometry);
 }
 
 bool RToleranceEntity::setProperty(RPropertyTypeId propertyTypeId,

@@ -77,66 +77,66 @@ RDimAngular3PEntity::~RDimAngular3PEntity() {
 }
 
 void RDimAngular3PEntity::init() {
-    RDimAngular3PEntity::PropertyCustom.generateId(typeid(RDimAngular3PEntity), RObject::PropertyCustom);
-    RDimAngular3PEntity::PropertyHandle.generateId(typeid(RDimAngular3PEntity), RObject::PropertyHandle);
-    RDimAngular3PEntity::PropertyProtected.generateId(typeid(RDimAngular3PEntity), RObject::PropertyProtected);
-    RDimAngular3PEntity::PropertyWorkingSet.generateId(typeid(RDimAngular3PEntity), RObject::PropertyWorkingSet);
-    RDimAngular3PEntity::PropertyType.generateId(typeid(RDimAngular3PEntity), REntity::PropertyType);
-    RDimAngular3PEntity::PropertyBlock.generateId(typeid(RDimAngular3PEntity), REntity::PropertyBlock);
-    RDimAngular3PEntity::PropertyLayer.generateId(typeid(RDimAngular3PEntity), REntity::PropertyLayer);
-    RDimAngular3PEntity::PropertyLinetype.generateId(typeid(RDimAngular3PEntity), REntity::PropertyLinetype);
-    RDimAngular3PEntity::PropertyLinetypeScale.generateId(typeid(RDimAngular3PEntity), REntity::PropertyLinetypeScale);
-    RDimAngular3PEntity::PropertyLineweight.generateId(typeid(RDimAngular3PEntity), REntity::PropertyLineweight);
-    RDimAngular3PEntity::PropertyColor.generateId(typeid(RDimAngular3PEntity), REntity::PropertyColor);
-    RDimAngular3PEntity::PropertyDisplayedColor.generateId(typeid(RDimAngular3PEntity), REntity::PropertyDisplayedColor);
-    RDimAngular3PEntity::PropertyDrawOrder.generateId(typeid(RDimAngular3PEntity), REntity::PropertyDrawOrder);
+    RDimAngular3PEntity::PropertyCustom.generateId(RDimAngular3PEntity::getRtti(), RObject::PropertyCustom);
+    RDimAngular3PEntity::PropertyHandle.generateId(RDimAngular3PEntity::getRtti(), RObject::PropertyHandle);
+    RDimAngular3PEntity::PropertyProtected.generateId(RDimAngular3PEntity::getRtti(), RObject::PropertyProtected);
+    RDimAngular3PEntity::PropertyWorkingSet.generateId(RDimAngular3PEntity::getRtti(), RObject::PropertyWorkingSet);
+    RDimAngular3PEntity::PropertyType.generateId(RDimAngular3PEntity::getRtti(), REntity::PropertyType);
+    RDimAngular3PEntity::PropertyBlock.generateId(RDimAngular3PEntity::getRtti(), REntity::PropertyBlock);
+    RDimAngular3PEntity::PropertyLayer.generateId(RDimAngular3PEntity::getRtti(), REntity::PropertyLayer);
+    RDimAngular3PEntity::PropertyLinetype.generateId(RDimAngular3PEntity::getRtti(), REntity::PropertyLinetype);
+    RDimAngular3PEntity::PropertyLinetypeScale.generateId(RDimAngular3PEntity::getRtti(), REntity::PropertyLinetypeScale);
+    RDimAngular3PEntity::PropertyLineweight.generateId(RDimAngular3PEntity::getRtti(), REntity::PropertyLineweight);
+    RDimAngular3PEntity::PropertyColor.generateId(RDimAngular3PEntity::getRtti(), REntity::PropertyColor);
+    RDimAngular3PEntity::PropertyDisplayedColor.generateId(RDimAngular3PEntity::getRtti(), REntity::PropertyDisplayedColor);
+    RDimAngular3PEntity::PropertyDrawOrder.generateId(RDimAngular3PEntity::getRtti(), REntity::PropertyDrawOrder);
 
-    RDimAngular3PEntity::PropertyMiddleOfTextX.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyMiddleOfTextX);
-    RDimAngular3PEntity::PropertyMiddleOfTextY.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyMiddleOfTextY);
-    RDimAngular3PEntity::PropertyMiddleOfTextZ.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyMiddleOfTextZ);
+    RDimAngular3PEntity::PropertyMiddleOfTextX.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyMiddleOfTextX);
+    RDimAngular3PEntity::PropertyMiddleOfTextY.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyMiddleOfTextY);
+    RDimAngular3PEntity::PropertyMiddleOfTextZ.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyMiddleOfTextZ);
 
-    RDimAngular3PEntity::PropertyText.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyText);
-    RDimAngular3PEntity::PropertyUpperTolerance.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyUpperTolerance);
-    RDimAngular3PEntity::PropertyLowerTolerance.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyLowerTolerance);
-    RDimAngular3PEntity::PropertyMeasuredValue.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyMeasuredValue);
+    RDimAngular3PEntity::PropertyText.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyText);
+    RDimAngular3PEntity::PropertyUpperTolerance.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyUpperTolerance);
+    RDimAngular3PEntity::PropertyLowerTolerance.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyLowerTolerance);
+    RDimAngular3PEntity::PropertyMeasuredValue.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyMeasuredValue);
 
-    //RDimAngular3PEntity::PropertyDimScale.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyDimScale);
-    RDimAngular3PEntity::PropertyDimBlockName.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyDimBlockName);
-    RDimAngular3PEntity::PropertyAutoTextPos.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyAutoTextPos);
-    RDimAngular3PEntity::PropertyFontName.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyFontName);
-    RDimAngular3PEntity::PropertyArrow1Flipped.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyArrow1Flipped);
-    RDimAngular3PEntity::PropertyArrow2Flipped.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyArrow2Flipped);
+    //RDimAngular3PEntity::PropertyDimScale.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimScale);
+    RDimAngular3PEntity::PropertyDimBlockName.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyDimBlockName);
+    RDimAngular3PEntity::PropertyAutoTextPos.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyAutoTextPos);
+    RDimAngular3PEntity::PropertyFontName.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyFontName);
+    RDimAngular3PEntity::PropertyArrow1Flipped.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyArrow1Flipped);
+    RDimAngular3PEntity::PropertyArrow2Flipped.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyArrow2Flipped);
 
-    RDimAngular3PEntity::PropertyExtLineFix.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyExtLineFix);
-    RDimAngular3PEntity::PropertyExtLineFixLength.generateId(typeid(RDimAngular3PEntity), RDimensionEntity::PropertyExtLineFixLength);
+    RDimAngular3PEntity::PropertyExtLineFix.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyExtLineFix);
+    RDimAngular3PEntity::PropertyExtLineFixLength.generateId(RDimAngular3PEntity::getRtti(), RDimensionEntity::PropertyExtLineFixLength);
 
-//    RDimAngular3PEntity::PropertyCenterX.generateId(typeid(RDimAngular3PEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
-//    RDimAngular3PEntity::PropertyCenterY.generateId(typeid(RDimAngular3PEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
-//    RDimAngular3PEntity::PropertyCenterZ.generateId(typeid(RDimAngular3PEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
+//    RDimAngular3PEntity::PropertyCenterX.generateId(RDimAngular3PEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
+//    RDimAngular3PEntity::PropertyCenterY.generateId(RDimAngular3PEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
+//    RDimAngular3PEntity::PropertyCenterZ.generateId(RDimAngular3PEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
 
-    RDimAngular3PEntity::PropertyCenterX.generateId(typeid(RDimAngular3PEntity), RDimAngularEntity::PropertyCenterX);
-    RDimAngular3PEntity::PropertyCenterY.generateId(typeid(RDimAngular3PEntity), RDimAngularEntity::PropertyCenterY);
-    RDimAngular3PEntity::PropertyCenterZ.generateId(typeid(RDimAngular3PEntity), RDimAngularEntity::PropertyCenterZ);
+    RDimAngular3PEntity::PropertyCenterX.generateId(RDimAngular3PEntity::getRtti(), RDimAngularEntity::PropertyCenterX);
+    RDimAngular3PEntity::PropertyCenterY.generateId(RDimAngular3PEntity::getRtti(), RDimAngularEntity::PropertyCenterY);
+    RDimAngular3PEntity::PropertyCenterZ.generateId(RDimAngular3PEntity::getRtti(), RDimAngularEntity::PropertyCenterZ);
 
-    RDimAngular3PEntity::PropertyExtensionLine1EndX.generateId(typeid(RDimAngular3PEntity), RDimAngularEntity::PropertyExtensionLine1EndX);
-    RDimAngular3PEntity::PropertyExtensionLine1EndY.generateId(typeid(RDimAngular3PEntity), RDimAngularEntity::PropertyExtensionLine1EndY);
-    RDimAngular3PEntity::PropertyExtensionLine1EndZ.generateId(typeid(RDimAngular3PEntity), RDimAngularEntity::PropertyExtensionLine1EndZ);
+    RDimAngular3PEntity::PropertyExtensionLine1EndX.generateId(RDimAngular3PEntity::getRtti(), RDimAngularEntity::PropertyExtensionLine1EndX);
+    RDimAngular3PEntity::PropertyExtensionLine1EndY.generateId(RDimAngular3PEntity::getRtti(), RDimAngularEntity::PropertyExtensionLine1EndY);
+    RDimAngular3PEntity::PropertyExtensionLine1EndZ.generateId(RDimAngular3PEntity::getRtti(), RDimAngularEntity::PropertyExtensionLine1EndZ);
 
-//    RDimAngular3PEntity::PropertyExtensionLine1EndX.generateId(typeid(RDimAngular3PEntity), QT_TRANSLATE_NOOP("REntity", "Line 1 End"), QT_TRANSLATE_NOOP("REntity", "X"), true);
-//    RDimAngular3PEntity::PropertyExtensionLine1EndY.generateId(typeid(RDimAngular3PEntity), QT_TRANSLATE_NOOP("REntity", "Line 1 End"), QT_TRANSLATE_NOOP("REntity", "Y"), true);
-//    RDimAngular3PEntity::PropertyExtensionLine1EndZ.generateId(typeid(RDimAngular3PEntity), QT_TRANSLATE_NOOP("REntity", "Line 1 End"), QT_TRANSLATE_NOOP("REntity", "Z"), true);
+//    RDimAngular3PEntity::PropertyExtensionLine1EndX.generateId(RDimAngular3PEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Line 1 End"), QT_TRANSLATE_NOOP("REntity", "X"), true);
+//    RDimAngular3PEntity::PropertyExtensionLine1EndY.generateId(RDimAngular3PEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Line 1 End"), QT_TRANSLATE_NOOP("REntity", "Y"), true);
+//    RDimAngular3PEntity::PropertyExtensionLine1EndZ.generateId(RDimAngular3PEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Line 1 End"), QT_TRANSLATE_NOOP("REntity", "Z"), true);
 
-    RDimAngular3PEntity::PropertyExtensionLine2EndX.generateId(typeid(RDimAngular3PEntity), RDimAngularEntity::PropertyExtensionLine2EndX);
-    RDimAngular3PEntity::PropertyExtensionLine2EndY.generateId(typeid(RDimAngular3PEntity), RDimAngularEntity::PropertyExtensionLine2EndY);
-    RDimAngular3PEntity::PropertyExtensionLine2EndZ.generateId(typeid(RDimAngular3PEntity), RDimAngularEntity::PropertyExtensionLine2EndZ);
+    RDimAngular3PEntity::PropertyExtensionLine2EndX.generateId(RDimAngular3PEntity::getRtti(), RDimAngularEntity::PropertyExtensionLine2EndX);
+    RDimAngular3PEntity::PropertyExtensionLine2EndY.generateId(RDimAngular3PEntity::getRtti(), RDimAngularEntity::PropertyExtensionLine2EndY);
+    RDimAngular3PEntity::PropertyExtensionLine2EndZ.generateId(RDimAngular3PEntity::getRtti(), RDimAngularEntity::PropertyExtensionLine2EndZ);
 
-//    RDimAngular3PEntity::PropertyDimArcPositionX.generateId(typeid(RDimAngular3PEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
-//    RDimAngular3PEntity::PropertyDimArcPositionY.generateId(typeid(RDimAngular3PEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
-//    RDimAngular3PEntity::PropertyDimArcPositionZ.generateId(typeid(RDimAngular3PEntity), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
+//    RDimAngular3PEntity::PropertyDimArcPositionX.generateId(RDimAngular3PEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
+//    RDimAngular3PEntity::PropertyDimArcPositionY.generateId(RDimAngular3PEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
+//    RDimAngular3PEntity::PropertyDimArcPositionZ.generateId(RDimAngular3PEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Dimension Arc"), QT_TRANSLATE_NOOP("REntity", "Z"), true, RPropertyAttributes::Geometry);
 
-    RDimAngular3PEntity::PropertyDimArcPositionX.generateId(typeid(RDimAngular3PEntity), RDimAngularEntity::PropertyDimArcPositionX);
-    RDimAngular3PEntity::PropertyDimArcPositionY.generateId(typeid(RDimAngular3PEntity), RDimAngularEntity::PropertyDimArcPositionY);
-    RDimAngular3PEntity::PropertyDimArcPositionZ.generateId(typeid(RDimAngular3PEntity), RDimAngularEntity::PropertyDimArcPositionZ);
+    RDimAngular3PEntity::PropertyDimArcPositionX.generateId(RDimAngular3PEntity::getRtti(), RDimAngularEntity::PropertyDimArcPositionX);
+    RDimAngular3PEntity::PropertyDimArcPositionY.generateId(RDimAngular3PEntity::getRtti(), RDimAngularEntity::PropertyDimArcPositionY);
+    RDimAngular3PEntity::PropertyDimArcPositionZ.generateId(RDimAngular3PEntity::getRtti(), RDimAngularEntity::PropertyDimArcPositionZ);
 }
 
 bool RDimAngular3PEntity::setProperty(RPropertyTypeId propertyTypeId,

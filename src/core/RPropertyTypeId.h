@@ -92,23 +92,25 @@ public:
     /**
      * \nonscriptable
      */
-    void generateId(const std::type_info& classInfo,
+    void generateId(RS::EntityType type,
         const QString& groupTitle, const QString& title, bool forceNew = false,
         RPropertyAttributes::Options options = RPropertyAttributes::NoOptions);
-    /**
-     * \nonscriptable
-     */
-    void generateId(const std::type_info& classInfo,  const RPropertyTypeId& other);
 
     /**
      * \nonscriptable
      */
-    static QSet<RPropertyTypeId> getPropertyTypeIds(const std::type_info& classInfo, RPropertyAttributes::Option = RPropertyAttributes::NoOptions);
+    void generateId(RS::EntityType type, const RPropertyTypeId& other);
+
     /**
      * \nonscriptable
      */
-    static bool hasPropertyType(const std::type_info& classInfo,
-            RPropertyTypeId propertyTypeId);
+    static QSet<RPropertyTypeId> getPropertyTypeIds(RS::EntityType type, RPropertyAttributes::Option = RPropertyAttributes::NoOptions);
+
+    /**
+     * \nonscriptable
+     */
+    static bool hasPropertyType(RS::EntityType type, RPropertyTypeId propertyTypeId);
+
     QString getPropertyGroupTitle() const;
     QString getPropertyTitle() const;
     static RPropertyTypeId getPropertyTypeId(const QString& groupTitle, const QString& title);
@@ -130,10 +132,10 @@ private:
     static long int counter;
 
     // maps class ID to set of property IDs:
-    static QMap<QString, QSet<RPropertyTypeId> > propertyTypeByObjectMap;
+    static QMap<RS::EntityType, QSet<RPropertyTypeId> > propertyTypeByObjectMap;
 
     // maps class ID / option combinations to set of property IDs:
-    static QMap<QPair<QString, RPropertyAttributes::Option>, QSet<RPropertyTypeId> > propertyTypeByObjectOptionMap;
+    static QMap<QPair<RS::EntityType, RPropertyAttributes::Option>, QSet<RPropertyTypeId> > propertyTypeByObjectOptionMap;
 
     // maps property type IDs to group title / title:
     static QMap<long int, QPair<QString, QString> > idToTitleMap;

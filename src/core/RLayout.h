@@ -158,6 +158,10 @@ public:
 
     static void init();
 
+    static RS::EntityType getRtti() {
+        return RS::ObjectLayout;
+    }
+
     virtual RS::EntityType getType() const {
         return RS::ObjectLayout;
     }

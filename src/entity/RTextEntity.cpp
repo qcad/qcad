@@ -61,38 +61,38 @@ RTextEntity::~RTextEntity() {
 }
 
 void RTextEntity::init() {
-    RTextEntity::PropertyCustom.generateId(typeid(RTextEntity), RObject::PropertyCustom);
-    RTextEntity::PropertyHandle.generateId(typeid(RTextEntity), RObject::PropertyHandle);
-    RTextEntity::PropertyProtected.generateId(typeid(RTextEntity), RObject::PropertyProtected);
-    RTextEntity::PropertyWorkingSet.generateId(typeid(RTextEntity), RObject::PropertyWorkingSet);
-    RTextEntity::PropertyType.generateId(typeid(RTextEntity), REntity::PropertyType);
-    RTextEntity::PropertyBlock.generateId(typeid(RTextEntity), REntity::PropertyBlock);
-    RTextEntity::PropertyLayer.generateId(typeid(RTextEntity), REntity::PropertyLayer);
-    RTextEntity::PropertyLinetype.generateId(typeid(RTextEntity), REntity::PropertyLinetype);
-    RTextEntity::PropertyLinetypeScale.generateId(typeid(RTextEntity), REntity::PropertyLinetypeScale);
-    RTextEntity::PropertyLineweight.generateId(typeid(RTextEntity), REntity::PropertyLineweight);
-    RTextEntity::PropertyColor.generateId(typeid(RTextEntity), REntity::PropertyColor);
-    RTextEntity::PropertyDisplayedColor.generateId(typeid(RTextEntity), REntity::PropertyDisplayedColor);
-    RTextEntity::PropertyDrawOrder.generateId(typeid(RTextEntity), REntity::PropertyDrawOrder);
+    RTextEntity::PropertyCustom.generateId(RTextEntity::getRtti(), RObject::PropertyCustom);
+    RTextEntity::PropertyHandle.generateId(RTextEntity::getRtti(), RObject::PropertyHandle);
+    RTextEntity::PropertyProtected.generateId(RTextEntity::getRtti(), RObject::PropertyProtected);
+    RTextEntity::PropertyWorkingSet.generateId(RTextEntity::getRtti(), RObject::PropertyWorkingSet);
+    RTextEntity::PropertyType.generateId(RTextEntity::getRtti(), REntity::PropertyType);
+    RTextEntity::PropertyBlock.generateId(RTextEntity::getRtti(), REntity::PropertyBlock);
+    RTextEntity::PropertyLayer.generateId(RTextEntity::getRtti(), REntity::PropertyLayer);
+    RTextEntity::PropertyLinetype.generateId(RTextEntity::getRtti(), REntity::PropertyLinetype);
+    RTextEntity::PropertyLinetypeScale.generateId(RTextEntity::getRtti(), REntity::PropertyLinetypeScale);
+    RTextEntity::PropertyLineweight.generateId(RTextEntity::getRtti(), REntity::PropertyLineweight);
+    RTextEntity::PropertyColor.generateId(RTextEntity::getRtti(), REntity::PropertyColor);
+    RTextEntity::PropertyDisplayedColor.generateId(RTextEntity::getRtti(), REntity::PropertyDisplayedColor);
+    RTextEntity::PropertyDrawOrder.generateId(RTextEntity::getRtti(), REntity::PropertyDrawOrder);
 
-    RTextEntity::PropertySimple.generateId(typeid(RTextEntity), RTextBasedEntity::PropertySimple);
-    RTextEntity::PropertyPositionX.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyPositionX);
-    RTextEntity::PropertyPositionY.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyPositionY);
-    RTextEntity::PropertyPositionZ.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyPositionZ);
-    RTextEntity::PropertyText.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyText);
-    RTextEntity::PropertyPlainText.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyPlainText);
-    RTextEntity::PropertyFontName.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyFontName);
-    RTextEntity::PropertyHeight.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyHeight);
-    RTextEntity::PropertyWidth.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyWidth);
-    RTextEntity::PropertyAngle.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyAngle);
-    RTextEntity::PropertyXScale.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyXScale);
-    RTextEntity::PropertyBold.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyBold);
-    RTextEntity::PropertyItalic.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyItalic);
-    RTextEntity::PropertyLineSpacingFactor.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyLineSpacingFactor);
-    RTextEntity::PropertyHAlign.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyHAlign);
-    RTextEntity::PropertyVAlign.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyVAlign);
-    RTextEntity::PropertyBackward.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyBackward);
-    RTextEntity::PropertyUpsideDown.generateId(typeid(RTextEntity), RTextBasedEntity::PropertyUpsideDown);
+    RTextEntity::PropertySimple.generateId(RTextEntity::getRtti(), RTextBasedEntity::PropertySimple);
+    RTextEntity::PropertyPositionX.generateId(RTextEntity::getRtti(), RTextBasedEntity::PropertyPositionX);
+    RTextEntity::PropertyPositionY.generateId(RTextEntity::getRtti(), RTextBasedEntity::PropertyPositionY);
+    RTextEntity::PropertyPositionZ.generateId(RTextEntity::getRtti(), RTextBasedEntity::PropertyPositionZ);
+    RTextEntity::PropertyText.generateId(RTextEntity::getRtti(), RTextBasedEntity::PropertyText);
+    RTextEntity::PropertyPlainText.generateId(RTextEntity::getRtti(), RTextBasedEntity::PropertyPlainText);
+    RTextEntity::PropertyFontName.generateId(RTextEntity::getRtti(), RTextBasedEntity::PropertyFontName);
+    RTextEntity::PropertyHeight.generateId(RTextEntity::getRtti(), RTextBasedEntity::PropertyHeight);
+    RTextEntity::PropertyWidth.generateId(RTextEntity::getRtti(), RTextBasedEntity::PropertyWidth);
+    RTextEntity::PropertyAngle.generateId(RTextEntity::getRtti(), RTextBasedEntity::PropertyAngle);
+    RTextEntity::PropertyXScale.generateId(RTextEntity::getRtti(), RTextBasedEntity::PropertyXScale);
+    RTextEntity::PropertyBold.generateId(RTextEntity::getRtti(), RTextBasedEntity::PropertyBold);
+    RTextEntity::PropertyItalic.generateId(RTextEntity::getRtti(), RTextBasedEntity::PropertyItalic);
+    RTextEntity::PropertyLineSpacingFactor.generateId(RTextEntity::getRtti(), RTextBasedEntity::PropertyLineSpacingFactor);
+    RTextEntity::PropertyHAlign.generateId(RTextEntity::getRtti(), RTextBasedEntity::PropertyHAlign);
+    RTextEntity::PropertyVAlign.generateId(RTextEntity::getRtti(), RTextBasedEntity::PropertyVAlign);
+    RTextEntity::PropertyBackward.generateId(RTextEntity::getRtti(), RTextBasedEntity::PropertyBackward);
+    RTextEntity::PropertyUpsideDown.generateId(RTextEntity::getRtti(), RTextBasedEntity::PropertyUpsideDown);
 }
 
 void RTextEntity::print(QDebug dbg) const {

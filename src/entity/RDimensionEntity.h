@@ -111,8 +111,12 @@ public:
 
     static void init();
 
+    static RS::EntityType getRtti() {
+        return RS::EntityDimension;
+    }
+
     static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
-        return RPropertyTypeId::getPropertyTypeIds(typeid(RDimensionEntity));
+        return RPropertyTypeId::getPropertyTypeIds(RDimensionEntity::getRtti());
     }
 
     virtual bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,

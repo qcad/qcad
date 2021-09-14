@@ -97,10 +97,14 @@ public:
     REntity(const REntity& other);
     virtual ~REntity();
 
+    static RS::EntityType getRtti() {
+        return RS::EntityUnknown;
+    }
+
     static void init();
 
     static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
-        return RPropertyTypeId::getPropertyTypeIds(typeid(REntity));
+        return RPropertyTypeId::getPropertyTypeIds(REntity::getRtti());
     }
 
     void setDocument(RDocument* document) {

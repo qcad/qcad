@@ -65,13 +65,13 @@ void RObject::setDocument(RDocument* document) {
 }
 
 void RObject::init() {
-    RObject::PropertyCustom.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Custom"));
-    RObject::PropertyType.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Type"));
-    RObject::PropertyHandle.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Handle"));
-    RObject::PropertyProtected.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Protected"));
-    RObject::PropertySelected.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Selected"));
-    RObject::PropertyInvisible.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Invisible"));
-    RObject::PropertyWorkingSet.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Working Set"));
+    RObject::PropertyCustom.generateId(RObject::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Custom"));
+    RObject::PropertyType.generateId(RObject::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Type"));
+    RObject::PropertyHandle.generateId(RObject::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Handle"));
+    RObject::PropertyProtected.generateId(RObject::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Protected"));
+    RObject::PropertySelected.generateId(RObject::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Selected"));
+    RObject::PropertyInvisible.generateId(RObject::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Invisible"));
+    RObject::PropertyWorkingSet.generateId(RObject::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Working Set"));
 }
 
 void RObject::setUndone(bool on) {
@@ -103,6 +103,35 @@ void RObject::setUndone(bool on) {
     }
 }
 
+//QList<RProperty> RObject::getAllProperties(bool showOnRequest) const {
+//    Q_UNUSED(showOnRequest)
+
+//    QList<RProperty> ret;
+
+//    ret << RProperty(RObject::PropertyType, getType(), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+//    ret << RProperty(RObject::PropertyHandle, getHandle(), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+
+//    if (customProperties.contains("QCAD")) {
+//        const QVariantMap& vm = customProperties["QCAD"];
+
+//        //QVariantMap::const_iterator it;
+//        //for (it=vm.constBegin(); it!=vm.constEnd(); it++) {
+//        QStringList propertyKeys = vm.keys();
+//        for (int i=0; i<propertyKeys.length(); i++) {
+//            const QString& propertyKey = propertyKeys[i];
+//            const QVariant& v = vm[propertyKey];
+//            if (v.type()==QVariant::Int) {
+//                ret << RProperty(RPropertyTypeId("QCAD", propertyKey), v, RPropertyAttributes(RPropertyAttributes::Custom|RPropertyAttributes::Integer));
+//            }
+//            else {
+//                ret << RProperty(RPropertyTypeId("QCAD", propertyKey), v, RPropertyAttributes(RPropertyAttributes::Custom));
+//            }
+//        }
+//    }
+
+//    return ret;
+//}
+
 QPair<QVariant, RPropertyAttributes> RObject::getProperty(RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes, bool showOnRequest) {
     Q_UNUSED(humanReadable)
     Q_UNUSED(noAttributes)
@@ -131,16 +160,14 @@ QPair<QVariant, RPropertyAttributes> RObject::getProperty(RPropertyTypeId& prope
         QString appId = propertyTypeId.getCustomPropertyTitle();
         QString name = propertyTypeId.getCustomPropertyName();
         if (customProperties.contains(appId)) {
-            QVariantMap vm = customProperties.value(appId);
+            QVariantMap& vm = customProperties[appId];
             if (vm.contains(name)) {
-                RPropertyAttributes attr;
                 if  (vm.value(name).type()==QVariant::Int) {
-                    attr = RPropertyAttributes(RPropertyAttributes::Custom|RPropertyAttributes::Integer);
+                    return qMakePair(vm.value(name), RPropertyAttributes(RPropertyAttributes::Custom|RPropertyAttributes::Integer));
                 }
                 else {
-                    attr = RPropertyAttributes(RPropertyAttributes::Custom);
+                    return qMakePair(vm.value(name), RPropertyAttributes(RPropertyAttributes::Custom));
                 }
-                return qMakePair(vm.value(name), attr);
             }
         }
     }
@@ -422,7 +449,7 @@ bool RObject::setMember(QList<double>& variable, const QVariant& value, bool con
  *      a property title using \ref getPropertyGroupTitle and \ref getPropertyTitle.
  */
 QSet<RPropertyTypeId> RObject::getPropertyTypeIds(RPropertyAttributes::Option option) const {
-    QSet<RPropertyTypeId> ret = RPropertyTypeId::getPropertyTypeIds(typeid(*this), option);
+    QSet<RPropertyTypeId> ret = RPropertyTypeId::getPropertyTypeIds(getType(), option);
     if (option==RPropertyAttributes::NoOptions) {
         ret.unite(getCustomPropertyTypeIds());
     }

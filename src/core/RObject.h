@@ -98,7 +98,13 @@ public:
 
     static void init();
 
-    virtual RS::EntityType getType() const = 0;
+    static RS::EntityType getRtti() {
+        return RS::ObjectUnknown;
+    }
+
+    virtual RS::EntityType getType() const {
+        return RS::ObjectUnknown;
+    }
 
     virtual RObject* clone() const = 0;
 
@@ -218,7 +224,7 @@ public:
      *      false otherwise.
      */
     virtual bool hasPropertyType(RPropertyTypeId propertyTypeId) {
-        return RPropertyTypeId::hasPropertyType(typeid(*this), propertyTypeId);
+        return RPropertyTypeId::hasPropertyType(getType(), propertyTypeId);
     }
 
     bool hasCustomProperties() const;

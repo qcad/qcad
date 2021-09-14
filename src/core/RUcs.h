@@ -73,6 +73,10 @@ public:
 
     static void init();
 
+    static RS::EntityType getRtti() {
+        return RS::ObjectUcs;
+    }
+
     virtual RS::EntityType getType() const {
         return RS::ObjectUcs;
     }

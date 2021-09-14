@@ -62,33 +62,33 @@ void RXLineEntity::setShape(const RXLine& l) {
 }
 
 void RXLineEntity::init() {
-    RXLineEntity::PropertyCustom.generateId(typeid(RXLineEntity), RObject::PropertyCustom);
-    RXLineEntity::PropertyHandle.generateId(typeid(RXLineEntity), RObject::PropertyHandle);
-    RXLineEntity::PropertyProtected.generateId(typeid(RXLineEntity), RObject::PropertyProtected);
-    RXLineEntity::PropertyWorkingSet.generateId(typeid(RXLineEntity), RObject::PropertyWorkingSet);
-    RXLineEntity::PropertyType.generateId(typeid(RXLineEntity), REntity::PropertyType);
-    RXLineEntity::PropertyBlock.generateId(typeid(RXLineEntity), REntity::PropertyBlock);
-    RXLineEntity::PropertyLayer.generateId(typeid(RXLineEntity), REntity::PropertyLayer);
-    RXLineEntity::PropertyLinetype.generateId(typeid(RXLineEntity), REntity::PropertyLinetype);
-    RXLineEntity::PropertyLinetypeScale.generateId(typeid(RXLineEntity), REntity::PropertyLinetypeScale);
-    RXLineEntity::PropertyLineweight.generateId(typeid(RXLineEntity), REntity::PropertyLineweight);
-    RXLineEntity::PropertyColor.generateId(typeid(RXLineEntity), REntity::PropertyColor);
-    RXLineEntity::PropertyDisplayedColor.generateId(typeid(RXLineEntity), REntity::PropertyDisplayedColor);
-    RXLineEntity::PropertyDrawOrder.generateId(typeid(RXLineEntity), REntity::PropertyDrawOrder);
+    RXLineEntity::PropertyCustom.generateId(RXLineEntity::getRtti(), RObject::PropertyCustom);
+    RXLineEntity::PropertyHandle.generateId(RXLineEntity::getRtti(), RObject::PropertyHandle);
+    RXLineEntity::PropertyProtected.generateId(RXLineEntity::getRtti(), RObject::PropertyProtected);
+    RXLineEntity::PropertyWorkingSet.generateId(RXLineEntity::getRtti(), RObject::PropertyWorkingSet);
+    RXLineEntity::PropertyType.generateId(RXLineEntity::getRtti(), REntity::PropertyType);
+    RXLineEntity::PropertyBlock.generateId(RXLineEntity::getRtti(), REntity::PropertyBlock);
+    RXLineEntity::PropertyLayer.generateId(RXLineEntity::getRtti(), REntity::PropertyLayer);
+    RXLineEntity::PropertyLinetype.generateId(RXLineEntity::getRtti(), REntity::PropertyLinetype);
+    RXLineEntity::PropertyLinetypeScale.generateId(RXLineEntity::getRtti(), REntity::PropertyLinetypeScale);
+    RXLineEntity::PropertyLineweight.generateId(RXLineEntity::getRtti(), REntity::PropertyLineweight);
+    RXLineEntity::PropertyColor.generateId(RXLineEntity::getRtti(), REntity::PropertyColor);
+    RXLineEntity::PropertyDisplayedColor.generateId(RXLineEntity::getRtti(), REntity::PropertyDisplayedColor);
+    RXLineEntity::PropertyDrawOrder.generateId(RXLineEntity::getRtti(), REntity::PropertyDrawOrder);
 
-    RXLineEntity::PropertyBasePointX.generateId(typeid(RXLineEntity), QT_TRANSLATE_NOOP("REntity", "Base Point"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RXLineEntity::PropertyBasePointY.generateId(typeid(RXLineEntity), QT_TRANSLATE_NOOP("REntity", "Base Point"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RXLineEntity::PropertyBasePointZ.generateId(typeid(RXLineEntity), QT_TRANSLATE_NOOP("REntity", "Base Point"), QT_TRANSLATE_NOOP("REntity", "Z"));
-    RXLineEntity::PropertySecondPointX.generateId(typeid(RXLineEntity), QT_TRANSLATE_NOOP("REntity", "Second Point"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RXLineEntity::PropertySecondPointY.generateId(typeid(RXLineEntity), QT_TRANSLATE_NOOP("REntity", "Second Point"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RXLineEntity::PropertySecondPointZ.generateId(typeid(RXLineEntity), QT_TRANSLATE_NOOP("REntity", "Second Point"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RXLineEntity::PropertyBasePointX.generateId(RXLineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Base Point"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RXLineEntity::PropertyBasePointY.generateId(RXLineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Base Point"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RXLineEntity::PropertyBasePointZ.generateId(RXLineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Base Point"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RXLineEntity::PropertySecondPointX.generateId(RXLineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Second Point"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RXLineEntity::PropertySecondPointY.generateId(RXLineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Second Point"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RXLineEntity::PropertySecondPointZ.generateId(RXLineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Second Point"), QT_TRANSLATE_NOOP("REntity", "Z"));
 
-    RXLineEntity::PropertyDirectionX.generateId(typeid(RXLineEntity), QT_TRANSLATE_NOOP("REntity", "Direction Vector"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RXLineEntity::PropertyDirectionY.generateId(typeid(RXLineEntity), QT_TRANSLATE_NOOP("REntity", "Direction Vector"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RXLineEntity::PropertyDirectionZ.generateId(typeid(RXLineEntity), QT_TRANSLATE_NOOP("REntity", "Direction Vector"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RXLineEntity::PropertyDirectionX.generateId(RXLineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Direction Vector"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RXLineEntity::PropertyDirectionY.generateId(RXLineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Direction Vector"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RXLineEntity::PropertyDirectionZ.generateId(RXLineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Direction Vector"), QT_TRANSLATE_NOOP("REntity", "Z"));
 
-    RXLineEntity::PropertyAngle.generateId(typeid(RXLineEntity), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
-    RXLineEntity::PropertyFixedAngle.generateId(typeid(RXLineEntity), "", QT_TRANSLATE_NOOP("REntity", "Fixed Angle"));
+    RXLineEntity::PropertyAngle.generateId(RXLineEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
+    RXLineEntity::PropertyFixedAngle.generateId(RXLineEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Fixed Angle"));
 }
 
 bool RXLineEntity::setProperty(RPropertyTypeId propertyTypeId,

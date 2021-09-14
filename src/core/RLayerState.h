@@ -52,6 +52,10 @@ public:
 
     static void init();
 
+    static RS::EntityType getRtti() {
+        return RS::ObjectLayerState;
+    }
+
     virtual RS::EntityType getType() const {
         return RS::ObjectLayerState;
     }

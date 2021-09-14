@@ -71,8 +71,12 @@ public:
 
     static void init();
 
+    static RS::EntityType getRtti() {
+        return RS::EntityTolerance;
+    }
+
     static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
-        return RPropertyTypeId::getPropertyTypeIds(typeid(RToleranceEntity));
+        return RPropertyTypeId::getPropertyTypeIds(RToleranceEntity::getRtti());
     }
 
     virtual RToleranceEntity* clone() const {

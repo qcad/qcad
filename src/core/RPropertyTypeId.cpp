@@ -26,8 +26,8 @@ long int RPropertyTypeId::counter = 0;
 const long int RPropertyTypeId::INVALID_ID = -1;
 //const QString RPropertyTypeId::blockAttributePrefix = "[[QCAD BLOCK ATTRIBUTE]]";
 
-QMap<QString, QSet<RPropertyTypeId> > RPropertyTypeId::propertyTypeByObjectMap;
-QMap<QPair<QString, RPropertyAttributes::Option>, QSet<RPropertyTypeId> > RPropertyTypeId::propertyTypeByObjectOptionMap;
+QMap<RS::EntityType, QSet<RPropertyTypeId> > RPropertyTypeId::propertyTypeByObjectMap;
+QMap<QPair<RS::EntityType, RPropertyAttributes::Option>, QSet<RPropertyTypeId> > RPropertyTypeId::propertyTypeByObjectOptionMap;
 QMap<long int, QPair<QString, QString> > RPropertyTypeId::idToTitleMap;
 QMap<QString, QMap<QString, RPropertyTypeId> > RPropertyTypeId::titleToIdMap;
 
@@ -55,7 +55,7 @@ RPropertyTypeId::RPropertyTypeId(long int id) :
     id(id), options(false) {
 }
 
-void RPropertyTypeId::generateId(const std::type_info& classInfo,
+void RPropertyTypeId::generateId(RS::EntityType type,
         const QString& groupTitle, const QString& title, bool forceNew, RPropertyAttributes::Options options) {
 
     if (cachedOptionList.isEmpty()) {
@@ -65,23 +65,23 @@ void RPropertyTypeId::generateId(const std::type_info& classInfo,
     }
 
     if (id!=-1) {
-        qWarning() << "RPropertyTypeId::generateId: property already initialized: " << classInfo.name() << ":" << groupTitle << ":" << title;
+        qWarning() << "RPropertyTypeId::generateId: property already initialized: " << type << ":" << groupTitle << ":" << title;
         return;
     }
 
     if (!forceNew && getPropertyTypeId(groupTitle, title).isValid()) {
         RPropertyTypeId pid = getPropertyTypeId(groupTitle, title);
         pid.options = options;
-        generateId(classInfo, pid);
+        generateId(type, pid);
         return;
     }
 
     id = counter++;
     this->options = options;
-    propertyTypeByObjectMap[classInfo.name()].insert(*this);
+    propertyTypeByObjectMap[type].insert(*this);
     if (this->options!=RPropertyAttributes::NoOptions) {
         for (int i=0; i<cachedOptionList.length(); i++) {
-            propertyTypeByObjectOptionMap[QPair<QString, RPropertyAttributes::Option>(classInfo.name(), cachedOptionList[i])].insert(*this);
+            propertyTypeByObjectOptionMap[QPair<RS::EntityType, RPropertyAttributes::Option>(type, cachedOptionList[i])].insert(*this);
         }
     }
     idToTitleMap[id].first = groupTitle;
@@ -100,8 +100,7 @@ void RPropertyTypeId::generateId(const std::type_info& classInfo,
 //    }
 }
 
-void RPropertyTypeId::generateId(const std::type_info& classInfo,
-        const RPropertyTypeId& other) {
+void RPropertyTypeId::generateId(RS::EntityType type, const RPropertyTypeId& other) {
     if (id!=-1) {
         qWarning("RPropertyTypeId::generateId: property already initialized");
         return;
@@ -109,10 +108,10 @@ void RPropertyTypeId::generateId(const std::type_info& classInfo,
 
     id = other.id;
     options = other.options;
-    propertyTypeByObjectMap[classInfo.name()].insert(*this);
+    propertyTypeByObjectMap[type].insert(*this);
     if (options!=RPropertyAttributes::NoOptions) {
         for (int i=0; i<cachedOptionList.length(); i++) {
-            propertyTypeByObjectOptionMap[QPair<QString, RPropertyAttributes::Option>(classInfo.name(), cachedOptionList[i])].insert(*this);
+            propertyTypeByObjectOptionMap[QPair<RS::EntityType, RPropertyAttributes::Option>(type, cachedOptionList[i])].insert(*this);
         }
     }
 }
@@ -251,13 +250,12 @@ void RPropertyTypeId::setCustomPropertyName(const QString& n) {
 /**
  * \retval true: if the given class has the given property
  */
-bool RPropertyTypeId::hasPropertyType(const std::type_info& classInfo,
-        RPropertyTypeId propertyTypeId) {
+bool RPropertyTypeId::hasPropertyType(RS::EntityType type, RPropertyTypeId propertyTypeId) {
 
-    if (!propertyTypeByObjectMap.contains(classInfo.name())) {
+    if (!propertyTypeByObjectMap.contains(type)) {
         return false;
     }
-    return propertyTypeByObjectMap[classInfo.name()].contains(propertyTypeId);
+    return propertyTypeByObjectMap[type].contains(propertyTypeId);
 }
 
 /**
@@ -270,23 +268,23 @@ bool RPropertyTypeId::hasPropertyType(const std::type_info& classInfo,
  * \return a set of property type ID pointers or an empty set if
  * the class has no registered property types.
  */
-QSet<RPropertyTypeId> RPropertyTypeId::getPropertyTypeIds(const std::type_info& classInfo, RPropertyAttributes::Option option) {
+QSet<RPropertyTypeId> RPropertyTypeId::getPropertyTypeIds(RS::EntityType type, RPropertyAttributes::Option option) {
     if (option!=RPropertyAttributes::NoOptions) {
-        QPair<QString, RPropertyAttributes::Option> pair(classInfo.name(), option);
+        QPair<RS::EntityType, RPropertyAttributes::Option> pair(type, option);
         if (propertyTypeByObjectOptionMap.contains(pair)) {
             return propertyTypeByObjectOptionMap[pair];
         }
         qWarning() << QString("RPropertyIdRegistry::getPropertyTypeIds: "
                               "no properties with option %1 registered for class %2")
-                      .arg(option).arg(classInfo.name());
+                      .arg(option).arg(type);
     }
     else {
-        if (propertyTypeByObjectMap.contains(classInfo.name())) {
-            return propertyTypeByObjectMap[classInfo.name()];
+        if (propertyTypeByObjectMap.contains(type)) {
+            return propertyTypeByObjectMap[type];
         }
         qWarning() << QString("RPropertyIdRegistry::getPropertyTypeIds: "
                               "no properties registered for class %1")
-                      .arg(classInfo.name());
+                      .arg(type);
     }
 
     return QSet<RPropertyTypeId> ();

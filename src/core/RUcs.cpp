@@ -35,19 +35,19 @@ RPropertyTypeId RUcs::PropertyYAxisDirectionY;
 RPropertyTypeId RUcs::PropertyYAxisDirectionZ;
 
 void RUcs::init() {
-    RUcs::PropertyName.generateId(typeid(RUcs), "", "Name");
+    RUcs::PropertyName.generateId(RUcs::getRtti(), "", "Name");
 
-    RUcs::PropertyOriginX.generateId(typeid(RUcs), "Origin", "X");
-    RUcs::PropertyOriginY.generateId(typeid(RUcs), "Origin", "Y");
-    RUcs::PropertyOriginZ.generateId(typeid(RUcs), "Origin", "Z");
+    RUcs::PropertyOriginX.generateId(RUcs::getRtti(), "Origin", "X");
+    RUcs::PropertyOriginY.generateId(RUcs::getRtti(), "Origin", "Y");
+    RUcs::PropertyOriginZ.generateId(RUcs::getRtti(), "Origin", "Z");
 
-    RUcs::PropertyXAxisDirectionX.generateId(typeid(RUcs), "X Axis", "X");
-    RUcs::PropertyXAxisDirectionY.generateId(typeid(RUcs), "X Axis", "Y");
-    RUcs::PropertyXAxisDirectionZ.generateId(typeid(RUcs), "X Axis", "Z");
+    RUcs::PropertyXAxisDirectionX.generateId(RUcs::getRtti(), "X Axis", "X");
+    RUcs::PropertyXAxisDirectionY.generateId(RUcs::getRtti(), "X Axis", "Y");
+    RUcs::PropertyXAxisDirectionZ.generateId(RUcs::getRtti(), "X Axis", "Z");
 
-    RUcs::PropertyYAxisDirectionX.generateId(typeid(RUcs), "Y Axis", "X");
-    RUcs::PropertyYAxisDirectionY.generateId(typeid(RUcs), "Y Axis", "Y");
-    RUcs::PropertyYAxisDirectionZ.generateId(typeid(RUcs), "Y Axis", "Z");
+    RUcs::PropertyYAxisDirectionX.generateId(RUcs::getRtti(), "Y Axis", "X");
+    RUcs::PropertyYAxisDirectionY.generateId(RUcs::getRtti(), "Y Axis", "Y");
+    RUcs::PropertyYAxisDirectionZ.generateId(RUcs::getRtti(), "Y Axis", "Z");
 }
 
 bool RUcs::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, RTransaction* transaction) {

@@ -89,44 +89,44 @@ void RPolylineEntity::setShape(const RPolyline& l) {
 }
 
 void RPolylineEntity::init() {
-    RPolylineEntity::PropertyCustom.generateId(typeid(RPolylineEntity), RObject::PropertyCustom);
-    RPolylineEntity::PropertyHandle.generateId(typeid(RPolylineEntity), RObject::PropertyHandle);
-    RPolylineEntity::PropertyProtected.generateId(typeid(RPolylineEntity), RObject::PropertyProtected);
-    RPolylineEntity::PropertyWorkingSet.generateId(typeid(RPolylineEntity), RObject::PropertyWorkingSet);
-    RPolylineEntity::PropertyType.generateId(typeid(RPolylineEntity), REntity::PropertyType);
-    RPolylineEntity::PropertyBlock.generateId(typeid(RPolylineEntity), REntity::PropertyBlock);
-    RPolylineEntity::PropertyLayer.generateId(typeid(RPolylineEntity), REntity::PropertyLayer);
-    RPolylineEntity::PropertyLinetype.generateId(typeid(RPolylineEntity), REntity::PropertyLinetype);
-    RPolylineEntity::PropertyLinetypeScale.generateId(typeid(RPolylineEntity), REntity::PropertyLinetypeScale);
-    RPolylineEntity::PropertyLineweight.generateId(typeid(RPolylineEntity), REntity::PropertyLineweight);
-    RPolylineEntity::PropertyColor.generateId(typeid(RPolylineEntity), REntity::PropertyColor);
-    RPolylineEntity::PropertyDisplayedColor.generateId(typeid(RPolylineEntity), REntity::PropertyDisplayedColor);
-    RPolylineEntity::PropertyDrawOrder.generateId(typeid(RPolylineEntity), REntity::PropertyDrawOrder);
+    RPolylineEntity::PropertyCustom.generateId(RPolylineEntity::getRtti(), RObject::PropertyCustom);
+    RPolylineEntity::PropertyHandle.generateId(RPolylineEntity::getRtti(), RObject::PropertyHandle);
+    RPolylineEntity::PropertyProtected.generateId(RPolylineEntity::getRtti(), RObject::PropertyProtected);
+    RPolylineEntity::PropertyWorkingSet.generateId(RPolylineEntity::getRtti(), RObject::PropertyWorkingSet);
+    RPolylineEntity::PropertyType.generateId(RPolylineEntity::getRtti(), REntity::PropertyType);
+    RPolylineEntity::PropertyBlock.generateId(RPolylineEntity::getRtti(), REntity::PropertyBlock);
+    RPolylineEntity::PropertyLayer.generateId(RPolylineEntity::getRtti(), REntity::PropertyLayer);
+    RPolylineEntity::PropertyLinetype.generateId(RPolylineEntity::getRtti(), REntity::PropertyLinetype);
+    RPolylineEntity::PropertyLinetypeScale.generateId(RPolylineEntity::getRtti(), REntity::PropertyLinetypeScale);
+    RPolylineEntity::PropertyLineweight.generateId(RPolylineEntity::getRtti(), REntity::PropertyLineweight);
+    RPolylineEntity::PropertyColor.generateId(RPolylineEntity::getRtti(), REntity::PropertyColor);
+    RPolylineEntity::PropertyDisplayedColor.generateId(RPolylineEntity::getRtti(), REntity::PropertyDisplayedColor);
+    RPolylineEntity::PropertyDrawOrder.generateId(RPolylineEntity::getRtti(), REntity::PropertyDrawOrder);
 
-    RPolylineEntity::PropertyPolylineGen.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Polyline Pattern"));
-    RPolylineEntity::PropertyClosed.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Closed"));
-    RPolylineEntity::PropertyVertexNX.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
-    RPolylineEntity::PropertyVertexNY.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
-    RPolylineEntity::PropertyVertexNZ.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
-    RPolylineEntity::PropertyBulgeN.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Bulge"), false, RPropertyAttributes::Geometry);
-    RPolylineEntity::PropertyAngleN.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Angle"));
+    RPolylineEntity::PropertyPolylineGen.generateId(RPolylineEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Polyline Pattern"));
+    RPolylineEntity::PropertyClosed.generateId(RPolylineEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Closed"));
+    RPolylineEntity::PropertyVertexNX.generateId(RPolylineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
+    RPolylineEntity::PropertyVertexNY.generateId(RPolylineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
+    RPolylineEntity::PropertyVertexNZ.generateId(RPolylineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
+    RPolylineEntity::PropertyBulgeN.generateId(RPolylineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Bulge"), false, RPropertyAttributes::Geometry);
+    RPolylineEntity::PropertyAngleN.generateId(RPolylineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Angle"));
 
-    RPolylineEntity::PropertyStartWidthN.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Start Width"));
-    RPolylineEntity::PropertyEndWidthN.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "End Width"));
+    RPolylineEntity::PropertyStartWidthN.generateId(RPolylineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Start Width"));
+    RPolylineEntity::PropertyEndWidthN.generateId(RPolylineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "End Width"));
 
-    RPolylineEntity::PropertyGlobalWidth.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Global Width"));
+    RPolylineEntity::PropertyGlobalWidth.generateId(RPolylineEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Global Width"));
 
-    RPolylineEntity::PropertyOrientation.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Orientation"));
-    RPolylineEntity::PropertyLength.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Length"));
-    RPolylineEntity::PropertyTotalLength.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Total Length"));
-    RPolylineEntity::PropertyArea.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Area"));
-    RPolylineEntity::PropertyTotalArea.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Total Area"));
+    RPolylineEntity::PropertyOrientation.generateId(RPolylineEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Orientation"));
+    RPolylineEntity::PropertyLength.generateId(RPolylineEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Length"));
+    RPolylineEntity::PropertyTotalLength.generateId(RPolylineEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Total Length"));
+    RPolylineEntity::PropertyArea.generateId(RPolylineEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Area"));
+    RPolylineEntity::PropertyTotalArea.generateId(RPolylineEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Total Area"));
 
-    RPolylineEntity::PropertyBaseAngle.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Base Angle"));
-    RPolylineEntity::PropertySize1.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Size 1"));
-    RPolylineEntity::PropertySize2.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Size 2"));
+    RPolylineEntity::PropertyBaseAngle.generateId(RPolylineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Base Angle"));
+    RPolylineEntity::PropertySize1.generateId(RPolylineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Size 1"));
+    RPolylineEntity::PropertySize2.generateId(RPolylineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Size 2"));
 
-    RPolylineEntity::PropertyElevation.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Global Z"));
+    RPolylineEntity::PropertyElevation.generateId(RPolylineEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Global Z"));
 }
 
 bool RPolylineEntity::setProperty(RPropertyTypeId propertyTypeId,

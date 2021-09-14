@@ -68,34 +68,34 @@ RHatchEntity* RHatchEntity::clone() const {
 }
 
 void RHatchEntity::init() {
-    RHatchEntity::PropertyCustom.generateId(typeid(RHatchEntity), RObject::PropertyCustom);
-    RHatchEntity::PropertyHandle.generateId(typeid(RHatchEntity), RObject::PropertyHandle);
-    RHatchEntity::PropertyProtected.generateId(typeid(RHatchEntity), RObject::PropertyProtected);
-    RHatchEntity::PropertyWorkingSet.generateId(typeid(RHatchEntity), RObject::PropertyWorkingSet);
-    RHatchEntity::PropertyType.generateId(typeid(RHatchEntity), REntity::PropertyType);
-    RHatchEntity::PropertyBlock.generateId(typeid(RHatchEntity), REntity::PropertyBlock);
-    RHatchEntity::PropertyLayer.generateId(typeid(RHatchEntity), REntity::PropertyLayer);
-    RHatchEntity::PropertyLinetype.generateId(typeid(RHatchEntity), REntity::PropertyLinetype);
-    RHatchEntity::PropertyLinetypeScale.generateId(typeid(RHatchEntity), REntity::PropertyLinetypeScale);
-    RHatchEntity::PropertyLineweight.generateId(typeid(RHatchEntity), REntity::PropertyLineweight);
-    RHatchEntity::PropertyColor.generateId(typeid(RHatchEntity), REntity::PropertyColor);
-    RHatchEntity::PropertyDisplayedColor.generateId(typeid(RHatchEntity), REntity::PropertyDisplayedColor);
-    RHatchEntity::PropertyDrawOrder.generateId(typeid(RHatchEntity), REntity::PropertyDrawOrder);
+    RHatchEntity::PropertyCustom.generateId(RHatchEntity::getRtti(), RObject::PropertyCustom);
+    RHatchEntity::PropertyHandle.generateId(RHatchEntity::getRtti(), RObject::PropertyHandle);
+    RHatchEntity::PropertyProtected.generateId(RHatchEntity::getRtti(), RObject::PropertyProtected);
+    RHatchEntity::PropertyWorkingSet.generateId(RHatchEntity::getRtti(), RObject::PropertyWorkingSet);
+    RHatchEntity::PropertyType.generateId(RHatchEntity::getRtti(), REntity::PropertyType);
+    RHatchEntity::PropertyBlock.generateId(RHatchEntity::getRtti(), REntity::PropertyBlock);
+    RHatchEntity::PropertyLayer.generateId(RHatchEntity::getRtti(), REntity::PropertyLayer);
+    RHatchEntity::PropertyLinetype.generateId(RHatchEntity::getRtti(), REntity::PropertyLinetype);
+    RHatchEntity::PropertyLinetypeScale.generateId(RHatchEntity::getRtti(), REntity::PropertyLinetypeScale);
+    RHatchEntity::PropertyLineweight.generateId(RHatchEntity::getRtti(), REntity::PropertyLineweight);
+    RHatchEntity::PropertyColor.generateId(RHatchEntity::getRtti(), REntity::PropertyColor);
+    RHatchEntity::PropertyDisplayedColor.generateId(RHatchEntity::getRtti(), REntity::PropertyDisplayedColor);
+    RHatchEntity::PropertyDrawOrder.generateId(RHatchEntity::getRtti(), REntity::PropertyDrawOrder);
 
-    RHatchEntity::PropertySolid.generateId(typeid(RHatchEntity), "", QT_TRANSLATE_NOOP("REntity", "Solid"));
-    RHatchEntity::PropertyTransparency.generateId(typeid(RHatchEntity), "", QT_TRANSLATE_NOOP("REntity", "Alpha"));
+    RHatchEntity::PropertySolid.generateId(RHatchEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Solid"));
+    RHatchEntity::PropertyTransparency.generateId(RHatchEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Alpha"));
 
-    RHatchEntity::PropertyPatternName.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Pattern"), QT_TRANSLATE_NOOP("REntity", "Name"));
-    RHatchEntity::PropertyEntityPattern.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Pattern"), QT_TRANSLATE_NOOP("REntity", "From Entity"));
-    RHatchEntity::PropertyAngle.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Pattern"), QT_TRANSLATE_NOOP("REntity", "Angle"), false, RPropertyAttributes::Geometry);
-    RHatchEntity::PropertyScaleFactor.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Pattern"), QT_TRANSLATE_NOOP("REntity", "Scale"), false, RPropertyAttributes::Geometry);
+    RHatchEntity::PropertyPatternName.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Pattern"), QT_TRANSLATE_NOOP("REntity", "Name"));
+    RHatchEntity::PropertyEntityPattern.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Pattern"), QT_TRANSLATE_NOOP("REntity", "From Entity"));
+    RHatchEntity::PropertyAngle.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Pattern"), QT_TRANSLATE_NOOP("REntity", "Angle"), false, RPropertyAttributes::Geometry);
+    RHatchEntity::PropertyScaleFactor.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Pattern"), QT_TRANSLATE_NOOP("REntity", "Scale"), false, RPropertyAttributes::Geometry);
 
-    RHatchEntity::PropertyOriginX.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Origin"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RHatchEntity::PropertyOriginY.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Origin"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RHatchEntity::PropertyOriginX.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Origin"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RHatchEntity::PropertyOriginY.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Origin"), QT_TRANSLATE_NOOP("REntity", "Y"));
 
-    RHatchEntity::PropertyVertexNX.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
-    RHatchEntity::PropertyVertexNY.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
-    RHatchEntity::PropertyVertexNZ.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
+    RHatchEntity::PropertyVertexNX.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "X"), false, RPropertyAttributes::Geometry);
+    RHatchEntity::PropertyVertexNY.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
+    RHatchEntity::PropertyVertexNZ.generateId(RHatchEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
 }
 
 bool RHatchEntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,

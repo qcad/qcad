@@ -108,8 +108,12 @@ public:
 
     static void init();
 
+    static RS::EntityType getRtti() {
+        return RS::EntityDimRadial;
+    }
+
     static QSet<RPropertyTypeId> getStaticPropertyTypeIds() {
-        return RPropertyTypeId::getPropertyTypeIds(typeid(RDimRadialEntity));
+        return RPropertyTypeId::getPropertyTypeIds(RDimRadialEntity::getRtti());
     }
 
     virtual RDimRadialEntity* clone() const {

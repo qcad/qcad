@@ -51,6 +51,10 @@ public:
 
     static void init();
 
+    static RS::EntityType getRtti() {
+        return RS::ObjectDocumentVariable;
+    }
+
     virtual RS::EntityType getType() const {
         return RS::ObjectDocumentVariable;
     }

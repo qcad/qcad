@@ -59,35 +59,35 @@ RSolidEntity::~RSolidEntity() {
 }
 
 void RSolidEntity::init() {
-    RSolidEntity::PropertyCustom.generateId(typeid(RSolidEntity), RObject::PropertyCustom);
-    RSolidEntity::PropertyHandle.generateId(typeid(RSolidEntity), RObject::PropertyHandle);
-    RSolidEntity::PropertyProtected.generateId(typeid(RSolidEntity), RObject::PropertyProtected);
-    RSolidEntity::PropertyWorkingSet.generateId(typeid(RSolidEntity), RObject::PropertyWorkingSet);
-    RSolidEntity::PropertyType.generateId(typeid(RSolidEntity), REntity::PropertyType);
-    RSolidEntity::PropertyBlock.generateId(typeid(RSolidEntity), REntity::PropertyBlock);
-    RSolidEntity::PropertyLayer.generateId(typeid(RSolidEntity), REntity::PropertyLayer);
-    RSolidEntity::PropertyLinetype.generateId(typeid(RSolidEntity), REntity::PropertyLinetype);
-    RSolidEntity::PropertyLinetypeScale.generateId(typeid(RSolidEntity), REntity::PropertyLinetypeScale);
-    RSolidEntity::PropertyLineweight.generateId(typeid(RSolidEntity), REntity::PropertyLineweight);
-    RSolidEntity::PropertyColor.generateId(typeid(RSolidEntity), REntity::PropertyColor);
-    RSolidEntity::PropertyDisplayedColor.generateId(typeid(RSolidEntity), REntity::PropertyDisplayedColor);
-    RSolidEntity::PropertyDrawOrder.generateId(typeid(RSolidEntity), REntity::PropertyDrawOrder);
+    RSolidEntity::PropertyCustom.generateId(RSolidEntity::getRtti(), RObject::PropertyCustom);
+    RSolidEntity::PropertyHandle.generateId(RSolidEntity::getRtti(), RObject::PropertyHandle);
+    RSolidEntity::PropertyProtected.generateId(RSolidEntity::getRtti(), RObject::PropertyProtected);
+    RSolidEntity::PropertyWorkingSet.generateId(RSolidEntity::getRtti(), RObject::PropertyWorkingSet);
+    RSolidEntity::PropertyType.generateId(RSolidEntity::getRtti(), REntity::PropertyType);
+    RSolidEntity::PropertyBlock.generateId(RSolidEntity::getRtti(), REntity::PropertyBlock);
+    RSolidEntity::PropertyLayer.generateId(RSolidEntity::getRtti(), REntity::PropertyLayer);
+    RSolidEntity::PropertyLinetype.generateId(RSolidEntity::getRtti(), REntity::PropertyLinetype);
+    RSolidEntity::PropertyLinetypeScale.generateId(RSolidEntity::getRtti(), REntity::PropertyLinetypeScale);
+    RSolidEntity::PropertyLineweight.generateId(RSolidEntity::getRtti(), REntity::PropertyLineweight);
+    RSolidEntity::PropertyColor.generateId(RSolidEntity::getRtti(), REntity::PropertyColor);
+    RSolidEntity::PropertyDisplayedColor.generateId(RSolidEntity::getRtti(), REntity::PropertyDisplayedColor);
+    RSolidEntity::PropertyDrawOrder.generateId(RSolidEntity::getRtti(), REntity::PropertyDrawOrder);
 
-    RSolidEntity::PropertyPoint1X.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 1"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RSolidEntity::PropertyPoint1Y.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 1"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RSolidEntity::PropertyPoint1Z.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 1"), QT_TRANSLATE_NOOP("REntity", "Z"));
-    RSolidEntity::PropertyPoint2X.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 2"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RSolidEntity::PropertyPoint2Y.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 2"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RSolidEntity::PropertyPoint2Z.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 2"), QT_TRANSLATE_NOOP("REntity", "Z"));
-    RSolidEntity::PropertyPoint3X.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 3"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RSolidEntity::PropertyPoint3Y.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 3"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RSolidEntity::PropertyPoint3Z.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 3"), QT_TRANSLATE_NOOP("REntity", "Z"));
-    RSolidEntity::PropertyPoint4X.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 4"), QT_TRANSLATE_NOOP("REntity", "X"));
-    RSolidEntity::PropertyPoint4Y.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 4"), QT_TRANSLATE_NOOP("REntity", "Y"));
-    RSolidEntity::PropertyPoint4Z.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 4"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RSolidEntity::PropertyPoint1X.generateId(RSolidEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Point 1"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RSolidEntity::PropertyPoint1Y.generateId(RSolidEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Point 1"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RSolidEntity::PropertyPoint1Z.generateId(RSolidEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Point 1"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RSolidEntity::PropertyPoint2X.generateId(RSolidEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Point 2"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RSolidEntity::PropertyPoint2Y.generateId(RSolidEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Point 2"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RSolidEntity::PropertyPoint2Z.generateId(RSolidEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Point 2"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RSolidEntity::PropertyPoint3X.generateId(RSolidEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Point 3"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RSolidEntity::PropertyPoint3Y.generateId(RSolidEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Point 3"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RSolidEntity::PropertyPoint3Z.generateId(RSolidEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Point 3"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RSolidEntity::PropertyPoint4X.generateId(RSolidEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Point 4"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RSolidEntity::PropertyPoint4Y.generateId(RSolidEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Point 4"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RSolidEntity::PropertyPoint4Z.generateId(RSolidEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Point 4"), QT_TRANSLATE_NOOP("REntity", "Z"));
 
-    RSolidEntity::PropertyLength.generateId(typeid(RSolidEntity), "", QT_TRANSLATE_NOOP("REntity", "Length"));
-    RSolidEntity::PropertyTotalLength.generateId(typeid(RSolidEntity), "", QT_TRANSLATE_NOOP("REntity", "Total Length"));
+    RSolidEntity::PropertyLength.generateId(RSolidEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Length"));
+    RSolidEntity::PropertyTotalLength.generateId(RSolidEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Total Length"));
 }
 
 bool RSolidEntity::setProperty(RPropertyTypeId propertyTypeId,
