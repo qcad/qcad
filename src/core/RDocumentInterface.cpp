@@ -1734,6 +1734,8 @@ void RDocumentInterface::selectBoxXY(const RBox& box, bool add) {
 
     QSet<REntity::Id> affectedEntities;
     document.selectEntities(entityIds, add, &affectedEntities);
+    // 20210914: also re-gen all entities that were already selected to make sure reference points are exported:
+    affectedEntities.unite(entityIds);
     updateSelectionStatus(affectedEntities, true);
 
     if (RMainWindow::hasMainWindow()) {
