@@ -347,8 +347,7 @@ void RGraphicsViewImage::updateImage() {
 
     // paint reference points of selected entities:
     QMap<REntity::Id, QList<RRefPoint> >& referencePoints = scene->getReferencePoints();
-    int num = scene->countReferencePoints();
-    if (num!=0 && num<RSettings::getIntValue("GraphicsView/MaxReferencePoints", 100000)) {
+    if (getDocument()->countSelectedEntities()<RSettings::getMaxReferencePointEntitiesDisplay()) {
         QPainter gbPainter(&graphicsBufferWithPreview);
         QMap<REntity::Id, QList<RRefPoint> >::iterator it;
         for (it = referencePoints.begin(); it != referencePoints.end(); ++it) {

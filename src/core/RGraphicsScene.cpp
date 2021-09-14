@@ -406,7 +406,13 @@ bool RGraphicsScene::hasSelectedReferencePoints() const {
 
 void RGraphicsScene::exportCurrentEntity(bool preview, bool forceSelected) {
     RExporter::exportCurrentEntity(preview, forceSelected);
-    exportReferencePoints();
+
+    if (document->countSelectedEntities()<RSettings::getMaxReferencePointEntities()) {
+        exportReferencePoints();
+    }
+    else {
+        referencePoints.clear();
+    }
 }
 
 void RGraphicsScene::unexportEntity(REntity::Id entityId) {

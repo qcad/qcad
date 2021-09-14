@@ -92,6 +92,8 @@ int RSettings::ignoreBlockReferencePoint = -1;
 int RSettings::ignoreAllReferencePoints = -1;
 int RSettings::referencePointSize = -1;
 int RSettings::referencePointShape = -1;
+int RSettings::maxReferencePointEntities = -1;
+int RSettings::maxReferencePointEntitiesDisplay = -1;
 int RSettings::propertyEditorShowOnRequest = -1;
 QString RSettings::polarCoordinateSeparator = QString::null;
 QString RSettings::cartesianCoordinateSeparator = QString::null;
@@ -961,6 +963,26 @@ int RSettings::getReferencePointShape() {
 }
 
 /**
+ * \return Max reference points to use.
+ */
+int RSettings::getMaxReferencePointEntities() {
+    if (maxReferencePointEntities==-1) {
+        maxReferencePointEntities = getIntValue("GraphicsView/MaxReferencePointEntities", 1000);
+    }
+    return maxReferencePointEntities;
+}
+
+/**
+ * \return Max reference points to display.
+ */
+int RSettings::getMaxReferencePointEntitiesDisplay() {
+    if (maxReferencePointEntitiesDisplay==-1) {
+        maxReferencePointEntitiesDisplay = getIntValue("GraphicsView/MaxReferencePointEntitiesDisplay", 1000);
+    }
+    return maxReferencePointEntitiesDisplay;
+}
+
+/**
  * \return True to show slow properties available on request.
  */
 bool RSettings::getPropertyEditorShowOnRequest() {
@@ -1742,6 +1764,8 @@ void RSettings::resetCache() {
     useSolidLineSelection = -1;
     arcAngleLengthThreshold = -1;
     positionByMousePress = -1;
+    maxReferencePointEntities = -1;
+    maxReferencePointEntitiesDisplay = -1;
     minArcAngleStep = -1;
     dashThreshold = -1;
     textRenderedAsText = -1;
