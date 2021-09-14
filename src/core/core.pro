@@ -299,6 +299,8 @@ else {
     CONFIG += plugin
 }
 
+QT += concurrent
+
 NAME = $${RLIBNAME}core
 TARGET = $${NAME}
 RESOURCES = resources/core.qrc
