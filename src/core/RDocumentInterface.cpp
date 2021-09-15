@@ -54,6 +54,7 @@
 #include "RSpline.h"
 #include "RTextLabel.h"
 #include "RTransaction.h"
+#include "RTransactionEvent.h"
 #include "RWheelEvent.h"
 
 RDocumentInterface* RDocumentInterface::clipboard = NULL;
