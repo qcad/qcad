@@ -32,41 +32,9 @@
 #include "RDocumentInterface.h"
 #include "RLayerListener.h"
 #include "RObject.h"
+#include "RProperty.h"
 #include "RPropertyListener.h"
 
-
-class RProperty {
-public:
-    RProperty(const RDocument& document,
-              const QSet<RObject::Id>& objectIds,
-              const RPropertyTypeId& propertyTypeId,
-              bool showOnRequest)
-        : document(&document),
-          objectIds(&objectIds),
-          propertyTypeId(propertyTypeId),
-          showOnRequest(showOnRequest) { }
-
-//    RProperty(const RProperty& other)
-//        : document(other.document),
-//          objectIds(other.objectIds),
-//          propertyTypeId(other.propertyTypeId),
-//          showOnRequest(other.showOnRequest),
-//          attributes(other.attributes),
-//          value(other.value) { }
-
-//    RProperty& operator = (const RProperty& other) {
-//        document = other.document;
-//        objectIds = other.objectIds;
-
-//    }
-
-    const RDocument* document;
-    const QSet<RObject::Id>* objectIds;
-    RPropertyTypeId propertyTypeId;
-    bool showOnRequest;
-    RPropertyAttributes attributes;
-    QVariant value;
-};
 
 /**
  * Base class for property editors. Provides basic functionality that
@@ -90,6 +58,10 @@ public:
     virtual void updateFromDocument(RDocument* document, bool onlyChanges, RS::EntityType filter = RS::EntityUnknown, bool manual = false, bool showOnRequest = false);
     virtual void updateFromObject(RObject* object, RDocument* document = NULL);
     virtual void clearEditor();
+
+    virtual QStringList getFixedCustomPropertyNames(const QList<RS::EntityType>& objectTypes) {
+        return QStringList();
+    }
 
     virtual void updateLayers(RDocumentInterface* documentInterface, QList<RLayer::Id>& layerIds);
     virtual void updateLayers(RDocumentInterface* documentInterface);
