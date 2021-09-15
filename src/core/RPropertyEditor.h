@@ -109,13 +109,6 @@ protected:
     }
 
     void updateProperty(const RPropertyTypeId& propertyTypeId, RObject& object, RDocument* document, bool showOnRequest = false);
-    //void removeAllButThese(const QMultiMap<QString, QString>& propertyTitles, bool customOnly=false);
-
-
-//    static void initConcurrent(const RDocument& document, const QSet<RObject::Id>& objectIds) {
-//        concurrentDocument = &document;
-//        concurrentObjectIds = &objectIds;
-//    }
 
     static void computePropertyValue(RProperty& property);
 
@@ -135,9 +128,6 @@ protected:
     RS::EntityType entityTypeFilter;
 
     static RPropertyEditor* instance;
-
-    //static const RDocument* concurrentDocument;
-    //static const QSet<RObject::Id>* concurrentObjectIds;
 };
 
 Q_DECLARE_METATYPE(RPropertyEditor*)
