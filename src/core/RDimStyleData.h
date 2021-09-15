@@ -197,7 +197,15 @@ public:
 public:
     static QMap<RS::KnownVariable, RS::KnownVariableType> dimXTypes;
 
-    friend QDebug operator<<(QDebug dbg, const RDimStyleData& d);
+    friend QDebug operator<<(QDebug dbg, const RDimStyleData& d) {
+        dbg.nospace() << "RDimSyleData(";
+        dbg.nospace() << d.mapBool;
+        dbg.nospace() << d.mapInt;
+        dbg.nospace() << d.mapDouble;
+        dbg.nospace() << d.mapColor;
+        dbg.nospace() << ")";
+        return dbg;
+    }
 
 protected:
     QMap<RS::KnownVariable, double> mapDouble;

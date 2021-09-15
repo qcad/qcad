@@ -175,17 +175,3 @@ void RDimStyleData::initFromSettings() {
         setDouble(RS::DIMTSZ, getDouble(RS::DIMASZ));
     }
 }
-
-
-/**
- * Stream operator for QDebug
- */
-QDebug operator<<(QDebug dbg, const RDimStyleData& d) {
-    dbg.nospace() << "RDimSyleData(";
-    dbg.nospace() << d.mapBool;
-    dbg.nospace() << d.mapInt;
-    dbg.nospace() << d.mapDouble;
-    dbg.nospace() << d.mapColor;
-    dbg.nospace() << ")";
-    return dbg;
-}
