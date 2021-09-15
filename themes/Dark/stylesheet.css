@@ -36,6 +36,10 @@ QDialog#TextDialog QTextEdit#Text {
     background-color: white;
 }
 
+QMenu::separator {
+    background: #555555;
+}
+
 
 /* Fix for Version and Units text background display in FlexPainter dialog. */
 QObject#FlexPainterDialog QLineEdit#lineEdit,
