@@ -67,6 +67,12 @@
         
     
     
+      QStringList getFixedCustomPropertyNames(
+                const QList < RS::EntityType > & objectTypes
+            );
+        
+    
+    
       void updateLayers(
                 RDocumentInterface * documentInterface, QList < RLayer::Id > & layerIds
             );
@@ -183,6 +189,12 @@
             );
         
     
+    
+      void computePropertyValue(
+                RProperty & property
+            );
+        
+    
   
         // methods of 1st level base class RPropertyListener:
         
@@ -195,6 +207,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         updateProperty
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        computePropertyValue
         (QScriptContext* context, QScriptEngine* engine) 
         ;QScriptValue __qtscript_self;
             };

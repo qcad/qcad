@@ -897,6 +897,17 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false" />
     </method>
+    <method name="getMaxReferencePointEntities"
+    cppName="getMaxReferencePointEntities" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="getMaxReferencePointEntitiesDisplay"
+    cppName="getMaxReferencePointEntitiesDisplay"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
     <method name="getPropertyEditorShowOnRequest"
     cppName="getPropertyEditorShowOnRequest" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">

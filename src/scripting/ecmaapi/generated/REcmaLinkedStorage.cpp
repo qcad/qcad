@@ -133,6 +133,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryObjectDirect, "queryObjectDirect");
             
+            REcmaHelper::registerFunction(&engine, proto, queryObjectCC, "queryObjectCC");
+            
             REcmaHelper::registerFunction(&engine, proto, queryObject, "queryObject");
             
             REcmaHelper::registerFunction(&engine, proto, queryObjectByHandle, "queryObjectByHandle");
@@ -2626,6 +2628,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLinkedStorage::queryObjectDirect", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLinkedStorage::queryObjectCC
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryObjectCC", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryObjectCC";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLinkedStorage* self = 
+                        getSelf("queryObjectCC", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RObject::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RObject::Id
+                    a0 =
+                    (RObject::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RObject *'
+    RObject * cppResult =
+        
+               self->queryObjectCC(a0);
+        // return type: RObject *
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryObjectCC().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryObjectCC", context, engine);
             return result;
         }
          QScriptValue

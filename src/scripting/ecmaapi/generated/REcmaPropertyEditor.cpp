@@ -83,6 +83,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, clearEditor, "clearEditor");
             
+            REcmaHelper::registerFunction(&engine, proto, getFixedCustomPropertyNames, "getFixedCustomPropertyNames");
+            
             REcmaHelper::registerFunction(&engine, proto, updateLayers, "updateLayers");
             
             REcmaHelper::registerFunction(&engine, proto, setCurrentLayer, "setCurrentLayer");
@@ -735,6 +737,67 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPropertyEditor::clearEditor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyEditor::getFixedCustomPropertyNames
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyEditor::getFixedCustomPropertyNames", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyEditor::getFixedCustomPropertyNames";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyEditor* self = 
+                        getSelf("getFixedCustomPropertyNames", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RS::EntityType > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RS::EntityType >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QStringList'
+    QStringList cppResult =
+        
+               self->getFixedCustomPropertyNames(a0);
+        // return type: QStringList
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyEditor.getFixedCustomPropertyNames().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyEditor::getFixedCustomPropertyNames", context, engine);
             return result;
         }
          QScriptValue

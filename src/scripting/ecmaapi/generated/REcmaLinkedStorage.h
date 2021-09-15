@@ -145,6 +145,9 @@
         queryObjectDirect
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryObjectCC
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryObject
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

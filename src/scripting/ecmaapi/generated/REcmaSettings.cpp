@@ -335,6 +335,10 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getReferencePointShape, "getReferencePointShape");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getMaxReferencePointEntities, "getMaxReferencePointEntities");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getMaxReferencePointEntitiesDisplay, "getMaxReferencePointEntitiesDisplay");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getPropertyEditorShowOnRequest, "getPropertyEditorShowOnRequest");
             
             REcmaHelper::registerFunction(&engine, &ctor, getPolarCoordinateSeparator, "getPolarCoordinateSeparator");
@@ -7308,6 +7312,84 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getReferencePointShape", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getMaxReferencePointEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getMaxReferencePointEntities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getMaxReferencePointEntities";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RSettings::
+       getMaxReferencePointEntities();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getMaxReferencePointEntities().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getMaxReferencePointEntities", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getMaxReferencePointEntitiesDisplay
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getMaxReferencePointEntitiesDisplay", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getMaxReferencePointEntitiesDisplay";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RSettings::
+       getMaxReferencePointEntitiesDisplay();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getMaxReferencePointEntitiesDisplay().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getMaxReferencePointEntitiesDisplay", context, engine);
             return result;
         }
          QScriptValue

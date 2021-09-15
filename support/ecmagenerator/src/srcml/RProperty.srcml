@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RProperty.h"><cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RPROPERTY_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RPROPERTY_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSet&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RObject.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyTypeId.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RDocument</name>;</class_decl>
+
+<class>class <name>RProperty</name> <block>{<private type="default">
+</private><public>public:
+    <constructor><name>RProperty</name><parameter_list>(<param><decl><type><name>const</name> <name>RDocument</name>&amp;</type> <name>document</name></decl></param>,
+              <param><decl><type><name>const</name> <name>QSet<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>objectIds</name></decl></param>,
+              <param><decl><type><name>const</name> <name>RPropertyTypeId</name>&amp;</type> <name>propertyTypeId</name></decl></param>,
+              <param><decl><type><name>bool</name></type> <name>showOnRequest</name></decl></param>)</parameter_list>
+        <member_list>: <call><name>document</name><argument_list>(<argument><expr>&amp;<name>document</name></expr></argument>)</argument_list></call>,
+          <call><name>objectIds</name><argument_list>(<argument><expr>&amp;<name>objectIds</name></expr></argument>)</argument_list></call>,
+          <call><name>propertyTypeId</name><argument_list>(<argument><expr><name>propertyTypeId</name></expr></argument>)</argument_list></call>,
+          <call><name>showOnRequest</name><argument_list>(<argument><expr><name>showOnRequest</name></expr></argument>)</argument_list></call> </member_list><block>{ }</block></constructor>
+
+    <decl_stmt><decl><type><name>const</name> <name>RDocument</name>*</type> <name>document</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>const</name> <name>QSet<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name>*</type> <name>objectIds</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>showOnRequest</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RPropertyAttributes</name></type> <name>attributes</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QVariant</name></type> <name>value</name></decl>;</decl_stmt>
+</public>}</block>;</class>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

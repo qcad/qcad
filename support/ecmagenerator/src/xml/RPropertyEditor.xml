@@ -49,6 +49,15 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="getFixedCustomPropertyNames"
+    cppName="getFixedCustomPropertyNames" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false">
+        <arg type="QList &lt; RS::EntityType &gt; &amp;"
+        typeName="QList &lt; RS::EntityType &gt;"
+        name="objectTypes" isConst="true" />
+      </variant>
+    </method>
     <method name="updateLayers" cppName="updateLayers"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
@@ -219,6 +228,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="document" isConst="false" />
         <arg type="bool" typeName="bool" name="showOnRequest"
         hasDefault="true" default="false" isConst="false" />
+      </variant>
+    </method>
+    <method name="computePropertyValue"
+    cppName="computePropertyValue" specifier="protected"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RProperty &amp;" typeName="RProperty"
+        name="property" isConst="false" />
       </variant>
     </method>
   </class>

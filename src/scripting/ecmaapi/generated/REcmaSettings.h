@@ -463,6 +463,12 @@
         getReferencePointShape
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getMaxReferencePointEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMaxReferencePointEntitiesDisplay
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPropertyEditorShowOnRequest
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

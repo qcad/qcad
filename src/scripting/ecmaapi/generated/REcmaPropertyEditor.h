@@ -67,6 +67,9 @@
         clearEditor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getFixedCustomPropertyNames
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         updateLayers
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -108,8 +108,6 @@
         <return>return <expr><call><name><name>RPropertyTypeId</name>::<name>getPropertyTypeIds</name></name><argument_list>(<argument><expr><call><name><name>REntity</name>::<name>getRtti</name></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
-
-
     <function><type><name>void</name></type> <name>setDocument</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>)</parameter_list> <block>{
         <constructor_decl><name>RObject::setDocument</name><parameter_list>(<param><decl><type><name>document</name></type></decl></param>)</parameter_list>;</constructor_decl>
         <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setDocument</name><argument_list>(<argument><expr><name>document</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>

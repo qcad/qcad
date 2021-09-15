@@ -279,6 +279,8 @@
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getIgnoreAllReferencePoints</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>int</name></type> <name>getReferencePointSize</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>int</name></type> <name>getReferencePointShape</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>int</name></type> <name>getMaxReferencePointEntities</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>int</name></type> <name>getMaxReferencePointEntitiesDisplay</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getPropertyEditorShowOnRequest</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getPolarCoordinateSeparator</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getCartesianCoordinateSeparator</name><parameter_list>()</parameter_list>;</function_decl>
@@ -346,6 +348,8 @@
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>ignoreAllReferencePoints</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>referencePointSize</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>referencePointShape</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>maxReferencePointEntities</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>maxReferencePointEntitiesDisplay</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>propertyEditorShowOnRequest</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>polarCoordinateSeparator</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>cartesianCoordinateSeparator</name></decl>;</decl_stmt>
