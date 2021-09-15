@@ -247,7 +247,7 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
         return;
     }
 
-    qDebug() << "RPropertyEditor::updateFromDocument";
+    //qDebug() << "RPropertyEditor::updateFromDocument";
     //RDebug::startTimer();
 
     if (filter!=RS::EntityUnknown) {
@@ -360,6 +360,7 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
     QStringList customPropertyNamesSorted = customPropertyNames.toList();
     customPropertyNamesSorted.append(fixedCustomPropertyNames);
     qSort(customPropertyNamesSorted);
+    customPropertyNamesSorted.removeDuplicates();
 
     // find out which properties need to be collected (combined properties of selected object types):
     QSet<RPropertyTypeId> combinedPropertyTypeIds;
