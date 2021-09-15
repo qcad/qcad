@@ -730,6 +730,7 @@ bool RMainWindowQt::event(QEvent* e) {
     if (pe!=NULL) {
         RDocumentInterface* documentInterface = getDocumentInterface();
         if (documentInterface!=NULL) {
+            // called when user changed a property in the property editor
             documentInterface->propertyChangeEvent(*pe);
         }
     }
