@@ -20,7 +20,7 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>0</y>
+     <y>-241</y>
      <width>635</width>
      <height>1168</height>
     </rect>
@@ -439,6 +439,9 @@
        </item>
        <item row="2" column="1">
         <widget class="QComboBox" name="Threads">
+         <property name="currentText">
+          <string notr="true">auto</string>
+         </property>
          <item>
           <property name="text">
            <string>auto</string>
@@ -554,6 +557,9 @@
          <property name="editable">
           <bool>true</bool>
          </property>
+         <property name="currentText">
+          <string notr="true">100</string>
+         </property>
          <property name="currentIndex">
           <number>3</number>
          </property>
@@ -605,6 +611,9 @@
         <widget class="QComboBox" name="ArcAngleLengthThreshold">
          <property name="editable">
           <bool>true</bool>
+         </property>
+         <property name="currentText">
+          <string notr="true">0</string>
          </property>
          <item>
           <property name="text">
@@ -674,6 +683,9 @@
         <widget class="QComboBox" name="MinArcAngleStep">
          <property name="editable">
           <bool>true</bool>
+         </property>
+         <property name="currentText">
+          <string notr="true">0.2</string>
          </property>
          <property name="currentIndex">
           <number>6</number>
@@ -757,6 +769,9 @@
          <property name="editable">
           <bool>true</bool>
          </property>
+         <property name="currentText">
+          <string notr="true">1000</string>
+         </property>
          <property name="currentIndex">
           <number>1</number>
          </property>
@@ -798,6 +813,9 @@
         <widget class="QComboBox" name="MaxHatchTime">
          <property name="editable">
           <bool>true</bool>
+         </property>
+         <property name="currentText">
+          <string notr="true">2000</string>
          </property>
          <property name="currentIndex">
           <number>5</number>
@@ -852,7 +870,7 @@
        <item row="8" column="0">
         <widget class="QLabel" name="label_9">
          <property name="text">
-          <string>Maximum number of entities with reference points:</string>
+          <string>Maximum selected entities with reference points:</string>
          </property>
         </widget>
        </item>
@@ -862,10 +880,10 @@
           <bool>true</bool>
          </property>
          <property name="currentText">
-          <string>100000</string>
+          <string notr="true">1000</string>
          </property>
          <property name="currentIndex">
-          <number>6</number>
+          <number>1</number>
          </property>
          <item>
           <property name="text">
@@ -928,6 +946,9 @@
        </item>
        <item row="10" column="1">
         <widget class="QComboBox" name="ReferencePointSize">
+         <property name="currentText">
+          <string notr="true">10</string>
+         </property>
          <property name="currentIndex">
           <number>6</number>
          </property>
@@ -1005,6 +1026,9 @@
          <property name="editable">
           <bool>true</bool>
          </property>
+         <property name="currentText">
+          <string notr="true">3</string>
+         </property>
          <item>
           <property name="text">
            <string notr="true">3</string>
@@ -1065,7 +1089,7 @@
        <item row="9" column="0">
         <widget class="QLabel" name="label_13">
          <property name="text">
-          <string>Maximum number of entities with displayed reference points:</string>
+          <string>Maximum selected entities with displayed reference points:</string>
          </property>
         </widget>
        </item>
@@ -1075,10 +1099,10 @@
           <bool>true</bool>
          </property>
          <property name="currentText">
-          <string>100000</string>
+          <string notr="true">1000</string>
          </property>
          <property name="currentIndex">
-          <number>6</number>
+          <number>1</number>
          </property>
          <item>
           <property name="text">
