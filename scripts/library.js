@@ -1515,6 +1515,23 @@ Array.prototype.containsIgnoreCase = function(obj) {
 };
 
 /**
+ * \return True if this array contains all items of the given array.
+ */
+Array.prototype.containsAll = function(obj) {
+    if (obj.length>this.length) {
+        return false;
+    }
+
+    for (var i=0; i<obj.length; i++) {
+        if (this.indexOf(obj[i])<0) {
+            return false;
+        }
+    }
+
+    return true;
+};
+
+/**
  * \return Array with all elements of this array that are not also
  * in the given array (subtract).
  */
