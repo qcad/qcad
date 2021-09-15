@@ -375,7 +375,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
         gridLayoutGeometry.setVerticalSpacing(2);
         gridLayoutGeometry.setHorizontalSpacing(2);
         // label:
-        gridLayoutGeometry.setColumnStretch(0,1);
+        gridLayoutGeometry.setColumnStretch(0,0);
         // control:
         gridLayoutGeometry.setColumnStretch(1,1);
         // control or additional controls (e.g. clear button for dimension label):
@@ -1058,6 +1058,8 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
                     'propertyChanged');
     }
 
+    control.cursorPosition = 0;
+
     return new Array(control);
 };
 
@@ -1111,6 +1113,8 @@ PropertyEditorImpl.prototype.initStringControls = function(objectName, propertyT
                     new PropertyWatcher(this, control, propertyTypeId),
                     'propertyChanged');
     }
+
+    control.cursorPosition = 0;
 
     if (isNull(clearButton)) {
         return new Array(control);
