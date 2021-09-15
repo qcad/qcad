@@ -677,7 +677,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
                             group===RSettings.getAppId() && !attributes.isUndeletable()) {
 
                             var removeCustomPropertyButton = new QToolButton(this.widget);
-                            removeCustomPropertyButton.icon = new QIcon(this.basePath + "/RemoveCustomProperty.svg");
+                            removeCustomPropertyButton.icon = new QIcon(autoPath(this.basePath + "/RemoveCustomProperty.svg"));
                             removeCustomPropertyButton.iconSize = new QSize(12,12);
                             removeCustomPropertyButton.toolTip = qsTr("Remove this property from selected objects");
                             var name = propertyTypeId.getCustomPropertyName();
@@ -770,7 +770,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
     if (!isNull(gridLayoutCustom)) {
         if (RSettings.isXDataEnabled() && RSettings.getBoolValue("PropertyEditor/AddCustomProperties", true)!==false) {
             var addCustomPropertyButton = new QToolButton(this.widget);
-            addCustomPropertyButton.icon = new QIcon(this.basePath + "/AddCustomProperty.svg");
+            addCustomPropertyButton.icon = new QIcon(autoPath(this.basePath + "/AddCustomProperty.svg"));
             addCustomPropertyButton.iconSize = new QSize(12,12);
             addCustomPropertyButton.toolTip = qsTr("Add custom property to selected objects");
             addCustomPropertyButton.objectName = "AddCustomProperty";
@@ -1100,7 +1100,7 @@ PropertyEditorImpl.prototype.initStringControls = function(objectName, propertyT
         clearButton = new QToolButton(this.geometryGroup);
         clearButton.objectName = objectName + "_clear";
         clearButton.iconSize = new QSize(12,12);
-        clearButton.icon = new QIcon(this.basePath + "/Clear.svg");
+        clearButton.icon = new QIcon(autoPath(this.basePath + "/Clear.svg"));
         clearButton.toolTip = qsTr("Use auto measurement");
         clearButton.clicked.connect(function() {
             control.text = "";
