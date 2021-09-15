@@ -9957,12 +9957,12 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+149"/>
         <source>Use auto measurement</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+41"/>
         <source>Yes</source>
         <translation type="unfinished"></translation>
     </message>

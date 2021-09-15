@@ -10540,12 +10540,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1521"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1525"/>
         <source>*VARIES*</source>
         <translation>*ВАРЬИРОВАНИЕ*</translation>
     </message>
     <message>
-        <location line="-1323"/>
+        <location line="-1327"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10605,12 +10605,12 @@ shown in search results:</source>
         <translation>Автоматический</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+149"/>
         <source>Use auto measurement</source>
         <translation>Использовать автоматическое измерение</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+41"/>
         <source>Yes</source>
         <translation>Да</translation>
     </message>

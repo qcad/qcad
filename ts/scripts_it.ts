@@ -11814,12 +11814,12 @@ mostrati nei risultati di ricerca:</translation>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="+746"/>
+        <location line="+750"/>
         <source>*VARIES*</source>
         <translation>*VARIE*</translation>
     </message>
     <message>
-        <location line="-1323"/>
+        <location line="-1327"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -11869,7 +11869,7 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Mostra tutte le proprietà</translation>
     </message>
     <message>
-        <location line="+703"/>
+        <location line="+707"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -11882,17 +11882,17 @@ mostrati nei risultati di ricerca:</translation>
         <translation type="obsolete">Sotto</translation>
     </message>
     <message>
-        <location line="-569"/>
+        <location line="-573"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+149"/>
         <source>Use auto measurement</source>
         <translation>Utilizzare la misurazione automatica</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+41"/>
         <source>Yes</source>
         <translation>Si</translation>
     </message>

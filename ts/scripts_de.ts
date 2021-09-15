@@ -12630,12 +12630,12 @@ nicht öffnen.
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1521"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1525"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="-1323"/>
+        <location line="-1327"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -12684,7 +12684,7 @@ nicht öffnen.
         <translation>Alle Eigenschaften anzeigen</translation>
     </message>
     <message>
-        <location line="+703"/>
+        <location line="+707"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -12721,7 +12721,7 @@ nicht öffnen.
         <translation type="obsolete">Mittelpunkt</translation>
     </message>
     <message>
-        <location line="-749"/>
+        <location line="-753"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
@@ -12739,12 +12739,12 @@ nicht öffnen.
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+149"/>
         <source>Use auto measurement</source>
         <translation>Automatisch</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+41"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
@@ -12819,7 +12819,7 @@ nicht öffnen.
         <translation type="vanished">Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1186"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1190"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>

@@ -10648,12 +10648,12 @@ shown in search results:</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+149"/>
         <source>Use auto measurement</source>
         <translation>Use auto measurement</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+41"/>
         <source>Yes</source>
         <translation>Yes</translation>
     </message>

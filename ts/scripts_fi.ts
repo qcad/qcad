@@ -10605,12 +10605,12 @@ näkyy hakutuloksissa:</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1521"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1525"/>
         <source>*VARIES*</source>
         <translation>*VAIHTELEVA*</translation>
     </message>
     <message>
-        <location line="-1323"/>
+        <location line="-1327"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10674,12 +10674,12 @@ näkyy hakutuloksissa:</translation>
         <translation>Automaattinen</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+149"/>
         <source>Use auto measurement</source>
         <translation>Käytä automaattista mittausta</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+41"/>
         <source>Yes</source>
         <translation>Kyllä</translation>
     </message>
