@@ -375,22 +375,23 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
 
     for (int i=0; i<RDimStyle::propertyVariables.length(); i++) {
         //RDimStyle::RDimXVar p = RDimStyle::propertyVariables[i];
-        if (RDimStyle::propertyVariables[i].first==propertyTypeId) {
+        QPair<RPropertyTypeId, RS::KnownVariable> pv = RDimStyle::propertyVariables.value(i);
+        if (pv.first==propertyTypeId) {
             RPropertyAttributes attr;
 
-            if (RDimStyleData::getType(RDimStyle::propertyVariables[i].second)==RS::VarTypeInt) {
+            if (RDimStyleData::getType(pv.second)==RS::VarTypeInt) {
                 attr.setInteger(true);
             }
             if (propertyTypeId==RDimensionEntity::PropertyDimdsep) {
                 // show DIMDESP as string
-                QVariant v = getData().getDimXVariant(RDimStyle::propertyVariables[i].second);
+                QVariant v = getData().getDimXVariant(pv.second);
                 QString str;
                 str.append(QChar(v.toInt()));
                 return qMakePair(str, RPropertyAttributes());
             }
 
             // TODO: add advanced attribute to show / hide in PE
-            return qMakePair(getData().getDimXVariant(RDimStyle::propertyVariables[i].second), attr);
+            return qMakePair(getData().getDimXVariant(pv.second), attr);
         }
     }
 
