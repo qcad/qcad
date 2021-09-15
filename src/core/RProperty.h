@@ -18,11 +18,13 @@ public:
     RProperty(const RDocument& document,
               const QSet<RObject::Id>& objectIds,
               const RPropertyTypeId& propertyTypeId,
-              bool showOnRequest)
+              bool showOnRequest,
+              RS::EntityType entityTypeFilter)
         : document(&document),
           objectIds(&objectIds),
           propertyTypeId(propertyTypeId),
-          showOnRequest(showOnRequest) { }
+          showOnRequest(showOnRequest),
+          entityTypeFilter(entityTypeFilter) { }
 
     const RDocument* document;
     const QSet<RObject::Id>* objectIds;
@@ -30,6 +32,7 @@ public:
     bool showOnRequest;
     RPropertyAttributes attributes;
     QVariant value;
+    RS::EntityType entityTypeFilter;
 };
 
 Q_DECLARE_METATYPE(RProperty*)

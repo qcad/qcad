@@ -326,12 +326,14 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
     // collect and count entity types:
     // collect common custom properties:
     QSet<QString> customPropertyNames;
+    QMap<RS::EntityType, int> combinedTypesLocal;
     bool first = true;
     for (it = objectIds.begin(); it != objectIds.end(); ++it) {
         QSharedPointer<RObject> obj = document->queryObjectDirect(*it);
         if (obj.isNull()) {
             continue;
         }
+        RS::EntityType type = obj->getType();
 
         if (first) {
             customPropertyNames = obj->getCustomPropertyKeys("QCAD").toSet();
@@ -342,20 +344,26 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
             }
         }
 
-        RS::EntityType type = obj->getType();
-
         if (combinedTypes.contains(type)) {
             combinedTypes[type]++;
         }
         else {
             combinedTypes.insert(type, 1);
         }
-
         first = false;
+
+        if (entityTypeFilter==RS::EntityAll || entityTypeFilter==type) {
+            if (combinedTypesLocal.contains(type)) {
+                combinedTypesLocal[type]++;
+            }
+            else {
+                combinedTypesLocal.insert(type, 1);
+            }
+        }
     }
 
     // get list of custom properties that are always shown, even if a selected object does not provide the property:
-    QStringList fixedCustomPropertyNames = getFixedCustomPropertyNames(combinedTypes.keys());
+    QStringList fixedCustomPropertyNames = getFixedCustomPropertyNames(combinedTypesLocal.keys());
 
     QStringList customPropertyNamesSorted = customPropertyNames.toList();
     customPropertyNamesSorted.append(fixedCustomPropertyNames);
@@ -364,7 +372,7 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
 
     // find out which properties need to be collected (combined properties of selected object types):
     QSet<RPropertyTypeId> combinedPropertyTypeIds;
-    QList<RS::EntityType> combinedTypeIds = combinedTypes.keys();
+    QList<RS::EntityType> combinedTypeIds = combinedTypesLocal.keys();
     for (int i=0; i<combinedTypeIds.length(); i++) {
         RS::EntityType t = combinedTypeIds[i];
         QSet<RPropertyTypeId> propertyTypeIds = RPropertyTypeId::getPropertyTypeIds(t);
@@ -383,12 +391,12 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
     // list of property type IDs with values (to be filled in by concurrent mapping below):
     QList<RProperty> ccProperties;
     for (int i=0; i<combinedPropertyTypeIdsSorted.length(); i++) {
-        ccProperties.append(RProperty(*document, objectIds, combinedPropertyTypeIdsSorted[i], showOnRequest));
+        ccProperties.append(RProperty(*document, objectIds, combinedPropertyTypeIdsSorted[i], showOnRequest, entityTypeFilter));
     }
 
     // append custom properties common among all selected objects:
     for (int i=0; i<customPropertyNamesSorted.length(); i++) {
-        ccProperties.append(RProperty(*document, objectIds, RPropertyTypeId("QCAD", customPropertyNamesSorted[i]), showOnRequest));
+        ccProperties.append(RProperty(*document, objectIds, RPropertyTypeId("QCAD", customPropertyNamesSorted[i]), showOnRequest, entityTypeFilter));
     }
 
 
@@ -477,6 +485,12 @@ void RPropertyEditor::computePropertyValue(RProperty& ccProp) {
         //QSharedPointer<RObject> obj = ccProp.document->queryObjectDirect(*it);
         RObject* obj = ccProp.document->queryObjectCC(*it);
         //QSharedPointer<RObject> obj = ccProp.document->queryObject(*it);
+
+        RS::EntityType type = obj->getType();
+
+        if (ccProp.entityTypeFilter!=RS::EntityAll && ccProp.entityTypeFilter!=type) {
+            continue;
+        }
 
         QPair<QVariant, RPropertyAttributes> prop = obj->getProperty(ccProp.propertyTypeId, true, true, ccProp.showOnRequest);
 
