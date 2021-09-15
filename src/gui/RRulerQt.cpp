@@ -158,14 +158,12 @@ void RRulerQt::paintEvent(QPaintEvent* e) {
     if (orientation == Qt::Horizontal) {
         if (sizeHint().height()*dpr != lastSize.height()) {
             lastSize.setHeight(sizeHint().height()*dpr);
-            qDebug() << "updateViewport";
             updateViewport();
             return;
         }
     } else {
         if (sizeHint().width()*dpr != lastSize.width()) {
             lastSize.setWidth(sizeHint().width()*dpr);
-            qDebug() << "updateViewport";
             updateViewport();
             return;
         }
