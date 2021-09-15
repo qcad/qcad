@@ -826,13 +826,6 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
                 onlyChanges = false;
             }
 
-            if (newProperty.second.isCustom()) {
-                if (!oldProperty.first.isValid()) {
-                    // custom property added:
-                    onlyChanges = false;
-                }
-            }
-
             objectHasChanged |= addPropertyChange(
                 object->getId(),
                 RPropertyChange(
