@@ -248,8 +248,7 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
     }
 
     qDebug() << "RPropertyEditor::updateFromDocument";
-    //RDebug::printBacktrace();
-    RDebug::startTimer();
+    //RDebug::startTimer();
 
     if (filter!=RS::EntityUnknown) {
         setEntityTypeFilter(filter);
@@ -275,7 +274,6 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
 
     // only block ref and attributes selected:
     // default to filter block ref:
-    RDebug::startTimer(7);
     if (entityTypeFilter==RS::EntityAll && !manual) {
         bool foundBlockRef = false;
         bool foundAttribute = false;
@@ -324,9 +322,7 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
             }
         }
     }
-    RDebug::stopTimer(7, "find out block ref / attr / combined types");
 
-    RDebug::startTimer(7);
     // collect and count entity types:
     // collect common custom properties:
     QSet<QString> customPropertyNames;
@@ -358,10 +354,12 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
         first = false;
     }
 
+    // get list of custom properties that are always shown, even if a selected object does not provide the property:
+    QStringList fixedCustomPropertyNames = getFixedCustomPropertyNames(combinedTypes.keys());
+
     QStringList customPropertyNamesSorted = customPropertyNames.toList();
+    customPropertyNamesSorted.append(fixedCustomPropertyNames);
     qSort(customPropertyNamesSorted);
-    //qDebug() << "customPropertyNamesSorted:" << customPropertyNamesSorted;
-    RDebug::stopTimer(7, "collecting entity types and custom properties");
 
     // find out which properties need to be collected (combined properties of selected object types):
     QSet<RPropertyTypeId> combinedPropertyTypeIds;
@@ -378,7 +376,6 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
         }
     }
 
-    qDebug() << "combinedPropertyTypeIds:" << combinedPropertyTypeIds;
     QList<RPropertyTypeId> combinedPropertyTypeIdsSorted = combinedPropertyTypeIds.toList();
     qSort(combinedPropertyTypeIdsSorted);
 
@@ -390,18 +387,14 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
 
     // append custom properties common among all selected objects:
     for (int i=0; i<customPropertyNamesSorted.length(); i++) {
-        //combinedPropertyTypeIdsSorted.append(RPropertyTypeId("QCAD", customPropertyNamesSorted[i]));
         ccProperties.append(RProperty(*document, objectIds, RPropertyTypeId("QCAD", customPropertyNamesSorted[i]), showOnRequest));
     }
 
 
     // for each property, find out value (either identical value or 'mixed'):
-    RDebug::startTimer(7);
     QtConcurrent::blockingMap(ccProperties, RPropertyEditor::computePropertyValue);
-    RDebug::stopTimer(7, "blockingMap");
 
-
-    RDebug::startTimer(7);
+    // update combined properties map:
     for (int i=0; i<ccProperties.length(); i++) {
         RProperty& p = ccProperties[i];
         RPropertyTypeId& pid = p.propertyTypeId;
@@ -418,8 +411,6 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
 
             if (propertyMap.contains(propertyTitle)) {
                 // existing property in existing group:
-                //propertyMap[propertyTitle].first = property.value;
-                //propertyMap[propertyTitle].second.setMixed(true);
                 qWarning() << "should not be reached";
             }
 
@@ -440,176 +431,12 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
             propertyOrder[propertyGroupTitle].push_back(propertyTitle);
         }
     }
-    RDebug::stopTimer(7, "collect prop");
-
-
-//    RDebug::startTimer(7);
-//    for (int i=0; i<combinedPropertyTypeIdsSorted.length(); i++) {
-//        RPropertyTypeId pid = combinedPropertyTypeIdsSorted[i];
-
-//        QVariant val;
-//        RPropertyAttributes attr;
-//        bool mixed = false;
-//        bool invisible = false;
-
-//        for (it = objectIds.begin(); it != objectIds.end(); ++it) {
-//            QSharedPointer<RObject> obj = document->queryObjectDirect(*it);
-
-//            QPair<QVariant, RPropertyAttributes> prop = obj->getProperty(pid, true, true, showOnRequest);
-
-//            if (prop.second.isInvisible()) {
-//                // property is invisible:
-//                invisible = true;
-//                break;
-//            }
-
-//            if (!val.isValid()) {
-//                // first value:
-//                val = prop.first;
-//                attr = prop.second;
-//            }
-//            else {
-//                // next value:
-//                if (prop.second.isSum()) {
-//                    // sum up all values:
-//                    double v = val.toDouble();
-//                    val.setValue(v + prop.first.toDouble());
-//                }
-//                else {
-//                    // compare and set to mixed if values don't match:
-//                    if (!RS::compare(val, prop.first)) {
-//                        mixed = true;
-//                        break;
-//                    }
-//                }
-//            }
-//        }
-//        // value of property is now known (value or mixed):
-
-//        if (invisible) {
-//            // property is invisible:
-//            continue;
-//        }
-
-//        // group title (e.g. "Center", "QCAD" for custom propertie, "" for group less):
-//        QString propertyGroupTitle = pid.getPropertyGroupTitle();
-//        // proerty title (e.g. "X", "myProp", "Text height", etc.):
-//        QString propertyTitle = pid.getPropertyTitle();
-
-//        // retrieve custom property attributes from RObject as previously registered:
-//        // this allows for custom properties to have attributes such as read-only, invisible, custom label, etc):
-//        if (pid.isCustom()) {
-//            attr = this->getCustomPropertyAttributes(propertyGroupTitle, propertyTitle);
-//            if (attr.isInvisible()) {
-//                continue;
-//            }
-//        }
-
-//        if (mixed) {
-//            // value is mixed:
-//            //qDebug() << "value is mixed:" << propertyGroupTitle << propertyTitle;
-//            attr.setMixed(true);
-//        }
-
-//        if (combinedProperties.contains(propertyGroupTitle)) {
-//            RPropertyMap& propertyMap = combinedProperties[propertyGroupTitle];
-
-//            if (propertyMap.contains(propertyTitle)) {
-//                // existing property in existing group:
-//                //propertyMap[propertyTitle].first = property.value;
-//                //propertyMap[propertyTitle].second.setMixed(true);
-//                qWarning() << "should not be reached";
-//            }
-
-//            else {
-//                // new property in existing group:
-//                propertyMap[propertyTitle] = QPair<QVariant, RPropertyAttributes>(val, attr);
-
-//                propertyOrder[propertyGroupTitle].push_back(propertyTitle);
-//            }
-//        }
-//        else {
-//            // new property in new group:
-//            RPropertyMap propertyMap;
-//            propertyMap[propertyTitle] = QPair<QVariant, RPropertyAttributes>(val, attr);
-//            combinedProperties[propertyGroupTitle] = propertyMap;
-
-//            groupOrder.push_back(propertyGroupTitle);
-//            propertyOrder[propertyGroupTitle].push_back(propertyTitle);
-//        }
-//    }
-//    RDebug::stopTimer(7, "collect prop");
-
-
-
-    // collect only combined properties
-    // without updating GUI:
-//    RDebug::startTimer(7);
-//    for (it = objectIds.begin(); it != objectIds.end(); ++it) {
-//        QSharedPointer<RObject> obj = document->queryObjectDirect(*it);
-//        if (obj.isNull()) {
-//            continue;
-//        }
-//        if (entityTypeFilter!=RS::EntityAll && !checkType(obj->getType(), entityTypeFilter)) {
-//            continue;
-//        }
-
-//        updateEditor(*obj.data(), combinedPropertyTypeIdsSorted, false, document, showOnRequest);
-//    }
-//    RDebug::stopTimer(7, "collect prop");
-
-
 
     RS::EntityType entityTypeFilterProp = entityTypeFilter;
     if (entityTypeFilterProp==RS::EntityBlockRefAttr) {
         // only block ref and attributes selected: show only block ref properties:
         entityTypeFilterProp = RS::EntityBlockRef;
     }
-
-//    RDebug::startTimer(7);
-//    // remove properties that are not shared by all selected entities:
-//    for (it = objectIds.begin(); it != objectIds.end(); ++it) {
-//        QSharedPointer<RObject> obj = document->queryObjectDirect(*it);
-//        if (obj.isNull()) {
-//            continue;
-//        }
-
-//        QPair<QVariant, RPropertyAttributes> p = obj->getProperty(REntity::PropertyType);
-//        RS::EntityType type = (RS::EntityType)p.first.toInt();
-
-//        if (entityTypeFilterProp==RS::EntityAll || obj->getType()==entityTypeFilterProp) {
-//            bool customOnly = false;
-//            QSet<RPropertyTypeId> propertyTypeIds;
-//            if (combinedTypes.contains(type)) {
-//                // already filtered out property type IDs of this type,
-//                // only look into custom properties:
-//                propertyTypeIds = obj->getCustomPropertyTypeIds();
-//                customOnly = true;
-//            }
-//            else {
-//                // not filtered out this type yet, look into all properties:
-//                propertyTypeIds = obj->getPropertyTypeIds();
-//            }
-
-//            if (!propertyTypeIds.isEmpty()) {
-//                QMultiMap<QString, QString> propertiesToKeep;
-//                QSet<RPropertyTypeId>::iterator it;
-//                for (it = propertyTypeIds.begin(); it != propertyTypeIds.end(); ++it) {
-//                    propertiesToKeep.insert(it->getPropertyGroupTitle(),
-//                                            it->getPropertyTitle());
-//                }
-//                removeAllButThese(propertiesToKeep, customOnly);
-//            }
-//        }
-
-//        if (combinedTypes.contains(type)) {
-//            combinedTypes[type]++;
-//        }
-//        else {
-//            combinedTypes.insert(type, 1);
-//        }
-//    }
-//    RDebug::stopTimer(7, "RPropertyEditor::updateFromDocument: remove prop not shared");
 
     if (RSettings::getSelectBlockWithAttribute()) {
         //combinedTypes.remove(RS::EntityBlockRefAttr);
@@ -621,7 +448,7 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
         }
     }
 
-    RDebug::stopTimer("RPropertyEditor::updateFromDocument");
+    //RDebug::stopTimer("RPropertyEditor::updateFromDocument");
 
 //    qDebug() << "combinedProperties:";
 //    QStringList groups = combinedProperties.keys();
