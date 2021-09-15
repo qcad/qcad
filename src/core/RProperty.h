@@ -8,6 +8,11 @@
 
 class RDocument;
 
+/**
+ * Property with type ID, value and attributes. Used for concurrent property collection.
+ *
+ * \ingroup core
+ */
 class RProperty {
 public:
     RProperty(const RDocument& document,
