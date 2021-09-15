@@ -8002,7 +8002,7 @@ BUG: Interferes with group castings.</source>
         <translation>Vrstva</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+11"/>
         <source>Layer name:</source>
         <translation>Názov vrstvy:</translation>
     </message>

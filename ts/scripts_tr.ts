@@ -7599,7 +7599,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">Katman</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+11"/>
         <source>Layer name:</source>
         <translation type="unfinished"></translation>
     </message>

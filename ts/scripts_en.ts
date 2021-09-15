@@ -7959,7 +7959,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Layer</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+11"/>
         <source>Layer name:</source>
         <translation>Layer name:</translation>
     </message>

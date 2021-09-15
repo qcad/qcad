@@ -8048,7 +8048,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Tason tieto</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.ui" line="+25"/>
+        <location filename="../scripts/Layer/LayerDialog.ui" line="+28"/>
         <source>Layer name:</source>
         <translation>Tason nimi:</translation>
     </message>
@@ -8057,12 +8057,12 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Kynä</translation>
     </message>
     <message>
-        <location line="-8"/>
+        <location line="-11"/>
         <source>Layer</source>
         <translation>Taso</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+39"/>
         <source>Attributes</source>
         <translation>Ominaisuudet</translation>
     </message>

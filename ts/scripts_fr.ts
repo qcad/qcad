@@ -8732,7 +8732,7 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.ui" line="+25"/>
+        <location filename="../scripts/Layer/LayerDialog.ui" line="+28"/>
         <source>Layer name:</source>
         <translation>Nom du calque :</translation>
     </message>
@@ -8741,12 +8741,12 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Stylo</translation>
     </message>
     <message>
-        <location line="-8"/>
+        <location line="-11"/>
         <source>Layer</source>
         <translation>Calque</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+39"/>
         <source>Attributes</source>
         <translation>Attributs</translation>
     </message>

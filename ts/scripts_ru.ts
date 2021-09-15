@@ -8006,7 +8006,7 @@ BUG: Interferes with group castings.</source>
         <translation>Слой</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+11"/>
         <source>Layer name:</source>
         <translation>Имя слоя:</translation>
     </message>

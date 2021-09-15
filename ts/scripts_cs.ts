@@ -7807,7 +7807,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">Vrstva</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+11"/>
         <source>Layer name:</source>
         <translation>Název vrstvy:</translation>
     </message>

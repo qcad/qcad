@@ -7580,17 +7580,17 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.ui" line="+25"/>
+        <location filename="../scripts/Layer/LayerDialog.ui" line="+28"/>
         <source>Layer name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-8"/>
+        <location line="-11"/>
         <source>Layer</source>
         <translation type="unfinished">Warstwa</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+39"/>
         <source>Attributes</source>
         <translation>Atrybuty</translation>
     </message>

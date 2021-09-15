@@ -9253,7 +9253,7 @@ BUG: Interferes with group castings.</translation>
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.ui" line="+25"/>
+        <location filename="../scripts/Layer/LayerDialog.ui" line="+28"/>
         <source>Layer name:</source>
         <translation>Layername:</translation>
     </message>
@@ -9262,12 +9262,12 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Stift</translation>
     </message>
     <message>
-        <location line="-8"/>
+        <location line="-11"/>
         <source>Layer</source>
         <translation>Layer</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+39"/>
         <source>Attributes</source>
         <translation>Attribute</translation>
     </message>

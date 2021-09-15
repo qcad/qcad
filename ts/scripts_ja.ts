@@ -8109,7 +8109,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">画層データ</translation>
     </message>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.ui" line="+25"/>
+        <location filename="../scripts/Layer/LayerDialog.ui" line="+28"/>
         <source>Layer name:</source>
         <translation>画層名:</translation>
     </message>
@@ -8118,12 +8118,12 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">ペン</translation>
     </message>
     <message>
-        <location line="-8"/>
+        <location line="-11"/>
         <source>Layer</source>
         <translation type="unfinished">レイヤー</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+39"/>
         <source>Attributes</source>
         <translation>属性</translation>
     </message>

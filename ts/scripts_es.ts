@@ -8707,7 +8707,7 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../scripts/Layer/LayerDialog.ui" line="+25"/>
+        <location filename="../scripts/Layer/LayerDialog.ui" line="+28"/>
         <source>Layer name:</source>
         <translation>Nombre de capa:</translation>
     </message>
@@ -8716,12 +8716,12 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Trazador</translation>
     </message>
     <message>
-        <location line="-8"/>
+        <location line="-11"/>
         <source>Layer</source>
         <translation>Capa</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+39"/>
         <source>Attributes</source>
         <translation>Atributos</translation>
     </message>
