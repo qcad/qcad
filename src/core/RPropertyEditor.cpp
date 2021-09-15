@@ -248,7 +248,7 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
     }
 
     //qDebug() << "RPropertyEditor::updateFromDocument";
-    //RDebug::startTimer();
+    RDebug::startTimer();
 
     if (filter!=RS::EntityUnknown) {
         setEntityTypeFilter(filter);
@@ -395,6 +395,10 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
     // for each property, find out value (either identical value or 'mixed'):
     QtConcurrent::blockingMap(ccProperties, RPropertyEditor::computePropertyValue);
 
+//    for (int i=0; i<ccProperties.length(); i++) {
+//        RPropertyEditor::computePropertyValue(ccProperties[i]);
+//    }
+
     // update combined properties map:
     for (int i=0; i<ccProperties.length(); i++) {
         RProperty& p = ccProperties[i];
@@ -449,7 +453,7 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
         }
     }
 
-    //RDebug::stopTimer("RPropertyEditor::updateFromDocument");
+    RDebug::stopTimer("RPropertyEditor::updateFromDocument");
 
 //    qDebug() << "combinedProperties:";
 //    QStringList groups = combinedProperties.keys();
