@@ -899,7 +899,6 @@ void RDimStyleProxyBasic::updateTextPosition(const QString& text, double textWid
             distH.setPolar(h, angle);
             textPositionSide = newTextPos;
             textPositionSide+=distH;
-            qDebug() << "textPositionSide: " << textPositionSide;
         }
         else {
             textPositionSide = RVector::invalid;
