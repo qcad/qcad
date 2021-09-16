@@ -46,12 +46,18 @@ SaveAs.initPreferences = function(pageWidget, calledByPrefDialog, document) {
 
     // Offer only a limited choice here as not all file format versions
     // are suitable for saving all information (e.g. 24 bit colors):
+    var defaultIndex = 0;
     for (var i=0; i<filterStrings.length; i++) {
         var filterString = filterStrings[i];
         if (File.isRecommendedVersion(filterString)) {
             widgets["Filter"].addItem(filterString);
+            if (filterString.contains("R27") && filterString.contains("*.dxf")) {
+                defaultIndex = widgets["Filter"].count-1;
+            }
         }
     }
+
+    widgets["Filter"].currentIndex = defaultIndex;
 };
 
 SaveAs.prototype.beginEvent = function() {
