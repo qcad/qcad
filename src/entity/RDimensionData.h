@@ -138,6 +138,11 @@ public:
     }
 
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false, bool segment = false, QList<RObject::Id>* entityIds = NULL) const {
+        Q_UNUSED(queryBox)
+        Q_UNUSED(ignoreComplex)
+        Q_UNUSED(segment)
+        Q_UNUSED(entityIds)
+
         return shapes;
     }
 
