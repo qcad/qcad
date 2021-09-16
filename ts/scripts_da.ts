@@ -386,7 +386,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/AppPreferences.js" line="+65"/>
         <source>Application &amp;Preferences</source>
-        <translation type="unfinished">Ansøgning og præferencer</translation>
+        <translation type="unfinished">Ansøgning præferencer</translation>
     </message>
 </context>
 <context>
@@ -500,7 +500,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PHInit.js" line="+2"/>
         <source>2 Points and &amp;Height</source>
-        <translation type="unfinished">2 punkter og &amp;Højde</translation>
+        <translation type="unfinished">2 punkter og &amp;højde</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2295,7 +2295,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/Copy/CopyInit.js" line="+2"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished">&amp;Kopiering</translation>
+        <translation type="unfinished">&amp;Kopier</translation>
     </message>
 </context>
 <context>
@@ -2303,7 +2303,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/CopyWithReference/CopyWithReferenceInit.js" line="+2"/>
         <source>&amp;Copy with Reference</source>
-        <translation type="unfinished">&amp;Kopiering med reference</translation>
+        <translation type="unfinished">&amp;Kopier med reference</translation>
     </message>
 </context>
 <context>
@@ -2441,7 +2441,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/Cut/CutInit.js" line="+2"/>
         <source>&amp;Cut</source>
-        <translation type="unfinished">&amp;Cut</translation>
+        <translation type="unfinished">&amp;Klip</translation>
     </message>
 </context>
 <context>
@@ -3204,7 +3204,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/DisplayDistanceAngle/DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display &amp;Distance/Angle</source>
-        <translation type="unfinished">Visning og afstand/vinkel</translation>
+        <translation type="unfinished">Visning &amp;afstand/vinkel</translation>
     </message>
 </context>
 <context>
@@ -3991,7 +3991,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation type="unfinished">Tegning og præferencer</translation>
+        <translation type="unfinished">Tegning præferencer</translation>
     </message>
 </context>
 <context>
@@ -4225,7 +4225,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Block/EditFromReference/EditFromReferenceInit.js" line="+2"/>
         <source>E&amp;dit Block from Reference</source>
-        <translation type="unfinished">E&amp;dit Block fra reference</translation>
+        <translation type="unfinished">Re&amp;diger blok fra reference</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4908,7 +4908,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/Examples.js" line="+55"/>
         <source>Script &amp;Examples</source>
-        <translation type="unfinished">Script og eksempler</translation>
+        <translation type="unfinished">Script &amp;eksempler</translation>
     </message>
 </context>
 <context>
@@ -7951,7 +7951,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisectorInit.js" line="+2"/>
         <source>Angle &amp;Bisector</source>
-        <translation type="unfinished">Vinkel og vinkel &amp;vinkelhalvdel</translation>
+        <translation type="unfinished">&amp;Vinkelhalvdel</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -9205,7 +9205,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/Paste/PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished">&amp;Paste</translation>
+        <translation type="unfinished">&amp;Sæt ind</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PreferencesPage.ui" line="+17"/>
@@ -9517,7 +9517,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/File/Print/PrintInit.js" line="+2"/>
         <source>&amp;Print</source>
-        <translation type="unfinished">&amp;Print</translation>
+        <translation type="unfinished">&amp;Udskriv</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -9530,7 +9530,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/File/PrintCurrentView/PrintCurrentViewInit.js" line="+2"/>
         <source>Print &amp;Current View</source>
-        <translation type="unfinished">Udskriv og aktuel visning</translation>
+        <translation type="unfinished">Udskriv &amp;aktuel visning</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -9658,7 +9658,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreviewInit.js" line="+2"/>
         <source>Print Pre&amp;view</source>
-        <translation type="unfinished">Print Pre&amp;view</translation>
+        <translation type="unfinished">Udskriftsforhåndsvisning</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -9893,7 +9893,7 @@ shown in search results:</source>
     <message>
         <location line="+10"/>
         <source>Open &amp;Recent</source>
-        <translation type="unfinished">Åbent og nyere</translation>
+        <translation type="unfinished">Åbent &amp;nyere</translation>
     </message>
 </context>
 <context>
@@ -9901,7 +9901,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/Redo/RedoInit.js" line="+2"/>
         <source>&amp;Redo</source>
-        <translation type="unfinished">&amp;Redo</translation>
+        <translation type="unfinished">&amp;Gendan</translation>
     </message>
 </context>
 <context>
@@ -9938,7 +9938,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Block/RenameBlock/RenameBlockInit.js" line="+2"/>
         <source>Re&amp;name Block</source>
-        <translation type="unfinished">Om- og omdøbe blok</translation>
+        <translation type="unfinished">Omdøbe blok</translation>
     </message>
 </context>
 <context>
@@ -11478,7 +11478,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapGrid/SnapGridInit.js" line="+2"/>
         <source>&amp;Grid</source>
-        <translation type="unfinished">&amp;Grid</translation>
+        <translation type="unfinished">&amp;Gitter</translation>
     </message>
 </context>
 <context>
@@ -11994,12 +11994,12 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished">&amp;Kopiering</translation>
+        <translation type="unfinished">&amp;Kopier</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished">&amp;Paste</translation>
+        <translation type="unfinished">&amp;Sæt ind</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -12600,7 +12600,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
         <source>M&amp;ove and Rotate</source>
-        <translation type="unfinished">M&amp;ove og rotere</translation>
+        <translation type="unfinished">F&amp;lyt og rotere</translation>
     </message>
 </context>
 <context>
@@ -12692,7 +12692,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/Tutorials.js" line="+56"/>
         <source>Script &amp;Tutorials</source>
-        <translation type="unfinished">Script og vejledninger</translation>
+        <translation type="unfinished">Script &amp;vejledninger</translation>
     </message>
 </context>
 <context>
@@ -12752,7 +12752,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/Undo/UndoInit.js" line="+2"/>
         <source>&amp;Undo</source>
-        <translation type="unfinished">&amp;Undo</translation>
+        <translation type="unfinished">&amp;Fortryd</translation>
     </message>
 </context>
 <context>
@@ -13380,7 +13380,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/View/Zoom/ZoomIn/ZoomInInit.js" line="+2"/>
         <source>Zoom &amp;In</source>
-        <translation type="unfinished">Zoom &amp;In</translation>
+        <translation type="unfinished">Zoom &amp;ind</translation>
     </message>
 </context>
 <context>
@@ -13388,7 +13388,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/View/Zoom/ZoomOut/ZoomOutInit.js" line="+2"/>
         <source>Zoom &amp;Out</source>
-        <translation type="unfinished">Zoom og ud</translation>
+        <translation type="unfinished">Zoom &amp;ud</translation>
     </message>
 </context>
 <context>
