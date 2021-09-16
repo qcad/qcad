@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>367</width>
+    <width>570</width>
     <height>622</height>
    </rect>
   </property>
@@ -27,7 +27,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>365</width>
+     <width>568</width>
      <height>620</height>
     </rect>
    </property>
@@ -198,6 +198,9 @@
         <widget class="QLabel" name="LabelLinetypeScale">
          <property name="text">
           <string>Linetype Scale:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
          </property>
         </widget>
        </item>
