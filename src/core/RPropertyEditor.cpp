@@ -248,7 +248,7 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
     }
 
     //qDebug() << "RPropertyEditor::updateFromDocument";
-    RDebug::startTimer();
+    //RDebug::startTimer();
 
     if (filter!=RS::EntityUnknown) {
         setEntityTypeFilter(filter);
@@ -461,7 +461,7 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
         }
     }
 
-    RDebug::stopTimer("RPropertyEditor::updateFromDocument");
+    //RDebug::stopTimer("RPropertyEditor::updateFromDocument");
 
 //    qDebug() << "combinedProperties:";
 //    QStringList groups = combinedProperties.keys();
