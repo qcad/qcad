@@ -10716,7 +10716,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Väri:</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+156"/>
         <source>Protected:</source>
         <translation>Suojattu:</translation>
     </message>
@@ -10729,7 +10729,7 @@ näkyy hakutuloksissa:</translation>
         <translation type="vanished">Siirrä valinta uuteen tasoon</translation>
     </message>
     <message>
-        <location line="-49"/>
+        <location line="-52"/>
         <source>Linetype Scale:</source>
         <translation>Viivatyypin asteikko:</translation>
     </message>
@@ -11399,7 +11399,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Avaa/tallenna</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>Vientisuodattimia ei löydetty. Keskeytetään ...</translation>
     </message>

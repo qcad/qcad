@@ -11837,12 +11837,12 @@ dans les résultats de recherche :</translation>
         <translation>Échelle du type de ligne :</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Protected:</source>
         <translation>Protégé :</translation>
     </message>
     <message>
-        <location line="-143"/>
+        <location line="-146"/>
         <source>Handle:</source>
         <translation>Handle :</translation>
     </message>
@@ -12549,7 +12549,7 @@ dans les résultats de recherche :</translation>
         <translation>Charger/Enregistrer</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>Pas de filtres d&apos;exportation ont été trouvés. Abandon...</translation>
     </message>

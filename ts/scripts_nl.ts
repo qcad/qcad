@@ -10804,12 +10804,12 @@ getoond in zoekresultaten:</translation>
         <translation>Lijntypeschaal:</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Protected:</source>
         <translation>Beschermd:</translation>
     </message>
     <message>
-        <location line="-143"/>
+        <location line="-146"/>
         <source>Handle:</source>
         <translation>Handle:</translation>
     </message>
@@ -11515,7 +11515,7 @@ getoond in zoekresultaten:</translation>
         <translation>Laden/opslaan</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>Geen export filters zijn gevonden. Afgebroken...</translation>
     </message>

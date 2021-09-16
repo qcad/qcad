@@ -10423,7 +10423,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Měřítko čáry:</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Protected:</source>
         <translation>Chráněno:</translation>
     </message>
@@ -11072,7 +11072,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Otevřít/Uložit</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>Nebyly nalezeny žádné filtry pro export. Přerušení...</translation>
     </message>

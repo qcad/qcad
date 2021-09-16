@@ -9828,7 +9828,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Protected:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10437,7 +10437,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
         <source>No export filters have been found. Aborting...</source>
         <translation type="unfinished"></translation>
     </message>

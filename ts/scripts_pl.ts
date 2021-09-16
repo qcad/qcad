@@ -10095,12 +10095,12 @@ shown in search results:</source>
         <translation>Skala rodzaju linii:</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Protected:</source>
         <translation>Chroniony:</translation>
     </message>
     <message>
-        <location line="-143"/>
+        <location line="-146"/>
         <source>Handle:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10742,7 +10742,7 @@ shown in search results:</source>
         <translation>Otwieranie/zapisywanie</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>Nie odnaleziono filtrów eksportowania. Anulowanie...</translation>
     </message>

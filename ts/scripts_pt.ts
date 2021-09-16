@@ -10389,7 +10389,7 @@ nos resultados de busca:</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode: </source>
-        <translation>Modo:</translation>
+        <translation type="unfinished">Modo: </translation>
     </message>
     <message>
         <location line="+17"/>
@@ -11000,12 +11000,12 @@ nos resultados de busca:</translation>
         <translation>Escala do Tipo de Linha:</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Protected:</source>
         <translation>Protegido:</translation>
     </message>
     <message>
-        <location line="-143"/>
+        <location line="-146"/>
         <source>Handle:</source>
         <translation>Manusear:</translation>
     </message>
@@ -11657,7 +11657,7 @@ nos resultados de busca:</translation>
         <translation>Carregue/Grave</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>Nenhum filtro de exportação foi encontrado. Abortando...</translation>
     </message>

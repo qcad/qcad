@@ -6394,7 +6394,7 @@ BUG: Interferes with group castings.</translation>
     <message>
         <location line="+36"/>
         <source>Width : </source>
-        <translation>Breite:</translation>
+        <translation type="unfinished">Breite: </translation>
     </message>
     <message>
         <location line="+16"/>
@@ -12062,7 +12062,7 @@ nicht öffnen.
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode: </source>
-        <translation>Modus:</translation>
+        <translation type="unfinished">Modus: </translation>
     </message>
     <message>
         <location line="+17"/>
@@ -12789,7 +12789,7 @@ nicht öffnen.
         <translation>Linientypskalierung:</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Protected:</source>
         <translation>Geschützt:</translation>
     </message>
@@ -12798,7 +12798,7 @@ nicht öffnen.
         <translation type="obsolete">Layer:</translation>
     </message>
     <message>
-        <location line="-153"/>
+        <location line="-156"/>
         <source>Color:</source>
         <translation>Farbe:</translation>
     </message>
@@ -13566,7 +13566,7 @@ nicht öffnen.
         <translation>Laden/Speichern</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>Keine Exportfilter wurden gefunden. Abbruch...</translation>
     </message>

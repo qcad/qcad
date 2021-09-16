@@ -357,7 +357,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Layer/AddLayer/AddLayerInit.js" line="+2"/>
         <source>&amp;Add Layer</source>
-        <translation type="unfinished">&amp;Add Layer</translation>
+        <translation type="unfinished">&amp;Tilføj lag</translation>
     </message>
 </context>
 <context>
@@ -386,7 +386,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/AppPreferences.js" line="+65"/>
         <source>Application &amp;Preferences</source>
-        <translation type="unfinished">Ansøgning præferencer</translation>
+        <translation>Ansøgning &amp;præferencer</translation>
     </message>
 </context>
 <context>
@@ -394,12 +394,12 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc.js" line="+71"/>
         <source>Arc Tools</source>
-        <translation type="unfinished">Arc Tools</translation>
+        <translation type="unfinished">Værktøjer til buer</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Arc</source>
-        <translation type="unfinished">&amp;Arc</translation>
+        <translation type="unfinished">&amp;Bue</translation>
     </message>
 </context>
 <context>
@@ -1199,7 +1199,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+28"/>
         <source>&amp;Block</source>
-        <translation type="unfinished">&amp;Block</translation>
+        <translation type="unfinished">&amp;Blok</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1256,7 +1256,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/Examples/BlockExamples/BlockExamples.js" line="+51"/>
         <source>&amp;Block</source>
-        <translation type="unfinished">&amp;Block</translation>
+        <translation type="unfinished">&amp;Blok</translation>
     </message>
 </context>
 <context>
@@ -1312,7 +1312,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+12"/>
         <source>&amp;List Block Attributes</source>
-        <translation type="unfinished">&amp;List Block Attributter</translation>
+        <translation type="unfinished">&amp;Liste over blokattributterne</translation>
     </message>
 </context>
 <context>
@@ -1353,7 +1353,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOutInit.js" line="+2"/>
         <source>&amp;Break out Segment</source>
-        <translation type="unfinished">&amp;Break out Segment</translation>
+        <translation type="unfinished">&amp;Bryd et segment ud</translation>
     </message>
 </context>
 <context>
@@ -1376,7 +1376,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
         <source>&amp;Break out Gap</source>
-        <translation type="unfinished">&amp;Gennemtræk Gap</translation>
+        <translation type="unfinished">&amp;Gennemtræk gap</translation>
     </message>
 </context>
 <context>
@@ -1414,7 +1414,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
         <source>&amp;Break out Manual</source>
-        <translation type="unfinished">&amp;Break out Manual</translation>
+        <translation type="unfinished">&amp;Bryd et segment ud manuelt</translation>
     </message>
 </context>
 <context>
@@ -1440,7 +1440,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+35"/>
         <source>Vertical/Horizontal</source>
-        <translation type="unfinished">Lodret/Horisontal</translation>
+        <translation type="unfinished">Lodret/horisontal</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+17"/>
@@ -1688,7 +1688,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+2"/>
         <source>2 Tan&amp;gents and Point</source>
-        <translation type="unfinished">2 tangenter og punkt</translation>
+        <translation type="unfinished">2 &amp;tangenter og punkt</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2634,7 +2634,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        <translation type="unfinished">Lukker</translation>
+        <translation type="unfinished">Skraveringer</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2682,12 +2682,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAligned/DimAlignedInit.js" line="+2"/>
         <source>&amp;Aligned</source>
-        <translation type="unfinished">&amp;Aligned</translation>
+        <translation type="unfinished">&amp;Tilpasset</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw aligned dimension</source>
-        <translation type="unfinished">Tegn en justeret dimension</translation>
+        <translation type="unfinished">Tegn en tilpasset dimension</translation>
     </message>
 </context>
 <context>
@@ -2715,12 +2715,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngularInit.js" line="+2"/>
         <source>&amp;Angular</source>
-        <translation type="unfinished">&amp;Angular</translation>
+        <translation type="unfinished">&amp;Vinkel</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw angular dimension</source>
-        <translation type="unfinished">Tegn vinkelmål</translation>
+        <translation type="unfinished">Tegn vinkeldimension</translation>
     </message>
 </context>
 <context>
@@ -2815,9 +2815,9 @@ Do you wish to recover it?</source>
     <message numerus="yes">
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
-        <translation type="unfinished">
-            <numerusform>Etiketpositionen for %n dimension(er) blev nulstillet.</numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Etiketpositionen for en dimension blev nulstillet.</numerusform>
+            <numerusform>Etiketpositionen for %n dimensioner blev nulstillet.</numerusform>
         </translation>
     </message>
     <message>
@@ -2897,7 +2897,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+1"/>
         <source>Arc</source>
-        <translation type="unfinished">Arc</translation>
+        <translation type="unfinished">Bue</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3468,7 +3468,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Not a correct  allow layer switch, ignored ! Text line %1</source>
-        <translation type="unfinished">Ikke en korrekt allow layer switch, ignoreres ! Tekstlinje %1</translation>
+        <translation type="unfinished">Ikke en korrekt allow lag switch, ignoreres ! Tekstlinje %1</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -3619,7 +3619,7 @@ is already in the list.</source>
     <message>
         <location line="-308"/>
         <source>Arc Invalid !</source>
-        <translation type="unfinished">Arc ugyldig !</translation>
+        <translation type="unfinished">Bue ugyldig !</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -3721,12 +3721,12 @@ is already in the list.</source>
     <message>
         <location line="+2"/>
         <source>Vert. alignment Invalid !</source>
-        <translation type="unfinished">Vert. tilpasning Ugyldig !</translation>
+        <translation type="unfinished">Vert. tilpasning ugyldig !</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Horz. alignment Invalid !</source>
-        <translation type="unfinished">Horz. tilpasning Ugyldig !</translation>
+        <translation type="unfinished">Horz. tilpasning ugyldig !</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3991,7 +3991,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation type="unfinished">Tegning præferencer</translation>
+        <translation type="unfinished">Tegning &amp;præferencer</translation>
     </message>
 </context>
 <context>
@@ -4000,8 +4000,8 @@ is already in the list.</source>
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+54"/>
         <source>%n entity/ies duplicated</source>
         <translation type="unfinished">
-            <numerusform>%n enhed/er duplikeret</numerusform>
-            <numerusform></numerusform>
+            <numerusform>En enhed duplikeret</numerusform>
+            <numerusform>%n enheder duplikeret</numerusform>
         </translation>
     </message>
     <message>
@@ -4238,12 +4238,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatch.js" line="+61"/>
         <source>Choose hatch</source>
-        <translation type="unfinished">Vælg luge</translation>
+        <translation type="unfinished">Vælg skravering</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation type="unfinished">Rediger &amp;Hatch</translation>
+        <translation type="unfinished">Rediger &amp;skravering</translation>
     </message>
 </context>
 <context>
@@ -4272,7 +4272,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/EditText/EditTextInit.js" line="+2"/>
         <source>Edit Te&amp;xt</source>
-        <translation type="unfinished">Rediger Te&amp;xt</translation>
+        <translation type="unfinished">Rediger te&amp;kst</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4849,8 +4849,8 @@ is already in the list.</source>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
         <translation type="unfinished">
-            <numerusform>Transaktionen berørte %n objekt(er).</numerusform>
-            <numerusform></numerusform>
+            <numerusform>Transaktionen berørte ét objekt.</numerusform>
+            <numerusform>Transaktionen berørte %n objekter.</numerusform>
         </translation>
     </message>
     <message>
@@ -4926,7 +4926,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
-        <translation type="unfinished">&amp;Explode</translation>
+        <translation type="unfinished">&amp;Eksplodere</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+137"/>
@@ -5259,7 +5259,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+3"/>
         <source>FlexPainter Beta 0.42e © CVH 2020 </source>
-        <translation type="unfinished">FlexPainter Beta 0.42e © CVH 2020</translation>
+        <translation type="unfinished">FlexPainter Beta 0.42e © CVH 2020 </translation>
     </message>
     <message>
         <location line="+245"/>
@@ -5302,12 +5302,22 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished">Udførlig info. (vedvarende på)</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+3"/>
+        <source>Verbose *</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Deleted painted over base entities. (persistent off)</source>
         <translation type="unfinished">Udgået malet over basisenheder. (vedvarende slukket)</translation>
     </message>
     <message>
-        <location line="-879"/>
+        <location line="+3"/>
+        <source>Delete Base Entities *</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-882"/>
         <source>&lt;Enter space size&gt;</source>
         <translation type="unfinished">&lt;Indtast pladsstørrelse&gt;</translation>
     </message>
@@ -5324,7 +5334,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+36"/>
         <source>Width : </source>
-        <translation type="unfinished">Bredde</translation>
+        <translation type="unfinished">Bredde: </translation>
     </message>
     <message>
         <location line="+16"/>
@@ -5375,16 +5385,6 @@ BUG: Interferes with group castings.</source>
         <location line="+7"/>
         <source>Align with End</source>
         <translation type="unfinished">Juster med enden</translation>
-    </message>
-    <message>
-        <location line="+39"/>
-        <source>Verbose *</source>
-        <translation type="unfinished">Verbose Makefile _tmp_da assistant_ar.qm assistant_bg.qm assistant_cs.qm assistant_da.qm assistant_de.qm assistant_en.qm assistant_es.qm assistant_fr.qm assistant_hu.qm assistant_ja.qm assistant_ko.qm assistant_pl.qm assistant_ru.qm assistant_sk.qm assistant_sl.qm assistant_uk.qm assistant_zh_CN.qm assistant_zh_TW.qm designer_ar.qm designer_bg.qm designer_cs.qm designer_da.qm designer_de.qm designer_en.qm designer_es.qm designer_fr.qm designer_hu.qm designer_ja.qm designer_ko.qm designer_pl.qm designer_ru.qm designer_sk.qm designer_sl.qm designer_uk.qm designer_zh_CN.qm designer_zh_TW.qm lBZkAZ.json linguist_ar.qm linguist_bg.qm linguist_cs.qm linguist_da.qm linguist_de.qm linguist_en.qm linguist_es.qm linguist_fr.qm linguist_hu.qm linguist_ja.qm linguist_ko.qm linguist_pl.qm linguist_ru.qm linguist_sk.qm linguist_sl.qm linguist_uk.qm linguist_zh_CN.qm linguist_zh_TW.qm qcadcore_cs.qm qcadcore_cs.ts qcadcore_da.qm qcadcore_da.ts qcadcore_de.qm qcadcore_de.ts qcadcore_en.qm qcadcore_en.ts qcadcore_es.qm qcadcore_es.ts qcadcore_fi.qm qcadcore_fi.ts qcadcore_fr.qm qcadcore_fr.ts qcadcore_hr.qm qcadcore_hr.ts qcadcore_hu.qm qcadcore_hu.ts qcadcore_it.qm qcadcore_it.ts qcadcore_ja.qm qcadcore_ja.ts qcadcore_lt.qm qcadcore_lt.ts qcadcore_nl.qm qcadcore_nl.ts qcadcore_pl.qm qcadcore_pl.ts qcadcore_pt.qm qcadcore_pt.ts qcadcore_ru.qm qcadcore_ru.ts qcadcore_sk.qm qcadcore_sk.ts qcadcore_sl.qm qcadcore_sl.ts qcadcore_sv.qm qcadcore_sv.ts qcadcore_th.qm qcadcore_th.ts qcadcore_tr.qm qcadcore_tr.ts qcadcore_zh_CN.qm qcadcore_zh_CN.ts qcadcore_zh_TW.qm qcadcore_zh_TW.ts qcadentity_cs.qm qcadentity_cs.ts qcadentity_da.qm qcadentity_da.ts qcadentity_de.qm qcadentity_de.ts qcadentity_en.qm qcadentity_en.ts qcadentity_es.qm qcadentity_es.ts qcadentity_fi.qm qcadentity_fi.ts qcadentity_fr.qm qcadentity_fr.ts qcadentity_hr.qm qcadentity_hr.ts qcadentity_hu.qm qcadentity_hu.ts qcadentity_it.qm qcadentity_it.ts qcadentity_ja.qm qcadentity_ja.ts qcadentity_lt.qm qcadentity_lt.ts qcadentity_nl.qm qcadentity_nl.ts qcadentity_pl.qm qcadentity_pl.ts qcadentity_pt.qm qcadentity_pt.ts qcadentity_ru.qm qcadentity_ru.ts qcadentity_sk.qm qcadentity_sk.ts qcadentity_sl.qm qcadentity_sl.ts qcadentity_sv.qm qcadentity_sv.ts qcadentity_th.qm qcadentity_th.ts qcadentity_tr.qm qcadentity_tr.ts qcadentity_zh_CN.qm qcadentity_zh_CN.ts qcadentity_zh_TW.qm qcadentity_zh_TW.ts qcadgui_cs.qm qcadgui_cs.ts qcadgui_da.qm qcadgui_da.ts qcadgui_de.qm qcadgui_de.ts qcadgui_en.qm qcadgui_en.ts qcadgui_es.qm qcadgui_es.ts qcadgui_fi.qm qcadgui_fi.ts qcadgui_fr.qm qcadgui_fr.ts qcadgui_hr.qm qcadgui_hr.ts qcadgui_hu.qm qcadgui_hu.ts qcadgui_it.qm qcadgui_it.ts qcadgui_ja.qm qcadgui_ja.ts qcadgui_lt.qm qcadgui_lt.ts qcadgui_nl.qm qcadgui_nl.ts qcadgui_pl.qm qcadgui_pl.ts qcadgui_pt.qm qcadgui_pt.ts qcadgui_ru.qm qcadgui_ru.ts qcadgui_sk.qm qcadgui_sk.ts qcadgui_sl.qm qcadgui_sl.ts qcadgui_sv.qm qcadgui_sv.ts qcadgui_th.qm qcadgui_th.ts qcadgui_tr.qm qcadgui_tr.ts qcadgui_zh_CN.qm qcadgui_zh_CN.ts qcadgui_zh_TW.qm qcadgui_zh_TW.ts qmlviewer_ar.qm qmlviewer_bg.qm qmlviewer_cs.qm qmlviewer_da.qm qmlviewer_en.qm qmlviewer_es.qm qmlviewer_fi.qm qmlviewer_fr.qm qmlviewer_he.qm qmlviewer_hu.qm qmlviewer_ja.qm qmlviewer_ko.qm qmlviewer_pl.qm qmlviewer_ru.qm qmlviewer_sk.qm qmlviewer_uk.qm qt_ar.qm qt_bg.qm qt_ca.qm qt_cs.qm qt_da.qm qt_de.qm qt_en.qm qt_es.qm qt_fa.qm qt_fi.qm qt_fr.qm qt_gl.qm qt_he.qm qt_help_ar.qm qt_help_bg.qm qt_help_cs.qm qt_help_da.qm qt_help_de.qm qt_help_en.qm qt_help_es.qm qt_help_fr.qm qt_help_gl.qm qt_help_hu.qm qt_help_it.qm qt_help_ja.qm qt_help_ko.qm qt_help_pl.qm qt_help_ru.qm qt_help_sk.qm qt_help_sl.qm qt_help_uk.qm qt_help_zh_CN.qm qt_help_zh_TW.qm qt_hu.qm qt_it.qm qt_ja.qm qt_ko.qm qt_lt.qm qt_pl.qm qt_pt.qm qt_ru.qm qt_sk.qm qt_sl.qm qt_sv.qm qt_uk.qm qt_zh_CN.qm qt_zh_TW.qm qtbase_ar.qm qtbase_bg.qm qtbase_ca.qm qtbase_cs.qm qtbase_da.qm qtbase_de.qm qtbase_en.qm qtbase_es.qm qtbase_fi.qm qtbase_fr.qm qtbase_gd.qm qtbase_he.qm qtbase_hu.qm qtbase_it.qm qtbase_ja.qm qtbase_ko.qm qtbase_lv.qm qtbase_nl.qm qtbase_nl.ts qtbase_pl.qm qtbase_pt.qm qtbase_pt.ts qtbase_ru.qm qtbase_sk.qm qtbase_uk.qm qtbase_zh_CN.qm qtbase_zh_CN.ts qtconfig_hu.qm qtconfig_ja.qm qtconfig_ko.qm qtconfig_pl.qm qtconfig_ru.qm qtconfig_sk.qm qtconfig_sl.qm qtconfig_uk.qm qtconfig_zh_CN.qm qtconfig_zh_TW.qm qtconnectivity_bg.qm qtconnectivity_da.qm qtconnectivity_de.qm qtconnectivity_en.qm qtconnectivity_es.qm qtconnectivity_ko.qm qtconnectivity_pl.qm qtconnectivity_ru.qm qtconnectivity_uk.qm qtdeclarative_bg.qm qtdeclarative_da.qm qtdeclarative_de.qm qtdeclarative_en.qm qtdeclarative_es.qm qtdeclarative_fi.qm qtdeclarative_fr.qm qtdeclarative_ja.qm qtdeclarative_ko.qm qtdeclarative_lv.qm qtdeclarative_pl.qm qtdeclarative_ru.qm qtdeclarative_sk.qm qtdeclarative_uk.qm qtlocation_bg.qm qtlocation_da.qm qtlocation_de.qm qtlocation_en.qm qtlocation_es.qm qtlocation_fr.qm qtlocation_ko.qm qtlocation_pl.qm qtlocation_ru.qm qtlocation_uk.qm qtmultimedia_ar.qm qtmultimedia_bg.qm qtmultimedia_ca.qm qtmultimedia_cs.qm qtmultimedia_da.qm qtmultimedia_de.qm qtmultimedia_en.qm qtmultimedia_es.qm qtmultimedia_fi.qm qtmultimedia_fr.qm qtmultimedia_hu.qm qtmultimedia_it.qm qtmultimedia_ja.qm qtmultimedia_ko.qm qtmultimedia_pl.qm qtmultimedia_ru.qm qtmultimedia_sk.qm qtmultimedia_uk.qm qtquick1_bg.qm qtquick1_ca.qm qtquick1_cs.qm qtquick1_da.qm qtquick1_de.qm qtquick1_en.qm qtquick1_es.qm qtquick1_fi.qm qtquick1_fr.qm qtquick1_he.qm qtquick1_hu.qm qtquick1_it.qm qtquick1_ja.qm qtquick1_ko.qm qtquick1_pl.qm qtquick1_ru.qm qtquick1_sk.qm qtquick1_uk.qm qtquickcontrols2_ar.qm qtquickcontrols2_bg.qm qtquickcontrols2_en.qm qtquickcontrols2_ko.qm qtquickcontrols2_uk.qm qtquickcontrols_bg.qm qtquickcontrols_de.qm qtquickcontrols_en.qm qtquickcontrols_fi.qm qtquickcontrols_fr.qm qtquickcontrols_ja.qm qtquickcontrols_ru.qm qtquickcontrols_uk.qm qtscript_ar.qm qtscript_bg.qm qtscript_ca.qm qtscript_cs.qm qtscript_da.qm qtscript_de.qm qtscript_en.qm qtscript_es.qm qtscript_fi.qm qtscript_fr.qm qtscript_he.qm qtscript_hu.qm qtscript_it.qm qtscript_ja.qm qtscript_ko.qm qtscript_lv.qm qtscript_pl.qm qtscript_ru.qm qtscript_sk.qm qtscript_uk.qm qtserialport_de.qm qtserialport_en.qm qtserialport_es.qm qtserialport_ja.qm qtserialport_ko.qm qtserialport_pl.qm qtserialport_ru.qm qtserialport_uk.qm qtwebengine_de.qm qtwebengine_en.qm qtwebengine_es.qm qtwebengine_ko.qm qtwebengine_pl.qm qtwebengine_ru.qm qtwebengine_uk.qm qtwebsockets_de.qm qtwebsockets_en.qm qtwebsockets_es.qm qtwebsockets_fr.qm qtwebsockets_ja.qm qtwebsockets_ko.qm qtwebsockets_pl.qm qtwebsockets_ru.qm qtwebsockets_uk.qm qtxmlpatterns_bg.qm qtxmlpatterns_ca.qm qtxmlpatterns_cs.qm qtxmlpatterns_da.qm qtxmlpatterns_de.qm qtxmlpatterns_en.qm qtxmlpatterns_es.qm qtxmlpatterns_fr.qm qtxmlpatterns_hu.qm qtxmlpatterns_it.qm qtxmlpatterns_ja.qm qtxmlpatterns_ko.qm qtxmlpatterns_pl.qm qtxmlpatterns_ru.qm qtxmlpatterns_sk.qm qtxmlpatterns_uk.qm scripts.pro scripts_cs.qm scripts_cs.ts scripts_da.qm scripts_da.ts scripts_de.qm scripts_de.ts scripts_en.qm scripts_en.ts scripts_es.qm scripts_es.ts scripts_fi.qm scripts_fi.ts scripts_fr.qm scripts_fr.ts scripts_hr.qm scripts_hr.ts scripts_hu.qm scripts_hu.ts scripts_it.qm scripts_it.ts scripts_ja.qm scripts_ja.ts scripts_lt.qm scripts_lt.ts scripts_nl.qm scripts_nl.ts scripts_pl.qm scripts_pl.ts scripts_pt.qm scripts_pt.ts scripts_ru.qm scripts_ru.ts scripts_sk.qm scripts_sk.ts scripts_sl.qm scripts_sl.ts scripts_sv.qm scripts_sv.ts scripts_th.qm scripts_th.ts scripts_tr.qm scripts_tr.ts scripts_zh_CN.qm scripts_zh_CN.ts scripts_zh_TW.qm scripts_zh_TW.ts</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Delete Base Entities *</source>
-        <translation type="unfinished">Sletning af basisenheder Makefile _tmp_da assistant_ar.qm assistant_bg.qm assistant_cs.qm assistant_da.qm assistant_de.qm assistant_en.qm assistant_es.qm assistant_fr.qm assistant_hu.qm assistant_ja.qm assistant_ko.qm assistant_pl.qm assistant_ru.qm assistant_sk.qm assistant_sl.qm assistant_uk.qm assistant_zh_CN.qm assistant_zh_TW.qm designer_ar.qm designer_bg.qm designer_cs.qm designer_da.qm designer_de.qm designer_en.qm designer_es.qm designer_fr.qm designer_hu.qm designer_ja.qm designer_ko.qm designer_pl.qm designer_ru.qm designer_sk.qm designer_sl.qm designer_uk.qm designer_zh_CN.qm designer_zh_TW.qm lBZkAZ.json linguist_ar.qm linguist_bg.qm linguist_cs.qm linguist_da.qm linguist_de.qm linguist_en.qm linguist_es.qm linguist_fr.qm linguist_hu.qm linguist_ja.qm linguist_ko.qm linguist_pl.qm linguist_ru.qm linguist_sk.qm linguist_sl.qm linguist_uk.qm linguist_zh_CN.qm linguist_zh_TW.qm qcadcore_cs.qm qcadcore_cs.ts qcadcore_da.qm qcadcore_da.ts qcadcore_de.qm qcadcore_de.ts qcadcore_en.qm qcadcore_en.ts qcadcore_es.qm qcadcore_es.ts qcadcore_fi.qm qcadcore_fi.ts qcadcore_fr.qm qcadcore_fr.ts qcadcore_hr.qm qcadcore_hr.ts qcadcore_hu.qm qcadcore_hu.ts qcadcore_it.qm qcadcore_it.ts qcadcore_ja.qm qcadcore_ja.ts qcadcore_lt.qm qcadcore_lt.ts qcadcore_nl.qm qcadcore_nl.ts qcadcore_pl.qm qcadcore_pl.ts qcadcore_pt.qm qcadcore_pt.ts qcadcore_ru.qm qcadcore_ru.ts qcadcore_sk.qm qcadcore_sk.ts qcadcore_sl.qm qcadcore_sl.ts qcadcore_sv.qm qcadcore_sv.ts qcadcore_th.qm qcadcore_th.ts qcadcore_tr.qm qcadcore_tr.ts qcadcore_zh_CN.qm qcadcore_zh_CN.ts qcadcore_zh_TW.qm qcadcore_zh_TW.ts qcadentity_cs.qm qcadentity_cs.ts qcadentity_da.qm qcadentity_da.ts qcadentity_de.qm qcadentity_de.ts qcadentity_en.qm qcadentity_en.ts qcadentity_es.qm qcadentity_es.ts qcadentity_fi.qm qcadentity_fi.ts qcadentity_fr.qm qcadentity_fr.ts qcadentity_hr.qm qcadentity_hr.ts qcadentity_hu.qm qcadentity_hu.ts qcadentity_it.qm qcadentity_it.ts qcadentity_ja.qm qcadentity_ja.ts qcadentity_lt.qm qcadentity_lt.ts qcadentity_nl.qm qcadentity_nl.ts qcadentity_pl.qm qcadentity_pl.ts qcadentity_pt.qm qcadentity_pt.ts qcadentity_ru.qm qcadentity_ru.ts qcadentity_sk.qm qcadentity_sk.ts qcadentity_sl.qm qcadentity_sl.ts qcadentity_sv.qm qcadentity_sv.ts qcadentity_th.qm qcadentity_th.ts qcadentity_tr.qm qcadentity_tr.ts qcadentity_zh_CN.qm qcadentity_zh_CN.ts qcadentity_zh_TW.qm qcadentity_zh_TW.ts qcadgui_cs.qm qcadgui_cs.ts qcadgui_da.qm qcadgui_da.ts qcadgui_de.qm qcadgui_de.ts qcadgui_en.qm qcadgui_en.ts qcadgui_es.qm qcadgui_es.ts qcadgui_fi.qm qcadgui_fi.ts qcadgui_fr.qm qcadgui_fr.ts qcadgui_hr.qm qcadgui_hr.ts qcadgui_hu.qm qcadgui_hu.ts qcadgui_it.qm qcadgui_it.ts qcadgui_ja.qm qcadgui_ja.ts qcadgui_lt.qm qcadgui_lt.ts qcadgui_nl.qm qcadgui_nl.ts qcadgui_pl.qm qcadgui_pl.ts qcadgui_pt.qm qcadgui_pt.ts qcadgui_ru.qm qcadgui_ru.ts qcadgui_sk.qm qcadgui_sk.ts qcadgui_sl.qm qcadgui_sl.ts qcadgui_sv.qm qcadgui_sv.ts qcadgui_th.qm qcadgui_th.ts qcadgui_tr.qm qcadgui_tr.ts qcadgui_zh_CN.qm qcadgui_zh_CN.ts qcadgui_zh_TW.qm qcadgui_zh_TW.ts qmlviewer_ar.qm qmlviewer_bg.qm qmlviewer_cs.qm qmlviewer_da.qm qmlviewer_en.qm qmlviewer_es.qm qmlviewer_fi.qm qmlviewer_fr.qm qmlviewer_he.qm qmlviewer_hu.qm qmlviewer_ja.qm qmlviewer_ko.qm qmlviewer_pl.qm qmlviewer_ru.qm qmlviewer_sk.qm qmlviewer_uk.qm qt_ar.qm qt_bg.qm qt_ca.qm qt_cs.qm qt_da.qm qt_de.qm qt_en.qm qt_es.qm qt_fa.qm qt_fi.qm qt_fr.qm qt_gl.qm qt_he.qm qt_help_ar.qm qt_help_bg.qm qt_help_cs.qm qt_help_da.qm qt_help_de.qm qt_help_en.qm qt_help_es.qm qt_help_fr.qm qt_help_gl.qm qt_help_hu.qm qt_help_it.qm qt_help_ja.qm qt_help_ko.qm qt_help_pl.qm qt_help_ru.qm qt_help_sk.qm qt_help_sl.qm qt_help_uk.qm qt_help_zh_CN.qm qt_help_zh_TW.qm qt_hu.qm qt_it.qm qt_ja.qm qt_ko.qm qt_lt.qm qt_pl.qm qt_pt.qm qt_ru.qm qt_sk.qm qt_sl.qm qt_sv.qm qt_uk.qm qt_zh_CN.qm qt_zh_TW.qm qtbase_ar.qm qtbase_bg.qm qtbase_ca.qm qtbase_cs.qm qtbase_da.qm qtbase_de.qm qtbase_en.qm qtbase_es.qm qtbase_fi.qm qtbase_fr.qm qtbase_gd.qm qtbase_he.qm qtbase_hu.qm qtbase_it.qm qtbase_ja.qm qtbase_ko.qm qtbase_lv.qm qtbase_nl.qm qtbase_nl.ts qtbase_pl.qm qtbase_pt.qm qtbase_pt.ts qtbase_ru.qm qtbase_sk.qm qtbase_uk.qm qtbase_zh_CN.qm qtbase_zh_CN.ts qtconfig_hu.qm qtconfig_ja.qm qtconfig_ko.qm qtconfig_pl.qm qtconfig_ru.qm qtconfig_sk.qm qtconfig_sl.qm qtconfig_uk.qm qtconfig_zh_CN.qm qtconfig_zh_TW.qm qtconnectivity_bg.qm qtconnectivity_da.qm qtconnectivity_de.qm qtconnectivity_en.qm qtconnectivity_es.qm qtconnectivity_ko.qm qtconnectivity_pl.qm qtconnectivity_ru.qm qtconnectivity_uk.qm qtdeclarative_bg.qm qtdeclarative_da.qm qtdeclarative_de.qm qtdeclarative_en.qm qtdeclarative_es.qm qtdeclarative_fi.qm qtdeclarative_fr.qm qtdeclarative_ja.qm qtdeclarative_ko.qm qtdeclarative_lv.qm qtdeclarative_pl.qm qtdeclarative_ru.qm qtdeclarative_sk.qm qtdeclarative_uk.qm qtlocation_bg.qm qtlocation_da.qm qtlocation_de.qm qtlocation_en.qm qtlocation_es.qm qtlocation_fr.qm qtlocation_ko.qm qtlocation_pl.qm qtlocation_ru.qm qtlocation_uk.qm qtmultimedia_ar.qm qtmultimedia_bg.qm qtmultimedia_ca.qm qtmultimedia_cs.qm qtmultimedia_da.qm qtmultimedia_de.qm qtmultimedia_en.qm qtmultimedia_es.qm qtmultimedia_fi.qm qtmultimedia_fr.qm qtmultimedia_hu.qm qtmultimedia_it.qm qtmultimedia_ja.qm qtmultimedia_ko.qm qtmultimedia_pl.qm qtmultimedia_ru.qm qtmultimedia_sk.qm qtmultimedia_uk.qm qtquick1_bg.qm qtquick1_ca.qm qtquick1_cs.qm qtquick1_da.qm qtquick1_de.qm qtquick1_en.qm qtquick1_es.qm qtquick1_fi.qm qtquick1_fr.qm qtquick1_he.qm qtquick1_hu.qm qtquick1_it.qm qtquick1_ja.qm qtquick1_ko.qm qtquick1_pl.qm qtquick1_ru.qm qtquick1_sk.qm qtquick1_uk.qm qtquickcontrols2_ar.qm qtquickcontrols2_bg.qm qtquickcontrols2_en.qm qtquickcontrols2_ko.qm qtquickcontrols2_uk.qm qtquickcontrols_bg.qm qtquickcontrols_de.qm qtquickcontrols_en.qm qtquickcontrols_fi.qm qtquickcontrols_fr.qm qtquickcontrols_ja.qm qtquickcontrols_ru.qm qtquickcontrols_uk.qm qtscript_ar.qm qtscript_bg.qm qtscript_ca.qm qtscript_cs.qm qtscript_da.qm qtscript_de.qm qtscript_en.qm qtscript_es.qm qtscript_fi.qm qtscript_fr.qm qtscript_he.qm qtscript_hu.qm qtscript_it.qm qtscript_ja.qm qtscript_ko.qm qtscript_lv.qm qtscript_pl.qm qtscript_ru.qm qtscript_sk.qm qtscript_uk.qm qtserialport_de.qm qtserialport_en.qm qtserialport_es.qm qtserialport_ja.qm qtserialport_ko.qm qtserialport_pl.qm qtserialport_ru.qm qtserialport_uk.qm qtwebengine_de.qm qtwebengine_en.qm qtwebengine_es.qm qtwebengine_ko.qm qtwebengine_pl.qm qtwebengine_ru.qm qtwebengine_uk.qm qtwebsockets_de.qm qtwebsockets_en.qm qtwebsockets_es.qm qtwebsockets_fr.qm qtwebsockets_ja.qm qtwebsockets_ko.qm qtwebsockets_pl.qm qtwebsockets_ru.qm qtwebsockets_uk.qm qtxmlpatterns_bg.qm qtxmlpatterns_ca.qm qtxmlpatterns_cs.qm qtxmlpatterns_da.qm qtxmlpatterns_de.qm qtxmlpatterns_en.qm qtxmlpatterns_es.qm qtxmlpatterns_fr.qm qtxmlpatterns_hu.qm qtxmlpatterns_it.qm qtxmlpatterns_ja.qm qtxmlpatterns_ko.qm qtxmlpatterns_pl.qm qtxmlpatterns_ru.qm qtxmlpatterns_sk.qm qtxmlpatterns_uk.qm scripts.pro scripts_cs.qm scripts_cs.ts scripts_da.qm scripts_da.ts scripts_de.qm scripts_de.ts scripts_en.qm scripts_en.ts scripts_es.qm scripts_es.ts scripts_fi.qm scripts_fi.ts scripts_fr.qm scripts_fr.ts scripts_hr.qm scripts_hr.ts scripts_hu.qm scripts_hu.ts scripts_it.qm scripts_it.ts scripts_ja.qm scripts_ja.ts scripts_lt.qm scripts_lt.ts scripts_nl.qm scripts_nl.ts scripts_pl.qm scripts_pl.ts scripts_pt.qm scripts_pt.ts scripts_ru.qm scripts_ru.ts scripts_sk.qm scripts_sk.ts scripts_sl.qm scripts_sl.ts scripts_sv.qm scripts_sv.ts scripts_th.qm scripts_th.ts scripts_tr.qm scripts_tr.ts scripts_zh_CN.qm scripts_zh_CN.ts scripts_zh_TW.qm scripts_zh_TW.ts</translation>
     </message>
 </context>
 <context>
@@ -6098,12 +6098,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation type="unfinished">Lugeværktøj</translation>
+        <translation type="unfinished">Værktøj til skravering</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Hatch</source>
-        <translation type="unfinished">&amp;Hatch</translation>
+        <translation type="unfinished">&amp;Skravering</translation>
     </message>
 </context>
 <context>
@@ -6111,7 +6111,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation type="unfinished">Luge</translation>
+        <translation type="unfinished">Skravering</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -6169,7 +6169,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation type="unfinished">&amp;Hatch fra valg</translation>
+        <translation type="unfinished">&amp;Skravering fra valg</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -6601,7 +6601,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEEInit.js" line="+2"/>
         <source>Distance &amp;Entity to Entity</source>
-        <translation type="unfinished">Afstand &amp;Enhed til enhed</translation>
+        <translation type="unfinished">Afstand &amp;enhed til enhed</translation>
     </message>
 </context>
 <context>
@@ -6624,7 +6624,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEPInit.js" line="+2"/>
         <source>Distance &amp;Entity to Point</source>
-        <translation type="unfinished">Afstand &amp;Entitet til punkt</translation>
+        <translation type="unfinished">Afstand &amp;enhed til punkt</translation>
     </message>
 </context>
 <context>
@@ -6724,7 +6724,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Information/InfoPositionPolRel/InfoPositionPolRelInit.js" line="+2"/>
         <source>Relative P&amp;olar Position</source>
-        <translation type="unfinished">Relativ P&amp;olar position</translation>
+        <translation type="unfinished">Relativ p&amp;olær position</translation>
     </message>
 </context>
 <context>
@@ -6962,7 +6962,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Block/InsertBlockItem/InsertBlockItem.js" line="+102"/>
         <source>Cannot import file from URL: </source>
-        <translation type="unfinished">Kan ikke importere fil fra URL</translation>
+        <translation type="unfinished">Kan ikke importere fil fra URL: </translation>
     </message>
     <message>
         <location line="+26"/>
@@ -7255,7 +7255,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+28"/>
         <source>&amp;Layer</source>
-        <translation type="unfinished">&amp;Layer</translation>
+        <translation type="unfinished">&amp;Lag</translation>
     </message>
     <message>
         <location line="+43"/>
@@ -7380,7 +7380,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/LayerExamples.js" line="+50"/>
         <source>&amp;Layer</source>
-        <translation type="unfinished">&amp;Layer</translation>
+        <translation type="unfinished">&amp;Lag</translation>
     </message>
 </context>
 <context>
@@ -8193,7 +8193,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Dist&amp;ance:</source>
-        <translation type="unfinished">Afstand:</translation>
+        <translation type="unfinished">&amp;Afstand:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -8600,7 +8600,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location line="+22"/>
         <source>&amp;Block</source>
-        <translation type="unfinished">&amp;Block</translation>
+        <translation type="unfinished">&amp;Blok</translation>
     </message>
 </context>
 <context>
@@ -8618,7 +8618,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location line="+23"/>
         <source>De&amp;velopment</source>
-        <translation type="unfinished">Udvikling</translation>
+        <translation type="unfinished">&amp;Udvikling</translation>
     </message>
 </context>
 <context>
@@ -8933,16 +8933,16 @@ vist i søgeresultaterne:</translation>
         <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
         <translation type="unfinished">
-            <numerusform>Radius faldt til under 0,0 efter %n koncentriske cirkel(r).</numerusform>
-            <numerusform></numerusform>
+            <numerusform>Radius faldt til under 0,0 efter %n koncentriske cirkel.</numerusform>
+            <numerusform>Radius faldt til under 0,0 efter %n koncentriske cirkler.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
         <translation type="unfinished">
+            <numerusform>Radius faldt til under 0,0 efter en koncentrisk bue.</numerusform>
             <numerusform>Radius faldt til under 0,0 efter %n koncentriske buer.</numerusform>
-            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -9300,7 +9300,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode: </source>
-        <translation type="unfinished">Tilstand</translation>
+        <translation type="unfinished">Tilstand: </translation>
     </message>
     <message>
         <location line="+17"/>
@@ -9659,7 +9659,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreviewInit.js" line="+2"/>
         <source>Print Pre&amp;view</source>
-        <translation type="unfinished">Udskriftsforhåndsvisning</translation>
+        <translation type="unfinished">Udskrifts&amp;forhåndsvisning</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -9835,7 +9835,7 @@ vist i søgeresultaterne:</translation>
         <translation type="unfinished">Linjetyper skala:</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Protected:</source>
         <translation type="unfinished">Beskyttet:</translation>
     </message>
@@ -9939,7 +9939,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location filename="../scripts/Block/RenameBlock/RenameBlockInit.js" line="+2"/>
         <source>Re&amp;name Block</source>
-        <translation type="unfinished">Omdøbe blok</translation>
+        <translation type="unfinished">Om&amp;døbe blok</translation>
     </message>
 </context>
 <context>
@@ -9947,7 +9947,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location filename="../scripts/Help/ReportBug/ReportBugInit.js" line="+2"/>
         <source>Report &amp;Bug</source>
-        <translation type="unfinished">Rapportere &amp;Bug</translation>
+        <translation type="unfinished">Rapportere &amp;bug</translation>
     </message>
 </context>
 <context>
@@ -9955,7 +9955,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location filename="../scripts/Help/ReportTranslationError/ReportTranslationErrorInit.js" line="+3"/>
         <source>Report &amp;Translation Error</source>
-        <translation type="unfinished">Rapport &amp;Oversættelsesfejl</translation>
+        <translation type="unfinished">Rapport &amp;oversættelsesfejl</translation>
     </message>
 </context>
 <context>
@@ -9992,7 +9992,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLengthInit.js" line="+2"/>
         <source>Restrict &amp;Angle or Length</source>
-        <translation type="unfinished">Begræns &amp;Vinkel eller længde</translation>
+        <translation type="unfinished">Begræns &amp;vinkel eller længde</translation>
     </message>
 </context>
 <context>
@@ -10000,7 +10000,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location filename="../scripts/Snap/RestrictHorizontal/RestrictHorizontalInit.js" line="+2"/>
         <source>Restrict &amp;Horizontally</source>
-        <translation type="unfinished">Begrænse &amp;Horisontalt</translation>
+        <translation type="unfinished">Begrænse &amp;horisontalt</translation>
     </message>
 </context>
 <context>
@@ -10008,7 +10008,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location filename="../scripts/Snap/RestrictOff/RestrictOffInit.js" line="+2"/>
         <source>Restrictions &amp;Off</source>
-        <translation type="unfinished">Begrænsninger &amp;Off</translation>
+        <translation type="unfinished">Begrænsninger &amp;off</translation>
     </message>
 </context>
 <context>
@@ -10016,7 +10016,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location filename="../scripts/Snap/RestrictOrthogonal/RestrictOrthogonalInit.js" line="+2"/>
         <source>Restrict &amp;Orthogonally</source>
-        <translation type="unfinished">Begrænse &amp;Orthogonalt</translation>
+        <translation type="unfinished">Begrænse &amp;orthogonalt</translation>
     </message>
 </context>
 <context>
@@ -10024,7 +10024,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location filename="../scripts/Snap/RestrictVertical/RestrictVerticalInit.js" line="+2"/>
         <source>Restrict &amp;Vertically</source>
-        <translation type="unfinished">Begrænse &amp;Vertikalt</translation>
+        <translation type="unfinished">Begrænse &amp;vertikalt</translation>
     </message>
 </context>
 <context>
@@ -10444,7 +10444,7 @@ vist i søgeresultaterne:</translation>
         <translation type="unfinished">Åbn/Save</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
         <source>No export filters have been found. Aborting...</source>
         <translation type="unfinished">Der er ikke fundet nogen eksportfiltre. Afbryder...</translation>
     </message>
@@ -10939,16 +10939,16 @@ vist i søgeresultaterne:</translation>
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
         <translation type="unfinished">
-            <numerusform>%n Enheder på lag &quot;%1&quot;</numerusform>
-            <numerusform></numerusform>
+            <numerusform>En enhed på lag &quot;%1&quot;</numerusform>
+            <numerusform>%n enheder på lag &quot;%1&quot;</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
         <translation type="unfinished">
-            <numerusform>%n Enheder</numerusform>
-            <numerusform></numerusform>
+            <numerusform>En enhed</numerusform>
+            <numerusform>%n enheder</numerusform>
         </translation>
     </message>
     <message>
@@ -10960,8 +10960,8 @@ vist i søgeresultaterne:</translation>
         <location line="+0"/>
         <source>%n Layers</source>
         <translation type="unfinished">
-            <numerusform>%n Lag</numerusform>
-            <numerusform></numerusform>
+            <numerusform>Et lag</numerusform>
+            <numerusform>%n lag</numerusform>
         </translation>
     </message>
     <message>
@@ -10986,7 +10986,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location filename="../scripts/Snap/SetRelativeZero/SetRelativeZeroInit.js" line="+2"/>
         <source>Set &amp;Relative Zero</source>
-        <translation type="unfinished">Sæt &amp;Relativt nul</translation>
+        <translation type="unfinished">Sæt &amp;relativt nul</translation>
     </message>
 </context>
 <context>
@@ -10999,7 +10999,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location line="+27"/>
         <source>&amp;Shape</source>
-        <translation type="unfinished">&amp;Shape</translation>
+        <translation type="unfinished">&amp;Form</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/Shape.ui" line="+17"/>
@@ -11237,7 +11237,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location filename="../scripts/Layer/ShowActiveLayer/ShowActiveLayerInit.js" line="+2"/>
         <source>Show &amp;Only Active</source>
-        <translation type="unfinished">Vis &amp;Kun aktiv</translation>
+        <translation type="unfinished">Vis &amp;kun aktiv</translation>
     </message>
 </context>
 <context>
@@ -11266,7 +11266,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadmeInit.js" line="+2"/>
         <source>Show &amp;Readme</source>
-        <translation type="unfinished">Vis &amp;Læs mere</translation>
+        <translation type="unfinished">Vis &amp;readme</translation>
     </message>
 </context>
 <context>
@@ -11394,7 +11394,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location line="+3"/>
         <source>Relati&amp;ve</source>
-        <translation type="unfinished">Relati&amp;ve</translation>
+        <translation type="unfinished">Relati&amp;v</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
@@ -11450,7 +11450,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManualInit.js" line="+2"/>
         <source>&amp;Distance Manual</source>
-        <translation type="unfinished">&amp;Afstandsmanual</translation>
+        <translation type="unfinished">&amp;Afstand manuelt</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -11471,7 +11471,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation type="unfinished">&amp;Gratis</translation>
+        <translation type="unfinished">&amp;Fri</translation>
     </message>
 </context>
 <context>
@@ -11505,7 +11505,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location line="+0"/>
         <source>Intersection Manual</source>
-        <translation type="unfinished">Vejledning om kryds</translation>
+        <translation type="unfinished">Krydsningspunkt manuelt</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -11536,7 +11536,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location filename="../scripts/Snap/SnapMiddleManual/SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
-        <translation type="unfinished">&amp;Middle Manual</translation>
+        <translation type="unfinished">&amp;Mellem manuelt</translation>
     </message>
 </context>
 <context>
@@ -11544,7 +11544,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location filename="../scripts/Snap/SnapOnEntity/SnapOnEntityInit.js" line="+2"/>
         <source>&amp;On Entity</source>
-        <translation type="unfinished">&amp;On Enhed</translation>
+        <translation type="unfinished">&amp;On enhed</translation>
     </message>
 </context>
 <context>
@@ -11568,7 +11568,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location filename="../scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js" line="+2"/>
         <source>Center of &amp;Selection</source>
-        <translation type="unfinished">Center for &amp;Selection</translation>
+        <translation type="unfinished">Centrum for &amp;valg</translation>
     </message>
 </context>
 <context>
@@ -11633,7 +11633,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location line="+7"/>
         <source>Choose Spline Degree</source>
-        <translation type="unfinished">Vælg Spline-grad</translation>
+        <translation type="unfinished">Vælg spline-grad</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -11752,7 +11752,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location filename="../scripts/Modify/Stretch/StretchInit.js" line="+2"/>
         <source>&amp;Stretch</source>
-        <translation type="unfinished">&amp;Stretch</translation>
+        <translation type="unfinished">&amp;Stræk</translation>
     </message>
 </context>
 <context>
@@ -12158,7 +12158,8 @@ vist i søgeresultaterne:</translation>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation></translation>
+        <translation>Enkel tekst
+(én linje, ingen formatering)</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -12384,7 +12385,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToBack/ToBackInit.js" line="+2"/>
         <source>Send to Bac&amp;k</source>
-        <translation type="unfinished">Send til Bac&amp;k</translation>
+        <translation type="unfinished">Send til &amp;baggrund</translation>
     </message>
 </context>
 <context>
@@ -12392,7 +12393,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToFront/ToFrontInit.js" line="+2"/>
         <source>Bring to &amp;Front</source>
-        <translation type="unfinished">Bring til &amp;Front</translation>
+        <translation type="unfinished">Bring til &amp;forgrund</translation>
     </message>
 </context>
 <context>
@@ -12685,7 +12686,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location filename="../scripts/Modify/TrimBoth/TrimBothInit.js" line="+2"/>
         <source>Trim &amp;Both</source>
-        <translation type="unfinished">Trim &amp;Både</translation>
+        <translation type="unfinished">Trim &amp;både</translation>
     </message>
 </context>
 <context>
@@ -13000,12 +13001,12 @@ vist i søgeresultaterne:</translation>
     <message>
         <location line="+21"/>
         <source>Importing file: </source>
-        <translation type="unfinished">Import af fil</translation>
+        <translation type="unfinished">Import af fil: </translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Importing URL: </source>
-        <translation type="unfinished">Import af URL</translation>
+        <translation type="unfinished">Import af URL: </translation>
     </message>
 </context>
 <context>
@@ -13688,12 +13689,12 @@ vist i søgeresultaterne:</translation>
     <message>
         <location line="+2"/>
         <source>Hatches</source>
-        <translation type="unfinished">Lukker</translation>
+        <translation type="unfinished">Skraveringer</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Hatch</source>
-        <translation type="unfinished">Luge</translation>
+        <translation type="unfinished">Skravering</translation>
     </message>
     <message>
         <location line="+2"/>

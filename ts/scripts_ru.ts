@@ -10656,12 +10656,12 @@ shown in search results:</source>
         <translation>Масштаб типа линии:</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Protected:</source>
         <translation>Защищённый:</translation>
     </message>
     <message>
-        <location line="-143"/>
+        <location line="-146"/>
         <source>Handle:</source>
         <translation>Обработчик:</translation>
     </message>
@@ -11347,7 +11347,7 @@ shown in search results:</source>
         <translation>Открыть/Сохранить</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>Фильтры для экспорта не найдены. Прервано...</translation>
     </message>

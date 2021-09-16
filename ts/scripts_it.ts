@@ -11334,7 +11334,7 @@ mostrati nei risultati di ricerca:</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode: </source>
-        <translation>Modalità:</translation>
+        <translation type="unfinished">Modalità: </translation>
     </message>
     <message>
         <location line="+17"/>
@@ -11937,12 +11937,12 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Scala del tipo di linea:</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Protected:</source>
         <translation>Protetta:</translation>
     </message>
     <message>
-        <location line="-143"/>
+        <location line="-146"/>
         <source>Handle:</source>
         <translation>Maniglia:</translation>
     </message>
@@ -12649,7 +12649,7 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Carico/Salvare</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>Non sono stati trovati filtri di exportazione. Interruzione...</translation>
     </message>

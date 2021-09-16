@@ -10718,7 +10718,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Mierka typu čiary:</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Protected:</source>
         <translation>Chránené:</translation>
     </message>
@@ -11379,7 +11379,7 @@ vo výsledku vyhľadania:</translation>
         <translation>Otvoriť/Uložiť</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>Žiadne exportné filtre sa nenašli. Ukončujem...</translation>
     </message>

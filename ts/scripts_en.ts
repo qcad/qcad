@@ -10705,7 +10705,7 @@ shown in search results:</translation>
         <translation>Linetype Scale:</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="+52"/>
         <source>Protected:</source>
         <translation>Protected:</translation>
     </message>
@@ -11370,7 +11370,7 @@ shown in search results:</translation>
         <translation>Open/Save</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+33"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>No export filters have been found. Aborting...</translation>
     </message>
