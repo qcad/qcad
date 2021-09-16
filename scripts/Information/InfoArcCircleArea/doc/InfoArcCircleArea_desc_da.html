@@ -1,0 +1,89 @@
+<div xml:space="preserve">
+ 
+<p>Forfatter: Robert S.</p> 
+<p>Denne kommando beregner arealet af buer, cirkler, ellipser og elliptiske
+buer og tilføjer valgfrit oplysningerne til det aktuelle lag i en tegning. Hvis
+du vælger en anden type enhed, vises der en advarsel i kommandolinjen.</p> 
+<p>For buer er der to muligheder for at beregne arealer, nemlig Segment eller
+Sektor. Arealet af et segment (eller en skive) er det område, der er afgrænset
+af buen og to linjer, der er trukket fra buens startpunkt og slutpunkt til
+buens centrum. Arealet af en sektor er det område, der er afgrænset af buen og
+en kordel, der er trukket fra buens startpunkt til slutpunktet.</p> 
+<p>
+<img alt="Segment or Sector" src="ArcCircle01.png" /> 
+<br />Figur 1: Et segment (skive) og en sektor.</p> 
+<p>
+  <b>Indstillinger</b>
+</p> 
+<p>Denne kommando har standardindstillingerne
+<i>"Add measurement to drawing</i>" og "
+<i>Text Height</i>" (
+<i>teksthøjde</i>).</p> 
+<p>
+<img alt="Standard options" src="ArcCircle02a.png" /> 
+<br />Figur 2: Standardindstillinger for info</p> 
+<p>Uanset om dette er slået fra eller ej, vises oplysningerne i
+kommandolinje-widgetten, når du klikker på en bue, cirkel, ellipse eller
+elliptisk bue.</p> 
+<p>
+<img alt="Info is displayed in command line widget" src="ArcCircle03.png" /> 
+<br />Figur 3: Info vises i kommandolinjen</p> 
+<p>(Bemærk: Hver gang du starter en info-kommando, er afkrydsningsfeltet
+<i>"Add measurement to drawing</i>" (
+<i>Tilføj måling til tegning</i>) altid frakrydset. Du skal huske at slå den
+til, hvis du vil have informationen tilføjet til tegningen).</p> 
+<p>Den tilføjer også følgende indstillinger.</p> 
+<p>
+<img alt="Options toolbar" src="ArcCircle02.png" /> 
+<br />Figur 4: Tilføjede indstillinger</p> 
+<p>
+  <b>Mode (Tilstand):</b>
+</p> 
+<p>Tilstanden gælder kun for buer.</p> 
+<p>
+<img alt="Sector" src="InfoSector.png" height="24" width="24" /> 
+<br />
+<i>Sektor</i>: Denne tilstand returnerer sektorens areal. Dette er nyttigt, når
+den bruges sammen med kommandoen
+<i>"Polygonal Area</i>".</p> 
+<p>
+<img alt="Segment" src="InfoSlice.png" height="24" width="24" /> 
+<i>Segment</i>: Denne tilstand returnerer arealet af segmentet.</p> 
+<p>
+  <b>Tilføj:</b>
+</p> 
+<p>
+<i>Enhed:</i> Dette vælger, om du vil tilføje en kopi af den målte enhed til
+det aktuelle lag i tegningen.</p> 
+<p>
+<i>Chord (Akkord):</i> Dette vælger, om du vil have akkorden (sektor) eller
+radiuslinjerne (segment) tilføjet til tegningen.</p> 
+<p>
+<i>Længde:</i> Som standard udskrives arealet altid på tegningen. Denne
+indstilling vælger, om du ønsker, at der skal tilføjes ekstra oplysninger til
+tegningen.</p> 
+<p>For cirkler og helellipser er de ekstra oplysninger omkredsen. Dette bruger
+midtpunktet som det nederste venstre hjørne til den tilføjede tekst.</p> 
+<p>
+  <img alt="Extra info for circles and ellipses" src="ArcCircle04.png" />
+</p> 
+<p>For cirkelbuer er de ekstra oplysninger buens længde og længden af korden (i
+sektortilstand) eller radius (i segmenttilstand).</p> 
+<p>For ellipser er de ekstra oplysninger buens længde og længden af korden (i
+sektortilstand) eller afstanden fra midtpunktet til buens startpunkt,
+efterfulgt af afstanden fra midtpunktet til buens slutpunkt (i
+segmenttilstand).</p> 
+<p>Det nederste venstre hjørne for den tilføjede tekst er buens endepunkt.</p> 
+<p>
+  <img alt="Extra info for arcs" src="ArcCircle06.png" />
+</p> 
+<p>
+  <img alt="Extra info for arcs" src="ArcCircle05.png" />
+</p> 
+<p>
+  <img alt="Extra info for arcs" src="ArcCircle08.png" />
+</p> 
+<p>
+  <img alt="Extra info for arcs" src="ArcCircle07.png" />
+</p> 
+</div>

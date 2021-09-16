@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Automatically generated file. Do not edit. -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Spline (kontrolpunkter)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../style.css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" /></head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+<p style="text-align:right;"><a href="/doc/qcad/latest/reference/da/index.php?page=scripts/Draw/Spline/SplineControlPoints/doc/SplineControlPoints">&#160;&#160;&#160;&#160;&#160;&#160;</a></p>
+<p style="font-style: italic;">Der er tale om en automatisk oversættelse.</p>
+<div class="nobreak">
+<h2>Spline (kontrolpunkter)</h2>
+<p class="toolinfo">
+<b>Værktøjslinje / ikon:</b>
+<br /><img src="../../doc/Spline.png" width="40" height="40" />
+&#160;&#160;&#160;
+<img src="../doc/SplineControlPoints.png" width="40" height="40" />
+&#160;&#160;&#160;
+<br/>
+<b>Menu:</b> <font face="courier new">Tegne &gt; Spline &gt; Spline (kontrolpunkter)</font>
+<br /><b>Genvej:</b> <font face="courier new">S, P</font>
+<br /><b>Kommandoer:</b> <font face="courier new">spline | sp</font>
+</p>
+</div>
+<h3>Beskrivelse</h3>
+<p>Tegner spline-kurver fra kontrolpunkter. Ikke-uniforme rationelle B-Splines
+(NURBS) med homogene vægtningsfaktorer er de eneste splines, der
+understøttes.</p>
+<h3>Anvendelse</h3>
+<div>
+  <ol>
+    <li>Vælg graden af spline i værktøjslinjen for indstillinger. De
+    understøttede grader er 2 (kvadratisk b-spline) og 3 (kubisk b-spline). Jo
+    højere grad, jo "glattere" bliver kurven. 
+    <br />Bemærk, at en kvadratisk b-spline pr. definition kræver mindst 3
+    kontrolpunkter, mens en kubisk b-spline har mindst 4 kontrolpunkter.</li>
+    <li>Marker afkrydsningsfeltet "Closed" (lukket) i værktøjslinjen for
+    indstillinger, hvis du vil oprette en lukket spline. Lukkede splines er
+    kontinuerlige lukkede sløjfer.</li>
+    <li>Angiv kontrolpunkterne. Når du har defineret det tredje (for
+    kvadratiske b-splines) eller fjerde (for kubiske b-splines) kontrolpunkt,
+    vises en forhåndsvisning. Du kan fjerne det sidste kontrolpunkt igen ved at
+    klikke på knappen "Undo" (Fortryd) i værktøjslinjen for indstillinger.</li>
+    <li>Tryk på Escape eller klik på højre museknap efter indstilling af det
+    sidste punkt for at bekræfte splineformen.</li>
+    <li>Du kan nu oprette en anden spline eller højreklikke igen for at
+    afslutte værktøjet.</li>
+  </ol>
+  <p>Eksempel på to åbne splines (kvadratisk og kubisk): 
+  <br />
+  <img src="SplineControlPoints01.png" class="figure" />
+  <br />Eksempel på to lukkede, periodiske splines (kvadratisk og kubisk) 
+  <br />
+  <img src="SplineControlPoints02.png" class="figure" /></p>
+</div>
+</body>
+</html>
