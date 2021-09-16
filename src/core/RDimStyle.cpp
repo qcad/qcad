@@ -151,7 +151,7 @@ QPair<QVariant, RPropertyAttributes> RDimStyle::getProperty(RPropertyTypeId& pro
     }
 
     if (propertyTypeId==PropertyArchTick) {
-        return qMakePair(getDouble(RS::DIMTSZ) > 0.0, RPropertyAttributes());
+        return qMakePair(QVariant(getDouble(RS::DIMTSZ) > 0.0), RPropertyAttributes());
     }
 
     return RObject::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
