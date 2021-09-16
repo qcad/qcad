@@ -198,7 +198,15 @@
 </public><public>public:
     <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name><name>RS</name>::<name>KnownVariable</name></name></argument>, <argument><name><name>RS</name>::<name>KnownVariableType</name></name></argument>&gt;</argument_list></name></type> <name>dimXTypes</name></decl>;</decl_stmt>
 
-    <function_decl><type><name>friend</name> <name>QDebug</name></type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>, <param><decl><type><name>const</name> <name>RDimStyleData</name>&amp;</type> <name>d</name></decl></param>)</parameter_list>;</function_decl>
+    <function><type><name>friend</name> <name>QDebug</name></type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>, <param><decl><type><name>const</name> <name>RDimStyleData</name>&amp;</type> <name>d</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>dbg</name>.<call><name>nospace</name><argument_list>()</argument_list></call> &lt;&lt; "RDimSyleData("</expr>;</expr_stmt>
+        <expr_stmt><expr><name>dbg</name>.<call><name>nospace</name><argument_list>()</argument_list></call> &lt;&lt; <name>d</name>.<name>mapBool</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>dbg</name>.<call><name>nospace</name><argument_list>()</argument_list></call> &lt;&lt; <name>d</name>.<name>mapInt</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>dbg</name>.<call><name>nospace</name><argument_list>()</argument_list></call> &lt;&lt; <name>d</name>.<name>mapDouble</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>dbg</name>.<call><name>nospace</name><argument_list>()</argument_list></call> &lt;&lt; <name>d</name>.<name>mapColor</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>dbg</name>.<call><name>nospace</name><argument_list>()</argument_list></call> &lt;&lt; ")"</expr>;</expr_stmt>
+        <return>return <expr><name>dbg</name></expr>;</return>
+    }</block></function>
 
 </public><protected>protected:
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>RS</name>::<name>KnownVariable</name></name></argument>, <argument><name>double</name></argument>&gt;</argument_list></name></type> <name>mapDouble</name></decl>;</decl_stmt>
@@ -211,7 +219,8 @@
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RDimStyleData</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RDimStyleData*</argument>)</argument_list></macro>
-
+<typedef>typedef <type><name>QMap<argument_list>&lt;<argument><name><name>RS</name>::<name>KnownVariable</name></name></argument>, <argument><name><name>RS</name>::<name>KnownVariableType</name></name></argument>&gt;</argument_list></name></type> <name>_QMapRSKnownVariableRSKnownVariableType</name>;</typedef>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>_QMapRSKnownVariableRSKnownVariableType</argument>)</argument_list></macro>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

@@ -156,6 +156,8 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>const RPropertyTypeId*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSet&lt;RPropertyTypeId&gt;</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QList&lt;RPropertyTypeId&gt;</argument>)</argument_list></macro>
+<typedef>typedef <type><name>QPair<argument_list>&lt;<argument><name>RPropertyTypeId</name></argument>, <argument><name><name>RS</name>::<name>KnownVariable</name></name></argument>&gt;</argument_list></name></type> <name>_RPairRPropertyTypeIdRSKnownVariable</name>;</typedef>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>_RPairRPropertyTypeIdRSKnownVariable</argument>)</argument_list></macro>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif> <comment type="block">/* RPROPERTYTYPEID_H_ */</comment>
 </unit>
