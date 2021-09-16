@@ -34,6 +34,27 @@ BrowseUserManual.prototype.beginEvent = function() {
     if (locale.language()===QLocale.German) {
         dir = "de";
     }
+    else if (locale.language()===QLocale.Danish) {
+        dir = "da";
+    }
+    else if (locale.language()===QLocale.Dutch) {
+        dir = "nl";
+    }
+    else if (locale.language()===QLocale.French) {
+        dir = "fr";
+    }
+    else if (locale.language()===QLocale.Italian) {
+        dir = "it";
+    }
+    else if (locale.language()===QLocale.Spanish) {
+        dir = "es";
+    }
+    else if (locale.language()===QLocale.Portuguese) {
+        dir = "pt";
+    }
+    else if (locale.language()===QLocale.Polish) {
+        dir = "pl";
+    }
     else if (locale.language()===QLocale.Japanese) {
         dir = "ja";
     }
