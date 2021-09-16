@@ -218,6 +218,7 @@ protected:
 
 Q_DECLARE_METATYPE(RDimStyleData)
 Q_DECLARE_METATYPE(RDimStyleData*)
-
+typedef QMap<RS::KnownVariable, RS::KnownVariableType> _QMapRSKnownVariableRSKnownVariableType;
+Q_DECLARE_METATYPE(_QMapRSKnownVariableRSKnownVariableType)
 
 #endif

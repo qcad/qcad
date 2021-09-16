@@ -142,7 +142,7 @@ Q_DECLARE_METATYPE(RDimStyle*)
 Q_DECLARE_METATYPE(const RDimStyle*)
 Q_DECLARE_METATYPE(QSharedPointer<RDimStyle>)
 Q_DECLARE_METATYPE(QSharedPointer<RDimStyle>*)
-typedef QList<QPair<RPropertyTypeId, RS::KnownVariable> > _RListQPairRPropertyTypeIdRSKnownVariable;
-Q_DECLARE_METATYPE(_RListQPairRPropertyTypeIdRSKnownVariable)
+typedef QList<QPair<RPropertyTypeId, RS::KnownVariable> > _QListQPairRPropertyTypeIdRSKnownVariable;
+Q_DECLARE_METATYPE(_QListQPairRPropertyTypeIdRSKnownVariable)
 
 #endif
