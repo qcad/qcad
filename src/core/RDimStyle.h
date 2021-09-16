@@ -131,6 +131,9 @@ public:
     friend QDebug operator<<(QDebug dbg, const RDimStyle& s);
 
 public:
+    /**
+     * \nonscriptable
+     */
     static QList<QPair<RPropertyTypeId, RS::KnownVariable> > propertyVariables;
 
 private:
@@ -142,5 +145,7 @@ Q_DECLARE_METATYPE(RDimStyle*)
 Q_DECLARE_METATYPE(const RDimStyle*)
 Q_DECLARE_METATYPE(QSharedPointer<RDimStyle>)
 Q_DECLARE_METATYPE(QSharedPointer<RDimStyle>*)
+typedef QList<QPair<RPropertyTypeId, RS::KnownVariable> > _RListQPairRPropertyTypeIdRSKnownVariable;
+Q_DECLARE_METATYPE(_RListQPairRPropertyTypeIdRSKnownVariable)
 
 #endif
