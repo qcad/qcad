@@ -370,7 +370,7 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
     }*/
 
     if (propertyTypeId==PropertyArchTick) {
-        return qMakePair(getData().getDimtsz() > 0.0, RPropertyAttributes());
+        return qMakePair(QVariant(getData().getDimtsz() > 0.0), RPropertyAttributes());
     }
 
     for (int i=0; i<RDimStyle::propertyVariables.length(); i++) {
@@ -387,7 +387,7 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
                 QVariant v = getData().getDimXVariant(pv.second);
                 QString str;
                 str.append(QChar(v.toInt()));
-                return qMakePair(str, RPropertyAttributes());
+                return qMakePair(QVariant(str), RPropertyAttributes());
             }
 
             // TODO: add advanced attribute to show / hide in PE
