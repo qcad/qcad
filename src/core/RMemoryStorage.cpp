@@ -1010,7 +1010,20 @@ QSharedPointer<RBlock> RMemoryStorage::queryBlockDirect(RBlock::Id blockId) cons
 }
 
 void RMemoryStorage::setObjectHandle(RObject& object, RObject::Handle objectHandle) {
+    if (object.getHandle()!=RObject::INVALID_HANDLE) {
+        // release old handle of object:
+        objectHandleMap.remove(object.getHandle());
+    }
+
     if (objectHandleMap.contains(objectHandle)) {
+        qWarning() << "cannot assign original handle to object";
+        QSharedPointer<RObject> obj = queryObjectByHandle(objectHandle);
+        if (obj.isNull()) {
+            qWarning() << "collision with null object";
+        }
+        else {
+            qWarning() << "collision with object of type:" << obj->getType();
+        }
         objectHandle = getNewObjectHandle();
     }
     Q_ASSERT(!objectHandleMap.contains(objectHandle));
