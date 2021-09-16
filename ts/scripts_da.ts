@@ -329,7 +329,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
-        <translation type="unfinished">Tilføj brugerdefineret ejendom</translation>
+        <translation type="unfinished">Tilføj brugerdefineret egenskab</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -447,7 +447,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PAInit.js" line="+2"/>
         <source>&amp;2 Points and Angle</source>
-        <translation type="unfinished">&amp;2 Punkter og vinkler</translation>
+        <translation type="unfinished">&amp;2 punkter og vinkler</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -667,7 +667,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPA.js" line="+66"/>
         <source>Center</source>
-        <translation type="unfinished">Center</translation>
+        <translation type="unfinished">Centrum</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -707,7 +707,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPAInit.js" line="+2"/>
         <source>&amp;Center, Point, Angles</source>
-        <translation type="unfinished">&amp;Center, punkt, vinkler</translation>
+        <translation type="unfinished">&amp;Centrum, punkt, vinkler</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -943,7 +943,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Center points</source>
-        <translation type="unfinished">Midterpunkter</translation>
+        <translation type="unfinished">Centrumpunkter</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1279,7 +1279,7 @@ Do you wish to recover it?</source>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
-        <translation type="unfinished">Liste over blokke</translation>
+        <translation type="unfinished">Blokliste</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+17"/>
@@ -1688,7 +1688,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TP/Circle2TPInit.js" line="+2"/>
         <source>2 Tan&amp;gents and Point</source>
-        <translation type="unfinished">2 Tan&amp;gents og Point</translation>
+        <translation type="unfinished">2 tangenter og punkt</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1726,7 +1726,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TRInit.js" line="+2"/>
         <source>2 &amp;Tangents and Radius</source>
-        <translation type="unfinished">2 &amp;Tangenter og radius</translation>
+        <translation type="unfinished">2 &amp;tangenter og radius</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1793,7 +1793,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3T/Circle3TInit.js" line="+2"/>
         <source>3 T&amp;angents</source>
-        <translation type="unfinished">3 T&amp;angents</translation>
+        <translation type="unfinished">3 t&amp;angenter</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1823,7 +1823,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCD/CircleCDInit.js" line="+2"/>
         <source>Center, &amp;Diameter</source>
-        <translation type="unfinished">Center, &amp;Diameter</translation>
+        <translation type="unfinished">Centrum, &amp;diameter</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1836,7 +1836,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCP/CircleCP.js" line="+56"/>
         <source>Center</source>
-        <translation type="unfinished">Center</translation>
+        <translation type="unfinished">Centrum</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1846,7 +1846,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCP/CircleCPInit.js" line="+2"/>
         <source>&amp;Center, Point</source>
-        <translation type="unfinished">&amp;Center, punkt</translation>
+        <translation type="unfinished">&amp;Centrum, punkt</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1876,7 +1876,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleCR/CircleCRInit.js" line="+2"/>
         <source>Center, &amp;Radius</source>
-        <translation type="unfinished">Center, &amp;Radius</translation>
+        <translation type="unfinished">Centrum, &amp;radius</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2244,7 +2244,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
         <source>Convert Drawing &amp;Unit</source>
-        <translation type="unfinished">Konverter Tegning &amp;Enhed</translation>
+        <translation type="unfinished">Konverter tegning&amp;enhed</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2395,12 +2395,12 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/CrossInit.js" line="+2"/>
         <source>Centerline Cross</source>
-        <translation type="unfinished">Centerline Cross</translation>
+        <translation type="unfinished">Centrumlinjekryds</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
-        <translation type="unfinished">Tegn centerlinjekryds i buer, cirkler eller ellipser</translation>
+        <translation type="unfinished">Tegn centrumlinjekryds i buer, cirkler eller ellipser</translation>
     </message>
 </context>
 <context>
@@ -3064,7 +3064,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+31"/>
         <source>Dimension line gap:</source>
-        <translation type="unfinished">Dimension line gap:</translation>
+        <translation type="unfinished">Dimension linjeafstand:</translation>
     </message>
     <message>
         <location line="+42"/>
@@ -3084,7 +3084,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+10"/>
         <source>Extension line offset:</source>
-        <translation type="unfinished">Forlængelseslinje offset:</translation>
+        <translation type="unfinished">Forlængerledningsforskydning:</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -3175,7 +3175,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+20"/>
         <source>Pre&amp;cision:</source>
-        <translation type="unfinished">Pre&amp;cision:</translation>
+        <translation type="unfinished">Præ&amp;cision:</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -3625,7 +3625,7 @@ is already in the list.</source>
         <location line="+43"/>
         <location line="+46"/>
         <source>Center Invalid !</source>
-        <translation type="unfinished">Center ugyldig !</translation>
+        <translation type="unfinished">Centrum ugyldig !</translation>
     </message>
     <message>
         <location line="-21"/>
@@ -3822,12 +3822,12 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype, ignored ! Text line %1 type: %2</source>
-        <translation type="unfinished">Ikke en korrekt linetype, ignoreres ! Tekstlinje %1 type: %2</translation>
+        <translation type="unfinished">Ikke en korrekt linjetype, ignoreres ! Tekstlinje %1 type: %2</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Not a correct Linetype scale, ignored ! Text line %1 scale: %2</source>
-        <translation type="unfinished">Ikke en korrekt Linetype-skala, ignoreres ! Tekstlinje %1 skala: %2</translation>
+        <translation type="unfinished">Ikke en korrekt linjetype-skala, ignoreres ! Tekstlinje %1 skala: %2</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3852,7 +3852,7 @@ is already in the list.</source>
     <message>
         <location line="+9"/>
         <source>Not a correct Linetype ! Text line %1 type: %2</source>
-        <translation type="unfinished">Ikke en korrekt linetype ! Tekstlinje %1 type: %2</translation>
+        <translation type="unfinished">Ikke en korrekt linjetype ! Tekstlinje %1 type: %2</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -4298,7 +4298,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.js" line="+74"/>
         <source>Center</source>
-        <translation type="unfinished">Center</translation>
+        <translation type="unfinished">Centrum</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -4383,7 +4383,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPAInit.js" line="+2"/>
         <source>&amp;Ellipse Arc</source>
-        <translation type="unfinished">&amp;Ellipse Arc</translation>
+        <translation type="unfinished">&amp;Ellipsebuen</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4396,7 +4396,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseCPP/EllipseCPPInit.js" line="+2"/>
         <source>&amp;Ellipse (Center, Point, Ratio)</source>
-        <translation type="unfinished">&amp;Ellipse (Center, Punkt, Forhold)</translation>
+        <translation type="unfinished">&amp;Ellipse (centrum, punkt, forhold)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4410,13 +4410,13 @@ is already in the list.</source>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDD.ui" line="+17"/>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="+19"/>
         <source>X Diameter:</source>
-        <translation type="unfinished">X Diameter:</translation>
+        <translation type="unfinished">X diameter:</translation>
     </message>
     <message>
         <location line="+23"/>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="+80"/>
         <source>Y Diameter:</source>
-        <translation type="unfinished">Y Diameter:</translation>
+        <translation type="unfinished">Y diameter:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -4432,7 +4432,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDInit.js" line="+2"/>
         <source>Ellipse with &amp;Diameters</source>
-        <translation type="unfinished">Ellipse med &amp;Diametre</translation>
+        <translation type="unfinished">Ellipse med &amp;diametre</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4542,7 +4542,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRInit.js" line="+2"/>
         <source>Ellipse with &amp;Radii</source>
-        <translation type="unfinished">Ellipse med &amp;Radii</translation>
+        <translation type="unfinished">Ellipse med &amp;radius</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -7143,7 +7143,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridOff/IsometricGridOff.js" line="+35"/>
         <source>Isometric Grid &amp;Off</source>
-        <translation type="unfinished">Isometrisk gitter &amp;Off</translation>
+        <translation type="unfinished">Isometrisk gitter &amp;off</translation>
     </message>
 </context>
 <context>
@@ -7372,7 +7372,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+26"/>
         <source>Linetype:</source>
-        <translation type="unfinished">Linetype:</translation>
+        <translation type="unfinished">Linjetype:</translation>
     </message>
 </context>
 <context>
@@ -7670,7 +7670,7 @@ Library browser will not be available.</source>
     <message>
         <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowserInit.js" line="-11"/>
         <source>&amp;Library Browser</source>
-        <translation type="unfinished">&amp;Library Browser</translation>
+        <translation type="unfinished">&amp;Biblioteksbrowser</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/LibraryBrowser/PreferencesPage.ui" line="+17"/>
@@ -7706,7 +7706,8 @@ Library browser will not be available.</source>
         <location line="+10"/>
         <source>Number of items
 shown in search results:</source>
-        <translation></translation>
+        <translation>Antal varer
+vist i søgeresultaterne:</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -7731,7 +7732,7 @@ shown in search results:</source>
     <message>
         <location line="+14"/>
         <source>Down</source>
-        <translation type="unfinished">Down</translation>
+        <translation type="unfinished">Ned</translation>
     </message>
 </context>
 <context>
@@ -8075,7 +8076,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Line/LineFreehand/LineFreehandInit.js" line="+2"/>
         <source>&amp;Freehand Line</source>
-        <translation type="unfinished">&amp;Freehand Line</translation>
+        <translation type="unfinished">&amp;Frihånd linje</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -8179,7 +8180,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonalTangent/LineOrthogonalTangentInit.js" line="+2"/>
         <source>Orthogonal / Tange&amp;nt</source>
-        <translation type="unfinished">Ortogonal / Tange&amp;nt</translation>
+        <translation type="unfinished">Vinkelret / tange&amp;nt</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -8406,7 +8407,7 @@ shown in search results:</source>
         <location line="+0"/>
         <location line="+2"/>
         <source>Linetype</source>
-        <translation type="unfinished">Linetype</translation>
+        <translation type="unfinished">Linjetype</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -8957,7 +8958,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
-        <translation type="unfinished">Offset (med afstand)</translation>
+        <translation type="unfinished">Parallelforskydning (med afstand)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -8980,7 +8981,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThroughInit.js" line="+2"/>
         <source>Offset (through Point)</source>
-        <translation type="unfinished">Offset (gennem punkt)</translation>
+        <translation type="unfinished">Parallelforskydning (gennem punkt)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -9104,7 +9105,7 @@ shown in search results:</source>
     <message>
         <location line="+24"/>
         <source>Offset Y:</source>
-        <translation type="unfinished">Offset Y:</translation>
+        <translation type="unfinished">Forskydning Y:</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -9132,7 +9133,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/View/Zoom/PanZoom/PanZoomInit.js" line="+2"/>
         <source>&amp;Pan Zoom</source>
-        <translation type="unfinished">&amp;Pan Zoom</translation>
+        <translation type="unfinished">&amp;Panoramazoom</translation>
     </message>
 </context>
 <context>
@@ -9501,7 +9502,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/View/Zoom/PreviousView/PreviousViewInit.js" line="+2"/>
         <source>&amp;Previous View</source>
-        <translation type="unfinished">&amp;Previous View</translation>
+        <translation type="unfinished">&amp;Forrige visning</translation>
     </message>
 </context>
 <context>
@@ -9509,7 +9510,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Window/PreviousWindow/PreviousWindowInit.js" line="+2"/>
         <source>&amp;Previous</source>
-        <translation type="unfinished">&amp;Precedent</translation>
+        <translation type="unfinished">&amp;Forrige</translation>
     </message>
 </context>
 <context>
@@ -9806,7 +9807,7 @@ shown in search results:</source>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>
-        <translation type="unfinished">Ejendomseditor</translation>
+        <translation type="unfinished">Egenskabseditor</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40"/>
@@ -9831,7 +9832,7 @@ shown in search results:</source>
     <message>
         <location line="+94"/>
         <source>Linetype Scale:</source>
-        <translation type="unfinished">Linetype Skala:</translation>
+        <translation type="unfinished">Linjetyper skala:</translation>
     </message>
     <message>
         <location line="+49"/>
@@ -9909,7 +9910,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/ReloadLinetypes/ReloadLinetypes.js" line="+48"/>
         <source>Reload Linetype Definitions</source>
-        <translation type="unfinished">Genindlæs Linetype-definitioner</translation>
+        <translation type="unfinished">Genindlæs linjetyper-definitioner</translation>
     </message>
 </context>
 <context>
@@ -10621,7 +10622,7 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>&amp;Select</source>
-        <translation type="unfinished">&amp;Select</translation>
+        <translation type="unfinished">&amp;Vælg</translation>
     </message>
 </context>
 <context>
@@ -11050,7 +11051,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.js" line="+61"/>
         <source>Center</source>
-        <translation type="unfinished">Center</translation>
+        <translation type="unfinished">Centrum</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -11065,7 +11066,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Side)</source>
-        <translation type="unfinished">Pol&amp;ygon (center, side)</translation>
+        <translation type="unfinished">Pol&amp;ygon (centrum, side)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -11121,7 +11122,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+59"/>
         <source>Center</source>
-        <translation type="unfinished">Center</translation>
+        <translation type="unfinished">Centrum</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -11177,7 +11178,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePPInit.js" line="+2"/>
         <source>&amp;Rectangle</source>
-        <translation type="unfinished">&amp;Rectangle</translation>
+        <translation type="unfinished">&amp;Rektangel</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -11713,7 +11714,7 @@ shown in search results:</source>
     <message>
         <location line="+6"/>
         <source>&amp;Status Bar</source>
-        <translation type="unfinished">&amp;Status Bar</translation>
+        <translation type="unfinished">&amp;Statuslinje</translation>
     </message>
 </context>
 <context>
@@ -12407,7 +12408,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/View/ToggleGrid/ToggleGrid.js" line="+90"/>
         <source>&amp;Grid</source>
-        <translation type="unfinished">&amp;Grid</translation>
+        <translation type="unfinished">&amp;Gitter</translation>
     </message>
 </context>
 <context>
@@ -12917,17 +12918,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
         <source>View Tools</source>
-        <translation type="unfinished">Se værktøjer</translation>
+        <translation type="unfinished">Værktøjer til visning</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>View</source>
-        <translation type="unfinished">Se</translation>
+        <translation type="unfinished">Visning</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;View</source>
-        <translation type="unfinished">&amp;View</translation>
+        <translation type="unfinished">&amp;Visning</translation>
     </message>
 </context>
 <context>
@@ -12963,7 +12964,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="unfinished">Rasterafstand &lt; Meta Rasterafstand</translation>
+        <translation type="unfinished">Gitterafstand &lt; meta gitterafstand</translation>
     </message>
 </context>
 <context>
@@ -13401,7 +13402,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelectionInit.js" line="+2"/>
         <source>Zoom to &amp;Selection</source>
-        <translation type="unfinished">Zoom til &amp;Vælgelse</translation>
+        <translation type="unfinished">Zoom til &amp;vælgelse</translation>
     </message>
 </context>
 <context>
@@ -13487,7 +13488,7 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Linetype</source>
-        <translation type="unfinished">Linetype</translation>
+        <translation type="unfinished">Linjetype</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -13497,7 +13498,7 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>View</source>
-        <translation type="unfinished">Se</translation>
+        <translation type="unfinished">Visning</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -13914,7 +13915,7 @@ shown in search results:</source>
         <location line="+152"/>
         <location line="+152"/>
         <source>Grid Spacing</source>
-        <translation type="unfinished">Rasterafstand</translation>
+        <translation type="unfinished">Gitterafstand</translation>
     </message>
     <message>
         <location line="-450"/>
