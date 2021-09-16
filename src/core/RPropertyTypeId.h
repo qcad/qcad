@@ -155,5 +155,7 @@ Q_DECLARE_METATYPE(RPropertyTypeId*)
 Q_DECLARE_METATYPE(const RPropertyTypeId*)
 Q_DECLARE_METATYPE(QSet<RPropertyTypeId>)
 Q_DECLARE_METATYPE(QList<RPropertyTypeId>)
+typedef QPair<RPropertyTypeId, RS::KnownVariable> _RPairRPropertyTypeIdRSKnownVariable;
+Q_DECLARE_METATYPE(_RPairRPropertyTypeIdRSKnownVariable)
 
 #endif /* RPROPERTYTYPEID_H_ */
