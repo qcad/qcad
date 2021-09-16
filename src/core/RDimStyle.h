@@ -131,9 +131,6 @@ public:
     friend QDebug operator<<(QDebug dbg, const RDimStyle& s);
 
 public:
-    /**
-     * \nonscriptable
-     */
     static QList<QPair<RPropertyTypeId, RS::KnownVariable> > propertyVariables;
 
 private:
