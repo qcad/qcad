@@ -10526,12 +10526,12 @@ getoond in zoekresultaten:</translation>
     <message>
         <location filename="../scripts/File/PrintCurrentView/PrintCurrentViewInit.js" line="+2"/>
         <source>Print &amp;Current View</source>
-        <translation>&amp;Huidige scherm akdrukken</translation>
+        <translation>&amp;Huidige weergave afdrukken</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Print current view</source>
-        <translation>Huidige scherm akdrukken</translation>
+        <translation>Huidige weergave afdrukken</translation>
     </message>
 </context>
 <context>
