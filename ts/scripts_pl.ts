@@ -6,7 +6,7 @@
     <message>
         <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
-        <translation type="unfinished"></translation>
+        <translation>O programie</translation>
     </message>
     <message>
         <location line="+61"/>
