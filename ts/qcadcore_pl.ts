@@ -255,7 +255,7 @@
     <message>
         <location filename="../src/core/RBlock.cpp" line="+65"/>
         <source>Pixel Unit</source>
-        <translation>Jednostka pikseli</translation>
+        <translation>Jednostka piksela</translation>
     </message>
     <message>
         <location line="+1"/>
