@@ -22,6 +22,7 @@ include("../../WidgetFactory.js");
 
 LanguagePreferences.localLanguageName = [];
 LanguagePreferences.localLanguageName["cs"] = "Čeština";
+LanguagePreferences.localLanguageName["da"] = "Dansk";
 LanguagePreferences.localLanguageName["de"] = "Deutsch";
 LanguagePreferences.localLanguageName["de_DE"] = "Deutsch";
 LanguagePreferences.localLanguageName["en"] = "English";
