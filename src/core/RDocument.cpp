@@ -2111,6 +2111,12 @@ QSet<RObject::Id> RDocument::queryPropertyEditorObjects() {
 //                    }
                 }
             }
+
+            // dim style properties, not shown for now:
+//            QSharedPointer<RDimStyle> dimStyle = queryDimStyleDirect();
+//            if (!dimStyle.isNull()) {
+//                objectIds.insert(dimStyle->getId());
+//            }
         }
     }
 
