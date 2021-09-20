@@ -978,6 +978,8 @@ function entityTypeToString(type, plural) {
         return plural ? qsTr("Linetypes") : qsTr("Linetype");
     case RS.ObjectView:
         return plural ? qsTr("Views") : qsTr("View");
+    case RS.ObjectDimStyle:
+        return plural ? qsTr("Dimension Styles") : qsTr("Dimension Style");
 
     case RS.EntityAll:
         return plural ? qsTr("Entities") : qsTr("Entity");
