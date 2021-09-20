@@ -62,6 +62,7 @@ void RPropertyTypeId::generateId(RS::EntityType type,
         cachedOptionList.append(RPropertyAttributes::Location);
         cachedOptionList.append(RPropertyAttributes::RefPoint);
         cachedOptionList.append(RPropertyAttributes::Geometry);
+        cachedOptionList.append(RPropertyAttributes::DimStyleOverride);
     }
 
     if (id!=-1) {
@@ -81,7 +82,9 @@ void RPropertyTypeId::generateId(RS::EntityType type,
     propertyTypeByObjectMap[type].insert(*this);
     if (this->options!=RPropertyAttributes::NoOptions) {
         for (int i=0; i<cachedOptionList.length(); i++) {
-            propertyTypeByObjectOptionMap[QPair<RS::EntityType, RPropertyAttributes::Option>(type, cachedOptionList[i])].insert(*this);
+            if (this->options.testFlag(cachedOptionList[i])) {
+                propertyTypeByObjectOptionMap[QPair<RS::EntityType, RPropertyAttributes::Option>(type, cachedOptionList[i])].insert(*this);
+            }
         }
     }
     idToTitleMap[id].first = groupTitle;
@@ -111,7 +114,9 @@ void RPropertyTypeId::generateId(RS::EntityType type, const RPropertyTypeId& oth
     propertyTypeByObjectMap[type].insert(*this);
     if (options!=RPropertyAttributes::NoOptions) {
         for (int i=0; i<cachedOptionList.length(); i++) {
-            propertyTypeByObjectOptionMap[QPair<RS::EntityType, RPropertyAttributes::Option>(type, cachedOptionList[i])].insert(*this);
+            if (options.testFlag(cachedOptionList[i])) {
+                propertyTypeByObjectOptionMap[QPair<RS::EntityType, RPropertyAttributes::Option>(type, cachedOptionList[i])].insert(*this);
+            }
         }
     }
 }
@@ -274,17 +279,17 @@ QSet<RPropertyTypeId> RPropertyTypeId::getPropertyTypeIds(RS::EntityType type, R
         if (propertyTypeByObjectOptionMap.contains(pair)) {
             return propertyTypeByObjectOptionMap[pair];
         }
-        qWarning() << QString("RPropertyIdRegistry::getPropertyTypeIds: "
-                              "no properties with option %1 registered for class %2")
-                      .arg(option).arg(type);
+//        qWarning() << QString("RPropertyIdRegistry::getPropertyTypeIds: "
+//                              "no properties with option %1 registered for class %2")
+//                      .arg(option).arg(type);
     }
     else {
         if (propertyTypeByObjectMap.contains(type)) {
             return propertyTypeByObjectMap[type];
         }
-        qWarning() << QString("RPropertyIdRegistry::getPropertyTypeIds: "
-                              "no properties registered for class %1")
-                      .arg(type);
+//        qWarning() << QString("RPropertyIdRegistry::getPropertyTypeIds: "
+//                              "no properties registered for class %1")
+//                      .arg(type);
     }
 
     return QSet<RPropertyTypeId> ();

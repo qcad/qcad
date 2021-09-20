@@ -370,12 +370,20 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
     qSort(customPropertyNamesSorted);
     customPropertyNamesSorted.removeDuplicates();
 
+    bool showDimStyleOverrides = RSettings::getBoolValue("PropertyEditor/DimStyleOverrides", true);
+
     // find out which properties need to be collected (combined properties of selected object types):
     QSet<RPropertyTypeId> combinedPropertyTypeIds;
     QList<RS::EntityType> combinedTypeIds = combinedTypesLocal.keys();
     for (int i=0; i<combinedTypeIds.length(); i++) {
         RS::EntityType t = combinedTypeIds[i];
         QSet<RPropertyTypeId> propertyTypeIds = RPropertyTypeId::getPropertyTypeIds(t);
+
+        // remove advanced dim style overrides properties:
+        if (!showDimStyleOverrides) {
+            QSet<RPropertyTypeId> propertyTypeIdsAdv = RPropertyTypeId::getPropertyTypeIds(t, RPropertyAttributes::DimStyleOverride);
+            propertyTypeIds.subtract(propertyTypeIdsAdv);
+        }
 
         if (i==0) {
             combinedPropertyTypeIds = propertyTypeIds;

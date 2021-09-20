@@ -379,16 +379,16 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
         QPair<RPropertyTypeId, RS::KnownVariable> pv = RDimStyle::propertyVariables.value(i);
         if (pv.first==propertyTypeId) {
             RPropertyAttributes attr;
-
-            if (RDimStyleData::getType(pv.second)==RS::VarTypeInt) {
-                attr.setInteger(true);
-            }
             if (propertyTypeId==RDimensionEntity::PropertyDimdsep) {
                 // show DIMDESP as string
                 QVariant v = getData().getDimXVariant(pv.second);
                 QString str;
                 str.append(QChar(v.toInt()));
-                return qMakePair(QVariant(str), RPropertyAttributes());
+                return qMakePair(QVariant(str), attr);
+            }
+
+            if (RDimStyleData::getType(pv.second)==RS::VarTypeInt) {
+                attr.setInteger(true);
             }
 
             // TODO: add advanced attribute to show / hide in PE
