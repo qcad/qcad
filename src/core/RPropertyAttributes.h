@@ -76,7 +76,8 @@ public:
         Geometry = Location | RefPoint,  //!< Property affected when changing geometry (Location | RefPoint)
         Scale = 0x2000000,               //!< Property is scale (1:2, 5"=1", ...)
         Area = 0x4000000,                //!< Property is area (relevant for formatting of value)
-        UnitLess = 0x8000000             //!< Property has no unit (linetype scale, draw order, ...)
+        UnitLess = 0x8000000,            //!< Property has no unit (linetype scale, draw order, ...)
+        DimStyleOverride = 0x10000000    //!< Property is advanced dimension style override (can be hidden)
     };
     Q_DECLARE_FLAGS(Options, Option)
 
