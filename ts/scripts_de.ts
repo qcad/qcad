@@ -9136,7 +9136,7 @@ BUG: Interferes with group castings.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+56"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+57"/>
         <source>Language Settings</source>
         <translation>Spracheinstellungen</translation>
     </message>
@@ -12847,6 +12847,11 @@ nicht öffnen.
         <location line="+7"/>
         <source>Always format property values as decimal numbers</source>
         <translation>Eigenschaftswerte immer als Dezimalzahlen formatieren</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Display advanced dimension style overrides</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -17554,6 +17559,16 @@ nicht öffnen.
         <location line="+0"/>
         <source>View</source>
         <translation>Ansicht</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Dimension Styles</source>
+        <translation>Bemassungsstile</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Dimension Style</source>
+        <translation>Bemassungsstil</translation>
     </message>
     <message>
         <location line="+3"/>

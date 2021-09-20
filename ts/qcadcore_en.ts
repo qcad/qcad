@@ -587,7 +587,7 @@
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1"/>
-        <location filename="../src/core/RPropertyTypeId.cpp" line="+150"/>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+155"/>
         <source>Custom</source>
         <translation>Custom</translation>
     </message>
@@ -778,9 +778,13 @@
         <translation>Extension line offset</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text above dimension line</source>
-        <translation>Text above dimension line</translation>
+        <translation type="vanished">Text above dimension line</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text position vertical</source>
+        <translation>Text position vertical</translation>
     </message>
     <message>
         <location line="+1"/>

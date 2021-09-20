@@ -469,7 +469,7 @@
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1"/>
-        <location filename="../src/core/RPropertyTypeId.cpp" line="+150"/>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+155"/>
         <source>Custom</source>
         <translation>Gebruikergedefinieerd</translation>
     </message>
@@ -782,9 +782,13 @@
         <translation>Hulplijn afzet</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text above dimension line</source>
-        <translation>Tekst boven de maatlijn</translation>
+        <translation type="vanished">Tekst boven de maatlijn</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text position vertical</source>
+        <translation>Tekstpositie verticaal</translation>
     </message>
     <message>
         <location line="+1"/>

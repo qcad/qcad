@@ -20,7 +20,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished">Center</translation>
+        <translation>Centrum</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -82,7 +82,7 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>X</source>
-        <translation type="unfinished">X</translation>
+        <translation>X</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -144,7 +144,7 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>Y</source>
-        <translation type="unfinished">Y</translation>
+        <translation>Y</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -203,7 +203,7 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>Z</source>
-        <translation type="unfinished">Z</translation>
+        <translation>Z</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -475,104 +475,84 @@
         <translation type="unfinished">Målt værdi</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Style</source>
-        <translation type="unfinished">Stil</translation>
+        <translation type="obsolete">Stil</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Overall dimension scale</source>
-        <translation type="unfinished">Samlet dimensionsskala</translation>
+        <translation type="obsolete">Samlet dimensionsskala</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Linear measurement factor</source>
-        <translation type="unfinished">Lineær målefaktor</translation>
+        <translation type="obsolete">Lineær målefaktor</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text height</source>
-        <translation type="unfinished">Teksthøjde</translation>
+        <translation type="obsolete">Teksthøjde</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation type="unfinished">Dimension line gap</translation>
+        <translation type="obsolete">Dimension line gap</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Arrow size</source>
-        <translation type="unfinished">Pilens størrelse</translation>
+        <translation type="obsolete">Pilens størrelse</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Extension line extension</source>
-        <translation type="unfinished">Udvidelse af linjeforlængelse</translation>
+        <translation type="obsolete">Udvidelse af linjeforlængelse</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Extension line offset</source>
-        <translation type="unfinished">Forlængelseslinje offset</translation>
+        <translation type="obsolete">Forlængelseslinje offset</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text position vertical</source>
-        <translation type="unfinished">Tekstposition lodret</translation>
+        <translation type="obsolete">Tekstposition lodret</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text inside horizontal</source>
-        <translation type="unfinished">Tekst inden for vandret</translation>
+        <translation type="obsolete">Tekst inden for vandret</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Tick size</source>
-        <translation type="unfinished">Krydsningsstørrelse</translation>
+        <translation type="obsolete">Krydsningsstørrelse</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Linear format</source>
-        <translation type="unfinished">Lineært format</translation>
+        <translation type="obsolete">Lineært format</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Decimal places</source>
-        <translation type="unfinished">Decimaler</translation>
+        <translation type="obsolete">Decimaler</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Decimal separator</source>
-        <translation type="unfinished">Decimal separator</translation>
+        <translation type="obsolete">Decimal separator</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Zero suppression</source>
-        <translation type="unfinished">Nul undertrykkelse</translation>
+        <translation type="obsolete">Nul undertrykkelse</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Angular format</source>
-        <translation type="unfinished">Angular-format</translation>
+        <translation type="obsolete">Angular-format</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation type="unfinished">Angulære decimaler</translation>
+        <translation type="obsolete">Angulære decimaler</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation type="unfinished">Undertrykkelse af vinkelnulpunktet</translation>
+        <translation type="obsolete">Undertrykkelse af vinkelnulpunktet</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Architectur tick</source>
-        <translation type="unfinished">Architectur tick</translation>
+        <translation type="obsolete">Architectur tick</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text color</source>
-        <translation type="unfinished">Tekstfarve</translation>
+        <translation type="obsolete">Tekstfarve</translation>
     </message>
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-3"/>
@@ -580,7 +560,7 @@
         <translation type="unfinished">Skala</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="-26"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+3"/>
         <source>Block Name</source>
         <translation type="unfinished">Bloknavn</translation>
     </message>

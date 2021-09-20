@@ -7816,7 +7816,7 @@ BUG: Interferes with group castings.</translation>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+56"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+57"/>
         <source>Language Settings</source>
         <translation>Language Settings</translation>
     </message>
@@ -10586,6 +10586,11 @@ shown in search results:</translation>
         <location line="+7"/>
         <source>Always format property values as decimal numbers</source>
         <translation>Always format property values as decimal numbers</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Display advanced dimension style overrides</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+198"/>
@@ -14739,6 +14744,16 @@ shown in search results:</translation>
         <location line="+0"/>
         <source>View</source>
         <translation>View</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Dimension Styles</source>
+        <translation>Dimension Styles</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Dimension Style</source>
+        <translation>Dimension Style</translation>
     </message>
     <message>
         <location line="+3"/>

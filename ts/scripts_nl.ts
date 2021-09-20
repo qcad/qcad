@@ -7906,7 +7906,7 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+56"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+57"/>
         <source>Language Settings</source>
         <translation>Taal instellingen</translation>
     </message>
@@ -10837,6 +10837,11 @@ getoond in zoekresultaten:</translation>
         <location line="+7"/>
         <source>Always format property values as decimal numbers</source>
         <translation>Waarden van eigenschappen altijd als decimale getallen formatteren</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Display advanced dimension style overrides</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -14903,6 +14908,16 @@ getoond in zoekresultaten:</translation>
         <location line="+0"/>
         <source>View</source>
         <translation>Weergave</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Dimension Styles</source>
+        <translation>Bematingsstijlen</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Dimension Style</source>
+        <translation>Bematingsstijl</translation>
     </message>
     <message>
         <location line="+3"/>

@@ -469,7 +469,7 @@
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1"/>
-        <location filename="../src/core/RPropertyTypeId.cpp" line="+150"/>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+155"/>
         <source>Custom</source>
         <translation>Personalizzato</translation>
     </message>
@@ -782,9 +782,13 @@
         <translation>Offset della linea di estensione</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text above dimension line</source>
-        <translation>Testo sopra la linea della dimensione</translation>
+        <translation type="vanished">Testo sopra la linea della dimensione</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text position vertical</source>
+        <translation>Posizione del testo verticale</translation>
     </message>
     <message>
         <location line="+1"/>

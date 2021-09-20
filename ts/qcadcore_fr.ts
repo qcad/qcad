@@ -469,7 +469,7 @@
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1"/>
-        <location filename="../src/core/RPropertyTypeId.cpp" line="+150"/>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+155"/>
         <source>Custom</source>
         <translation>Personnalisé</translation>
     </message>
@@ -782,9 +782,13 @@
         <translation>Distance de la ligne d&apos;attache / objet</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text above dimension line</source>
-        <translation>Texte au-dessus de la ligne de dimension</translation>
+        <translation type="vanished">Texte au-dessus de la ligne de dimension</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text position vertical</source>
+        <translation>Position verticale du texte</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -821,111 +821,91 @@
         <translation>Valore misurato</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Style</source>
-        <translation>Stile</translation>
+        <translation type="vanished">Stile</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Overall dimension scale</source>
-        <translation>Scala delle dimensioni globali</translation>
+        <translation type="vanished">Scala delle dimensioni globali</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Linear measurement factor</source>
-        <translation>Fattore di misura lineare</translation>
+        <translation type="vanished">Fattore di misura lineare</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text height</source>
-        <translation>Altezza del testo</translation>
+        <translation type="vanished">Altezza del testo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation>Spazio tra le linee di dimensione</translation>
+        <translation type="vanished">Spazio tra le linee di dimensione</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Arrow size</source>
-        <translation>Dimensione della freccia</translation>
+        <translation type="vanished">Dimensione della freccia</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Extension line extension</source>
-        <translation>Estensione della linea di estensione</translation>
+        <translation type="vanished">Estensione della linea di estensione</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Extension line offset</source>
-        <translation>Offset della linea di estensione</translation>
+        <translation type="vanished">Offset della linea di estensione</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text position vertical</source>
-        <translation>Posizione del testo verticale</translation>
+        <translation type="vanished">Posizione del testo verticale</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text inside horizontal</source>
-        <translation>Testo all&apos;interno orizzontale</translation>
+        <translation type="vanished">Testo all&apos;interno orizzontale</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Tick size</source>
-        <translation>Dimensione del tick</translation>
+        <translation type="vanished">Dimensione del tick</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Linear format</source>
-        <translation>Formato lineare</translation>
+        <translation type="vanished">Formato lineare</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Decimal places</source>
-        <translation>Posizioni decimali</translation>
+        <translation type="vanished">Posizioni decimali</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Decimal separator</source>
-        <translation>Separatore decimale</translation>
+        <translation type="vanished">Separatore decimale</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Zero suppression</source>
-        <translation>Soppressione zero</translation>
+        <translation type="vanished">Soppressione zero</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Angular format</source>
-        <translation>Formato angolare</translation>
+        <translation type="vanished">Formato angolare</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation>Decimali angolari</translation>
+        <translation type="vanished">Decimali angolari</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation>Soppressione dello zero angolare</translation>
+        <translation type="vanished">Soppressione dello zero angolare</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Architectur tick</source>
-        <translation>Spunta l&apos;architettura</translation>
+        <translation type="vanished">Spunta l&apos;architettura</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text color</source>
-        <translation>Colore del testo</translation>
+        <translation type="vanished">Colore del testo</translation>
     </message>
     <message>
         <source>Linear Factor</source>
         <translation type="vanished">Fattore</translation>
     </message>
     <message>
-        <location line="-26"/>
+        <location line="+3"/>
         <source>Block Name</source>
         <translation>Nome blocco</translation>
     </message>

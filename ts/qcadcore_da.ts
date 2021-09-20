@@ -560,7 +560,7 @@
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1"/>
-        <location filename="../src/core/RPropertyTypeId.cpp" line="+150"/>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+155"/>
         <source>Custom</source>
         <translation type="unfinished">Tilpasset</translation>
     </message>
@@ -751,9 +751,13 @@
         <translation type="unfinished">Forlængelseslinje offset</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text above dimension line</source>
-        <translation type="unfinished">Tekst over dimensionslinje</translation>
+        <translation type="obsolete">Tekst over dimensionslinje</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text position vertical</source>
+        <translation>Tekstposition vertikalt</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -554,7 +554,7 @@
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1"/>
-        <location filename="../src/core/RPropertyTypeId.cpp" line="+150"/>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+155"/>
         <source>Custom</source>
         <translation>Vlastní</translation>
     </message>
@@ -756,7 +756,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Text above dimension line</source>
+        <source>Text position vertical</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

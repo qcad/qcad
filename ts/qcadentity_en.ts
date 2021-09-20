@@ -470,104 +470,84 @@
         <translation>Measured Value</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Style</source>
-        <translation>Style</translation>
+        <translation type="vanished">Style</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Overall dimension scale</source>
-        <translation>Overall dimension scale</translation>
+        <translation type="vanished">Overall dimension scale</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Linear measurement factor</source>
-        <translation>Linear measurement factor</translation>
+        <translation type="vanished">Linear measurement factor</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text height</source>
-        <translation>Text height</translation>
+        <translation type="vanished">Text height</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation>Dimension line gap</translation>
+        <translation type="vanished">Dimension line gap</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Arrow size</source>
-        <translation>Arrow size</translation>
+        <translation type="vanished">Arrow size</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Extension line extension</source>
-        <translation>Extension line extension</translation>
+        <translation type="vanished">Extension line extension</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Extension line offset</source>
-        <translation>Extension line offset</translation>
+        <translation type="vanished">Extension line offset</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text position vertical</source>
-        <translation>Text position vertical</translation>
+        <translation type="vanished">Text position vertical</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text inside horizontal</source>
-        <translation>Text inside horizontal</translation>
+        <translation type="vanished">Text inside horizontal</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Tick size</source>
-        <translation>Tick size</translation>
+        <translation type="vanished">Tick size</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Linear format</source>
-        <translation>Linear format</translation>
+        <translation type="vanished">Linear format</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Decimal places</source>
-        <translation>Decimal places</translation>
+        <translation type="vanished">Decimal places</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Decimal separator</source>
-        <translation>Decimal separator</translation>
+        <translation type="vanished">Decimal separator</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Zero suppression</source>
-        <translation>Zero suppression</translation>
+        <translation type="vanished">Zero suppression</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Angular format</source>
-        <translation>Angular format</translation>
+        <translation type="vanished">Angular format</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation>Angular decimal places</translation>
+        <translation type="vanished">Angular decimal places</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation>Angular zero suppression</translation>
+        <translation type="vanished">Angular zero suppression</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Architectur tick</source>
-        <translation>Architectur tick</translation>
+        <translation type="vanished">Architectur tick</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text color</source>
-        <translation>Text color</translation>
+        <translation type="vanished">Text color</translation>
     </message>
     <message>
         <source>Linear Factor</source>
@@ -579,7 +559,7 @@
         <translation>Scale</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="-26"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+3"/>
         <source>Block Name</source>
         <translation>Block Name</translation>
     </message>

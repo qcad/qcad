@@ -465,111 +465,91 @@
         <translation>Gemeten waarde</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Style</source>
-        <translation>Stijl</translation>
+        <translation type="vanished">Stijl</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Overall dimension scale</source>
-        <translation>Algemene dimensieschaal</translation>
+        <translation type="vanished">Algemene dimensieschaal</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Linear measurement factor</source>
-        <translation>Lineaire meetfactor</translation>
+        <translation type="vanished">Lineaire meetfactor</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text height</source>
-        <translation>Hoogte van de tekst</translation>
+        <translation type="vanished">Hoogte van de tekst</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation>Maat lijn uitsparing</translation>
+        <translation type="vanished">Maat lijn uitsparing</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Arrow size</source>
-        <translation>Pijlgrootte</translation>
+        <translation type="vanished">Pijlgrootte</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Extension line extension</source>
-        <translation>Hulplijn extentie</translation>
+        <translation type="vanished">Hulplijn extentie</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Extension line offset</source>
-        <translation>Hulplijn afzet</translation>
+        <translation type="vanished">Hulplijn afzet</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text position vertical</source>
-        <translation>Tekstpositie verticaal</translation>
+        <translation type="vanished">Tekstpositie verticaal</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text inside horizontal</source>
-        <translation>Tekst binnen horizontaal</translation>
+        <translation type="vanished">Tekst binnen horizontaal</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Tick size</source>
-        <translation>Tickgrootte</translation>
+        <translation type="vanished">Tickgrootte</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Linear format</source>
-        <translation>Lineair formaat</translation>
+        <translation type="vanished">Lineair formaat</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Decimal places</source>
-        <translation>Decimale plaatsen</translation>
+        <translation type="vanished">Decimale plaatsen</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Decimal separator</source>
-        <translation>Decimaal scheidingsteken</translation>
+        <translation type="vanished">Decimaal scheidingsteken</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Zero suppression</source>
-        <translation>Nul onderdrukking</translation>
+        <translation type="vanished">Nul onderdrukking</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Angular format</source>
-        <translation>Hoekformaat</translation>
+        <translation type="vanished">Hoekformaat</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation>Decimale plaatsen hoekmaat</translation>
+        <translation type="vanished">Decimale plaatsen hoekmaat</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation>Onderdrukking van nul hoekmaat</translation>
+        <translation type="vanished">Onderdrukking van nul hoekmaat</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Architectur tick</source>
-        <translation>Architectur tick</translation>
+        <translation type="vanished">Architectur tick</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text color</source>
-        <translation>Tekst kleur</translation>
+        <translation type="vanished">Tekst kleur</translation>
     </message>
     <message>
         <source>Linear Factor</source>
         <translation type="vanished">Lineaire factor</translation>
     </message>
     <message>
-        <location line="-26"/>
+        <location line="+3"/>
         <source>Block Name</source>
         <translation>Bloknaam</translation>
     </message>

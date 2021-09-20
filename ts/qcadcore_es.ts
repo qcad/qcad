@@ -469,7 +469,7 @@
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1"/>
-        <location filename="../src/core/RPropertyTypeId.cpp" line="+150"/>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+155"/>
         <source>Custom</source>
         <translation>Personalizado</translation>
     </message>
@@ -782,9 +782,13 @@
         <translation>Desfase línea de referencia</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text above dimension line</source>
-        <translation>Texto sobre la línea de cota</translation>
+        <translation type="vanished">Texto sobre la línea de cota</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text position vertical</source>
+        <translation>Posición del texto en vertical</translation>
     </message>
     <message>
         <location line="+1"/>

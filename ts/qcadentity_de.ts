@@ -813,111 +813,91 @@
         <translation>Auto Beschriftung</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Style</source>
-        <translation>Stil</translation>
+        <translation type="vanished">Stil</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Overall dimension scale</source>
-        <translation>Gesamtskalierung Bemassung</translation>
+        <translation type="vanished">Gesamtskalierung Bemassung</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Linear measurement factor</source>
-        <translation>Linearfaktor</translation>
+        <translation type="vanished">Linearfaktor</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text height</source>
-        <translation>Höhe des Textes</translation>
+        <translation type="vanished">Höhe des Textes</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation>Bemassungslinien Abstand</translation>
+        <translation type="vanished">Bemassungslinien Abstand</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Arrow size</source>
-        <translation>Pfeilgrösse</translation>
+        <translation type="vanished">Pfeilgrösse</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Extension line extension</source>
-        <translation>Verlängerung der Begrenzungslinie</translation>
+        <translation type="vanished">Verlängerung der Begrenzungslinie</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Extension line offset</source>
-        <translation>Begrenzungslinien Abstand</translation>
+        <translation type="vanished">Begrenzungslinien Abstand</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text position vertical</source>
-        <translation>Textposition vertikal</translation>
+        <translation type="vanished">Textposition vertikal</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text inside horizontal</source>
-        <translation>Text innen horizontal</translation>
+        <translation type="vanished">Text innen horizontal</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Tick size</source>
-        <translation>Tick-Grösse</translation>
+        <translation type="vanished">Tick-Grösse</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Linear format</source>
-        <translation>Linearformat</translation>
+        <translation type="vanished">Linearformat</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Decimal places</source>
-        <translation>Dezimalstellen</translation>
+        <translation type="vanished">Dezimalstellen</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Decimal separator</source>
-        <translation>Dezimaltrennzeichen</translation>
+        <translation type="vanished">Dezimaltrennzeichen</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Zero suppression</source>
-        <translation>Null Unterdrückung</translation>
+        <translation type="vanished">Null Unterdrückung</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Angular format</source>
-        <translation>Winkelformat</translation>
+        <translation type="vanished">Winkelformat</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation>Nachkommastellen Winkelmass</translation>
+        <translation type="vanished">Nachkommastellen Winkelmass</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation>Unterdrückung von Nullen Winkelmass</translation>
+        <translation type="vanished">Unterdrückung von Nullen Winkelmass</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Architectur tick</source>
-        <translation>Architektur-Tick</translation>
+        <translation type="vanished">Architektur-Tick</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text color</source>
-        <translation>Textfarbe</translation>
+        <translation type="vanished">Textfarbe</translation>
     </message>
     <message>
         <source>Linear Factor</source>
         <translation type="vanished">Linearfaktor</translation>
     </message>
     <message>
-        <location line="-26"/>
+        <location line="+4"/>
         <source>Block Name</source>
         <translation>Blockname</translation>
     </message>

@@ -7664,7 +7664,7 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+56"/>
+        <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+57"/>
         <source>Language Settings</source>
         <translation>Nastavení jazyka</translation>
     </message>
@@ -10304,6 +10304,11 @@ ve výsledcích vyhledávání:</translation>
         <location line="+7"/>
         <source>Always format property values as decimal numbers</source>
         <translation type="unfinished">Hodnoty vlastností vždy formátovat jako desetinná čísla</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Display advanced dimension style overrides</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+198"/>
@@ -14361,6 +14366,16 @@ ve výsledcích vyhledávání:</translation>
         <location line="+0"/>
         <source>View</source>
         <translation>Zobrazení</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Dimension Styles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Dimension Style</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
