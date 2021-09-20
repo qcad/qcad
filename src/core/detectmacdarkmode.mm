@@ -21,11 +21,11 @@ bool isMacDarkMode() {
         if (darkMode) {
             // dark mode enabled if system is in dark mode
             // use system setting
-            qDebug() << "dark mode allowed in plist file: use system setting";
+            //qDebug() << "dark mode allowed in plist file: use system setting";
         }
         else {
             // dark mode explicitly disabled in plist file:
-            qDebug() << "dark mode explicitly disabled in plist file";
+            //qDebug() << "dark mode explicitly disabled in plist file";
             return false;
         }
     }
@@ -60,9 +60,9 @@ bool isMacDarkMode() {
     // detect OS dark mode:
     NSString* style = [[NSUserDefaults standardUserDefaults] stringForKey:@"AppleInterfaceStyle"];
     if (style==nil) {
-        qDebug() << "style is nil: no dark mode";
+        //qDebug() << "style is nil: no dark mode";
         return false;
     }
-    qDebug() << "style not nil: got dark mode";
+    //qDebug() << "style not nil: got dark mode";
     return true;
 }
