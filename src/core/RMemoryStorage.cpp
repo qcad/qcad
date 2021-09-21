@@ -813,8 +813,13 @@ RObject* RMemoryStorage::queryObjectCC(RObject::Id objectId) const {
 }
 
 QSharedPointer<RObject> RMemoryStorage::queryObjectByHandle(RObject::Handle objectHandle) const {
+//    QHash<RObject::Handle, QSharedPointer<RObject> >::const_iterator it;
+//    for (it=objectHandleMap.constBegin(); it!=objectHandleMap.constEnd(); it++) {
+//        qDebug() << "handle: " << QString("%1").arg(it.key(), 0, 16);
+//    }
+
     if (!objectHandleMap.contains(objectHandle)) {
-        return QSharedPointer<RObject> ();
+        return QSharedPointer<RObject>();
     }
     if (!objectHandleMap[objectHandle].isNull()) {
         return QSharedPointer<RObject>(objectHandleMap[objectHandle]->clone());
@@ -1010,7 +1015,7 @@ QSharedPointer<RBlock> RMemoryStorage::queryBlockDirect(RBlock::Id blockId) cons
 }
 
 void RMemoryStorage::setObjectHandle(RObject& object, RObject::Handle objectHandle) {
-    if (object.getHandle()!=RObject::INVALID_HANDLE) {
+    if (object.getHandle()!=RObject::INVALID_HANDLE && objectHandle!=RObject::INVALID_HANDLE) {
         // release old handle of object:
         objectHandleMap.remove(object.getHandle());
     }
@@ -1656,6 +1661,9 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
 
         // only set new handle if handle is not set already:
         if (!keepHandles || object->getHandle()==RObject::INVALID_HANDLE) {
+            // make sure old handle is not removed from objectHandleMap:
+            // entity handle might originate from another document:
+            setObjectHandle(*object, RObject::INVALID_HANDLE);
             setObjectHandle(*object, getNewObjectHandle());
         }
 
