@@ -1782,7 +1782,7 @@ QList<QSharedPointer<RShape> > RShape::getOrderedShapes(const QList<QSharedPoint
         if (!circle.isNull()) {
             ret.append(shape);
             traversed.insert(i);
-            break;
+            continue;
         }
 
         // full ellipse:
@@ -1790,7 +1790,7 @@ QList<QSharedPointer<RShape> > RShape::getOrderedShapes(const QList<QSharedPoint
         if (!ellipseArc.isNull() && ellipseArc->isFullEllipse()) {
             ret.append(shape);
             traversed.insert(i);
-            break;
+            continue;
         }
 
         // full spline:
@@ -1799,7 +1799,7 @@ QList<QSharedPointer<RShape> > RShape::getOrderedShapes(const QList<QSharedPoint
             if (spline->isPeriodic()) {
                 ret.append(shape);
                 traversed.insert(i);
-                break;
+                continue;
             }
         }
 
