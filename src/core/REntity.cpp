@@ -295,7 +295,7 @@ QPair<QVariant, RPropertyAttributes> REntity::getProperty(
         return qMakePair(QVariant(getData().getDrawOrder()), RPropertyAttributes(RPropertyAttributes::UnitLess));
     }
     else if (propertyTypeId == PropertyParentId) {
-        return qMakePair(QVariant(getData().getParentId()), RPropertyAttributes(RPropertyAttributes::UnitLess));
+        return qMakePair(QVariant(getData().getParentId()), RPropertyAttributes(RPropertyAttributes::UnitLess|RPropertyAttributes::Invisible));
     }
 
     // human readable properties (not relevant for transactions):
