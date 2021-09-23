@@ -447,6 +447,14 @@ bool RPainterPath::getNoPattern() const {
     return getMode(RPainterPath::NoPattern);
 }
 
+void RPainterPath::setScreenBasedLinetype(bool on) {
+    setMode(RPainterPath::ScreenBasedLinetype, on);
+}
+
+bool RPainterPath::getScreenBasedLinetype() const {
+    return getMode(RPainterPath::ScreenBasedLinetype);
+}
+
 void RPainterPath::setPixelWidth(bool on) {
     setMode(RPainterPath::PixelWidth, on);
 }

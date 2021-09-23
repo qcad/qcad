@@ -140,6 +140,7 @@ bool RGraphicsSceneQt::beginPath() {
     if (!layer.isNull()) {
         if (layer->getCustomBoolProperty("QCAD", "ScreenBasedLinetypes", false)==true) {
             screenBasedLinetypesOverride = true;
+            currentPainterPath.setScreenBasedLinetype(screenBasedLinetypesOverride);
         }
         // TODO: handle layer opacity:
 //        if (!layer->isPlottable()) {

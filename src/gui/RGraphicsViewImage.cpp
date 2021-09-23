@@ -1584,7 +1584,7 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
         painter->setPen(pen);
 
         // 20210903: make sure screen-based linetypes are rendered as path to keep pattern visible:
-        if (scene->getScreenBasedLinetypes() || scene->getDraftMode() || isPrintingOrExporting() /*|| clipBox.contains(pathBB)*/) {
+        if (scene->getScreenBasedLinetypes() || path.getScreenBasedLinetype() || scene->getDraftMode() || isPrintingOrExporting() /*|| clipBox.contains(pathBB)*/) {
             if (brush.style() != Qt::NoBrush) {
                 painter->fillPath(path, brush);
             }

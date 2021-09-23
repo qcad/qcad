@@ -63,7 +63,8 @@ public:
         NoColorMode = 0x0800,           //!< disable color mode
         SimplePointDisplay = 0x1000,    //!< simple point mode (for points in hatch patterns)
         PolylineGen = 0x2000,           //!< use polyline pattern along whole path (polyline)
-        NoPattern = 0x4000              //!< no pattern (polyline with widths)
+        NoPattern = 0x4000,             //!< no pattern (polyline with widths)
+        ScreenBasedLinetype = 0x8000    //!< force screen-based linetypes for this path
     };
     Q_DECLARE_FLAGS(Modes, Mode)
 
@@ -227,6 +228,9 @@ public:
 
     void setNoPattern(bool on);
     bool getNoPattern() const;
+
+    void setScreenBasedLinetype(bool on);
+    bool getScreenBasedLinetype() const;
 
     void setPixelWidth(bool on);
     bool getPixelWidth() const;
