@@ -272,67 +272,91 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
 
     //qDebug() << "manual:" << manual;
 
-    // only block ref and attributes selected:
+    // check if only block refs and attributes are selected:
     // default to filter block ref:
-    if (entityTypeFilter==RS::EntityAll && !manual) {
-        bool foundBlockRef = false;
-        bool foundAttribute = false;
-        bool foundOther = false;
-        for (it = objectIds.begin(); it != objectIds.end(); ++it) {
-            QSharedPointer<RObject> obj = document->queryObjectDirect(*it);
-            if (obj.isNull()) {
-                continue;
-            }
-
-            RS::EntityType type = obj->getType();
-
-            if (!foundBlockRef && type==RS::EntityBlockRef) {
-                foundBlockRef = true;
-                if (foundAttribute && foundOther) {
-                    break;
-                }
-            }
-            if (!foundAttribute && type==RS::EntityAttribute) {
-                foundAttribute = true;
-                if (foundBlockRef && foundOther) {
-                    break;
-                }
-            }
-            if (!foundOther && type!=RS::EntityBlockRef && type!=RS::EntityAttribute) {
-                foundOther = true;
-                if (foundBlockRef && foundAttribute) {
-                    break;
-                }
-            }
-
-//            if (combinedTypes.contains(type)) {
-//                combinedTypes[type]++;
-//            }
-//            else {
-//                combinedTypes.insert(type, 1);
-//            }
+    // special case: single block ref with attributes allows changing attributes:
+    RObject::Id singleBlockReferenceId = RObject::INVALID_ID;  // ID of single block ref (with attributes) selected
+    bool firstBlockReference = true;
+    bool foundBlockRef = false;
+    bool foundAttribute = false;
+    bool foundOther = false;
+    for (it = objectIds.begin(); it != objectIds.end(); ++it) {
+        QSharedPointer<RObject> obj = document->queryObjectDirect(*it);
+        if (obj.isNull()) {
+            continue;
         }
 
-        if (foundBlockRef && foundAttribute && !foundOther) {
-            if (RSettings::getSelectBlockWithAttribute()) {
-                entityTypeFilter = RS::EntityBlockRef;
+        RS::EntityType type = obj->getType();
+
+        if (foundBlockRef && type==RS::EntityBlockRef) {
+            if (singleBlockReferenceId!=RObject::INVALID_ID) {
+                QSharedPointer<RBlockReferenceEntity> singleBlockRef = document->queryObjectDirect(singleBlockReferenceId).dynamicCast<RBlockReferenceEntity>();
+                QSharedPointer<RBlockReferenceEntity> blockRef = obj.dynamicCast<RBlockReferenceEntity>();
+
+                if (singleBlockRef->getReferencedBlockId()!=blockRef->getReferencedBlockId()) {
+                    singleBlockReferenceId = RObject::INVALID_ID;
+                }
+            }
+        }
+
+        if (!foundBlockRef && type==RS::EntityBlockRef) {
+            foundBlockRef = true;
+            if (foundAttribute && foundOther) {
+                singleBlockReferenceId = RObject::INVALID_ID;
+                break;
+            }
+            if (firstBlockReference) {
+                singleBlockReferenceId = *it;
+                //qDebug() << "block ref selected:" << singleBlockReferenceId;
             }
             else {
-                entityTypeFilter = RS::EntityBlockRefAttr;
+                singleBlockReferenceId = RObject::INVALID_ID;
+                //qDebug() << "multiple block ref selected";
+            }
+            firstBlockReference = false;
+        }
+        if (!foundAttribute && type==RS::EntityAttribute) {
+            foundAttribute = true;
+            if (foundBlockRef && foundOther) {
+                singleBlockReferenceId = RObject::INVALID_ID;
+                break;
+            }
+        }
+        if (!foundOther && type!=RS::EntityBlockRef && type!=RS::EntityAttribute) {
+            foundOther = true;
+            //qDebug() << "other selected";
+            singleBlockReferenceId = RObject::INVALID_ID;
+            if (foundBlockRef && foundAttribute) {
+                singleBlockReferenceId = RObject::INVALID_ID;
+                break;
             }
         }
     }
 
+    // got only single block ref with attributes:
+    if (singleBlockReferenceId!=RObject::INVALID_ID && foundBlockRef && foundAttribute && !foundOther) {
+        if (entityTypeFilter==RS::EntityAll && !manual) {
+            entityTypeFilter = RS::EntityBlockRefAttr;
+        }
+    }
+
+    //qDebug() << "singleBlockReferenceId:" << singleBlockReferenceId;
+    //qDebug() << "entityTypeFilter:" << entityTypeFilter;
+
     // collect and count entity types:
     // collect common custom properties:
     QSet<QString> customPropertyNames;
+
+    // types to show properties for (based on current filter):
     QMap<RS::EntityType, int> combinedTypesLocal;
+
     bool first = true;
     for (it = objectIds.begin(); it != objectIds.end(); ++it) {
         QSharedPointer<RObject> obj = document->queryObjectDirect(*it);
         if (obj.isNull()) {
             continue;
         }
+
         RS::EntityType type = obj->getType();
 
         if (first) {
@@ -344,15 +368,28 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
             }
         }
 
-        if (combinedTypes.contains(type)) {
-            combinedTypes[type]++;
+        // single block ref with attributes:
+        if (type==RS::EntityBlockRef && singleBlockReferenceId!=RObject::INVALID_ID && foundAttribute) {
+            //type = RS::EntityBlockRefAttr;
+            if (combinedTypes.contains(RS::EntityBlockRefAttr)) {
+                combinedTypes[RS::EntityBlockRefAttr]++;
+            }
+            else {
+                combinedTypes.insert(RS::EntityBlockRefAttr, 1);
+            }
         }
         else {
-            combinedTypes.insert(type, 1);
+            if (combinedTypes.contains(type)) {
+                combinedTypes[type]++;
+            }
+            else {
+                combinedTypes.insert(type, 1);
+            }
         }
         first = false;
 
-        if (entityTypeFilter==RS::EntityAll || entityTypeFilter==type) {
+        // combined types with selection filter applied:
+        if (checkType(type, entityTypeFilter)) {
             if (combinedTypesLocal.contains(type)) {
                 combinedTypesLocal[type]++;
             }
@@ -361,6 +398,7 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
             }
         }
     }
+
 
     // get list of custom properties that are always shown, even if a selected object does not provide the property:
     QStringList fixedCustomPropertyNames = getFixedCustomPropertyNames(combinedTypesLocal.keys());
@@ -377,6 +415,9 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
     QList<RS::EntityType> combinedTypeIds = combinedTypesLocal.keys();
     for (int i=0; i<combinedTypeIds.length(); i++) {
         RS::EntityType t = combinedTypeIds[i];
+        if (t==RS::EntityBlockRefAttr) {
+            t = RS::EntityBlockRef;
+        }
         QSet<RPropertyTypeId> propertyTypeIds = RPropertyTypeId::getPropertyTypeIds(t);
 
         // remove advanced dim style overrides properties:
@@ -393,6 +434,40 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
         }
     }
 
+
+    // only a single block (with attributes) selected:
+    // add attributes as custom property types:
+    if (singleBlockReferenceId!=RObject::INVALID_ID && foundAttribute && entityTypeFilter==RS::EntityBlockRefAttr /*&& !onlyChanges*/) {
+        // add properties for block attributes:
+        QSet<REntity::Id> childIds = document->queryChildEntities(singleBlockReferenceId, RS::EntityAttribute);
+        QSet<REntity::Id>::iterator it;
+        for (it=childIds.begin(); it!=childIds.end(); it++) {
+            REntity::Id childId = *it;
+            QSharedPointer<REntity> child = document->queryEntityDirect(childId);
+            if (child.isNull()) {
+                continue;
+            }
+            if (child->isUndone()) {
+                continue;
+            }
+
+            // get block attribute properties:
+            QSet<RPropertyTypeId> childProperties = child->getPropertyTypeIds();
+            QSet<RPropertyTypeId>::iterator it2;
+            for (it2=childProperties.begin(); it2!=childProperties.end(); it2++) {
+                RPropertyTypeId pid = *it2;
+                QPair<QVariant, RPropertyAttributes> p = child->getProperty(pid);
+                if (p.second.isVisibleToParent()) {
+                    pid.setId(RPropertyTypeId::INVALID_ID);
+                    combinedPropertyTypeIds.insert(pid);
+                    //qDebug() << pid.getCustomPropertyTitle() << " / " << pid.getCustomPropertyName();
+                    //qDebug() << p.first.toString();
+                }
+            }
+        }
+    }
+
+
     QList<RPropertyTypeId> combinedPropertyTypeIdsSorted = combinedPropertyTypeIds.toList();
     qSort(combinedPropertyTypeIdsSorted);
 
@@ -407,10 +482,10 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
         ccProperties.append(RProperty(*document, objectIds, RPropertyTypeId("QCAD", customPropertyNamesSorted[i]), showOnRequest, entityTypeFilter));
     }
 
-
     // for each property, find out value (either identical value or 'mixed'):
     QtConcurrent::blockingMap(ccProperties, RPropertyEditor::computePropertyValue);
 
+    // serial:
 //    for (int i=0; i<ccProperties.length(); i++) {
 //        RPropertyEditor::computePropertyValue(ccProperties[i]);
 //    }
@@ -453,30 +528,25 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
         }
     }
 
-    RS::EntityType entityTypeFilterProp = entityTypeFilter;
-    if (entityTypeFilterProp==RS::EntityBlockRefAttr) {
-        // only block ref and attributes selected: show only block ref properties:
-        entityTypeFilterProp = RS::EntityBlockRef;
-    }
-
-    if (RSettings::getSelectBlockWithAttribute()) {
-        //combinedTypes.remove(RS::EntityBlockRefAttr);
-        combinedTypes.remove(RS::EntityAttribute);
-    }
-    else {
-        if (combinedTypes.contains(RS::EntityBlockRef) && combinedTypes.contains(RS::EntityAttribute)) {
-            combinedTypes.insert(RS::EntityBlockRefAttr, combinedTypes[RS::EntityBlockRef] + combinedTypes[RS::EntityBlockRefAttr]);
-        }
-    }
 
     //RDebug::stopTimer("RPropertyEditor::updateFromDocument");
 
+    // single block ref with attributes:
+    if (combinedTypes.contains(RS::EntityBlockRef) && combinedTypes.contains(RS::EntityAttribute) && singleBlockReferenceId!=RObject::INVALID_ID) {
+        combinedTypes.insert(RS::EntityBlockRefAttr, combinedTypes[RS::EntityBlockRef] + combinedTypes[RS::EntityBlockRefAttr]);
+    }
+
+//    qDebug() << "entityTypeFilter:" << entityTypeFilter;
 //    qDebug() << "combinedProperties:";
 //    QStringList groups = combinedProperties.keys();
 //    for (int i=0; i<groups.length(); i++) {
 //        qDebug() << "  group:" << groups[i];
-//        qDebug() << "    props:" << combinedProperties[groups[i]].keys();
+//        QStringList keys = combinedProperties[groups[i]].keys();
+//        for (int k=0; k<keys.length(); k++) {
+//            qDebug() << "    prop:" << keys[k] << ": " << combinedProperties[groups[i]][keys[k]].first;
+//        }
 //    }
+//    qDebug() << "combinedTypes:" << combinedTypes;
 
     updateGui(onlyChanges);
 
@@ -496,7 +566,8 @@ void RPropertyEditor::computePropertyValue(RProperty& ccProp) {
 
         RS::EntityType type = obj->getType();
 
-        if (ccProp.entityTypeFilter!=RS::EntityAll && ccProp.entityTypeFilter!=type) {
+        //if (ccProp.entityTypeFilter!=RS::EntityAll && ccProp.entityTypeFilter!=type) {
+        if (!checkType(type, ccProp.entityTypeFilter)) {
             continue;
         }
 
@@ -760,10 +831,14 @@ int RPropertyEditor::getTypeCount(RS::EntityType type) {
 }
 
 bool RPropertyEditor::checkType(RS::EntityType type, RS::EntityType filter) {
+    if (filter==RS::EntityAll) {
+        return true;
+    }
     if (type==filter) {
         return true;
     }
-    if (filter==RS::EntityBlockRefAttr && (type==RS::EntityBlockRef || type==RS::EntityAttribute)) {
+    //if (filter==RS::EntityBlockRefAttr && (type==RS::EntityBlockRef || type==RS::EntityAttribute)) {
+    if (filter==RS::EntityBlockRefAttr && type==RS::EntityBlockRef) {
         return true;
     }
 
