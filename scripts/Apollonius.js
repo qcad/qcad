@@ -899,14 +899,21 @@ Apollonius.getSolutionsPCC = function(point, circle1, circle2) {
 
     // intersections of circle with L are P and P':
     ips = c.getIntersectionPoints(l, false);
-    if (ips.length!==2) {
-        return ret;
+    if (ips.length===1) {
+        // point on the symetry axis between two circles of same size:
+        var l1 = new RLine(p, circle1.getCenter());
+        var l2 = new RLine(p, circle2.getCenter());
+        var ips1 = l1.getIntersectionPoints(circle1);
+        var ips2 = l2.getIntersectionPoints(circle2);
+        if (ips1.length===1 && ips2.length===1) {
+            ret.push(RCircle.createFrom3Points(ips1[0], ips2[0], p));
+        }
     }
-
-    // solve PPC case for P, P', one of the circles:
-    ret = Apollonius.getSolutionsPPC(ips[0], ips[1], circle1);
-    ret = ret.concat(Apollonius.getSolutionsPPC(new RPoint(ips[0]), new RPoint(ips[1]), circle2));
-
+    else if (ips.length===2) {
+        // solve PPC case for P, P', one of the circles:
+        ret = Apollonius.getSolutionsPPC(ips[0], ips[1], circle1);
+        ret = ret.concat(Apollonius.getSolutionsPPC(new RPoint(ips[0]), new RPoint(ips[1]), circle2));
+    }
 
     if (!circle1.isOnShape(point.position, false) &&
         !circle2.isOnShape(point.position, false)) {
