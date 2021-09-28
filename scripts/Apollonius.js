@@ -583,7 +583,6 @@ Apollonius.shapesTouch = function(shape1, shape2) {
         }
     }
 
-    debugger;
     return false;
 };
 
@@ -853,12 +852,61 @@ Apollonius.getSolutionsLLL = function(line1, line2, line3) {
  * and the given point.
  */
 Apollonius.getSolutionsPCC = function(point, circle1, circle2) {
+    var ret = [];
+    //Apollonius.constructionShapes = [];
+
     if (!isPointShape(point) ||
         !isCircleShape(circle1) ||
         !isCircleShape(circle2)) {
 
-        return [];
+        return ret;
     }
+
+    var p = point.getPosition();
+
+    // reduce PCC to PPC case:
+
+    // find second point [P']:
+
+    // find two tangents of two circles:
+    var tangents = ShapeAlgorithms.getTangents(circle1, circle2);
+    if (tangents.length!==4) {
+        return ret;
+    }
+
+    //Apollonius.constructionShapes.push(tangents[0]);
+    //Apollonius.constructionShapes.push(tangents[1]);
+
+    // circle from 3P through two tangent points and P:
+    var p1 = tangents[0].getClosestPointOnShape(circle1.getCenter(), false);
+    var p2 = tangents[0].getClosestPointOnShape(circle2.getCenter(), false);
+    var c = RCircle.createFrom3Points(p1, p2, p);
+
+    // find intersection of tangents:
+    var l;
+    var ips = tangents[0].getIntersectionPoints(tangents[1], false);
+    if (ips.length===1) {
+        // line from intersection to point [L]:
+        l = new RLine(ips[0], p);
+        //Apollonius.constructionShapes.push(l);
+
+        //Apollonius.constructionShapes.push(c);
+    }
+    else {
+        // circles of equal size:
+        l = new RLine(p, tangents[0].getAngle(), 1.0);
+    }
+
+    // intersections of circle with L are P and P':
+    ips = c.getIntersectionPoints(l, false);
+    if (ips.length!==2) {
+        return ret;
+    }
+
+    // solve PPC case for P, P', one of the circles:
+    ret = Apollonius.getSolutionsPPC(ips[0], ips[1], circle1);
+    ret = ret.concat(Apollonius.getSolutionsPPC(new RPoint(ips[0]), new RPoint(ips[1]), circle2));
+
 
     if (!circle1.isOnShape(point.position, false) &&
         !circle2.isOnShape(point.position, false)) {
@@ -875,11 +923,13 @@ Apollonius.getSolutionsPCC = function(point, circle1, circle2) {
 
         var tangents = Apollonius.getCommonTangents(circlesInverse[0], circlesInverse[1]);
 
-        return Apollonius.getInverseShapes(tangents, inversionCircle);
+        ret = ret.concat(Apollonius.getInverseShapes(tangents, inversionCircle));
     }
-    else {
-        return [];
-    }
+
+    ret = Apollonius.removeDuplicates(ret);
+    ret = Apollonius.verify(ret, point, circle1, circle2);
+
+    return ret;
 };
 
 /**
@@ -898,6 +948,36 @@ Apollonius.getSolutionsPPC = function(point1, point2, circle) {
     if (circle.isOnShape(point1.position) && circle.isOnShape(point2.position)) {
         return [ circle ];
     }
+
+    var pOnCircle = undefined;
+    var pOther = undefined;
+    if (circle.isOnShape(point1.position)) {
+        pOnCircle = point1.position;
+        pOther = point2.position;
+    }
+    if (circle.isOnShape(point2.position)) {
+        pOnCircle = point2.position;
+        pOther = point1.position;
+    }
+    // one point is on circle:
+    if (!isNull(pOnCircle) && !isNull(pOther)) {
+        //Apollonius.constructionShapes = [];
+
+        // line from circle center to point on circle:
+        var l = new RLine(circle.getCenter(), pOnCircle);
+        //Apollonius.constructionShapes.push(l);
+        // middle orthogonal between points:
+        var m = RVector.getAverage(pOnCircle, pOther);
+        var lOrtho = new RLine(m, pOther.getAngleTo(pOnCircle) + Math.PI/2, 1.0);
+        //Apollonius.constructionShapes.push(lOrtho);
+
+        var ips = l.getIntersectionPoints(lOrtho, false);
+        if (ips.length!==1) {
+            return [];
+        }
+        return [ new RCircle(ips[0], ips[0].getDistanceTo(pOnCircle)) ];
+    }
+
 
     var inversionCircle = new RCircle(point1.position, 10);
 
@@ -1149,6 +1229,9 @@ Apollonius.getSolutionsPLC = function(point, line, circle) {
 //        debugger;
 //    }
 
+
+
+
 //    var inversionCircle = new RCircle(point.position, 10);
 
 //    if (line.isOnShape(point.position) || circle.isOnShape(point.position)) {
@@ -1164,6 +1247,9 @@ Apollonius.getSolutionsPLC = function(point, line, circle) {
 //    var tangents = Apollonius.getCommonTangents(shapesInverse[0], shapesInverse[1]);
 
 //    return Apollonius.getInverseShapes(tangents, inversionCircle);
+
+
+
 
     var a = point.getPosition();
     var c = circle.getCenter();
@@ -1228,6 +1314,33 @@ Apollonius.getSolutionsPLC = function(point, line, circle) {
             ips = par2.getIntersectionPoints(circ, false);
             centerCandidates = centerCandidates.concat(ips);
         }
+
+        // special case:
+        // point is on line:
+        else if (line.isOnShape(a, false)) {
+            // similarity axis:
+            var ea = new RLine(e, a);
+            ips = circle.getIntersectionPoints(ea, false);
+            if (ips.length!==2) {
+                continue;
+            }
+            var i1 = ips[0];
+            if (i1.equalsFuzzy(e)) {
+                i1 = ips[1];
+            }
+            var ci1 = new RLine(c, i1);
+
+            // ortho through a:
+            var orthoA = new RLine(a, line.getAngle() + Math.PI/2, 1.0)
+
+            ips = orthoA.getIntersectionPoints(ci1, false);
+            if (ips.length!==1) {
+                continue;
+            }
+
+            centerCandidates.push(ips[0]);
+        }
+
         else {
             var da = new RLine(d, a);
             ips = da.getIntersectionPoints(lData, false);
