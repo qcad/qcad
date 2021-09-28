@@ -905,7 +905,7 @@ QString RDimensionData::formatLabel(double distance) const {
             false,
             (getDimzin()&4)!=4, (getDimzin()&8)!=8,
             false,
-            getDimdsep());
+            (char)getDimdsep());
     }
     else {
         ret = QString("%1").arg(distance);
@@ -919,9 +919,11 @@ QString RDimensionData::formatAngleLabel(double angle) const {
 
     if (document!=NULL) {
         ret = RUnit::formatAngle(angle,
-                                 document->getAngleFormat(), document->getAnglePrecision(),
-                                 document->showLeadingZeroesAngle(), document->showTrailingZeroesAngle(),
-                                 document->getDecimalSeparator());
+                                 (RS::AngleFormat)getDimaunit(),
+                                 getDimadec(),
+                                 (getDimazin()&1)!=1,
+                                 (getDimazin()&2)!=2,
+                                 (char)getDimdsep());
     }
     else {
         ret = QString("%1").arg(angle);
