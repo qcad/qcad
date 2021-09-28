@@ -552,11 +552,17 @@ QString RDocument::formatAngle(double value) {
  * This is determined by the variable "$DIMLUNIT".
  */
 RS::LinearFormat RDocument::getLinearFormat() const {
-    return (RS::LinearFormat)getKnownVariable(RS::DIMLUNIT, 2).toInt();
+    //return (RS::LinearFormat)getKnownVariable(RS::DIMLUNIT, 2).toInt();
+
+    QSharedPointer<RDimStyle> dimStyle = queryDimStyleDirect();
+    return (RS::LinearFormat)dimStyle->getInt(RS::DIMLUNIT);
 }
 
 void RDocument::setLinearFormat(RS::LinearFormat f) {
-    setKnownVariable(RS::DIMLUNIT, f);
+    //setKnownVariable(RS::DIMLUNIT, f);
+
+    QSharedPointer<RDimStyle> dimStyle = queryDimStyleDirect();
+    dimStyle->setInt(RS::DIMLUNIT, f);
 }
 
 
@@ -565,27 +571,42 @@ void RDocument::setLinearFormat(RS::LinearFormat f) {
  * This is determined by the variable "$DIMDEC".
  */
 int RDocument::getLinearPrecision() {
-    return getKnownVariable(RS::DIMDEC, 4).toInt();
+    //return getKnownVariable(RS::DIMDEC, 4).toInt();
+
+    QSharedPointer<RDimStyle> dimStyle = queryDimStyleDirect();
+    return (RS::LinearFormat)dimStyle->getInt(RS::DIMDEC);
 }
 
 
 
 bool RDocument::showLeadingZeroes() {
-    return !(getKnownVariable(RS::DIMZIN, 8).toInt() & 4);
+    //return !(getKnownVariable(RS::DIMZIN, 8).toInt() & 4);
+
+    QSharedPointer<RDimStyle> dimStyle = queryDimStyleDirect();
+    return !(dimStyle->getInt(RS::DIMZIN) & 4);
 }
 
 
 bool RDocument::showTrailingZeroes() {
-    return !(getKnownVariable(RS::DIMZIN, 8).toInt() & 8);
+    //return !(getKnownVariable(RS::DIMZIN, 8).toInt() & 8);
+
+    QSharedPointer<RDimStyle> dimStyle = queryDimStyleDirect();
+    return !(dimStyle->getInt(RS::DIMZIN) & 8);
 }
 
 bool RDocument::showLeadingZeroesAngle() {
-    return !(getKnownVariable(RS::DIMAZIN, 3).toInt() & 1);
+    //return !(getKnownVariable(RS::DIMAZIN, 3).toInt() & 1);
+
+    QSharedPointer<RDimStyle> dimStyle = queryDimStyleDirect();
+    return !(dimStyle->getInt(RS::DIMAZIN) & 1);
 }
 
 
 bool RDocument::showTrailingZeroesAngle() {
-    return !(getKnownVariable(RS::DIMAZIN, 3).toInt() & 2);
+    //return !(getKnownVariable(RS::DIMAZIN, 3).toInt() & 2);
+
+    QSharedPointer<RDimStyle> dimStyle = queryDimStyleDirect();
+    return !(dimStyle->getInt(RS::DIMAZIN) & 2);
 }
 
 
@@ -594,7 +615,10 @@ bool RDocument::showTrailingZeroesAngle() {
  * This is determined by the variable "$DIMAUNIT".
  */
 RS::AngleFormat RDocument::getAngleFormat() {
-    return (RS::AngleFormat)getKnownVariable(RS::DIMAUNIT, 0).toInt();
+    //return (RS::AngleFormat)getKnownVariable(RS::DIMAUNIT, 0).toInt();
+
+    QSharedPointer<RDimStyle> dimStyle = queryDimStyleDirect();
+    return (RS::AngleFormat)dimStyle->getInt(RS::DIMAUNIT);
 }
 
 /**
@@ -602,7 +626,10 @@ RS::AngleFormat RDocument::getAngleFormat() {
  * This is determined by the variable "$DIMADEC".
  */
 int RDocument::getAnglePrecision() {
-    return getKnownVariable(RS::DIMADEC, 2).toInt();
+    //return getKnownVariable(RS::DIMADEC, 2).toInt();
+
+    QSharedPointer<RDimStyle> dimStyle = queryDimStyleDirect();
+    return (RS::AngleFormat)dimStyle->getInt(RS::DIMADEC);
 }
 
 /**
@@ -611,7 +638,14 @@ int RDocument::getAnglePrecision() {
  * 0 means '.'.
  */
 char RDocument::getDecimalSeparator() {
-    int ret = (char)getKnownVariable(RS::DIMDSEP, (int)'.').toInt();
+//    int ret = (char)getKnownVariable(RS::DIMDSEP, (int)'.').toInt();
+//    if (ret==0) {
+//        ret = '.';
+//    }
+//    return ret;
+
+    QSharedPointer<RDimStyle> dimStyle = queryDimStyleDirect();
+    int ret = dimStyle->getInt(RS::DIMDSEP);
     if (ret==0) {
         ret = '.';
     }
