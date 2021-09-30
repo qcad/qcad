@@ -270,15 +270,28 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     // DIMSTYLE:
     if (!minimalistic) {
         //qDebug() << "writing dim styles...";
-        dxf.writeDimStyle(*dw,
-                          document->getKnownVariable(RS::DIMASZ, 2.5).toDouble(),
-                          document->getKnownVariable(RS::DIMEXE, 0.625).toDouble(),
-                          document->getKnownVariable(RS::DIMEXO, 0.625).toDouble(),
-                          document->getKnownVariable(RS::DIMGAP, 0.625).toDouble(),
-                          document->getKnownVariable(RS::DIMTXT, 2.5).toDouble(),
-                          document->getKnownVariable(RS::DIMTAD, 1).toInt(),
-                          document->getKnownVariable(RS::DIMTIH, false).toBool()
-        );
+        QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+        if (!dimStyle.isNull()) {
+            dxf.writeDimStyle(*dw,
+                              dimStyle->getDouble(RS::DIMASZ),
+                              dimStyle->getDouble(RS::DIMEXE),
+                              dimStyle->getDouble(RS::DIMEXO),
+                              dimStyle->getDouble(RS::DIMGAP),
+                              dimStyle->getDouble(RS::DIMTXT),
+                              dimStyle->getInt(RS::DIMTAD),
+                              dimStyle->getBool(RS::DIMTIH)
+            );
+        }
+
+//        dxf.writeDimStyle(*dw,
+//                          document->getKnownVariable(RS::DIMASZ, 2.5).toDouble(),
+//                          document->getKnownVariable(RS::DIMEXE, 0.625).toDouble(),
+//                          document->getKnownVariable(RS::DIMEXO, 0.625).toDouble(),
+//                          document->getKnownVariable(RS::DIMGAP, 0.625).toDouble(),
+//                          document->getKnownVariable(RS::DIMTXT, 2.5).toDouble(),
+//                          document->getKnownVariable(RS::DIMTAD, 1).toInt(),
+//                          document->getKnownVariable(RS::DIMTIH, false).toBool()
+//        );
     }
 
     // BLOCK_RECORD:
@@ -488,6 +501,7 @@ void RDxfExporter::writeVariables() {
 
         switch (value.type()) {
         case QVariant::Int:
+        case QVariant::Bool:
             dw->dxfString(9, (const char*)RDxfExporter::escapeUnicode(name));
             dw->dxfInt(code, value.toInt());
             break;
