@@ -92,6 +92,10 @@ public:
     virtual ~RShape() {
     }
 
+    virtual bool isValid() const {
+        return true;
+    }
+
     virtual RShape::Type getShapeType() const {
         return Unknown;
     }

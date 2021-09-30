@@ -58,7 +58,7 @@ public:
 
     RArc toArc(double startAngle=0.0) const;
 
-    bool isValid() const {
+    virtual bool isValid() const {
         return center.isValid();
     }
 

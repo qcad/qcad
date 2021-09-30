@@ -549,6 +549,10 @@ void RArc::setReversed(bool r) {
 }
 
 RBox RArc::getBoundingBox() const {
+    if (!isValid()) {
+        return RBox();
+    }
+
     RVector minV;
     RVector maxV;
     double minX = qMin(getStartPoint().x, getEndPoint().x);

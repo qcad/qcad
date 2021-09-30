@@ -211,7 +211,7 @@ public:
 
     QList<RSpline> getBezierSegments(const RBox& queryBox = RDEFAULT_RBOX) const;
 
-    bool isValid() const;
+    virtual bool isValid() const;
     double getTDelta() const;
     double getTMin() const;
     double getTMax() const;

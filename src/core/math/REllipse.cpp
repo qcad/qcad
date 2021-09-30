@@ -197,7 +197,7 @@ REllipse REllipse::createInscribed(const RVector& p1, const RVector& p2, const R
     return ellipse;
 }
 
-bool REllipse::isValid() {
+bool REllipse::isValid() const {
     return center.isValid() && majorPoint.isValid() && !RMath::isNaN(ratio) && !RMath::isNaN(startParam) && !RMath::isNaN(endParam);
 }
 

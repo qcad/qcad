@@ -61,7 +61,7 @@ public:
 
     virtual QList<RVector> getVectorProperties() const;
 
-    bool isValid() const;
+    virtual bool isValid() const;
 
     virtual RBox getBoundingBox() const;
 

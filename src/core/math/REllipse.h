@@ -63,7 +63,7 @@ public:
         return true;
     }
 
-    bool isValid();
+    virtual bool isValid() const;
 
     virtual void setZ(double z);
 

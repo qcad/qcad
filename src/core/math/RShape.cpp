@@ -1060,19 +1060,22 @@ QList<RVector> RShape::getIntersectionPointsCC(const RCircle& circle1, const RCi
     RVector u = c2 - c1;
     double uMag = u.getMagnitude();
 
+    // concentric
+    if (uMag < RS::PointTolerance) {
+        return res;
+    }
+
+    double tol = (r1+r2)/2000;
+
     // the two circles (almost) touch externally / internally in one point (tangent):
-    if (RMath::fuzzyCompare(uMag, r1+r2, 1.0e-4) ||
-        RMath::fuzzyCompare(uMag, fabs(r1-r2), 1.0e-4)) {
+    if (RMath::fuzzyCompare(uMag, r1+r2, tol) ||
+        RMath::fuzzyCompare(uMag, fabs(r1-r2), tol)) {
 
         u.setMagnitude2D(r1);
         res.append(c1 + u);
         return res;
     }
 
-    // concentric
-    if (uMag < RS::PointTolerance) {
-        return res;
-    }
 
     RVector v = RVector(u.y, -u.x);
 
@@ -1094,7 +1097,7 @@ QList<RVector> RShape::getIntersectionPointsCC(const RCircle& circle1, const RCi
     RVector sol1 = c1 + u*s + v*t1;
     RVector sol2 = c1 + u*s + v*t2;
 
-    if (sol1.equalsFuzzy(sol2, 1.0e-4)) {
+    if (sol1.equalsFuzzy(sol2, tol)) {
         res.append(sol1);
     }
     else {
