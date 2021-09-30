@@ -1519,8 +1519,6 @@ void RDxfImporter::addDictionaryEntry(const DL_DictionaryEntryData& data) {
 
     if (inDict) {
         qcadDict[data.handle.c_str()] = data.name.c_str();
-        qDebug() << "data.handle.c_str():" << data.handle.c_str();
-        qDebug() << "data.name.c_str():" << data.name.c_str();
     }
 }
 
@@ -1554,7 +1552,6 @@ void RDxfImporter::setVariableInt(const std::string& key, int value, int code) {
 }
 
 void RDxfImporter::setVariableDouble(const std::string& key, double value, int code) {
-    qDebug() << "RDxfImporter::setVariableDouble";
     Q_UNUSED(code)
 
     RS::KnownVariable v = dxfServices.stringToVariable(key.c_str());
@@ -1572,7 +1569,8 @@ QString RDxfImporter::getEncoding(const QString& str) {
     if (l=="latin1" || l=="ansi_1252" || l=="iso-8859-1" ||
             l=="cp819" || l=="csiso" || l=="ibm819" || l=="iso_8859-1" ||
             l=="iso8859-1" || l=="iso-ir-100" || l=="l1") {
-        return "Latin1";
+        //return "Latin1";
+        return "utf8";
     } else if (l=="big5" || l=="ansi_950" || l=="cn-big5" || l=="csbig5" ||
                l=="x-x-big5") {
         return "Big5";
