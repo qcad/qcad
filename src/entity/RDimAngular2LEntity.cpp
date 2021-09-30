@@ -48,6 +48,27 @@ RPropertyTypeId RDimAngular2LEntity::PropertyFontName;
 RPropertyTypeId RDimAngular2LEntity::PropertyArrow1Flipped;
 RPropertyTypeId RDimAngular2LEntity::PropertyArrow2Flipped;
 
+RPropertyTypeId RDimAngular2LEntity::PropertyDimscale;
+//RPropertyTypeId RDimAngular2LEntity::PropertyDimlfac;
+RPropertyTypeId RDimAngular2LEntity::PropertyDimtxt;
+RPropertyTypeId RDimAngular2LEntity::PropertyDimgap;
+RPropertyTypeId RDimAngular2LEntity::PropertyDimasz;
+//RPropertyTypeId RDimAngular2LEntity::PropertyDimdli;
+RPropertyTypeId RDimAngular2LEntity::PropertyDimexe;
+RPropertyTypeId RDimAngular2LEntity::PropertyDimexo;
+RPropertyTypeId RDimAngular2LEntity::PropertyDimtad;
+RPropertyTypeId RDimAngular2LEntity::PropertyDimtih;
+RPropertyTypeId RDimAngular2LEntity::PropertyDimtsz;
+//RPropertyTypeId RDimAngular2LEntity::PropertyDimlunit;
+//RPropertyTypeId RDimAngular2LEntity::PropertyDimdec;
+RPropertyTypeId RDimAngular2LEntity::PropertyDimdsep;
+//RPropertyTypeId RDimAngular2LEntity::PropertyDimzin;
+RPropertyTypeId RDimAngular2LEntity::PropertyDimaunit;
+RPropertyTypeId RDimAngular2LEntity::PropertyDimadec;
+RPropertyTypeId RDimAngular2LEntity::PropertyDimazin;
+RPropertyTypeId RDimAngular2LEntity::PropertyArchTick;
+RPropertyTypeId RDimAngular2LEntity::PropertyDimclrt;
+
 RPropertyTypeId RDimAngular2LEntity::PropertyExtLineFix;
 RPropertyTypeId RDimAngular2LEntity::PropertyExtLineFixLength;
 
@@ -103,6 +124,27 @@ void RDimAngular2LEntity::init() {
     RDimAngular2LEntity::PropertyUpperTolerance.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyUpperTolerance);
     RDimAngular2LEntity::PropertyLowerTolerance.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyLowerTolerance);
     RDimAngular2LEntity::PropertyMeasuredValue.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyMeasuredValue);
+
+    RDimAngular2LEntity::PropertyDimscale.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimscale);
+    //RDimAngular2LEntity::PropertyDimlfac.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimlfac);
+    RDimAngular2LEntity::PropertyDimtxt.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimtxt);
+    RDimAngular2LEntity::PropertyDimgap.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimgap);
+    RDimAngular2LEntity::PropertyDimasz.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimasz);
+    //RDimAngular2LEntity::PropertyDimdli.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimdli);
+    RDimAngular2LEntity::PropertyDimexe.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimexe);
+    RDimAngular2LEntity::PropertyDimexo.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimexo);
+    RDimAngular2LEntity::PropertyDimtad.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimtad);
+    RDimAngular2LEntity::PropertyDimtih.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimtih);
+    RDimAngular2LEntity::PropertyDimtsz.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimtsz);
+//    RDimAngular2LEntity::PropertyDimlunit.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimlunit);
+//    RDimAngular2LEntity::PropertyDimdec.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimdec);
+    RDimAngular2LEntity::PropertyDimdsep.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimdsep);
+//    RDimAngular2LEntity::PropertyDimzin.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimzin);
+    RDimAngular2LEntity::PropertyDimaunit.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimaunit);
+    RDimAngular2LEntity::PropertyDimadec.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimadec);
+    RDimAngular2LEntity::PropertyDimazin.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimazin);
+    RDimAngular2LEntity::PropertyArchTick.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyArchTick);
+    RDimAngular2LEntity::PropertyDimclrt.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimclrt);
 
     //RDimAngular2LEntity::PropertyDimScale.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimScale);
     RDimAngular2LEntity::PropertyDimBlockName.generateId(RDimAngular2LEntity::getRtti(), RDimensionEntity::PropertyDimBlockName);

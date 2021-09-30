@@ -49,6 +49,27 @@ RPropertyTypeId RDimArcLengthEntity::PropertyFontName;
 RPropertyTypeId RDimArcLengthEntity::PropertyArrow1Flipped;
 RPropertyTypeId RDimArcLengthEntity::PropertyArrow2Flipped;
 
+RPropertyTypeId RDimArcLengthEntity::PropertyDimscale;
+RPropertyTypeId RDimArcLengthEntity::PropertyDimlfac;
+RPropertyTypeId RDimArcLengthEntity::PropertyDimtxt;
+RPropertyTypeId RDimArcLengthEntity::PropertyDimgap;
+RPropertyTypeId RDimArcLengthEntity::PropertyDimasz;
+//RPropertyTypeId RDimArcLengthEntity::PropertyDimdli;
+RPropertyTypeId RDimArcLengthEntity::PropertyDimexe;
+RPropertyTypeId RDimArcLengthEntity::PropertyDimexo;
+RPropertyTypeId RDimArcLengthEntity::PropertyDimtad;
+RPropertyTypeId RDimArcLengthEntity::PropertyDimtih;
+RPropertyTypeId RDimArcLengthEntity::PropertyDimtsz;
+RPropertyTypeId RDimArcLengthEntity::PropertyDimlunit;
+RPropertyTypeId RDimArcLengthEntity::PropertyDimdec;
+RPropertyTypeId RDimArcLengthEntity::PropertyDimdsep;
+RPropertyTypeId RDimArcLengthEntity::PropertyDimzin;
+//RPropertyTypeId RDimArcLengthEntity::PropertyDimaunit;
+//RPropertyTypeId RDimArcLengthEntity::PropertyDimadec;
+//RPropertyTypeId RDimArcLengthEntity::PropertyDimazin;
+RPropertyTypeId RDimArcLengthEntity::PropertyArchTick;
+RPropertyTypeId RDimArcLengthEntity::PropertyDimclrt;
+
 RPropertyTypeId RDimArcLengthEntity::PropertyExtLineFix;
 RPropertyTypeId RDimArcLengthEntity::PropertyExtLineFixLength;
 
@@ -100,6 +121,27 @@ void RDimArcLengthEntity::init() {
     RDimArcLengthEntity::PropertyUpperTolerance.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyUpperTolerance);
     RDimArcLengthEntity::PropertyLowerTolerance.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyLowerTolerance);
     RDimArcLengthEntity::PropertyMeasuredValue.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyMeasuredValue);
+
+    RDimArcLengthEntity::PropertyDimscale.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyDimscale);
+    RDimArcLengthEntity::PropertyDimlfac.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyDimlfac);
+    RDimArcLengthEntity::PropertyDimtxt.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyDimtxt);
+    RDimArcLengthEntity::PropertyDimgap.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyDimgap);
+    RDimArcLengthEntity::PropertyDimasz.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyDimasz);
+    //RDimArcLengthEntity::PropertyDimdli.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyDimdli);
+    RDimArcLengthEntity::PropertyDimexe.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyDimexe);
+    RDimArcLengthEntity::PropertyDimexo.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyDimexo);
+    RDimArcLengthEntity::PropertyDimtad.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyDimtad);
+    RDimArcLengthEntity::PropertyDimtih.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyDimtih);
+    RDimArcLengthEntity::PropertyDimtsz.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyDimtsz);
+    RDimArcLengthEntity::PropertyDimlunit.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyDimlunit);
+    RDimArcLengthEntity::PropertyDimdec.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyDimdec);
+    RDimArcLengthEntity::PropertyDimdsep.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyDimdsep);
+    RDimArcLengthEntity::PropertyDimzin.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyDimzin);
+//    RDimArcLengthEntity::PropertyDimaunit.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyDimaunit);
+//    RDimArcLengthEntity::PropertyDimadec.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyDimadec);
+//    RDimArcLengthEntity::PropertyDimazin.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyDimazin);
+    RDimArcLengthEntity::PropertyArchTick.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyArchTick);
+    RDimArcLengthEntity::PropertyDimclrt.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyDimclrt);
 
 //    RDimArcLengthEntity::PropertyLinearFactor.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyLinearFactor);
 //    RDimArcLengthEntity::PropertyDimScale.generateId(RDimArcLengthEntity::getRtti(), RDimensionEntity::PropertyDimScale);

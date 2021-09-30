@@ -41,6 +41,27 @@ RPropertyTypeId RDimAngularEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimAngularEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimAngularEntity::PropertyMeasuredValue;
 
+RPropertyTypeId RDimAngularEntity::PropertyDimscale;
+//RPropertyTypeId RDimAngularEntity::PropertyDimlfac;
+RPropertyTypeId RDimAngularEntity::PropertyDimtxt;
+RPropertyTypeId RDimAngularEntity::PropertyDimgap;
+RPropertyTypeId RDimAngularEntity::PropertyDimasz;
+//RPropertyTypeId RDimAngularEntity::PropertyDimdli;
+RPropertyTypeId RDimAngularEntity::PropertyDimexe;
+RPropertyTypeId RDimAngularEntity::PropertyDimexo;
+RPropertyTypeId RDimAngularEntity::PropertyDimtad;
+RPropertyTypeId RDimAngularEntity::PropertyDimtih;
+RPropertyTypeId RDimAngularEntity::PropertyDimtsz;
+//RPropertyTypeId RDimAngularEntity::PropertyDimlunit;
+//RPropertyTypeId RDimAngularEntity::PropertyDimdec;
+RPropertyTypeId RDimAngularEntity::PropertyDimdsep;
+//RPropertyTypeId RDimAngularEntity::PropertyDimzin;
+RPropertyTypeId RDimAngularEntity::PropertyDimaunit;
+RPropertyTypeId RDimAngularEntity::PropertyDimadec;
+RPropertyTypeId RDimAngularEntity::PropertyDimazin;
+RPropertyTypeId RDimAngularEntity::PropertyArchTick;
+RPropertyTypeId RDimAngularEntity::PropertyDimclrt;
+
 //RPropertyTypeId RDimAngularEntity::PropertyDimScale;
 RPropertyTypeId RDimAngularEntity::PropertyDimBlockName;
 RPropertyTypeId RDimAngularEntity::PropertyAutoTextPos;
@@ -102,6 +123,27 @@ void RDimAngularEntity::init() {
     RDimAngularEntity::PropertyFontName.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyFontName);
     RDimAngularEntity::PropertyArrow1Flipped.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyArrow1Flipped);
     RDimAngularEntity::PropertyArrow2Flipped.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyArrow2Flipped);
+
+    RDimAngularEntity::PropertyDimscale.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyDimscale);
+    //RDimAngularEntity::PropertyDimlfac.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyDimlfac);
+    RDimAngularEntity::PropertyDimtxt.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyDimtxt);
+    RDimAngularEntity::PropertyDimgap.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyDimgap);
+    RDimAngularEntity::PropertyDimasz.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyDimasz);
+    //RDimAngularEntity::PropertyDimdli.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyDimdli);
+    RDimAngularEntity::PropertyDimexe.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyDimexe);
+    RDimAngularEntity::PropertyDimexo.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyDimexo);
+    RDimAngularEntity::PropertyDimtad.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyDimtad);
+    RDimAngularEntity::PropertyDimtih.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyDimtih);
+    RDimAngularEntity::PropertyDimtsz.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyDimtsz);
+//    RDimAngularEntity::PropertyDimlunit.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyDimlunit);
+//    RDimAngularEntity::PropertyDimdec.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyDimdec);
+    RDimAngularEntity::PropertyDimdsep.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyDimdsep);
+//    RDimAngularEntity::PropertyDimzin.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyDimzin);
+    RDimAngularEntity::PropertyDimaunit.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyDimaunit);
+    RDimAngularEntity::PropertyDimadec.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyDimadec);
+    RDimAngularEntity::PropertyDimazin.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyDimazin);
+    RDimAngularEntity::PropertyArchTick.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyArchTick);
+    RDimAngularEntity::PropertyDimclrt.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyDimclrt);
 
     RDimAngularEntity::PropertyExtLineFix.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyExtLineFix);
     RDimAngularEntity::PropertyExtLineFixLength.generateId(RDimAngularEntity::getRtti(), RDimensionEntity::PropertyExtLineFixLength);
