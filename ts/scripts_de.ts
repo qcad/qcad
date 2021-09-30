@@ -456,7 +456,7 @@ um die Änderungen zu übernehmen.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1812"/>
+        <location filename="../scripts/Apollonius.js" line="+1932"/>
         <source>Invalid radius</source>
         <translation>Ungültiger Radius</translation>
     </message>
@@ -12630,12 +12630,12 @@ nicht öffnen.
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1525"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1531"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="-1327"/>
+        <location line="-1333"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -12684,7 +12684,7 @@ nicht öffnen.
         <translation>Alle Eigenschaften anzeigen</translation>
     </message>
     <message>
-        <location line="+707"/>
+        <location line="+713"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -12721,7 +12721,7 @@ nicht öffnen.
         <translation type="obsolete">Mittelpunkt</translation>
     </message>
     <message>
-        <location line="-753"/>
+        <location line="-759"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
@@ -12739,12 +12739,12 @@ nicht öffnen.
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use auto measurement</source>
         <translation>Automatisch</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+44"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
@@ -12819,7 +12819,7 @@ nicht öffnen.
         <translation type="vanished">Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1190"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1196"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>
@@ -17491,7 +17491,7 @@ nicht öffnen.
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+968"/>
+        <location filename="../scripts/library.js" line="+980"/>
         <source>Objects</source>
         <translation>Objekte</translation>
     </message>

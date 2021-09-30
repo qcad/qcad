@@ -404,7 +404,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1812"/>
+        <location filename="../scripts/Apollonius.js" line="+1932"/>
         <source>Invalid radius</source>
         <translation>Недопустимый радиус</translation>
     </message>
@@ -10540,12 +10540,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1525"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1531"/>
         <source>*VARIES*</source>
         <translation>*ВАРЬИРОВАНИЕ*</translation>
     </message>
     <message>
-        <location line="-1327"/>
+        <location line="-1333"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10605,12 +10605,12 @@ shown in search results:</source>
         <translation>Автоматический</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use auto measurement</source>
         <translation>Использовать автоматическое измерение</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+44"/>
         <source>Yes</source>
         <translation>Да</translation>
     </message>
@@ -14652,7 +14652,7 @@ shown in search results:</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+968"/>
+        <location filename="../scripts/library.js" line="+980"/>
         <source>Objects</source>
         <translation>Объекты</translation>
     </message>

@@ -75,7 +75,7 @@
     <message>
         <location line="+1"/>
         <source>Additional tools, features and file formats including DWG are available in &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; or &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ytterligare verktyg, funktioner och filformat, inklusive DWG, finns i &lt;a href=&apos;%1&apos;&gt;QCAD Professional&lt;/a&gt; eller &lt;a href=&apos;%2&apos;&gt;QCAD/CAM&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -95,12 +95,12 @@
     <message>
         <location line="+1"/>
         <source>Qt ships with QCAD under the &lt;a href=&apos;%1&apos;&gt;LGPL Open Source license&lt;/a&gt; which confers various rights to you as the user, including the right to recompile the Qt libraries for your platform. To do that follow the &lt;a href=&apos;%2&apos;&gt;documentation shown on the Qt website&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Qt levereras med QCAD under &lt;a href=&apos;%1&apos;&gt;LGPL Open Source-licensen&lt;/a&gt; som ger dig som användare olika rättigheter, inklusive rätten att kompilera om Qt-biblioteken för din plattform. För att göra det följer du &lt;a href=&apos;%2&apos;&gt;dokumentationen som visas på Qt-webbplatsen&lt;/a&gt;.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Programmet tillhandahålls i befintligt skick utan någon som helst garanti, inklusive garantierna för utformning, säljbarhet och lämplighet för ett visst ändamål.</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -188,7 +188,7 @@
     <message>
         <location line="+164"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Licenser</translation>
     </message>
     <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
@@ -206,7 +206,7 @@
     <message>
         <location line="+58"/>
         <source>Hatch Patterns</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skraffermönster</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -259,7 +259,7 @@
     <message>
         <location line="+23"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Licenser</translation>
     </message>
 </context>
 <context>
@@ -376,7 +376,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1812"/>
+        <location filename="../scripts/Apollonius.js" line="+1932"/>
         <source>Invalid radius</source>
         <translation>Ogiltig radie</translation>
     </message>
@@ -1023,13 +1023,13 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2Pdf.js" line="+30"/>
         <source>Export to PDF</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exportera till PDF</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
         <location line="+4"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Batch2Pdf synliga layoutblock</translation>
     </message>
 </context>
 <context>
@@ -1075,12 +1075,12 @@ Vill du återställa den?</translation>
     <message>
         <location line="+17"/>
         <source>Length &amp;1:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Längd 1:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Length &amp;2:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Längd 2:</translation>
     </message>
     <message>
         <source>Length 1:</source>
@@ -1121,12 +1121,12 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportDialog.ui" line="+14"/>
         <source>Bitmap Export</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Export av bitmappar</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Storlek</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1141,78 +1141,78 @@ Vill du återställa den?</translation>
     <message>
         <location line="+23"/>
         <source>Pixels per drawing unit:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pixlar per ritningsenhet:</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Export bounding box of selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exportera en avgränsande box för urvalet</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Background</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bakgrund</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>White</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vit</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Black</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Svart</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Transparent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Transparent</translation>
     </message>
     <message>
         <location line="+10"/>
         <location line="+23"/>
         <source>Color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Färg</translation>
     </message>
     <message>
         <location line="-17"/>
         <source>Monochrome</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Monokrom</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Grayscale</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gråskala</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Anti-aliasing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Anti-aliasing</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use anti-aliasing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Använd anti-aliasing</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Margin</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Marginal</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Margin:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Marginal:</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>px</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">px</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Add extra margin to compensate for line weight</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lägg till extra marginal för att kompensera för linjestyrka</translation>
     </message>
 </context>
 <context>
@@ -1220,7 +1220,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/File/BitmapExport/BitmapExportWorker.js" line="+122"/>
         <source>Invalid image size (width x height must be less than %1)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ogiltig bildstorlek (bredd x höjd måste vara mindre än %1)</translation>
     </message>
 </context>
 <context>
@@ -1233,7 +1233,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+110"/>
         <source>Cannot edit block while editing a block in-place</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Det går inte att redigera block när ett block redigeras på plats</translation>
     </message>
     <message>
         <source>Show block tools</source>
@@ -1251,12 +1251,12 @@ Vill du återställa den?</translation>
         <location filename="../scripts/Block/BlockDialog.js" line="+81"/>
         <source>block</source>
         <comment>default block name prefix</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">block</translation>
     </message>
     <message>
         <location line="+53"/>
         <source>Leading or trailing spaces.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ledande eller avslutande mellanslag.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1271,7 +1271,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+11"/>
         <source>Block &quot;%1&quot; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blocket &quot;%1&quot; finns redan&lt;br&gt;och kommer att skrivas över.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1285,7 +1285,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Block/BlockDialog.ui" line="+17"/>
         <source>Block</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Block</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1302,7 +1302,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Misc/Examples/BlockExamples/BlockExamples.js" line="+51"/>
         <source>&amp;Block</source>
-        <translation type="unfinished">&amp;Block</translation>
+        <translation type="unfinished">Block</translation>
     </message>
 </context>
 <context>
@@ -1310,7 +1310,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockFixNames/BlockFixNames.js" line="+80"/>
         <source>&amp;Fix Block Names</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fixa blocknamn</translation>
     </message>
 </context>
 <context>
@@ -1318,24 +1318,24 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Widgets/BlockList/BlockList.js" line="+492"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+53"/>
         <location line="+39"/>
         <source>Block List</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lista över block</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/BlockList/PreferencesPage.ui" line="+17"/>
         <source>Hide internal blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dölja interna block</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Enable alternating row colors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Aktivera alternerande radfärger</translation>
     </message>
 </context>
 <context>
@@ -1343,22 +1343,22 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListAttributes/BlockListAttributes.js" line="+47"/>
         <source>Block:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Block:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Block reference ID:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gruppreferens-ID:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Block attribute:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blockattribut:</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>&amp;List Block Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lista över blockattribut</translation>
     </message>
 </context>
 <context>
@@ -1366,17 +1366,17 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js" line="+92"/>
         <source>Export Block List (CSV)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exportera blocklista (CSV)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CSV</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Export Block List</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exportera blocklista</translation>
     </message>
 </context>
 <context>
@@ -1384,22 +1384,22 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.js" line="+59"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj linje, båge, cirkel, ellips, spline eller polylinsegment</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse segment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj linje, båge, cirkel eller ellipsesegment</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOutInit.js" line="+2"/>
         <source>&amp;Break out Segment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Segment för utbrytning</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOut/BreakOut.ui" line="+17"/>
         <source>Remove Segment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ta bort segmentet</translation>
     </message>
 </context>
 <context>
@@ -1407,22 +1407,22 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.js" line="+54"/>
         <source>Choose line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj linje, båge eller cirkel</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Specify point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ange punkt</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGapInit.js" line="+2"/>
         <source>&amp;Break out Gap</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bryt ut Gap</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutGap/BreakOutGap.ui" line="+17"/>
         <source>Gap:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gap:</translation>
     </message>
 </context>
 <context>
@@ -1430,17 +1430,17 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.js" line="+79"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj linje, båge, cirkel, ellips, spline eller polylinje för att bryta upp</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj linje, båge, cirkel eller ellips för att bryta upp</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>First break point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Första brytpunkten</translation>
     </message>
     <message>
         <source>Done</source>
@@ -1449,22 +1449,22 @@ Vill du återställa den?</translation>
     <message>
         <location line="+8"/>
         <source>Second break point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Andra brytpunkten</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Click the part of the circle or ellipse to remove</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Klicka på den del av cirkeln eller ellipsen som du vill ta bort</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManualInit.js" line="+2"/>
         <source>&amp;Break out Manual</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Utbrytarhandbok</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/BreakOutManual/BreakOutManual.ui" line="+17"/>
         <source>Remove Segment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ta bort segmentet</translation>
     </message>
 </context>
 <context>
@@ -1472,7 +1472,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Help/BrowseUserManual/BrowseUserManualInit.js" line="+2"/>
         <source>Browse User Manual</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bläddra i användarhandboken</translation>
     </message>
 </context>
 <context>
@@ -1480,32 +1480,32 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBar.js" line="+51"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>CAD Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CAD-verktygsfält</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Vertical/Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vertikal/Horisontell</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CadToolBar/PreferencesPage.ui" line="+17"/>
         <source>Icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ikonstorlek:</translation>
     </message>
     <message>
         <location line="+71"/>
         <source>Pixel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pixel</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">px</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1519,7 +1519,7 @@ Vill du återställa den?</translation>
         <location filename="../scripts/Widgets/CadToolBar/CadToolBarPanel.js" line="+39"/>
         <location line="+71"/>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tillbaka</translation>
     </message>
 </context>
 <context>
@@ -1527,53 +1527,53 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.js" line="+373"/>
         <source>Expand all</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Expandera alla</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Collapse all</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kolla in alla</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>List View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lista</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Icon View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ikonvy</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+47"/>
         <source>Tool Matrix</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verktygsmatris</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/PreferencesPage.ui" line="+17"/>
         <source>Icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ikonstorlek:</translation>
     </message>
     <message>
         <location line="+96"/>
         <source>Pixel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pixel</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">px</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>List view</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lista</translation>
     </message>
 </context>
 <context>
@@ -1581,7 +1581,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Misc/MiscModify/ChangeFontToArial/ChangeFontToArial.js" line="+65"/>
         <source>Set Font to Arial</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ange teckensnitt till Arial</translation>
     </message>
 </context>
 <context>
@@ -1590,27 +1590,27 @@ Vill du återställa den?</translation>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdates.js" line="+62"/>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+14"/>
         <source>Checking for Updates...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kontrollerar om det finns uppdateringar...</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Version information not found.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Versionsuppgifter har inte hittats.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>No connection to server or file not found. Please try again later.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ingen anslutning till servern eller filen har inte hittats. Försök igen senare.</translation>
     </message>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesInit.js" line="+6"/>
         <source>Check for &amp;Updates...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kontrollera om det finns uppdateringar...</translation>
     </message>
     <message>
         <location filename="../scripts/Help/CheckForUpdates/CheckForUpdatesDialog.ui" line="+53"/>
         <source>Automatically check for updates</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kontrollera automatiskt om det finns uppdateringar</translation>
     </message>
 </context>
 <context>
@@ -1618,12 +1618,12 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle.js" line="+71"/>
         <source>Circle Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cirkelverktyg</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cirkel</translation>
     </message>
 </context>
 <context>
@@ -1651,7 +1651,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+4"/>
         <source>Draw circle from 2 diametrically opposite points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita en cirkel från 2 diametralt motsatta punkter</translation>
     </message>
 </context>
 <context>
@@ -1755,17 +1755,17 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle2TR/Circle2TR.js" line="+77"/>
         <source>First line, arc or circle</source>
-        <translation type="unfinished">Första linjen, båge eller cirkel</translation>
+        <translation type="unfinished">Första linjen, bågen eller cirkeln</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Second line, arc or circle</source>
-        <translation type="unfinished">Andra linjen, båge eller cirkel</translation>
+        <translation type="unfinished">Andra linjen, bågen eller cirkeln</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Choose solution</source>
-        <translation type="unfinished">Välj lösning</translation>
+        <translation type="unfinished">Välj en lösning</translation>
     </message>
     <message>
         <location line="+103"/>
@@ -1817,7 +1817,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+5"/>
         <source>Draw circle from 3 points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita en cirkel från 3 punkter</translation>
     </message>
 </context>
 <context>
@@ -1825,22 +1825,22 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3T/Circle3T.js" line="+84"/>
         <source>First line, arc or circle</source>
-        <translation type="unfinished">Första linjen, båge eller cirkel</translation>
+        <translation type="unfinished">Första linjen, bågen eller cirkeln</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Second line, arc or circle</source>
-        <translation type="unfinished">Andra linjen, båge eller cirkel</translation>
+        <translation type="unfinished">Andra linjen, bågen eller cirkeln</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Third line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tredje linje, båge eller cirkel</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Choose solution</source>
-        <translation type="unfinished">Välj lösning</translation>
+        <translation type="unfinished">Välj en lösning</translation>
     </message>
     <message>
         <location line="+120"/>
@@ -1851,7 +1851,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/Circle3T/Circle3TInit.js" line="+2"/>
         <source>3 T&amp;angents</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">3 tangenter</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -1909,7 +1909,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+5"/>
         <source>Draw circle from center and point on circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita en cirkel från centrum och en punkt på cirkeln</translation>
     </message>
 </context>
 <context>
@@ -2027,17 +2027,17 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation type="unfinished">&amp;Tangera, punkt, radie</translation>
+        <translation type="unfinished">Tangent, punkt, radie</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle tangential to entity, through point with radius</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita en cirkel tangentiellt till enheten, genom en punkt med radie</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPR.js" line="+39"/>
         <source>Point on circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Punkt på cirkeln</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPR.ui" line="+17"/>
@@ -2050,7 +2050,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Edit/ClipboardOperation.js" line="+54"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Referenspunkt</translation>
     </message>
 </context>
 <context>
@@ -2058,7 +2058,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Window/CloseAll/CloseAllInit.js" line="+2"/>
         <source>&amp;Close All</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stäng alla</translation>
     </message>
 </context>
 <context>
@@ -2066,7 +2066,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/File/NewFile/CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Avslutande dragning...</translation>
     </message>
 </context>
 <context>
@@ -2074,7 +2074,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/File/CloseFile/CloseFileInit.js" line="+2"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stäng</translation>
     </message>
 </context>
 <context>
@@ -2087,7 +2087,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+0"/>
         <source>Colors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Färger</translation>
     </message>
 </context>
 <context>
@@ -2095,47 +2095,47 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ColorSettings/ColorSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Standardvärden för nya ritningar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Printing - Colors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Utskrift - Färger</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Printing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Utskrift</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Colors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Färger</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ColorSettings/PreferencesPage.ui" line="+19"/>
         <source>Background color:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bakgrundsfärg:</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>Color Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Färgläge</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Full color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fullfärg</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Grayscale</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gråskala</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Black / white</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Svart/vit</translation>
     </message>
 </context>
 <context>
@@ -2143,104 +2143,104 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.js" line="+30"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+68"/>
         <location filename="../scripts/Widgets/CommandLine/CommandLine.ui" line="+20"/>
         <source>Command Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kommandorad</translation>
     </message>
     <message>
         <location line="-21"/>
         <source>&amp;Command Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kommandorad</translation>
     </message>
     <message>
         <location line="+208"/>
         <source>Invalid value:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ogiltigt värde:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Invalid coordinate or distance &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Felaktig koordinat eller ogiltigt avstånd &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Unknown command or invalid coordinate or value: &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Okänt kommando eller ogiltig koordinat eller ogiltigt värde: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Numbers may be entered as: &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Siffror kan anges som: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Coordinates may be entered as: &quot;%1&quot; (absolute) or &quot;%2&quot; (relative) or &quot;%3&quot; (polar) or &quot;%4&quot; (relative polar)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Koordinater kan anges som: &quot;%1&quot; (absolut) eller &quot;%2&quot; (relativt) eller &quot;%3&quot; (polärt) eller &quot;%4&quot; (relativt polärt)</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>You may change the number / coordinate format in the application preferences.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Du kan ändra formatet för nummer/koordinater i programinställningarna.</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>Transaction failed. Please check for block recursions and locked or invisible layers or blocks.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Transaktionen misslyckades. Kontrollera om det finns blockrekursioner och låsta eller osynliga lager eller block.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Warning</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varning</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Info</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Expression</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uttryck</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Koordinera</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Command</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kommando</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Command:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kommando:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>: </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">:</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CommandLine/PreferencesPage.ui" line="+17"/>
         <source>History size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Historisk storlek:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Show warnings as dialog</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa varningar som en dialogruta</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Show information as dialog</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa information som en dialogruta</translation>
     </message>
 </context>
 <context>
@@ -2248,7 +2248,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Misc/Examples/CommandLineExamples/CommandLineExamples.js" line="+50"/>
         <source>&amp;Command Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kommandorad</translation>
     </message>
 </context>
 <context>
@@ -2256,7 +2256,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/View/CommandLineFocus/CommandLineFocusInit.js" line="+2"/>
         <source>&amp;Focus on Command Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fokus på kommandoraden</translation>
     </message>
 </context>
 <context>
@@ -2264,7 +2264,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Misc/Tutorials/CommandLineTools/CommandLineTools.js" line="+50"/>
         <source>&amp;Command Line Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verktyg för kommandoraden</translation>
     </message>
 </context>
 <context>
@@ -2272,42 +2272,42 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnit.js" line="+86"/>
         <source>Nothing to be done.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Det finns inget att göra.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unit &quot;%1&quot; selected. Nothing to be done</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enhet &quot;%1&quot; vald. Inget att göra</translation>
     </message>
     <message>
         <location line="+136"/>
         <source>Converted drawing from %1 to %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Konverterad ritning från %1 till %2</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnitInit.js" line="+2"/>
         <source>Convert Drawing &amp;Unit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Konvertera ritningsenhet</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Convert drawing to a different drawing unit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Konvertera ritningen till en annan ritningsenhet</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/ConvertUnit/ConvertUnit.ui" line="+20"/>
         <source>From:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Från:</translation>
     </message>
     <message>
         <location line="+53"/>
         <source>To:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Till:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Convert:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Konvertera:</translation>
     </message>
 </context>
 <context>
@@ -2315,37 +2315,37 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.js" line="+28"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Coordinate Display</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Koordinatvisning</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/CoordinateDisplay.ui" line="+72"/>
         <source>Absolute Cartesian Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Absolut kartesisk koordinat</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Absolute Polar Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Absolut polarkoordinat</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative Cartesian Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Relativ kartesisk koordinat</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative Polar Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Relativ polarkoordinat</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/CoordinateDisplay/PreferencesPage.ui" line="+17"/>
         <source>Forced update every N mouse moves:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tvångsuppdatering varje N musrörelser:</translation>
     </message>
 </context>
 <context>
@@ -2353,7 +2353,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Edit/Copy/CopyInit.js" line="+2"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopiera</translation>
     </message>
 </context>
 <context>
@@ -2361,7 +2361,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Edit/CopyWithReference/CopyWithReferenceInit.js" line="+2"/>
         <source>&amp;Copy with Reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopia med referens</translation>
     </message>
 </context>
 <context>
@@ -2374,27 +2374,27 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/CounterInit.js" line="+2"/>
         <source>&amp;Counter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mottagningen</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Auto increment number</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Automatisk ökning av antalet</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Counter/Counter.ui" line="+17"/>
         <source>Start:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Börja:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Increment:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ökning:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number Format:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nummer Format:</translation>
     </message>
     <message>
         <source>Width:</source>
@@ -2403,12 +2403,12 @@ Vill du återställa den?</translation>
     <message>
         <location line="+79"/>
         <source>Prefix:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Prefix:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Suffix:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Suffix:</translation>
     </message>
 </context>
 <context>
@@ -2452,17 +2452,17 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/Cross.js" line="+56"/>
         <source>Select arc, circle, ellipse or elliptical arc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj båge, cirkel, ellips eller elliptisk båge</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/CrossInit.js" line="+2"/>
         <source>Centerline Cross</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mittlinje kors</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw centerline cross in arcs, circles or ellipses</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita centrumlinjer i bågar, cirklar eller ellipser</translation>
     </message>
 </context>
 <context>
@@ -2470,7 +2470,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Misc/MiscDraw/Cross/Cross.ui" line="+17"/>
         <source>X:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">X:</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -2480,17 +2480,17 @@ Vill du återställa den?</translation>
     <message>
         <location line="+57"/>
         <source>Extension</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förlängning</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Total length</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Totala längden</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Percent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Procent</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -2503,7 +2503,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Edit/Cut/CutInit.js" line="+2"/>
         <source>&amp;Cut</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skär</translation>
     </message>
 </context>
 <context>
@@ -2511,7 +2511,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Edit/CutWithReference/CutWithReferenceInit.js" line="+2"/>
         <source>&amp;Cut with Reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Klipp med referens</translation>
     </message>
 </context>
 <context>
@@ -2519,12 +2519,12 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/DefaultAction.js" line="+92"/>
         <source>Select entity or region</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj enhet eller region</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Move entity or reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Flytta enhet eller referens</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -2534,37 +2534,37 @@ Vill du återställa den?</translation>
     <message>
         <location line="+7"/>
         <source>Target point of reference point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Målpunkt för referenspunkt</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Target point of selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Målpunkt för urvalet</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Move entity to desired location</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Flytta enheten till önskad plats</translation>
     </message>
     <message>
         <location line="+400"/>
         <source>Move Reference Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Flytta referenspunkt</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Flytta val</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Flytta enhet</translation>
     </message>
     <message>
         <location line="+127"/>
         <source>Editing block &quot;%1&quot;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Redigera block &quot;%1&quot;&lt;br&gt;Välj &lt;i&gt;Block &gt; Återgå till huvudritning&lt;/i&gt; när du är klar</translation>
     </message>
 </context>
 <context>
@@ -2577,17 +2577,17 @@ Vill du återställa den?</translation>
     <message>
         <location line="+0"/>
         <source>Navigation</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Navigering</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Zoom (Wheel Mouse)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zoom (hjulmus)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Scroll (Trackpad, Multi-Touch Mouse)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rulla (styrplatta, multitouch-mus)</translation>
     </message>
 </context>
 <context>
@@ -2595,7 +2595,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Edit/Delete/DeleteInit.js" line="+2"/>
         <source>&amp;Delete</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ta bort</translation>
     </message>
 </context>
 <context>
@@ -2603,12 +2603,12 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Select/DeselectAll/DeselectAllInit.js" line="+2"/>
         <source>&amp;Deselect All</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Avmarkera alla</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Deselect all entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Avmarkera alla enheter</translation>
     </message>
 </context>
 <context>
@@ -2624,7 +2624,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Layer/DeselectLayer/DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer Entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Avmarkera skiktenheter</translation>
     </message>
 </context>
 <context>
@@ -2632,7 +2632,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/DevDebug/DevDebug.js" line="+45"/>
         <source>&amp;Debug Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Felsökningsläge</translation>
     </message>
 </context>
 <context>
@@ -2645,73 +2645,73 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeDialog.ui" line="+14"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dialog</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Arcs and Circles</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bågar och cirklar</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into line segments (fixed length)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">i linjesegment (fast längd)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>into line segments (fixed angle)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">i linjesegment (fast vinkel)</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Ellipses</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ellipser</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into polyline with arc segments</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">till en polylinje med bågsegment</translation>
     </message>
     <message>
         <location line="+5"/>
         <location line="+16"/>
         <source>into polyline with line segments</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">till en polylinje med linjesegment</translation>
     </message>
     <message>
         <location line="-8"/>
         <source>Splines</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Splines</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mått</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into lines, solids and texts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">till linjer, solider och texter</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Luckor</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into lines</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">i rader</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blocker</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>into entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">till enheter</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/Dialog.ui" line="+94"/>
@@ -2743,7 +2743,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+8"/>
         <source>Dimension line location</source>
-        <translation type="unfinished">Dimensionslinje läge</translation>
+        <translation type="unfinished">Placering av måttlinje</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAligned/DimAlignedInit.js" line="+2"/>
@@ -2771,7 +2771,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+9"/>
         <source>Dimension arc location</source>
-        <translation type="unfinished">DImension båge plats</translation>
+        <translation type="unfinished">Dimension bågens placering</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngularInit.js" line="+2"/>
@@ -2786,7 +2786,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
         <source>Use maximum angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Använd maximal vinkel</translation>
     </message>
 </context>
 <context>
@@ -2799,17 +2799,17 @@ Vill du återställa den?</translation>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
-        <translation type="unfinished">Dimensionslinjens plats eller vinkel</translation>
+        <translation type="unfinished">Måttlinjens placering eller vinkel</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimDiametric/DimDiametricInit.js" line="+2"/>
         <source>&amp;Diametric</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diametrisk</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw diametric dimension</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita diametralt mått</translation>
     </message>
 </context>
 <context>
@@ -2817,12 +2817,12 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimHorizontal/DimHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Horisontell</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw horizontal dimension</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita horisontell dimension</translation>
     </message>
 </context>
 <context>
@@ -2830,22 +2830,22 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinate.js" line="+61"/>
         <source>Feature location</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Plats för funktionen</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Endpoint of leader</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Slutpunkt för ledaren</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimOrdinate/DimOrdinateInit.js" line="+2"/>
         <source>&amp;Ordinate (X/Y)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ordinat (X/Y)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ordinate dimension</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita ordinatdimensionen</translation>
     </message>
 </context>
 <context>
@@ -2853,7 +2853,7 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRadial/DimRadial.js" line="+57"/>
         <source>Choose arc or circle entity</source>
-        <translation type="unfinished">Välj båge eller cirkelobjekt</translation>
+        <translation type="unfinished">Välj båg- eller cirkelenhet</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2881,6 +2881,7 @@ Vill du återställa den?</translation>
     <message numerus="yes">
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
+        <translation type="unfinished">Etikettpositionen för %n dimension(er) har återställts.</translation>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -2916,12 +2917,12 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotatedInit.js" line="+2"/>
         <source>&amp;Rotated (Linear)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Roterad (linjär)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw linear dimension at a fixed angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita linjära dimensioner i en fast vinkel</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotated.ui" line="+17"/>
@@ -2934,12 +2935,12 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimVertical/DimVerticalInit.js" line="+2"/>
         <source>&amp;Vertical</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vertikal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw vertical dimension</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita vertikal dimension</translation>
     </message>
 </context>
 <context>
@@ -2967,37 +2968,37 @@ Vill du återställa den?</translation>
     <message>
         <location line="+1"/>
         <source>Arc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Arc</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus/Minus</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Plus/Minus</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal to</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nästan lika med</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Asymptotically equal to</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Asymptotiskt lika med</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kvadrat</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Delta</translation>
     </message>
     <message>
         <location line="+100"/>
         <source>Dimension Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verktyg för dimensioner</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -3042,7 +3043,7 @@ Vill du återställa den?</translation>
     <message>
         <location line="+18"/>
         <source>Auto</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Auto</translation>
     </message>
 </context>
 <context>
@@ -3050,17 +3051,17 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimensionScaleDialog.ui" line="+14"/>
         <source>Dimension Scale</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dimensionsskala</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>The scale for new dimensions is not 1:1. Dimension labels will show values that differ from the measured value in the drawing. You can correct the scale factor in the options toolbar at the top.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skalan för nya dimensioner är inte 1:1. Måttetiketter visar värden som skiljer sig från det uppmätta värdet i ritningen. Du kan korrigera skalfaktorn i verktygsfältet Alternativ högst upp.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Don&apos;t show this warning again</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa inte den här varningen igen</translation>
     </message>
 </context>
 <context>
@@ -3068,63 +3069,63 @@ Vill du återställa den?</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Standardvärden för nya ritningar</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Dimension Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inställningar för dimensioner</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dimension</translation>
     </message>
     <message>
         <location line="+112"/>
         <source>point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">punkt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>comma</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">kommatecken</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>space</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">utrymme</translation>
     </message>
     <message>
         <location line="+309"/>
         <source>Unit / Format</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enhet / Format</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ritningsenheten måste vara &quot;Inch&quot; för att visa måletiketter i formaten &quot;Architectural&quot; eller &quot;Engineering&quot;. Formatet har ändrats till &quot;Decimal&quot;.</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+29"/>
         <source>Dimension Style</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dimension Stil</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Horizontal text labels</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Horisontella textetiketter</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Text above dimension line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Text ovanför måtten</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Sizes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Storlekar</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -3134,124 +3135,124 @@ Vill du återställa den?</translation>
     <message>
         <location line="+31"/>
         <source>Dimension line gap:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mätningslinjeavstånd:</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Arrow size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pilens storlek:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Extension line extension:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förlängning av linjeförlängning:</translation>
     </message>
     <message>
         <location line="+64"/>
         <source>Text height:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Textens höjd:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Extension line offset:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förskjutning av förlängningslinjen:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Dimension line increment:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förhöjning av dimensioner:</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Size scale factor:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skalfaktor för storleken:</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Arrow Style</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pil stil</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Arrow</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Architectural tick</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Arkitektonisk fästing</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Label</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Etikett</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Label font:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Typsnitt för etiketter:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Label color:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Färg på etiketten:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Number Format</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Format för nummer</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Decimal separator:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Decimalavgränsare:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Label Format</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Format för etikett</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Linear Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Linjära dimensioner</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Format:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Format:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>P&amp;recision:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Precision:</translation>
     </message>
     <message>
         <location line="+32"/>
         <location line="+60"/>
         <source>Show trailing zeros</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa avslutande nollor</translation>
     </message>
     <message>
         <location line="-50"/>
         <source>Angular Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vinkelmått</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>F&amp;ormat:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Format:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Pre&amp;cision:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Precision:</translation>
     </message>
     <message>
         <location line="+32"/>
         <location line="+19"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förhandsgranska</translation>
     </message>
 </context>
 <context>
@@ -3261,12 +3262,11 @@ Vill du återställa den?</translation>
         <source>The folder
 &quot;%1&quot;
 is already in the list.</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Folder not added</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mappen har inte lagts till</translation>
     </message>
 </context>
 <context>
@@ -3274,7 +3274,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/DisplayDistanceAngle/DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display &amp;Distance/Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visningsavstånd/-vinkel</translation>
     </message>
 </context>
 <context>
@@ -3282,7 +3282,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Divide/Divide.js" line="+68"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj linje, båge, cirkel, ellips, spline eller polylinje</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3292,17 +3292,17 @@ is already in the list.</source>
     <message>
         <location line="+12"/>
         <source>Specify point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ange punkt</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Specify second point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ange den andra punkten</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Divide/DivideInit.js" line="+2"/>
         <source>&amp;Divide</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dela upp</translation>
     </message>
 </context>
 <context>
@@ -3310,7 +3310,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/DraftMode/DraftMode.js" line="+86"/>
         <source>&amp;Draft Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Utkastläge</translation>
     </message>
 </context>
 <context>
@@ -3318,7 +3318,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Draw.js" line="+61"/>
         <source>Draw</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -3364,17 +3364,17 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vänster</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">Mitten</translation>
+        <translation type="unfinished">Mellanliggande</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Höger</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3384,12 +3384,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Botten</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Längst ner till höger</translation>
     </message>
     <message>
         <location line="+51"/>
@@ -3402,7 +3402,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/DrawBasedOnThreeCircles.js" line="+72"/>
         <source>First arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Första bågen eller cirkeln</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -3420,7 +3420,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js" line="+71"/>
         <source>Draw &amp;Bounding Box</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita en avgränsande box</translation>
     </message>
 </context>
 <context>
@@ -3428,7 +3428,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/DrawExamples.js" line="+51"/>
         <source>&amp;Draw</source>
-        <translation type="unfinished">&amp;Rita</translation>
+        <translation type="unfinished">Rita</translation>
     </message>
 </context>
 <context>
@@ -3436,109 +3436,109 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+129"/>
         <source>No import file selected !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ingen importfil har valts!</translation>
     </message>
     <message>
         <location line="+3"/>
         <location line="+15"/>
         <location line="+1168"/>
         <source>Command ended.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kommandot avslutades.</translation>
     </message>
     <message>
         <location line="-1171"/>
         <source>No file opened!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ingen fil har öppnats!</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Cast CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cast CSV</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Reading from file: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Läser från fil: %1</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Switched to comma/dot CSV style.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bytte till CSV-stil med kommatecken/prickar.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Switched to semicolon/dot CSV style.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bytte till semikolon/punkt CSV-stil.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Switched to semicolon/comma CSV style.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bytte till semikolon/komma som CSV-stil.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Unsupported or invalid CSV style, ignored ! Text line %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Otillämpad eller ogiltig CSV-stil, ignoreras ! Textrad %1</translation>
     </message>
     <message>
         <location line="+82"/>
         <source>Setting new relative origin failed, ignored ! Text line %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Det gick inte att ställa in ett nytt relativt ursprung, ignorerades! Textrad %1</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Can not switch to layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kan inte byta till lager, ignoreras! Textrad %1 lager: %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  layer switch, ignored ! Text line %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inte en korrekt lageromkopplare, ignoreras ! Textrad %1</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Not a correct  new layer switch, ignored ! Text line %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inte en korrekt ny lagerväxel, ignoreras ! Textrad %1</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Can not hide layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kan inte dölja lagret, ignoreras! Textrad %1 lager: %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  hide layer switch, ignored ! Text line %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Det är inte en korrekt växel för att dölja lagret, den ignoreras! Textrad %1</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Can not freeze layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kan inte frysa lagret, ignoreras ! Textrad %1 lager: %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  freeze layer switch, ignored ! Text line %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inte en korrekt byte av fryslager, ignoreras! Textrad %1</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Can not lock layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kan inte låsa lagret, ignoreras! Textrad %1 lager: %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  lock layer switch, ignored ! Text line %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inte en korrekt låsskiktsomkoppling, ignoreras! Textrad %1</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Can not allow layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kan inte tillåta lager, ignoreras! Textrad %1 lager: %2</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Not a correct  allow layer switch, ignored ! Text line %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inte en korrekt allow layer switch, ignoreras ! Textrad %1</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -3562,7 +3562,7 @@ is already in the list.</source>
         <location line="+23"/>
         <location line="+32"/>
         <source>Low field count !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lågt antal fält !</translation>
     </message>
     <message>
         <location line="-469"/>
@@ -3590,7 +3590,7 @@ is already in the list.</source>
         <location line="+29"/>
         <location line="+25"/>
         <source>Odd field count !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Udda antal fält !</translation>
     </message>
     <message>
         <location line="-579"/>
@@ -3602,7 +3602,7 @@ is already in the list.</source>
         <location line="+156"/>
         <location line="+166"/>
         <source>Rv Invalid !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rv Ogiltig !</translation>
     </message>
     <message>
         <location line="-587"/>
@@ -3618,7 +3618,7 @@ is already in the list.</source>
         <location line="+26"/>
         <location line="+55"/>
         <source>Rv1 Invalid !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rv1 Ogiltig !</translation>
     </message>
     <message>
         <location line="-451"/>
@@ -3636,7 +3636,7 @@ is already in the list.</source>
         <location line="+27"/>
         <location line="+34"/>
         <source>Rv2 Invalid !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rv2 Ogiltig !</translation>
     </message>
     <message>
         <location line="-422"/>
@@ -3647,7 +3647,7 @@ is already in the list.</source>
         <location line="+45"/>
         <location line="+21"/>
         <source>Radius Invalid !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Radien är ogiltig !</translation>
     </message>
     <message>
         <location line="-247"/>
@@ -3657,22 +3657,22 @@ is already in the list.</source>
         <location line="+34"/>
         <location line="+149"/>
         <source>Angle Invalid !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vinkeln är ogiltig!</translation>
     </message>
     <message>
         <location line="-480"/>
         <source>Angle1 Invalid !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vinkel1 ogiltig !</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angle2 Invalid !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Angle2 ogiltig !</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Equal angles !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lika vinklar !</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -3684,28 +3684,28 @@ is already in the list.</source>
         <location line="+27"/>
         <location line="+34"/>
         <source>Rv3 Invalid !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rv3 ogiltig !</translation>
     </message>
     <message>
         <location line="-308"/>
         <source>Arc Invalid !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Arc ogiltig !</translation>
     </message>
     <message>
         <location line="+43"/>
         <location line="+46"/>
         <source>Center Invalid !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Centrum ogiltigt !</translation>
     </message>
     <message>
         <location line="-21"/>
         <source>Radius too small !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Radien är för liten!</translation>
     </message>
     <message>
         <location line="+88"/>
         <source>Circle Invalid !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cirkeln är ogiltig!</translation>
     </message>
     <message>
         <location line="+67"/>
@@ -3713,27 +3713,27 @@ is already in the list.</source>
         <location line="+27"/>
         <location line="+34"/>
         <source>Rv4 Invalid !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rv4 ogiltig !</translation>
     </message>
     <message>
         <location line="-42"/>
         <source>Size Invalid !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Storleken är ogiltig!</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Size in X Invalid !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Storlek i X ogiltig !</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Size in Y Invalid !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Storlek i Y Ogiltig !</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Polygon, less than 5 references !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Polygon, mindre än 5 referenser !</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -3741,122 +3741,122 @@ is already in the list.</source>
         <location line="+27"/>
         <location line="+28"/>
         <source>Rv %1 Invalid !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rv %1 ogiltig !</translation>
     </message>
     <message>
         <location line="-62"/>
         <source>Polyline, less than 2 references !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Polylinje, mindre än 2 referenser !</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Bulge %1 Invalid !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bulge %1 ogiltig!</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Unsupported PRO feature !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">PRO-funktion som inte stöds !</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fit point Spline, less than 3 references !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Anpassningspunkt Spline, mindre än 3 referenser !</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Control point Spline, less than 4 references !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kontrollpunkt Spline, mindre än 4 referenser !</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Text, low field count !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Text, lågt antal fält !</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text, odd field count !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Text, udda antal fält !</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Height Invalid !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Höjden är ogiltig!</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Width Invalid !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bredden är ogiltig!</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Vert. alignment Invalid !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vert. anpassning ogiltig !</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Horz. alignment Invalid !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Horz. anpassning Ogiltig !</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing direction Invalid !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ritningsriktning ogiltig !</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing style Invalid !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stil för radavstånd ogiltig !</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing Invalid !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Radavstånd ogiltigt !</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Unsupported entry ! Text line %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uppgift som inte stöds ! Textrad %1</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Error with first optional list !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fel i den första valfria listan !</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Error with second optional list !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fel med den andra valfria listan !</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Not a correct entry ! Text line %1 : %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Det är inte en korrekt uppgift! Textrad %1 : %2</translation>
     </message>
     <message>
         <location line="+77"/>
         <source>Casted entries : %1 with %2 text lines</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gjutna poster : %1 med %2 textrader</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Importing CSV complete. Command ended.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Import av CSV är klar. Kommando avslutat.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Nothing casted !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ingenting kastat!</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Draw from CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dra från CSV</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CSV</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -3866,88 +3866,88 @@ is already in the list.</source>
     <message>
         <location line="+165"/>
         <source>Attributes empty ! Text line %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Attributen är tomma ! Textrad %1</translation>
     </message>
     <message>
         <location line="+24"/>
         <location line="+97"/>
         <source>Not a correct layer name ! Text line %1 name: %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Det är inte ett korrekt namn på lagret! Textrad %1 namn: %2</translation>
     </message>
     <message>
         <location line="-90"/>
         <source>Layer doesn&apos;t exist, ignored ! Text line %1 layer: %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lagret existerar inte, ignoreras! Textrad %1 lager: %2</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Not a correct color, ignored ! Text line %1 color: %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inte en korrekt färg, ignorerad ! Textrad %1 färg: %2</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight, ignored ! Text line %1 weight: %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inte en korrekt linjvikt, ignoreras! Textrad %1 vikt: %2</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype, ignored ! Text line %1 type: %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inte en korrekt Linetype, ignoreras! Textrad %1 typ: %2</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Not a correct Linetype scale, ignored ! Text line %1 scale: %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inte en korrekt Linetype-skala, ignoreras! Textrad %1 skala: %2</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Not a correct attribute, ignored ! Text line %1 &gt; %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inte ett korrekt attribut, ignoreras! Textrad %1 &gt; %2</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Parent layer doesn&apos;t exist ! Text line %1 layer: %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Det överordnade lagret finns inte! Textrad %1 lager: %2</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Not a correct color ! Text line %1 color: %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inte en korrekt färg! Textrad %1 färg: %2</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Not a correct Lineweight ! Text line %1 weight: %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Det är inte en korrekt linjvikt! Textrad %1 vikt: %2</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Not a correct Linetype ! Text line %1 type: %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inte en korrekt Linetype! Textrad %1 typ: %2</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Add/Update layer ignored !</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lägg till/uppdatera lagret ignoreras !</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Updated layer : %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uppdaterat lager : %1</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Added new layer : %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ett nytt lager har lagts till: %1</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dra från CSV</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Draws entities based on textual entries in a CSV file</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ritar enheter baserat på textposter i en CSV-fil</translation>
     </message>
 </context>
 <context>
@@ -3955,12 +3955,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/DrawOrder/DrawOrder.js" line="+92"/>
         <source>&amp;Draw Order</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dragningsordning</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Draw Order</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dragningsordning</translation>
     </message>
 </context>
 <context>
@@ -3968,12 +3968,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.js" line="+70"/>
         <source>First vertex</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Första vertex</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Next vertex</source>
-        <translation type="unfinished">nästa spets</translation>
+        <translation type="unfinished">Nästa topp</translation>
     </message>
     <message>
         <source>Done</source>
@@ -4002,7 +4002,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolyline.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation type="unfinished">stäng polylinje</translation>
+        <translation type="unfinished">Stäng polylinjen</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -4032,32 +4032,32 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Arc with radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Båge med radie:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>,, A</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">,, A</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sopa</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Restrict length or angle</source>
-        <translation type="unfinished">Begränsa längd eller vinkel</translation>
+        <translation type="unfinished">Begränsa längden eller vinkeln</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Polyline/DrawPolyline/DrawPolylineInit.js" line="+2"/>
         <source>&amp;Draw Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita polylinje</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw polyline with line and arc segments</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita polylinje med linje- och bågsegment</translation>
     </message>
 </context>
 <context>
@@ -4065,7 +4065,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DrawingPreferences.js" line="+43"/>
         <source>Drawing &amp;Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inställningar för ritning</translation>
     </message>
 </context>
 <context>
@@ -4073,6 +4073,7 @@ is already in the list.</source>
     <message numerus="yes">
         <location filename="../scripts/Edit/Duplicate/Duplicate.js" line="+54"/>
         <source>%n entity/ies duplicated</source>
+        <translation type="unfinished">%n enheter/ies dupliceras</translation>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -4081,7 +4082,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Duplicate/DuplicateInit.js" line="+2"/>
         <source>&amp;Duplicate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dubbla</translation>
     </message>
 </context>
 <context>
@@ -4089,7 +4090,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/EAction.js" line="+70"/>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tillbaka</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4100,48 +4101,48 @@ is already in the list.</source>
     <message>
         <location line="-2114"/>
         <source>Done</source>
-        <translation type="unfinished">Klar</translation>
+        <translation type="unfinished">Klart</translation>
     </message>
     <message>
         <location line="+277"/>
         <location line="+140"/>
         <source>Active Tool:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Aktivt verktyg:</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ingen</translation>
     </message>
     <message>
         <location line="+662"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alternativ</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Main Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Viktigaste verktygen</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>CAD Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">CAD-verktyg</translation>
     </message>
     <message>
         <location line="+568"/>
         <source>Invalid position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ogiltig position</translation>
     </message>
     <message>
         <location line="+177"/>
         <source>Entity is not in working set.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enheten finns inte i arbetsuppsättningen.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity is on a locked layer.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enheten befinner sig på ett låst lager.</translation>
     </message>
     <message>
         <location line="+225"/>
@@ -4151,82 +4152,82 @@ is already in the list.</source>
     <message>
         <location line="+64"/>
         <source>Entity is not a block reference.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enhet är inte en blockreferens.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enheten är inte en linje eller en båge.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enheten är inte en linje, båge eller polylinje.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enheten är inte en linje.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enhet är inte en båge.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc or circle.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enheten är inte en båge eller cirkel.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enheten är inte en linje, båge eller cirkel.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enheten är inte en linje, båge, spline, ellipsbåge eller polylinje.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc, circle or ellipse.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enheten är inte en båge, cirkel eller ellips.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enheten är inte en linje, båge, cirkel eller ellips.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enheten är inte en linje, båge, cirkel, ellips eller polylinje.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or spline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enheten är inte en linje, båge, cirkel, ellips eller spline.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enheten är inte en linje, båge, cirkel, spline eller polylinje.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enheten är inte en linje, båge, cirkel, ellips, spline eller polylinje.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enheten är inte en polylinje.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a spline with fit points.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enheten är inte en spline med passande punkter.</translation>
     </message>
 </context>
 <context>
@@ -4234,33 +4235,33 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.js" line="+58"/>
         <source>Show ECMAScript Shell</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa ECMAScript Shell</translation>
     </message>
     <message>
         <location line="+56"/>
         <source>&amp;Script Shell</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skriptskal</translation>
     </message>
     <message>
         <location line="+35"/>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skriptskal</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShellDialog.ui" line="+20"/>
         <source>ECMAScript Shell</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ECMAScript Shell</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to enable the ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Through the ECMAScript Shell you can &lt;span style=&quot; color:#ff0000;&quot;&gt;modify your drawings&lt;/span&gt; but also &lt;span style=&quot; color:#ff0000;&quot;&gt;delete files&lt;/span&gt; or &lt;span style=&quot; color:#ff0000;&quot;&gt;crash the application&lt;/span&gt; which can lead to &lt;span style=&quot; color:#ff0000;&quot;&gt;data loss&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;For inexperienced programmers, it is recommended to limit the use of the ECMAScript shell to the &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; which is considered to be &quot;safe&quot; to use.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Du är på väg att aktivera ECMAScript Shell.&lt;/p&gt;&lt;p&gt;Genom ECMAScript Shell kan du &lt;span style=&quot; color:#ff0000;&quot;&gt;ändra dina ritningar&lt;/span&gt; men också &lt;span style=&quot; color:#ff0000;&quot;&gt;radera filer&lt;/span&gt; eller &lt;span style=&quot; color:#ff0000;&quot;&gt;krascha programmet&lt;/span&gt; vilket kan leda till &lt;span style=&quot; color:#ff0000;&quot;&gt;dataförlust&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;För oerfarna programmerare rekommenderas att begränsa användningen av ECMAScript-skalet till &lt;a href=&quot;http://www.qcad.org/doc/qcad/latest/developer/group__ecma__simple.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QCAD Simple API&lt;/span&gt;&lt;/a&gt; som anses vara &quot;säker&quot; att använda.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa inte den här dialogrutan igen</translation>
     </message>
 </context>
 <context>
@@ -4268,12 +4269,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Edit.js" line="+65"/>
         <source>Edit Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Redigera verktyg</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Redigera</translation>
     </message>
 </context>
 <context>
@@ -4312,12 +4313,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatch.js" line="+61"/>
         <source>Choose hatch</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj lucka</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditHatch/EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Redigera luckan</translation>
     </message>
 </context>
 <context>
@@ -4325,7 +4326,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Layer/EditLayer/EditLayerInit.js" line="+2"/>
         <source>&amp;Edit Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Redigera lager</translation>
     </message>
 </context>
 <context>
@@ -4341,17 +4342,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/EditText/EditText.js" line="+61"/>
         <source>Choose text</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj text</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/EditText/EditTextInit.js" line="+2"/>
         <source>Edit Te&amp;xt</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Redigera text</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Edit text</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Redigera text</translation>
     </message>
 </context>
 <context>
@@ -4381,47 +4382,47 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Major point of ellipse or major radius</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ellipsens huvudpunkt eller huvudradie</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Major point of ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ellipsens huvudpunkt</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Minor point of ellipse or minor radius</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ellipsens mindre punkt eller mindre radie</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Minor point of ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ellipsens mindre punkt</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Rotation angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rotationsvinkel</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Start parameter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Startparameter</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End parameter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Slutparameter</translation>
     </message>
     <message>
         <location line="+267"/>
         <source>Invalid major radius.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Felaktig större radie.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Major radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Större radie:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -4470,7 +4471,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita en ellipsbåge från centrum, huvudpunkt, förhållande och vinklar</translation>
     </message>
 </context>
 <context>
@@ -4478,12 +4479,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseCPP/EllipseCPPInit.js" line="+2"/>
         <source>&amp;Ellipse (Center, Point, Ratio)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ellips (centrum, punkt, förhållande)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw full ellipse from center, major point and ratio</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita en hel ellips från centrum, huvudpunkt och förhållande</translation>
     </message>
 </context>
 <context>
@@ -4491,24 +4492,24 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDInit.js" line="+2"/>
         <source>Ellipse with &amp;Diameters</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ellips med diametrar</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ellipse with position and diameters</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita en ellips med position och diametrar</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDD.ui" line="+17"/>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="+19"/>
         <source>X Diameter:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">X Diameter:</translation>
     </message>
     <message>
         <location line="+23"/>
         <location filename="../scripts/Draw/Ellipse/EllipseDD/EllipseDDDialog.ui" line="+80"/>
         <source>Y Diameter:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Y Diameter:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -4575,7 +4576,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Draw parallel curve to ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita en parallell kurva till en ellips</translation>
     </message>
 </context>
 <context>
@@ -4583,12 +4584,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThroughInit.js" line="+2"/>
         <source>Parallel Curve (&amp;through Point)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Parallellkurva (genom en punkt)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel curve to ellipse through point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita en parallell kurva till ellipsen genom punkten</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThrough.ui" line="+17"/>
@@ -4601,7 +4602,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRInit.js" line="+2"/>
         <source>Ellipse with &amp;Radii</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ellips med radier</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4612,13 +4613,13 @@ is already in the list.</source>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRR.ui" line="+17"/>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="+129"/>
         <source>X Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">X Radius:</translation>
     </message>
     <message>
         <location line="+23"/>
         <location filename="../scripts/Draw/Ellipse/EllipseRR/EllipseRRDialog.ui" line="-10"/>
         <source>Y Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Y Radius:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -4637,7 +4638,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Edit/Esc/EscInit.js" line="+2"/>
         <source>&amp;Escape</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Flykt</translation>
     </message>
 </context>
 <context>
@@ -4645,7 +4646,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/BlockExamples/ExAddBlock/ExAddBlock.js" line="+85"/>
         <source>&amp;Create Block</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skapa block</translation>
     </message>
 </context>
 <context>
@@ -4653,7 +4654,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExAddLayer/ExAddLayer.js" line="+44"/>
         <source>Added layer &quot;MyLayer&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lagret &quot;MyLayer&quot; har lagts till</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -4666,17 +4667,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ExDeleteObject/ExDeleteObject.js" line="+59"/>
         <source>Deleted line with ID %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Radad rad med ID %1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>You can use &lt;i&gt;Edit &gt; Undo&lt;/i&gt; to restore the line entity.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Du kan använda &lt;i&gt;Redigera &gt; Ångra&lt;/i&gt; för att återställa linjenheten.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Add and Delete Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lägg till och ta bort en rad</translation>
     </message>
 </context>
 <context>
@@ -4684,7 +4685,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExDirListing/ExDirListing.js" line="+66"/>
         <source>&amp;Directory Listing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kataloglista</translation>
     </message>
 </context>
 <context>
@@ -4692,7 +4693,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawColors/ExDrawColors.js" line="+66"/>
         <source>Draw &amp;Colors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita färger</translation>
     </message>
 </context>
 <context>
@@ -4700,7 +4701,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExDrawFonts/ExDrawFonts.js" line="+85"/>
         <source>Draw &amp;Fonts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Teckensnitt</translation>
     </message>
 </context>
 <context>
@@ -4708,17 +4709,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExDumpPolyline/ExDumpPolyline.js" line="+48"/>
         <source>Clockwise polyline:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Polylinje medurs:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Counterclockwise polyline:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Polylinje moturs:</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>&amp;Output Polyline Vertices</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Utdata Polyline Vertices</translation>
     </message>
 </context>
 <context>
@@ -4726,12 +4727,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/ExLayerCustomProperty/ExLayerCustomProperty.js" line="+43"/>
         <source>Added custom property &quot;MyCustomProperty&quot; to layer &quot;0&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lägg till den anpassade egenskapen &quot;MyCustomProperty&quot; till lager &quot;0&quot;.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Add Custom Property to a Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lägga till anpassad egenskap till ett lager</translation>
     </message>
 </context>
 <context>
@@ -4739,7 +4740,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDove.js" line="+56"/>
         <source>First corner</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Första hörnet</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -4749,12 +4750,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/DrawExamples/ExLineDove/ExLineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sågad svans</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw a dovetail joint</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita en svartsvansförbindelse</translation>
     </message>
 </context>
 <context>
@@ -4762,7 +4763,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExMainWindow/ExMainWindow.js" line="+50"/>
         <source>&amp;Main Window</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Huvudfönster</translation>
     </message>
 </context>
 <context>
@@ -4770,7 +4771,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/ExMandelbrot/ExMandelbrot.js" line="+48"/>
         <source>&amp;Mandelbrot Example</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mandelbrot-exempel</translation>
     </message>
 </context>
 <context>
@@ -4778,7 +4779,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/ExMathSpiral/ExMathSpiral.js" line="+73"/>
         <source>&amp;Spiral</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spiral</translation>
     </message>
 </context>
 <context>
@@ -4786,12 +4787,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal/ExMinimal.js" line="+12"/>
         <source>Hello World.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hej, världen.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Minimal Example</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Minimalt exempel</translation>
     </message>
 </context>
 <context>
@@ -4799,12 +4800,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.js" line="+51"/>
         <source>&amp;Minimal Example 2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Minimalt exempel 2</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/ExMinimal2/ExMinimal2.ui" line="+9"/>
         <source>&amp;Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Radie:</translation>
     </message>
 </context>
 <context>
@@ -4812,7 +4813,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExProcess/ExProcess.js" line="+81"/>
         <source>&amp;Run Process</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kör process</translation>
     </message>
 </context>
 <context>
@@ -4820,22 +4821,22 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExRegisterFileExporter/ExRegisterFileExporter.js" line="+37"/>
         <source>Example Files %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exempelfiler %1</translation>
     </message>
     <message>
         <location line="+84"/>
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Info</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Registered a file exporter for file type &quot;.example&quot;. Use File &gt; Save As to see the filter in action.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Registrerade en filexportör för filtypen &quot;.example&quot;. Använd Arkiv &gt; Spara som för att se filtret i aktion.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Register File Exporter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Register File Exporter</translation>
     </message>
 </context>
 <context>
@@ -4843,27 +4844,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExRegisterFileImporter/ExRegisterFileImporter.js" line="+37"/>
         <source>Example Files %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exempelfiler %1</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>Read from file: &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Läser från fil: &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Info</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Registered a file importer for file type &quot;.example&quot;. Use File &gt; Open to see the filter in action.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Registrerade en filimportör för filtypen &quot;.example&quot;. Använd Fil &gt; Öppna för att se filtret i aktion.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Register File Importer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Register File Importer</translation>
     </message>
 </context>
 <context>
@@ -4871,27 +4872,27 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.js" line="+60"/>
         <source>&amp;Resize Window</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ändra storlek på fönstret</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExResizeWindow/ExResizeWindow.ui" line="+14"/>
         <source>Enter Size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ange storlek</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Storlek:</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>1280x720 (720p) 16:9</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">1280x720 (720p) 16:9</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>1920x1080 (1080p, Full HD) 16:9</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">1920x1080 (1080p, Full HD) 16:9</translation>
     </message>
 </context>
 <context>
@@ -4917,12 +4918,12 @@ is already in the list.</source>
     <message>
         <location line="+46"/>
         <source>Three Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tre punkter</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw three points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dra tre poäng</translation>
     </message>
 </context>
 <context>
@@ -4930,6 +4931,7 @@ is already in the list.</source>
     <message numerus="yes">
         <location filename="../scripts/Misc/Examples/ListenerExamples/ExTransactionListener/ExTransactionListener.js" line="+50"/>
         <source>Transaction affected %n object(s).</source>
+        <translation type="unfinished">Transaktionen påverkade %n objekt.</translation>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -4938,7 +4940,7 @@ is already in the list.</source>
     <message>
         <location line="+67"/>
         <source>&amp;Transaction Listener</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Transaktionslyssnare</translation>
     </message>
 </context>
 <context>
@@ -4946,7 +4948,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/ExWidget.js" line="+28"/>
         <source>&amp;Widget</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Widget</translation>
     </message>
 </context>
 <context>
@@ -4959,12 +4961,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Export XML</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exportera XML</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlExport/ExXmlExportInit.js" line="+2"/>
         <source>&amp;Export XML</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exportera XML</translation>
     </message>
 </context>
 <context>
@@ -4977,12 +4979,12 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Import XML</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Importera XML</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlImport/ExXmlImportInit.js" line="+2"/>
         <source>&amp;Import XML</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Importera XML</translation>
     </message>
 </context>
 <context>
@@ -4990,7 +4992,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/Examples.js" line="+55"/>
         <source>Script &amp;Examples</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exempel på manuskript</translation>
     </message>
 </context>
 <context>
@@ -4998,57 +5000,57 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Modify/Explode/Explode.js" line="+30"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ändra</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Explode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Explodera</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/ExplodeInit.js" line="+2"/>
         <source>&amp;Explode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Explodera</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Explode/PreferencesPage.ui" line="+137"/>
         <source>Spline approximation tolerance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tolerans för approximation av Spline:</translation>
     </message>
     <message>
         <location line="-118"/>
         <source>Explode splines to polylines with line segments</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Explodera splines till polylinjer med linjesegment</translation>
     </message>
     <message>
         <location line="+111"/>
         <source>Ellipse segments (per full ellipse):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ellipsesegment (per hel ellips):</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Convert splines from texts to arcs or lines if appropriate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Konvertera splines från texter till bågar eller linjer om det är lämpligt</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Explode circles into polylines with two half circles</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Explodera cirklar till polylinjer med två halvcirklar</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Explode text glyphs to polylines</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Explodera textglyfer till polylinjer</translation>
     </message>
     <message>
         <location line="-80"/>
         <source>Explode multiline texts into multiple simple text blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Explodera flerradiga texter till flera enkla textblock</translation>
     </message>
     <message>
         <location line="-41"/>
         <source>Spline segments:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spline-segment:</translation>
     </message>
 </context>
 <context>
@@ -5056,7 +5058,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Help/FAQ/FAQInit.js" line="+2"/>
         <source>FA&amp;Qs (online)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vanliga frågor (online)</translation>
     </message>
 </context>
 <context>
@@ -5064,12 +5066,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/File/File.js" line="+65"/>
         <source>File Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verktyg för filer</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fil</translation>
     </message>
     <message>
         <location line="+92"/>
@@ -5080,12 +5082,12 @@ is already in the list.</source>
     <message>
         <location line="-39"/>
         <source>Overwrite File?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skriva över en fil?</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Filen &quot;%1&quot; finns redan. Vill du skriva över den?</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -5099,52 +5101,52 @@ is already in the list.</source>
         <location filename="../scripts/Widgets/FirstStart/FirstStart.js" line="+36"/>
         <location line="+225"/>
         <source>%1 First Start</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%1 Första start</translation>
     </message>
     <message>
         <location line="-5"/>
         <source>Black</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Svart</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>White</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vit</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Language:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Språk:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Welcome to %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välkommen till %1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please choose the settings used for new drawings. All these settings can be changed later in the Preference Dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj de inställningar som används för nya ritningar. Alla dessa inställningar kan ändras senare i inställningsdialogen.</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Unit:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enhet:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Default Paper Size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Standardpappersstorlek:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal Point:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Decimalpunkt:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Background Color:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bakgrundsfärg:</translation>
     </message>
 </context>
 <context>
@@ -5152,17 +5154,17 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainter.js" line="+1115"/>
         <source>Add Active SubLayer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lägg till ett aktivt underlager</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>FP added layer:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FP lade till ett lager:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="+11"/>
         <source>Paints over selection mimicking a roller stamp</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Målar över urvalet och efterliknar en rullstämpel</translation>
     </message>
 </context>
 <context>
@@ -5170,293 +5172,292 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterDialog.ui" line="+14"/>
         <source>Painter Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alternativ för målare</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Painters casting options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Målare gjutningsalternativ</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Flip Painters</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Flip Painters</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cast in group</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gjutning i grupp</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Cast on sub-layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gjutning på underlag</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add Begin Apex</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lägg till Begin Apex</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add End Apex</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lägg till slut Apex</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add Insertions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lägga till inlagor</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Painter set</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Målare uppsättning</translation>
     </message>
     <message>
         <location line="-101"/>
         <source>Mirror painters over baseline.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spegelmålare över baslinjen.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Group all castings to one operation.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gruppera alla gjutningar till en operation.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Cast on newly sub-layer &apos;Painted&apos;.
 BUG: Interferes with group castings.</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Start with casting a begin apex on open forms.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Börja med att gjuta en början av en spets på öppna former.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>End with casting an end apex on open forms.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Avsluta med att gjuta en ändspets på öppna former.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Add insertions in between eg. spacers, knots. (Not implemented)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lägg till mellanliggande insatser, t.ex. distanser, knutar. (Ej genomfört)</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Preview of painters.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förhandsgranskning av målare.</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Select painter set.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj målaruppsättning.</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>CurtainRope</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">GardinerRope</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalBar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">OrthogonalBar</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>OrthogonalPointsGlobal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">OrthogonalPointsGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWave</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SinusoidWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SinusoidWaveGlobal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SinusoidWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>3PhaseWaveGlobal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">3PhaseWaveGlobal</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>TriangleWave</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">TriangleWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SawtoothWave</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SawtoothWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqaureWave</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SqaureWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SteppedWave</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SteppedWave</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShape</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SqauredShape</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>SqauredShapeFlexing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SqauredShapeFlexing</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>AllPainterDataTypes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alla målardatatyper</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Insertion type</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Typ av infogning</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Preview of insertion.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förhandsgranskning av infogning.</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Select Insertion or Enter void space. (Not implemented)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj Infogning eller Ange tomrum. (Ej implementerat)</translation>
     </message>
     <message>
         <location line="+250"/>
         <source>Version</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Version</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>FlexPainter Beta 0.42e © CVH 2020 </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FlexPainter Beta 0.42e © CVH 2020</translation>
     </message>
     <message>
         <location line="+245"/>
         <source>Document Units.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dokumentenheter.</translation>
     </message>
     <message>
         <location line="+39"/>
         <source>Enter painter width. (+0)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ange målarbredd. (+0)</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Enter main painter stepsize. (+0)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ange huvudmålarens stegstorlek. (+0)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Enter main painter length. (+)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ange huvudmålarens längd. (+)</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Keep painters proportional.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Håll målarna proportionella.</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Select percentage of Stepsize.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj procentsats för stegstorlek.</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Adapt scaling f 1.00-0.90 to fit the whole form.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Anpassa skalan f 1,00-0,90 så att den passar hela formuläret.</translation>
     </message>
     <message>
         <location line="+92"/>
         <source>Verbose info. (persistent on)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förbluffande information. (ihållande på)</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Deleted painted over base entities. (persistent off)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Borttagen målad över basenheter. (bestående av)</translation>
     </message>
     <message>
         <location line="-879"/>
         <source>&lt;Enter space size&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;Ange storlek på utrymme&gt;</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Curtain Rope Knot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gardin rep knut</translation>
     </message>
     <message>
         <location line="+489"/>
         <source>#Undefined#</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">#Odefinierad#</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Width : </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bredd :</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">0</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Repetitive Painter options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alternativ för Repetitive Painter</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Stepsize :</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stegstorlek :</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Length :</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Längd :</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Closed Forms shifting % :</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Slutna former som skiftar % :</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Open forms scaling options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alternativ för skalning av öppna formulär</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Dynamically scale to fit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dynamiskt skalbar för att passa</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Align with begin</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Anpassa sig till början</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Centered</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Centrerad</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Align with End</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Anpassa till ändan</translation>
     </message>
     <message>
         <location line="+39"/>
@@ -5474,7 +5475,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
         <source>&amp;FlexPainter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -5482,7 +5483,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Modify/FlipHorizontal/FlipHorizontalInit.js" line="+2"/>
         <source>Flip Hori&amp;zontal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vänd horisontellt</translation>
     </message>
 </context>
 <context>
@@ -5490,7 +5491,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Modify/FlipVertical/FlipVerticalInit.js" line="+2"/>
         <source>Flip Verti&amp;cal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vänd vertikalt</translation>
     </message>
 </context>
 <context>
@@ -5498,22 +5499,22 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/FlushBackLog/FlushBackLog.js" line="+38"/>
         <source>Flush Undo History</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spola historiken för ångra ändringar</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Are you sure that you want to flush the undo / redo transaction history?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Är du säker på att du vill rensa historiken för ångra/åter göra-transaktioner?</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This cannot be undone.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Detta kan inte göras ogjort.</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Flush &amp;Undo History</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spola historiken för ångra ändringar</translation>
     </message>
 </context>
 <context>
@@ -5534,32 +5535,32 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.ui" line="+14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Formulär</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Cube size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kubstorlek:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Draw glue lap</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita lim varv</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/20_ThreeRight.ui" line="+14"/>
         <source>Three: Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tre: Rätt</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/21_ThreeLeft.ui" line="+14"/>
         <source>Three: Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tre: Vänster</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/22_ThreeAbove.ui" line="+14"/>
         <source>Three: Above</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tre: Över</translation>
     </message>
 </context>
 <context>
@@ -5567,7 +5568,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Help/Forum/ForumInit.js" line="+2"/>
         <source>&amp;Forum</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Forum</translation>
     </message>
 </context>
 <context>
@@ -5575,7 +5576,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fyra: Jämställd</translation>
     </message>
 </context>
 <context>
@@ -5583,7 +5584,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/32_FourLeft.ui" line="+14"/>
         <source>Four: Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fyra: Vänster</translation>
     </message>
 </context>
 <context>
@@ -5591,7 +5592,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/31_FourRight.ui" line="+14"/>
         <source>Four: Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fyra: Rätt</translation>
     </message>
 </context>
 <context>
@@ -5619,7 +5620,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+10"/>
         <source>Double-click to edit hatch</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dubbelklicka för att redigera skraffering</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5629,57 +5630,57 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+28"/>
         <source>Edit block reference in-place</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Redigera blockreferensen på plats</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Double-click to select contour</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dubbelklicka för att välja kontur</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Tolerance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tolerans:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Right double-click to reset</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Höger dubbelklicka för att återställa</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blocker</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Select block references together with attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj blockreferenser tillsammans med attribut</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Hide attributes when block references are hidden</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dölja attribut när blockreferenser är dolda</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cursor Range</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cursorområde</translation>
     </message>
     <message>
         <location line="+102"/>
         <source>Cursor range for picking entities:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cursorområde för att välja enheter:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Cursor range for snap:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cursorområde för snaps:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Highlight entity within range</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Markera enhet inom räckvidden</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/PreferencesPage.ui" line="+32"/>
@@ -5724,12 +5725,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+10"/>
         <source>This can be used if cursors are not visible on external monitors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Detta kan användas om markörer inte är synliga på externa skärmar</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use system cursors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Använda systemets markörer</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -5739,67 +5740,67 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+8"/>
         <source>Margin (px):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Marginal (px):</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>Auto zoom on load</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Automatisk zoom vid laddning</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Color Adjustment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Färgjustering</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Color lightness threshold:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tröskelvärde för färgljusstyrka:</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Prevent white on white / black on black display</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förhindra vit på vit/svart på svart visning</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Disable for printing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inaktivera för utskrift</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Linetypes and Lineweights</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Linjetyper och linjestyrkor</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Default lineweight:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Standardlinjevikt:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Automatically use screen based linetypes in model view</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Använd automatiskt skärmbaserade linjetyper i modellvyn</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Auto switch to screen based linetypes in model view</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Automatisk övergång till skärmbaserade linjetyper i modellvyn</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skala linjetypmönster efter linjvikt</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation>mönsterskala för linjetjocklek 0.00mm:</translation>
+        <translation>Mönsterskala för linjetjocklek 0.00mm:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Apply line weight to points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tillämpa linjvikt på punkter</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -5809,22 +5810,22 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+6"/>
         <source>Anti-aliasing on by default</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Anti-aliasing aktiverad som standard</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Use full resolution for Retina / high resolution display</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Använd full upplösning för Retina- eller högupplösta skärmar</translation>
     </message>
     <message>
         <location line="+514"/>
         <source>Reference point size (px):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Referenspunktsstorlek (px):</translation>
     </message>
     <message>
         <location line="+228"/>
         <source>Persistent selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Beständigt urval</translation>
     </message>
     <message>
         <location line="-626"/>
@@ -5834,47 +5835,47 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+133"/>
         <source>Minimum angle step for rendering arcs (degrees):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Minsta vinkelsteg för återgivning av bågar (grader):</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>Display entities with more than N dashes as continuous:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa enheter med fler än N streck som kontinuerliga:</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Timeout for hatch rendering:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Timeout för raster av skraffering:</translation>
     </message>
     <message>
         <location line="-361"/>
         <source>auto</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">auto</translation>
     </message>
     <message>
         <location line="-11"/>
         <source>Number of threads:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Antal trådar:</translation>
     </message>
     <message>
         <location line="+437"/>
         <source>Maximum selected entities with reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Maximalt antal valda enheter med referenspunkter:</translation>
     </message>
     <message>
         <location line="+147"/>
         <source>Text height threshold (px):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tröskelvärde för texthöjd (px):</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Maximum selected entities with displayed reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Maximalt antal valda enheter med visade referenspunkter:</translation>
     </message>
     <message>
         <location line="+73"/>
         <source>Selection</source>
-        <translation type="unfinished">Markering</translation>
+        <translation type="unfinished">Urval</translation>
     </message>
     <message>
         <source>Text height display threshold (px):</source>
@@ -5888,22 +5889,22 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/GridPreferences/PreferencesPage.ui" line="+34"/>
         <source>Automatically scale grid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Automatisk skalning av rutnätet</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Automatically scale meta grid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Automatisk skalning av metagallret</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Solid grid lines</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fasta rasterlinjer</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Minimal grid spacing (px):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Minimalt rasteravstånd (px):</translation>
     </message>
 </context>
 <context>
@@ -5916,7 +5917,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+12"/>
         <source>Background:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bakgrund:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -5961,7 +5962,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+36"/>
         <source>Meta grid:</source>
-        <translation type="unfinished">Meta-rutnät:</translation>
+        <translation type="unfinished">Meta rutnät:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -5971,67 +5972,67 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+12"/>
         <source>Primary selection color:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Primär färg för urvalet:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use secondary selection color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Använd sekundär färg för urval</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Secondary selection color:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Färg för sekundärt urval:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Primary reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Primära referenspunkter:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Secondary reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sekundära referenspunkter:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Selection box border:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gränsen för valboxen:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Selection box fill:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fyllning av urvalsrutan:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Cross-selection box fill:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fyllning av rutan för kryssval:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Start points:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Startpunkter:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End points:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Slutpunkter:</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Tertiary reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tertiära referenspunkter:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Snap Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Snap-verktyg</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Snap label:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Snap-etikett:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -6056,7 +6057,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+30"/>
         <source>Working set fading factor:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Arbetsuppsättningens utglesningsfaktor:</translation>
     </message>
     <message>
         <location line="+75"/>
@@ -6066,7 +6067,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+12"/>
         <source>Zoom box border:</source>
-        <translation type="unfinished">Zoom lådlinje:</translation>
+        <translation type="unfinished">Gräns för zoomrutan:</translation>
     </message>
 </context>
 <context>
@@ -6078,17 +6079,17 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/GraphicsViewPreferences/FontPreferences/PreferencesPage.ui" line="+41"/>
         <source>Ruler font:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Typsnitt för linjal:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Snap label font:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Typsnitt för snap-etiketter:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Info label font:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Teckensnitt för informationsmärkning:</translation>
     </message>
 </context>
 <context>
@@ -6096,37 +6097,37 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Navigation/DefaultNavigation/PreferencesPage.ui" line="+84"/>
         <source>Mouse wheel zoom factor:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zoomfaktor för mushjulet:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Limit zoom and scroll to prevent overflows</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Begränsa zoom och rullning för att förhindra överflöd</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Enable pan gesture</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Aktivera panorering</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Reverse mouse wheel direction for zoom</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Omvända mushjulets riktning för zoom</translation>
     </message>
     <message>
         <location line="+217"/>
         <source>Panning threshold (px):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tröskelvärde för panorering (px):</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Mouse wheel / two finger swipe:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mushjul / svepning med två fingrar:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Middle mouse button zoom factor:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zoomfaktor för den mellersta musknappen:</translation>
     </message>
 </context>
 <context>
@@ -6139,7 +6140,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+0"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Utseende</translation>
     </message>
 </context>
 <context>
@@ -6166,12 +6167,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="-2"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Standardvärden för nya ritningar</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Allmänt</translation>
     </message>
     <message>
         <location line="+84"/>
@@ -6180,7 +6181,7 @@ BUG: Interferes with group castings.</source>
         <location line="+22"/>
         <location line="+1"/>
         <source>auto</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">auto</translation>
     </message>
 </context>
 <context>
@@ -6200,7 +6201,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+72"/>
         <source>Hatch Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verktyg för luckor</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -6217,32 +6218,32 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lucka</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Typ</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Solid Fill</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fast fyllning</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skraffermönster</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förhandsgranska</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mönster</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -6260,27 +6261,27 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelection.js" line="+56"/>
         <source>No boundary selected.</source>
-        <translation type="unfinished">Ingen yttre gräns vald.</translation>
+        <translation type="unfinished">Ingen gräns har valts.</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation type="unfinished">Slingan är inte sluten vid punkt %1/%2.</translation>
+        <translation type="unfinished">Slingan är inte stängd vid punkt %1/%2.</translation>
     </message>
     <message>
         <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
-        <translation type="unfinished">Varje gränsobjekt måste vara en linje, båge, cirkel, ellipsbåge, ellips, polylinje eller list. Found:</translation>
+        <translation type="unfinished">Varje gränsenhet måste vara en linje, en båge, en cirkel, en ellipsbåge, en ellips, en polylinje eller en spline. Hittades:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hatch från urvalet</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Create hatch or solid fill from selected boundary</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skapa skraffering eller fyllning med fasta material från den valda gränsen</translation>
     </message>
 </context>
 <context>
@@ -6288,7 +6289,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Help/Help.js" line="+60"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hjälp</translation>
     </message>
 </context>
 <context>
@@ -6304,7 +6305,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Layer/HideAllLayers/HideAllLayersInit.js" line="+2"/>
         <source>&amp;Hide All Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dölja alla lager</translation>
     </message>
 </context>
 <context>
@@ -6312,7 +6313,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/IOExamples.js" line="+51"/>
         <source>&amp;Import/Export</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Import/export</translation>
     </message>
 </context>
 <context>
@@ -6370,7 +6371,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
         <source>&amp;Insert Bitmap</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Infoga bitmapp</translation>
     </message>
 </context>
 <context>
@@ -6378,12 +6379,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.js" line="+73"/>
         <source>Error while importing file %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fel vid import av fil %1</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inga importfilter har hittats. Avbryter...</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -6393,7 +6394,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+3"/>
         <source>Import Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Importera ritning</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -6403,12 +6404,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFileInit.js" line="+2"/>
         <source>&amp;Import</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Import</translation>
     </message>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFile.ui" line="+17"/>
         <source>As block:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Som block:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -6418,7 +6419,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="unfinished">Rotera klistrade objekt&lt;br&gt;med denna vinkel</translation>
+        <translation type="unfinished">Rotera inplacerade enheter&lt;br&gt;med den här vinkeln</translation>
     </message>
     <message>
         <location line="+110"/>
@@ -6428,32 +6429,32 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="unfinished">Skala klistrade objekt&lt;br&gt;med faktor</translation>
+        <translation type="unfinished">Skala inplacerade enheter&lt;br&gt;med den här faktorn</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="unfinished">Vänd klistrade objekt&lt;br&gt;horisontellt</translation>
+        <translation type="unfinished">Vänd inklistrade enheter horisontellt</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="unfinished">Vänd klistrade objekt&lt;br&gt;vertikalt</translation>
+        <translation type="unfinished">Vänd inklistrade enheter&lt;br&gt;vertikalt</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Klistra in alla enheter&lt;br&gt;till det aktuella lagret&lt;br&gt;i stället för det ursprungliga lagret</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>To current layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Till aktuellt lager</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="unfinished">Skriv över existerande lager&lt;br&gt;i ritning med&lt;br&gt;lager från urklipp</translation>
+        <translation type="unfinished">Skriva över befintliga lager i ritningen med lager från urklipp</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -6463,12 +6464,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="unfinished">Skriv över existerande block&lt;br&gt;i ritning med&lt;br&gt;block från urklipp</translation>
+        <translation type="unfinished">Skriv över befintliga block i ritningen med block från urklipp</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation type="unfinished">Skriv över block</translation>
+        <translation type="unfinished">Överskrivning av block</translation>
     </message>
 </context>
 <context>
@@ -6481,12 +6482,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+1"/>
         <source>Import Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Importpunkter</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>&amp;Import Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Importpunkter</translation>
     </message>
 </context>
 <context>
@@ -6494,12 +6495,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngle.js" line="+67"/>
         <source>Specify first line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ange första raden</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ange den andra raden</translation>
     </message>
     <message>
         <source>Done</source>
@@ -6513,7 +6514,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngleInit.js" line="+2"/>
         <source>&amp;Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vinkel</translation>
     </message>
 </context>
 <context>
@@ -6521,7 +6522,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js" line="+70"/>
         <source>Choose arc, circle, ellipse or elliptical arc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj båge, cirkel, ellips eller elliptisk båge</translation>
     </message>
     <message>
         <source>Done</source>
@@ -6535,24 +6536,24 @@ BUG: Interferes with group castings.</source>
         <location line="+22"/>
         <location line="+22"/>
         <source>Area</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Område</translation>
     </message>
     <message>
         <location line="-108"/>
         <location line="+66"/>
         <source>Circumference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Omkrets</translation>
     </message>
     <message>
         <location line="-59"/>
         <source>Circle area:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cirkelområde:</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+67"/>
         <source>circumference:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">omkrets:</translation>
     </message>
     <message>
         <location line="-54"/>
@@ -6561,20 +6562,20 @@ BUG: Interferes with group castings.</source>
         <location line="+22"/>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="+119"/>
         <source>Length</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Längd</translation>
     </message>
     <message>
         <location line="-88"/>
         <location line="+67"/>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-16"/>
         <source>Chord</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Chord</translation>
     </message>
     <message>
         <location line="-60"/>
         <location line="+24"/>
         <source>Ellipse arc area:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ellipsens bågområde:</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -6582,84 +6583,84 @@ BUG: Interferes with group castings.</source>
         <location line="+43"/>
         <location line="+22"/>
         <source>arc length:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">båglängd:</translation>
     </message>
     <message>
         <location line="-88"/>
         <location line="+67"/>
         <source>chord:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ackord:</translation>
     </message>
     <message>
         <location line="-52"/>
         <source>Distance</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Avstånd</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">avstånd:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Ellipse area:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ellipsområde:</translation>
     </message>
     <message>
         <location line="+22"/>
         <location line="+22"/>
         <source>Arc area:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Arc-område:</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Radius</source>
-        <translation type="unfinished">Radie</translation>
+        <translation type="unfinished">Radius</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">radie:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleAreaInit.js" line="+2"/>
         <source>Arc/Circle/Ellipse Area</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Område för båge/cirkel/ellips</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.ui" line="-86"/>
         <source>Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Läge:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Calculate Area of Segment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Beräkna segmentets area</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Calculate Area of Sector</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Beräkna sektorns area</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Add:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lägg till:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Add entities to drawing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lägg till enheter i ritningen</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enhet</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Add lengths/circumference to drawing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lägg till längder/omkretsar i ritningen</translation>
     </message>
 </context>
 <context>
@@ -6667,7 +6668,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoArea.js" line="+70"/>
         <source>Set next polygon corner</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ställ in nästa polygonhörn</translation>
     </message>
     <message>
         <source>Done</source>
@@ -6676,27 +6677,27 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+144"/>
         <source>Polygon area:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Polygonområdet:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>circumference:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">omkrets:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoAreaInit.js" line="+2"/>
         <source>Pol&amp;ygonal Area</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Polygonalt område</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoArea/InfoArea.ui" line="+17"/>
         <source>Calculate length and close tool.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Beräkna längden och stäng verktyget.</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Close Tool.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stäng verktyget.</translation>
     </message>
 </context>
 <context>
@@ -6704,12 +6705,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEE.js" line="+62"/>
         <source>Specify first entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ange den första enheten</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ange den andra enheten</translation>
     </message>
     <message>
         <source>Done</source>
@@ -6723,7 +6724,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEEInit.js" line="+2"/>
         <source>Distance &amp;Entity to Entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Avstånd Enhet till enhet</translation>
     </message>
 </context>
 <context>
@@ -6731,12 +6732,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEP.js" line="+59"/>
         <source>Specify entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ange enhet</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Specify point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ange punkt</translation>
     </message>
     <message>
         <source>Done</source>
@@ -6750,7 +6751,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEPInit.js" line="+2"/>
         <source>Distance &amp;Entity to Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Avstånd Enhet till punkt</translation>
     </message>
 </context>
 <context>
@@ -6777,12 +6778,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+4"/>
         <source>Delta X:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Delta X:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta Y:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Delta Y:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6792,7 +6793,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePPInit.js" line="+2"/>
         <source>Distance &amp;Point to Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Avstånd punkt till punkt</translation>
     </message>
 </context>
 <context>
@@ -6800,7 +6801,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Information/InfoPolylineArea/InfoPolylineArea.js" line="+53"/>
         <source>Choose polyline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj polylinje</translation>
     </message>
     <message>
         <source>Done</source>
@@ -6809,27 +6810,27 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+51"/>
         <source>Area</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Område</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Circumference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Omkrets</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Polyline area:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Polylinjeområde:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>circumference:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">omkrets:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoPolylineArea/InfoPolylineAreaInit.js" line="+2"/>
         <source>Polyl&amp;ine Area</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Polylinjeområde</translation>
     </message>
 </context>
 <context>
@@ -6837,12 +6838,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Information/InfoPosition/InfoPosition.js" line="+55"/>
         <source>Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Punkt</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoPosition/InfoPositionInit.js" line="+2"/>
         <source>&amp;Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Position</translation>
     </message>
 </context>
 <context>
@@ -6850,7 +6851,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Information/InfoPositionPol/InfoPositionPolInit.js" line="+2"/>
         <source>&amp;Polar Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Polär position</translation>
     </message>
 </context>
 <context>
@@ -6858,7 +6859,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Information/InfoPositionPolRel/InfoPositionPolRelInit.js" line="+2"/>
         <source>Relative P&amp;olar Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Relativ polär position</translation>
     </message>
 </context>
 <context>
@@ -6866,7 +6867,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Information/InfoPositionRel/InfoPositionRelInit.js" line="+2"/>
         <source>&amp;Relative Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Relativ position</translation>
     </message>
 </context>
 <context>
@@ -6874,22 +6875,22 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Information/Information.js" line="+334"/>
         <source>Information Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Informationsverktyg</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Info</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Info</translation>
     </message>
     <message>
         <location filename="../scripts/Information/Information.ui" line="+17"/>
         <source>Add measurement to drawing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lägg till mätning i ritningen</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Text height:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Textens höjd:</translation>
     </message>
 </context>
 <context>
@@ -6897,47 +6898,47 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/PreferencesPage.ui" line="+19"/>
         <source>Decimal point:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Decimalpunkt:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Cartesian coordinate separator:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Separator för kartesiska koordinater:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Polar coordinate separator:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Separator för polarkoordinater:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Relative coordinate prefix:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Prefix för relativa koordinater:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Examples</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exempel</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Absolute Cartesian coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Absolut kartesisk koordinat:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Absolute polar coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Absolut polarkoordinat:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Relative Cartesian coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Relativ kartesisk koordinat:</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative polar coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Relativ polarkoordinat:</translation>
     </message>
 </context>
 <context>
@@ -6945,18 +6946,18 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/InputPreferences/InputPreferences.js" line="+32"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Allmänt</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Coordinate Format</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Koordinatformat</translation>
     </message>
     <message>
         <location line="+15"/>
         <location line="+27"/>
         <source>Comma</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Komma</translation>
     </message>
     <message>
         <location line="-27"/>
@@ -6964,42 +6965,42 @@ BUG: Interferes with group castings.</source>
         <location line="+5"/>
         <location line="+15"/>
         <source>(Default)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(standard)</translation>
     </message>
     <message>
         <location line="-25"/>
         <source>Semicolon</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Semikolon</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Less Than</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mindre än</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>At</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">På</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Percentage</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Procentuell andel</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dollar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dollar</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hash</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hasch</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Dot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Punkt</translation>
     </message>
 </context>
 <context>
@@ -7101,7 +7102,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+26"/>
         <source>Adjusted invalid block name to &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Justerat ogiltigt blocknamn till &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
@@ -7185,12 +7186,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Select/InvertSelection/InvertSelectionInit.js" line="+2"/>
         <source>&amp;Invert Selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Invertera val</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Invert the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Invertera det aktuella urvalet</translation>
     </message>
 </context>
 <context>
@@ -7198,78 +7199,78 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.js" line="+50"/>
         <source>Isometric</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Isometrisk</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Isometric True Scale</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Isometrisk skala</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Planometric</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Planometrisk</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimetric</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dimetrisk</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Cabinet</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skåp</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cavalier</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cavalier</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProjectInit.js" line="+2"/>
         <source>&amp;Isometric Projection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Isometrisk projektion</translation>
     </message>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsoProject/IsoProject.ui" line="+17"/>
         <source>Top</source>
-        <translation type="unfinished">Överst</translation>
+        <translation type="unfinished">Topp</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Botten</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vänster</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Left back</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vänsterback</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Höger</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Right back</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rätt tillbaka</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Rotate selection counter-clockwise before projection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rotera urvalet moturs före projicering</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rotera urvalet medurs före projicering</translation>
     </message>
 </context>
 <context>
@@ -7277,7 +7278,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridLeft/IsometricGridLeft.js" line="+35"/>
         <source>&amp;Left Projection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vänster projektion</translation>
     </message>
 </context>
 <context>
@@ -7285,7 +7286,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridOff/IsometricGridOff.js" line="+35"/>
         <source>Isometric Grid &amp;Off</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Isometriskt rutnät Off</translation>
     </message>
 </context>
 <context>
@@ -7293,7 +7294,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridRight/IsometricGridRight.js" line="+35"/>
         <source>&amp;Right Projection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Höger projektion</translation>
     </message>
 </context>
 <context>
@@ -7301,7 +7302,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricGridTop/IsometricGridTop.js" line="+143"/>
         <source>&amp;Top Projection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Översta projektion</translation>
     </message>
 </context>
 <context>
@@ -7309,7 +7310,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Projection/IsometricProjection/IsometricProjection.js" line="+49"/>
         <source>&amp;Isometric Projection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Isometrisk projektion</translation>
     </message>
 </context>
 <context>
@@ -7317,7 +7318,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/View/IsometricView/IsometricView.js" line="+44"/>
         <source>&amp;Isometric View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Isometrisk vy</translation>
     </message>
 </context>
 <context>
@@ -7325,12 +7326,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/PreferencesPage.ui" line="+17"/>
         <source>Shortcut timeout:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Timeout för genväg:</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Enable keyboard navigation in list widgets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Aktivera tangentbordsnavigering i listwidgetar</translation>
     </message>
 </context>
 <context>
@@ -7338,12 +7339,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/KeyboardPreferences/KeyboardPreferences.js" line="+24"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Allmänt</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Keyboard</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tangentbord</translation>
     </message>
 </context>
 <context>
@@ -7351,7 +7352,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/PreferencesPage.ui" line="+20"/>
         <source>Language of user interface:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Språk i användargränssnittet:</translation>
     </message>
 </context>
 <context>
@@ -7359,12 +7360,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LanguagePreferences/LanguagePreferences.js" line="+57"/>
         <source>Language Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Språkinställningar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Språk</translation>
     </message>
 </context>
 <context>
@@ -7372,62 +7373,62 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Layer/Layer.js" line="+97"/>
         <source>Layer Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verktyg för lager</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>&amp;Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skikt</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Showing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visar alla lager</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Hiding all layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dölja alla lager</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Thawing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tina alla lager</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Freezing all layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Frysning av alla lager</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Locking all layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Låsning av alla lager</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unlocking all layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lås upp alla lager</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/AddLayer/PreferencesPage.ui" line="+33"/>
         <source>Default lineweight for new layers:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Standardlinjevikt för nya lager:</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>Default color for new layers:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Standardfärg för nya lager:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Default lineweight for layer 0:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Standardlinjevikt för lager 0:</translation>
     </message>
     <message>
         <location line="-48"/>
         <source>Default color for layer 0:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Standardfärg för lager 0:</translation>
     </message>
 </context>
 <context>
@@ -7435,32 +7436,32 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/LayerCompatibility.js" line="+30"/>
         <source>Layer</source>
-        <translation type="unfinished">Lager</translation>
+        <translation type="unfinished">Skikt</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Compatibility</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kompatibilitet</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/LayerCompatibility/PreferencesPage.ui" line="+17"/>
         <source>Layer 0</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skikt 0</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Layer 0 behaves like a regular layer (QCAD)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lager 0 beter sig som ett vanligt lager (QCAD)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Layer 0 behaves differently (best compatibility)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lager 0 beter sig annorlunda (bästa kompatibilitet)</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Entities in blocks on layer 0 take on attributes and visibility of block reference.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enheter i block på lager 0 får blockreferensens attribut och synlighet.</translation>
     </message>
 </context>
 <context>
@@ -7469,52 +7470,52 @@ BUG: Interferes with group castings.</source>
         <location filename="../scripts/Layer/LayerDialog.js" line="+40"/>
         <source>layer</source>
         <comment>default layer name prefix</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">skikt</translation>
     </message>
     <message>
         <location line="+150"/>
         <source>Leading or trailing spaces.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ledande eller avslutande mellanslag.</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Layer name is empty.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Namnet på lagret är tomt.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Layer already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lagret finns redan.</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/LayerDialog.ui" line="+17"/>
         <source>Layer</source>
-        <translation type="unfinished">Lager</translation>
+        <translation type="unfinished">Skikt</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Layer name:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lagrets namn:</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Egenskaper</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Color:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Färg:</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Lineweight:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Linjevikt:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Linetype:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Linjetyp:</translation>
     </message>
 </context>
 <context>
@@ -7522,7 +7523,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/Examples/LayerExamples/LayerExamples.js" line="+50"/>
         <source>&amp;Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skikt</translation>
     </message>
 </context>
 <context>
@@ -7530,23 +7531,23 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Widgets/LayerList/LayerList.js" line="+197"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+109"/>
         <source>Layer List</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lista över lager</translation>
     </message>
     <message>
         <location line="-55"/>
         <source>&amp;Layer List</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lista över lager</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/LayerList/PreferencesPage.ui" line="+19"/>
         <source>Enable alternating row colors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Aktivera alternerande radfärger</translation>
     </message>
 </context>
 <context>
@@ -7554,7 +7555,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+61"/>
         <source>Arrow position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pilens position</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -7572,7 +7573,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Draw/Dimension/Leader/Leader.ui" line="+23"/>
         <source>Undo Last Segment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ångra det senaste segmentet</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -7595,22 +7596,22 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.js" line="+60"/>
         <source>Choose line or arc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj linje eller båge</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/LengthenInit.js" line="+2"/>
         <source>&amp;Lengthen / Shorten</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förläng / förkorta</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Lengthen/Lengthen.ui" line="+17"/>
         <source>Amount:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Belopp:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Belopp som ska förlängas eller förkortas (negativt)</translation>
     </message>
 </context>
 <context>
@@ -7618,95 +7619,95 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowser.js" line="+72"/>
         <source>audience</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">publik</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>creator</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">skapare</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>dimension</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">dimension</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>levelOfDetail</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">levelOfDetail</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>license</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">licens</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>perspective</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">perspektiv</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>presentation</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">presentation</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>publisher</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">förlag</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>subject</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ämne</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>title</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">titel</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+1157"/>
         <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bibliotekswebbläsare</translation>
     </message>
     <message>
         <location line="-1149"/>
         <source>Icon</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ikon</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>List</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lista</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Choose Source Folder</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj källmapp</translation>
     </message>
     <message>
         <location line="+687"/>
         <source>Page %1 of %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sidan %1 av %2</translation>
     </message>
     <message>
         <location line="+237"/>
         <source>Updating icons...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uppdatering av ikoner...</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+219"/>
         <source>Abort</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Avbryt</translation>
     </message>
     <message>
         <location line="-27"/>
@@ -7716,7 +7717,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+1"/>
         <source>Folder:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mapp:</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -7726,22 +7727,22 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+3"/>
         <source>Attribute as:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Attribut som:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Creator:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skapare:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Updating library index:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uppdatering av biblioteksindex:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>DB error</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">DB-fel</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7750,138 +7751,136 @@ Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Source removed from part library: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Källan har tagits bort från delbiblioteket: %1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Force database update.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Forcera uppdatering av databasen.</translation>
     </message>
     <message>
         <location line="+393"/>
         <source>&amp;Insert</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Infoga</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Edit Script File...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Redigera skriptfilen...</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Open &amp;SVG File...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Öppna SVG-fil...</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Open...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Öppna...</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Edit...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Redigera...</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>File Browser</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Filwebbläsare</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Show in %1...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa i %1...</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>&amp;Remove from Favorites</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ta bort från favoriter</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Add to Favorites</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lägg till i favoriter</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>&amp;Regenerate Icon</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Återskapa ikon</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>&amp;Regenerate Icons</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Återskapa ikoner</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowserInit.js" line="-11"/>
         <source>&amp;Library Browser</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bibliotekswebbläsare</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/LibraryBrowser/PreferencesPage.ui" line="+17"/>
         <source>Synchronization</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Synkronisering</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Update search index on startup</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uppdatera sökindex vid start</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Display Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visningsalternativ</translation>
     </message>
     <message>
         <location line="+53"/>
         <source>Dark icon background</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mörk ikonbakgrund</translation>
     </message>
     <message>
         <location line="-44"/>
         <source>Icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ikonstorlek:</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>View mode:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visningsläge:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of items
 shown in search results:</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Library Sources</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bibliotekskällor</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lägg till...</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ta bort</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Up</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Upp</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Down</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ned</translation>
     </message>
 </context>
 <context>
@@ -7889,42 +7888,42 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/LibraryBrowser/LibraryBrowser.ui" line="+28"/>
         <source>File System</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Filsystem</translation>
     </message>
     <message>
         <location line="+60"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sök på</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Look for:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sök efter:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Clear</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Klart</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Find</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hitta</translation>
     </message>
     <message>
         <location line="+129"/>
         <source>Favorites</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Favoriter</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Insert selected item into drawing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Infoga det valda objektet i ritningen</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Update DB from file system</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uppdatera DB från filsystemet</translation>
     </message>
 </context>
 <context>
@@ -7974,7 +7973,7 @@ shown in search results:</source>
     <message>
         <location line="+10"/>
         <source>Next point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nästa punkt</translation>
     </message>
     <message>
         <source>Done</source>
@@ -7983,7 +7982,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.ui" line="+23"/>
         <source>Close Sequence</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stäng sekvensen</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7993,7 +7992,7 @@ shown in search results:</source>
     <message>
         <location line="+20"/>
         <source>Undo Previous Segment</source>
-        <translation type="unfinished">Ångra tidigare segment</translation>
+        <translation type="unfinished">Ångra föregående segment</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -8003,7 +8002,7 @@ shown in search results:</source>
     <message>
         <location line="+13"/>
         <source>Redo Segment</source>
-        <translation type="unfinished">Gör om segment</translation>
+        <translation type="unfinished">Segment för omarbetning</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -8056,12 +8055,12 @@ shown in search results:</source>
     <message>
         <location line="+11"/>
         <source>Start</source>
-        <translation type="unfinished">Start</translation>
+        <translation type="unfinished">Starta</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Middle</source>
-        <translation type="unfinished">Mitten</translation>
+        <translation type="unfinished">Mellanliggande</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -8071,12 +8070,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Line/LineAngle/LineAngleInit.js" line="+2"/>
         <source>Line from &amp;Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Linje från vinkel</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw line at a given absolute angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita en linje i en given absolut vinkel</translation>
     </message>
 </context>
 <context>
@@ -8084,17 +8083,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisector.js" line="+67"/>
         <source>First line</source>
-        <translation type="unfinished">Första linjen</translation>
+        <translation type="unfinished">Första raden</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Second line</source>
-        <translation type="unfinished">Andra linjen</translation>
+        <translation type="unfinished">Andra raden</translation>
     </message>
     <message>
         <location line="+71"/>
         <source>Lines don&apos;t intersect.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Linjer skär inte varandra.</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisector.ui" line="+17"/>
@@ -8136,47 +8135,47 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js" line="+2"/>
         <source>Box &amp;Joint from 2 Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Box Joint från 2 punkter</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw Box Joint Fingers, Slots and Tennons</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dragboxens fingrar, springor och tennon</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.ui" line="+17"/>
         <source>Depth:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Djup:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Finger Width:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fingerbredd:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Finger/Slot Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förhållande mellan fingrar och skåror:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Style:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stil:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Finger first</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fingret först</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Slot first</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Slot först</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Tenons</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tappar</translation>
     </message>
 </context>
 <context>
@@ -8198,32 +8197,32 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint from 2 Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sågad skarv från 2 punkter</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw a dovetail joint</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita en svartsvansförbindelse</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.ui" line="+18"/>
         <source>Number of Dovetails:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Antal skivstjärtar:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Dovetail Height:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Höjd för skivstång:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Dovetail Gradient:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skarvstjärne Gradient:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Dovetail/Pin Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förhållande mellan skruv och stift:</translation>
     </message>
 </context>
 <context>
@@ -8264,12 +8263,12 @@ shown in search results:</source>
     <message>
         <location line="+11"/>
         <source>Start</source>
-        <translation type="unfinished">Start</translation>
+        <translation type="unfinished">Starta</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Middle</source>
-        <translation type="unfinished">Mitten</translation>
+        <translation type="unfinished">Mellanliggande</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -8279,12 +8278,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Line/LineHorizontal/LineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Horisontell linje</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw horizontal line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita en horisontell linje</translation>
     </message>
 </context>
 <context>
@@ -8297,17 +8296,17 @@ shown in search results:</source>
     <message>
         <location line="+20"/>
         <source>&amp;Reference Point:</source>
-        <translation type="unfinished">&amp;Referenspunkt:</translation>
+        <translation type="unfinished">Referenspunkt:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Start</source>
-        <translation type="unfinished">Start</translation>
+        <translation type="unfinished">Starta</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Middle</source>
-        <translation type="unfinished">Mitten</translation>
+        <translation type="unfinished">Mellanliggande</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -8362,22 +8361,22 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Dist&amp;ance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Avstånd:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Number:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nummer:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallelInit.js" line="+2"/>
         <source>Para&amp;llel (with Distance)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Parallell (med avstånd)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita parallellt med befintlig linje eller koncentrisk båge, cirkel</translation>
     </message>
 </context>
 <context>
@@ -8385,12 +8384,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThroughInit.js" line="+2"/>
         <source>Par&amp;allel (through Point)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Parallell (genom punkt)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita en parallell linje eller en koncentrisk båge eller cirkel genom en given punkt</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThrough.ui" line="+17"/>
@@ -8403,17 +8402,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.js" line="+68"/>
         <source>First arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Första bågen eller cirkeln</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second arc or circle</source>
-        <translation type="unfinished">Andra bågen eller cirkel</translation>
+        <translation type="unfinished">Andra bågen eller cirkeln</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxisInit.js" line="+2"/>
         <source>Radical Axis of 2 Circles</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Radikal axel av 2 cirklar</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
@@ -8426,7 +8425,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.ui" line="+17"/>
         <source>Relative Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Relativ vinkel:</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -8466,12 +8465,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Line/LineRelativeAngle/LineRelativeAngle.js" line="+71"/>
         <source>Choose base line, arc, circle, ellipse or polyline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj baslinje, båge, cirkel, ellips eller polylinje</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Set position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ställ in positionen</translation>
     </message>
 </context>
 <context>
@@ -8479,7 +8478,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineSimilarityAxes/LineSimilarityAxesInit.js" line="+2"/>
         <source>Similarity Axes of 3 Circles</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Likhetsaxlar för 3 cirklar</translation>
     </message>
 </context>
 <context>
@@ -8497,23 +8496,23 @@ shown in search results:</source>
     <message>
         <location line="+85"/>
         <source>No tangent possible.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ingen tangent möjlig.</translation>
     </message>
     <message>
         <location line="+25"/>
         <location line="+33"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kan inte rita tangenten från en punkt i en cirkel till en cirkel</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent1/LineTangent1Init.js" line="+2"/>
         <source>&amp;Tangent (Point, Circle)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tangent (punkt, cirkel)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw tangent (point, circle)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita tangenten (punkt, cirkel)</translation>
     </message>
 </context>
 <context>
@@ -8521,27 +8520,27 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2.js" line="+71"/>
         <source>Choose first circle or arc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj den första cirkeln eller bågen</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose second circle or arc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj en andra cirkel eller båge</translation>
     </message>
     <message>
         <location line="+142"/>
         <source>No tangent possible</source>
-        <translation type="unfinished">Tangering är inte möjlig</translation>
+        <translation type="unfinished">Ingen tangent möjlig</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2Init.js" line="+2"/>
         <source>Tan&amp;gent (Two Circles)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tangent (två cirklar)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw tangent (circle, circle)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita tangenten (cirkel, cirkel)</translation>
     </message>
 </context>
 <context>
@@ -8562,7 +8561,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/View/LinetypeMode/LinetypeMode.js" line="+86"/>
         <source>Screen-based Line&amp;types</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skärmbaserade linjetyper</translation>
     </message>
 </context>
 <context>
@@ -8570,28 +8569,28 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/LinetypeSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Standardvärden för nya ritningar</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Linetype</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Linjetyp</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Allmänt</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/LinetypeSettings/PreferencesPage.ui" line="+19"/>
         <source>Global linetype scale:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Global linjetypskala:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Scale of linetypes matches the scale of each viewport</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Linjetypernas skala matchar skalan i varje vyport</translation>
     </message>
 </context>
 <context>
@@ -8599,7 +8598,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Examples/ListenerExamples/ListenerExamples.js" line="+50"/>
         <source>&amp;Listeners</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lyssnare</translation>
     </message>
 </context>
 <context>
@@ -8607,7 +8606,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Layer/LockAllLayers/LockAllLayersInit.js" line="+2"/>
         <source>&amp;Lock All Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lås alla lager</translation>
     </message>
 </context>
 <context>
@@ -8615,7 +8614,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/LockRelativeZero/LockRelativeZeroInit.js" line="+2"/>
         <source>&amp;Lock Relative Zero</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lås relativ nollpunkt</translation>
     </message>
 </context>
 <context>
@@ -8623,7 +8622,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/MathExamples.js" line="+51"/>
         <source>&amp;Mathematics</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Matematik</translation>
     </message>
 </context>
 <context>
@@ -8631,7 +8630,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/File/NewFile/MdiChildEmpty.ui" line="+20"/>
         <source>Untitled</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Utan titel</translation>
     </message>
 </context>
 <context>
@@ -8639,17 +8638,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/MenuBar/MenuBar.js" line="+24"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Menu Bar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Menyrad</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/MenuBar/PreferencesPage.ui" line="+17"/>
         <source>Use native menu bar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Använd den ursprungliga menyraden</translation>
     </message>
 </context>
 <context>
@@ -8657,12 +8656,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MenusAndToolBars.js" line="+32"/>
         <source>MenusAndToolBars() is running...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">MenusAndToolBars() körs...</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Menus and Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Menyer och verktygsfält</translation>
     </message>
 </context>
 <context>
@@ -8670,42 +8669,42 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.js" line="+44"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ändra</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Mirror</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spegel</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>First point of symmetry axis</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Första punkten på symmetriaxeln</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point of symmetry axis</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Andra punkten på symmetriaxeln</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorInit.js" line="+2"/>
         <source>&amp;Mirror</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spegel</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/Mirror.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopiera</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Använd aktuellt lager och aktuella attribut</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Mirror/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Använd dialogrutan för verktygsalternativ</translation>
     </message>
 </context>
 <context>
@@ -8713,27 +8712,27 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Mirror/MirrorDialog.ui" line="+14"/>
         <source>Mirror Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spegelalternativ</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Antal kopior</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Radera originalet</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Behåll originalet</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Använd aktuellt lager och aktuella attribut</translation>
     </message>
 </context>
 <context>
@@ -8741,17 +8740,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Misc.js" line="+60"/>
         <source>Misc Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diverse verktyg</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diverse</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Misc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diverse</translation>
     </message>
 </context>
 <context>
@@ -8759,17 +8758,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscBlock/MiscBlock.js" line="+51"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diverse</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Block Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diverse verktyg för blockering</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Block</source>
-        <translation type="unfinished">&amp;Block</translation>
+        <translation type="unfinished">Block</translation>
     </message>
 </context>
 <context>
@@ -8777,17 +8776,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/MiscDevelopment.js" line="+51"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diverse</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Development Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diverse utvecklingsverktyg</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>De&amp;velopment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Utveckling</translation>
     </message>
 </context>
 <context>
@@ -8795,22 +8794,22 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/MiscDraw.js" line="+52"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diverse</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Drawing Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diverse ritverktyg</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Misc Draw</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diverse dragning</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Draw</source>
-        <translation type="unfinished">&amp;Rita</translation>
+        <translation type="unfinished">Rita</translation>
     </message>
 </context>
 <context>
@@ -8818,17 +8817,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/MiscIO.js" line="+51"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diverse</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Import / Export Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diverse verktyg för import/export</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Import/Export</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Import/export</translation>
     </message>
 </context>
 <context>
@@ -8836,17 +8835,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/MiscModify.js" line="+44"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diverse</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Misc Modification Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diverse verktyg för modifiering</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ändra</translation>
     </message>
 </context>
 <context>
@@ -8854,17 +8853,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/MiscSelect.js" line="+52"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diverse</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Misc Selection Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diverse urvalsverktyg</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Select</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj</translation>
     </message>
 </context>
 <context>
@@ -8872,12 +8871,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Modify.js" line="+99"/>
         <source>Modification Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verktyg för ändringar</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ändra</translation>
     </message>
 </context>
 <context>
@@ -8885,22 +8884,22 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/ModifyCorner.js" line="+86"/>
         <source>Choose corner</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj hörn</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Choose first entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj den första enheten</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Choose second entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj den andra enheten</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Set point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inställningspunkt</translation>
     </message>
 </context>
 <context>
@@ -8908,7 +8907,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Examples/ModifyExamples/ModifyExamples.js" line="+49"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ändra</translation>
     </message>
 </context>
 <context>
@@ -8916,7 +8915,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImport.js" line="+38"/>
         <source>Import MOL</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Import MOL</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8926,12 +8925,12 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>MOL Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">MOL-filer</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImportInit.js" line="+2"/>
         <source>Leetro MOL Import...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Leetro MOL Import...</translation>
     </message>
 </context>
 <context>
@@ -8939,12 +8938,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/MolImport/MolImporter.js" line="+161"/>
         <source>Importing Leetro MOL file...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Import av Leetro MOL-fil...</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Abort</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Avbryt</translation>
     </message>
 </context>
 <context>
@@ -8952,7 +8951,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/MouseDisplay/MouseDisplay.ui" line="+32"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Formulär</translation>
     </message>
 </context>
 <context>
@@ -8960,23 +8959,23 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui" line="+14"/>
         <source>Enter Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ange position</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Position X:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Position X:</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+14"/>
         <source>0.00</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">0.00</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Position Y:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Position Y:</translation>
     </message>
 </context>
 <context>
@@ -8984,7 +8983,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/MenusAndToolBars/MyScripts.js" line="+53"/>
         <source>My Scripts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mina manuskript</translation>
     </message>
 </context>
 <context>
@@ -8992,17 +8991,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/ExWidget/MyWidget.ui" line="+14"/>
         <source>Character Map</source>
-        <translation type="unfinished">Teckenkarta</translation>
+        <translation type="unfinished">Karta över karaktärer</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>MyLineEdit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">MyLineEdit</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>MyButton</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">MyButton</translation>
     </message>
 </context>
 <context>
@@ -9010,47 +9009,47 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/File/NewFile/NewFile.js" line="+144"/>
         <source>Opening drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Öppningsritning:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Import Error</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Importfel</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Cannot open file</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kan inte öppna filen</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No suitable Importer found. Please check file format and extension.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ingen lämplig importör hittades. Kontrollera filformat och filändelse.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>File not found.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Filen har inte hittats.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Please check your access rights, the file format and file extension.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kontrollera dina åtkomsträttigheter, filformatet och filtillägget.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Import failed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Importen misslyckades.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>File is empty.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Filen är tom.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Drawing loaded successfully:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ritningen har laddats framgångsrikt:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -9060,27 +9059,27 @@ shown in search results:</source>
     <message>
         <location line="+138"/>
         <source>Untitled %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Utan titel %1</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>read-only</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">skrivskyddad</translation>
     </message>
     <message>
         <location line="+63"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vill du spara de ändringar du gjort i dokumentet %1?</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Your changes will be lost if you don&apos;t save them.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dina ändringar går förlorade om du inte sparar dem.</translation>
     </message>
     <message>
         <location filename="../scripts/File/NewFile/NewFileInit.js" line="+2"/>
         <source>&amp;New</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ny</translation>
     </message>
 </context>
 <context>
@@ -9088,7 +9087,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Window/NextWindow/NextWindowInit.js" line="+2"/>
         <source>&amp;Next</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nästa</translation>
     </message>
 </context>
 <context>
@@ -9101,6 +9100,7 @@ shown in search results:</source>
     <message numerus="yes">
         <location line="+94"/>
         <source>Radius dropped below 0.0 after %n concentric circle(s).</source>
+        <translation type="unfinished">Radien sjönk under 0,0 efter %n koncentriska cirklar.</translation>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -9109,6 +9109,7 @@ shown in search results:</source>
     <message numerus="yes">
         <location line="+3"/>
         <source>Radius dropped below 0.0 after %n concentric arc(s).</source>
+        <translation type="unfinished">Radien sjönk under 0,0 efter %n koncentriska båge(n).</translation>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -9117,22 +9118,22 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Offset/OffsetInit.js" line="+2"/>
         <source>Offset (with Distance)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förskjutning (med avstånd)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Offset line, arc, circle or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förskjutning av linje, båge, cirkel eller ellips</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Offset/Offset.ui" line="+17"/>
         <source>&amp;Distance:</source>
-        <translation type="unfinished">&amp;Avstånd:</translation>
+        <translation type="unfinished">Avstånd:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Number:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nummer:</translation>
     </message>
 </context>
 <context>
@@ -9140,17 +9141,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.js" line="+70"/>
         <source>Specify point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ange punkt</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThroughInit.js" line="+2"/>
         <source>Offset (through Point)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förskjutning (genom punkt)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Offset line, arc, circle or ellipse through point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förskjuta linje, båge, cirkel eller ellips genom en punkt</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.ui" line="+17"/>
@@ -9163,12 +9164,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/File/OpenFile/OpenFile.js" line="+47"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inga importfilter har hittats. Avbryter...</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Open Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Öppen ritning</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -9178,12 +9179,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/File/OpenFile/OpenFileInit.js" line="+2"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Öppna</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Open an existing drawing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Öppna en befintlig ritning</translation>
     </message>
 </context>
 <context>
@@ -9191,7 +9192,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/View/OptionsToolBarFocus/OptionsToolBarFocusInit.js" line="+2"/>
         <source>&amp;Focus on Options Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fokusera på verktygsfältet Alternativ</translation>
     </message>
 </context>
 <context>
@@ -9226,102 +9227,102 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js" line="+29"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Standardvärden för nya ritningar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Printing - Page</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Utskrift - Sida</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Printing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Utskrift</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Page</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sidan</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Anpassad</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PageSettings/PreferencesPage.ui" line="+19"/>
         <source>Page Orientation</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Orientering av sidan</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Portrait</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Porträtt</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Landscape</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Landskap</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Paper</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Papper</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Paper size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pappersstorlek:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Paper width:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pappersbredd:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Paper height:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pappershöjd:</translation>
     </message>
     <message>
         <location line="+74"/>
         <source>Viewport</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visaport</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skala:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Offset X:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Offset X:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Offset Y:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förskjutning Y:</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Zero-Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nollpunkt</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Miscellaneous</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diverse</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Point size (mm):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Punktstorlek (mm):</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Show paper borders</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa pappersgränser</translation>
     </message>
 </context>
 <context>
@@ -9329,7 +9330,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/View/Zoom/PanZoom/PanZoomInit.js" line="+2"/>
         <source>&amp;Pan Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Panorera zoom</translation>
     </message>
 </context>
 <context>
@@ -9337,12 +9338,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.js" line="+52"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Redigera</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Paste</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Klistra in</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -9352,7 +9353,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/Paste/PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Klistra in</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.ui" line="+17"/>
@@ -9375,27 +9376,27 @@ shown in search results:</source>
     <message>
         <location line="+88"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="unfinished">Vänd klistrade objekt&lt;br&gt;horisontellt</translation>
+        <translation type="unfinished">Vänd inklistrade enheter horisontellt</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="unfinished">Vänd klistrade objekt&lt;br&gt;vertikalt</translation>
+        <translation type="unfinished">Vänd inklistrade enheter&lt;br&gt;vertikalt</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Klistra in alla enheter&lt;br&gt;till det aktuella lagret&lt;br&gt;i stället för det ursprungliga lagret</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>To current layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Till aktuellt lager</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="unfinished">Skriv över existerande lager&lt;br&gt;i ritning med&lt;br&gt;lager från urklipp</translation>
+        <translation type="unfinished">Skriva över befintliga lager i ritningen med lager från urklipp</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -9405,17 +9406,17 @@ shown in search results:</source>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="unfinished">Skriv över existerande block&lt;br&gt;i ritning med&lt;br&gt;block från urklipp</translation>
+        <translation type="unfinished">Skriv över befintliga block i ritningen med block från urklipp</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation type="unfinished">Skriv över block</translation>
+        <translation type="unfinished">Överskrivning av block</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PreferencesPage.ui" line="+17"/>
         <source>Reset to defaults every time tool is used</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Återställs till standardvärden varje gång verktyget används</translation>
     </message>
 </context>
 <context>
@@ -9423,12 +9424,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/File/PdfExport/PdfExportInit.js" line="+2"/>
         <source>P&amp;DF Export</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">PDF-export</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Exports the current drawing as PDF</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exporterar den aktuella ritningen som PDF</translation>
     </message>
 </context>
 <context>
@@ -9436,12 +9437,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/PenToolBar/PenToolBar.js" line="+26"/>
         <source>Pen</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Penna</translation>
     </message>
     <message>
         <location line="+64"/>
         <source>Reset to Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Återställ till standardvärden</translation>
     </message>
 </context>
 <context>
@@ -9449,7 +9450,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.js" line="+74"/>
         <source>&amp;Persistent Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Beständiga widgetar</translation>
     </message>
 </context>
 <context>
@@ -9457,12 +9458,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Point/Point.js" line="+71"/>
         <source>Point Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Punktverktyg</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>&amp;Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Punkt</translation>
     </message>
 </context>
 <context>
@@ -9475,12 +9476,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Point/Point1P/Point1PInit.js" line="+2"/>
         <source>Single &amp;Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enda punkt</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw single point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita en enda punkt</translation>
     </message>
 </context>
 <context>
@@ -9488,28 +9489,28 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PointDisplaySettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Standardvärden för nya ritningar</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Point Display</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visning av poäng</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Allmänt</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode: </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Läge:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Size (pixel):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Storlek (pixel):</translation>
     </message>
 </context>
 <context>
@@ -9517,17 +9518,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPole.js" line="+67"/>
         <source>Arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Båge eller cirkel</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Linje</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPole/PointPoleInit.js" line="+2"/>
         <source>Pole of Line and Circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Linjens och cirkelns poler</translation>
     </message>
 </context>
 <context>
@@ -9540,7 +9541,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
         <source>Power Center of Three Circles</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kraftcentrum i tre cirklar</translation>
     </message>
 </context>
 <context>
@@ -9548,7 +9549,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Polyline/Polyline.js" line="+73"/>
         <source>Polyline Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verktyg för polylinjer</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -9561,114 +9562,114 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj linje, båge, cirkel, ellips, spline eller polylinje för att bryta upp</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj linje, båge, cirkel eller ellips för att bryta upp</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Pick the first point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj den första punkten</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pick the first break point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj den första brytpunkten</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Pick the second point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj den andra punkten</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pick the second break point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj den andra brytpunkten</translation>
     </message>
     <message>
         <location line="+170"/>
         <source>Break Out Segment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Segment för utbrytning</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
         <source>Remove line break segment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ta bort segmentet för radbrytning</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Remove the line segment between the break symbol</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ta bort linjesegmentet mellan brytningssymbolen</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Remove Segment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ta bort segmentet</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Inherit entity properties</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Arvade egenskaper för enheter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inherit all properties from the chosen entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Övertar alla egenskaper från den valda enheten</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inherit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ärva</translation>
     </message>
     <message>
         <location line="+17"/>
         <location line="+13"/>
         <source>Peak ratio</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Toppförhållande</translation>
     </message>
     <message>
         <location line="-10"/>
         <location line="+13"/>
         <source>The ratio of the peak height to the break width</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förhållandet mellan topphöjden och brytningsbredden</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Peak Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Toppförhållande:</translation>
     </message>
     <message>
         <location line="+78"/>
         <source>First/Last segment inclined</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Första/sista segmentet lutar</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>The first and last segment of the break symbol are inclined</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Det första och sista segmentet av brytningssymbolen är lutande</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>First/Last segment vertical</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Första/sista segmentet vertikalt</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>The first and last segment of the break symbol are vertical</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Det första och sista segmentet av brytningssymbolen är vertikala</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
         <source>&amp;Polyline break symbol from 2 points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Symbol för polylinjeavbrott från 2 punkter</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw a polyline break symbol from 2 points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita en polylinje som bryts symboliskt från 2 punkter</translation>
     </message>
 </context>
 <context>
@@ -9678,27 +9679,27 @@ shown in search results:</source>
         <location line="+71"/>
         <location line="+21"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inställningar</translation>
     </message>
     <message>
         <location line="-74"/>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Filter</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Expand Tree</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Expandera träd</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kollapsande träd</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Restore to Default Values</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Återställa till standardvärden</translation>
     </message>
 </context>
 <context>
@@ -9706,7 +9707,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/View/Zoom/PreviousView/PreviousViewInit.js" line="+2"/>
         <source>&amp;Previous View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Föregående vy</translation>
     </message>
 </context>
 <context>
@@ -9714,7 +9715,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Window/PreviousWindow/PreviousWindowInit.js" line="+2"/>
         <source>&amp;Previous</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Föregående</translation>
     </message>
 </context>
 <context>
@@ -9722,12 +9723,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/File/Print/PrintInit.js" line="+2"/>
         <source>&amp;Print</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skriv ut</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Print current drawing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Utskrift av aktuell ritning</translation>
     </message>
 </context>
 <context>
@@ -9735,12 +9736,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/File/PrintCurrentView/PrintCurrentViewInit.js" line="+2"/>
         <source>Print &amp;Current View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skriva ut aktuell vy</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Print current view</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skriva ut aktuell vy</translation>
     </message>
 </context>
 <context>
@@ -9748,57 +9749,57 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+247"/>
         <source>Drag to move paper</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dra för att flytta papper</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Done</source>
-        <translation type="unfinished">Klar</translation>
+        <translation type="unfinished">Klart</translation>
     </message>
     <message>
         <location line="+435"/>
         <source>Export to PDF</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exportera till PDF</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Exporting to %1...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exporterar till %1...</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Export complete: %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Export avslutad: %1</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Export failed (cannot open file for writing): %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exporten misslyckades (kan inte öppna filen för skrivning): %1</translation>
     </message>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreviewInit.js" line="+2"/>
         <source>Print Pre&amp;view</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förhandsgranska utskrift</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Preview how current drawing would be printed</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förhandsgranska hur den aktuella ritningen skulle skrivas ut</translation>
     </message>
     <message>
         <location filename="../scripts/File/PrintPreview/PrintPreview.ui" line="+17"/>
         <source>Close Print Preview</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stäng utskriftsförhandsgranskning</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Print...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skriv ut...</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Export as PDF...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exportera som PDF...</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -9813,62 +9814,62 @@ shown in search results:</source>
     <message>
         <location line="+18"/>
         <source>Move Paper Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Flytta pappersposition</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Auto fit drawing to page(s)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Automatisk anpassning av ritningen till sidan/sidorna</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Auto Center</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Auto Center</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Portrait</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Porträtt</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Landscape</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Landskap</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Auto zoom to page</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Automatisk zoom till sidan</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Full Color Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fullfärgsläge</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Grayscale Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Grayscale-läge</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Black / White Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Svart/vit-läge</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Show Paper Borders</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa pappersgränser</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Print Crop Marks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Utskrift Crop Marks</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Show More Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa fler alternativ</translation>
     </message>
 </context>
 <context>
@@ -9876,22 +9877,22 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Projection/Projection.js" line="+84"/>
         <source>Projection Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verktyg för projektion</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Projection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Projektion</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Referenspunkt</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Målpunkt</translation>
     </message>
 </context>
 <context>
@@ -9899,154 +9900,154 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+198"/>
         <source>:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">:</translation>
     </message>
     <message>
         <location line="+151"/>
         <source>No Selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inget urval</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Specific Properties</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Specifika egenskaper</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Dependent Entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Beroende enheter</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Anpassad</translation>
     </message>
     <message>
         <location line="+197"/>
         <source>Index</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Index</translation>
     </message>
     <message>
         <location line="+79"/>
         <source>Remove this property from selected objects</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ta bort den här egenskapen från valda objekt</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>All</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alla</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Add custom property to selected objects</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lägg till anpassad egenskap till valda objekt</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Show</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Show all properties</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa alla fastigheter</translation>
     </message>
     <message>
         <location line="+134"/>
         <source>Auto</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Auto</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use auto measurement</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Använd automatisk mätning</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+44"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ja</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ingen</translation>
     </message>
     <message>
         <location line="+379"/>
         <source>*VARIES*</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">*VARIES*</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Egenskapsredigerare</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PreferencesPage.ui" line="+17"/>
         <source>Display Z coordinates</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa Z-koordinater</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Display properties of current block and current layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa egenskaper för aktuellt block och aktuellt lager</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Allow adding custom properties</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tillåt att lägga till anpassade egenskaper</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Always show all properties (this may slow down selection of entities)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa alltid alla egenskaper (detta kan göra urvalet av enheter långsammare)</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Always format property values as decimal numbers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Formatera alltid egenskapsvärden som decimaltal</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Display advanced dimension style overrides</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa avancerade dimensionsstilar som åsidosätts</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.ui" line="+40"/>
         <source>Selection:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Urval:</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>General Properties</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Allmänna egenskaper</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Color:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Färg:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Handle:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Handtag:</translation>
     </message>
     <message>
         <location line="+94"/>
         <source>Linetype Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Linjetyp Skala:</translation>
     </message>
     <message>
         <location line="+52"/>
         <source>Protected:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skyddad:</translation>
     </message>
 </context>
 <context>
@@ -10054,7 +10055,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Examples/QtExamples/QtExamples.js" line="+50"/>
         <source>&amp;Qt</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Qt</translation>
     </message>
 </context>
 <context>
@@ -10062,7 +10063,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/File/Quit/QuitInit.js" line="+8"/>
         <source>&amp;Quit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sluta med</translation>
     </message>
 </context>
 <context>
@@ -10070,12 +10071,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadmeDialog.ui" line="+14"/>
         <source>Readme</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Läs mer</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Don&apos;t show this dialog at startup</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa inte den här dialogrutan vid start</translation>
     </message>
 </context>
 <context>
@@ -10088,22 +10089,22 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Recent Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Senaste filerna</translation>
     </message>
     <message>
         <location filename="../scripts/File/RecentFiles/RecentFilesInit.js" line="+59"/>
         <source>&amp;Clear List</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rensa listan</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Open &amp;Recent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Öppna Nyligen</translation>
     </message>
     <message>
         <location filename="../scripts/File/RecentFiles/PreferencesPage.ui" line="+17"/>
         <source>Recent files history size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Storleken på de senaste filernas historik:</translation>
     </message>
 </context>
 <context>
@@ -10111,7 +10112,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/Redo/RedoInit.js" line="+2"/>
         <source>&amp;Redo</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gör om</translation>
     </message>
 </context>
 <context>
@@ -10119,7 +10120,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/ReloadLinetypes/ReloadLinetypes.js" line="+48"/>
         <source>Reload Linetype Definitions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ladda om definitioner av linjetyper</translation>
     </message>
 </context>
 <context>
@@ -10140,7 +10141,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Layer/RemoveLayer/RemoveLayerInit.js" line="+2"/>
         <source>&amp;Delete Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ta bort lager</translation>
     </message>
 </context>
 <context>
@@ -10156,7 +10157,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Help/ReportBug/ReportBugInit.js" line="+2"/>
         <source>Report &amp;Bug</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rapportera fel</translation>
     </message>
 </context>
 <context>
@@ -10164,7 +10165,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Help/ReportTranslationError/ReportTranslationErrorInit.js" line="+3"/>
         <source>Report &amp;Translation Error</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rapportera översättningsfel</translation>
     </message>
 </context>
 <context>
@@ -10172,12 +10173,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Reset/ResetInit.js" line="+5"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Återställ</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Reset / Idle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Återställning/vila</translation>
     </message>
 </context>
 <context>
@@ -10185,7 +10186,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLengthInit.js" line="+2"/>
         <source>Restrict &amp;Angle or Length</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Begränsa vinkel eller längd</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLength.ui" line="+17"/>
@@ -10196,7 +10197,7 @@ shown in search results:</source>
         <location line="+20"/>
         <location line="+47"/>
         <source>Base:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bas:</translation>
     </message>
     <message>
         <location line="-20"/>
@@ -10209,7 +10210,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/RestrictHorizontal/RestrictHorizontalInit.js" line="+2"/>
         <source>Restrict &amp;Horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Begränsa horisontellt</translation>
     </message>
 </context>
 <context>
@@ -10217,7 +10218,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/RestrictOff/RestrictOffInit.js" line="+2"/>
         <source>Restrictions &amp;Off</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Begränsningar Av</translation>
     </message>
 </context>
 <context>
@@ -10225,7 +10226,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/RestrictOrthogonal/RestrictOrthogonalInit.js" line="+2"/>
         <source>Restrict &amp;Orthogonally</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Begränsa ortogonalt</translation>
     </message>
 </context>
 <context>
@@ -10233,7 +10234,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/RestrictVertical/RestrictVerticalInit.js" line="+2"/>
         <source>Restrict &amp;Vertically</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Begränsa vertikalt</translation>
     </message>
 </context>
 <context>
@@ -10241,7 +10242,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Reverse/ReverseInit.js" line="+2"/>
         <source>&amp;Reverse</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Omvänt</translation>
     </message>
 </context>
 <context>
@@ -10249,52 +10250,52 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.js" line="+47"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ändra</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rotera</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Center point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Centrumpunkt</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Referenspunkt</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Target point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Målpunkt</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rotera</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Använd dialogrutan för verktygsalternativ</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate/Rotate.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopiera</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Antal kopior:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Använd aktuellt lager och aktuella attribut</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -10304,7 +10305,7 @@ shown in search results:</source>
     <message>
         <location line="+23"/>
         <source>Define angle using mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Definiera vinkel med hjälp av muspekaren</translation>
     </message>
 </context>
 <context>
@@ -10312,32 +10313,32 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2.js" line="+67"/>
         <source>Center of primary rotation</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Centrum för den primära rotationen</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Center of secondary rotation</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Centrum för sekundär rotation</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Init.js" line="+2"/>
         <source>Rotate T&amp;wo</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rotera två</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Primär vinkel:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Secondary Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sekundär vinkel:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Copies:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopior:</translation>
     </message>
 </context>
 <context>
@@ -10345,42 +10346,42 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Rotate2/Rotate2Dialog.ui" line="+14"/>
         <source>Rotate Two Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rotera två alternativ</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Antal kopior</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Radera originalet</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Behåll originalet</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Flera kopior</translation>
     </message>
     <message>
         <location line="+97"/>
         <source>Angle &amp;a:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vinkel a:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Angle &amp;b:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vinkel b:</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Använd aktuellt lager och aktuella attribut</translation>
     </message>
 </context>
 <context>
@@ -10388,42 +10389,42 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Rotate/RotateDialog.ui" line="+14"/>
         <source>Rotate Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rotera alternativ</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Antal kopior</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Radera originalet</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Behåll originalet</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Flera kopior</translation>
     </message>
     <message>
         <location line="+97"/>
         <source>&amp;Angle (a):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vinkel (a):</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Define angle using mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Definiera vinkel med hjälp av muspekaren</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Använd aktuellt lager och aktuella attribut</translation>
     </message>
 </context>
 <context>
@@ -10431,32 +10432,32 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Round/Round.js" line="+58"/>
         <source>The two entities cannot be rounded.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">De två enheterna kan inte avrundas.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished">Första objektet kan inte trimmas.</translation>
+        <translation type="unfinished">Den första enheten kan inte beskäras.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished">Andra objektet kan inte trimmas.</translation>
+        <translation type="unfinished">Den andra enheten kan inte beskäras.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Runt</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Round/Round.ui" line="+17"/>
         <source>Trim</source>
-        <translation type="unfinished">Trimma</translation>
+        <translation type="unfinished">Trim</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Radie:</translation>
     </message>
     <message>
         <source>Radius:</source>
@@ -10468,7 +10469,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScript.js" line="+60"/>
         <source>Open Script File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Öppna skriptfil</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10478,37 +10479,37 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>ECMAScript Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ECMAScript-filer</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Run Script</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kör skriptet</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptInit.js" line="+2"/>
         <source>R&amp;un Script</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kör skriptet</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Open and run a script file</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Öppna och köra en skriptfil</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDevelopment/RunScript/RunScriptDialog.ui" line="+20"/>
         <source>Running Script</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Körning av manuskriptet</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You are about to run the following script(s):&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;This script could potentially modify your drawings, modify or delete your files or access your network connection.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;It is strongly recommended to only run scripts from trusted sources.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Du är på väg att köra följande skript:&lt;/p&gt;&lt;p&gt;%1&lt;/p&gt;&lt;p&gt;Det här skriptet kan potentiellt ändra dina ritningar, ändra eller ta bort dina filer eller komma åt din nätverksanslutning.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;Det rekommenderas starkt att endast köra skript från betrodda källor.&lt;/span&gt;&lt;/p&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Don&apos;t show this dialog again</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa inte den här dialogrutan igen</translation>
     </message>
 </context>
 <context>
@@ -10516,72 +10517,72 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/File/Save/Save.js" line="+92"/>
         <source>Overwrite File?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skriva över en fil?</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The file &quot;%1&quot; already exists. Do you wish to overwrite it?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Filen &quot;%1&quot; finns redan. Vill du skriva över den?</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>File Format Version Not Recommended</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Version av filformat som inte rekommenderas</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The file format version you are using is not recommended: &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Den version av filformatet som du använder rekommenderas inte: &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Custom properties will not be saved.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Anpassade egenskaper sparas inte.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>All black entities and layers will be saved as white.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alla svarta enheter och lager sparas som vita.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>All custom colors will be adjusted to the nearest fixed color.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alla anpassade färger justeras till närmaste fasta färg.</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Proceed?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fortsätt?</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Saving...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spara...</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Saving to file format version &quot;%1&quot;.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spara till filformatversion &quot;%1&quot;.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Black entities and layers are saved as white.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Svarta enheter och lager sparas som vita.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Custom colors are adjusted to the nearest fixed color.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Anpassade färger justeras till närmaste fasta färg.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>File %1 has not been saved.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fil %1 har inte sparats.</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Saved file:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sparad fil:</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -10591,7 +10592,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/File/Save/SaveInit.js" line="+2"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spara</translation>
     </message>
 </context>
 <context>
@@ -10604,12 +10605,12 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Open/Save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Öppna/Spara</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>No export filters have been found. Aborting...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inga exportfilter har hittats. Avbryter...</translation>
     </message>
     <message>
         <location line="+84"/>
@@ -10619,57 +10620,57 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAsInit.js" line="+2"/>
         <source>Save &amp;As...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spara som...</translation>
     </message>
     <message>
         <location filename="../scripts/File/SaveAs/PreferencesPage.ui" line="+17"/>
         <source>File Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dialog för filer</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use system file dialog</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Använd dialogrutan för systemfilen</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Opening</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Öppning</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Allow opening of zero size files (e.g. online files that are not synched to disk)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tillåt öppning av filer med nollstorlek (t.ex. online-filer som inte synkroniseras till disk)</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Decode strings in DXF/DWG as UTF-8 (experimental)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Avkodning av strängar i DXF/DWG som UTF-8 (experimentellt)</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Saving</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spara</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Default format:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Standardformat:</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa en varning när du sparar till ett filformat som inte stöder 24bit-färger</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Store &quot;last saved by&quot; file information as:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lagra filinformation om &quot;senast sparad av&quot; som:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>(empty for username)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(tomt för användarnamn)</translation>
     </message>
 </context>
 <context>
@@ -10682,73 +10683,73 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ändra</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Focus point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fokuspunkt</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Referenspunkt</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Target point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Målpunkt</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skala</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Använd dialogrutan för verktygsalternativ</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Scale/Scale.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopiera</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Antal kopior:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Använd aktuellt lager och aktuella attribut</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Factor x:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Faktor x:</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+14"/>
         <source>1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">1</translation>
     </message>
     <message>
         <location line="-7"/>
         <source>Factor y:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Faktor y:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Proportional</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Proportionell</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Define factor using mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Definiera faktor med hjälp av muspekaren</translation>
     </message>
 </context>
 <context>
@@ -10756,52 +10757,52 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Scale/ScaleDialog.ui" line="+14"/>
         <source>Scale Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skalalternativ</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Antal kopior</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Radera originalet</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Behåll originalet</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Flera kopior</translation>
     </message>
     <message>
         <location line="+115"/>
         <source>Factor x:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Faktor x:</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>Factor y:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Faktor y:</translation>
     </message>
     <message>
         <location line="-26"/>
         <source>Proportional</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Proportionell</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Define factor using mouse cursor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Definiera faktor med hjälp av muspekaren</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Använd aktuellt lager och aktuella attribut</translation>
     </message>
 </context>
 <context>
@@ -10809,7 +10810,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/PreferencesPage.ui" line="+17"/>
         <source>Rescan scripts folder on startup</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sök igenom mappen med skript vid start</translation>
     </message>
 </context>
 <context>
@@ -10817,7 +10818,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ScriptingPreferences/ScriptingPreferences.js" line="+24"/>
         <source>Scripting</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skriptning</translation>
     </message>
 </context>
 <context>
@@ -10825,17 +10826,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/Select.js" line="+216"/>
         <source>Selection Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verktyg för urval</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Selection Tools Panel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Panel för valverktyg</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Select</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj</translation>
     </message>
 </context>
 <context>
@@ -10843,12 +10844,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectAll/SelectAllInit.js" line="+2"/>
         <source>Select &amp;All</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj alla</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Select all visible entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Markera alla synliga enheter</translation>
     </message>
 </context>
 <context>
@@ -10864,17 +10865,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColor.js" line="+64"/>
         <source>Select one or more objects only of the desired color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj ett eller flera objekt med önskad färg</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Selected all visible entities of color %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Valde alla synliga enheter med färgen %1</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByColor/SelectByColorInit.js" line="+2"/>
         <source>By Color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Med färg</translation>
     </message>
 </context>
 <context>
@@ -10882,7 +10883,7 @@ shown in search results:</source>
     <message>
         <location line="+3"/>
         <source>Select all objects of a color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Markera alla objekt av en färg</translation>
     </message>
 </context>
 <context>
@@ -10890,17 +10891,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandle.js" line="+58"/>
         <source>Object selected:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Objektet är valt:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Object is not a drawing entity:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Objektet är inte en ritningsenhet:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleInit.js" line="+2"/>
         <source>By Handle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Med handtag</translation>
     </message>
 </context>
 <context>
@@ -10908,12 +10909,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui" line="+17"/>
         <source>Selection by Handle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Urval efter handtag</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Handle (hex):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Handtag (hex):</translation>
     </message>
 </context>
 <context>
@@ -10921,52 +10922,52 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.js" line="+54"/>
         <source>Choose entity of contour</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj enhet för kontur</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContourInit.js" line="+2"/>
         <source>(De-)Select &amp;Contour</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(Av-)välja kontur</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select connected entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(Av-)välja anslutna enheter</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectContour/SelectContour.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Läge:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ersätta det aktuella urvalet</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lägg till det aktuella urvalet</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Subtrahera från det aktuella urvalet</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skär det aktuella urvalet</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Tolerance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tolerans:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Same Layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Samma skikt</translation>
     </message>
 </context>
 <context>
@@ -10984,37 +10985,37 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
         <source>(De-)Select In&amp;tersected Entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(Av-)välja genomsökta enheter</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities intersected by a line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(Av-)välja alla enheter som skärs av en linje</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Läge:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ersätta det aktuella urvalet</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lägg till det aktuella urvalet</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Subtrahera från det aktuella urvalet</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skär det aktuella urvalet</translation>
     </message>
 </context>
 <context>
@@ -11022,17 +11023,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayer.js" line="+68"/>
         <source>%1 entities added to selection.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%1 enheter har lagts till i urvalet.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 entities removed from selection.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%1 enheter har tagits bort från urvalet.</translation>
     </message>
     <message>
         <location filename="../scripts/Layer/SelectLayer/SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer Entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj skiktenheter</translation>
     </message>
 </context>
 <context>
@@ -11040,42 +11041,42 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.js" line="+68"/>
         <source>Choose entity on layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj enhet på lagret</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(Av-)välja lager</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities on the same layer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(Av-)välja alla enheter på samma lager</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectLayerByEntity/SelectLayerByEntity.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Läge:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ersätta det aktuella urvalet</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lägg till det aktuella urvalet</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Subtrahera från det aktuella urvalet</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skär det aktuella urvalet</translation>
     </message>
 </context>
 <context>
@@ -11083,7 +11084,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.js" line="+74"/>
         <source>First corner</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Första hörnet</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -11097,42 +11098,42 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangleInit.js" line="+2"/>
         <source>(De-)Select &amp;Rectangular Area</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(De-)Välj rektangulärt område</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities inside a rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(Av-)välja alla enheter inom en rektangel</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectRectangle/SelectRectangle.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Läge:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ersätta det aktuella urvalet</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lägg till det aktuella urvalet</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Subtrahera från det aktuella urvalet</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skär det aktuella urvalet</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Cross Selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Korsval</translation>
     </message>
 </context>
 <context>
@@ -11155,21 +11156,22 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.js" line="+58"/>
         <source>No entities selected.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inga enheter har valts ut.</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>%1 %2 on Layer &quot;%3&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%1 %2 på lager &quot;%3&quot;</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>%1 %2 on %3 Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%1 %2 på %3 lager</translation>
     </message>
     <message numerus="yes">
         <location line="+4"/>
         <source>%n Entities on Layer &quot;%1&quot;</source>
+        <translation type="unfinished">%n Enheter på lager &quot;%1&quot;</translation>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -11178,6 +11180,7 @@ shown in search results:</source>
     <message numerus="yes">
         <location line="+3"/>
         <source>%n Entities</source>
+        <translation type="unfinished">%n Enheter</translation>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -11186,11 +11189,12 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>on</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">på</translation>
     </message>
     <message numerus="yes">
         <location line="+0"/>
         <source>%n Layers</source>
+        <translation type="unfinished">%n lager</translation>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -11200,12 +11204,11 @@ shown in search results:</source>
         <location line="+4"/>
         <source>Selected entities:
 %1.</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/SelectionDisplay/SelectionDisplay.ui" line="+26"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Formulär</translation>
     </message>
 </context>
 <context>
@@ -11218,7 +11221,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SetRelativeZero/SetRelativeZeroInit.js" line="+2"/>
         <source>Set &amp;Relative Zero</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ställ in relativ nollpunkt</translation>
     </message>
 </context>
 <context>
@@ -11245,7 +11248,7 @@ shown in search results:</source>
     <message>
         <location line="+10"/>
         <source>Fill</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fyll</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -11259,27 +11262,27 @@ shown in search results:</source>
         <location filename="../scripts/ShapeAlgorithms.js" line="+1430"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Minst två punkter är identiska.</translation>
     </message>
     <message>
         <location line="-22"/>
         <source>No circle possible.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ingen cirkel är möjlig.</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>No arc possible.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ingen båge möjlig.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Invalid number of segments: %1.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Otillräckligt antal segment: %1.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Invalid ellipse major / minor: %1 / %2.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ogiltig ellips major/moll: %1/ %2.</translation>
     </message>
 </context>
 <context>
@@ -11329,12 +11332,12 @@ shown in search results:</source>
     <message>
         <location line="+8"/>
         <source>Second side</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Andra sidan</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Second Corner</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Andra hörnet</translation>
     </message>
     <message>
         <source>Done</source>
@@ -11343,12 +11346,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Side, Side)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Polygon (sida, sida)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from middle points of two opposite sides or two opposite corners</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita en regelbunden polygon från mittpunkterna på två motsatta sidor eller två motsatta hörn</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFPP/ShapePolygonAFPP.ui" line="+17"/>
@@ -11358,7 +11361,7 @@ shown in search results:</source>
     <message>
         <location line="+21"/>
         <source>Corner to Corner</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Från hörn till hörn</translation>
     </message>
 </context>
 <context>
@@ -11366,7 +11369,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+59"/>
         <source>Center</source>
-        <translation type="unfinished">Mittpunkt</translation>
+        <translation type="unfinished">Centrum</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -11417,12 +11420,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonPP/ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (2 Points of Side)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Polygon (2 sidopunkter)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from end points of one side</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita en regelbunden polygon från ändpunkterna på en sida</translation>
     </message>
 </context>
 <context>
@@ -11430,17 +11433,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePPInit.js" line="+2"/>
         <source>&amp;Rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rektangel</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw rectangle from two corners</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita en rektangel från två hörn</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
         <source>Rotate:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rotera:</translation>
     </message>
 </context>
 <context>
@@ -11459,13 +11462,13 @@ shown in search results:</source>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSize.ui" line="+17"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+19"/>
         <source>&amp;Width:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bredd:</translation>
     </message>
     <message>
         <location line="+23"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+30"/>
         <source>&amp;Height:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Höjd:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -11481,7 +11484,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+101"/>
         <source>Create Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skapa polylinje</translation>
     </message>
 </context>
 <context>
@@ -11489,7 +11492,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Layer/ShowActiveLayer/ShowActiveLayerInit.js" line="+2"/>
         <source>Show &amp;Only Active</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa endast aktiva</translation>
     </message>
 </context>
 <context>
@@ -11505,7 +11508,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Layer/ShowAllLayers/ShowAllLayersInit.js" line="+2"/>
         <source>&amp;Show All Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa alla lager</translation>
     </message>
 </context>
 <context>
@@ -11513,12 +11516,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadme.js" line="+46"/>
         <source>File &quot;%1&quot; doesn&apos;t exist.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Filen &quot;%1&quot; finns inte.</translation>
     </message>
     <message>
         <location filename="../scripts/Help/ShowReadme/ShowReadmeInit.js" line="+2"/>
         <source>Show &amp;Readme</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa Readme</translation>
     </message>
 </context>
 <context>
@@ -11526,7 +11529,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/00_Single.ui" line="+14"/>
         <source>Single</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enkel</translation>
     </message>
 </context>
 <context>
@@ -11534,12 +11537,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/Snap.js" line="+57"/>
         <source>Snap Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Snap-verktyg</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>&amp;Snap</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Snap</translation>
     </message>
 </context>
 <context>
@@ -11547,17 +11550,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAuto.js" line="+34"/>
         <source>Snap</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Snap</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Auto Snap</source>
-        <translation type="unfinished">Automatisk snapning</translation>
+        <translation type="unfinished">Auto Snap</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapAuto/SnapAutoInit.js" line="+2"/>
         <source>&amp;Auto</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Auto</translation>
     </message>
 </context>
 <context>
@@ -11565,7 +11568,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapCenter/SnapCenterInit.js" line="+2"/>
         <source>&amp;Center</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Centrum</translation>
     </message>
 </context>
 <context>
@@ -11573,47 +11576,47 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.js" line="+88"/>
         <source>Set coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ange koordinat</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Enter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gå in på</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinateInit.js" line="+2"/>
         <source>&amp;Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Koordinera</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+17"/>
         <source>&amp;x:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">x:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>X Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">X-koordinat</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;y:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">y:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Y Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Y-koordinat</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Tick for Relative Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kryss för relativ koordinat</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Relati&amp;ve</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Relativ</translation>
     </message>
 </context>
 <context>
@@ -11621,37 +11624,37 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolarInit.js" line="+2"/>
         <source>&amp;Polar Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Polarkoordinat</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinatePolar/SnapCoordinatePolar.ui" line="+17"/>
         <source>&amp;r:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">r:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Radius (Distance)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Radius (avstånd)</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;&lt;:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vinkel</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Tick for Relative Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kryss för relativ koordinat</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Relati&amp;ve</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Relativ</translation>
     </message>
 </context>
 <context>
@@ -11659,12 +11662,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistanceInit.js" line="+2"/>
         <source>&amp;Distance</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Avstånd</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistance/SnapDistance.ui" line="+17"/>
         <source>Snap distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Snapsavstånd:</translation>
     </message>
 </context>
 <context>
@@ -11672,7 +11675,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.js" line="+36"/>
         <source>Specify first point to measure distance from</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ange den första punkten för att mäta avståndet från</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -11682,32 +11685,32 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManualInit.js" line="+2"/>
         <source>&amp;Distance Manual</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Avståndshandbok</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Snap distance between 2 points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Snapsavstånd mellan 2 punkter</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManual.ui" line="+17"/>
         <source>Snap distance:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Snapsavstånd:</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>Distance</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Avstånd</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Percentage</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Procentuell andel</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Fraction</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fraktion</translation>
     </message>
 </context>
 <context>
@@ -11715,7 +11718,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapEnd/SnapEndInit.js" line="+2"/>
         <source>&amp;End</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Slut</translation>
     </message>
 </context>
 <context>
@@ -11723,7 +11726,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gratis</translation>
     </message>
 </context>
 <context>
@@ -11731,7 +11734,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapGrid/SnapGridInit.js" line="+2"/>
         <source>&amp;Grid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rutnät</translation>
     </message>
 </context>
 <context>
@@ -11739,7 +11742,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapIntersection/SnapIntersectionInit.js" line="+2"/>
         <source>&amp;Intersection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Korsning</translation>
     </message>
 </context>
 <context>
@@ -11747,32 +11750,32 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManual.js" line="+47"/>
         <source>Snap</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Snap</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Intersection Manual</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Manual för korsningar</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>First entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Första enhet</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Andra enhet</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Manual för korsningar</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapIntersectionManual/PreferencesPage.ui" line="+17"/>
         <source>Terminate manual intersection tool after one use</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Avsluta det manuella skärningsverktyget efter en användning</translation>
     </message>
 </context>
 <context>
@@ -11780,7 +11783,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapMiddle/SnapMiddleInit.js" line="+2"/>
         <source>&amp;Middle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mellanliggande</translation>
     </message>
 </context>
 <context>
@@ -11788,7 +11791,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapMiddleManual/SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Middle Manual</translation>
     </message>
 </context>
 <context>
@@ -11796,7 +11799,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapOnEntity/SnapOnEntityInit.js" line="+2"/>
         <source>&amp;On Entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">På enhet</translation>
     </message>
 </context>
 <context>
@@ -11804,7 +11807,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapPerpendicular/SnapPerpendicularInit.js" line="+2"/>
         <source>&amp;Perpendicular</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lodrätt</translation>
     </message>
 </context>
 <context>
@@ -11812,7 +11815,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapReference/SnapReferenceInit.js" line="+2"/>
         <source>&amp;Reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Referens</translation>
     </message>
 </context>
 <context>
@@ -11820,7 +11823,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapSelectionCenter/SnapSelectionCenterInit.js" line="+2"/>
         <source>Center of &amp;Selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Centrum för urval</translation>
     </message>
 </context>
 <context>
@@ -11828,7 +11831,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapTangential/SnapTangentialInit.js" line="+2"/>
         <source>&amp;Tangential</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tangentiell</translation>
     </message>
 </context>
 <context>
@@ -11836,7 +11839,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapXManual/SnapXManualInit.js" line="+2"/>
         <source>&amp;X/Y from Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">X/Y från punkter</translation>
     </message>
 </context>
 <context>
@@ -11844,7 +11847,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapYManual/SnapYManualInit.js" line="+2"/>
         <source>&amp;Y/X from Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Y/X från punkter</translation>
     </message>
 </context>
 <context>
@@ -11852,7 +11855,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Spline/Spline.js" line="+72"/>
         <source>Spline Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spline-verktyg</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -11879,37 +11882,37 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPointsInit.js" line="+2"/>
         <source>&amp;Spline (Control Points)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spline (kontrollpunkter)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw spline from control points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita en spline från kontrollpunkter</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Spline/SplineControlPoints/SplineControlPoints.ui" line="+23"/>
         <source>Undo Last Control Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ångra den senaste kontrollpunkten</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Degree:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Examen:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Choose Spline Degree</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj Spline-grad</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Tick for Closed Spline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kryss för sluten spline</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Closed</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stängt</translation>
     </message>
 </context>
 <context>
@@ -11917,7 +11920,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscModify/SplineToLine/SplineToLine.js" line="+71"/>
         <source>Convert Straight Splines to Lines</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Konvertera raka splines till linjer</translation>
     </message>
 </context>
 <context>
@@ -11925,52 +11928,52 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/StatusBar/StatusBar.js" line="+32"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Status Bar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Statusfältet</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Status Bar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Statusfältet</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/StatusBar/PreferencesPage.ui" line="+53"/>
         <source>Status bar font:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Typsnitt för statusfältet:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Status Bar Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Widgets för statusfältet</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Coordinate display</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Koordinatvisning</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Mouse display</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visning av musen</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selection display</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Val av display</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Progress display</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Framstegsdisplay</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Show status tips</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa statustips</translation>
     </message>
 </context>
 <context>
@@ -11978,7 +11981,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Stretch/Stretch.js" line="+59"/>
         <source>First corner</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Första hörnet</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -11988,27 +11991,27 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Referenspunkt</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Målpunkt</translation>
     </message>
     <message>
         <location line="+141"/>
         <source>No selected entities in given range</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inga utvalda enheter i det angivna intervallet</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No entities in given range</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inga enheter inom det angivna intervallet</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Stretch/StretchInit.js" line="+2"/>
         <source>&amp;Stretch</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stretch</translation>
     </message>
 </context>
 <context>
@@ -12022,12 +12025,12 @@ shown in search results:</source>
         <location line="+0"/>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Import av SVG</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Import SVG</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Importera SVG</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12037,32 +12040,32 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>SVG Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SVG-filer</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportInit.js" line="+2"/>
         <source>SVG &amp;Import...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SVG-import...</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/PreferencesPage.ui" line="+17"/>
         <source>Splines</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Splines</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Automatically convert splines to lines / arcs if appropriate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Konvertera automatiskt splines till linjer/bågar om det är lämpligt</translation>
     </message>
     <message>
         <location filename="../scripts/File/SvgImport/SvgImportDialog.ui" line="+8"/>
         <source>Resolution:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lösning:</translation>
     </message>
     <message>
         <location line="+57"/>
         <source>Pixels / Inch</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bildpunkter / tum</translation>
     </message>
 </context>
 <context>
@@ -12070,7 +12073,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/ImportExport/SvgImporter/SvgImporterInit.js" line="+9"/>
         <source>SVG Files %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SVG-filer %1</translation>
     </message>
 </context>
 <context>
@@ -12078,17 +12081,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/TabBar/TabBar.js" line="+24"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Tab Bar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Flikar</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/TabBar/PreferencesPage.ui" line="+17"/>
         <source>Show tab bar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa flikfältet</translation>
     </message>
 </context>
 <context>
@@ -12128,27 +12131,27 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
         <source>Font size in text dialog preview:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Teckensnittsstorlek i förhandsgranskningen av textdialogrutan:</translation>
     </message>
     <message>
         <location line="+99"/>
         <source>Show font preview in font controls</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa förhandsgranskning av teckensnitt i typsnittskontroller</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Use reduced selection of fonts:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Använd ett begränsat urval av typsnitt:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Uncheck all</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Avmarkera alla</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Check all</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kontrollera alla</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui" line="-10"/>
@@ -12158,22 +12161,22 @@ shown in search results:</source>
     <message>
         <location line="+17"/>
         <source>Text height</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Texthöjd</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Avstånd</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Letter spacing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bokstavsavstånd</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">0</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -12183,22 +12186,22 @@ shown in search results:</source>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Moturs</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Medurs</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Fit text to line, arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Anpassa texten till en linje, båge eller cirkel</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Fit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Passar</translation>
     </message>
 </context>
 <context>
@@ -12207,7 +12210,7 @@ shown in search results:</source>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlong.js" line="+99"/>
         <location line="+1"/>
         <source>Select Entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj enhet</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -12218,12 +12221,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlong/TextAlongInit.js" line="+2"/>
         <source>&amp;Text Along Entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Text Längs Entitet</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw text along an entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita text längs en enhet</translation>
     </message>
 </context>
 <context>
@@ -12236,52 +12239,52 @@ shown in search results:</source>
     <message>
         <location line="+269"/>
         <source>&amp;Undo</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ångra</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Redo</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gör om</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cu&amp;t</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skär</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopiera</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Klistra in</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Bold</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fet</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Italic</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kursivt</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Underline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Understrykning</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Subscript</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Index</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Superscript</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Överskrift</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -12331,47 +12334,47 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Delta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pi</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Identity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Identitet</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Not equal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inte lika</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Ohm</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ohm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Omega</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Omega</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Squared</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kvadrat</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tärnad</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No-break space</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Utrymme utan avbrott</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Text/TextDialog/TextDialog.ui" line="+14"/>
@@ -12425,47 +12428,47 @@ shown in search results:</source>
     <message>
         <location line="+36"/>
         <source>Cut</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skär</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopiera</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Paste</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Klistra in</translation>
     </message>
     <message>
         <location line="+170"/>
         <source>Ctrl+B</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ctrl+B</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Ctrl+I</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ctrl+I</translation>
     </message>
     <message>
         <location line="+50"/>
         <source>Insert Symbol...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Infoga symbol...</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Source</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Källa</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Attribute Details</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uppgifter om attribut</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Tag:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tag:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -12515,32 +12518,32 @@ shown in search results:</source>
     <message>
         <location line="+32"/>
         <source>Top Center</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Övre mitten</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Middle Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mitt till höger</translation>
     </message>
     <message>
         <location line="+58"/>
         <source>Middle Center</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mitt centrum</translation>
     </message>
     <message>
         <location line="+58"/>
         <source>Base Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bas vänster</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Center</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bascenter</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Base Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bas höger</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -12560,12 +12563,12 @@ shown in search results:</source>
     <message>
         <location line="+203"/>
         <source>Bottom Center</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nedre mitten</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Bottom Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Längst ner till höger</translation>
     </message>
     <message>
         <location line="+59"/>
@@ -12588,7 +12591,7 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Draw</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita</translation>
     </message>
 </context>
 <context>
@@ -12596,7 +12599,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/PreferencesPage.ui" line="+20"/>
         <source>User interface theme:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tema för användargränssnittet:</translation>
     </message>
 </context>
 <context>
@@ -12604,12 +12607,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ThemePreferences/ThemePreferences.js" line="+31"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Allmänt</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tema</translation>
     </message>
 </context>
 <context>
@@ -12617,7 +12620,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/23_ThreeBelow.ui" line="+14"/>
         <source>Three: Below</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tre: Under</translation>
     </message>
 </context>
 <context>
@@ -12625,7 +12628,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/25_ThreeHorizontal.ui" line="+14"/>
         <source>Three: Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tre: Horisontell</translation>
     </message>
 </context>
 <context>
@@ -12633,7 +12636,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/24_ThreeVertical.ui" line="+14"/>
         <source>Three: Vertical</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tre: Vertikal</translation>
     </message>
 </context>
 <context>
@@ -12641,7 +12644,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToBack/ToBackInit.js" line="+2"/>
         <source>Send to Bac&amp;k</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skicka till baksidan</translation>
     </message>
 </context>
 <context>
@@ -12649,7 +12652,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/DrawOrder/ToFront/ToFrontInit.js" line="+2"/>
         <source>Bring to &amp;Front</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ta fram den framsida</translation>
     </message>
 </context>
 <context>
@@ -12665,7 +12668,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/View/ToggleGrid/ToggleGrid.js" line="+90"/>
         <source>&amp;Grid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rutnät</translation>
     </message>
 </context>
 <context>
@@ -12673,7 +12676,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Layer/ToggleLayerLock/ToggleLayerLockInit.js" line="+2"/>
         <source>&amp;Toggle Lock Status</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Växla låsstatus</translation>
     </message>
 </context>
 <context>
@@ -12681,7 +12684,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Layer/ToggleLayerVisibility/ToggleLayerVisibilityInit.js" line="+2"/>
         <source>&amp;Toggle Visibility</source>
-        <translation type="unfinished">&amp;Växla synlighet</translation>
+        <translation type="unfinished">Växla synlighet</translation>
     </message>
 </context>
 <context>
@@ -12689,27 +12692,27 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/PreferencesPage.ui" line="+19"/>
         <source>Icon size:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ikonstorlek:</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Pixel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pixel</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">px</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Options Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verktygsfältet för alternativ</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Shortcut prefix character:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tecken för genvägsprefix:</translation>
     </message>
 </context>
 <context>
@@ -12717,12 +12720,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/ToolBarContextMenu/ToolBarContextMenu.js" line="+82"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Widgets</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verktygsfält</translation>
     </message>
 </context>
 <context>
@@ -12730,12 +12733,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/ToolBarPreferences/ToolBarPreferences.js" line="+30"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verktygsfält</translation>
     </message>
 </context>
 <context>
@@ -12743,7 +12746,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/View/ToolMatrixFocus/ToolMatrixFocusInit.js" line="+2"/>
         <source>&amp;Focus on Tool Matrix</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fokus på verktygsmatris</translation>
     </message>
 </context>
 <context>
@@ -12751,7 +12754,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/CadToolMatrix/CadToolMatrix.ui" line="+37"/>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Filter</translation>
     </message>
 </context>
 <context>
@@ -12759,7 +12762,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Transform.js" line="+47"/>
         <source>This tool requires a selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Det här verktyget kräver ett urval</translation>
     </message>
 </context>
 <context>
@@ -12767,52 +12770,52 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Translate/Translate.js" line="+44"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ändra</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Copy</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Flytta/kopiera</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Referenspunkt</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Målpunkt</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateInit.js" line="+2"/>
         <source>&amp;Move / Copy</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Flytta/kopiera</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Move or copy entities once or multiple times</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Flytta eller kopiera enheter en eller flera gånger</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Använd dialogrutan för verktygsalternativ</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Translate/Translate.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopiera</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Antal kopior:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Använd aktuellt lager och aktuella attribut</translation>
     </message>
 </context>
 <context>
@@ -12820,32 +12823,32 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Translate/TranslateDialog.ui" line="+14"/>
         <source>Move / Copy Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Flytta/kopiera alternativ</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Antal kopior</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Radera originalet</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Behåll originalet</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Flera kopior</translation>
     </message>
     <message>
         <location line="+89"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Använd aktuellt lager och aktuella attribut</translation>
     </message>
 </context>
 <context>
@@ -12853,7 +12856,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateInit.js" line="+2"/>
         <source>M&amp;ove and Rotate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Flytta och rotera</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17"/>
@@ -12866,37 +12869,37 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotateDialog.ui" line="+14"/>
         <source>Move and Rotate Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alternativ för att flytta och rotera</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Antal kopior</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Radera originalet</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Behåll originalet</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Flera kopior</translation>
     </message>
     <message>
         <location line="+97"/>
         <source>&amp;Angle (a):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vinkel (a):</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Använd aktuellt lager och aktuella attribut</translation>
     </message>
 </context>
 <context>
@@ -12904,37 +12907,37 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/Trim/Trim.js" line="+77"/>
         <source>Choose limiting entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj begränsande enhet</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose entity to trim</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Välj enhet som ska beskäras</translation>
     </message>
     <message>
         <location line="+174"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">De två enheterna skär inte varandra eller har för närvarande inte stöd för trimning.</translation>
     </message>
     <message>
         <location line="+74"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished">Första objektet kan inte trimmas.</translation>
+        <translation type="unfinished">Den första enheten kan inte beskäras.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enheten kan inte beskäras.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished">Andra objektet kan inte trimmas.</translation>
+        <translation type="unfinished">Den andra enheten kan inte beskäras.</translation>
     </message>
     <message>
         <location filename="../scripts/Modify/Trim/TrimInit.js" line="+2"/>
         <source>&amp;Trim</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Trim</translation>
     </message>
 </context>
 <context>
@@ -12942,7 +12945,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/TrimBoth/TrimBothInit.js" line="+2"/>
         <source>Trim &amp;Both</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Trimma båda</translation>
     </message>
 </context>
 <context>
@@ -12950,7 +12953,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/Tutorials/Tutorials.js" line="+56"/>
         <source>Script &amp;Tutorials</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Handledning i manuskript</translation>
     </message>
 </context>
 <context>
@@ -12958,7 +12961,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/11_TwoHorizontal.ui" line="+14"/>
         <source>Two: Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Två: Horisontell</translation>
     </message>
 </context>
 <context>
@@ -12966,7 +12969,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/Templates/10_TwoVertical.ui" line="+14"/>
         <source>Two: Vertical</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Två: Vertikal</translation>
     </message>
 </context>
 <context>
@@ -12974,22 +12977,22 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/PreferencesPage.ui" line="+17"/>
         <source>These settings affect the resolution and scale of the QCAD user interface. These preferences can be adjusted if there are problems with the user interface of QCAD, such as very large or very small icons or text labels.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dessa inställningar påverkar upplösningen och skalan i QCAD:s användargränssnitt. Dessa inställningar kan justeras om det finns problem med användargränssnittet i QCAD, t.ex. mycket stora eller mycket små ikoner eller textetiketter.</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Auto screen scale factor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Automatisk skalfaktor för skärmen</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Enable high DPI scaling</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Aktivera hög DPI-skalning</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Scale factor:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skalfaktor:</translation>
     </message>
 </context>
 <context>
@@ -12997,12 +13000,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/UiPreferences/UiPreferences.js" line="+29"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Allmänt</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>User Interface</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Användargränssnitt</translation>
     </message>
 </context>
 <context>
@@ -13010,7 +13013,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/Undo/UndoInit.js" line="+2"/>
         <source>&amp;Undo</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ångra</translation>
     </message>
 </context>
 <context>
@@ -13018,148 +13021,148 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/UnitSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Standardvärden för nya ritningar</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Drawing Unit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ritningsenhet</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Allmänt</translation>
     </message>
     <message>
         <location line="+71"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ingen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Inch</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tum</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fot</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Mile</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mile</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Millimeter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Millimeter</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Centimeter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Centimeter</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Meter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mätare</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Kilometer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kilometer</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Microinch</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Microinch</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Mil</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mil</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Yard</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gården</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angstrom</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Angström</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Nanometer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nanometer</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Micron</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Micron</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimeter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Decimeter</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decameter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dekameter</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Hectometer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hektometer</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gigameter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gigameter</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Astro</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Astro</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lightyear</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lightyear</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Parsec</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Parsec</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Imperial</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Imperial</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Metriskt</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/UnitSettings/PreferencesPage.ui" line="+17"/>
         <source>Drawing unit:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ritningsenhet:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Paper unit:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pappersenhet:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Measurement system (for line types and hatch patterns):</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mätsystem (för linjetyper och skraffermönster):</translation>
     </message>
 </context>
 <context>
@@ -13167,7 +13170,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Layer/UnlockAllLayers/UnlockAllLayersInit.js" line="+2"/>
         <source>&amp;Unlock All Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lås upp alla lager</translation>
     </message>
 </context>
 <context>
@@ -13175,17 +13178,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/View/View.js" line="+64"/>
         <source>View Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa verktyg</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa</translation>
     </message>
 </context>
 <context>
@@ -13193,17 +13196,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/View/ViewToolBars/ViewToolBarsPostInit.js" line="+6"/>
         <source>&amp;Toolbars and Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verktygsfält och widgetar</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Widgets</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verktygsfält</translation>
     </message>
 </context>
 <context>
@@ -13211,17 +13214,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/PreferencesPage.ui" line="+21"/>
         <source>Viewports</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visaportar</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förhandsgranska</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidgetQt.ui" line="+105"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rutavstånd &lt; Meta Rutavstånd</translation>
     </message>
 </context>
 <context>
@@ -13229,22 +13232,22 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/ViewportSettings/ViewportSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Standardvärden för nya ritningar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layout - Viewports</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Layout - vyportar</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Layout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Layout</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewports</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visaportar</translation>
     </message>
 </context>
 <context>
@@ -13252,17 +13255,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/ViewportWidget/ViewportWidget.js" line="+295"/>
         <source>Dropped data not supported</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uppgifter som tappats bort stöds inte</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Importing file: </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Importerar fil:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Importing URL: </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Importera URL:</translation>
     </message>
 </context>
 <context>
@@ -13270,7 +13273,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Help/Website/WebsiteInit.js" line="+2"/>
         <source>Visit &amp;Website</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Besök webbplatsen</translation>
     </message>
 </context>
 <context>
@@ -13278,12 +13281,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/WidgetFactory.js" line="+1094"/>
         <source>Restore defaults</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Återställa standardvärden</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Insert Symbol</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Infoga symbol</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -13293,62 +13296,62 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>Arc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Arc</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation type="unfinished">Grad</translation>
+        <translation type="unfinished">Examen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus/Minus</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Plus/Minus</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal to</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nästan lika med</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Asymptotically equal to</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Asymptotiskt lika med</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pi</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square root</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kvadratrot</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Phi</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Phi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>phi</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">phi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Alt phi</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alt phi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Ohm</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ohm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>omega</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">omega</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13358,168 +13361,168 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation type="unfinished">Division</translation>
+        <translation type="unfinished">Huvudgrupp</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kvadrat</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Delta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Stacked text</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Staplad text</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Measured value</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Uppmätt värde</translation>
     </message>
     <message>
         <location line="+137"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vänster</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished">Mittpunkt</translation>
+        <translation type="unfinished">Centrum</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Höger</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Aligned</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Anpassad</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+7"/>
         <source>Middle</source>
-        <translation type="unfinished">Mitten</translation>
+        <translation type="unfinished">Mellanliggande</translation>
     </message>
     <message>
         <location line="-6"/>
         <source>Fit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Passar</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Top</source>
-        <translation type="unfinished">Överst</translation>
+        <translation type="unfinished">Topp</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Base</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bas</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Botten</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Scientific</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vetenskaplig</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Decimal</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Engineering</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Teknik</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectural</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Arkitektur</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fractional</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fraktionell</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Centered</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Centrerad</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+38"/>
         <source>Show trailing zeroes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa efterföljande nollor</translation>
     </message>
     <message>
         <location line="-9"/>
         <source>Decimal Degrees</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Decimalgrader</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Deg/min/sec</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Deg/min/sek</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gradians</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gradians</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Radians</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Radianer</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Surveyor&apos;s units</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lantmäteriets enheter</translation>
     </message>
     <message>
         <location line="-28"/>
         <location line="+35"/>
         <source>Suppress trailing zeroes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Undertrycka efterföljande nollor</translation>
     </message>
     <message>
         <location line="+22"/>
         <location line="+4"/>
         <source>Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Medurs</translation>
     </message>
     <message>
         <location line="-3"/>
         <location line="+4"/>
         <source>Counterclockwise</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Moturs</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Preceding</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Föregående</translation>
     </message>
     <message>
         <location line="-86"/>
         <location line="+87"/>
         <source>Above</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Över</translation>
     </message>
     <message>
         <location line="-74"/>
         <source>Include 0&apos;0&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inkludera 0&apos;0&quot;</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -13530,34 +13533,34 @@ shown in search results:</source>
         <location line="+33"/>
         <location line="+2"/>
         <source>(unsupported)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">(utan stöd)</translation>
     </message>
     <message>
         <location line="-39"/>
         <source>Include 0&apos;, suppress 0&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inkludera 0&apos;, undertrycka 0&quot;</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Include 0&quot;, suppress 0&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inkludera 0&quot;, undertrycka 0</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+35"/>
         <source>Suppress leading zeroes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Undertrycka ledande nollor</translation>
     </message>
     <message>
         <location line="-33"/>
         <location line="+35"/>
         <source>Suppress leading / trailing zeroes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Undertrycka ledande/slutande nollor</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ingen</translation>
     </message>
 </context>
 <context>
@@ -13565,7 +13568,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Widgets/Widgets.js" line="+56"/>
         <source>&amp;Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Widgets</translation>
     </message>
 </context>
 <context>
@@ -13573,12 +13576,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Window/Window.js" line="+109"/>
         <source>&amp;Window</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fönster</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Window Tools</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verktyg för fönster</translation>
     </message>
 </context>
 <context>
@@ -13586,7 +13589,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/View/Zoom/WindowZoom/WindowZoomInit.js" line="+2"/>
         <source>&amp;Window Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fönsterzoom</translation>
     </message>
 </context>
 <context>
@@ -13594,12 +13597,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineHorizontal/XLineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Construction Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Horisontell byggnadslinje</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw horizontal construction line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita en horisontell konstruktionslinje</translation>
     </message>
 </context>
 <context>
@@ -13607,12 +13610,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/XLineVertical/XLineVerticalInit.js" line="+2"/>
         <source>&amp;Vertical Construction Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vertikal byggnadslinje</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw vertical construction line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rita en vertikal konstruktionslinje</translation>
     </message>
 </context>
 <context>
@@ -13620,17 +13623,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/View/Zoom/Zoom.js" line="+51"/>
         <source>Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zoom</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Zoom Tools</source>
-        <translation type="unfinished">Zoomverktyg</translation>
+        <translation type="unfinished">Verktyg för zoomning</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>&amp;Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zoom</translation>
     </message>
 </context>
 <context>
@@ -13638,7 +13641,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/View/Zoom/ZoomIn/ZoomInInit.js" line="+2"/>
         <source>Zoom &amp;In</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zooma in</translation>
     </message>
 </context>
 <context>
@@ -13646,7 +13649,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/View/Zoom/ZoomOut/ZoomOutInit.js" line="+2"/>
         <source>Zoom &amp;Out</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zooma ut</translation>
     </message>
 </context>
 <context>
@@ -13654,12 +13657,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelection.js" line="+31"/>
         <source>No selection found.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Inget urval har hittats.</translation>
     </message>
     <message>
         <location filename="../scripts/View/Zoom/ZoomToSelection/ZoomToSelectionInit.js" line="+2"/>
         <source>Zoom to &amp;Selection</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zooma till urvalet</translation>
     </message>
 </context>
 <context>
@@ -13667,340 +13670,340 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/autostart.js" line="+361"/>
         <source>Loading add-on translations...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Laddar översättningar av tilläggsfunktioner...</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Loading add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Laddar tillägg...</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Initializing add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Initialisering av tilläggsmoduler...</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Initializing add-ons:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Initialisering av tillägg:</translation>
     </message>
 </context>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+968"/>
+        <location filename="../scripts/library.js" line="+980"/>
         <source>Objects</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Objekt</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Object</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Objekt</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Unknown Objects</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Okända objekt</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Object</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Okänt objekt</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blocker</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Block</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Layers</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Skikt</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer</source>
-        <translation type="unfinished">Lager</translation>
+        <translation type="unfinished">Skikt</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Layouts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Layouter</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Layout</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Linetypes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Linjetyper</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Linetype</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Linjetyp</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Views</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Utsikter</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Dimension Styles</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dimensionsstilar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension Style</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dimension Stil</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enheter</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enhet</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>3dFaces</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">3dFaces</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>3dFace</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">3dFace</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blockreferenser</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blockreferens</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blockreferenser och attribut</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blockreferens och attribut</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Arcs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bågar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Arc</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Arc</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Egenskaper</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Attribut</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Attribute Definitions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Definitioner av attribut</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute Definition</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Definition av attribut</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Circles</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cirklar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cirkel</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mått</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dimension</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Aligned Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Anpassade dimensioner</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Aligned Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Anpassad dimension</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vinkelmått</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vinkel dimension</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Line)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vinkelmått (2 rader)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Line)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vinkelmått (2 rader)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Point)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vinkelmått (3 punkter)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Point)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vinkelmått (3 punkter)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Arc Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Arc Dimension</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Diametric Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diametriska mått</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Diametric Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Diametrisk dimension</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ordinate Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ordinarie dimensioner</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ordinate Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ordinatdimension</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rotated Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Roterade dimensioner</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotated Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Roterad dimension</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Radial Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Radiella dimensioner</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Radial Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Radial dimension</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ellipses</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ellipser</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ellips</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Hatches</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Luckor</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Hatch</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lucka</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Images</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bilder</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bild</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Leaders</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ledare</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Leader</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Tolerances</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Toleranser</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Tolerance</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tolerans</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Lines</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Linjer</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Linje</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14010,82 +14013,82 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Infinite Lines</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Oändliga linjer</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ray</source>
-        <translation type="unfinished">Stråle</translation>
+        <translation type="unfinished">Ray</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rays</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rays</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Poäng</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Punkt</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Polylines</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Polylinjer</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Polylinje</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Solids</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fastämnen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Solid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Solid</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Traces</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spår</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Trace</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spår</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Faces</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ansikten</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Face</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ansikte</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Splines</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Splines</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Spline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spline</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Text based</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Textbaserad</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14095,62 +14098,62 @@ shown in search results:</source>
     <message>
         <location line="+0"/>
         <source>Texts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Texter</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visaportar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visaport</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unknown Entities</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Okända enheter</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Entity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Okänd enhet</translation>
     </message>
     <message>
         <location line="+102"/>
         <source>All CAD Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alla CAD-filer</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>DXF Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">DXF-filer</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>SVG Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">SVG-filer</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>DXF Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">DXF-ritning</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>DWG Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">DWG-ritning</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>PDF File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">PDF-fil</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>PDF/A-1B File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">PDF/A-1B-fil</translation>
     </message>
 </context>
 <context>
@@ -14158,7 +14161,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/GridSettings/PreferencesPage.ui" line="+29"/>
         <source>Viewport 1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bildfönster 1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -14166,7 +14169,7 @@ shown in search results:</source>
         <location line="+152"/>
         <location line="+152"/>
         <source>Display Grid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visa rutnät</translation>
     </message>
     <message>
         <location line="-446"/>
@@ -14174,7 +14177,7 @@ shown in search results:</source>
         <location line="+152"/>
         <location line="+152"/>
         <source>Isometric Grid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Isometriskt rutnät</translation>
     </message>
     <message>
         <location line="-449"/>
@@ -14182,7 +14185,7 @@ shown in search results:</source>
         <location line="+152"/>
         <location line="+152"/>
         <source>Grid Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Avstånd mellan rutorna</translation>
     </message>
     <message>
         <location line="-450"/>
@@ -14206,7 +14209,7 @@ shown in search results:</source>
         <location line="+62"/>
         <location line="+63"/>
         <source>X:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">X:</translation>
     </message>
     <message>
         <location line="-462"/>
@@ -14214,22 +14217,22 @@ shown in search results:</source>
         <location line="+152"/>
         <location line="+152"/>
         <source>Meta Grid Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Meta Grid Spacing (rasteravstånd)</translation>
     </message>
     <message>
         <location line="-390"/>
         <source>Viewport 2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bildfönster 2</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bildfönster 3</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 4</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bildfönster 4</translation>
     </message>
 </context>
 <context>
@@ -14237,17 +14240,18 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/simple_modify.js" line="+301"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished">Första objektet kan inte trimmas.</translation>
+        <translation type="unfinished">Den första enheten kan inte beskäras.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enheten kan inte beskäras.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished">Andra objektet kan inte trimmas.</translation>
+        <translation type="unfinished">Den andra enheten kan inte beskäras.</translation>
     </message>
 </context>
 </TS>
+

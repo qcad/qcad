@@ -404,7 +404,7 @@ da bodo spremembe začele delovat.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1812"/>
+        <location filename="../scripts/Apollonius.js" line="+1932"/>
         <source>Invalid radius</source>
         <translation>Neveljavni polmer</translation>
     </message>
@@ -10971,12 +10971,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1525"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1531"/>
         <source>*VARIES*</source>
         <translation>*RAZLIČNO*</translation>
     </message>
     <message>
-        <location line="-1327"/>
+        <location line="-1333"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -11035,7 +11035,7 @@ shown in search results:</source>
         <translation>Prikaži vse lasnosti</translation>
     </message>
     <message>
-        <location line="+707"/>
+        <location line="+713"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -11076,17 +11076,17 @@ shown in search results:</source>
         <translation type="obsolete">Dno</translation>
     </message>
     <message>
-        <location line="-573"/>
+        <location line="-579"/>
         <source>Auto</source>
         <translation>Samodejno</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use auto measurement</source>
         <translation>Uporabi samodejne meritve</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+44"/>
         <source>Yes</source>
         <translation>Da</translation>
     </message>
@@ -15244,7 +15244,7 @@ shown in search results:</source>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+968"/>
+        <location filename="../scripts/library.js" line="+980"/>
         <source>Objects</source>
         <translation>Objekti</translation>
     </message>

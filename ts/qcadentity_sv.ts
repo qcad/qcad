@@ -10,7 +10,7 @@
         <location filename="../src/entity/RCircleEntity.cpp" line="+79"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="+109"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="+151"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="+147"/>
@@ -25,7 +25,7 @@
     <message>
         <location line="-2"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
-        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="+117"/>
+        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="+159"/>
         <location line="+12"/>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-2"/>
         <location line="+4"/>
@@ -533,7 +533,7 @@
     <message>
         <location line="+1"/>
         <source>Alpha</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alpha</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -609,13 +609,13 @@
         <location line="+2"/>
         <location line="+1"/>
         <source>U</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">U</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>V</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">V</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -824,7 +824,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Fit Point</source>
-        <translation type="unfinished">Passpunkt</translation>
+        <translation type="unfinished">Anpassningspunkt</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -866,7 +866,7 @@
         <translation>Osynlig</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+143"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+185"/>
         <source>Arc Symbol Type</source>
         <translation>Typ av bågsymbol</translation>
     </message>
@@ -875,19 +875,22 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Location</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Plats</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Riktning</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Text</translation>
     </message>
 </context>
 </TS>
+
+
+

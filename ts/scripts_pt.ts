@@ -431,7 +431,7 @@ para que as mudanças de preferências entrem em vigor.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1812"/>
+        <location filename="../scripts/Apollonius.js" line="+1932"/>
         <source>Invalid radius</source>
         <translation>Raio inválido</translation>
     </message>
@@ -10888,12 +10888,12 @@ nos resultados de busca:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1525"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1531"/>
         <source>*VARIES*</source>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1327"/>
+        <location line="-1333"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10943,12 +10943,12 @@ nos resultados de busca:</translation>
         <translation>Mostrar todas as propriedades</translation>
     </message>
     <message>
-        <location line="+707"/>
+        <location line="+713"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="-753"/>
+        <location line="-759"/>
         <source>Add custom property to selected objects</source>
         <translation>Adicione uma propriedade personalizada aos objetos selecionados</translation>
     </message>
@@ -10958,12 +10958,12 @@ nos resultados de busca:</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use auto measurement</source>
         <translation>Use a medição automática</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+44"/>
         <source>Yes</source>
         <translation>Sim</translation>
     </message>
@@ -15095,7 +15095,7 @@ nos resultados de busca:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+968"/>
+        <location filename="../scripts/library.js" line="+980"/>
         <source>Objects</source>
         <translation>Objectos</translation>
     </message>

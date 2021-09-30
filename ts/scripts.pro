@@ -96,6 +96,16 @@ SOURCES = \
 ../scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest01.js \
 ../scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest02.js \
 ../scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest03.js \
+../scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest04.js \
+../scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest05.js \
+../scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest06.js \
+../scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest07.js \
+../scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest08.js \
+../scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest09.js \
+../scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest10.js \
+../scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest11.js \
+../scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest12.js \
+../scripts/Draw/Circle/Circle2TP/Tests/Circle2TPTest13.js \
 ../scripts/Draw/Circle/Circle2TR/Circle2TR.js \
 ../scripts/Draw/Circle/Circle2TR/Circle2TRInit.js \
 ../scripts/Draw/Circle/Circle2TR/Tests/Circle2TRTest00.js \

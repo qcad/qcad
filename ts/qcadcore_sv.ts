@@ -319,7 +319,7 @@
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
         <source>Referenced Block</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Block som det hänvisas till</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -410,7 +410,7 @@
     <message>
         <location line="+2"/>
         <source>Parent Id</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Föräldra-id</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -483,17 +483,17 @@
     <message>
         <location line="+1"/>
         <source>Selected</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Utvald</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Invisible</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Osynlig</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Working Set</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Arbetsuppsättning</translation>
     </message>
     <message>
         <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>
@@ -530,7 +530,7 @@
     <message>
         <location line="+1"/>
         <source>Text Width</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Textens bredd</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -576,12 +576,12 @@
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bakåt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Upside Down</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Upp och ner</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
@@ -683,7 +683,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Insertion Base</source>
-        <translation type="unfinished">Införande</translation>
+        <translation type="unfinished">Insatsbas</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -712,122 +712,122 @@
     <message>
         <location filename="../src/core/RDimStyle.cpp" line="+72"/>
         <source>Style</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stil</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overall dimension scale</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Övergripande dimensionsskala</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear measurement factor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Faktor för linjär mätning</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text height</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Texthöjd</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Måtten för linjeavstånd</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pilens storlek</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line increment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förhöjning av dimensioner</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förlängning av linjeförlängning</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line offset</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Förskjutning av förlängningslinjen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text position vertical</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Textens position vertikalt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text inside horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Text inuti horisontell</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Storlek på krysset</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear format</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Linjärt format</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal places</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Decimalställen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal separator</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Decimalseparator</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zero suppression</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nollundertryckning</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular format</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Angular-format</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vinkelformade decimaler</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Undertryckning av vinkelnollpunkt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Arkitektur tick</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Textfärg</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pilkorset</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pilblock 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pilblock 2</translation>
     </message>
 </context>
 <context>
@@ -1240,3 +1240,6 @@
     </message>
 </context>
 </TS>
+
+
+

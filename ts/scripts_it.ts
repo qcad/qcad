@@ -447,7 +447,7 @@ applicare le modifiche.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1812"/>
+        <location filename="../scripts/Apollonius.js" line="+1932"/>
         <source>Invalid radius</source>
         <translation>Raggio non valido</translation>
     </message>
@@ -11814,12 +11814,12 @@ mostrati nei risultati di ricerca:</translation>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="+750"/>
+        <location line="+756"/>
         <source>*VARIES*</source>
         <translation>*VARIE*</translation>
     </message>
     <message>
-        <location line="-1327"/>
+        <location line="-1333"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -11869,7 +11869,7 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Mostra tutte le proprietà</translation>
     </message>
     <message>
-        <location line="+707"/>
+        <location line="+713"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -11882,17 +11882,17 @@ mostrati nei risultati di ricerca:</translation>
         <translation type="obsolete">Sotto</translation>
     </message>
     <message>
-        <location line="-573"/>
+        <location line="-579"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use auto measurement</source>
         <translation>Utilizzare la misurazione automatica</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+44"/>
         <source>Yes</source>
         <translation>Si</translation>
     </message>
@@ -16367,7 +16367,7 @@ mostrati nei risultati di ricerca:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+968"/>
+        <location filename="../scripts/library.js" line="+980"/>
         <source>Objects</source>
         <translation>Oggetti</translation>
     </message>

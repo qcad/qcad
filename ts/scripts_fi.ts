@@ -380,7 +380,7 @@ asetuksien muutokset astuvat voimaan.</translation>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1812"/>
+        <location filename="../scripts/Apollonius.js" line="+1932"/>
         <source>Invalid radius</source>
         <translation>Virheellinen säde</translation>
     </message>
@@ -10610,12 +10610,12 @@ näkyy hakutuloksissa:</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1525"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1531"/>
         <source>*VARIES*</source>
         <translation>*VAIHTELEVA*</translation>
     </message>
     <message>
-        <location line="-1327"/>
+        <location line="-1333"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10679,12 +10679,12 @@ näkyy hakutuloksissa:</translation>
         <translation>Automaattinen</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use auto measurement</source>
         <translation>Käytä automaattista mittausta</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+44"/>
         <source>Yes</source>
         <translation>Kyllä</translation>
     </message>
@@ -14757,7 +14757,7 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+968"/>
+        <location filename="../scripts/library.js" line="+980"/>
         <source>Objects</source>
         <translation>Esineet</translation>
     </message>

@@ -371,7 +371,7 @@ the preference changes to take effect.</source>
 <context>
     <name>Apollonius</name>
     <message>
-        <location filename="../scripts/Apollonius.js" line="+1812"/>
+        <location filename="../scripts/Apollonius.js" line="+1932"/>
         <source>Invalid radius</source>
         <translation type="unfinished">Ugyldig radius</translation>
     </message>
@@ -9783,12 +9783,12 @@ vist i søgeresultaterne:</translation>
         <translation type="unfinished">Auto</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+152"/>
         <source>Use auto measurement</source>
         <translation type="unfinished">Brug automatisk måling</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+44"/>
         <source>Yes</source>
         <translation type="unfinished">Ja</translation>
     </message>
@@ -13437,7 +13437,7 @@ vist i søgeresultaterne:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+968"/>
+        <location filename="../scripts/library.js" line="+980"/>
         <source>Objects</source>
         <translation type="unfinished">Genstande</translation>
     </message>

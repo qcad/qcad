@@ -6,9 +6,9 @@
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="+92"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+79"/>
-        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="+117"/>
+        <location filename="../src/entity/RDimAngular2LEntity.cpp" line="+159"/>
         <location line="+12"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="+109"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="+151"/>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
@@ -1037,7 +1037,7 @@
         <translation>Unsichtbar</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+143"/>
+        <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+185"/>
         <source>Arc Symbol Type</source>
         <translation>Bogensymboltyp</translation>
     </message>
