@@ -79,6 +79,11 @@ public:
     virtual double getMeasuredValue() const;
     virtual QString getAutoLabel() const;
 
+    virtual void to2D() {
+        RDimensionData::to2D();
+        chordPoint.z = 0.0;
+    }
+
 private:
     /** Chord point. Definition point from RDimensionData is center. */
     RVector chordPoint;

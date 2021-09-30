@@ -80,6 +80,11 @@ public:
     virtual QString getAutoLabel() const;
     //virtual void updateTextData() const;
 
+    virtual void to2D() {
+        RDimensionData::to2D();
+        chordPoint.z = 0.0;
+    }
+
 private:
     /** Chord point. Definition point from RDimensionData is near chord point. */
     RVector chordPoint;

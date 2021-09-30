@@ -68,6 +68,11 @@ public:
     void updateRefDefinitionPoint2(const RVector& v) const {
         refDefinitionPoint2 = v;
     }
+    virtual void to2D() {
+        RDimLinearData::to2D();
+        refDefinitionPoint1.z = 0.0;
+        refDefinitionPoint2.z = 0.0;
+    }
 
 private:
     // for caching only:

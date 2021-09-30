@@ -557,6 +557,8 @@ public:
     QSharedPointer<RBlockReferenceEntity> getDimensionBlockReference() const;
     bool hasDimensionBlockReference() const;
 
+    virtual void to2D();
+
 protected:
     /** Definition point */
     mutable RVector definitionPoint;

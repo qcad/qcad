@@ -1001,3 +1001,12 @@ QSharedPointer<RBlockReferenceEntity> RDimensionData::getDimensionBlockReference
     //delete dimBlockReference;
     return QSharedPointer<RBlockReferenceEntity>(dimBlockReference);
 }
+
+void RDimensionData::to2D() {
+    definitionPoint.z = 0.0;
+    textPositionCenter.z = 0.0;
+    textPositionSide.z = 0.0;
+    arrow1Pos.z = 0.0;
+    arrow2Pos.z = 0.0;
+    textData.to2D();
+}

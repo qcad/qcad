@@ -113,6 +113,14 @@ public:
                    RVector& p1, RVector& p2) const;
     RVector getCenter() const;
 
+    virtual void to2D() {
+        RDimAngularData::to2D();
+        extensionLine1Start.z = 0.0;
+        extensionLine1End.z = 0.0;
+        extensionLine2Start.z = 0.0;
+        dimArcPosition.z = 0.0;
+    }
+
 private:
     /** Start point of first extension line. */
     RVector extensionLine1Start;

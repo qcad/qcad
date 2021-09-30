@@ -107,6 +107,12 @@ public:
     virtual double getMeasuredValue() const;
     virtual QString getAutoLabel() const;
 
+    virtual void to2D() {
+        RDimensionData::to2D();
+        definingPoint.z = 0.0;
+        leaderEndPoint.z = 0.0;
+    }
+
 private:
     /** Defining point (feature location) */
     RVector definingPoint;

@@ -97,6 +97,12 @@ public:
 
     //virtual void updateTextData() const;
 
+    virtual void to2D() {
+        RDimensionData::to2D();
+        extensionPoint1.z = 0.0;
+        extensionPoint2.z = 0.0;
+    }
+
 protected:
     /** Definition point. Startpoint of the first extension line. */
     RVector extensionPoint1;

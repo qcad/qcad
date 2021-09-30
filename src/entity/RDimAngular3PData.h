@@ -99,6 +99,13 @@ public:
                    bool& reversed,
                    RVector& p1, RVector& p2) const;
 
+    virtual void to2D() {
+        RDimAngularData::to2D();
+        center.z = 0.0;
+        extensionLine1End.z = 0.0;
+        extensionLine2End.z = 0.0;
+    }
+
 private:
     /** Start point of first extension line. */
     RVector center;
