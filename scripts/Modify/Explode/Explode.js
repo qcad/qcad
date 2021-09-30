@@ -413,7 +413,9 @@ Explode.explodeEntity = function(entity, options) {
     else if (isDimensionEntity(entity)) {
         shapes = entity.getShapes();
         for (k=0; k<shapes.length; k++) {
-            ret.push(shapes[k].data());
+            if (shapes[k].isValid()) {
+                ret.push(shapes[k].data());
+            }
         }
         var textData = entity.getData().getTextData();
         e = new RTextEntity(entity.getDocument(), textData);
