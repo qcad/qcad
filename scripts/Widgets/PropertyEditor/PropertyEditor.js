@@ -1058,7 +1058,10 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
                     'propertyChanged');
     }
 
-    control.cursorPosition = 0;
+    // move cursor to start if field is not being edited:
+    if (!control.focus) {
+        control.cursorPosition = 0;
+    }
 
     return new Array(control);
 };
@@ -1114,7 +1117,10 @@ PropertyEditorImpl.prototype.initStringControls = function(objectName, propertyT
                     'propertyChanged');
     }
 
-    control.cursorPosition = 0;
+    // move cursor to start if field is not being edited:
+    if (!control.focus) {
+        control.cursorPosition = 0;
+    }
 
     if (isNull(clearButton)) {
         return new Array(control);
