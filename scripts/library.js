@@ -535,6 +535,18 @@ function isClosedPolylineEntity(obj, tolerance) {
 }
 
 /**
+ * \return true if the given object is a geometrically open polyline entity.
+ */
+function isOpenPolylineEntity(obj, tolerance) {
+    if (isNull(tolerance)) {
+        return isPolylineEntity(obj) && !obj.isGeometricallyClosed();
+    }
+    else {
+        return isPolylineEntity(obj) && !obj.isGeometricallyClosed(tolerance);
+    }
+}
+
+/**
  * Checks if the given object is a solid entity.
  *
  * \return true if the given object is a solid entity (RSolidEntity).
