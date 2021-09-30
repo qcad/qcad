@@ -94,6 +94,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, updateRefDefinitionPoint2, "updateRefDefinitionPoint2");
             
+            REcmaHelper::registerFunction(&engine, proto, to2D, "to2D");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RDimAlignedData*>(), *proto);
 
@@ -1166,6 +1168,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimAlignedData::updateRefDefinitionPoint2", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimAlignedData::to2D
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimAlignedData::to2D", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimAlignedData::to2D";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAlignedData* self = 
+                        getSelf("to2D", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->to2D();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedData.to2D().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimAlignedData::to2D", context, engine);
             return result;
         }
          QScriptValue REcmaDimAlignedData::toString

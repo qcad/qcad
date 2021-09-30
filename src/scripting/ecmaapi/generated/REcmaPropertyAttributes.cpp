@@ -325,6 +325,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("DimStyleOverride",
+    QScriptValue(RPropertyAttributes::DimStyleOverride),
+    QScriptValue::ReadOnly);
+
+
     // enum conversions:
     
     qScriptRegisterMetaType<RPropertyAttributes::Option>(

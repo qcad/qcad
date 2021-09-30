@@ -40,6 +40,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     <constructor>
       <variant />
     </constructor>
+    <method name="isValid" cppName="isValid" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="getShapeType" cppName="getShapeType"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

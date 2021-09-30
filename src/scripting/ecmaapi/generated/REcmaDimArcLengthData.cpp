@@ -122,6 +122,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getMeasurement, "getMeasurement");
             
+            REcmaHelper::registerFunction(&engine, proto, to2D, "to2D");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RDimArcLengthData*>(), *proto);
 
@@ -2083,6 +2085,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimArcLengthData::getMeasurement", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimArcLengthData::to2D
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimArcLengthData::to2D", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimArcLengthData::to2D";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimArcLengthData* self = 
+                        getSelf("to2D", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->to2D();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimArcLengthData.to2D().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimArcLengthData::to2D", context, engine);
             return result;
         }
          QScriptValue REcmaDimArcLengthData::toString

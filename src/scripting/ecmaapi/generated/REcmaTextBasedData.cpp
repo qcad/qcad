@@ -242,6 +242,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getSimpleTextBlocks, "getSimpleTextBlocks");
             
+            REcmaHelper::registerFunction(&engine, proto, to2D, "to2D");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RTextBasedData*>(), *proto);
 
@@ -7049,6 +7051,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTextBasedData::toRichText", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextBasedData::to2D
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextBasedData::to2D", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextBasedData::to2D";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedData* self = 
+                        getSelf("to2D", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->to2D();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.to2D().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextBasedData::to2D", context, engine);
             return result;
         }
          QScriptValue REcmaTextBasedData::toString

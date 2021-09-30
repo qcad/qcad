@@ -65,6 +65,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
+            
             REcmaHelper::registerFunction(&engine, proto, getShapeType, "getShapeType");
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
@@ -405,6 +407,55 @@
 
     // public methods:
      QScriptValue
+        REcmaShape::isValid
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaShape::isValid", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaShape::isValid";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RShape* self = 
+                        getSelf("isValid", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isValid();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.isValid().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaShape::isValid", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaShape::getShapeType
         (QScriptContext* context, QScriptEngine* engine) 
         

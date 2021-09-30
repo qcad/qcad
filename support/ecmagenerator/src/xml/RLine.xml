@@ -63,7 +63,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false" />
     </method>
     <method name="isValid" cppName="isValid" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="getBoundingBox" cppName="getBoundingBox"

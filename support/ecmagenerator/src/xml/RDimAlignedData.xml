@@ -98,5 +98,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="to2D" cppName="to2D" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
   </class>
 </unit>

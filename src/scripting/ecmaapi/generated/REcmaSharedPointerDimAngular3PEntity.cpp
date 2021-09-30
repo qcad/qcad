@@ -192,6 +192,66 @@
                 qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyMeasuredValue),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyDimscale",
+                qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyDimscale),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimtxt",
+                qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyDimtxt),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimgap",
+                qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyDimgap),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimasz",
+                qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyDimasz),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimexe",
+                qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyDimexe),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimexo",
+                qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyDimexo),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimtad",
+                qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyDimtad),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimtih",
+                qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyDimtih),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimtsz",
+                qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyDimtsz),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimdsep",
+                qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyDimdsep),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimaunit",
+                qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyDimaunit),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimadec",
+                qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyDimadec),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimazin",
+                qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyDimazin),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyArchTick",
+                qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyArchTick),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimclrt",
+                qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyDimclrt),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyDimBlockName",
                 qScriptValueFromValue(&engine, RDimAngular3PEntity::PropertyDimBlockName),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

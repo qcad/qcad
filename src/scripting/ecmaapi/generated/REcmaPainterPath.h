@@ -225,6 +225,12 @@
         getNoPattern
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setScreenBasedLinetype
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getScreenBasedLinetype
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setPixelWidth
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

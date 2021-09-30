@@ -116,6 +116,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getCenter, "getCenter");
             
+            REcmaHelper::registerFunction(&engine, proto, to2D, "to2D");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RDimAngular2LData*>(), *proto);
 
@@ -1947,6 +1949,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimAngular2LData::getCenter", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimAngular2LData::to2D
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimAngular2LData::to2D", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimAngular2LData::to2D";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimAngular2LData* self = 
+                        getSelf("to2D", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->to2D();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimAngular2LData.to2D().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimAngular2LData::to2D", context, engine);
             return result;
         }
          QScriptValue REcmaDimAngular2LData::toString

@@ -191,6 +191,70 @@
                 qScriptValueFromValue(&engine, RDimArcLengthEntity::PropertyMeasuredValue),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyDimscale",
+                qScriptValueFromValue(&engine, RDimArcLengthEntity::PropertyDimscale),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimlfac",
+                qScriptValueFromValue(&engine, RDimArcLengthEntity::PropertyDimlfac),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimtxt",
+                qScriptValueFromValue(&engine, RDimArcLengthEntity::PropertyDimtxt),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimgap",
+                qScriptValueFromValue(&engine, RDimArcLengthEntity::PropertyDimgap),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimasz",
+                qScriptValueFromValue(&engine, RDimArcLengthEntity::PropertyDimasz),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimexe",
+                qScriptValueFromValue(&engine, RDimArcLengthEntity::PropertyDimexe),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimexo",
+                qScriptValueFromValue(&engine, RDimArcLengthEntity::PropertyDimexo),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimtad",
+                qScriptValueFromValue(&engine, RDimArcLengthEntity::PropertyDimtad),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimtih",
+                qScriptValueFromValue(&engine, RDimArcLengthEntity::PropertyDimtih),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimtsz",
+                qScriptValueFromValue(&engine, RDimArcLengthEntity::PropertyDimtsz),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimlunit",
+                qScriptValueFromValue(&engine, RDimArcLengthEntity::PropertyDimlunit),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimdec",
+                qScriptValueFromValue(&engine, RDimArcLengthEntity::PropertyDimdec),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimdsep",
+                qScriptValueFromValue(&engine, RDimArcLengthEntity::PropertyDimdsep),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimzin",
+                qScriptValueFromValue(&engine, RDimArcLengthEntity::PropertyDimzin),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyArchTick",
+                qScriptValueFromValue(&engine, RDimArcLengthEntity::PropertyArchTick),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimclrt",
+                qScriptValueFromValue(&engine, RDimArcLengthEntity::PropertyDimclrt),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyDimBlockName",
                 qScriptValueFromValue(&engine, RDimArcLengthEntity::PropertyDimBlockName),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

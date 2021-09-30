@@ -69,6 +69,11 @@
     <function><type><name>void</name></type> <name>updateRefDefinitionPoint2</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
         <expr_stmt><expr><name>refDefinitionPoint2</name> = <name>v</name></expr>;</expr_stmt>
     }</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>to2D</name><parameter_list>()</parameter_list> <block>{
+        <constructor_decl><name>RDimLinearData::to2D</name><parameter_list>()</parameter_list>;</constructor_decl>
+        <expr_stmt><expr><name>refDefinitionPoint1</name>.<name>z</name> = 0.0</expr>;</expr_stmt>
+        <expr_stmt><expr><name>refDefinitionPoint2</name>.<name>z</name> = 0.0</expr>;</expr_stmt>
+    }</block></function>
 
 </public><private>private:
     <comment type="line">// for caching only:</comment>

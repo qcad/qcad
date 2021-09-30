@@ -153,6 +153,110 @@
 
     // static properties:
     
+            ctor.setProperty("PropertyCustom",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyCustom),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyHandle",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyHandle),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyProtected",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyProtected),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimscale",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyDimscale),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimlfac",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyDimlfac),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimtxt",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyDimtxt),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimgap",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyDimgap),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimasz",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyDimasz),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimdli",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyDimdli),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimexe",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyDimexe),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimexo",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyDimexo),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimtad",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyDimtad),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimtih",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyDimtih),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimtsz",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyDimtsz),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimlunit",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyDimlunit),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimdec",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyDimdec),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimdsep",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyDimdsep),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimzin",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyDimzin),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimaunit",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyDimaunit),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimadec",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyDimadec),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimazin",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyDimazin),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyArchTick",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyArchTick),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimclrt",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyDimclrt),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimblk",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyDimblk),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimblk1",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyDimblk1),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimblk2",
+                qScriptValueFromValue(&engine, RDimStyle::PropertyDimblk2),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("propertyVariables",
                 qScriptValueFromValue(&engine, RDimStyle::propertyVariables),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

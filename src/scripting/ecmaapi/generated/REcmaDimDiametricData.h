@@ -94,6 +94,9 @@
         ;static  QScriptValue
         getAutoLabel
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        to2D
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

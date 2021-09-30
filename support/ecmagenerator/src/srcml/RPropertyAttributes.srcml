@@ -77,7 +77,8 @@
         <expr><name>Geometry</name> = <name>Location</name> | <name>RefPoint</name></expr>,  <comment type="line">//!&lt; Property affected when changing geometry (Location | RefPoint)</comment>
         <expr><name>Scale</name> = 0x2000000</expr>,               <comment type="line">//!&lt; Property is scale (1:2, 5"=1", ...)</comment>
         <expr><name>Area</name> = 0x4000000</expr>,                <comment type="line">//!&lt; Property is area (relevant for formatting of value)</comment>
-        <expr><name>UnitLess</name> = 0x8000000</expr>             <comment type="line">//!&lt; Property has no unit (linetype scale, draw order, ...)</comment>
+        <expr><name>UnitLess</name> = 0x8000000</expr>,            <comment type="line">//!&lt; Property has no unit (linetype scale, draw order, ...)</comment>
+        <expr><name>DimStyleOverride</name> = 0x10000000</expr>    <comment type="line">//!&lt; Property is advanced dimension style override (can be hidden)</comment>
     }</block>;</enum>
     <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Options</argument>, <argument>Option</argument>)</argument_list></macro>
 

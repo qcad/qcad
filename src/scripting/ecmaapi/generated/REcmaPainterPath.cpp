@@ -192,6 +192,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getNoPattern, "getNoPattern");
             
+            REcmaHelper::registerFunction(&engine, proto, setScreenBasedLinetype, "setScreenBasedLinetype");
+            
+            REcmaHelper::registerFunction(&engine, proto, getScreenBasedLinetype, "getScreenBasedLinetype");
+            
             REcmaHelper::registerFunction(&engine, proto, setPixelWidth, "setPixelWidth");
             
             REcmaHelper::registerFunction(&engine, proto, getPixelWidth, "getPixelWidth");
@@ -350,6 +354,11 @@
 
     ctor.setProperty("NoPattern",
     QScriptValue(RPainterPath::NoPattern),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ScreenBasedLinetype",
+    QScriptValue(RPainterPath::ScreenBasedLinetype),
     QScriptValue::ReadOnly);
 
 
@@ -4382,6 +4391,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPainterPath::getNoPattern", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::setScreenBasedLinetype
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::setScreenBasedLinetype", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setScreenBasedLinetype";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("setScreenBasedLinetype", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setScreenBasedLinetype(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setScreenBasedLinetype().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::setScreenBasedLinetype", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::getScreenBasedLinetype
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::getScreenBasedLinetype", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getScreenBasedLinetype";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("getScreenBasedLinetype", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getScreenBasedLinetype();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getScreenBasedLinetype().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::getScreenBasedLinetype", context, engine);
             return result;
         }
          QScriptValue

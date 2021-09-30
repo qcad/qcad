@@ -36,6 +36,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="Scale" />
       <value name="Area" />
       <value name="UnitLess" />
+      <value name="DimStyleOverride" />
     </enum>
     <constructor>
       <variant />

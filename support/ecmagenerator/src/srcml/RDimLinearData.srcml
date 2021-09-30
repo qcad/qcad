@@ -98,6 +98,12 @@
 
     <comment type="line">//virtual void updateTextData() const;</comment>
 
+    <function><type><name>virtual</name> <name>void</name></type> <name>to2D</name><parameter_list>()</parameter_list> <block>{
+        <constructor_decl><name>RDimensionData::to2D</name><parameter_list>()</parameter_list>;</constructor_decl>
+        <expr_stmt><expr><name>extensionPoint1</name>.<name>z</name> = 0.0</expr>;</expr_stmt>
+        <expr_stmt><expr><name>extensionPoint2</name>.<name>z</name> = 0.0</expr>;</expr_stmt>
+    }</block></function>
+
 </public><protected>protected:
     <comment type="block">/** Definition point. Startpoint of the first extension line. */</comment>
     <decl_stmt><decl><type><name>RVector</name></type> <name>extensionPoint1</name></decl>;</decl_stmt>

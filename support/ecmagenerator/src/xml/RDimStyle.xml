@@ -99,6 +99,58 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <property name="PropertyCustom" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyHandle" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyProtected" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimscale" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimlfac" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimtxt" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimgap" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimasz" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimdli" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimexe" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimexo" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimtad" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimtih" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimtsz" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimlunit" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimdec" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimdsep" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimzin" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimaunit" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimadec" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimazin" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyArchTick" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimclrt" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimblk" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimblk1" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimblk2" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="propertyVariables"
     type="QList &lt; QPair &lt; RPropertyTypeId , RS :: KnownVariable &gt; &gt;"
     isConst="false" isStatic="true" />

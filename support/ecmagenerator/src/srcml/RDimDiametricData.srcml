@@ -81,6 +81,11 @@
     <function_decl><type><name>virtual</name> <name>QString</name></type> <name>getAutoLabel</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <comment type="line">//virtual void updateTextData() const;</comment>
 
+    <function><type><name>virtual</name> <name>void</name></type> <name>to2D</name><parameter_list>()</parameter_list> <block>{
+        <constructor_decl><name>RDimensionData::to2D</name><parameter_list>()</parameter_list>;</constructor_decl>
+        <expr_stmt><expr><name>chordPoint</name>.<name>z</name> = 0.0</expr>;</expr_stmt>
+    }</block></function>
+
 </public><private>private:
     <comment type="block">/** Chord point. Definition point from RDimensionData is near chord point. */</comment>
     <decl_stmt><decl><type><name>RVector</name></type> <name>chordPoint</name></decl>;</decl_stmt>

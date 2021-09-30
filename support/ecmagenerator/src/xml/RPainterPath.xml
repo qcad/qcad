@@ -27,6 +27,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="SimplePointDisplay" />
       <value name="PolylineGen" />
       <value name="NoPattern" />
+      <value name="ScreenBasedLinetype" />
     </enum>
     <constructor>
       <variant />
@@ -473,6 +474,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getNoPattern" cppName="getNoPattern"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setScreenBasedLinetype"
+    cppName="setScreenBasedLinetype" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getScreenBasedLinetype"
+    cppName="getScreenBasedLinetype" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="setPixelWidth" cppName="setPixelWidth"

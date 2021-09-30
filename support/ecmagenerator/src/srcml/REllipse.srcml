@@ -64,7 +64,7 @@
         <return>return <expr><name>true</name></expr>;</return>
     }</block></function>
 
-    <function_decl><type><name>bool</name></type> <name>isValid</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>isValid</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setZ</name><parameter_list>(<param><decl><type><name>double</name></type> <name>z</name></decl></param>)</parameter_list>;</function_decl>
 
