@@ -1068,6 +1068,11 @@ QString RTextBasedData::toRichText(const QString& escapedText, const QFont& main
 //    return RColor::createFromCadCustom(str).name();
 //}
 
+void RTextBasedData::to2D() {
+    position.z = 0.0;
+    alignmentPoint.z = 0.0;
+}
+
 QDebug operator<<(QDebug dbg, const RTextBasedData& t) {
     dbg.nospace() << "RTextBasedData("
                   << "text: " << t.getText()
