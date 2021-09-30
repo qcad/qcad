@@ -97,13 +97,13 @@ void RDimStyleProxyBasic::renderDimRotated() {
 
     double dimexe = dimensionData->getDimexe();
     double dimexo = dimensionData->getDimexo();
-    int dimtih = dimensionData->getDimtih();
+    bool dimtih = dimensionData->getDimtih();
 
     // rotate text so it's readable from the bottom or right (ISO)
     // quadrant 1 & 4
     bool corrected=false;
     double textAngle;
-    if (dimtih!=0) {
+    if (dimtih!=false) {
         textAngle = 0.0;
     }
     else {
@@ -178,7 +178,7 @@ void RDimStyleProxyBasic::renderDimAligned() {
 
     double dimexo = dimensionData->getDimexo();
     double dimexe = dimensionData->getDimexe();
-    int dimtih = dimensionData->getDimtih();
+    bool dimtih = dimensionData->getDimtih();
 
     RVector definitionPoint = data.getDefinitionPoint();
     RVector extensionPoint1 = data.getExtensionPoint1();
@@ -231,7 +231,7 @@ void RDimStyleProxyBasic::renderDimAligned() {
     // quadrant 1 & 4
     bool corrected=false;
     double textAngle;
-    if (dimtih!=0) {
+    if (dimtih!=false) {
         textAngle = 0.0;
     }
     else {
@@ -401,122 +401,31 @@ void RDimStyleProxyBasic::renderDimOrdinate() {
 void RDimStyleProxyBasic::renderDimRadial() {
     const RDimRadialData& data = *dynamic_cast<const RDimRadialData*>(dimensionData);
 
-    QList<QSharedPointer<RShape> > shapes;
-
-    //defaultAngle = 0.0;
-
-    RVector definitionPoint = data.getDefinitionPoint();
+    QString text = data.getText();
     RVector chordPoint = data.getChordPoint();
-
-    double angle = definitionPoint.getAngleTo(chordPoint);
-
-    // text distance to line (DIMGAP)
-    double dimgap = dimensionData->getDimgap();
-    double dimtxt = dimensionData->getDimtxt();
-    double dimasz = dimensionData->getDimasz();
-    bool archTick = dimensionData->useArchTick();
-
-    // length of dimension line:
-    double length = definitionPoint.getDistanceTo(chordPoint);
-
-//    RVector oldMot = textPositionCenter;
-//    textPositionCenter = RVector(0,0);
-//    //dimLineLength = RNANDOUBLE;
-//    getTextData();
-//    textPositionCenter = oldMot;
-
-    RTextData& textData = data.initTextData();
-
-    double textWidth = textData.getWidth();
-
-    // do we have to put the arrow / text outside of the arc?
-    bool outsideArrow = (length < dimasz*2+textWidth);
-    bool outsideLabel = outsideArrow;
-
-    // force flipping arrows (against logic above):
-    if (data.isArrow1Flipped()) {
-        outsideArrow = !outsideArrow;
-        outsideLabel = outsideArrow;
-    }
-
-    double arrowAngle;
-    if (outsideArrow) {
-        if (outsideLabel) {
-            length += dimasz*2 + textWidth;
-        }
-        else {
-            length += dimasz*2;
-        }
-        arrowAngle = angle+M_PI;
-    } else {
-        if (outsideLabel) {
-            length += dimasz*2 + textWidth;
-        }
-        arrowAngle = angle;
-    }
-
-    RVector v3 = RVector::createPolar(length, angle);
-    v3+=definitionPoint;
-
-    // dimension line:
-    shapes.append(QSharedPointer<RShape>(new RLine(definitionPoint, v3)));
-
-    // create arrow:
-    shapes.append(getArrow(chordPoint, arrowAngle));
-
-    RVector arrow1Pos = RVector::invalid;
-    if (!archTick) {
-        arrow1Pos = chordPoint + RVector::createPolar(dimasz, arrowAngle + M_PI);
-    }
-
-    RVector distV;
-    double textAngle;
+    RVector definitionPoint = data.getDefinitionPoint();
+    bool dimtih = dimensionData->getDimtih();
 
     // rotate text so it's readable from the bottom or right (ISO)
     // quadrant 1 & 4
-    if (angle > M_PI/2.0*3.0+RS::AngleTolerance ||
-        angle < M_PI/2.0+RS::AngleTolerance) {
+    bool corrected=false;
 
-        distV.setPolar(dimgap + dimtxt/2.0, angle+M_PI/2.0);
-        textAngle = angle;
+    double textAngle;
+    if (dimtih!=false) {
+        textAngle = 0.0;
     }
-    // quadrant 2 & 3
     else {
-        distV.setPolar(dimgap + dimtxt/2.0, angle-M_PI/2.0);
-        textAngle = angle+M_PI;
+        textAngle = RMath::makeAngleReadable(chordPoint.getAngleTo(definitionPoint), true, &corrected);
     }
 
-    RVector textPos;
-    if (data.hasCustomTextPosition()) {
-        //textPos = textPositionCenter;
-    } else {
-        if (outsideLabel) {
-            if (outsideArrow) {
-                textPos.setPolar(length-textWidth/2.0-dimasz, angle);
-            }
-            else {
-                textPos.setPolar(length-textWidth/2.0-dimasz, angle);
-            }
-        }
-        else {
-            if (outsideArrow) {
-                textPos.setPolar((length-dimasz*2)/2.0, angle);
-            }
-            else {
-                textPos.setPolar(length/2.0, angle);
-            }
-        }
-        textPos += definitionPoint;
-        // move text away from dimension line:
-        textPos += distV;
-        //textPositionCenter = textPos;
-
-        //dimensionData->updateTextPositionSide(RVector::invalid);
-        dimensionData->updateTextPositionCenter(textPos);
-    }
-    //defaultAngle = textAngle;
+    // export text label:
+    RTextData& textData = data.initTextData();
+    double textWidth = textData.getWidth();
+    updateTextPosition(text, textWidth, chordPoint, definitionPoint, corrected);
     textData.rotate(textAngle, RVector(0,0));
-    textData.move(data.getTextPosition());
+    textData.move(dimensionData->getTextPosition());
+
+    QList<QSharedPointer<RShape> > shapes = getDimensionLineShapes(chordPoint, definitionPoint, true, false);
 
     data.updateTextData(textData);
     RBox bbox = textData.getBoundingBox(false);
@@ -525,7 +434,142 @@ void RDimStyleProxyBasic::renderDimRadial() {
     }
     data.updateBoundingBox(bbox);
     data.updateShapes(shapes);
-    data.updateArrowPos1(arrow1Pos);
+
+//    QList<QSharedPointer<RShape> > shapes;
+
+//    //defaultAngle = 0.0;
+
+//    RVector definitionPoint = data.getDefinitionPoint();
+//    RVector chordPoint = data.getChordPoint();
+
+//    double angle = definitionPoint.getAngleTo(chordPoint);
+
+//    // text distance to line (DIMGAP)
+//    double dimgap = dimensionData->getDimgap();
+//    double dimtxt = dimensionData->getDimtxt();
+//    double dimasz = dimensionData->getDimasz();
+//    bool archTick = dimensionData->useArchTick();
+//    int dimtad = dimensionData->getDimtad();
+//    bool dimtih = dimensionData->getDimtih();
+
+//    // length of dimension line:
+//    double length = definitionPoint.getDistanceTo(chordPoint);
+
+////    RVector oldMot = textPositionCenter;
+////    textPositionCenter = RVector(0,0);
+////    //dimLineLength = RNANDOUBLE;
+////    getTextData();
+////    textPositionCenter = oldMot;
+
+//    RTextData& textData = data.initTextData();
+
+//    //QList<QSharedPointer<RShape> > shapes = getDimensionLineShapes(chordPoint, definitionPoint, true, true);
+
+//    double textWidth = textData.getWidth();
+
+//    // do we have to put the arrow / text outside of the arc?
+//    bool outsideArrow = (length < dimasz*2+textWidth);
+//    bool outsideLabel = outsideArrow;
+
+//    // force flipping arrows (against logic above):
+//    if (data.isArrow1Flipped()) {
+//        outsideArrow = !outsideArrow;
+//        outsideLabel = outsideArrow;
+//    }
+
+//    double arrowAngle;
+//    if (outsideArrow) {
+//        if (outsideLabel) {
+//            length += dimasz*2 + textWidth;
+//        }
+//        else {
+//            length += dimasz*2;
+//        }
+//        arrowAngle = angle+M_PI;
+//    } else {
+//        if (outsideLabel) {
+//            length += dimasz*2 + textWidth;
+//        }
+//        arrowAngle = angle;
+//    }
+
+//    RVector v3 = RVector::createPolar(length, angle);
+//    v3+=definitionPoint;
+
+//    // dimension line:
+//    shapes.append(QSharedPointer<RShape>(new RLine(definitionPoint, v3)));
+
+//    // create arrow:
+//    shapes.append(getArrow(chordPoint, arrowAngle));
+
+//    RVector arrow1Pos = RVector::invalid;
+//    if (!archTick) {
+//        arrow1Pos = chordPoint + RVector::createPolar(dimasz, arrowAngle + M_PI);
+//    }
+
+//    RVector distV;
+//    double textAngle;
+
+//    // rotate text so it's readable from the bottom or right (ISO)
+//    // quadrant 1 & 4
+//    if (angle > M_PI/2.0*3.0+RS::AngleTolerance ||
+//        angle < M_PI/2.0+RS::AngleTolerance) {
+
+//        distV.setPolar(dimgap + dimtxt/2.0, angle+M_PI/2.0);
+//        textAngle = angle;
+//    }
+//    // quadrant 2 & 3
+//    else {
+//        distV.setPolar(dimgap + dimtxt/2.0, angle-M_PI/2.0);
+//        textAngle = angle+M_PI;
+//    }
+
+//    RVector textPos;
+//    if (data.hasCustomTextPosition()) {
+//        //textPos = textPositionCenter;
+//    } else {
+//        if (outsideLabel) {
+//            if (outsideArrow) {
+//                textPos.setPolar(length-textWidth/2.0-dimasz, angle);
+//            }
+//            else {
+//                textPos.setPolar(length-textWidth/2.0-dimasz, angle);
+//            }
+//        }
+//        else {
+//            if (outsideArrow) {
+//                textPos.setPolar((length-dimasz*2)/2.0, angle);
+//            }
+//            else {
+//                textPos.setPolar(length/2.0, angle);
+//            }
+//        }
+//        textPos += definitionPoint;
+
+//        // move text away from dimension line:
+//        QString text = data.getText();
+//        if (!text.contains("\\X")) {
+//            if (dimtad!=0 && dimtih==false) {
+//                // text above dimension line (dimtad is 1):
+//                textPos += distV;
+//            }
+//        }
+
+//        //dimensionData->updateTextPositionSide(RVector::invalid);
+//        dimensionData->updateTextPositionCenter(textPos);
+//    }
+//    //defaultAngle = textAngle;
+//    textData.rotate(textAngle, RVector(0,0));
+//    textData.move(data.getTextPosition());
+
+//    data.updateTextData(textData);
+//    RBox bbox = textData.getBoundingBox(false);
+//    for (int i=0; i<shapes.length(); i++) {
+//        bbox.growToInclude(shapes[i]->getBoundingBox());
+//    }
+//    data.updateBoundingBox(bbox);
+//    data.updateShapes(shapes);
+//    data.updateArrowPos1(arrow1Pos);
 }
 
 void RDimStyleProxyBasic::renderDimDiametric() {
@@ -534,14 +578,14 @@ void RDimStyleProxyBasic::renderDimDiametric() {
     QString text = data.getText();
     RVector chordPoint = data.getChordPoint();
     RVector definitionPoint = data.getDefinitionPoint();
-    int dimtih = dimensionData->getDimtih();
+    bool dimtih = dimensionData->getDimtih();
 
     // rotate text so it's readable from the bottom or right (ISO)
     // quadrant 1 & 4
     bool corrected=false;
 
     double textAngle;
-    if (dimtih!=0) {
+    if (dimtih!=false) {
         textAngle = 0.0;
     }
     else {
@@ -585,7 +629,8 @@ void RDimStyleProxyBasic::renderDimAngular() {
     double dimtxt = dimensionData->getDimtxt();
     double dimgap = dimensionData->getDimgap();
     double dimasz = dimensionData->getDimasz();
-    int dimtih = dimensionData->getDimtih();
+    int dimtad = dimensionData->getDimtad();
+    bool dimtih = dimensionData->getDimtih();
 
     // find out center:
     RVector center = data.getCenter();
@@ -785,7 +830,7 @@ void RDimStyleProxyBasic::renderDimAngular() {
 
     RVector distV;
     double textAngle;
-    if (dimtih!=0) {
+    if (dimtih!=false) {
         textAngle = 0.0;
     }
     else {
@@ -808,7 +853,11 @@ void RDimStyleProxyBasic::renderDimAngular() {
         if (data.getMeasurement().contains("\\P")) {
             f = 2.0;
         }
-        textPos+=distV*f;
+
+        if (dimtad!=0 && dimtih==false) {
+            // text above dimension line (dimtad is 1):
+            textPos+=distV*f;
+        }
 
         dimensionData->updateTextPositionCenter(textPos);
     }
