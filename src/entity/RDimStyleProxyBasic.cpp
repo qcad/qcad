@@ -425,7 +425,7 @@ void RDimStyleProxyBasic::renderDimRadial() {
     textData.rotate(textAngle, RVector(0,0));
     textData.move(dimensionData->getTextPosition());
 
-    QList<QSharedPointer<RShape> > shapes = getDimensionLineShapes(chordPoint, definitionPoint, true, false);
+    QList<QSharedPointer<RShape> > shapes = getDimensionLineShapes(definitionPoint, chordPoint, false, true);
 
     data.updateTextData(textData);
     RBox bbox = textData.getBoundingBox(false);
