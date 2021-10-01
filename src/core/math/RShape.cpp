@@ -1065,7 +1065,7 @@ QList<RVector> RShape::getIntersectionPointsCC(const RCircle& circle1, const RCi
         return res;
     }
 
-    double tol = (r1+r2)/2000;
+    double tol = (r1+r2)/200000;
 
     // the two circles (almost) touch externally / internally in one point (tangent):
     if (RMath::fuzzyCompare(uMag, r1+r2, tol) ||
