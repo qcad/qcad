@@ -319,7 +319,7 @@
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
         <source>Referenced Block</source>
-        <translation type="unfinished">Block som det hänvisas till</translation>
+        <translation>Block som är referenser</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1240,6 +1240,3 @@
     </message>
 </context>
 </TS>
-
-
-

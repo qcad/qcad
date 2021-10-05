@@ -123,12 +123,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+422"/>
+        <location line="+449"/>
         <source>Plugin:</source>
         <translation>Eklenti:</translation>
     </message>
     <message>
-        <location line="-397"/>
+        <location line="-424"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -9608,8 +9608,8 @@ shown in search results:</source>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
-        <source>Mode: </source>
-        <translation type="unfinished"></translation>
+        <source>Mode:</source>
+        <translation type="unfinished">Mod:</translation>
     </message>
     <message>
         <location line="+17"/>

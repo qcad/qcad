@@ -6,7 +6,7 @@
     <message>
         <location filename="../src/gui/RColorCombo.cpp" line="+157"/>
         <source>Custom</source>
-        <translation type="unfinished">Tilpasset</translation>
+        <translation>Tilpasset</translation>
     </message>
 </context>
 <context>
@@ -14,47 +14,47 @@
     <message>
         <location filename="../src/gui/REventHandler.cpp" line="+195"/>
         <source>Grid</source>
-        <translation type="unfinished">Gitter</translation>
+        <translation>Gitter</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>End</source>
-        <translation type="unfinished">Slut</translation>
+        <translation>Slut</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation type="unfinished">På enheden</translation>
+        <translation>På enheden</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Perpendicular</source>
-        <translation type="unfinished">Lodret</translation>
+        <translation>Lodret</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Tangential</source>
-        <translation type="unfinished">Tangentielt</translation>
+        <translation>Tangentielt</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Center</source>
-        <translation type="unfinished">Center</translation>
+        <translation>Center</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Middle</source>
-        <translation type="unfinished">Midt</translation>
+        <translation>Midt</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Intersection</source>
-        <translation type="unfinished">Krydsningspunkt</translation>
+        <translation>Krydsningspunkt</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Reference</source>
-        <translation type="unfinished">Henvisning</translation>
+        <translation>Henvisning</translation>
     </message>
 </context>
 <context>
@@ -62,7 +62,7 @@
     <message>
         <location filename="../src/gui/RMathLineEdit.cpp" line="+172"/>
         <source>Invalid</source>
-        <translation type="unfinished">Ugyldig</translation>
+        <translation>Ugyldig</translation>
     </message>
 </context>
 </TS>

@@ -44,12 +44,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+422"/>
+        <location line="+449"/>
         <source>Plugin:</source>
         <translation>Vtičnik:</translation>
     </message>
     <message>
-        <location line="-397"/>
+        <location line="-424"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -10545,9 +10545,13 @@ shown in search results:</source>
         <translation>Splošno</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode: </source>
-        <translation>Način: </translation>
+        <translation type="vanished">Način: </translation>
+    </message>
+    <message>
+        <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
+        <source>Mode:</source>
+        <translation type="unfinished">Način:</translation>
     </message>
     <message>
         <location line="+17"/>

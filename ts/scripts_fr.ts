@@ -67,12 +67,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+422"/>
+        <location line="+449"/>
         <source>Plugin:</source>
         <translation>Plugin :</translation>
     </message>
     <message>
-        <location line="-397"/>
+        <location line="-424"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -11240,9 +11240,13 @@ dans les résultats de recherche :</translation>
         <translation>Générale</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode: </source>
-        <translation>Mode : </translation>
+        <translation type="vanished">Mode : </translation>
+    </message>
+    <message>
+        <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
+        <source>Mode:</source>
+        <translation>Mode :</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -11874,7 +11878,7 @@ dans les résultats de recherche :</translation>
     <message>
         <location line="+7"/>
         <source>Display advanced dimension style overrides</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher les remplacements de style de cote avancés</translation>
     </message>
 </context>
 <context>

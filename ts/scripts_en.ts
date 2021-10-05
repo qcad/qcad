@@ -135,12 +135,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+422"/>
+        <location line="+449"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-397"/>
+        <location line="-424"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -10065,9 +10065,13 @@ shown in search results:</translation>
         <translation>General</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode: </source>
-        <translation>Mode: </translation>
+        <translation type="vanished">Mode: </translation>
+    </message>
+    <message>
+        <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
+        <source>Mode:</source>
+        <translation>Mode:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -10590,7 +10594,7 @@ shown in search results:</translation>
     <message>
         <location line="+7"/>
         <source>Display advanced dimension style overrides</source>
-        <translation type="unfinished"></translation>
+        <translation>Display advanced dimension style overrides</translation>
     </message>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+198"/>

@@ -123,12 +123,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+422"/>
+        <location line="+449"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-397"/>
+        <location line="-424"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -9859,9 +9859,13 @@ ve výsledcích vyhledávání:</translation>
         <translation>Všeobecné</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode: </source>
-        <translation>Režim:</translation>
+        <translation type="vanished">Režim:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
+        <source>Mode:</source>
+        <translation type="unfinished">Režim:</translation>
     </message>
     <message>
         <location line="+17"/>

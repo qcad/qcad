@@ -209,31 +209,31 @@
         <location line="+1"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
         <source>Radius</source>
-        <translation type="unfinished">Radius</translation>
+        <translation>Radius</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-9"/>
         <source>Start Angle</source>
-        <translation type="unfinished">Startvinkel</translation>
+        <translation>Startvinkel</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+1"/>
         <source>End Angle</source>
-        <translation type="unfinished">Vinkel i enden</translation>
+        <translation>Vinkel i enden</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+1"/>
         <source>Reversed</source>
-        <translation type="unfinished">Omvendt</translation>
+        <translation>Omvendt</translation>
     </message>
     <message>
         <location line="+2"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+2"/>
         <source>Diameter</source>
-        <translation type="unfinished">Diameter</translation>
+        <translation>Diameter</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -245,7 +245,7 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="-11"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
         <source>Length</source>
-        <translation type="unfinished">Længde</translation>
+        <translation>Længde</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -256,87 +256,87 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
         <source>Total Length</source>
-        <translation type="unfinished">Samlet længde</translation>
+        <translation>Samlet længde</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Sweep Angle</source>
-        <translation type="unfinished">Fejevinkel</translation>
+        <translation>Fejevinkel</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+2"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Area</source>
-        <translation type="unfinished">Område</translation>
+        <translation>Område</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Total Area</source>
-        <translation type="unfinished">Samlet areal</translation>
+        <translation>Samlet areal</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+93"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+101"/>
         <source>Tag</source>
-        <translation type="unfinished">Tag</translation>
+        <translation>Tag</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Prompt</source>
-        <translation type="unfinished">Prompt</translation>
+        <translation>Prompt</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+1"/>
         <source>Invisible</source>
-        <translation type="unfinished">Usynlig</translation>
+        <translation>Usynlig</translation>
     </message>
     <message>
         <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
         <source>Circumference</source>
-        <translation type="unfinished">Omkreds</translation>
+        <translation>Omkreds</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngular2LEntity.cpp" line="-14"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 Start</source>
-        <translation type="unfinished">Linje 1 Start</translation>
+        <translation>Linje 1 Start</translation>
     </message>
     <message>
         <location line="+10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 Start</source>
-        <translation type="unfinished">Linje 2 Start</translation>
+        <translation>Linje 2 Start</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 1 End</source>
-        <translation type="unfinished">Linje 1 ende</translation>
+        <translation>Linje 1 ende</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Line 2 End</source>
-        <translation type="unfinished">Linje 2 slut</translation>
+        <translation>Linje 2 slut</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Arc</source>
-        <translation type="unfinished">Dimension Arc</translation>
+        <translation>Dimension Arc</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimArcLengthEntity.cpp" line="+185"/>
         <source>Arc Symbol Type</source>
-        <translation type="unfinished">Type af buesymbol</translation>
+        <translation>Type af buesymbol</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimDiametricEntity.cpp" line="-6"/>
@@ -346,35 +346,35 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Chord Point</source>
-        <translation type="unfinished">Akkordpunkt</translation>
+        <translation>Akkordpunkt</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Far Chord Point</source>
-        <translation type="unfinished">Langtliggende akkordpunkt</translation>
+        <translation>Langtliggende akkordpunkt</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Line</source>
-        <translation type="unfinished">Dimension Line</translation>
+        <translation>Dimension Line</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 1</source>
-        <translation type="unfinished">Udvidelsespunkt 1</translation>
+        <translation>Udvidelsespunkt 1</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Extension Point 2</source>
-        <translation type="unfinished">Udvidelsespunkt 2</translation>
+        <translation>Udvidelsespunkt 2</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="-10"/>
@@ -383,96 +383,96 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="-5"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation type="unfinished">Oprindelse</translation>
+        <translation>Oprindelse</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ordinate</source>
-        <translation type="unfinished">Ordinat</translation>
+        <translation>Ordinat</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Defining Point</source>
-        <translation type="unfinished">Definitionspunkt</translation>
+        <translation>Definitionspunkt</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation type="unfinished">Leader slutpunkt</translation>
+        <translation>Leader slutpunkt</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+167"/>
         <source>Dimension Angle</source>
-        <translation type="unfinished">Dimension Vinkel</translation>
+        <translation>Dimension Vinkel</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>
         <source>Label</source>
-        <translation type="unfinished">Etiket</translation>
+        <translation>Etiket</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <source>Tolerance</source>
-        <translation type="unfinished">Tolerance</translation>
+        <translation>Tolerance</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Upper Limit</source>
-        <translation type="unfinished">Øvre grænse</translation>
+        <translation>Øvre grænse</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Lower Limit</source>
-        <translation type="unfinished">Nedre grænse</translation>
+        <translation>Nedre grænse</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Definition Point</source>
-        <translation type="unfinished">Definitionspunkt</translation>
+        <translation>Definitionspunkt</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
-        <translation type="unfinished">Tekst Position</translation>
+        <translation>Tekst Position</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Flip First Arrow</source>
-        <translation type="unfinished">Vend første pil</translation>
+        <translation>Vend første pil</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Flip Second Arrow</source>
-        <translation type="unfinished">Vend anden pil</translation>
+        <translation>Vend anden pil</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Fixed Extension Line</source>
-        <translation type="unfinished">Fast forlængelse af linje</translation>
+        <translation>Fast forlængelse af linje</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension Line Length</source>
-        <translation type="unfinished">Længde af forlængerledning</translation>
+        <translation>Længde af forlængerledning</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Auto Label</source>
-        <translation type="unfinished">Automatisk mærke</translation>
+        <translation>Automatisk mærke</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Measured Value</source>
-        <translation type="unfinished">Målt værdi</translation>
+        <translation>Målt værdi</translation>
     </message>
     <message>
         <source>Style</source>
@@ -557,39 +557,39 @@
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-3"/>
         <source>Scale</source>
-        <translation type="unfinished">Skala</translation>
+        <translation>Skala</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="+3"/>
         <source>Block Name</source>
-        <translation type="unfinished">Bloknavn</translation>
+        <translation>Bloknavn</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Auto Label Position</source>
-        <translation type="unfinished">Automatisk etiketposition</translation>
+        <translation>Automatisk etiketposition</translation>
     </message>
     <message>
         <location filename="../src/entity/REllipseEntity.cpp" line="-17"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Major Point</source>
-        <translation type="unfinished">Vigtigste punkt</translation>
+        <translation>Vigtigste punkt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Ratio</source>
-        <translation type="unfinished">Forhold</translation>
+        <translation>Forhold</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Start Parameter</source>
-        <translation type="unfinished">Startparameter</translation>
+        <translation>Startparameter</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End Parameter</source>
-        <translation type="unfinished">Slutparameter</translation>
+        <translation>Slutparameter</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -599,7 +599,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Point</source>
-        <translation type="unfinished">Startpunkt</translation>
+        <translation>Startpunkt</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -609,7 +609,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>End Point</source>
-        <translation type="unfinished">Slutpunkt</translation>
+        <translation>Slutpunkt</translation>
     </message>
     <message>
         <location filename="../src/entity/RFaceEntity.cpp" line="-14"/>
@@ -622,7 +622,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 1</source>
-        <translation type="unfinished">Punkt 1</translation>
+        <translation>Punkt 1</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -635,7 +635,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 2</source>
-        <translation type="unfinished">Punkt 2</translation>
+        <translation>Punkt 2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -648,7 +648,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 3</source>
-        <translation type="unfinished">Punkt 3</translation>
+        <translation>Punkt 3</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -661,17 +661,17 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 4</source>
-        <translation type="unfinished">Punkt 4</translation>
+        <translation>Punkt 4</translation>
     </message>
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-6"/>
         <source>Solid</source>
-        <translation type="unfinished">Solid</translation>
+        <translation>Solid</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Alpha</source>
-        <translation type="unfinished">Alpha</translation>
+        <translation>Alpha</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -679,17 +679,17 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation type="unfinished">Mønster</translation>
+        <translation>Mønster</translation>
     </message>
     <message>
         <location line="-3"/>
         <source>Name</source>
-        <translation type="unfinished">Navn</translation>
+        <translation>Navn</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>From Entity</source>
-        <translation type="unfinished">Fra Enhed</translation>
+        <translation>Fra Enhed</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -699,7 +699,7 @@
         <location filename="../src/entity/RRayEntity.cpp" line="+2"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+2"/>
         <source>Angle</source>
-        <translation type="unfinished">Vinkel</translation>
+        <translation>Vinkel</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -716,22 +716,22 @@
         <location line="+2"/>
         <location line="+1"/>
         <source>Vertex</source>
-        <translation type="unfinished">Vertex</translation>
+        <translation>Vertex</translation>
     </message>
     <message>
         <location line="+189"/>
         <source>Yes</source>
-        <translation type="unfinished">Ja</translation>
+        <translation>Ja</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>No</source>
-        <translation type="unfinished">Nej</translation>
+        <translation>Nej</translation>
     </message>
     <message>
         <location filename="../src/entity/RImageEntity.cpp" line="-18"/>
         <source>File</source>
-        <translation type="unfinished">Fil</translation>
+        <translation>Fil</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -741,116 +741,116 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation type="unfinished">Position</translation>
+        <translation>Position</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>U</source>
-        <translation type="unfinished">U</translation>
+        <translation>U</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>V</source>
-        <translation type="unfinished">V</translation>
+        <translation>V</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Width Factor</source>
-        <translation type="unfinished">Breddefaktor</translation>
+        <translation>Breddefaktor</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Height Factor</source>
-        <translation type="unfinished">Højdefaktor</translation>
+        <translation>Højdefaktor</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Width</source>
-        <translation type="unfinished">Bredde</translation>
+        <translation>Bredde</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Height</source>
-        <translation type="unfinished">Højde</translation>
+        <translation>Højde</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Fade</source>
-        <translation type="unfinished">Fade</translation>
+        <translation>Fade</translation>
     </message>
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-4"/>
         <source>Arrow</source>
-        <translation type="unfinished">Pile</translation>
+        <translation>Pile</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow Block</source>
-        <translation type="unfinished">Pileblok</translation>
+        <translation>Pileblok</translation>
     </message>
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
         <source>Polyline Pattern</source>
-        <translation type="unfinished">Polylinemønster</translation>
+        <translation>Polylinemønster</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Closed</source>
-        <translation type="unfinished">Lukket</translation>
+        <translation>Lukket</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Bulge</source>
-        <translation type="unfinished">Bulge</translation>
+        <translation>Bulge</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Start Width</source>
-        <translation type="unfinished">Startbredde</translation>
+        <translation>Startbredde</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End Width</source>
-        <translation type="unfinished">Bredde i enden</translation>
+        <translation>Bredde i enden</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Global Width</source>
-        <translation type="unfinished">Global bredde</translation>
+        <translation>Global bredde</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Orientation</source>
-        <translation type="unfinished">Orientering</translation>
+        <translation>Orientering</translation>
     </message>
     <message>
         <location line="+6"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Size</source>
-        <translation type="unfinished">Størrelse</translation>
+        <translation>Størrelse</translation>
     </message>
     <message>
         <location line="-2"/>
         <source>Base Angle</source>
-        <translation type="unfinished">Base vinkel</translation>
+        <translation>Base vinkel</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Size 1</source>
-        <translation type="unfinished">Størrelse 1</translation>
+        <translation>Størrelse 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Size 2</source>
-        <translation type="unfinished">Størrelse 2</translation>
+        <translation>Størrelse 2</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Global Z</source>
-        <translation type="unfinished">Global Z</translation>
+        <translation>Global Z</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>
@@ -860,7 +860,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Base Point</source>
-        <translation type="unfinished">Base Point</translation>
+        <translation>Base Point</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -870,7 +870,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Second Point</source>
-        <translation type="unfinished">Andet punkt</translation>
+        <translation>Andet punkt</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -880,90 +880,90 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction Vector</source>
-        <translation type="unfinished">Retningsvektor</translation>
+        <translation>Retningsvektor</translation>
     </message>
     <message>
         <location line="+3"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+3"/>
         <source>Fixed Angle</source>
-        <translation type="unfinished">Fast vinkel</translation>
+        <translation>Fast vinkel</translation>
     </message>
     <message>
         <location filename="../src/entity/RSplineEntity.cpp" line="-12"/>
         <source>Closed Periodic</source>
-        <translation type="unfinished">Lukket Periodisk</translation>
+        <translation>Lukket Periodisk</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation type="unfinished">Uddannelse</translation>
+        <translation>Uddannelse</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Control Point</source>
-        <translation type="unfinished">Kontrolpunkt</translation>
+        <translation>Kontrolpunkt</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Fit Point</source>
-        <translation type="unfinished">Pasformspunkt</translation>
+        <translation>Pasformspunkt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Knot Vector</source>
-        <translation type="unfinished">Knude vektor</translation>
+        <translation>Knude vektor</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Knot</source>
-        <translation type="unfinished">Knude</translation>
+        <translation>Knude</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use Start Tangent</source>
-        <translation type="unfinished">Brug Start Tangent</translation>
+        <translation>Brug Start Tangent</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Tangent</source>
-        <translation type="unfinished">Start tangent</translation>
+        <translation>Start tangent</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Use End Tangent</source>
-        <translation type="unfinished">Brug endetangent</translation>
+        <translation>Brug endetangent</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>End Tangent</source>
-        <translation type="unfinished">Tangent i slutningen</translation>
+        <translation>Tangent i slutningen</translation>
     </message>
     <message>
         <location filename="../src/entity/RToleranceEntity.cpp" line="-5"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Location</source>
-        <translation type="unfinished">Placering</translation>
+        <translation>Placering</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction</source>
-        <translation type="unfinished">Retning</translation>
+        <translation>Retning</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text</source>
-        <translation type="unfinished">Tekst</translation>
+        <translation>Tekst</translation>
     </message>
 </context>
 </TS>

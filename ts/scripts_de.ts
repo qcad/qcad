@@ -85,12 +85,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+422"/>
+        <location line="+449"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-397"/>
+        <location line="-424"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -6394,7 +6394,7 @@ BUG: Interferes with group castings.</translation>
     <message>
         <location line="+36"/>
         <source>Width : </source>
-        <translation type="unfinished">Breite: </translation>
+        <translation>Breite: </translation>
     </message>
     <message>
         <location line="+16"/>
@@ -12060,9 +12060,13 @@ nicht öffnen.
         <translation>Allgemein</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode: </source>
-        <translation type="unfinished">Modus: </translation>
+        <translation type="obsolete">Modus: </translation>
+    </message>
+    <message>
+        <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
+        <source>Mode:</source>
+        <translation>Modus:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -12851,7 +12855,7 @@ nicht öffnen.
     <message>
         <location line="+7"/>
         <source>Display advanced dimension style overrides</source>
-        <translation type="unfinished"></translation>
+        <translation>Erweiterte Bemassungsstile anzeigen</translation>
     </message>
 </context>
 <context>

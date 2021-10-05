@@ -67,12 +67,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+422"/>
+        <location line="+449"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-397"/>
+        <location line="-424"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -11332,9 +11332,13 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Generale</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode: </source>
-        <translation type="unfinished">Modalità: </translation>
+        <translation type="obsolete">Modalità: </translation>
+    </message>
+    <message>
+        <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
+        <source>Mode:</source>
+        <translation>Modalità:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -11974,7 +11978,7 @@ mostrati nei risultati di ricerca:</translation>
     <message>
         <location line="+7"/>
         <source>Display advanced dimension style overrides</source>
-        <translation type="unfinished"></translation>
+        <translation>Visualizzare le sovrapposizioni di stile delle dimensioni avanzate</translation>
     </message>
 </context>
 <context>

@@ -39,12 +39,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+422"/>
+        <location line="+449"/>
         <source>Plugin:</source>
         <translation>Wtyczka:</translation>
     </message>
     <message>
-        <location line="-397"/>
+        <location line="-424"/>
         <source>ID:</source>
         <translation>Identyfikator:</translation>
     </message>
@@ -9573,9 +9573,13 @@ shown in search results:</source>
         <translation>Ogólne</translation>
     </message>
     <message>
-        <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode: </source>
-        <translation>Tryb:</translation>
+        <translation type="vanished">Tryb:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
+        <source>Mode:</source>
+        <translation type="unfinished">Tryb:</translation>
     </message>
     <message>
         <location line="+17"/>
