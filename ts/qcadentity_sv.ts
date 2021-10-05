@@ -533,7 +533,7 @@
     <message>
         <location line="+1"/>
         <source>Alpha</source>
-        <translation type="unfinished">Alpha</translation>
+        <translation>Alpha</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -609,13 +609,13 @@
         <location line="+2"/>
         <location line="+1"/>
         <source>U</source>
-        <translation type="unfinished">U</translation>
+        <translation>U</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>V</source>
-        <translation type="unfinished">V</translation>
+        <translation>V</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -824,7 +824,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Fit Point</source>
-        <translation type="unfinished">Anpassningspunkt</translation>
+        <translation>Anpassningspunkt</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -875,19 +875,19 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Location</source>
-        <translation type="unfinished">Plats</translation>
+        <translation>Plats</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Direction</source>
-        <translation type="unfinished">Riktning</translation>
+        <translation>Riktning</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text</source>
-        <translation type="unfinished">Text</translation>
+        <translation>Text</translation>
     </message>
 </context>
 </TS>

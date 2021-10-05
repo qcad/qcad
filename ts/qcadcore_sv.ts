@@ -410,7 +410,7 @@
     <message>
         <location line="+2"/>
         <source>Parent Id</source>
-        <translation type="unfinished">Föräldra-id</translation>
+        <translation>Föräldra-id</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -483,17 +483,17 @@
     <message>
         <location line="+1"/>
         <source>Selected</source>
-        <translation type="unfinished">Utvald</translation>
+        <translation>Utvald</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Invisible</source>
-        <translation type="unfinished">Osynlig</translation>
+        <translation>Osynlig</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Working Set</source>
-        <translation type="unfinished">Arbetsuppsättning</translation>
+        <translation>Arbetsuppsättning</translation>
     </message>
     <message>
         <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>
@@ -530,7 +530,7 @@
     <message>
         <location line="+1"/>
         <source>Text Width</source>
-        <translation type="unfinished">Textens bredd</translation>
+        <translation>Textens bredd</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -576,12 +576,12 @@
     <message>
         <location line="+1"/>
         <source>Backward</source>
-        <translation type="unfinished">Bakåt</translation>
+        <translation>Bakåt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Upside Down</source>
-        <translation type="unfinished">Upp och ner</translation>
+        <translation>Upp och ner</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
@@ -683,7 +683,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Insertion Base</source>
-        <translation type="unfinished">Insatsbas</translation>
+        <translation>Insatsbas</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -712,122 +712,122 @@
     <message>
         <location filename="../src/core/RDimStyle.cpp" line="+72"/>
         <source>Style</source>
-        <translation type="unfinished">Stil</translation>
+        <translation>Stil</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Overall dimension scale</source>
-        <translation type="unfinished">Övergripande dimensionsskala</translation>
+        <translation>Övergripande dimensionsskala</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear measurement factor</source>
-        <translation type="unfinished">Faktor för linjär mätning</translation>
+        <translation>Faktor för linjär mätning</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text height</source>
-        <translation type="unfinished">Texthöjd</translation>
+        <translation>Texthöjd</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation type="unfinished">Måtten för linjeavstånd</translation>
+        <translation>Måtten för linjeavstånd</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow size</source>
-        <translation type="unfinished">Pilens storlek</translation>
+        <translation>Pilens storlek</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line increment</source>
-        <translation type="unfinished">Förhöjning av dimensioner</translation>
+        <translation>Förhöjning av dimensioner</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation type="unfinished">Förlängning av linjeförlängning</translation>
+        <translation>Förlängning av linjeförlängning</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line offset</source>
-        <translation type="unfinished">Förskjutning av förlängningslinjen</translation>
+        <translation>Förskjutning av förlängningslinjen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text position vertical</source>
-        <translation type="unfinished">Textens position vertikalt</translation>
+        <translation>Textens position vertikalt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text inside horizontal</source>
-        <translation type="unfinished">Text inuti horisontell</translation>
+        <translation>Text inuti horisontell</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation type="unfinished">Storlek på krysset</translation>
+        <translation>Storlek på krysset</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear format</source>
-        <translation type="unfinished">Linjärt format</translation>
+        <translation>Linjärt format</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal places</source>
-        <translation type="unfinished">Decimalställen</translation>
+        <translation>Decimalställen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal separator</source>
-        <translation type="unfinished">Decimalseparator</translation>
+        <translation>Decimalseparator</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zero suppression</source>
-        <translation type="unfinished">Nollundertryckning</translation>
+        <translation>Nollundertryckning</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular format</source>
-        <translation type="unfinished">Angular-format</translation>
+        <translation>Angular-format</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation type="unfinished">Vinkelformade decimaler</translation>
+        <translation>Vinkelformade decimaler</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation type="unfinished">Undertryckning av vinkelnollpunkt</translation>
+        <translation>Undertryckning av vinkelnollpunkt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation type="unfinished">Arkitektur tick</translation>
+        <translation>Arkitektur tick</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text color</source>
-        <translation type="unfinished">Textfärg</translation>
+        <translation>Textfärg</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block</source>
-        <translation type="unfinished">Pilkorset</translation>
+        <translation>Pilkorset</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 1</source>
-        <translation type="unfinished">Pilblock 1</translation>
+        <translation>Pilblock 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 2</source>
-        <translation type="unfinished">Pilblock 2</translation>
+        <translation>Pilblock 2</translation>
     </message>
 </context>
 <context>
