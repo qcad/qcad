@@ -110,6 +110,79 @@ QString RLineweight::getName(RLineweight::Lineweight lineweight) {
     return QString();
 }
 
+RLineweight::Lineweight RLineweight::getClosestMatch(double lw) {
+    if (lw<(Weight000+Weight005)/200.0) {
+        return Weight000;
+    }
+    if (lw<(Weight005+Weight009)/200.0) {
+        return Weight005;
+    }
+    if (lw<(Weight009+Weight013)/200.0) {
+        return Weight009;
+    }
+    if (lw<(Weight013+Weight015)/200.0) {
+        return Weight013;
+    }
+    if (lw<(Weight015+Weight018)/200.0) {
+        return Weight015;
+    }
+    if (lw<(Weight018+Weight020)/200.0) {
+        return Weight018;
+    }
+    if (lw<(Weight020+Weight025)/200.0) {
+        return Weight020;
+    }
+    if (lw<(Weight025+Weight030)/200.0) {
+        return Weight025;
+    }
+    if (lw<(Weight030+Weight035)/200.0) {
+        return Weight030;
+    }
+    if (lw<(Weight035+Weight040)/200.0) {
+        return Weight035;
+    }
+    if (lw<(Weight040+Weight050)/200.0) {
+        return Weight040;
+    }
+    if (lw<(Weight050+Weight053)/200.0) {
+        return Weight050;
+    }
+    if (lw<(Weight053+Weight060)/200.0) {
+        return Weight053;
+    }
+    if (lw<(Weight060+Weight070)/200.0) {
+        return Weight060;
+    }
+    if (lw<(Weight070+Weight080)/200.0) {
+        return Weight070;
+    }
+    if (lw<(Weight080+Weight090)/200.0) {
+        return Weight080;
+    }
+    if (lw<(Weight090+Weight100)/200.0) {
+        return Weight090;
+    }
+    if (lw<(Weight100+Weight106)/200.0) {
+        return Weight100;
+    }
+    if (lw<(Weight106+Weight120)/200.0) {
+        return Weight106;
+    }
+    if (lw<(Weight120+Weight140)/200.0) {
+        return Weight120;
+    }
+    if (lw<(Weight140+Weight158)/200.0) {
+        return Weight140;
+    }
+    if (lw<(Weight158+Weight200)/200.0) {
+        return Weight158;
+    }
+    if (lw<(Weight200+Weight211)/200.0) {
+        return Weight200;
+    }
+    return Weight211;
+}
+
 QIcon RLineweight::getIcon(RLineweight::Lineweight lineweight, const QSize& size) {
     init();
 

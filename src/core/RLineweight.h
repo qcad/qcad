@@ -80,6 +80,8 @@ public:
     static QIcon getIcon(RLineweight::Lineweight color, const QSize& size = RDEFAULT_QSIZE_ICON);
     static QString getName(RLineweight::Lineweight lineweight);
 
+    static Lineweight getClosestMatch(double lw);
+
 private:
     static void init();
     static void init(const QString& cn, RLineweight::Lineweight lineweight);
