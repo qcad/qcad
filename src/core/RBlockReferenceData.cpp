@@ -525,6 +525,7 @@ bool RBlockReferenceData::applyTransformationTo(QSharedPointer<REntity>& entity)
     }
     entity->rotate(rotation);
     entity->move(position);
+    entity->getBoundingBoxes();
 
     return true;
 }
