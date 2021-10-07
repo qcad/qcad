@@ -415,7 +415,7 @@ void RDimensionEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
         return;
     }
 
-    // update textData and shapes:
+    // update textData and shapes through RDimStlye:
     data.render();
 
     // get dimension style to export dimesion:
@@ -480,13 +480,15 @@ void RDimensionEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
             e.setBrush(brush);
         }
 
-        // lines are not filled:
+        // lines and arcs are not filled:
         else {
             e.setBrush(Qt::NoBrush);
         }
 
         e.exportShape(s);
     }
+
+    e.setBrush(Qt::NoBrush);
 
     return;
 
