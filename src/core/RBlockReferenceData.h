@@ -52,7 +52,8 @@ public:
             const RVector& position, const RVector& scaleFactors,
             double angle,
             int columnCount=1, int rowCount=1,
-            double columnSpacing=0, double rowSpacing=0);
+            double columnSpacing=0, double rowSpacing=0,
+            double visualPropertiesScale=1.0);
 
     static RS::EntityType getRtti() {
         return RS::EntityBlockRef;
