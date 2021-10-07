@@ -45,7 +45,8 @@ RBlockReferenceData::RBlockReferenceData(
         RBlock::Id referencedBlockId, const RVector& position,
         const RVector& scaleFactors, double rotation,
         int columnCount, int rowCount,
-        double columnSpacing, double rowSpacing) :
+        double columnSpacing, double rowSpacing,
+        double visualPropertiesScale) :
         referencedBlockId(referencedBlockId),
         position(position),
         scaleFactors(scaleFactors),
@@ -53,7 +54,8 @@ RBlockReferenceData::RBlockReferenceData(
         columnCount(columnCount),
         rowCount(rowCount),
         columnSpacing(columnSpacing),
-        rowSpacing(rowSpacing) {
+        rowSpacing(rowSpacing),
+        visualPropertiesScale(visualPropertiesScale) {
 }
 
 void RBlockReferenceData::setReferencedBlockName(const QString& blockName) {
@@ -463,6 +465,7 @@ bool RBlockReferenceData::applyTransformationTo(REntity& entity) const {
         entity.scaleVisualProperties(visualPropertiesScale);
     }
 
+    // note: no non-uniform scaling:
     entity.move(-block->getOrigin());
     entity.scale(scaleFactors, RVector());
     //entity.scale(scaleFactors, RVector(), newShapes);
