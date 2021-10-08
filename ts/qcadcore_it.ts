@@ -727,7 +727,7 @@
         <translation type="vanished">Margini di stampa</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+832"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+836"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>È stato rilevato un riferimento circolare (ricorsivo) blocco:</translation>
     </message>

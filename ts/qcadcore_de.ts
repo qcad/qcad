@@ -735,7 +735,7 @@
         <translation type="obsolete">Plot Papiergrösse</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+832"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+836"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Circuläre (rekursive) Blockreferenzierung detektiert:</translation>
     </message>
