@@ -139,10 +139,10 @@ void RDimRadialEntity::init() {
     RDimRadialEntity::PropertyAutoTextPos.generateId(RDimRadialEntity::getRtti(), RDimensionEntity::PropertyAutoTextPos);
     RDimRadialEntity::PropertyFontName.generateId(RDimRadialEntity::getRtti(), RDimensionEntity::PropertyFontName);
     RDimRadialEntity::PropertyArrow1Flipped.generateId(RDimRadialEntity::getRtti(), RDimensionEntity::PropertyArrow1Flipped);
-    RDimRadialEntity::PropertyArrow2Flipped.generateId(RDimRadialEntity::getRtti(), RDimensionEntity::PropertyArrow2Flipped);
+    //RDimRadialEntity::PropertyArrow2Flipped.generateId(RDimRadialEntity::getRtti(), RDimensionEntity::PropertyArrow2Flipped);
 
-    RDimRadialEntity::PropertyExtLineFix.generateId(RDimRadialEntity::getRtti(), RDimensionEntity::PropertyExtLineFix);
-    RDimRadialEntity::PropertyExtLineFixLength.generateId(RDimRadialEntity::getRtti(), RDimensionEntity::PropertyExtLineFixLength);
+    //RDimRadialEntity::PropertyExtLineFix.generateId(RDimRadialEntity::getRtti(), RDimensionEntity::PropertyExtLineFix);
+    //RDimRadialEntity::PropertyExtLineFixLength.generateId(RDimRadialEntity::getRtti(), RDimensionEntity::PropertyExtLineFixLength);
 
     RDimRadialEntity::PropertyCenterPointX.generateId(RDimRadialEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"), true, RPropertyAttributes::Geometry);
     RDimRadialEntity::PropertyCenterPointY.generateId(RDimRadialEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"), true, RPropertyAttributes::Geometry);
