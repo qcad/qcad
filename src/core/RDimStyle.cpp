@@ -79,7 +79,7 @@ void RDimStyle::init() {
     RDimStyle::PropertyDimexe.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Extension line extension"), false, RPropertyAttributes::DimStyleOverride);
     RDimStyle::PropertyDimexo.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Extension line offset"), false, RPropertyAttributes::DimStyleOverride);
     RDimStyle::PropertyDimtad.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Text position vertical"), false, RPropertyAttributes::DimStyleOverride);
-    RDimStyle::PropertyDimtih.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Text inside horizontal"), false, RPropertyAttributes::DimStyleOverride);
+    RDimStyle::PropertyDimtih.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Text horizontal"), false, RPropertyAttributes::DimStyleOverride);
     RDimStyle::PropertyDimtsz.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Tick size"), false, RPropertyAttributes::DimStyleOverride);
     RDimStyle::PropertyDimlunit.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Linear format"), false, RPropertyAttributes::DimStyleOverride);
     RDimStyle::PropertyDimdec.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Decimal places"), false, RPropertyAttributes::DimStyleOverride);
