@@ -344,6 +344,9 @@ void RDocument::init(bool beforeLoad) {
 
         docVars->setDimensionFont(RSettings::getStringValue("DimensionSettings/DimensionFont", "Standard"));
 
+        // make sure by default, text and arrows are inside / outside:
+        docVars->setKnownVariable(RS::DIMATFIT, 0);
+
         // notify new document listeners
         if (RMainWindow::hasMainWindow()) {
             RMainWindow::getMainWindow()->notifyNewDocumentListeners(this, &transaction, beforeLoad);
