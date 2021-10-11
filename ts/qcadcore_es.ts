@@ -791,9 +791,13 @@
         <translation>Posición del texto en vertical</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text inside horizontal</source>
-        <translation>Texto dentro de la horizontal</translation>
+        <translation type="vanished">Texto dentro de la horizontal</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text horizontal</source>
+        <translation>Texto horizontal</translation>
     </message>
     <message>
         <location line="+1"/>

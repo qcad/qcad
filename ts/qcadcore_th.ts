@@ -757,7 +757,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Text inside horizontal</source>
+        <source>Text horizontal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

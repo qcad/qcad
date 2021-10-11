@@ -760,9 +760,13 @@
         <translation>Tekstposition vertikalt</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text inside horizontal</source>
-        <translation>Tekst inden for vandret</translation>
+        <translation type="vanished">Tekst inden for vandret</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text horizontal</source>
+        <translation>Tekst horisontal</translation>
     </message>
     <message>
         <location line="+1"/>

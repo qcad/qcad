@@ -787,9 +787,13 @@
         <translation>Text position vertical</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Text inside horizontal</source>
-        <translation>Text inside horizontal</translation>
+        <translation type="vanished">Text inside horizontal</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Text horizontal</source>
+        <translation>Text horizontal</translation>
     </message>
     <message>
         <location line="+1"/>
