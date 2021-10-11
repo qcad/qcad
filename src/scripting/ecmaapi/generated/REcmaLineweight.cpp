@@ -70,6 +70,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getName, "getName");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getClosestMatch, "getClosestMatch");
+            
 
     // static properties:
     
@@ -552,6 +554,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLineweight::getName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLineweight::getClosestMatch
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLineweight::getClosestMatch", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLineweight::getClosestMatch";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RLineweight::Lineweight'
+    RLineweight::Lineweight cppResult =
+        RLineweight::
+       getClosestMatch(a0);
+        // return type: RLineweight::Lineweight
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLineweight.getClosestMatch().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLineweight::getClosestMatch", context, engine);
             return result;
         }
          QScriptValue REcmaLineweight::toString

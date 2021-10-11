@@ -1029,6 +1029,217 @@
         
     } else 
 
+    if( context->argumentCount() ==
+        9
+                && (
+                
+                        context->argument(
+                        0
+                        ).isNumber()
+                ) /* type: RBlock::Id */
+            
+                && (
+                
+                        context->argument(
+                        1
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        1
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        1
+                        ).isNull()
+                ) /* type: RVector */
+            
+                && (
+                
+                        context->argument(
+                        2
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        2
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        2
+                        ).isNull()
+                ) /* type: RVector */
+            
+                && (
+                
+                        context->argument(
+                        3
+                        ).isNumber()
+                ) /* type: double */
+            
+                && (
+                
+                        context->argument(
+                        4
+                        ).isNumber()
+                ) /* type: int */
+            
+                && (
+                
+                        context->argument(
+                        5
+                        ).isNumber()
+                ) /* type: int */
+            
+                && (
+                
+                        context->argument(
+                        6
+                        ).isNumber()
+                ) /* type: double */
+            
+                && (
+                
+                        context->argument(
+                        7
+                        ).isNumber()
+                ) /* type: double */
+            
+                && (
+                
+                        context->argument(
+                        8
+                        ).isNumber()
+                ) /* type: double */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RBlock::Id
+                    a0 =
+                    (RBlock::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RBlockReferenceData: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap2 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                    if (ap2 == NULL) {
+                           return REcmaHelper::throwError("RBlockReferenceData: Argument 2 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a2 = 
+                    *ap2;
+                
+                    // argument isStandardType
+                    double
+                    a3 =
+                    (double)
+                    
+                    context->argument( 3 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a4 =
+                    (int)
+                    
+                    context->argument( 4 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a5 =
+                    (int)
+                    
+                    context->argument( 5 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a6 =
+                    (double)
+                    
+                    context->argument( 6 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a7 =
+                    (double)
+                    
+                    context->argument( 7 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a8 =
+                    (double)
+                    
+                    context->argument( 8 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // copyable class:
+            RBlockReferenceData
+                    cppResult(
+                    a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4
+        ,
+    a5
+        ,
+    a6
+        ,
+    a7
+        ,
+    a8
+                    );
+                
+            result = engine->newVariant(
+            context->thisObject(), qVariantFromValue(cppResult));
+        
+    } else 
+
     {
        return REcmaHelper::throwError(
        QString::fromLatin1("RBlockReferenceData(): no matching constructor found."),

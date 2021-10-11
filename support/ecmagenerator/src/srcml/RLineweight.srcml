@@ -81,6 +81,8 @@
     <function_decl><type><name>static</name> <name>QIcon</name></type> <name>getIcon</name><parameter_list>(<param><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>color</name></decl></param>, <param><decl><type><name>const</name> <name>QSize</name>&amp;</type> <name>size</name> =<init> <expr><name>RDEFAULT_QSIZE_ICON</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getName</name><parameter_list>(<param><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>lineweight</name></decl></param>)</parameter_list>;</function_decl>
 
+    <function_decl><type><name>static</name> <name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>getClosestMatch</name><parameter_list>(<param><decl><type><name>double</name></type> <name>lw</name></decl></param>)</parameter_list>;</function_decl>
+
 </public><private>private:
     <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>cn</name></decl></param>, <param><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>lineweight</name></decl></param>)</parameter_list>;</function_decl>

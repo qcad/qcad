@@ -88,6 +88,9 @@
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cloneToSharedPointer
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isInterpolated
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

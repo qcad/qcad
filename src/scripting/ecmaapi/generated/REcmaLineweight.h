@@ -54,6 +54,9 @@
         ;static  QScriptValue
         getName
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getClosestMatch
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

@@ -67,5 +67,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getClosestMatch" cppName="getClosestMatch"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RLineweight::Lineweight"
+      isPureVirtual="false">
+        <arg type="double" typeName="double" name="lw"
+        isConst="false" />
+      </variant>
+    </method>
   </class>
 </unit>

@@ -77,6 +77,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
+            REcmaHelper::registerFunction(&engine, proto, cloneToSharedPointer, "cloneToSharedPointer");
+            
             REcmaHelper::registerFunction(&engine, proto, isInterpolated, "isInterpolated");
             
             REcmaHelper::registerFunction(&engine, proto, getClosestPointOnShape, "getClosestPointOnShape");
@@ -1216,6 +1218,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerShape::clone", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerShape::cloneToSharedPointer
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerShape::cloneToSharedPointer", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerShape::cloneToSharedPointer";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RShape* self = 
+                        getSelf("cloneToSharedPointer", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RShape >'
+    QSharedPointer < RShape > cppResult =
+        
+               self->cloneToSharedPointer();
+        // return type: QSharedPointer < RShape >
+                // Shared pointer to shape, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.cloneToSharedPointer().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerShape::cloneToSharedPointer", context, engine);
             return result;
         }
          QScriptValue

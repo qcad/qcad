@@ -27,6 +27,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="0" isConst="false" />
         <arg type="double" typeName="double" name="rowSpacing"
         hasDefault="true" default="0" isConst="false" />
+        <arg type="double" typeName="double"
+        name="visualPropertiesScale" hasDefault="true"
+        default="1.0" isConst="false" />
       </variant>
     </constructor>
     <method name="getRtti" cppName="getRtti" specifier="public"
