@@ -604,14 +604,21 @@
   </customwidget>
  </customwidgets>
  <tabstops>
+  <tabstop>DIMTIH</tabstop>
+  <tabstop>DIMTAD</tabstop>
   <tabstop>KeepProportions</tabstop>
   <tabstop>DIMTXT</tabstop>
   <tabstop>DIMEXE</tabstop>
   <tabstop>DIMEXO</tabstop>
   <tabstop>DIMGAP</tabstop>
   <tabstop>DIMASZ</tabstop>
+  <tabstop>DIMDLI</tabstop>
+  <tabstop>DIMSCALE</tabstop>
   <tabstop>Arrow</tabstop>
   <tabstop>ArchitecturalTick</tabstop>
+  <tabstop>DimensionFont</tabstop>
+  <tabstop>DimensionTextColor</tabstop>
+  <tabstop>DecimalPoint</tabstop>
   <tabstop>LinearFormat</tabstop>
   <tabstop>LinearPrecision</tabstop>
   <tabstop>LinearShowTrailingZeros</tabstop>
@@ -628,12 +635,12 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>61</x>
-     <y>36</y>
+     <x>74</x>
+     <y>114</y>
     </hint>
     <hint type="destinationlabel">
-     <x>230</x>
-     <y>92</y>
+     <x>411</x>
+     <y>180</y>
     </hint>
    </hints>
   </connection>
@@ -644,12 +651,12 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>92</x>
-     <y>33</y>
+     <x>105</x>
+     <y>114</y>
     </hint>
     <hint type="destinationlabel">
-     <x>40</x>
-     <y>96</y>
+     <x>56</x>
+     <y>184</y>
     </hint>
    </hints>
   </connection>
@@ -660,12 +667,12 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>118</x>
-     <y>29</y>
+     <x>131</x>
+     <y>114</y>
     </hint>
     <hint type="destinationlabel">
-     <x>100</x>
-     <y>124</y>
+     <x>116</x>
+     <y>223</y>
     </hint>
    </hints>
   </connection>
@@ -676,12 +683,12 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>130</x>
-     <y>34</y>
+     <x>143</x>
+     <y>114</y>
     </hint>
     <hint type="destinationlabel">
-     <x>127</x>
-     <y>154</y>
+     <x>143</x>
+     <y>254</y>
     </hint>
    </hints>
   </connection>
@@ -692,12 +699,12 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>153</x>
-     <y>30</y>
+     <x>166</x>
+     <y>114</y>
     </hint>
     <hint type="destinationlabel">
-     <x>73</x>
-     <y>189</y>
+     <x>89</x>
+     <y>285</y>
     </hint>
    </hints>
   </connection>
@@ -708,12 +715,12 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>251</x>
-     <y>33</y>
+     <x>264</x>
+     <y>114</y>
     </hint>
     <hint type="destinationlabel">
-     <x>237</x>
-     <y>123</y>
+     <x>418</x>
+     <y>223</y>
     </hint>
    </hints>
   </connection>
@@ -724,12 +731,12 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>290</x>
-     <y>30</y>
+     <x>303</x>
+     <y>114</y>
     </hint>
     <hint type="destinationlabel">
-     <x>288</x>
-     <y>165</y>
+     <x>469</x>
+     <y>254</y>
     </hint>
    </hints>
   </connection>
@@ -740,12 +747,12 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>327</x>
-     <y>33</y>
+     <x>340</x>
+     <y>114</y>
     </hint>
     <hint type="destinationlabel">
-     <x>315</x>
-     <y>185</y>
+     <x>496</x>
+     <y>285</y>
     </hint>
    </hints>
   </connection>
@@ -756,12 +763,12 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>328</x>
-     <y>40</y>
+     <x>341</x>
+     <y>114</y>
     </hint>
     <hint type="destinationlabel">
-     <x>387</x>
-     <y>223</y>
+     <x>568</x>
+     <y>316</y>
     </hint>
    </hints>
   </connection>
@@ -772,12 +779,28 @@
    <slot>setDisabled(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>328</x>
-     <y>40</y>
+     <x>341</x>
+     <y>114</y>
     </hint>
     <hint type="destinationlabel">
-     <x>107</x>
-     <y>223</y>
+     <x>123</x>
+     <y>316</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>DIMTIH</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>DIMTAD</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>158</x>
+     <y>35</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>165</x>
+     <y>57</y>
     </hint>
    </hints>
   </connection>
