@@ -1,0 +1,87 @@
+<div xml:space="preserve">
+ 
+<p>Författare: Robert S.</p> 
+<p>Det här kommandot beräknar arean av bågar, cirklar, ellipser och elliptiska
+bågar och lägger eventuellt till informationen till det aktuella lagret i en
+ritning. Om du väljer någon annan typ av enhet visas en varning på
+kommandoraden.</p> 
+<p>För bågar finns det två alternativ för att beräkna areor, nämligen Segment
+eller Sektor. Arean av ett segment (eller skiva) är det område som avgränsas av
+bågen och två linjer som dras från bågens startpunkt och slutpunkt till bågens
+centrum. En sektors area är den area som avgränsas av bågen och en lina som
+dras från bågens startpunkt till dess slutpunkt.</p> 
+<p>
+<img alt="Segment or Sector" src="ArcCircle01.png" /> 
+<br />Figur 1: Ett segment (skiva) och en sektor.</p> 
+<p>
+  <b>Alternativ</b>
+</p> 
+<p>Det här kommandot har standardalternativen "
+<i>Add measurement to drawing</i>" och "
+<i>Text Height</i>".</p> 
+<p>
+<img alt="Standard options" src="ArcCircle02a.png" /> 
+<br />Figur 2: Standardalternativ för Info</p> 
+<p>Oavsett om detta är avstängt eller inte, när du klickar på en båge, cirkel,
+ellips eller elliptisk båge visas informationen i kommandoradswidgeten.</p> 
+<p>
+<img alt="Info is displayed in command line widget" src="ArcCircle03.png" /> 
+<br />Figur 3: Information som visas på kommandoraden</p> 
+<p>(Obs: Varje gång du startar ett infokommando är kryssrutan
+<i>"Add measurement to drawing</i>" alltid avmarkerad. Du måste komma ihåg att
+slå på den om du vill att informationen ska läggas till i ritningen).</p> 
+<p>Det lägger också till följande alternativ.</p> 
+<p>
+<img alt="Options toolbar" src="ArcCircle02.png" /> 
+<br />Figur 4: Tillagda alternativ</p> 
+<p>
+  <b>Läge:</b>
+</p> 
+<p>Läget gäller endast för bågar.</p> 
+<p>
+<img alt="Sector" src="InfoSector.png" height="24" width="24" /> 
+<br />
+<i>Sektor</i>: Det här läget returnerar sektorns area. Detta är användbart när
+det används tillsammans med kommandot
+<i>"Polygonal area</i>".</p> 
+<p>
+<img alt="Segment" src="InfoSlice.png" height="24" width="24" /> 
+<i>Segment</i>: Det här läget visar segmentets area.</p> 
+<p>
+  <b>Lägg till:</b>
+</p> 
+<p>
+<i>Enhet:</i> Detta väljer om du vill lägga till en kopia av den uppmätta
+enheten till det aktuella lagret i ritningen.</p> 
+<p>
+<i>Chord:</i> Detta väljer om du vill att ackordet (sektor) eller radielinjerna
+(segment) ska läggas till i ritningen.</p> 
+<p>
+<i>Längd:</i> Som standard skrivs området alltid ut på ritningen. Med detta
+alternativ väljer du om du vill att extra information ska läggas till på
+ritningen.</p> 
+<p>För cirklar och hela ellipser är den extra informationen omkretsen. Här
+används mittpunkten som det nedre vänstra hörnet för den tillagda texten.</p> 
+<p>
+  <img alt="Extra info for circles and ellipses" src="ArcCircle04.png" />
+</p> 
+<p>För cirkelbågar är den extra informationen bågens längd och längden på
+ackordet (i sektorläge) eller radien (i segmentläge).</p> 
+<p>För ellipser är den extra informationen bågens längd och längden på ackorden
+(i sektorsläge), eller avståndet från centrumpunkten till bågens startpunkt,
+följt av avståndet från centrumpunkten till bågens slutpunkt (i
+segmentläge).</p> 
+<p>Det nedre vänstra hörnet för den tillagda texten är bågens slutpunkt.</p> 
+<p>
+  <img alt="Extra info for arcs" src="ArcCircle06.png" />
+</p> 
+<p>
+  <img alt="Extra info for arcs" src="ArcCircle05.png" />
+</p> 
+<p>
+  <img alt="Extra info for arcs" src="ArcCircle08.png" />
+</p> 
+<p>
+  <img alt="Extra info for arcs" src="ArcCircle07.png" />
+</p> 
+</div>
