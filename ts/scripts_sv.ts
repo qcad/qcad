@@ -11736,7 +11736,7 @@ som visas i sökresultaten:</translation>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation>Gratis</translation>
+        <translation>&amp;Obegränsad</translation>
     </message>
 </context>
 <context>

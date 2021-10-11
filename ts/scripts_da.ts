@@ -11490,7 +11490,7 @@ vist i søgeresultaterne:</translation>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation>&amp;Fri</translation>
+        <translation>&amp;Ubegrænset</translation>
     </message>
 </context>
 <context>

@@ -12247,7 +12247,7 @@ ve výsledcích vyhledávání:</translation>
     <message>
         <location filename="../scripts/Snap/SnapFree/SnapFreeInit.js" line="+2"/>
         <source>&amp;Free</source>
-        <translation>&amp;Volně</translation>
+        <translation>&amp;Neomezené</translation>
     </message>
 </context>
 <context>
