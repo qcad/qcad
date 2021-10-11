@@ -4,7 +4,7 @@ function init(basePath) {
     action.setScriptFile(basePath + "/SnapMiddleManual.js");
     action.setIcon(basePath + "/SnapMiddleManual.svg");
     action.setDefaultShortcut(new QKeySequence("s,n"));
-    action.setDefaultCommands(["snapintersectionmiddlemanual", "sn"]);
+    action.setDefaultCommands(["snapmiddlemanual", "sn"]);
     action.setGroup("snaps");
     action.setOverride();
     action.setGroupSortOrder(15150);
