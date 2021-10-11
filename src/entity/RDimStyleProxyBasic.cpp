@@ -486,7 +486,10 @@ void RDimStyleProxyBasic::renderDimRadial() {
     double arrowAngle;
     if (outsideArrow) {
         if (outsideLabel) {
-            length += dimasz*2 + textWidth;
+            length += dimasz*2;
+            if (!dimtih) {
+                length += textWidth;
+            }
         }
         else {
             length += dimasz*2;
@@ -494,13 +497,16 @@ void RDimStyleProxyBasic::renderDimRadial() {
         arrowAngle = angle+M_PI;
     } else {
         if (outsideLabel) {
-            length += dimasz*2 + textWidth;
+            length += dimasz*2;
+            if (!dimtih) {
+                length += textWidth;
+            }
         }
         arrowAngle = angle;
     }
 
-    RVector v3 = RVector::createPolar(length, angle);
-    v3+=definitionPoint;
+    RVector dimLineEndPoint = RVector::createPolar(length, angle);
+    dimLineEndPoint+=definitionPoint;
 
 //    // dimension line:
 //    //shapes.append(QSharedPointer<RShape>(new RLine(definitionPoint, v3)));
@@ -540,24 +546,33 @@ void RDimStyleProxyBasic::renderDimRadial() {
         //textPos = textPositionCenter;
     } else {
         if (outsideLabel) {
-            qDebug() << "outsideLabel";
             if (outsideArrow) {
-                qDebug() << "outsideArrow";
-                textPos.setPolar(radius + dimasz + (length - radius - dimasz)/2.0, angle);
+                double dist = radius + dimasz + (length - radius - dimasz)/2.0;
+                if (dimtad==0) {
+                    dist += dimasz;
+                }
+                textPos.setPolar(dist, angle);
             }
             else {
-                qDebug() << "outsideArrow FALSE";
                 textPos.setPolar(length-textWidth/2.0-dimasz, angle);
+            }
+
+            if (dimtih) {
+                // move text to the right if outside and horizontal:
+                if (dimLineEndPoint.x<definitionPoint.x) {
+                    textPos.x = dimLineEndPoint.x - definitionPoint.x - (textWidth/2.0 + dimasz + dimgap);
+                }
+                else {
+                    textPos.x = dimLineEndPoint.x - definitionPoint.x + (textWidth/2.0 + dimasz + dimgap);
+                }
+                textPos.y = dimLineEndPoint.y - definitionPoint.y;
             }
         }
         else {
-            qDebug() << "outsideLabel FALSE";
             if (outsideArrow) {
-                qDebug() << "outsideArrow";
                 textPos.setPolar((length-dimasz*2)/2.0, angle);
             }
             else {
-                qDebug() << "outsideArrow FALSE";
                 textPos.setPolar(length/2.0, angle);
             }
         }
@@ -583,7 +598,17 @@ void RDimStyleProxyBasic::renderDimRadial() {
     // dimension line:
     //QList<QSharedPointer<RShape> > shapes;
     //shapes.append(QSharedPointer<RShape>(new RLine(definitionPoint, v3)));
-    QList<QSharedPointer<RShape> > shapes = getDimensionLineShapes(definitionPoint, v3, false, false);
+    QList<QSharedPointer<RShape> > shapes = getDimensionLineShapes(definitionPoint, dimLineEndPoint, false, false);
+
+    // horizontal line to label:
+    if (outsideLabel && dimtih) {
+        if (dimLineEndPoint.x<definitionPoint.x) {
+            shapes.append(QSharedPointer<RLine>(new RLine(dimLineEndPoint, dimLineEndPoint - RVector(dimasz, 0))));
+        }
+        else {
+            shapes.append(QSharedPointer<RLine>(new RLine(dimLineEndPoint, dimLineEndPoint + RVector(dimasz, 0))));
+        }
+    }
 
     // create arrow:
     shapes.append(getArrow(chordPoint, arrowAngle));
