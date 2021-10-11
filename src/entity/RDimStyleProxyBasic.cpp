@@ -986,14 +986,17 @@ void RDimStyleProxyBasic::updateTextPosition(const QString& text, double textWid
             }
         }
 
-        if (!RMath::isNaN(minSpace) && textWidth>minSpace) {
+        if (!RMath::isNaN(minSpace) && textWidth>minSpace && !dimtih) {
             double h = textWidth/2.0+dimLineLength/2.0+dimgap;
-            if (dimtad==0 || dimtih) {
-                // text in line with dimension line:
+            if (dimtad==0) {
+                // text centered with dimension line:
                 // move further away to move away from arrows:
                 if (outsideArrow2) {
                     h += dimasz;
                 }
+//                else {
+//                    h += dimgap;
+//                }
             }
             RVector distH;
             distH.setPolar(h, angle);
