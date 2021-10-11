@@ -572,6 +572,12 @@ void REcmaHelper::fromScriptValue(QScriptEngine* engine, QScriptValue scriptValu
             continue;
         }
 
+        QSharedPointer<RShape> pPl = v.value<QSharedPointer<RPolyline> >();
+        if (!pPl.isNull()) {
+            cppValue.append(pPl);
+            continue;
+        }
+
         // TODO: add more shared pointer types...
 
         RShape* shape = v.value<RShape*>();
