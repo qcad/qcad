@@ -134,6 +134,10 @@ public:
 
     virtual RShape* clone() const = 0;
 
+    virtual QSharedPointer<RShape> cloneToSharedPointer() const {
+        return QSharedPointer<RShape>(clone());
+    }
+
     /**
      * Reimplement and return true if this shape relies on interpolation
      * for geometrical operations such as finding intersection points. E.g.
