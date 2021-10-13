@@ -332,6 +332,64 @@ bool RPolyline::appendShapeAuto(const RShape& shape) {
     return appendShape(shape);
 }
 
+bool RPolyline::appendShapeTrim(const RShape& shape) {
+    if (!shape.isDirected()) {
+        return false;
+    }
+
+    if (countVertices()>0) {
+        if (getEndPoint().equalsFuzzy(shape.getStartPoint())) {
+            return appendShape(shape);
+        }
+        if (getEndPoint().equalsFuzzy(shape.getEndPoint())) {
+            QSharedPointer<RShape> rev = QSharedPointer<RShape>(shape.clone());
+            rev->reverse();
+            return appendShape(*rev);
+        }
+
+        if (shape.getShapeType()==RShape::Line) {
+            QSharedPointer<RShape> lastSegment = getLastSegment();
+            QList<RVector> ips = lastSegment->getIntersectionPoints(shape, false);
+            if (ips.length()==1) {
+                RVector ip = ips[0];
+                moveEndPoint(ip);
+                QSharedPointer<RShape> trimmed = QSharedPointer<RShape>(shape.clone());
+                trimmed->trimStartPoint(ip);
+                return appendShape(*trimmed);
+            }
+        }
+    }
+
+    appendShape(shape);
+}
+
+bool RPolyline::closeTrim() {
+    if (isGeometricallyClosed()) {
+        return true;
+    }
+
+    if (countSegments()>1) {
+        QSharedPointer<RShape> firstSegment = getFirstSegment();
+        QSharedPointer<RShape> lastSegment = getLastSegment();
+
+        if (firstSegment.isNull() || lastSegment.isNull()) {
+            return false;
+        }
+
+        if (firstSegment->getShapeType()==RShape::Line && lastSegment->getShapeType()==RShape::Line) {
+            QList<RVector> ips = lastSegment->getIntersectionPoints(*firstSegment, false);
+            if (ips.length()==1) {
+                RVector ip = ips[0];
+                moveStartPoint(ip);
+                moveEndPoint(ip);
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
+
 void RPolyline::appendVertex(const RVector& vertex, double bulge, double w1, double w2) {
     vertices.append(vertex);
     bulges.append(bulge);

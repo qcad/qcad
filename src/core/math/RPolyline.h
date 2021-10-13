@@ -79,6 +79,8 @@ public:
     bool prependShape(const RShape& shape);
     bool appendShape(const RShape& shape, bool prepend = false);
     bool appendShapeAuto(const RShape& shape);
+    bool appendShapeTrim(const RShape& shape);
+    bool closeTrim();
 
     void appendVertex(const RVector& vertex, double bulge = 0.0, double w1 = 0.0, double w2 = 0.0);
     void appendVertex(double x, double y, double bulge = 0.0, double w1 = 0.0, double w2 = 0.0);
