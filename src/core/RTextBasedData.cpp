@@ -259,7 +259,7 @@ void RTextBasedData::setText(const QString& text) {
 }
 
 QList<RRefPoint> RTextBasedData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
-    Q_UNUSED(hint);
+    Q_UNUSED(hint)
 
     QList<RRefPoint> ret;
 
