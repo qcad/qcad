@@ -169,5 +169,6 @@ void RAttributeEntity::print(QDebug dbg) const {
                   << ", textHeight: " << getTextHeight()
                   << ", textWidth: " << getTextWidth()
                   << ", drawingDirection: " << getDrawingDirection()
+                  << ", invisible: " << isInvisible()
                   << ")";
 }

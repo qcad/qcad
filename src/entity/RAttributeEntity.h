@@ -132,6 +132,10 @@ public:
         data.setInvisible(i);
     }
 
+    virtual bool isSelectable() const {
+        return !isInvisible() && RTextBasedEntity::isSelectable();
+    }
+
 protected:
     virtual void print(QDebug dbg) const;
 
