@@ -20,7 +20,7 @@
 
 
 RAttributeDefinitionData::RAttributeDefinitionData(RDocument* document, const RAttributeDefinitionData& data)
-    : RTextBasedData(document, data) {
+    : RTextBasedData(document, data), invisible(false) {
     *this = data;
     this->document = document;
     if (document!=NULL) {
@@ -29,7 +29,7 @@ RAttributeDefinitionData::RAttributeDefinitionData(RDocument* document, const RA
 }
 
 RAttributeDefinitionData::RAttributeDefinitionData(const RTextBasedData& textData, const QString& tag, const QString& prompt)
-    : RTextBasedData(textData), tag(tag), prompt(prompt) {
+    : RTextBasedData(textData), tag(tag), prompt(prompt), invisible(false) {
 
 }
 
@@ -48,6 +48,7 @@ QDebug operator<<(QDebug dbg, const RAttributeDefinitionData& t) {
                   << ", tag: " << t.tag
                   << ", prompt: " << t.prompt
                   << ", position: " << t.getPosition()
+                  << ", invisible: " << t.invisible
                   << ")";
     return dbg;
 }

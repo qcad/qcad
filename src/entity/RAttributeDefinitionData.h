@@ -66,6 +66,14 @@ public:
         prompt = p;
     }
 
+    bool isInvisible() const {
+        return invisible;
+    }
+
+    void setInvisible(bool on) {
+        invisible = on;
+    }
+
     virtual QString getRenderedText(bool escUnicode=false) const;
 
     /**
@@ -76,6 +84,7 @@ public:
 private:
     QString tag;
     QString prompt;
+    bool invisible;
 };
 
 Q_DECLARE_METATYPE(RAttributeDefinitionData)
