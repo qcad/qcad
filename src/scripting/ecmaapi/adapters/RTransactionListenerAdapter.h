@@ -41,8 +41,13 @@ public:
         emit transactionUpdated(document, transaction);
     }
 
+    virtual void setCurrentBlock(RDocument* document) {
+        emit currentBlockSet(document);
+    }
+
 signals:
     void transactionUpdated(RDocument* document, RTransaction* transaction);
+    void currentBlockSet(RDocument* document);
 };
 
 Q_DECLARE_METATYPE(RTransactionListenerAdapter*)

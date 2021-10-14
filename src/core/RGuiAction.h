@@ -352,6 +352,9 @@ public:
     static void clear();
 
     virtual void updateTransactionListener(RDocument* document, RTransaction* transaction = NULL);
+    virtual void setCurrentBlock(RDocument* document) {
+        Q_UNUSED(document);
+    }
     virtual void updateSelectionListener(RDocumentInterface* documentInterface);
     virtual void updateFocus(RDocumentInterface* documentInterface);
 

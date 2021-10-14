@@ -22,6 +22,8 @@
 
 #include "core_global.h"
 
+#include <QMetaType>
+
 class RDocument;
 class REntity;
 class RTransaction;
@@ -43,6 +45,8 @@ public:
      * Called by the document whenever the current transaction stack changes.
      */
     virtual void updateTransactionListener(RDocument* document, RTransaction* transaction=NULL) = 0;
+
+    virtual void setCurrentBlock(RDocument* document) = 0;
 };
 
 Q_DECLARE_METATYPE(RTransactionListener*)

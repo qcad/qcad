@@ -2537,6 +2537,12 @@ void RDocumentInterface::setCurrentBlock(RBlock::Id blockId) {
     if (RMainWindow::hasMainWindow() && notifyGlobalListeners) {
         RMainWindow::getMainWindow()->notifyBlockListenersCurrentBlock(this);
     }
+
+    QMap<int, RTransactionListener*>::iterator it;
+    for (it = transactionListeners.begin(); it != transactionListeners.end(); ++it) {
+        (*it)->setCurrentBlock(&document);
+    }
+
     regenerateScenes();
 }
 
