@@ -71,6 +71,7 @@ public:
     static RPropertyTypeId PropertyText;
     static RPropertyTypeId PropertyPlainText;
     static RPropertyTypeId PropertyVAlign;
+    static RPropertyTypeId PropertyInvisible;
 
 public:
     RAttributeDefinitionEntity(RDocument* document, const RAttributeDefinitionData& data);
@@ -124,6 +125,14 @@ public:
 
     void setPrompt(const QString& p) {
         data.setPrompt(p);
+    }
+
+    bool isInvisible() const {
+        return data.isInvisible();
+    }
+
+    void setInvisible(bool i) {
+        data.setInvisible(i);
     }
 
 protected:

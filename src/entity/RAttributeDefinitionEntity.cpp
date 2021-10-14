@@ -50,6 +50,7 @@ RPropertyTypeId RAttributeDefinitionEntity::PropertyItalic;
 RPropertyTypeId RAttributeDefinitionEntity::PropertyLineSpacingFactor;
 RPropertyTypeId RAttributeDefinitionEntity::PropertyHAlign;
 RPropertyTypeId RAttributeDefinitionEntity::PropertyVAlign;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyInvisible;
 
 
 RAttributeDefinitionEntity::RAttributeDefinitionEntity(RDocument* document, const RAttributeDefinitionData& data) :
@@ -90,6 +91,8 @@ void RAttributeDefinitionEntity::init() {
     RAttributeDefinitionEntity::PropertyHAlign.generateId(RAttributeDefinitionEntity::getRtti(), RTextBasedEntity::PropertyHAlign);
     RAttributeDefinitionEntity::PropertyVAlign.generateId(RAttributeDefinitionEntity::getRtti(), RTextBasedEntity::PropertyVAlign);
 
+    RAttributeDefinitionEntity::PropertyInvisible.generateId(RAttributeDefinitionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Invisible"));
+
     RAttributeDefinitionEntity::PropertyTag.generateId(RAttributeDefinitionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Tag"));
     RAttributeDefinitionEntity::PropertyPrompt.generateId(RAttributeDefinitionEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Prompt"));
 }
@@ -98,6 +101,7 @@ bool RAttributeDefinitionEntity::setProperty(RPropertyTypeId propertyTypeId,
         const QVariant& value, RTransaction* transaction) {
     bool ret = RTextBasedEntity::setProperty(propertyTypeId, value, transaction);
 
+    ret = ret || RObject::setMember(data.invisible, value, PropertyInvisible == propertyTypeId);
     ret = ret || RObject::setMember(data.tag, value, PropertyTag == propertyTypeId);
     ret = ret || RObject::setMember(data.prompt, value, PropertyPrompt == propertyTypeId);
 
@@ -114,6 +118,8 @@ QPair<QVariant, RPropertyAttributes> RAttributeDefinitionEntity::getProperty(
         return qMakePair(QVariant(data.tag), RPropertyAttributes());
     } else if (propertyTypeId == PropertyPrompt) {
         return qMakePair(QVariant(data.prompt), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyInvisible) {
+        return qMakePair(QVariant(data.invisible), RPropertyAttributes());
     }
     return RTextBasedEntity::getProperty(propertyTypeId, humanReadable, noAttributes, showOnRequest);
 }
