@@ -20,7 +20,7 @@
 include("scripts/Widgets/LibraryBrowser/LibraryBrowser.js");
 include("scripts/File/File.js");
 include("scripts/Block/Block.js");
-include("../BlockDialog.js");
+include("scripts/Block/BlockDialog.js");
 
 function CreateLibraryItem(guiAction) {
     Block.call(this, guiAction);
@@ -76,15 +76,34 @@ CreateLibraryItem.prototype.coordinateEvent = function(event) {
     var filterStrings = RFileExporterRegistry.getFilterStrings();
     filterStrings = translateFilterStrings(filterStrings);
 
+    // Last used path or user data location:
+    var userPath = RSettings.getDataLocation() + QDir.separator + "libraries";
+    var initialPath = RSettings.getStringValue("CreateLibraryItem/Path", userPath);
+
+    // Revert to the original default when the folder does not exist:
+    var destDir = new QDir(initialPath);
+    if (!destDir.exists()) {
+        // The former default 'LaunchPath/libraries' will always be valid
+        initialPath = RSettings.getLaunchPath() + QDir.separator + "libraries";
+    }
+
+    // Get filename by dialog:
     var res = File.getSaveFileName(
         EAction.getMainWindow(),
         qsTr("Save library item as..."),
-        RSettings.getLaunchPath() + "/libraries",
+        initialPath,
         filterStrings);
 
     if (!isNull(res)) {
-        itemDocumentInterface.exportFile(res[0], res[1]);
-        LibraryBrowser.showDirectory(new QFileInfo(res[0]).absolutePath());
+        // # Issue Fixed # The export may not be successful, a warning is handled
+        var success = itemDocumentInterface.exportFile(res[0], res[1]);
+        // With a successful export update the Library Browser path and the last used path:
+        if (success) {
+            var fi = new QFileInfo(res[0]);
+            LibraryBrowser.showDirectory(fi.absolutePath());
+            // Store last used path persistent:
+            RSettings.setValue("CreateLibraryItem/Path", fi.absolutePath());
+        }
     }
 
     itemDocumentInterface.destroy();
