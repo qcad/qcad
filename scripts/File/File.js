@@ -108,7 +108,7 @@ File.init = function() {
  * a file related to the given file.
  *
  * \param filePath Typically the path and file name of the drawing file.
- * \param extension File extension to use for exported file (bmd, pdf, dxf, etc).
+ * \param extension File extension to use for exported file (bmp, pdf, dxf, etc).
  */
 File.getInitialSaveAsPath = function(filePath, extension) {
     var ret = "";
