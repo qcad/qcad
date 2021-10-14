@@ -81,6 +81,13 @@ RColor RAttributeData::getColor(bool resolve, const QStack<REntity*>& blockRefSt
     return REntityData::getColor(resolve, blockRefStack);
 }
 
+QList<RRefPoint> RAttributeData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
+    if (isInvisible()) {
+        return QList<RRefPoint>();
+    }
+    return RTextBasedData::getReferencePoints();
+}
+
 QDebug operator<<(QDebug dbg, const RAttributeData& t) {
     dbg.nospace() << "RAttributeData("
                   << "text: " << t.getEscapedText()

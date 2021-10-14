@@ -78,6 +78,8 @@ public:
         return RTextBasedData::getColor();
     }
 
+    virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint) const;
+
     /**
      * \nonscriptable
      */
