@@ -86,6 +86,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setPrompt, "setPrompt");
             
+            REcmaHelper::registerFunction(&engine, proto, isInvisible, "isInvisible");
+            
+            REcmaHelper::registerFunction(&engine, proto, setInvisible, "setInvisible");
+            
             REcmaHelper::registerFunction(&engine, proto, getRenderedText, "getRenderedText");
             
         engine.setDefaultPrototype(
@@ -561,6 +565,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerAttributeDefinitionData::setPrompt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerAttributeDefinitionData::isInvisible
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerAttributeDefinitionData::isInvisible", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerAttributeDefinitionData::isInvisible";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RAttributeDefinitionData* self = 
+                        getSelf("isInvisible", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isInvisible();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeDefinitionData.isInvisible().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerAttributeDefinitionData::isInvisible", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerAttributeDefinitionData::setInvisible
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerAttributeDefinitionData::setInvisible", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerAttributeDefinitionData::setInvisible";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RAttributeDefinitionData* self = 
+                        getSelf("setInvisible", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setInvisible(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeDefinitionData.setInvisible().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerAttributeDefinitionData::setInvisible", context, engine);
             return result;
         }
          QScriptValue

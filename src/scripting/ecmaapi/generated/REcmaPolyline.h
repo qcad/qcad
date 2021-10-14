@@ -94,6 +94,12 @@
         appendShapeAuto
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        appendShapeTrim
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        closeTrim
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         appendVertex
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

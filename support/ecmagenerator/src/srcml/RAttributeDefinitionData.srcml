@@ -67,6 +67,14 @@
         <expr_stmt><expr><name>prompt</name> = <name>p</name></expr>;</expr_stmt>
     }</block></function>
 
+    <function><type><name>bool</name></type> <name>isInvisible</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>invisible</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setInvisible</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>invisible</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
     <function_decl><type><name>virtual</name> <name>QString</name></type> <name>getRenderedText</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>escUnicode</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <comment type="block">/**
@@ -77,6 +85,7 @@
 </public><private>private:
     <decl_stmt><decl><type><name>QString</name></type> <name>tag</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QString</name></type> <name>prompt</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>invisible</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RAttributeDefinitionData</argument>)</argument_list></macro>
