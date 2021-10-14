@@ -70,7 +70,7 @@ void RObject::init() {
     RObject::PropertyHandle.generateId(RObject::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Handle"));
     RObject::PropertyProtected.generateId(RObject::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Protected"));
     RObject::PropertySelected.generateId(RObject::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Selected"));
-    RObject::PropertyInvisible.generateId(RObject::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Invisible"));
+    RObject::PropertyInvisible.generateId(RObject::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Object Invisible"));
     RObject::PropertyWorkingSet.generateId(RObject::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Working Set"));
 }
 
