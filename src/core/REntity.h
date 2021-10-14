@@ -181,6 +181,8 @@ public:
         getData().setSelectedWorkingSet(on);
     }
 
+    virtual bool isSelectable() const;
+
     virtual bool isUpdatesEnabled() const {
         return getData().isUpdatesEnabled();
     }

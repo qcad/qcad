@@ -452,6 +452,15 @@ void REntity::setSelected(bool on) {
     }
 }
 
+bool REntity::isSelectable() const {
+    const RDocument* doc = getDocument();
+    if (doc==NULL) {
+        return true;
+    }
+
+    return !doc->isLayerLocked(getLayerId()) && !doc->isLayerOffOrFrozen(getLayerId());
+}
+
 QSharedPointer<REntity> REntity::scaleNonUniform(const RVector& scaleFactors, const RVector& center) {
     QSharedPointer<REntity> cl(clone());
     RShape* s = cl->castToShape();
