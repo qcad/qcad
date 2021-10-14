@@ -182,6 +182,8 @@
         <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setSelectedWorkingSet</name><argument_list>(<argument><expr><name>on</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>isSelectable</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
     <function><type><name>virtual</name> <name>bool</name></type> <name>isUpdatesEnabled</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>isUpdatesEnabled</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>

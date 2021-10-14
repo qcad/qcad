@@ -95,6 +95,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setInvisible, "setInvisible");
             
+            REcmaHelper::registerFunction(&engine, proto, isSelectable, "isSelectable");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RAttributeEntity*>(), *proto);
 
@@ -1611,6 +1613,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaAttributeEntity::setInvisible", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaAttributeEntity::isSelectable
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaAttributeEntity::isSelectable", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaAttributeEntity::isSelectable";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RAttributeEntity* self = 
+                        getSelf("isSelectable", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isSelectable();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeEntity.isSelectable().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaAttributeEntity::isSelectable", context, engine);
             return result;
         }
          QScriptValue REcmaAttributeEntity::toString

@@ -99,6 +99,9 @@
         setSelectedWorkingSet
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isSelectable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isUpdatesEnabled
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -42,8 +42,13 @@
         <function_decl><type><name>emit</name></type> <name>transactionUpdated</name><parameter_list>(<param><decl><type><name>document</name></type></decl></param>, <param><decl><type><name>transaction</name></type></decl></param>)</parameter_list>;</function_decl>
     }</block></function>
 
+    <function><type><name>virtual</name> <name>void</name></type> <name>setCurrentBlock</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>)</parameter_list> <block>{
+        <function_decl><type><name>emit</name></type> <name>currentBlockSet</name><parameter_list>(<param><decl><type><name>document</name></type></decl></param>)</parameter_list>;</function_decl>
+    }</block></function>
+
 <label><name>signals</name>:</label>
     <function_decl><type><name>void</name></type> <name>transactionUpdated</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>currentBlockSet</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>)</parameter_list>;</function_decl>
 </public>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTransactionListenerAdapter*</argument>)</argument_list></macro>

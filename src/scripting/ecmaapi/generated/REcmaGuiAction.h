@@ -339,6 +339,9 @@
         updateTransactionListener
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setCurrentBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         updateSelectionListener
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

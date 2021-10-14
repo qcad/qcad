@@ -99,6 +99,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setSelectedWorkingSet, "setSelectedWorkingSet");
             
+            REcmaHelper::registerFunction(&engine, proto, isSelectable, "isSelectable");
+            
             REcmaHelper::registerFunction(&engine, proto, isUpdatesEnabled, "isUpdatesEnabled");
             
             REcmaHelper::registerFunction(&engine, proto, setUpdatesEnabled, "setUpdatesEnabled");
@@ -1256,6 +1258,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerEntity::setSelectedWorkingSet", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerEntity::isSelectable
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerEntity::isSelectable", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEntity::isSelectable";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntity* self = 
+                        getSelf("isSelectable", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isSelectable();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntity.isSelectable().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerEntity::isSelectable", context, engine);
             return result;
         }
          QScriptValue

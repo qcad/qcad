@@ -80,6 +80,9 @@
         ;static  QScriptValue
         getColor
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getReferencePoints
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

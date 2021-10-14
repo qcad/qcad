@@ -77,6 +77,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, updateTransactionListener, "updateTransactionListener");
             
+            REcmaHelper::registerFunction(&engine, proto, setCurrentBlock, "setCurrentBlock");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RTransactionListenerAdapter*>(), *proto);
 
@@ -321,6 +323,68 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTransactionListenerAdapter::updateTransactionListener", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTransactionListenerAdapter::setCurrentBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTransactionListenerAdapter::setCurrentBlock", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTransactionListenerAdapter::setCurrentBlock";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTransactionListenerAdapter* self = 
+                        getSelf("setCurrentBlock", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RDocument * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RDocument * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RDocument >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RTransactionListenerAdapter: Argument 0 is not of type RDocument *RDocument *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCurrentBlock(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTransactionListenerAdapter.setCurrentBlock().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTransactionListenerAdapter::setCurrentBlock", context, engine);
             return result;
         }
          QScriptValue REcmaTransactionListenerAdapter::toString

@@ -120,6 +120,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="isSelectable" cppName="isSelectable"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="isUpdatesEnabled" cppName="isUpdatesEnabled"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
