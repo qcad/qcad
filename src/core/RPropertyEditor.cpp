@@ -543,7 +543,7 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
 //        qDebug() << "  group:" << groups[i];
 //        QStringList keys = combinedProperties[groups[i]].keys();
 //        for (int k=0; k<keys.length(); k++) {
-//            qDebug() << "    prop:" << keys[k] << ": " << combinedProperties[groups[i]][keys[k]].first;
+//            qDebug() << "    prop:" << keys[k] << ": " << combinedProperties[groups[i]][keys[k]].first << " (mixed:" << combinedProperties[groups[i]][keys[k]].second.isMixed() << ")";
 //        }
 //    }
 //    qDebug() << "combinedTypes:" << combinedTypes;
@@ -572,7 +572,6 @@ void RPropertyEditor::computePropertyValue(RProperty& ccProp) {
         }
 
         QPair<QVariant, RPropertyAttributes> prop = obj->getProperty(ccProp.propertyTypeId, true, true, ccProp.showOnRequest);
-
         if (prop.second.isInvisible()) {
             // property is invisible:
             invisible = true;
