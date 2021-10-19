@@ -433,8 +433,11 @@ void RTextRenderer::renderSimple() {
     case RS::HAlignFit:
     case RS::HAlignLeft:
         if (!leadingSpaces) {
-            // move completely to the left (left border is 0.0):
-            xOffset = -boundingBox.getMinimum().x;
+            if (RSettings::getSimpleTextAlignLeft()) {
+                // move completely to the left (left border is 0.0):
+                // backwards compatibility:
+                xOffset = -boundingBox.getMinimum().x;
+            }
         }
         else {
             xOffset = 0.0;

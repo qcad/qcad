@@ -95,6 +95,7 @@ int RSettings::referencePointShape = -1;
 int RSettings::maxReferencePointEntities = -1;
 int RSettings::maxReferencePointEntitiesDisplay = -1;
 int RSettings::propertyEditorShowOnRequest = -1;
+int RSettings::simpleTextAlignLeft = -1;
 QString RSettings::polarCoordinateSeparator = QString::null;
 QString RSettings::cartesianCoordinateSeparator = QString::null;
 QString RSettings::relativeCoordinatePrefix = QString::null;
@@ -993,6 +994,16 @@ bool RSettings::getPropertyEditorShowOnRequest() {
 }
 
 /**
+ * \return True to align left aligned simple text to the reference point exactly.
+ */
+bool RSettings::getSimpleTextAlignLeft() {
+    if (simpleTextAlignLeft==-1) {
+        simpleTextAlignLeft = getBoolValue("TextRendering/SimpleTextAlignLeft", false);
+    }
+    return simpleTextAlignLeft;
+}
+
+/**
  * \return Polar coordinate separator (<).
  */
 QString RSettings::getPolarCoordinateSeparator() {
@@ -1766,6 +1777,8 @@ void RSettings::resetCache() {
     positionByMousePress = -1;
     maxReferencePointEntities = -1;
     maxReferencePointEntitiesDisplay = -1;
+    propertyEditorShowOnRequest = -1;
+    simpleTextAlignLeft = -1;
     minArcAngleStep = -1;
     dashThreshold = -1;
     textRenderedAsText = -1;
