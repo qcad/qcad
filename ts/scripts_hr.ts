@@ -6,71 +6,71 @@
     <message>
         <location filename="../scripts/Help/About/About.js" line="+68"/>
         <source>About %1</source>
-        <translation type="unfinished"></translation>
+        <translation>O %1</translation>
     </message>
     <message>
         <location line="+53"/>
         <location line="+123"/>
         <source>Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Verzija:</translation>
     </message>
     <message>
         <location line="-119"/>
         <location line="+136"/>
         <location line="+11"/>
         <source>Internet:</source>
-        <translation type="unfinished"></translation>
+        <translation>Internet:</translation>
     </message>
     <message>
         <location line="-145"/>
         <source>Build Date:</source>
-        <translation type="unfinished"></translation>
+        <translation>Datum izrade:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Revision:</source>
-        <translation type="unfinished"></translation>
+        <translation>Revizija:</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+117"/>
         <source>Qt Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt verzija:</translation>
     </message>
     <message>
         <location line="-113"/>
         <source>Architecture:</source>
-        <translation type="unfinished"></translation>
+        <translation>Arhitektura:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Compiler:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kompajler:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>License Key:</source>
-        <translation type="unfinished"></translation>
+        <translation>Licencni ključ:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>%1 is an application for computer-aided design (CAD).</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 je aplikacija za računalom potpomognuto crtanje (CAD).</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 is based on QCAD, a free (open source) software.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 je baziran na QCAD-u, slobodnom (otvorenog koda) softveru.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>%1 is free (open source) software.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 je slobodni (otvorenog koda) softver.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>This means that everyone can &lt;a href=&apos;%1&apos;&gt;get involved&lt;/a&gt;!</source>
-        <translation type="unfinished"></translation>
+        <translation>To znači da se svatko može &lt;a href=&apos;%1&apos;&gt;uključiti&lt;/a&gt;!</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -105,95 +105,95 @@
     <message>
         <location line="+12"/>
         <source>Plugins</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaci</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>No plugins found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaci nisu pronađeni.</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>No information available</source>
-        <translation type="unfinished"></translation>
+        <translation>Nema dostupnih podataka</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+449"/>
         <source>Plugin:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodatak:</translation>
     </message>
     <message>
         <location line="-424"/>
         <source>ID:</source>
-        <translation type="unfinished"></translation>
+        <translation>ID:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Description:</source>
-        <translation type="unfinished"></translation>
+        <translation>Opis:</translation>
     </message>
     <message>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
         <source>Unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>Nepoznat</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>License:</source>
-        <translation type="unfinished"></translation>
+        <translation>Licenca:</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Active</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktivno</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inactive (restart)</source>
-        <translation type="unfinished"></translation>
+        <translation>Neaktivno (ponovno pokreni)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Trial Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Probna verzija:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>File:</source>
-        <translation type="unfinished"></translation>
+        <translation>Datoteka:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Error:</source>
-        <translation type="unfinished"></translation>
+        <translation>Greška:</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Script Add-Ons</source>
-        <translation type="unfinished"></translation>
+        <translation>Skriptni dodaci</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>No script add-ons found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nisu pronađeni skriptni dodaci.</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>Zasluge</translation>
     </message>
     <message>
         <location line="+164"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation>Licence</translation>
     </message>
     <message>
         <location filename="../scripts/Help/About/AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
-        <translation type="unfinished"></translation>
+        <translation>%O programu...</translation>
     </message>
 </context>
 <context>
@@ -201,32 +201,32 @@
     <message>
         <location filename="../scripts/Help/About/AboutCredits.js" line="+4"/>
         <source>Programming</source>
-        <translation type="unfinished"></translation>
+        <translation>Programiranje</translation>
     </message>
     <message>
         <location line="+58"/>
         <source>Hatch Patterns</source>
-        <translation type="unfinished"></translation>
+        <translation>Uzorci ispuna</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Prijevodi</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Templates</source>
-        <translation type="unfinished"></translation>
+        <translation>Predlošci</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikonice</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Testing, Feedback and Minor Fixes</source>
-        <translation type="unfinished"></translation>
+        <translation>Testiranje, povratne informacije i manji ispravci</translation>
     </message>
 </context>
 <context>
@@ -234,32 +234,32 @@
     <message>
         <location filename="../scripts/Help/About/AboutDialog.ui" line="+101"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>O</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>Zasluge</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Plugins</source>
-        <translation type="unfinished"></translation>
+        <translation>Dodaci</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Scripts</source>
-        <translation type="unfinished"></translation>
+        <translation>Skripte</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>System</source>
-        <translation type="unfinished"></translation>
+        <translation>Sustav</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Licenses</source>
-        <translation type="unfinished"></translation>
+        <translation>Licence</translation>
     </message>
 </context>
 <context>
@@ -267,43 +267,44 @@
     <message>
         <location filename="../scripts/Edit/AbstractPreferences.js" line="+46"/>
         <source>Application Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Postavke aplikacije</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Postavke crteža</translation>
     </message>
     <message>
         <location line="+300"/>
         <source>Apply preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Primijeni postavke</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Restart required</source>
-        <translation type="unfinished"></translation>
+        <translation>Potrebno ponovno pokretanje</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Molim ponovno pokreni QCAD za
+primjenjivanje promijenjenih postavki.</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Defaults for</source>
-        <translation type="unfinished"></translation>
+        <translation>Zadane postavke za</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>These are default preferences for new drawings.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ovo su zadane postavke za nove crteže.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Changes will affect new drawings but NOT the current drawing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Promijene će utjecati na nove crteže ali NE i na trenutni crtež.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -316,7 +317,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Block/AddBlock/AddBlockInit.js" line="+2"/>
         <source>&amp;Add Empty Block</source>
-        <translation>&amp;Dodaj Prazan Blok</translation>
+        <translation>&amp;Dodaj prazan blok</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -378,7 +379,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+51"/>
         <source>No solution</source>
-        <translation type="unfinished">Nema rješenja</translation>
+        <translation>Nema rješenja</translation>
     </message>
 </context>
 <context>
@@ -441,7 +442,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation>Smjer obrnuto od kazaljke na satu (Pozitivno)</translation>
+        <translation>Suprotno od kretanja satne kazaljke (Pozitivan)</translation>
     </message>
     <message>
         <source>Direction</source>
@@ -450,12 +451,12 @@ the preference changes to take effect.</source>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation>Smjer kazaljke na satu (Negativno)</translation>
+        <translation>U smjeru kretanja satne kazaljke (Negativan)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PA/Arc2PAInit.js" line="+2"/>
         <source>&amp;2 Points and Angle</source>
-        <translation>&amp;2 Točke i Kut</translation>
+        <translation>&amp;2 Točke i kut</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -468,12 +469,12 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PH.js" line="+65"/>
         <source>Start point</source>
-        <translation type="unfinished">Početna točka</translation>
+        <translation>Početna točka</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>End point</source>
-        <translation type="unfinished">Krajnja točka</translation>
+        <translation>Krajnja točka</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -483,7 +484,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation type="unfinished">Te dvije točke su jednake</translation>
+        <translation>Te dvije točke su jednake</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PH/Arc2PHInit.js" line="+2"/>
@@ -503,17 +504,17 @@ the preference changes to take effect.</source>
     <message>
         <location line="+27"/>
         <source>Direction:</source>
-        <translation type="unfinished">Smjer:</translation>
+        <translation>Smjer:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="unfinished"></translation>
+        <translation>Suprotno od kretanja satne kazaljke (Pozitivan)</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>U smjeru kretanja satne kazaljke (Negativan)</translation>
     </message>
 </context>
 <context>
@@ -521,12 +522,12 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PL.js" line="+65"/>
         <source>Start point</source>
-        <translation type="unfinished">Početna točka</translation>
+        <translation>Početna točka</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>End point</source>
-        <translation type="unfinished">Krajnja točka</translation>
+        <translation>Krajnja točka</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -536,7 +537,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation type="unfinished">Te dvije točke su jednake</translation>
+        <translation>Te dvije točke su jednake</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -556,22 +557,22 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PL/Arc2PL.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished">Duljina:</translation>
+        <translation>Duljina:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Direction:</source>
-        <translation type="unfinished">Smjer:</translation>
+        <translation>Smjer:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="unfinished"></translation>
+        <translation>Suprotno od kretanja satne kazaljke (Pozitivan)</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>U smjeru kretanja satne kazaljke (Negativan)</translation>
     </message>
 </context>
 <context>
@@ -589,7 +590,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+81"/>
         <source>Invalid radius</source>
-        <translation>Nevaljan promjer</translation>
+        <translation>Neispravan polumjer</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -609,7 +610,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation>Smjer suprotan od kazaljke na satu (Pozitivan)</translation>
+        <translation>Suprotno od kretanja satne kazaljke (Pozitivan)</translation>
     </message>
     <message>
         <source>Direction</source>
@@ -618,7 +619,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation>Smjer kazaljke na satu (Negativan)</translation>
+        <translation>U smjeru kretanja satne kazaljke (Negativan)</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -628,7 +629,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+7"/>
         <source>Shorter Arc</source>
-        <translation>Kraći Luk</translation>
+        <translation>Kraći luk</translation>
     </message>
     <message>
         <source>Solution</source>
@@ -637,17 +638,17 @@ the preference changes to take effect.</source>
     <message>
         <location line="+20"/>
         <source>Longer Arc</source>
-        <translation>Duži Kut</translation>
+        <translation>Duži luk</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/Arc2PR/Arc2PRInit.js" line="+2"/>
         <source>&amp;2 Points and Radius</source>
-        <translation>&amp;2 Točke i Promjer</translation>
+        <translation>&amp;2 Točke i polumjer</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and radius</source>
-        <translation>Nacrtaj luk preko 2 točke i promjera</translation>
+        <translation>Nacrtaj luk preko 2 točke i polumjera</translation>
     </message>
 </context>
 <context>
@@ -713,7 +714,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
-        <translation>Smjer suprotan od kazaljke na satu (pozitivan)</translation>
+        <translation>Suprotno od kretanja satne kazaljke (pozitivan)</translation>
     </message>
     <message>
         <source>Direction</source>
@@ -722,7 +723,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation>Smjer kazaljke na satu (Negativan)</translation>
+        <translation>U smjeru kretanja satne kazaljke (Negativan)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcCPA/ArcCPAInit.js" line="+2"/>
@@ -786,7 +787,7 @@ the preference changes to take effect.</source>
     <message>
         <location line="+11"/>
         <source>Point on arc</source>
-        <translation type="unfinished">Točka na luku</translation>
+        <translation>Točka na luku</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -797,7 +798,7 @@ the preference changes to take effect.</source>
         <location line="+128"/>
         <location line="+65"/>
         <source>No solution</source>
-        <translation type="unfinished">Nema rješenja</translation>
+        <translation>Nema rješenja</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPRInit.js" line="+2"/>
@@ -812,7 +813,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../scripts/Draw/Arc/ArcTPR/ArcTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished">Polumjer:</translation>
+        <translation>Polumjer:</translation>
     </message>
 </context>
 <context>
@@ -1093,7 +1094,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+36"/>
         <source>Files</source>
-        <translation type="unfinished">Datoteke</translation>
+        <translation>Datoteke</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1118,7 +1119,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+6"/>
         <source>Width:</source>
-        <translation type="unfinished">Širina:</translation>
+        <translation>Širina:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -1296,7 +1297,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/Examples/BlockExamples/BlockExamples.js" line="+51"/>
         <source>&amp;Block</source>
-        <translation type="unfinished">&amp;Blok</translation>
+        <translation>&amp;Blok</translation>
     </message>
 </context>
 <context>
@@ -2048,7 +2049,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Circle/CircleTPR/CircleTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished">Polumjer:</translation>
+        <translation>Polumjer:</translation>
     </message>
 </context>
 <context>
@@ -2481,7 +2482,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+32"/>
         <source>Y:</source>
-        <translation type="unfinished">Y:</translation>
+        <translation>Y:</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -2501,7 +2502,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+15"/>
         <source>Angle:</source>
-        <translation type="unfinished">Kut:</translation>
+        <translation>Kut:</translation>
     </message>
 </context>
 <context>
@@ -2882,7 +2883,7 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
-        <translation>Nisu odabrane kote s prilagođenim položajem oznake</translation>
+        <translation>Nisu odabrane kote s prilagođenim položajem oznake.</translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
@@ -3380,7 +3381,7 @@ is already in the list.</source>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">Sredina</translation>
+        <translation>Sredina</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3872,7 +3873,7 @@ is already in the list.</source>
     <message>
         <location line="+0"/>
         <source>All Files</source>
-        <translation type="unfinished">Sve datoteke</translation>
+        <translation>Sve datoteke</translation>
     </message>
     <message>
         <location line="+165"/>
@@ -3984,7 +3985,7 @@ is already in the list.</source>
     <message>
         <location line="+10"/>
         <source>Next vertex</source>
-        <translation type="unfinished">Sljedeći vertex</translation>
+        <translation>Sljedeća točka</translation>
     </message>
     <message>
         <source>Done</source>
@@ -4033,22 +4034,22 @@ is already in the list.</source>
     <message>
         <location line="+20"/>
         <source>Undo Previous Segment</source>
-        <translation type="unfinished">Poništi prethodni segment</translation>
+        <translation>Poništi prethodni segment</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, U</source>
-        <translation type="unfinished">,, U</translation>
+        <translation>,, U</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Redo Segment</source>
-        <translation type="unfinished">Ponovi segment</translation>
+        <translation>Ponovi segment</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, R</source>
-        <translation type="unfinished">,, R</translation>
+        <translation>,, R</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -4068,7 +4069,7 @@ is already in the list.</source>
     <message>
         <location line="+36"/>
         <source>Restrict length or angle</source>
-        <translation type="unfinished">Ograniči duljinu ili kut</translation>
+        <translation>Zaključaj duljinu ili kut</translation>
     </message>
 </context>
 <context>
@@ -4112,7 +4113,7 @@ is already in the list.</source>
     <message>
         <location line="-2114"/>
         <source>Done</source>
-        <translation type="unfinished">Završeno</translation>
+        <translation>Završeno</translation>
     </message>
     <message>
         <location line="+277"/>
@@ -4158,7 +4159,7 @@ is already in the list.</source>
     <message>
         <location line="+225"/>
         <source>Length:</source>
-        <translation type="unfinished">Duljina:</translation>
+        <translation>Duljina:</translation>
     </message>
     <message>
         <location line="+64"/>
@@ -4388,7 +4389,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPA.js" line="+74"/>
         <source>Center</source>
-        <translation type="unfinished">Centar</translation>
+        <translation>Centar</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -4463,7 +4464,7 @@ is already in the list.</source>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
-        <translation>Smjer suprotan od kazaljke na satu (pozitivan)</translation>
+        <translation>Suprotno od kretanja satne kazaljke (pozitivan)</translation>
     </message>
     <message>
         <source>Direction</source>
@@ -4472,7 +4473,7 @@ is already in the list.</source>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation>Smjer kazaljke na satu (Negativan)</translation>
+        <translation>U smjeru kretanja satne kazaljke (Negativan)</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseArcCPPA/EllipseArcCPPAInit.js" line="+2"/>
@@ -4586,12 +4587,12 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffset/EllipseOffset.ui" line="+17"/>
         <source>Distance:</source>
-        <translation type="unfinished">Udaljenost:</translation>
+        <translation>Udaljenost:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Number:</source>
-        <translation type="unfinished">Broj:</translation>
+        <translation>Broj:</translation>
     </message>
 </context>
 <context>
@@ -4609,7 +4610,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Draw/Ellipse/EllipseOffsetThrough/EllipseOffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished">Broj:</translation>
+        <translation>Broj:</translation>
     </message>
 </context>
 <context>
@@ -4724,7 +4725,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExDumpPolyline/ExDumpPolyline.js" line="+48"/>
         <source>Clockwise polyline:</source>
-        <translation type="unfinished"></translation>
+        <translation>Polilinija u smjeru kretanja satne kazaljke:</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4971,7 +4972,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlExport/ExXmlExport.js" line="+39"/>
         <source>All Files</source>
-        <translation type="unfinished">Sve datoteke</translation>
+        <translation>Sve datoteke</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4989,7 +4990,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/Misc/Examples/IOExamples/ExXmlImport/ExXmlImport.js" line="+73"/>
         <source>All Files</source>
-        <translation type="unfinished">Sve datoteke</translation>
+        <translation>Sve datoteke</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -5092,7 +5093,7 @@ is already in the list.</source>
         <location line="+92"/>
         <location line="+76"/>
         <source>Format:</source>
-        <translation type="unfinished">Format:</translation>
+        <translation>Format:</translation>
     </message>
     <message>
         <location line="-39"/>
@@ -5107,7 +5108,7 @@ is already in the list.</source>
     <message>
         <location line="+26"/>
         <source>All Files</source>
-        <translation type="unfinished">Sve datoteke</translation>
+        <translation>Sve datoteke</translation>
     </message>
 </context>
 <context>
@@ -6261,12 +6262,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelection.js" line="+56"/>
         <source>No boundary selected.</source>
-        <translation type="unfinished">Nije odabrana granica.</translation>
+        <translation>Nije odabrana granica.</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
-        <translation type="unfinished">Petlja nije zatvorena u točki %1/%2.</translation>
+        <translation>Petlja nije zatvorena u točki %1/%2.</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -6366,7 +6367,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+27"/>
         <source>Angle:</source>
-        <translation type="unfinished">Kut:</translation>
+        <translation>Kut:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Image/ImageInit.js" line="+2"/>
@@ -6389,7 +6390,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+4"/>
         <source>All Files</source>
-        <translation type="unfinished">Sve datoteke</translation>
+        <translation>Sve datoteke</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -6399,7 +6400,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+9"/>
         <source>Format:</source>
-        <translation type="unfinished">Format:</translation>
+        <translation>Format:</translation>
     </message>
     <message>
         <location filename="../scripts/File/ImportFile/ImportFileInit.js" line="+2"/>
@@ -6414,32 +6415,32 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished">Rotacija:</translation>
+        <translation>Rotacija:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="unfinished">Rotiraj zalijepljene entitete&lt;br&gt;za ovaj kut</translation>
+        <translation>Rotiraj zalijepljene entitete&lt;br&gt;za ovaj kut</translation>
     </message>
     <message>
         <location line="+110"/>
         <source>Scale:</source>
-        <translation type="unfinished">Mjerilo:</translation>
+        <translation>Mjerilo:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="unfinished">Promijeni mjerilo zalijepljenih entiteta&lt;br&gt;za ovaj faktor</translation>
+        <translation>Skaliraj zalijepljene entitete&lt;br&gt;za ovaj faktor</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="unfinished">Obrni zalijepljene entitete&lt;br&gt;horizontalno</translation>
+        <translation>Obrni zalijepljene entitete&lt;br&gt;horizontalno</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="unfinished">Obrni zalijepljene entitete&lt;br&gt;vertikalno</translation>
+        <translation>Obrni zalijepljene entitete&lt;br&gt;vertikalno</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -6454,22 +6455,22 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+7"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="unfinished">Piši preko postojećih slojeva&lt;br&gt;u crtežu sa&lt;br&gt;slojevima iz međuspremnika</translation>
+        <translation>Prepiši postojeće slojeve&lt;br&gt;u crtežu sa&lt;br&gt;slojevima iz međuspremnika</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation type="unfinished">Piši preko slojeva</translation>
+        <translation>Prepiši slojeve</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="unfinished">Piši preko postojećih blokova&lt;br&gt;u crteže s&lt;br&gt;blokovima iz međuspremnika</translation>
+        <translation>Prepiši postojeće blokove&lt;br&gt;u crtežu s&lt;br&gt;blokovima iz međuspremnika</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation type="unfinished">Piši preko blokova</translation>
+        <translation>Prepiši blokove</translation>
     </message>
 </context>
 <context>
@@ -6477,7 +6478,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/ImportPoints/ImportPoints.js" line="+39"/>
         <source>All Files</source>
-        <translation type="unfinished">Sve datoteke</translation>
+        <translation>Sve datoteke</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6509,7 +6510,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+96"/>
         <source>Angle:</source>
-        <translation type="unfinished">Kut:</translation>
+        <translation>Kut:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngleInit.js" line="+2"/>
@@ -6615,7 +6616,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="-7"/>
         <source>Radius</source>
-        <translation type="unfinished">Polumjer</translation>
+        <translation>Polumjer</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -6719,7 +6720,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+95"/>
         <source>Distance:</source>
-        <translation type="unfinished">Udaljenost:</translation>
+        <translation>Udaljenost:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEEInit.js" line="+2"/>
@@ -6746,7 +6747,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+81"/>
         <source>Distance:</source>
-        <translation type="unfinished">Udaljenost:</translation>
+        <translation>Udaljenost:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoDistanceEP/InfoDistanceEPInit.js" line="+2"/>
@@ -6759,12 +6760,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePP.js" line="+59"/>
         <source>First point</source>
-        <translation type="unfinished">Prva točka</translation>
+        <translation>Prva točka</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished">Druga točka</translation>
+        <translation>Druga točka</translation>
     </message>
     <message>
         <source>Done</source>
@@ -6773,7 +6774,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+53"/>
         <source>Distance:</source>
-        <translation type="unfinished">Udaljenost:</translation>
+        <translation>Udaljenost:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -6788,7 +6789,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+1"/>
         <source>Angle:</source>
-        <translation type="unfinished">Kut:</translation>
+        <translation>Kut:</translation>
     </message>
     <message>
         <location filename="../scripts/Information/InfoDistancePP/InfoDistancePPInit.js" line="+2"/>
@@ -7265,12 +7266,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+24"/>
         <source>Rotate selection counter-clockwise before projection</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotiraj odabrano suprotno od smjera kretanja satne kazaljke prije projiciranja</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotiraj odabrano u smjeru kretanja satne kazaljke prije projiciranja</translation>
     </message>
 </context>
 <context>
@@ -7475,7 +7476,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+150"/>
         <source>Leading or trailing spaces.</source>
-        <translation type="unfinished">Praznine na početku ili na kraju.</translation>
+        <translation>Praznine na početku ili na kraju.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7973,7 +7974,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Line/Line2P/Line2P.js" line="+67"/>
         <source>First point</source>
-        <translation type="unfinished">Prva točka</translation>
+        <translation>Prva točka</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -8070,17 +8071,17 @@ shown in search results:</source>
     <message>
         <location line="+11"/>
         <source>Start</source>
-        <translation type="unfinished">Početak</translation>
+        <translation>Početak</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Middle</source>
-        <translation type="unfinished">Sredina</translation>
+        <translation>Sredina</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>End</source>
-        <translation type="unfinished">Kraj</translation>
+        <translation>Kraj</translation>
     </message>
 </context>
 <context>
@@ -8088,7 +8089,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Line/LineBisector/LineBisector.js" line="+67"/>
         <source>First line</source>
-        <translation type="unfinished">Prva linija</translation>
+        <translation>Prva linija</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -8126,12 +8127,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.js" line="+63"/>
         <source>First point</source>
-        <translation type="unfinished">Prva točka</translation>
+        <translation>Prva točka</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished">Druga točka</translation>
+        <translation>Druga točka</translation>
     </message>
     <message>
         <source>Done</source>
@@ -8188,12 +8189,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineDove/LineDove.js" line="+63"/>
         <source>First point</source>
-        <translation type="unfinished">Prva točka</translation>
+        <translation>Prva točka</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished">Druga točka</translation>
+        <translation>Druga točka</translation>
     </message>
     <message>
         <source>Done</source>
@@ -8235,7 +8236,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Line/LineFreehand/LineFreehand.js" line="+55"/>
         <source>Press to start drawing</source>
-        <translation>Pritisni za početak crtanja.</translation>
+        <translation>Pritisni za početak crtanja</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -8278,17 +8279,17 @@ shown in search results:</source>
     <message>
         <location line="+11"/>
         <source>Start</source>
-        <translation type="unfinished">Početak</translation>
+        <translation>Početak</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Middle</source>
-        <translation type="unfinished">Sredina</translation>
+        <translation>Sredina</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>End</source>
-        <translation type="unfinished">Kraj</translation>
+        <translation>Kraj</translation>
     </message>
 </context>
 <context>
@@ -8296,7 +8297,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Line/LineOrthogonal/LineOrthogonal.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished">Duljina:</translation>
+        <translation>Duljina:</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -8395,7 +8396,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Line/LineParallelThrough/LineParallelThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished">Broj:</translation>
+        <translation>Broj:</translation>
     </message>
 </context>
 <context>
@@ -8418,7 +8419,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished">Duljina:</translation>
+        <translation>Duljina:</translation>
     </message>
 </context>
 <context>
@@ -8496,7 +8497,7 @@ shown in search results:</source>
     <message>
         <location line="+12"/>
         <source>Choose circle, arc or ellipse</source>
-        <translation type="unfinished">Izaberi kružnicu, luk ili elipsu</translation>
+        <translation>Odaberi kružnicu, luk ili elipsu</translation>
     </message>
     <message>
         <location line="+85"/>
@@ -8535,7 +8536,7 @@ shown in search results:</source>
     <message>
         <location line="+142"/>
         <source>No tangent possible</source>
-        <translation type="unfinished">Tangenta nije moguća</translation>
+        <translation>Tangenta nije moguća</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Line/LineTangent2/LineTangent2Init.js" line="+2"/>
@@ -8773,7 +8774,7 @@ shown in search results:</source>
     <message>
         <location line="+22"/>
         <source>&amp;Block</source>
-        <translation type="unfinished">&amp;Blok</translation>
+        <translation>&amp;Blok</translation>
     </message>
 </context>
 <context>
@@ -8925,7 +8926,7 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>All Files</source>
-        <translation type="unfinished">Sve datoteke</translation>
+        <translation>Sve datoteke</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -9059,7 +9060,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Format:</source>
-        <translation type="unfinished">Format:</translation>
+        <translation>Format:</translation>
     </message>
     <message>
         <location line="+138"/>
@@ -9161,7 +9162,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/OffsetThrough/OffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished">Broj:</translation>
+        <translation>Broj:</translation>
     </message>
 </context>
 <context>
@@ -9179,7 +9180,7 @@ shown in search results:</source>
     <message>
         <location line="+2"/>
         <source>All Files</source>
-        <translation type="unfinished">Sve datoteke</translation>
+        <translation>Sve datoteke</translation>
     </message>
     <message>
         <location filename="../scripts/File/OpenFile/OpenFileInit.js" line="+2"/>
@@ -9347,7 +9348,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/Paste/Paste.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished">Rotacija:</translation>
+        <translation>Rotacija:</translation>
     </message>
     <message>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
@@ -9356,7 +9357,7 @@ shown in search results:</source>
     <message>
         <location line="+126"/>
         <source>Scale:</source>
-        <translation type="unfinished">Mjerilo:</translation>
+        <translation>Mjerilo:</translation>
     </message>
     <message>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
@@ -9365,12 +9366,12 @@ shown in search results:</source>
     <message>
         <location line="+88"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="unfinished">Obrni zalijepljene entitete&lt;br&gt;horizontalno</translation>
+        <translation>Obrni zalijepljene entitete&lt;br&gt;horizontalno</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="unfinished">Obrni zalijepljene entitete&lt;br&gt;vertikalno</translation>
+        <translation>Obrni zalijepljene entitete&lt;br&gt;vertikalno</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -9385,22 +9386,22 @@ shown in search results:</source>
     <message>
         <location line="+7"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="unfinished">Piši preko postojećih slojeva&lt;br&gt;u crtežu sa&lt;br&gt;slojevima iz međuspremnika</translation>
+        <translation>Prepiši postojeće slojeve&lt;br&gt;u crtežu sa&lt;br&gt;slojevima iz međuspremnika</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation type="unfinished">Piši preko slojeva</translation>
+        <translation>Prepiši slojeve</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="unfinished">Piši preko postojećih blokova&lt;br&gt;u crteže s&lt;br&gt;blokovima iz međuspremnika</translation>
+        <translation>Prepiši postojeće blokove&lt;br&gt;u crtežu s&lt;br&gt;blokovima iz međuspremnika</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation type="unfinished">Piši preko blokova</translation>
+        <translation>Prepiši blokove</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/Paste/PreferencesPage.ui" line="+17"/>
@@ -9525,7 +9526,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenter.js" line="+45"/>
         <source>No solution</source>
-        <translation type="unfinished">Nema rješenja</translation>
+        <translation>Nema rješenja</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js" line="+2"/>
@@ -9743,7 +9744,7 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>Done</source>
-        <translation type="unfinished">Završeno</translation>
+        <translation>Završeno</translation>
     </message>
     <message>
         <location line="+435"/>
@@ -9793,7 +9794,7 @@ shown in search results:</source>
     <message>
         <location line="+18"/>
         <source>Scale:</source>
-        <translation type="unfinished">Mjerilo:</translation>
+        <translation>Mjerilo:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -10180,7 +10181,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/RestrictAngleLength/RestrictAngleLength.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="unfinished">Kut:</translation>
+        <translation>Kut:</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -10191,7 +10192,7 @@ shown in search results:</source>
     <message>
         <location line="-20"/>
         <source>Distance:</source>
-        <translation type="unfinished">Udaljenost:</translation>
+        <translation>Udaljenost:</translation>
     </message>
 </context>
 <context>
@@ -10289,7 +10290,7 @@ shown in search results:</source>
     <message>
         <location line="+14"/>
         <source>Angle:</source>
-        <translation type="unfinished">Kut:</translation>
+        <translation>Kut:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -10463,7 +10464,7 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>All Files</source>
-        <translation type="unfinished">Sve datoteke</translation>
+        <translation>Sve datoteke</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -10576,7 +10577,7 @@ shown in search results:</source>
     <message>
         <location line="+2"/>
         <source>Format:</source>
-        <translation type="unfinished">Format:</translation>
+        <translation>Format:</translation>
     </message>
     <message>
         <location filename="../scripts/File/Save/SaveInit.js" line="+2"/>
@@ -10604,7 +10605,7 @@ shown in search results:</source>
     <message>
         <location line="+84"/>
         <source>Format:</source>
-        <translation type="unfinished">Format:</translation>
+        <translation>Format:</translation>
     </message>
     <message>
         <location filename="../scripts/File/SaveAs/SaveAsInit.js" line="+2"/>
@@ -10964,12 +10965,12 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntities.js" line="+90"/>
         <source>First point</source>
-        <translation type="unfinished">Prva točka</translation>
+        <translation>Prva točka</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point</source>
-        <translation type="unfinished">Druga točka</translation>
+        <translation>Druga točka</translation>
     </message>
     <message>
         <location filename="../scripts/Select/SelectIntersectedEntities/SelectIntersectedEntitiesInit.js" line="+2"/>
@@ -11235,7 +11236,7 @@ shown in search results:</source>
     <message>
         <location line="+14"/>
         <source>Radius:</source>
-        <translation type="unfinished">Polumjer:</translation>
+        <translation>Polumjer:</translation>
     </message>
 </context>
 <context>
@@ -11272,7 +11273,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonAFCP/ShapePolygonAFCP.js" line="+61"/>
         <source>Center</source>
-        <translation type="unfinished">Centar</translation>
+        <translation>Centar</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -11351,7 +11352,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapePolygonCP/ShapePolygonCP.js" line="+59"/>
         <source>Center</source>
-        <translation type="unfinished">Centar</translation>
+        <translation>Centar</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -11456,12 +11457,12 @@ shown in search results:</source>
         <location line="+30"/>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="-10"/>
         <source>Angle:</source>
-        <translation type="unfinished">Kut:</translation>
+        <translation>Kut:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Reference Point:</source>
-        <translation type="unfinished">Referentna Točka:</translation>
+        <translation>Referentna točka:</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectangleSize/ShapeRectangleSizeDialog.ui" line="+101"/>
@@ -11662,7 +11663,7 @@ shown in search results:</source>
     <message>
         <location line="+32"/>
         <source>Second point</source>
-        <translation type="unfinished">Druga točka</translation>
+        <translation>Druga točka</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapDistanceManual/SnapDistanceManualInit.js" line="+2"/>
@@ -12017,7 +12018,7 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>All Files</source>
-        <translation type="unfinished">Sve datoteke</translation>
+        <translation>Sve datoteke</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -12108,7 +12109,7 @@ shown in search results:</source>
     <message>
         <location line="+20"/>
         <source>Angle:</source>
-        <translation type="unfinished">Kut:</translation>
+        <translation>Kut:</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
@@ -12163,17 +12164,17 @@ shown in search results:</source>
     <message>
         <location line="+14"/>
         <source>Direction:</source>
-        <translation type="unfinished">Smjer:</translation>
+        <translation>Smjer:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>Suprotno od kretanja satne kazaljke</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>U smjeru kretanja satne kazaljke</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -12296,7 +12297,7 @@ shown in search results:</source>
     <message>
         <location line="+2"/>
         <source>Diameter</source>
-        <translation type="unfinished">Promjer</translation>
+        <translation>Promjer</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12316,7 +12317,7 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation type="unfinished">Delta</translation>
+        <translation>Delta</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -12479,7 +12480,7 @@ shown in search results:</source>
     <message>
         <location line="+16"/>
         <source>Angle:</source>
-        <translation type="unfinished">Kut:</translation>
+        <translation>Kut:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -12665,7 +12666,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Layer/ToggleLayerVisibility/ToggleLayerVisibilityInit.js" line="+2"/>
         <source>&amp;Toggle Visibility</source>
-        <translation type="unfinished">&amp;Promijeni Vidljivost</translation>
+        <translation>&amp;Promijeni vidljivost</translation>
     </message>
 </context>
 <context>
@@ -12842,7 +12843,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Modify/TranslateRotate/TranslateRotate.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="unfinished">Kut:</translation>
+        <translation>Kut:</translation>
     </message>
 </context>
 <context>
@@ -13272,7 +13273,7 @@ shown in search results:</source>
     <message>
         <location line="+4"/>
         <source>Diameter</source>
-        <translation type="unfinished">Promjer</translation>
+        <translation>Promjer</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13287,17 +13288,17 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>Plus/Minus</source>
-        <translation type="unfinished">Plus/Minus</translation>
+        <translation>Plus/Minus</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal to</source>
-        <translation type="unfinished">Skoro jednako kao</translation>
+        <translation>Skoro jednako kao</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Asymptotically equal to</source>
-        <translation type="unfinished">Asimptotski jednako kao</translation>
+        <translation>Asimptotski jednako kao</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13352,7 +13353,7 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation type="unfinished">Delta</translation>
+        <translation>Delta</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13372,7 +13373,7 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished">Centar</translation>
+        <translation>Centar</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13388,7 +13389,7 @@ shown in search results:</source>
         <location line="+1"/>
         <location line="+7"/>
         <source>Middle</source>
-        <translation type="unfinished">Sredina</translation>
+        <translation>Sredina</translation>
     </message>
     <message>
         <location line="-6"/>
@@ -13481,7 +13482,7 @@ shown in search results:</source>
         <location line="+22"/>
         <location line="+4"/>
         <source>Clockwise</source>
-        <translation type="unfinished"></translation>
+        <translation>U smjeru kretanja satne kazaljke</translation>
     </message>
     <message>
         <location line="-3"/>
@@ -14178,7 +14179,7 @@ shown in search results:</source>
         <location line="+116"/>
         <location line="+30"/>
         <source>Y:</source>
-        <translation type="unfinished">Y:</translation>
+        <translation>Y:</translation>
     </message>
     <message>
         <location line="-512"/>
