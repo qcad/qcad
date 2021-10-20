@@ -487,8 +487,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <source>Object Invisible</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Invisible</source>
-        <translation>Neviditeľné</translation>
+        <translation type="vanished">Neviditeľné</translation>
     </message>
     <message>
         <location line="+1"/>

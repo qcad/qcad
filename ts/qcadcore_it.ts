@@ -490,8 +490,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <source>Object Invisible</source>
+        <translation>Oggetto invisibile</translation>
+    </message>
+    <message>
         <source>Invisible</source>
-        <translation>Invisibile</translation>
+        <translation type="vanished">Invisibile</translation>
     </message>
     <message>
         <location line="+1"/>

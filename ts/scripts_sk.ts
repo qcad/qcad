@@ -44,12 +44,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+449"/>
+        <location line="+422"/>
         <source>Plugin:</source>
         <translation>Zásuvný modul:</translation>
     </message>
     <message>
-        <location line="-424"/>
+        <location line="-397"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -2595,7 +2595,7 @@ Prajete si ho obnoviť?</translation>
         <translation>Referenčný bod</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+44"/>
         <source>Save library item as...</source>
         <translation>Uložiť položku knižnice ako...</translation>
     </message>
@@ -7120,7 +7120,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Hotovo</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+121"/>
         <source>Polygon area:</source>
         <translation>Plocha polygónu:</translation>
     </message>
@@ -7263,7 +7263,7 @@ BUG: Interferes with group castings.</source>
         <translation>Obvod</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+49"/>
         <source>Polyline area:</source>
         <translation>Plocha krivky:</translation>
     </message>

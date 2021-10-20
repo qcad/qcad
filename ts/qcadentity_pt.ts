@@ -985,7 +985,7 @@
         <translation type="vanished">Vertical</translation>
     </message>
     <message>
-        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+93"/>
+        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+96"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+101"/>
         <source>Tag</source>
         <translation>Rótulo</translation>
@@ -1032,6 +1032,7 @@
         <translation>Ângulo Fixo</translation>
     </message>
     <message>
+        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="-3"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+1"/>
         <source>Invisible</source>
         <translation>Invisível</translation>

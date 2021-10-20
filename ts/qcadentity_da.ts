@@ -278,7 +278,7 @@
         <translation>Samlet areal</translation>
     </message>
     <message>
-        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+93"/>
+        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+96"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+101"/>
         <source>Tag</source>
         <translation>Tag</translation>
@@ -289,6 +289,7 @@
         <translation>Prompt</translation>
     </message>
     <message>
+        <location line="-3"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+1"/>
         <source>Invisible</source>
         <translation>Usynlig</translation>

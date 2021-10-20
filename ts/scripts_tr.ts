@@ -123,12 +123,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+449"/>
+        <location line="+422"/>
         <source>Plugin:</source>
         <translation>Eklenti:</translation>
     </message>
     <message>
-        <location line="-424"/>
+        <location line="-397"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -2487,7 +2487,7 @@ Onu kurtarmak ister misiniz?</translation>
         <translation>Referans Noktası</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+44"/>
         <source>Save library item as...</source>
         <translation>Kütüphane öğesini şunun gibi kaydet...</translation>
     </message>
@@ -6773,7 +6773,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Bitti</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+121"/>
         <source>Polygon area:</source>
         <translation>Çokgen alanı:</translation>
     </message>
@@ -6916,7 +6916,7 @@ BUG: Interferes with group castings.</source>
         <translation>Çevre</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+49"/>
         <source>Polyline area:</source>
         <translation type="unfinished"></translation>
     </message>

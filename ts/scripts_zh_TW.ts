@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+449"/>
+        <location line="+422"/>
         <source>Plugin:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-424"/>
+        <location line="-397"/>
         <source>ID:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2369,7 +2369,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+44"/>
         <source>Save library item as...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6552,7 +6552,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+121"/>
         <source>Polygon area:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6679,7 +6679,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+49"/>
         <source>Polyline area:</source>
         <translation type="unfinished"></translation>
     </message>

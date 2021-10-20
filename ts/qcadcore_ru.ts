@@ -467,8 +467,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <source>Object Invisible</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Invisible</source>
-        <translation>Невидимый</translation>
+        <translation type="vanished">Невидимый</translation>
     </message>
     <message>
         <location line="+1"/>

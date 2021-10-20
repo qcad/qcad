@@ -581,8 +581,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <source>Object Invisible</source>
+        <translation>Objekt usynlig</translation>
+    </message>
+    <message>
         <source>Invisible</source>
-        <translation>Usynlig</translation>
+        <translation type="vanished">Usynlig</translation>
     </message>
     <message>
         <location line="+1"/>

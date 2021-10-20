@@ -67,12 +67,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+449"/>
+        <location line="+422"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-424"/>
+        <location line="-397"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -2764,7 +2764,7 @@ Do you wish to recover it?</source>
         <translation>Punto de referencia</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+44"/>
         <source>Save library item as...</source>
         <translation>Guardar elemento de biblioteca...</translation>
     </message>
@@ -7756,7 +7756,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Terminar</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+121"/>
         <source>Polygon area:</source>
         <translation>Área de un polígono:</translation>
     </message>
@@ -7911,7 +7911,7 @@ BUG: Interferes with group castings.</source>
         <translation>Circunferencia</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+49"/>
         <source>Polyline area:</source>
         <translation>Área:</translation>
     </message>

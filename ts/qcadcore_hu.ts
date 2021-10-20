@@ -463,7 +463,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Invisible</source>
+        <source>Object Invisible</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -85,12 +85,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+449"/>
+        <location line="+422"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-424"/>
+        <location line="-397"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -2923,7 +2923,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Referenzpunkt</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+44"/>
         <source>Save library item as...</source>
         <translation>Bibliothekeintrag speichern unter...</translation>
     </message>
@@ -8237,7 +8237,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Fertig</translation>
     </message>
     <message>
-        <location filename="../scripts/Information/InfoArea/InfoArea.js" line="+214"/>
+        <location filename="../scripts/Information/InfoArea/InfoArea.js" line="+191"/>
         <source>Polygon area:</source>
         <translation>Polygonfläche:</translation>
     </message>
@@ -8260,7 +8260,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="obsolete">Polygonfläche</translation>
     </message>
     <message>
-        <location filename="../scripts/Information/InfoArea/InfoArea.js" line="-145"/>
+        <location filename="../scripts/Information/InfoArea/InfoArea.js" line="-122"/>
         <source>Set next polygon corner</source>
         <translation>Nächsten Eckpunkt setzen</translation>
     </message>
@@ -8409,7 +8409,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Umfang</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+49"/>
         <source>Polyline area:</source>
         <translation>Polylinienfläche:</translation>
     </message>

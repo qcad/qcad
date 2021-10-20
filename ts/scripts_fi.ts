@@ -20,12 +20,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+449"/>
+        <location line="+422"/>
         <source>Plugin:</source>
         <translation>Laajennusosa:</translation>
     </message>
     <message>
-        <location line="-424"/>
+        <location line="-397"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -2559,7 +2559,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Viitepiste</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+44"/>
         <source>Save library item as...</source>
         <translation>Tallenna kirjastokohde nimellä ...</translation>
     </message>
@@ -7175,7 +7175,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Valmis</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+121"/>
         <source>Polygon area:</source>
         <translation>Monikulmion ala:</translation>
     </message>
@@ -7318,7 +7318,7 @@ BUG: Interferes with group castings.</source>
         <translation>Ympärysmitta</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+49"/>
         <source>Polyline area:</source>
         <translation>Murtoviiva-alue:</translation>
     </message>

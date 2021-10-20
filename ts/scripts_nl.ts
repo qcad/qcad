@@ -44,12 +44,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+449"/>
+        <location line="+422"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-424"/>
+        <location line="-397"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -2573,7 +2573,7 @@ Wilt u het herstellen?</translation>
         <translation>Referentiepunt</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+44"/>
         <source>Save library item as...</source>
         <translation>Bibliotheekitem opslaan als...</translation>
     </message>
@@ -7171,7 +7171,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Klaar</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+121"/>
         <source>Polygon area:</source>
         <translation>Polygoonoppervlakte:</translation>
     </message>
@@ -7314,7 +7314,7 @@ BUG: Interferes with group castings.</source>
         <translation>Omtrek</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+49"/>
         <source>Polyline area:</source>
         <translation>Oppervlakte:</translation>
     </message>

@@ -608,8 +608,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <source>Object Invisible</source>
+        <translation>Object invisible</translation>
+    </message>
+    <message>
         <source>Invisible</source>
-        <translation>Invisible</translation>
+        <translation type="vanished">Invisible</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -119,12 +119,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+449"/>
+        <location line="+422"/>
         <source>Plugin:</source>
         <translation>Dodatak:</translation>
     </message>
     <message>
-        <location line="-424"/>
+        <location line="-397"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -374,7 +374,7 @@ primjenjivanje promijenjenih postavki.</translation>
     <message>
         <location filename="../scripts/Apollonius.js" line="+1932"/>
         <source>Invalid radius</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Neispravan polumjer</translation>
     </message>
     <message>
         <location line="+51"/>
@@ -2439,7 +2439,7 @@ Do you wish to recover it?</source>
         <translation>Referentna Točka</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+44"/>
         <source>Save library item as...</source>
         <translation>Snimi stavku zbirke kao...</translation>
     </message>
@@ -6676,7 +6676,7 @@ BUG: Interferes with group castings.</source>
         <translation type="obsolete">Završeno</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+121"/>
         <source>Polygon area:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6819,7 +6819,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+49"/>
         <source>Polyline area:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7720,7 +7720,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="-27"/>
         <source>File:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Datoteka:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7730,7 +7730,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+3"/>
         <source>License:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Licenca:</translation>
     </message>
     <message>
         <location line="+3"/>

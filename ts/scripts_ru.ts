@@ -39,12 +39,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+449"/>
+        <location line="+422"/>
         <source>Plugin:</source>
         <translation>Модуль:</translation>
     </message>
     <message>
-        <location line="-424"/>
+        <location line="-397"/>
         <source>ID:</source>
         <translation>Идентификатор:</translation>
     </message>
@@ -2557,7 +2557,7 @@ Do you wish to recover it?</source>
         <translation>Точка привязки</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+44"/>
         <source>Save library item as...</source>
         <translation>Сохранить элемент библиотеки как...</translation>
     </message>
@@ -7124,7 +7124,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Завершено</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+121"/>
         <source>Polygon area:</source>
         <translation>Площадь многоугольника:</translation>
     </message>
@@ -7267,7 +7267,7 @@ BUG: Interferes with group castings.</source>
         <translation>Периметр</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+49"/>
         <source>Polyline area:</source>
         <translation>Площадь ломаной:</translation>
     </message>

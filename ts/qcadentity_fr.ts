@@ -977,7 +977,7 @@
         <translation>Point 4</translation>
     </message>
     <message>
-        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+93"/>
+        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+96"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+101"/>
         <source>Tag</source>
         <translation>Étiquette</translation>
@@ -1024,6 +1024,7 @@
         <translation>Angle fixe</translation>
     </message>
     <message>
+        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="-3"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+1"/>
         <source>Invisible</source>
         <translation>Invisible</translation>

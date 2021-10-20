@@ -63,12 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+449"/>
+        <location line="+422"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="-424"/>
+        <location line="-397"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -2612,7 +2612,7 @@ Você deseja recuperá-lo?</translation>
         <translation>Ponto de Referência</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+44"/>
         <source>Save library item as...</source>
         <translation>Grave item da biblioteca como...</translation>
     </message>
@@ -7313,7 +7313,7 @@ BUG: Interferes with group castings.</source>
         <translation>Definir próximo canto do polígono</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+121"/>
         <source>Polygon area:</source>
         <translation>Zona poligonal:</translation>
     </message>
@@ -7448,7 +7448,7 @@ BUG: Interferes with group castings.</source>
         <translation>Circunferência</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+49"/>
         <source>Polyline area:</source>
         <translation>Área:</translation>
     </message>

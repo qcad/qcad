@@ -885,7 +885,7 @@
         <translation type="vanished">垂直</translation>
     </message>
     <message>
-        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+93"/>
+        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+96"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+101"/>
         <source>Tag</source>
         <translation>タグ</translation>
@@ -932,6 +932,7 @@
         <translation>固定角</translation>
     </message>
     <message>
+        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="-3"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+1"/>
         <source>Invisible</source>
         <translation>不可視</translation>
