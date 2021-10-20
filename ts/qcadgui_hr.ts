@@ -24,7 +24,7 @@
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Na entitetu</translation>
     </message>
     <message>
         <location line="+3"/>

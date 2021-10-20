@@ -261,7 +261,7 @@
     <message>
         <location line="+1"/>
         <source>Sweep Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Kut pomjeranja</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -286,7 +286,7 @@
     <message>
         <location line="+1"/>
         <source>Prompt</source>
-        <translation type="unfinished"></translation>
+        <translation>Upit</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+1"/>
@@ -346,14 +346,14 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Chord Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Točka tetive</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Far Chord Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Točka daleke tetive</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="-10"/>
@@ -388,7 +388,7 @@
     <message>
         <location line="+2"/>
         <source>Ordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>Ordinata</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -402,7 +402,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Leader End Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Krajnja točka pokazivača</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+167"/>
@@ -435,7 +435,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Definition Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Točka definicije</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -457,17 +457,17 @@
     <message>
         <location line="+2"/>
         <source>Fixed Extension Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Fiksna pomoćna mjerna crta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension Line Length</source>
-        <translation type="unfinished"></translation>
+        <translation>Duljina pomoćne mjerne crte</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Auto Label</source>
-        <translation>Auto-etiketa</translation>
+        <translation>Automatska oznaka</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -486,12 +486,12 @@
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="+3"/>
         <source>Block Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Naziv bloka</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Auto Label Position</source>
-        <translation>Položaj Auto-etikete</translation>
+        <translation>Položaj automatske oznake</translation>
     </message>
     <message>
         <location filename="../src/entity/REllipseEntity.cpp" line="-17"/>
@@ -815,7 +815,7 @@
     <message>
         <location filename="../src/entity/RSplineEntity.cpp" line="-12"/>
         <source>Closed Periodic</source>
-        <translation type="unfinished"></translation>
+        <translation>Zatvorena periodska krivulja</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -834,12 +834,12 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Fit Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Točka uklopa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Knot Vector</source>
-        <translation type="unfinished"></translation>
+        <translation>Čvorni vektor</translation>
     </message>
     <message>
         <location line="+0"/>
