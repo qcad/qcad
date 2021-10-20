@@ -693,8 +693,8 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool
     // if this exporter exports a visual
     // representation of the drawing (scene, view, print)...
     if (isVisualExporter()) {
-        if (getCurrentViewport()!=NULL) {
-            // entity in viewport context, don't export invisible entities:
+        if (getCurrentViewport()!=NULL || getCurrentBlockRef()!=NULL) {
+            // entity in viewport or block reference context, don't export invisible entities:
             skip = !isVisible(entity);
         }
         else {
@@ -733,7 +733,6 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool
         }
         twoColorSelectedMode = false;
     }
-//    }
 
     if (blockRefOrViewportSet) {
         blockRefViewportStack.pop();
