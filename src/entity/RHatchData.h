@@ -162,6 +162,11 @@ public:
     void newLoop();
     void cancelLoop();
     void addBoundary(QSharedPointer<RShape> shape, bool addAutoLoops = true);
+    void addBoundaryShape(QSharedPointer<RShape> shape, int loop) {
+        if (loop < boundary.length()) {
+            boundary[loop].append(shape);
+        }
+    }
     RPainterPath getBoundaryPath(double pixelSizeHint = RDEFAULT_MIN1) const;
     virtual QList<RPainterPath> getPainterPaths(bool draft = false, double pixelSizeHint = RDEFAULT_MIN1) const;
 
@@ -184,6 +189,12 @@ public:
     QList<QSharedPointer<RShape> > getLoopBoundary(int index) const;
 
     QList<RPolyline> getBoundaryAsPolylines(double segmentLength) const;
+
+    void autoCloseLoops() {
+        if (hatchProxy!=NULL) {
+            hatchProxy->autoCloseLoops(*this);
+        }
+    }
 
     int getComplexity() const;
 

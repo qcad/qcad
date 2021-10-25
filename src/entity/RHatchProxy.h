@@ -37,6 +37,7 @@ public:
     virtual ~RHatchProxy() {}
 
     virtual QList<RPolyline> getBoundaryAsPolylines(const RHatchData& hatch, double segmentLength) = 0;
+    virtual void autoCloseLoops(RHatchData& hatch) = 0;
 };
 
 #endif
