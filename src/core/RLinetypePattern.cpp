@@ -159,7 +159,7 @@ bool RLinetypePattern::operator==(const RLinetypePattern& other) const {
     }
 
     for (int i = 0; i < other.pattern.length(); ++i) {
-        if (pattern[i] != other.pattern[i]) {
+        if (!RMath::fuzzyCompare(pattern[i], other.pattern[i])) {
             return false;
         }
     }
