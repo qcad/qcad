@@ -292,6 +292,17 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
+    <method name="addBoundaryShape" cppName="addBoundaryShape"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QSharedPointer &lt; RShape &gt;"
+        typeName="QSharedPointer &lt; RShape &gt;" name="shape"
+        isConst="false" />
+        <arg type="int" typeName="int" name="loop"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getBoundaryPath" cppName="getBoundaryPath"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -349,6 +360,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double" name="segmentLength"
         isConst="false" />
       </variant>
+    </method>
+    <method name="autoCloseLoops" cppName="autoCloseLoops"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
     </method>
     <method name="getComplexity" cppName="getComplexity"
     specifier="public" isStatic="false" isVirtual="false"

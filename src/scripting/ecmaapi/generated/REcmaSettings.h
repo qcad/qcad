@@ -472,6 +472,9 @@
         getPropertyEditorShowOnRequest
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getSimpleTextAlignLeft
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPolarCoordinateSeparator
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

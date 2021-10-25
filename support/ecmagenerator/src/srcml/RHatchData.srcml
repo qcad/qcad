@@ -163,6 +163,11 @@
     <function_decl><type><name>void</name></type> <name>newLoop</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>cancelLoop</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>addBoundary</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>shape</name></decl></param>, <param><decl><type><name>bool</name></type> <name>addAutoLoops</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function><type><name>void</name></type> <name>addBoundaryShape</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>shape</name></decl></param>, <param><decl><type><name>int</name></type> <name>loop</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr><name>loop</name> &lt; <name>boundary</name>.<call><name>length</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name><name>boundary</name><index>[<expr><name>loop</name></expr>]</index></name>.<call><name>append</name><argument_list>(<argument><expr><name>shape</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></then></if>
+    }</block></function>
     <function_decl><type><name>RPainterPath</name></type> <name>getBoundaryPath</name><parameter_list>(<param><decl><type><name>double</name></type> <name>pixelSizeHint</name> =<init> <expr><name>RDEFAULT_MIN1</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>getPainterPaths</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>draft</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>pixelSizeHint</name> =<init> <expr><name>RDEFAULT_MIN1</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
@@ -185,6 +190,12 @@
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getLoopBoundary</name><parameter_list>(<param><decl><type><name>int</name></type> <name>index</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>RPolyline</name></argument>&gt;</argument_list></name></type> <name>getBoundaryAsPolylines</name><parameter_list>(<param><decl><type><name>double</name></type> <name>segmentLength</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function><type><name>void</name></type> <name>autoCloseLoops</name><parameter_list>()</parameter_list> <block>{
+        <if>if <condition>(<expr><name>hatchProxy</name>!=<name>NULL</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>hatchProxy</name>-&gt;<call><name>autoCloseLoops</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        }</block></then></if>
+    }</block></function>
 
     <function_decl><type><name>int</name></type> <name>getComplexity</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 

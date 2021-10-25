@@ -154,6 +154,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, addBoundary, "addBoundary");
             
+            REcmaHelper::registerFunction(&engine, proto, addBoundaryShape, "addBoundaryShape");
+            
             REcmaHelper::registerFunction(&engine, proto, getBoundaryPath, "getBoundaryPath");
             
             REcmaHelper::registerFunction(&engine, proto, getPainterPaths, "getPainterPaths");
@@ -169,6 +171,8 @@
             REcmaHelper::registerFunction(&engine, proto, getLoopBoundary, "getLoopBoundary");
             
             REcmaHelper::registerFunction(&engine, proto, getBoundaryAsPolylines, "getBoundaryAsPolylines");
+            
+            REcmaHelper::registerFunction(&engine, proto, autoCloseLoops, "autoCloseLoops");
             
             REcmaHelper::registerFunction(&engine, proto, getComplexity, "getComplexity");
             
@@ -3548,6 +3552,105 @@
             return result;
         }
          QScriptValue
+        REcmaHatchData::addBoundaryShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::addBoundaryShape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::addBoundaryShape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("addBoundaryShape", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QSharedPointer < RShape > */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is SharedPointer
+                    QSharedPointer < RShape > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     RShape * o0 = 
+                    qscriptvalue_cast < RShape * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        
+                          // always clone shape if we expect a shared pointer (might be a simple object on stack):
+                          QSharedPointer < RShape >(o0->clone());
+                        
+                    }
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < RShape >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < RShape >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RHatchData: Argument 0 is not of type  RShape .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RHatchData: Argument 0 is not of type  RShape .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < RShape > 
+                    //a0 =
+                    //QSharedPointer < RShape >(o0->clone());
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->addBoundaryShape(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.addBoundaryShape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::addBoundaryShape", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaHatchData::getBoundaryPath
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -4063,6 +4166,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaHatchData::getBoundaryAsPolylines", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::autoCloseLoops
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::autoCloseLoops", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::autoCloseLoops";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("autoCloseLoops", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->autoCloseLoops();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.autoCloseLoops().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::autoCloseLoops", context, engine);
             return result;
         }
          QScriptValue

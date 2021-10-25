@@ -341,6 +341,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getPropertyEditorShowOnRequest, "getPropertyEditorShowOnRequest");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getSimpleTextAlignLeft, "getSimpleTextAlignLeft");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getPolarCoordinateSeparator, "getPolarCoordinateSeparator");
             
             REcmaHelper::registerFunction(&engine, &ctor, getCartesianCoordinateSeparator, "getCartesianCoordinateSeparator");
@@ -7429,6 +7431,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getPropertyEditorShowOnRequest", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getSimpleTextAlignLeft
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getSimpleTextAlignLeft", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getSimpleTextAlignLeft";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       getSimpleTextAlignLeft();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getSimpleTextAlignLeft().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getSimpleTextAlignLeft", context, engine);
             return result;
         }
          QScriptValue
