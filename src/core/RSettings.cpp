@@ -1201,7 +1201,7 @@ QString RSettings::getOSVersion() {
         return "Windows 8.1";
     // QSysInfo::WV_WINDOWS10:
     case 0x00c0:
-        return "Windows 10";
+        return "Windows 10 or 11";
     default:
         return "Windows >= 10";
     }
