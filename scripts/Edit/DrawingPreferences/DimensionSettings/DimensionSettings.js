@@ -771,10 +771,10 @@ DimensionSettings.savePreferences = function(pageWidget, calledByPrefDialog, doc
 
 
     // force update of bounding box of dimension entities:
-    var ids = document.queryAllEntities();
+    var ids = document.queryAllEntities(false, true);
     for (i=0; i<ids.length; i++) {
         var entityId = ids[i];
-        var entity = document.queryEntity(entityId);
+        var entity = document.queryEntityDirect(entityId);
         if (!isDimensionEntity(entity)) {
             // ignore non dimension entities:
             continue;
