@@ -204,10 +204,11 @@ InfoArcCircleArea.prototype.getSegmentArea = function() {
     } else if (sweep === 180) {
         segmentArea = 0.5 * this.getCircleEllipseArea();
     } else {
-        var remainAngle = RMath.deg2rad(360 - sweep);
-        var remainSliceArea = (this.radius1 * this.radius2 * remainAngle) / 2.0;
-        var remainSegmentArea = (this.radius1 * this.radius2 * (remainAngle - Math.sin(remainAngle))) / 2.0;
-        segmentArea = this.getSectorArea() + (remainSliceArea - remainSectorArea);
+        // TODO / broken:
+//        var remainAngle = RMath.deg2rad(360 - sweep);
+//        var remainSliceArea = (this.radius1 * this.radius2 * remainAngle) / 2.0;
+//        var remainSegmentArea = (this.radius1 * this.radius2 * (remainAngle - Math.sin(remainAngle))) / 2.0;
+//        segmentArea = this.getSectorArea() + (remainSliceArea - remainSectorArea);
     }
 
     return segmentArea;
