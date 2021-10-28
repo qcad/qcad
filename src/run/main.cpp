@@ -290,8 +290,6 @@ int main(int argc, char *argv[]) {
     REllipseEntity::init();
     RImageEntity::init();
     RHatchEntity::init();
-    RLeaderEntity::init();
-    RToleranceEntity::init();
     RLineEntity::init();
     RPointEntity::init();
     RPolylineEntity::init();
@@ -332,6 +330,8 @@ int main(int argc, char *argv[]) {
     RDimOrdinateEntity::init();
     RDimRadialEntity::init();
     RDimRotatedEntity::init();
+    RToleranceEntity::init();
+    RLeaderEntity::init();
 
     RLinetypeListMetric::init();
     RLinetypeListImperial::init();
