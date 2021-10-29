@@ -149,11 +149,11 @@ ConvertUnit.convert = function(di, fromUnit, toUnit) {
             tc.scale(factor);
             entity.setViewTarget(tc);
         } else if (isDimensionEntity(entity)) {
-            var s = entity.getDimScale(false);
+            var s = entity.getDimscale(false);
             entity.scale(factor);
             if (!RMath.fuzzyCompare(0.0, s)) {
                 // dimension has individual scale factor (property, override):
-                entity.setDimScale(s*factor);
+                entity.setDimscale(s*factor);
             }
         } else {
             entity.scale(factor);
