@@ -217,8 +217,13 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
             0.0
         )
     );
-    modelSpaceData.scaleVisualProperties(data.scaleFactor);
-    modelSpaceData.update();
+    //modelSpaceData.scaleVisualProperties(data.scaleFactor);
+    //modelSpaceData.update();
+
+    RTransform blockRefTransform;
+    blockRefTransform = modelSpaceData.getTransform();
+    //blockRefTransform.translate(offset.x, offset.y);
+    e.exportTransform(blockRefTransform);
 
     // start clipping from here:
     e.setClipping(true);
@@ -233,7 +238,8 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
             break;
         }
 
-        QSharedPointer<REntity> entity = modelSpaceData.queryEntity(*it, true);
+        //QSharedPointer<REntity> entity = modelSpaceData.queryEntity(*it, true);
+        QSharedPointer<REntity> entity = modelSpaceData.queryEntity(*it);
         if (entity.isNull()) {
             continue;
         }
@@ -243,15 +249,20 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
             continue;
         }
 
-        // transform according to viewport settings:
-        entity->rotate(data.rotation, data.position);
+//        if (entity->getType()==RS::EntityBlockRef) {
+//            QSharedPointer<RBlockReferenceEntity> blockRef = entity.dynamicCast<RBlockReferenceEntity>();
+//            blockRef->scaleVisualProperties(blockRef->getScaleFactors().x);
+//        }
 
-        RBox bb = entity->getBoundingBox();
-        bb.c1.z = 0;
-        bb.c2.z = 0;
-        if (!viewportBox.intersects(bb)) {
-            continue;
-        }
+        // transform according to viewport settings:
+        //entity->rotate(data.rotation, data.position);
+
+//        RBox bb = entity->getBoundingBox();
+//        bb.c1.z = 0;
+//        bb.c2.z = 0;
+//        if (!viewportBox.intersects(bb)) {
+//            continue;
+//        }
 
         if (doc->getKnownVariable(RS::PSLTSCALE, true).toBool()==false) {
             // scale line type pattern:
@@ -268,6 +279,8 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
     }
 
     e.setClipping(false);
+
+    e.exportEndTransform();
 }
 
 void RViewportEntity::print(QDebug dbg) const {
