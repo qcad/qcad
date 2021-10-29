@@ -1305,6 +1305,9 @@
     <file alias="scripts/Information/InfoArcCircleArea/InfoSector.svg">../../scripts/Information/InfoArcCircleArea/InfoSector.svg</file>
     <file alias="scripts/Information/InfoArcCircleArea/InfoSlice-inverse.svg">../../scripts/Information/InfoArcCircleArea/InfoSlice-inverse.svg</file>
     <file alias="scripts/Information/InfoArcCircleArea/InfoSlice.svg">../../scripts/Information/InfoArcCircleArea/InfoSlice.svg</file>
+    <file alias="scripts/Information/InfoArcCircleArea/Tests/InfoArcCircleAreaTest00.js">../../scripts/Information/InfoArcCircleArea/Tests/InfoArcCircleAreaTest00.js</file>
+    <file alias="scripts/Information/InfoArcCircleArea/Tests/data/ellipse_area.dxf">../../scripts/Information/InfoArcCircleArea/Tests/data/ellipse_area.dxf</file>
+    <file alias="scripts/Information/InfoArcCircleArea/Tests/required/InfoArcCircleAreaTest00_000.dxf">../../scripts/Information/InfoArcCircleArea/Tests/required/InfoArcCircleAreaTest00_000.dxf</file>
     <file alias="scripts/Information/InfoArea/Calculate-inverse.svg">../../scripts/Information/InfoArea/Calculate-inverse.svg</file>
     <file alias="scripts/Information/InfoArea/Calculate.svg">../../scripts/Information/InfoArea/Calculate.svg</file>
     <file alias="scripts/Information/InfoArea/Close-inverse.svg">../../scripts/Information/InfoArea/Close-inverse.svg</file>
