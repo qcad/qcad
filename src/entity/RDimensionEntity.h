@@ -224,11 +224,11 @@ public:
         getData().setLinearFactor(f);
     }
 
-    double getDimScale() const {
+    double getDimscale() const {
         return getData().getDimscale();
     }
 
-    void setDimScale(double f) {
+    void setDimscale(double f) {
         getData().setDimscale(f);
     }
 
