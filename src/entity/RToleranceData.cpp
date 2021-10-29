@@ -22,8 +22,10 @@
 
 RToleranceData::RToleranceData()
     :
-      dimScaleOverride(0.0),
+      //dimScaleOverride(0.0),
       dimToleranceBlockId(REntity::INVALID_ID),
+      dimscale(-1.0),
+      dimtxt(-1.0),
       joinFirstField(false) {
 }
 
@@ -36,67 +38,114 @@ RToleranceData::RToleranceData(RDocument* document, const RToleranceData& data)
     }
 }
 
-RToleranceData::RToleranceData(const RPolyline& polyline, bool arrowHead)
-    : dimScaleOverride(1.0), dimToleranceBlockId(REntity::INVALID_ID) {
+//void RToleranceData::setDimScaleOverride(double v) {
+//    dimScaleOverride = v;
+//}
 
-}
+//double RToleranceData::getDimscale(bool fromDocument) const {
+//    double ret = dimScaleOverride;
 
-double RToleranceData::getDimtxt() const {
-    double dimtxt = 2.5;
+//    if (document!=NULL && fromDocument && RMath::fuzzyCompare(ret, 0.0)) {
+//        ret = document->getKnownVariable(RS::DIMSCALE, 1.0).toDouble();
+//    }
 
-    if (document!=NULL) {
-        dimtxt = document->getKnownVariable(RS::DIMTXT, dimtxt).toDouble();
-    }
-    else {
-        qWarning() << "RDimensionData::getDimtxt: no document";
-    }
+//    return ret;
+//}
 
-    return dimtxt * getDimscale();
-}
-
-
-void RToleranceData::setDimScaleOverride(double v) {
-    dimScaleOverride = v;
-}
-
-double RToleranceData::getDimscale(bool fromDocument) const {
-    double ret = dimScaleOverride;
-
-    if (document!=NULL && fromDocument && RMath::fuzzyCompare(ret, 0.0)) {
-        ret = document->getKnownVariable(RS::DIMSCALE, 1.0).toDouble();
-    }
-
-    return ret;
-}
+//void RToleranceData::scaleVisualProperties(double scaleFactor) {
+//    if (dimScaleOverride>RS::PointTolerance) {
+//        setDimScaleOverride(dimScaleOverride * scaleFactor);
+//    }
+//    else {
+//        double s = getDimscale();
+//        setDimScaleOverride(scaleFactor * s);
+//    }
+//}
 
 void RToleranceData::scaleVisualProperties(double scaleFactor) {
-    if (dimScaleOverride>RS::PointTolerance) {
-        setDimScaleOverride(dimScaleOverride * scaleFactor);
-    }
-    else {
-        double s = getDimscale();
-        setDimScaleOverride(scaleFactor * s);
-    }
+    qDebug() << "RToleranceData::scaleVisualProperties:" << (unsigned long int)this;
+    qDebug() << "RToleranceData::scaleVisualProperties: before:" << getDimscale();
+    //RDebug::printBacktrace();
+    //qDebug() << "tol scale visual: " << scaleFactor;
+    setDimscale(getDimscale() * scaleFactor);
+    qDebug() << "RToleranceData::scaleVisualProperties: after:" << getDimscale();
 }
 
 QList<RVector> RToleranceData::getCorners() const {
     QList<RVector> ret;
 
     if (!divisions.isEmpty()) {
-        double dimtxt = getDimtxt();
+        double dimtxtLocal = getDimtxt();
 
         QList<RVector> points;
 
         int iLine = 0;
         for (int i=0; i<divisions.length(); i++) {
             if (divisions[i].length()>1) {
-                points.append(RVector(0, -dimtxt - iLine*dimtxt*2));
-                points.append(RVector(0, dimtxt - iLine*dimtxt*2));
-                points.append(RVector(divisions[i].last(), -dimtxt - iLine*dimtxt*2));
-                points.append(RVector(divisions[i].last(), dimtxt - iLine*dimtxt*2));
+//                points.append(RVector(0, -dimtxtLocal - iLine*dimtxtLocal*2));
+//                points.append(RVector(0, dimtxtLocal - iLine*dimtxtLocal*2));
+//                points.append(RVector(divisions[i].last(), -dimtxtLocal - iLine*dimtxtLocal*2));
+//                points.append(RVector(divisions[i].last(), dimtxtLocal - iLine*dimtxtLocal*2));
+
+                //if (iLine==0) {
+                    // top row corners:
+                    points.append(RVector(0, dimtxtLocal - iLine*dimtxtLocal*2));
+                    points.append(RVector(divisions[i].last(), dimtxtLocal - iLine*dimtxtLocal*2));
+//                }
+//                if (iLine==divisions.length()-1) {
+                    // bottom row corners:
+                    points.append(RVector(0, -dimtxtLocal - iLine*dimtxtLocal*2));
+                    points.append(RVector(divisions[i].last(), -dimtxtLocal - iLine*dimtxtLocal*2));
+//                }
             }
             iLine++;
         }
+
+        points = RVector::getUnique(points);
+
+        for (int i=0; i<points.length(); i++) {
+            RVector p = points[i];
+            p.rotate(direction.getAngle(), RVector(0,0));
+            p.move(location);
+
+            ret.append(p);
+        }
+    }
+
+    return ret;
+}
+
+QList<RVector> RToleranceData::getMiddels() const {
+    QList<RVector> ret;
+
+    if (!divisions.isEmpty()) {
+        double dimtxtLocal = getDimtxt();
+
+        QList<RVector> points;
+
+        int iLine = 0;
+        for (int i=0; i<divisions.length(); i++) {
+            if (divisions[i].length()>1) {
+                // top middle:
+                if (iLine==0) {
+                    points.append(RVector((0 + divisions[i].last()) / 2.0, dimtxtLocal - iLine*dimtxtLocal*2));
+                }
+
+                // bottom middle:
+                if (iLine==divisions.length()-1) {
+                    points.append(RVector((0 + divisions[i].last()) / 2.0, -dimtxtLocal - iLine*dimtxtLocal*2));
+                }
+
+                // front middle of row:
+                points.append(RVector(0, -iLine*dimtxtLocal*2));
+
+                // back middle of row:
+                points.append(RVector(divisions[i].last(), -iLine*dimtxtLocal*2));
+            }
+            iLine++;
+        }
+
+        points = RVector::getUnique(points);
 
         for (int i=0; i<points.length(); i++) {
             RVector p = points[i];
@@ -115,13 +164,14 @@ QList<RRefPoint> RToleranceData::getReferencePoints(RS::ProjectionRenderingHint 
 
     QList<RRefPoint> ret;
 
-    ret.append(RRefPoint(location));
+    //ret.append(RRefPoint(location));
 
     if (!divisions.isEmpty()) {
-        QList<RVector> corners = getCorners();
+        QList<RVector> refPoints = getCorners();
+        refPoints.append(getMiddels());
 
-        for (int i=0; i<corners.length(); i++) {
-            ret.append(RRefPoint(corners[i]));
+        for (int i=0; i<refPoints.length(); i++) {
+            ret.append(RRefPoint(refPoints[i]));
         }
     }
 
@@ -133,16 +183,17 @@ bool RToleranceData::moveReferencePoint(const RVector& referencePoint, const RVe
 
     bool ret = false;
 
-    if (referencePoint.equalsFuzzy(location)) {
-        location = targetPoint;
-        ret = true;
-        update();
-    }
+//    if (referencePoint.equalsFuzzy(location)) {
+//        location = targetPoint;
+//        ret = true;
+//        update();
+//    }
 
-    QList<RVector> corners = getCorners();
-    for (int i=0; i<corners.length(); i++) {
-        if (referencePoint.equalsFuzzy(corners[i])) {
-            location += targetPoint-corners[i];
+    QList<RVector> refPoints = getCorners();
+    refPoints.append(getMiddels());
+    for (int i=0; i<refPoints.length(); i++) {
+        if (referencePoint.equalsFuzzy(refPoints[i])) {
+            location += targetPoint-refPoints[i];
             ret = true;
             update();
         }
@@ -343,7 +394,8 @@ QList<RTextData> RToleranceData::getTextLabels() const {
 
         if (!divisions.isEmpty() && divisions.last().length()==1) {
             // remove single division line:
-            divisions.last().clear();
+            //divisions.last().clear();
+            divisions.removeLast();
         }
         else {
             cursorY -= dimtxt * 2;

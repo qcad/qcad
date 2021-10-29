@@ -19,6 +19,7 @@
 #include "RExporter.h"
 #include "RToleranceEntity.h"
 #include "RMetaTypes.h"
+#include "RPluginLoader.h"
 #include "RStorage.h"
 
 RPropertyTypeId RToleranceEntity::PropertyCustom;
@@ -42,7 +43,8 @@ RPropertyTypeId RToleranceEntity::PropertyDirectionX;
 RPropertyTypeId RToleranceEntity::PropertyDirectionY;
 RPropertyTypeId RToleranceEntity::PropertyDirectionZ;
 RPropertyTypeId RToleranceEntity::PropertyText;
-//RPropertyTypeId RToleranceEntity::PropertyDimScale;
+RPropertyTypeId RToleranceEntity::PropertyDimscale;
+RPropertyTypeId RToleranceEntity::PropertyDimtxt;
 
 
 RToleranceEntity::RToleranceEntity(RDocument* document, const RToleranceData& data) :
@@ -81,7 +83,10 @@ void RToleranceEntity::init() {
     RToleranceEntity::PropertyDirectionY.generateId(RToleranceEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Direction"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
     RToleranceEntity::PropertyDirectionZ.generateId(RToleranceEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Direction"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
     RToleranceEntity::PropertyText.generateId(RToleranceEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Text"));
-//    RToleranceEntity::PropertyDimScale.generateId(RToleranceEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Scale"), false, RPropertyAttributes::Geometry);
+    RToleranceEntity::PropertyDimscale.generateId(RToleranceEntity::getRtti(), RDimStyle::PropertyDimscale);
+    if (RPluginLoader::hasPlugin("DWG")) {
+        RToleranceEntity::PropertyDimtxt.generateId(RToleranceEntity::getRtti(), RDimStyle::PropertyDimtxt);
+    }
 }
 
 bool RToleranceEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -95,6 +100,8 @@ bool RToleranceEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(data.direction.y, value, PropertyDirectionY == propertyTypeId);
     ret = ret || RObject::setMember(data.direction.z, value, PropertyDirectionZ == propertyTypeId);
     ret = ret || RObject::setMember(getData().text, value, PropertyText == propertyTypeId);
+    ret = ret || RObject::setMember(getData().dimscale, value, PropertyDimscale == propertyTypeId);
+    ret = ret || RObject::setMember(getData().dimtxt, value, PropertyDimtxt == propertyTypeId);
 
 //    if (PropertyDimScale == propertyTypeId) {
 //        ret = ret || RObject::setMember(data.dimScaleOverride, value, PropertyDimScale == propertyTypeId);
@@ -120,6 +127,29 @@ QPair<QVariant, RPropertyAttributes> RToleranceEntity::getProperty(
         return qMakePair(QVariant(data.direction.z), RPropertyAttributes());
     } else if (propertyTypeId == PropertyText) {
         return qMakePair(QVariant(getData().text), RPropertyAttributes(RPropertyAttributes::RichText|RPropertyAttributes::Label));
+    } else if (propertyTypeId == PropertyDimscale || propertyTypeId == PropertyDimtxt) {
+        double v;
+        if (propertyTypeId == PropertyDimscale) {
+            v = data.dimscale;
+        }
+        else {
+            v = data.dimtxt;
+        }
+        if (v<0.0) {
+            RDocument* doc = getDocument();
+            if (doc!=NULL) {
+                QSharedPointer<RDimStyle> dimStyle = getDocument()->queryDimStyleDirect();
+                if (!dimStyle.isNull()) {
+                    if (propertyTypeId == PropertyDimscale) {
+                        v = dimStyle->getDouble(RS::DIMSCALE);
+                    }
+                    else {
+                        v = dimStyle->getDouble(RS::DIMTXT);
+                    }
+                }
+            }
+        }
+        return qMakePair(QVariant(v), RPropertyAttributes());
     }
 //    else if (propertyTypeId == PropertyDimScale) {
 //        return qMakePair(QVariant(data.dimScaleOverride), RPropertyAttributes());
@@ -146,6 +176,7 @@ void RToleranceEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
     // render text strings with distance of h:
     for (int i=0; i<labels.length(); i++) {
         RTextData label = labels[i];
+        label.setSelected(isSelected());
 
         //qDebug() << "sub:" << sub;
 
@@ -167,18 +198,31 @@ void RToleranceEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
 
         if (label.isSane()) {
             if (e.isTextRenderedAsText()) {
-                QList<RPainterPath> paths = e.exportText(label, isSelected());
+                QList<RPainterPath> paths = e.exportText(label, forceSelected);
                 e.exportPainterPaths(paths);
             }
             else {
-                // render text as paths:
-                // set brush explicitly:
-                QVariant v = getDocument()->getKnownVariable(RS::DIMCLRT, RColor(RColor::ByBlock));
-                RColor textColor = v.value<RColor>();
-                if (!textColor.isByBlock()) {
-                    brush.setColor(textColor);
-                }
-                e.setBrush(brush);
+//                if (!data.isSelected()) {
+                    // render text as paths:
+                    // set brush explicitly:
+                    //QVariant v = doc->getKnownVariable(RS::DIMCLRT, RColor(RColor::ByBlock));
+                    //RColor textColor = v.value<RColor>();
+//                    if (textColor.isByLayer()) {
+//                        QSharedPointer<RLayer> layer = doc->queryLayerDirect(data.getLayerId());
+//                        if (!layer.isNull()) {
+//                            textColor = layer->getColor();
+//                        }
+//                    }
+
+                    //QBrush brush = e.getBrush();
+                    //if (!textColor.isByBlock()) {
+//                        brush.setColor(textColor);
+//                        QPen p = e.getPen();
+//                        p.setColor(textColor);
+//                        e.setPen(p);
+//                    }
+//                    e.setBrush(brush);
+//                }
                 e.exportPainterPathSource(label);
             }
         }
@@ -198,6 +242,8 @@ void RToleranceEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
 
 void RToleranceEntity::print(QDebug dbg) const {
     dbg.nospace() << "RToleranceEntity(";
+    dbg.nospace() << "location: " << data.getLocation() << ", ";
+    dbg.nospace() << "dimscale: " << data.getDimscale() << ", ";
     REntity::print(dbg);
     dbg.nospace()  << ")";
 }
