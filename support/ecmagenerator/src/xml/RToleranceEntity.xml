@@ -121,15 +121,15 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="getDimtxt" cppName="getDimtxt" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false" />
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="scale"
+        hasDefault="true" default="true" isConst="false" />
+      </variant>
     </method>
     <method name="getDimscale" cppName="getDimscale"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false">
-        <arg type="bool" typeName="bool" name="fromDocument"
-        hasDefault="true" default="true" isConst="false" />
-      </variant>
+      <variant returnType="double" isPureVirtual="false" />
     </method>
     <method name="getExploded" cppName="getExploded"
     specifier="public" isStatic="false" isVirtual="false"
@@ -159,6 +159,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QList &lt; RLine &gt;"
       isPureVirtual="false" />
+    </method>
+    <method name="clearStyleOverrides"
+    cppName="clearStyleOverrides" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
     </method>
     <method name="print" cppName="print" specifier="protected"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
@@ -206,6 +211,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyDirectionZ" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyText" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimscale" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimtxt" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
   </class>
 </unit>

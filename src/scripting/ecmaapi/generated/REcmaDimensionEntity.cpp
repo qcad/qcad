@@ -124,9 +124,9 @@
             
             REcmaHelper::registerFunction(&engine, proto, setLinearFactor, "setLinearFactor");
             
-            REcmaHelper::registerFunction(&engine, proto, getDimScale, "getDimScale");
+            REcmaHelper::registerFunction(&engine, proto, getDimscale, "getDimscale");
             
-            REcmaHelper::registerFunction(&engine, proto, setDimScale, "setDimScale");
+            REcmaHelper::registerFunction(&engine, proto, setDimscale, "setDimscale");
             
             REcmaHelper::registerFunction(&engine, proto, getDimBlockName, "getDimBlockName");
             
@@ -2559,19 +2559,19 @@
             return result;
         }
          QScriptValue
-        REcmaDimensionEntity::getDimScale
+        REcmaDimensionEntity::getDimscale
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimensionEntity::getDimScale", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionEntity::getDimScale";
+            //REcmaHelper::functionStart("REcmaDimensionEntity::getDimscale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionEntity::getDimscale";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDimensionEntity* self = 
-                        getSelf("getDimScale", context);
+                        getSelf("getDimscale", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -2591,7 +2591,7 @@
     // return type 'double'
     double cppResult =
         
-               self->getDimScale();
+               self->getDimscale();
         // return type: double
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -2601,26 +2601,26 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.getDimScale().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.getDimscale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimensionEntity::getDimScale", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimensionEntity::getDimscale", context, engine);
             return result;
         }
          QScriptValue
-        REcmaDimensionEntity::setDimScale
+        REcmaDimensionEntity::setDimscale
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimensionEntity::setDimScale", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionEntity::setDimScale";
+            //REcmaHelper::functionStart("REcmaDimensionEntity::setDimscale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionEntity::setDimscale";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDimensionEntity* self = 
-                        getSelf("setDimScale", context);
+                        getSelf("setDimscale", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -2650,16 +2650,16 @@
     // call C++ function:
     // return type 'void'
     
-               self->setDimScale(a0);
+               self->setDimscale(a0);
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.setDimScale().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.setDimscale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimensionEntity::setDimScale", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimensionEntity::setDimscale", context, engine);
             return result;
         }
          QScriptValue

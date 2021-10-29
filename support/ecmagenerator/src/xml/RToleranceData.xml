@@ -8,12 +8,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     <baseClass name="REntityData" specifier="public" />
     <constructor>
       <variant />
-      <variant>
-        <arg type="RPolyline &amp;" typeName="RPolyline"
-        name="polyline" isConst="true" />
-        <arg type="bool" typeName="bool" name="arrowHead"
-        isConst="false" />
-      </variant>
     </constructor>
     <method name="getType" cppName="getType" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
@@ -68,21 +62,28 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="getDimtxt" cppName="getDimtxt" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false" />
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="scale"
+        hasDefault="true" default="true" isConst="false" />
+      </variant>
+    </method>
+    <method name="setDimtxt" cppName="setDimtxt" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="f"
+        isConst="false" />
+      </variant>
     </method>
     <method name="getDimscale" cppName="getDimscale"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false">
-        <arg type="bool" typeName="bool" name="fromDocument"
-        hasDefault="true" default="true" isConst="false" />
-      </variant>
+      <variant returnType="double" isPureVirtual="false" />
     </method>
-    <method name="setDimScaleOverride"
-    cppName="setDimScaleOverride" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+    <method name="setDimscale" cppName="setDimscale"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="double" typeName="double" name="v"
+        <arg type="double" typeName="double" name="f"
         isConst="false" />
       </variant>
     </method>
@@ -95,6 +96,12 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="getCorners" cppName="getCorners"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getMiddels" cppName="getMiddels"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QList &lt; RVector &gt;"
@@ -211,6 +218,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="clearStyleOverrides"
+    cppName="clearStyleOverrides" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
     </method>
   </class>
 </unit>

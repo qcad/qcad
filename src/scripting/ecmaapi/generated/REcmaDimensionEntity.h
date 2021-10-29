@@ -137,10 +137,10 @@
         setLinearFactor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getDimScale
+        getDimscale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setDimScale
+        setDimscale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getDimBlockName

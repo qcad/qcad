@@ -126,9 +126,9 @@
             
             REcmaHelper::registerFunction(&engine, proto, setLinearFactor, "setLinearFactor");
             
-            REcmaHelper::registerFunction(&engine, proto, getDimScale, "getDimScale");
+            REcmaHelper::registerFunction(&engine, proto, getDimscale, "getDimscale");
             
-            REcmaHelper::registerFunction(&engine, proto, setDimScale, "setDimScale");
+            REcmaHelper::registerFunction(&engine, proto, setDimscale, "setDimscale");
             
             REcmaHelper::registerFunction(&engine, proto, getDimBlockName, "getDimBlockName");
             
@@ -2560,19 +2560,19 @@
             return result;
         }
          QScriptValue
-        REcmaSharedPointerDimensionEntity::getDimScale
+        REcmaSharedPointerDimensionEntity::getDimscale
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerDimensionEntity::getDimScale", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimensionEntity::getDimScale";
+            //REcmaHelper::functionStart("REcmaSharedPointerDimensionEntity::getDimscale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimensionEntity::getDimscale";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDimensionEntity* self = 
-                        getSelf("getDimScale", context);
+                        getSelf("getDimscale", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -2592,7 +2592,7 @@
     // return type 'double'
     double cppResult =
         
-               self->getDimScale();
+               self->getDimscale();
         // return type: double
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -2602,26 +2602,26 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.getDimScale().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.getDimscale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerDimensionEntity::getDimScale", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimensionEntity::getDimscale", context, engine);
             return result;
         }
          QScriptValue
-        REcmaSharedPointerDimensionEntity::setDimScale
+        REcmaSharedPointerDimensionEntity::setDimscale
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerDimensionEntity::setDimScale", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimensionEntity::setDimScale";
+            //REcmaHelper::functionStart("REcmaSharedPointerDimensionEntity::setDimscale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimensionEntity::setDimscale";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDimensionEntity* self = 
-                        getSelf("setDimScale", context);
+                        getSelf("setDimscale", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -2651,16 +2651,16 @@
     // call C++ function:
     // return type 'void'
     
-               self->setDimScale(a0);
+               self->setDimscale(a0);
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.setDimScale().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.setDimscale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerDimensionEntity::setDimScale", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimensionEntity::setDimscale", context, engine);
             return result;
         }
          QScriptValue

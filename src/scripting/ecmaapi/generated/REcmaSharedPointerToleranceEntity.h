@@ -111,6 +111,9 @@
         ;static  QScriptValue
         getFrame
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        clearStyleOverrides
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
