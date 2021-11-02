@@ -1172,6 +1172,10 @@
     <file alias="scripts/Misc/MiscIO/MolImport/MolImport.svg">../../scripts/Misc/MiscIO/MolImport/MolImport.svg</file>
     <file alias="scripts/Misc/MiscIO/MolImport/MolImportInit.js">../../scripts/Misc/MiscIO/MolImport/MolImportInit.js</file>
     <file alias="scripts/Misc/MiscIO/MolImport/MolImporter.js">../../scripts/Misc/MiscIO/MolImport/MolImporter.js</file>
+    <file alias="scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroid-inverse.svg">../../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroid-inverse.svg</file>
+    <file alias="scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroid.js">../../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroid.js</file>
+    <file alias="scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroid.svg">../../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroid.svg</file>
+    <file alias="scripts/Misc/MiscInformation/MiscInformation.js">../../scripts/Misc/MiscInformation/MiscInformation.js</file>
     <file alias="scripts/Misc/MiscModify/ChangeFontToArial/ChangeFontToArial.js">../../scripts/Misc/MiscModify/ChangeFontToArial/ChangeFontToArial.js</file>
     <file alias="scripts/Misc/MiscModify/FlushBackLog/FlushBackLog.js">../../scripts/Misc/MiscModify/FlushBackLog/FlushBackLog.js</file>
     <file alias="scripts/Misc/MiscModify/MiscModify.js">../../scripts/Misc/MiscModify/MiscModify.js</file>
