@@ -239,6 +239,11 @@ void RDimStyleProxyBasic::renderDimAligned() {
         textAngle = RMath::makeAngleReadable(rotation, true, &corrected);
     }
 
+    RVector p1 = extensionPoint1 + e1*extLength;
+    RVector p2 = extensionPoint2 + e1*extLength;
+
+    updateOutsideArrow(p1, p2);
+
     // export text label:
     RTextData& textData = data.initTextData();
     double textWidth = textData.getWidth();
@@ -250,7 +255,7 @@ void RDimStyleProxyBasic::renderDimAligned() {
     QList<QSharedPointer<RShape> > shapes;
     shapes.append(QSharedPointer<RLine>(new RLine(extLine1)));
     shapes.append(QSharedPointer<RLine>(new RLine(extLine2)));
-    shapes.append(getDimensionLineShapes(extensionPoint1 + e1*extLength, extensionPoint2 + e1*extLength, true, true));
+    shapes.append(getDimensionLineShapes(p1, p2, true, true));
 
     data.updateRefDefinitionPoint1(refDefinitionPoint1);
     data.updateRefDefinitionPoint2(refDefinitionPoint2);
