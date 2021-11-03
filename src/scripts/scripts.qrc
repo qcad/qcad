@@ -351,7 +351,9 @@
     <file alias="scripts/Draw/Dimension/DimAligned/DimAligned.svg">../../scripts/Draw/Dimension/DimAligned/DimAligned.svg</file>
     <file alias="scripts/Draw/Dimension/DimAligned/DimAlignedInit.js">../../scripts/Draw/Dimension/DimAligned/DimAlignedInit.js</file>
     <file alias="scripts/Draw/Dimension/DimAligned/Tests/DimAlignedTest00.js">../../scripts/Draw/Dimension/DimAligned/Tests/DimAlignedTest00.js</file>
+    <file alias="scripts/Draw/Dimension/DimAligned/Tests/DimAlignedTest01.js">../../scripts/Draw/Dimension/DimAligned/Tests/DimAlignedTest01.js</file>
     <file alias="scripts/Draw/Dimension/DimAligned/Tests/required/DimAlignedTest00_000.dxf">../../scripts/Draw/Dimension/DimAligned/Tests/required/DimAlignedTest00_000.dxf</file>
+    <file alias="scripts/Draw/Dimension/DimAligned/Tests/required/DimAlignedTest01_000.dxf">../../scripts/Draw/Dimension/DimAligned/Tests/required/DimAlignedTest01_000.dxf</file>
     <file alias="scripts/Draw/Dimension/DimAngular/DimAngular-inverse.svg">../../scripts/Draw/Dimension/DimAngular/DimAngular-inverse.svg</file>
     <file alias="scripts/Draw/Dimension/DimAngular/DimAngular.js">../../scripts/Draw/Dimension/DimAngular/DimAngular.js</file>
     <file alias="scripts/Draw/Dimension/DimAngular/DimAngular.svg">../../scripts/Draw/Dimension/DimAngular/DimAngular.svg</file>
