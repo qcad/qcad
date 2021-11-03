@@ -202,22 +202,6 @@
                 qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyFontName),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
-            ctor.setProperty("PropertyArrow1Flipped",
-                qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyArrow1Flipped),
-                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
-            
-            ctor.setProperty("PropertyArrow2Flipped",
-                qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyArrow2Flipped),
-                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
-            
-            ctor.setProperty("PropertyExtLineFix",
-                qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyExtLineFix),
-                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
-            
-            ctor.setProperty("PropertyExtLineFixLength",
-                qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyExtLineFixLength),
-                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
-            
             ctor.setProperty("PropertyDimscale",
                 qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyDimscale),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

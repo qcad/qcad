@@ -168,14 +168,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyFontName" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
-    <property name="PropertyArrow1Flipped" type="RPropertyTypeId"
-    isConst="false" isStatic="true" />
-    <property name="PropertyArrow2Flipped" type="RPropertyTypeId"
-    isConst="false" isStatic="true" />
-    <property name="PropertyExtLineFix" type="RPropertyTypeId"
-    isConst="false" isStatic="true" />
-    <property name="PropertyExtLineFixLength"
-    type="RPropertyTypeId" isConst="false" isStatic="true" />
     <property name="PropertyDimscale" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyDimlfac" type="RPropertyTypeId"

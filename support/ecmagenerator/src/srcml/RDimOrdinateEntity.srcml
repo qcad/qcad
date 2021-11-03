@@ -64,11 +64,12 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyLowerTolerance</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyMeasuredValue</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyFontName</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyArrow1Flipped</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyArrow2Flipped</name></decl>;</decl_stmt>
 
-    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyExtLineFix</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyExtLineFixLength</name></decl>;</decl_stmt>
+    <comment type="line">//static RPropertyTypeId PropertyArrow1Flipped;</comment>
+    <comment type="line">//static RPropertyTypeId PropertyArrow2Flipped;</comment>
+
+    <comment type="line">//static RPropertyTypeId PropertyExtLineFix;</comment>
+    <comment type="line">//static RPropertyTypeId PropertyExtLineFixLength;</comment>
 
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDimscale</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDimlfac</name></decl>;</decl_stmt>
