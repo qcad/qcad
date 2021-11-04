@@ -1202,7 +1202,7 @@ void RDxfImporter::addLeader(const DL_LeaderData& data) {
             if (tuple.first==1070 && tuple.second==40 && i<list.size()-1) {
                 tuple = list[i+1];
                 if (tuple.first==1040) {
-                    leader.setDimScaleOverride(tuple.second.toDouble());
+                    leader.setDimscale(tuple.second.toDouble());
                 }
             }
         }
