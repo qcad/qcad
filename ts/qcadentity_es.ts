@@ -89,7 +89,7 @@
         <location filename="../src/entity/RImageEntity.cpp" line="-18"/>
         <location line="+4"/>
         <location line="+3"/>
-        <location filename="../src/entity/RLeaderEntity.cpp" line="+78"/>
+        <location filename="../src/entity/RLeaderEntity.cpp" line="+80"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+84"/>
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="-2"/>
@@ -105,7 +105,7 @@
         <location line="+3"/>
         <location line="+10"/>
         <location line="+4"/>
-        <location filename="../src/entity/RToleranceEntity.cpp" line="+77"/>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="+79"/>
         <location line="+3"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+76"/>
         <location line="+3"/>

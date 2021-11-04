@@ -2982,7 +2982,7 @@ Prajete si ho obnoviť?</translation>
         <translation>Uhlová kót&amp;a</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw angular dimension</source>
         <translation>Vytvoriť uhlovú kótu</translation>
     </message>
@@ -7146,6 +7146,111 @@ BUG: Interferes with group castings.</source>
     </message>
 </context>
 <context>
+    <name>InfoAreaCentroid</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroid.js" line="+102"/>
+        <source>No selection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Please, make a selection first. Command terminated.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Multiple selection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Not implemented. Command terminated.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Centroid &amp; area script by CVH</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Enclosed area:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <location line="+19"/>
+        <source>Approximated enclosed area:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-13"/>
+        <source>Ellipse arc sector area (closed format): %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Ellipse arc segment area (closed format): %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Hatched area:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Total hatched area:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Differential hatched area:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Unsupported entity type.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>No results.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Centroid point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>(Incl. approximations)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Approximated centroid:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Centroid:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1761"/>
+        <source>Unhandled shape from hatch loop.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+15"/>
+        <location line="+1"/>
+        <source>Add centroid for a selected entity.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>InfoDistanceEE</name>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEE.js" line="+62"/>
@@ -8069,7 +8174,7 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>Leader</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+61"/>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+62"/>
         <source>Arrow position</source>
         <translation>Pozícia šípky</translation>
     </message>
@@ -9431,6 +9536,24 @@ vo výsledku vyhľadania:</translation>
         <location line="-22"/>
         <source>Misc Import / Export Tools</source>
         <translation>Rôzne nástroje Importu/Exportu</translation>
+    </message>
+</context>
+<context>
+    <name>MiscInformation</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/MiscInformation.js" line="+41"/>
+        <source>Misc</source>
+        <translation type="unfinished">Rôzne</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Misc Information Tools</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>&amp;Information</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

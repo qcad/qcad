@@ -2983,7 +2983,7 @@ Você deseja recuperá-lo?</translation>
         <translation>&amp;Angular</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw angular dimension</source>
         <translation>Desenho dimensão angular</translation>
     </message>
@@ -7339,6 +7339,111 @@ BUG: Interferes with group castings.</source>
     </message>
 </context>
 <context>
+    <name>InfoAreaCentroid</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroid.js" line="+102"/>
+        <source>No selection.</source>
+        <translation>Sem seleção.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Please, make a selection first. Command terminated.</source>
+        <translation>Por favor, faça uma selecção primeiro. Comando terminado.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Multiple selection.</source>
+        <translation>Seleção múltipla.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Not implemented. Command terminated.</source>
+        <translation>Não implementado. Comando terminado.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Centroid &amp; area script by CVH</source>
+        <translation>Roteiro da área Centroid por CVH</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Enclosed area:</source>
+        <translation>Área fechada:</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <location line="+19"/>
+        <source>Approximated enclosed area:</source>
+        <translation>Área fechada aproximada:</translation>
+    </message>
+    <message>
+        <location line="-13"/>
+        <source>Ellipse arc sector area (closed format): %1</source>
+        <translation>Área do sector do arco elipse (formato fechado): %1</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Ellipse arc segment area (closed format): %1</source>
+        <translation>Área do segmento de arco elipse (formato fechado): %1</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Hatched area:</source>
+        <translation>Área hachurada:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Total hatched area:</source>
+        <translation>Área total de incubação:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Differential hatched area:</source>
+        <translation>Área de incubação diferencial:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Unsupported entity type.</source>
+        <translation>Tipo de entidade não suportada.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>No results.</source>
+        <translation>Sem resultados.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Centroid point</source>
+        <translation>Ponto centróide</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>(Incl. approximations)</source>
+        <translation>(Incl. aproximações)</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Approximated centroid:</source>
+        <translation>Centróide aproximado:</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Centroid:</source>
+        <translation>Centroid:</translation>
+    </message>
+    <message>
+        <location line="+1761"/>
+        <source>Unhandled shape from hatch loop.</source>
+        <translation>Forma livre do laço da escotilha.</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+15"/>
+        <location line="+1"/>
+        <source>Add centroid for a selected entity.</source>
+        <translation>Adicionar centroid para uma entidade selecionada.</translation>
+    </message>
+</context>
+<context>
     <name>InfoDistanceEE</name>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEE.js" line="+62"/>
@@ -8306,7 +8411,7 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>Leader</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+61"/>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+62"/>
         <source>Arrow position</source>
         <translation>Posição das setas</translation>
     </message>
@@ -9674,6 +9779,24 @@ nos resultados de busca:</translation>
         <location line="+22"/>
         <source>&amp;Import/Export</source>
         <translation>&amp;Importar/Exportar</translation>
+    </message>
+</context>
+<context>
+    <name>MiscInformation</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/MiscInformation.js" line="+41"/>
+        <source>Misc</source>
+        <translation>Miscelânea</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Misc Information Tools</source>
+        <translation>Ferramentas de Informação miscelânea</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>&amp;Information</source>
+        <translation>&amp;Informação</translation>
     </message>
 </context>
 <context>

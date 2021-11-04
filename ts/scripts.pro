@@ -144,6 +144,7 @@ SOURCES = \
 ../scripts/Draw/Dimension/DimAligned/DimAligned.js \
 ../scripts/Draw/Dimension/DimAligned/DimAlignedInit.js \
 ../scripts/Draw/Dimension/DimAligned/Tests/DimAlignedTest00.js \
+../scripts/Draw/Dimension/DimAligned/Tests/DimAlignedTest01.js \
 ../scripts/Draw/Dimension/DimAngular/DimAngular.js \
 ../scripts/Draw/Dimension/DimAngular/DimAngularInit.js \
 ../scripts/Draw/Dimension/DimAngular/Tests/DimAngularTest00.js \
@@ -498,6 +499,7 @@ SOURCES = \
 ../scripts/Information/InfoAngle/InfoAngleInit.js \
 ../scripts/Information/InfoArcCircleArea/InfoArcCircleArea.js \
 ../scripts/Information/InfoArcCircleArea/InfoArcCircleAreaInit.js \
+../scripts/Information/InfoArcCircleArea/Tests/InfoArcCircleAreaTest00.js \
 ../scripts/Information/InfoArea/InfoArea.js \
 ../scripts/Information/InfoArea/InfoAreaInit.js \
 ../scripts/Information/InfoDistanceEE/InfoDistanceEE.js \
@@ -646,6 +648,9 @@ SOURCES = \
 ../scripts/Misc/MiscIO/MolImport/MolImport.js \
 ../scripts/Misc/MiscIO/MolImport/MolImportInit.js \
 ../scripts/Misc/MiscIO/MolImport/MolImporter.js \
+../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroid.js \
+../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js \
+../scripts/Misc/MiscInformation/MiscInformation.js \
 ../scripts/Misc/MiscModify/ChangeFontToArial/ChangeFontToArial.js \
 ../scripts/Misc/MiscModify/FlushBackLog/FlushBackLog.js \
 ../scripts/Misc/MiscModify/MiscModify.js \
