@@ -1,5 +1,5 @@
 /**
- * InfoAreaCentroid Beta version 0.10 (As MiscInfo)
+ * InfoAreaCentroid Beta version 0.11 (As MiscMathExamples)
  * Copyright (c) 2021 by CVH.
  * All rights reserved.
  *
@@ -1270,6 +1270,7 @@ InfoAreaCentroid.prototype.getEllipseArcSegmentAreaCentroid = function(ellipse) 
 
 //debugger;
     // Retrieve approximation tolerances of the Explode method (XP), if any, or use defaults:
+    // # Issue # ->fullEllipseArcs<- Is a size relative accuracy
     eSegs = RSettings.getIntValue("Explode/EllipseSegments", 32);    // Default =32 arc segments/full ellipse
 
     // Approximate the ellipse with a polyline and autoClose with a line segment:
@@ -1790,8 +1791,10 @@ InfoAreaCentroid.prototype.getEllipseArcWireCentroid = function(ellipse) {
         return [center.x, center.y, center, 0.0];
     }
 
-    // Construct polyline of RShapes from ellipse approximation:
+    // Retrieve approximation tolerances of the Explode method (XP), if any, or use defaults:
+    // # Issue # ->fullEllipseArcs<- Is a size relative accuracy
     eSegs = RSettings.getIntValue("Explode/EllipseSegments", 32);    // Default =32 arc segments/full ellipse
+    // Get polyline of RShapes from ellipse approximation:
     approx = ellipse.approximateWithArcs(eSegs); // REllipseEntity & REllipse
     this.hasApprox = true;
 
@@ -1930,10 +1933,17 @@ InfoAreaCentroid.prototype.getHacthPolyLoops = function(hatchData) {
         polyShapes = [];
         for (n=0; n<nMax; n++) {    // Cycle all boundary loop shapes
             shape = shapes[n];
-            // Diversify on RShape:
-            if (isArcShape(shape)) {
+            // Diversify on RShape from boundary loop:
+            if (isCircleShape(shape)) {
+                // Append circles as arc shapes:
+                // # Bug Fixed # Circles are initially stored as circles
+                // https://www.qcad.org/rsforum/viewtopic.php?t=8846#p35173
+                polyShapes.push(new RArc(shape.getCenter(), shape.getRadius(), 0.0, Math.PI, false));
+                polyShapes.push(new RArc(shape.getCenter(), shape.getRadius(), Math.PI, 2*Math.PI, false));
+            }
+            else if (isArcShape(shape)) {
                 // Append arc shape:
-                // # Issue Fixed # Circles are stored as full arcs ... bulge = 1.66312e+16 instead of infinite
+                // # Issue Fixed # Circles are saved as full arcs ... bulge = 1.66312e+16 instead of infinite
                 if (shape.getSweep() > 2*Math.PI - RS.AngleTolerance) {
                     polyShapes.push(new RArc(shape.getCenter(), shape.getRadius(), 0.0, Math.PI, false));
                     polyShapes.push(new RArc(shape.getCenter(), shape.getRadius(), Math.PI, 2*Math.PI, false));
@@ -1956,8 +1966,10 @@ InfoAreaCentroid.prototype.getHacthPolyLoops = function(hatchData) {
                 polyShapes = polyShapes.concat(approx.getExploded());
             }
             else if (isEllipseShape(shape)) {
-                // Append RShapes from ellipse approximation:
+                // Retrieve approximation tolerances of the Explode method (XP), if any, or use defaults:
+                // # Issue # ->fullEllipseArcs<- Is a size relative accuracy
                 eSegs = RSettings.getIntValue("Explode/EllipseSegments", 32);    // Default =32 arc segments/full ellipse
+                // Append RShapes from ellipse approximation:
                 approx = shape.approximateWithArcs(eSegs);
                 this.hasApprox = true;
                 polyShapes = polyShapes.concat(approx.getExploded());
@@ -2102,34 +2114,3 @@ InfoAreaCentroid.prototype.getMarkerSize = function(entity) {
     // Return centroid marker size:
     return markerSize;
 };
-
-/**
- * Adds a PRO menu for the InfoAreaCentroid action to Misc .. Examples .. Math Examples menu.
- */
-InfoAreaCentroid.init = function(basePath) {
-    // Prevent InfoAreaCentroid to be loaded without PRO resources
-    if (!hasPlugin("PROTOOLS")) {
-        return;    // Don't initiate the Addon
-    }
-    // -> Continue with PRO recourses
-
-    var action = new RGuiAction("&Area Centroid", RMainWindowQt.getMainWindow());    // '&' Indicates the key letter
-    action.setRequiresDocument(true);
-    action.setRequiresSelection(true);
-    action.setScriptFile(basePath + "/InfoAreaCentroid.js");
-    action.setIcon(basePath + "/InfoAreaCentroid.svg");
-    action.setDefaultShortcut(new QKeySequence("i,m"));
-    action.setDefaultCommands(["centroids", "getcm"]);    // List as an Array!
-    var tipShort = qsTranslate("InfoAreaCentroid", "Add centroid for a selected entity.");   // In an init section in the script mostly qsTr() is used
-    var tipLong = qsTranslate("InfoAreaCentroid", "Add centroid for a selected entity.");
-    action.setStatusTip(tipLong);    // Overtakes and displays left in the Status Bar
-    action.setToolTip(tipShort);    // Displays aside Tool bars
-    action.setNoState(true);    // Indicates whether this action is stateless (i.e. terminates in beginEvent).
-    //action.setGroupSortOrder(54100);    // Misc .. Information
-    //action.setWidgetNames(["MiscInformationMenu", "MiscInformationToolBar"]);
-    action.setGroupSortOrder(56100);
-    action.setSortOrder(100);
-    action.setWidgetNames(["MiscInformationMenu", "!MiscInformationToolBar", "!MiscInformationToolsPanel"]);
-};
-
-
