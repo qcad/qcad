@@ -60,7 +60,8 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyVertexNY</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyVertexNZ</name></decl>;</decl_stmt>
 
-    <comment type="line">//static RPropertyTypeId PropertyDimScale;</comment>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDimscale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDimasz</name></decl>;</decl_stmt>
 
 </public><public>public:
     <constructor_decl><name>RLeaderEntity</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>const</name> <name>RLeaderData</name>&amp;</type> <name>data</name></decl></param>)</parameter_list>;</constructor_decl>
@@ -189,8 +190,12 @@
         <return>return <expr><name>data</name>.<call><name>isClosed</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>double</name></type> <name>getDimscale</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>fromDocument</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>data</name>.<call><name>getDimscale</name><argument_list>(<argument><expr><name>fromDocument</name></expr></argument>)</argument_list></call></expr>;</return>
+    <function><type><name>double</name></type> <name>getDimscale</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getDimscale</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getDimasz</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>scale</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getDimasz</name><argument_list>(<argument><expr><name>scale</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getExploded</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
@@ -202,6 +207,10 @@
     }</block></function>
     <function><type><name>void</name></type> <name>setDimLeaderBlockId</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>id</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>data</name>.<call><name>setDimLeaderBlockId</name><argument_list>(<argument><expr><name>id</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>clearStyleOverrides</name><parameter_list>()</parameter_list> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>clearStyleOverrides</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportEntity</name><parameter_list>(<param><decl><type><name>RExporter</name>&amp;</type> <name>e</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name>=<init><expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>

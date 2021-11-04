@@ -77,11 +77,11 @@
             
             REcmaHelper::registerFunction(&engine, proto, getDimasz, "getDimasz");
             
-            REcmaHelper::registerFunction(&engine, proto, setDimaszOverride, "setDimaszOverride");
+            REcmaHelper::registerFunction(&engine, proto, setDimasz, "setDimasz");
             
             REcmaHelper::registerFunction(&engine, proto, getDimscale, "getDimscale");
             
-            REcmaHelper::registerFunction(&engine, proto, setDimScaleOverride, "setDimScaleOverride");
+            REcmaHelper::registerFunction(&engine, proto, setDimscale, "setDimscale");
             
             REcmaHelper::registerFunction(&engine, proto, scaleVisualProperties, "scaleVisualProperties");
             
@@ -122,6 +122,8 @@
             REcmaHelper::registerFunction(&engine, proto, setDimLeaderBlockId, "setDimLeaderBlockId");
             
             REcmaHelper::registerFunction(&engine, proto, update, "update");
+            
+            REcmaHelper::registerFunction(&engine, proto, clearStyleOverrides, "clearStyleOverrides");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RLeaderData*>(), *proto);
@@ -447,6 +449,38 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getDimasz(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderData.getDimasz().",
                    context);
@@ -455,19 +489,19 @@
             return result;
         }
          QScriptValue
-        REcmaLeaderData::setDimaszOverride
+        REcmaLeaderData::setDimasz
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLeaderData::setDimaszOverride", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaLeaderData::setDimaszOverride";
+            //REcmaHelper::functionStart("REcmaLeaderData::setDimasz", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLeaderData::setDimasz";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RLeaderData* self = 
-                        getSelf("setDimaszOverride", context);
+                        getSelf("setDimasz", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -497,16 +531,16 @@
     // call C++ function:
     // return type 'void'
     
-               self->setDimaszOverride(a0);
+               self->setDimasz(a0);
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderData.setDimaszOverride().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderData.setDimasz().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLeaderData::setDimaszOverride", context, engine);
+            //REcmaHelper::functionEnd("REcmaLeaderData::setDimasz", context, engine);
             return result;
         }
          QScriptValue
@@ -551,38 +585,6 @@
 
 
         
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isBool()
-        ) /* type: bool */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    bool
-                    a0 =
-                    (bool)
-                    
-                    context->argument( 0 ).
-                    toBool();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'double'
-    double cppResult =
-        
-               self->getDimscale(a0);
-        // return type: double
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderData.getDimscale().",
                    context);
@@ -591,19 +593,19 @@
             return result;
         }
          QScriptValue
-        REcmaLeaderData::setDimScaleOverride
+        REcmaLeaderData::setDimscale
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLeaderData::setDimScaleOverride", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaLeaderData::setDimScaleOverride";
+            //REcmaHelper::functionStart("REcmaLeaderData::setDimscale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLeaderData::setDimscale";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RLeaderData* self = 
-                        getSelf("setDimScaleOverride", context);
+                        getSelf("setDimscale", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -633,16 +635,16 @@
     // call C++ function:
     // return type 'void'
     
-               self->setDimScaleOverride(a0);
+               self->setDimscale(a0);
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderData.setDimScaleOverride().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderData.setDimscale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLeaderData::setDimScaleOverride", context, engine);
+            //REcmaHelper::functionEnd("REcmaLeaderData::setDimscale", context, engine);
             return result;
         }
          QScriptValue
@@ -2203,6 +2205,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLeaderData::update", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLeaderData::clearStyleOverrides
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLeaderData::clearStyleOverrides", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLeaderData::clearStyleOverrides";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLeaderData* self = 
+                        getSelf("clearStyleOverrides", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clearStyleOverrides();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderData.clearStyleOverrides().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLeaderData::clearStyleOverrides", context, engine);
             return result;
         }
          QScriptValue REcmaLeaderData::toString

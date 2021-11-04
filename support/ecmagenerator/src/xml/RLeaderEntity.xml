@@ -230,8 +230,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getDimscale" cppName="getDimscale"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getDimasz" cppName="getDimasz" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false">
-        <arg type="bool" typeName="bool" name="fromDocument"
+        <arg type="bool" typeName="bool" name="scale"
         hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
@@ -253,6 +257,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="REntity::Id" typeName="REntity::Id" name="id"
         isConst="false" />
       </variant>
+    </method>
+    <method name="clearStyleOverrides"
+    cppName="clearStyleOverrides" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
     </method>
     <method name="exportEntity" cppName="exportEntity"
     specifier="public" isStatic="false" isVirtual="true"
@@ -308,6 +317,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyVertexNY" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyVertexNZ" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimscale" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDimasz" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
   </class>
 </unit>

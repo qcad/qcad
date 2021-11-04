@@ -57,13 +57,13 @@
         getDimasz
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setDimaszOverride
+        setDimasz
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getDimscale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setDimScaleOverride
+        setDimscale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         scaleVisualProperties
@@ -124,6 +124,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         update
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        clearStyleOverrides
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

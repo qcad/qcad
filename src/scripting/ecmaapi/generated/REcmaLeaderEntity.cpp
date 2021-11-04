@@ -128,11 +128,15 @@
             
             REcmaHelper::registerFunction(&engine, proto, getDimscale, "getDimscale");
             
+            REcmaHelper::registerFunction(&engine, proto, getDimasz, "getDimasz");
+            
             REcmaHelper::registerFunction(&engine, proto, getExploded, "getExploded");
             
             REcmaHelper::registerFunction(&engine, proto, getDimLeaderBlockId, "getDimLeaderBlockId");
             
             REcmaHelper::registerFunction(&engine, proto, setDimLeaderBlockId, "setDimLeaderBlockId");
+            
+            REcmaHelper::registerFunction(&engine, proto, clearStyleOverrides, "clearStyleOverrides");
             
             REcmaHelper::registerFunction(&engine, proto, exportEntity, "exportEntity");
             
@@ -225,6 +229,14 @@
             
             ctor.setProperty("PropertyVertexNZ",
                 qScriptValueFromValue(&engine, RLeaderEntity::PropertyVertexNZ),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimscale",
+                qScriptValueFromValue(&engine, RLeaderEntity::PropertyDimscale),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimasz",
+                qScriptValueFromValue(&engine, RLeaderEntity::PropertyDimasz),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
 
@@ -2667,6 +2679,55 @@
 
 
         
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderEntity.getDimscale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLeaderEntity::getDimscale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLeaderEntity::getDimasz
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLeaderEntity::getDimasz", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLeaderEntity::getDimasz";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLeaderEntity* self = 
+                        getSelf("getDimasz", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getDimasz();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
     
     if( context->argumentCount() ==
     1 && (
@@ -2690,7 +2751,7 @@
     // return type 'double'
     double cppResult =
         
-               self->getDimscale(a0);
+               self->getDimasz(a0);
         // return type: double
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -2700,10 +2761,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderEntity.getDimscale().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderEntity.getDimasz().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLeaderEntity::getDimscale", context, engine);
+            //REcmaHelper::functionEnd("REcmaLeaderEntity::getDimasz", context, engine);
             return result;
         }
          QScriptValue
@@ -2857,6 +2918,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLeaderEntity::setDimLeaderBlockId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLeaderEntity::clearStyleOverrides
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLeaderEntity::clearStyleOverrides", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLeaderEntity::clearStyleOverrides";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLeaderEntity* self = 
+                        getSelf("clearStyleOverrides", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clearStyleOverrides();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderEntity.clearStyleOverrides().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLeaderEntity::clearStyleOverrides", context, engine);
             return result;
         }
          QScriptValue

@@ -145,6 +145,9 @@
         getDimscale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDimasz
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getExploded
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -152,6 +155,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setDimLeaderBlockId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        clearStyleOverrides
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         exportEntity

@@ -27,11 +27,13 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="getDimasz" cppName="getDimasz" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false" />
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="scale"
+        hasDefault="true" default="true" isConst="false" />
+      </variant>
     </method>
-    <method name="setDimaszOverride" cppName="setDimaszOverride"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
+    <method name="setDimasz" cppName="setDimasz" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="double" typeName="double" name="v"
         isConst="false" />
@@ -40,16 +42,13 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getDimscale" cppName="getDimscale"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="double" isPureVirtual="false">
-        <arg type="bool" typeName="bool" name="fromDocument"
-        hasDefault="true" default="true" isConst="false" />
-      </variant>
+      <variant returnType="double" isPureVirtual="false" />
     </method>
-    <method name="setDimScaleOverride"
-    cppName="setDimScaleOverride" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+    <method name="setDimscale" cppName="setDimscale"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="double" typeName="double" name="v"
+        <arg type="double" typeName="double" name="f"
         isConst="false" />
       </variant>
     </method>
@@ -200,6 +199,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="update" cppName="update" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="clearStyleOverrides"
+    cppName="clearStyleOverrides" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
   </class>
