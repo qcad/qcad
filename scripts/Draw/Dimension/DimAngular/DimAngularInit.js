@@ -1,6 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("DimAngular", "&Angular"),
-        RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("DimAngular", "&Angular"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/DimAngular.js");
     action.setIcon(basePath + "/DimAngular.svg");

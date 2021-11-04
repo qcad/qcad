@@ -134,10 +134,13 @@ DimAngular.prototype.escapeEvent = function() {
 DimAngular.prototype.initUiOptions = function(resume, optionsToolBar) {
     Dimension.prototype.initUiOptions.call(this, resume, optionsToolBar);
 
-    optionsToolBar.findChild("ScaleAction").visible = false;
-    optionsToolBar.findChild("ScaleLabelAction").visible = false;
-    optionsToolBar.findChild("ScaleSeparatorAction").visible = false;
-    optionsToolBar.findChild("AutoScaleAction").visible = false;
+    var widgetNames = [ "ScaleAction", "ScaleLabelAction", "ScaleSeparatorAction", "AutoScaleAction" ];
+    for (var i=0; i<widgetNames.length; i++) {
+        var w = optionsToolBar.findChild(widgetNames[i]);
+        if (!isNull(w)) {
+            w.visible = false;
+        }
+    }
 };
 
 DimAngular.prototype.pickEntity = function(event, preview) {
@@ -228,7 +231,7 @@ DimAngular.prototype.pickCoordinate = function(event, preview) {
     }
 };
 
-DimAngular.prototype.getOperation = function(preview) {
+DimAngular.prototype.getEntity = function(preview) {
     if (!isLineBasedShape(this.firstShape) && !isArcShape(this.firstShape)) {
         return undefined;
     }
@@ -338,6 +341,22 @@ DimAngular.prototype.getOperation = function(preview) {
         return undefined;
     }
 
+    this.initEntity(entity, preview);
+
+    return entity;
+};
+
+/**
+ * Can be overwritten to initialize the added entity.
+ */
+DimAngular.prototype.initEntity = function(entity, preview) {
+};
+
+DimAngular.prototype.getOperation = function(preview) {
+    var entity = this.getEntity(preview);
+    if (isNull(entity)) {
+        return undefined;
+    }
     return new RAddObjectOperation(entity, this.getToolTitle());
 };
 
