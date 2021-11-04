@@ -19,6 +19,7 @@
 #include "RExporter.h"
 #include "RLeaderEntity.h"
 #include "RMetaTypes.h"
+#include "RPluginLoader.h"
 #include "RStorage.h"
 
 RPropertyTypeId RLeaderEntity::PropertyCustom;
@@ -41,7 +42,8 @@ RPropertyTypeId RLeaderEntity::PropertyVertexNX;
 RPropertyTypeId RLeaderEntity::PropertyVertexNY;
 RPropertyTypeId RLeaderEntity::PropertyVertexNZ;
 
-//RPropertyTypeId RLeaderEntity::PropertyDimScale;
+RPropertyTypeId RLeaderEntity::PropertyDimscale;
+RPropertyTypeId RLeaderEntity::PropertyDimasz;
 
 
 RLeaderEntity::RLeaderEntity(RDocument* document, const RLeaderData& data) :
@@ -79,7 +81,10 @@ void RLeaderEntity::init() {
     RLeaderEntity::PropertyVertexNY.generateId(RLeaderEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Y"), false, RPropertyAttributes::Geometry);
     RLeaderEntity::PropertyVertexNZ.generateId(RLeaderEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Z"), false, RPropertyAttributes::Geometry);
 
-    //RLeaderEntity::PropertyDimScale.generateId(RLeaderEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Scale"));
+    RLeaderEntity::PropertyDimscale.generateId(RLeaderEntity::getRtti(), RDimStyle::PropertyDimscale);
+    if (RPluginLoader::hasPlugin("DWG")) {
+        RLeaderEntity::PropertyDimasz.generateId(RLeaderEntity::getRtti(), RDimStyle::PropertyDimasz);
+    }
 }
 
 bool RLeaderEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -111,6 +116,9 @@ bool RLeaderEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMemberX(data.vertices, value, PropertyVertexNX == propertyTypeId);
     ret = ret || RObject::setMemberY(data.vertices, value, PropertyVertexNY == propertyTypeId);
     ret = ret || RObject::setMemberZ(data.vertices, value, PropertyVertexNZ == propertyTypeId);
+
+    ret = ret || RObject::setMember(getData().dimscale, value, PropertyDimscale == propertyTypeId);
+    ret = ret || RObject::setMember(getData().dimasz, value, PropertyDimasz == propertyTypeId);
 
 //    if (PropertyDimScale == propertyTypeId) {
 //        ret = ret || RObject::setMember(data.dimScaleOverride, value, PropertyDimScale == propertyTypeId);
@@ -169,6 +177,31 @@ QPair<QVariant, RPropertyAttributes> RLeaderEntity::getProperty(
         v.setValue(RVector::getZList(data.vertices));
         return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List));
     }
+    else if (propertyTypeId == PropertyDimscale || propertyTypeId == PropertyDimasz) {
+            double v;
+            if (propertyTypeId == PropertyDimscale) {
+                v = data.dimscale;
+            }
+            else {
+                v = data.dimasz;
+            }
+            if (v<0.0) {
+                RDocument* doc = getDocument();
+                if (doc!=NULL) {
+                    QSharedPointer<RDimStyle> dimStyle = getDocument()->queryDimStyleDirect();
+                    if (!dimStyle.isNull()) {
+                        if (propertyTypeId == PropertyDimscale) {
+                            v = dimStyle->getDouble(RS::DIMSCALE);
+                        }
+                        else {
+                            v = dimStyle->getDouble(RS::DIMASZ);
+                        }
+                    }
+                }
+            }
+            return qMakePair(QVariant(v), RPropertyAttributes());
+        }
+
 //    else if (propertyTypeId == PropertyDimScale) {
 //        return qMakePair(QVariant(data.dimScaleOverride), RPropertyAttributes());
 //    }
