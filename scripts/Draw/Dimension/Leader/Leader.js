@@ -31,6 +31,7 @@ function Leader(guiAction) {
     this.leaderEntity = undefined;
     this.segment = undefined;
     this.arrowBlockId = RBlock.INVALID_ID;
+    this.lastPoint = undefined;
 
     this.setUiOptions("Leader.ui");
 }
@@ -136,6 +137,7 @@ Leader.prototype.pickCoordinate = function(event, preview) {
         if (!isNull(this.leaderEntity) && this.leaderEntity.countVertices()>0) {
             var appendPoint = this.leaderEntity.getEndPoint();
             this.segment = new RLine(appendPoint, point);
+            this.lastPoint = point;
 
             // append vertex:
             if (!preview) {
@@ -192,6 +194,7 @@ Leader.prototype.getOperation = function(preview) {
         }
     }
     else {
+        // add segment (not undoable as only adding the whole leader can be undone):
         return new RAddObjectOperation(this.leaderEntity, this.getToolTitle(), true, false);
     }
 };
