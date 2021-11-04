@@ -135,6 +135,7 @@ public:
 
         return v;
     }
+
     void setDimscale(double f) {
         dimscale = f;
         update();

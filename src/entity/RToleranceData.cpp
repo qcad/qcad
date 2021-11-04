@@ -63,12 +63,7 @@ RToleranceData::RToleranceData(RDocument* document, const RToleranceData& data)
 //}
 
 void RToleranceData::scaleVisualProperties(double scaleFactor) {
-    qDebug() << "RToleranceData::scaleVisualProperties:" << (unsigned long int)this;
-    qDebug() << "RToleranceData::scaleVisualProperties: before:" << getDimscale();
-    //RDebug::printBacktrace();
-    //qDebug() << "tol scale visual: " << scaleFactor;
     setDimscale(getDimscale() * scaleFactor);
-    qDebug() << "RToleranceData::scaleVisualProperties: after:" << getDimscale();
 }
 
 QList<RVector> RToleranceData::getCorners() const {
