@@ -775,7 +775,7 @@ DimensionSettings.savePreferences = function(pageWidget, calledByPrefDialog, doc
     for (i=0; i<ids.length; i++) {
         var entityId = ids[i];
         var entity = document.queryEntityDirect(entityId);
-        if (!isDimensionEntity(entity)) {
+        if (!isDimensionEntity(entity) && !isToleranceEntity(entity) && !isLeaderEntity(entity)) {
             // ignore non dimension entities:
             continue;
         }
