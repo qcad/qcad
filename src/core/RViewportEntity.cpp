@@ -154,8 +154,8 @@ void RViewportEntity::setData(RViewportData& d) {
 }
 
 void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
-    Q_UNUSED(preview);
-    Q_UNUSED(forceSelected);
+    Q_UNUSED(preview)
+    Q_UNUSED(forceSelected)
 
     RDocument* doc = (RDocument*)getDocument();
     if (doc==NULL) {
@@ -206,22 +206,30 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
     //offset -= data.viewCenter * data.scale;
     //offset -= data.viewTarget * data.scale;
 
+    QSharedPointer<RBlock> model = doc->queryBlockDirect(doc->getModelSpaceBlockId());
+    model->setOrigin(data.viewCenter);
+
     // create temporary block reference to model space block:
     RBlockReferenceData modelSpaceData(
         doc,
         RBlockReferenceData(
             doc->getModelSpaceBlockId(),
             //data.position + offset,
-            offset,
+            //offset,
+            data.position,
             RVector(data.scaleFactor, data.scaleFactor),
-            0.0
+            //0.0
+            data.rotation
         )
     );
     //modelSpaceData.scaleVisualProperties(data.scaleFactor);
     //modelSpaceData.update();
 
-    RTransform blockRefTransform;
-    blockRefTransform = modelSpaceData.getTransform();
+    RTransform blockRefTransform = modelSpaceData.getTransform();
+//    RTransform rot;
+//    rot.rotateRadians(data.rotation);
+//    rot *= blockRefTransform;
+//    blockRefTransform = rot;
     //blockRefTransform.translate(offset.x, offset.y);
     e.exportTransform(blockRefTransform);
 
@@ -257,12 +265,13 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
         // transform according to viewport settings:
         //entity->rotate(data.rotation, data.position);
 
-//        RBox bb = entity->getBoundingBox();
-//        bb.c1.z = 0;
-//        bb.c2.z = 0;
-//        if (!viewportBox.intersects(bb)) {
-//            continue;
-//        }
+        RBox bb = entity->getBoundingBox();
+        bb.c1.z = 0;
+        bb.c2.z = 0;
+        bb.transform(blockRefTransform);
+        if (!viewportBox.intersects(bb)) {
+            continue;
+        }
 
         if (doc->getKnownVariable(RS::PSLTSCALE, true).toBool()==false) {
             // scale line type pattern:
@@ -273,12 +282,16 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
             entity->setViewportContext(data);
         }
 
+        //RDebug::startTimer(7);
         e.exportEntity(*entity, preview, true);
+        //RDebug::stopTimer(7, "export entity as part of viewport");
 
         i++;
     }
 
     e.setClipping(false);
+
+    model->setOrigin(RVector(0,0));
 
     e.exportEndTransform();
 }
