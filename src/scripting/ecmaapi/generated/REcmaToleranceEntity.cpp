@@ -96,7 +96,11 @@
             
             REcmaHelper::registerFunction(&engine, proto, getDimtxt, "getDimtxt");
             
+            REcmaHelper::registerFunction(&engine, proto, setDimtxt, "setDimtxt");
+            
             REcmaHelper::registerFunction(&engine, proto, getDimscale, "getDimscale");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDimscale, "setDimscale");
             
             REcmaHelper::registerFunction(&engine, proto, getExploded, "getExploded");
             
@@ -1696,6 +1700,61 @@
             return result;
         }
          QScriptValue
+        REcmaToleranceEntity::setDimtxt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaToleranceEntity::setDimtxt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaToleranceEntity::setDimtxt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RToleranceEntity* self = 
+                        getSelf("setDimtxt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimtxt(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RToleranceEntity.setDimtxt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaToleranceEntity::setDimtxt", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaToleranceEntity::getDimscale
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1742,6 +1801,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaToleranceEntity::getDimscale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaToleranceEntity::setDimscale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaToleranceEntity::setDimscale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaToleranceEntity::setDimscale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RToleranceEntity* self = 
+                        getSelf("setDimscale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimscale(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RToleranceEntity.setDimscale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaToleranceEntity::setDimscale", context, engine);
             return result;
         }
          QScriptValue

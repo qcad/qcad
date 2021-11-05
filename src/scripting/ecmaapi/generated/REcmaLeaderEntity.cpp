@@ -128,7 +128,11 @@
             
             REcmaHelper::registerFunction(&engine, proto, getDimscale, "getDimscale");
             
+            REcmaHelper::registerFunction(&engine, proto, setDimscale, "setDimscale");
+            
             REcmaHelper::registerFunction(&engine, proto, getDimasz, "getDimasz");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDimasz, "setDimasz");
             
             REcmaHelper::registerFunction(&engine, proto, getExploded, "getExploded");
             
@@ -2687,6 +2691,61 @@
             return result;
         }
          QScriptValue
+        REcmaLeaderEntity::setDimscale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLeaderEntity::setDimscale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLeaderEntity::setDimscale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLeaderEntity* self = 
+                        getSelf("setDimscale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimscale(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderEntity.setDimscale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLeaderEntity::setDimscale", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaLeaderEntity::getDimasz
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -2765,6 +2824,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLeaderEntity::getDimasz", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLeaderEntity::setDimasz
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLeaderEntity::setDimasz", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLeaderEntity::setDimasz";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLeaderEntity* self = 
+                        getSelf("setDimasz", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimasz(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderEntity.setDimasz().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLeaderEntity::setDimasz", context, engine);
             return result;
         }
          QScriptValue

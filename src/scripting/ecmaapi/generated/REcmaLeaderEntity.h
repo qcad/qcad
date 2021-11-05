@@ -143,7 +143,13 @@
         getDimscale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setDimscale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDimasz
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimasz
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getExploded
