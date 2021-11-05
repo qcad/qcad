@@ -1130,6 +1130,7 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
 
         // regenerate arc, xline, block reference, etc.:
         if (regen) {
+            // TODO: only regen part of block ref / viewport that needs regeneration:
             sceneQt->exportEntity(id, true);
         }
     }
