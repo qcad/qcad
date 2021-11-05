@@ -201,7 +201,7 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
     // clip rectangle export
     e.exportClipRectangle(viewportBox);
 
-    RVector offset = getViewOffset();
+    //RVector offset = getViewOffset();
     //RVector offset(0,0);
     //offset -= data.viewCenter * data.scale;
     //offset -= data.viewTarget * data.scale;
