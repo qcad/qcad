@@ -193,8 +193,16 @@ public:
         return data.getDimscale();
     }
 
+    void setDimscale(double v) {
+        data.setDimscale(v);
+    }
+
     double getDimasz(bool scale=true) const {
         return data.getDimasz(scale);
+    }
+
+    void setDimasz(double v) {
+        data.setDimasz(v);
     }
 
     QList<QSharedPointer<RShape> > getExploded() const {
