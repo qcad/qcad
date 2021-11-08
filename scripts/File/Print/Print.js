@@ -217,7 +217,12 @@ Print.prototype.print = function(pdfFile, printerName, pdfVersion) {
         return false;
     }
 
-    this.printCurrentBlock(printer, painter);
+    for (var i=1; i<printer.copyCount(); i++) {
+        if (i>1) {
+            printer.newPage();
+        }
+        this.printCurrentBlock(printer, painter);
+    }
 
     painter.end();
     printer.destroy();
@@ -295,8 +300,24 @@ Print.prototype.printCurrentBlock = function(printer, painter) {
     // iterate through all pages and print the appropriate area
     var firstPage = true;
 
+    var fromPage = printer.fromPage();
+    var toPage = printer.toPage();
+
     var pages = Print.getPages(this.document);
     for (var i = 0; i < pages.length; ++i) {
+
+        if (fromPage!==0) {
+            if (i+1<fromPage) {
+                continue;
+            }
+        }
+
+        if (toPage!==0) {
+            if (i+1>toPage) {
+                continue;
+            }
+        }
+
         // if this is not the first page, add new page:
         if (!firstPage) {
             printer.newPage();
