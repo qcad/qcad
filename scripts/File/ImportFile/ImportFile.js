@@ -91,6 +91,8 @@ ImportFile.prototype.initOperation = function(op) {
     if (this.asBlock && !isNull(this.blockName) && this.blockName.length>0) {
         op.setBlockName(this.blockName);
     }
+    //op.setCopyAllLayers(true);
+    //op.setCopyEmptyBlocks(true);
 };
 
 ImportFile.prototype.getFileName = function() {
