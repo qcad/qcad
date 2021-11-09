@@ -309,6 +309,7 @@ QList<RTextData> RToleranceData::getTextLabels() const {
     //QString firstField2;
 
     RColor textColor;
+
     if (document!=NULL) {
         QVariant v = document->getKnownVariable(RS::DIMCLRT, RColor(RColor::ByBlock));
         textColor = v.value<RColor>();
@@ -358,7 +359,10 @@ QList<RTextData> RToleranceData::getTextLabels() const {
             textData.setDimensionLabel(true);
 
             RColor textColor = RColor(RColor::ByBlock);
-            QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+            QSharedPointer<RDimStyle> dimStyle;
+            if (document!=NULL) {
+                dimStyle = document->queryDimStyleDirect();
+            }
             if (!dimStyle.isNull()) {
                 textColor = dimStyle->getColor(RS::DIMCLRT);
             }

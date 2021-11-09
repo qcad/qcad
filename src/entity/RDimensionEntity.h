@@ -127,6 +127,8 @@ public:
 
     virtual void exportEntity(RExporter& e, bool preview=false, bool forceSelected=false) const;
 
+    static void renderDimensionText(RExporter& e, const RDocument* doc, RTextData& textData, bool isSelected=false, bool forceSelected=false);
+
     virtual RDimensionData& getData() = 0;
 
     virtual const RDimensionData& getData() const = 0;

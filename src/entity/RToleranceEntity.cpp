@@ -16,6 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RDimensionEntity.h"
 #include "RExporter.h"
 #include "RToleranceEntity.h"
 #include "RMetaTypes.h"
@@ -170,7 +171,6 @@ void RToleranceEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
 
     double dimtxt = getDimtxt();
     RVector cursor = getLocation() + RVector(dimtxt/2.0, 0);
-    QBrush brush = e.getBrush();
     QList<RTextData> labels = getTextLabels();
 
     // render text strings with distance of h:
@@ -197,39 +197,13 @@ void RToleranceEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
 //                     false);
 
         if (textData.isSane()) {
-            if (e.isTextRenderedAsText()) {
-                QList<RPainterPath> paths = e.exportText(textData, forceSelected);
-                e.exportPainterPaths(paths);
-            }
-            else {
-                if (!data.isSelected()) {
-                    RColor textColor = RColor(RColor::ByBlock);
-                    QSharedPointer<RDimStyle> dimStyle = doc->queryDimStyleDirect();
-                    if (!dimStyle.isNull()) {
-                        textColor = dimStyle->getColor(RS::DIMCLRT);
-                    }
-                    if (textColor!=RColor::ByBlock) {
-                        textData.setColor(textColor);
-                    }
-
-                    QBrush brush = e.getBrush();
-                    if (!textColor.isByBlock()) {
-                        brush.setColor(textColor);
-                        QPen p = e.getPen();
-                        p.setColor(textColor);
-                        e.setPen(p);
-                    }
-                    e.setBrush(brush);
-                }
-
-                e.exportPainterPathSource(textData);
-
-            }
+            RDimensionEntity::renderDimensionText(e, doc, textData, data.isSelected(), forceSelected);
         }
 
         cursor += RVector(textData.getBoundingBox().getWidth(), 0);
         cursor += RVector(dimtxt, 0);
     }
+
 
     // render frame:
     QList<RLine> lines = getFrame();
