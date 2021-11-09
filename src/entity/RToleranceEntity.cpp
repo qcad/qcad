@@ -163,10 +163,10 @@ void RToleranceEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
     Q_UNUSED(preview)
     Q_UNUSED(forceSelected)
 
-    // TODO
-
-    // split text string at %%v (|):
-    //QStringList subs = getText().split("%%v", QString::SkipEmptyParts);
+    const RDocument* doc = getDocument();
+    if (doc==NULL) {
+        return;
+    }
 
     double dimtxt = getDimtxt();
     RVector cursor = getLocation() + RVector(dimtxt/2.0, 0);
@@ -175,8 +175,8 @@ void RToleranceEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
 
     // render text strings with distance of h:
     for (int i=0; i<labels.length(); i++) {
-        RTextData label = labels[i];
-        label.setSelected(isSelected());
+        RTextData textData = labels[i];
+        textData.setSelected(isSelected());
 
         //qDebug() << "sub:" << sub;
 
@@ -196,38 +196,38 @@ void RToleranceEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
 //                     0,
 //                     false);
 
-        if (label.isSane()) {
+        if (textData.isSane()) {
             if (e.isTextRenderedAsText()) {
-                QList<RPainterPath> paths = e.exportText(label, forceSelected);
+                QList<RPainterPath> paths = e.exportText(textData, forceSelected);
                 e.exportPainterPaths(paths);
             }
             else {
-//                if (!data.isSelected()) {
-                    // render text as paths:
-                    // set brush explicitly:
-                    //QVariant v = doc->getKnownVariable(RS::DIMCLRT, RColor(RColor::ByBlock));
-                    //RColor textColor = v.value<RColor>();
-//                    if (textColor.isByLayer()) {
-//                        QSharedPointer<RLayer> layer = doc->queryLayerDirect(data.getLayerId());
-//                        if (!layer.isNull()) {
-//                            textColor = layer->getColor();
-//                        }
-//                    }
+                if (!data.isSelected()) {
+                    RColor textColor = RColor(RColor::ByBlock);
+                    QSharedPointer<RDimStyle> dimStyle = doc->queryDimStyleDirect();
+                    if (!dimStyle.isNull()) {
+                        textColor = dimStyle->getColor(RS::DIMCLRT);
+                    }
+                    if (textColor!=RColor::ByBlock) {
+                        textData.setColor(textColor);
+                    }
 
-                    //QBrush brush = e.getBrush();
-                    //if (!textColor.isByBlock()) {
-//                        brush.setColor(textColor);
-//                        QPen p = e.getPen();
-//                        p.setColor(textColor);
-//                        e.setPen(p);
-//                    }
-//                    e.setBrush(brush);
-//                }
-                e.exportPainterPathSource(label);
+                    QBrush brush = e.getBrush();
+                    if (!textColor.isByBlock()) {
+                        brush.setColor(textColor);
+                        QPen p = e.getPen();
+                        p.setColor(textColor);
+                        e.setPen(p);
+                    }
+                    e.setBrush(brush);
+                }
+
+                e.exportPainterPathSource(textData);
+
             }
         }
 
-        cursor += RVector(label.getBoundingBox().getWidth(), 0);
+        cursor += RVector(textData.getBoundingBox().getWidth(), 0);
         cursor += RVector(dimtxt, 0);
     }
 

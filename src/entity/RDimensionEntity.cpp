@@ -445,13 +445,13 @@ void RDimensionEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
         if (!data.isSelected()) {
             // render text as paths:
             // set brush explicitly:
-            QVariant v = doc->getKnownVariable(RS::DIMCLRT, RColor(RColor::ByBlock));
-            RColor textColor = v.value<RColor>();
-            if (textColor.isByLayer()) {
-                QSharedPointer<RLayer> layer = doc->queryLayerDirect(data.getLayerId());
-                if (!layer.isNull()) {
-                    textColor = layer->getColor();
-                }
+            RColor textColor = RColor(RColor::ByBlock);
+            QSharedPointer<RDimStyle> dimStyle = doc->queryDimStyleDirect();
+            if (!dimStyle.isNull()) {
+                textColor = dimStyle->getColor(RS::DIMCLRT);
+            }
+            if (textColor!=RColor::ByBlock) {
+                textData.setColor(textColor);
             }
 
             QBrush brush = e.getBrush();

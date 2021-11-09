@@ -23,14 +23,17 @@
 RToleranceData::RToleranceData()
     :
       //dimScaleOverride(0.0),
+      direction(1,0,0),
       dimToleranceBlockId(REntity::INVALID_ID),
       dimscale(-1.0),
       dimtxt(-1.0),
       joinFirstField(false) {
 }
 
-RToleranceData::RToleranceData(RDocument* document, const RToleranceData& data)
-    : REntityData(document) {
+RToleranceData::RToleranceData(RDocument* doc, const RToleranceData& data)
+    : REntityData(doc),
+      direction(1,0,0) {
+
     *this = data;
     this->document = document;
     if (document!=NULL) {
@@ -354,6 +357,11 @@ QList<RTextData> RToleranceData::getTextLabels() const {
             textData.setSelected(isSelected());
             textData.setDimensionLabel(true);
 
+            RColor textColor = RColor(RColor::ByBlock);
+            QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+            if (!dimStyle.isNull()) {
+                textColor = dimStyle->getColor(RS::DIMCLRT);
+            }
             if (textColor!=RColor::ByBlock) {
                 textData.setColor(textColor);
             }
