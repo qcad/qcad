@@ -69,6 +69,22 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
+    <method name="renderDimensionText"
+    cppName="renderDimensionText" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RExporter &amp;" typeName="RExporter" name="e"
+        isConst="false" />
+        <arg type="RDocument *" typeName="RDocument *" name="doc"
+        isConst="true" />
+        <arg type="RTextData &amp;" typeName="RTextData"
+        name="textData" isConst="false" />
+        <arg type="bool" typeName="bool" name="isSelected"
+        hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="forceSelected"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
+    </method>
     <method name="getData" cppName="getData" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RDimensionData &amp;"
