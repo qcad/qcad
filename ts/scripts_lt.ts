@@ -2486,7 +2486,7 @@ Do you wish to recover it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+400"/>
+        <location line="+405"/>
         <source>Move Reference Point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6279,7 +6279,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+31"/>
         <source>No import filters have been found. Aborting...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9670,7 +9670,7 @@ shown in search results:</source>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+247"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+249"/>
         <source>Drag to move paper</source>
         <translation type="unfinished"></translation>
     </message>
@@ -9680,7 +9680,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+435"/>
+        <location line="+438"/>
         <source>Export to PDF</source>
         <translation type="unfinished"></translation>
     </message>

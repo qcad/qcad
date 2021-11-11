@@ -2670,7 +2670,7 @@ Do you wish to recover it?</translation>
         <translation>Move entity to desired location</translation>
     </message>
     <message>
-        <location line="+400"/>
+        <location line="+405"/>
         <source>Move Reference Point</source>
         <translation>Move Reference Point</translation>
     </message>
@@ -6804,7 +6804,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Error while importing file %1</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+31"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>No import filters have been found. Aborting...</translation>
     </message>
@@ -10535,7 +10535,7 @@ shown in search results:</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+247"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+249"/>
         <source>Drag to move paper</source>
         <translation>Drag to move paper</translation>
     </message>
@@ -10545,7 +10545,7 @@ shown in search results:</translation>
         <translation>Done</translation>
     </message>
     <message>
-        <location line="+435"/>
+        <location line="+438"/>
         <source>Export to PDF</source>
         <translation>Export to PDF</translation>
     </message>

@@ -2735,7 +2735,7 @@ Você deseja recuperá-lo?</translation>
         <translation>Mova a entidade para a localização desejada</translation>
     </message>
     <message>
-        <location line="+400"/>
+        <location line="+405"/>
         <source>Move Reference Point</source>
         <translation>Mova o Ponto de Referência</translation>
     </message>
@@ -7024,7 +7024,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Não há filtros de importação</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+31"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Nenhum filtro de importação foi encontrado. Abortando...</translation>
     </message>
@@ -10849,7 +10849,7 @@ nos resultados de busca:</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+247"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+249"/>
         <source>Drag to move paper</source>
         <translation>Arrastar para mover papel</translation>
     </message>
@@ -10859,7 +10859,7 @@ nos resultados de busca:</translation>
         <translation>Feito</translation>
     </message>
     <message>
-        <location line="+435"/>
+        <location line="+438"/>
         <source>Export to PDF</source>
         <translation>Exportar para PDF</translation>
     </message>

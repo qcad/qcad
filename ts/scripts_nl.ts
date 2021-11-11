@@ -2708,7 +2708,7 @@ Wilt u het herstellen?</translation>
         <translation>Object verplaatsen</translation>
     </message>
     <message>
-        <location line="+400"/>
+        <location line="+405"/>
         <source>Move Reference Point</source>
         <translation>Referentiepunt verplaatsen</translation>
     </message>
@@ -6878,7 +6878,7 @@ BUG: Interferes with group castings.</source>
         <translation>Fout bij het importeren van bestand %1</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+31"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Geen import filters zijn gevonden. Afgebroken...</translation>
     </message>
@@ -10664,7 +10664,7 @@ getoond in zoekresultaten:</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+247"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+249"/>
         <source>Drag to move paper</source>
         <translation>Slepen om papier te verplaatsen</translation>
     </message>
@@ -10674,7 +10674,7 @@ getoond in zoekresultaten:</translation>
         <translation>Klaar</translation>
     </message>
     <message>
-        <location line="+435"/>
+        <location line="+438"/>
         <source>Export to PDF</source>
         <translation>PDF exporteren</translation>
     </message>

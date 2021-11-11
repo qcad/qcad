@@ -3086,7 +3086,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation>Objekt verschieben</translation>
     </message>
     <message>
-        <location line="+400"/>
+        <location line="+405"/>
         <source>Move Reference Point</source>
         <translation>Referenzpunkt verschieben</translation>
     </message>
@@ -3869,7 +3869,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
     <message>
         <location line="-50"/>
         <source>Angular Dimensions</source>
-        <translation>Winkel Bemassungen</translation>
+        <translation>Winkelbemassungen</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -7889,7 +7889,7 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Keine Importfilter</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+31"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Keine Importfilter wurden gefunden. Abbruch...</translation>
     </message>
@@ -12567,7 +12567,7 @@ nicht öffnen.
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+248"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+250"/>
         <source>Done</source>
         <translation>Fertig</translation>
     </message>
@@ -12592,7 +12592,7 @@ nicht öffnen.
         <translation>Querformat</translation>
     </message>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+435"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+438"/>
         <source>Export to PDF</source>
         <translation>PDF exportieren</translation>
     </message>
@@ -12602,12 +12602,12 @@ nicht öffnen.
         <translation>Drucken ...</translation>
     </message>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-436"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="-439"/>
         <source>Drag to move paper</source>
         <translation>Ziehen zum Verschieben des Papiers</translation>
     </message>
     <message>
-        <location line="+449"/>
+        <location line="+452"/>
         <source>Exporting to %1...</source>
         <translation>Exportiere nach %1...</translation>
     </message>
@@ -17800,12 +17800,12 @@ nicht öffnen.
     <message>
         <location line="+2"/>
         <source>Angular Dimensions</source>
-        <translation>Winkel Bemassungen</translation>
+        <translation>Winkelbemassungen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension</source>
-        <translation>Winkel Bemassung</translation>
+        <translation>Winkelbemassung</translation>
     </message>
     <message>
         <source>2 Line Angular Dimensions</source>

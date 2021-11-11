@@ -2730,7 +2730,7 @@ Do you wish to recover it?</source>
         <translation>希望の位置にエンティティを移動</translation>
     </message>
     <message>
-        <location line="+400"/>
+        <location line="+405"/>
         <source>Move Reference Point</source>
         <translation>参照点の移動</translation>
     </message>
@@ -6939,7 +6939,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">インポートフィルタがありません</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+31"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>インポートフィルタがみつかりません。中断します...</translation>
     </message>
@@ -10788,7 +10788,7 @@ shown in search results:</source>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+247"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+249"/>
         <source>Drag to move paper</source>
         <translation>用紙を移動するためドラッグしてください</translation>
     </message>
@@ -10798,7 +10798,7 @@ shown in search results:</source>
         <translation>完了</translation>
     </message>
     <message>
-        <location line="+435"/>
+        <location line="+438"/>
         <source>Export to PDF</source>
         <translation>PDFにエクスポート</translation>
     </message>

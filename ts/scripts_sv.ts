@@ -2547,7 +2547,7 @@ Vill du återställa den?</translation>
         <translation>Flytta enheten till önskad plats</translation>
     </message>
     <message>
-        <location line="+400"/>
+        <location line="+405"/>
         <source>Move Reference Point</source>
         <translation>Flytta referenspunkt</translation>
     </message>
@@ -6384,7 +6384,7 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>Fel vid import av fil %1</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+31"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Inga importfilter har hittats. Avbryter...</translation>
     </message>
@@ -9881,7 +9881,7 @@ som visas i sökresultaten:</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+247"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+249"/>
         <source>Drag to move paper</source>
         <translation>Dra för att flytta papper</translation>
     </message>
@@ -9891,7 +9891,7 @@ som visas i sökresultaten:</translation>
         <translation>Klart</translation>
     </message>
     <message>
-        <location line="+435"/>
+        <location line="+438"/>
         <source>Export to PDF</source>
         <translation>Exportera till PDF</translation>
     </message>

@@ -41,7 +41,7 @@
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="-2"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+117"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+118"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-2"/>
         <location line="+3"/>
@@ -72,7 +72,7 @@
         <location line="+3"/>
         <location line="+10"/>
         <location line="+4"/>
-        <location filename="../src/entity/RToleranceEntity.cpp" line="+79"/>
+        <location filename="../src/entity/RToleranceEntity.cpp" line="+80"/>
         <location line="+3"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+76"/>
         <location line="+3"/>

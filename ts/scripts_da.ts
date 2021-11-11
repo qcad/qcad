@@ -2487,7 +2487,7 @@ Do you wish to recover it?</source>
         <translation>Flyt enheden til den ønskede placering</translation>
     </message>
     <message>
-        <location line="+400"/>
+        <location line="+405"/>
         <source>Move Reference Point</source>
         <translation>Flyt referencepunkt</translation>
     </message>
@@ -6280,7 +6280,7 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation>Fejl under import af fil %1</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+31"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Der er ikke fundet nogen importfiltre. Afbryder...</translation>
     </message>
@@ -9678,7 +9678,7 @@ vist i søgeresultaterne:</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+247"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+249"/>
         <source>Drag to move paper</source>
         <translation>Træk for at flytte papiret</translation>
     </message>
@@ -9688,7 +9688,7 @@ vist i søgeresultaterne:</translation>
         <translation>Udført</translation>
     </message>
     <message>
-        <location line="+435"/>
+        <location line="+438"/>
         <source>Export to PDF</source>
         <translation>Eksporter til PDF</translation>
     </message>

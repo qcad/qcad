@@ -2659,7 +2659,7 @@ Přejete si ho obnovit?</translation>
         <translation>Přesuňte prvek na požadované umístění</translation>
     </message>
     <message>
-        <location line="+400"/>
+        <location line="+405"/>
         <source>Move Reference Point</source>
         <translation>Přesuňte referenční bod</translation>
     </message>
@@ -6648,7 +6648,7 @@ BUG: Interferes with group castings.</source>
         <translation>Chyba při importu souboru %1</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+31"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Nebyly nalezeny žádné filtry pro import. Přerušení...</translation>
     </message>
@@ -10253,7 +10253,7 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+247"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+249"/>
         <source>Drag to move paper</source>
         <translation>Přetažením přesuňte papír</translation>
     </message>
@@ -10263,7 +10263,7 @@ ve výsledcích vyhledávání:</translation>
         <translation>Dokončit</translation>
     </message>
     <message>
-        <location line="+435"/>
+        <location line="+438"/>
         <source>Export to PDF</source>
         <translation>Export do PDF</translation>
     </message>

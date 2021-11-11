@@ -2692,7 +2692,7 @@ Do you wish to recover it?</source>
         <translation>Переместить объект в нужное место</translation>
     </message>
     <message>
-        <location line="+400"/>
+        <location line="+405"/>
         <source>Move Reference Point</source>
         <translation>Переместить точку привязки</translation>
     </message>
@@ -6831,7 +6831,7 @@ BUG: Interferes with group castings.</source>
         <translation>Ошибка при импорте файла %1</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+31"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Фильтры для импорта не найдены. Прервано...</translation>
     </message>
@@ -10512,7 +10512,7 @@ shown in search results:</source>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+247"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+249"/>
         <source>Drag to move paper</source>
         <translation>Для перемещения бумаги перетащите её</translation>
     </message>
@@ -10522,7 +10522,7 @@ shown in search results:</source>
         <translation>Завершено</translation>
     </message>
     <message>
-        <location line="+435"/>
+        <location line="+438"/>
         <source>Export to PDF</source>
         <translation>Экспортировать в PDF</translation>
     </message>

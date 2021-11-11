@@ -2694,7 +2694,7 @@ Haluatko palauttaa sen?</translation>
         <translation>Siirrä kokonaisuus haluttuun sijaintiin</translation>
     </message>
     <message>
-        <location line="+400"/>
+        <location line="+405"/>
         <source>Move Reference Point</source>
         <translation>Siirrä viitepiste</translation>
     </message>
@@ -6882,7 +6882,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Ei tuontisuodattimia</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+31"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Tuontisuodattimia ei löydetty. Keskeytetään ...</translation>
     </message>
@@ -10552,7 +10552,7 @@ näkyy hakutuloksissa:</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+247"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+249"/>
         <source>Drag to move paper</source>
         <translation>Siirrä paperia vetämällä</translation>
     </message>
@@ -10562,7 +10562,7 @@ näkyy hakutuloksissa:</translation>
         <translation>Valmis</translation>
     </message>
     <message>
-        <location line="+435"/>
+        <location line="+438"/>
         <source>Export to PDF</source>
         <translation>Vie PDF:ksi</translation>
     </message>

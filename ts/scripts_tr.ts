@@ -2602,7 +2602,7 @@ Onu kurtarmak ister misiniz?</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+400"/>
+        <location line="+405"/>
         <source>Move Reference Point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6480,7 +6480,7 @@ BUG: Interferes with group castings.</source>
         <translation>%1 dosyası alınırken hata oluştu</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+31"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Hiçbir içe aktarma filtresi bulunamadı. Durduruluyor ...</translation>
     </message>
@@ -9981,7 +9981,7 @@ shown in search results:</source>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+247"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+249"/>
         <source>Drag to move paper</source>
         <translation>Kağıt taşımak için sürükleyin</translation>
     </message>
@@ -9991,7 +9991,7 @@ shown in search results:</source>
         <translation>Bitti</translation>
     </message>
     <message>
-        <location line="+435"/>
+        <location line="+438"/>
         <source>Export to PDF</source>
         <translation>PDF Olarak Dışa Aktar</translation>
     </message>
