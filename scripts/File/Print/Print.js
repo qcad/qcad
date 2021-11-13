@@ -217,7 +217,7 @@ Print.prototype.print = function(pdfFile, printerName, pdfVersion) {
         return false;
     }
 
-    for (var i=1; i<printer.copyCount(); i++) {
+    for (var i=1; i<=printer.copyCount(); i++) {
         if (i>1) {
             printer.newPage();
         }
