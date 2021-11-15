@@ -1912,8 +1912,9 @@ QList<QSharedPointer<RShape> > RSpline::splitAt(const QList<RVector>& points) co
 
 /**
  * Finds _some_ self intersection points of splines. Used for snapping to those intersections.
- * Note that this does not find all intersections and might return non-intersections.
+ * Note that this does not find all intersections and might also return non-intersections.
  * Most notably, self-intersections of bezier segments are not detected.
+ * This is not suitable to reliably detect the existance of self intersections.
  */
 QList<RVector> RSpline::getSelfIntersectionPoints(double tolerance) const {
     return getIntersectionPointsSS(*this, *this, true, true, tolerance);
