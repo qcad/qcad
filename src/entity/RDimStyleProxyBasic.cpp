@@ -33,6 +33,13 @@
 #include "RTriangle.h"
 
 void RDimStyleProxyBasic::render(const RDimStyle& dimStyle, const REntityData& entityData, bool preview, bool forceSelected) {
+    // instantiate new dim style proxy for this single rendering (thread safety):
+    RDimStyleProxyBasic dimStyleProxy;
+    dimStyleProxy.renderPrivate(dimStyle, entityData, preview, forceSelected);
+}
+
+
+void RDimStyleProxyBasic::renderPrivate(const RDimStyle& dimStyle, const REntityData& entityData, bool preview, bool forceSelected) {
     this->document = entityData.getDocument();
     this->dimStyle = &dimStyle;
     this->dimensionData = dynamic_cast<const RDimensionData*>(&entityData);
@@ -646,6 +653,8 @@ void RDimStyleProxyBasic::renderDimDiametric() {
     else {
         textAngle = RMath::makeAngleReadable(chordPoint.getAngleTo(definitionPoint), true, &corrected);
     }
+
+    updateOutsideArrow(chordPoint, definitionPoint);
 
     // export text label:
     RTextData& textData = data.initTextData();
