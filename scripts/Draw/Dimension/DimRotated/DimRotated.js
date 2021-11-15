@@ -123,8 +123,9 @@ DimRotated.prototype.pickCoordinate = function(event, preview) {
             this.data.getExtensionPoint1().getAngleTo(this.data.getExtensionPoint2()) +
                 Math.PI/2.0;
         var doc = di.getDocument();
-        var dimtxt = doc.getKnownVariable(RS.DIMTXT, 2.5);
-        var dimscale = doc.getKnownVariable(RS.DIMSCALE, 1.0);
+        var dimStyle = doc.queryDimStyleDirect();
+        var dimtxt = dimStyle.getDouble(RS.DIMTXT);
+        var dimscale = dimStyle.getDouble(RS.DIMSCALE);
         var dp = this.data.getExtensionPoint2();
         dp = dp.operator_add(RVector.createPolar(dimtxt*2*dimscale, angle));
         this.data.setDefinitionPoint(dp);
