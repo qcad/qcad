@@ -1910,8 +1910,8 @@ QList<QSharedPointer<RShape> > RSpline::splitAt(const QList<RVector>& points) co
     return ret;
 }
 
-QList<RVector> RSpline::getSelfIntersectionPoints() const {
-    return getIntersectionPointsSS(*this, *this, true, true);
+QList<RVector> RSpline::getSelfIntersectionPoints(double tolerance) const {
+    return getIntersectionPointsSS(*this, *this, true, true, tolerance);
 }
 
 void RSpline::print(QDebug dbg) const {

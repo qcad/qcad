@@ -268,7 +268,8 @@ public:
     QList<RVector> getIntersectionPoints(const RShape& other,
             bool limited = true, bool same = false, bool force = false) const;
 
-    virtual QList<RVector> getSelfIntersectionPoints() const {
+    virtual QList<RVector> getSelfIntersectionPoints(double tolerance=RS::PointTolerance) const {
+        Q_UNUSED(tolerance)
         return QList<RVector>();
     }
 
@@ -456,7 +457,7 @@ public:
             const RExplodable& explodable2, bool limited);
 
     static QList<RVector> getIntersectionPointsSS(const RSpline& spline1,
-            const RSpline& spline2, bool limited = true, bool same = false);
+            const RSpline& spline2, bool limited = true, bool same = false, double tolerance=RS::PointTolerance);
 
     static QList<RVector> getIntersectionPointsXX(const RExplodable& explodable1,
             const RExplodable& explodable2, bool limited = true, bool same = false);
