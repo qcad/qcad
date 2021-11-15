@@ -2439,7 +2439,7 @@ Do you wish to recover it?</source>
         <translation type="vanished">単位&apos;%1&apos;が選択されました-何もされませんでした</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>%1 から %2 にコンバートされた図面</translation>
     </message>
@@ -7356,7 +7356,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+15"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+16"/>
         <location line="+1"/>
         <source>Add centroid for a selected entity.</source>
         <translation type="unfinished"></translation>

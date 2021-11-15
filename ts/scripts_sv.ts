@@ -2280,7 +2280,7 @@ Vill du återställa den?</translation>
         <translation>Enhet &quot;%1&quot; vald. Inget att göra</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Konverterad ritning från %1 till %2</translation>
     </message>
@@ -6801,7 +6801,7 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>Obehandlad form från luckans slinga.</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+15"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+16"/>
         <location line="+1"/>
         <source>Add centroid for a selected entity.</source>
         <translation>Lägg till centroid för en vald enhet.</translation>

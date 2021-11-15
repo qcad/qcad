@@ -2588,7 +2588,7 @@ Do you wish to recover it?</source>
         <translation type="vanished">Unidad &apos;%1&apos; seleccionado - nada que hacer</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Dibujo convertido de %1 a %2</translation>
     </message>
@@ -7884,7 +7884,7 @@ BUG: Interferes with group castings.</source>
         <translation>Forma no manipulada del bucle de la escotilla.</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+15"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+16"/>
         <location line="+1"/>
         <source>Add centroid for a selected entity.</source>
         <translation>Añade el centroide de una entidad seleccionada.</translation>

@@ -2427,7 +2427,7 @@ Prajete si ho obnoviť?</translation>
         <translation type="vanished">Zvolená jednotka &apos;%1&apos; - sa nedá konvertovať</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Konvertované z &quot;%1&quot; na &quot;%2&quot;</translation>
     </message>
@@ -7244,7 +7244,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+15"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+16"/>
         <location line="+1"/>
         <source>Add centroid for a selected entity.</source>
         <translation type="unfinished"></translation>

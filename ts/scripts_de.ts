@@ -2735,7 +2735,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation type="vanished">Einheit &apos;%1&apos; gewählt - keine Konvertierung nötig</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Zeichnung konvertiert von %1 in %2</translation>
     </message>
@@ -8374,7 +8374,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Unbehandelte Form aus der Schraffurschleife.</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+15"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+16"/>
         <location line="+1"/>
         <source>Add centroid for a selected entity.</source>
         <translation>Hinzufügen des Schwerpunkts für ein ausgewähltes Objekt.</translation>

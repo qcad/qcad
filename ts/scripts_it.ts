@@ -2614,7 +2614,7 @@ Vuoi recuperarlo?</translation>
         <translation type="vanished">Unità &apos;%1&apos; selezionato - niente da fare</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Disegno convertito da %1 a %2</translation>
     </message>
@@ -7973,7 +7973,7 @@ BUG: Interferes with group castings.</source>
         <translation>Forma non gestita dal ciclo del portello.</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+15"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+16"/>
         <location line="+1"/>
         <source>Add centroid for a selected entity.</source>
         <translation>Aggiungi il centroide per un&apos;entità selezionata.</translation>

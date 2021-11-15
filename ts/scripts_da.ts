@@ -2224,7 +2224,7 @@ Do you wish to recover it?</source>
         <translation>Enhed &quot;%1&quot; valgt. Der skal ikke gøres noget</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Konverteret tegning fra %1 til %2</translation>
     </message>
@@ -6685,7 +6685,7 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation>Ubehandlet form fra lukkeløkke.</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+15"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+16"/>
         <location line="+1"/>
         <source>Add centroid for a selected entity.</source>
         <translation>Tilføjer centroid for en valgt enhed.</translation>

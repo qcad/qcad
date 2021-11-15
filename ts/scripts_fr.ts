@@ -2590,7 +2590,7 @@ Voulez-vous le récupérer ?</translation>
         <translation type="vanished">Unité &apos;%1&apos; sélectionné - rien à faire</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Dessin converti de %1 à %2</translation>
     </message>
@@ -7905,7 +7905,7 @@ BUG: Interferes with group castings.</source>
         <translation>Forme non manipulée de la boucle d&apos;éclosion.</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+15"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+16"/>
         <location line="+1"/>
         <source>Add centroid for a selected entity.</source>
         <translation>Ajouter un centroïde pour une entité sélectionnée.</translation>

@@ -2335,7 +2335,7 @@ Onu kurtarmak ister misiniz?</translation>
         <translation type="vanished">&apos;%1&apos; birimi seçildi - Yapılacak bir şey yok</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>%1&apos;den %2&apos;ye dönüştürülen çizim</translation>
     </message>
@@ -6897,7 +6897,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+15"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+16"/>
         <location line="+1"/>
         <source>Add centroid for a selected entity.</source>
         <translation type="unfinished"></translation>

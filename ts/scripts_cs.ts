@@ -2360,7 +2360,7 @@ Přejete si ho obnovit?</translation>
         <translation type="vanished">Vybraná jednotka &apos;%1&apos; - Nic se nestane</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Výkres převeden z %1 na %2</translation>
     </message>
@@ -7065,7 +7065,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+15"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+16"/>
         <location line="+1"/>
         <source>Add centroid for a selected entity.</source>
         <translation type="unfinished"></translation>
