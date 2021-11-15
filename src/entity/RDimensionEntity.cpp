@@ -239,7 +239,7 @@ bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
         else {
             getData().setDimtsz(0.0);
         }
-        return true;
+        ret = true;
     }
 
     for (int i=0; i<RDimStyle::propertyVariables.length(); i++) {
