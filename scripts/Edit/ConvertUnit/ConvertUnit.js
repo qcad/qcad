@@ -101,11 +101,15 @@ ConvertUnit.convert = function(di, fromUnit, toUnit) {
         }
     }
     docVars.setUnit(toUnit);
-    docVars.setKnownVariable(RS.DIMSCALE, doc.getKnownVariable(RS.DIMSCALE, 1.0) * factor);
+
+    var dimStyle = doc.queryDimStyle();
+    var dimscale = dimStyle.getDouble(RS.DIMSCALE);
+    dimStyle.setDouble(RS.DIMSCALE, dimscale*factor);
 
     var op = new RAddObjectsOperation();
     op.setTransactionGroup(doc.getTransactionGroup());
     op.addObject(docVars);
+    op.addObject(dimStyle);
     di.applyOperation(op);
 
     op = new RAddObjectsOperation();
