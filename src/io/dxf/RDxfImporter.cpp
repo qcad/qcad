@@ -77,8 +77,8 @@ RDxfImporter::RDxfImporter(RDocument& document, RMessageHandler* messageHandler,
 RDxfImporter::~RDxfImporter() {
 }
 
-bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter) {
-    Q_UNUSED(nameFilter);
+bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter, const QVariantMap& params) {
+    Q_UNUSED(nameFilter)
 
     this->fileName = fileName;
     QFileInfo fi(fileName);

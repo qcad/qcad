@@ -1105,7 +1105,7 @@ void RDocumentInterface::zoomChangeEvent(RGraphicsView& view) {
 }
 
 RDocumentInterface::IoErrorCode RDocumentInterface::importUrl(const QUrl& url,
-        const QString& nameFilter, bool notify) {
+        const QString& nameFilter, bool notify, const QVariantMap& params) {
     // URL points to local file:
 #if QT_VERSION >= 0x040800
     if (url.isLocalFile()) {
@@ -1154,7 +1154,7 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importUrl(const QUrl& url,
     if (file.open(QIODevice::WriteOnly)) {
         file.write(data);
         file.close();
-        ret = importFile(file.fileName(), nameFilter, notify);
+        ret = importFile(file.fileName(), nameFilter, notify, params);
         if (!file.remove()) {
             qWarning() << "cannot remove file " << file.fileName();
         }
@@ -1171,7 +1171,7 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importUrl(const QUrl& url,
  * file type.
  */
 RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
-        const QString& fileName, const QString& nameFilter, bool notify) {
+        const QString& fileName, const QString& nameFilter, bool notify, const QVariantMap& params) {
 
     // TODO: improve detection of downloadable URLs:
     if (fileName.toLower().startsWith("http://") ||
@@ -1184,10 +1184,14 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
 
     RMainWindow* mainWindow = RMainWindow::getMainWindow();
 
+    bool docNotify = document.getNotifyListeners();
+
     // clear before loading
     // RNewDocumentListeners are notified that we're intending to load a document:
     clear(true);
     clearCaches();
+
+    document.setNotifyListeners(docNotify);
 
     QFileInfo fi(fileName);
     if (!fi.exists()) {
@@ -1253,7 +1257,7 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
         mainWindow->notifyImportListenersPre(this);
     }
 
-    if (fileImporter->importFile(fileName, nameFilter)) {
+    if (fileImporter->importFile(fileName, nameFilter, params)) {
         document.setModified(false);
     } else {
         document.setFileName(previousFileName);

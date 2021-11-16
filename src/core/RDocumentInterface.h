@@ -51,6 +51,10 @@
 #define RDEFAULT_MIN1 -1
 #endif
 
+#ifndef RDEFAULT_QVARIANTMAP
+#define RDEFAULT_QVARIANTMAP QVariantMap()
+#endif
+
 class RGraphicsScene;
 class RGraphicsSceneDrawable;
 class RGraphicsView;
@@ -212,9 +216,9 @@ public:
     void setCursor(const QCursor& cursor, bool global = true);
 
     RDocumentInterface::IoErrorCode importUrl(
-        const QUrl& url, const QString& nameFilter = "", bool notify = true);
+        const QUrl& url, const QString& nameFilter = "", bool notify = true, const QVariantMap& params = RDEFAULT_QVARIANTMAP);
     RDocumentInterface::IoErrorCode importFile(
-        const QString& fileName, const QString& nameFilter = "", bool notify = true);
+        const QString& fileName, const QString& nameFilter = "", bool notify = true, const QVariantMap& params = RDEFAULT_QVARIANTMAP);
 
     QString getCorrectedFileName(const QString& fileName, const QString& fileVersion);
     bool exportFile(const QString& fileName, const QString& fileVersion = "", bool resetModified = true);

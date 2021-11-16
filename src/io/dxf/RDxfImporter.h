@@ -65,7 +65,7 @@ public:
         RMessageHandler* messageHandler = NULL, RProgressHandler* progressHandler = NULL);
     virtual ~RDxfImporter();
 
-    virtual bool importFile(const QString& fileName, const QString& nameFilter);
+    virtual bool importFile(const QString& fileName, const QString& nameFilter, const QVariantMap& params = RDEFAULT_QVARIANTMAP);
 
     virtual void processCodeValuePair(unsigned int groupCode, const std::string& groupValue);
 
