@@ -12757,12 +12757,12 @@ nicht öffnen.
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1531"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1540"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="-1333"/>
+        <location line="-1342"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -12811,7 +12811,7 @@ nicht öffnen.
         <translation>Alle Eigenschaften anzeigen</translation>
     </message>
     <message>
-        <location line="+713"/>
+        <location line="+722"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -12848,7 +12848,7 @@ nicht öffnen.
         <translation type="obsolete">Mittelpunkt</translation>
     </message>
     <message>
-        <location line="-759"/>
+        <location line="-768"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
@@ -12866,7 +12866,7 @@ nicht öffnen.
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+161"/>
         <source>Use auto measurement</source>
         <translation>Automatisch</translation>
     </message>
@@ -12946,7 +12946,7 @@ nicht öffnen.
         <translation type="vanished">Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1196"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="-1205"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>
@@ -12971,12 +12971,17 @@ nicht öffnen.
         <translation>Immer alle Eigenschaften anzeigen (dies kann die Auswahl der Objekte verlangsamen)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+17"/>
         <source>Always format property values as decimal numbers</source>
         <translation>Eigenschaftswerte immer als Dezimalzahlen formatieren</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
+        <source>Decimals / precision for displayed property values:</source>
+        <translation>Dezimalstellen / Genauigkeit für angezeigte Eigenschaftswerte:</translation>
+    </message>
+    <message>
+        <location line="-19"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Erweiterte Bemassungsstile anzeigen</translation>
     </message>

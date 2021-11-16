@@ -10667,12 +10667,12 @@ shown in search results:</source>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1531"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1540"/>
         <source>*VARIES*</source>
         <translation>*ВАРЬИРОВАНИЕ*</translation>
     </message>
     <message>
-        <location line="-1333"/>
+        <location line="-1342"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -10732,7 +10732,7 @@ shown in search results:</source>
         <translation>Автоматический</translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+161"/>
         <source>Use auto measurement</source>
         <translation>Использовать автоматическое измерение</translation>
     </message>
@@ -10813,12 +10813,17 @@ shown in search results:</source>
         <translation>Всегда показывать все свойства (это может замедлить выбор объектов)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+17"/>
         <source>Always format property values as decimal numbers</source>
         <translation>Всегда форматировать значения свойств как десятичные числа</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
+        <source>Decimals / precision for displayed property values:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-19"/>
         <source>Display advanced dimension style overrides</source>
         <translation type="unfinished"></translation>
     </message>

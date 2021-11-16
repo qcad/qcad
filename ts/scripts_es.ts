@@ -11822,12 +11822,12 @@ en los resultados de búsqueda:</translation>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="+756"/>
+        <location line="+765"/>
         <source>*VARIES*</source>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1333"/>
+        <location line="-1342"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -11877,7 +11877,7 @@ en los resultados de búsqueda:</translation>
         <translation>Mostrar todas las propiedades</translation>
     </message>
     <message>
-        <location line="+713"/>
+        <location line="+722"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -11886,12 +11886,12 @@ en los resultados de búsqueda:</translation>
         <translation type="obsolete">Parte inferior</translation>
     </message>
     <message>
-        <location line="-579"/>
+        <location line="-588"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+161"/>
         <source>Use auto measurement</source>
         <translation>Usar medición automática</translation>
     </message>
@@ -11967,12 +11967,17 @@ en los resultados de búsqueda:</translation>
         <translation>Mostrar siempre todas las propiedades (esto puede ralentizar la selección de entidades)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+17"/>
         <source>Always format property values as decimal numbers</source>
         <translation>Siempre formatea los valores de las propiedades como números decimales</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
+        <source>Decimals / precision for displayed property values:</source>
+        <translation>Decimales / precisión para los valores de las propiedades mostradas:</translation>
+    </message>
+    <message>
+        <location line="-19"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Mostrar las anulaciones de estilo de las dimensiones avanzadas</translation>
     </message>

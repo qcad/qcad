@@ -9849,12 +9849,17 @@ vist i søgeresultaterne:</translation>
         <translation>Vis altid alle egenskaber (dette kan gøre udvælgelsen af enheder langsommere)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+17"/>
         <source>Always format property values as decimal numbers</source>
         <translation>Formater altid egenskabsværdier som decimaltal</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
+        <source>Decimals / precision for displayed property values:</source>
+        <translation>Decimaler/præcision for de viste egenskabsværdier:</translation>
+    </message>
+    <message>
+        <location line="-19"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Vis avancerede dimensionsstilsoverstyringer</translation>
     </message>
@@ -9919,7 +9924,7 @@ vist i søgeresultaterne:</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+161"/>
         <source>Use auto measurement</source>
         <translation>Brug automatisk måling</translation>
     </message>

@@ -11850,7 +11850,7 @@ dans les résultats de recherche :</translation>
         <translation>Afficher toutes les propriétés</translation>
     </message>
     <message>
-        <location line="+713"/>
+        <location line="+722"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -11884,7 +11884,7 @@ dans les résultats de recherche :</translation>
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1333"/>
+        <location line="-1342"/>
         <source>:</source>
         <translation> :</translation>
     </message>
@@ -11918,7 +11918,7 @@ dans les résultats de recherche :</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+161"/>
         <source>Use auto measurement</source>
         <translation>Utiliser la mesure automatique</translation>
     </message>
@@ -11994,12 +11994,17 @@ dans les résultats de recherche :</translation>
         <translation>Toujours afficher toutes les propriétés (cela peut ralentir la sélection des entités)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+17"/>
         <source>Always format property values as decimal numbers</source>
         <translation>Toujours formater les valeurs des propriétés sous forme de nombres décimaux</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
+        <source>Decimals / precision for displayed property values:</source>
+        <translation>Décimales / précision pour les valeurs de propriété affichées :</translation>
+    </message>
+    <message>
+        <location line="-19"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Afficher les remplacements de style de cote avancés</translation>
     </message>

@@ -11015,12 +11015,12 @@ nos resultados de busca:</translation>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1531"/>
+        <location filename="../scripts/Widgets/PropertyEditor/PropertyEditor.js" line="+1540"/>
         <source>*VARIES*</source>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1333"/>
+        <location line="-1342"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -11070,12 +11070,12 @@ nos resultados de busca:</translation>
         <translation>Mostrar todas as propriedades</translation>
     </message>
     <message>
-        <location line="+713"/>
+        <location line="+722"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="-759"/>
+        <location line="-768"/>
         <source>Add custom property to selected objects</source>
         <translation>Adicione uma propriedade personalizada aos objetos selecionados</translation>
     </message>
@@ -11085,7 +11085,7 @@ nos resultados de busca:</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+161"/>
         <source>Use auto measurement</source>
         <translation>Use a medição automática</translation>
     </message>
@@ -11157,12 +11157,17 @@ nos resultados de busca:</translation>
         <translation>Sempre mostrar todas as propriedades (isso pode retardar a seleção de entidades)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+17"/>
         <source>Always format property values as decimal numbers</source>
         <translation>Sempre formatar valores de propriedade como números decimais</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
+        <source>Decimals / precision for displayed property values:</source>
+        <translation>Decimais / precisão para valores de propriedade exibidos:</translation>
+    </message>
+    <message>
+        <location line="-19"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Exibição de estilo avançado de dimensões</translation>
     </message>

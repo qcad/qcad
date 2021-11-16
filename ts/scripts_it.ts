@@ -11941,12 +11941,12 @@ mostrati nei risultati di ricerca:</translation>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="+756"/>
+        <location line="+765"/>
         <source>*VARIES*</source>
         <translation>*VARIE*</translation>
     </message>
     <message>
-        <location line="-1333"/>
+        <location line="-1342"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -11996,7 +11996,7 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Mostra tutte le proprietà</translation>
     </message>
     <message>
-        <location line="+713"/>
+        <location line="+722"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -12009,12 +12009,12 @@ mostrati nei risultati di ricerca:</translation>
         <translation type="obsolete">Sotto</translation>
     </message>
     <message>
-        <location line="-579"/>
+        <location line="-588"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+161"/>
         <source>Use auto measurement</source>
         <translation>Utilizzare la misurazione automatica</translation>
     </message>
@@ -12094,12 +12094,17 @@ mostrati nei risultati di ricerca:</translation>
         <translation>Mostra sempre tutte le proprietà (questo può rallentare la selezione delle entità)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+17"/>
         <source>Always format property values as decimal numbers</source>
         <translation>Formattare i valori delle proprietà come numeri decimali</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
+        <source>Decimals / precision for displayed property values:</source>
+        <translation>Decimali / precisione per i valori di proprietà visualizzati:</translation>
+    </message>
+    <message>
+        <location line="-19"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Visualizzare le sovrapposizioni di stile delle dimensioni avanzate</translation>
     </message>

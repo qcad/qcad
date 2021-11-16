@@ -10092,7 +10092,7 @@ som visas i sökresultaten:</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+161"/>
         <source>Use auto measurement</source>
         <translation>Använd automatisk mätning</translation>
     </message>
@@ -10144,12 +10144,17 @@ som visas i sökresultaten:</translation>
         <translation>Visa alltid alla egenskaper (detta kan göra urvalet av enheter långsammare)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+17"/>
         <source>Always format property values as decimal numbers</source>
         <translation>Formatera alltid egenskapsvärden som decimaltal</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
+        <source>Decimals / precision for displayed property values:</source>
+        <translation>Decimaler/precision för visade egenskapsvärden:</translation>
+    </message>
+    <message>
+        <location line="-19"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Visa avancerade dimensionsstilar som åsidosätts</translation>
     </message>
