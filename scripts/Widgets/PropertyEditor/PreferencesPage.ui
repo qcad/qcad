@@ -46,13 +46,6 @@
     </widget>
    </item>
    <item>
-    <widget class="QCheckBox" name="FormatAsDecimal">
-     <property name="text">
-      <string>Always format property values as decimal numbers</string>
-     </property>
-    </widget>
-   </item>
-   <item>
     <widget class="QCheckBox" name="DimStyleOverrides">
      <property name="text">
       <string>Display advanced dimension style overrides</string>
@@ -61,6 +54,89 @@
       <bool>true</bool>
      </property>
     </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="FormatAsDecimal">
+     <property name="text">
+      <string>Always format property values as decimal numbers</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Decimals / precision for displayed property values:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="Decimals">
+       <property name="currentIndex">
+        <number>8</number>
+       </property>
+       <item>
+        <property name="text">
+         <string notr="true">0</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">6</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">7</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">8</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
    </item>
    <item>
     <spacer name="verticalSpacer">
