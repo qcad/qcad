@@ -548,6 +548,16 @@ void REcmaHelper::registerFunction(QScriptEngine* engine, QScriptValue* proto,
     proto->setProperty(name, f,  QScriptValue::ReadOnly | QScriptValue::Undeletable /*| QScriptValue::SkipInEnumeration*/);
 }
 
+void REcmaHelper::fromScriptValue(QScriptEngine* engine, QScriptValue scriptValue, QVariantMap& cppValue) {
+    QScriptValueIterator it(scriptValue);
+    while (it.hasNext()) {
+        it.next();
+        //qDebug() << it.name() << ": " << it.value().toString();
+
+        cppValue.insert(it.name(), it.value().toVariant());
+    }
+}
+
 void REcmaHelper::fromScriptValue(QScriptEngine* engine, QScriptValue scriptValue, QList<QSharedPointer<RShape> >& cppValue) {
     QVariantList variantList = engine->fromScriptValue<QVariantList>(scriptValue);
     for (int i = 0; i < variantList.size(); ++i) {

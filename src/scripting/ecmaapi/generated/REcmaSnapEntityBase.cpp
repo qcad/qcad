@@ -369,7 +369,7 @@
                     }
                     RGraphicsView& a1 = *ap1;
                 
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QSet < REntity::Id >
                     a2;
                     REcmaHelper::fromScriptValue(

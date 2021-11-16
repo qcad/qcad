@@ -43,9 +43,10 @@ public:
         : RFileImporter(document, messageHandler, progressHandler) {}
     virtual ~RFileImporterAdapter() {}
     
-    virtual bool importFile(const QString& fileName, const QString& nameFilter) {
+    virtual bool importFile(const QString& fileName, const QString& nameFilter, const QVariantMap& params = RDEFAULT_QVARIANTMAP) {
         Q_UNUSED(fileName)
         Q_UNUSED(nameFilter)
+        Q_UNUSED(params)
         return false;
     }
 };

@@ -3113,7 +3113,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QStringList
                     a0;
                     REcmaHelper::fromScriptValue(

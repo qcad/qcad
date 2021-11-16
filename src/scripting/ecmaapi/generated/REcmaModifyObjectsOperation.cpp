@@ -187,7 +187,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < QSharedPointer < RObject > >
                     a0;
                     REcmaHelper::fromScriptValue(
@@ -233,7 +233,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < QSharedPointer < RObject > >
                     a0;
                     REcmaHelper::fromScriptValue(

@@ -160,7 +160,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < RPainterPath >
                     a0;
                     REcmaHelper::fromScriptValue(

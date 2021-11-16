@@ -1460,7 +1460,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QSet < QString >
                     a0;
                     REcmaHelper::fromScriptValue(

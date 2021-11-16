@@ -45,7 +45,8 @@
     
     
       bool importFile(
-                const QString & fileName, const QString & nameFilter
+                const QString & fileName, const QString & nameFilter, const QVariantMap & params
+        = RDEFAULT_QVARIANTMAP
             );
         
     

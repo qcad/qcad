@@ -52,6 +52,10 @@
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_MIN1</name> -1</cpp:define>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_QVARIANTMAP</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QVARIANTMAP</name> <name>QVariantMap</name>()</cpp:define>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
 <class_decl>class <name>RGraphicsScene</name>;</class_decl>
 <class_decl>class <name>RGraphicsSceneDrawable</name>;</class_decl>
 <class_decl>class <name>RGraphicsView</name>;</class_decl>
@@ -213,9 +217,9 @@
     <function_decl><type><name>void</name></type> <name>setCursor</name><parameter_list>(<param><decl><type><name>const</name> <name>QCursor</name>&amp;</type> <name>cursor</name></decl></param>, <param><decl><type><name>bool</name></type> <name>global</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name><name>RDocumentInterface</name>::<name>IoErrorCode</name></name></type> <name>importUrl</name><parameter_list>(
-        <param><decl><type><name>const</name> <name>QUrl</name>&amp;</type> <name>url</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>nameFilter</name> =<init> <expr>""</expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>notify</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+        <param><decl><type><name>const</name> <name>QUrl</name>&amp;</type> <name>url</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>nameFilter</name> =<init> <expr>""</expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>notify</name> =<init> <expr><name>true</name></expr></init></decl></param>, <param><decl><type><name>const</name> <name>QVariantMap</name>&amp;</type> <name>params</name> =<init> <expr><name>RDEFAULT_QVARIANTMAP</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name><name>RDocumentInterface</name>::<name>IoErrorCode</name></name></type> <name>importFile</name><parameter_list>(
-        <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>nameFilter</name> =<init> <expr>""</expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>notify</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+        <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>nameFilter</name> =<init> <expr>""</expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>notify</name> =<init> <expr><name>true</name></expr></init></decl></param>, <param><decl><type><name>const</name> <name>QVariantMap</name>&amp;</type> <name>params</name> =<init> <expr><name>RDEFAULT_QVARIANTMAP</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>QString</name></type> <name>getCorrectedFileName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileVersion</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>exportFile</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileVersion</name> =<init> <expr>""</expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>resetModified</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>

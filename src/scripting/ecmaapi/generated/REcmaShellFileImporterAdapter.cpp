@@ -95,7 +95,7 @@
     
     
       bool REcmaShellFileImporterAdapter::importFile(
-                const QString & fileName, const QString & nameFilter
+                const QString & fileName, const QString & nameFilter, const QVariantMap & params
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileImporterAdapter::importFile", engine);
@@ -108,7 +108,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=2*/
+                    || _q_function.property("length").toInt32()!=3*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RFileImporterAdapter::importFile";
@@ -122,7 +122,7 @@
                         //}
                         bool ret =
                         RFileImporterAdapter::importFile(
-                            fileName, nameFilter
+                            fileName, nameFilter, params
                         );
 
                         // block recursion again:
@@ -163,6 +163,17 @@
         << qScriptValueFromValue(engine, 
 
         nameFilter
+        )
+      
+
+
+
+    // type: QVariantMap &, copyable: false
+        << qScriptValueFromValue(engine, 
+
+        
+            // const reference argument - make a new object:
+            new QVariantMap(params)
         )
       
                             )

@@ -2262,7 +2262,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < QSharedPointer < RShape > >
                     a0;
                     REcmaHelper::fromScriptValue(

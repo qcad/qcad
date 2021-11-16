@@ -1544,8 +1544,8 @@
                         return REcmaHelper::throwError("<xsl:value-of select="$name"/>: Argument <xsl:value-of select="$index" /> is not of type <xsl:value-of select="$typeName" /><xsl:value-of select="$typeName" />.", context);                    
                     }
                 </xsl:when>
-                <xsl:when test="rs:isArray($typeName)">
-                    // argument isArray
+                <xsl:when test="rs:isArray($typeName) or $typeName='QVariantMap'">
+                    // argument isArray or QVariantMap
                     <!-- 
                     e.g.:
                     RUcs::Id a0 = qscriptvalue_cast<RUcs::Id>(context->argument(0));
@@ -1938,6 +1938,9 @@
         </xsl:when>
         <xsl:when test="$type='QVariant'">
             <func:result select="document('variantconversion.xml')/list/item/text()"/>
+        </xsl:when>
+        <xsl:when test="$type='QVariantMap'">
+            <func:result select="document('variantmapconversion.xml')/list/item/text()"/>
         </xsl:when>
         <xsl:otherwise>
             <func:result select="document('objectconversion.xml')/list/item/text()"/>

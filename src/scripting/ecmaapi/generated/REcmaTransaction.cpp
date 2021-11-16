@@ -396,7 +396,7 @@
                     context->argument( 2 ).
                     toString();
                 
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < RObject::Id >
                     a3;
                     REcmaHelper::fromScriptValue(
@@ -2229,7 +2229,7 @@
                     context->argument( 2 ).
                     toBool();
                 
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QSet < RPropertyTypeId >
                     a3;
                     REcmaHelper::fromScriptValue(
@@ -2409,7 +2409,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QSet < RObject::Id >
                     a0;
                     REcmaHelper::fromScriptValue(

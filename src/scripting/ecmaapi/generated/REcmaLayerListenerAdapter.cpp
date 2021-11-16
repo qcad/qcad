@@ -299,7 +299,7 @@
                         return REcmaHelper::throwError("RLayerListenerAdapter: Argument 0 is not of type RDocumentInterface *RDocumentInterface *.", context);                    
                     }
                 
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < RLayer::Id >
                     a1;
                     REcmaHelper::fromScriptValue(

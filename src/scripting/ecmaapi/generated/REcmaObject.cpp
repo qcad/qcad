@@ -3106,7 +3106,7 @@
                     context->argument( 2 ).
                     toBool();
                 
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QStringList
                     a3;
                     REcmaHelper::fromScriptValue(
@@ -3183,7 +3183,7 @@
                     context->argument( 2 ).
                     toBool();
                 
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QStringList
                     a3;
                     REcmaHelper::fromScriptValue(
@@ -3273,7 +3273,7 @@
                     context->argument( 2 ).
                     toBool();
                 
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QStringList
                     a3;
                     REcmaHelper::fromScriptValue(

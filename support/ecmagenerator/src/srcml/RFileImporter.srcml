@@ -27,6 +27,10 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
 
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_QVARIANTMAP</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QVARIANTMAP</name> <name>QVariantMap</name>()</cpp:define>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
 <comment type="block">/**
  * \brief Base class for file importers. 
  *
@@ -45,7 +49,7 @@
      * Must be implemented by file importers to import the given file into
      * the document.
      */</comment>
-    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>importFile</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>nameFilter</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>importFile</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>nameFilter</name></decl></param>, <param><decl><type><name>const</name> <name>QVariantMap</name>&amp;</type> <name>params</name> =<init> <expr><name>RDEFAULT_QVARIANTMAP</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 </public>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RFileImporter*</argument>)</argument_list></macro>

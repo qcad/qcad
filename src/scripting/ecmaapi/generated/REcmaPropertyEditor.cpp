@@ -769,7 +769,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < RS::EntityType >
                     a0;
                     REcmaHelper::fromScriptValue(
@@ -848,7 +848,7 @@
                         return REcmaHelper::throwError("RPropertyEditor: Argument 0 is not of type RDocumentInterface *RDocumentInterface *.", context);                    
                     }
                 
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < RLayer::Id >
                     a1;
                     REcmaHelper::fromScriptValue(

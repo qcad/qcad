@@ -11586,7 +11586,7 @@
                     a0 = 
                     *ap0;
                 
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < RTextLayout >
                     a1;
                     REcmaHelper::fromScriptValue(
