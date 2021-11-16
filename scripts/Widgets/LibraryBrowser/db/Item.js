@@ -246,8 +246,10 @@ Item.prototype.getIcon = function(small, regenerate, noFavoritesMark) {
         return this.markIcon(this.icon, small, !noFavoritesMark && this.isFavorite(), true, false);
     }
 
-    // not a script, import the file (DXF,DWG,SVG):
-    if (di.importFile(fi.filePath()) != RDocumentInterface.IoErrorNoError) {
+    // not a script, import the file (DXF,DWG,SVG,PDF,etc.):
+    // tell importer that this is for a part library icon:
+    var param = { "PartLibraryIcon": true };
+    if (di.importFile(fi.filePath(), "", false, param) != RDocumentInterface.IoErrorNoError) {
         return this.markIcon(undefined, small, !noFavoritesMark && this.isFavorite(), false, false);
     }
 
