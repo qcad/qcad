@@ -16685,7 +16685,7 @@ nicht öffnen.
     <message>
         <location line="+17"/>
         <source>Auto screen scale factor</source>
-        <translation>Skalierung für alle Grössen:</translation>
+        <translation>Automatischer Bildschirm-Skalierungsfaktor</translation>
     </message>
     <message>
         <location line="+13"/>
