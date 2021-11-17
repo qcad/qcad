@@ -126,15 +126,19 @@ double RImageData::getDistanceTo(const RVector& point, bool limited, double rang
 }
 
 bool RImageData::intersectsWith(const RShape& shape) const {
-    //const RLine* line = dynamic_cast<const RLine*>(&shape);
-    //if (line!=NULL) {
-        QList<RLine> edges = getEdges();
-        for (int i=0; i<edges.size(); i++) {
-            if (edges.at(i).intersectsWith(shape)) {
-                return true;
-            }
+    RPolyline plEdge;
+    QList<RLine> edges = getEdges();
+    for (int i=0; i<edges.size(); i++) {
+        if (edges.at(i).intersectsWith(shape)) {
+            return true;
         }
-    //}
+        plEdge.appendShape(edges.at(i));
+    }
+
+    if (plEdge.contains(shape.getPointOnShape())) {
+        return true;
+    }
+
     return false;
 }
 
