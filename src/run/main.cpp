@@ -152,7 +152,7 @@ int main(int argc, char *argv[]) {
         QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling, false);
     }
     double qsf = RSettings::getDoubleValue("Ui/QT_SCALE_FACTOR", -1.0);
-    if (qsf>0.0) {
+    if (qsf>0.0 && qsf>0.49 && qsf<4.1) {
 #ifdef Q_OS_WIN
         _putenv_s("QT_SCALE_FACTOR", (const char*)QString("%1").arg(qsf).toLocal8Bit());
 #else
