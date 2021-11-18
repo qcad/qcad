@@ -188,7 +188,9 @@ Layer.showHide = function(show, di, layerId, showProgress) {
                 layer.setOff(!show);
             }
             else {
-                layer.setFrozen(!show);
+                if (freezeLayer) {
+                    layer.setFrozen(!show);
+                }
                 layer.setOff(!show);
             }
         } else {
@@ -197,7 +199,9 @@ Layer.showHide = function(show, di, layerId, showProgress) {
             }
             else {
                 layer.setOff(false);
-                layer.setFrozen(false);
+                if (freezeLayer) {
+                    layer.setFrozen(false);
+                }
             }
         }
         operation.addObject(layer);
