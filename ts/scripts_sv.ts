@@ -3436,34 +3436,47 @@ finns redan i listan.</translation>
 <context>
     <name>DrawFromCSV</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+129"/>
         <source>No import file selected !</source>
-        <translation>Ingen importfil har valts!</translation>
+        <translation type="vanished">Ingen importfil har valts!</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+145"/>
         <location line="+15"/>
-        <location line="+1168"/>
+        <location line="+1275"/>
         <source>Command ended.</source>
         <translation>Kommandot avslutades.</translation>
     </message>
     <message>
-        <location line="-1171"/>
         <source>No file opened!</source>
-        <translation>Ingen fil har öppnats!</translation>
+        <translation type="vanished">Ingen fil har öppnats!</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="-1293"/>
+        <source>No import file selected.</source>
+        <translation>Ingen importfil har valts.</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>No file opened.</source>
+        <translation>Ingen fil har öppnats.</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>DrawFromCSV script (v3.03) by CVH</source>
+        <translation>Skriptet DrawFromCSV (v3.03) av CVH</translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>Cast CSV</source>
         <translation>Cast CSV</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+5"/>
         <source>Reading from file: %1</source>
         <translation>Läser från fil: %1</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+46"/>
         <source>Switched to comma/dot CSV style.</source>
         <translation>Bytte till CSV-stil med kommatecken/prickar.</translation>
     </message>
@@ -3479,379 +3492,748 @@ finns redan i listan.</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>Unsupported or invalid CSV style, ignored ! Text line %1</source>
-        <translation>Otillämpad eller ogiltig CSV-stil, ignoreras ! Textrad %1</translation>
+        <source>Unsupported or invalid CSV style, ignored. Text line: %1</source>
+        <translation>Otillämpad eller ogiltig CSV-stil, ignoreras. Textrad: %1</translation>
     </message>
     <message>
         <location line="+82"/>
-        <source>Setting new relative origin failed, ignored ! Text line %1</source>
-        <translation>Det gick inte att ställa in ett nytt relativt ursprung, ignorerades! Textrad %1</translation>
+        <source>Setting new relative origin failed, ignored. Text line: %1</source>
+        <translation>Det gick inte att ställa in ett nytt relativt ursprung, ignorerades. Textrad: %1</translation>
     </message>
     <message>
         <location line="+15"/>
-        <source>Can not switch to layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Kan inte byta till lager, ignoreras! Textrad %1 lager: %2</translation>
+        <source>Setting new rounding radius failed, ignored. Text line: %1</source>
+        <translation>Att ställa in ny avrundningsradie misslyckades, ignorerades. Textrad: %1</translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>Not a correct  layer switch, ignored ! Text line %1</source>
-        <translation>Inte en korrekt lageromkopplare, ignoreras ! Textrad %1</translation>
+        <location line="+6"/>
+        <source>Rounding polylines requires QCAD Professional, ignored. Text line: %1</source>
+        <translation>Avrundning av polylinjer kräver QCAD Professional, ignorerat. Textlinje: %1</translation>
     </message>
     <message>
-        <location line="+14"/>
-        <source>Not a correct  new layer switch, ignored ! Text line %1</source>
-        <translation>Inte en korrekt ny lagerväxel, ignoreras ! Textrad %1</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Can not hide layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Kan inte dölja lagret, ignoreras! Textrad %1 lager: %2</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Not a correct  hide layer switch, ignored ! Text line %1</source>
-        <translation>Det är inte en korrekt växel för att dölja lagret, den ignoreras! Textrad %1</translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <source>Can not freeze layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Kan inte frysa lagret, ignoreras ! Textrad %1 lager: %2</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Not a correct  freeze layer switch, ignored ! Text line %1</source>
-        <translation>Inte en korrekt byte av fryslager, ignoreras! Textrad %1</translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <source>Can not lock layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Kan inte låsa lagret, ignoreras! Textrad %1 lager: %2</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Not a correct  lock layer switch, ignored ! Text line %1</source>
-        <translation>Inte en korrekt låsskiktsomkoppling, ignoreras! Textrad %1</translation>
-    </message>
-    <message>
-        <location line="+28"/>
-        <source>Can not allow layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Kan inte tillåta lager, ignoreras! Textrad %1 lager: %2</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Not a correct  allow layer switch, ignored ! Text line %1</source>
-        <translation>Inte en korrekt allow layer switch, ignoreras ! Textrad %1</translation>
-    </message>
-    <message>
-        <location line="+19"/>
-        <location line="+17"/>
-        <location line="+19"/>
-        <location line="+18"/>
-        <location line="+25"/>
-        <location line="+24"/>
-        <location line="+19"/>
-        <location line="+19"/>
-        <location line="+25"/>
-        <location line="+22"/>
-        <location line="+48"/>
-        <location line="+46"/>
-        <location line="+19"/>
-        <location line="+21"/>
-        <location line="+22"/>
-        <location line="+24"/>
-        <location line="+21"/>
-        <location line="+26"/>
-        <location line="+23"/>
-        <location line="+32"/>
-        <source>Low field count !</source>
-        <translation>Lågt antal fält !</translation>
-    </message>
-    <message>
-        <location line="-469"/>
-        <location line="+17"/>
-        <location line="+19"/>
-        <location line="+18"/>
-        <location line="+25"/>
-        <location line="+24"/>
-        <location line="+19"/>
-        <location line="+19"/>
-        <location line="+25"/>
-        <location line="+22"/>
-        <location line="+48"/>
-        <location line="+46"/>
-        <location line="+19"/>
-        <location line="+21"/>
-        <location line="+22"/>
-        <location line="+24"/>
-        <location line="+21"/>
-        <location line="+26"/>
-        <location line="+23"/>
-        <location line="+32"/>
-        <location line="+34"/>
-        <location line="+23"/>
-        <location line="+29"/>
-        <location line="+25"/>
-        <source>Odd field count !</source>
-        <translation>Udda antal fält !</translation>
-    </message>
-    <message>
-        <location line="-579"/>
-        <location line="+37"/>
-        <location line="+104"/>
-        <location line="+48"/>
-        <location line="+48"/>
-        <location line="+45"/>
-        <location line="+156"/>
-        <location line="+166"/>
-        <source>Rv Invalid !</source>
-        <translation>Rv Ogiltig !</translation>
-    </message>
-    <message>
-        <location line="-587"/>
-        <location line="+37"/>
-        <location line="+49"/>
-        <location line="+19"/>
-        <location line="+44"/>
-        <location line="+135"/>
-        <location line="+21"/>
-        <location line="+22"/>
-        <location line="+24"/>
-        <location line="+21"/>
-        <location line="+26"/>
-        <location line="+55"/>
-        <source>Rv1 Invalid !</source>
-        <translation>Rv1 Ogiltig !</translation>
-    </message>
-    <message>
-        <location line="-451"/>
-        <location line="+43"/>
-        <location line="+24"/>
-        <location line="+19"/>
-        <location line="+19"/>
-        <location line="+44"/>
-        <location line="+135"/>
-        <location line="+21"/>
-        <location line="+22"/>
-        <location line="+24"/>
-        <location line="+21"/>
-        <location line="+26"/>
-        <location line="+27"/>
-        <location line="+34"/>
-        <source>Rv2 Invalid !</source>
-        <translation>Rv2 Ogiltig !</translation>
-    </message>
-    <message>
-        <location line="-422"/>
-        <location line="+24"/>
-        <location line="+63"/>
-        <location line="+52"/>
-        <location line="+44"/>
-        <location line="+45"/>
-        <location line="+21"/>
-        <source>Radius Invalid !</source>
-        <translation>Radien är ogiltig !</translation>
-    </message>
-    <message>
-        <location line="-247"/>
-        <location line="+24"/>
-        <location line="+109"/>
-        <location line="+251"/>
-        <location line="+34"/>
-        <location line="+149"/>
-        <source>Angle Invalid !</source>
-        <translation>Vinkeln är ogiltig!</translation>
-    </message>
-    <message>
-        <location line="-480"/>
-        <source>Angle1 Invalid !</source>
-        <translation>Vinkel1 ogiltig !</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Angle2 Invalid !</source>
-        <translation>Angle2 ogiltig !</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Equal angles !</source>
-        <translation>Lika vinklar !</translation>
-    </message>
-    <message>
-        <location line="+22"/>
-        <location line="+156"/>
-        <location line="+22"/>
-        <location line="+24"/>
-        <location line="+21"/>
-        <location line="+26"/>
-        <location line="+27"/>
-        <location line="+34"/>
-        <source>Rv3 Invalid !</source>
-        <translation>Rv3 ogiltig !</translation>
-    </message>
-    <message>
-        <location line="-308"/>
-        <source>Arc Invalid !</source>
-        <translation>Arc ogiltig !</translation>
-    </message>
-    <message>
-        <location line="+43"/>
-        <location line="+46"/>
-        <source>Center Invalid !</source>
-        <translation>Centrum ogiltigt !</translation>
-    </message>
-    <message>
-        <location line="-21"/>
-        <source>Radius too small !</source>
-        <translation>Radien är för liten!</translation>
-    </message>
-    <message>
-        <location line="+88"/>
-        <source>Circle Invalid !</source>
-        <translation>Cirkeln är ogiltig!</translation>
-    </message>
-    <message>
-        <location line="+67"/>
-        <location line="+26"/>
-        <location line="+27"/>
-        <location line="+34"/>
-        <source>Rv4 Invalid !</source>
-        <translation>Rv4 ogiltig !</translation>
-    </message>
-    <message>
-        <location line="-42"/>
-        <source>Size Invalid !</source>
-        <translation>Storleken är ogiltig!</translation>
-    </message>
-    <message>
-        <location line="+32"/>
-        <source>Size in X Invalid !</source>
-        <translation>Storlek i X ogiltig !</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Size in Y Invalid !</source>
-        <translation>Storlek i Y Ogiltig !</translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>Polygon, less than 5 references !</source>
-        <translation>Polygon, mindre än 5 referenser !</translation>
+        <location line="+16"/>
+        <source>Can not switch to non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
+        <translation>Kan inte byta till obefintliga lager, ignoreras. Textrad: %1%2 Lager: %3</translation>
     </message>
     <message>
         <location line="+5"/>
-        <location line="+25"/>
-        <location line="+27"/>
-        <location line="+28"/>
-        <source>Rv %1 Invalid !</source>
-        <translation>Rv %1 ogiltig !</translation>
+        <source>Not a correct set active &apos;Layer&apos; switch, ignored. Text line: %1</source>
+        <translation>Inte en korrekt inställd aktiv &quot;Layer&quot;-omkopplare, ignorerad. Textrad: %1</translation>
     </message>
     <message>
-        <location line="-62"/>
-        <source>Polyline, less than 2 references !</source>
-        <translation>Polylinje, mindre än 2 referenser !</translation>
+        <location line="+15"/>
+        <source>Not a correct &apos;New layer&apos; switch, ignored. Text line: %1</source>
+        <translation>Det är inte en korrekt &quot;New layer&quot;-omkoppling, utan ignoreras. Textrad: %1</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Can not hide non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
+        <translation>Kan inte dölja obefintliga lager, ignoreras. Textrad: %1%2 Lager: %3</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Not a correct &apos;HideLayer&apos; switch, ignored. Text line: %1</source>
+        <translation>Det är inte en korrekt &quot;HideLayer&quot;-omkoppling, utan ignoreras. Textrad: %1</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Can not freeze non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
+        <translation>Kan inte frysa obefintliga lager, ignoreras. Textrad: %1%2 Lager: %3</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Not a correct &apos;FreezeLayer&apos; switch, ignored. Text line: %1</source>
+        <translation>Det är inte en korrekt &quot;FreezeLayer&quot;-omkoppling, utan ignoreras. Textrad: %1</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Can not lock non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
+        <translation>Kan inte låsa icke-existerande lager, ignoreras. Textrad: %1%2 Lager: %3</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Not a correct &apos;LockLayer&apos; switch, ignored. Text line: %1</source>
+        <translation>Det är inte en korrekt &quot;LockLayer&quot;-omkoppling, utan ignoreras. Textrad: %1</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Can not allow non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
+        <translation>Kan inte tillåta obefintliga lager, ignoreras. Textrad: %1%2 Lager: %3</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Not a correct &apos;AllowLayer&apos; switch, ignored. Text line: %1</source>
+        <translation>Det är inte en korrekt AllowLayer-omkoppling, som ignoreras. Textrad: %1</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <location line="+17"/>
+        <location line="+20"/>
+        <location line="+19"/>
+        <location line="+26"/>
+        <location line="+25"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+25"/>
+        <location line="+33"/>
+        <location line="+49"/>
+        <location line="+47"/>
+        <location line="+19"/>
+        <location line="+22"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <location line="+29"/>
+        <location line="+33"/>
+        <location line="+135"/>
+        <source>Low field count.</source>
+        <translation>Lågt antal fält.</translation>
+    </message>
+    <message>
+        <location line="-656"/>
+        <location line="+17"/>
+        <location line="+20"/>
+        <location line="+19"/>
+        <location line="+26"/>
+        <location line="+25"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+25"/>
+        <location line="+33"/>
+        <location line="+49"/>
+        <location line="+47"/>
+        <location line="+19"/>
+        <location line="+22"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <location line="+29"/>
+        <location line="+33"/>
+        <location line="+35"/>
+        <location line="+24"/>
+        <location line="+28"/>
+        <location line="+25"/>
+        <location line="+23"/>
+        <source>Odd field count.</source>
+        <translation>Udda antal fält.</translation>
+    </message>
+    <message>
+        <location line="-655"/>
+        <location line="+38"/>
+        <location line="+109"/>
+        <location line="+59"/>
+        <location line="+49"/>
+        <location line="+46"/>
+        <location line="+188"/>
+        <location line="+168"/>
+        <source>Rv Invalid.</source>
+        <translation>Rv Ogiltig.</translation>
+    </message>
+    <message>
+        <location line="-640"/>
+        <location line="+39"/>
+        <location line="+51"/>
+        <location line="+20"/>
+        <location line="+45"/>
+        <location line="+148"/>
+        <location line="+22"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <location line="+62"/>
+        <source>Rv1 Invalid.</source>
+        <translation>Rv1 Ogiltig.</translation>
+    </message>
+    <message>
+        <location line="-503"/>
+        <location line="+45"/>
+        <location line="+25"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+45"/>
+        <location line="+148"/>
+        <location line="+22"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <location line="+33"/>
+        <location line="+35"/>
+        <source>Rv2 Invalid.</source>
+        <translation>Rv2 ogiltig.</translation>
+    </message>
+    <message>
+        <location line="-510"/>
+        <location line="+19"/>
+        <location line="+26"/>
+        <location line="+25"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+77"/>
+        <location line="+49"/>
+        <location line="+67"/>
+        <source>Equal positions.</source>
+        <translation>Jämställda positioner.</translation>
+    </message>
+    <message>
+        <location line="-265"/>
+        <location line="+25"/>
+        <location line="+66"/>
+        <location line="+39"/>
+        <location line="+25"/>
+        <location line="+45"/>
+        <location line="+45"/>
+        <location line="+22"/>
+        <location line="+33"/>
+        <source>Radius Invalid.</source>
+        <translation>Radien är ogiltig.</translation>
+    </message>
+    <message>
+        <location line="-298"/>
+        <location line="+25"/>
+        <location line="+124"/>
+        <location line="+284"/>
+        <location line="+35"/>
+        <location line="+150"/>
+        <source>Angle Invalid.</source>
+        <translation>Vinkel Ogiltig.</translation>
+    </message>
+    <message>
+        <location line="-527"/>
+        <source>Angle1 Invalid.</source>
+        <translation>Vinkel1 ogiltig.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Angle2 Invalid.</source>
+        <translation>Angle2 ogiltig.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Equal angles.</source>
+        <translation>Lika vinklar.</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <location line="+170"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <source>Equal positions 1-2.</source>
+        <translation>Jämställda positioner 1-2.</translation>
+    </message>
+    <message>
+        <location line="-286"/>
+        <location line="+170"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <location line="+32"/>
+        <location line="+35"/>
+        <source>Rv3 Invalid.</source>
+        <translation>Rv3 ogiltig.</translation>
+    </message>
+    <message>
+        <location line="-354"/>
+        <location line="+170"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <source>Equal positions 1-3.</source>
+        <translation>Jämställda positioner 1-3.</translation>
+    </message>
+    <message>
+        <location line="-287"/>
+        <location line="+170"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <source>Equal positions 2-3.</source>
+        <translation>Jämställda positioner 2-3.</translation>
+    </message>
+    <message>
+        <location line="-284"/>
+        <location line="+2"/>
+        <location line="+168"/>
+        <location line="+2"/>
+        <source>Near co-linear positions.</source>
+        <translation>Nästan samlinjära positioner.</translation>
+    </message>
+    <message>
+        <location line="-168"/>
+        <source>Arc Invalid.</source>
+        <translation>Arc Invalid.</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <location line="+47"/>
+        <source>Center Invalid.</source>
+        <translation>Centrum ogiltigt.</translation>
+    </message>
+    <message>
+        <location line="-21"/>
+        <source>Radius too small.</source>
+        <translation>Radien är för liten.</translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>Circle Invalid.</source>
+        <translation>Cirkel ogiltig.</translation>
+    </message>
+    <message>
+        <location line="+79"/>
+        <location line="+33"/>
+        <location line="+30"/>
+        <location line="+35"/>
+        <source>Rv4 Invalid.</source>
+        <translation>Rv4 ogiltig.</translation>
+    </message>
+    <message>
+        <location line="-97"/>
+        <location line="+33"/>
+        <source>Equal positions 1-4.</source>
+        <translation>Jämställda positioner 1-4.</translation>
+    </message>
+    <message>
+        <location line="-32"/>
+        <location line="+33"/>
+        <source>Equal positions 2-4.</source>
+        <translation>Jämställda positioner 2-4.</translation>
+    </message>
+    <message>
+        <location line="-32"/>
+        <location line="+33"/>
+        <source>Equal positions 3-4.</source>
+        <translation>Jämställda positioner 3-4.</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Size Invalid.</source>
+        <translation>Storleken är ogiltig.</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Size in X Invalid.</source>
+        <translation>Storlek i X Ogiltig.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Size in Y Invalid.</source>
+        <translation>Storlek i Y Ogiltig.</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Polygon: less than 5 references.</source>
+        <translation>Polygon: mindre än 5 referenser.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+26"/>
+        <location line="+26"/>
+        <location line="+28"/>
+        <source>Rv%1 Invalid.</source>
+        <translation>Rv%1 Ogiltig.</translation>
+    </message>
+    <message>
+        <location line="-61"/>
+        <source>Polyline, less than 2 references.</source>
+        <translation>Polylinje, mindre än 2 referenser.</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Bulge %1 Invalid !</source>
-        <translation>Bulge %1 ogiltig!</translation>
+        <source>Bulge%1 Invalid.</source>
+        <translation>Bulge%1 Ogiltig.</translation>
     </message>
     <message>
-        <location line="+19"/>
-        <source>Unsupported PRO feature !</source>
-        <translation>PRO-funktion som inte stöds !</translation>
+        <location line="+18"/>
+        <source>Unsupported QCAD Professional feature.</source>
+        <translation>Funktion i QCAD Professional som inte stöds.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Fit point Spline, less than 3 references !</source>
-        <translation>Anpassningspunkt Spline, mindre än 3 referenser !</translation>
+        <source>3th degree fit point Spline, less than 3 references.</source>
+        <translation>3:e gradens passande punkt Spline, mindre än 3 referenser.</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Control point Spline, less than 4 references !</source>
-        <translation>Kontrollpunkt Spline, mindre än 4 referenser !</translation>
+        <source>3th degree control point Spline, less than 4 references.</source>
+        <translation>3:e gradens kontrollpunkt Spline, mindre än 4 referenser.</translation>
     </message>
     <message>
-        <location line="+23"/>
-        <source>Text, low field count !</source>
-        <translation>Text, lågt antal fält !</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Text, odd field count !</source>
-        <translation>Text, udda antal fält !</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Height Invalid !</source>
-        <translation>Höjden är ogiltig!</translation>
+        <location line="+28"/>
+        <source>Height Invalid.</source>
+        <translation>Höjd ogiltig.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Width Invalid !</source>
-        <translation>Bredden är ogiltig!</translation>
+        <source>Width Invalid.</source>
+        <translation>Bredd ogiltig.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Vert. alignment Invalid !</source>
-        <translation>Vert. anpassning ogiltig !</translation>
+        <source>Vert. alignment Invalid.</source>
+        <translation>Vert. anpassning Ogiltig.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Horz. alignment Invalid !</source>
-        <translation>Horz. anpassning Ogiltig !</translation>
+        <source>Horz. alignment Invalid.</source>
+        <translation>Horz. anpassning Invalid.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Drawing direction Invalid !</source>
-        <translation>Ritningsriktning ogiltig !</translation>
+        <source>Drawing direction Invalid.</source>
+        <translation>Ritningsriktning ogiltig.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Line spacing style Invalid !</source>
-        <translation>Stil för radavstånd ogiltig !</translation>
+        <source>Line spacing style Invalid.</source>
+        <translation>Stil för radavstånd ogiltig.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Line spacing Invalid !</source>
-        <translation>Radavstånd ogiltigt !</translation>
+        <source>Line spacing Invalid.</source>
+        <translation>Radavstånd ogiltigt.</translation>
     </message>
     <message>
-        <location line="+41"/>
-        <source>Unsupported entry ! Text line %1</source>
-        <translation>Uppgift som inte stöds ! Textrad %1</translation>
+        <location line="+37"/>
+        <source>Unsupported method. Text line: %1</source>
+        <translation>Metod som inte stöds. Textrad: %1</translation>
     </message>
     <message>
         <location line="+19"/>
-        <source>Error with first optional list !</source>
-        <translation>Fel i den första valfria listan !</translation>
+        <source>Error with first optional list.</source>
+        <translation>Fel i den första valfria listan.</translation>
     </message>
     <message>
         <location line="+14"/>
+        <source>Error with second optional list.</source>
+        <translation>Fel i den andra valfria listan.</translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <source>Not a correct entry, ignored. Text line: %1 &gt; %2</source>
+        <translation>Inte en korrekt post, ignorerad. Textrad: %1 &gt; %2</translation>
+    </message>
+    <message>
+        <location line="+80"/>
+        <source>Casted entries: %1 out of %2 text lines</source>
+        <translation>Casted poster: %1 av %2 textrader</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Nothing casted.</source>
+        <translation>Inget kastat.</translation>
+    </message>
+    <message>
+        <location line="+227"/>
+        <source>Attributes empty. Text line: %1</source>
+        <translation>Egenskaperna är tomma. Textrad: %1</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Not a correct layer name, ignored. Text line: %1%2 Name: %3</source>
+        <translation>Det är inte ett korrekt namn på lagret, det ignoreras. Textrad: %1%2 Namn: %3</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Layer doesn&apos;t exist, ignored. Text line: %1%2 Layer: %3</source>
+        <translation>Lagret existerar inte, ignoreras. Textrad: %1%2 Lager: %3</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Not a correct color, ignored. Text line: %1%2 Color: %3</source>
+        <translation>Inte en korrekt färg, ignorerad. Textrad: %1%2 Färg: %3</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
+        <translation>Inte en korrekt linjvikt, ignoreras. Textrad: %1%2 Vikt: %3</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</source>
+        <translation>Inte en korrekt Linetype, ignoreras. Textrad: %1%2 Typ: %3</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
+        <translation>Inte en korrekt Linetype-skala, ignoreras. Textrad: %1%2 Skala: %3</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Unsupported attribute, ignored. Text line: %1 &gt; %2</source>
+        <translation>Attribut som inte stöds, ignoreras. Textrad: %1 &gt; %2</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Not a correct layer name. Text line: %1%2 Name: %3</source>
+        <translation>Det är inte ett korrekt lagernamn. Textrad: %1%2 Namn: %3</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Parent layer doesn&apos;t exist. Text line: %1%2 Layer: %3</source>
+        <translation>Det finns inget överordnat lager. Textrad: %1%2 Lager: %3</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Not a correct color. Text line: %1%2 Color: %3</source>
+        <translation>Inte en korrekt färg. Textrad: %1%2 Färg: %3</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
+        <translation>Inte en korrekt linjvikt. Textrad: %1%2 Vikt: %3</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Not a correct Linetype. Text line: %1%2 Type: %3</source>
+        <translation>Inte en korrekt linjetyp. Textrad: %1%2 Typ: %3</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Add/Update layer ignored.</source>
+        <translation>Lägg till/uppdatera lager ignoreras.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Updated layer: %1</source>
+        <translation>Uppdaterat lager: %1</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Added new layer: %1</source>
+        <translation>Ett nytt lager har lagts till: %1</translation>
+    </message>
+    <message>
+        <source>Unsupported or invalid CSV style, ignored ! Text line %1</source>
+        <translation type="vanished">Otillämpad eller ogiltig CSV-stil, ignoreras ! Textrad %1</translation>
+    </message>
+    <message>
+        <source>Setting new relative origin failed, ignored ! Text line %1</source>
+        <translation type="vanished">Det gick inte att ställa in ett nytt relativt ursprung, ignorerades! Textrad %1</translation>
+    </message>
+    <message>
+        <source>Can not switch to layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="vanished">Kan inte byta till lager, ignoreras! Textrad %1 lager: %2</translation>
+    </message>
+    <message>
+        <source>Not a correct  layer switch, ignored ! Text line %1</source>
+        <translation type="vanished">Inte en korrekt lageromkopplare, ignoreras ! Textrad %1</translation>
+    </message>
+    <message>
+        <source>Not a correct  new layer switch, ignored ! Text line %1</source>
+        <translation type="vanished">Inte en korrekt ny lagerväxel, ignoreras ! Textrad %1</translation>
+    </message>
+    <message>
+        <source>Can not hide layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="vanished">Kan inte dölja lagret, ignoreras! Textrad %1 lager: %2</translation>
+    </message>
+    <message>
+        <source>Not a correct  hide layer switch, ignored ! Text line %1</source>
+        <translation type="vanished">Det är inte en korrekt växel för att dölja lagret, den ignoreras! Textrad %1</translation>
+    </message>
+    <message>
+        <source>Can not freeze layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="vanished">Kan inte frysa lagret, ignoreras ! Textrad %1 lager: %2</translation>
+    </message>
+    <message>
+        <source>Not a correct  freeze layer switch, ignored ! Text line %1</source>
+        <translation type="vanished">Inte en korrekt byte av fryslager, ignoreras! Textrad %1</translation>
+    </message>
+    <message>
+        <source>Can not lock layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="vanished">Kan inte låsa lagret, ignoreras! Textrad %1 lager: %2</translation>
+    </message>
+    <message>
+        <source>Not a correct  lock layer switch, ignored ! Text line %1</source>
+        <translation type="vanished">Inte en korrekt låsskiktsomkoppling, ignoreras! Textrad %1</translation>
+    </message>
+    <message>
+        <source>Can not allow layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="vanished">Kan inte tillåta lager, ignoreras! Textrad %1 lager: %2</translation>
+    </message>
+    <message>
+        <source>Not a correct  allow layer switch, ignored ! Text line %1</source>
+        <translation type="vanished">Inte en korrekt allow layer switch, ignoreras ! Textrad %1</translation>
+    </message>
+    <message>
+        <source>Low field count !</source>
+        <translation type="vanished">Lågt antal fält !</translation>
+    </message>
+    <message>
+        <source>Odd field count !</source>
+        <translation type="vanished">Udda antal fält !</translation>
+    </message>
+    <message>
+        <source>Rv Invalid !</source>
+        <translation type="vanished">Rv Ogiltig !</translation>
+    </message>
+    <message>
+        <source>Rv1 Invalid !</source>
+        <translation type="vanished">Rv1 Ogiltig !</translation>
+    </message>
+    <message>
+        <source>Rv2 Invalid !</source>
+        <translation type="vanished">Rv2 Ogiltig !</translation>
+    </message>
+    <message>
+        <source>Radius Invalid !</source>
+        <translation type="vanished">Radien är ogiltig !</translation>
+    </message>
+    <message>
+        <source>Angle Invalid !</source>
+        <translation type="vanished">Vinkeln är ogiltig!</translation>
+    </message>
+    <message>
+        <source>Angle1 Invalid !</source>
+        <translation type="vanished">Vinkel1 ogiltig !</translation>
+    </message>
+    <message>
+        <source>Angle2 Invalid !</source>
+        <translation type="vanished">Angle2 ogiltig !</translation>
+    </message>
+    <message>
+        <source>Equal angles !</source>
+        <translation type="vanished">Lika vinklar !</translation>
+    </message>
+    <message>
+        <source>Rv3 Invalid !</source>
+        <translation type="vanished">Rv3 ogiltig !</translation>
+    </message>
+    <message>
+        <source>Arc Invalid !</source>
+        <translation type="vanished">Arc ogiltig !</translation>
+    </message>
+    <message>
+        <source>Center Invalid !</source>
+        <translation type="vanished">Centrum ogiltigt !</translation>
+    </message>
+    <message>
+        <source>Radius too small !</source>
+        <translation type="vanished">Radien är för liten!</translation>
+    </message>
+    <message>
+        <source>Circle Invalid !</source>
+        <translation type="vanished">Cirkeln är ogiltig!</translation>
+    </message>
+    <message>
+        <source>Rv4 Invalid !</source>
+        <translation type="vanished">Rv4 ogiltig !</translation>
+    </message>
+    <message>
+        <source>Size Invalid !</source>
+        <translation type="vanished">Storleken är ogiltig!</translation>
+    </message>
+    <message>
+        <source>Size in X Invalid !</source>
+        <translation type="vanished">Storlek i X ogiltig !</translation>
+    </message>
+    <message>
+        <source>Size in Y Invalid !</source>
+        <translation type="vanished">Storlek i Y Ogiltig !</translation>
+    </message>
+    <message>
+        <source>Polygon, less than 5 references !</source>
+        <translation type="vanished">Polygon, mindre än 5 referenser !</translation>
+    </message>
+    <message>
+        <source>Rv %1 Invalid !</source>
+        <translation type="vanished">Rv %1 ogiltig !</translation>
+    </message>
+    <message>
+        <source>Polyline, less than 2 references !</source>
+        <translation type="vanished">Polylinje, mindre än 2 referenser !</translation>
+    </message>
+    <message>
+        <source>Bulge %1 Invalid !</source>
+        <translation type="vanished">Bulge %1 ogiltig!</translation>
+    </message>
+    <message>
+        <source>Unsupported PRO feature !</source>
+        <translation type="vanished">PRO-funktion som inte stöds !</translation>
+    </message>
+    <message>
+        <source>Fit point Spline, less than 3 references !</source>
+        <translation type="vanished">Anpassningspunkt Spline, mindre än 3 referenser !</translation>
+    </message>
+    <message>
+        <source>Control point Spline, less than 4 references !</source>
+        <translation type="vanished">Kontrollpunkt Spline, mindre än 4 referenser !</translation>
+    </message>
+    <message>
+        <source>Text, low field count !</source>
+        <translation type="vanished">Text, lågt antal fält !</translation>
+    </message>
+    <message>
+        <source>Text, odd field count !</source>
+        <translation type="vanished">Text, udda antal fält !</translation>
+    </message>
+    <message>
+        <source>Height Invalid !</source>
+        <translation type="vanished">Höjden är ogiltig!</translation>
+    </message>
+    <message>
+        <source>Width Invalid !</source>
+        <translation type="vanished">Bredden är ogiltig!</translation>
+    </message>
+    <message>
+        <source>Vert. alignment Invalid !</source>
+        <translation type="vanished">Vert. anpassning ogiltig !</translation>
+    </message>
+    <message>
+        <source>Horz. alignment Invalid !</source>
+        <translation type="vanished">Horz. anpassning Ogiltig !</translation>
+    </message>
+    <message>
+        <source>Drawing direction Invalid !</source>
+        <translation type="vanished">Ritningsriktning ogiltig !</translation>
+    </message>
+    <message>
+        <source>Line spacing style Invalid !</source>
+        <translation type="vanished">Stil för radavstånd ogiltig !</translation>
+    </message>
+    <message>
+        <source>Line spacing Invalid !</source>
+        <translation type="vanished">Radavstånd ogiltigt !</translation>
+    </message>
+    <message>
+        <source>Unsupported entry ! Text line %1</source>
+        <translation type="vanished">Uppgift som inte stöds ! Textrad %1</translation>
+    </message>
+    <message>
+        <source>Error with first optional list !</source>
+        <translation type="vanished">Fel i den första valfria listan !</translation>
+    </message>
+    <message>
         <source>Error with second optional list !</source>
-        <translation>Fel med den andra valfria listan !</translation>
+        <translation type="vanished">Fel med den andra valfria listan !</translation>
     </message>
     <message>
-        <location line="+47"/>
         <source>Not a correct entry ! Text line %1 : %2</source>
-        <translation>Det är inte en korrekt uppgift! Textrad %1 : %2</translation>
+        <translation type="vanished">Det är inte en korrekt uppgift! Textrad %1 : %2</translation>
     </message>
     <message>
-        <location line="+77"/>
         <source>Casted entries : %1 with %2 text lines</source>
-        <translation>Gjutna poster : %1 med %2 textrader</translation>
+        <translation type="vanished">Gjutna poster : %1 med %2 textrader</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="-447"/>
         <source>Importing CSV complete. Command ended.</source>
         <translation>Import av CSV är klar. Kommando avslutat.</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Nothing casted !</source>
-        <translation>Ingenting kastat!</translation>
+        <translation type="vanished">Ingenting kastat!</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+46"/>
         <source>Draw from CSV</source>
         <translation>Dra från CSV</translation>
     </message>
@@ -3866,80 +4248,64 @@ finns redan i listan.</translation>
         <translation>Alla filer</translation>
     </message>
     <message>
-        <location line="+165"/>
         <source>Attributes empty ! Text line %1</source>
-        <translation>Attributen är tomma ! Textrad %1</translation>
+        <translation type="vanished">Attributen är tomma ! Textrad %1</translation>
     </message>
     <message>
-        <location line="+24"/>
-        <location line="+97"/>
         <source>Not a correct layer name ! Text line %1 name: %2</source>
-        <translation>Det är inte ett korrekt namn på lagret! Textrad %1 namn: %2</translation>
+        <translation type="vanished">Det är inte ett korrekt namn på lagret! Textrad %1 namn: %2</translation>
     </message>
     <message>
-        <location line="-90"/>
         <source>Layer doesn&apos;t exist, ignored ! Text line %1 layer: %2</source>
-        <translation>Lagret existerar inte, ignoreras! Textrad %1 lager: %2</translation>
+        <translation type="vanished">Lagret existerar inte, ignoreras! Textrad %1 lager: %2</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Not a correct color, ignored ! Text line %1 color: %2</source>
-        <translation>Inte en korrekt färg, ignorerad ! Textrad %1 färg: %2</translation>
+        <translation type="vanished">Inte en korrekt färg, ignorerad ! Textrad %1 färg: %2</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Not a correct Lineweight, ignored ! Text line %1 weight: %2</source>
-        <translation>Inte en korrekt linjvikt, ignoreras! Textrad %1 vikt: %2</translation>
+        <translation type="vanished">Inte en korrekt linjvikt, ignoreras! Textrad %1 vikt: %2</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Not a correct Linetype, ignored ! Text line %1 type: %2</source>
-        <translation>Inte en korrekt Linetype, ignoreras! Textrad %1 typ: %2</translation>
+        <translation type="vanished">Inte en korrekt Linetype, ignoreras! Textrad %1 typ: %2</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Not a correct Linetype scale, ignored ! Text line %1 scale: %2</source>
-        <translation>Inte en korrekt Linetype-skala, ignoreras! Textrad %1 skala: %2</translation>
+        <translation type="vanished">Inte en korrekt Linetype-skala, ignoreras! Textrad %1 skala: %2</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>Not a correct attribute, ignored ! Text line %1 &gt; %2</source>
-        <translation>Inte ett korrekt attribut, ignoreras! Textrad %1 &gt; %2</translation>
+        <translation type="vanished">Inte ett korrekt attribut, ignoreras! Textrad %1 &gt; %2</translation>
     </message>
     <message>
-        <location line="+52"/>
         <source>Parent layer doesn&apos;t exist ! Text line %1 layer: %2</source>
-        <translation>Det överordnade lagret finns inte! Textrad %1 lager: %2</translation>
+        <translation type="vanished">Det överordnade lagret finns inte! Textrad %1 lager: %2</translation>
     </message>
     <message>
-        <location line="+30"/>
         <source>Not a correct color ! Text line %1 color: %2</source>
-        <translation>Inte en korrekt färg! Textrad %1 färg: %2</translation>
+        <translation type="vanished">Inte en korrekt färg! Textrad %1 färg: %2</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Not a correct Lineweight ! Text line %1 weight: %2</source>
-        <translation>Det är inte en korrekt linjvikt! Textrad %1 vikt: %2</translation>
+        <translation type="vanished">Det är inte en korrekt linjvikt! Textrad %1 vikt: %2</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Not a correct Linetype ! Text line %1 type: %2</source>
-        <translation>Inte en korrekt Linetype! Textrad %1 typ: %2</translation>
+        <translation type="vanished">Inte en korrekt Linetype! Textrad %1 typ: %2</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Add/Update layer ignored !</source>
-        <translation>Lägg till/uppdatera lagret ignoreras !</translation>
+        <translation type="vanished">Lägg till/uppdatera lagret ignoreras !</translation>
     </message>
     <message>
-        <location line="+11"/>
         <source>Updated layer : %1</source>
-        <translation>Uppdaterat lager : %1</translation>
+        <translation type="vanished">Uppdaterat lager : %1</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Added new layer : %1</source>
-        <translation>Ett nytt lager har lagts till: %1</translation>
+        <translation type="vanished">Ett nytt lager har lagts till: %1</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
@@ -6705,7 +7071,7 @@ BUG: Störningar vid gruppgjutningar.</translation>
 <context>
     <name>InfoAreaCentroid</name>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroid.js" line="+102"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroid.js" line="+118"/>
         <source>No selection.</source>
         <translation>Inget urval.</translation>
     </message>
@@ -6715,43 +7081,38 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>Gör ett val först. Kommando avslutat.</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Multiple selection.</source>
-        <translation>Flera val.</translation>
+        <translation type="vanished">Flera val.</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+8"/>
         <source>Not implemented. Command terminated.</source>
         <translation>Inte genomfört. Kommandot avslutas.</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Centroid &amp; area script by CVH</source>
-        <translation>Centroid area script av CVH</translation>
+        <translation type="vanished">Centroid area script av CVH</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Enclosed area:</source>
         <translation>Inhägnat område:</translation>
     </message>
     <message>
-        <location line="+21"/>
-        <location line="+19"/>
+        <location line="+46"/>
         <source>Approximated enclosed area:</source>
         <translation>Ungefärlig inhägnad yta:</translation>
     </message>
     <message>
-        <location line="-13"/>
         <source>Ellipse arc sector area (closed format): %1</source>
-        <translation>Ellipsbågens sektorområde (slutet format): %1</translation>
+        <translation type="vanished">Ellipsbågens sektorområde (slutet format): %1</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Ellipse arc segment area (closed format): %1</source>
-        <translation>Ellipsens bågsegmentområde (slutet format): %1</translation>
+        <translation type="vanished">Ellipsens bågsegmentområde (slutet format): %1</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+4"/>
         <source>Hatched area:</source>
         <translation>Skrafferat område:</translation>
     </message>
@@ -6766,45 +7127,125 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>Differentiellt skrafferat område:</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Unsupported entity type.</source>
-        <translation>Enhetstyp som inte stöds.</translation>
+        <translation type="vanished">Enhetstyp som inte stöds.</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-67"/>
+        <source>Multiple entities in selection.</source>
+        <translation>Flera enheter i urvalet.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Area centroid script (v0.31) by CVH</source>
+        <translation>Skript för områdescentroid (v0.31) av CVH</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>2D Centroid</source>
+        <translation>2D-centroid</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Centroid markers circle in selection. No results.</source>
+        <translation>Centroidmarkeringar i cirkeln i urvalet. Inga resultat.</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Unsupported entity type. No results.</source>
+        <translation>Enhetstyp som inte stöds. Inga resultat.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>No results.</source>
         <translation>Inga resultat.</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Centroid point</source>
         <translation>Centroidpunkt</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+49"/>
         <source>(Incl. approximations)</source>
         <translation>(Inklusive uppskattningar)</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
+        <location line="+19"/>
         <source>Approximated centroid:</source>
         <translation>Närmare centroid:</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-19"/>
+        <location line="+19"/>
         <source>Centroid:</source>
         <translation>Centroid:</translation>
     </message>
     <message>
-        <location line="+1761"/>
+        <location line="+193"/>
+        <location line="+563"/>
+        <source>Encountered an unsupported polyline with custom widths</source>
+        <translation>Upptäckte en polylinje som inte stöds med anpassade bredder</translation>
+    </message>
+    <message>
+        <location line="-478"/>
+        <location line="+581"/>
+        <source>Encountered an unsupported polygon with custom widths</source>
+        <translation>En polygon som inte stöds med anpassade bredder har uppstått</translation>
+    </message>
+    <message>
+        <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
         <translation>Obehandlad form från luckans slinga.</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+16"/>
-        <location line="+1"/>
+        <location line="+80"/>
+        <source>Self-intersecting shape near (%1). No Results.</source>
+        <translation>Självskärande form nära (%1). Inga resultat.</translation>
+    </message>
+    <message>
         <source>Add centroid for a selected entity.</source>
-        <translation>Lägg till centroid för en vald enhet.</translation>
+        <translation type="vanished">Lägg till centroid för en vald enhet.</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+18"/>
+        <source>Add 2D area centroid for a selected entity.</source>
+        <translation>Lägg till 2D-områdescentroid för en vald enhet.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Add 2D uniform density area centroid marker and values for a selected entity.</source>
+        <translation>Lägg till centroidmarkörer och värden för 2D-områden med enhetlig täthet för en vald enhet.</translation>
+    </message>
+</context>
+<context>
+    <name>InfoCentroids</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js" line="+232"/>
+        <location line="+1"/>
+        <source>2D Centroid</source>
+        <translation>2D-centroid</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>X position</source>
+        <translation>X-position</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Y position</source>
+        <translation>Y-position</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Weighted</source>
+        <translation>Vägd</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Density</source>
+        <translation>Densitet</translation>
     </message>
 </context>
 <context>
@@ -6975,6 +7416,190 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <location filename="../scripts/Information/InfoPositionRel/InfoPositionRelInit.js" line="+2"/>
         <source>&amp;Relative Position</source>
         <translation>Relativ position</translation>
+    </message>
+</context>
+<context>
+    <name>InfoSumCentroidsWeighted</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeighted.js" line="+94"/>
+        <source>No selection.</source>
+        <translation>Inget urval.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Please, make a selection first. Command terminated.</source>
+        <translation>Gör ett val först. Kommando avslutat.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Centroids weighted sum script (v0.10b) by CVH</source>
+        <translation>Skript för vägd summa av Centroider (v0.10b) av CVH</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>2D Centroid</source>
+        <translation>2D-centroid</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Density</source>
+        <translation>Densitet</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>X position</source>
+        <translation>X-position</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Y position</source>
+        <translation>Y-position</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Weighted</source>
+        <translation>Vägd</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>No centroid markers in selection.</source>
+        <translation>Inga centroidmarkörer i urvalet.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>One marker selected, nothing to sum. Please verify selection.</source>
+        <translation>En markör vald, inget att summera. Kontrollera valet.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Results in Zero.</source>
+        <translation>Resultat i noll.</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Total sum(%1):</source>
+        <translation>Total summa(%1):</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Weighted sum(%1):</source>
+        <translation>Vägd summa(%1):</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Summed centroid position:</source>
+        <translation>Summerad centroidposition:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+18"/>
+        <source>Sum selected 2D centroid markers weighted.</source>
+        <translation>Summan av valda 2D-centroidmarkörer viktade.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sum selected 2D centroid markers weighted by their individual custom density.</source>
+        <translation>Summera utvalda 2D-centroidmarkörer viktade med deras individuella anpassade täthet.</translation>
+    </message>
+</context>
+<context>
+    <name>InfoWireCentroid</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroid.js" line="+117"/>
+        <source>No selection.</source>
+        <translation>Inget urval.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Please, make a selection first. Command terminated.</source>
+        <translation>Gör ett val först. Kommando avslutat.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Wire centroid script (v0.31) by CVH</source>
+        <translation>Script för trådcentroid (v0.31) av CVH</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Length:</source>
+        <translation>Längd:</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>2D Centroid</source>
+        <translation>2D-centroid</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Centroid markers circle in selection. No results.</source>
+        <translation>Centroidmarkeringar i cirkeln i urvalet. Inga resultat.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+7"/>
+        <source>Approximated length:</source>
+        <translation>Ungefärlig längd:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Unsupported entity type. No results.</source>
+        <translation>Enhetstyp som inte stöds. Inga resultat.</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>No results.</source>
+        <translation>Inga resultat.</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Results in Zero.</source>
+        <translation>Resultat i noll.</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Centroid point</source>
+        <translation>Centroidpunkt</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Total length:</source>
+        <translation>Total längd:</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>(Incl. approximations)</source>
+        <translation>(Inklusive uppskattningar)</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <location line="+19"/>
+        <source>Approximated centroid:</source>
+        <translation>Närmare centroid:</translation>
+    </message>
+    <message>
+        <location line="-19"/>
+        <location line="+19"/>
+        <source>Centroid:</source>
+        <translation>Centroid:</translation>
+    </message>
+    <message>
+        <location line="+116"/>
+        <source>Encountered an unsupported polyline with custom widths</source>
+        <translation>Upptäckte en polylinje som inte stöds med anpassade bredder</translation>
+    </message>
+    <message>
+        <location line="+101"/>
+        <source>Encountered an unsupported polygon with custom widths</source>
+        <translation>En polygon som inte stöds med anpassade bredder har uppstått</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+18"/>
+        <source>Add 2D wire centroid for a selection.</source>
+        <translation>Lägg till 2D-trådcentroid för ett urval.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Add 2D uniform density wire centroid marker and values for a selection of entities.</source>
+        <translation>Lägg till 2D-markörer och värden för centroiden för tråd med enhetlig densitet för ett urval av enheter.</translation>
     </message>
 </context>
 <context>
@@ -7498,7 +8123,7 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>Dölja alla lager</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+50"/>
         <source>Thawing all layers</source>
         <translation>Tina alla lager</translation>
     </message>
@@ -10569,12 +11194,12 @@ som visas i sökresultaten:</translation>
 <context>
     <name>Round</name>
     <message>
-        <location filename="../scripts/Modify/Round/Round.js" line="+58"/>
+        <location filename="../scripts/Modify/Round/Round.js" line="+60"/>
         <source>The two entities cannot be rounded.</source>
         <translation>De två enheterna kan inte avrundas.</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+48"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Den första enheten kan inte beskäras.</translation>
     </message>

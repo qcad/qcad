@@ -3629,34 +3629,47 @@ již v seznamu je.</translation>
 <context>
     <name>DrawFromCSV</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+129"/>
         <source>No import file selected !</source>
-        <translation type="unfinished">Není vybrán žádný importní soubor !</translation>
+        <translation type="obsolete">Není vybrán žádný importní soubor !</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+145"/>
         <location line="+15"/>
-        <location line="+1168"/>
+        <location line="+1275"/>
         <source>Command ended.</source>
         <translation type="unfinished">Příkaz byl ukončen.</translation>
     </message>
     <message>
-        <location line="-1171"/>
         <source>No file opened!</source>
-        <translation type="unfinished">Žádný soubor nebyl otevřen!</translation>
+        <translation type="obsolete">Žádný soubor nebyl otevřen!</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="-1293"/>
+        <source>No import file selected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>No file opened.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>DrawFromCSV script (v3.03) by CVH</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>Cast CSV</source>
         <translation type="unfinished">Obsazení CSV</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+5"/>
         <source>Reading from file: %1</source>
         <translation type="unfinished">Čtení ze souboru: %1</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+46"/>
         <source>Switched to comma/dot CSV style.</source>
         <translation type="unfinished">Přepnuto na styl CSV s čárkou/tečkou.</translation>
     </message>
@@ -3672,379 +3685,748 @@ již v seznamu je.</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>Unsupported or invalid CSV style, ignored ! Text line %1</source>
-        <translation type="unfinished">Nepodporovaný nebo neplatný styl CSV, ignorováno ! Textový řádek %1</translation>
+        <source>Unsupported or invalid CSV style, ignored. Text line: %1</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+82"/>
-        <source>Setting new relative origin failed, ignored ! Text line %1</source>
-        <translation type="unfinished">Nastavení nového relativního původu se nezdařilo, ignorováno ! Textový řádek %1</translation>
+        <source>Setting new relative origin failed, ignored. Text line: %1</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+15"/>
-        <source>Can not switch to layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="unfinished">Nelze přepnout na vrstvu, ignorováno ! Textový řádek %1 vrstva: %2</translation>
+        <source>Setting new rounding radius failed, ignored. Text line: %1</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>Not a correct  layer switch, ignored ! Text line %1</source>
-        <translation type="unfinished">Není to správný přepínač vrstev, ignoruje se ! Textový řádek %1</translation>
+        <location line="+6"/>
+        <source>Rounding polylines requires QCAD Professional, ignored. Text line: %1</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+14"/>
-        <source>Not a correct  new layer switch, ignored ! Text line %1</source>
-        <translation type="unfinished">Není to správný přepínač nové vrstvy, ignorováno ! Textový řádek %1</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Can not hide layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="unfinished">Nelze skrýt vrstvu, ignorováno ! Textový řádek %1 vrstva: %2</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Not a correct  hide layer switch, ignored ! Text line %1</source>
-        <translation type="unfinished">Není správný přepínač skrývací vrstvy, ignorován ! Textový řádek %1</translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <source>Can not freeze layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="unfinished">Nelze zmrazit vrstvu, ignorováno ! Textový řádek %1 vrstva: %2</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Not a correct  freeze layer switch, ignored ! Text line %1</source>
-        <translation type="unfinished">Není to správný přepínač vrstvy zmrazení, ignoruje se ! Textový řádek %1</translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <source>Can not lock layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="unfinished">Nelze uzamknout vrstvu, ignorováno ! Textový řádek %1 vrstva: %2</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Not a correct  lock layer switch, ignored ! Text line %1</source>
-        <translation type="unfinished">Není to správný přepínač vrstvy zámku, ignoruje se ! Textový řádek %1</translation>
-    </message>
-    <message>
-        <location line="+28"/>
-        <source>Can not allow layer, ignored ! Text line %1 layer: %2</source>
-        <translation type="unfinished">Nelze povolit vrstvu, ignorováno ! Textový řádek %1 vrstva: %2</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Not a correct  allow layer switch, ignored ! Text line %1</source>
-        <translation type="unfinished">Není správný přepínač přípustné vrstvy, ignorováno ! Textový řádek %1</translation>
-    </message>
-    <message>
-        <location line="+19"/>
-        <location line="+17"/>
-        <location line="+19"/>
-        <location line="+18"/>
-        <location line="+25"/>
-        <location line="+24"/>
-        <location line="+19"/>
-        <location line="+19"/>
-        <location line="+25"/>
-        <location line="+22"/>
-        <location line="+48"/>
-        <location line="+46"/>
-        <location line="+19"/>
-        <location line="+21"/>
-        <location line="+22"/>
-        <location line="+24"/>
-        <location line="+21"/>
-        <location line="+26"/>
-        <location line="+23"/>
-        <location line="+32"/>
-        <source>Low field count !</source>
-        <translation type="unfinished">Nízký počet polí !</translation>
-    </message>
-    <message>
-        <location line="-469"/>
-        <location line="+17"/>
-        <location line="+19"/>
-        <location line="+18"/>
-        <location line="+25"/>
-        <location line="+24"/>
-        <location line="+19"/>
-        <location line="+19"/>
-        <location line="+25"/>
-        <location line="+22"/>
-        <location line="+48"/>
-        <location line="+46"/>
-        <location line="+19"/>
-        <location line="+21"/>
-        <location line="+22"/>
-        <location line="+24"/>
-        <location line="+21"/>
-        <location line="+26"/>
-        <location line="+23"/>
-        <location line="+32"/>
-        <location line="+34"/>
-        <location line="+23"/>
-        <location line="+29"/>
-        <location line="+25"/>
-        <source>Odd field count !</source>
-        <translation type="unfinished">Lichý počet polí !</translation>
-    </message>
-    <message>
-        <location line="-579"/>
-        <location line="+37"/>
-        <location line="+104"/>
-        <location line="+48"/>
-        <location line="+48"/>
-        <location line="+45"/>
-        <location line="+156"/>
-        <location line="+166"/>
-        <source>Rv Invalid !</source>
-        <translation type="unfinished">Rv Neplatné !</translation>
-    </message>
-    <message>
-        <location line="-587"/>
-        <location line="+37"/>
-        <location line="+49"/>
-        <location line="+19"/>
-        <location line="+44"/>
-        <location line="+135"/>
-        <location line="+21"/>
-        <location line="+22"/>
-        <location line="+24"/>
-        <location line="+21"/>
-        <location line="+26"/>
-        <location line="+55"/>
-        <source>Rv1 Invalid !</source>
-        <translation type="unfinished">Rv1 Neplatné !</translation>
-    </message>
-    <message>
-        <location line="-451"/>
-        <location line="+43"/>
-        <location line="+24"/>
-        <location line="+19"/>
-        <location line="+19"/>
-        <location line="+44"/>
-        <location line="+135"/>
-        <location line="+21"/>
-        <location line="+22"/>
-        <location line="+24"/>
-        <location line="+21"/>
-        <location line="+26"/>
-        <location line="+27"/>
-        <location line="+34"/>
-        <source>Rv2 Invalid !</source>
-        <translation type="unfinished">Rv2 Neplatné !</translation>
-    </message>
-    <message>
-        <location line="-422"/>
-        <location line="+24"/>
-        <location line="+63"/>
-        <location line="+52"/>
-        <location line="+44"/>
-        <location line="+45"/>
-        <location line="+21"/>
-        <source>Radius Invalid !</source>
-        <translation type="unfinished">Neplatný poloměr !</translation>
-    </message>
-    <message>
-        <location line="-247"/>
-        <location line="+24"/>
-        <location line="+109"/>
-        <location line="+251"/>
-        <location line="+34"/>
-        <location line="+149"/>
-        <source>Angle Invalid !</source>
-        <translation type="unfinished">Úhel neplatný !</translation>
-    </message>
-    <message>
-        <location line="-480"/>
-        <source>Angle1 Invalid !</source>
-        <translation type="unfinished">Angle1 Neplatný !</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Angle2 Invalid !</source>
-        <translation type="unfinished">Úhel2 Neplatný !</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Equal angles !</source>
-        <translation type="unfinished">Stejné úhly !</translation>
-    </message>
-    <message>
-        <location line="+22"/>
-        <location line="+156"/>
-        <location line="+22"/>
-        <location line="+24"/>
-        <location line="+21"/>
-        <location line="+26"/>
-        <location line="+27"/>
-        <location line="+34"/>
-        <source>Rv3 Invalid !</source>
-        <translation type="unfinished">Rv3 Neplatné !</translation>
-    </message>
-    <message>
-        <location line="-308"/>
-        <source>Arc Invalid !</source>
-        <translation type="unfinished">Oblouk neplatný !</translation>
-    </message>
-    <message>
-        <location line="+43"/>
-        <location line="+46"/>
-        <source>Center Invalid !</source>
-        <translation type="unfinished">Střed neplatný !</translation>
-    </message>
-    <message>
-        <location line="-21"/>
-        <source>Radius too small !</source>
-        <translation type="unfinished">Příliš malý poloměr !</translation>
-    </message>
-    <message>
-        <location line="+88"/>
-        <source>Circle Invalid !</source>
-        <translation type="unfinished">Kroužek neplatný !</translation>
-    </message>
-    <message>
-        <location line="+67"/>
-        <location line="+26"/>
-        <location line="+27"/>
-        <location line="+34"/>
-        <source>Rv4 Invalid !</source>
-        <translation type="unfinished">Rv4 Neplatné !</translation>
-    </message>
-    <message>
-        <location line="-42"/>
-        <source>Size Invalid !</source>
-        <translation type="unfinished">Neplatná velikost !</translation>
-    </message>
-    <message>
-        <location line="+32"/>
-        <source>Size in X Invalid !</source>
-        <translation type="unfinished">Velikost v X Neplatné !</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Size in Y Invalid !</source>
-        <translation type="unfinished">Velikost v Y Neplatné !</translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>Polygon, less than 5 references !</source>
-        <translation type="unfinished">Polygon, méně než 5 odkazů !</translation>
+        <location line="+16"/>
+        <source>Can not switch to non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
-        <location line="+25"/>
-        <location line="+27"/>
-        <location line="+28"/>
-        <source>Rv %1 Invalid !</source>
-        <translation type="unfinished">Rv %1 Neplatné !</translation>
+        <source>Not a correct set active &apos;Layer&apos; switch, ignored. Text line: %1</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-62"/>
-        <source>Polyline, less than 2 references !</source>
-        <translation type="unfinished">Polyline, méně než 2 odkazy !</translation>
+        <location line="+15"/>
+        <source>Not a correct &apos;New layer&apos; switch, ignored. Text line: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Can not hide non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Not a correct &apos;HideLayer&apos; switch, ignored. Text line: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Can not freeze non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Not a correct &apos;FreezeLayer&apos; switch, ignored. Text line: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Can not lock non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Not a correct &apos;LockLayer&apos; switch, ignored. Text line: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Can not allow non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Not a correct &apos;AllowLayer&apos; switch, ignored. Text line: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <location line="+17"/>
+        <location line="+20"/>
+        <location line="+19"/>
+        <location line="+26"/>
+        <location line="+25"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+25"/>
+        <location line="+33"/>
+        <location line="+49"/>
+        <location line="+47"/>
+        <location line="+19"/>
+        <location line="+22"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <location line="+29"/>
+        <location line="+33"/>
+        <location line="+135"/>
+        <source>Low field count.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-656"/>
+        <location line="+17"/>
+        <location line="+20"/>
+        <location line="+19"/>
+        <location line="+26"/>
+        <location line="+25"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+25"/>
+        <location line="+33"/>
+        <location line="+49"/>
+        <location line="+47"/>
+        <location line="+19"/>
+        <location line="+22"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <location line="+29"/>
+        <location line="+33"/>
+        <location line="+35"/>
+        <location line="+24"/>
+        <location line="+28"/>
+        <location line="+25"/>
+        <location line="+23"/>
+        <source>Odd field count.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-655"/>
+        <location line="+38"/>
+        <location line="+109"/>
+        <location line="+59"/>
+        <location line="+49"/>
+        <location line="+46"/>
+        <location line="+188"/>
+        <location line="+168"/>
+        <source>Rv Invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-640"/>
+        <location line="+39"/>
+        <location line="+51"/>
+        <location line="+20"/>
+        <location line="+45"/>
+        <location line="+148"/>
+        <location line="+22"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <location line="+62"/>
+        <source>Rv1 Invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-503"/>
+        <location line="+45"/>
+        <location line="+25"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+45"/>
+        <location line="+148"/>
+        <location line="+22"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <location line="+33"/>
+        <location line="+35"/>
+        <source>Rv2 Invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-510"/>
+        <location line="+19"/>
+        <location line="+26"/>
+        <location line="+25"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+77"/>
+        <location line="+49"/>
+        <location line="+67"/>
+        <source>Equal positions.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-265"/>
+        <location line="+25"/>
+        <location line="+66"/>
+        <location line="+39"/>
+        <location line="+25"/>
+        <location line="+45"/>
+        <location line="+45"/>
+        <location line="+22"/>
+        <location line="+33"/>
+        <source>Radius Invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-298"/>
+        <location line="+25"/>
+        <location line="+124"/>
+        <location line="+284"/>
+        <location line="+35"/>
+        <location line="+150"/>
+        <source>Angle Invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-527"/>
+        <source>Angle1 Invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Angle2 Invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Equal angles.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <location line="+170"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <source>Equal positions 1-2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-286"/>
+        <location line="+170"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <location line="+32"/>
+        <location line="+35"/>
+        <source>Rv3 Invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-354"/>
+        <location line="+170"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <source>Equal positions 1-3.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-287"/>
+        <location line="+170"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <source>Equal positions 2-3.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-284"/>
+        <location line="+2"/>
+        <location line="+168"/>
+        <location line="+2"/>
+        <source>Near co-linear positions.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-168"/>
+        <source>Arc Invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <location line="+47"/>
+        <source>Center Invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-21"/>
+        <source>Radius too small.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>Circle Invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+79"/>
+        <location line="+33"/>
+        <location line="+30"/>
+        <location line="+35"/>
+        <source>Rv4 Invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-97"/>
+        <location line="+33"/>
+        <source>Equal positions 1-4.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-32"/>
+        <location line="+33"/>
+        <source>Equal positions 2-4.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-32"/>
+        <location line="+33"/>
+        <source>Equal positions 3-4.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Size Invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Size in X Invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Size in Y Invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Polygon: less than 5 references.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+26"/>
+        <location line="+26"/>
+        <location line="+28"/>
+        <source>Rv%1 Invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-61"/>
+        <source>Polyline, less than 2 references.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Bulge %1 Invalid !</source>
-        <translation type="unfinished">Bulge %1 Invalid !</translation>
+        <source>Bulge%1 Invalid.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+19"/>
-        <source>Unsupported PRO feature !</source>
-        <translation type="unfinished">Nepodporovaná funkce PRO !</translation>
+        <location line="+18"/>
+        <source>Unsupported QCAD Professional feature.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Fit point Spline, less than 3 references !</source>
-        <translation type="unfinished">Fit point Spline, méně než 3 reference !</translation>
+        <source>3th degree fit point Spline, less than 3 references.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Control point Spline, less than 4 references !</source>
-        <translation type="unfinished">Řídicí bod Spline, méně než 4 reference !</translation>
+        <source>3th degree control point Spline, less than 4 references.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+23"/>
-        <source>Text, low field count !</source>
-        <translation type="unfinished">Text, nízký počet polí !</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Text, odd field count !</source>
-        <translation type="unfinished">Text, počet lichých polí !</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Height Invalid !</source>
-        <translation type="unfinished">Neplatná výška !</translation>
+        <location line="+28"/>
+        <source>Height Invalid.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Width Invalid !</source>
-        <translation type="unfinished">Neplatná šířka !</translation>
+        <source>Width Invalid.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Vert. alignment Invalid !</source>
-        <translation type="unfinished">Vert. zarovnání Neplatné !</translation>
+        <source>Vert. alignment Invalid.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Horz. alignment Invalid !</source>
-        <translation type="unfinished">Horz. zarovnání Neplatné !</translation>
+        <source>Horz. alignment Invalid.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Drawing direction Invalid !</source>
-        <translation type="unfinished">Směr kreslení je neplatný !</translation>
+        <source>Drawing direction Invalid.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Line spacing style Invalid !</source>
-        <translation type="unfinished">Styl řádkování Neplatný !</translation>
+        <source>Line spacing style Invalid.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Line spacing Invalid !</source>
-        <translation type="unfinished">Neplatné řádkování !</translation>
+        <source>Line spacing Invalid.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+41"/>
-        <source>Unsupported entry ! Text line %1</source>
-        <translation type="unfinished">Nepodporovaná položka ! Textový řádek %1</translation>
+        <location line="+37"/>
+        <source>Unsupported method. Text line: %1</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+19"/>
-        <source>Error with first optional list !</source>
-        <translation type="unfinished">Chyba s prvním nepovinným seznamem !</translation>
+        <source>Error with first optional list.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
+        <source>Error with second optional list.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <source>Not a correct entry, ignored. Text line: %1 &gt; %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+80"/>
+        <source>Casted entries: %1 out of %2 text lines</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Nothing casted.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+227"/>
+        <source>Attributes empty. Text line: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Not a correct layer name, ignored. Text line: %1%2 Name: %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Layer doesn&apos;t exist, ignored. Text line: %1%2 Layer: %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Not a correct color, ignored. Text line: %1%2 Color: %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Unsupported attribute, ignored. Text line: %1 &gt; %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Not a correct layer name. Text line: %1%2 Name: %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Parent layer doesn&apos;t exist. Text line: %1%2 Layer: %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Not a correct color. Text line: %1%2 Color: %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Not a correct Linetype. Text line: %1%2 Type: %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Add/Update layer ignored.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Updated layer: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Added new layer: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unsupported or invalid CSV style, ignored ! Text line %1</source>
+        <translation type="obsolete">Nepodporovaný nebo neplatný styl CSV, ignorováno ! Textový řádek %1</translation>
+    </message>
+    <message>
+        <source>Setting new relative origin failed, ignored ! Text line %1</source>
+        <translation type="obsolete">Nastavení nového relativního původu se nezdařilo, ignorováno ! Textový řádek %1</translation>
+    </message>
+    <message>
+        <source>Can not switch to layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="obsolete">Nelze přepnout na vrstvu, ignorováno ! Textový řádek %1 vrstva: %2</translation>
+    </message>
+    <message>
+        <source>Not a correct  layer switch, ignored ! Text line %1</source>
+        <translation type="obsolete">Není to správný přepínač vrstev, ignoruje se ! Textový řádek %1</translation>
+    </message>
+    <message>
+        <source>Not a correct  new layer switch, ignored ! Text line %1</source>
+        <translation type="obsolete">Není to správný přepínač nové vrstvy, ignorováno ! Textový řádek %1</translation>
+    </message>
+    <message>
+        <source>Can not hide layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="obsolete">Nelze skrýt vrstvu, ignorováno ! Textový řádek %1 vrstva: %2</translation>
+    </message>
+    <message>
+        <source>Not a correct  hide layer switch, ignored ! Text line %1</source>
+        <translation type="obsolete">Není správný přepínač skrývací vrstvy, ignorován ! Textový řádek %1</translation>
+    </message>
+    <message>
+        <source>Can not freeze layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="obsolete">Nelze zmrazit vrstvu, ignorováno ! Textový řádek %1 vrstva: %2</translation>
+    </message>
+    <message>
+        <source>Not a correct  freeze layer switch, ignored ! Text line %1</source>
+        <translation type="obsolete">Není to správný přepínač vrstvy zmrazení, ignoruje se ! Textový řádek %1</translation>
+    </message>
+    <message>
+        <source>Can not lock layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="obsolete">Nelze uzamknout vrstvu, ignorováno ! Textový řádek %1 vrstva: %2</translation>
+    </message>
+    <message>
+        <source>Not a correct  lock layer switch, ignored ! Text line %1</source>
+        <translation type="obsolete">Není to správný přepínač vrstvy zámku, ignoruje se ! Textový řádek %1</translation>
+    </message>
+    <message>
+        <source>Can not allow layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="obsolete">Nelze povolit vrstvu, ignorováno ! Textový řádek %1 vrstva: %2</translation>
+    </message>
+    <message>
+        <source>Not a correct  allow layer switch, ignored ! Text line %1</source>
+        <translation type="obsolete">Není správný přepínač přípustné vrstvy, ignorováno ! Textový řádek %1</translation>
+    </message>
+    <message>
+        <source>Low field count !</source>
+        <translation type="obsolete">Nízký počet polí !</translation>
+    </message>
+    <message>
+        <source>Odd field count !</source>
+        <translation type="obsolete">Lichý počet polí !</translation>
+    </message>
+    <message>
+        <source>Rv Invalid !</source>
+        <translation type="obsolete">Rv Neplatné !</translation>
+    </message>
+    <message>
+        <source>Rv1 Invalid !</source>
+        <translation type="obsolete">Rv1 Neplatné !</translation>
+    </message>
+    <message>
+        <source>Rv2 Invalid !</source>
+        <translation type="obsolete">Rv2 Neplatné !</translation>
+    </message>
+    <message>
+        <source>Radius Invalid !</source>
+        <translation type="obsolete">Neplatný poloměr !</translation>
+    </message>
+    <message>
+        <source>Angle Invalid !</source>
+        <translation type="obsolete">Úhel neplatný !</translation>
+    </message>
+    <message>
+        <source>Angle1 Invalid !</source>
+        <translation type="obsolete">Angle1 Neplatný !</translation>
+    </message>
+    <message>
+        <source>Angle2 Invalid !</source>
+        <translation type="obsolete">Úhel2 Neplatný !</translation>
+    </message>
+    <message>
+        <source>Equal angles !</source>
+        <translation type="obsolete">Stejné úhly !</translation>
+    </message>
+    <message>
+        <source>Rv3 Invalid !</source>
+        <translation type="obsolete">Rv3 Neplatné !</translation>
+    </message>
+    <message>
+        <source>Arc Invalid !</source>
+        <translation type="obsolete">Oblouk neplatný !</translation>
+    </message>
+    <message>
+        <source>Center Invalid !</source>
+        <translation type="obsolete">Střed neplatný !</translation>
+    </message>
+    <message>
+        <source>Radius too small !</source>
+        <translation type="obsolete">Příliš malý poloměr !</translation>
+    </message>
+    <message>
+        <source>Circle Invalid !</source>
+        <translation type="obsolete">Kroužek neplatný !</translation>
+    </message>
+    <message>
+        <source>Rv4 Invalid !</source>
+        <translation type="obsolete">Rv4 Neplatné !</translation>
+    </message>
+    <message>
+        <source>Size Invalid !</source>
+        <translation type="obsolete">Neplatná velikost !</translation>
+    </message>
+    <message>
+        <source>Size in X Invalid !</source>
+        <translation type="obsolete">Velikost v X Neplatné !</translation>
+    </message>
+    <message>
+        <source>Size in Y Invalid !</source>
+        <translation type="obsolete">Velikost v Y Neplatné !</translation>
+    </message>
+    <message>
+        <source>Polygon, less than 5 references !</source>
+        <translation type="obsolete">Polygon, méně než 5 odkazů !</translation>
+    </message>
+    <message>
+        <source>Rv %1 Invalid !</source>
+        <translation type="obsolete">Rv %1 Neplatné !</translation>
+    </message>
+    <message>
+        <source>Polyline, less than 2 references !</source>
+        <translation type="obsolete">Polyline, méně než 2 odkazy !</translation>
+    </message>
+    <message>
+        <source>Bulge %1 Invalid !</source>
+        <translation type="obsolete">Bulge %1 Invalid !</translation>
+    </message>
+    <message>
+        <source>Unsupported PRO feature !</source>
+        <translation type="obsolete">Nepodporovaná funkce PRO !</translation>
+    </message>
+    <message>
+        <source>Fit point Spline, less than 3 references !</source>
+        <translation type="obsolete">Fit point Spline, méně než 3 reference !</translation>
+    </message>
+    <message>
+        <source>Control point Spline, less than 4 references !</source>
+        <translation type="obsolete">Řídicí bod Spline, méně než 4 reference !</translation>
+    </message>
+    <message>
+        <source>Text, low field count !</source>
+        <translation type="obsolete">Text, nízký počet polí !</translation>
+    </message>
+    <message>
+        <source>Text, odd field count !</source>
+        <translation type="obsolete">Text, počet lichých polí !</translation>
+    </message>
+    <message>
+        <source>Height Invalid !</source>
+        <translation type="obsolete">Neplatná výška !</translation>
+    </message>
+    <message>
+        <source>Width Invalid !</source>
+        <translation type="obsolete">Neplatná šířka !</translation>
+    </message>
+    <message>
+        <source>Vert. alignment Invalid !</source>
+        <translation type="obsolete">Vert. zarovnání Neplatné !</translation>
+    </message>
+    <message>
+        <source>Horz. alignment Invalid !</source>
+        <translation type="obsolete">Horz. zarovnání Neplatné !</translation>
+    </message>
+    <message>
+        <source>Drawing direction Invalid !</source>
+        <translation type="obsolete">Směr kreslení je neplatný !</translation>
+    </message>
+    <message>
+        <source>Line spacing style Invalid !</source>
+        <translation type="obsolete">Styl řádkování Neplatný !</translation>
+    </message>
+    <message>
+        <source>Line spacing Invalid !</source>
+        <translation type="obsolete">Neplatné řádkování !</translation>
+    </message>
+    <message>
+        <source>Unsupported entry ! Text line %1</source>
+        <translation type="obsolete">Nepodporovaná položka ! Textový řádek %1</translation>
+    </message>
+    <message>
+        <source>Error with first optional list !</source>
+        <translation type="obsolete">Chyba s prvním nepovinným seznamem !</translation>
+    </message>
+    <message>
         <source>Error with second optional list !</source>
-        <translation type="unfinished">Chyba s druhým nepovinným seznamem !</translation>
+        <translation type="obsolete">Chyba s druhým nepovinným seznamem !</translation>
     </message>
     <message>
-        <location line="+47"/>
         <source>Not a correct entry ! Text line %1 : %2</source>
-        <translation type="unfinished">Není to správný údaj ! Řádek textu %1 : %2</translation>
+        <translation type="obsolete">Není to správný údaj ! Řádek textu %1 : %2</translation>
     </message>
     <message>
-        <location line="+77"/>
         <source>Casted entries : %1 with %2 text lines</source>
-        <translation type="unfinished">Obsazené položky : %1 s %2 textovými řádky</translation>
+        <translation type="obsolete">Obsazené položky : %1 s %2 textovými řádky</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="-447"/>
         <source>Importing CSV complete. Command ended.</source>
         <translation type="unfinished">Import CSV dokončen. Příkaz ukončen.</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Nothing casted !</source>
-        <translation type="unfinished">Nic není odlito!</translation>
+        <translation type="obsolete">Nic není odlito!</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+46"/>
         <source>Draw from CSV</source>
         <translation type="unfinished">Čerpání z CSV</translation>
     </message>
@@ -4059,80 +4441,64 @@ již v seznamu je.</translation>
         <translation type="unfinished">Všechny soubory</translation>
     </message>
     <message>
-        <location line="+165"/>
         <source>Attributes empty ! Text line %1</source>
-        <translation type="unfinished">Atributy prázdné ! Textový řádek %1</translation>
+        <translation type="obsolete">Atributy prázdné ! Textový řádek %1</translation>
     </message>
     <message>
-        <location line="+24"/>
-        <location line="+97"/>
         <source>Not a correct layer name ! Text line %1 name: %2</source>
-        <translation type="unfinished">Není to správný název vrstvy ! Název textového řádku %1: %2</translation>
+        <translation type="obsolete">Není to správný název vrstvy ! Název textového řádku %1: %2</translation>
     </message>
     <message>
-        <location line="-90"/>
         <source>Layer doesn&apos;t exist, ignored ! Text line %1 layer: %2</source>
-        <translation type="unfinished">Vrstva neexistuje, ignorováno ! Textový řádek %1 vrstva: %2</translation>
+        <translation type="obsolete">Vrstva neexistuje, ignorováno ! Textový řádek %1 vrstva: %2</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Not a correct color, ignored ! Text line %1 color: %2</source>
-        <translation type="unfinished">Není správná barva, ignorováno ! Barva textového řádku %1: %2</translation>
+        <translation type="obsolete">Není správná barva, ignorováno ! Barva textového řádku %1: %2</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Not a correct Lineweight, ignored ! Text line %1 weight: %2</source>
-        <translation type="unfinished">Není správná lineární váha, ignorováno ! Váha řádku textu %1: %2</translation>
+        <translation type="obsolete">Není správná lineární váha, ignorováno ! Váha řádku textu %1: %2</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Not a correct Linetype, ignored ! Text line %1 type: %2</source>
-        <translation type="unfinished">Není správný typ linky, ignorováno ! Typ textového řádku %1: %2</translation>
+        <translation type="obsolete">Není správný typ linky, ignorováno ! Typ textového řádku %1: %2</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Not a correct Linetype scale, ignored ! Text line %1 scale: %2</source>
-        <translation type="unfinished">Není správná stupnice Linetype, ignorováno ! Měřítko textového řádku %1: %2</translation>
+        <translation type="obsolete">Není správná stupnice Linetype, ignorováno ! Měřítko textového řádku %1: %2</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>Not a correct attribute, ignored ! Text line %1 &gt; %2</source>
-        <translation type="unfinished">Není správný atribut, ignoruje se ! Řádek textu %1 &gt; %2</translation>
+        <translation type="obsolete">Není správný atribut, ignoruje se ! Řádek textu %1 &gt; %2</translation>
     </message>
     <message>
-        <location line="+52"/>
         <source>Parent layer doesn&apos;t exist ! Text line %1 layer: %2</source>
-        <translation type="unfinished">Nadřazená vrstva neexistuje ! Textový řádek %1 vrstva: %2</translation>
+        <translation type="obsolete">Nadřazená vrstva neexistuje ! Textový řádek %1 vrstva: %2</translation>
     </message>
     <message>
-        <location line="+30"/>
         <source>Not a correct color ! Text line %1 color: %2</source>
-        <translation type="unfinished">Není to správná barva ! Barva textového řádku %1: %2</translation>
+        <translation type="obsolete">Není to správná barva ! Barva textového řádku %1: %2</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Not a correct Lineweight ! Text line %1 weight: %2</source>
-        <translation type="unfinished">Není to správná lineární váha! Hmotnost řádku textu %1: %2</translation>
+        <translation type="obsolete">Není to správná lineární váha! Hmotnost řádku textu %1: %2</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Not a correct Linetype ! Text line %1 type: %2</source>
-        <translation type="unfinished">Není to správný typ linky ! Typ textového řádku %1: %2</translation>
+        <translation type="obsolete">Není to správný typ linky ! Typ textového řádku %1: %2</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Add/Update layer ignored !</source>
-        <translation type="unfinished">Přidat/aktualizovat vrstvu ignorováno !</translation>
+        <translation type="obsolete">Přidat/aktualizovat vrstvu ignorováno !</translation>
     </message>
     <message>
-        <location line="+11"/>
         <source>Updated layer : %1</source>
-        <translation type="unfinished">Aktualizovaná vrstva : %1</translation>
+        <translation type="obsolete">Aktualizovaná vrstva : %1</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Added new layer : %1</source>
-        <translation type="unfinished">Přidána nová vrstva : %1</translation>
+        <translation type="obsolete">Přidána nová vrstva : %1</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
@@ -6969,7 +7335,7 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>InfoAreaCentroid</name>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroid.js" line="+102"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroid.js" line="+118"/>
         <source>No selection.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6979,43 +7345,22 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Multiple selection.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+8"/>
         <source>Not implemented. Command terminated.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>Centroid &amp; area script by CVH</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Enclosed area:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+21"/>
-        <location line="+19"/>
+        <location line="+46"/>
         <source>Approximated enclosed area:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-13"/>
-        <source>Ellipse arc sector area (closed format): %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Ellipse arc segment area (closed format): %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+4"/>
         <source>Hatched area:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7030,44 +7375,116 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Unsupported entity type.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>No results.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Centroid point</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+25"/>
-        <source>(Incl. approximations)</source>
+        <location line="-67"/>
+        <source>Multiple entities in selection.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
+        <source>Area centroid script (v0.31) by CVH</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>2D Centroid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Centroid markers circle in selection. No results.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Unsupported entity type. No results.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>No results.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Centroid point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>(Incl. approximations)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <location line="+19"/>
         <source>Approximated centroid:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-19"/>
+        <location line="+19"/>
         <source>Centroid:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+1761"/>
+        <location line="+193"/>
+        <location line="+563"/>
+        <source>Encountered an unsupported polyline with custom widths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-478"/>
+        <location line="+581"/>
+        <source>Encountered an unsupported polygon with custom widths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+16"/>
+        <location line="+80"/>
+        <source>Self-intersecting shape near (%1). No Results.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+18"/>
+        <source>Add 2D area centroid for a selected entity.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+1"/>
-        <source>Add centroid for a selected entity.</source>
+        <source>Add 2D uniform density area centroid marker and values for a selected entity.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>InfoCentroids</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js" line="+232"/>
+        <location line="+1"/>
+        <source>2D Centroid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>X position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Y position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Weighted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Density</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7239,6 +7656,190 @@ BUG: Interferes with group castings.</source>
         <location filename="../scripts/Information/InfoPositionRel/InfoPositionRelInit.js" line="+2"/>
         <source>&amp;Relative Position</source>
         <translation>&amp;Relativní pozice</translation>
+    </message>
+</context>
+<context>
+    <name>InfoSumCentroidsWeighted</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeighted.js" line="+94"/>
+        <source>No selection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Please, make a selection first. Command terminated.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Centroids weighted sum script (v0.10b) by CVH</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>2D Centroid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Density</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>X position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Y position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Weighted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>No centroid markers in selection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>One marker selected, nothing to sum. Please verify selection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Results in Zero.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Total sum(%1):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Weighted sum(%1):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Summed centroid position:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+18"/>
+        <source>Sum selected 2D centroid markers weighted.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sum selected 2D centroid markers weighted by their individual custom density.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>InfoWireCentroid</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroid.js" line="+117"/>
+        <source>No selection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Please, make a selection first. Command terminated.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Wire centroid script (v0.31) by CVH</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Length:</source>
+        <translation type="unfinished">Délka:</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>2D Centroid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Centroid markers circle in selection. No results.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+7"/>
+        <source>Approximated length:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Unsupported entity type. No results.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>No results.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Results in Zero.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Centroid point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Total length:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>(Incl. approximations)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <location line="+19"/>
+        <source>Approximated centroid:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-19"/>
+        <location line="+19"/>
+        <source>Centroid:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+116"/>
+        <source>Encountered an unsupported polyline with custom widths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+101"/>
+        <source>Encountered an unsupported polygon with custom widths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+18"/>
+        <source>Add 2D wire centroid for a selection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Add 2D uniform density wire centroid marker and values for a selection of entities.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7826,7 +8427,7 @@ BUG: Interferes with group castings.</source>
         <translation>Skrýt všechny vrstvy</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+50"/>
         <source>Thawing all layers</source>
         <translation>Rozmrazit všechny vrstvy</translation>
     </message>
@@ -10957,12 +11558,12 @@ ve výsledcích vyhledávání:</translation>
 <context>
     <name>Round</name>
     <message>
-        <location filename="../scripts/Modify/Round/Round.js" line="+58"/>
+        <location filename="../scripts/Modify/Round/Round.js" line="+60"/>
         <source>The two entities cannot be rounded.</source>
         <translation>Tyto dva prvky nelze zaoblit.</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+48"/>
         <source>First entity cannot be trimmed.</source>
         <translation>První prvek nelze oříznout.</translation>
     </message>
