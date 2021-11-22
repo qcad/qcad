@@ -2,4 +2,4 @@ TEMPLATE = subdirs
 
 SUBDIRS = \
     dir \
-    InfoAreaCentroid
+    InfoCentroids
