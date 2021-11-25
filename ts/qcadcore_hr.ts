@@ -719,9 +719,13 @@
         <translation>Stil</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Overall dimension scale</source>
-        <translation>Sveobuhvatno mjerilo kotiranja</translation>
+        <translation type="vanished">Sveobuhvatno mjerilo kotiranja</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Overall scale</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>

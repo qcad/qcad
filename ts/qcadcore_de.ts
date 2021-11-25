@@ -754,12 +754,11 @@
         <translation>Stil</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Overall dimension scale</source>
-        <translation>Globale Skalierung der Bemassung</translation>
+        <translation type="vanished">Globale Skalierung der Bemassung</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Linear measurement factor</source>
         <translation>Linearfaktor</translation>
     </message>
@@ -807,7 +806,12 @@
         <translation type="vanished">Text innen horizontal</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-8"/>
+        <source>Overall scale</source>
+        <translation>Globale Skalierung</translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Text horizontal</source>
         <translation>Text horizontal</translation>
     </message>
