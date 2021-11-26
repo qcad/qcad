@@ -958,6 +958,9 @@ void RSpline::appendToExploded(const RLine& line) const {
         return;
     }
 
+    static QMutex m;
+    QMutexLocker ml(&m);
+
     if (!exploded.isEmpty()) {
         // compare angle of this sement with last segment and
         // modify last segment if angle is the same (straight line):
