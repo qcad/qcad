@@ -1,0 +1,12 @@
+function init(basePath) {
+    var action = new RGuiAction(qsTranslate("LeaderFromText", "&Leader from Selected Text"), RMainWindowQt.getMainWindow());
+    action.setRequiresDocument(true);
+    action.setScriptFile(basePath + "/LeaderFromText.js");
+    action.setIcon(basePath + "/LeaderFromText.svg");
+    action.setStatusTip(qsTranslate("LeaderFromText", "&LeaderFromText visible layout blocks"));
+    action.setDefaultShortcut(new QKeySequence("T,2,L"));
+    action.setDefaultCommands(["leaderfromtext", "lftxt"]);
+    action.setGroupSortOrder(54100);
+    action.setSortOrder(400);
+    action.setWidgetNames(["MiscDrawMenu"]);
+}
