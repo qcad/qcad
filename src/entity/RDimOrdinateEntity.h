@@ -63,11 +63,12 @@ public:
     static RPropertyTypeId PropertyLowerTolerance;
     static RPropertyTypeId PropertyMeasuredValue;
     static RPropertyTypeId PropertyFontName;
-    static RPropertyTypeId PropertyArrow1Flipped;
-    static RPropertyTypeId PropertyArrow2Flipped;
 
-    static RPropertyTypeId PropertyExtLineFix;
-    static RPropertyTypeId PropertyExtLineFixLength;
+    //static RPropertyTypeId PropertyArrow1Flipped;
+    //static RPropertyTypeId PropertyArrow2Flipped;
+
+    //static RPropertyTypeId PropertyExtLineFix;
+    //static RPropertyTypeId PropertyExtLineFixLength;
 
     static RPropertyTypeId PropertyDimscale;
     static RPropertyTypeId PropertyDimlfac;

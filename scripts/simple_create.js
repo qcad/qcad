@@ -192,6 +192,12 @@ function addArc(center, radius, startAngle, endAngle, reversed) {
     if (isArray(center)) {
         center = new RVector(center);
     }
+
+    if (!isVector(center)) {
+        qWarning("invalid center");
+        throw("invalid center");
+    }
+
     return addShape(new RArc(center, radius, deg2rad(startAngle), deg2rad(endAngle), reversed));
 }
 

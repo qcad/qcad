@@ -338,7 +338,7 @@
         <translation>Layout</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+836"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+858"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Circular (recursive) block referencing detected:</translation>
     </message>
@@ -742,12 +742,11 @@
         <translation>Style</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Overall dimension scale</source>
-        <translation>Overall dimension scale</translation>
+        <translation type="vanished">Overall dimension scale</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Linear measurement factor</source>
         <translation>Linear measurement factor</translation>
     </message>
@@ -795,7 +794,12 @@
         <translation type="vanished">Text inside horizontal</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-8"/>
+        <source>Overall scale</source>
+        <translation>Overall scale</translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Text horizontal</source>
         <translation>Text horizontal</translation>
     </message>

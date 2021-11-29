@@ -2133,7 +2133,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < RBox >
                     a0;
                     REcmaHelper::fromScriptValue(

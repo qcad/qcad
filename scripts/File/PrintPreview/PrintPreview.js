@@ -181,7 +181,9 @@ PrintPreviewImpl.prototype.beginEvent = function() {
     var mdiChild = EAction.getMdiChild();
     this.view = mdiChild.getLastKnownViewWithFocus();
 
+    di.disableUpdates();
     this.parentClass.prototype.beginEvent.call(this);
+    di.enableUpdates();
 
     if (!isNull(this.view)) {
         var document = this.getDocument();
@@ -198,7 +200,7 @@ PrintPreviewImpl.prototype.beginEvent = function() {
             }
         }
 
-        // needed to update pattern scaling according to drawing scale:
+        // needed to update linetype pattern scaling according to drawing scale:
         di.regenerateScenes();
     }
 
@@ -400,6 +402,7 @@ PrintPreviewImpl.prototype.showUiOptions = function(resume) {
     var widgets = getWidgets(optionsToolBar);
 
     var document = this.getDocument();
+    var di = this.getDocumentInterface();
     var scaleString = Print.getScaleString(document);
 
     this.initScaleCombo();
@@ -416,7 +419,9 @@ PrintPreviewImpl.prototype.showUiOptions = function(resume) {
     var scaleCombo = widgets["Scale"];
     scaleCombo.blockSignals(true);
     scaleCombo.setEditText(scaleString);
+    di.disableUpdates();
     this.slotScaleChanged(scaleString);
+    di.enableUpdates();
     scaleCombo.blockSignals(false);
 
     var action = RGuiAction.getByScriptFile("scripts/Edit/DrawingPreferences/DrawingPreferences.js");

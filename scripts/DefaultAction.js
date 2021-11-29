@@ -173,13 +173,18 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
         if (referencePoint.isValid()) {
             this.highlightReferencePoint(referencePoint);
         } else {
-            range = view.mapDistanceFromView(this.pickRangePixels);
-            var strictRange = view.mapDistanceFromView(10);
-            RMouseEvent.setOriginalMousePos(event.globalPos());
-            entityId = this.di.getClosestEntity(event.getModelPosition(), range, strictRange, false);
-            RMouseEvent.resetOriginalMousePos();
-            if (entityId !== RObject.INVALID_ID && this.document.isEntityEditable(entityId)) {
-                this.highlightEntity(entityId);
+            if (RSettings.getBoolValue("GraphicsView/HighlightEntity", true)===true) {
+
+                entityId = EAction.getEntityIdUnderCursor(this.getDocumentInterface(), event, undefined, true);
+
+//                range = view.mapDistanceFromView(this.pickRangePixels);
+//                var strictRange = view.mapDistanceFromView(10);
+//                RMouseEvent.setOriginalMousePos(event.globalPos());
+//                entityId = this.di.getClosestEntity(event.getModelPosition(), range, strictRange, false);
+//                RMouseEvent.resetOriginalMousePos();
+                if (entityId !== RObject.INVALID_ID && this.document.isEntityEditable(entityId)) {
+                    this.highlightEntity(entityId);
+                }
             }
         }
         break;

@@ -18,6 +18,8 @@
  */
 #include <cmath>
 
+#include <QMutex>
+
 #include "RArc.h"
 #include "RDebug.h"
 #include "RLine.h"
@@ -957,6 +959,9 @@ void RSpline::appendToExploded(const RLine& line) const {
     if (line.getLength()<1.0e-6) {
         return;
     }
+
+    static QMutex m;
+    QMutexLocker ml(&m);
 
     if (!exploded.isEmpty()) {
         // compare angle of this sement with last segment and
@@ -1910,8 +1915,14 @@ QList<QSharedPointer<RShape> > RSpline::splitAt(const QList<RVector>& points) co
     return ret;
 }
 
-QList<RVector> RSpline::getSelfIntersectionPoints() const {
-    return getIntersectionPointsSS(*this, *this, true, true);
+/**
+ * Finds _some_ self intersection points of splines. Used for snapping to those intersections.
+ * Note that this does not find all intersections and might also return non-intersections.
+ * Most notably, self-intersections of bezier segments are not detected.
+ * This is not suitable to reliably detect the existence of self intersections.
+ */
+QList<RVector> RSpline::getSelfIntersectionPoints(double tolerance) const {
+    return getIntersectionPointsSS(*this, *this, true, true, tolerance);
 }
 
 void RSpline::print(QDebug dbg) const {

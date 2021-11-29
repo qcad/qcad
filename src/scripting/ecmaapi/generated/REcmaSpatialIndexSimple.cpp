@@ -459,7 +459,7 @@
                     context->argument( 0 ).
                     toNumber();
                 
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < RBox >
                     a1;
                     REcmaHelper::fromScriptValue(

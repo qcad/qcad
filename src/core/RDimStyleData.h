@@ -109,7 +109,6 @@ public:
             break;
 
         case RS::VarTypeBool:
-            qDebug() << "set bool:" << val.toBool();
             setBool(key, val.toBool());
             break;
 

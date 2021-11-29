@@ -31,6 +31,7 @@ function Leader(guiAction) {
     this.leaderEntity = undefined;
     this.segment = undefined;
     this.arrowBlockId = RBlock.INVALID_ID;
+    this.lastPoint = undefined;
 
     this.setUiOptions("Leader.ui");
 }
@@ -136,6 +137,7 @@ Leader.prototype.pickCoordinate = function(event, preview) {
         if (!isNull(this.leaderEntity) && this.leaderEntity.countVertices()>0) {
             var appendPoint = this.leaderEntity.getEndPoint();
             this.segment = new RLine(appendPoint, point);
+            this.lastPoint = point;
 
             // append vertex:
             if (!preview) {
@@ -177,6 +179,7 @@ Leader.prototype.getOperation = function(preview) {
         if (this.leaderEntity.countVertices()>1) {
             var entity = new RLineEntity(this.getDocument(), new RLineData(this.segment));
             entity.copyAttributesFrom(this.leaderEntity.data());
+            this.initEntity(entity, preview);
             return new RAddObjectOperation(entity, false);
         }
         else {
@@ -188,12 +191,26 @@ Leader.prototype.getOperation = function(preview) {
             var ld = this.leaderEntity.clone();
             ld.appendVertex(this.segment.getEndPoint());
             ld.setArrowHead(this.arrowHead);
-            return new RAddObjectOperation(ld, true, false);
+            this.initEntity(ld, preview);
+            return new RAddObjectOperation(ld, this.getUseCurrentAttributes(), false);
         }
     }
     else {
-        return new RAddObjectOperation(this.leaderEntity, this.getToolTitle(), true, false);
+        // add segment (not undoable as only adding the whole leader can be undone):
+        this.initEntity(this.leaderEntity, preview);
+        return new RAddObjectOperation(this.leaderEntity, this.getToolTitle(), this.getUseCurrentAttributes(), false);
     }
+};
+
+
+/**
+ * Can be overwritten to initialize the added entity.
+ */
+Leader.prototype.initEntity = function(entity, preview) {
+};
+
+Leader.prototype.getUseCurrentAttributes = function() {
+    return true;
 };
 
 /**
@@ -269,10 +286,12 @@ Leader.prototype.updateButtonStates = function() {
     }
 
     var w = objectFromPath("MainWindow::Options::Undo");
-    if (this.leaderEntity.countVertices() > 1) {
-        w.enabled = true;
-    } else {
-        w.enabled = false;
+    if (!isNull(w)) {
+        if (this.leaderEntity.countVertices() > 1) {
+            w.enabled = true;
+        } else {
+            w.enabled = false;
+        }
     }
 };
 

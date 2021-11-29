@@ -857,7 +857,7 @@
                     context->argument( 1 ).
                     toBool();
                 
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < RS::EntityType >
                     a2;
                     REcmaHelper::fromScriptValue(

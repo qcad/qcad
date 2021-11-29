@@ -1105,7 +1105,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < RLayer::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
@@ -3847,7 +3847,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QSet < REntity::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
@@ -3956,7 +3956,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QSet < REntity::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
@@ -4105,7 +4105,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QSet < REntity::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
@@ -4606,6 +4606,89 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    4 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QUrl */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(3).isObject() || 
+            context->argument(3).isNull()
+        ) /* type: QVariantMap */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QUrl*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QUrl*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RDocumentInterface: Argument 0 is not of type QUrl*.",
+                               context);                    
+                    }
+                    QUrl& a0 = *ap0;
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+                    // argument isArray or QVariantMap
+                    QVariantMap
+                    a3;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(3),
+                        a3
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RDocumentInterface::IoErrorCode'
+    RDocumentInterface::IoErrorCode cppResult =
+        
+               self->importUrl(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3);
+        // return type: RDocumentInterface::IoErrorCode
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.importUrl().",
                    context);
@@ -4761,6 +4844,79 @@
     a1
         ,
     a2);
+        // return type: RDocumentInterface::IoErrorCode
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    4 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(3).isObject() || 
+            context->argument(3).isNull()
+        ) /* type: QVariantMap */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+                    // argument isArray or QVariantMap
+                    QVariantMap
+                    a3;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(3),
+                        a3
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RDocumentInterface::IoErrorCode'
+    RDocumentInterface::IoErrorCode cppResult =
+        
+               self->importFile(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3);
         // return type: RDocumentInterface::IoErrorCode
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -6394,7 +6550,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QSet < REntity::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
@@ -6430,7 +6586,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QSet < REntity::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
@@ -6596,7 +6752,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QSet < REntity::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
@@ -7277,7 +7433,7 @@
                     context->argument( 4 ).
                     toNumber();
                 
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < qreal >
                     a5;
                     REcmaHelper::fromScriptValue(

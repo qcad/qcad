@@ -38,15 +38,26 @@ void RDebug::printBacktrace(const QString& prefix) {
     void *array[20];
     size_t size;
     char **strings;
-    size_t i;
+    int i;
 
     size = backtrace(array, 20);
     strings = backtrace_symbols(array, size);
 
     qDebug("Obtained %zd stack frames.\n", size);
 
-    for(i = 0; i < size; i++) {
-        qDebug("%s%s\n", (const char*)prefix.toUtf8(), strings[i]);
+    for(i = size-1; i>=0; i--) {
+        QString str(strings[i]);
+        str.replace("\t", "    ");
+        str = str.mid(59);
+        str = str.replace(QRegExp("_[ZNK]*[0-9]*"), "");
+        str = str.replace(QRegExp("[ERK]*[0-9]+"), "::");
+        str = str.replace(QRegExp("E[ibd]* \\+ ::$"), "");
+        str = str.replace(QRegExp("bbb \\+ ::$"), "");
+        str = str.replace(QRegExp(" \\+ ::$"), "");
+        //qDebug("%s%s\n", (const char*)prefix.toUtf8(), strings[i]);
+        QString ind = "";
+        ind = ind.leftJustified(size-i);
+        qDebug("%s%s%s\n", (const char*)prefix.toUtf8(), (const char*)ind.toUtf8(), (const char*)str.toUtf8());
     }
 
     free(strings);

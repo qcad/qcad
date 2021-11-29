@@ -2,6 +2,7 @@ macx {
     arch = $$system("uname -m")
     equals(arch, "arm64") {
         QMAKE_APPLE_DEVICE_ARCHS=arm64
+        QMAKE_LFLAGS+=-L/usr/lib -lstdc++
     }
 }
 

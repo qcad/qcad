@@ -101,11 +101,15 @@ ConvertUnit.convert = function(di, fromUnit, toUnit) {
         }
     }
     docVars.setUnit(toUnit);
-    docVars.setKnownVariable(RS.DIMSCALE, doc.getKnownVariable(RS.DIMSCALE, 1.0) * factor);
+
+    var dimStyle = doc.queryDimStyle();
+    var dimscale = dimStyle.getDouble(RS.DIMSCALE);
+    dimStyle.setDouble(RS.DIMSCALE, dimscale*factor);
 
     var op = new RAddObjectsOperation();
     op.setTransactionGroup(doc.getTransactionGroup());
     op.addObject(docVars);
+    op.addObject(dimStyle);
     di.applyOperation(op);
 
     op = new RAddObjectsOperation();
@@ -149,11 +153,11 @@ ConvertUnit.convert = function(di, fromUnit, toUnit) {
             tc.scale(factor);
             entity.setViewTarget(tc);
         } else if (isDimensionEntity(entity)) {
-            var s = entity.getDimScale(false);
+            var s = entity.getDimscale(false);
             entity.scale(factor);
             if (!RMath.fuzzyCompare(0.0, s)) {
                 // dimension has individual scale factor (property, override):
-                entity.setDimScale(s*factor);
+                entity.setDimscale(s*factor);
             }
         } else {
             entity.scale(factor);

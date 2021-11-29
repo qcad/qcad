@@ -52,6 +52,8 @@ public:
     virtual void render(const RDimStyle& dimStyle, const REntityData& entity, bool preview, bool forceSelected);
 
 protected:
+    virtual void renderPrivate(const RDimStyle& dimStyle, const REntityData& entity, bool preview, bool forceSelected);
+
     virtual void renderDimRotated();
     virtual void renderDimAligned();
     virtual void renderDimOrdinate();

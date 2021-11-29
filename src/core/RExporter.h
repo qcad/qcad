@@ -290,7 +290,7 @@ public:
     /**
      * Override to force text rendering mode.
      */
-    virtual bool isTextRenderedAsText() {
+    virtual bool isTextRenderedAsText() const {
         return RSettings::isTextRenderedAsText();
     }
 

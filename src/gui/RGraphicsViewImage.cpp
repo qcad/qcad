@@ -976,7 +976,15 @@ void RGraphicsViewImage::paintOverlay(QPainter* painter) {
 
                     if (drawable.getPixelUnit()) {
                         //text.scale(RVector(1/factor,1/factor), text.getAlignmentPoint());
-                        text.scale(RVector(1/factor,1/factor), RVector(0,0));
+
+                        if (!isPrinting() && !isPrintPreview()) {
+                            text.scale(RVector(1/factor,1/factor), RVector(0,0));
+                        }
+                        else {
+                            double f = RUnit::convert(0.22, RS::Millimeter, getDocument()->getUnit());
+                            f/=getDevicePixelRatio();
+                            text.scale(RVector(f,f), RVector(0,0));
+                        }
                     }
 
                     text.move(drawable.getOffset());
@@ -1130,6 +1138,7 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
 
         // regenerate arc, xline, block reference, etc.:
         if (regen) {
+            // TODO: only regen part of block ref / viewport that needs regeneration:
             sceneQt->exportEntity(id, true);
         }
     }

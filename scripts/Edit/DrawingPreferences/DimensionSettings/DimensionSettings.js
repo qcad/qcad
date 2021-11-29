@@ -769,13 +769,14 @@ DimensionSettings.savePreferences = function(pageWidget, calledByPrefDialog, doc
     widgets["AngularShowTrailingZeros"].setProperty("Saved", true);
     transaction.addObject(dimStyle);
 
+    dimStyle.updateDocumentVariables();
 
     // force update of bounding box of dimension entities:
-    var ids = document.queryAllEntities();
+    var ids = document.queryAllEntities(false, true);
     for (i=0; i<ids.length; i++) {
         var entityId = ids[i];
-        var entity = document.queryEntity(entityId);
-        if (!isDimensionEntity(entity)) {
+        var entity = document.queryEntityDirect(entityId);
+        if (!isDimensionEntity(entity) && !isToleranceEntity(entity) && !isLeaderEntity(entity)) {
             // ignore non dimension entities:
             continue;
         }
@@ -784,4 +785,5 @@ DimensionSettings.savePreferences = function(pageWidget, calledByPrefDialog, doc
         entity.update();
         document.addToSpatialIndex(entity);
     }
+
 };

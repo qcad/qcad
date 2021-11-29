@@ -731,7 +731,7 @@
         <translation type="vanished">Plotranden</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+836"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+858"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Circulaire (recursieve) blokverwijzingen gedetecteerd:</translation>
     </message>
@@ -746,12 +746,11 @@
         <translation>Stijl</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Overall dimension scale</source>
-        <translation>Algemene bematingsschaal</translation>
+        <translation type="vanished">Algemene bematingsschaal</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Linear measurement factor</source>
         <translation>Lineaire meetfactor</translation>
     </message>
@@ -799,7 +798,12 @@
         <translation type="vanished">Tekst binnen horizontaal</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-8"/>
+        <source>Overall scale</source>
+        <translation>Algemene schaal</translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Text horizontal</source>
         <translation>Tekst horizontaal</translation>
     </message>

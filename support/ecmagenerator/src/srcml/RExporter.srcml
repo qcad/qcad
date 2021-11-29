@@ -291,7 +291,7 @@
     <comment type="block">/**
      * Override to force text rendering mode.
      */</comment>
-    <function><type><name>virtual</name> <name>bool</name></type> <name>isTextRenderedAsText</name><parameter_list>()</parameter_list> <block>{
+    <function><type><name>virtual</name> <name>bool</name></type> <name>isTextRenderedAsText</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><call><name><name>RSettings</name>::<name>isTextRenderedAsText</name></name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 

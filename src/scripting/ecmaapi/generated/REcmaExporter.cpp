@@ -2672,7 +2672,7 @@
                     context->argument( 2 ).
                     toString();
                 
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < int64_t >
                     a3;
                     REcmaHelper::fromScriptValue(
@@ -3482,7 +3482,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QSet < REntity::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
@@ -3513,7 +3513,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QSet < REntity::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
@@ -4358,7 +4358,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < QSharedPointer < RShape > >
                     a0;
                     REcmaHelper::fromScriptValue(
@@ -5842,7 +5842,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < RPainterPath >
                     a0;
                     REcmaHelper::fromScriptValue(
@@ -5873,7 +5873,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < RPainterPath >
                     a0;
                     REcmaHelper::fromScriptValue(
@@ -5919,7 +5919,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < RPainterPath >
                     a0;
                     REcmaHelper::fromScriptValue(
@@ -6005,7 +6005,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < RPainterPath >
                     a0;
                     REcmaHelper::fromScriptValue(

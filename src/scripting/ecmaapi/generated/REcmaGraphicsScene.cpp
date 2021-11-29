@@ -489,7 +489,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QSet < REntity::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
@@ -558,7 +558,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QSet < REntity::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
@@ -667,7 +667,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QSet < RObject::Id >
                     a0;
                     REcmaHelper::fromScriptValue(
@@ -1971,7 +1971,7 @@
                     context->argument( 0 ).
                     toNumber();
                 
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < RGraphicsSceneDrawable >
                     a1;
                     REcmaHelper::fromScriptValue(

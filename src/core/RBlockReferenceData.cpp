@@ -108,6 +108,11 @@ RVector RBlockReferenceData::getVectorTo(const RVector& point, bool limited, dou
                 if (entity.isNull()) {
                     continue;
                 }
+
+                if (entity->getType()!=RS::EntityBlockRef) {
+                    entity->scaleVisualProperties(getScaleFactors().x);
+                }
+
                 if (col!=0 || row!=0) {
                     // entity might be from cache: clone:
                     entity = QSharedPointer<REntity>(entity->clone());
@@ -170,6 +175,11 @@ double RBlockReferenceData::getDistanceTo(const RVector& point,
                 if (entity.isNull()) {
                     continue;
                 }
+
+                if (entity->getType()!=RS::EntityBlockRef) {
+                    entity->scaleVisualProperties(getScaleFactors().x);
+                }
+
                 if (col!=0 || row!=0) {
                     // entity might be from cache: clone:
                     entity = QSharedPointer<REntity>(entity->clone());
@@ -335,6 +345,8 @@ RVector RBlockReferenceData::getPointOnEntity() const {
         return RVector::invalid;
     }
 
+    RVector ret = RVector::invalid;
+
     QList<REntity::Id> idsOrdered = document->getStorage().orderBackToFront(ids);
 
     QList<REntity::Id>::iterator it;
@@ -344,11 +356,16 @@ RVector RBlockReferenceData::getPointOnEntity() const {
             continue;
         }
 
-        return entity->getPointOnEntity();
+        if (entity->getType()!=RS::EntityBlockRef) {
+            entity->scaleVisualProperties(getScaleFactors().x);
+        }
+
+        ret = entity->getPointOnEntity();
+        break;
     }
 
     // no valid entity in block:
-    return RVector::invalid;
+    return ret;
 }
 
 /**
@@ -391,6 +408,7 @@ QSharedPointer<REntity> RBlockReferenceData::queryEntity(REntity::Id entityId, b
 
     // transform entity into (new type of) entity:
     if (transform) {
+        // this also scales visual properties:
         applyTransformationTo(entity);
     }
     else {
@@ -733,6 +751,10 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
                 // ignore complex entities for operations like snap (hatches, texts):
                 if (ignoreComplex && REntity::isComplex(t)) {
                     continue;
+                }
+
+                if (entity->getType()!=RS::EntityBlockRef) {
+                    entity->scaleVisualProperties(getScaleFactors().x);
                 }
 
                 if (isArray) {

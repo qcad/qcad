@@ -44,9 +44,10 @@
         <member_list>: <call><name>RFileImporter</name><argument_list>(<argument><expr><name>document</name></expr></argument>, <argument><expr><name>messageHandler</name></expr></argument>, <argument><expr><name>progressHandler</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
     <destructor><specifier>virtual</specifier> <name>~RFileImporterAdapter</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
     
-    <function><type><name>virtual</name> <name>bool</name></type> <name>importFile</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>nameFilter</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>virtual</name> <name>bool</name></type> <name>importFile</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>nameFilter</name></decl></param>, <param><decl><type><name>const</name> <name>QVariantMap</name>&amp;</type> <name>params</name> =<init> <expr><name>RDEFAULT_QVARIANTMAP</name></expr></init></decl></param>)</parameter_list> <block>{
         <macro><name>Q_UNUSED</name><argument_list>(<argument>fileName</argument>)</argument_list></macro>
         <macro><name>Q_UNUSED</name><argument_list>(<argument>nameFilter</argument>)</argument_list></macro>
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>params</argument>)</argument_list></macro>
         <return>return <expr><name>false</name></expr>;</return>
     }</block></function>
 </public>}</block>;</class>

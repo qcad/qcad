@@ -315,7 +315,7 @@
         <translation>Raspored</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+836"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+858"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Detektirana kružna (rekurzivna) referenca bloka:</translation>
     </message>
@@ -719,9 +719,13 @@
         <translation>Stil</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Overall dimension scale</source>
-        <translation>Sveobuhvatno mjerilo kotiranja</translation>
+        <translation type="vanished">Sveobuhvatno mjerilo kotiranja</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Overall scale</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>

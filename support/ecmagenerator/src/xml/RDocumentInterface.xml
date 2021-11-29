@@ -514,6 +514,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="bool" typeName="bool" name="notify"
         hasDefault="true" default="true" isConst="false" />
+        <arg type="QVariantMap &amp;" typeName="QVariantMap"
+        name="params" hasDefault="true"
+        default="RDEFAULT_QVARIANTMAP" isConst="true" />
       </variant>
     </method>
     <method name="importFile" cppName="importFile"
@@ -528,6 +531,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="bool" typeName="bool" name="notify"
         hasDefault="true" default="true" isConst="false" />
+        <arg type="QVariantMap &amp;" typeName="QVariantMap"
+        name="params" hasDefault="true"
+        default="RDEFAULT_QVARIANTMAP" isConst="true" />
       </variant>
     </method>
     <method name="getCorrectedFileName"

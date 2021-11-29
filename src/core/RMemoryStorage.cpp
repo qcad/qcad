@@ -452,6 +452,10 @@ QSet<REntity::Id> RMemoryStorage::queryInfiniteEntities() const {
             continue;
         }
 
+        if (!e->isVisible()) {
+            continue;
+        }
+
 //        if (e->getBlockId() != currentBlockId) {
 //            continue;
 //        }

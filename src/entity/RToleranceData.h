@@ -41,7 +41,6 @@ protected:
 
 public:
     RToleranceData();
-    RToleranceData(const RPolyline& polyline, bool arrowHead);
 
     virtual RS::EntityType getType() const {
         return RS::EntityTolerance;
@@ -56,6 +55,7 @@ public:
 
     void setLocation(const RVector& l) {
         location = l;
+        update();
     }
 
     RVector getDirection() const {
@@ -64,6 +64,7 @@ public:
 
     void setDirection(const RVector& d) {
         direction = d;
+        update();
     }
 
     QList<QStringList> getFields() const;
@@ -73,6 +74,7 @@ public:
     }
     void setText(const QString& t) {
         text = t;
+        update();
     }
 //    void addField(const QString& t) {
 //        text += "%%v" + t;
@@ -81,10 +83,67 @@ public:
 //        text += "^J";
 //    }
 
-    double getDimtxt() const;
+    double getDimtxt(bool scale = true) const {
+        double v = 2.5;
 
-    double getDimscale(bool fromDocument=true) const;
-    void setDimScaleOverride(double v);
+        // get value from override:
+        if (dimtxt>0.0) {
+            v = dimtxt;
+        }
+
+        else if (document!=NULL) {
+            QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+            if (!dimStyle.isNull()) {
+                // get value from dimension style:
+                v = dimStyle->getDouble(RS::DIMTXT);
+            }
+            else {
+                // TODO: get value from document (should never happen):
+                Q_ASSERT(false);
+            }
+        }
+
+        if (scale) {
+            v *= getDimscale();
+        }
+
+        return v;
+    }
+    void setDimtxt(double f) {
+        dimtxt = f;
+        update();
+    }
+
+    double getDimscale() const {
+        // get value from override:
+        if (dimscale>0.0) {
+            return dimscale;
+        }
+
+        double v = 1.0;
+        if (document!=NULL) {
+            QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+            if (!dimStyle.isNull()) {
+                // get value from dimension style:
+                v = dimStyle->getDouble(RS::DIMSCALE);
+            }
+            else {
+                // TODO: get value from document (should never happen):
+                Q_ASSERT(false);
+            }
+        }
+
+        return v;
+    }
+
+    void setDimscale(double f) {
+        dimscale = f;
+        update();
+    }
+
+    //double getDimscale(bool fromDocument=true) const;
+    //void setDimScaleOverride(double v);
+
 
     virtual void scaleVisualProperties(double scaleFactor);
 
@@ -93,6 +152,7 @@ public:
 //    }
 
     QList<RVector> getCorners() const;
+    QList<RVector> getMiddels() const;
 
     virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;
 
@@ -122,15 +182,36 @@ public:
 
     RVector getPointOnEntity() const;
 
+    void clearStyleOverrides() {
+        dimscale = -1.0;
+        dimtxt = -1.0;
+        update();
+    }
+
+//    bool hasOverrides() const {
+//        return overrides.isValid();
+//    }
+
+//    bool hasOverride(RS::KnownVariable key) const {
+//        return overrides.hasOverride(key);
+//    }
+
+//    RDimStyleData getOverrides() const {
+//        return overrides;
+//    }
+
 private:
     RVector location;
     RVector direction;
     /** Text code, e.g. {\Fgdt;b}%%v0.05%%v0.02%%vB%%v%%v */
     QString text;
     /** Dimension scale */
-    double dimScaleOverride;
+    //double dimScaleOverride;
     /** Block to use instead of arrow */
     RBlock::Id dimToleranceBlockId;
+
+    double dimscale;
+    double dimtxt;
 
     mutable QList<QList<double> > divisions;
     mutable bool joinFirstField;

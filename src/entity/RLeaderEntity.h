@@ -59,7 +59,8 @@ public:
     static RPropertyTypeId PropertyVertexNY;
     static RPropertyTypeId PropertyVertexNZ;
 
-    //static RPropertyTypeId PropertyDimScale;
+    static RPropertyTypeId PropertyDimscale;
+    static RPropertyTypeId PropertyDimasz;
 
 public:
     RLeaderEntity(RDocument* document, const RLeaderData& data);
@@ -188,8 +189,20 @@ public:
         return data.isClosed();
     }
 
-    double getDimscale(bool fromDocument=true) const {
-        return data.getDimscale(fromDocument);
+    double getDimscale() const {
+        return data.getDimscale();
+    }
+
+    void setDimscale(double v) {
+        data.setDimscale(v);
+    }
+
+    double getDimasz(bool scale=true) const {
+        return data.getDimasz(scale);
+    }
+
+    void setDimasz(double v) {
+        data.setDimasz(v);
     }
 
     QList<QSharedPointer<RShape> > getExploded() const {
@@ -201,6 +214,10 @@ public:
     }
     void setDimLeaderBlockId(REntity::Id id) {
         data.setDimLeaderBlockId(id);
+    }
+
+    void clearStyleOverrides() {
+        data.clearStyleOverrides();
     }
 
     virtual void exportEntity(RExporter& e, bool preview=false, bool forceSelected=false) const;

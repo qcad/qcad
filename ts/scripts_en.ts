@@ -220,7 +220,7 @@
         <translation>Programming</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+59"/>
         <source>Hatch Patterns</source>
         <translation>Hatch Patterns</translation>
     </message>
@@ -2363,7 +2363,7 @@ Do you wish to recover it?</translation>
         <translation type="vanished">Unit &apos;%1&apos; selected - Nothing to be done</translation>
     </message>
     <message>
-        <location line="+136"/>
+        <location line="+140"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Converted drawing from %1 to %2</translation>
     </message>
@@ -2670,7 +2670,7 @@ Do you wish to recover it?</translation>
         <translation>Move entity to desired location</translation>
     </message>
     <message>
-        <location line="+400"/>
+        <location line="+405"/>
         <source>Move Reference Point</source>
         <translation>Move Reference Point</translation>
     </message>
@@ -2922,7 +2922,7 @@ Do you wish to recover it?</translation>
         <translation>&amp;Angular</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw angular dimension</source>
         <translation>Draw angular dimension</translation>
     </message>
@@ -3639,34 +3639,47 @@ is already in the list.</translation>
 <context>
     <name>DrawFromCSV</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+129"/>
         <source>No import file selected !</source>
-        <translation>No import file selected.</translation>
+        <translation type="vanished">No import file selected.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+145"/>
         <location line="+15"/>
-        <location line="+1168"/>
+        <location line="+1275"/>
         <source>Command ended.</source>
         <translation>Command ended.</translation>
     </message>
     <message>
-        <location line="-1171"/>
         <source>No file opened!</source>
+        <translation type="vanished">No file opened.</translation>
+    </message>
+    <message>
+        <location line="-1293"/>
+        <source>No import file selected.</source>
+        <translation>No import file selected.</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>No file opened.</source>
         <translation>No file opened.</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+11"/>
+        <source>DrawFromCSV script (v3.03) by CVH</source>
+        <translation>DrawFromCSV script (v3.03) by CVH</translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>Cast CSV</source>
         <translation>Cast CSV</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+5"/>
         <source>Reading from file: %1</source>
         <translation>Reading from file: %1</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+46"/>
         <source>Switched to comma/dot CSV style.</source>
         <translation>Switched to comma/dot CSV style.</translation>
     </message>
@@ -3682,379 +3695,748 @@ is already in the list.</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>Unsupported or invalid CSV style, ignored ! Text line %1</source>
-        <translation>Unsupported or invalid CSV style, ignored. Text line %1</translation>
+        <source>Unsupported or invalid CSV style, ignored. Text line: %1</source>
+        <translation>Unsupported or invalid CSV style, ignored. Text line: %1</translation>
     </message>
     <message>
         <location line="+82"/>
-        <source>Setting new relative origin failed, ignored ! Text line %1</source>
-        <translation>Setting new relative origin failed, ignored. Text line %1</translation>
+        <source>Setting new relative origin failed, ignored. Text line: %1</source>
+        <translation>Setting new relative origin failed, ignored. Text line: %1</translation>
     </message>
     <message>
         <location line="+15"/>
-        <source>Can not switch to layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Can not switch to layer, ignored. Text line %1 layer: %2</translation>
+        <source>Setting new rounding radius failed, ignored. Text line: %1</source>
+        <translation>Setting new rounding radius failed, ignored. Text line: %1</translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>Not a correct  layer switch, ignored ! Text line %1</source>
-        <translation>Not a correct  layer switch, ignored. Text line %1</translation>
+        <location line="+6"/>
+        <source>Rounding polylines requires QCAD Professional, ignored. Text line: %1</source>
+        <translation>Rounding polylines requires QCAD Professional, ignored. Text line: %1</translation>
     </message>
     <message>
-        <location line="+14"/>
-        <source>Not a correct  new layer switch, ignored ! Text line %1</source>
-        <translation>Not a correct  new layer switch, ignored. Text line %1</translation>
+        <location line="+16"/>
+        <source>Can not switch to non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
+        <translation>Can not switch to non-existing layers, ignored. Text line: %1%2 Layer: %3</translation>
     </message>
     <message>
-        <location line="+23"/>
-        <source>Can not hide layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Can not hide layer, ignored. Text line %1 layer: %2</translation>
+        <location line="+5"/>
+        <source>Not a correct set active &apos;Layer&apos; switch, ignored. Text line: %1</source>
+        <translation>Not a correct set active &apos;Layer&apos; switch, ignored. Text line: %1</translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>Not a correct  hide layer switch, ignored ! Text line %1</source>
-        <translation>Not a correct  hide layer switch, ignored. Text line %1</translation>
+        <location line="+15"/>
+        <source>Not a correct &apos;New layer&apos; switch, ignored. Text line: %1</source>
+        <translation>Not a correct &apos;New layer&apos; switch, ignored. Text line: %1</translation>
     </message>
     <message>
-        <location line="+26"/>
-        <source>Can not freeze layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Can not freeze layer, ignored. Text line %1 layer: %2</translation>
+        <location line="+25"/>
+        <source>Can not hide non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
+        <translation>Can not hide non-existing layers, ignored. Text line: %1%2 Layer: %3</translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>Not a correct  freeze layer switch, ignored ! Text line %1</source>
-        <translation>Not a correct  freeze layer switch, ignored. Text line %1</translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <source>Can not lock layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Can not lock layer, ignored. Text line %1 layer: %2</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Not a correct  lock layer switch, ignored ! Text line %1</source>
-        <translation>Not a correct  lock layer switch, ignored. Text line %1</translation>
+        <location line="+5"/>
+        <source>Not a correct &apos;HideLayer&apos; switch, ignored. Text line: %1</source>
+        <translation>Not a correct &apos;HideLayer&apos; switch, ignored. Text line: %1</translation>
     </message>
     <message>
         <location line="+28"/>
-        <source>Can not allow layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Can not allow layer, ignored. Text line %1 layer: %2</translation>
+        <source>Can not freeze non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
+        <translation>Can not freeze non-existing layers, ignored. Text line: %1%2 Layer: %3</translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>Not a correct  allow layer switch, ignored ! Text line %1</source>
-        <translation>Not a correct  allow layer switch, ignored. Text line %1</translation>
+        <location line="+5"/>
+        <source>Not a correct &apos;FreezeLayer&apos; switch, ignored. Text line: %1</source>
+        <translation>Not a correct &apos;FreezeLayer&apos; switch, ignored. Text line: %1</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Can not lock non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
+        <translation>Can not lock non-existing layers, ignored. Text line: %1%2 Layer: %3</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Not a correct &apos;LockLayer&apos; switch, ignored. Text line: %1</source>
+        <translation>Not a correct &apos;LockLayer&apos; switch, ignored. Text line: %1</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Can not allow non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
+        <translation>Can not allow non-existing layers, ignored. Text line: %1%2 Layer: %3</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Not a correct &apos;AllowLayer&apos; switch, ignored. Text line: %1</source>
+        <translation>Not a correct &apos;AllowLayer&apos; switch, ignored. Text line: %1</translation>
     </message>
     <message>
         <location line="+19"/>
         <location line="+17"/>
+        <location line="+20"/>
         <location line="+19"/>
-        <location line="+18"/>
-        <location line="+25"/>
-        <location line="+24"/>
-        <location line="+19"/>
-        <location line="+19"/>
-        <location line="+25"/>
-        <location line="+22"/>
-        <location line="+48"/>
-        <location line="+46"/>
-        <location line="+19"/>
-        <location line="+21"/>
-        <location line="+22"/>
-        <location line="+24"/>
-        <location line="+21"/>
         <location line="+26"/>
-        <location line="+23"/>
-        <location line="+32"/>
-        <source>Low field count !</source>
+        <location line="+25"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+25"/>
+        <location line="+33"/>
+        <location line="+49"/>
+        <location line="+47"/>
+        <location line="+19"/>
+        <location line="+22"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <location line="+29"/>
+        <location line="+33"/>
+        <location line="+135"/>
+        <source>Low field count.</source>
         <translation>Low field count.</translation>
     </message>
     <message>
-        <location line="-469"/>
+        <location line="-656"/>
         <location line="+17"/>
+        <location line="+20"/>
         <location line="+19"/>
-        <location line="+18"/>
-        <location line="+25"/>
-        <location line="+24"/>
-        <location line="+19"/>
-        <location line="+19"/>
-        <location line="+25"/>
-        <location line="+22"/>
-        <location line="+48"/>
-        <location line="+46"/>
-        <location line="+19"/>
-        <location line="+21"/>
-        <location line="+22"/>
-        <location line="+24"/>
-        <location line="+21"/>
         <location line="+26"/>
-        <location line="+23"/>
-        <location line="+32"/>
-        <location line="+34"/>
-        <location line="+23"/>
-        <location line="+29"/>
         <location line="+25"/>
-        <source>Odd field count !</source>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+25"/>
+        <location line="+33"/>
+        <location line="+49"/>
+        <location line="+47"/>
+        <location line="+19"/>
+        <location line="+22"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <location line="+29"/>
+        <location line="+33"/>
+        <location line="+35"/>
+        <location line="+24"/>
+        <location line="+28"/>
+        <location line="+25"/>
+        <location line="+23"/>
+        <source>Odd field count.</source>
         <translation>Odd field count.</translation>
     </message>
     <message>
-        <location line="-579"/>
-        <location line="+37"/>
-        <location line="+104"/>
-        <location line="+48"/>
-        <location line="+48"/>
-        <location line="+45"/>
-        <location line="+156"/>
-        <location line="+166"/>
-        <source>Rv Invalid !</source>
+        <location line="-655"/>
+        <location line="+38"/>
+        <location line="+109"/>
+        <location line="+59"/>
+        <location line="+49"/>
+        <location line="+46"/>
+        <location line="+188"/>
+        <location line="+168"/>
+        <source>Rv Invalid.</source>
         <translation>Rv Invalid.</translation>
     </message>
     <message>
-        <location line="-587"/>
-        <location line="+37"/>
-        <location line="+49"/>
-        <location line="+19"/>
-        <location line="+44"/>
-        <location line="+135"/>
-        <location line="+21"/>
+        <location line="-640"/>
+        <location line="+39"/>
+        <location line="+51"/>
+        <location line="+20"/>
+        <location line="+45"/>
+        <location line="+148"/>
         <location line="+22"/>
+        <location line="+33"/>
+        <location line="+28"/>
         <location line="+24"/>
-        <location line="+21"/>
-        <location line="+26"/>
-        <location line="+55"/>
-        <source>Rv1 Invalid !</source>
+        <location line="+33"/>
+        <location line="+62"/>
+        <source>Rv1 Invalid.</source>
         <translation>Rv1 Invalid.</translation>
     </message>
     <message>
-        <location line="-451"/>
-        <location line="+43"/>
-        <location line="+24"/>
-        <location line="+19"/>
-        <location line="+19"/>
-        <location line="+44"/>
-        <location line="+135"/>
-        <location line="+21"/>
+        <location line="-503"/>
+        <location line="+45"/>
+        <location line="+25"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+45"/>
+        <location line="+148"/>
         <location line="+22"/>
+        <location line="+33"/>
+        <location line="+28"/>
         <location line="+24"/>
-        <location line="+21"/>
-        <location line="+26"/>
-        <location line="+27"/>
-        <location line="+34"/>
-        <source>Rv2 Invalid !</source>
+        <location line="+33"/>
+        <location line="+33"/>
+        <location line="+35"/>
+        <source>Rv2 Invalid.</source>
         <translation>Rv2 Invalid.</translation>
     </message>
     <message>
-        <location line="-422"/>
-        <location line="+24"/>
-        <location line="+63"/>
-        <location line="+52"/>
-        <location line="+44"/>
+        <location line="-510"/>
+        <location line="+19"/>
+        <location line="+26"/>
+        <location line="+25"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+77"/>
+        <location line="+49"/>
+        <location line="+67"/>
+        <source>Equal positions.</source>
+        <translation>Equal positions.</translation>
+    </message>
+    <message>
+        <location line="-265"/>
+        <location line="+25"/>
+        <location line="+66"/>
+        <location line="+39"/>
+        <location line="+25"/>
         <location line="+45"/>
-        <location line="+21"/>
-        <source>Radius Invalid !</source>
+        <location line="+45"/>
+        <location line="+22"/>
+        <location line="+33"/>
+        <source>Radius Invalid.</source>
         <translation>Radius Invalid.</translation>
     </message>
     <message>
-        <location line="-247"/>
-        <location line="+24"/>
-        <location line="+109"/>
-        <location line="+251"/>
-        <location line="+34"/>
-        <location line="+149"/>
-        <source>Angle Invalid !</source>
+        <location line="-298"/>
+        <location line="+25"/>
+        <location line="+124"/>
+        <location line="+284"/>
+        <location line="+35"/>
+        <location line="+150"/>
+        <source>Angle Invalid.</source>
         <translation>Angle Invalid.</translation>
     </message>
     <message>
-        <location line="-480"/>
-        <source>Angle1 Invalid !</source>
+        <location line="-527"/>
+        <source>Angle1 Invalid.</source>
         <translation>Angle1 Invalid.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Angle2 Invalid !</source>
+        <source>Angle2 Invalid.</source>
         <translation>Angle2 Invalid.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Equal angles !</source>
+        <source>Equal angles.</source>
         <translation>Equal angles.</translation>
     </message>
     <message>
-        <location line="+22"/>
-        <location line="+156"/>
-        <location line="+22"/>
-        <location line="+24"/>
         <location line="+21"/>
-        <location line="+26"/>
-        <location line="+27"/>
-        <location line="+34"/>
-        <source>Rv3 Invalid !</source>
+        <location line="+170"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <source>Equal positions 1-2.</source>
+        <translation>Equal positions 1-2.</translation>
+    </message>
+    <message>
+        <location line="-286"/>
+        <location line="+170"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <location line="+32"/>
+        <location line="+35"/>
+        <source>Rv3 Invalid.</source>
         <translation>Rv3 Invalid.</translation>
     </message>
     <message>
-        <location line="-308"/>
-        <source>Arc Invalid !</source>
+        <location line="-354"/>
+        <location line="+170"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <source>Equal positions 1-3.</source>
+        <translation>Equal positions 1-3.</translation>
+    </message>
+    <message>
+        <location line="-287"/>
+        <location line="+170"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <source>Equal positions 2-3.</source>
+        <translation>Equal positions 2-3.</translation>
+    </message>
+    <message>
+        <location line="-284"/>
+        <location line="+2"/>
+        <location line="+168"/>
+        <location line="+2"/>
+        <source>Near co-linear positions.</source>
+        <translation>Near co-linear positions.</translation>
+    </message>
+    <message>
+        <location line="-168"/>
+        <source>Arc Invalid.</source>
         <translation>Arc Invalid.</translation>
     </message>
     <message>
-        <location line="+43"/>
         <location line="+46"/>
-        <source>Center Invalid !</source>
+        <location line="+47"/>
+        <source>Center Invalid.</source>
         <translation>Center Invalid.</translation>
     </message>
     <message>
         <location line="-21"/>
-        <source>Radius too small !</source>
+        <source>Radius too small.</source>
         <translation>Radius too small.</translation>
     </message>
     <message>
-        <location line="+88"/>
-        <source>Circle Invalid !</source>
+        <location line="+98"/>
+        <source>Circle Invalid.</source>
         <translation>Circle Invalid.</translation>
     </message>
     <message>
-        <location line="+67"/>
-        <location line="+26"/>
-        <location line="+27"/>
-        <location line="+34"/>
-        <source>Rv4 Invalid !</source>
+        <location line="+79"/>
+        <location line="+33"/>
+        <location line="+30"/>
+        <location line="+35"/>
+        <source>Rv4 Invalid.</source>
         <translation>Rv4 Invalid.</translation>
     </message>
     <message>
-        <location line="-42"/>
-        <source>Size Invalid !</source>
+        <location line="-97"/>
+        <location line="+33"/>
+        <source>Equal positions 1-4.</source>
+        <translation>Equal positions 1-4.</translation>
+    </message>
+    <message>
+        <location line="-32"/>
+        <location line="+33"/>
+        <source>Equal positions 2-4.</source>
+        <translation>Equal positions 2-4.</translation>
+    </message>
+    <message>
+        <location line="-32"/>
+        <location line="+33"/>
+        <source>Equal positions 3-4.</source>
+        <translation>Equal positions 3-4.</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Size Invalid.</source>
         <translation>Size Invalid.</translation>
     </message>
     <message>
-        <location line="+32"/>
-        <source>Size in X Invalid !</source>
+        <location line="+33"/>
+        <source>Size in X Invalid.</source>
         <translation>Size in X Invalid.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Size in Y Invalid !</source>
+        <source>Size in Y Invalid.</source>
         <translation>Size in Y Invalid.</translation>
     </message>
     <message>
-        <location line="+27"/>
-        <source>Polygon, less than 5 references !</source>
-        <translation>Polygon, less than 5 references.</translation>
+        <location line="+28"/>
+        <source>Polygon: less than 5 references.</source>
+        <translation>Polygon: less than 5 references.</translation>
     </message>
     <message>
         <location line="+5"/>
-        <location line="+25"/>
-        <location line="+27"/>
+        <location line="+26"/>
+        <location line="+26"/>
         <location line="+28"/>
-        <source>Rv %1 Invalid !</source>
-        <translation>Rv %1 Invalid.</translation>
+        <source>Rv%1 Invalid.</source>
+        <translation>Rv%1 Invalid.</translation>
     </message>
     <message>
-        <location line="-62"/>
-        <source>Polyline, less than 2 references !</source>
+        <location line="-61"/>
+        <source>Polyline, less than 2 references.</source>
         <translation>Polyline, less than 2 references.</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Bulge %1 Invalid !</source>
-        <translation>Bulge %1 Invalid.</translation>
+        <source>Bulge%1 Invalid.</source>
+        <translation>Bulge%1 Invalid.</translation>
     </message>
     <message>
-        <location line="+19"/>
-        <source>Unsupported PRO feature !</source>
-        <translation>Unsupported PRO feature.</translation>
+        <location line="+18"/>
+        <source>Unsupported QCAD Professional feature.</source>
+        <translation>Unsupported QCAD Professional feature.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Fit point Spline, less than 3 references !</source>
-        <translation>Fit point Spline, less than 3 references.</translation>
+        <source>3th degree fit point Spline, less than 3 references.</source>
+        <translation>3th degree fit point Spline, less than 3 references.</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Control point Spline, less than 4 references !</source>
-        <translation>Control point Spline, less than 4 references.</translation>
+        <source>3th degree control point Spline, less than 4 references.</source>
+        <translation>3th degree control point Spline, less than 4 references.</translation>
     </message>
     <message>
-        <location line="+23"/>
-        <source>Text, low field count !</source>
-        <translation>Text, low field count.</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Text, odd field count !</source>
-        <translation>Text, odd field count.</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Height Invalid !</source>
+        <location line="+28"/>
+        <source>Height Invalid.</source>
         <translation>Height Invalid.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Width Invalid !</source>
+        <source>Width Invalid.</source>
         <translation>Width Invalid.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Vert. alignment Invalid !</source>
+        <source>Vert. alignment Invalid.</source>
         <translation>Vert. alignment Invalid.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Horz. alignment Invalid !</source>
+        <source>Horz. alignment Invalid.</source>
         <translation>Horz. alignment Invalid.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Drawing direction Invalid !</source>
+        <source>Drawing direction Invalid.</source>
         <translation>Drawing direction Invalid.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Line spacing style Invalid !</source>
+        <source>Line spacing style Invalid.</source>
         <translation>Line spacing style Invalid.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Line spacing Invalid !</source>
+        <source>Line spacing Invalid.</source>
         <translation>Line spacing Invalid.</translation>
     </message>
     <message>
-        <location line="+41"/>
-        <source>Unsupported entry ! Text line %1</source>
-        <translation>Unsupported entry. Text line %1</translation>
+        <location line="+37"/>
+        <source>Unsupported method. Text line: %1</source>
+        <translation>Unsupported method. Text line: %1</translation>
     </message>
     <message>
         <location line="+19"/>
-        <source>Error with first optional list !</source>
+        <source>Error with first optional list.</source>
         <translation>Error with first optional list.</translation>
     </message>
     <message>
         <location line="+14"/>
-        <source>Error with second optional list !</source>
+        <source>Error with second optional list.</source>
         <translation>Error with second optional list.</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+43"/>
+        <source>Not a correct entry, ignored. Text line: %1 &gt; %2</source>
+        <translation>Not a correct entry, ignored. Text line: %1 &gt; %2</translation>
+    </message>
+    <message>
+        <location line="+80"/>
+        <source>Casted entries: %1 out of %2 text lines</source>
+        <translation>Casted entries: %1 out of %2 text lines</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Nothing casted.</source>
+        <translation>Nothing casted.</translation>
+    </message>
+    <message>
+        <location line="+227"/>
+        <source>Attributes empty. Text line: %1</source>
+        <translation>Attributes empty. Text line: %1</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Not a correct layer name, ignored. Text line: %1%2 Name: %3</source>
+        <translation>Not a correct layer name, ignored. Text line: %1%2 Name: %3</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Layer doesn&apos;t exist, ignored. Text line: %1%2 Layer: %3</source>
+        <translation>Layer doesn&apos;t exist, ignored. Text line: %1%2 Layer: %3</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Not a correct color, ignored. Text line: %1%2 Color: %3</source>
+        <translation>Not a correct color, ignored. Text line: %1%2 Color: %3</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
+        <translation>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</source>
+        <translation>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
+        <translation>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Unsupported attribute, ignored. Text line: %1 &gt; %2</source>
+        <translation>Unsupported attribute, ignored. Text line: %1 &gt; %2</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Not a correct layer name. Text line: %1%2 Name: %3</source>
+        <translation>Not a correct layer name. Text line: %1%2 Name: %3</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Parent layer doesn&apos;t exist. Text line: %1%2 Layer: %3</source>
+        <translation>Parent layer doesn&apos;t exist. Text line: %1%2 Layer: %3</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Not a correct color. Text line: %1%2 Color: %3</source>
+        <translation>Not a correct color. Text line: %1%2 Color: %3</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
+        <translation>Not a correct Lineweight. Text line: %1%2 Weight: %3</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Not a correct Linetype. Text line: %1%2 Type: %3</source>
+        <translation>Not a correct Linetype. Text line: %1%2 Type: %3</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Add/Update layer ignored.</source>
+        <translation>Add/Update layer ignored.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Updated layer: %1</source>
+        <translation>Updated layer: %1</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Added new layer: %1</source>
+        <translation>Added new layer: %1</translation>
+    </message>
+    <message>
+        <source>Unsupported or invalid CSV style, ignored ! Text line %1</source>
+        <translation type="vanished">Unsupported or invalid CSV style, ignored. Text line %1</translation>
+    </message>
+    <message>
+        <source>Setting new relative origin failed, ignored ! Text line %1</source>
+        <translation type="vanished">Setting new relative origin failed, ignored. Text line %1</translation>
+    </message>
+    <message>
+        <source>Can not switch to layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="vanished">Can not switch to layer, ignored. Text line %1 layer: %2</translation>
+    </message>
+    <message>
+        <source>Not a correct  layer switch, ignored ! Text line %1</source>
+        <translation type="vanished">Not a correct  layer switch, ignored. Text line %1</translation>
+    </message>
+    <message>
+        <source>Not a correct  new layer switch, ignored ! Text line %1</source>
+        <translation type="vanished">Not a correct  new layer switch, ignored. Text line %1</translation>
+    </message>
+    <message>
+        <source>Can not hide layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="vanished">Can not hide layer, ignored. Text line %1 layer: %2</translation>
+    </message>
+    <message>
+        <source>Not a correct  hide layer switch, ignored ! Text line %1</source>
+        <translation type="vanished">Not a correct  hide layer switch, ignored. Text line %1</translation>
+    </message>
+    <message>
+        <source>Can not freeze layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="vanished">Can not freeze layer, ignored. Text line %1 layer: %2</translation>
+    </message>
+    <message>
+        <source>Not a correct  freeze layer switch, ignored ! Text line %1</source>
+        <translation type="vanished">Not a correct  freeze layer switch, ignored. Text line %1</translation>
+    </message>
+    <message>
+        <source>Can not lock layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="vanished">Can not lock layer, ignored. Text line %1 layer: %2</translation>
+    </message>
+    <message>
+        <source>Not a correct  lock layer switch, ignored ! Text line %1</source>
+        <translation type="vanished">Not a correct  lock layer switch, ignored. Text line %1</translation>
+    </message>
+    <message>
+        <source>Can not allow layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="vanished">Can not allow layer, ignored. Text line %1 layer: %2</translation>
+    </message>
+    <message>
+        <source>Not a correct  allow layer switch, ignored ! Text line %1</source>
+        <translation type="vanished">Not a correct  allow layer switch, ignored. Text line %1</translation>
+    </message>
+    <message>
+        <source>Low field count !</source>
+        <translation type="vanished">Low field count.</translation>
+    </message>
+    <message>
+        <source>Odd field count !</source>
+        <translation type="vanished">Odd field count.</translation>
+    </message>
+    <message>
+        <source>Rv Invalid !</source>
+        <translation type="vanished">Rv Invalid.</translation>
+    </message>
+    <message>
+        <source>Rv1 Invalid !</source>
+        <translation type="vanished">Rv1 Invalid.</translation>
+    </message>
+    <message>
+        <source>Rv2 Invalid !</source>
+        <translation type="vanished">Rv2 Invalid.</translation>
+    </message>
+    <message>
+        <source>Radius Invalid !</source>
+        <translation type="vanished">Radius Invalid.</translation>
+    </message>
+    <message>
+        <source>Angle Invalid !</source>
+        <translation type="vanished">Angle Invalid.</translation>
+    </message>
+    <message>
+        <source>Angle1 Invalid !</source>
+        <translation type="vanished">Angle1 Invalid.</translation>
+    </message>
+    <message>
+        <source>Angle2 Invalid !</source>
+        <translation type="vanished">Angle2 Invalid.</translation>
+    </message>
+    <message>
+        <source>Equal angles !</source>
+        <translation type="vanished">Equal angles.</translation>
+    </message>
+    <message>
+        <source>Rv3 Invalid !</source>
+        <translation type="vanished">Rv3 Invalid.</translation>
+    </message>
+    <message>
+        <source>Arc Invalid !</source>
+        <translation type="vanished">Arc Invalid.</translation>
+    </message>
+    <message>
+        <source>Center Invalid !</source>
+        <translation type="vanished">Center Invalid.</translation>
+    </message>
+    <message>
+        <source>Radius too small !</source>
+        <translation type="vanished">Radius too small.</translation>
+    </message>
+    <message>
+        <source>Circle Invalid !</source>
+        <translation type="vanished">Circle Invalid.</translation>
+    </message>
+    <message>
+        <source>Rv4 Invalid !</source>
+        <translation type="vanished">Rv4 Invalid.</translation>
+    </message>
+    <message>
+        <source>Size Invalid !</source>
+        <translation type="vanished">Size Invalid.</translation>
+    </message>
+    <message>
+        <source>Size in X Invalid !</source>
+        <translation type="vanished">Size in X Invalid.</translation>
+    </message>
+    <message>
+        <source>Size in Y Invalid !</source>
+        <translation type="vanished">Size in Y Invalid.</translation>
+    </message>
+    <message>
+        <source>Polygon, less than 5 references !</source>
+        <translation type="vanished">Polygon, less than 5 references.</translation>
+    </message>
+    <message>
+        <source>Rv %1 Invalid !</source>
+        <translation type="vanished">Rv %1 Invalid.</translation>
+    </message>
+    <message>
+        <source>Polyline, less than 2 references !</source>
+        <translation type="vanished">Polyline, less than 2 references.</translation>
+    </message>
+    <message>
+        <source>Bulge %1 Invalid !</source>
+        <translation type="vanished">Bulge %1 Invalid.</translation>
+    </message>
+    <message>
+        <source>Unsupported PRO feature !</source>
+        <translation type="vanished">Unsupported PRO feature.</translation>
+    </message>
+    <message>
+        <source>Fit point Spline, less than 3 references !</source>
+        <translation type="vanished">Fit point Spline, less than 3 references.</translation>
+    </message>
+    <message>
+        <source>Control point Spline, less than 4 references !</source>
+        <translation type="vanished">Control point Spline, less than 4 references.</translation>
+    </message>
+    <message>
+        <source>Text, low field count !</source>
+        <translation type="vanished">Text, low field count.</translation>
+    </message>
+    <message>
+        <source>Text, odd field count !</source>
+        <translation type="vanished">Text, odd field count.</translation>
+    </message>
+    <message>
+        <source>Height Invalid !</source>
+        <translation type="vanished">Height Invalid.</translation>
+    </message>
+    <message>
+        <source>Width Invalid !</source>
+        <translation type="vanished">Width Invalid.</translation>
+    </message>
+    <message>
+        <source>Vert. alignment Invalid !</source>
+        <translation type="vanished">Vert. alignment Invalid.</translation>
+    </message>
+    <message>
+        <source>Horz. alignment Invalid !</source>
+        <translation type="vanished">Horz. alignment Invalid.</translation>
+    </message>
+    <message>
+        <source>Drawing direction Invalid !</source>
+        <translation type="vanished">Drawing direction Invalid.</translation>
+    </message>
+    <message>
+        <source>Line spacing style Invalid !</source>
+        <translation type="vanished">Line spacing style Invalid.</translation>
+    </message>
+    <message>
+        <source>Line spacing Invalid !</source>
+        <translation type="vanished">Line spacing Invalid.</translation>
+    </message>
+    <message>
+        <source>Unsupported entry ! Text line %1</source>
+        <translation type="vanished">Unsupported entry. Text line %1</translation>
+    </message>
+    <message>
+        <source>Error with first optional list !</source>
+        <translation type="vanished">Error with first optional list.</translation>
+    </message>
+    <message>
+        <source>Error with second optional list !</source>
+        <translation type="vanished">Error with second optional list.</translation>
+    </message>
+    <message>
         <source>Not a correct entry ! Text line %1 : %2</source>
-        <translation>Not a correct entry. Text line %1 : %2</translation>
+        <translation type="vanished">Not a correct entry. Text line %1 : %2</translation>
     </message>
     <message>
-        <location line="+77"/>
         <source>Casted entries : %1 with %2 text lines</source>
-        <translation>Casted entries : %1 with %2 text lines</translation>
+        <translation type="vanished">Casted entries : %1 with %2 text lines</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="-447"/>
         <source>Importing CSV complete. Command ended.</source>
         <translation>Importing CSV complete. Command ended.</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Nothing casted !</source>
-        <translation>Nothing casted.</translation>
+        <translation type="vanished">Nothing casted.</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+46"/>
         <source>Draw from CSV</source>
         <translation>Draw from CSV</translation>
     </message>
@@ -4069,80 +4451,64 @@ is already in the list.</translation>
         <translation>All Files</translation>
     </message>
     <message>
-        <location line="+165"/>
         <source>Attributes empty ! Text line %1</source>
-        <translation>Attributes empty. Text line %1</translation>
+        <translation type="vanished">Attributes empty. Text line %1</translation>
     </message>
     <message>
-        <location line="+24"/>
-        <location line="+97"/>
         <source>Not a correct layer name ! Text line %1 name: %2</source>
-        <translation>Not a correct layer name. Text line %1 name: %2</translation>
+        <translation type="vanished">Not a correct layer name. Text line %1 name: %2</translation>
     </message>
     <message>
-        <location line="-90"/>
         <source>Layer doesn&apos;t exist, ignored ! Text line %1 layer: %2</source>
-        <translation>Layer doesn&apos;t exist, ignored. Text line %1 layer: %2</translation>
+        <translation type="vanished">Layer doesn&apos;t exist, ignored. Text line %1 layer: %2</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Not a correct color, ignored ! Text line %1 color: %2</source>
-        <translation>Not a correct color, ignored. Text line %1 color: %2</translation>
+        <translation type="vanished">Not a correct color, ignored. Text line %1 color: %2</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Not a correct Lineweight, ignored ! Text line %1 weight: %2</source>
-        <translation>Not a correct Lineweight, ignored. Text line %1 weight: %2</translation>
+        <translation type="vanished">Not a correct Lineweight, ignored. Text line %1 weight: %2</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Not a correct Linetype, ignored ! Text line %1 type: %2</source>
-        <translation>Not a correct Linetype, ignored. Text line %1 type: %2</translation>
+        <translation type="vanished">Not a correct Linetype, ignored. Text line %1 type: %2</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Not a correct Linetype scale, ignored ! Text line %1 scale: %2</source>
-        <translation>Not a correct Linetype scale, ignored. Text line %1 scale: %2</translation>
+        <translation type="vanished">Not a correct Linetype scale, ignored. Text line %1 scale: %2</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>Not a correct attribute, ignored ! Text line %1 &gt; %2</source>
-        <translation>Not a correct attribute, ignored. Text line %1 &gt; %2</translation>
+        <translation type="vanished">Not a correct attribute, ignored. Text line %1 &gt; %2</translation>
     </message>
     <message>
-        <location line="+52"/>
         <source>Parent layer doesn&apos;t exist ! Text line %1 layer: %2</source>
-        <translation>Parent layer doesn&apos;t exist. Text line %1 layer: %2</translation>
+        <translation type="vanished">Parent layer doesn&apos;t exist. Text line %1 layer: %2</translation>
     </message>
     <message>
-        <location line="+30"/>
         <source>Not a correct color ! Text line %1 color: %2</source>
-        <translation>Not a correct color. Text line %1 color: %2</translation>
+        <translation type="vanished">Not a correct color. Text line %1 color: %2</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Not a correct Lineweight ! Text line %1 weight: %2</source>
-        <translation>Not a correct Lineweight. Text line %1 weight: %2</translation>
+        <translation type="vanished">Not a correct Lineweight. Text line %1 weight: %2</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Not a correct Linetype ! Text line %1 type: %2</source>
-        <translation>Not a correct Linetype. Text line %1 type: %2</translation>
+        <translation type="vanished">Not a correct Linetype. Text line %1 type: %2</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Add/Update layer ignored !</source>
-        <translation>Add/Update layer ignored.</translation>
+        <translation type="vanished">Add/Update layer ignored.</translation>
     </message>
     <message>
-        <location line="+11"/>
         <source>Updated layer : %1</source>
-        <translation>Updated layer : %1</translation>
+        <translation type="vanished">Updated layer : %1</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Added new layer : %1</source>
-        <translation>Added new layer : %1</translation>
+        <translation type="vanished">Added new layer : %1</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
@@ -6804,7 +7170,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Error while importing file %1</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+31"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>No import filters have been found. Aborting...</translation>
     </message>
@@ -7123,6 +7489,186 @@ BUG: Interferes with group castings.</translation>
     </message>
 </context>
 <context>
+    <name>InfoAreaCentroid</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroid.js" line="+118"/>
+        <source>No selection.</source>
+        <translation>No selection.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Please, make a selection first. Command terminated.</source>
+        <translation>Please, make a selection first. Command terminated.</translation>
+    </message>
+    <message>
+        <source>Multiple selection.</source>
+        <translation type="vanished">Multiple selection.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Not implemented. Command terminated.</source>
+        <translation>Not implemented. Command terminated.</translation>
+    </message>
+    <message>
+        <source>Centroid &amp; area script by CVH</source>
+        <translation type="vanished">Centroid &amp; area script by CVH</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Enclosed area:</source>
+        <translation>Enclosed area:</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>Approximated enclosed area:</source>
+        <translation>Approximated enclosed area:</translation>
+    </message>
+    <message>
+        <source>Ellipse arc sector area (closed format): %1</source>
+        <translation type="vanished">Ellipse arc sector area (closed format): %1</translation>
+    </message>
+    <message>
+        <source>Ellipse arc segment area (closed format): %1</source>
+        <translation type="vanished">Ellipse arc segment area (closed format): %1</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Hatched area:</source>
+        <translation>Hatched area:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Total hatched area:</source>
+        <translation>Total hatched area:</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Differential hatched area:</source>
+        <translation>Differential hatched area:</translation>
+    </message>
+    <message>
+        <source>Unsupported entity type.</source>
+        <translation type="vanished">Unsupported entity type.</translation>
+    </message>
+    <message>
+        <location line="-67"/>
+        <source>Multiple entities in selection.</source>
+        <translation>Multiple entities in selection.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Area centroid script (v0.31) by CVH</source>
+        <translation>Area centroid script (v0.31) by CVH</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>2D Centroid</source>
+        <translation>2D Centroid</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Centroid markers circle in selection. No results.</source>
+        <translation>Centroid markers circle in selection. No results.</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Unsupported entity type. No results.</source>
+        <translation>Unsupported entity type. No results.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>No results.</source>
+        <translation>No results.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Centroid point</source>
+        <translation>Centroid point</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>(Incl. approximations)</source>
+        <translation>(Incl. approximations)</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <location line="+19"/>
+        <source>Approximated centroid:</source>
+        <translation>Approximated centroid:</translation>
+    </message>
+    <message>
+        <location line="-19"/>
+        <location line="+19"/>
+        <source>Centroid:</source>
+        <translation>Centroid:</translation>
+    </message>
+    <message>
+        <location line="+193"/>
+        <location line="+563"/>
+        <source>Encountered an unsupported polyline with custom widths</source>
+        <translation>Encountered an unsupported polyline with custom widths</translation>
+    </message>
+    <message>
+        <location line="-478"/>
+        <location line="+581"/>
+        <source>Encountered an unsupported polygon with custom widths</source>
+        <translation>Encountered an unsupported polygon with custom widths</translation>
+    </message>
+    <message>
+        <location line="+686"/>
+        <source>Unhandled shape from hatch loop.</source>
+        <translation>Unhandled shape from hatch loop.</translation>
+    </message>
+    <message>
+        <location line="+80"/>
+        <source>Self-intersecting shape near (%1). No Results.</source>
+        <translation>Self-intersecting shape near (%1). No Results.</translation>
+    </message>
+    <message>
+        <source>Add centroid for a selected entity.</source>
+        <translation type="vanished">Add centroid for a selected entity.</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+18"/>
+        <source>Add 2D area centroid for a selected entity.</source>
+        <translation>Add 2D area centroid for a selected entity.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Add 2D uniform density area centroid marker and values for a selected entity.</source>
+        <translation>Add 2D uniform density area centroid marker and values for a selected entity.</translation>
+    </message>
+</context>
+<context>
+    <name>InfoCentroids</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js" line="+232"/>
+        <location line="+1"/>
+        <source>2D Centroid</source>
+        <translation>2D Centroid</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>X position</source>
+        <translation>X position</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Y position</source>
+        <translation>Y position</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Weighted</source>
+        <translation>Weighted</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Density</source>
+        <translation>Density</translation>
+    </message>
+</context>
+<context>
     <name>InfoDistanceEE</name>
     <message>
         <location filename="../scripts/Information/InfoDistanceEE/InfoDistanceEE.js" line="+62"/>
@@ -7290,6 +7836,190 @@ BUG: Interferes with group castings.</translation>
         <location filename="../scripts/Information/InfoPositionRel/InfoPositionRelInit.js" line="+2"/>
         <source>&amp;Relative Position</source>
         <translation>&amp;Relative Position</translation>
+    </message>
+</context>
+<context>
+    <name>InfoSumCentroidsWeighted</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeighted.js" line="+94"/>
+        <source>No selection.</source>
+        <translation>No selection.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Please, make a selection first. Command terminated.</source>
+        <translation>Please, make a selection first. Command terminated.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Centroids weighted sum script (v0.10b) by CVH</source>
+        <translation>Centroids weighted sum script (v0.10b) by CVH</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>2D Centroid</source>
+        <translation>2D Centroid</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Density</source>
+        <translation>Density</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>X position</source>
+        <translation>X position</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Y position</source>
+        <translation>Y position</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Weighted</source>
+        <translation>Weighted</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>No centroid markers in selection.</source>
+        <translation>No centroid markers in selection.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>One marker selected, nothing to sum. Please verify selection.</source>
+        <translation>One marker selected, nothing to sum. Please verify selection.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Results in Zero.</source>
+        <translation>Results in Zero.</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Total sum(%1):</source>
+        <translation>Total sum(%1):</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Weighted sum(%1):</source>
+        <translation>Weighted sum(%1):</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Summed centroid position:</source>
+        <translation>Summed centroid position:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+18"/>
+        <source>Sum selected 2D centroid markers weighted.</source>
+        <translation>Sum selected 2D centroid markers weighted.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sum selected 2D centroid markers weighted by their individual custom density.</source>
+        <translation>Sum selected 2D centroid markers weighted by their individual custom density.</translation>
+    </message>
+</context>
+<context>
+    <name>InfoWireCentroid</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroid.js" line="+117"/>
+        <source>No selection.</source>
+        <translation>No selection.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Please, make a selection first. Command terminated.</source>
+        <translation>Please, make a selection first. Command terminated.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Wire centroid script (v0.31) by CVH</source>
+        <translation>Wire centroid script (v0.31) by CVH</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Length:</source>
+        <translation>Length:</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>2D Centroid</source>
+        <translation>2D Centroid</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Centroid markers circle in selection. No results.</source>
+        <translation>Centroid markers circle in selection. No results.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+7"/>
+        <source>Approximated length:</source>
+        <translation>Approximated length:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Unsupported entity type. No results.</source>
+        <translation>Unsupported entity type. No results.</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>No results.</source>
+        <translation>No results.</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Results in Zero.</source>
+        <translation>Results in Zero.</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Centroid point</source>
+        <translation>Centroid point</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Total length:</source>
+        <translation>Total length:</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>(Incl. approximations)</source>
+        <translation>(Incl. approximations)</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <location line="+19"/>
+        <source>Approximated centroid:</source>
+        <translation>Approximated centroid:</translation>
+    </message>
+    <message>
+        <location line="-19"/>
+        <location line="+19"/>
+        <source>Centroid:</source>
+        <translation>Centroid:</translation>
+    </message>
+    <message>
+        <location line="+116"/>
+        <source>Encountered an unsupported polyline with custom widths</source>
+        <translation>Encountered an unsupported polyline with custom widths</translation>
+    </message>
+    <message>
+        <location line="+101"/>
+        <source>Encountered an unsupported polygon with custom widths</source>
+        <translation>Encountered an unsupported polygon with custom widths</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+18"/>
+        <source>Add 2D wire centroid for a selection.</source>
+        <translation>Add 2D wire centroid for a selection.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Add 2D uniform density wire centroid marker and values for a selection of entities.</source>
+        <translation>Add 2D uniform density wire centroid marker and values for a selection of entities.</translation>
     </message>
 </context>
 <context>
@@ -7873,7 +8603,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Hiding all layers</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+50"/>
         <source>Thawing all layers</source>
         <translation>Thawing all layers</translation>
     </message>
@@ -8019,7 +8749,7 @@ BUG: Interferes with group castings.</translation>
 <context>
     <name>Leader</name>
     <message>
-        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+61"/>
+        <location filename="../scripts/Draw/Dimension/Leader/Leader.js" line="+62"/>
         <source>Arrow position</source>
         <translation>Arrow position</translation>
     </message>
@@ -8055,6 +8785,14 @@ BUG: Interferes with group castings.</translation>
         <location line="+5"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation>Draw leader (line sequence with arrow)</translation>
+    </message>
+</context>
+<context>
+    <name>LeaderFromText</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
+        <source>&amp;Leader from Selected Text</source>
+        <translation>&amp;Leader from Selected Text</translation>
     </message>
 </context>
 <context>
@@ -9367,6 +10105,24 @@ shown in search results:</translation>
     </message>
 </context>
 <context>
+    <name>MiscInformation</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/MiscInformation.js" line="+41"/>
+        <source>Misc</source>
+        <translation>Misc</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Misc Information Tools</source>
+        <translation>Misc Information Tools</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>&amp;Information</source>
+        <translation>&amp;Information</translation>
+    </message>
+</context>
+<context>
     <name>MiscModify</name>
     <message>
         <location filename="../scripts/Misc/MiscModify/MiscModify.js" line="+44"/>
@@ -10412,7 +11168,7 @@ shown in search results:</translation>
 <context>
     <name>PrintPreview</name>
     <message>
-        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+247"/>
+        <location filename="../scripts/File/PrintPreview/PrintPreview.js" line="+249"/>
         <source>Drag to move paper</source>
         <translation>Drag to move paper</translation>
     </message>
@@ -10422,7 +11178,7 @@ shown in search results:</translation>
         <translation>Done</translation>
     </message>
     <message>
-        <location line="+435"/>
+        <location line="+438"/>
         <source>Export to PDF</source>
         <translation>Export to PDF</translation>
     </message>
@@ -10587,12 +11343,17 @@ shown in search results:</translation>
         <translation>Always show all properties (this may slow down selection of entities)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+17"/>
         <source>Always format property values as decimal numbers</source>
         <translation>Always format property values as decimal numbers</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
+        <source>Decimals / precision for displayed property values:</source>
+        <translation>Decimals / precision for displayed property values:</translation>
+    </message>
+    <message>
+        <location line="-19"/>
         <source>Display advanced dimension style overrides</source>
         <translation>Display advanced dimension style overrides</translation>
     </message>
@@ -10657,7 +11418,7 @@ shown in search results:</translation>
         <translation>Auto</translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+161"/>
         <source>Use auto measurement</source>
         <translation>Use auto measurement</translation>
     </message>
@@ -11107,12 +11868,12 @@ shown in search results:</translation>
 <context>
     <name>Round</name>
     <message>
-        <location filename="../scripts/Modify/Round/Round.js" line="+58"/>
+        <location filename="../scripts/Modify/Round/Round.js" line="+60"/>
         <source>The two entities cannot be rounded.</source>
         <translation>The two entities cannot be rounded.</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+48"/>
         <source>First entity cannot be trimmed.</source>
         <translation>First entity cannot be trimmed.</translation>
     </message>

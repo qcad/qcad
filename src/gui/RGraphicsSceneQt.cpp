@@ -1049,9 +1049,18 @@ bool RGraphicsSceneQt::hasPreview() const {
 }
 
 QList<REntity::Id> RGraphicsSceneQt::getPreviewEntityIds() {
-    QList<REntity::Id> ret = previewDrawables.keys();
-    ret.append(previewClipRectangles.keys());
-    ret = ret.toSet().toList();
+    QList<REntity::Id> retWithDuplicates = previewDrawables.keys();
+    retWithDuplicates.append(previewClipRectangles.keys());
+
+    // remove duplicate without changing order:
+    QSet<REntity::Id> set;
+    QList<REntity::Id> ret;
+    for (int i=0; i<retWithDuplicates.length(); i++) {
+        if (!set.contains(retWithDuplicates[i])) {
+            ret.append(retWithDuplicates[i]);
+        }
+    }
+
     return ret;
 }
 

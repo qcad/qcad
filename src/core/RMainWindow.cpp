@@ -748,7 +748,6 @@ void RMainWindow::removePaletteListener(RPaletteListener* l) {
 void RMainWindow::notifyPaletteListeners() {
     QList<RPaletteListener*>::iterator it;
     for (it = paletteListeners.begin(); it != paletteListeners.end(); ++it) {
-        qDebug() << "notifyPaletteListener";
         (*it)->updatePalette();
     }
 }

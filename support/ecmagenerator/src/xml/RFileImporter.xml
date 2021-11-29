@@ -27,6 +27,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="fileName" isConst="true" />
         <arg type="QString &amp;" typeName="QString"
         name="nameFilter" isConst="true" />
+        <arg type="QVariantMap &amp;" typeName="QVariantMap"
+        name="params" hasDefault="true"
+        default="RDEFAULT_QVARIANTMAP" isConst="true" />
       </variant>
     </method>
   </class>

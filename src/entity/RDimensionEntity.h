@@ -127,6 +127,8 @@ public:
 
     virtual void exportEntity(RExporter& e, bool preview=false, bool forceSelected=false) const;
 
+    static void renderDimensionText(RExporter& e, const RDocument* doc, RTextData& textData, bool isSelected=false, bool forceSelected=false);
+
     virtual RDimensionData& getData() = 0;
 
     virtual const RDimensionData& getData() const = 0;
@@ -224,11 +226,11 @@ public:
         getData().setLinearFactor(f);
     }
 
-    double getDimScale() const {
+    double getDimscale() const {
         return getData().getDimscale();
     }
 
-    void setDimScale(double f) {
+    void setDimscale(double f) {
         getData().setDimscale(f);
     }
 

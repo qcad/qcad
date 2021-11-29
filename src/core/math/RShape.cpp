@@ -1681,11 +1681,11 @@ QList<RVector> RShape::getIntersectionPointsSX(const RSpline& spline1,
 }
 
 QList<RVector> RShape::getIntersectionPointsSS(const RSpline& spline1,
-        const RSpline& spline2, bool limited, bool same) {
+        const RSpline& spline2, bool limited, bool same, double tolerance) {
 
     if (RSpline::hasProxy()) {
         RSplineProxy* proxy = RSpline::getSplineProxy();
-        return proxy->getIntersectionPoints(spline1, spline2, limited, same);
+        return proxy->getIntersectionPoints(spline1, spline2, limited, same, tolerance);
     }
 
     return QList<RVector>();

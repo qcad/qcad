@@ -623,6 +623,10 @@ Explode.explodeEntity = function(entity, options) {
                     continue;
                 }
 
+                if (!isBlockReferenceEntity(subEntity)) {
+                    subEntity.scaleVisualProperties(data.getScaleFactors().x);
+                }
+
                 // ignore attribute definitions:
                 if (isAttributeDefinitionEntity(subEntity)) {
                     continue;

@@ -78,16 +78,22 @@
         getDimtxt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setDimtxt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDimscale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setDimScaleOverride
+        setDimscale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         scaleVisualProperties
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getCorners
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMiddels
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getReferencePoints
@@ -130,6 +136,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getPointOnEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        clearStyleOverrides
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

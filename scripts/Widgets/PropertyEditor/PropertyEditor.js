@@ -1011,6 +1011,15 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
                 value = RMath.rad2deg(value);
             }
             var document = EAction.getDocument();
+
+            var decimals = RSettings.getIntValue("PropertyEditor/Decimals", 8);
+            if (decimals<0) {
+                decimals = 0;
+            }
+            if (decimals>8) {
+                decimals = 8;
+            }
+
             if (RSettings.getBoolValue("PropertyEditor/FormatAsDecimal", false)!==true &&
                 !attributes.isAngleType() &&
                 !attributes.isAreaType() &&
@@ -1021,7 +1030,7 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
                 (document.getLinearFormat()===RS.Fractional ||
                  document.getLinearFormat()===RS.FractionalStacked)*/) {
 
-                newText = RUnit.getLabel(value, document, 8);
+                newText = RUnit.getLabel(value, document, decimals);
 
                 if (document.getLinearFormat()===RS.Architectural ||
                     document.getLinearFormat()===RS.ArchitecturalStacked ||
@@ -1033,7 +1042,7 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
 
             }
             else {
-                newText = sprintf("%.6f", value);
+                newText = sprintf("%." + decimals + "f", value);
             }
         }
     }

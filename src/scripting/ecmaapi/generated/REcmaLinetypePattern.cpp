@@ -268,7 +268,7 @@
                     context->argument( 2 ).
                     toString();
                 
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < double >
                     a3;
                     REcmaHelper::fromScriptValue(
@@ -506,7 +506,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < double >
                     a0;
                     REcmaHelper::fromScriptValue(
@@ -1562,7 +1562,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < double >
                     a0;
                     REcmaHelper::fromScriptValue(

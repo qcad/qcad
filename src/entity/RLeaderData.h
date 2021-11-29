@@ -52,11 +52,64 @@ public:
         return this;
     }
 
-    double getDimasz() const;
-    void setDimaszOverride(double v);
+    double getDimasz(bool scale = true) const {
+        double v = 2.5;
 
-    double getDimscale(bool fromDocument=true) const;
-    void setDimScaleOverride(double v);
+        // get value from override:
+        if (dimasz>0.0) {
+            v = dimasz;
+        }
+
+        else if (document!=NULL) {
+            QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+            if (!dimStyle.isNull()) {
+                // get value from dimension style:
+                v = dimStyle->getDouble(RS::DIMASZ);
+            }
+            else {
+                // TODO: get value from document (should never happen):
+                Q_ASSERT(false);
+            }
+        }
+
+        if (scale) {
+            v *= getDimscale();
+        }
+
+        return v;
+    }
+
+    void setDimasz(double v) {
+        dimasz = v;
+        update();
+    }
+
+    double getDimscale() const {
+        // get value from override:
+        if (dimscale>0.0) {
+            return dimscale;
+        }
+
+        double v = 1.0;
+        if (document!=NULL) {
+            QSharedPointer<RDimStyle> dimStyle = document->queryDimStyleDirect();
+            if (!dimStyle.isNull()) {
+                // get value from dimension style:
+                v = dimStyle->getDouble(RS::DIMSCALE);
+            }
+            else {
+                // TODO: get value from document (should never happen):
+                Q_ASSERT(false);
+            }
+        }
+
+        return v;
+    }
+
+    void setDimscale(double f) {
+        dimscale = f;
+        update();
+    }
 
     virtual void scaleVisualProperties(double scaleFactor);
 
@@ -111,13 +164,19 @@ public:
 
     virtual void update() const;
 
+    void clearStyleOverrides() {
+        dimscale = -1.0;
+        dimasz = -1.0;
+        update();
+    }
+
 private:
     /** Arrow head on / off */
     mutable bool arrowHead;
     /** Arrow size */
-    double dimaszOverride;
+    double dimasz;
     /** Dimension scale */
-    double dimScaleOverride;
+    double dimscale;
     /** Block to use instead of arrow */
     RBlock::Id dimLeaderBlockId;
 };

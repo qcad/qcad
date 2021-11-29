@@ -21,6 +21,7 @@
 #include "RExporter.h"
 #include "RPluginLoader.h"
 #include "RStorage.h"
+#include "RTextData.h"
 #include "RTriangle.h"
 
 RPropertyTypeId RDimensionEntity::PropertyCustom;
@@ -238,7 +239,7 @@ bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
         else {
             getData().setDimtsz(0.0);
         }
-        return true;
+        ret = true;
     }
 
     for (int i=0; i<RDimStyle::propertyVariables.length(); i++) {
@@ -434,37 +435,7 @@ void RDimensionEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
     }
     textData.setSelected(isSelected());
 
-    //QVariant v = getDocument()->getKnownVariable(RS::DIMCLRT, RColor(RColor::ByBlock));
-    //RColor textColor = v.value<RColor>();
-    if (e.isTextRenderedAsText()) {
-        //textData.setColor(textColor);
-        QList<RPainterPath> paths = e.exportText(textData, forceSelected);
-        e.exportPainterPaths(paths);
-    }
-    else {
-        if (!data.isSelected()) {
-            // render text as paths:
-            // set brush explicitly:
-            QVariant v = doc->getKnownVariable(RS::DIMCLRT, RColor(RColor::ByBlock));
-            RColor textColor = v.value<RColor>();
-            if (textColor.isByLayer()) {
-                QSharedPointer<RLayer> layer = doc->queryLayerDirect(data.getLayerId());
-                if (!layer.isNull()) {
-                    textColor = layer->getColor();
-                }
-            }
-
-            QBrush brush = e.getBrush();
-            if (!textColor.isByBlock()) {
-                brush.setColor(textColor);
-                QPen p = e.getPen();
-                p.setColor(textColor);
-                e.setPen(p);
-            }
-            e.setBrush(brush);
-        }
-        e.exportPainterPathSource(textData);
-    }
+    RDimensionEntity::renderDimensionText(e, doc, textData, data.isSelected(), forceSelected);
 
     QBrush brush = e.getBrush();
 
@@ -576,6 +547,47 @@ void RDimensionEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
 
     //data.dirty = false;
     */
+}
+
+void RDimensionEntity::renderDimensionText(RExporter& e, const RDocument* doc, RTextData& textData, bool isSelected, bool forceSelected) {
+    if (e.isTextRenderedAsText()) {
+        QList<RPainterPath> paths = e.exportText(textData, forceSelected);
+        e.exportPainterPaths(paths);
+    }
+    else {
+        QPen penBak = e.getPen();
+        QBrush brushBak = e.getBrush();
+
+        if (!isSelected) {
+            // render text as paths:
+            // set brush explicitly:
+            RColor textColor = RColor(RColor::ByBlock);
+            QSharedPointer<RDimStyle> dimStyle = doc->queryDimStyleDirect();
+            if (!dimStyle.isNull()) {
+                textColor = dimStyle->getColor(RS::DIMCLRT);
+            }
+            if (textColor.isByLayer()) {
+                textColor = textData.getColor(true, e.getBlockRefViewportStack());
+            }
+
+            if (!textColor.isByBlock()) {
+                textData.setColor(textColor);
+            }
+
+            QBrush brush = e.getBrush();
+            if (!textColor.isByBlock()) {
+                brush.setColor(textColor);
+                QPen p = e.getPen();
+                p.setColor(textColor);
+                e.setPen(p);
+            }
+            e.setBrush(brush);
+        }
+        e.exportPainterPathSource(textData);
+
+        e.setPen(penBak);
+        e.setBrush(brushBak);
+    }
 }
 
 void RDimensionEntity::print(QDebug dbg) const {

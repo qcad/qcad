@@ -77,8 +77,8 @@ RDxfImporter::RDxfImporter(RDocument& document, RMessageHandler* messageHandler,
 RDxfImporter::~RDxfImporter() {
 }
 
-bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter) {
-    Q_UNUSED(nameFilter);
+bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter, const QVariantMap& params) {
+    Q_UNUSED(nameFilter)
 
     this->fileName = fileName;
     QFileInfo fi(fileName);
@@ -1202,7 +1202,7 @@ void RDxfImporter::addLeader(const DL_LeaderData& data) {
             if (tuple.first==1070 && tuple.second==40 && i<list.size()-1) {
                 tuple = list[i+1];
                 if (tuple.first==1040) {
-                    leader.setDimScaleOverride(tuple.second.toDouble());
+                    leader.setDimscale(tuple.second.toDouble());
                 }
             }
         }

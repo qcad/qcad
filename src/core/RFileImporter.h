@@ -26,6 +26,10 @@
 
 #include <QString>
 
+#ifndef RDEFAULT_QVARIANTMAP
+#define RDEFAULT_QVARIANTMAP QVariantMap()
+#endif
+
 /**
  * \brief Base class for file importers. 
  *
@@ -44,7 +48,7 @@ public:
      * Must be implemented by file importers to import the given file into
      * the document.
      */
-    virtual bool importFile(const QString& fileName, const QString& nameFilter) = 0;
+    virtual bool importFile(const QString& fileName, const QString& nameFilter, const QVariantMap& params = RDEFAULT_QVARIANTMAP) = 0;
 };
 
 Q_DECLARE_METATYPE(RFileImporter*)

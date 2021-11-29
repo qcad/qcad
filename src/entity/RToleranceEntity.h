@@ -62,7 +62,8 @@ public:
     static RPropertyTypeId PropertyDirectionY;
     static RPropertyTypeId PropertyDirectionZ;
     static RPropertyTypeId PropertyText;
-//    static RPropertyTypeId PropertyDimScale;
+    static RPropertyTypeId PropertyDimscale;
+    static RPropertyTypeId PropertyDimtxt;
 
 public:
     RToleranceEntity(RDocument* document, const RToleranceData& data);
@@ -125,12 +126,20 @@ public:
         return data.getText();
     }
 
-    double getDimtxt() const {
-        return data.getDimtxt();
+    double getDimtxt(bool scale=true) const {
+        return data.getDimtxt(scale);
     }
 
-    double getDimscale(bool fromDocument=true) const {
-        return data.getDimscale(fromDocument);
+    void setDimtxt(double v) {
+        data.setDimtxt(v);
+    }
+
+    double getDimscale() const {
+        return data.getDimscale();
+    }
+
+    void setDimscale(double v) {
+        data.setDimscale(v);
     }
 
     QList<QSharedPointer<RShape> > getExploded() const {
@@ -145,6 +154,10 @@ public:
 
     QList<RLine> getFrame() const {
         return data.getFrame();
+    }
+
+    void clearStyleOverrides() {
+        data.clearStyleOverrides();
     }
 
 protected:

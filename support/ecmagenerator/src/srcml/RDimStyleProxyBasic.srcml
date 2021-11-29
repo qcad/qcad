@@ -53,6 +53,8 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>render</name><parameter_list>(<param><decl><type><name>const</name> <name>RDimStyle</name>&amp;</type> <name>dimStyle</name></decl></param>, <param><decl><type><name>const</name> <name>REntityData</name>&amp;</type> <name>entity</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name></decl></param>)</parameter_list>;</function_decl>
 
 </public><protected>protected:
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>renderPrivate</name><parameter_list>(<param><decl><type><name>const</name> <name>RDimStyle</name>&amp;</type> <name>dimStyle</name></decl></param>, <param><decl><type><name>const</name> <name>REntityData</name>&amp;</type> <name>entity</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name></decl></param>)</parameter_list>;</function_decl>
+
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>renderDimRotated</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>renderDimAligned</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>renderDimOrdinate</name><parameter_list>()</parameter_list>;</function_decl>

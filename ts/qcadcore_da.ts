@@ -315,7 +315,7 @@
         <translation>Layout</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceData.cpp" line="+836"/>
+        <location filename="../src/core/RBlockReferenceData.cpp" line="+858"/>
         <source>Circular (recursive) block referencing detected:</source>
         <translation>Cirkulær (rekursiv) blokhenvisning opdaget:</translation>
     </message>
@@ -715,12 +715,11 @@
         <translation>Stil</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Overall dimension scale</source>
-        <translation>Samlet dimensionsskala</translation>
+        <translation type="vanished">Samlet dimensionsskala</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Linear measurement factor</source>
         <translation>Lineær målefaktor</translation>
     </message>
@@ -768,7 +767,12 @@
         <translation type="vanished">Tekst inden for vandret</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-8"/>
+        <source>Overall scale</source>
+        <translation>Samlet skala</translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Text horizontal</source>
         <translation>Tekst horisontal</translation>
     </message>

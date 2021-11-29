@@ -634,6 +634,9 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft, double pixelSizeHint
 
     //RDebug::startTimer();
 
+    //qDebug() << "regenerating hatch";
+    //RDebug::startTimer();
+
     // get pattern:
     const RPattern* p = NULL;
     bool customPattern = false;
@@ -868,7 +871,7 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft, double pixelSizeHint
                 }
             }
 
-            if (timer.elapsed()>500) {
+            //if (timer.elapsed()>500) {
                 if (timeOut==-1) {
                     timeOut = RSettings::getIntValue("GraphicsView/MaxHatchTime", 2000);
                 }
@@ -879,12 +882,15 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft, double pixelSizeHint
                     gotDraft = draft;
                     return painterPaths;
                 }
-            }
+            //}
         }
     }
 
     dirty = false;
     gotDraft = draft;
+
+    //RDebug::stopTimer("regen hatch");
+    //RDebug::printBacktrace();
 
     return painterPaths;
 }

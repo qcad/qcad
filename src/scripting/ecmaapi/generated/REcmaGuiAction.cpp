@@ -1091,7 +1091,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < QKeySequence >
                     a0;
                     REcmaHelper::fromScriptValue(
@@ -1147,7 +1147,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QStringList
                     a0;
                     REcmaHelper::fromScriptValue(
@@ -1252,7 +1252,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QList < QKeySequence >
                     a0;
                     REcmaHelper::fromScriptValue(
@@ -4692,7 +4692,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QStringList
                     a0;
                     REcmaHelper::fromScriptValue(
@@ -4748,7 +4748,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QStringList
                     a0;
                     REcmaHelper::fromScriptValue(
@@ -6180,7 +6180,7 @@
             toQObject()
             );
         
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QStringList
                     a1;
                     REcmaHelper::fromScriptValue(
@@ -6291,7 +6291,7 @@
     ){
     // prepare arguments:
     
-                    // argument isArray
+                    // argument isArray or QVariantMap
                     QStringList
                     a0;
                     REcmaHelper::fromScriptValue(

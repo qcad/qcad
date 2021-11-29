@@ -110,7 +110,6 @@
             <break>break;</break>
 
         </case><case>case <expr><name><name>RS</name>::<name>VarTypeBool</name></name></expr>:
-            <expr_stmt><expr><call><name>qDebug</name><argument_list>()</argument_list></call> &lt;&lt; "set bool:" &lt;&lt; <name>val</name>.<call><name>toBool</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
             <expr_stmt><expr><call><name>setBool</name><argument_list>(<argument><expr><name>key</name></expr></argument>, <argument><expr><name>val</name>.<call><name>toBool</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
             <break>break;</break>
 
