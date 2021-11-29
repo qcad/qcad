@@ -204,7 +204,7 @@
         <translation>Programmering</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+59"/>
         <source>Hatch Patterns</source>
         <translation>Skraffermönster</translation>
     </message>
@@ -8321,6 +8321,14 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <location line="+5"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation>Rita ledare (linjesekvens med pil)</translation>
+    </message>
+</context>
+<context>
+    <name>LeaderFromText</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
+        <source>&amp;Leader from Selected Text</source>
+        <translation>&amp;Ledarlinje från markerad text</translation>
     </message>
 </context>
 <context>

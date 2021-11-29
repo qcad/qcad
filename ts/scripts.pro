@@ -624,6 +624,8 @@ SOURCES = \
 ../scripts/Misc/MiscDraw/Cross/Cross.js \
 ../scripts/Misc/MiscDraw/Cross/CrossInit.js \
 ../scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js \
+../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js \
+../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js \
 ../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.js \
 ../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js \
 ../scripts/Misc/MiscDraw/LineDove/LineDove.js \

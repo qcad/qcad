@@ -204,7 +204,7 @@
         <translation>Programmering</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+59"/>
         <source>Hatch Patterns</source>
         <translation>Skraveringsmønstre</translation>
     </message>
@@ -8173,6 +8173,14 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <location line="+5"/>
         <source>Draw leader (line sequence with arrow)</source>
         <translation>Tegn lederen (linjesekvens med pil)</translation>
+    </message>
+</context>
+<context>
+    <name>LeaderFromText</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
+        <source>&amp;Leader from Selected Text</source>
+        <translation>&amp;Lederlinje fra markeret tekst</translation>
     </message>
 </context>
 <context>

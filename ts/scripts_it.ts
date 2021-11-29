@@ -240,7 +240,7 @@
         <translation>Programmazione</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+59"/>
         <source>Hatch Patterns</source>
         <translation>Modelli di tratteggio</translation>
     </message>
@@ -9719,6 +9719,14 @@ BUG: Interferes with group castings.</source>
         <location line="+14"/>
         <source>Arrow head</source>
         <translation>Freccia</translation>
+    </message>
+</context>
+<context>
+    <name>LeaderFromText</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
+        <source>&amp;Leader from Selected Text</source>
+        <translation>&amp;Linea di quotatura dal testo selezionato</translation>
     </message>
 </context>
 <context>
