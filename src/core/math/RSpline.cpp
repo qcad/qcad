@@ -18,6 +18,8 @@
  */
 #include <cmath>
 
+#include <QMutex>
+
 #include "RArc.h"
 #include "RDebug.h"
 #include "RLine.h"
