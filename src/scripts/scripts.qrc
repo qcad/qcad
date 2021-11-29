@@ -1587,6 +1587,10 @@
     <file alias="scripts/Misc/MiscDraw/Cross/Cross.ui">../../scripts/Misc/MiscDraw/Cross/Cross.ui</file>
     <file alias="scripts/Misc/MiscDraw/Cross/CrossInit.js">../../scripts/Misc/MiscDraw/Cross/CrossInit.js</file>
     <file alias="scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js">../../scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js</file>
+    <file alias="scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText-inverse.svg">../../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText-inverse.svg</file>
+    <file alias="scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js">../../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js</file>
+    <file alias="scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.svg">../../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.svg</file>
+    <file alias="scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js">../../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js</file>
     <file alias="scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint-inverse.svg">../../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint-inverse.svg</file>
     <file alias="scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.js">../../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.js</file>
     <file alias="scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.svg">../../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.svg</file>
