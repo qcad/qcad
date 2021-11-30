@@ -220,12 +220,17 @@
         <translation>Programming</translation>
     </message>
     <message>
-        <location line="+59"/>
+        <location line="+62"/>
         <source>Hatch Patterns</source>
         <translation>Hatch Patterns</translation>
     </message>
     <message>
         <location line="+31"/>
+        <source>Themes</source>
+        <translation>Themes</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Translations</source>
         <translation>Translations</translation>
     </message>
@@ -7629,7 +7634,12 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Add centroid for a selected entity.</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+18"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+11"/>
+        <source>&amp;Area Centroid</source>
+        <translation>&amp;Area Centroid</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Add 2D area centroid for a selected entity.</source>
         <translation>Add 2D area centroid for a selected entity.</translation>
     </message>
@@ -7911,7 +7921,12 @@ BUG: Interferes with group castings.</translation>
         <translation>Summed centroid position:</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+18"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+11"/>
+        <source>&amp;Sum Centroids Weighted</source>
+        <translation>&amp;Sum Centroids Weighted</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Sum selected 2D centroid markers weighted.</source>
         <translation>Sum selected 2D centroid markers weighted.</translation>
     </message>
@@ -8012,7 +8027,12 @@ BUG: Interferes with group castings.</translation>
         <translation>Encountered an unsupported polygon with custom widths</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+18"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+11"/>
+        <source>&amp;Wire Centroid</source>
+        <translation>&amp;Wire Centroid</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Add 2D wire centroid for a selection.</source>
         <translation>Add 2D wire centroid for a selection.</translation>
     </message>

@@ -204,12 +204,17 @@
         <translation>Programmering</translation>
     </message>
     <message>
-        <location line="+59"/>
+        <location line="+62"/>
         <source>Hatch Patterns</source>
         <translation>Skraveringsmønstre</translation>
     </message>
     <message>
         <location line="+31"/>
+        <source>Themes</source>
+        <translation>Temaer</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Translations</source>
         <translation>Oversættelser</translation>
     </message>
@@ -7093,7 +7098,12 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation type="vanished">Tilføjer centroid for en valgt enhed.</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+18"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+11"/>
+        <source>&amp;Area Centroid</source>
+        <translation>&amp;Område centroid</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Add 2D area centroid for a selected entity.</source>
         <translation>Tilføj 2D-områdecentroid for en valgt enhed.</translation>
     </message>
@@ -7359,7 +7369,12 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation>Summen af centroidpositioner:</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+18"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+11"/>
+        <source>&amp;Sum Centroids Weighted</source>
+        <translation>&amp;Sum centroider vægtet</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Sum selected 2D centroid markers weighted.</source>
         <translation>Summen af udvalgte 2D centroid-markører vægtet.</translation>
     </message>
@@ -7460,7 +7475,12 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation>Opdagede en ikke understøttet polygon med brugerdefinerede bredder</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+18"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+11"/>
+        <source>&amp;Wire Centroid</source>
+        <translation>&amp;Tråd centroid</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Add 2D wire centroid for a selection.</source>
         <translation>Tilføj en 2D-tråds centroid til et valg.</translation>
     </message>

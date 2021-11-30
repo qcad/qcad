@@ -232,12 +232,17 @@
         <translation>Programmering</translation>
     </message>
     <message>
-        <location line="+59"/>
+        <location line="+62"/>
         <source>Hatch Patterns</source>
         <translation>Arceerpatronen</translation>
     </message>
     <message>
         <location line="+31"/>
+        <source>Themes</source>
+        <translation>Thema&apos;s</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Translations</source>
         <translation>Vertalingen</translation>
     </message>
@@ -7703,7 +7708,12 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Voeg centroïde toe voor een geselecteerde object.</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+18"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+11"/>
+        <source>&amp;Area Centroid</source>
+        <translation>&amp;Centroïde van oppervlakte</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Add 2D area centroid for a selected entity.</source>
         <translation>2D-gebiedszwaartepunt toevoegen voor een geselecteerde object.</translation>
     </message>
@@ -7985,7 +7995,12 @@ BUG: Interferes with group castings.</source>
         <translation>Gesommeerde centroïde positie:</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+18"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+11"/>
+        <source>&amp;Sum Centroids Weighted</source>
+        <translation>&amp;Som centroïden gewogen</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Sum selected 2D centroid markers weighted.</source>
         <translation>Som geselecteerde 2D-centroïde markers gewogen.</translation>
     </message>
@@ -8086,7 +8101,12 @@ BUG: Interferes with group castings.</source>
         <translation>Een niet-ondersteunde veelhoek met aangepaste breedtes gevonden</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+18"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+11"/>
+        <source>&amp;Wire Centroid</source>
+        <translation>&amp;Draad centroïde</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Add 2D wire centroid for a selection.</source>
         <translation>Voeg 2D draad centroïde toe voor een selectie.</translation>
     </message>

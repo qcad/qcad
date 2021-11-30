@@ -204,12 +204,17 @@
         <translation>程序编码</translation>
     </message>
     <message>
-        <location line="+59"/>
+        <location line="+62"/>
         <source>Hatch Patterns</source>
         <translation>填充图案</translation>
     </message>
     <message>
         <location line="+31"/>
+        <source>Themes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Translations</source>
         <translation>翻译</translation>
     </message>
@@ -6928,7 +6933,12 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+18"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+11"/>
+        <source>&amp;Area Centroid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Add 2D area centroid for a selected entity.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7210,7 +7220,12 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+18"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+11"/>
+        <source>&amp;Sum Centroids Weighted</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Sum selected 2D centroid markers weighted.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7311,7 +7326,12 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+18"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+11"/>
+        <source>&amp;Wire Centroid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Add 2D wire centroid for a selection.</source>
         <translation type="unfinished"></translation>
     </message>

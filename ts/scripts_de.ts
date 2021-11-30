@@ -252,12 +252,17 @@
         <translation>Programmierung</translation>
     </message>
     <message>
-        <location line="+59"/>
+        <location line="+62"/>
         <source>Hatch Patterns</source>
         <translation>Schraffurmuster</translation>
     </message>
     <message>
         <location line="+31"/>
+        <source>Themes</source>
+        <translation>Motive</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Translations</source>
         <translation>Übersetzungen</translation>
     </message>
@@ -8782,7 +8787,12 @@ BUG: Interferes with group castings.</translation>
         <translation type="vanished">Hinzufügen des Schwerpunkts für ein ausgewähltes Objekt.</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+18"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+11"/>
+        <source>&amp;Area Centroid</source>
+        <translation>&amp;Flächenschwerpunkt</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Add 2D area centroid for a selected entity.</source>
         <translation>2D Flächenschwerpunkt für ein ausgewähltes Objekt hinzufügen.</translation>
     </message>
@@ -9084,7 +9094,12 @@ BUG: Interferes with group castings.</translation>
         <translation>Summenschwerpunktposition:</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+18"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+11"/>
+        <source>&amp;Sum Centroids Weighted</source>
+        <translation>&amp;Summe Zentroide gewichtet</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Sum selected 2D centroid markers weighted.</source>
         <translation>Summe ausgewählter 2D-Schwerpunktmarker gewichtet.</translation>
     </message>
@@ -9185,7 +9200,12 @@ BUG: Interferes with group castings.</translation>
         <translation>Es wurde ein nicht unterstütztes Polygon mit benutzerdefinierten Breiten gefunden</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+18"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+11"/>
+        <source>&amp;Wire Centroid</source>
+        <translation>&amp;Drahtschwerpunkt</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Add 2D wire centroid for a selection.</source>
         <translation>2D-Drahtschwerpunkt für eine Auswahl hinzufügen.</translation>
     </message>
