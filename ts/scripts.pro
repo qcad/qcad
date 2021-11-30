@@ -624,6 +624,8 @@ SOURCES = \
 ../scripts/Misc/MiscDraw/Cross/Cross.js \
 ../scripts/Misc/MiscDraw/Cross/CrossInit.js \
 ../scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js \
+../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js \
+../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js \
 ../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.js \
 ../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJointInit.js \
 ../scripts/Misc/MiscDraw/LineDove/LineDove.js \
@@ -654,8 +656,13 @@ SOURCES = \
 ../scripts/Misc/MiscIO/MolImport/MolImport.js \
 ../scripts/Misc/MiscIO/MolImport/MolImportInit.js \
 ../scripts/Misc/MiscIO/MolImport/MolImporter.js \
-../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroid.js \
-../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js \
+../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroid.js \
+../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js \
+../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js \
+../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeighted.js \
+../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js \
+../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroid.js \
+../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js \
 ../scripts/Misc/MiscInformation/MiscInformation.js \
 ../scripts/Misc/MiscModify/ChangeFontToArial/ChangeFontToArial.js \
 ../scripts/Misc/MiscModify/FlushBackLog/FlushBackLog.js \

@@ -18,6 +18,8 @@
  */
 #include <cmath>
 
+#include <QMutex>
+
 #include "RArc.h"
 #include "RDebug.h"
 #include "RLine.h"
@@ -957,6 +959,9 @@ void RSpline::appendToExploded(const RLine& line) const {
     if (line.getLength()<1.0e-6) {
         return;
     }
+
+    static QMutex m;
+    QMutexLocker ml(&m);
 
     if (!exploded.isEmpty()) {
         // compare angle of this sement with last segment and

@@ -70,7 +70,7 @@ void RDimStyle::init() {
     RDimStyle::PropertyProtected.generateId(RDimStyle::getRtti(), RObject::PropertyProtected);
 
     QString tsStyle = QT_TRANSLATE_NOOP("REntity", "Style");
-    RDimStyle::PropertyDimscale.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Overall dimension scale"));
+    RDimStyle::PropertyDimscale.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Overall scale"));
     RDimStyle::PropertyDimlfac.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Linear measurement factor"));
     RDimStyle::PropertyDimtxt.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Text height"), false, RPropertyAttributes::DimStyleOverride|RPropertyAttributes::Geometry);
     RDimStyle::PropertyDimgap.generateId(RDimStyle::getRtti(), tsStyle, QT_TRANSLATE_NOOP("REntity", "Dimension line gap"), false, RPropertyAttributes::DimStyleOverride|RPropertyAttributes::Geometry);

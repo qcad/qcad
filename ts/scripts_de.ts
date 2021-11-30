@@ -252,12 +252,17 @@
         <translation>Programmierung</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+62"/>
         <source>Hatch Patterns</source>
         <translation>Schraffurmuster</translation>
     </message>
     <message>
         <location line="+31"/>
+        <source>Themes</source>
+        <translation>Motive</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Translations</source>
         <translation>Übersetzungen</translation>
     </message>
@@ -4142,34 +4147,47 @@ ist bereits in der Liste.</translation>
 <context>
     <name>DrawFromCSV</name>
     <message>
-        <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+129"/>
         <source>No import file selected !</source>
-        <translation>Keine Importdatei ausgewählt.</translation>
+        <translation type="vanished">Keine Importdatei ausgewählt.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSV.js" line="+145"/>
         <location line="+15"/>
-        <location line="+1168"/>
+        <location line="+1275"/>
         <source>Command ended.</source>
         <translation>Befehl beendet.</translation>
     </message>
     <message>
-        <location line="-1171"/>
         <source>No file opened!</source>
+        <translation type="vanished">Keine Datei geöffnet.</translation>
+    </message>
+    <message>
+        <location line="-1293"/>
+        <source>No import file selected.</source>
+        <translation>Keine Importdatei ausgewählt.</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>No file opened.</source>
         <translation>Keine Datei geöffnet.</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+11"/>
+        <source>DrawFromCSV script (v3.03) by CVH</source>
+        <translation>DrawFromCSV-Skript (v3.03) von CVH</translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>Cast CSV</source>
         <translation>Zeichnen von CSV</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+5"/>
         <source>Reading from file: %1</source>
         <translation>Lesen aus Datei: %1</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+46"/>
         <source>Switched to comma/dot CSV style.</source>
         <translation>Umschalten auf CSV-Stil mit Komma/Punkt.</translation>
     </message>
@@ -4185,379 +4203,748 @@ ist bereits in der Liste.</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>Unsupported or invalid CSV style, ignored ! Text line %1</source>
-        <translation>Nicht unterstützter oder ungültiger CSV-Stil, ignoriert. Textzeile %1</translation>
+        <source>Unsupported or invalid CSV style, ignored. Text line: %1</source>
+        <translation>Nicht unterstützter oder ungültiger CSV-Stil, ignoriert. Textzeile: %1</translation>
     </message>
     <message>
         <location line="+82"/>
-        <source>Setting new relative origin failed, ignored ! Text line %1</source>
-        <translation>Setzen des neuen relativen Ursprungs fehlgeschlagen, ignoriert. Textzeile %1</translation>
+        <source>Setting new relative origin failed, ignored. Text line: %1</source>
+        <translation>Das Setzen eines neuen relativen Ursprungs ist fehlgeschlagen und wird ignoriert. Textzeile: %1</translation>
     </message>
     <message>
         <location line="+15"/>
-        <source>Can not switch to layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Kann nicht auf Layer umschalten, wird ignoriert. Textzeile %1 Layer: %2</translation>
+        <source>Setting new rounding radius failed, ignored. Text line: %1</source>
+        <translation>Setzen eines neuen Rundungsradius fehlgeschlagen, ignoriert. Textzeile: %1</translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>Not a correct  layer switch, ignored ! Text line %1</source>
-        <translation>Kein korrekter Layerwechsel, wird ignoriert. Textzeile %1</translation>
+        <location line="+6"/>
+        <source>Rounding polylines requires QCAD Professional, ignored. Text line: %1</source>
+        <translation>Abrunden von Polylinien erfordert QCAD Professional, wird ignoriert. Textzeile: %1</translation>
     </message>
     <message>
-        <location line="+14"/>
-        <source>Not a correct  new layer switch, ignored ! Text line %1</source>
-        <translation>Kein korrekter neuer Layerschalter, ignoriert. Textzeile %1</translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <source>Can not hide layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Kann Layer nicht ausblenden, wird ignoriert. Textzeile %1 Layer: %2</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Not a correct  hide layer switch, ignored ! Text line %1</source>
-        <translation>Kein korrekter Schalter zum Ausblenden der Layer, ignoriert. Textzeile %1</translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <source>Can not freeze layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Kann Layer nicht einfrieren, wird ignoriert. Textzeile %1 Layer: %2</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Not a correct  freeze layer switch, ignored ! Text line %1</source>
-        <translation>Kein korrekter Freeze-Layer-Schalter, ignoriert. Textzeile %1</translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <source>Can not lock layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Kann Layer nicht sperren, wird ignoriert. Textzeile %1 Layer: %2</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Not a correct  lock layer switch, ignored ! Text line %1</source>
-        <translation>Kein korrekter Sperrschichtschalter, ignoriert. Textzeile %1</translation>
-    </message>
-    <message>
-        <location line="+28"/>
-        <source>Can not allow layer, ignored ! Text line %1 layer: %2</source>
-        <translation>Kann Layer nicht zulassen, wird ignoriert. Textzeile %1 Layer: %2</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Not a correct  allow layer switch, ignored ! Text line %1</source>
-        <translation>Kein korrekter Schalter der Erlaubnisebene, ignoriert. Textzeile %1</translation>
-    </message>
-    <message>
-        <location line="+19"/>
-        <location line="+17"/>
-        <location line="+19"/>
-        <location line="+18"/>
-        <location line="+25"/>
-        <location line="+24"/>
-        <location line="+19"/>
-        <location line="+19"/>
-        <location line="+25"/>
-        <location line="+22"/>
-        <location line="+48"/>
-        <location line="+46"/>
-        <location line="+19"/>
-        <location line="+21"/>
-        <location line="+22"/>
-        <location line="+24"/>
-        <location line="+21"/>
-        <location line="+26"/>
-        <location line="+23"/>
-        <location line="+32"/>
-        <source>Low field count !</source>
-        <translation>Niedrige Feldanzahl.</translation>
-    </message>
-    <message>
-        <location line="-469"/>
-        <location line="+17"/>
-        <location line="+19"/>
-        <location line="+18"/>
-        <location line="+25"/>
-        <location line="+24"/>
-        <location line="+19"/>
-        <location line="+19"/>
-        <location line="+25"/>
-        <location line="+22"/>
-        <location line="+48"/>
-        <location line="+46"/>
-        <location line="+19"/>
-        <location line="+21"/>
-        <location line="+22"/>
-        <location line="+24"/>
-        <location line="+21"/>
-        <location line="+26"/>
-        <location line="+23"/>
-        <location line="+32"/>
-        <location line="+34"/>
-        <location line="+23"/>
-        <location line="+29"/>
-        <location line="+25"/>
-        <source>Odd field count !</source>
-        <translation>Ungerade Feldanzahl.</translation>
-    </message>
-    <message>
-        <location line="-579"/>
-        <location line="+37"/>
-        <location line="+104"/>
-        <location line="+48"/>
-        <location line="+48"/>
-        <location line="+45"/>
-        <location line="+156"/>
-        <location line="+166"/>
-        <source>Rv Invalid !</source>
-        <translation>Rv Ungültig.</translation>
-    </message>
-    <message>
-        <location line="-587"/>
-        <location line="+37"/>
-        <location line="+49"/>
-        <location line="+19"/>
-        <location line="+44"/>
-        <location line="+135"/>
-        <location line="+21"/>
-        <location line="+22"/>
-        <location line="+24"/>
-        <location line="+21"/>
-        <location line="+26"/>
-        <location line="+55"/>
-        <source>Rv1 Invalid !</source>
-        <translation>Rv1 Ungültig.</translation>
-    </message>
-    <message>
-        <location line="-451"/>
-        <location line="+43"/>
-        <location line="+24"/>
-        <location line="+19"/>
-        <location line="+19"/>
-        <location line="+44"/>
-        <location line="+135"/>
-        <location line="+21"/>
-        <location line="+22"/>
-        <location line="+24"/>
-        <location line="+21"/>
-        <location line="+26"/>
-        <location line="+27"/>
-        <location line="+34"/>
-        <source>Rv2 Invalid !</source>
-        <translation>Rv2 Ungültig.</translation>
-    </message>
-    <message>
-        <location line="-422"/>
-        <location line="+24"/>
-        <location line="+63"/>
-        <location line="+52"/>
-        <location line="+44"/>
-        <location line="+45"/>
-        <location line="+21"/>
-        <source>Radius Invalid !</source>
-        <translation>Radius ungültig.</translation>
-    </message>
-    <message>
-        <location line="-247"/>
-        <location line="+24"/>
-        <location line="+109"/>
-        <location line="+251"/>
-        <location line="+34"/>
-        <location line="+149"/>
-        <source>Angle Invalid !</source>
-        <translation>Winkel ungültig.</translation>
-    </message>
-    <message>
-        <location line="-480"/>
-        <source>Angle1 Invalid !</source>
-        <translation>Winkel1 Ungültig.</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Angle2 Invalid !</source>
-        <translation>Winkel2 Ungültig.</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Equal angles !</source>
-        <translation>Gleiche Winkel.</translation>
-    </message>
-    <message>
-        <location line="+22"/>
-        <location line="+156"/>
-        <location line="+22"/>
-        <location line="+24"/>
-        <location line="+21"/>
-        <location line="+26"/>
-        <location line="+27"/>
-        <location line="+34"/>
-        <source>Rv3 Invalid !</source>
-        <translation>Rv3 Ungültig.</translation>
-    </message>
-    <message>
-        <location line="-308"/>
-        <source>Arc Invalid !</source>
-        <translation>Bogen ungültig.</translation>
-    </message>
-    <message>
-        <location line="+43"/>
-        <location line="+46"/>
-        <source>Center Invalid !</source>
-        <translation>Mitte Ungültig.</translation>
-    </message>
-    <message>
-        <location line="-21"/>
-        <source>Radius too small !</source>
-        <translation>Radius zu klein.</translation>
-    </message>
-    <message>
-        <location line="+88"/>
-        <source>Circle Invalid !</source>
-        <translation>Kreis ungültig.</translation>
-    </message>
-    <message>
-        <location line="+67"/>
-        <location line="+26"/>
-        <location line="+27"/>
-        <location line="+34"/>
-        <source>Rv4 Invalid !</source>
-        <translation>Rv4 Ungültig.</translation>
-    </message>
-    <message>
-        <location line="-42"/>
-        <source>Size Invalid !</source>
-        <translation>Größe ungültig.</translation>
-    </message>
-    <message>
-        <location line="+32"/>
-        <source>Size in X Invalid !</source>
-        <translation>Größe in X Ungültig.</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Size in Y Invalid !</source>
-        <translation>Größe in Y Ungültig.</translation>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>Polygon, less than 5 references !</source>
-        <translation>Polygon, weniger als 5 Referenzen.</translation>
+        <location line="+16"/>
+        <source>Can not switch to non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
+        <translation>Kann nicht zu nicht existierenden Layer wechseln, wird ignoriert. Textzeile: %1%2 Layer: %3</translation>
     </message>
     <message>
         <location line="+5"/>
-        <location line="+25"/>
-        <location line="+27"/>
-        <location line="+28"/>
-        <source>Rv %1 Invalid !</source>
-        <translation>Rv %1 Ungültig.</translation>
+        <source>Not a correct set active &apos;Layer&apos; switch, ignored. Text line: %1</source>
+        <translation>Nicht korrekt eingestellter aktiver &apos;Layer&apos;-Schalter, ignoriert. Textzeile: %1</translation>
     </message>
     <message>
-        <location line="-62"/>
-        <source>Polyline, less than 2 references !</source>
+        <location line="+15"/>
+        <source>Not a correct &apos;New layer&apos; switch, ignored. Text line: %1</source>
+        <translation>Kein korrekter Schalter &apos;Neue Layer&apos;, ignoriert. Textzeile: %1</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Can not hide non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
+        <translation>Kann nicht vorhandene Layer nicht ausblenden, wird ignoriert. Textzeile: %1%2 Layer: %3</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Not a correct &apos;HideLayer&apos; switch, ignored. Text line: %1</source>
+        <translation>Kein korrekter &apos;HideLayer&apos;-Schalter, ignoriert. Textzeile: %1</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Can not freeze non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
+        <translation>Nicht existierende Layer können nicht eingefroren werden, ignoriert. Textzeile: %1%2 Layer: %3</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Not a correct &apos;FreezeLayer&apos; switch, ignored. Text line: %1</source>
+        <translation>Kein korrekter &apos;FreezeLayer&apos;-Schalter, ignoriert. Textzeile: %1</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Can not lock non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
+        <translation>Nicht existierende Layer können nicht gesperrt werden, wird ignoriert. Textzeile: %1%2 Layer: %3</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Not a correct &apos;LockLayer&apos; switch, ignored. Text line: %1</source>
+        <translation>Kein korrekter &apos;LockLayer&apos;-Schalter, ignoriert. Textzeile: %1</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Can not allow non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
+        <translation>Kann nicht existierende Layer nicht zulassen, wird ignoriert. Textzeile: %1%2 Layer: %3</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Not a correct &apos;AllowLayer&apos; switch, ignored. Text line: %1</source>
+        <translation>Kein korrekter &apos;AllowLayer&apos;-Schalter, ignoriert. Textzeile: %1</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <location line="+17"/>
+        <location line="+20"/>
+        <location line="+19"/>
+        <location line="+26"/>
+        <location line="+25"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+25"/>
+        <location line="+33"/>
+        <location line="+49"/>
+        <location line="+47"/>
+        <location line="+19"/>
+        <location line="+22"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <location line="+29"/>
+        <location line="+33"/>
+        <location line="+135"/>
+        <source>Low field count.</source>
+        <translation>Niedrige Feldzahl.</translation>
+    </message>
+    <message>
+        <location line="-656"/>
+        <location line="+17"/>
+        <location line="+20"/>
+        <location line="+19"/>
+        <location line="+26"/>
+        <location line="+25"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+25"/>
+        <location line="+33"/>
+        <location line="+49"/>
+        <location line="+47"/>
+        <location line="+19"/>
+        <location line="+22"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <location line="+29"/>
+        <location line="+33"/>
+        <location line="+35"/>
+        <location line="+24"/>
+        <location line="+28"/>
+        <location line="+25"/>
+        <location line="+23"/>
+        <source>Odd field count.</source>
+        <translation>Ungerade Feldanzahl.</translation>
+    </message>
+    <message>
+        <location line="-655"/>
+        <location line="+38"/>
+        <location line="+109"/>
+        <location line="+59"/>
+        <location line="+49"/>
+        <location line="+46"/>
+        <location line="+188"/>
+        <location line="+168"/>
+        <source>Rv Invalid.</source>
+        <translation>Rv Ungültig.</translation>
+    </message>
+    <message>
+        <location line="-640"/>
+        <location line="+39"/>
+        <location line="+51"/>
+        <location line="+20"/>
+        <location line="+45"/>
+        <location line="+148"/>
+        <location line="+22"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <location line="+62"/>
+        <source>Rv1 Invalid.</source>
+        <translation>Rv1 Ungültig.</translation>
+    </message>
+    <message>
+        <location line="-503"/>
+        <location line="+45"/>
+        <location line="+25"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+45"/>
+        <location line="+148"/>
+        <location line="+22"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <location line="+33"/>
+        <location line="+35"/>
+        <source>Rv2 Invalid.</source>
+        <translation>Rv2 Ungültig.</translation>
+    </message>
+    <message>
+        <location line="-510"/>
+        <location line="+19"/>
+        <location line="+26"/>
+        <location line="+25"/>
+        <location line="+20"/>
+        <location line="+20"/>
+        <location line="+77"/>
+        <location line="+49"/>
+        <location line="+67"/>
+        <source>Equal positions.</source>
+        <translation>Gleiche Positionen.</translation>
+    </message>
+    <message>
+        <location line="-265"/>
+        <location line="+25"/>
+        <location line="+66"/>
+        <location line="+39"/>
+        <location line="+25"/>
+        <location line="+45"/>
+        <location line="+45"/>
+        <location line="+22"/>
+        <location line="+33"/>
+        <source>Radius Invalid.</source>
+        <translation>Radius ungültig.</translation>
+    </message>
+    <message>
+        <location line="-298"/>
+        <location line="+25"/>
+        <location line="+124"/>
+        <location line="+284"/>
+        <location line="+35"/>
+        <location line="+150"/>
+        <source>Angle Invalid.</source>
+        <translation>Winkel ungültig.</translation>
+    </message>
+    <message>
+        <location line="-527"/>
+        <source>Angle1 Invalid.</source>
+        <translation>Angle1 Ungültig.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Angle2 Invalid.</source>
+        <translation>Angle2 Ungültig.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Equal angles.</source>
+        <translation>Gleiche Winkel.</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <location line="+170"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <source>Equal positions 1-2.</source>
+        <translation>Gleiche Positionen 1-2.</translation>
+    </message>
+    <message>
+        <location line="-286"/>
+        <location line="+170"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <location line="+32"/>
+        <location line="+35"/>
+        <source>Rv3 Invalid.</source>
+        <translation>Rv3 Ungültig.</translation>
+    </message>
+    <message>
+        <location line="-354"/>
+        <location line="+170"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <source>Equal positions 1-3.</source>
+        <translation>Gleiche Positionen 1-3.</translation>
+    </message>
+    <message>
+        <location line="-287"/>
+        <location line="+170"/>
+        <location line="+33"/>
+        <location line="+28"/>
+        <location line="+24"/>
+        <location line="+33"/>
+        <source>Equal positions 2-3.</source>
+        <translation>Gleiche Positionen 2-3.</translation>
+    </message>
+    <message>
+        <location line="-284"/>
+        <location line="+2"/>
+        <location line="+168"/>
+        <location line="+2"/>
+        <source>Near co-linear positions.</source>
+        <translation>Nahezu kolineare Positionen.</translation>
+    </message>
+    <message>
+        <location line="-168"/>
+        <source>Arc Invalid.</source>
+        <translation>Bogen ungültig.</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <location line="+47"/>
+        <source>Center Invalid.</source>
+        <translation>Zentrum ungültig.</translation>
+    </message>
+    <message>
+        <location line="-21"/>
+        <source>Radius too small.</source>
+        <translation>Radius zu klein.</translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>Circle Invalid.</source>
+        <translation>Kreis Ungültig.</translation>
+    </message>
+    <message>
+        <location line="+79"/>
+        <location line="+33"/>
+        <location line="+30"/>
+        <location line="+35"/>
+        <source>Rv4 Invalid.</source>
+        <translation>Rv4 Ungültig.</translation>
+    </message>
+    <message>
+        <location line="-97"/>
+        <location line="+33"/>
+        <source>Equal positions 1-4.</source>
+        <translation>Gleiche Positionen 1-4.</translation>
+    </message>
+    <message>
+        <location line="-32"/>
+        <location line="+33"/>
+        <source>Equal positions 2-4.</source>
+        <translation>Gleiche Positionen 2-4.</translation>
+    </message>
+    <message>
+        <location line="-32"/>
+        <location line="+33"/>
+        <source>Equal positions 3-4.</source>
+        <translation>Gleiche Positionen 3-4.</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Size Invalid.</source>
+        <translation>Grösse ungültig.</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Size in X Invalid.</source>
+        <translation>Grösse in X ungültig.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Size in Y Invalid.</source>
+        <translation>Grösse in Y ungültig.</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Polygon: less than 5 references.</source>
+        <translation>Polygon: weniger als 5 Referenzen.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+26"/>
+        <location line="+26"/>
+        <location line="+28"/>
+        <source>Rv%1 Invalid.</source>
+        <translation>Rv%1 Ungültig.</translation>
+    </message>
+    <message>
+        <location line="-61"/>
+        <source>Polyline, less than 2 references.</source>
         <translation>Polylinie, weniger als 2 Referenzen.</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Bulge %1 Invalid !</source>
-        <translation>Ausbuchtung %1 Ungültig.</translation>
+        <source>Bulge%1 Invalid.</source>
+        <translation>Ausbuchtung%1 ungültig.</translation>
     </message>
     <message>
-        <location line="+19"/>
-        <source>Unsupported PRO feature !</source>
-        <translation>Nicht unterstützte PRO-Funktion.</translation>
+        <location line="+18"/>
+        <source>Unsupported QCAD Professional feature.</source>
+        <translation>Nicht unterstützte QCAD Professional Funktion.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Fit point Spline, less than 3 references !</source>
-        <translation>Passpunkt Spline, weniger als 3 Referenzen.</translation>
+        <source>3th degree fit point Spline, less than 3 references.</source>
+        <translation>3. Grad fit Punkt Spline, weniger als 3 Referenzen.</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Control point Spline, less than 4 references !</source>
-        <translation>Kontrollpunkt Spline, weniger als 4 Referenzen.</translation>
+        <source>3th degree control point Spline, less than 4 references.</source>
+        <translation>3. Grades Kontrollpunkt Spline, weniger als 4 Referenzen.</translation>
     </message>
     <message>
-        <location line="+23"/>
-        <source>Text, low field count !</source>
-        <translation>Text, niedrige Feldanzahl.</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Text, odd field count !</source>
-        <translation>Text, ungerade Feldanzahl.</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Height Invalid !</source>
+        <location line="+28"/>
+        <source>Height Invalid.</source>
         <translation>Höhe ungültig.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Width Invalid !</source>
+        <source>Width Invalid.</source>
         <translation>Breite ungültig.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Vert. alignment Invalid !</source>
-        <translation>Vert. Ausrichtung Ungültig.</translation>
+        <source>Vert. alignment Invalid.</source>
+        <translation>Vertikale Ausrichtung ungültig.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Horz. alignment Invalid !</source>
-        <translation>Horz. Ausrichtung Ungültig.</translation>
+        <source>Horz. alignment Invalid.</source>
+        <translation>Horz. Ausrichtung ungültig.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Drawing direction Invalid !</source>
-        <translation>Zeichnungsrichtung Ungültig.</translation>
+        <source>Drawing direction Invalid.</source>
+        <translation>Zeichnungsrichtung ungültig.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Line spacing style Invalid !</source>
-        <translation>Zeilenabstand Stil Ungültig.</translation>
+        <source>Line spacing style Invalid.</source>
+        <translation>Stil des Zeilenabstands ungültig.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Line spacing Invalid !</source>
-        <translation>Zeilenabstand Ungültig.</translation>
+        <source>Line spacing Invalid.</source>
+        <translation>Zeilenabstand ungültig.</translation>
     </message>
     <message>
-        <location line="+41"/>
-        <source>Unsupported entry ! Text line %1</source>
-        <translation>Nicht unterstützter Eintrag. Textzeile %1</translation>
+        <location line="+37"/>
+        <source>Unsupported method. Text line: %1</source>
+        <translation>Nicht unterstützte Methode. Textzeile: %1</translation>
     </message>
     <message>
         <location line="+19"/>
-        <source>Error with first optional list !</source>
-        <translation>Fehler bei der ersten Optionsliste.</translation>
+        <source>Error with first optional list.</source>
+        <translation>Fehler bei der ersten optionalen Liste.</translation>
     </message>
     <message>
         <location line="+14"/>
+        <source>Error with second optional list.</source>
+        <translation>Fehler bei der zweiten optionalen Liste.</translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <source>Not a correct entry, ignored. Text line: %1 &gt; %2</source>
+        <translation>Kein korrekter Eintrag, ignoriert. Textzeile: %1 &gt; %2</translation>
+    </message>
+    <message>
+        <location line="+80"/>
+        <source>Casted entries: %1 out of %2 text lines</source>
+        <translation>Gezeichnete Einträge: %1 von %2 Textzeilen</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Nothing casted.</source>
+        <translation>Nichts gezeichnet.</translation>
+    </message>
+    <message>
+        <location line="+227"/>
+        <source>Attributes empty. Text line: %1</source>
+        <translation>Attribute leer. Textzeile: %1</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Not a correct layer name, ignored. Text line: %1%2 Name: %3</source>
+        <translation>Kein korrekter Layername, wird ignoriert. Textzeile: %1%2 Name: %3</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Layer doesn&apos;t exist, ignored. Text line: %1%2 Layer: %3</source>
+        <translation>Layer existiert nicht, wird ignoriert. Textzeile: %1%2 Layer: %3</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Not a correct color, ignored. Text line: %1%2 Color: %3</source>
+        <translation>Keine korrekte Farbe, ignoriert. Textzeile: %1%2 Farbe: %3</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
+        <translation>Keine korrekte Linienstärke, wird ignoriert. Textzeile: %1%2 Gewicht: %3</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</source>
+        <translation>Kein korrekter Linetype, wird ignoriert. Textzeile: %1%2 Typ: %3</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
+        <translation>Keine korrekte Linetype-Skala, ignoriert. Textzeile: %1%2 Massstab: %3</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Unsupported attribute, ignored. Text line: %1 &gt; %2</source>
+        <translation>Nicht unterstütztes Attribut, ignoriert. Textzeile: %1 &gt; %2</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Not a correct layer name. Text line: %1%2 Name: %3</source>
+        <translation>Kein korrekter Layername. Textzeile: %1%2 Name: %3</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Parent layer doesn&apos;t exist. Text line: %1%2 Layer: %3</source>
+        <translation>Die übergeordnete Layer existiert nicht. Textzeile: %1%2 Layer: %3</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Not a correct color. Text line: %1%2 Color: %3</source>
+        <translation>Nicht die richtige Farbe. Textzeile: %1%2 Farbe: %3</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
+        <translation>Keine korrekte Linienstärke. Textzeile: %1%2 Gewicht: %3</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Not a correct Linetype. Text line: %1%2 Type: %3</source>
+        <translation>Kein korrekter Linientyp. Textzeile: %1%2 Typ: %3</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Add/Update layer ignored.</source>
+        <translation>Layer hinzufügen/aktualisieren wird ignoriert.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Updated layer: %1</source>
+        <translation>Aktualisierte Layer: %1</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Added new layer: %1</source>
+        <translation>Neue Layer hinzugefügt: %1</translation>
+    </message>
+    <message>
+        <source>Unsupported or invalid CSV style, ignored ! Text line %1</source>
+        <translation type="vanished">Nicht unterstützter oder ungültiger CSV-Stil, ignoriert. Textzeile %1</translation>
+    </message>
+    <message>
+        <source>Setting new relative origin failed, ignored ! Text line %1</source>
+        <translation type="vanished">Setzen des neuen relativen Ursprungs fehlgeschlagen, ignoriert. Textzeile %1</translation>
+    </message>
+    <message>
+        <source>Can not switch to layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="vanished">Kann nicht auf Layer umschalten, wird ignoriert. Textzeile %1 Layer: %2</translation>
+    </message>
+    <message>
+        <source>Not a correct  layer switch, ignored ! Text line %1</source>
+        <translation type="vanished">Kein korrekter Layerwechsel, wird ignoriert. Textzeile %1</translation>
+    </message>
+    <message>
+        <source>Not a correct  new layer switch, ignored ! Text line %1</source>
+        <translation type="vanished">Kein korrekter neuer Layerschalter, ignoriert. Textzeile %1</translation>
+    </message>
+    <message>
+        <source>Can not hide layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="vanished">Kann Layer nicht ausblenden, wird ignoriert. Textzeile %1 Layer: %2</translation>
+    </message>
+    <message>
+        <source>Not a correct  hide layer switch, ignored ! Text line %1</source>
+        <translation type="vanished">Kein korrekter Schalter zum Ausblenden der Layer, ignoriert. Textzeile %1</translation>
+    </message>
+    <message>
+        <source>Can not freeze layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="vanished">Kann Layer nicht einfrieren, wird ignoriert. Textzeile %1 Layer: %2</translation>
+    </message>
+    <message>
+        <source>Not a correct  freeze layer switch, ignored ! Text line %1</source>
+        <translation type="vanished">Kein korrekter Freeze-Layer-Schalter, ignoriert. Textzeile %1</translation>
+    </message>
+    <message>
+        <source>Can not lock layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="vanished">Kann Layer nicht sperren, wird ignoriert. Textzeile %1 Layer: %2</translation>
+    </message>
+    <message>
+        <source>Not a correct  lock layer switch, ignored ! Text line %1</source>
+        <translation type="vanished">Kein korrekter Sperrschichtschalter, ignoriert. Textzeile %1</translation>
+    </message>
+    <message>
+        <source>Can not allow layer, ignored ! Text line %1 layer: %2</source>
+        <translation type="vanished">Kann Layer nicht zulassen, wird ignoriert. Textzeile %1 Layer: %2</translation>
+    </message>
+    <message>
+        <source>Not a correct  allow layer switch, ignored ! Text line %1</source>
+        <translation type="vanished">Kein korrekter Schalter der Erlaubnisebene, ignoriert. Textzeile %1</translation>
+    </message>
+    <message>
+        <source>Low field count !</source>
+        <translation type="vanished">Niedrige Feldanzahl.</translation>
+    </message>
+    <message>
+        <source>Odd field count !</source>
+        <translation type="vanished">Ungerade Feldanzahl.</translation>
+    </message>
+    <message>
+        <source>Rv Invalid !</source>
+        <translation type="vanished">Rv Ungültig.</translation>
+    </message>
+    <message>
+        <source>Rv1 Invalid !</source>
+        <translation type="vanished">Rv1 Ungültig.</translation>
+    </message>
+    <message>
+        <source>Rv2 Invalid !</source>
+        <translation type="vanished">Rv2 Ungültig.</translation>
+    </message>
+    <message>
+        <source>Radius Invalid !</source>
+        <translation type="vanished">Radius ungültig.</translation>
+    </message>
+    <message>
+        <source>Angle Invalid !</source>
+        <translation type="vanished">Winkel ungültig.</translation>
+    </message>
+    <message>
+        <source>Angle1 Invalid !</source>
+        <translation type="vanished">Winkel1 Ungültig.</translation>
+    </message>
+    <message>
+        <source>Angle2 Invalid !</source>
+        <translation type="vanished">Winkel2 Ungültig.</translation>
+    </message>
+    <message>
+        <source>Equal angles !</source>
+        <translation type="vanished">Gleiche Winkel.</translation>
+    </message>
+    <message>
+        <source>Rv3 Invalid !</source>
+        <translation type="vanished">Rv3 Ungültig.</translation>
+    </message>
+    <message>
+        <source>Arc Invalid !</source>
+        <translation type="vanished">Bogen ungültig.</translation>
+    </message>
+    <message>
+        <source>Center Invalid !</source>
+        <translation type="vanished">Mitte Ungültig.</translation>
+    </message>
+    <message>
+        <source>Radius too small !</source>
+        <translation type="vanished">Radius zu klein.</translation>
+    </message>
+    <message>
+        <source>Circle Invalid !</source>
+        <translation type="vanished">Kreis ungültig.</translation>
+    </message>
+    <message>
+        <source>Rv4 Invalid !</source>
+        <translation type="vanished">Rv4 Ungültig.</translation>
+    </message>
+    <message>
+        <source>Size Invalid !</source>
+        <translation type="vanished">Grösse ungültig.</translation>
+    </message>
+    <message>
+        <source>Size in X Invalid !</source>
+        <translation type="vanished">Grösse in X Ungültig.</translation>
+    </message>
+    <message>
+        <source>Size in Y Invalid !</source>
+        <translation type="vanished">Grösse in Y Ungültig.</translation>
+    </message>
+    <message>
+        <source>Polygon, less than 5 references !</source>
+        <translation type="vanished">Polygon, weniger als 5 Referenzen.</translation>
+    </message>
+    <message>
+        <source>Rv %1 Invalid !</source>
+        <translation type="vanished">Rv %1 Ungültig.</translation>
+    </message>
+    <message>
+        <source>Polyline, less than 2 references !</source>
+        <translation type="vanished">Polylinie, weniger als 2 Referenzen.</translation>
+    </message>
+    <message>
+        <source>Bulge %1 Invalid !</source>
+        <translation type="vanished">Ausbuchtung %1 Ungültig.</translation>
+    </message>
+    <message>
+        <source>Unsupported PRO feature !</source>
+        <translation type="vanished">Nicht unterstützte PRO-Funktion.</translation>
+    </message>
+    <message>
+        <source>Fit point Spline, less than 3 references !</source>
+        <translation type="vanished">Passpunkt Spline, weniger als 3 Referenzen.</translation>
+    </message>
+    <message>
+        <source>Control point Spline, less than 4 references !</source>
+        <translation type="vanished">Kontrollpunkt Spline, weniger als 4 Referenzen.</translation>
+    </message>
+    <message>
+        <source>Text, low field count !</source>
+        <translation type="vanished">Text, niedrige Feldanzahl.</translation>
+    </message>
+    <message>
+        <source>Text, odd field count !</source>
+        <translation type="vanished">Text, ungerade Feldanzahl.</translation>
+    </message>
+    <message>
+        <source>Height Invalid !</source>
+        <translation type="vanished">Höhe ungültig.</translation>
+    </message>
+    <message>
+        <source>Width Invalid !</source>
+        <translation type="vanished">Breite ungültig.</translation>
+    </message>
+    <message>
+        <source>Vert. alignment Invalid !</source>
+        <translation type="vanished">Vert. Ausrichtung Ungültig.</translation>
+    </message>
+    <message>
+        <source>Horz. alignment Invalid !</source>
+        <translation type="vanished">Horz. Ausrichtung Ungültig.</translation>
+    </message>
+    <message>
+        <source>Drawing direction Invalid !</source>
+        <translation type="vanished">Zeichnungsrichtung Ungültig.</translation>
+    </message>
+    <message>
+        <source>Line spacing style Invalid !</source>
+        <translation type="vanished">Zeilenabstand Stil Ungültig.</translation>
+    </message>
+    <message>
+        <source>Line spacing Invalid !</source>
+        <translation type="vanished">Zeilenabstand Ungültig.</translation>
+    </message>
+    <message>
+        <source>Unsupported entry ! Text line %1</source>
+        <translation type="vanished">Nicht unterstützter Eintrag. Textzeile %1</translation>
+    </message>
+    <message>
+        <source>Error with first optional list !</source>
+        <translation type="vanished">Fehler bei der ersten Optionsliste.</translation>
+    </message>
+    <message>
         <source>Error with second optional list !</source>
-        <translation>Fehler bei zweiter optionaler Liste.</translation>
+        <translation type="vanished">Fehler bei zweiter optionaler Liste.</translation>
     </message>
     <message>
-        <location line="+47"/>
         <source>Not a correct entry ! Text line %1 : %2</source>
-        <translation>Kein korrekter Eintrag. Textzeile %1 : %2</translation>
+        <translation type="vanished">Kein korrekter Eintrag. Textzeile %1 : %2</translation>
     </message>
     <message>
-        <location line="+77"/>
         <source>Casted entries : %1 with %2 text lines</source>
-        <translation>Gegossene Einträge : %1 mit %2 Textzeilen</translation>
+        <translation type="vanished">Gegossene Einträge : %1 mit %2 Textzeilen</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="-447"/>
         <source>Importing CSV complete. Command ended.</source>
         <translation>Importieren von CSV abgeschlossen. Befehl beendet.</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Nothing casted !</source>
-        <translation>Nichts gegossen.</translation>
+        <translation type="vanished">Nichts gegossen.</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+46"/>
         <source>Draw from CSV</source>
         <translation>Zeichnen aus CSV</translation>
     </message>
@@ -4572,80 +4959,64 @@ ist bereits in der Liste.</translation>
         <translation>Alle Dateien</translation>
     </message>
     <message>
-        <location line="+165"/>
         <source>Attributes empty ! Text line %1</source>
-        <translation>Attribute leer. Textzeile %1</translation>
+        <translation type="vanished">Attribute leer. Textzeile %1</translation>
     </message>
     <message>
-        <location line="+24"/>
-        <location line="+97"/>
         <source>Not a correct layer name ! Text line %1 name: %2</source>
-        <translation>Kein korrekter Layername. Textzeile %1 Name: %2</translation>
+        <translation type="vanished">Kein korrekter Layername. Textzeile %1 Name: %2</translation>
     </message>
     <message>
-        <location line="-90"/>
         <source>Layer doesn&apos;t exist, ignored ! Text line %1 layer: %2</source>
-        <translation>Layer existiert nicht, wird ignoriert. Textzeile %1 Layer: %2</translation>
+        <translation type="vanished">Layer existiert nicht, wird ignoriert. Textzeile %1 Layer: %2</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Not a correct color, ignored ! Text line %1 color: %2</source>
-        <translation>Keine korrekte Farbe, wird ignoriert. Textzeile %1 Farbe: %2</translation>
+        <translation type="vanished">Keine korrekte Farbe, wird ignoriert. Textzeile %1 Farbe: %2</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Not a correct Lineweight, ignored ! Text line %1 weight: %2</source>
-        <translation>Kein korrektes Lineweight, wird ignoriert. Textzeile %1 Gewicht: %2</translation>
+        <translation type="vanished">Kein korrektes Lineweight, wird ignoriert. Textzeile %1 Gewicht: %2</translation>
     </message>
     <message>
-        <location line="+10"/>
         <source>Not a correct Linetype, ignored ! Text line %1 type: %2</source>
-        <translation>Kein korrekter Linetype, wird ignoriert. Textzeile %1 Typ: %2</translation>
+        <translation type="vanished">Kein korrekter Linetype, wird ignoriert. Textzeile %1 Typ: %2</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Not a correct Linetype scale, ignored ! Text line %1 scale: %2</source>
-        <translation>Keine korrekte Linetype-Skala, wird ignoriert. Textzeile %1 Maßstab: %2</translation>
+        <translation type="vanished">Keine korrekte Linetype-Skala, wird ignoriert. Textzeile %1 Massstab: %2</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>Not a correct attribute, ignored ! Text line %1 &gt; %2</source>
-        <translation>Kein korrektes Attribut, wird ignoriert. Textzeile %1 &gt; %2</translation>
+        <translation type="vanished">Kein korrektes Attribut, wird ignoriert. Textzeile %1 &gt; %2</translation>
     </message>
     <message>
-        <location line="+52"/>
         <source>Parent layer doesn&apos;t exist ! Text line %1 layer: %2</source>
-        <translation>Übergeordnete Layer existiert nicht. Textzeile %1 Layer: %2</translation>
+        <translation type="vanished">Übergeordnete Layer existiert nicht. Textzeile %1 Layer: %2</translation>
     </message>
     <message>
-        <location line="+30"/>
         <source>Not a correct color ! Text line %1 color: %2</source>
-        <translation>Keine korrekte Farbe. Textzeile %1 Farbe: %2</translation>
+        <translation type="vanished">Keine korrekte Farbe. Textzeile %1 Farbe: %2</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Not a correct Lineweight ! Text line %1 weight: %2</source>
-        <translation>Nicht korrektes Lineweight. Textzeile %1 Gewicht: %2</translation>
+        <translation type="vanished">Nicht korrektes Lineweight. Textzeile %1 Gewicht: %2</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Not a correct Linetype ! Text line %1 type: %2</source>
-        <translation>Kein korrekter Linetype. Textzeile %1 Typ: %2</translation>
+        <translation type="vanished">Kein korrekter Linetype. Textzeile %1 Typ: %2</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Add/Update layer ignored !</source>
-        <translation>Layer hinzufügen/aktualisieren wird ignoriert.</translation>
+        <translation type="vanished">Layer hinzufügen/aktualisieren wird ignoriert.</translation>
     </message>
     <message>
-        <location line="+11"/>
         <source>Updated layer : %1</source>
-        <translation>Aktualisierte Schicht : %1</translation>
+        <translation type="vanished">Aktualisierte Schicht : %1</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Added new layer : %1</source>
-        <translation>Neue Layer hinzugefügt: %1</translation>
+        <translation type="vanished">Neue Layer hinzugefügt: %1</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
@@ -8278,7 +8649,7 @@ BUG: Interferes with group castings.</translation>
 <context>
     <name>InfoAreaCentroid</name>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroid.js" line="+102"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroid.js" line="+118"/>
         <source>No selection.</source>
         <translation>Keine Auswahl.</translation>
     </message>
@@ -8288,43 +8659,38 @@ BUG: Interferes with group castings.</translation>
         <translation>Bitte treffen Sie zuerst eine Auswahl. Der Befehl wurde beendet.</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Multiple selection.</source>
-        <translation>Mehrfachauswahl.</translation>
+        <translation type="vanished">Mehrfachauswahl.</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+8"/>
         <source>Not implemented. Command terminated.</source>
         <translation>Nicht implementiert. Befehl abgebrochen.</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Centroid &amp; area script by CVH</source>
-        <translation>Skript für den Schwerpunktbereich von CVH</translation>
+        <translation type="vanished">Skript für den Schwerpunktbereich von CVH</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>Enclosed area:</source>
         <translation>Geschlossener Bereich:</translation>
     </message>
     <message>
-        <location line="+21"/>
-        <location line="+19"/>
+        <location line="+46"/>
         <source>Approximated enclosed area:</source>
         <translation>Ungefähre geschlossene Fläche:</translation>
     </message>
     <message>
-        <location line="-13"/>
         <source>Ellipse arc sector area (closed format): %1</source>
-        <translation>Bereich des Ellipsenbogensektors (geschlossenes Format): %1</translation>
+        <translation type="vanished">Bereich des Ellipsenbogensektors (geschlossenes Format): %1</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Ellipse arc segment area (closed format): %1</source>
-        <translation>Bereich des Ellipsenbogensegments (geschlossenes Format): %1</translation>
+        <translation type="vanished">Bereich des Ellipsenbogensegments (geschlossenes Format): %1</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+4"/>
         <source>Hatched area:</source>
         <translation>Schraffierte Fläche:</translation>
     </message>
@@ -8339,45 +8705,130 @@ BUG: Interferes with group castings.</translation>
         <translation>Unterschiedliche schraffierte Fläche:</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Unsupported entity type.</source>
-        <translation>Nicht unterstützter Objekttyp.</translation>
+        <translation type="vanished">Nicht unterstützter Objekttyp.</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-67"/>
+        <source>Multiple entities in selection.</source>
+        <translation>Mehrere Entitäten in der Auswahl.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Area centroid script (v0.31) by CVH</source>
+        <translation>Flächenschwerpunkt-Skript (v0.31) von CVH</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>2D Centroid</source>
+        <translation>2D-Schwerpunkt</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Centroid markers circle in selection. No results.</source>
+        <translation>Schwerpunktmarkierungen kreisen in der Auswahl. Keine Ergebnisse.</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Unsupported entity type. No results.</source>
+        <translation>Nicht unterstützter Objekttyp. Keine Ergebnisse.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>No results.</source>
         <translation>Keine Ergebnisse.</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Centroid point</source>
         <translation>Schwerpunktpunkt</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+49"/>
         <source>(Incl. approximations)</source>
         <translation>(inkl. Näherungswerte)</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
+        <location line="+19"/>
         <source>Approximated centroid:</source>
         <translation>Ungefährer Schwerpunkt:</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-19"/>
+        <location line="+19"/>
         <source>Centroid:</source>
         <translation>Zentroid:</translation>
     </message>
     <message>
-        <location line="+1761"/>
+        <location line="+193"/>
+        <location line="+563"/>
+        <source>Encountered an unsupported polyline with custom widths</source>
+        <translation>Ein nicht unterstützter Linienzug mit benutzerdefinierten Breiten wurde gefunden</translation>
+    </message>
+    <message>
+        <location line="-478"/>
+        <location line="+581"/>
+        <source>Encountered an unsupported polygon with custom widths</source>
+        <translation>Es wurde ein nicht unterstütztes Polygon mit benutzerdefinierten Breiten gefunden</translation>
+    </message>
+    <message>
+        <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
         <translation>Unbehandelte Form aus der Schraffurschleife.</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+16"/>
-        <location line="+1"/>
+        <location line="+80"/>
+        <source>Self-intersecting shape near (%1). No Results.</source>
+        <translation>Selbst schneidende Form in der Nähe von (%1). Keine Ergebnisse.</translation>
+    </message>
+    <message>
         <source>Add centroid for a selected entity.</source>
-        <translation>Hinzufügen des Schwerpunkts für ein ausgewähltes Objekt.</translation>
+        <translation type="vanished">Hinzufügen des Schwerpunkts für ein ausgewähltes Objekt.</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+11"/>
+        <source>&amp;Area Centroid</source>
+        <translation>&amp;Flächenschwerpunkt</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Add 2D area centroid for a selected entity.</source>
+        <translation>2D Flächenschwerpunkt für ein ausgewähltes Objekt hinzufügen.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Add 2D uniform density area centroid marker and values for a selected entity.</source>
+        <translation>Hinzufügen von 2D-Schwerpunktmarkierungen und -werten für ein ausgewähltes Objekt mit einheitlicher Dichte.</translation>
+    </message>
+</context>
+<context>
+    <name>InfoCentroids</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js" line="+232"/>
+        <location line="+1"/>
+        <source>2D Centroid</source>
+        <translation>2D-Schwerpunkt</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>X position</source>
+        <translation>Position X</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Y position</source>
+        <translation>Y-Stellung</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Weighted</source>
+        <translation>Gewichtet</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Density</source>
+        <translation>Dichte</translation>
     </message>
 </context>
 <context>
@@ -8568,6 +9019,200 @@ BUG: Interferes with group castings.</translation>
         <location filename="../scripts/Information/InfoPositionRel/InfoPositionRelInit.js" line="+2"/>
         <source>&amp;Relative Position</source>
         <translation>&amp;Relative Position</translation>
+    </message>
+</context>
+<context>
+    <name>InfoSumCentroidsWeighted</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeighted.js" line="+94"/>
+        <source>No selection.</source>
+        <translation>Keine Auswahl.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Please, make a selection first. Command terminated.</source>
+        <translation>Bitte treffen Sie zuerst eine Auswahl. Der Befehl wurde beendet.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Centroids weighted sum script (v0.10b) by CVH</source>
+        <translation>Skript zur gewichteten Summe der Zentren (v0.10b) von CVH</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>2D Centroid</source>
+        <translation>2D-Schwerpunkt</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Density</source>
+        <translation>Dichte</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>X position</source>
+        <translation>Position X</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Y position</source>
+        <translation>Y-Stellung</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Weighted</source>
+        <translation>Gewichtet</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>No centroid markers in selection.</source>
+        <translation>Keine Schwerpunktmarkierungen in der Auswahl.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>One marker selected, nothing to sum. Please verify selection.</source>
+        <translation>Ein Marker ausgewählt, nichts zu summieren. Bitte überprüfen Sie die Auswahl.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Results in Zero.</source>
+        <translation>Ergebnisse in Null.</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Total sum(%1):</source>
+        <translation>Gesamtsumme(%1):</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Weighted sum(%1):</source>
+        <translation>Gewichtete Summe(%1):</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Summed centroid position:</source>
+        <translation>Summenschwerpunktposition:</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+11"/>
+        <source>&amp;Sum Centroids Weighted</source>
+        <translation>&amp;Summe Zentroide gewichtet</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Sum selected 2D centroid markers weighted.</source>
+        <translation>Summe ausgewählter 2D-Schwerpunktmarker gewichtet.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sum selected 2D centroid markers weighted by their individual custom density.</source>
+        <translation>Summe ausgewählter 2D-Schwerpunktmarker, gewichtet nach ihrer individuellen Dichte.</translation>
+    </message>
+</context>
+<context>
+    <name>InfoWireCentroid</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroid.js" line="+117"/>
+        <source>No selection.</source>
+        <translation>Keine Auswahl.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Please, make a selection first. Command terminated.</source>
+        <translation>Bitte treffen Sie zuerst eine Auswahl. Der Befehl wurde beendet.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Wire centroid script (v0.31) by CVH</source>
+        <translation>Drahtschwerpunkt-Skript (v0.31) von CVH</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Length:</source>
+        <translation>Länge:</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>2D Centroid</source>
+        <translation>2D-Schwerpunkt</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Centroid markers circle in selection. No results.</source>
+        <translation>Schwerpunktmarkierungen kreisen in der Auswahl. Keine Ergebnisse.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+7"/>
+        <source>Approximated length:</source>
+        <translation>Ungefähre Länge:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Unsupported entity type. No results.</source>
+        <translation>Nicht unterstützter Objekttyp. Keine Ergebnisse.</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>No results.</source>
+        <translation>Keine Ergebnisse.</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Results in Zero.</source>
+        <translation>Ergebnisse in Null.</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Centroid point</source>
+        <translation>Schwerpunktpunkt</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Total length:</source>
+        <translation>Gesamtlänge:</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>(Incl. approximations)</source>
+        <translation>(inkl. Näherungswerte)</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <location line="+19"/>
+        <source>Approximated centroid:</source>
+        <translation>Ungefährer Schwerpunkt:</translation>
+    </message>
+    <message>
+        <location line="-19"/>
+        <location line="+19"/>
+        <source>Centroid:</source>
+        <translation>Zentroid:</translation>
+    </message>
+    <message>
+        <location line="+116"/>
+        <source>Encountered an unsupported polyline with custom widths</source>
+        <translation>Ein nicht unterstützter Linienzug mit benutzerdefinierten Breiten wurde gefunden</translation>
+    </message>
+    <message>
+        <location line="+101"/>
+        <source>Encountered an unsupported polygon with custom widths</source>
+        <translation>Es wurde ein nicht unterstütztes Polygon mit benutzerdefinierten Breiten gefunden</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+11"/>
+        <source>&amp;Wire Centroid</source>
+        <translation>&amp;Drahtschwerpunkt</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Add 2D wire centroid for a selection.</source>
+        <translation>2D-Drahtschwerpunkt für eine Auswahl hinzufügen.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Add 2D uniform density wire centroid marker and values for a selection of entities.</source>
+        <translation>Hinzufügen von 2D-Drahtschwerpunktmarkierungen und -werten für eine Auswahl von Objekten.</translation>
     </message>
 </context>
 <context>
@@ -9298,7 +9943,7 @@ BUG: Interferes with group castings.</translation>
         <translation>Alle Layer verbergen</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+50"/>
         <source>Thawing all layers</source>
         <translation>Alle Layer auftauen</translation>
     </message>
@@ -9531,6 +10176,14 @@ BUG: Interferes with group castings.</translation>
         <location line="+14"/>
         <source>Arrow head</source>
         <translation>Pfeil</translation>
+    </message>
+</context>
+<context>
+    <name>LeaderFromText</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
+        <source>&amp;Leader from Selected Text</source>
+        <translation>&amp;Führungslinie von ausgewähltem Text</translation>
     </message>
 </context>
 <context>
@@ -13466,12 +14119,12 @@ nicht öffnen.
         <translation>&amp;Runden</translation>
     </message>
     <message>
-        <location filename="../scripts/Modify/Round/Round.js" line="+58"/>
+        <location filename="../scripts/Modify/Round/Round.js" line="+60"/>
         <source>The two entities cannot be rounded.</source>
         <translation>Die zwei Objekte können nicht gerundet werden.</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+48"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Erstes Objekt kann nicht getrimmt werden.</translation>
     </message>

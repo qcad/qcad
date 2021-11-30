@@ -33,7 +33,9 @@ v7 - 16/03/21 - Move  all the bottom tabs right so first tab is not floating.
                 Bottom inactive tabs background fixed.
                 Bottom inactive tabs font color made more visible.
                 Tooltips section removed.
-
+v8 - 27/11/21 - min-width: 90px added to QComboBox section to fix some single character
+                width comobo box lists width.
+                
 */
 
 /*-----QWidget-----*/
@@ -213,6 +215,7 @@ QComboBox
     background-color: qlineargradient(x1:1, y1:0, x2:1, y2:1, stop:0 #C7D5DF,stop:1 #7A95A6);
     border: 1px solid #86A2B3;
     border-radius: 3px;
+    min-width: 90px;
 }
 
 QComboBox::disabled

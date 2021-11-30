@@ -29,6 +29,7 @@ function Round(guiAction) {
     ModifyCorner.call(this, guiAction);
 
     this.radius = 1.0;
+    this.inverted = false;
 
     this.setUiOptions("Round.ui");
 }
@@ -52,6 +53,7 @@ Round.prototype.getOperation = function(preview) {
             this.trim,
             this.radius,
             this.posSolution,
+            this.inverted,
             preview);
 
     if (!success && !preview) {
@@ -73,9 +75,14 @@ Round.prototype.getOperation = function(preview) {
  * \param trim true: Trim both entities to rounding arc.
  * \param radius Radius of rounding.
  * \param solutionPos Position that determines which solution to apply (optional, defaults to clickPos1)
+ * \param inverted Invert arc (inside rouding)
  * \param preview Operation is used for preview.
  */
-Round.round = function(op, entity1, clickPos1, entity2, clickPos2, trim, radius, solutionPos, preview) {
+Round.round = function(op, entity1, clickPos1, entity2, clickPos2, trim, radius, solutionPos, inverted, preview) {
+    if (isNull(inverted)) {
+        inverted = false;
+    }
+
     if (!isEntity(entity1) || !isValidVector(clickPos1) ||
         !isEntity(entity2) || !isValidVector(clickPos2) ||
         !isBoolean(trim)) {
@@ -114,7 +121,11 @@ Round.round = function(op, entity1, clickPos1, entity2, clickPos2, trim, radius,
     }
 
     // add rounding:
-    op.addObject(new RArcEntity(entity1.getDocument(), new RArcData(newShapes[1].data())));
+    var d = newShapes[1].data();
+    if (inverted) {
+        d.mirror(new RLine(d.getStartPoint(), d.getEndPoint()));
+    }
+    op.addObject(new RArcEntity(entity1.getDocument(), new RArcData(d)));
 
     return true;
 };
@@ -156,5 +167,9 @@ Round.prototype.getAuxPreview = function() {
 
 Round.prototype.slotRadiusChanged = function(value) {
     this.radius = value;
+};
+
+Round.prototype.slotInvertedChanged = function(value) {
+    this.inverted = value;
 };
 
