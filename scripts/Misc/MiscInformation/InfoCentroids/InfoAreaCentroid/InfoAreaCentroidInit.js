@@ -13,7 +13,6 @@ function init(basePath) {
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/InfoAreaCentroid.js");
     action.setIcon(basePath + "/InfoAreaCentroid.svg");
-    action.setDefaultShortcut(new QKeySequence("a,m"));
     action.setDefaultCommands(["acentroid", "getac"]);    // List as an Array!
     var tipShort = qsTranslate("InfoAreaCentroid", "Add 2D area centroid for a selected entity.");   // In an init section in the script mostly qsTr() is used
     var tipLong = qsTranslate("InfoAreaCentroid", "Add 2D uniform density area centroid marker and values for a selected entity.");

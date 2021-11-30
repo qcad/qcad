@@ -13,7 +13,6 @@ function init(basePath) {
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/InfoSumCentroidsWeighted.js");
     action.setIcon(basePath + "/InfoSumCentroidsWeighted.svg");
-    action.setDefaultShortcut(new QKeySequence("c,m"));
     action.setDefaultCommands(["sumcentroid", "sumc"]);    // List as an Array!
     var tipShort = qsTranslate("InfoSumCentroidsWeighted", "Sum selected 2D centroid markers weighted.");   // In an init section in the script mostly qsTr() is used
     var tipLong = qsTranslate("InfoSumCentroidsWeighted", "Sum selected 2D centroid markers weighted by their individual custom density.");

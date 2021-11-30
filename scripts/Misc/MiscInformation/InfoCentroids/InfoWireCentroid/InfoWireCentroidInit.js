@@ -13,7 +13,6 @@ function init(basePath) {
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/InfoWireCentroid.js");
     action.setIcon(basePath + "/InfoWireCentroid.svg");
-    action.setDefaultShortcut(new QKeySequence("w,m"));
     action.setDefaultCommands(["wcentroid", "getwc"]);    // List as an Array!
     var tipShort = qsTranslate("InfoWireCentroid", "Add 2D wire centroid for a selection.");   // In an init section in the script mostly qsTr() is used
     var tipLong = qsTranslate("InfoWireCentroid", "Add 2D uniform density wire centroid marker and values for a selection of entities.");
