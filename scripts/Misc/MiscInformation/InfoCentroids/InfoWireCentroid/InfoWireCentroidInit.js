@@ -8,7 +8,7 @@ function init(basePath) {
     }
     // -> Continue with PRO recourses
 
-    var action = new RGuiAction("&Wire Centroid", RMainWindowQt.getMainWindow());    // '&' Indicates the key letter
+    var action = new RGuiAction(qsTranslate("InfoWireCentroid", "&Wire Centroid"), RMainWindowQt.getMainWindow());    // '&' Indicates the key letter
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/InfoWireCentroid.js");

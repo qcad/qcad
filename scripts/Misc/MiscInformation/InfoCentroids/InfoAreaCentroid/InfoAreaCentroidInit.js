@@ -8,7 +8,7 @@ function init(basePath) {
     }
     // -> Continue with PRO recourses
 
-    var action = new RGuiAction("&Area Centroid", RMainWindowQt.getMainWindow());    // '&' Indicates the key letter
+    var action = new RGuiAction(qsTranslate("InfoAreaCentroid", "&Area Centroid"), RMainWindowQt.getMainWindow());    // '&' Indicates the key letter
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/InfoAreaCentroid.js");
