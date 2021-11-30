@@ -10,20 +10,12 @@ macx {
     }
 }
 
-linux-g++* {
-    arch = $$system("uname -m")
-    equals(arch, "x86_64") {
-        QMAKE_TARGET.arch = x86_64
-    }
-}
-
 linux-* {
     arch = $$system("uname -m")
     equals(arch, "x86_64") {
         QMAKE_TARGET.arch=x86_64
     }
 }
-
 
 greaterThan(QT_MAJOR_VERSION, 4) {
     cache()
