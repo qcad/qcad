@@ -1,3 +1,7 @@
+linux-g++:QMAKE_TARGET.arch = $$QMAKE_HOST.arch
+linux-g++-32:QMAKE_TARGET.arch = x86
+linux-g++-64:QMAKE_TARGET.arch = x86_64
+
 macx {
     arch = $$system("uname -m")
     equals(arch, "arm64") {
