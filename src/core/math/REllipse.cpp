@@ -618,6 +618,16 @@ double REllipse::getLength() const {
     if (isFullEllipse()) {
         a1 = 0.0;
         a2 = 2*M_PI;
+
+        double a = getMajorRadius();
+        double b = getMinorRadius();
+        if (RMath::fuzzyCompare((a+b), 0.0)) {
+            return 0.0;
+        }
+        double h = pow((a-b)/(a+b), 2);
+
+        return M_PI * (a+b) * ( (135168 - 85760 * h - 5568 * h * h + 3867 * h * h * h) /
+                                    (135168 - 119552 * h + 22208 * h * h - 345 * h * h * h) );
     }
     else {
         a1 = RMath::getNormalizedAngle(startParam);

@@ -31,6 +31,9 @@ v6 - 24/02/21 - Tool Matrix widget header background colour changed.
                  in the Reset, Options and Snap toolbars, possibly other locations.
 v7 - 16/03/21 - Move  all the bottom tabs right so first tab is not floating.
                 Tooltips section removed.
+v8 - 27/11/21 - min-width: 90px added to QComboBox section to fix some single character
+                width comobo box lists width.
+
 
 */
 
@@ -209,8 +212,9 @@ QTextEdit::disabled
 QComboBox
 {
     background-color: qlineargradient(x1:1, y1:0, x2:1, y2:1, stop:0 #fff6e6,stop:1 #b37100);
-    border: 1px solid #b37100;
+    border: 1px solid #804f00;
     border-radius: 3px;
+    min-width: 90px;
 }
 
 QComboBox::disabled

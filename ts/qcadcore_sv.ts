@@ -719,12 +719,11 @@
         <translation>Stil</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Overall dimension scale</source>
-        <translation>Övergripande dimensionsskala</translation>
+        <translation type="vanished">Övergripande dimensionsskala</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Linear measurement factor</source>
         <translation>Faktor för linjär mätning</translation>
     </message>
@@ -768,7 +767,12 @@
         <translation type="vanished">Text inuti horisontell</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-8"/>
+        <source>Overall scale</source>
+        <translation>Övergripande skala</translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Text horizontal</source>
         <translation>Text horisontell</translation>
     </message>

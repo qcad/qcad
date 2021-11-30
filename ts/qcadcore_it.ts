@@ -746,12 +746,11 @@
         <translation>Stile</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Overall dimension scale</source>
-        <translation>Scala delle dimensioni globali</translation>
+        <translation type="vanished">Scala delle dimensioni globali</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Linear measurement factor</source>
         <translation>Fattore di misura lineare</translation>
     </message>
@@ -799,7 +798,12 @@
         <translation type="vanished">Testo all&apos;interno orizzontale</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-8"/>
+        <source>Overall scale</source>
+        <translation>Scala globali</translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Text horizontal</source>
         <translation>Testo orizzontale</translation>
     </message>

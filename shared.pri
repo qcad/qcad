@@ -1,7 +1,19 @@
+linux-g++:QMAKE_TARGET.arch = $$QMAKE_HOST.arch
+linux-g++-32:QMAKE_TARGET.arch = x86
+linux-g++-64:QMAKE_TARGET.arch = x86_64
+
 macx {
     arch = $$system("uname -m")
     equals(arch, "arm64") {
         QMAKE_APPLE_DEVICE_ARCHS=arm64
+        QMAKE_LFLAGS+=-L/usr/lib -lstdc++
+    }
+}
+
+linux-g++* {
+    arch = $$system("uname -m")
+    equals(arch, "x86_64") {
+        QMAKE_TARGET.arch = x86_64
     }
 }
 
