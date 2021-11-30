@@ -94,6 +94,10 @@ var credits =
                                  ],
     ],
     [
+        qsTr("Themes"),
+        [ "Pete Vickerstaff",    "Coffee, Cyan, Dark Grey, Default Plus, Forest, Heather, Light Grey, Midnight, Pastel, Pink Champagne" ],
+    ],
+    [
         qsTr("Translations"),
         [ "Petr Zgraja, 'fialot'", "Czech (cs) translation" ],
         [ "Andrew Mustun",       "Dutch (nl) translation" ],
