@@ -7,7 +7,10 @@ var credits =
         [ "Christian Aigner", "Misc > Draw > Dovetail from 2 Points<br>"
                               ],
         [ "CVH",              "Misc > Script Examples > Mathematics > FlexPainter<br>" +
-                              "Misc > Import/Export > Draw from CSV<br>"
+                              "Misc > Import/Export > Draw from CSV<br>" +
+                              "Misc > Information > Area Centroid<br>" +
+                              "Misc > Information > Wire Centroid<br>" +
+                              "Misc > Information >  Sum Centroids Weighted<br>"
                               ],
         [ "Dmitry Ponomarev", "Misc > Import/Export > Batch2Pdf visible layout blocks<br>" +
                               "Misc > Draw > Leader from Selected Text<br>"

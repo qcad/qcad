@@ -8,7 +8,7 @@ function init(basePath) {
     }
     // -> Continue with PRO recourses
 
-    var action = new RGuiAction("&Sum centroids weighted", RMainWindowQt.getMainWindow());    // '&' Indicates the key letter
+    var action = new RGuiAction(qsTranslate("InfoSumCentroidsWeighted", "&Sum Centroids Weighted"), RMainWindowQt.getMainWindow());    // '&' Indicates the key letter
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/InfoSumCentroidsWeighted.js");
