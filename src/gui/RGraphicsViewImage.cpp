@@ -1284,7 +1284,10 @@ void RGraphicsViewImage::paintEntityThread(int threadId, REntity::Id id, bool pr
 
         // drawable is not plottable (from layer for which plottable is off):
         if (drawable.getNoPlot() && (isPrinting() || (showOnlyPlottable && isPrintPreview()))) {
-            continue;
+            // always export transforms (viewports):
+            if (drawable.getType()!=RGraphicsSceneDrawable::Transform && drawable.getType()!=RGraphicsSceneDrawable::EndTransform) {
+                continue;
+            }
         }
 
         bool workingSet = true;
