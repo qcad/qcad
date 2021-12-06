@@ -148,6 +148,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setExtLineFixLength, "setExtLineFixLength");
             
+            REcmaHelper::registerFunction(&engine, proto, hasOverride, "hasOverride");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RDimensionEntity*>(), *proto);
 
@@ -3479,6 +3481,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimensionEntity::setExtLineFixLength", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionEntity::hasOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionEntity::hasOverride", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionEntity::hasOverride";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionEntity* self = 
+                        getSelf("hasOverride", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::KnownVariable */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::KnownVariable
+                    a0 =
+                    (RS::KnownVariable)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasOverride(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.hasOverride().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionEntity::hasOverride", context, engine);
             return result;
         }
          QScriptValue

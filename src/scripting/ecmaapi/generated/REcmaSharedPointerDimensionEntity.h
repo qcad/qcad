@@ -178,6 +178,9 @@
         setExtLineFixLength
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        hasOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDimensionBlockNames
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

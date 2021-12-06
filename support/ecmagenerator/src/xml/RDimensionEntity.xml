@@ -311,6 +311,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="hasOverride" cppName="hasOverride"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RS::KnownVariable" typeName="RS::KnownVariable"
+        name="key" isConst="false" />
+      </variant>
+    </method>
     <method name="getDimensionBlockNames"
     cppName="getDimensionBlockNames" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
