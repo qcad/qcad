@@ -269,6 +269,10 @@ public:
         getData().setExtLineFixLength(v);
     }
 
+    bool hasOverride(RS::KnownVariable key) const {
+        return getData().hasOverride(key);
+    }
+
     static QSet<QString> getDimensionBlockNames(RDocument* doc);
 
 protected:
