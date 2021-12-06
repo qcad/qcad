@@ -625,10 +625,19 @@ QList<RVector> REntityData::getIntersectionPoints(
             // same is considered to be false:
             QList<RVector> ips = shapes1.at(i)->getIntersectionPoints(*shapes2.at(k), limited, false);
             ret.append(ips);
-            if (entityIds!=NULL && i<entityIds1.length() && k<entityIds2.length()) {
+
+            if (entityIds!=NULL) {
+                RObject::Id id1 = RObject::INVALID_ID;
+                RObject::Id id2 = RObject::INVALID_ID;
+                if (i<entityIds1.length()) {
+                    id1 = entityIds1.at(i);
+                }
+                if (k<entityIds2.length()) {
+                    id2 = entityIds2.at(k);
+                }
                 // make sure the indices in ret and entityIds match, insert duplicates if necessary:
                 for (int c=0; c<ips.length(); c++) {
-                    entityIds->append(QPair<RObject::Id, RObject::Id>(entityIds1.at(i), entityIds2.at(k)));
+                    entityIds->append(QPair<RObject::Id, RObject::Id>(id1, id2));
                 }
             }
         }
