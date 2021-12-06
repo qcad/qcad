@@ -93,16 +93,19 @@ ConvertUnit.convert = function(di, fromUnit, toUnit) {
 
     doc.startTransactionGroup();
 
+    var dimStyle = doc.queryDimStyle();
     var docVars = doc.queryDocumentVariables();
+
     // make sure we don't end up with a metric document with imperial dimension format:
     if (doc.getLinearFormat()===RS.Engineering || doc.getLinearFormat()===RS.ArchitecturalStacked || doc.getLinearFormat()===RS.Architectural) {
         if (!RUnit.isMetric(doc.getUnit()) && RUnit.isMetric(toUnit)) {
-            docVars.setKnownVariable(RS.DIMLUNIT, RS.Decimal);
+            dimStyle.setInt(RS.DIMLUNIT, RS.Decimal);
         }
     }
+
     docVars.setUnit(toUnit);
 
-    var dimStyle = doc.queryDimStyle();
+    // scale dimension sizes:
     var dimscale = dimStyle.getDouble(RS.DIMSCALE);
     dimStyle.setDouble(RS.DIMSCALE, dimscale*factor);
 
@@ -153,9 +156,10 @@ ConvertUnit.convert = function(di, fromUnit, toUnit) {
             tc.scale(factor);
             entity.setViewTarget(tc);
         } else if (isDimensionEntity(entity)) {
-            var s = entity.getDimscale(false);
             entity.scale(factor);
-            if (!RMath.fuzzyCompare(0.0, s)) {
+
+            var s = entity.getDimscale();
+            if (entity.hasOverride(RS.DIMSCALE)) {
                 // dimension has individual scale factor (property, override):
                 entity.setDimscale(s*factor);
             }
