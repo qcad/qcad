@@ -1045,6 +1045,9 @@
     <file alias="scripts/Edit/ConvertUnit/ConvertUnit.svg">../../scripts/Edit/ConvertUnit/ConvertUnit.svg</file>
     <file alias="scripts/Edit/ConvertUnit/ConvertUnit.ui">../../scripts/Edit/ConvertUnit/ConvertUnit.ui</file>
     <file alias="scripts/Edit/ConvertUnit/ConvertUnitInit.js">../../scripts/Edit/ConvertUnit/ConvertUnitInit.js</file>
+    <file alias="scripts/Edit/ConvertUnit/Tests/ConvertUnitTest00.js">../../scripts/Edit/ConvertUnit/Tests/ConvertUnitTest00.js</file>
+    <file alias="scripts/Edit/ConvertUnit/Tests/data/30x30mm.dxf">../../scripts/Edit/ConvertUnit/Tests/data/30x30mm.dxf</file>
+    <file alias="scripts/Edit/ConvertUnit/Tests/required/ConvertUnitTest00_000.dxf">../../scripts/Edit/ConvertUnit/Tests/required/ConvertUnitTest00_000.dxf</file>
     <file alias="scripts/Edit/ConvertUnit/Tick.svg">../../scripts/Edit/ConvertUnit/Tick.svg</file>
     <file alias="scripts/Edit/Copy/Copy-inverse.svg">../../scripts/Edit/Copy/Copy-inverse.svg</file>
     <file alias="scripts/Edit/Copy/Copy.js">../../scripts/Edit/Copy/Copy.js</file>
