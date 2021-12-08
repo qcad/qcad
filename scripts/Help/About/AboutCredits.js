@@ -13,7 +13,7 @@ var credits =
                               "Misc > Information >  Sum Centroids Weighted<br>"
                               ],
         [ "Dmitry Ponomarev", "Misc > Import/Export > Batch2Pdf visible layout blocks<br>" +
-                              "Misc > Draw > Leader from Selected Text<br>"
+                              "Misc > Draw > Text Aligned Leader<br>"
                               ],
         [ "Matfie",           "Gear generator library item \"InvoluteSpur\"<br>"
                               ],
