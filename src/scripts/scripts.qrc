@@ -1590,10 +1590,6 @@
     <file alias="scripts/Misc/MiscDraw/Cross/Cross.ui">../../scripts/Misc/MiscDraw/Cross/Cross.ui</file>
     <file alias="scripts/Misc/MiscDraw/Cross/CrossInit.js">../../scripts/Misc/MiscDraw/Cross/CrossInit.js</file>
     <file alias="scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js">../../scripts/Misc/MiscDraw/DrawBoundingBox/DrawBoundingBox.js</file>
-    <file alias="scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText-inverse.svg">../../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText-inverse.svg</file>
-    <file alias="scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js">../../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js</file>
-    <file alias="scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.svg">../../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.svg</file>
-    <file alias="scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js">../../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js</file>
     <file alias="scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint-inverse.svg">../../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint-inverse.svg</file>
     <file alias="scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.js">../../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.js</file>
     <file alias="scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.svg">../../scripts/Misc/MiscDraw/LineBoxJoint/LineBoxJoint.svg</file>
@@ -1631,6 +1627,10 @@
     <file alias="scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js">../../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js</file>
     <file alias="scripts/Misc/MiscDraw/PolylineBreakSymbol/VertSeg-inverse.svg">../../scripts/Misc/MiscDraw/PolylineBreakSymbol/VertSeg-inverse.svg</file>
     <file alias="scripts/Misc/MiscDraw/PolylineBreakSymbol/VertSeg.svg">../../scripts/Misc/MiscDraw/PolylineBreakSymbol/VertSeg.svg</file>
+    <file alias="scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeader-inverse.svg">../../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeader-inverse.svg</file>
+    <file alias="scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeader.js">../../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeader.js</file>
+    <file alias="scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeader.svg">../../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeader.svg</file>
+    <file alias="scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js">../../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js</file>
     <file alias="scripts/Misc/MiscDraw/TextAlong/Clockwise-inverse.svg">../../scripts/Misc/MiscDraw/TextAlong/Clockwise-inverse.svg</file>
     <file alias="scripts/Misc/MiscDraw/TextAlong/Clockwise.svg">../../scripts/Misc/MiscDraw/TextAlong/Clockwise.svg</file>
     <file alias="scripts/Misc/MiscDraw/TextAlong/CounterClockwise-inverse.svg">../../scripts/Misc/MiscDraw/TextAlong/CounterClockwise-inverse.svg</file>
