@@ -5,7 +5,6 @@ SUBDIRS = \
     Counter \
     Cross \
     DrawBoundingBox \
-    LeaderFromText \
     LineBoxJoint \
     LineDove \
     LineRadicalAxis \
@@ -13,6 +12,7 @@ SUBDIRS = \
     PointPole \
     PointPowerCenter \
     PolylineBreakSymbol \
+    TextAlignedLeader \
     TextAlong \
     XLineHorizontal \
     XLineVertical
