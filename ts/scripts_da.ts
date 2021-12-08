@@ -2229,7 +2229,7 @@ Do you wish to recover it?</source>
         <translation>Enhed &quot;%1&quot; valgt. Der skal ikke gøres noget</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+144"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Konverteret tegning fra %1 til %2</translation>
     </message>
@@ -7103,7 +7103,7 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation>&amp;Område centroid</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Add 2D area centroid for a selected entity.</source>
         <translation>Tilføj 2D-områdecentroid for en valgt enhed.</translation>
     </message>
@@ -7374,7 +7374,7 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation>&amp;Sum centroider vægtet</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Sum selected 2D centroid markers weighted.</source>
         <translation>Summen af udvalgte 2D centroid-markører vægtet.</translation>
     </message>
@@ -7480,7 +7480,7 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation>&amp;Tråd centroid</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Add 2D wire centroid for a selection.</source>
         <translation>Tilføj en 2D-tråds centroid til et valg.</translation>
     </message>

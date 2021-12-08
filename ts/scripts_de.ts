@@ -2740,7 +2740,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <translation type="vanished">Einheit &apos;%1&apos; gewählt - keine Konvertierung nötig</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+144"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Zeichnung konvertiert von %1 in %2</translation>
     </message>
@@ -8792,7 +8792,7 @@ BUG: Interferes with group castings.</translation>
         <translation>&amp;Flächenschwerpunkt</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Add 2D area centroid for a selected entity.</source>
         <translation>2D Flächenschwerpunkt für ein ausgewähltes Objekt hinzufügen.</translation>
     </message>
@@ -9099,7 +9099,7 @@ BUG: Interferes with group castings.</translation>
         <translation>&amp;Summe Zentroide gewichtet</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Sum selected 2D centroid markers weighted.</source>
         <translation>Summe ausgewählter 2D-Schwerpunktmarker gewichtet.</translation>
     </message>
@@ -9205,7 +9205,7 @@ BUG: Interferes with group castings.</translation>
         <translation>&amp;Drahtschwerpunkt</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Add 2D wire centroid for a selection.</source>
         <translation>2D-Drahtschwerpunkt für eine Auswahl hinzufügen.</translation>
     </message>

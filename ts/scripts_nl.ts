@@ -2410,7 +2410,7 @@ Wilt u het herstellen?</translation>
         <translation type="vanished">Eenheid &apos;%1&apos; geselecteerd - niets te doen</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+144"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Tekening omgezet van %1 naar %2</translation>
     </message>
@@ -7713,7 +7713,7 @@ BUG: Interferes with group castings.</source>
         <translation>&amp;Centroïde van oppervlakte</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Add 2D area centroid for a selected entity.</source>
         <translation>2D-gebiedszwaartepunt toevoegen voor een geselecteerde object.</translation>
     </message>
@@ -8000,7 +8000,7 @@ BUG: Interferes with group castings.</source>
         <translation>&amp;Som centroïden gewogen</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Sum selected 2D centroid markers weighted.</source>
         <translation>Som geselecteerde 2D-centroïde markers gewogen.</translation>
     </message>
@@ -8106,7 +8106,7 @@ BUG: Interferes with group castings.</source>
         <translation>&amp;Draad centroïde</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Add 2D wire centroid for a selection.</source>
         <translation>Voeg 2D draad centroïde toe voor een selectie.</translation>
     </message>

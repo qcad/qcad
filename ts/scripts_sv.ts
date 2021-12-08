@@ -2285,7 +2285,7 @@ Vill du återställa den?</translation>
         <translation>Enhet &quot;%1&quot; vald. Inget att göra</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+144"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Konverterad ritning från %1 till %2</translation>
     </message>
@@ -7219,7 +7219,7 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>&amp;Område centroid</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Add 2D area centroid for a selected entity.</source>
         <translation>Lägg till 2D-områdescentroid för en vald enhet.</translation>
     </message>
@@ -7506,7 +7506,7 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>&amp;Summa centroider viktade</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Sum selected 2D centroid markers weighted.</source>
         <translation>Summan av valda 2D-centroidmarkörer viktade.</translation>
     </message>
@@ -7612,7 +7612,7 @@ BUG: Störningar vid gruppgjutningar.</translation>
         <translation>&amp;Trådcentroid</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Add 2D wire centroid for a selection.</source>
         <translation>Lägg till 2D-trådcentroid för ett urval.</translation>
     </message>

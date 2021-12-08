@@ -391,6 +391,7 @@ SOURCES = \
 ../scripts/Edit/ClipboardOperation.js \
 ../scripts/Edit/ConvertUnit/ConvertUnit.js \
 ../scripts/Edit/ConvertUnit/ConvertUnitInit.js \
+../scripts/Edit/ConvertUnit/Tests/ConvertUnitTest00.js \
 ../scripts/Edit/Copy/Copy.js \
 ../scripts/Edit/Copy/CopyInit.js \
 ../scripts/Edit/Copy/Tests/CopyTest00.js \

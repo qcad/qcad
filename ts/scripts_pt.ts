@@ -2449,7 +2449,7 @@ Você deseja recuperá-lo?</translation>
         <translation type="vanished">Unidade &apos;%1&apos; selecionado - nada a ser feito</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+144"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Desenho convertido de %1 para %2</translation>
     </message>
@@ -7855,7 +7855,7 @@ BUG: Interferes with group castings.</source>
         <translation>&amp;Área Centroid</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Add 2D area centroid for a selected entity.</source>
         <translation>Adicionar centróide de área 2D para uma entidade selecionada.</translation>
     </message>
@@ -8138,7 +8138,7 @@ BUG: Interferes with group castings.</source>
         <translation>&amp;Soma Centroides ponderada</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Sum selected 2D centroid markers weighted.</source>
         <translation>Soma de marcadores centróides 2D selecionados, ponderados.</translation>
     </message>
@@ -8244,7 +8244,7 @@ BUG: Interferes with group castings.</source>
         <translation>&amp;Fio Centroid</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Add 2D wire centroid for a selection.</source>
         <translation>Adicionar centróide de fio 2D para uma seleção.</translation>
     </message>

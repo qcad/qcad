@@ -2368,7 +2368,7 @@ Do you wish to recover it?</translation>
         <translation type="vanished">Unit &apos;%1&apos; selected - Nothing to be done</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+144"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Converted drawing from %1 to %2</translation>
     </message>
@@ -7639,7 +7639,7 @@ BUG: Interferes with group castings.</translation>
         <translation>&amp;Area Centroid</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Add 2D area centroid for a selected entity.</source>
         <translation>Add 2D area centroid for a selected entity.</translation>
     </message>
@@ -7926,7 +7926,7 @@ BUG: Interferes with group castings.</translation>
         <translation>&amp;Sum Centroids Weighted</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Sum selected 2D centroid markers weighted.</source>
         <translation>Sum selected 2D centroid markers weighted.</translation>
     </message>
@@ -8032,7 +8032,7 @@ BUG: Interferes with group castings.</translation>
         <translation>&amp;Wire Centroid</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Add 2D wire centroid for a selection.</source>
         <translation>Add 2D wire centroid for a selection.</translation>
     </message>

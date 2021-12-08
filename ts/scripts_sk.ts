@@ -2432,7 +2432,7 @@ Prajete si ho obnoviť?</translation>
         <translation type="vanished">Zvolená jednotka &apos;%1&apos; - sa nedá konvertovať</translation>
     </message>
     <message>
-        <location line="+140"/>
+        <location line="+144"/>
         <source>Converted drawing from %1 to %2</source>
         <translation>Konvertované z &quot;%1&quot; na &quot;%2&quot;</translation>
     </message>
@@ -7354,7 +7354,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Add 2D area centroid for a selected entity.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7641,7 +7641,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Sum selected 2D centroid markers weighted.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7747,7 +7747,7 @@ BUG: Interferes with group castings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Add 2D wire centroid for a selection.</source>
         <translation type="unfinished"></translation>
     </message>
