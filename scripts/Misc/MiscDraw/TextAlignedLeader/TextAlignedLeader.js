@@ -1,6 +1,3 @@
-/**
- * By dmitpon
- */
 include("scripts/EAction.js");
 include("scripts/library.js");
 
@@ -41,7 +38,7 @@ TextAlignedLeader.prototype.setState = function (state) {
     switch (this.state) {
         case TextAlignedLeader.State.SettingFirstVertex:
             this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
-            var trFirstVertex = qsTr("First vertex position");
+            var trFirstVertex = qsTr("Arrow position");
             this.setCommandPrompt(trFirstVertex);
             this.setLeftMouseTip(trFirstVertex);
             this.setRightMouseTip(EAction.trCancel);
@@ -152,6 +149,6 @@ TextAlignedLeader.prototype.drawLeader = function (entityId) {
     }
 
     this.di.applyOperation(this.op);
-    EAction.handleUserMessage(qsTr("Text aligned leader was created successfully"));
+    EAction.handleUserMessage(qsTr("TextAlignedLeader was created successfully"));
     this.terminate();
 };

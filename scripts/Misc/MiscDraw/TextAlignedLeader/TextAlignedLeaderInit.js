@@ -5,7 +5,7 @@ function init(basePath) {
     action.setIcon(basePath + "/TextAlignedLeader.svg");
     action.setStatusTip(qsTranslate("TextAlignedLeader", "&TextAlignedLeader"));
     action.setDefaultShortcut(new QKeySequence("2,T"));
-    action.setDefaultCommands(["TextAlignedLeader", "tal"]);
+    action.setDefaultCommands(["textalignedleader", "tal"]);
     action.setGroupSortOrder(54100);
     action.setSortOrder(400);
     action.setWidgetNames(["MiscDrawMenu"]);

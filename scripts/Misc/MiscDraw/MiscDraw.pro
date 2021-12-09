@@ -5,6 +5,7 @@ SUBDIRS = \
     Counter \
     Cross \
     DrawBoundingBox \
+    LeaderFromText \
     LineBoxJoint \
     LineDove \
     LineRadicalAxis \
