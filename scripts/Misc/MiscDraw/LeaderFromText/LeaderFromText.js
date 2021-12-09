@@ -75,6 +75,6 @@ LeaderFromText.prototype.beginEvent = function () {
     }
 
     di.applyOperation(op);
-    EAction.handleUserMessage(qsTr("LeaderFromText was created successfully"));
+    EAction.handleUserMessage(qsTr("Leader from text was created successfully"));
     this.terminate();
 };
