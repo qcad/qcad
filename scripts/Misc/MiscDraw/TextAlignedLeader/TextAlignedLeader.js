@@ -149,6 +149,6 @@ TextAlignedLeader.prototype.drawLeader = function (entityId) {
     }
 
     this.di.applyOperation(this.op);
-    EAction.handleUserMessage(qsTr("TextAlignedLeader was created successfully"));
+    EAction.handleUserMessage(qsTr("Leader was created successfully"));
     this.terminate();
 };
