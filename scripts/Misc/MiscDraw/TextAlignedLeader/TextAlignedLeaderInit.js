@@ -3,7 +3,6 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/TextAlignedLeader.js");
     action.setIcon(basePath + "/TextAlignedLeader.svg");
-    action.setStatusTip(qsTranslate("TextAlignedLeader", "&TextAlignedLeader"));
     action.setDefaultShortcut(new QKeySequence("2,T"));
     action.setDefaultCommands(["textalignedleader", "tal"]);
     action.setGroupSortOrder(54100);
