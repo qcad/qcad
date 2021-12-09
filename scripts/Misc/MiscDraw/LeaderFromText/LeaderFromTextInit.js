@@ -3,7 +3,6 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/LeaderFromText.js");
     action.setIcon(basePath + "/LeaderFromText.svg");
-    action.setStatusTip(qsTranslate("LeaderFromText", "&LeaderFromText visible layout blocks"));
     action.setDefaultShortcut(new QKeySequence("T,2,L"));
     action.setDefaultCommands(["LeaderFromText", "lftxt"]);
     action.setGroupSortOrder(54100);
