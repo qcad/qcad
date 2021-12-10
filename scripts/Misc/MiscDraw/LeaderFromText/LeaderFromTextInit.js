@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("LeaderFromText", "&Leader from selected text"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("LeaderFromText", "&Leader from Selected Text"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/LeaderFromText.js");
     action.setIcon(basePath + "/LeaderFromText.svg");
