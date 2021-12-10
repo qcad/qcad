@@ -240,7 +240,7 @@
         <translation>Programación</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+63"/>
         <source>Hatch Patterns</source>
         <translation>Patrón de rayado</translation>
     </message>
@@ -9631,13 +9631,13 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>LeaderFromText</name>
     <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation type="vanished">&amp;Directriz del texto seleccionado</translation>
+        <translation>&amp;Directriz del texto seleccionado</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from selected text</source>
-        <translation>&amp;Línea directriz del texto seleccionado</translation>
+        <translation type="vanished">&amp;Línea directriz del texto seleccionado</translation>
     </message>
     <message>
         <source>Leader from text was created successfully</source>

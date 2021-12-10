@@ -228,7 +228,7 @@
         <translation>Programiranje</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+63"/>
         <source>Hatch Patterns</source>
         <translation>Vzorec črtkanja</translation>
     </message>
@@ -8774,13 +8774,13 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>LeaderFromText</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
-        <source>&amp;Leader from selected text</source>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
+        <source>Leader was created successfully</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
-        <source>Leader was created successfully</source>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
+        <source>&amp;Leader from Selected Text</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

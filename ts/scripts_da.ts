@@ -204,7 +204,7 @@
         <translation>Programmering</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+63"/>
         <source>Hatch Patterns</source>
         <translation>Skraveringsmønstre</translation>
     </message>
@@ -8198,13 +8198,13 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
 <context>
     <name>LeaderFromText</name>
     <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation type="vanished">&amp;Lederlinje fra markeret tekst</translation>
+        <translation>&amp;Lederlinje fra markeret tekst</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from selected text</source>
-        <translation>&amp;Lederlinje fra udvalgt tekst</translation>
+        <translation type="vanished">&amp;Lederlinje fra udvalgt tekst</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>

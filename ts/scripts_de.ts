@@ -252,7 +252,7 @@
         <translation>Programmierung</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+63"/>
         <source>Hatch Patterns</source>
         <translation>Schraffurmuster</translation>
     </message>
@@ -10181,13 +10181,13 @@ BUG: Interferes with group castings.</translation>
 <context>
     <name>LeaderFromText</name>
     <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation type="vanished">&amp;Führungslinie von ausgewähltem Text</translation>
+        <translation>&amp;Führungslinie von ausgewähltem Text</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from selected text</source>
-        <translation>&amp;Führungslinie von ausgewähltem Text</translation>
+        <translation type="vanished">&amp;Führungslinie von ausgewähltem Text</translation>
     </message>
     <message>
         <source>Leader from text was created successfully</source>

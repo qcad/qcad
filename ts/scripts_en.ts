@@ -220,7 +220,7 @@
         <translation>Programming</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+63"/>
         <source>Hatch Patterns</source>
         <translation>Hatch Patterns</translation>
     </message>
@@ -8810,17 +8810,17 @@ BUG: Interferes with group castings.</translation>
 <context>
     <name>LeaderFromText</name>
     <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation type="vanished">&amp;Leader from Selected Text</translation>
+        <translation>&amp;Leader from Selected Text</translation>
     </message>
     <message>
         <source>LeaderFromText was created successfully</source>
         <translation type="vanished">LeaderFromText was created successfully</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from selected text</source>
-        <translation>&amp;Leader from selected text</translation>
+        <translation type="vanished">&amp;Leader from selected text</translation>
     </message>
     <message>
         <source>Leader from text was created successfully</source>

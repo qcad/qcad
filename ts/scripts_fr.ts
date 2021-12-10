@@ -240,7 +240,7 @@
         <translation>Programmation</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+63"/>
         <source>Hatch Patterns</source>
         <translation>Motifs de hachures</translation>
     </message>
@@ -9656,13 +9656,13 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>LeaderFromText</name>
     <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation type="vanished">&amp;Repère du texte sélectionné</translation>
+        <translation>&amp;Repère du texte sélectionné</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from selected text</source>
-        <translation>&amp;Repère du texte sélectionné</translation>
+        <translation type="vanished">&amp;Repère du texte sélectionné</translation>
     </message>
     <message>
         <source>Leader from text was created successfully</source>

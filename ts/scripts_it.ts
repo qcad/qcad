@@ -240,7 +240,7 @@
         <translation>Programmazione</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+63"/>
         <source>Hatch Patterns</source>
         <translation>Modelli di tratteggio</translation>
     </message>
@@ -9744,13 +9744,13 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>LeaderFromText</name>
     <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation type="vanished">&amp;Linea di quotatura dal testo selezionato</translation>
+        <translation>&amp;Linea di quotatura dal testo selezionato</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from selected text</source>
-        <translation>&amp;Linea che consente dal testo selezionato</translation>
+        <translation type="vanished">&amp;Linea che consente dal testo selezionato</translation>
     </message>
     <message>
         <source>Leader from text was created successfully</source>

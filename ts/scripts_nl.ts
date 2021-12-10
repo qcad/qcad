@@ -232,7 +232,7 @@
         <translation>Programmering</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+63"/>
         <source>Hatch Patterns</source>
         <translation>Arceerpatronen</translation>
     </message>
@@ -8939,13 +8939,13 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>LeaderFromText</name>
     <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation type="vanished">&amp;Aanhaling van geselecteerde tekst</translation>
+        <translation>&amp;Aanhaling van geselecteerde tekst</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from selected text</source>
-        <translation>&amp;Aanhaling uit geselecteerde tekst</translation>
+        <translation type="vanished">&amp;Aanhaling uit geselecteerde tekst</translation>
     </message>
     <message>
         <source>Leader from text was created successfully</source>
