@@ -8346,9 +8346,18 @@ BUG: Störningar vid gruppgjutningar.</translation>
 <context>
     <name>LeaderFromText</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>&amp;Ledarlinje från markerad text</translation>
+        <translation type="vanished">&amp;Ledarlinje från markerad text</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
+        <source>&amp;Leader from selected text</source>
+        <translation>&amp;Ledarlinje från utvald text</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
+        <source>Leader was created successfully</source>
+        <translation>Ledarlinje skapades framgångsrikt</translation>
     </message>
 </context>
 <context>
@@ -12993,6 +13002,29 @@ som visas i sökresultaten:</translation>
         <location line="+3"/>
         <source>Fit</source>
         <translation>Passar</translation>
+    </message>
+</context>
+<context>
+    <name>TextAlignedLeader</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeader.js" line="+41"/>
+        <source>Arrow position</source>
+        <translation>Pilens position</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Choose text</source>
+        <translation>Välj text</translation>
+    </message>
+    <message>
+        <location line="+102"/>
+        <source>Leader was created successfully</source>
+        <translation>Ledarlinje skapades framgångsrikt</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
+        <source>&amp;Text Aligned Leader</source>
+        <translation>&amp;Textjusterad ledarlinje</translation>
     </message>
 </context>
 <context>

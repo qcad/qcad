@@ -9631,9 +9631,22 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>LeaderFromText</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>&amp;Directriz del texto seleccionado</translation>
+        <translation type="vanished">&amp;Directriz del texto seleccionado</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
+        <source>&amp;Leader from selected text</source>
+        <translation>&amp;Línea directriz del texto seleccionado</translation>
+    </message>
+    <message>
+        <source>Leader from text was created successfully</source>
+        <translation type="vanished">Línea directriz del texto fue creado con éxito</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
+        <source>Leader was created successfully</source>
+        <translation>Línea directriz fue creado con éxito</translation>
     </message>
 </context>
 <context>
@@ -15196,6 +15209,29 @@ en los resultados de búsqueda:</translation>
         <location line="+3"/>
         <source>Fit</source>
         <translation>Ajustar</translation>
+    </message>
+</context>
+<context>
+    <name>TextAlignedLeader</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeader.js" line="+41"/>
+        <source>Arrow position</source>
+        <translation>Posición de la flecha</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Choose text</source>
+        <translation>Elegir texto</translation>
+    </message>
+    <message>
+        <location line="+102"/>
+        <source>Leader was created successfully</source>
+        <translation>Línea directriz fue creado con éxito</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
+        <source>&amp;Text Aligned Leader</source>
+        <translation>&amp;Línea directriz alineado con el texto</translation>
     </message>
 </context>
 <context>

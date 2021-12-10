@@ -8939,9 +8939,22 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>LeaderFromText</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>&amp;Aanhaling van geselecteerde tekst</translation>
+        <translation type="vanished">&amp;Aanhaling van geselecteerde tekst</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
+        <source>&amp;Leader from selected text</source>
+        <translation>&amp;Aanhaling uit geselecteerde tekst</translation>
+    </message>
+    <message>
+        <source>Leader from text was created successfully</source>
+        <translation type="vanished">Aanhaling uit tekst werd met succes aangemaakt</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
+        <source>Leader was created successfully</source>
+        <translation>Aanhaling werd met succes aangemaakt</translation>
     </message>
 </context>
 <context>
@@ -13994,6 +14007,29 @@ getoond in zoekresultaten:</translation>
         <location line="+3"/>
         <source>Fit</source>
         <translation>Passen</translation>
+    </message>
+</context>
+<context>
+    <name>TextAlignedLeader</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeader.js" line="+41"/>
+        <source>Arrow position</source>
+        <translation>Pijlpositie</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Choose text</source>
+        <translation>Tekst kiezen</translation>
+    </message>
+    <message>
+        <location line="+102"/>
+        <source>Leader was created successfully</source>
+        <translation>Aanhaling werd met succes aangemaakt</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
+        <source>&amp;Text Aligned Leader</source>
+        <translation>&amp;Tekst-uitgelijnde aanhaling</translation>
     </message>
 </context>
 <context>

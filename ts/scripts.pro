@@ -642,6 +642,8 @@ SOURCES = \
 ../scripts/Misc/MiscDraw/PointPowerCenter/PointPowerCenterInit.js \
 ../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js \
 ../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js \
+../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeader.js \
+../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js \
 ../scripts/Misc/MiscDraw/TextAlong/TextAlong.js \
 ../scripts/Misc/MiscDraw/TextAlong/TextAlongInit.js \
 ../scripts/Misc/MiscDraw/XLineHorizontal/XLineHorizontal.js \

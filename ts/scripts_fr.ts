@@ -9656,9 +9656,22 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>LeaderFromText</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
+        <translation type="vanished">&amp;Repère du texte sélectionné</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
+        <source>&amp;Leader from selected text</source>
         <translation>&amp;Repère du texte sélectionné</translation>
+    </message>
+    <message>
+        <source>Leader from text was created successfully</source>
+        <translation type="vanished">Le repère du texte a été créé avec succès</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
+        <source>Leader was created successfully</source>
+        <translation>Le repère a été créé avec succès</translation>
     </message>
 </context>
 <context>
@@ -15219,6 +15232,29 @@ dans les résultats de recherche :</translation>
         <location line="+3"/>
         <source>Fit</source>
         <translation>Ajuster</translation>
+    </message>
+</context>
+<context>
+    <name>TextAlignedLeader</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeader.js" line="+41"/>
+        <source>Arrow position</source>
+        <translation>Position de la flèche</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Choose text</source>
+        <translation>Choisissez le texte</translation>
+    </message>
+    <message>
+        <location line="+102"/>
+        <source>Leader was created successfully</source>
+        <translation>Le repère a été créé avec succès</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
+        <source>&amp;Text Aligned Leader</source>
+        <translation>&amp;Repère aligné sur le texte</translation>
     </message>
 </context>
 <context>

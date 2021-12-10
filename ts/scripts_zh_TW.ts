@@ -7882,7 +7882,12 @@ BUG: Interferes with group castings.</source>
     <name>LeaderFromText</name>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
-        <source>&amp;Leader from Selected Text</source>
+        <source>&amp;Leader from selected text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
+        <source>Leader was created successfully</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -12410,6 +12415,29 @@ shown in search results:</source>
     <message>
         <location line="+3"/>
         <source>Fit</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>TextAlignedLeader</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeader.js" line="+41"/>
+        <source>Arrow position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Choose text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+102"/>
+        <source>Leader was created successfully</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
+        <source>&amp;Text Aligned Leader</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

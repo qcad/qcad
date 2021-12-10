@@ -8810,9 +8810,26 @@ BUG: Interferes with group castings.</translation>
 <context>
     <name>LeaderFromText</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>&amp;Leader from Selected Text</translation>
+        <translation type="vanished">&amp;Leader from Selected Text</translation>
+    </message>
+    <message>
+        <source>LeaderFromText was created successfully</source>
+        <translation type="vanished">LeaderFromText was created successfully</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
+        <source>&amp;Leader from selected text</source>
+        <translation>&amp;Leader from selected text</translation>
+    </message>
+    <message>
+        <source>Leader from text was created successfully</source>
+        <translation type="vanished">Leader from text was created successfully</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
+        <source>Leader was created successfully</source>
+        <translation>Leader was created successfully</translation>
     </message>
 </context>
 <context>
@@ -13857,6 +13874,29 @@ shown in search results:</translation>
         <location line="+3"/>
         <source>Fit</source>
         <translation>Fit</translation>
+    </message>
+</context>
+<context>
+    <name>TextAlignedLeader</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeader.js" line="+41"/>
+        <source>Arrow position</source>
+        <translation>Arrow position</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Choose text</source>
+        <translation>Choose text</translation>
+    </message>
+    <message>
+        <location line="+102"/>
+        <source>Leader was created successfully</source>
+        <translation>Leader was created successfully</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
+        <source>&amp;Text Aligned Leader</source>
+        <translation>&amp;Text Aligned Leader</translation>
     </message>
 </context>
 <context>

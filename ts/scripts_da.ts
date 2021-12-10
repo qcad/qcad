@@ -8198,9 +8198,18 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
 <context>
     <name>LeaderFromText</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>&amp;Lederlinje fra markeret tekst</translation>
+        <translation type="vanished">&amp;Lederlinje fra markeret tekst</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
+        <source>&amp;Leader from selected text</source>
+        <translation>&amp;Lederlinje fra udvalgt tekst</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
+        <source>Leader was created successfully</source>
+        <translation>Lederlinje blev oprettet med succes</translation>
     </message>
 </context>
 <context>
@@ -12743,6 +12752,29 @@ vist i søgeresultaterne:</translation>
         <location line="+3"/>
         <source>Fit</source>
         <translation>Passer</translation>
+    </message>
+</context>
+<context>
+    <name>TextAlignedLeader</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeader.js" line="+41"/>
+        <source>Arrow position</source>
+        <translation>Pilens position</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Choose text</source>
+        <translation>Vælg tekst</translation>
+    </message>
+    <message>
+        <location line="+102"/>
+        <source>Leader was created successfully</source>
+        <translation>Lederlinje blev oprettet med succes</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
+        <source>&amp;Text Aligned Leader</source>
+        <translation>&amp;Tekst justeret lederlinje</translation>
     </message>
 </context>
 <context>

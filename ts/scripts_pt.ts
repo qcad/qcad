@@ -9093,9 +9093,22 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>LeaderFromText</name>
     <message>
-        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation>&amp;Conduza do Texto selecionado</translation>
+        <translation type="vanished">&amp;Conduza do Texto selecionado</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
+        <source>&amp;Leader from selected text</source>
+        <translation>&amp;Linha de chamada do texto selecionado</translation>
+    </message>
+    <message>
+        <source>Leader from text was created successfully</source>
+        <translation type="vanished">Linha de chamada do texto foi criado com sucesso</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
+        <source>Leader was created successfully</source>
+        <translation>Linha de chamada foi criado com sucesso</translation>
     </message>
 </context>
 <context>
@@ -14249,6 +14262,29 @@ nos resultados de busca:</translation>
         <location line="+3"/>
         <source>Fit</source>
         <translation>Caber</translation>
+    </message>
+</context>
+<context>
+    <name>TextAlignedLeader</name>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeader.js" line="+41"/>
+        <source>Arrow position</source>
+        <translation>Posição das setas</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Choose text</source>
+        <translation>Escolha o texto</translation>
+    </message>
+    <message>
+        <location line="+102"/>
+        <source>Leader was created successfully</source>
+        <translation>Linha de chamada foi criado com sucesso</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
+        <source>&amp;Text Aligned Leader</source>
+        <translation>&amp;Linha de chamada alinhado a texto</translation>
     </message>
 </context>
 <context>
