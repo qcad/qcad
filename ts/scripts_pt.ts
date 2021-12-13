@@ -2887,7 +2887,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+16"/>
         <source>Dimensions</source>
-        <translation>Dimensões</translation>
+        <translation>Cotas</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -2952,7 +2952,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+8"/>
         <source>Dimension line location</source>
-        <translation>Localização da linha de dimensão</translation>
+        <translation>Localização da linha de cota</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAligned/DimAlignedInit.js" line="+2"/>
@@ -2962,7 +2962,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+4"/>
         <source>Draw aligned dimension</source>
-        <translation>Dimensão do desenho alinhado</translation>
+        <translation>Desenhe cota alinhada</translation>
     </message>
 </context>
 <context>
@@ -2980,7 +2980,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+9"/>
         <source>Dimension arc location</source>
-        <translation>Dimensão localização do arco</translation>
+        <translation>Localização do arco de cota</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngularInit.js" line="+2"/>
@@ -2990,7 +2990,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+4"/>
         <source>Draw angular dimension</source>
-        <translation>Desenho dimensão angular</translation>
+        <translation>Desenho cota angular</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimAngular/DimAngular.ui" line="+17"/>
@@ -3008,7 +3008,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
-        <translation>Localização ou ângulo da linha de dimensão</translation>
+        <translation>Localização ou ângulo da linha de cota</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimDiametric/DimDiametricInit.js" line="+2"/>
@@ -3018,7 +3018,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+5"/>
         <source>Draw diametric dimension</source>
-        <translation>Dimensão diamétrica do desenho</translation>
+        <translation>Desenho cota diamétrica</translation>
     </message>
 </context>
 <context>
@@ -3031,7 +3031,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+5"/>
         <source>Draw horizontal dimension</source>
-        <translation>Desenho dimensão horizontal</translation>
+        <translation>Desenho cota horizontal</translation>
     </message>
 </context>
 <context>
@@ -3054,7 +3054,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+5"/>
         <source>Draw ordinate dimension</source>
-        <translation>Desenho dimensão ordenada</translation>
+        <translation>Desenho cota ordenada</translation>
     </message>
 </context>
 <context>
@@ -3067,7 +3067,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
-        <translation>Localização ou ângulo da linha de dimensão</translation>
+        <translation>Localização ou ângulo da linha de cota</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRadial/DimRadialInit.js" line="+2"/>
@@ -3077,7 +3077,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+5"/>
         <source>Draw radial dimension</source>
-        <translation>Desenho dimensão radial</translation>
+        <translation>Desenho cota radial</translation>
     </message>
 </context>
 <context>
@@ -3085,14 +3085,14 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRegen/DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
-        <translation>Sem entidades de dimensão com posições de etiqueta personalizadas seleccionadas.</translation>
+        <translation>Sem entidades de cota com posições de etiqueta personalizadas seleccionadas.</translation>
     </message>
     <message numerus="yes">
         <location line="+3"/>
         <source>Label position of %n dimension(s) was reset.</source>
         <translation>
-            <numerusform>Resete a posição de rótulo de %n dimensão.</numerusform>
-            <numerusform>Resete a posição de rótulo de %n dimensões.</numerusform>
+            <numerusform>Resete a posição de rótulo de %n cota.</numerusform>
+            <numerusform>Resete a posição de rótulo de %n cotas.</numerusform>
         </translation>
     </message>
     <message>
@@ -3116,7 +3116,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+8"/>
         <source>Dimension line location</source>
-        <translation>Localização da linha de dimensão</translation>
+        <translation>Localização da linha de cota</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotatedInit.js" line="+2"/>
@@ -3126,7 +3126,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+5"/>
         <source>Draw linear dimension at a fixed angle</source>
-        <translation>Desenhar dimensão linear em um ângulo fixo</translation>
+        <translation>Desenhar cota linear em um ângulo fixo</translation>
     </message>
     <message>
         <location filename="../scripts/Draw/Dimension/DimRotated/DimRotated.ui" line="+17"/>
@@ -3144,7 +3144,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+5"/>
         <source>Draw vertical dimension</source>
-        <translation>Desenho dimensão vertical</translation>
+        <translation>Desenho cota vertical</translation>
     </message>
 </context>
 <context>
@@ -3206,7 +3206,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+100"/>
         <source>Dimension Tools</source>
-        <translation>Ferramentas de dimensão</translation>
+        <translation>Ferramentas de cota</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -3277,13 +3277,13 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js" line="+29"/>
         <source>Dimension</source>
-        <translation>Dimensão</translation>
+        <translation>Cota</translation>
     </message>
     <message>
         <location line="-2"/>
         <location line="+2"/>
         <source>Dimension Settings</source>
-        <translation>Configuração das dimensões</translation>
+        <translation>Configuração das cotas</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -3353,11 +3353,11 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+1"/>
         <source>The drawing unit must be &quot;Inch&quot; to display dimension labels in formats &quot;Architectural&quot; or &quot;Engineering&quot;. Format changed to &quot;Decimal&quot;.</source>
-        <translation>A unidade de desenho deve ser &quot;Polegada&quot; para exibir rótulos de dimensões em formatos &quot;Arquitetura&quot; ou &quot;Engenharia&quot;. Formato alterado para &quot;Decimal&quot;.</translation>
+        <translation>A unidade de desenho deve ser &quot;Polegada&quot; para exibir rótulos de cotas em formatos &quot;Arquitetura&quot; ou &quot;Engenharia&quot;. Formato alterado para &quot;Decimal&quot;.</translation>
     </message>
     <message>
         <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation type="vanished">A unidade de desenho deve ser &apos;Polegada&apos; ou &apos;Pé&apos; para exibir rótulos de dimensões nos formatos &apos;Arquitetura&apos; ou &apos;Engenharia&apos;. Formato alterado para &apos;Decimal&apos;.</translation>
+        <translation type="vanished">A unidade de desenho deve ser &apos;Polegada&apos; ou &apos;Pé&apos; para exibir rótulos de cotas nos formatos &apos;Arquitetura&apos; ou &apos;Engenharia&apos;. Formato alterado para &apos;Decimal&apos;.</translation>
     </message>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/DimensionSettings/PreferencesPage.ui" line="+55"/>
@@ -3397,12 +3397,12 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+7"/>
         <source>Text above dimension line</source>
-        <translation>Texto acima da linha de dimensão</translation>
+        <translation>Texto acima da linha de cota</translation>
     </message>
     <message>
         <location line="+50"/>
         <source>Dimension line gap:</source>
-        <translation>Distância da linha de dimensão:</translation>
+        <translation>Distância da linha de cota:</translation>
     </message>
     <message>
         <location line="+42"/>
@@ -3412,7 +3412,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+108"/>
         <source>Dimension line increment:</source>
-        <translation>Incremento de linhas de dimensão:</translation>
+        <translation>Incremento de linhas de cota:</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -3439,7 +3439,7 @@ Você deseja recuperá-lo?</translation>
     </message>
     <message>
         <source>Dimension label font:</source>
-        <translation type="vanished">Fonte do rótulo de dimensões:</translation>
+        <translation type="vanished">Fonte do rótulo de cotas:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -3479,7 +3479,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="+6"/>
         <source>Linear Dimensions</source>
-        <translation>Dimensões lineares</translation>
+        <translation>Cotas lineares</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3500,7 +3500,7 @@ Você deseja recuperá-lo?</translation>
     <message>
         <location line="-50"/>
         <source>Angular Dimensions</source>
-        <translation>Dimensões angulares</translation>
+        <translation>Cotas angulares</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -9149,7 +9149,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+1"/>
         <source>dimension</source>
-        <translation>dimensão</translation>
+        <translation>cota</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -11835,7 +11835,7 @@ nos resultados de busca:</translation>
     <message>
         <location line="-19"/>
         <source>Display advanced dimension style overrides</source>
-        <translation>Exibição de estilo avançado de dimensões</translation>
+        <translation>Exibição de estilo avançado de cotas</translation>
     </message>
 </context>
 <context>
@@ -15988,7 +15988,7 @@ nos resultados de busca:</translation>
     <message>
         <location line="+2"/>
         <source>Dimension Styles</source>
-        <translation>Estilos de dimensões</translation>
+        <translation>Estilos de cotas</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -16078,113 +16078,113 @@ nos resultados de busca:</translation>
     <message>
         <location line="+2"/>
         <source>Dimensions</source>
-        <translation>Dimensões</translation>
+        <translation>Cotas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation>Dimensão</translation>
+        <translation>Cota</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Aligned Dimensions</source>
-        <translation>Dimensões alinhadas</translation>
+        <translation>Cotas alinhadas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Aligned Dimension</source>
-        <translation>Dimensão alinhada</translation>
+        <translation>Cota alinhada</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions</source>
-        <translation>Dimensões angulares</translation>
+        <translation>Cotas angulares</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension</source>
-        <translation>Dimensão angular</translation>
+        <translation>Cota angular</translation>
     </message>
     <message>
         <source>2 Line Angular Dimensions</source>
-        <translation type="vanished">Dimensões angulares de 2 linhas</translation>
+        <translation type="vanished">Cotas angulares de 2 linhas</translation>
     </message>
     <message>
         <source>2 Line Angular Dimension</source>
-        <translation type="vanished">Dimensão angular de 2 linhas</translation>
+        <translation type="vanished">Cota angular de 2 linhas</translation>
     </message>
     <message>
         <source>3 Point Angular Dimensions</source>
-        <translation type="vanished">Dimensões angulares de 3 pontos</translation>
+        <translation type="vanished">Cotas angulares de 3 pontos</translation>
     </message>
     <message>
         <source>3 Point Angular Dimension</source>
-        <translation type="vanished">Dimensão angular de 3 pontos</translation>
+        <translation type="vanished">Cota angular de 3 pontos</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (2 Line)</source>
-        <translation>Dimensões angulares (2 linhas)</translation>
+        <translation>Cotas angulares (2 linhas)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (2 Line)</source>
-        <translation>Dimensão angular (2 linhas)</translation>
+        <translation>Cota angular (2 linhas)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions (3 Point)</source>
-        <translation>Dimensões angulares (3 pontos)</translation>
+        <translation>Cotas angulares (3 pontos)</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension (3 Point)</source>
-        <translation>Dimensão angular (3 pontos)</translation>
+        <translation>Cota angular (3 pontos)</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Arc Dimension</source>
-        <translation>Dimensão do arco</translation>
+        <translation>Cota do arco</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Diametric Dimensions</source>
-        <translation>Dimensões Diamétricas</translation>
+        <translation>Cotas diamétricas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Diametric Dimension</source>
-        <translation>Dimensão diamétrica</translation>
+        <translation>Cota diamétrica</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ordinate Dimensions</source>
-        <translation>Dimensões do ordenado</translation>
+        <translation>Cotas do ordenado</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ordinate Dimension</source>
-        <translation>Dimensão do ordenado</translation>
+        <translation>Cota do ordenado</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rotated Dimensions</source>
-        <translation>Dimensões rotacionadas</translation>
+        <translation>Cotas rotacionadas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotated Dimension</source>
-        <translation>Dimensão rotacionada</translation>
+        <translation>Cota rotacionada</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Radial Dimensions</source>
-        <translation>Dimensões radiais</translation>
+        <translation>Cotas radiais</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Radial Dimension</source>
-        <translation>Dimensão radial</translation>
+        <translation>Cota radial</translation>
     </message>
     <message>
         <location line="+2"/>

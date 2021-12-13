@@ -216,7 +216,7 @@
     <name>RDimStyle</name>
     <message>
         <source>Overall dimension scale</source>
-        <translation type="vanished">Escala de dimensão geral</translation>
+        <translation type="vanished">Escala de cota geral</translation>
     </message>
     <message>
         <source>Text height</source>
@@ -228,7 +228,7 @@
     </message>
     <message>
         <source>Text above dimension line</source>
-        <translation type="vanished">Texto acima da linha de dimensão</translation>
+        <translation type="vanished">Texto acima da linha de cota</translation>
     </message>
     <message>
         <source>Text inside horizontal</source>
@@ -747,7 +747,7 @@
     </message>
     <message>
         <source>Overall dimension scale</source>
-        <translation type="vanished">Escala de dimensão geral</translation>
+        <translation type="vanished">Escala de cota geral</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -762,7 +762,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation>Distância da linha de dimensão</translation>
+        <translation>Distância da linha de cota</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -772,7 +772,7 @@
     <message>
         <location line="+1"/>
         <source>Dimension line increment</source>
-        <translation>Incremento da linha de dimensão</translation>
+        <translation>Incremento da linha de cota</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -786,7 +786,7 @@
     </message>
     <message>
         <source>Text above dimension line</source>
-        <translation type="vanished">Texto acima da linha de dimensão</translation>
+        <translation type="vanished">Texto acima da linha de cota</translation>
     </message>
     <message>
         <location line="+1"/>

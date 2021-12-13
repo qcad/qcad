@@ -287,7 +287,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Line</source>
-        <translation>Linha de Dimensão</translation>
+        <translation>Linha de cota</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -390,7 +390,7 @@
     <message>
         <location filename="../src/entity/RDimRotatedEntity.cpp" line="+167"/>
         <source>Dimension Angle</source>
-        <translation>Ângulo de Dimensão</translation>
+        <translation>Ângulo de cota</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>
@@ -451,7 +451,7 @@
     </message>
     <message>
         <source>Overall dimension scale</source>
-        <translation type="vanished">Escala de dimensão global</translation>
+        <translation type="vanished">Escala de cota global</translation>
     </message>
     <message>
         <source>Linear measurement factor</source>
@@ -463,7 +463,7 @@
     </message>
     <message>
         <source>Dimension line gap</source>
-        <translation type="vanished">Distância da linha de dimensão</translation>
+        <translation type="vanished">Distância da linha de cota</translation>
     </message>
     <message>
         <source>Arrow size</source>
