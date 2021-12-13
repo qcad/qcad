@@ -241,18 +241,22 @@ BreakOut.breakOut = function(op, entity, pos, extend, removeSegment) {
 
     if (!extend) {
         if (!BreakOut.drop(newSegments[0])) {
-            e = shapeToEntity(entity.getDocument(), newSegments[0]);
-            if (!isNull(e)) {
-                e.copyAttributesFrom(entity.data());
-                op.addObject(e, false);
+            if (isXLineShape(newSegments[0]) || isRayShape(newSegments[0]) || newSegments[0].getLength()>RS.PointTolerance) {
+                e = shapeToEntity(entity.getDocument(), newSegments[0]);
+                if (!isNull(e)) {
+                    e.copyAttributesFrom(entity.data());
+                    op.addObject(e, false);
+                }
             }
         }
 
         if (!BreakOut.drop(newSegments[1])) {
-            e = shapeToEntity(entity.getDocument(), newSegments[1]);
-            if (!isNull(e)) {
-                e.copyAttributesFrom(entity.data());
-                op.addObject(e, false);
+            if (isXLineShape(newSegments[1]) || isRayShape(newSegments[1]) || newSegments[1].getLength()>RS.PointTolerance) {
+                e = shapeToEntity(entity.getDocument(), newSegments[1]);
+                if (!isNull(e)) {
+                    e.copyAttributesFrom(entity.data());
+                    op.addObject(e, false);
+                }
             }
         }
     }
