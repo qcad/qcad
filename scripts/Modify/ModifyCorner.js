@@ -389,3 +389,7 @@ ModifyCorner.prototype.slotIndividualEdgesChanged = function(value) {
         this.setState(ModifyCorner.State.ChoosingCorner);
     }
 };
+
+ModifyCorner.prototype.slotSingleClickChanged = function(value) {
+    this.slotIndividualEdgesChanged(!value);
+};
