@@ -2538,7 +2538,8 @@ QList<QSharedPointer<RShape> > RShape::roundShapes(
         trimmed2 = QSharedPointer<RShape>(shape2->clone());
     }
 
-    RS::Ending ending1, ending2;
+    RS::Ending ending1 = RS::EndingNone;
+    RS::Ending ending2 = RS::EndingNone;
 
     if (trim || samePolyline) {
         // trim entities to intersection
@@ -2591,6 +2592,26 @@ QList<QSharedPointer<RShape> > RShape::roundShapes(
         QSharedPointer<RPolyline> pl1 = shape1.dynamicCast<RPolyline>();
         RPolyline pl = pl1->modifyPolylineCorner(*trimmed1.data(), ending1, i1, *trimmed2.data(), ending2, i2, &arc);
         return QList<QSharedPointer<RShape> >() <<  QSharedPointer<RShape>(new RPolyline(pl));
+    }
+
+    if (RMath::fuzzyAngleCompare(arc.getStartAngle(), arc.getEndAngle())) {
+        // rounding is full circle (two shapes are tangential):
+        return ret;
+    }
+
+    if (RShape::isArcShape(*trimmed1)) {
+        QSharedPointer<RArc> arc1 = trimmed1.dynamicCast<RArc>();
+        if (RMath::fuzzyAngleCompare(arc1->getStartAngle(), arc1->getEndAngle())) {
+            // trimmed shape is full circle (two shapes are tangential):
+            return ret;
+        }
+    }
+    if (RShape::isArcShape(*trimmed2)) {
+        QSharedPointer<RArc> arc2 = trimmed2.dynamicCast<RArc>();
+        if (RMath::fuzzyAngleCompare(arc2->getStartAngle(), arc2->getEndAngle())) {
+            // trimmed shape is full circle (two shapes are tangential):
+            return ret;
+        }
     }
 
     ret.append(trimmed1);
