@@ -889,6 +889,8 @@ function entityTypeToClass(type) {
         return "RLinetype";
     case RS.ObjectView:
         return "RView";
+    case RS.ObjectDimStyle:
+        return "RDimStyle";
 
     case RS.EntityAll:
         return "REntity";
