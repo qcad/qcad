@@ -1,5 +1,5 @@
-/**
- * InfoCentroids Beta version 0.31 (As MiscInformation)
+/**Beta 0.32
+ * InfoCentroids Beta version 0.32 (As MiscInformation)
  * Copyright (c) 2021 by CVH.
  * All rights reserved.
  *
@@ -26,29 +26,47 @@
  * along with QCAD.
  */
 
-// # Oddity Fixed # Misc .. Information actions are based on EAction.js
-// Misc .. Examples usually chain down to Misc (and to EAction)
-include("scripts/EAction.js");
+/**
+ * \defgroup ecma_misc_information_centroids 2D Centroids Scripts
+ * \ingroup ecma_misc_information
+ *
+ * \brief This module contains 2D Centroids related ECMAScript.
+ */
+
+include("scripts/Misc/MiscInformation/MiscInformation.js");
 
 /**
  * \class InfoCentroids
  * \ingroup ecma_misc_information
- * \brief Base class for all centroid tools.
+ * \brief Base class for all 2D Centroid tools.
  * \author CVH © 2021
  */
 
 // Define the class constructor, which calls the base class constructor:
 function InfoCentroids(guiAction) {
-    EAction.call(this, guiAction);
+    MiscInformation.call(this, guiAction);
 };
 
+// Common translations:
+InfoCentroids.Terms = {
+    Title : qsTr("2D Centroid"),
+    PointMass : qsTr("Point mass"),
+    Area : qsTr("Area"),
+    Wire : qsTr("Wire"),
+    Density : qsTr("Density"),
+    Weighted : qsTr("Weighted"),
+    PositionX : qsTr("X position"),
+    PositionY : qsTr("Y position"),
+    Undefined : qsTr("Undefined")
+}
+
 // Deriving our class from the base class:
-InfoCentroids.prototype = new EAction();
+InfoCentroids.prototype = new MiscInformation();
 InfoCentroids.includeBasePath = includeBasePath;
 
 // BeginEvent handler:
 InfoCentroids.prototype.beginEvent = function() {
-    EAction.prototype.beginEvent.call(this);
+    MiscInformation.prototype.beginEvent.call(this);
 };
 
 /**
@@ -61,37 +79,40 @@ InfoCentroids.prototype.beginEvent = function() {
  *
  * \param list         A list of values.
  *
- * \return The sum of the values or zero when not an array of numbers.
+ * \return The sum of the values or NaN when not an array of all numbers.
  */
 InfoCentroids.prototype.getRunningSumKBK = function (list) {
     var i, iMax;
+    var tulple;
     var t;
     var sum = 0.0;
     var cs  = 0.0;
     var ccs = 0.0;
     var c   = 0.0;
     var cc  = 0.0;
-    var fool;
 
-    // Fail without a list of numbers:
-    if (isNull(list) || list.length === 0 || !isNumber(list[0])) return 0.0;    // Failed list of numbers
+    // Fail without a list:
+    if (isNull(list) || list.length === 0) return Number.NaN;    // Failed as list
 
 //debugger;
     // Naively for 1 or 2 values:
     iMax = list.length;
+
     if (iMax === 1) return list[0];
     if (iMax === 2) return list[0] + list[1];
 
     // Second-order 'iterative Kahan–Babuška algorithm':
     // See: https://en.wikipedia.org/wiki/Kahan_summation_algorithm
     for (i=0; i<iMax; i++) {    // Cycle all values
-        t = sum + list[i];
+        tulple = list[i];
 
-        if (Math.abs(sum) >= Math.abs(list[i])) {
-            c = (sum - t) + list[i];
+        t = sum + tulple;
+
+        if (Math.abs(sum) >= Math.abs(tulple)) {
+            c = (sum - t) + tulple;
         }
         else {
-            c = (list[i] - t) + sum;
+            c = (tulple - t) + sum;
         }
 
         sum = t;
@@ -113,12 +134,12 @@ InfoCentroids.prototype.getRunningSumKBK = function (list) {
 };
 
 /**
- * Accumulate box size.
+ * Accumulate a given item to an overall box size.
  * \author CVH © 2021
  *
  * \param item         An RBox or an RVector to include.
  *
- * \return Nothing. Overall box is adapted.
+ * \return Nothing. Overall box in this.boxSize is adapted.
  */
 InfoCentroids.prototype.mergeBoxWith = function(item) {
 
@@ -145,11 +166,23 @@ InfoCentroids.prototype.mergeBoxWith = function(item) {
 
 /**
  * Adding text labels to a given operation.
+ * \author CVH © 2021
+ *
+ * \param doc           Reference to the current document.
+ * \param op            Given operation to add the text label entity.
+ * \param pos           Marker position.
+ * \param offset        Offset vector to the marker position.
+ * \param text          Label text.
+ *
+ * \return Nothing, text label is added to the operation.
  */
 InfoCentroids.prototype.addTextLabel = function(doc, op, pos, offset, text) {
-    var textData;
     var infoColor;
-    var newEntity;
+    var textData;
+    var textEntity;
+
+    // Retrieve info color:    Default =pale green
+    infoColor = RSettings.getColor("GraphicsViewColors/MeasurementToolsColor", new RColor(155,220,112));
 
 //debugger;
     // Create new text data object:
@@ -161,99 +194,139 @@ InfoCentroids.prototype.addTextLabel = function(doc, op, pos, offset, text) {
     textData.setTextHeight(this.fontSize);
     textData.setText(text);
 
-    // Retrieve info color:
-    infoColor = RSettings.getColor("GraphicsViewColors/MeasurementToolsColor", new RColor(155,220,112));    // Default =pale green
-
     // Create new document entity:
-    newEntity = new RTextEntity(doc, textData);
-    newEntity.setColor(infoColor);
+    textEntity = new RTextEntity(doc, textData);
+    textEntity.setColor(infoColor);
 
-    // Add to operation:
-    op.addObject(newEntity, false, false);    // NOTuseCurrentAttributes NOTforceNew
+    // Add to given operation:
+    op.addObject(textEntity, false, false);    // NOTuseCurrentAttributes NOTforceNew
 };
 
 /**
- * Adding centroid marker to a given operation.
+ * Adding 2D Centroid marker to a given operation.
+ * Supports: 2D point mass, 2D area Centroid and 2D wire Centroid
+ * Type depends on booleans this.massMode & this.wireMode
  * \author CVH © 2021
+ *
+ * \param doc              Reference to the current document.
+ * \param op               Given operation to add the marker entity.
+ * \param dataC            Centroid data [x, y, position, weight]
+ *    (A value to weigh with, not to be mistaken by its mass for area/wire types)
+ * \param radius           Marker size.
+ * \param (preview)        Optional: Preview mode, true/=false.
+ *
+ * \return Nothing, marker is added to the operation.
  */
-InfoCentroids.prototype.addCentroidMarker = function(doc, op, dataC, radius) {
-    var quaterC = 0.4142135623730950488;    // bulge = (sqrt(2) - 1)
-    var type;
-    var bulges, widths;
-    var shift;
-    var pts;
-    var poly;
-    var circleData, polyData;
+InfoCentroids.prototype.addCentroidMarker = function(doc, op, dataC, radius, preview) {
     var infoColor;
-    var circleEntity, polyEntity;
-    var decPnt;
+    var quaterC, bulges, widths;
+    var step;
+    var pts;
+    var poly, polyData, polyEntity;
+    var terms;
+    var type;
+    var mass;
 
-
-    // Revert to defaults when missing:
-    if (isNull(this.wireMode)) this.wireMode = false;
-    type = (this.wireMode === false) ? "Area" : "Wire";
+    // Retrieve info color::    Default =pale green
+    infoColor = RSettings.getColor("GraphicsViewColors/MeasurementToolsColor", new RColor(155,220,112));
 
 //debugger;
-    bulges = [quaterC, 0.0, -quaterC, 0.0];
-    // # Issue Fixed # Circle sector is not rendered correct by QCAD with Width = 2R
+    quaterC = 0.4142135623730950488;    // bulge = sqrt(2)-1
+    bulges = [1.0, 0.0, quaterC, 0.0, -quaterC,  0.0, -1.0];
+    // # Known Issue # Circle sector is not rendered correct by QCAD with Width = 2R
     // Fixed with adding 1%, functional for 2R>=0.03 units
     // See: https://qcad.org/rsforum/viewtopic.php?t=7889&p=30877#p30803
     // See: https://www.ribbonsoft.com/bugtracker/index.php?do=details&task_id=2155
     var radiusFix = radius * 1.01;
-    widths = [radiusFix, 0.0, radiusFix, 0.0];
-    shift = radius / 2;
-    pts = [new RVector(dataC[0] + shift, dataC[1]),
-            new RVector(dataC[0], dataC[1] + shift),
-            new RVector(dataC[0], dataC[1] - shift),
-            new RVector(dataC[0] - shift, dataC[1])];
+    widths = [0.0, 0.0, radiusFix, 0.0, radiusFix, 0.0, 0.0];
+    step = radius / 2;
+    pts = [new RVector(dataC[0] - radius, dataC[1]),
+            new RVector(dataC[0] + radius, dataC[1]),
+            new RVector(dataC[0] + step, dataC[1]),
+            new RVector(dataC[0], dataC[1] + step),
+            new RVector(dataC[0], dataC[1] - step),
+            new RVector(dataC[0] - step, dataC[1]),
+            new RVector(dataC[0] - radius, dataC[1]),
+            new RVector(dataC[0] + radius, dataC[1])];
 
-    // Create new centroid marker polyline:
+    // Create new centroid marker polyline shape:
     poly = new RPolyline(pts, false);    // notClosed
     poly.setBulges(bulges);
     poly.setStartWidths(widths);
     poly.setEndWidths(widths);
-
-    // Create new shape data objects:
-    circleData = new RCircleData(dataC[2], radius);
     polyData = new RPolylineData(poly);
 
-    // Retrieve info color:
-    infoColor = RSettings.getColor("GraphicsViewColors/MeasurementToolsColor", new RColor(155,220,112));    // Default =pale green
-
-    // Create new entities:
-    circleEntity = new RCircleEntity(doc, circleData);
-    circleEntity.setColor(infoColor);
+    // Create new polyline entity:
     polyEntity = new RPolylineEntity(doc, polyData);
     polyEntity.setColor(infoColor);
 
-    // Set custom Properties, use application decPnt:
-    // # Bug Fixed # Export absolute centroid value
-    decPnt = RSettings.getStringValue("Input/DecimalPoint", ".");    // Default =dot
-    circleEntity.setCustomProperty("QCAD", qsTr("2D Centroid"), type);
-    polyEntity.setCustomProperty("QCAD", qsTr("2D Centroid"), type);
-    polyEntity.setCustomProperty("QCAD", qsTr("X position"), dataC[0].toPrecision(17).replace(".", decPnt));
-    polyEntity.setCustomProperty("QCAD", qsTr("Y position"), dataC[1].toPrecision(17).replace(".", decPnt));
-    polyEntity.setCustomProperty("QCAD", qsTr("Weighted"), Math.abs(dataC[3]).toPrecision(17).replace(".", decPnt));
-    polyEntity.setCustomProperty("QCAD", qsTr("Density"), "1");
+    // Add custom properties except in preview mode (InfoAddCustomCentroid):
+    if (isNull(preview) || preview === false) {
+        terms = InfoCentroids.Terms;
 
-    // Add to operation:
+        // Ifso, use mass mode:
+        if (this.massMode === true) {
+            type = terms.PointMass;
+        }
+        // Otherwise use area/wire mode:
+        else {
+            // Revert to defaults when missing:
+            if (isNull(this.wireMode)) this.wireMode = false;
+            type = (this.wireMode === false) ? terms.Area : terms.Wire;
+        }
+
+        // Set marker common custom properties, use application decPnt & full precision:
+        polyEntity.setCustomProperty("QCAD", terms.Title, type);
+        polyEntity.setCustomProperty("QCAD", terms.PositionX, this.formatPropValue(dataC[0]));
+        polyEntity.setCustomProperty("QCAD", terms.PositionY, this.formatPropValue(dataC[1]));
+
+        // Set marker point mass custom property:
+        mass = terms.Undefined;
+        if (this.massMode) {    // From a mass mode >
+            // Store value or valid equation:
+            if (isNumber(dataC[3])) {    // When a number >
+                mass = this.formatPropValue(dataC[3]);
+            } // End with number
+            else if (!isNull(dataC[3])) {    // When not a number nor undefined >
+                // Use an equation when valid:
+                if (isNumber(RMath.eval(dataC[3].replace(/\,/g, ".")))) {
+                    // Store equation literal:
+                    mass = dataC[3];
+                }
+            } // End with NaN
+        } // End mass mode
+        else {    // From Area/wire mode >
+            // Density is 'Undefined' and considered as 1.0 ... 1xWeighted = Weighted
+            mass = this.formatPropValue(dataC[3]);
+        } // End modes
+        polyEntity.setCustomProperty("QCAD", terms.PointMass, mass);
+
+        // Set additional properties for area/wire Centroids:
+        if (!this.massMode) {
+            polyEntity.setCustomProperty("QCAD", terms.Weighted, this.formatPropValue(Math.abs(dataC[3])));
+            polyEntity.setCustomProperty("QCAD", terms.Density, terms.Undefined);
+        }
+    } // End isNotPreview
+
+    // Add marker to the given operation:
     op.addObject(polyEntity, false, false);    // NOTuseCurrentAttributes NOTforceNew
-    op.addObject(circleEntity, false, false);    // NOTuseCurrentAttributes NOTforceNew
 };
 
 /**
- * Define centroid marker size based on overall box and drawing font size.
+ * Defines a 2D Centroid marker size based on overall box and drawing font size.
+ * Depends on this.boxSize & this.fontSize
  * \author CVH © 2021
  *
- * \return Radius for marker.
+ * \return Radius for marker entity.
  */
 InfoCentroids.prototype.getMarkerSize = function() {
     var markerSize;
 
 //debugger;
+    // If any, by box size or default:
     if (isOfType(this.boxSize, RBox)) {
         // Proportional to shape(s):
-        // Equals to: half the size of sqrt(25x25 per squared area):
+        // Equals to: half the size of sqrt(25x25 per squared out area):
         markerSize = Math.sqrt(this.boxSize.getArea() / 625) / 2;
     }
     else {
@@ -269,5 +342,171 @@ InfoCentroids.prototype.getMarkerSize = function() {
     return markerSize;
 };
 
-// Pete proposed: ["InformationMenu", "InformationToolBar", "InformationToolsPanel", "InformationMatrixPanel"]
-// Endorsed by Husky
+/**
+ * Format a value textual for a 2D Centroid label.
+ * Without a leading space.
+ * \author CVH © 2021
+ *
+ * \param value            Value to format textual.
+ * \param decPnt           Decimal separator.
+ * \param digits           Number of digits.
+ * \param trailingZ        Trailing zeros, true/false.
+ *
+ * \return Textual representation governed by given preferences
+ */
+InfoCentroids.prototype.formatLabelValue = function(value, decPnt, digits, trailingZ) {
+    var numTxt;
+
+    // Fail without a number:
+    if (!isNumber(value)) return " NaN";    // Failed as number
+
+    // In fixed notation:
+    numTxt = value.toFixed(digits);
+    // Suppress trailing zeros if required:
+    if (!trailingZ) numTxt = numTxt.replace(/(?:(\.\d*?[1-9]+)|\.)0*$/, "\$1");
+
+    return numTxt.replace(".", decPnt);
+};
+
+/**
+ * Format a value textual for reporting on the command History.
+ * Without trailing zeros, defaults to 8 when digits is invalid.
+ * With a leading space, without trailing zeros.
+ * \author CVH © 2021
+ *
+ * \param value           Value to format textual.
+ * \param (digits)        Optional: Number of digits. (=Appl.Prec.)
+ *
+ * \return Textual representation with application decimal point in
+ *           given or in application precision.
+ */
+InfoCentroids.prototype.formatCmdValue = function(value, digits) {
+    var decPnt;
+    var numTxt;
+
+    // Fail without a number:
+    if (!isNumber(value)) return " NaN";    // Failed as number
+
+    // Retrieve application decimal point preferences:
+    decPnt = RSettings.getStringValue("Input/DecimalPoint", ".");    // Default =dot
+
+    // Revert to application precision or default when omitted or invalid:
+    if (isNull(digits)) {
+        // # Known Issue # Will not work prior QCAD 3.26.4.13
+        digits = RSettings.getIntValue("PropertyEditor/Decimals", 8);    // Default =8
+    }
+    if (!isNumber(digits) || digits < 0 || digits > 8) {
+        digits = 8;
+    }
+
+    // In fixed notation, suppress trailing zeros:
+    numTxt = value.toFixed(digits).replace(/(?:(\.\d*?[1-9]+)|\.)0*$/, "\$1");
+
+    return " " + numTxt.replace(".", decPnt);
+};
+
+/**
+ * Format a value textual for storing properties.
+ * Without a leading space.
+ * \author CVH © 2021
+ *
+ * \param value        Value to format textual.
+ *
+ * \return Textual representation in full precision with application decimal point.
+ */
+InfoCentroids.prototype.formatPropValue = function(value) {
+    // Fail without a number:
+    if (!isNumber(value)) return " NaN";    // Failed as number
+
+    // Retrieve application decimal point preferences:
+    var decPnt = RSettings.getStringValue("Input/DecimalPoint", ".");    // Default =dot
+
+    return value.toPrecision(17).replace(".", decPnt);
+};
+
+/**
+ * Format a pair of values textual as coordinate.
+ * In full precision with application decimal point.
+ * With a leading space.
+ * \author CVH © 2021
+ *
+ * \param valueX        X value of coordinate.
+ * \param valueY        X value of coordinate.
+ *
+ * \return Textual representation coordinate pair.
+ */
+InfoCentroids.prototype.formatCoordinate = function(valueX, valueY) {
+    // Retrieve application decimal point preferences:
+    var lstSep = RSettings.getStringValue("Input/CartesianCoordinateSeparator", ",");    // Default =comma
+
+    return " " + this.formatPropValue(valueX) + lstSep + " " + this.formatPropValue(valueY);
+};
+
+/**
+ * Advance the selection to the added marker (polyline).
+ * \author CVH © 2021
+ *
+ * \param di                 A reference to the document interface.
+ * \param transaction        The transaction that added entities.
+ *
+ * \return Nothing. Selection is adapted
+ */
+InfoCentroids.prototype.advanceSelection = function(di, transaction) {
+    var doc = di.getDocument();
+    var affectedIds;
+    var i, idn;
+    var entity;
+
+    // Retrieve affected entity Id's:
+    affectedIds = transaction.getAffectedObjects();
+    idn = affectedIds.length;
+
+    // Process all Id's:
+    for (i=idn-1; i>=0; i--) {    // Cycle all Id's backwards
+        entity = doc.queryEntity(affectedIds[i]);
+        // Properly remove Id from list when not a polyline:
+        if (!isPolylineEntity(entity)) affectedIds.splice(i, 1);
+    } // Loop Id's
+
+    // Advance selection:
+    di.selectEntities(affectedIds, false);    // NOTaddToCurrent
+};
+
+// Initialization:
+// ----------------
+InfoCentroids.getMenu = function() {
+    var menu = EAction.getSubMenu(
+        MiscInformation.getMenu(),
+        71050, 100,    // 71050 initially confirmed by Andrew, PM Thu Nov 11, 2021 11:25 am but now set lower than the positions tools
+        InfoCentroids.getTitle(),
+        "MiscInformationCentroidsMenu"
+    );
+    return menu;
+};
+
+InfoCentroids.getTitle = function() {
+    return qsTr("2D &Centroids");
+};
+
+InfoCentroids.prototype.getTitle = function() {
+    return InfoCentroids.getTitle();
+};
+
+InfoCentroids.init = function() {
+    // Prevent InfoAddCustomCentroid to be loaded without PRO resources
+    if (!hasPlugin("PROTOOLS")) {
+        return;    // Don't initiate the Addon
+    }
+    // -> Continue with PRO recourses
+
+    // Prevent InfoAddCustomCentroid to be loaded with inadequate framework lower than QCAD 3.27
+    var frameworkV = getVersionNumber(RSettings.getMajorVersion(), RSettings.getMinorVersion(), RSettings.getRevisionVersion(), RSettings.getBuildVersion());
+    var minV = getVersionNumber(3, 27, 0, 0);
+    if (frameworkV < minV) {
+        return;    // Don't initiate the Addon
+    }
+    // -> Continue when framework is up to date
+
+    InfoCentroids.getMenu();
+};
+

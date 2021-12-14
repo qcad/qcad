@@ -1,5 +1,5 @@
-/**
- * InfoWireCentroid Beta version 0.31 (As MiscInformation)
+/**0.31b
+ * InfoWireCentroid Beta version 0.32 (As MiscInformation)
  * Copyright (c) 2021 by CVH.
  * All rights reserved.
  *
@@ -28,13 +28,11 @@
 
 include("scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js");
 
-// # ToDo # Should we implement poly.normalize(RS.PointTolerance)?
 // # ToDo # Should we clear long or vast arrays? shift() out or splice(0, 1) out?
 
 /**
  * \class InfoWireCentroid
- * \ingroup ecma_misc_information
- * \brief This action adds wire centroid markers and details to selections.
+ * \brief This action adds a wire 2D Centroid marker and text labels for a selection.
  * \author CVH © 2021
  */
 
@@ -48,10 +46,11 @@ InfoWireCentroid.prototype = new InfoCentroids();
 InfoWireCentroid.includeBasePath = includeBasePath;
 
 /**
- * This GUI action adds centroid markers and details for selected entities.
+ * This GUI action adds a 2D Centroid marker and detail labels for selected entities.
  * Calculates overall centroid position and total length assuming a uniform density wire.
  * Casts additional details as text labels and reports them on the Command History.
  * Stores full floating point data as marker custom properties.
+ * 2D Centroid markers are generated with a default density of 1.00 per unit.
  * Supports single or multiple selected entities:
  *    - Line entity.
  *    - Arc entity.
@@ -59,15 +58,19 @@ InfoWireCentroid.includeBasePath = includeBasePath;
  *    - Ellipse entity, full or approximated as ellipse arc.
  *    - Polyline entity.
  *    - Spline entity as approximated polyline.
- * Not interpolating with line segments, the methods sum length and centroid by shape.
+ * Not interpolating with line segments, the methods sum lengths and centroids by shapes.
  *
- * Included are various methods for RShapes wire centroid.
+ * Included are various methods for wire 2D Centroids of RShapes.
  */
 // BeginEvent handler:
 InfoWireCentroid.prototype.beginEvent = function() {
     InfoCentroids.prototype.beginEvent.call(this);
 
-    // Call the wire centroid method for selections main loop:
+    // Presets:
+    this.massMode = false;
+    this.wireMode = true;
+
+    // Call the wire centroid for a selection main loop:
     this.selectionsWireCentroid(this.getDocumentInterface());
 
     // # Issue Fixed # Button toggles between usage, fixed with releasing
@@ -86,12 +89,12 @@ InfoWireCentroid.prototype.beginEvent = function() {
  *
  * \param di         A document interface.
  *
- * \return Nothing. Casts centroid marker and text labels, reports on Command History.
+ * \return Nothing. Casts 2D Centroid marker and text labels, reports on Command History.
  */
 InfoWireCentroid.prototype.selectionsWireCentroid = function(di) {
     var doc = di.getDocument();
     var i, ids, idn;
-    var msg, numTxt;
+    var msg, txt;
     var entity, entityShape;
     var type;
     var res;
@@ -101,18 +104,19 @@ InfoWireCentroid.prototype.selectionsWireCentroid = function(di) {
     var x, y, length;
     var centroid, dataC;
     var op;
-    var docDimSize, docDimScale;
+    var dimStyle;
     var shift;
     var markerSize;
     var decPnt, lstSep;
-    var dimLinPrec, dimNoZeros;
+    var dimLinPrec, dimTrZeros;
     var offset;
+    var transaction;
 
     // Retrieve document selection, fail on none:
     // # ToDo # Add states for none & pointing inside a closed contour
     ids = doc.querySelectedEntities();
     idn = ids.length;
-    if (idn === 0) {    // Action requires selection
+    if (idn === 0) {    // Double lock, action requires selection
         // Abort here:
         EAction.handleUserWarning(qsTr("No selection."));
         EAction.handleUserInfo(qsTr("Please, make a selection first. Command terminated."));
@@ -120,10 +124,9 @@ InfoWireCentroid.prototype.selectionsWireCentroid = function(di) {
     }
 
     // Additional Command History script notification:
-    EAction.handleUserMessage(qsTr("Wire centroid script (v0.31) by CVH"));
+    EAction.handleUserMessage(qsTr("Wire 2D Centroid script (v0.32) by CVH"));
 
     // Initial values:
-    this.wireMode = true;
     this.hasApprox = false;
     this.isSingular = (idn === 1);
     this.boxSize = undefined;
@@ -153,10 +156,10 @@ InfoWireCentroid.prototype.selectionsWireCentroid = function(di) {
                 res = this.getArcWireCentroid(entityShape); // Diversifies
                 break;
             case 2:    // isCircleEntity
-            // Reject marker circles:
-                if (!isNull(entity.getCustomProperty("QCAD", qsTr("2D Centroid"), undefined))) {
+                // Reject old style marker circles:
+                if (!isNull(entity.getCustomProperty("QCAD", InfoCentroids.Terms.Title, undefined))) {
                     // Abort critical:
-                    EAction.handleUserWarning(qsTr("Centroid markers circle in selection. No results."));
+                    EAction.handleUserWarning(qsTr("2D Centroid markers circle in selection. No results."));
                     return undefined;    // Failed, isMarker
                 }
                 res = this.getCircleWireCentroid(entityShape);
@@ -204,9 +207,14 @@ InfoWireCentroid.prototype.selectionsWireCentroid = function(di) {
     y = this.getRunningSumKBK(shapesY);
     length = this.getRunningSumKBK(shapesL);
 
-    // Avoid dividing by a zero length, abort critical:
+    // Avoid NaN values:
+    if (!isNumber(x) || !isNumber(y) || !isNumber(length)) {
+        return undefined;    // Failed, NaN
+    }
+
+    // Avoid division by a zero length, abort critical:
     if (length === 0.0) {
-        EAction.handleUserWarning(qsTr("Results in Zero."));
+        EAction.handleUserWarning(qsTr("Results in a division by zero."));
         debugger;    // ### Catch this In the act !!! ###
         return undefined;    // Failed, divZero
     }
@@ -219,7 +227,7 @@ InfoWireCentroid.prototype.selectionsWireCentroid = function(di) {
     // Initiate an operation:
     op = new RAddObjectOperation();
     // Set tool title used for undo/redo information:
-    op.setText(qsTr("Centroid point"));
+    op.setText(qsTr("2D wire Centroid"));
 
     // Retrieve document dimension font:
     this.docDimFont = doc.getDimensionFont();
@@ -235,12 +243,9 @@ InfoWireCentroid.prototype.selectionsWireCentroid = function(di) {
         this.docDimFont = "Standard";
     }
 
-    // Retrieve dimension size:
-//    docDimSize = doc.getKnownVariable(RS.DIMTXT, 2.5);    // Default =2.5
-//    docDimScale = doc.getKnownVariable(RS.DIMSCALE, 1.0);    // Default =1.0
-//    this.fontSize = docDimSize * docDimScale;
-    // # Issue # Will not work with QCAD <= 3.26.4.
-    var dimStyle = doc.queryDimStyle();
+    // Retrieve drawing dimensions font size:
+    // # Known Issue # Will not work prior QCAD 3.26.4
+    dimStyle = doc.queryDimStyle();
     this.fontSize = dimStyle.getDouble(RS.DIMTXT) * dimStyle.getDouble(RS.DIMSCALE);
 
     // Assure for a font size equal or larger than 0.03 (See addCentroidMarker() fix):
@@ -253,69 +258,57 @@ InfoWireCentroid.prototype.selectionsWireCentroid = function(di) {
     this.addCentroidMarker(doc, op, dataC, markerSize);
 
     // Use drawing decPnt/lstSep/precision:
-//    decPnt = String.fromCharCode(doc.getDecimalSeparator());    // charCode 32/44/46
-//    dimLinPrec = doc.getLinearPrecision();
-    // # Issue # Will not work with QCAD <= 3.26.4.
+    // # Known Issue # Will not work prior QCAD 3.26.4
     decPnt = String.fromCharCode(dimStyle.getInt(RS.DIMDSEP));    // charCode 32/44/46
-    // # Issue Fixed # Can't locate a drawing list separator, use common sense
-    // Default =comma, revert back to semicolon when comma is used:
+    dimLinPrec = dimStyle.getInt(RS.DIMDEC);          // Integer value
+    dimTrZeros = dimStyle.getInt(RS.DIMZIN) === 0;    // Show decimal trailing zeros: 0=Yes 8=No
+    // # Issue Fixed # Undefined drawing list separator, use common sense
     lstSep = (decPnt === ",") ? ";" : ",";    // Default =comma
-    dimLinPrec = dimStyle.getInt(RS.DIMDEC);
-    dimNoZeros = dimStyle.getInt(RS.DIMZIN) === 8;    // Show decimal trailing zeros: 0=Yes 8=No
 
-    // Include absolute length value:
-    if (!this.isSingular) msg = qsTr("Total length:");
-    numTxt = Math.abs(length).toFixed(dimLinPrec);
-    // Suppress trailing zeros when required:
-    if (dimNoZeros) numTxt = parseFloat(numTxt).toString();
-    msg += " " + numTxt.replace(".", decPnt);
-    if (!this.isSingular && this.hasApprox) msg += " " + qsTr("(Incl. approximations)");
+    // Adapt to not singular nature:
+    if (!this.isSingular) msg = qsTr("Total length:")
+
+    // Include absolute length label:
+    txt = msg + " " + this.formatLabelValue(Math.abs(length), decPnt, dimLinPrec, dimTrZeros);
+    if (!this.isSingular && this.hasApprox) txt += " " + qsTr("(Incl. approximations)");
     offset = new RVector(markerSize + shift, markerSize + shift);
-    this.addTextLabel(doc, op, centroid, offset, msg);
-    // # ToDo # Use application precision
-    // # Issue # Can't locate an application linear precision
-    EAction.handleUserInfo(msg);
+    this.addTextLabel(doc, op, centroid, offset, txt);
 
-    // Include centroid position:
+    // Report absolute length:
+    txt = msg + this.formatCmdValue(Math.abs(length));
+    if (!this.isSingular && this.hasApprox) txt += " " + qsTr("(Incl. approximations)");
+    EAction.handleUserInfo(txt);
+
+    // Diversify on approximated nature:
     msg = (this.hasApprox) ? qsTr("Approximated centroid:") : qsTr("Centroid:");
-    numTxt = centroid.x.toFixed(dimLinPrec);
-    // Suppress trailing zeros when required:
-    if (dimNoZeros) numTxt = parseFloat(numTxt).toString();
-    msg += " (" + numTxt.replace(".", decPnt);
-    numTxt = centroid.y.toFixed(dimLinPrec);
-    // Suppress trailing zeros when required:
-    if (dimNoZeros) numTxt = parseFloat(numTxt).toString();
-    msg += lstSep + " " + numTxt.replace(".", decPnt) + ")";
+
+    // Include centroid position label:
+    txt = msg + " (" + this.formatLabelValue(centroid.x, decPnt, dimLinPrec, dimTrZeros);
+    txt += lstSep + " " + this.formatLabelValue(centroid.y, decPnt, dimLinPrec, dimTrZeros) + ")";
     offset = new RVector(markerSize + shift, shift - markerSize);
-    this.addTextLabel(doc, op, centroid, offset, msg);
+    this.addTextLabel(doc, op, centroid, offset, txt);
 
-    // Use application decPnt/lstSep & 17 significant:
-    decPnt = RSettings.getStringValue("Input/DecimalPoint", ".");    // Default =dot
-    lstSep = RSettings.getStringValue("Input/CartesianCoordinateSeparator", ",");    // Default =comma
-    // Revert back to semicolon when comma is used:
-    if (decPnt === ",") lstSep = ";";
-
-    // Command History centroid position:
-    msg = (this.hasApprox) ? qsTr("Approximated centroid:") : qsTr("Centroid:");
-    numTxt = centroid.x.toPrecision(17);
-    msg += " (" + numTxt.replace(".", decPnt);
-    numTxt = centroid.y.toPrecision(17);
-    msg += lstSep + " " + numTxt.replace(".", decPnt) + ")";
+    // Report centroid position:
+    msg += this.formatCoordinate(centroid.x, centroid.y);
     EAction.handleUserInfo(msg);
 
     // Set relative zero and apply all operations:
     di.setRelativeZero(res[2]);
-    di.applyOperation(op);
+    transaction = di.applyOperation(op);
+
+    // Advance selection to marker:
+    this.advanceSelection(di, transaction);
+
     // Return to terminate:
     return true;
 };
 
-// --------------------------------------------------
-// Centroid methods for a wire of uniform density
-// --------------------------------------------------
+// -----------------------------------------------------
+// Centroid methods for a wire of uniform density in 2D
+// -----------------------------------------------------
 
-// Spline RShapes
-/** OK by approx  Called by Main  Length differs a lot with QCAD getLength()
+// Spline RShapes ... Length differs a lot with QCAD getLength()
+/**
  * Spline RShape centroid data, including length (+).
  * Considering a wire of uniform density.
  * Approximated with a polyline given the XP method tolerance.
@@ -377,7 +370,7 @@ InfoWireCentroid.prototype.getSplineWireCentroid = function(spline) {
 };
 
 // Polyline RShapes
-/** OK  Called by Main & SplineWireCentroid & EllipseArcWireCentroid
+/**
  * Polyline RShape centroid data, including length (+).
  * Considering a wire of uniform density.
  * \author CVH © 2021
@@ -460,8 +453,12 @@ InfoWireCentroid.prototype.getPolylineWireCentroid = function(polyline) {
     y = this.getRunningSumKBK(shapesY);
     length = this.getRunningSumKBK(shapesL);
 
-// ### Catch this In the act !!! ###
-if (!RMath.fuzzyCompare(length, orgLength)) debugger;
+if (!RMath.fuzzyCompare(length, orgLength)) debugger; // ### Catch this In the act !!! ###
+
+    // Avoid NaN values:
+    if (!isNumber(x) || !isNumber(y) || !isNumber(length)) {
+        return undefined;    // Failed, NaN
+    }
 
     // Avoid and fail when dividing by a zero length:
     if (length === 0.0) return undefined;    // Failed, divZero
@@ -477,7 +474,7 @@ if (!RMath.fuzzyCompare(length, orgLength)) debugger;
 };
 
 // Polyline RShapes with line segments
-/** OK  Unused
+/**
  * Closed or open polyline RShape with line segments centroid data, including length (+).
  * Considering a wire of uniform density.
  * \author CVH © 2021
@@ -569,8 +566,12 @@ InfoWireCentroid.prototype.getPolygonWireCentroid = function(polygon) {
     y = this.getRunningSumKBK(linesY);
     length = this.getRunningSumKBK(linesL);
 
-// ### Catch this In the act !!! ###
-if (!RMath.fuzzyCompare(length, orgLength)) debugger;
+if (!RMath.fuzzyCompare(length, orgLength)) debugger;    // ### Catch this In the act !!! ###
+
+    // Avoid NaN values:
+    if (!isNumber(x) || !isNumber(y) || !isNumber(length)) {
+        return undefined;    // Failed, NaN
+    }
 
     // Avoid and fail when dividing by a zero length:
     if (length === 0.0) return undefined;    // Failed, divZero
@@ -586,7 +587,7 @@ if (!RMath.fuzzyCompare(length, orgLength)) debugger;
 };
 
 // Line RShapes
-/** OK closed format  Called by Main & PolylineWireCentroid & PolygonWireCentroid
+/**
  * Line segment RShape centroid data, including length (+).
  * Considering a wire of uniform density.
  * Excluding Rays and Xlines
@@ -638,7 +639,7 @@ InfoWireCentroid.prototype.getCircleWireCentroid = function(circle) {
     return [centroid.x, centroid.y, centroid, length];
 };
 
-/** OK closed format  Called by Main & PolylineWireCentroid
+/**
  * Arc RShape centroid data, including length (+).
  * Considering a wire of uniform density.
  * \author CVH © 2021
@@ -704,7 +705,7 @@ InfoWireCentroid.prototype.getArcWireCentroid = function(arc) {
 
 // Ellipse RShapes
 // # Informational # Remark that QCAD doesn't handle minorR equal to zero, a degenerate ellipse
-/** Diversifies  Called by Main
+/**
  * Ellipse RShape centroid data, including length (+).
  * Diversifies between a full ellipse or an ellipse arc.
  * Considering a wire of uniform density.
@@ -729,7 +730,7 @@ InfoWireCentroid.prototype.getEllipseWireCentroid = function(ellipse) {
     }
 };
 
-/** OK by infSeries  Called by EllipseWireCentroid & EllipseArcWireCentroid
+/**
  * Full ellipse RShape centroid data, including circumference (+).
  * Considering a wire of uniform density.
  * Centroid closed format equation, nearly exact circumference by infinite series expansion.
@@ -790,7 +791,7 @@ var circumRamanCM = circumRaman_C * 0.9999855;
 var circumRamanCP = circumRaman_C * 1.0000145;
 // --------------------------------------------
 
-// A well used approximation method in many programs by Chris Rackauckas:
+// A well used approximation method in many programs mentioned by Chris Rackauckas:
 // pi(a+b)(135168-85760h-5568h²+3687h³)/(135168-119552h-22208h²+345h³)
 // http://www.chrisrackauckas.com/assets/Papers/ChrisRackauckas-The_Circumference_of_an_Ellipse.pdf
 
@@ -830,7 +831,7 @@ var circumRamanCP = circumRaman_C * 1.0000145;
     return [centroid.x, centroid.y, centroid, length];
 };
 
-/** OK by approx  Called by EllipseWireCentroid
+/**
  * Ellipse arc RShape centroid data, including length (+).
  * Considering a wire of uniform density.
  * Approximated with a polyline given the XP method number of arc segments, at least 4096.
@@ -887,7 +888,7 @@ InfoWireCentroid.prototype.getEllipseArcWireCentroid = function(ellipse) {
     // Retrieve approximation tolerances of the Explode method (XP), if any, or use defaults:
     // # Issue Unsolved # ->fullEllipseArcs<- Is a size relative accuracy
     eSegs = RSettings.getIntValue("Explode/EllipseSegments", 32);    // Default =32 arc segments/full ellipse
-    //  # Issue Fixed # Here 4,096 ... 65,536 would be advised, not less and to high may degenerate the result
+    //  # Issue Fixed # Here 4,096 ... 65,536 would be advised, not less and too high may degenerate the result
     if (eSegs < 4096) eSegs = 4096;
     // Approximate the ellipse with a polyline with arc segments:
     approx = clone.approximateWithArcs(eSegs);
@@ -907,7 +908,7 @@ InfoWireCentroid.prototype.getEllipseArcWireCentroid = function(ellipse) {
     return [centroid.x, centroid.y, centroid, res[3]];
 };
 
-/** OK Called by FullEllipseWireCentroid
+/**
  * Full ellipse circumference (+) by series expansion, best suited for elongated ellipses.
  * Fast converging exact infinite series expansion for a given number of terms.
  * Also known as the 'Cayley's series expansion'.
@@ -965,9 +966,9 @@ InfoWireCentroid.prototype.getFullEllipseCircumISC = function (a, b, terms) {
     factor = 1 + t1 * t2;
 
 //var reply = 4 * a;
-//EAction.handleUserMessage(reply.toPrecision(21).replace(".",","));
+//EAction.handleUserMessage(reply.toPrecision(21).replace(".", ","));
 //var reply = 4 * a * factor;
-//EAction.handleUserMessage(reply.toPrecision(21).replace(".",","));
+//EAction.handleUserMessage(reply.toPrecision(21).replace(".", ","));
 
     a1 = 1;
     a2 = 2;
@@ -990,7 +991,7 @@ InfoWireCentroid.prototype.getFullEllipseCircumISC = function (a, b, terms) {
         factor += t1 * t2;
 
 //var reply = 4 * a * factor;
-//EAction.handleUserMessage(reply.toPrecision(21).replace(".",","));
+//EAction.handleUserMessage(reply.toPrecision(21).replace(".", ","));
 
         if (factor === oldFactor) break;    // Maximum precision attained
     } // Loop terms
@@ -999,7 +1000,7 @@ InfoWireCentroid.prototype.getFullEllipseCircumISC = function (a, b, terms) {
     return 4 * a * factor
 };
 
-/** OK Called by FullEllipseWireCentroid
+/**
  * Full ellipse circumference (+) by series expansion, best suited for round ellipses.
  * Exact infinite series expansion for a given number of terms.
  * Also known as the 'Gauss-Kummer series expansion'.
@@ -1072,7 +1073,7 @@ InfoWireCentroid.prototype.getFullEllipseCircumISGK = function (a, b, terms) {
     } // Loop terms
 
 //var reply = base + sum;
-//EAction.handleUserMessage(reply.toPrecision(21).replace(".",","));
+//EAction.handleUserMessage(reply.toPrecision(21).replace(".", ","));
 
     // Return pi(a+b) and the sum of the terms:
     return base + sum;
@@ -1080,8 +1081,8 @@ InfoWireCentroid.prototype.getFullEllipseCircumISGK = function (a, b, terms) {
 
 // ==================================================
 
-/** Diversifies
- * Uniform density wire centroids supported entity type or -1 when not supported.
+/**
+ * Diversifies uniform density wire centroids supported entity type or -1 when not supported.
  * REntity based (Excludes RSolids and so).
  */
 InfoWireCentroid.prototype.getSupportedWireCentroidType = function(entity) {

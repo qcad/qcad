@@ -1,0 +1,62 @@
+Steps to re-created the worked out 3D example.
+-----------------------------------------------
+With the example drawing <Summing Centroids v2.dxf> hide/freeze the layer 'Centroids'.
+Add a new layer e.g. 'My Centroids'.
+
+Front view:
+------------
+The hatch was created from 3 boundaries: The spline shape, the circular void and the rectangle.
+  As if the rectangle is also a void what later is filled with steel & plywood.
+
+Create 2 uniform density area 2D Centroids from:
+- the hatched area. (1)
+- the rectangle representing the steel insert. (2)
+  By selecting one single entity at a time.
+Create a point mass 2D Centroid at:
+- the center of the circle representing the RVS rod. (3)
+  And enter its known mass by equation 'PI*10*10*100*0.00793' in grams. (4)
+
+Activate the 2D Centroids listener. (5)
+
+Edit the custom property 'Density' of the plywood centroid marker to read '0.00068*19'. (6)
+  This is the volumetric density of plywood in g/mm³ times its thickness in mm what is the areal density.
+  -> Because of the listener, the marker its 'Point mass' property is also updated (601.066...grams).
+Set the custom property 'Density' of the insert centroid marker to '(0.00785*8)+(0.00068*11)'. (7)
+  As if the sum of an 8mm thick layer of steel and an 11mm layer of plywood their individual areal densities.
+
+Draw a selection around these 3 markers, the tool only considers selected markers.
+Combine all 3 in one overall point mass 2D Centroid by taking the weighted sum of the components. (8)
+
+Side view:
+-----------
+Remark that we don't create new 2D Centroids from an area in the side view.
+  Those are unrelated to front view areas with their front view areal density.
+Duplicate (DP) the Plywood centroid marker. (9)
+- Move (MV) the duplicate restricted horizontally to the middle of the Plywood in the side view. (10)
+  -> Because of the listener, the marker coordinate properties are updated, here only in Y.
+Duplicate the RVS rod centroid marker. (11)
+- Move the duplicate to the middle of the rod in the side view. (12)
+  Snapping Middle Manual (SN) for the target point.
+Duplicate the steel insert centroid marker. (13, 16)
+- Move the duplicate restricted horizontally to the middle of the 8mm steel insert in the side view. (14, 17)
+- Edit the custom property 'Density' of this marker to read '(0.00785*8)+0' ... Only the steel. (15, 18)
+- Repeat this for the left over plywood with equation '0+(0.00068*11)'.
+
+De-activate the 2D Centroids listener. (19)
+
+Draw a selection around the 4 markers in the side view.
+Combine all 4 in one overall 2D Centroid by taking the weighted sum of the components. (20)
+
+
+Both overall results indicate where the center of mass is situated in 3D.
+A point mass of 903.5646g situated @(224.0144, 233.8132, -25.6400) or 6.64mm 'behind' the 19mm plywood.
+Obvious is that some X/Y values correlate when performed correctly.
+
+The procedure is similar for the alternative representation in the lower section of the drawing.
+(Refer to Layer State Y4 'Alternative')
+Proof of concept by comparing the results with partial sums.
+The weighted sum of two components is always situated on a line between both 2D markers.
+(Refer to Layer State Y2 'Partials')
+
+Regards,
+CVH

@@ -1,0 +1,138 @@
+Preface:
+=========
+A centroid in 2D is merely a point in X&Y where all the mass would be condensed in an infinite small point.
+Because a point has no dimensions, one would not be able to give it other properties.
+    Whatever times zero results in nothing.
+We only assume that it has a mass as a distinct property.
+
+Another property would directly relate to the origin of the centroid.
+In 2D that is limited to a certain infinite thin area or to a certain length of an infinite thin wire.
+
+A centroid its mass is then proportional related to its area in 2D or to its length in 1D.
+    For simplicity expressed as a unitless factor 'Weighted'.
+    Generalized, the weight that each of the properties has when combining multiple components.
+
+The centroid point its mass only differs in how the value for the mass is obtained:
+- From a certain calculated area times a given uniform areal density.
+- From a certain length of wire(s) times a given uniform linear density.
+- Of a given point mass or the mass from combining other 2D Centroids their data.
+    Again simplifying an additional required 'Density' property as a unitless value.
+
+Depending their nature, densities are to be expressed per drawing units or per squared drawing units.
+All mass or density values must be expressed in the same unit of mass.
+The individual custom density can be set by changing the custom property of the marker.
+
+There are no restrictions on adding various other custom properties to a 2D Centroid marker.
+In QCAD custom properties are simple textual notes.
+One could add material specifications e.g.:
+    'Material : Plywood' & 'Thickness in Z : 19mm' & 'Density (vol.) : 680 kg/m³ or 0.00068g/mm³' ...
+    The areal density of this material would be 19mm times 0.00068g/mm³ = 0,01292 in g/mm².
+Analogue for the linear density of wires.
+
+For the ease of use one can enter equations without doing calculations on forehand.
+
+FAQ:
+- The area method takes a single selection while the wire method takes any selected line-art as entry.
+  A multiple area selection can have nested or overlapping contours aside of no solution for the area
+    of line segments, the difference between an arc as sector or as arc segment and so on.
+  Up to this point, a single or multiple contours method is not implemented.
+  The workaround is by a hatched area, a polyline or combining individual centroids of open/closed shapes.
+  In the last context a void can be regarded as a negative density and mass.
+
+- Why are they not implemented as common properties of entities?
+  There are several reasons:
+  - The ambiguous nature explained above.
+  - Splines and ellipse arc wires require integration and tend to be too slow as property.
+    The finer this is done by a vast amount of tiny sub values the more accurate the result. (Up to a point!)
+    It may take several seconds for one and thus several hundreds of seconds for a drawing with 100 splines.
+  - To evaluate to a point mass an additional areal/linear density value is required.
+
+Changed in InfoCentroids version 0.32:
+=======================================
+- All QCAD Professional add-ons for QCAD framework 3.27 and later.
+    Otherwise, the add-ons are not loaded and initiated.
+- Cleared all shortcut key sequences as there was discovered another conflict with ModifyToolsPanel (WM).
+    Found no good alternatives.
+- 2D Centroids as a coherent sub menu of the Misc Information menu.
+- Centroids markers are now one single (odd shaped) polyline.
+    Easier to select but this has a drawback when snapping.
+    Before, the extra circle had a nice and easy center/middle snapping point.
+- Implemented a new point mass 2D Centroid marker type.
+    As known plain point mass or as the weighted sum of combining others centroids their data.
+- Implemented a small tool for adding 2D centroids with given mass at indicated position,
+    fully customizable by dialog.
+- Somewhat updated the preparations for translations.
+    A major drawback is that custom properties are not auto-translated by the Property Editor.
+    2D Centroids are thus native language specific and can't be handled in a different language.
+- Implemented a custom property change listener for 2D centroids.
+    When active, this will try to bind any change made to the values 'Density' or 'Point mass'.
+    It will also bind any translation of the marker by updating the 'position X/Y' values.
+    The custom properties for the 'Weighted' value, together with the values for X and Y are the
+      recorded textual results of a calculation of an area or a wire centroid. These are not tied
+      to anything in the drawing and should not be changed except in very controlled situations.
+      e.g.: For translating them over to a cross sectional or side view.
+    2 drawbacks:
+    - A transaction listener will listen to any change that is applied to a drawing.        Initially always inactive and preferable turned on/off as required.
+    - All is part of a circular relationship, adapting to an input may change the input again.
+        As a workaround, the marker(s) in question are deselected after a change is applied.
+- 'Density' or 'Point mass' can be expressed as simple equations. e.g. '(a*b)+(c*d)-d ...'
+    With all numerical values, preferable with the application decimal point but not strictly required.
+    For the above example one enters the text "19*0,00068" or "19*0.00068" what evaluates to 0.01292.
+    A thousand separator is not supported and may result in invalid results.
+- Numbers for mass, area and length on the Command History are now with the recently added
+    application preference for decimal digits in the Property Editor.
+- Reporting the summed area or length when combining equal types.
+    This does not take into account overlapping and/or nested nature.
+- Several minor changes and tweaks.
+    e.g. Advancing the selection to the added marker.
+- Synchronized with related commits by Andrew.
+
+
+Changed in InfoCentroids version 0.31:
+=======================================
+- Circles from hatch boundary bug fix. (version 0.11)
+- Checks for QCAD framework >= 3.26.4.5 and adapts. (version 0.13) (Removed v0.32)
+    Ifso, excluding all (autoClosed) self-intersection shapes.
+    Reports first intersection that is found.
+- Excludes polyline with widths and circles and thus its own markers. (Deprecated v0.32)
+- Changed proportional character of markers.
+- Centralized critical error handling.
+
+- Labels number formatting, decimal point and precision by drawing preferences. (Bug fix)
+    List separator by common sense.
+- Command History decimal point, list separator and precision by QCAD general preferences.
+    Position is in full floating point notation with 17 significant digits.
+    What is re-usable as an 'exact' Cartesian position string.
+- Added marker custom properties full 17 significant digits values.
+    Later to be summed weighted with their individual custom densities.
+    Refer to the InfoSumCentroidsWeighted Addon.
+
+- All closed format equations for ellipses and ellipse arcs area & area centroids.
+- Improved integration for ellipses:
+    For arc wire 2D Centroids: At least 4096 arc segments/full ellipse are used.
+    As or as part of a hatch boundary: At least 1024 arc segments/full ellipse are used.
+- Nearly exact full ellipse circumference by two distinct fast converging infinite series expansions.
+    For more details see notes inside the function declarations: getFullEllipseWireCentroid,
+    getFullEllipseCircumISC and getFullEllipseCircumISGK.
+- Improved location stability, shapes are mostly handled as if they were encircling the origin.
+- Implemented 'A generalized Kahan–Babuška-Summation-Algorithm' proposed by Klein.
+    Running sums can have a poor accuracy due to loss of significance.
+    See: https://en.wikipedia.org/wiki/Kahan_summation_algorithm
+
+- Included uniform density area 2D Centroid in sector mode for (ellipse) arcs by a hidden switch.
+    See QCAD.ini/conf after an initial use.
+- Included separate class for uniform density wire methods.
+    The wire method handles single and multi-selections of any line-art.
+    In normal use one would not mix the results of those above.
+    Still, all three types of centroids can be summed weighted.
+
+- Misc .. Information menu as adopted by Andrew. (Updated v0.32)
+    Keeping in mind that QCAD supports user toolbars.
+- Reverted to shortcuts: (Deprecated all v0.32)
+    'AM' aka Area center of Mass
+    'WM' aka Wire(s) center of Mass
+    'CM' aka Combine centers of Mass
+
+- For the scripters: All methods reverted to RShapes
+
+=======================================

@@ -1,5 +1,5 @@
-/**
- * InfoAreaCentroid Beta version 0.31 (As MiscInformation)
+/**Beta 0.32
+ * InfoAreaCentroid Beta version 0.32 (As MiscInformationCentroids)
  * Copyright (c) 2021 by CVH.
  * All rights reserved.
  *
@@ -30,13 +30,12 @@ include("scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js");
 //  # Issue Fixed # Included for coordinateToString(), library.js doesn't include it
 include("scripts/sprintf.js");
 
-// # ToDo # Should we implement poly.normalize(RS.PointTolerance)?
 // # ToDo # Should we clear long or vast arrays? shift() out or splice(0, 1) out?
 
 /**
  * \class InfoAreaCentroid
- * \ingroup ecma_misc_information
- * \brief This action adds area centroid markers and details to selections.
+ * \ingroup ecma_misc_information_centroids
+ * \brief This action adds an area 2D Centroid marker and text labels for a selected entity.
  * \author CVH © 2021
  */
 
@@ -50,33 +49,38 @@ InfoAreaCentroid.prototype = new InfoCentroids();
 InfoAreaCentroid.includeBasePath = includeBasePath;
 
 /**
- * This GUI action adds a centroid marker and details for a selected entity.
+ * This GUI action adds a 2D centroid marker and detail labels for a selected entity.
  * Calculates centroid position and enclosed area assuming a uniform density surface.
  * Casts additional details as text labels and reports them on the Command History.
  * Stores full floating point data as marker custom properties.
+ * 2D Centroid markers are generated with a default density of 1.00 per unit.
  * Supports selected enclosed area of:
  *    - Arc entity as an arc segment.
  *    - Circle entity.
  *    - Ellipse entity, full or as arc segment, autoClosed with a line segment.
- *    - Polyline entity, autoClosed with a line.
+ *    - Polyline entity, autoClosed with a line segment.
  *    - Spline entity as approximated polyline & autoClosed with a line segment.
  *    - Optional as arc and ellipse arc sector by a hidden switch.
  * Supports Hatch entity total/differential hatched area.
- * Not interpolating with line segments, the methods sum area and centroid by shape.
+ * Not interpolating with line segments, the methods sum areas and centroids by shapes.
  *
- * Included are various methods for RShapes area and area centroid.
+ * Included are various methods for area and area 2D centroids for RShapes.
  */
 // BeginEvent handler:
 InfoAreaCentroid.prototype.beginEvent = function() {
     InfoCentroids.prototype.beginEvent.call(this);
 
-    // Retrieve hidden switch:
+    // Presets:
+    this.massMode = false;
+    this.wireMode = false;
+
+    // Retrieve hidden switch as preset:
     this.sectorMode = RSettings.getBoolValue("InfoAreaCentroid/sectorMode", false);    // Default =False
 
-    // Call the area centroid method for selected main loop
+    // Call the area centroid of a selected entity main loop
     this.selectionAreaCentroid(this.getDocumentInterface());
 
-    // Store switch back:
+    // Initiate or store switch back:
     RSettings.setValue("InfoAreaCentroid/sectorMode", this.sectorMode, true);    // doOverwrite
 
     // # Issue Fixed # Button toggles between usage, fixed with releasing
@@ -87,34 +91,35 @@ InfoAreaCentroid.prototype.beginEvent = function() {
     return;
 };
 
-/** Main AreaCentroid
+/**
  * Main InfoAreaCentroid loop.
  * \author CVH © 2021
  *
  * \param di         A document interface.
  *
- * \return Nothing. Casts centroid marker and text labels, reports on Command History.
+ * \return Nothing. Casts 2D Centroid marker and text labels, reports on Command History.
  */
 InfoAreaCentroid.prototype.selectionAreaCentroid = function(di) {
     var doc = di.getDocument();
     var ids, idn;
-    var msg, numTxt;
+    var msg, txt;
     var entity, entityShape;
     var type;
     var res;
     var op;
-    var docDimSize, docDimScale;
+    var dimStyle
     var shift;
     var markerSize;
     var decPnt, lstSep;
-    var docLinPerc;
+    var dimLinPrec, dimTrZeros;
     var offset;
+    var transaction;
 
     // Retrieve document selection, fail on none or many:
     // # ToDo # Add states for none & pointing inside a closed contour
     ids = doc.querySelectedEntities();
     idn = ids.length;
-    if (idn === 0) {    // Action requires selection
+    if (idn === 0) {    // Double lock, action requires selection
         EAction.handleUserWarning(qsTr("No selection."));
         EAction.handleUserInfo(qsTr("Please, make a selection first. Command terminated."));
         return undefined;    // Failed selection
@@ -122,17 +127,19 @@ InfoAreaCentroid.prototype.selectionAreaCentroid = function(di) {
     else if (idn > 1) {
         // Excluding there:
         // - Open shapes can be treated as a wire or as an enclosed area
-        // - Uniform density areas can't be summed to uniform wire lengths
+        // - Arcs and ellipse arcs can be treated as segments or sectors or wires
+        // - Uniform density areas can't be summed directly to uniform wire lengths
         EAction.handleUserWarning(qsTr("Multiple entities in selection."));
         EAction.handleUserInfo(qsTr("Not implemented. Command terminated."));
         return undefined;    // Failed selection
     }
 
     // Additional Command History script notification:
-    EAction.handleUserMessage(qsTr("Area centroid script (v0.31) by CVH"));
+    msg = qsTr("Area 2D Centroid script (v0.32) by CVH");
+    if (this.sectorMode) msg += " - " + qsTr("Arc sector mode");
+    EAction.handleUserMessage(qsTr("Area 2D Centroid script (v0.32) by CVH"));
 
     // Initial values:
-    this.wireMode = false;
     this.hasApprox = false;
     this.isSingleLoop = true;
     this.isDifferential = false;
@@ -162,8 +169,8 @@ InfoAreaCentroid.prototype.selectionAreaCentroid = function(di) {
             res = this.getArcAreaCentroid(entityShape); // Diversifies
             break;
         case 2:    // isCircleEntity
-            // Reject marker circles:
-            if (!isNull(entity.getCustomProperty("QCAD", qsTr("2D Centroid"), undefined))) {
+            // Reject old style marker circles:
+            if (!isNull(entity.getCustomProperty("QCAD", InfoCentroids.Terms.Title, undefined))) {
                 // Abort critical:
                 EAction.handleUserWarning(qsTr("Centroid markers circle in selection. No results."));
                 return undefined;    // Failed, isMarker
@@ -211,7 +218,7 @@ InfoAreaCentroid.prototype.selectionAreaCentroid = function(di) {
     // Initiate an operation:
     op = new RAddObjectOperation();
     // Set tool title used for undo/redo information:
-    op.setText(qsTr("Centroid point"));
+    op.setText(qsTr("2D area Centroid"));
 
     // Retrieve document dimension font:
     this.docDimFont = doc.getDimensionFont();
@@ -227,12 +234,9 @@ InfoAreaCentroid.prototype.selectionAreaCentroid = function(di) {
         this.docDimFont = "Standard";
     }
 
-    // Retrieve dimension size:
-//    docDimSize = doc.getKnownVariable(RS.DIMTXT, 2.5);    // Default =2.5
-//    docDimScale = doc.getKnownVariable(RS.DIMSCALE, 1.0);    // Default =1.0
-//    this.fontSize = docDimSize * docDimScale;
-    // # Issue # Will not work with QCAD <= 3.26.4.
-    var dimStyle = doc.queryDimStyle();
+    // Retrieve drawing dimensions font size:
+    // # Known Issue # Will not work prior QCAD 3.26.4
+    dimStyle = doc.queryDimStyle();
     this.fontSize = dimStyle.getDouble(RS.DIMTXT) * dimStyle.getDouble(RS.DIMSCALE);
 
     // Assure for a font size equal or larger than 0.03 (See addCentroidMarker() fix):
@@ -245,58 +249,44 @@ InfoAreaCentroid.prototype.selectionAreaCentroid = function(di) {
     this.addCentroidMarker(doc, op, res, markerSize);
 
     // Use drawing decPnt/lstSep/precision:
-//    decPnt = String.fromCharCode(doc.getDecimalSeparator());    // charCode 32/44/46
-//    dimLinPrec = doc.getLinearPrecision();
-    // # Issue # Will not work with QCAD <= 3.26.4.
+    // # Known Issue # Will not work prior QCAD 3.26.4
     decPnt = String.fromCharCode(dimStyle.getInt(RS.DIMDSEP));    // charCode 32/44/46
-    // # Issue Fixed # Can't locate a drawing list separator, use common sense
-    // Default =comma, revert back to semicolon when comma is used:
+    dimLinPrec = dimStyle.getInt(RS.DIMDEC);          // Integer value
+    dimTrZeros = dimStyle.getInt(RS.DIMZIN) === 0;    // Show decimal trailing zeros: 0=Yes 8=No
+    // # Issue Fixed # Undefined drawing list separator, use common sense
     lstSep = (decPnt === ",") ? ";" : ",";    // Default =comma
-    dimLinPrec = dimStyle.getInt(RS.DIMDEC);
-    dimNoZeros = dimStyle.getInt(RS.DIMZIN) === 8;    // Show decimal trailing zeros: 0=Yes 8=No
 
-    // Include absolute area value:
-    numTxt = Math.abs(res[3]).toFixed(dimLinPrec);
-    // Suppress trailing zeros when required:
-    if (dimNoZeros) numTxt = parseFloat(numTxt).toString();
-    msg += " " + numTxt.replace(".", decPnt);
-    if (type === 6 && this.hasApprox) msg += " " + qsTr("(Incl. approximations)");
+    // Include absolute area label:
+    txt = msg + " " +this.formatLabelValue(Math.abs(res[3]), decPnt, dimLinPrec, dimTrZeros);
+    if (type === 6 && this.hasApprox) txt += " " + qsTr("(Incl. approximations)");
     offset = new RVector(markerSize + shift, markerSize + shift);
-    this.addTextLabel(doc, op, res[2], offset, msg);
-    // # ToDo # Use application precision
-    // # Issue Unsolved # Can't locate an application linear precision
-    EAction.handleUserInfo(msg);
+    this.addTextLabel(doc, op, res[2], offset, txt);
 
-    // Include centroid position:
+    // Report absolute area:
+    txt = msg + this.formatCmdValue(Math.abs(res[3]));
+    if (type === 6 && this.hasApprox) txt += " " + qsTr("(Incl. approximations)");
+    EAction.handleUserInfo(txt);
+
+    // Diversify on approximated nature:
     msg = (this.hasApprox) ? qsTr("Approximated centroid:") : qsTr("Centroid:");
-    numTxt = res[0].toFixed(dimLinPrec);
-    // Suppress trailing zeros when required:
-    if (dimNoZeros) numTxt = parseFloat(numTxt).toString();
-    msg += " (" + numTxt.replace(".", decPnt);
-    numTxt = res[1].toFixed(dimLinPrec);
-    // Suppress trailing zeros when required:
-    if (dimNoZeros) numTxt = parseFloat(numTxt).toString();
-    msg += lstSep + " " + numTxt.replace(".", decPnt) + ")";
+
+    // Include centroid position label:
+    txt = msg + " (" + this.formatLabelValue(res[0], decPnt, dimLinPrec, dimTrZeros);
+    txt += lstSep + " " + this.formatLabelValue(res[1], decPnt, dimLinPrec, dimTrZeros) + ")";
     offset = new RVector(markerSize + shift, shift - markerSize);
-    this.addTextLabel(doc, op, res[2], offset, msg);
+    this.addTextLabel(doc, op, res[2], offset, txt);
 
-    // Use application decPnt/lstSep & 17 significant:
-    decPnt = RSettings.getStringValue("Input/DecimalPoint", ".");    // Default =dot
-    lstSep = RSettings.getStringValue("Input/CartesianCoordinateSeparator", ",");    // Default =comma
-    // Revert back to semicolon when comma is used:
-    if (decPnt === ",") lstSep = ";";
-
-    // Command History centroid position:
-    msg = (this.hasApprox) ? qsTr("Approximated centroid:") : qsTr("Centroid:");
-    numTxt = res[0].toPrecision(17);
-    msg += " (" + numTxt.replace(".", decPnt);
-    numTxt = res[1].toPrecision(17);
-    msg += lstSep + " " + numTxt.replace(".", decPnt) + ")";
+    // Report centroid position:
+    msg += this.formatCoordinate(res[0], res[1]);
     EAction.handleUserInfo(msg);
 
     // Set relative zero and apply all operations:
     di.setRelativeZero(res[2]);
-    di.applyOperation(op);
+    transaction = di.applyOperation(op);
+
+    // Advance selection to marker:
+    this.advanceSelection(di, transaction);
+
     // Return to terminate:
     return true;
 };
@@ -305,7 +295,7 @@ InfoAreaCentroid.prototype.selectionAreaCentroid = function(di) {
 // Area methods
 // -------------
 // Hatch items
-/** OK ifso by approx  Unused
+/**
  * Hatched differential area of a hatch entity (+).
  * Ifso approximated with polylines given the XP method settings, handled in situ.
  * \author CVH © 2021
@@ -351,6 +341,11 @@ InfoAreaCentroid.prototype.getHatchedArea = function(entity) {
     // Calculate running sum:
     dArea = this.getRunningSumKBK(boundsA);
 
+        // Avoid NaN values:
+        if (!isNumber(dArea)) {
+            return undefined;    // Failed, NaN
+        }
+
     // Hatch statistics:
     if (boundsA.length > 1) this.isSingleLoop = false;
 
@@ -359,7 +354,7 @@ InfoAreaCentroid.prototype.getHatchedArea = function(entity) {
 };
 
 // Contour items
-/** ToDo
+/**
  * Placeholder: Contours of connected items enclosed area (+).
  * As merged polygons + shapes, ifso approximated with polylines given the XP method settings.
  * Incorrect for nested, intersecting or self-intersecting shapes.
@@ -376,7 +371,7 @@ InfoAreaCentroid.prototype.getContoursArea = function(loops) {
     return undefined;
 };
 
-/** ToDo
+/**
  * Placeholder: A single contour of connected items enclosed area (+).
  * As merged polygon + shapes, ifso approximated with polylines given the XP method settings.
  * Incorrect for self-intersecting shapes.
@@ -389,14 +384,14 @@ InfoAreaCentroid.prototype.getContoursArea = function(loops) {
 InfoAreaCentroid.prototype.getContourArea = function(items) {
     // # ToDo # Contour of connected items, ifso by approx
     // Verify  isNotNull-Length isNotNull isConnected
-    // Merge endpoints to a polyline with line segments
+    // Merge endpoints to a polyline with line segments to an inner polygon hull
     // Set off situ by box ...?
     // Cycle Area methods
     return undefined;
 }
 
 // Spline RShapes
-/** OK by approx  Unused
+/**
  * Spline RShape enclosed signed area (+CCW, -CW).
  * Approximated with an auto closed polyline given XP method tolerance.
  * Unverified and incorrect for self-intersecting shapes.
@@ -449,7 +444,7 @@ InfoAreaCentroid.prototype.getSplineArea = function(spline) {
 };
 
 // Polyline RShapes
-/** OK  Called by HatchedArea & SplineArea
+/**
  * Polyline RShape enclosed signed area (+CCW, -CW).
  * Auto closed with line segment.
  * Unverified and incorrect for self-intersecting shapes.
@@ -523,6 +518,11 @@ InfoAreaCentroid.prototype.getPolylineArea = function(polyline) {
         // Calculate running sums:
         area = this.getRunningSumKBK(bulgesA);
 
+        // Avoid NaN values:
+        if (!isNumber(area)) {
+            return undefined;    // Failed, NaN
+        }
+
         // Return the polyline total signed area:
          return area;
     }
@@ -533,7 +533,7 @@ InfoAreaCentroid.prototype.getPolylineArea = function(polyline) {
 };
 
 // Polyline RShapes with line segments
-/** OK  Called by PolylineArea
+/**
  * Closed or open polyline RShape with line segments enclosed signed area (+CCW, -CW).
  * Auto closed with line segment, elides bulge factors.
  * Unverified and incorrect for self-intersecting shapes.
@@ -594,12 +594,17 @@ InfoAreaCentroid.prototype.getPolygonArea = function(polygon) {
     // Calculate half the running sum:
     area = this.getRunningSumKBK(areas) / 2;
 
+    // Avoid a NaN value:
+    if (!isNumber(area)) {
+        return undefined;    // Failed, NaN
+    }
+
     // Return the polygon signed area:
     return area;
 };
 
 // Circular RShapes excluding circles
-/** Diversifies  Unused
+/**
  * Arc RShape enclosed signed area (+CCW, -CW).
  * Diversifies between an arc segment or an arc sector.
  * \author CVH © 2021
@@ -622,7 +627,7 @@ InfoAreaCentroid.prototype.getArcArea = function(arc) {
     }
 };
 
-/** OK  Called by ArcArea & PolylineArea
+/**
  * Arc RShape segment enclosed signed area (+CCW, -CW).
  * Not to be confused with an arc shape itself.
  * \author CVH © 2021
@@ -657,7 +662,7 @@ InfoAreaCentroid.prototype.getArcSegmentArea = function(arc) {
     return area;
 };
 
-/** OK  Called by ArcArea
+/**
  * Arc RShape sector enclosed signed area (+CCW, -CW).
  * \author CVH © 2021
  *
@@ -692,7 +697,7 @@ InfoAreaCentroid.prototype.getArcSectorArea = function(arc) {
 
 // Ellipse RShapes
 // # Informational # Remark that QCAD doesn't handle minorR equal to zero, a degenerate ellipse
-/** Diversifies  Unused
+/**
  * Ellipse RShape enclosed (signed) area.
  * Diversifies between a full ellipse (+) or an ellipse arc segment or sector (+CCW, -CW).
  * Closed format equation.
@@ -722,7 +727,7 @@ InfoAreaCentroid.prototype.getEllipseArea = function(ellipse) {
     }
 };
 
-/** OK closed format  Called by EllipseArea
+/**
  * Full ellipse RShape enclosed area (+).
  * Closed format equation.
  * \author CVH © 2021
@@ -748,7 +753,7 @@ InfoAreaCentroid.prototype.getFullEllipseArea = function(ellipse) {
     return area;
 };
 
-/** OK closed format  Called by EllipseArea & EllipseArcSegmentAreaCentroid
+/**
  * Ellipse arc RShape segment enclosed signed area (+CCW, -CW).
  * Not to be confused with an ellipse arc shape itself.
  * Closed format equation.
@@ -785,7 +790,7 @@ InfoAreaCentroid.prototype.getEllipseArcSegmentArea = function(ellipse) {
     return area;
 };
 
-/** OK closed format  Called by EllipseArea & EllipseArcSectorAreaCentroid
+/**
  * Ellipse arc RShape sector enclosed signed area (+CCW, -CW).
  * Closed format equation.
  * \author CVH © 2021
@@ -825,7 +830,7 @@ InfoAreaCentroid.prototype.getEllipseArcSectorArea = function(ellipse) {
 // Area centroid methods for a uniform density in 2D
 // --------------------------------------------------
 // Hatch entities
-/**OK ifso by approx  Called by Main
+/**
  * Hatched centroid data of a hatch entity, including the differential hatched area (+).
  * Considering a uniform density in 2D.
  * Ifso approximated with polylines given the XP method settings, handled in situ.
@@ -883,6 +888,11 @@ InfoAreaCentroid.prototype.getHatchedAreaCentroid = function(entity) {
     dY = this.getRunningSumKBK(boundsY);
     dArea = this.getRunningSumKBK(boundsA);
 
+    // Avoid NaN values:
+    if (!isNumber(dX) || !isNumber(dY) || !isNumber(dArea)) {
+        return undefined;    // Failed, NaN
+    }
+
     // Avoid and fail when dividing by a zero area:
     if (dArea === 0.0) return undefined;    // Failed, divZero
 
@@ -894,7 +904,7 @@ InfoAreaCentroid.prototype.getHatchedAreaCentroid = function(entity) {
 };
 
 // Contour items
-/** ToDo
+/**
  * Placeholder: Contours of connected items centroid data, including the total enclosed area (+).
  * Considering a uniform density in 2D.
  * As merged polygons + shapes, ifso approximated with polylines given the XP method settings.
@@ -912,7 +922,7 @@ InfoAreaCentroid.prototype.getContoursAreaCentroid = function(loops) {
     return undefined;
 };
 
-/** ToDo
+/**
  * Placeholder: A single contour of connected items centroid data, including the total enclosed area (+).
  * Considering a uniform density in 2D.
  * As merged polygon + shapes, ifso approximated with polylines given the XP method settings.
@@ -926,14 +936,14 @@ InfoAreaCentroid.prototype.getContoursAreaCentroid = function(loops) {
 InfoAreaCentroid.prototype.getContourAreaCentroid = function(items) {
     // # ToDo # Contour of connected items, ifso by approx
     // Verify  isNotNull-Length isNotNull isConnected
-    // Merge endpoints to a polyline with line segments
+    // Merge endpoints to a polyline with line segments to an inner polygon hull
     // Set off situ by box ...?
     // Cycle AreaCentroid methods
     return undefined;
 }
 
 // Spline RShapes
-/** OK by approx  Called by main
+/**
  * Spline RShape centroid data, including enclosed signed area (+CCW, -CW).
  * Considering a uniform density in 2D.
  * Approximated with an auto closed polyline given XP method tolerance.
@@ -1003,7 +1013,7 @@ InfoAreaCentroid.prototype.getSplineAreaCentroid = function(spline) {
 };
 
 // Polyline RShapes
-/** OK  Called by Main & HatchedAreaCentroid & SplineAreaCentroid
+/**
  * Polyline RShape centroid data, including enclosed signed area (+CCW, -CW).
  * Considering a uniform density in 2D.
  * Auto closed with line segment.
@@ -1015,10 +1025,10 @@ InfoAreaCentroid.prototype.getSplineAreaCentroid = function(spline) {
  * \return [centroid.x, centroid.y, centroid, signed area] or 'undefined'.
  */
 InfoAreaCentroid.prototype.getPolylineAreaCentroid = function(polyline) {
-// Also see empty InfoArcCircleArea.prototype.getCenter()
 // Was: InfoPolylineArea.prototype.getCenter() but needed correction
 // Was: InfoArea.prototype.getCenter() but needed correction
 // https://qcad.org/rsforum/viewtopic.php?p=35084#p35080
+// Also see empty InfoArcCircleArea.prototype.getCenter()
     var orgLength, start;
     var polygonC;
     var shapes;
@@ -1091,6 +1101,11 @@ InfoAreaCentroid.prototype.getPolylineAreaCentroid = function(polyline) {
         y = this.getRunningSumKBK(bulgesY);
         area = this.getRunningSumKBK(bulgesA);
 
+        // Avoid NaN values:
+        if (!isNumber(x) || !isNumber(y) || !isNumber(area)) {
+            return undefined;    // Failed, NaN
+        }
+
         // Avoid and fail when dividing by a zero area:
         if (area === 0.0) return undefined;    // Failed, divZero
 
@@ -1108,7 +1123,7 @@ InfoAreaCentroid.prototype.getPolylineAreaCentroid = function(polyline) {
 };
 
 // Polylines RShapes with line segments
-/** OK  Called by PolylineAreaCentroid
+/**
  * Closed or open polyline RShape with line segments centroid data, including enclosed signed area (+CCW, -CW).
  * Considering a uniform density in 2D.
  * Auto closed with line segment, elides bulge factors.
@@ -1179,6 +1194,11 @@ InfoAreaCentroid.prototype.getPolygonAreaCentroid = function(polygon) {
     y = this.getRunningSumKBK(yVals);
     area = this.getRunningSumKBK(areas);
 
+    // Avoid NaN values:
+    if (!isNumber(x) || !isNumber(y) || !isNumber(area)) {
+        return undefined;    // Failed, NaN
+    }
+
     // Avoid dividing by a zero area:
     if (area === 0.0) {
         // Diversify specific vector on number of points:
@@ -1210,7 +1230,7 @@ InfoAreaCentroid.prototype.getPolygonAreaCentroid = function(polygon) {
 };
 
 // Circular RShapes
-/** Diversifies  Called by Main
+/**
  * Arc RShape centroid data, including signed area (+CCW, -CW).
  * Diversifies between an arc segment or an arc sector.
  * Considering a uniform density in 2D.
@@ -1235,7 +1255,7 @@ InfoAreaCentroid.prototype.getArcAreaCentroid = function(arc) {
     }
 };
 
-/** OK closed format  Called by Main
+/**
  * Circle RShape centroid data, including enclosed area (+).
  * Considering a uniform density in 2D.
  * \author CVH © 2021
@@ -1262,7 +1282,7 @@ InfoAreaCentroid.prototype.getCircleAreaCentroid = function(circle) {
     return [centroid.x, centroid.y, centroid, area];
 };
 
-/** OK closed format  Called by ArcAreaCentroid & PolylineAreaCentroid & EllipseArcSegmentAreaCentroid
+/**
  * Arc RShape segment centroid data, including signed area (+CCW, -CW).
  * Not to be confused with an arc shape itself.
  * Considering a uniform density in 2D.
@@ -1331,7 +1351,7 @@ InfoAreaCentroid.prototype.getArcSegmentAreaCentroid = function(arc) {
     return [centroid.x, centroid.y, centroid, area];
 };
 
-/** OK closed format  Called by ArcAreaCentroid & EllipseArcSectorAreaCentroid
+/**
  * Arc RShape sector centroid data, including signed area (+CCW, -CW).
  * Considering a uniform density in 2D.
  * \author CVH © 2021
@@ -1403,7 +1423,7 @@ InfoAreaCentroid.prototype.getArcSectorAreaCentroid = function(arc) {
 
 // Ellipse RShapes
 // # Informational # Remark that QCAD doesn't handle minorR equal to zero, a degenerate ellipse
-/** Diversifies  Called by Main
+/**
  * Ellipse RShape centroid data, including enclosed (signed) area.
  * Diversifies between a full ellipse (+) or an ellipse arc segment or sector (+CCW, -CW).
  * Considering a uniform density in 2D.
@@ -1433,7 +1453,7 @@ InfoAreaCentroid.prototype.getEllipseAreaCentroid = function(ellipse) {
     }
 };
 
-/** OK closed format  Called by EllipseAreaCentroid
+/**
  * Full ellipse RShape centroid data, including enclosed area (+).
  * Considering a uniform density in 2D.
  * Closed format equation.
@@ -1462,7 +1482,7 @@ InfoAreaCentroid.prototype.getFullEllipseAreaCentroid = function(ellipse) {
     return [centroid.x, centroid.y, centroid, area];
 };
 
-/** OK closed format  Called by EllipseAreaCentroid
+/**
  * Ellipse arc RShape segment centroid data, including enclosed signed area (+CCW, -CW).
  * Not to be confused with an ellipse arc shape itself.
  * Considering a uniform density in 2D.
@@ -1540,7 +1560,7 @@ InfoAreaCentroid.prototype.getEllipseArcSegmentAreaCentroid = function(ellipse) 
     return [centroid.x, centroid.y, centroid, area]
 };
 
-/** tobeVerified closed format  Called by EllipseAreaCentroid
+/**
  * Ellipse arc RShape sector centroid data including, enclosed signed area (+CCW, -CW).
  * Considering a uniform density in 2D.
  * Closed format equation.
@@ -1622,8 +1642,8 @@ InfoAreaCentroid.prototype.getEllipseArcSectorAreaCentroid = function(ellipse) {
 
 // ==================================================
 
-/** Diversifies
- * Uniform density area centroids supported entity type or -1 when not supported.
+/** 
+ * Diversifies uniform density area centroids supported entity type or -1 when not supported.
  * REntity based (Excludes RSolids and so).
  */
 InfoAreaCentroid.prototype.getSupportedAreaCentroidType = function(entity) {
@@ -1665,16 +1685,13 @@ InfoAreaCentroid.prototype.getSupportedAreaCentroidType = function(entity) {
  *
  * \return A list (>=1) of pre-oriented boundary loops as polylines or 'undefined'.
  */
-// Seems OK
 InfoAreaCentroid.prototype.getOrientedHatchBoundaries = function(hatch) {
     var hatchData;
     var boundaries;
     var i, j, iMax;
     var boundary;
     var nesting, isOddNested;
-    var trial;
-    var pointInside;
-    var pointOnEntity;
+    var trialPoint, trial;
     var orientation;
 
     // Fail without a hatch entity:
@@ -1703,7 +1720,7 @@ InfoAreaCentroid.prototype.getOrientedHatchBoundaries = function(hatch) {
 
         // Define odd or even nested vs all other boundaries except itself:
         nesting = 0;
-        var point = boundary.getStartPoint();
+        trialPoint = boundary.getStartPoint();
         for (j=0; j<iMax; j++) {    // Cycle all boundaries except itself
             if (i === j) continue;    // Skip itself
             trial = boundaries[j];
@@ -1714,7 +1731,7 @@ InfoAreaCentroid.prototype.getOrientedHatchBoundaries = function(hatch) {
                 continue;    // Is not nested
             }
             // B) Verify if a random vertex is inside the trial boundary.
-            if (trial.contains(point, true, RS.PointTolerance)) {
+            if (trial.contains(trialPoint, true, RS.PointTolerance)) {
                 nesting++;    // Is nested
             }
         } // Loop boundaries except itself
@@ -1765,7 +1782,6 @@ InfoAreaCentroid.prototype.getOrientedHatchBoundaries = function(hatch) {
  *
  * \return A list of boundary loops as polylines, can be empty.
  */
-// Seems OK
 InfoAreaCentroid.prototype.getHatchPolyLoops = function(hatchData) {
     var i, iMax, n, nMax;
     var shapes, shape;
@@ -1844,10 +1860,9 @@ InfoAreaCentroid.prototype.getHatchPolyLoops = function(hatchData) {
     return loops;
 };
 
-/** OK
+/**
  * Verifies if the given open/closed polyline shape is self-intersecting.
  * Specific for area methods including an autoClose line segment.
- * Really functional beyond QCAD version 3.26.4.4.
  * \author CVH © 2021
  *
  * \param shape         A polyline RShape.
@@ -1855,58 +1870,49 @@ InfoAreaCentroid.prototype.getHatchPolyLoops = function(hatchData) {
  * \return True or false, assumed false when not a polyline RShape.
  */
 InfoAreaCentroid.prototype.isSelfIntersectingPoly = function(shape) {
-    var frameworkV, minV, upToDate;
     var ips = [];
-    var msg;
     var line;
     var ipsLine;
 
     // Fail without a polyline shape, assume not intersecting:    RShape based (Includes RSolids and so)
-    if (!isPolylineShape(shape)) return true;    // Failed RShape
+    if (!isPolylineShape(shape)) return false;    // Failed RShape
 
-    // # Issue Solved # Tolerance patch issued on Jun 17, 2021
-    // Prior version 3.26.4.5, without tolerance, assume it isn't self-intersecting 
-    frameworkV = getVersionNumber(RSettings.getMajorVersion(), RSettings.getMinorVersion(), RSettings.getRevisionVersion(), RSettings.getBuildVersion());
-    minV = getVersionNumber(3, 26, 4, 5);
-    upToDate = (frameworkV >= minV);
+    // # Issue Solved # Polyline tolerance patch issued on Jun 17, 2021
+    //    Prior version 3.26.4.5, without tolerance
+    // # Issue Solved # Spline tolerance patch issued on Nov 15, 2021
+    //    Not intended for all self-intersections
+    // # Solutions # Beta version 0.32 requires Framework 3.27, splines as approximated polylines
 
 //debugger;
     // Get self-intersection points, diversify on arc segments:
-    if (shape.hasArcSegments() && upToDate) {
+    if (shape.hasArcSegments()) {   // With line/arc segments >
         // # Issue Fixed # No good test on self-intersecting bulging polylines
         // See: https://qcad.org/rsforum/viewtopic.php?t=8526
         // Setting something less strict than the connect tolerance 1.0e-3 (RPolyline.appendShape)
         ips = shape.getSelfIntersectionPoints(1.1e-3);
     }
-    else {
-        // # Issue Fixed # Test on polylines with line segment
-        // Returns a single intersection point where segments are crossing and
+    else {   // With line segments >
+        // # Issue Fixed # Test on polylines with line segment:
+        // - Returns a single intersection point where segments are crossing and
         //    4 equal intersection points where nodes coexists
-        // # Issue # Odd extra ending as intersection point when a node is on an other segment, unrelated to CW/CCW or tolerance
+        // - # Issue # Odd extra ending as intersection point when a node is on an other segment,
+        //    unrelated to CW/CCW or tolerance ... position in the plane ...
         //    See: https://qcad.org/bugtracker/index.php?do=details&task_id=2302
-        // # Issue # May still return self-intersections points that are nearly nodes
+        // - # Issue # May still return self-intersections points that are nearly nodes
         //    e.g. Open spline example approximated with arcs, tolerance 0.001,
         //    transformed into an open polygon by forcing bulging factors to zero:
-        //    1e-9 >>> 112 (near?) nodes (=Default RS.PointTolerance)
-        //    1e-8 >>> 1 near node "RVector(2167.413312, 2742.600518, 0.000000, 1)"
-        //    Or better: Reported intersection of 2 consecutive line segments is off by 3.9015270069336183e-7 from the node itself
-        //    1e-7 >>> no intersection reported
-        if (upToDate) {
-            // With tolerance:
-            ips = shape.getSelfIntersectionPoints(1e-6);
-        }
-        else {
-            // Without tolerance:
-//          ips = [];
-            ips = shape.getSelfIntersectionPoints();
-        }
+        //    - 1e-9 >>> 112 (near?) nodes (=Default RS.PointTolerance)
+        //    - 1e-8 >>> 1 near node "RVector(2167.413312, 2742.600518, 0.000000, 1)"
+        //      Or better: Reported intersection of 2 consecutive line segments is off by 3.9015270069336183e-7 from the node itself
+        //    - 1e-7 >>> no intersection reported
+        ips = shape.getSelfIntersectionPoints(1e-6);
     }
 
     // Additional intersections with closing line shape:
     if (!shape.isGeometricallyClosed(RS.PointTolerance)) {
         line = new RLine(shape.getEndPoint(), shape.getStartPoint());
         ipsLine = line.getIntersectionPoints(shape);
-        // With more intersections than endpoints add second point found, one will do:
+        // With more intersections than endpoints add the second point found, one will do:
         if (ipsLine.length > 2) ips.push(ipsLine[1]);
     }
 

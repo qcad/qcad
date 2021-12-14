@@ -1,5 +1,5 @@
-/**
- * InfoSumCentroidsWeighted Beta version 0.11 (As MiscInformation)
+/**Beta 0.24
+ * InfoSumCentroidsWeighted Beta version 0.24 (As MiscInformationCentroids)
  * Copyright (c) 2021 by CVH.
  * All rights reserved.
  *
@@ -32,8 +32,8 @@ include("scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js");
 
 /**
  * \class InfoSumCentroidsWeighted
- * \ingroup ecma_misc_information
- * \brief This action sums centroid markers details weighted.
+ * \ingroup ecma_misc_information_centroids
+ * \brief This action makes the weighted sum of selected 2D Centroid markers.
  * \author CVH © 2021
  */
 
@@ -47,14 +47,19 @@ InfoSumCentroidsWeighted.prototype = new InfoCentroids();
 InfoSumCentroidsWeighted.includeBasePath = includeBasePath;
 
 /**
- * This GUI action sums selected centroid markers weighted by their individual custom density.
- * Centroid markers are generated with default density of 1.00 per unit.
- * Report on the Command History.
+ * This GUI action sums selected 2D Centroid markers weighted by their individual point mass.
+ * For area and wire centroids the mass is related to a given custom density.
+ * Version 0.24 report on the Command History.
  */
 // BeginEvent handler:
 InfoSumCentroidsWeighted.prototype.beginEvent = function() {
     InfoCentroids.prototype.beginEvent.call(this);
 
+    // Presets:
+    this.massMode = true;
+    this.wireMode = false;
+
+    // Call main loop:
     this.sumSelectedCentroids(this.getDocumentInterface());
 
     // # Issue Fixed # Button toggles between usage, fixed with releasing
@@ -75,126 +80,254 @@ InfoSumCentroidsWeighted.prototype.beginEvent = function() {
  */
 InfoSumCentroidsWeighted.prototype.sumSelectedCentroids = function(di) {
     var doc = di.getDocument();
+    var terms = InfoCentroids.Terms;
     var i, ids, idn;
-    var xVals, yVals, wdVals;
-    var count;
     var entity;
-    var density, X, Y, weight;
-    var wd, dFirst;
-    var isUniform;
-    var centroidX, centroidY, centroidW;
-    var decPnt, lstSep;
+    var type, tFirst, isMixed;
+    var anyError;
+    var density, mass, weight, X, Y;
+    var hasUndefVal;
+    var count;
+    var dFirst, isUniform;
+    var xVals, yVals, mVals, wVals, rVals;
     var msg;
+    var centroidX, centroidY, centroidM;
+    var op;
+    var dataC;
+    var markerSize;
+    var transaction;
 
 //debugger;
     // Retrieve document selection, fail on none:
     ids = doc.querySelectedEntities();
     idn = ids.length;
-    if (idn === 0) {    // Action requires selection
+    if (idn === 0) {    // Double lock, action requires selection
         EAction.handleUserWarning(qsTr("No selection."));
         EAction.handleUserInfo(qsTr("Please, make a selection first. Command terminated."));
         return;    // Failed selection
     }
 
     // Additional Command History script notification:
-    EAction.handleUserMessage(qsTr("Centroids weighted sum script (v0.10b) by CVH"));
+    EAction.handleUserMessage(qsTr("2D Centroids weighted sum script (v0.24) by CVH."));
 
     // Initial values:
+    hasUndefVal = false;
+    count = 0;
+    isUniform = true;
+    isMixed = false;
     xVals = [];
     yVals = [];
-    wdVals = [];
-    dFirst = 0.0;
-    isUniform = true;
-    count = 0;
+    wVals = [];
+    mVals = [];
+    rVals = [];
 
+    // Process all selected entities:
     for (i=0; i<idn; i++) {    // Cycle selected entities
         // Retrieve the selected entity:
         entity = doc.queryEntity(ids[i]);
 
-        if (isNull(entity.getCustomProperty("QCAD", qsTr("2D Centroid"), undefined))) {
-            continue;    // Not a marker entity, skip to next selected
+        // Exclude anything except polylines:
+        if (!isPolylineEntity(entity)) {
+            continue;    // Never a centroid marker entity, skip to next selected
         }
 
-        // Verify that it is not a marker circle:
-        density = entity.getCustomProperty("QCAD", qsTr("Density"), undefined);
-        if (isNull(density)) {
-            continue;    // A marker circle entity, skip to next selected
+        // Exclude anything except 2D Centroid markers:
+        type = entity.getCustomProperty("QCAD", terms.Title, undefined)
+        if (isNull(type)) {
+            continue;    // Not a centroid marker polyline, skip to next selected
         }
 
-        // Retrieve further centroid data from custom properties:
-        X = entity.getCustomProperty("QCAD", qsTr("X position"), "0.0");
-        Y = entity.getCustomProperty("QCAD", qsTr("Y position"), "0.0");
-        weight = entity.getCustomProperty("QCAD", qsTr("Weighted"), "0.0");
+        // Retrieve centroid other custom properties:
+        density = entity.getCustomProperty("QCAD", terms.Density, undefined);
+        mass = entity.getCustomProperty("QCAD", terms.PointMass, undefined);
+        weight = entity.getCustomProperty("QCAD", terms.Weighted, undefined);
+        X = entity.getCustomProperty("QCAD", terms.PositionX, undefined);
+        Y = entity.getCustomProperty("QCAD", terms.PositionY, undefined);
 
-        // Convert to numbers:
-        density = parseFloat(density.replace(",","."));
-        X = parseFloat(X.replace(",","."));
-        Y = parseFloat(Y.replace(",","."));
-        weight = parseFloat(weight.replace(",","."));
+        // Validate coordinates:
+        if (isNull(X) || isNull(Y)) {
+            anyError = qsTr("Encountered a missing coordinate value.");
+            break;    // Failed, stop cycling
+        }
+        X = parseFloat(X.replace(/\,/g, "."));
+        Y = parseFloat(Y.replace(/\,/g, "."));
+        if (!isNumber(X) || !isNumber(Y)) {
+            anyError = qsTr("Encountered an invalid coordinate value.");
+            break;    // Failed, stop cycling
+        }
+        // -> Continue with valid coordinates
 
-        // List weighted if all are numbers:
-        if (isNumber(density + X + Y + weight)) {
-            wd = density * weight;
-            // Verify for uniform density:
-            if (count === 0) dFirst = density;
-            if (density !== dFirst) isUniform = false;
-
-            // List up when it has a weighted mass:
-            // # Bug Fixed # Don't mind sign
-            if (wd !== 0.0) {
-                // List values up:
-                xVals.push(X * wd);
-                yVals.push(Y * wd);
-                wdVals.push(wd);
-                count++;
+        // Validate point mass or density/weighted pair:
+        if (type === terms.PointMass) {    // With a point mass >
+            if (isNull(mass)) {
+                anyError = qsTr("Encountered a missing \'%1\' value.").arg(terms.PointMass);
+                break;    // Failed, stop cycling
             }
+            mass = RMath.eval(mass.replace(/\,/g, "."));
+            if (!isNumber(mass)) {
+                anyError = qsTr("Encountered an invalid \'%1\' value.").arg(terms.PointMass);
+                break;    // Failed, stop cycling
+            }
+        } // End point mass related
+        else if (type === terms.Area || type === terms.Wire) {   // When area/wire related >
+            if (isNull(weight)) {
+                anyError = qsTr("Encountered a missing \'%1\' value.").arg(terms.Weighted);
+                break;    // Failed, stop cycling
+            }
+            weight = parseFloat(weight.replace(/\,/g, "."));
+            if (!isNumber(weight)) {
+                anyError = qsTr("Encountered an invalid \'%1\' value.").arg(terms.Weighted);
+                break;    // Failed, stop cycling
+            }
+
+            if (isNull(density)) {
+                anyError = qsTr("Encountered a missing \'%1\' value.").arg(terms.Density);
+                break;    // Failed, stop cycling
+            }
+
+            // Revert to unity value when density is literal 'Undefined':
+            if (density === terms.Undefined) {
+                density = "1.0";
+                hasUndefVal= true;
+            }
+
+            density = RMath.eval(density.replace(/\,/g, "."));
+            if (!isNumber(density)) {
+                anyError = qsTr("Encountered an invalid \'%1\' value.").arg(terms.Density);
+                break;    // Failed, stop cycling
+            }
+
+            // Define point mass:
+            mass = weight * density;
+        } // End area/wire related
+        else {   // With unknown type >
+            anyError = qsTr("Encountered an unknown marker type.");
+            break;    // Failed, stop cycling
         }
-        else {
-            debugger;    // ### Catch this In the act !!! ###
-        }
+        // -> Continue with valid coordinates & valid mass
+
+        // Collect radii, account for old style markers:
+        rVals.push(entity.getBoundingBox().getWidth() / 2);
+
+        // Verify for uniform density & equal type:
+        if (count === 0) {    // With the first component
+            // Preserve first values:
+            dFirst = density;
+            tFirst = type;
+        } // End with first
+        else {    // With successive components
+            // Compare with first values:
+            if (density !== dFirst) isUniform = false;
+            if (type !== tFirst) isMixed = true;
+        } // End with successive
+
+        // If any, list up all weighted values of the first type:
+        if (!isMixed && !isNull(weight)) wVals.push(weight);
+
+        // List up properties weighted:
+        xVals.push(X * mass);
+        yVals.push(Y * mass);
+        mVals.push(mass);
+        count++;
+    } // Loop selected
+
+//debugger;
+    // If any, fail on returned error:
+    if (!isNull(anyError)) {
+        EAction.handleUserWarning(anyError + " " + qsTr("No result."));
+        return;    // Failed
     }
 
-    // Fail without anything to sum else sum collected data:
-    if (count < 2) {
-        if (count === 0) {
-            msg = qsTr("No centroid markers in selection.");
-        }
-        else {
-            msg = qsTr("One marker selected, nothing to sum. Please verify selection.");
-        }
+    // Fail without anything to sum:
+    if (count === 0) {
+        msg = qsTr("No 2D Centroid markers found in the selection.");
         EAction.handleUserWarning(msg);
-        return; 
+        return;    // Failed
     }
-    else {
-        centroidW = this.getRunningSumKBK(wdVals);
-        // Avoid dividing by zero:
-        if (centroidW === 0.0) {
-            EAction.handleUserWarning(qsTr("Results in Zero."));
+    // -> Continue with at least one data point
+
+    // Report the mass of a single data point:
+    if (count === 1) {    // With 1 data point >
+        msg = qsTr("Single marker selected, point mass = %1").arg(this.formatCmdValue(mVals[0]));
+        // If any, specify undefined densities:
+        if (hasUndefVal) msg += " - " + qsTr("Density is undefined") + " (=1.0)";
+        EAction.handleUserInfo(msg);
+        return;    // Done, return to terminate
+    } // End 1 data point
+    // Try to sum multiple components weighted:
+    else {    // With more data points >
+        centroidM = this.getRunningSumKBK(mVals);
+
+        // Avoid division by zero, abort critical:
+        if (centroidM === 0.0) {
+            EAction.handleUserWarning(qsTr("Results in a division by zero."));
             debugger;    // ### Catch this In the act !!! ###
             return;    // Failed, divZero
         }
 
-        centroidX = this.getRunningSumKBK(xVals) / centroidW;
-        centroidY = this.getRunningSumKBK(yVals) / centroidW;
+        centroidX = this.getRunningSumKBK(xVals) / centroidM;
+        centroidY = this.getRunningSumKBK(yVals) / centroidM;
+    } // End more data points
+
+    // Avoid NaN values, abort critical:
+    if (!isNumber(centroidM) || !isNumber(centroidX) || !isNumber(centroidY)) {
+        EAction.handleUserWarning(qsTr("Results in a NaN value."));
+        debugger;    // ### Catch this In the act !!! ###
+        return;    // Failed, NaN
     }
 
-    // Use application decPnt/lstSep & precision or 17 significant:
-    decPnt = RSettings.getStringValue("Input/DecimalPoint", ".");    // Default =dot
-    lstSep = RSettings.getStringValue("Input/CartesianCoordinateSeparator", ",");    // Default =comma
-    // # ToDo # Use application precision
-    // # Issue # Can't locate an appLinPerc
+    // Initiate an operation:
+    op = new RAddObjectOperation();
+    // Set tool title used for undo/redo information:
+    op.setText(qsTr("Combined 2D Centroid"));
 
-    // Report total/weighted sum (+/-):
-    msg = (isUniform) ? qsTr("Total sum(%1):").arg(count) : qsTr("Weighted sum(%1):").arg(count);
-    msg += " " + centroidW.toPrecision(17).replace(".", decPnt);
+//debugger;
+    // Create a centroid data set:
+    dataC = [centroidX, centroidY, new RVector(centroidX, centroidY), centroidM];
+
+    // Include centroid marker proportional to the combined components:
+    // Equals the largest size summed with 1/3 of the average size of the others components
+    rVals.sort(function(a, b) {return b - a});
+    markerSize = rVals.shift() + this.getRunningSumKBK(rVals) / rVals.length / 3;
+    this.addCentroidMarker(doc, op, dataC, markerSize);
+
+    // Report total/combined sum (+/-):
+    msg = (isUniform) ?
+                qsTr("Combined uniform point mass (%1):").arg(count) :
+                qsTr("Combined point mass (%1):").arg(count);
+
+    msg += this.formatCmdValue(centroidM);
+    // If any, specify undefined densities:
+    if (hasUndefVal) {
+        if (isUniform) {
+            msg += " - " + qsTr("All densities are undefined") + " (=1.0)";
+        }
+        else {
+            msg += " - " + qsTr("Some densities are undefined") + " (=1.0)";
+        }
+    }
     EAction.handleUserInfo(msg);
+
+    // When not mixed report overall weighted property human readable:
+    if (!isMixed && wVals.length > 0) {
+        msg = "Combined" + " ";
+        if (type === terms.Area) msg += qsTr("area (Informational):");
+        if (type === terms.Wire) msg += qsTr("wire length (Informational):");
+        msg += this.formatCmdValue(this.getRunningSumKBK(wVals));
+        EAction.handleUserInfo(msg);
+    }
 
     // Report overall centroid position:
-    msg = qsTr("Summed centroid position:");
-    msg += " (" + centroidX.toPrecision(17).replace(".", decPnt);
-    msg += lstSep + " " + centroidY.toPrecision(17).replace(".", decPnt);
-    msg += ")"
+    msg = qsTr("Combined centroid:");
+    msg += this.formatCoordinate(centroidX, centroidY);
     EAction.handleUserInfo(msg);
+
+    // Set relative zero and apply all operations:
+    di.setRelativeZero(dataC[2]);
+    transaction = di.applyOperation(op);
+
+    // Advance selection to marker:
+    this.advanceSelection(di, transaction);
 
     // Return to terminate:
     return;
