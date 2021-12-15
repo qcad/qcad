@@ -20,6 +20,15 @@
 #include <QDataStream>
 #include <QTime>
 
+#if QT_VERSION >= 0x050000
+#  include <QRegularExpression>
+#else
+#  include <QRegExp>
+#  ifndef QRegularExpression
+#    define QRegularExpression QRegExp
+#  endif
+#endif
+
 #include "RLocalPeer.h"
 
 #if defined(Q_OS_WIN)
@@ -45,7 +54,7 @@ RLocalPeer::RLocalPeer(QObject* parent, const QString &appId)
 #endif
         prefix = id.section(QLatin1Char('/'), -1);
     }
-    prefix.remove(QRegExp("[^a-zA-Z]"));
+    prefix.remove(QRegularExpression("[^a-zA-Z]"));
     prefix.truncate(6);
 
     QByteArray idc = id.toUtf8();

@@ -26,6 +26,15 @@
 #include <QString>
 #include <QPair>
 
+#if QT_VERSION >= 0x050000
+#  include <QRegularExpression>
+#else
+#  include <QRegExp>
+#  ifndef QRegularExpression
+#    define QRegularExpression QRegExp
+#  endif
+#endif
+
 #include "REntity.h"
 
 class RExporter;
@@ -52,7 +61,7 @@ public:
     virtual bool checkCustomProperty(REntity* e) const {
         QSet<QPair<QString, QString> >::const_iterator it;
         for (it=registeredProperties.constBegin(); it!=registeredProperties.constEnd(); it++) {
-            if (e->hasCustomProperty((*it).first, QRegExp((*it).second))) {
+            if (e->hasCustomProperty((*it).first, QRegularExpression((*it).second))) {
                 return true;
             }
         }

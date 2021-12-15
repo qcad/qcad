@@ -21,6 +21,15 @@
 #include <QDebug>
 #include <QStringList>
 
+#if QT_VERSION >= 0x050000
+#  include <QRegularExpression>
+#else
+#  include <QRegExp>
+#  ifndef QRegularExpression
+#    define QRegularExpression QRegExp
+#  endif
+#endif
+
 #include "RDebug.h"
 
 //FILE* RDebug::stream=stderr;
@@ -49,11 +58,11 @@ void RDebug::printBacktrace(const QString& prefix) {
         QString str(strings[i]);
         str.replace("\t", "    ");
         str = str.mid(59);
-        str = str.replace(QRegExp("_[ZNK]*[0-9]*"), "");
-        str = str.replace(QRegExp("[ERK]*[0-9]+"), "::");
-        str = str.replace(QRegExp("E[ibd]* \\+ ::$"), "");
-        str = str.replace(QRegExp("bbb \\+ ::$"), "");
-        str = str.replace(QRegExp(" \\+ ::$"), "");
+        str = str.replace(QRegularExpression("_[ZNK]*[0-9]*"), "");
+        str = str.replace(QRegularExpression("[ERK]*[0-9]+"), "::");
+        str = str.replace(QRegularExpression("E[ibd]* \\+ ::$"), "");
+        str = str.replace(QRegularExpression("bbb \\+ ::$"), "");
+        str = str.replace(QRegularExpression(" \\+ ::$"), "");
         //qDebug("%s%s\n", (const char*)prefix.toUtf8(), strings[i]);
         QString ind = "";
         ind = ind.leftJustified(size-i);

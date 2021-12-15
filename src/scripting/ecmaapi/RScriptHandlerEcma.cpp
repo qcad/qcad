@@ -20,7 +20,6 @@
 
 #include <QDomNode>
 #include <QFile>
-#include <QRegExp>
 #include <QScriptEngine>
 #include <QScriptValueIterator>
 #include <QStringList>
@@ -35,6 +34,15 @@
 #include <QXmlResultItems>
 #include <QXmlStreamWriter>
 #include <QXmlContentHandler>
+
+#if QT_VERSION >= 0x050000
+#  include <QRegularExpression>
+#else
+#  include <QRegExp>
+#  ifndef QRegularExpression
+#    define QRegularExpression QRegExp
+#  endif
+#endif
 
 #include <QtScriptTools>
 

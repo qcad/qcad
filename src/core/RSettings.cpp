@@ -31,8 +31,13 @@
 #if QT_VERSION >= 0x050000
 #  include <QWindow>
 #  include <QStandardPaths>
+#  include <QRegularExpression>
 #else
 #  include <QDesktopServices>
+#  include <QRegExp>
+#  ifndef QRegularExpression
+#    define QRegularExpression QRegExp
+#  endif
 #endif
 
 #include "RDebug.h"
@@ -123,7 +128,7 @@ QStringList RSettings::openGLMessages;
  */
 QString RSettings::getAppId() {
     //QString ret = qApp->applicationName();
-    //ret.replace(QRegExp("[^a-zA-Z0-9]"), "");
+    //ret.replace(QRegularExpression("[^a-zA-Z0-9]"), "");
     // prevent 'empty record name' exception:
     //if (ret.isEmpty()) {
     //    ret = "QCAD";
@@ -1549,7 +1554,11 @@ double RSettings::getDoubleValue(const QString& key, double defaultValue) {
     if (str.isEmpty()) {
         return defaultValue;
     }
-    else if (QRegExp("^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?$").exactMatch(str)) {
+#if QT_VERSION < 0x050000
+    else if (QRegularExpression("^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?$").exactMatch(str)) {
+#else
+    if (QRegularExpression(QRegularExpression::anchoredPattern("^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?$")).match(str).hasMatch()) {
+#endif
         d = ret.toDouble();
     }
     else {

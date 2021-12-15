@@ -355,7 +355,7 @@ void RDxfImporter::addBlock(const DL_BlockData& data) {
     // TODO
 //    if (!blockName.startsWith("*")) {
 //        QString oldBlockName = blockName;
-//        blockName.replace(QRegExp("[<>/\":;?*|,=`\\\\]"), "_");
+//        blockName.replace(QRegularExpression("[<>/\":;?*|,=`\\\\]"), "_");
 //        version2BlockMapping.insert(oldBlockName, blockName);
 //    }
 

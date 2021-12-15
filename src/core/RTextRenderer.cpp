@@ -246,7 +246,7 @@ void RTextRenderer::renderSimple() {
     // diameter:
     text.replace(RTextRenderer::rxDiameter, RTextRenderer::chDiameter);
     // underlined:
-    //text.replace(QRegExp(RTextRenderer::rxUnderline), "");
+    //text.replace(QRegularExpression(RTextRenderer::rxUnderline), "");
     // no op (%%x -> x):
     text.replace(RTextRenderer::rxNoOp, "\\1");
     // no op at end of string (%% -> ""):
@@ -1864,7 +1864,7 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
 
     // same block without trailing spaces:
 //    QString blockTextNoTrailingSpace = blockText;
-//    blockTextNoTrailingSpace.replace(QRegExp("[ ]+$"), "");
+//    blockTextNoTrailingSpace.replace(QRegularExpression("[ ]+$"), "");
 //    if (blockTextNoTrailingSpace!=blockText) {
 //        QTextLayout l;
 //        l.setCacheEnabled(true);

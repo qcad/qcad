@@ -16,7 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QRegExp>
+
+#include <QtGlobal>
+
+#if QT_VERSION >= 0x050000
+#  include <QRegularExpression>
+#else
+#  include <QRegExp>
+#  ifndef QRegularExpression
+#    define QRegularExpression QRegExp
+#  endif
+#endif
 
 #include "RMemoryStorage.h"
 #include "RSettings.h"
