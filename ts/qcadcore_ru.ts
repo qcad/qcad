@@ -319,7 +319,7 @@
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-6"/>
         <source>Referenced Block</source>
-        <translation type="unfinished"></translation>
+        <translation>Блок, на который дана ссылка</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -410,7 +410,7 @@
     <message>
         <location line="+2"/>
         <source>Parent Id</source>
-        <translation type="unfinished"></translation>
+        <translation>Идентификатор родительского объекта</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -468,7 +468,7 @@
     <message>
         <location line="+1"/>
         <source>Object Invisible</source>
-        <translation type="unfinished"></translation>
+        <translation>Объект невидим</translation>
     </message>
     <message>
         <source>Invisible</source>
@@ -534,7 +534,7 @@
     <message>
         <location line="+1"/>
         <source>Text Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Ширина текста</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -716,7 +716,7 @@
     <message>
         <location filename="../src/core/RDimStyle.cpp" line="+72"/>
         <source>Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Стиль</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -726,37 +726,37 @@
     <message>
         <location line="+1"/>
         <source>Linear measurement factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Коэффициент измерения длины</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text height</source>
-        <translation type="unfinished"></translation>
+        <translation>Высота текста</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line gap</source>
-        <translation type="unfinished"></translation>
+        <translation>Интервал размерной линии</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow size</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер стрелки</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Dimension line increment</source>
-        <translation type="unfinished"></translation>
+        <translation>Приращение размерной линии</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line extension</source>
-        <translation type="unfinished"></translation>
+        <translation>Удлинение удлинительной линии</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Extension line offset</source>
-        <translation type="unfinished"></translation>
+        <translation>Смещение удлинительной линии</translation>
     </message>
     <message>
         <location line="+1"/>
