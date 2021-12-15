@@ -3856,7 +3856,7 @@ is already in the list.</source>
         <location line="+188"/>
         <location line="+168"/>
         <source>Rv Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rv некорректен.</translation>
     </message>
     <message>
         <location line="-640"/>
@@ -3872,7 +3872,7 @@ is already in the list.</source>
         <location line="+33"/>
         <location line="+62"/>
         <source>Rv1 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rv1 некорректен.</translation>
     </message>
     <message>
         <location line="-503"/>
@@ -3890,7 +3890,7 @@ is already in the list.</source>
         <location line="+33"/>
         <location line="+35"/>
         <source>Rv2 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rv2 некорректен.</translation>
     </message>
     <message>
         <location line="-510"/>
@@ -3903,7 +3903,7 @@ is already in the list.</source>
         <location line="+49"/>
         <location line="+67"/>
         <source>Equal positions.</source>
-        <translation type="unfinished"></translation>
+        <translation>Равные положения.</translation>
     </message>
     <message>
         <location line="-265"/>
@@ -3916,7 +3916,7 @@ is already in the list.</source>
         <location line="+22"/>
         <location line="+33"/>
         <source>Radius Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Радиус некорректен.</translation>
     </message>
     <message>
         <location line="-298"/>
@@ -3926,22 +3926,22 @@ is already in the list.</source>
         <location line="+35"/>
         <location line="+150"/>
         <source>Angle Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Угол некорректен.</translation>
     </message>
     <message>
         <location line="-527"/>
         <source>Angle1 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Угол1 некорректен.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angle2 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Угол2 некорректен.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Equal angles.</source>
-        <translation type="unfinished"></translation>
+        <translation>Равные углы.</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -3951,7 +3951,7 @@ is already in the list.</source>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Равные положения 1-2.</translation>
     </message>
     <message>
         <location line="-286"/>
@@ -3963,7 +3963,7 @@ is already in the list.</source>
         <location line="+32"/>
         <location line="+35"/>
         <source>Rv3 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rv3 некорректен.</translation>
     </message>
     <message>
         <location line="-354"/>
@@ -3973,7 +3973,7 @@ is already in the list.</source>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 1-3.</source>
-        <translation type="unfinished"></translation>
+        <translation>Равные положения 1-3.</translation>
     </message>
     <message>
         <location line="-287"/>
@@ -3983,7 +3983,7 @@ is already in the list.</source>
         <location line="+24"/>
         <location line="+33"/>
         <source>Equal positions 2-3.</source>
-        <translation type="unfinished"></translation>
+        <translation>Равные положения 2-3.</translation>
     </message>
     <message>
         <location line="-284"/>
@@ -3991,28 +3991,28 @@ is already in the list.</source>
         <location line="+168"/>
         <location line="+2"/>
         <source>Near co-linear positions.</source>
-        <translation type="unfinished"></translation>
+        <translation>Почти коллинеарные положения.</translation>
     </message>
     <message>
         <location line="-168"/>
         <source>Arc Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Дуга некорректна.</translation>
     </message>
     <message>
         <location line="+46"/>
         <location line="+47"/>
         <source>Center Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Центр некорректен.</translation>
     </message>
     <message>
         <location line="-21"/>
         <source>Radius too small.</source>
-        <translation type="unfinished"></translation>
+        <translation>Слишком маленький радиус.</translation>
     </message>
     <message>
         <location line="+98"/>
         <source>Circle Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Круг некорректен.</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -4020,45 +4020,45 @@ is already in the list.</source>
         <location line="+30"/>
         <location line="+35"/>
         <source>Rv4 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rv4 некорректен.</translation>
     </message>
     <message>
         <location line="-97"/>
         <location line="+33"/>
         <source>Equal positions 1-4.</source>
-        <translation type="unfinished"></translation>
+        <translation>Равные положения 1-4.</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 2-4.</source>
-        <translation type="unfinished"></translation>
+        <translation>Равные положения 2-4.</translation>
     </message>
     <message>
         <location line="-32"/>
         <location line="+33"/>
         <source>Equal positions 3-4.</source>
-        <translation type="unfinished"></translation>
+        <translation>Равные положения 3-4.</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Size Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер некорректен.</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Size in X Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер по X некорректен.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Size in Y Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер по Y некорректен.</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Polygon: less than 5 references.</source>
-        <translation type="unfinished"></translation>
+        <translation>Многоугольник: менее 5 привязок.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -4066,207 +4066,207 @@ is already in the list.</source>
         <location line="+26"/>
         <location line="+28"/>
         <source>Rv%1 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rv%1 некорректен.</translation>
     </message>
     <message>
         <location line="-61"/>
         <source>Polyline, less than 2 references.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ломаная, менее 2 привязок.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Bulge%1 Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Выпуклость%1 некорректна.</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Unsupported QCAD Professional feature.</source>
-        <translation type="unfinished"></translation>
+        <translation>Неподдерживаемая возможность QCAD Professional.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>3th degree fit point Spline, less than 3 references.</source>
-        <translation type="unfinished"></translation>
+        <translation>Сплайн с уклоном 3 градуса и узловыми точками, менее 3 привязок.</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>3th degree control point Spline, less than 4 references.</source>
-        <translation type="unfinished"></translation>
+        <translation>Сплайн с уклоном 3 градуса и контрольными точками, менее 4 привязок.</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Height Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Высота некорректна.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Width Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ширина некорректна.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Vert. alignment Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Выравнивание по вертикали некорректно.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Horz. alignment Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Выравнивание по горизонтали некорректно.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing direction Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Направление черчения некорректно.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing style Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Стиль межстрочного интервала некорректен.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Line spacing Invalid.</source>
-        <translation type="unfinished"></translation>
+        <translation>Межстрочный интервал некорректен.</translation>
     </message>
     <message>
         <location line="+37"/>
         <source>Unsupported method. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Неподдерживаемый метод. Строка текста: %1</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Error with first optional list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка с первым необязательным списком.</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Error with second optional list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка со вторым необязательным списком.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Not a correct entry, ignored. Text line: %1 &gt; %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Некорректная запись, игнорируется. Строка текста: %1 &gt; %2</translation>
     </message>
     <message>
         <location line="+80"/>
         <source>Casted entries: %1 out of %2 text lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Полученные записи: %1 из %2 строк текста</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Nothing casted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ничего не было размещено.</translation>
     </message>
     <message>
         <location line="+227"/>
         <source>Attributes empty. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Пустые атрибуты. Строка текста: %1</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Not a correct layer name, ignored. Text line: %1%2 Name: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Некорректное имя слоя, игнорируется. Строка текста: %1%2 Имя: %3</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Layer doesn&apos;t exist, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Слой не существует, игнорируется. Строка текста: %1%2 Слой: %3</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Not a correct color, ignored. Text line: %1%2 Color: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Некорректный цвет, игнорируется. Строка текста: %1%2 Цвет: %3</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Not a correct Lineweight, ignored. Text line: %1%2 Weight: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Некорректный вес линии, игнорируется. Строка текста: %1%2 Вес: %3</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Not a correct Linetype, ignored. Text line: %1%2 Type: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Некорректный тип линии, игнорируется. Строка текста: %1%2 Тип: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype scale, ignored. Text line: %1%2 Scale: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Некорректный масштаб типа линии, игнорируется. Строка текста: %1%2 Масштаб: %3</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Unsupported attribute, ignored. Text line: %1 &gt; %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Неподдерживаемый атрибут, игнорируется. Строка текста: %1 &gt; %2</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>Not a correct layer name. Text line: %1%2 Name: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Некорректное имя слоя. Строка текста: %1%2 Имя: %3</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Parent layer doesn&apos;t exist. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Родительский слой не существует. Строка текста: %1%2 Слой: %3</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Not a correct color. Text line: %1%2 Color: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Некорректный цвет. Строка текста: %1%2 Цвет: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Lineweight. Text line: %1%2 Weight: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Некорректный вес линии. Строка текста: %1%2 Вес: %3</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Not a correct Linetype. Text line: %1%2 Type: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Некорректный тип линии. Строка текста: %1%2 Тип: %3</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Add/Update layer ignored.</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавление/Обновление слоя игнорируется.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Updated layer: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Слой обновлён: %1</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Added new layer: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавлен новый слой: %1</translation>
     </message>
     <message>
         <location line="-447"/>
         <source>Importing CSV complete. Command ended.</source>
-        <translation type="unfinished"></translation>
+        <translation>Импорт CSV завершён. Команда завершена.</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Draw from CSV</source>
-        <translation type="unfinished"></translation>
+        <translation>Чертить из CSV</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>CSV</source>
-        <translation type="unfinished">CSV</translation>
+        <translation>CSV</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>All Files</source>
-        <translation type="unfinished">Все файлы</translation>
+        <translation>Все файлы</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/DrawFromCSV/DrawFromCSVInit.js" line="+6"/>
         <source>&amp;Draw from CSV</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Чертить из CSV</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Draws entities based on textual entries in a CSV file</source>
-        <translation type="unfinished"></translation>
+        <translation>Чертить объекты на основе текстовых записей в файле CSV</translation>
     </message>
 </context>
 <context>
@@ -4463,7 +4463,7 @@ is already in the list.</source>
     <message>
         <location line="+568"/>
         <source>Invalid position</source>
-        <translation type="unfinished"></translation>
+        <translation>Некорректное положение</translation>
     </message>
     <message>
         <location line="+177"/>
@@ -4518,7 +4518,7 @@ is already in the list.</source>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, spline, ellipse arc or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Объект не является линией, дугой, сплайном, дугой эллипса или ломаной.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -5425,7 +5425,7 @@ is already in the list.</source>
     <message>
         <location line="+14"/>
         <source>Convert splines from texts to arcs or lines if appropriate</source>
-        <translation type="unfinished"></translation>
+        <translation>Конвертировать сплайны из текстов в дуги или линии, если требуется</translation>
     </message>
 </context>
 <context>
