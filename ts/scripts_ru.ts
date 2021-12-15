@@ -235,7 +235,7 @@
     <message>
         <location line="+31"/>
         <source>Themes</source>
-        <translation type="unfinished"></translation>
+        <translation>Темы</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -1082,13 +1082,13 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2Pdf.js" line="+30"/>
         <source>Export to PDF</source>
-        <translation type="unfinished">Экспортировать в PDF</translation>
+        <translation>Экспортировать в PDF</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscIO/Batch2Pdf/Batch2PdfInit.js" line="+2"/>
         <location line="+4"/>
         <source>&amp;Batch2Pdf visible layout blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Batch2Pdf видимые блоки компоновки</translation>
     </message>
 </context>
 <context>
@@ -1129,12 +1129,12 @@ Do you wish to recover it?</source>
     <message>
         <location line="+17"/>
         <source>Length &amp;1:</source>
-        <translation type="unfinished"></translation>
+        <translation>Длина &amp;1:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Length &amp;2:</source>
-        <translation type="unfinished"></translation>
+        <translation>Длина &amp;2:</translation>
     </message>
     <message>
         <source>Length 1:</source>
@@ -3353,17 +3353,17 @@ Do you wish to recover it?</source>
     <message>
         <location line="-115"/>
         <source>Dimension Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Стиль размеров</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Horizontal text labels</source>
-        <translation type="unfinished"></translation>
+        <translation>Горизонтальные текстовые подписи</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Text above dimension line</source>
-        <translation type="unfinished"></translation>
+        <translation>Текст над размерной линией</translation>
     </message>
     <message>
         <location line="+50"/>
@@ -3675,122 +3675,122 @@ is already in the list.</source>
         <location line="+15"/>
         <location line="+1275"/>
         <source>Command ended.</source>
-        <translation type="unfinished"></translation>
+        <translation>Команда завершилась.</translation>
     </message>
     <message>
         <location line="-1293"/>
         <source>No import file selected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Не выбран файл для импорта.</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>No file opened.</source>
-        <translation type="unfinished"></translation>
+        <translation>Нет открытых файлов.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>DrawFromCSV script (v3.03) by CVH</source>
-        <translation type="unfinished"></translation>
+        <translation>Сценарий DrawFromCSV (v3.03) от CVH</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Cast CSV</source>
-        <translation type="unfinished"></translation>
+        <translation>CSV-трансляция</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Reading from file: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Чтение из файла: %1</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Switched to comma/dot CSV style.</source>
-        <translation type="unfinished"></translation>
+        <translation>Переключено на стиль CSV с запятой/точкой.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Switched to semicolon/dot CSV style.</source>
-        <translation type="unfinished"></translation>
+        <translation>Переключено на стиль CSV с точкой с запятой/точкой.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Switched to semicolon/comma CSV style.</source>
-        <translation type="unfinished"></translation>
+        <translation>Переключено на стиль CSV с точкой с запятой/запятой.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Unsupported or invalid CSV style, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Неподдерживаемый или некорректный стиль CSV, игнорируется. Строка текста: %1</translation>
     </message>
     <message>
         <location line="+82"/>
         <source>Setting new relative origin failed, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Установка нового относительного начала координат завершилась неудачей, игнорируется. Строка текста: %1</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Setting new rounding radius failed, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Установка нового радиуса скругления завершилась неудачей, игнорируется. Строка текста: %1</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Rounding polylines requires QCAD Professional, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Для скругления ломаных требуется QCAD Professional, игнорируется. Строка текста:  %1</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Can not switch to non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Невозможно перейти на несуществующие слои, игнорируется. Строка текста: %1%2 Слой: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct set active &apos;Layer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Некорректный активный переключатель «Layer», игнорируется. Строка текста: %1</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Not a correct &apos;New layer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Некорректный переключатель «New layer», игнорируется. Строка текста: %1</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Can not hide non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Невозможно скрыть несуществующие слои, игнорируется. Строка текста: %1%2 Слой: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;HideLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Некорректный переключатель «HideLayer», игнорируется. Строка текста: %1</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Can not freeze non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Невозможно заморозить несуществующие слои, игнорируется. Строка текста: %1%2 Слой: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;FreezeLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Некорректный переключатель «FreezeLayer», игнорируется. Строка текста: %1</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Can not lock non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Невозможно заблокировать несуществующие слои, игнорируется. Строка текста: %1%2 Слой: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;LockLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Некорректный переключатель «LockLayer», игнорируется. Строка текста: %1</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Can not allow non-existing layers, ignored. Text line: %1%2 Layer: %3</source>
-        <translation type="unfinished"></translation>
+        <translation>Невозможно разрешить несуществующие слои, игнорируется. Строка текста: %1%2 Слой: %3</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Not a correct &apos;AllowLayer&apos; switch, ignored. Text line: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Некорректный переключатель «AllowLayer», игнорируется. Строка текста: %1</translation>
     </message>
     <message>
         <location line="+19"/>
@@ -3815,7 +3815,7 @@ is already in the list.</source>
         <location line="+33"/>
         <location line="+135"/>
         <source>Low field count.</source>
-        <translation type="unfinished"></translation>
+        <translation>Малое число полей.</translation>
     </message>
     <message>
         <location line="-656"/>
@@ -3844,7 +3844,7 @@ is already in the list.</source>
         <location line="+25"/>
         <location line="+23"/>
         <source>Odd field count.</source>
-        <translation type="unfinished"></translation>
+        <translation>Нечётное число полей.</translation>
     </message>
     <message>
         <location line="-655"/>
