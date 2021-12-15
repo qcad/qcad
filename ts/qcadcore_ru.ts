@@ -721,7 +721,7 @@
     <message>
         <location line="+1"/>
         <source>Overall scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Общий масштаб</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -761,77 +761,77 @@
     <message>
         <location line="+1"/>
         <source>Text position vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>Вертикальное положение текста</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>Горизонтальный текст</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Tick size</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер галочки</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Linear format</source>
-        <translation type="unfinished"></translation>
+        <translation>Линейный формат</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal places</source>
-        <translation type="unfinished"></translation>
+        <translation>Десятичные разряды</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal separator</source>
-        <translation type="unfinished"></translation>
+        <translation>Десятичный разделитель</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Zero suppression</source>
-        <translation type="unfinished"></translation>
+        <translation>Подавление нулей</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular format</source>
-        <translation type="unfinished"></translation>
+        <translation>Угловой формат</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular decimal places</source>
-        <translation type="unfinished"></translation>
+        <translation>Угловые десятичные разряды</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Angular zero suppression</source>
-        <translation type="unfinished"></translation>
+        <translation>Угловое подавление нулей</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectur tick</source>
-        <translation type="unfinished"></translation>
+        <translation>Архитектурная галочка</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Text color</source>
-        <translation type="unfinished"></translation>
+        <translation>Цвет текста</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block</source>
-        <translation type="unfinished"></translation>
+        <translation>Блок стрелки</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Блок стрелки 1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Arrow block 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Блок стрелки 2</translation>
     </message>
 </context>
 <context>
