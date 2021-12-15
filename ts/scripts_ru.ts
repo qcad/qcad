@@ -5400,7 +5400,7 @@ is already in the list.</source>
     <message>
         <location line="+135"/>
         <source>Explode circles into polylines with two half circles</source>
-        <translation type="unfinished"></translation>
+        <translation>Разнести круги на ломаные с двумя полукругами</translation>
     </message>
     <message>
         <location line="+90"/>
@@ -5940,7 +5940,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/Examples/MathExamples/FlexPainter/FlexPainterInit.js" line="-1"/>
         <source>&amp;FlexPainter</source>
-        <translation type="unfinished">&amp;FlexPainter</translation>
+        <translation>&amp;FlexPainter</translation>
     </message>
 </context>
 <context>
@@ -6237,12 +6237,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+10"/>
         <source>This can be used if cursors are not visible on external monitors</source>
-        <translation type="unfinished"></translation>
+        <translation>Это можно использовать, если курсоры не видны на внешних мониторах</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Use system cursors</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать системные курсоры</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -6272,7 +6272,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+136"/>
         <source>Apply line weight to points</source>
-        <translation type="unfinished"></translation>
+        <translation>Применить вес линии к точкам</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -6287,7 +6287,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+426"/>
         <source>Maximum selected entities with reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Максимальное количество выбранных объектов с точками привязки:</translation>
     </message>
     <message>
         <source>1000</source>
@@ -6296,7 +6296,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+219"/>
         <source>Maximum selected entities with displayed reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Максимальное количество выбранных объектов с отображаемыми точками привязки:</translation>
     </message>
     <message>
         <location line="-656"/>
@@ -6310,12 +6310,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+507"/>
         <source>Reference point size (px):</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер точки привязки (пикс.):</translation>
     </message>
     <message>
         <location line="+77"/>
         <source>Text height threshold (px):</source>
-        <translation type="unfinished"></translation>
+        <translation>Порог высоты текста (пикс.):</translation>
     </message>
     <message>
         <location line="+151"/>
@@ -7241,131 +7241,131 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroid.js" line="+118"/>
         <source>No selection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ничего не выбрано.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation type="unfinished"></translation>
+        <translation>Сначала сделайте выбор. Команда прервана.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Not implemented. Command terminated.</source>
-        <translation type="unfinished"></translation>
+        <translation>Не реализовано. Команда прервана.</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Enclosed area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Замкнутая область:</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Approximated enclosed area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Аппроксимированная замкнутая область:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Заштрихованная область:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Total hatched area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Общая заштрихованная область:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Differential hatched area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Разностная заштрихованная область:</translation>
     </message>
     <message>
         <location line="-67"/>
         <source>Multiple entities in selection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Несколько объектов в выделении.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Area centroid script (v0.31) by CVH</source>
-        <translation type="unfinished"></translation>
+        <translation>Сценарий центра области (v0.31) от CVH</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>2D Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation>Центр 2D</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Centroid markers circle in selection. No results.</source>
-        <translation type="unfinished"></translation>
+        <translation>Центр обозначает центр выделения. Нет результатов.</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Unsupported entity type. No results.</source>
-        <translation type="unfinished"></translation>
+        <translation>Неподдерживаемый тип объекта. Нет результатов.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>No results.</source>
-        <translation type="unfinished"></translation>
+        <translation>Нет результатов.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Centroid point</source>
-        <translation type="unfinished"></translation>
+        <translation>Точка центра</translation>
     </message>
     <message>
         <location line="+49"/>
         <source>(Incl. approximations)</source>
-        <translation type="unfinished"></translation>
+        <translation>(вкл. аппроксимации)</translation>
     </message>
     <message>
         <location line="+8"/>
         <location line="+19"/>
         <source>Approximated centroid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Аппроксимированный центр:</translation>
     </message>
     <message>
         <location line="-19"/>
         <location line="+19"/>
         <source>Centroid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Центр:</translation>
     </message>
     <message>
         <location line="+193"/>
         <location line="+563"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation type="unfinished"></translation>
+        <translation>Обнаружена неподдерживаемая ломаная с пользовательскими значениями ширины</translation>
     </message>
     <message>
         <location line="-478"/>
         <location line="+581"/>
         <source>Encountered an unsupported polygon with custom widths</source>
-        <translation type="unfinished"></translation>
+        <translation>Обнаружен неподдерживаемый многоугольник с пользовательскими значениями ширины</translation>
     </message>
     <message>
         <location line="+686"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation type="unfinished"></translation>
+        <translation>Необрабатываемая форма из петли штриховки.</translation>
     </message>
     <message>
         <location line="+80"/>
         <source>Self-intersecting shape near (%1). No Results.</source>
-        <translation type="unfinished"></translation>
+        <translation>Самопересекающаяся форма рядом с (%1). Нет результатов.</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+11"/>
         <source>&amp;Area Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Центр области</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Add 2D area centroid for a selected entity.</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить центр 2D-области для выбранного объекта.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Add 2D uniform density area centroid marker and values for a selected entity.</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить маркер центра 2D-области с однородной плотностью и значения для выбранного объекта.</translation>
     </message>
 </context>
 <context>
@@ -7374,27 +7374,27 @@ BUG: Interferes with group castings.</source>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js" line="+232"/>
         <location line="+1"/>
         <source>2D Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation>Центр 2D</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>X position</source>
-        <translation type="unfinished"></translation>
+        <translation>Положение по X</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Y position</source>
-        <translation type="unfinished"></translation>
+        <translation>Положение по Y</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Weighted</source>
-        <translation type="unfinished"></translation>
+        <translation>Взвеш.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Density</source>
-        <translation type="unfinished"></translation>
+        <translation>Плотность</translation>
     </message>
 </context>
 <context>
@@ -7572,87 +7572,87 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeighted.js" line="+94"/>
         <source>No selection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ничего не выбрано.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation type="unfinished"></translation>
+        <translation>Сначала выберите что-либо. Команда прервана.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Centroids weighted sum script (v0.10b) by CVH</source>
-        <translation type="unfinished"></translation>
+        <translation>Сценарий взвешенной суммы центров (v0.10b) от CVH</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>2D Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation>Центр 2D</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Density</source>
-        <translation type="unfinished"></translation>
+        <translation>Плотность</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>X position</source>
-        <translation type="unfinished"></translation>
+        <translation>Положение по X</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Y position</source>
-        <translation type="unfinished"></translation>
+        <translation>Положение по Y</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Weighted</source>
-        <translation type="unfinished"></translation>
+        <translation>Взвешенное</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>No centroid markers in selection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Выделение не содержит маркеры центра.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>One marker selected, nothing to sum. Please verify selection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Выбран один маркер, суммировать ничего. Проверьте выбор.</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Results in Zero.</source>
-        <translation type="unfinished"></translation>
+        <translation>Результат — ноль.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Total sum(%1):</source>
-        <translation type="unfinished"></translation>
+        <translation>Общая сумма(%1):</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Weighted sum(%1):</source>
-        <translation type="unfinished"></translation>
+        <translation>Взвешенная сумма(%1):</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Summed centroid position:</source>
-        <translation type="unfinished"></translation>
+        <translation>Суммированное положение центра:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+11"/>
         <source>&amp;Sum Centroids Weighted</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Взвешенная сумма центров</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Sum selected 2D centroid markers weighted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Взвешенная сумма выбранных маркеров центра 2D.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Sum selected 2D centroid markers weighted by their individual custom density.</source>
-        <translation type="unfinished"></translation>
+        <translation>Сумма выбранных маркеров центра 2D, взвешенная по их отдельной пользовательской плотности.</translation>
     </message>
 </context>
 <context>
@@ -7660,27 +7660,27 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroid.js" line="+117"/>
         <source>No selection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ничего не выбрано.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please, make a selection first. Command terminated.</source>
-        <translation type="unfinished"></translation>
+        <translation>Сначала выберите что-либо. Команда прервана.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Wire centroid script (v0.31) by CVH</source>
-        <translation type="unfinished"></translation>
+        <translation>Сценарий центра провода (v0.31) от CVH</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Length:</source>
-        <translation type="unfinished">Длина:</translation>
+        <translation>Длина:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>2D Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation>Центр 2D</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -7758,7 +7758,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+1"/>
         <source>Add 2D uniform density wire centroid marker and values for a selection of entities.</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить маркер центра 2D-провода с однородной плотностью и значения для выбранных объектов.</translation>
     </message>
 </context>
 <context>
