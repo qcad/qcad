@@ -63,10 +63,11 @@ void RDxfServices::fixDimensionLabel(QString& text, QString& uTol, QString& lTol
     text.replace(rxAlignment, "");
 
     // analyze and strip stacked text (tolerance) at end:
-    QRegExp rxTolerance("\\\\S([^^]*)\\^([^;]*);$");
-    if (rxTolerance.indexIn(text)!=-1) {
-        uTol = rxTolerance.cap(1);
-        lTol = rxTolerance.cap(2);
+    QRegularExpression rxTolerance("\\\\S([^^]*)\\^([^;]*);$");
+    QRegularExpressionMatch match = rxTolerance.match(text);
+    if (match.hasMatch()) {
+        uTol = match.captured(1);
+        lTol = match.captured(2);
     }
     text.replace(rxTolerance, "");
 
