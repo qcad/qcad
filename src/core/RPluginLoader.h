@@ -24,7 +24,9 @@
 
 #include <QList>
 #include <QMetaType>
+#if QT_VERSION < 0x060000
 #include <QScriptEngine>
+#endif
 
 #include "RPluginInterface.h"
 #include "RPluginInfo.h"
@@ -52,6 +54,7 @@ public:
      */
     static void postInitPlugin(QObject* plugin, RPluginInterface::InitStatus status);
 
+#if QT_VERSION < 0x060000
     /**
      * \nonscriptable
      */
@@ -61,6 +64,7 @@ public:
      * \nonscriptable
      */
     static void initScriptExtensions(QObject* plugin, QScriptEngine& engine);
+#endif
 
     static void initTranslations();
 

@@ -372,7 +372,7 @@ public slots:
     /**
      * Called when the action is triggered (e.g. a button is pressed or a menu chosen).
      */
-    bool slotTrigger(const QString& command = QString::null);
+    bool slotTrigger(const QString& command = QString());
 
 signals:
     void postTriggered();

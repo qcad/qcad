@@ -102,6 +102,15 @@ public:
 
     void fixVersion2HatchData(QString& patternName, double& angle, double& scale, bool solid) const;
 
+#if QT_VERSION >= 0x060000
+    QStringDecoder* getCodec() const {
+        return codec;
+    }
+
+    void setCodec(QStringDecoder* codec) {
+        this->codec = codec;
+    }
+#else
     QTextCodec* getCodec() const {
         return codec;
     }
@@ -109,6 +118,7 @@ public:
     void setCodec(QTextCodec* codec) {
         this->codec = codec;
     }
+#endif
 
     /**
      * \nonscriptable
@@ -154,7 +164,11 @@ private:
     QMap<QString, QString> version2TextFonts;
     QMap<QString, QString> version2DimensionLabels;
 
+#if QT_VERSION >= 0x060000
+    QStringDecoder* codec;
+#else
     QTextCodec* codec;
+#endif
 };
 
 Q_DECLARE_METATYPE(RDxfServices::Type)

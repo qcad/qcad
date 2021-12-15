@@ -706,6 +706,26 @@ public:
     static int compareAlphanumerical(const QString& s1, const QString& s2);
     static bool lessThanAlphanumerical(const QString& s1, const QString& s2);
 
+    // workaround for Qt 6 deprecating QList::toSet:
+    template<class T>
+    static QSet<T> toSet(const QList<T>& list) {
+#if QT_VERSION >= 0x060000
+        return QSet<T>(list.begin(), list.end());
+#else
+        return list.toSet();
+#endif
+    }
+
+    // workaround for Qt 6 deprecating QSet::toList:
+    template<class T>
+    static QList<T> toList(const QSet<T>& set) {
+#if QT_VERSION >= 0x060000
+        return QList<T>(set.begin(), set.end());
+#else
+        return set.toList();
+#endif
+    }
+
     static const double PointTolerance;
     static const double AngleTolerance;
 };

@@ -15,7 +15,7 @@ SUBDIRS = \
 !r_mobile {
     SUBDIRS += \
         customwidgets \
-        scripting \
+        #scripting \
         run
 }
 

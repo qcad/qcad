@@ -235,6 +235,7 @@ void RPluginLoader::postInitPlugin(QObject* plugin, RPluginInterface::InitStatus
     }
 }
 
+#if QT_VERSION < 0x060000
 void RPluginLoader::initScriptExtensions(QScriptEngine& engine) {
     foreach (QString fileName, getPluginFiles()) {
         QPluginLoader loader(fileName);
@@ -255,6 +256,7 @@ void RPluginLoader::initScriptExtensions(QObject* plugin, QScriptEngine& engine)
         p->initScriptExtensions(engine);
     }
 }
+#endif
 
 void RPluginLoader::initTranslations() {
     foreach (QString fileName, getPluginFiles()) {

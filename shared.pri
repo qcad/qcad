@@ -20,9 +20,11 @@ linux-* {
 greaterThan(QT_MAJOR_VERSION, 4) {
     cache()
     DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x000000
-    QT += printsupport
-    macx {
-        QT += macextras
+    lessThan(QT_MAJOR_VERSION, 6) {
+        QT += printsupport
+        macx {
+            QT += macextras
+        }
     }
 }
 else {
@@ -158,14 +160,18 @@ else {
 TARGET = $$join(TARGET,,$$RLIBNAME,)
 
 QT += core \
-    script \
-    scripttools \
     sql \
     svg \
     opengl \
     network \
-    xml \
-    xmlpatterns
+    xml
+
+lessThan(QT_MAJOR_VERSION, 6) {
+    QT += core \
+        script \
+        scripttools \
+        xmlpatterns
+}
 
 # make sure that the QtHelp framework is included in the app bundle under macOS:
 greaterThan(QT_MAJOR_VERSION, 4) {
