@@ -7360,12 +7360,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+6"/>
         <source>Add 2D area centroid for a selected entity.</source>
-        <translation>Добавить центр 2D-области для выбранного объекта.</translation>
+        <translation>Добавить центроид области 2D для выбранного объекта.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Add 2D uniform density area centroid marker and values for a selected entity.</source>
-        <translation>Добавить маркер центра 2D-области с однородной плотностью и значения для выбранного объекта.</translation>
+        <translation>Добавить маркер центроида области 2D с однородной плотностью и значения для выбранного объекта.</translation>
     </message>
 </context>
 <context>
@@ -7374,7 +7374,7 @@ BUG: Interferes with group castings.</source>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js" line="+232"/>
         <location line="+1"/>
         <source>2D Centroid</source>
-        <translation>Центр 2D</translation>
+        <translation>Центроид 2D</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7587,7 +7587,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+14"/>
         <source>2D Centroid</source>
-        <translation>Центр 2D</translation>
+        <translation>Центроид 2D</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -7612,7 +7612,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+33"/>
         <source>No centroid markers in selection.</source>
-        <translation>Выделение не содержит маркеры центра.</translation>
+        <translation>Выделение не содержит маркеры центроида.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -7637,7 +7637,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+5"/>
         <source>Summed centroid position:</source>
-        <translation>Суммированное положение центра:</translation>
+        <translation>Суммированное положение центроида:</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+11"/>
@@ -7647,12 +7647,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+6"/>
         <source>Sum selected 2D centroid markers weighted.</source>
-        <translation>Взвешенная сумма выбранных маркеров центра 2D.</translation>
+        <translation>Взвешенная сумма выбранных маркеров центроида 2D.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Sum selected 2D centroid markers weighted by their individual custom density.</source>
-        <translation>Сумма выбранных маркеров центра 2D, взвешенная по их отдельной пользовательской плотности.</translation>
+        <translation>Сумма выбранных маркеров центроида 2D, взвешенная по их отдельной пользовательской плотности.</translation>
     </message>
 </context>
 <context>
@@ -7670,7 +7670,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+5"/>
         <source>Wire centroid script (v0.31) by CVH</source>
-        <translation>Сценарий центра провода (v0.31) от CVH</translation>
+        <translation>Сценарий центроида провода (v0.31) от CVH</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -7680,12 +7680,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+26"/>
         <source>2D Centroid</source>
-        <translation>Центр 2D</translation>
+        <translation>Центроид 2D</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Centroid markers circle in selection. No results.</source>
-        <translation>Круг маркеров центра в выделении. Нет результатов.</translation>
+        <translation>Круг маркеров центроида в выделении. Нет результатов.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -7711,7 +7711,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+13"/>
         <source>Centroid point</source>
-        <translation>Точка центра</translation>
+        <translation>Точка центроида</translation>
     </message>
     <message>
         <location line="+45"/>
@@ -7727,7 +7727,7 @@ BUG: Interferes with group castings.</source>
         <location line="+8"/>
         <location line="+19"/>
         <source>Approximated centroid:</source>
-        <translation>Аппроксимированный центр:</translation>
+        <translation>Аппроксимированный центроид:</translation>
     </message>
     <message>
         <location line="-19"/>
