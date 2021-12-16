@@ -7286,17 +7286,17 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+6"/>
         <source>Area centroid script (v0.31) by CVH</source>
-        <translation>Сценарий центра области (v0.31) от CVH</translation>
+        <translation>Сценарий центроида области (v0.31) от CVH</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>2D Centroid</source>
-        <translation>Центр 2D</translation>
+        <translation>Центроид 2D</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Centroid markers circle in selection. No results.</source>
-        <translation>Центр обозначает центр выделения. Нет результатов.</translation>
+        <translation>Круг маркеров центроида в выделении. Нет результатов.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -7311,7 +7311,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+9"/>
         <source>Centroid point</source>
-        <translation>Точка центра</translation>
+        <translation>Точка центроида</translation>
     </message>
     <message>
         <location line="+49"/>
@@ -7322,13 +7322,13 @@ BUG: Interferes with group castings.</source>
         <location line="+8"/>
         <location line="+19"/>
         <source>Approximated centroid:</source>
-        <translation>Аппроксимированный центр:</translation>
+        <translation>Аппроксимированный центроид:</translation>
     </message>
     <message>
         <location line="-19"/>
         <location line="+19"/>
         <source>Centroid:</source>
-        <translation>Центр:</translation>
+        <translation>Центроид:</translation>
     </message>
     <message>
         <location line="+193"/>
@@ -7355,7 +7355,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+11"/>
         <source>&amp;Area Centroid</source>
-        <translation>&amp;Центр области</translation>
+        <translation>&amp;Центроид области</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -7685,75 +7685,75 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+2"/>
         <source>Centroid markers circle in selection. No results.</source>
-        <translation type="unfinished"></translation>
+        <translation>Круг маркеров центра в выделении. Нет результатов.</translation>
     </message>
     <message>
         <location line="+7"/>
         <location line="+7"/>
         <source>Approximated length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Аппроксимированная длина:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Unsupported entity type. No results.</source>
-        <translation type="unfinished"></translation>
+        <translation>Неподдерживаемый тип объекта. Нет результатов.</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>No results.</source>
-        <translation type="unfinished"></translation>
+        <translation>Нет результатов.</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Results in Zero.</source>
-        <translation type="unfinished"></translation>
+        <translation>Результат — ноль.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Centroid point</source>
-        <translation type="unfinished"></translation>
+        <translation>Точка центра</translation>
     </message>
     <message>
         <location line="+45"/>
         <source>Total length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Общая длина:</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>(Incl. approximations)</source>
-        <translation type="unfinished"></translation>
+        <translation>(вкл. аппроксимации)</translation>
     </message>
     <message>
         <location line="+8"/>
         <location line="+19"/>
         <source>Approximated centroid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Аппроксимированный центр:</translation>
     </message>
     <message>
         <location line="-19"/>
         <location line="+19"/>
         <source>Centroid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Центр:</translation>
     </message>
     <message>
         <location line="+116"/>
         <source>Encountered an unsupported polyline with custom widths</source>
-        <translation type="unfinished"></translation>
+        <translation>Обнаружена неподдерживаемая ломаная с пользовательскими значениями ширины</translation>
     </message>
     <message>
         <location line="+101"/>
         <source>Encountered an unsupported polygon with custom widths</source>
-        <translation type="unfinished"></translation>
+        <translation>Обнаружен неподдерживаемый многоугольник с пользовательскими значениями ширины</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+11"/>
         <source>&amp;Wire Centroid</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Центр провода</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Add 2D wire centroid for a selection.</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить центроид провода 2D для выделения.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8563,7 +8563,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
         <source>&amp;Leader from Selected Text</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Полка-выноска из выделенного текста</translation>
     </message>
 </context>
 <context>
