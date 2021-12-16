@@ -3507,7 +3507,7 @@ is already in the list.</source>
     <message>
         <location filename="../scripts/View/DisplayDistanceAngle/DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display &amp;Distance/Angle</source>
-        <translation>Отобразить &amp;Расстояние/Угол</translation>
+        <translation>Отобразить &amp;расстояние/угол</translation>
     </message>
 </context>
 <context>
@@ -4012,7 +4012,7 @@ is already in the list.</source>
     <message>
         <location line="+98"/>
         <source>Circle Invalid.</source>
-        <translation>Круг некорректен.</translation>
+        <translation>Окружность некорректна.</translation>
     </message>
     <message>
         <location line="+79"/>
@@ -6040,7 +6040,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+14"/>
         <source>Draw glue lap</source>
-        <translation>Начертить клейкий круг</translation>
+        <translation>Начертить клеевой нахлёст</translation>
     </message>
 </context>
 <context>
@@ -6267,7 +6267,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+58"/>
         <source>Prevent white on white / black on black display</source>
-        <translation>Предотвратить белый на белом/чёрный на чёрном дисплее</translation>
+        <translation>Предотвратить белый на белом / чёрный на чёрном дисплее</translation>
     </message>
     <message>
         <location line="+136"/>
@@ -7733,7 +7733,7 @@ BUG: Interferes with group castings.</source>
         <location line="-19"/>
         <location line="+19"/>
         <source>Centroid:</source>
-        <translation>Центр:</translation>
+        <translation>Центроид:</translation>
     </message>
     <message>
         <location line="+116"/>
@@ -7748,7 +7748,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+11"/>
         <source>&amp;Wire Centroid</source>
-        <translation>&amp;Центр провода</translation>
+        <translation>&amp;Центроид провода</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -7758,7 +7758,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+1"/>
         <source>Add 2D uniform density wire centroid marker and values for a selection of entities.</source>
-        <translation>Добавить маркер центра 2D-провода с однородной плотностью и значения для выбранных объектов.</translation>
+        <translation>Добавить маркер центроида провода 2D с однородной плотностью и значения для выбранных объектов.</translation>
     </message>
 </context>
 <context>
@@ -8558,7 +8558,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromText.js" line="+78"/>
         <source>Leader was created successfully</source>
-        <translation type="unfinished"></translation>
+        <translation>Полка-выноска успешно создана</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/LeaderFromText/LeaderFromTextInit.js" line="+2"/>
@@ -8956,7 +8956,7 @@ shown in search results:</source>
     <message>
         <location line="+23"/>
         <source>Line Segment</source>
-        <translation>Отрезок</translation>
+        <translation>Отрезок линии</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9383,7 +9383,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Line/LineParallel/LineParallel.ui" line="+17"/>
         <source>Dist&amp;ance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Расс&amp;тояние:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -9885,17 +9885,17 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscInformation/MiscInformation.js" line="+41"/>
         <source>Misc</source>
-        <translation type="unfinished">Разное</translation>
+        <translation>Разное</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Misc Information Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Разные информационные инструменты</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Information</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Информация</translation>
     </message>
 </context>
 <context>
@@ -10597,7 +10597,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/DrawingPreferences/PointDisplaySettings/PreferencesPage.ui" line="+21"/>
         <source>Mode:</source>
-        <translation type="unfinished">Режим:</translation>
+        <translation>Режим:</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -10673,114 +10673,114 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.js" line="+108"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation type="unfinished">Выбрать линию, дугу, окружность, эллипс, сплайн или ломаную для разбиения</translation>
+        <translation>Выбрать линию, дугу, окружность, эллипс, сплайн или ломаную для разбиения</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse to break up</source>
-        <translation type="unfinished">Выбрать линию, дугу, окружность или эллипс для разбиения</translation>
+        <translation>Выбрать линию, дугу, окружность или эллипс для разбиения</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Pick the first point</source>
-        <translation type="unfinished"></translation>
+        <translation>Выбрать первую точку</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pick the first break point</source>
-        <translation type="unfinished"></translation>
+        <translation>Выбрать первую точку разрыва</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Pick the second point</source>
-        <translation type="unfinished"></translation>
+        <translation>Выбрать вторую точку</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pick the second break point</source>
-        <translation type="unfinished"></translation>
+        <translation>Выбрать вторую точку разрыва</translation>
     </message>
     <message>
         <location line="+170"/>
         <source>Break Out Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Выломать сегмент</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui" line="+23"/>
         <source>Remove line break segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить сегмент разрыва линии</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Remove the line segment between the break symbol</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить сегмент линии между символом разрыва</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Remove Segment</source>
-        <translation type="unfinished">Удалить сегмент</translation>
+        <translation>Удалить сегмент</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Inherit entity properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Наследовать свойства объекта</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inherit all properties from the chosen entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Наследовать все свойства выбранного объекта</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inherit</source>
-        <translation type="unfinished"></translation>
+        <translation>Наследовать</translation>
     </message>
     <message>
         <location line="+17"/>
         <location line="+13"/>
         <source>Peak ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Коэффициент пика</translation>
     </message>
     <message>
         <location line="-10"/>
         <location line="+13"/>
         <source>The ratio of the peak height to the break width</source>
-        <translation type="unfinished"></translation>
+        <translation>Отношение высоты пика к ширине разрыва</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Peak Ratio:</source>
-        <translation type="unfinished"></translation>
+        <translation>Коэффициент пика:</translation>
     </message>
     <message>
         <location line="+78"/>
         <source>First/Last segment inclined</source>
-        <translation type="unfinished"></translation>
+        <translation>Наклонный первый/последний сегмент</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>The first and last segment of the break symbol are inclined</source>
-        <translation type="unfinished"></translation>
+        <translation>Первый и последний сегменты символа разрыва являются наклонными</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>First/Last segment vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>Вертикальный первый/последний сегмент</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>The first and last segment of the break symbol are vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>Первый и последний сегменты символа разрыва являются вертикальными</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbolInit.js" line="+2"/>
         <source>&amp;Polyline break symbol from 2 points</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Символ разрыва ломаной из 2 точек</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw a polyline break symbol from 2 points</source>
-        <translation type="unfinished"></translation>
+        <translation>Начертить символ разрыва ломаной из 2 точек</translation>
     </message>
 </context>
 <context>
@@ -10984,7 +10984,7 @@ shown in search results:</source>
     <message>
         <location line="+8"/>
         <source>Preview how current drawing would be printed</source>
-        <translation>Предпросмотр как текущий чертёж будет напечатан</translation>
+        <translation>Предпросмотр того, как текущий чертёж будет напечатан</translation>
     </message>
 </context>
 <context>
@@ -11170,12 +11170,12 @@ shown in search results:</source>
     <message>
         <location line="+9"/>
         <source>Decimals / precision for displayed property values:</source>
-        <translation type="unfinished"></translation>
+        <translation>Десятичные разряды / точность отображаемых значений свойств:</translation>
     </message>
     <message>
         <location line="-19"/>
         <source>Display advanced dimension style overrides</source>
-        <translation type="unfinished"></translation>
+        <translation>Отображать расширенные переопределения стиля размеров</translation>
     </message>
 </context>
 <context>
@@ -11596,7 +11596,7 @@ shown in search results:</source>
     <message>
         <location line="+17"/>
         <source>&amp;Radius:</source>
-        <translation type="unfinished">&amp;Радиус:</translation>
+        <translation>&amp;Радиус:</translation>
     </message>
     <message>
         <source>Radius:</source>
@@ -11778,17 +11778,17 @@ shown in search results:</source>
     <message>
         <location line="+13"/>
         <source>Opening</source>
-        <translation type="unfinished"></translation>
+        <translation>Открытие</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Allow opening of zero size files (e.g. online files that are not synched to disk)</source>
-        <translation type="unfinished"></translation>
+        <translation>Разрешить открытие файлов нулевого размера (например, сетевых файлов, которые не были синхронизированы на диск)</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Decode strings in DXF/DWG as UTF-8 (experimental)</source>
-        <translation type="unfinished"></translation>
+        <translation>Расшифровывать строки в DXF/DWG как UTF-8 (экспериментально)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -12733,7 +12733,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Draw/Shape/ShapeRectanglePP/ShapeRectanglePP.ui" line="+17"/>
         <source>Rotate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Повернуть:</translation>
     </message>
 </context>
 <context>
@@ -12879,7 +12879,7 @@ shown in search results:</source>
     <message>
         <location line="+1"/>
         <source>Enter</source>
-        <translation type="unfinished"></translation>
+        <translation>Ввод</translation>
     </message>
     <message>
         <location filename="../scripts/Snap/SnapCoordinate/SnapCoordinate.ui" line="+17"/>
@@ -13451,7 +13451,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Edit/AppPreferences/TextPreferences/PreferencesPage.ui" line="+19"/>
         <source>Font size in text dialog preview:</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер шрифта в диалоге предпросмотра текста:</translation>
     </message>
     <message>
         <location line="+99"/>
@@ -13529,22 +13529,22 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeader.js" line="+41"/>
         <source>Arrow position</source>
-        <translation type="unfinished">Положение стрелки</translation>
+        <translation>Положение стрелки</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Choose text</source>
-        <translation type="unfinished">Выбрать текст</translation>
+        <translation>Выбрать текст</translation>
     </message>
     <message>
         <location line="+102"/>
         <source>Leader was created successfully</source>
-        <translation type="unfinished"></translation>
+        <translation>Полка-выноска успешно создана</translation>
     </message>
     <message>
         <location filename="../scripts/Misc/MiscDraw/TextAlignedLeader/TextAlignedLeaderInit.js" line="+2"/>
         <source>&amp;Text Aligned Leader</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Полка-выноска с выравниванием по тексту</translation>
     </message>
 </context>
 <context>
@@ -14854,38 +14854,38 @@ shown in search results:</source>
     <message>
         <location line="+5"/>
         <source>Scientific</source>
-        <translation type="unfinished">Научный</translation>
+        <translation>Научный</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal</source>
-        <translation type="unfinished">Десятичный</translation>
+        <translation>Десятичный</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Engineering</source>
-        <translation type="unfinished">Инженерный</translation>
+        <translation>Инженерный</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectural</source>
-        <translation type="unfinished">Архитектурный</translation>
+        <translation>Архитектурный</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fractional</source>
-        <translation type="unfinished">Дробный</translation>
+        <translation>Дробный</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Centered</source>
-        <translation type="unfinished">По центру</translation>
+        <translation>По центру</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+38"/>
         <source>Show trailing zeroes</source>
-        <translation type="unfinished"></translation>
+        <translation>Показывать нули в конце</translation>
     </message>
     <message>
         <source>0</source>
@@ -14926,33 +14926,33 @@ shown in search results:</source>
     <message>
         <location line="-9"/>
         <source>Decimal Degrees</source>
-        <translation type="unfinished">Десятичные градусы</translation>
+        <translation>Десятичные градусы</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Deg/min/sec</source>
-        <translation type="unfinished">Град/мин/сек</translation>
+        <translation>Град/мин/сек</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gradians</source>
-        <translation type="unfinished">Грады</translation>
+        <translation>Грады</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Radians</source>
-        <translation type="unfinished">Радианы</translation>
+        <translation>Радианы</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Surveyor&apos;s units</source>
-        <translation type="unfinished">Геодезические единицы</translation>
+        <translation>Геодезические единицы</translation>
     </message>
     <message>
         <location line="-28"/>
         <location line="+35"/>
         <source>Suppress trailing zeroes</source>
-        <translation type="unfinished"></translation>
+        <translation>Подавлять нули в конце</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -14980,7 +14980,7 @@ shown in search results:</source>
     <message>
         <location line="-74"/>
         <source>Include 0&apos;0&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Включать 0&apos;0&quot;</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -14991,29 +14991,29 @@ shown in search results:</source>
         <location line="+33"/>
         <location line="+2"/>
         <source>(unsupported)</source>
-        <translation type="unfinished"></translation>
+        <translation>(не поддерживается)</translation>
     </message>
     <message>
         <location line="-39"/>
         <source>Include 0&apos;, suppress 0&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Включать 0&apos;, подавлять 0&quot;</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Include 0&quot;, suppress 0&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Включать 0&quot;, подавлять 0&apos;</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+35"/>
         <source>Suppress leading zeroes</source>
-        <translation type="unfinished"></translation>
+        <translation>Подавлять нули в начале</translation>
     </message>
     <message>
         <location line="-33"/>
         <location line="+35"/>
         <source>Suppress leading / trailing zeroes</source>
-        <translation type="unfinished"></translation>
+        <translation>Подавлять нули в начале / конце</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -15229,12 +15229,12 @@ shown in search results:</source>
     <message>
         <location line="+2"/>
         <source>Dimension Styles</source>
-        <translation type="unfinished"></translation>
+        <translation>Стили размеров</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Стиль размеров</translation>
     </message>
     <message>
         <location line="+3"/>
