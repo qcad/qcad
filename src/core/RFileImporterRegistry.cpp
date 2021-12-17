@@ -116,7 +116,7 @@ QStringList RFileImporterRegistry::getFilterExtensions() {
             QString filterString = filterStrings[i];
             QRegExp rx("\\*\\.([^ )]*)");
             int pos = 0;
-             
+
             while ((pos = rx.indexIn(filterString, pos)) != -1)  {
                 ret.append(rx.cap(1));
                 pos += rx.matchedLength();
