@@ -69,11 +69,7 @@ void RMathLineEdit::slotTextChanged(const QString& text) {
     bool hasFormula = false;
 
     // most common case (double value):
-#if QT_VERSION < 0x050000
-    if (QRegularExpression("^[+-]?\\d*\\.?\\d+$").exactMatch(text)) {
-#else
-    if (QRegularExpression(QRegularExpression::anchoredPattern("^[+-]?\\d*\\.?\\d+$")).match(text).hasMatch()) {
-#endif
+    if (QRegExp("^[+-]?\\d*\\.?\\d+$").exactMatch(text)) {
         value = text.toDouble();
         hasError = false;
         hasFormula = false;

@@ -25,15 +25,6 @@
 
 #include <complex>
 
-#if QT_VERSION >= 0x050000
-#  include <QRegularExpression>
-#else
-#  include <QRegExp>
-#  ifndef QRegularExpression
-#    define QRegularExpression QRegExp
-#  endif
-#endif
-
 #include <QScriptEngine>
 
 #include "RDebug.h"
@@ -170,17 +161,13 @@ double RMath::eval(const QString& expression, bool* ok) {
 
     // 'correct' commas in numbers to points:
     if (RSettings::getNumberLocale().decimalPoint()==',') {
-        expr.replace(QRegularExpression("(\\d*),(\\d+)"), "\\1.\\2");
+        expr.replace(QRegExp("(\\d*),(\\d+)"), "\\1.\\2");
     }
 
     int idx = -1;
 
     // convert surveyor type angles (e.g. N10d30'12.5"E) to degrees:
-#if QT_VERSION < 0x050000
     if (expr.contains(QRegExp("[NESW]", Qt::CaseInsensitive))) {
-#else
-    if (expr.contains(QRegularExpression("[NESW]", QRegularExpression::CaseInsensitiveOption))) {
-#endif
         // \b(?:(?:([NS])(?:([+-]?)(?:(?:(\d*\.?\d*)[d°])?(?:(\d*\.?\d*)')?(?:(\d*\.?\d*)")?|(\d*))([EW]))?)|([EW]))\b
         QRegExp re(
             "\\b"                               // a word
