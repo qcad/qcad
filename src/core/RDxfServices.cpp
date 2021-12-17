@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2011-2018 by Andrew Mustun. All rights reserved.
- * 
+ *
  * This file is part of the QCAD project.
  *
  * QCAD is free software: you can redistribute it and/or modify
@@ -18,15 +18,6 @@
  */
 #include <QFileInfo>
 #include <QTemporaryFile>
-
-#if QT_VERSION >= 0x050000
-#  include <QRegularExpression>
-#else
-#  include <QRegExp>
-#  ifndef QRegularExpression
-#    define QRegularExpression QRegExp
-#  endif
-#endif
 
 #include "RDocument.h"
 #include "RDxfServices.h"
@@ -53,21 +44,20 @@ void RDxfServices::reset() {
 void RDxfServices::fixVersion2String(QString& str) const {
     // correct stacked text
     // \S+0.1\-0.1; -> \S+0.1^-0.1;
-    QRegularExpression rx("\\\\S([^\\\\;]*)\\\\([^;]*);");
+    QRegExp rx("\\\\S([^\\\\;]*)\\\\([^;]*);");
     str.replace(rx, "\\S\\1^\\2;");
 }
 
 void RDxfServices::fixDimensionLabel(QString& text, QString& uTol, QString& lTol) const {
     // strip away initial vertical alignment, e.g. '\A1;'
-    QRegularExpression rxAlignment("^\\\\A(\\d+);");
+    QRegExp rxAlignment("^\\\\A(\\d+);");
     text.replace(rxAlignment, "");
 
     // analyze and strip stacked text (tolerance) at end:
-    QRegularExpression rxTolerance("\\\\S([^^]*)\\^([^;]*);$");
-    QRegularExpressionMatch match = rxTolerance.match(text);
-    if (match.hasMatch()) {
-        uTol = match.captured(1);
-        lTol = match.captured(2);
+    QRegExp rxTolerance("\\\\S([^^]*)\\^([^;]*);$");
+    if (rxTolerance.indexIn(text)!=-1) {
+        uTol = rxTolerance.cap(1);
+        lTol = rxTolerance.cap(2);
     }
     text.replace(rxTolerance, "");
 
@@ -139,7 +129,7 @@ void RDxfServices::detectVersion2Format(const QString& fileName) {
 
 QString RDxfServices::getSafeBlockName(QString& blockName) {
     QString ret = blockName;
-    ret.replace(QRegularExpression("[<>/\":;?*|,=`\\\\\n]"), "_");
+    ret.replace(QRegExp("[<>/\":;?*|,=`\\\\\n]"), "_");
     ret.replace(QChar(0x0083), "_");
     return ret;
 }
@@ -148,7 +138,7 @@ void RDxfServices::fixBlockName(QString& blockName) {
     // fix invalid block names (mainly from QCAD 2):
     if (!blockName.startsWith("*")) {
         QString oldBlockName = blockName;
-        blockName.replace(QRegularExpression("[<>/\":;?*|,=`\\\\\n]"), "_");
+        blockName.replace(QRegExp("[<>/\":;?*|,=`\\\\\n]"), "_");
         blockName.replace(QChar(0x0083), "_");
         version2BlockMapping.insert(oldBlockName, blockName);
     }
@@ -157,7 +147,7 @@ void RDxfServices::fixBlockName(QString& blockName) {
 void RDxfServices::fixLayerName(QString& layerName) {
     // fix invalid layer names (mainly from QCAD 2):
     QString oldLayerName = layerName;
-    layerName.replace(QRegularExpression("[<>/\":;?*|,=`\\\\\n]"), "_");
+    layerName.replace(QRegExp("[<>/\":;?*|,=`\\\\\n]"), "_");
     layerName.replace(QChar(0x0083), "_");
     version2LayerMapping.insert(oldLayerName, layerName);
 }
