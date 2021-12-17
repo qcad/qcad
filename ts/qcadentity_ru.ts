@@ -788,7 +788,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Fit Point</source>
-        <translation>Уместить точку</translation>
+        <translation>Узловая точка</translation>
     </message>
     <message>
         <location line="+1"/>
