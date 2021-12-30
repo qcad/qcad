@@ -7923,7 +7923,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+687"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Forma livre do laço da escotilha.</translation>
+        <translation>Forma livre do laço da hachura.</translation>
     </message>
     <message>
         <location line="+70"/>
@@ -15460,7 +15460,7 @@ nos resultados de busca:</translation>
     <message>
         <location line="+1"/>
         <source>Meter</source>
-        <translation>Medidor</translation>
+        <translation>Metro</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -16549,7 +16549,7 @@ nos resultados de busca:</translation>
     <message>
         <location line="+0"/>
         <source>Hatch</source>
-        <translation>Escotilha</translation>
+        <translation>Hachura</translation>
     </message>
     <message>
         <location line="+2"/>
