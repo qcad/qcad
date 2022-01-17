@@ -218,7 +218,7 @@
     <message>
         <location line="+63"/>
         <source>Hatch Patterns</source>
-        <translation type="unfinished">Wzory luk</translation>
+        <translation type="unfinished">Wzór kreskowania</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -1080,7 +1080,7 @@ Odzyskać ją?</translation>
     <message>
         <location filename="../scripts/View/Zoom/AutoZoom/AutoZoomInit.js" line="+2"/>
         <source>&amp;Auto Zoom</source>
-        <translation type="unfinished">Auto Zoom</translation>
+        <translation type="unfinished">Przybliż automatycznie</translation>
     </message>
 </context>
 <context>
@@ -2780,7 +2780,7 @@ Odzyskać ją?</translation>
     <message>
         <location line="+8"/>
         <source>Hatches</source>
-        <translation type="unfinished">Włazy</translation>
+        <translation type="unfinished">Kreskowania</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -6269,7 +6269,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+13"/>
         <source>Auto Zoom</source>
-        <translation type="unfinished">Auto Zoom</translation>
+        <translation type="unfinished">Przybliż automatycznie</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -6719,7 +6719,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Draw/Hatch/Hatch.js" line="+99"/>
         <source>&amp;Hatch</source>
-        <translation type="unfinished">Właz</translation>
+        <translation type="unfinished">Kreskuj</translation>
     </message>
     <message>
         <location line="-27"/>
@@ -6736,7 +6736,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchDialog.ui" line="+17"/>
         <source>Hatch</source>
-        <translation type="unfinished">Właz</translation>
+        <translation type="unfinished">Kreskuj</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -6751,7 +6751,7 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+10"/>
         <source>Hatch Pattern</source>
-        <translation type="unfinished">Wzór luk</translation>
+        <translation type="unfinished">Wzór kreskowania</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -6794,12 +6794,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location filename="../scripts/Draw/Hatch/HatchFromSelection/HatchFromSelectionInit.js" line="+2"/>
         <source>&amp;Hatch from Selection</source>
-        <translation>Zakreskuj &amp;zaznaczenie</translation>
+        <translation>&amp;Kreskowanie z wyboru</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Create hatch or solid fill from selected boundary</source>
-        <translation>Zakreskowuje lub wypełnia jednolicie zaznaczony kontur</translation>
+        <translation>Utwórz kreskowanie lub wypełnienie bryłą z wybranej granicy</translation>
     </message>
 </context>
 <context>
@@ -7289,12 +7289,12 @@ BUG: Interferes with group castings.</source>
     <message>
         <location line="+4"/>
         <source>Hatched area:</source>
-        <translation type="unfinished">Obszar zakreskowany:</translation>
+        <translation type="unfinished">Obszar kreskowany:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Total hatched area:</source>
-        <translation type="unfinished">Całkowita powierzchnia zakreskowana:</translation>
+        <translation type="unfinished">Obszar kreskowany ogółem:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9056,7 +9056,7 @@ shown in search results:</source>
     <message>
         <location line="+5"/>
         <source>Middle</source>
-        <translation type="unfinished">Middle</translation>
+        <translation type="unfinished">Środek</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -9264,7 +9264,7 @@ shown in search results:</source>
     <message>
         <location line="+5"/>
         <source>Middle</source>
-        <translation type="unfinished">Middle</translation>
+        <translation type="unfinished">Środek</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -10422,7 +10422,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/File/PdfExport/PdfExportInit.js" line="+2"/>
         <source>P&amp;DF Export</source>
-        <translation type="unfinished">PDF Export</translation>
+        <translation type="unfinished">Eksport P&amp;DF</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -12942,7 +12942,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapMiddle/SnapMiddleInit.js" line="+2"/>
         <source>&amp;Middle</source>
-        <translation type="unfinished">Middle</translation>
+        <translation type="unfinished">&amp;Środek</translation>
     </message>
 </context>
 <context>
@@ -12950,7 +12950,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/Snap/SnapMiddleManual/SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
-        <translation type="unfinished">Middle Manual</translation>
+        <translation type="unfinished">&amp;Środkowy ręczny</translation>
     </message>
 </context>
 <context>
@@ -14958,7 +14958,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/View/Zoom/ZoomIn/ZoomInInit.js" line="+2"/>
         <source>Zoom &amp;In</source>
-        <translation type="unfinished">Powiększenie</translation>
+        <translation type="unfinished">Zblizenie</translation>
     </message>
 </context>
 <context>
@@ -14966,7 +14966,7 @@ shown in search results:</source>
     <message>
         <location filename="../scripts/View/Zoom/ZoomOut/ZoomOutInit.js" line="+2"/>
         <source>Zoom &amp;Out</source>
-        <translation type="unfinished">Zoom Out</translation>
+        <translation type="unfinished">&amp;Oddalenie</translation>
     </message>
 </context>
 <context>
@@ -15275,12 +15275,12 @@ shown in search results:</source>
     <message>
         <location line="+2"/>
         <source>Hatches</source>
-        <translation type="unfinished">Włazy</translation>
+        <translation type="unfinished">Kreskowania</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Hatch</source>
-        <translation type="unfinished">Właz</translation>
+        <translation type="unfinished">Kreskuj</translation>
     </message>
     <message>
         <location line="+2"/>
