@@ -296,7 +296,7 @@ QList<RTextData> RToleranceData::getTextLabels() const {
     if (fields.length()>1 && fields[0].length()>0 && fields[1].length()>0) {
         QString field1 = fields[0][0];
         QString field2 = fields[1][0];
-        QRegExp reg("\\F[gG][dD][tT];", Qt::CaseInsensitive);
+        QRegularExpression reg = RS::createRegEpCI("\\F[gG][dD][tT];");
         field1.replace(reg, "\\Fgdt;");
         field2.replace(reg, "\\Fgdt;");
         if (!field1.isEmpty()) {

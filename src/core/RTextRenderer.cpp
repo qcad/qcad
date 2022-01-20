@@ -37,68 +37,68 @@ QChar RTextRenderer::chPlusMinus = QChar(0x00b1);
 QChar RTextRenderer::chDiameter = QChar(0x00f8);
 
 QString RTextRenderer::rxLineFeedStr = "\\\\p(?:x?i(\\d*\\.?\\d*);)?";
-QRegExp RTextRenderer::rxLineFeed(rxLineFeedStr);
+QRegularExpression RTextRenderer::rxLineFeed(rxLineFeedStr);
 QString RTextRenderer::rxAlignmentLeftStr = "\\\\pql;";
-QRegExp RTextRenderer::rxAlignmentLeft(rxAlignmentLeftStr);
+QRegularExpression RTextRenderer::rxAlignmentLeft(rxAlignmentLeftStr);
 QString RTextRenderer::rxAlignmentCenterStr = "\\\\pqc;";
-QRegExp RTextRenderer::rxAlignmentCenter(rxAlignmentCenterStr);
+QRegularExpression RTextRenderer::rxAlignmentCenter(rxAlignmentCenterStr);
 QString RTextRenderer::rxAlignmentRightStr = "\\\\pqr;";
-QRegExp RTextRenderer::rxAlignmentRight(rxAlignmentRightStr);
+QRegularExpression RTextRenderer::rxAlignmentRight(rxAlignmentRightStr);
 QString RTextRenderer::rxXAlignmentLeftStr = "\\\\pxql;";
-QRegExp RTextRenderer::rxXAlignmentLeft(rxXAlignmentLeftStr);
+QRegularExpression RTextRenderer::rxXAlignmentLeft(rxXAlignmentLeftStr);
 QString RTextRenderer::rxXAlignmentCenterStr = "\\\\pxqc;";
-QRegExp RTextRenderer::rxXAlignmentCenter(rxXAlignmentCenterStr);
+QRegularExpression RTextRenderer::rxXAlignmentCenter(rxXAlignmentCenterStr);
 QString RTextRenderer::rxXAlignmentRightStr = "\\\\pxqr;";
-QRegExp RTextRenderer::rxXAlignmentRight(rxXAlignmentRightStr);
+QRegularExpression RTextRenderer::rxXAlignmentRight(rxXAlignmentRightStr);
 QString RTextRenderer::rxXSpaceMTextStr = "\\\\pxsm(\\d*\\.?\\d*),?[a-z]*;";
-QRegExp RTextRenderer::rxXSpaceMText(rxXSpaceMTextStr);
+QRegularExpression RTextRenderer::rxXSpaceMText(rxXSpaceMTextStr);
 QString RTextRenderer::rxTabMMStr = "\\\\pt(\\d*\\.?\\d*,?)*;";
-QRegExp RTextRenderer::rxTabMM(rxTabMMStr);
+QRegularExpression RTextRenderer::rxTabMM(rxTabMMStr);
 QString RTextRenderer::rxTabINStr = "\\\\pxt(\\d*\\.?\\d*,?)*;";
-QRegExp RTextRenderer::rxTabIN(rxTabINStr);
+QRegularExpression RTextRenderer::rxTabIN(rxTabINStr);
 QString RTextRenderer::rxParagraphFeedStr = "\\\\P";
-QRegExp RTextRenderer::rxParagraphFeed(rxParagraphFeedStr);
+QRegularExpression RTextRenderer::rxParagraphFeed(rxParagraphFeedStr);
 QString RTextRenderer::rxXFeedStr = "\\\\X";
-QRegExp RTextRenderer::rxXFeed(rxXFeedStr);
+QRegularExpression RTextRenderer::rxXFeed(rxXFeedStr);
 QString RTextRenderer::rxHeightChangeStr = "\\\\H(\\d*\\.?\\d*)(x?);";
-QRegExp RTextRenderer::rxHeightChange(rxHeightChangeStr);
+QRegularExpression RTextRenderer::rxHeightChange(rxHeightChangeStr);
 QString RTextRenderer::rxUnderlineChangeStr = "\\\\L|\\\\l";
-QRegExp RTextRenderer::rxUnderlineChange(rxUnderlineChangeStr);
+QRegularExpression RTextRenderer::rxUnderlineChange(rxUnderlineChangeStr);
 //QString RTextRenderer::rxRelativeHeightChange = "";
 QString RTextRenderer::rxStackedTextStr = "\\\\S([^^]*)\\^([^;]*);";
-QRegExp RTextRenderer::rxStackedText(rxStackedTextStr);
+QRegularExpression RTextRenderer::rxStackedText(rxStackedTextStr);
 QString RTextRenderer::rxColorChangeIndexStr = "\\\\C(\\d+);";
-QRegExp RTextRenderer::rxColorChangeIndex(rxColorChangeIndexStr);
+QRegularExpression RTextRenderer::rxColorChangeIndex(rxColorChangeIndexStr);
 QString RTextRenderer::rxColorChangeCustomStr ="\\\\c(\\d+);";
-QRegExp RTextRenderer::rxColorChangeCustom(rxColorChangeCustomStr);
+QRegularExpression RTextRenderer::rxColorChangeCustom(rxColorChangeCustomStr);
 QString RTextRenderer::rxNonBreakingSpaceStr = "\\\\~";
-QRegExp RTextRenderer::rxNonBreakingSpace(rxNonBreakingSpaceStr);
+QRegularExpression RTextRenderer::rxNonBreakingSpace(rxNonBreakingSpaceStr);
 // TODO: break at regular spaces for line breaking:
 //QString RTextRenderer::rxSpaceStr = " ";
 QString RTextRenderer::rxOverlineOnStr = "\\\\O";
-QRegExp RTextRenderer::rxOverlineOn(rxOverlineOnStr);
+QRegularExpression RTextRenderer::rxOverlineOn(rxOverlineOnStr);
 QString RTextRenderer::rxOverlineOffStr = "\\\\o";
-QRegExp RTextRenderer::rxOverlineOff(rxOverlineOffStr);
+QRegularExpression RTextRenderer::rxOverlineOff(rxOverlineOffStr);
 QString RTextRenderer::rxUnderlineOnStr = "\\\\L";
-QRegExp RTextRenderer::rxUnderlineOn(rxUnderlineOnStr);
+QRegularExpression RTextRenderer::rxUnderlineOn(rxUnderlineOnStr);
 QString RTextRenderer::rxUnderlineOffStr = "\\\\l";
-QRegExp RTextRenderer::rxUnderlineOff(rxUnderlineOffStr);
+QRegularExpression RTextRenderer::rxUnderlineOff(rxUnderlineOffStr);
 QString RTextRenderer::rxStrikethroughOnStr = "\\\\K";
-QRegExp RTextRenderer::rxStrikethroughOn(rxStrikethroughOnStr);
+QRegularExpression RTextRenderer::rxStrikethroughOn(rxStrikethroughOnStr);
 QString RTextRenderer::rxStrikethroughOffStr = "\\\\k";
-QRegExp RTextRenderer::rxStrikethroughOff(rxStrikethroughOffStr);
+QRegularExpression RTextRenderer::rxStrikethroughOff(rxStrikethroughOffStr);
 QString RTextRenderer::rxWidthChangeStr = "\\\\W(\\d*\\.?\\d*)x?;";
-QRegExp RTextRenderer::rxWidthChange(rxWidthChangeStr);
+QRegularExpression RTextRenderer::rxWidthChange(rxWidthChangeStr);
 QString RTextRenderer::rxObliqueAngleChangeStr = "\\\\Q(\\d*\\.?\\d*);";
-QRegExp RTextRenderer::rxObliqueAngleChange(rxObliqueAngleChangeStr);
+QRegularExpression RTextRenderer::rxObliqueAngleChange(rxObliqueAngleChangeStr);
 QString RTextRenderer::rxTrackChangeStr = "\\\\T(\\d*\\.?\\d*);";
-QRegExp RTextRenderer::rxTrackChange(rxTrackChangeStr);
+QRegularExpression RTextRenderer::rxTrackChange(rxTrackChangeStr);
 QString RTextRenderer::rxAlignmentChangeStr = "\\\\A(\\d+);";
-QRegExp RTextRenderer::rxAlignmentChange(rxAlignmentChangeStr);
+QRegularExpression RTextRenderer::rxAlignmentChange(rxAlignmentChangeStr);
 QString RTextRenderer::rxFontChangeCadStr = "\\\\F([^|;]*)"    // \Ffont
                                          "[^;]*"            // ignore anything except ";"
                                          ";";               // require ";"
-QRegExp RTextRenderer::rxFontChangeCad(rxFontChangeCadStr);
+QRegularExpression RTextRenderer::rxFontChangeCad(rxFontChangeCadStr);
 QString RTextRenderer::rxFontChangeTtfStr = "\\\\f([^|;]*)"
                                          "(?:\\|+([bicp])(\\d+))?"
                                          "(?:\\|+([bicp])(\\d+))?"
@@ -107,47 +107,47 @@ QString RTextRenderer::rxFontChangeTtfStr = "\\\\f([^|;]*)"
                                          //"\\|*" // optional "|" at end, see FS#1882
                                          "([^;]*)"            // ignore anything except ";"
                                          ";";
-QRegExp RTextRenderer::rxFontChangeTtf(rxFontChangeTtfStr);
+QRegularExpression RTextRenderer::rxFontChangeTtf(rxFontChangeTtfStr);
 QString RTextRenderer::rxBeginBlockStr = "\\{";
-QRegExp RTextRenderer::rxBeginBlock(rxBeginBlockStr);
+QRegularExpression RTextRenderer::rxBeginBlock(rxBeginBlockStr);
 QString RTextRenderer::rxEndBlockStr = "\\}";
-QRegExp RTextRenderer::rxEndBlock(rxEndBlockStr);
+QRegularExpression RTextRenderer::rxEndBlock(rxEndBlockStr);
 QString RTextRenderer::rxBackslashStr = "\\\\\\\\";
-QRegExp RTextRenderer::rxBackslash(rxBackslashStr);
+QRegularExpression RTextRenderer::rxBackslash(rxBackslashStr);
 QString RTextRenderer::rxCurlyOpenStr = "\\\\\\{";
-QRegExp RTextRenderer::rxCurlyOpen(rxCurlyOpenStr);
+QRegularExpression RTextRenderer::rxCurlyOpen(rxCurlyOpenStr);
 QString RTextRenderer::rxCurlyCloseStr = "\\\\\\}";
-QRegExp RTextRenderer::rxCurlyClose(rxCurlyCloseStr);
+QRegularExpression RTextRenderer::rxCurlyClose(rxCurlyCloseStr);
 QString RTextRenderer::rxDegreeStr = "%%[dD]";
-QRegExp RTextRenderer::rxDegree(rxDegreeStr);
+QRegularExpression RTextRenderer::rxDegree(rxDegreeStr);
 QString RTextRenderer::escDegreeStr = "%%d";
-QRegExp RTextRenderer::escDegree(escDegreeStr);
+QRegularExpression RTextRenderer::escDegree(escDegreeStr);
 QString RTextRenderer::rxPlusMinusStr = "%%[pP]";
-QRegExp RTextRenderer::rxPlusMinus(rxPlusMinusStr);
+QRegularExpression RTextRenderer::rxPlusMinus(rxPlusMinusStr);
 QString RTextRenderer::escPlusMinusStr = "%%p";
-QRegExp RTextRenderer::escPlusMinus(escPlusMinusStr);
+QRegularExpression RTextRenderer::escPlusMinus(escPlusMinusStr);
 QString RTextRenderer::rxDiameterStr = "%%[cC]";
-QRegExp RTextRenderer::rxDiameter(rxDiameterStr);
+QRegularExpression RTextRenderer::rxDiameter(rxDiameterStr);
 QString RTextRenderer::escDiameterStr = "%%c";
-QRegExp RTextRenderer::escDiameter(escDiameterStr);
+QRegularExpression RTextRenderer::escDiameter(escDiameterStr);
 QString RTextRenderer::rxUnderlineStr = "%%[uU]";
-QRegExp RTextRenderer::rxUnderline(rxUnderlineStr);
+QRegularExpression RTextRenderer::rxUnderline(rxUnderlineStr);
 QString RTextRenderer::escUnderlineStr = "%%u";
-QRegExp RTextRenderer::escUnderline(escUnderlineStr);
+QRegularExpression RTextRenderer::escUnderline(escUnderlineStr);
 // invalid escape sequence (to replace %%x with "x"):
 QString RTextRenderer::rxNoOpStr = "%%([^uUcCpPdD])";
-QRegExp RTextRenderer::rxNoOp(rxNoOpStr);
+QRegularExpression RTextRenderer::rxNoOp(rxNoOpStr);
 QString RTextRenderer::rxNoOpEndStr = "%%$";
-QRegExp RTextRenderer::rxNoOpEnd(rxNoOpEndStr);
+QRegularExpression RTextRenderer::rxNoOpEnd(rxNoOpEndStr);
 QString RTextRenderer::escNoOpStr = "%%";
-QRegExp RTextRenderer::escNoOp(escNoOpStr);
+QRegularExpression RTextRenderer::escNoOp(escNoOpStr);
 QString RTextRenderer::rxUnicodeStr = "\\\\[Uu]\\+([0-9a-fA-F]{4})";
-QRegExp RTextRenderer::rxUnicode(rxUnicodeStr);
+QRegularExpression RTextRenderer::rxUnicode(rxUnicodeStr);
 // optional break at spaced for wrapped text:
 // TODO: add tabs and other whitespace:
 QString RTextRenderer::rxOptionalBreakStr = "[ ]+";
 //QString RTextRenderer::rxOptionalBreakStr = "[_]+";
-QRegExp RTextRenderer::rxOptionalBreak(rxOptionalBreakStr);
+QRegularExpression RTextRenderer::rxOptionalBreak(rxOptionalBreakStr);
 
 QString rxAllTmp =
       RTextRenderer::rxLineFeedStr + "|"
@@ -192,8 +192,8 @@ QString rxAllTmp =
 
 QString RTextRenderer::rxAllStr = "(" + rxAllTmp + ")";
 QString RTextRenderer::rxAllBreakStr = "(" + rxAllTmp + "|" + RTextRenderer::rxOptionalBreakStr + ")";
-QRegExp RTextRenderer::rxAll(RTextRenderer::rxAllStr);
-QRegExp RTextRenderer::rxAllBreak(RTextRenderer::rxAllBreakStr);
+QRegularExpression RTextRenderer::rxAll(RTextRenderer::rxAllStr);
+QRegularExpression RTextRenderer::rxAllBreak(RTextRenderer::rxAllBreakStr);
 
 QMutex RTextRenderer::m;
 
@@ -308,7 +308,21 @@ void RTextRenderer::renderSimple() {
         // handle underlining formats:
         bool found = true;
         QList<int> underlineOnOff;
-        QRegExp rx(RTextRenderer::rxUnderline);
+        QRegularExpression rx(RTextRenderer::rxUnderline);
+#if QT_VERSION >= 0x060000
+        QRegularExpressionMatch match;
+        while (found) {
+            found = false;
+            int i = RS::indexIn(rx, match, text);
+            int len = RS::matchedLength(rx, match);
+
+            if (i!=-1) {
+                found = true;
+                underlineOnOff.append(i);
+                text.replace(i, len, "");
+            }
+        }
+#else
         while (found) {
             found = false;
             int i = rx.indexIn(text);
@@ -320,6 +334,7 @@ void RTextRenderer::renderSimple() {
                 text.replace(i, len, "");
             }
         }
+#endif
 
         int maxI = text.length()-1;
         QTextCharFormat fUnderlined;
@@ -531,7 +546,7 @@ void RTextRenderer::render() {
     // (\P, \H[0-9]*.?[0-9]+;, \S*/*;, ...)
 
     // split up text at every formatting change:
-    QRegExp rxAllLocal = rxAll;
+    QRegularExpression rxAllLocal = rxAll;
     if (wrap) {
         rxAllLocal = rxAllBreak;
     }
@@ -541,18 +556,19 @@ void RTextRenderer::render() {
     QStringList formattings;
     int pos = 0;
     int i=1;
-    while ((pos = rxAllLocal.indexIn(text, pos)) != -1) {
-        QString formatting = rxAllLocal.cap(1);
+    QRegularExpressionMatch match;
+    while ((pos = RS::indexIn(rxAllLocal, match, text, pos)) != -1) {
+        QString formatting = RS::capture(rxAllLocal, match, 1);
         //qDebug() << "formatting:" << formatting;
 
         // space is literal and also formatting (optional line break):
-        if (rxOptionalBreak.exactMatch(formatting)) {
+        if (RS::exactMatch(rxOptionalBreak, formatting)) {
             literals.insert(i++, formatting);
             formattings.append(formatting);
         }
 
         formattings.append(formatting);
-        pos += rxAllLocal.matchedLength();
+        pos += RS::matchedLength(rxAllLocal, match);
         i++;
     }
 
@@ -719,23 +735,23 @@ void RTextRenderer::render() {
 
         // detect formatting that ends the current text block:
         if (!formatting.isEmpty()) {
-            fontChange = rxFontChangeTtf.exactMatch(formatting) ||
-                rxFontChangeCad.exactMatch(formatting);
-            underlineChange = rxUnderlineChange.exactMatch(formatting);
-            colorChange = rxColorChangeCustom.exactMatch(formatting) ||
-                rxColorChangeIndex.exactMatch(formatting);
-            heightChange = rxHeightChange.exactMatch(formatting);
-            stackedText = rxStackedText.exactMatch(formatting);
-            lineFeed = rxLineFeed.exactMatch(formatting);
-            paragraphFeed = rxParagraphFeed.exactMatch(formatting);
+            fontChange = RS::exactMatch(rxFontChangeTtf, formatting) ||
+                RS::exactMatch(rxFontChangeCad, formatting);
+            underlineChange = RS::exactMatch(rxUnderlineChange, formatting);
+            colorChange = RS::exactMatch(rxColorChangeCustom, formatting) ||
+                RS::exactMatch(rxColorChangeIndex, formatting);
+            heightChange = RS::exactMatch(rxHeightChange, formatting);
+            stackedText = RS::exactMatch(rxStackedText, formatting);
+            lineFeed = RS::exactMatch(rxLineFeed, formatting);
+            paragraphFeed = RS::exactMatch(rxParagraphFeed, formatting);
             if (textData.isDimensionLabel()) {
-                xFeed = rxXFeed.exactMatch(formatting);
+                xFeed = RS::exactMatch(rxXFeed, formatting);
             }
-            blockEnd = rxEndBlock.exactMatch(formatting);
-            optionalBreak = rxOptionalBreak.exactMatch(formatting);
+            blockEnd = RS::exactMatch(rxEndBlock, formatting);
+            optionalBreak = RS::exactMatch(rxOptionalBreak, formatting);
         }
 
-        optionalBreakText = rxOptionalBreak.exactMatch(textBlock);
+        optionalBreakText = RS::exactMatch(rxOptionalBreak, textBlock);
 
         bool start = (i==0);
         bool end = (i==literals.size()-1);
@@ -783,7 +799,7 @@ void RTextRenderer::render() {
 
                     // potential line break:
                     // back up various data to roll back in case of line wrap:
-                    if (rxOptionalBreak.exactMatch(textBlock)) {
+                    if (RS::exactMatch(rxOptionalBreak, textBlock)) {
 //                        qDebug() << "potential break at:" << textBlock << i;
 //                        //qDebug() << "painterPaths:" << painterPaths.length();
 //                        qDebug() << "textLayouts:" << textLayouts.length();
@@ -924,7 +940,8 @@ void RTextRenderer::render() {
 
                 //QRegExp reg(rxStackedText);
                 //reg.setPattern(rxStackedText);
-                rxStackedText.exactMatch(formatting);
+                QRegularExpressionMatch match;
+                RS::exactMatch(rxStackedText, match, formatting);
 
 //                qDebug() << "before: textLayouts.length:" << textLayouts.length();
 //                qDebug() << "before: linePaths.length:" << linePaths.length();
@@ -942,7 +959,7 @@ void RTextRenderer::render() {
 
                     // s==0: superscript, s==1: subscript:
                     for (int s=0; s<=1; ++s) {
-                        QString script = rxStackedText.cap(s+1);
+                        QString script = RS::capture(rxStackedText, match, s+1);
                         if (script.isEmpty()) {
                             continue;
                         }
@@ -1042,8 +1059,8 @@ void RTextRenderer::render() {
 //                qDebug() << "after: lineBlockTransforms.length:" << lineBlockTransforms.length();
 
                 if (target==RichText) {
-                    QString super = rxStackedText.cap(1);
-                    QString sub = rxStackedText.cap(2);
+                    QString super = RS::capture(rxStackedText, match, 1);
+                    QString sub = RS::capture(rxStackedText, match, 2);
                     if (!super.isEmpty()) {
                         richText += QString("<span style=\"vertical-align:super;\">%1</span>").arg(super);
                     }
@@ -1287,14 +1304,17 @@ void RTextRenderer::render() {
 
         // unicode:
         //reg = rxUnicode;
-        if (rxUnicode.exactMatch(formatting)) {
-            textBlock += QChar(rxUnicode.cap(1).toInt(0, 16));
-            continue;
+        {
+            QRegularExpressionMatch match;
+            if (RS::exactMatch(rxUnicode, match, formatting)) {
+                textBlock += QChar(match.captured(1).toInt(0, 16));
+                continue;
+            }
         }
 
 //        // unicode (5 hex digits):
 //        reg.setPattern(rxUnicodeM);
-//        if (reg.exactMatch(formatting)) {
+//        if (RS::exactMatch(reg, formatting)) {
 //            uint code = reg.cap(1).toInt(0, 16);
 //            qDebug() << QString("M code: %1").arg(code, 0, 16);
 //            QString c = QString::fromUcs4(&code, 1);
@@ -1305,42 +1325,42 @@ void RTextRenderer::render() {
 
         // curly braket open:
         //reg = rxCurlyOpen;
-        if (rxCurlyOpen.exactMatch(formatting)) {
+        if (RS::exactMatch(rxCurlyOpen, formatting)) {
             textBlock += "{";
             continue;
         }
 
         // curly braket close:
         //reg.setPattern(rxCurlyClose);
-        if (rxCurlyClose.exactMatch(formatting)) {
+        if (RS::exactMatch(rxCurlyClose, formatting)) {
             textBlock += "}";
             continue;
         }
 
         // degree:
         //reg.setPattern(rxDegree);
-        if (rxDegree.exactMatch(formatting)) {
+        if (RS::exactMatch(rxDegree, formatting)) {
             textBlock += chDegree;
             continue;
         }
 
         // plus/minus:
         //reg.setPattern(rxPlusMinus);
-        if (rxPlusMinus.exactMatch(formatting)) {
+        if (RS::exactMatch(rxPlusMinus, formatting)) {
             textBlock += chPlusMinus;
             continue;
         }
 
         // diameter:
         //reg.setPattern(rxDiameter);
-        if (rxDiameter.exactMatch(formatting)) {
+        if (RS::exactMatch(rxDiameter, formatting)) {
             textBlock += chDiameter;
             continue;
         }
 
         // underlined:
         //reg.setPattern(rxUnderline);
-        if (rxUnderline.exactMatch(formatting)) {
+        if (RS::exactMatch(rxUnderline, formatting)) {
             if (target==RichText) {
                 if (!underline) {
                     richText += QString("<span style=\"text-decoration:underline;\">");
@@ -1358,7 +1378,7 @@ void RTextRenderer::render() {
 
         // underline on:
         //reg.setPattern(rxUnderlineOn);
-        if (rxUnderlineOn.exactMatch(formatting)) {
+        if (RS::exactMatch(rxUnderlineOn, formatting)) {
             setBlockUnderline(true);
 
             if (target==RichText) {
@@ -1371,7 +1391,7 @@ void RTextRenderer::render() {
 
         // underline off:
         //reg.setPattern(rxUnderlineOff);
-        if (rxUnderlineOff.exactMatch(formatting)) {
+        if (RS::exactMatch(rxUnderlineOff, formatting)) {
             setBlockUnderline(false);
 
             if (target==RichText) {
@@ -1384,14 +1404,14 @@ void RTextRenderer::render() {
 
         // backslash:
         //reg.setPattern(rxBackslash);
-        if (rxBackslash.exactMatch(formatting)) {
+        if (RS::exactMatch(rxBackslash, formatting)) {
             textBlock += "\\";
             continue;
         }
 
         // non-breaking space:
         //reg.setPattern(rxNonBreakingSpace);
-        if (rxNonBreakingSpace.exactMatch(formatting)) {
+        if (RS::exactMatch(rxNonBreakingSpace, formatting)) {
             if (target==PainterPaths) {
                 textBlock += QChar(QChar::Nbsp);
             }
@@ -1402,93 +1422,102 @@ void RTextRenderer::render() {
             continue;
         }
 
-        // font change (TTF):
-        //reg.setPattern(rxFontChangeTtf);
-        if (rxFontChangeTtf.exactMatch(formatting)) {
-            setBlockFont(rxFontChangeTtf.cap(1));
-            for (int k=2; k<rxFontChangeTtf.captureCount()-1; k+=2) {
-                // code: i, b, c, p
-                QString code = rxFontChangeTtf.cap(k);
-                // value: 0/1
-                int value = rxFontChangeTtf.cap(k+1).toInt();
+        {
+            // font change (TTF):
+            //reg.setPattern(rxFontChangeTtf);
+            QRegularExpressionMatch match;
+            if (RS::exactMatch(rxFontChangeTtf, match, formatting)) {
+                setBlockFont(match.captured(1));
+                for (int k=2; k<rxFontChangeTtf.captureCount()-1; k+=2) {
+                    // code: i, b, c, p
+                    QString code = match.captured(k);
+                    // value: 0/1
+                    int value = match.captured(k+1).toInt();
 
-                if (code.toLower()=="b") {
-                    setBlockBold(value!=0);
-                }
-                else if (code.toLower()=="i") {
-                    setBlockItalic(value!=0);
-                }
-            }
-            if (getBlockFont()=="gdt") {
-                setUseCadFont(true);
-            }
-            else {
-                setUseCadFont(false);
-            }
-            blockChangedHeightOrFont = true;
-
-            if (target==RichText) {
-                QString style;
-                style += QString("font-family:%1;").arg(getBlockFont());
-                if (!useCadFont.top()) {
-                    style += QString("font-weight:%1;").arg(getBlockBold() ? "bold" : "normal");
-                    style += QString("font-style:%1;").arg(getBlockItalic() ? "italic" : "normal");
-                }
-                richText += QString("<span style=\"%1\">").arg(style);
-                openTags.top().append("span");
-            }
-            continue;
-        }
-
-        // font change (CAD):
-        //reg.setPattern(rxFontChangeCad);
-        if (rxFontChangeCad.exactMatch(formatting)) {
-            setBlockFont(rxFontChangeCad.cap(1));
-            bool prevTtf = !getUseCadFont();
-            setUseCadFont(true);
-            if (xCursor>RS::PointTolerance) {
-                RFont* f = RFontList::get(getBlockFont());
-                if (f!=NULL && f->isValid()) {
-                    if (prevTtf) {
-                        xCursor += f->getLetterSpacing() / 9.0 * getBlockHeight() * textData.getXScale();
+                    if (code.toLower()=="b") {
+                        setBlockBold(value!=0);
+                    }
+                    else if (code.toLower()=="i") {
+                        setBlockItalic(value!=0);
                     }
                 }
-            }
-            blockChangedHeightOrFont = true;
+                if (getBlockFont()=="gdt") {
+                    setUseCadFont(true);
+                }
+                else {
+                    setUseCadFont(false);
+                }
+                blockChangedHeightOrFont = true;
 
-            if (target==RichText) {
-                QString style;
-                style += QString("font-family:%1;").arg(getBlockFont());
-                richText += QString("<span style=\"%1\">").arg(style);
-                openTags.top().append("span");
+                if (target==RichText) {
+                    QString style;
+                    style += QString("font-family:%1;").arg(getBlockFont());
+                    if (!useCadFont.top()) {
+                        style += QString("font-weight:%1;").arg(getBlockBold() ? "bold" : "normal");
+                        style += QString("font-style:%1;").arg(getBlockItalic() ? "italic" : "normal");
+                    }
+                    richText += QString("<span style=\"%1\">").arg(style);
+                    openTags.top().append("span");
+                }
+                continue;
             }
-            continue;
         }
 
-        // height change:
-        //reg.setPattern(rxHeightChange);
-        if (rxHeightChange.exactMatch(formatting)) {
-            bool factor = rxHeightChange.cap(2)=="x";
-
-            if (factor) {
-                if (!blockHeight.isEmpty()) {
-                    setBlockHeight(getBlockHeight() * rxHeightChange.cap(1).toDouble());
+        {
+            // font change (CAD):
+            //reg.setPattern(rxFontChangeCad);
+            QRegularExpressionMatch match;
+            if (RS::exactMatch(rxFontChangeCad, match, formatting)) {
+                setBlockFont(match.captured(1));
+                bool prevTtf = !getUseCadFont();
+                setUseCadFont(true);
+                if (xCursor>RS::PointTolerance) {
+                    RFont* f = RFontList::get(getBlockFont());
+                    if (f!=NULL && f->isValid()) {
+                        if (prevTtf) {
+                            xCursor += f->getLetterSpacing() / 9.0 * getBlockHeight() * textData.getXScale();
+                        }
+                    }
                 }
-            }
-            else {
-                if (!blockHeight.isEmpty()) {
-                    setBlockHeight(rxHeightChange.cap(1).toDouble());
-                }
-            }
-            blockChangedHeightOrFont = true;
+                blockChangedHeightOrFont = true;
 
-            if (target==RichText && !blockHeight.isEmpty() && !openTags.isEmpty()) {
-                QString style;
-                style += QString("font-size:%1pt;").arg(getBlockHeight() * fontHeightFactor);
-                richText += QString("<span style=\"%1\">").arg(style);
-                openTags.top().append("span");
+                if (target==RichText) {
+                    QString style;
+                    style += QString("font-family:%1;").arg(getBlockFont());
+                    richText += QString("<span style=\"%1\">").arg(style);
+                    openTags.top().append("span");
+                }
+                continue;
             }
-            continue;
+        }
+
+        {
+            // height change:
+            //reg.setPattern(rxHeightChange);
+            QRegularExpressionMatch match;
+            if (RS::exactMatch(rxHeightChange, match, formatting)) {
+                bool factor = match.captured(2)=="x";
+
+                if (factor) {
+                    if (!blockHeight.isEmpty()) {
+                        setBlockHeight(getBlockHeight() * match.captured(1).toDouble());
+                    }
+                }
+                else {
+                    if (!blockHeight.isEmpty()) {
+                        setBlockHeight(match.captured(1).toDouble());
+                    }
+                }
+                blockChangedHeightOrFont = true;
+
+                if (target==RichText && !blockHeight.isEmpty() && !openTags.isEmpty()) {
+                    QString style;
+                    style += QString("font-size:%1pt;").arg(getBlockHeight() * fontHeightFactor);
+                    richText += QString("<span style=\"%1\">").arg(style);
+                    openTags.top().append("span");
+                }
+                continue;
+            }
         }
 
         QTextLayout::FormatRange fr;
@@ -1497,7 +1526,7 @@ void RTextRenderer::render() {
 
         // start format block:
         //reg.setPattern(rxBeginBlock);
-        if (rxBeginBlock.exactMatch(formatting)) {
+        if (RS::exactMatch(rxBeginBlock, formatting)) {
             currentFormat.push(getCurrentFormat());
             blockFont.push(getBlockFont());
             blockBold.push(getBlockBold());
@@ -1514,7 +1543,7 @@ void RTextRenderer::render() {
 
         // end format block:
         //reg.setPattern(rxEndBlock);
-        if (rxEndBlock.exactMatch(formatting)) {
+        if (RS::exactMatch(rxEndBlock, formatting)) {
             if (!currentFormat.isEmpty()) {
                 currentFormat.pop();
             }
@@ -1556,39 +1585,43 @@ void RTextRenderer::render() {
             continue;
         }
 
-        // color change (indexed):
-        //reg.setPattern(rxColorChangeIndex);
-        if (rxColorChangeIndex.exactMatch(formatting)) {
-            RColor blockColor = RColor::createFromCadIndex(rxColorChangeIndex.cap(1));
-            //qDebug() << "block color:" << blockColor;
-            if (!currentFormat.isEmpty()) {
-                //qDebug() << "001";
-                if (blockColor.isByLayer()) {
-                    currentFormat.top().setForeground(RColor::CompatByLayer);
-                } else if (blockColor.isByBlock()) {
-                    currentFormat.top().setForeground(RColor::CompatByBlock);
+        {
+            // color change (indexed):
+            //reg.setPattern(rxColorChangeIndex);
+            QRegularExpressionMatch match;
+            if (RS::exactMatch(rxColorChangeIndex, match, formatting)) {
+                RColor blockColor = RColor::createFromCadIndex(match.captured(1));
+                //qDebug() << "block color:" << blockColor;
+                if (!currentFormat.isEmpty()) {
+                    //qDebug() << "001";
+                    if (blockColor.isByLayer()) {
+                        currentFormat.top().setForeground(RColor::CompatByLayer);
+                    } else if (blockColor.isByBlock()) {
+                        currentFormat.top().setForeground(RColor::CompatByBlock);
+                    }
+                    else {
+                        currentFormat.top().setForeground(blockColor);
+                    }
+                    fr.format = currentFormat.top();
+                    formats.append(fr);
+                    //qDebug() << "appending format 2:" << fr.format.foreground();
                 }
-                else {
-                    currentFormat.top().setForeground(blockColor);
-                }
-                fr.format = currentFormat.top();
-                formats.append(fr);
-                //qDebug() << "appending format 2:" << fr.format.foreground();
-            }
 
-            if (target==RichText && !openTags.isEmpty()) {
-                QString style;
-                style += QString("color:%1;").arg(blockColor.name());
-                richText += QString("<span style=\"%1\">").arg(style);
-                openTags.top().append("span");
+                if (target==RichText && !openTags.isEmpty()) {
+                    QString style;
+                    style += QString("color:%1;").arg(blockColor.name());
+                    richText += QString("<span style=\"%1\">").arg(style);
+                    openTags.top().append("span");
+                }
+                continue;
             }
-            continue;
         }
 
         // color change (custom):
         //reg.setPattern(rxColorChangeCustom);
-        if (rxColorChangeCustom.exactMatch(formatting)) {
-            RColor blockColor = RColor::createFromCadCustom(rxColorChangeCustom.cap(1));
+        QRegularExpressionMatch match;
+        if (RS::exactMatch(rxColorChangeCustom, match, formatting)) {
+            RColor blockColor = RColor::createFromCadCustom(RS::capture(rxColorChangeCustom, match, 1));
             if (!currentFormat.isEmpty()) {
                 currentFormat.top().setForeground(blockColor);
                 fr.format = currentFormat.top();
@@ -1606,7 +1639,7 @@ void RTextRenderer::render() {
             continue;
         }
 
-//        if (rxOptionalBreak.exactMatch(textBlock)) {
+//        if (RS::exactMatch(rxOptionalBreak, textBlock)) {
 //            qDebug() << "potential break at:" << textBlock << i;
 //            qDebug() << "painterPaths:" << painterPaths.length();
 //            //breakPointPainterPathsLength = painterPaths.length();
@@ -2208,6 +2241,6 @@ QString RTextRenderer::getRichTextForBlock(
 
     Q_UNUSED(formats)
 
-    return Qt::escape(blockText).replace(' ', "&nbsp;");
+    return RS::escape(blockText).replace(' ', "&nbsp;");
     //return blockText;
 }

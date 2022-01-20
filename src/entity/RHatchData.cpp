@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include <QPen>
+#include <QElapsedTimer>
 
 #include "RArc.h"
 #include "RCircle.h"
@@ -685,7 +686,7 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft, double pixelSizeHint
     QList<RLine> boundaryEdges = boundaryBox.getLines2d();
     QList<RVector> boundaryCorners = boundaryBox.getCorners2d();
 
-    QTime timer;
+    QElapsedTimer timer;
     timer.start();
     int timeOut = -1;
 

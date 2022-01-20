@@ -37,7 +37,7 @@ RFontChooserWidget::RFontChooserWidget(QWidget *parent) :
             NULL) {
 
     QGridLayout* layout = new QGridLayout;
-    layout->setMargin(0);
+    layout->setContentsMargins(0,0,0,0);
 
     lbLabel = new QLabel("");
     layout->addWidget(lbLabel, 0,0);

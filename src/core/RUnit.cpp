@@ -429,7 +429,11 @@ QString RUnit::formatScientific(double length, RS::Unit unit,
 
     char format[128];
     sprintf(format, "%%.%dE%%s", prec);
+#if QT_VERSION >= 0x060000
+    ret.asprintf(format, length, (const char*)unitString.toLatin1());
+#else
     ret.sprintf(format, length, (const char*)unitString.toLatin1());
+#endif
 
     return ret;
 }
@@ -658,6 +662,23 @@ QString RUnit::formatFractional(double length, RS::Unit /*unit*/,
 
     QString ret;
 
+#if QT_VERSION >= 0x060000
+    if (num!=0 && nominator!=0 ) {
+        ret.asprintf("%s%d %d/%d",
+                    (const char*)neg.toLatin1(), num,
+                    nominator, denominator);
+    } else if(nominator!=0) {
+        ret.asprintf("%s%d/%d",
+                    (const char*)neg.toLatin1(),
+                    nominator, denominator);
+    } else if(num!=0) {
+        ret.asprintf("%s%d",
+                    (const char*)neg.toLatin1(),
+                    num);
+    } else {
+        ret.asprintf("0");
+    }
+#else
     if (num!=0 && nominator!=0 ) {
         ret.sprintf("%s%d %d/%d",
                     (const char*)neg.toLatin1(), num,
@@ -673,6 +694,7 @@ QString RUnit::formatFractional(double length, RS::Unit /*unit*/,
     } else {
         ret.sprintf("0");
     }
+#endif
 
     return ret;
 }
@@ -805,7 +827,11 @@ QString RUnit::doubleToString(double value, double prec,
     dotPos = exaStr.indexOf('.');
 
     if (dotPos==-1) {
+#if QT_VERSION >= 0x060000
+        ret.asprintf("%d", RMath::mround(num*prec));
+#else
         ret.sprintf("%d", RMath::mround(num*prec));
+#endif
     } else {
         int digits = exaStr.length() - dotPos - 1;
         // num*prec to allow rounding to multiples of 0.2 or 0.5, etc.
@@ -844,7 +870,11 @@ QString RUnit::doubleToString(double value, int prec,
         fuzz*=-1;
     }
 
+#if QT_VERSION >= 0x060000
+    ret.asprintf(formatString.toLatin1(), value + fuzz);
+#else
     ret.sprintf(formatString.toLatin1(), value + fuzz);
+#endif
     //ret = "%1".arg(value+fuzz, 0, 'f', prec);
 
     if (!showTrailingZeroes) {

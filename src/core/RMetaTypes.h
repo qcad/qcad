@@ -112,7 +112,6 @@
 #include <QTemporaryFile>
 #include <QTextCharFormat>
 #include <QTextBrowser>
-#include <QTextCodec>
 #include <QTextEdit>
 #include <QTextLayout>
 #include <QThread>
@@ -128,10 +127,7 @@
 #include <QVector>
 #include <QWheelEvent>
 #include <QWidget>
-#include <QXmlContentHandler>
-#include <QXmlResultItems>
 #include <QXmlStreamWriter>
-#include <QXmlQuery>
 
 //#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
 //#  if QT_VERSION <= 0x050500
@@ -276,7 +272,6 @@ Q_DECLARE_METATYPE(QTabletEvent*)
 Q_DECLARE_METATYPE(QTemporaryFile*)
 Q_DECLARE_METATYPE(QTextCharFormat*)
 Q_DECLARE_METATYPE(QTextBrowser*)
-Q_DECLARE_METATYPE(QTextCodec*)
 Q_DECLARE_METATYPE(QTextEdit*)
 Q_DECLARE_METATYPE(QTextLayout*)
 Q_DECLARE_METATYPE(QSharedPointer<QTextLayout>)
@@ -300,11 +295,7 @@ Q_DECLARE_METATYPE(QVariant*)
 //#endif
 Q_DECLARE_METATYPE(QWheelEvent*)
 Q_DECLARE_METATYPE(QWidget*)
-Q_DECLARE_METATYPE(QXmlQuery)
-Q_DECLARE_METATYPE(QXmlQuery*)
 Q_DECLARE_METATYPE(QXmlStreamWriter*)
-Q_DECLARE_METATYPE(QXmlContentHandler*)
-Q_DECLARE_METATYPE(QXmlResultItems*)
 
 Q_DECLARE_METATYPE(QFlags<Qt::MouseButton>)
 Q_DECLARE_METATYPE(QFlags<Qt::KeyboardModifier>)
@@ -339,7 +330,6 @@ typedef QMap<int, QSet<int> > _RMapIntSetInt;
 Q_DECLARE_METATYPE(_RMapIntSetInt)
 Q_DECLARE_METATYPE(_RMapIntSetInt*)
 
-Q_DECLARE_METATYPE(QVector<qreal>)
 Q_DECLARE_METATYPE(QVector<qreal>*)
 Q_DECLARE_METATYPE(QVector<float>)
 Q_DECLARE_METATYPE(QVector<float>*)
@@ -362,9 +352,6 @@ Q_DECLARE_METATYPE(Qt::ItemDataRole)
 Q_DECLARE_METATYPE(Qt::WindowFlags)
 Q_DECLARE_METATYPE(Qt::WidgetAttribute)
 Q_DECLARE_METATYPE(Qt::WidgetAttribute*)
-#if !defined(Q_OS_IOS)
-Q_DECLARE_METATYPE(QPrinter::PaperSize)
-#endif
 Q_DECLARE_METATYPE(QVariant::Type)
 Q_DECLARE_METATYPE(QAbstractItemView::ScrollHint)
 Q_DECLARE_METATYPE(QEasingCurve::Type)
@@ -376,5 +363,26 @@ Q_DECLARE_METATYPE(QSet<int>)
 Q_DECLARE_METATYPE(QSet<int>*)
 
 //Q_DECLARE_METATYPE(QtScriptShell_QListView*)
+
+
+#if QT_VERSION >= 0x060000
+#else
+#include <QTextCodec>
+#include <QXmlContentHandler>
+#include <QXmlResultItems>
+#include <QXmlQuery>
+
+Q_DECLARE_METATYPE(QVector<qreal>)
+Q_DECLARE_METATYPE(QTextCodec*)
+Q_DECLARE_METATYPE(QXmlQuery)
+Q_DECLARE_METATYPE(QXmlQuery*)
+Q_DECLARE_METATYPE(QXmlContentHandler*)
+Q_DECLARE_METATYPE(QXmlResultItems*)
+
+#if !defined(Q_OS_IOS)
+Q_DECLARE_METATYPE(QPrinter::PaperSize)
+#endif
+#endif
+
 
 #endif

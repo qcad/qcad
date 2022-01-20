@@ -1262,10 +1262,18 @@ bool RSpline::reverse() {
     int k;
     if (!isClosed()) {
         for (k = 0; k < controlPoints.size()/2; k++) {
+#if QT_VERSION >= 0x060000
+            controlPoints.swapItemsAt(k,controlPoints.size()-(1+k));
+#else
             controlPoints.swap(k,controlPoints.size()-(1+k));
+#endif
         }
         for (k = 0; k < fitPoints.size()/2; k++) {
+#if QT_VERSION >= 0x060000
+            fitPoints.swapItemsAt(k,fitPoints.size()-(1+k));
+#else
             fitPoints.swap(k,fitPoints.size()-(1+k));
+#endif
         }
         double t;
         int i, j;
@@ -1281,14 +1289,22 @@ bool RSpline::reverse() {
     else {
         if (hasFitPoints()) {
             for (k = 0; k < (int)floor(fitPoints.size()/2.0); k++) {
+#if QT_VERSION >= 0x060000
+                fitPoints.swapItemsAt(k,fitPoints.size()-(1+k));
+#else
                 fitPoints.swap(k,fitPoints.size()-(1+k));
+#endif
             }
             // keep start node the same:
             fitPoints.prepend(fitPoints.takeLast());
         }
         else {
             for (k = 0; k < controlPoints.size()/2; k++) {
+#if QT_VERSION >= 0x060000
+                controlPoints.swapItemsAt(k,controlPoints.size()-(1+k));
+#else
                 controlPoints.swap(k,controlPoints.size()-(1+k));
+#endif
             }
         }
         updateTangentsPeriodic();
@@ -1887,14 +1903,14 @@ QList<QSharedPointer<RShape> > RSpline::splitAt(const QList<RVector>& points) co
 
     QList<QSharedPointer<RShape> > ret;
 
-    QMap<double, RVector> sortable;
+    QMultiMap<double, RVector> sortable;
     for (int i=0; i<points.length(); i++) {
         double t = getTAtPoint(points[i]);
         sortable.insert(t, points[i]);
     }
 
     QList<double> keys = sortable.keys();
-#if QT_VERSION > 0x050000
+#if QT_VERSION >= 0x060000
     std::sort(keys.begin(), keys.end());
 #else
     qSort(keys);

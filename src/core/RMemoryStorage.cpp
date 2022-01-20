@@ -19,15 +19,6 @@
 
 #include <QtGlobal>
 
-#if QT_VERSION >= 0x050000
-#  include <QRegularExpression>
-#else
-#  include <QRegExp>
-#  ifndef QRegularExpression
-#    define QRegularExpression QRegExp
-#  endif
-#endif
-
 #include "RMemoryStorage.h"
 #include "RSettings.h"
 #include "RS.h"
@@ -193,7 +184,7 @@ QSet<RObject::Id> RMemoryStorage::queryAllObjects() const {
  */
 QSet<REntity::Id> RMemoryStorage::queryAllVisibleEntities() {
     updateVisibleCache();
-    return visibleEntityMap.keys().toSet();
+    return RS::toSet<REntity::Id>(visibleEntityMap.keys());
 
     /*
     QSet<REntity::Id> result;
@@ -540,7 +531,7 @@ void RMemoryStorage::updateSelectedEntityMap() const {
 QSet<REntity::Id> RMemoryStorage::querySelectedEntities() const {
     updateSelectedEntityMap();
 
-    return selectedEntityMap.keys().toSet();
+    return RS::toSet<REntity::Id>(selectedEntityMap.keys());
 }
 
 void RMemoryStorage::updateSelectedLayerMap() const {
@@ -566,7 +557,7 @@ void RMemoryStorage::updateSelectedLayerMap() const {
 QSet<RObject::Id> RMemoryStorage::querySelectedLayers() const {
     updateSelectedLayerMap();
 
-    return selectedLayerMap.keys().toSet();
+    return RS::toSet<RObject::Id>(selectedLayerMap.keys());
 }
 
 QSet<REntity::Id> RMemoryStorage::queryLayerEntities(RLayer::Id layerId, bool allBlocks) {
@@ -650,7 +641,7 @@ QSet<REntity::Id> RMemoryStorage::queryChildEntities(REntity::Id parentId, RS::E
     }
 
     QList<REntity::Id> childIds = childMap.values(parentId);
-    return childIds.toSet();
+    return RS::toSet<REntity::Id>(childIds);
 
     /*
     QSet<REntity::Id> result; // = queryBlockEntities(blockRef->getReferencedBlockId());
@@ -1125,13 +1116,13 @@ QString RMemoryStorage::getBlockNameFromLayout(RLayout::Id layoutId) const {
 }
 
 QSet<QString> RMemoryStorage::getBlockNames(const QString& rxStr) const {
-    QRegExp rx(rxStr);
+    QRegularExpression rx(rxStr);
     QSet<QString> ret;
     QHash<RObject::Id, QSharedPointer<RBlock> >::const_iterator it;
     for (it = blockMap.constBegin(); it != blockMap.constEnd(); ++it) {
         QSharedPointer<RBlock> b = *it;
         if (!b.isNull() && !b->isUndone()) {
-            if (rx.isEmpty() || rx.exactMatch(b->getName())) {
+            if (rxStr.isEmpty() || RS::exactMatch(rx, b->getName())) {
                 ret.insert(b->getName());
             }
         }
@@ -2105,13 +2096,13 @@ QString RMemoryStorage::getLayerName(RLayer::Id layerId) const {
 }
 
 QSet<QString> RMemoryStorage::getLayerNames(const QString& rxStr) const {
-    QRegExp rx(rxStr);
+    QRegularExpression rx(rxStr);
     QSet<QString> ret;
     QHash<RObject::Id, QSharedPointer<RLayer> >::const_iterator it;
     for (it = layerMap.constBegin(); it != layerMap.constEnd(); ++it) {
         QSharedPointer<RLayer> l = *it;
         if (!l.isNull() && !l->isUndone()) {
-            if (rx.isEmpty() || rx.exactMatch(l->getName())) {
+            if (rxStr.isEmpty() || RS::exactMatch(rx, l->getName())) {
                 ret.insert(l->getName());
             }
         }
@@ -2136,13 +2127,13 @@ QString RMemoryStorage::getLayerStateName(RLayerState::Id layerStateId) const {
 }
 
 QSet<QString> RMemoryStorage::getLayerStateNames(const QString& rxStr) const {
-    QRegExp rx(rxStr);
+    QRegularExpression rx(rxStr);
     QSet<QString> ret;
     QHash<RObject::Id, QSharedPointer<RLayerState> >::const_iterator it;
     for (it = layerStateMap.constBegin(); it != layerStateMap.constEnd(); ++it) {
         QSharedPointer<RLayerState> l = *it;
         if (!l.isNull() && !l->isUndone()) {
-            if (rx.isEmpty() || rx.exactMatch(l->getName())) {
+            if (rxStr.isEmpty() || RS::exactMatch(rx, l->getName())) {
                 ret.insert(l->getName());
             }
         }
@@ -2167,13 +2158,13 @@ QString RMemoryStorage::getLayoutName(RLayout::Id layoutId) const {
 }
 
 QSet<QString> RMemoryStorage::getLayoutNames(const QString& rxStr) const {
-    QRegExp rx(rxStr);
+    QRegularExpression rx(rxStr);
     QSet<QString> ret;
     QHash<RObject::Id, QSharedPointer<RLayout> >::const_iterator it;
     for (it = layoutMap.constBegin(); it != layoutMap.constEnd(); ++it) {
         QSharedPointer<RLayout> l = *it;
         if (!l.isNull() && !l->isUndone()) {
-            if (rx.isEmpty() || rx.exactMatch(l->getName())) {
+            if (rxStr.isEmpty() || RS::exactMatch(rx, l->getName())) {
                 ret.insert(l->getName());
             }
         }

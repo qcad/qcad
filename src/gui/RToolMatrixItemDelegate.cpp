@@ -114,8 +114,12 @@ void RToolMatrixItemDelegate::paint(QPainter* painter, const QStyleOptionViewIte
 
         // draw text
         QRect textrect = QRect(r.left() + i*2, r.top(), r.width() - ((5*i)/2), r.height());
+#if QT_VERSION >= 0x060000
+        QString text = option.fontMetrics.elidedText(model->data(index, Qt::DisplayRole).toString(), Qt::ElideMiddle, textrect.width());
+#else
         QString text = elidedText(option.fontMetrics, textrect.width(), Qt::ElideMiddle,
             model->data(index, Qt::DisplayRole).toString());
+#endif
         treeView->style()->drawItemText(painter, textrect, Qt::AlignCenter,
             option.palette, treeView->isEnabled(), text);
 

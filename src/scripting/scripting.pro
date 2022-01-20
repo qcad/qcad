@@ -1,5 +1,7 @@
 include( ../../shared.pri )
 
-SUBDIRS = ecmaapi
+lessThan(QT_MAJOR_VERSION, 6) {
+    SUBDIRS = ecmaapi
+}
 
 TEMPLATE = subdirs

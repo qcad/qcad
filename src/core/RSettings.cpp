@@ -31,13 +31,8 @@
 #if QT_VERSION >= 0x050000
 #  include <QWindow>
 #  include <QStandardPaths>
-#  include <QRegularExpression>
 #else
 #  include <QDesktopServices>
-#  include <QRegExp>
-#  ifndef QRegularExpression
-#    define QRegularExpression QRegExp
-#  endif
 #endif
 
 #include "RDebug.h"
@@ -101,9 +96,9 @@ int RSettings::maxReferencePointEntities = -1;
 int RSettings::maxReferencePointEntitiesDisplay = -1;
 int RSettings::propertyEditorShowOnRequest = -1;
 int RSettings::simpleTextAlignLeft = -1;
-QString RSettings::polarCoordinateSeparator = QString::null;
-QString RSettings::cartesianCoordinateSeparator = QString::null;
-QString RSettings::relativeCoordinatePrefix = QString::null;
+QString RSettings::polarCoordinateSeparator = QString();
+QString RSettings::cartesianCoordinateSeparator = QString();
+QString RSettings::relativeCoordinatePrefix = QString();
 QStringList RSettings::recentFiles;
 QLocale* RSettings::numberLocale = NULL;
 QString RSettings::applicationNameOverride;
@@ -473,7 +468,9 @@ QString RSettings::getCacheLocation() {
  * \return Standard path for user data.
  */
 QString RSettings::getDataLocation() {
-#if QT_VERSION >= 0x050000
+#if QT_VERSION >= 0x060000
+    return RSettings::getStandardLocation(QStandardPaths::AppDataLocation);
+#elif QT_VERSION >= 0x050000
     return RSettings::getStandardLocation(QStandardPaths::DataLocation);
 #else
     return RSettings::getStandardLocation(QDesktopServices::DataLocation);
@@ -1799,9 +1796,9 @@ void RSettings::resetCache() {
     ignoreAllReferencePoints = -1;
     referencePointSize = -1;
     referencePointShape = -1;
-    cartesianCoordinateSeparator = QString::null;
-    polarCoordinateSeparator = QString::null;
-    relativeCoordinatePrefix = QString::null;
+    cartesianCoordinateSeparator = QString();
+    polarCoordinateSeparator = QString();
+    relativeCoordinatePrefix = QString();
     mouseThreshold = -1;
     themePath = QString();
     cache.clear();

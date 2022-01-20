@@ -141,7 +141,7 @@ private:
     QCursor lastCursor;
 
     bool gesturesEnabled;
-    QTime mouseClickTimer;
+    QElapsedTimer mouseClickTimer;
     RVector mousePressScreenPosition;
     RVector mousePressModelPosition;
     bool gotMouseButtonPress;

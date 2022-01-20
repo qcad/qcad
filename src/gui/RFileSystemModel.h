@@ -23,6 +23,7 @@
 #include "gui_global.h"
 
 #include <QFileSystemModel>
+#include <QFileIconProvider>
 
 #define RDEFAULT_QMODELINDEX QModelIndex()
 

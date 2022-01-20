@@ -274,7 +274,7 @@ void RClipboardOperation::copy(RDocument& src, RDocument& dest,
                 continue;
             }
 
-            QList<REntity::Id> blockEntityIds = src.queryBlockEntities(blockId).toList();
+            QList<REntity::Id> blockEntityIds = RS::toList(src.queryBlockEntities(blockId));
 
             if (blockEntityIds.isEmpty()) {
                 //copyBlock(blockId, src, dest, overwriteBlocks, toCurrentBlock, blockName, transaction);
@@ -292,7 +292,7 @@ void RClipboardOperation::copy(RDocument& src, RDocument& dest,
                 continue;
             }
 
-            QList<REntity::Id> blockEntityIds = src.queryBlockEntities(blockId).toList();
+            QList<REntity::Id> blockEntityIds = RS::toList(src.queryBlockEntities(blockId));
 
             if (!blockEntityIds.isEmpty()) {
                 bool first = true;

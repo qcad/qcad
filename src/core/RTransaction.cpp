@@ -111,7 +111,7 @@ RTransaction::RTransaction(
 //        parent->appendChild(*this);
 //    }
 
-    affectedObjectIdsSet = affectedObjectIds.toSet();
+    affectedObjectIdsSet = RS::toSet(affectedObjectIds);
 }
 
 

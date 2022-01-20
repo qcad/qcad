@@ -26,8 +26,11 @@
 RWheelEvent::RWheelEvent(const RVector& position, int delta,
         Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,
         Qt::Orientation orient, RGraphicsScene& s, RGraphicsView& v) :
-    QWheelEvent(QPoint(position.x, position.y), delta, buttons, modifiers,
-            orient),
+#if QT_VERSION >= 0x060000
+    QWheelEvent(QPointF(position.x, position.y), QPointF(position.x, position.y), QPoint(delta, delta), QPoint(0,0), buttons, modifiers, Qt::NoScrollPhase, false),
+#else
+    QWheelEvent(QPoint(position.x, position.y), delta, buttons, modifiers, orient),
+#endif
     RInputEvent(position, s, v) {
 
 }
@@ -35,7 +38,11 @@ RWheelEvent::RWheelEvent(const RVector& position, int delta,
 RWheelEvent::RWheelEvent(const QWheelEvent& wheelEvent, RGraphicsScene& s,
         RGraphicsView& v, qreal devicePixelRatio) :
     QWheelEvent(wheelEvent),
+#if QT_VERSION >= 0x060000
+    RInputEvent(RVector(wheelEvent.position().x(), wheelEvent.position().y()), s, v, devicePixelRatio) {
+#else
     RInputEvent(RVector(wheelEvent.pos().x(), wheelEvent.pos().y()), s, v, devicePixelRatio) {
+#endif
 }
 
 RWheelEvent::~RWheelEvent() {

@@ -18,7 +18,7 @@
  */
 #include <QFileInfo>
 #include <QStringList>
-#include <QTextCodec>
+//#include <QTextCodec>
 #include <QTextStream>
 
 #include "RArc.h"
@@ -46,7 +46,7 @@ QList<QPair<QString, RPattern*> > RPattern::loadAllFrom(const QString& fileName)
     }
 
     QTextStream ts(&file);
-    ts.setCodec("UTF-8");
+    RS::setUtf8Codec(ts);
     QString line;
     RPattern* pattern = NULL;
 
@@ -71,10 +71,18 @@ QList<QPair<QString, RPattern*> > RPattern::loadAllFrom(const QString& fileName)
 
         // name / description:
         if (line.at(0)=='*') {
-            QRegExp rx("\\*([^,]*)(?:,\\s*(.*))?", Qt::CaseSensitive, QRegExp::RegExp2);
+#if QT_VERSION >= 0x060000
+            QRegularExpression rx("\\*([^,]*)(?:,\\s*(.*))?");
+            QRegularExpressionMatch match;
+            line.indexOf(rx, 0, &match);
+            QString name = match.captured(1);
+            QString description = match.captured(2);
+#else
+            QRegularExpression rx("\\*([^,]*)(?:,\\s*(.*))?", Qt::CaseSensitive, QRegExp::RegExp2);
             rx.indexIn(line);
             QString name = rx.cap(1);
             QString description = rx.cap(2);
+#endif
             pattern = new RPattern(name, description);
             ret.append(qMakePair(name, pattern));
             continue;
@@ -82,7 +90,13 @@ QList<QPair<QString, RPattern*> > RPattern::loadAllFrom(const QString& fileName)
 
         // pattern line definition:
         if (pattern!=NULL) {
-            QStringList parts = line.split(',', QString::SkipEmptyParts);
+            QStringList parts = line.split(',',
+#if QT_VERSION >= 0x060000
+                                           Qt::SkipEmptyParts
+#else
+                                           QString::SkipEmptyParts
+#endif
+                                           );
             if (parts.length()<5) {
                 // 20160906: silently ignore invalid lines:
                 //qWarning() << "RPattern::loadAllFrom: ignoring line: " << line << " in pattern " << fileName;

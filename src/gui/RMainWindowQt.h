@@ -23,6 +23,7 @@
 #include "gui_global.h"
 
 #include <QDockWidget>
+#include <QElapsedTimer>
 #include <QMainWindow>
 #include <QKeyEvent>
 #include <QToolBar>
@@ -202,7 +203,7 @@ protected:
     int disableCounter;
 
     QString keyLog;
-    QTime keyTimeOut;
+    QElapsedTimer keyTimeOut;
 
 //private:
 //    bool objectWasDestroyed;

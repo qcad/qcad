@@ -19,7 +19,11 @@
 #include <QDir>
 #include <QList>
 #include <QFileInfo>
-#include <QTextCodec>
+#if QT_VERSION >= 0x060000
+#  include <QStringConverter>
+#else
+#  include <QTextCodec>
+#endif
 #include <QMultiMap>
 #include  <QDebug>
 
@@ -808,14 +812,16 @@ void RDxfImporter::addMText(const DL_MTextData& data) {
         QString dwgCodePage = vDwgCodePage.toString();
         QString enc = getEncoding(dwgCodePage);
 
-        // get the text codec:
-        QTextCodec* codec = QTextCodec::codecForName(enc.toLatin1());
-        if (codec!=NULL) {
-            mtextString = codec->toUnicode(mtext);
-        }
-        else {
-            qWarning() << "RDxfImporter::addMText: unsupported text codec: " << enc;
-        }
+        mtextString = RS::convert(mtext, enc);
+
+//        // get the text codec:
+//        QTextCodec* codec = QTextCodec::codecForName(enc.toLatin1());
+//        if (codec!=NULL) {
+//            mtextString = codec->toUnicode(mtext);
+//        }
+//        else {
+//            qWarning() << "RDxfImporter::addMText: unsupported text codec: " << enc;
+//        }
     }
 
     // use default style for the drawing:
@@ -1668,7 +1674,7 @@ QString RDxfImporter::getEncoding(const QString& str) {
 
 QString RDxfImporter::getXDataString(const QString& appId, int code, int pos) {
     if (!xData.contains(appId)) {
-        return QString::null;
+        return QString();
     }
 
     int c = 0;
@@ -1678,7 +1684,7 @@ QString RDxfImporter::getXDataString(const QString& appId, int code, int pos) {
         }
     }
 
-    return QString::null;
+    return QString();
 }
 
 int RDxfImporter::getXDataInt(const QString& appId, int code, int pos) {

@@ -87,7 +87,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
             continue;
         }
 
-        idsList.append(ids.keys().toSet());
+        idsList.append(RS::toSet(ids.keys()));
 
         foundEntities = true;
 

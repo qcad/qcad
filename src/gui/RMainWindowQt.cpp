@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 #include <QtGui>
-#include <QDesktopWidget>
+//#include <QDesktopWidget>
 #include <QLabel>
 #include <QLineEdit>
 #include <QMenu>
@@ -582,8 +582,8 @@ bool RMainWindowQt::readSettings() {
 
     // get total available width on all screens:
     int totalWidth = 0;
-    for (int i=0; i<QApplication::desktop()->screenCount(); i++) {
-        totalWidth+=QApplication::desktop()->availableGeometry(i).width();
+    for (int i=0; i<RS::getScreenCount(); i++) {
+        totalWidth+=RS::getAvailableGeometry(i).width();
     }
 
     // sanity check for x:

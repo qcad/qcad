@@ -205,12 +205,12 @@ RLinetypePattern RStorage::getCurrentLinetypePattern() const {
 }
 
 bool RStorage::hasView(const QString& viewName) const {
-    QStringList sl = getViewNames().toList();
+    QStringList sl = RS::toList<QString>(getViewNames());
     return sl.contains(viewName, Qt::CaseInsensitive);
 }
 
 bool RStorage::hasLayer(const QString& layerName) const {
-    QStringList sl = getLayerNames().toList();
+    QStringList sl = RS::toList<QString>(getLayerNames());
     return sl.contains(layerName, Qt::CaseInsensitive);
 }
 
@@ -219,22 +219,22 @@ bool RStorage::hasLayerStates() const {
 }
 
 bool RStorage::hasLayerState(const QString& layerStateName) const {
-    QStringList sl = getLayerStateNames().toList();
+    QStringList sl = RS::toList<QString>(getLayerStateNames());
     return sl.contains(layerStateName, Qt::CaseInsensitive);
 }
 
 bool RStorage::hasLayout(const QString& layoutName) const {
-    QStringList sl = getLayoutNames().toList();
+    QStringList sl = RS::toList<QString>(getLayoutNames());
     return sl.contains(layoutName, Qt::CaseInsensitive);
 }
 
 bool RStorage::hasBlock(const QString& blockName) const {
-    QStringList sl = getBlockNames().toList();
+    QStringList sl = RS::toList<QString>(getBlockNames());
     return sl.contains(blockName, Qt::CaseInsensitive);
 }
 
 bool RStorage::hasLinetype(const QString& linetypeName) const {
-    QStringList sl = getLinetypeNames().toList();
+    QStringList sl = RS::toList<QString>(getLinetypeNames());
     return sl.contains(linetypeName, Qt::CaseInsensitive);
 }
 
