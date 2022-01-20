@@ -72,7 +72,8 @@ void RLinetypeCombo::reinit() {
             continue;
         }
 
-        v.setValue<RLinetypePattern>(p);
+        //v.setValue<RLinetypePattern>(p);
+        v.setValue(p);
         addItem(p.getLabel(), v);
     }
 

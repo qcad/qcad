@@ -3,7 +3,9 @@
 
 #include <QDebug>
 #include <QObject>
+#if QT_VERSION < 0x060000
 #include <QScriptEngine>
+#endif
 #include <QStringList>
 
 #include "RPluginInterface.h"
@@ -22,7 +24,9 @@ public:
     virtual bool init();
     virtual void uninit(bool) {}
     virtual void postInit(InitStatus) {}
+#if QT_VERSION < 0x060000
     virtual void initScriptExtensions(QScriptEngine& engine);
+#endif
     virtual void initTranslations();
     virtual RPluginInfo getPluginInfo();
     virtual bool checkLicense() { return true; }

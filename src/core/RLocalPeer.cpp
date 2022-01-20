@@ -20,6 +20,7 @@
 #include <QDataStream>
 #include <QTime>
 
+#include "RS.h"
 #include "RLocalPeer.h"
 
 #if defined(Q_OS_WIN)

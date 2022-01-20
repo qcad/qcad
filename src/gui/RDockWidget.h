@@ -36,8 +36,8 @@ class QCADGUI_EXPORT RDockWidget: public QDockWidget {
 Q_OBJECT
 
 public:
-    RDockWidget(const QString& title, QWidget* parent = NULL, Qt::WindowFlags flags = 0);
-    RDockWidget(QWidget* parent = NULL, Qt::WindowFlags flags = 0);
+    RDockWidget(const QString& title, QWidget* parent = NULL, Qt::WindowFlags flags = Qt::WindowFlags());
+    RDockWidget(QWidget* parent = NULL, Qt::WindowFlags flags = Qt::WindowFlags());
 
 signals:
     void shown();

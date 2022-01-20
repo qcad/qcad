@@ -28,7 +28,7 @@ void RPatternList::init(bool metric, RResourceList<RPattern>& res) {
     patternFileList.append(RS::getPatternList(metric));
 
     // unique:
-    patternFileList = patternFileList.toSet().toList();
+    patternFileList = RS::unique<QString>(patternFileList);
 
     for (int i=0; i<patternFileList.size(); i++) {
         QString fileName = patternFileList.at(i);

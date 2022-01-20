@@ -26,7 +26,7 @@ void RLinetypeList::init(bool metric, RResourceList<RLinetypePattern>& res) {
     linetypeFileList.append(RS::getLinetypeList(metric));
 
     // unique:
-    linetypeFileList = linetypeFileList.toSet().toList();
+    linetypeFileList = RS::unique<QString>(linetypeFileList);
 
     for (int i=0; i<linetypeFileList.size(); i++) {
         QString fileName = linetypeFileList[i];

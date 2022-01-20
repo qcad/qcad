@@ -49,7 +49,8 @@ void RLineweightCombo::init() {
 
     while (it.hasNext()) {
         QPair<QString, RLineweight::Lineweight> p = it.next();
-        v.setValue<RLineweight::Lineweight> (p.second);
+        v.setValue(p.second);
+        //v.setValue<RLineweight::Lineweight> (p.second);
         addItem(RLineweight::getIcon(p.second, QSize(16, 16)), p.first, v);
     }
 

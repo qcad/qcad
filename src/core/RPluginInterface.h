@@ -71,6 +71,7 @@ public:
      */
     virtual void postInit(RPluginInterface::InitStatus status) = 0;
 
+#if QT_VERSION < 0x060000
     /**
      * Called whenever a new script engine is instantiated.
      * Implementations may register their own script extensions by making
@@ -79,6 +80,7 @@ public:
      * \nonscriptable
      */
     virtual void initScriptExtensions(QScriptEngine& engine) = 0;
+#endif
 
     /**
      * Called when the user chosen language changed.

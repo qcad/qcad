@@ -130,7 +130,7 @@ void RCharacterWidget::paintEvent(QPaintEvent *event) {
                         squareSize, squareSize, QBrush(Qt::red));
 
             painter.drawText(column * squareSize + (squareSize / 2)
-                    - fontMetrics.width(QChar(key)) / 2, row * squareSize + 4
+                    - fontMetrics.horizontalAdvance(QChar(key)) / 2, row * squareSize + 4
                     + fontMetrics.ascent(), QString(QChar(key)));
         }
     }

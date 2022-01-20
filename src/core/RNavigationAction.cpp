@@ -24,7 +24,7 @@ RNavigationAction::RNavigationAction(RGuiAction* guiAction)
 }
 
 void RNavigationAction::mousePressEvent(RMouseEvent& event) {
-    if (event.button() == Qt::MidButton ||
+    if (event.button() == RS::MiddleButton ||
         ( event.button() == Qt::LeftButton && 
           event.modifiers() == Qt::ControlModifier)) {
         panOrigin = event.getScreenPosition();
@@ -34,7 +34,7 @@ void RNavigationAction::mousePressEvent(RMouseEvent& event) {
 }
 
 void RNavigationAction::mouseReleaseEvent(RMouseEvent& event) {
-    if (event.button() == Qt::MidButton ||
+    if (event.button() == RS::MiddleButton ||
         event.button() == Qt::LeftButton) {
         panning = false;
     }
@@ -42,7 +42,7 @@ void RNavigationAction::mouseReleaseEvent(RMouseEvent& event) {
 
 void RNavigationAction::mouseMoveEvent(RMouseEvent& event) {
     if (panning &&
-        ( event.buttons() == Qt::MidButton ||
+        ( event.buttons() == RS::MiddleButton ||
           ( event.buttons() == Qt::LeftButton &&
             event.modifiers() == Qt::ControlModifier )
         )) {

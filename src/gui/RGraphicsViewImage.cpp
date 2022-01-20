@@ -1153,21 +1153,27 @@ void RGraphicsViewImage::paintEntitiesMulti(const RBox& queryBox) {
         int start = threadId*slice;
         int end = (threadId+1)*slice;
         if (threadId==painterThread.length()-1) {
-            end = list.length();
+            end = (int)list.length();
         }
         //qDebug() << "slice:" << start << end;
-        futureThread.append(QtConcurrent::run(this, &RGraphicsViewImage::paintEntitiesThread, threadId, list, start, end));
+
+        // TODO (#qt6):
+        //futureThread.append(QtConcurrent::run(this, &RGraphicsViewImage::paintEntitiesThread, threadId, list, start, end));
+        //QFuture<void> future = QtConcurrent::run(&RGraphicsViewImage::paintEntitiesThread, *this, threadId, list, start, end);
+        //futureThread.append(future);
+
+        paintEntitiesThread(threadId, list, start, end);
     }
     //RDebug::stopTimer(100, "launch threads");
 
     //RDebug::startTimer(100);
-    for (int i=0; i<futureThread.length(); i++) {
-        futureThread[i].waitForFinished();
-    }
+//    for (int i=0; i<futureThread.length(); i++) {
+//        futureThread[i].waitForFinished();
+//    }
     //RDebug::stopTimer(100, "waitForFinished");
 }
 
-void RGraphicsViewImage::paintEntitiesThread(int threadId, QList<REntity::Id>& list, int start, int end) {
+void RGraphicsViewImage::paintEntitiesThread(int threadId, const QList<REntity::Id>& list, int start, int end) {
     for (int i=start; i<end; i++) {
         paintEntityThread(threadId, list[i]);
     }
@@ -2007,11 +2013,20 @@ void RGraphicsViewImage::paintImage(QPainter* painter, RImageData& image, bool w
         double angle = image.getUVector().getAngle();
 
         painter->save();
+        /*
         QMatrix wm = painter->matrix();
         wm.translate(image.getInsertionPoint().x, image.getInsertionPoint().y);
         wm.rotate(RMath::rad2deg(angle));
         wm.scale(scale.x, -scale.y);
         painter->setMatrix(wm);
+        */
+
+        QTransform t = painter->worldTransform();
+        t.translate(image.getInsertionPoint().x, image.getInsertionPoint().y);
+        t.rotate(RMath::rad2deg(angle));
+        t.scale(scale.x, -scale.y);
+        painter->setWorldTransform(t);
+
         double opacity = 1.0;
         if (image.getFade()>0 && image.getFade()<100) {
             opacity = 1.0 - ((double)image.getFade()/100);

@@ -17,7 +17,11 @@
  * along with QCAD.
  */
 #include <QCoreApplication>
-#include <QDesktopWidget>
+#if QT_VERSION >= 0x060000
+#   include <QScreen>
+#else
+#   include <QDesktopWidget>
+#endif
 #include <QDir>
 #include <QObject>
 #include <QThread>
@@ -771,7 +775,11 @@ bool RMainWindow::readSettings() {
     bool ret = false;
     double factor = 0.75;
 
+#if QT_VERSION >= 0x060000
+    QRect desktopRect = QGuiApplication::primaryScreen()->availableGeometry();
+#else
     QRect desktopRect = QApplication::desktop()->availableGeometry();
+#endif
 
     if (desktopRect.width()<2000) {
         factor = 0.9;

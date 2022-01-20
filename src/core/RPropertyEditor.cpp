@@ -360,11 +360,11 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
         RS::EntityType type = obj->getType();
 
         if (first) {
-            customPropertyNames = obj->getCustomPropertyKeys("QCAD").toSet();
+            customPropertyNames = RS::toSet<QString>(obj->getCustomPropertyKeys("QCAD"));
         }
         else {
             if (!customPropertyNames.isEmpty()) {
-                customPropertyNames.intersect(obj->getCustomPropertyKeys("QCAD").toSet());
+                customPropertyNames.intersect(RS::toSet<QString>(obj->getCustomPropertyKeys("QCAD")));
             }
         }
 
@@ -403,9 +403,9 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
     // get list of custom properties that are always shown, even if a selected object does not provide the property:
     QStringList fixedCustomPropertyNames = getFixedCustomPropertyNames(combinedTypesLocal.keys());
 
-    QStringList customPropertyNamesSorted = customPropertyNames.toList();
+    QStringList customPropertyNamesSorted = RS::toList<QString>(customPropertyNames);
     customPropertyNamesSorted.append(fixedCustomPropertyNames);
-    qSort(customPropertyNamesSorted);
+    qSort(customPropertyNamesSorted.begin(), customPropertyNamesSorted.end());
     customPropertyNamesSorted.removeDuplicates();
 
     bool showDimStyleOverrides = RSettings::getBoolValue("PropertyEditor/DimStyleOverrides", true);
@@ -468,8 +468,8 @@ void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, 
     }
 
 
-    QList<RPropertyTypeId> combinedPropertyTypeIdsSorted = combinedPropertyTypeIds.toList();
-    qSort(combinedPropertyTypeIdsSorted);
+    QList<RPropertyTypeId> combinedPropertyTypeIdsSorted = RS::toList<RPropertyTypeId>(combinedPropertyTypeIds);
+    qSort(combinedPropertyTypeIdsSorted.begin(), combinedPropertyTypeIdsSorted.end());
 
     // list of property type IDs with values (to be filled in by concurrent mapping below):
     QList<RProperty> ccProperties;
@@ -632,8 +632,8 @@ void RPropertyEditor::computePropertyValue(RProperty& ccProp) {
 void RPropertyEditor::updateFromObject(RObject* object, RDocument* document) {
     if (object != NULL) {
         QSet<RPropertyTypeId> propertyTypeIds = object->getPropertyTypeIds();
-        QList<RPropertyTypeId> propertyTypeIdsSorted = propertyTypeIds.toList();
-        qSort(propertyTypeIdsSorted);
+        QList<RPropertyTypeId> propertyTypeIdsSorted = RS::toList<RPropertyTypeId>(propertyTypeIds);
+        qSort(propertyTypeIdsSorted.begin(), propertyTypeIdsSorted.end());
         updateEditor(*object, propertyTypeIdsSorted, true, document);
     }
 }

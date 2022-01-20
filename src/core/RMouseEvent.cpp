@@ -36,7 +36,11 @@ RMouseEvent::RMouseEvent(Type type, const RVector& position,
 RMouseEvent::RMouseEvent(const QMouseEvent& mouseEvent, RGraphicsScene& s,
         RGraphicsView& v, qreal devicePixelRatio) :
     QMouseEvent(mouseEvent),
+#if QT_VERSION >= 0x060000
+    RInputEvent(RVector(mouseEvent.localPos().x(), mouseEvent.localPos().y()), s, v, devicePixelRatio) {
+#else
     RInputEvent(RVector(mouseEvent.posF().x(), mouseEvent.posF().y()), s, v, devicePixelRatio) {
+#endif
 
     setAccepted(mouseEvent.isAccepted());
 }

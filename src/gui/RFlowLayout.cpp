@@ -94,7 +94,7 @@ QLayoutItem* RFlowLayout::takeAt(int index) {
 }
 
 Qt::Orientations RFlowLayout::expandingDirections() const {
-    return 0;
+    return Qt::Horizontal;
 }
 
 bool RFlowLayout::hasHeightForWidth() const {
@@ -122,7 +122,10 @@ QSize RFlowLayout::minimumSize() const {
         size = size.expandedTo(item->minimumSize());
     }
 
-    size += QSize(2*margin(), 2*margin());
+    int l, t, r, b;
+    getContentsMargins(&l, &t, &r, &b);
+
+    size += QSize(2*l, 2*t);
     return size;
 }
 

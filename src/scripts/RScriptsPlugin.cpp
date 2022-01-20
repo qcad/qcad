@@ -15,9 +15,11 @@ bool RScriptsPlugin::init() {
     return true;
 }
 
+#if QT_VERSION < 0x060000
 void RScriptsPlugin::initScriptExtensions(QScriptEngine& engine) {
     Q_UNUSED(engine)
 }
+#endif
 
 void RScriptsPlugin::initTranslations() {
     RSettings::loadTranslations("scripts", QStringList() << ":ts");

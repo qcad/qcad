@@ -46,7 +46,7 @@ void RColorCombo::init() {
         QPair<QString, RColor> p = it.next();
 
         if (p.second.isValid()) {
-            v.setValue<RColor> (p.second);
+            v.setValue(p.second);
             addItem(RColor::getIcon(p.second, iconSize()), p.first, v);
             lastIsSeparator = false;
         } else {
@@ -152,7 +152,7 @@ void RColorCombo::setColor(const RColor& col) {
     }
     currentColor = col;
     QVariant v;
-    v.setValue<RColor> (currentColor);
+    v.setValue(currentColor);
     blockSignals(true);
     QString custom = tr("Custom");
     int i = findText(custom, Qt::MatchExactly);

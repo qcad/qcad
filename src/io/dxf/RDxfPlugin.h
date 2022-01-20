@@ -24,7 +24,9 @@ public:
     virtual bool init();
     virtual void uninit(bool) {}
     virtual void postInit(InitStatus) {}
+#if QT_VERSION < 0x060000
     virtual void initScriptExtensions(QScriptEngine&) {}
+#endif
     virtual void initTranslations() {}
     virtual RPluginInfo getPluginInfo();
     virtual bool checkLicense() { return true; }

@@ -144,7 +144,7 @@ QPair<int, int> RSpatialIndex::queryNearestNeighbor(double x, double y, double z
         qWarning() << "RSpatialIndex::queryNearestNeighbor: no result";
         return QPair<int, int>(-1,-1);
     }
-    return QPair<int, int>(keys.at(0), res[keys.at(0)].toList().first());
+    return QPair<int, int>(keys.at(0), RS::toList<int>(res[keys.at(0)]).first());
 }
 
 /**

@@ -23,7 +23,7 @@
 #include <QPainter>
 #include <QSvgRenderer>
 #include <QToolBar>
-#include <QVectorIterator>
+//#include <QVectorIterator>
 
 #include "RDebug.h"
 #include "RGuiAction.h"
@@ -82,7 +82,23 @@ RGuiAction::~RGuiAction() {
     maps << &actionsByShortcut;
     maps << &actionsByPrimaryCommand;
     maps << &actionsByScriptFile;
+#if QT_VERSION >= 0x060000
+    QMultiMap<QString, RGuiAction*>::iterator it;
+    QStringList keys;
+    for (it=actionsByGroup.begin(); it!=actionsByGroup.end(); it++) {
+        if (it.value() == this) {
+            keys << it.key();
+        }
+    }
+    keys.removeDuplicates();
+    QStringListIterator ki(keys);
+    while (ki.hasNext()) {
+        QString s = ki.next();
+        actionsByGroup.remove(s);
+    }
+#else
     maps << &actionsByGroup;
+#endif
 
     QListIterator<QMap<QString, RGuiAction*>*> vi(maps);
     while (vi.hasNext()) {
@@ -937,7 +953,7 @@ void RGuiAction::triggerGroupDefault(const QString& group) {
 }
 
 void RGuiAction::triggerGroupDefaults() {
-    QStringList groups = actionsByGroup.keys().toSet().toList();
+    QStringList groups = RS::unique<QString>(actionsByGroup.keys());
     for (int i=0; i<groups.length(); i++) {
         triggerGroupDefault(groups.at(i));
     }

@@ -55,7 +55,7 @@ bool RShortcutLineEdit::eventFilter(QObject *obj, QEvent *event) {
         }
         m_keyNum++;
         QKeySequence ks(m_key[0], m_key[1], m_key[2], m_key[3]);
-        setText(ks);
+        setText(ks.toString());
         keyEvent->accept();
         return true;
     } else {

@@ -147,7 +147,7 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
         }
     }
     else {
-        QStringList lts = document->getLinetypeNames().toList();
+        QStringList lts = RS::toList(document->getLinetypeNames());
         //qDebug() << "RDxfExporter::exportFile: linetypes table";
         dw->tableLinetypes(lts.size());
         // continuous must always be the first LTYPE:
@@ -176,7 +176,7 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
         layerNames.append("0");
     }
     else {
-        layerNames = document->getLayerNames().toList();
+        layerNames = RS::toList(document->getLayerNames());
     }
     dw->tableLayers(layerNames.size());
     for (int i=0; i<layerNames.size(); ++i) {
@@ -215,7 +215,7 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
         uniqueTextStyles.append(style);
 
         // write one text style for each new, unique combination of font, size, etc:
-        QList<REntity::Id> entityIds = document->queryAllEntities(false, true).toList();
+        QList<REntity::Id> entityIds = RS::toList(document->queryAllEntities(false, true));
         for (int i=0; i<entityIds.size(); i++) {
             REntity::Id id = entityIds[i];
             QSharedPointer<REntity> entity = document->queryEntityDirect(id);
@@ -295,7 +295,7 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     }
 
     // BLOCK_RECORD:
-    QStringList blockNames = document->getBlockNames().toList();
+    QStringList blockNames = RS::toList(document->getBlockNames());
     if (exportVersion!=DL_Codes::AC1009 && exportVersion!=DL_Codes::AC1009_MIN) {
         //qDebug() << "writing block records...";
         dxf.writeBlockRecord(*dw);

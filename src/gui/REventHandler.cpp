@@ -159,7 +159,7 @@ void REventHandler::drawInfoLabel(QPainter* painter, const RTextLabel& textLabel
         QFont font = RSettings::getInfoLabelFont();
         font.setPointSizeF(font.pointSizeF()*graphicsView->getDevicePixelRatio());
         QFontMetrics fm(font);
-        int w = fm.width(text)+10;
+        int w = fm.horizontalAdvance(text)+10;
         int h = fm.height()+10;
         //fm.destroy();
         painter->setFont(font);
@@ -244,7 +244,7 @@ void REventHandler::drawSnapLabel(QPainter* painter, const RVector& pos, const R
     if (!text.isEmpty()) {
         painter->drawText(
             p.x + offset, p.y + offset,
-            fm.width(text)+10, fm.height()+10,
+            fm.horizontalAdvance(text)+10, fm.height()+10,
             Qt::AlignHCenter | Qt::AlignVCenter,
             text, NULL);
     }
@@ -311,7 +311,7 @@ void REventHandler::drawSnapLabel(QPainter* painter, const RVector& pos, const R
     if (!displayText.isEmpty()) {
         painter->drawText(
                     p.x + offset, p.y - 3*offset - fm.height(),
-                    fm.width(displayText)+10, fm.height()+10,
+                    fm.horizontalAdvance(displayText)+10, fm.height()+10,
                     Qt::AlignHCenter | Qt::AlignVCenter,
                     displayText, NULL);
     }

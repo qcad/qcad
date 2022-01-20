@@ -273,7 +273,7 @@ public:
 
     virtual void paintEntities(QPainter* painter, const RBox& queryBox);
     void paintEntitiesMulti(const RBox& queryBox);
-    void paintEntitiesThread(int threadId, QList<REntity::Id>& list, int start, int end);
+    void paintEntitiesThread(int threadId, const QList<REntity::Id>& list, int start, int end);
 
     virtual void paintEntityThread(int threadId, REntity::Id id, bool preview = false);
 
