@@ -72,7 +72,11 @@
 #include "RPointEntity.h"
 #include "RPolylineEntity.h"
 #include "RRayEntity.h"
-#include "RScriptHandlerEcma.h"
+#if QT_VERSION < 0x060000
+#  include "RScriptHandlerEcma.h"
+#else
+#  include "RScriptHandler.h"
+#endif
 #include "RScriptHandlerRegistry.h"
 #include "RSettings.h"
 #include "RSingleApplication.h"
@@ -176,15 +180,21 @@ int main(int argc, char *argv[]) {
     QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
 #endif
 
-#ifdef Q_OS_MAC
+#if QT_VERSION < 0x060000
+#  ifdef Q_OS_MAC
     if (QSysInfo::MacintoshVersion>=0x000B) {
         // system font change bug fix on OS X 10.9 (Mavericks):
         QFont::insertSubstitution(".Lucida Grande UI", "Lucida Grande");
     }
+#  endif
+#else
+    // TODO #qt6
 #endif
 
+#if QT_VERSION < 0x060000
     QTime time = QTime::currentTime();
     qsrand((uint)time.msec());
+#endif
 
     QStringList originalArguments;
     for (int i=0; i<argc; i++) {
@@ -250,11 +260,15 @@ int main(int argc, char *argv[]) {
     QSqlDatabase::drivers();
 #endif
 
+#if QT_VERSION < 0x060000
     qRegisterMetaType<RColor>();
     qRegisterMetaTypeStreamOperators<RColor>("RColor");
 
     qRegisterMetaType<RVector>();
     qRegisterMetaTypeStreamOperators<RVector>("RVector");
+#else
+    // TODO #qt6
+#endif
 
     QString cwd = QDir::currentPath();
     RSettings::setLaunchPath(cwd);
@@ -355,6 +369,7 @@ int main(int argc, char *argv[]) {
         delete handler;
     }
     else {
+#if QT_VERSION < 0x060000
         RScriptHandlerRegistry::registerScriptHandler(RScriptHandlerEcma::factory,
                 RScriptHandlerEcma::getSupportedFileExtensionsStatic());
 
@@ -368,6 +383,7 @@ int main(int argc, char *argv[]) {
 
         // delete script handler and print uncaught exceptions:
         delete handler;
+#endif
     }
 
     RPluginLoader::unloadPlugins();
