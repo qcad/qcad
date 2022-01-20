@@ -19,15 +19,6 @@
 
 #include <QtGlobal>
 
-#if QT_VERSION >= 0x050000
-#  include <QRegularExpression>
-#else
-#  include <QRegExp>
-#  ifndef QRegularExpression
-#    define QRegularExpression QRegExp
-#  endif
-#endif
-
 #include "RMemoryStorage.h"
 #include "RSettings.h"
 #include "RS.h"

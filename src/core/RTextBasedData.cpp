@@ -932,11 +932,11 @@ QString RTextBasedData::toRichText(const QString& escapedText, const QFont& main
  * \internal HTML helper function.
  */
 //void RTextBasedData::replaceLineFeeds(QString& str) {
-//    str.replace(QRegularExpression(RTextRenderer::rxLineFeed), "<br/>");
+//    str.replace(QRegExp(RTextRenderer::rxLineFeed), "<br/>");
 
 //    // paragraphs:
 //    QString oldStr = str;
-//    str.replace(QRegularExpression(RTextRenderer::rxParagraphFeed), "</p><p>");
+//    str.replace(QRegExp(RTextRenderer::rxParagraphFeed), "</p><p>");
 //    if (str!=oldStr) {
 //        str = "<p>" + str + "</p>";
 //    }
@@ -946,7 +946,7 @@ QString RTextBasedData::toRichText(const QString& escapedText, const QFont& main
  * \internal HTML helper function.
  */
 //void RTextBasedData::replaceNonBreakingSpaces(QString& str) {
-//    str.replace(QRegularExpression(RTextRenderer::rxNonBreakingSpace), "&nbsp;");
+//    str.replace(QRegExp(RTextRenderer::rxNonBreakingSpace), "&nbsp;");
 //}
 
 /**

@@ -1835,16 +1835,27 @@ void RExporter::exportShapeSegment(QSharedPointer<RShape> shape, double angle) {
 double RExporter::getCurrentPixelSizeHint() const {
     double ret = pixelSizeHint;
 
-    // adjust pixel size hint, based on block context:
+    // adjust pixel size hint, based on block or viewport context:
     for (int i=0; i<entityStack.size(); i++) {
         REntity* e = entityStack[i];
-        RBlockReferenceEntity* br = dynamic_cast<RBlockReferenceEntity*>(e);
-        if (br==NULL) {
-            continue;
+
+        if (e->getType()==RS::EntityBlockRef) {
+            RBlockReferenceEntity* br = dynamic_cast<RBlockReferenceEntity*>(e);
+            if (br!=NULL) {
+                double sf = qMax(br->getScaleFactors().x, br->getScaleFactors().y);
+                if (sf>RS::PointTolerance) {
+                    ret /= sf;
+                }
+            }
         }
-        double sf = qMax(br->getScaleFactors().x, br->getScaleFactors().y);
-        if (sf>RS::PointTolerance) {
-            ret /= sf;
+        else if (e->getType()==RS::EntityViewport) {
+            RViewportEntity* vp = dynamic_cast<RViewportEntity*>(e);
+            if (vp!=NULL) {
+                double sf = vp->getScale();
+                if (sf>RS::PointTolerance) {
+                    ret /= sf;
+                }
+            }
         }
     }
 

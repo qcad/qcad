@@ -659,9 +659,13 @@ SOURCES = \
 ../scripts/Misc/MiscIO/MolImport/MolImport.js \
 ../scripts/Misc/MiscIO/MolImport/MolImportInit.js \
 ../scripts/Misc/MiscIO/MolImport/MolImporter.js \
+../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroid.js \
+../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroidInit.js \
 ../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroid.js \
 ../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js \
 ../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js \
+../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListener.js \
+../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInit.js \
 ../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeighted.js \
 ../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js \
 ../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroid.js \
@@ -1186,6 +1190,7 @@ SOURCES = \
 ../scripts/Misc/MiscDraw/LineRadicalAxis/LineRadicalAxis.ui \
 ../scripts/Misc/MiscDraw/PolylineBreakSymbol/PolylineBreakSymbol.ui \
 ../scripts/Misc/MiscDraw/TextAlong/TextAlong.ui \
+../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/AddCentroidDialog.ui \
 ../scripts/Misc/MiscSelect/SelectByHandle/SelectByHandleDialog.ui \
 ../scripts/Misc/Tutorials/LibraryBrowserScripts/CubeCuttingOut.ui \
 ../scripts/Misc/Tutorials/PersistentWidgets/PersistentWidgets.ui \
