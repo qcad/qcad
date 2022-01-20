@@ -408,7 +408,7 @@ bool RLinetypePattern::setPatternString(const QString& patternString) {
     QStringList parts;
     QRegularExpression rx("\\[[^\\]]*\\]|A|([+-]?\\d+\\.?\\d*)|([+-]?\\d*\\.?\\d+)");
 
-#if QT_VERSION >= 0x060000
+#if QT_VERSION >= 0x050000
     int pos = 0;
     QRegularExpressionMatch match;
     while ((pos = patternString.indexOf(rx, pos, &match))!=-1) {
@@ -459,7 +459,7 @@ bool RLinetypePattern::setPatternString(const QString& patternString) {
                 "\\]"
             );
 
-#if QT_VERSION >= 0x060000
+#if QT_VERSION >= 0x050000
             QRegularExpressionMatch match;
             rx.setPatternOptions(QRegularExpression::CaseInsensitiveOption);
             part.indexOf(rx, 0, &match);
@@ -469,7 +469,7 @@ bool RLinetypePattern::setPatternString(const QString& patternString) {
 #endif
 
             int idx = dashes.length()-1;
-#if QT_VERSION >= 0x060000
+#if QT_VERSION >= 0x050000
             QString text = match.captured(1);
 #else
             QString text = rx.cap(1);
@@ -478,14 +478,14 @@ bool RLinetypePattern::setPatternString(const QString& patternString) {
                 text = text.mid(1, text.length()-2);
             }
             shapeTexts.insert(idx, text);
-#if QT_VERSION >= 0x060000
+#if QT_VERSION >= 0x050000
             shapeTextStyles.insert(idx, match.captured(2));
 #else
             shapeTextStyles.insert(idx, rx.cap(2));
 #endif
 
             for (int k=3; k+1<=rx.captureCount(); k+=2) {
-#if QT_VERSION >= 0x060000
+#if QT_VERSION >= 0x050000
                 QString c = match.captured(k).toUpper();
                 double val = match.captured(k+1).toDouble();
 #else

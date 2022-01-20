@@ -22,24 +22,28 @@
 
 #include "core_global.h"
 
-#include <QGuiApplication>
+#include <QApplication>
+#include <QDebug>
+#include <QDesktopWidget>
 #include <QEasingCurve>
+#include <QGuiApplication>
 #include <QPair>
 #include <QString>
 #include <QStringList>
+#include <QTextCodec>
 #include <QVariant>
 
 #if QT_VERSION >= 0x060000
 #include <QScreen>
 #endif
 
-#if QT_VERSION >= 0x060000
+#if QT_VERSION >= 0x050000
 #  include <QRegularExpression>
 #else
 #  include <QRegExp>
-#  ifndef QRegularExpression
-#    define QRegularExpression QRegExp
-#  endif
+//#  ifndef QRegularExpression
+//#    define QRegularExpression QRegExp
+//#  endif
 #endif
 
 #if QT_VERSION >= 0x060000
@@ -113,11 +117,14 @@ class RPropertyAttributes;
 //#define REASING_BEZIERSPLINE QEasingCurve::BezierSpline
 //#define REASING_TCBSPLINE QEasingCurve::TCBSpline
 
-#if QT_VERSION >= 0x060000
-#else
+#if QT_VERSION < 0x050000
+class QRegularExpressionMatch {
+};
+/*
 #  ifndef QRegularExpressionMatch
-#    define QRegularExpressionMatch void
+#    define QRegularExpressionMatch int
 #  endif
+*/
 #endif
 
 /**
@@ -764,126 +771,18 @@ public:
     }
 
     // workarounds for Qt 6 QRegExp changes:
-    static bool exactMatch(const QRegularExpression& rx, const QString& string) {
-#if QT_VERSION >= 0x060000
-        return rx.match(string).hasMatch();
-#else
-        return rx.exactMatch(string);
-#endif
-    }
-
-    static bool exactMatch(const QRegularExpression& rx, QRegularExpressionMatch& match, const QString& string) {
-#if QT_VERSION >= 0x060000
-        match = rx.match(string);
-        return match.hasMatch();
-#else
-        return rx.exactMatch(string);
-#endif
-    }
-
-    static bool exactMatch(const QString& rxStr, const QString& string) {
-        QRegularExpression rx(rxStr);
-#if QT_VERSION >= 0x060000
-        return rx.match(string).hasMatch();
-#else
-        return rx.exactMatch(string);
-#endif
-    }
-
-    static int indexIn(const QRegularExpression& rx, QRegularExpressionMatch& match, const QString& string, int from = 0) {
-#if QT_VERSION >= 0x060000
-        return (int)string.indexOf(rx, 0, &match);
-#else
-        return rx.indexIn(string);
-#endif
-    }
-
-    static QString capture(const QRegularExpression& rx, const QRegularExpressionMatch& match, int nth = 0) {
-#if QT_VERSION >= 0x060000
-        return match.captured(nth);
-#else
-        return rx.cap(nth);
-#endif
-    }
-
-    static int matchedLength(const QRegularExpression& rx, const QRegularExpressionMatch& match) {
-#if QT_VERSION >= 0x060000
-        return (int)match.capturedLength();
-#else
-        return rx.matchedLength();
-#endif
-    }
-
-    static QRegularExpression createRegEpCI(const QString& str, bool regExp2 = false) {
-#if QT_VERSION >= 0x060000
-        return QRegularExpression(str, QRegularExpression::CaseInsensitiveOption);
-#else
-        if (regExp2) {
-            return QRegExp(str, Qt::CaseInsensitive, QRegExp::RegExp2);
-        }
-        else {
-            return QRegExp(str, Qt::CaseInsensitive);
-        }
-#endif
-    }
-
-    static void setUtf8Codec(QTextStream& ts) {
-#if QT_VERSION >= 0x060000
-        ts.setEncoding(QStringConverter::Utf8);
-#else
-        ts.setCodec("UTF-8");
-#endif
-    }
-
-    static QString escape(const QString& plain) {
-#if QT_VERSION >= 0x060000
-        return plain.toHtmlEscaped();
-#else
-        return Qt::escape(plain);
-#endif
-    }
-
-    static long long getScreenCount() {
-#if QT_VERSION >= 0x060000
-        return QGuiApplication::screens().count();
-#else
-        return QApplication::desktop()->screenCount();
-#endif
-    }
-
-    static QSize getAvailableGeometry(int screen) {
-#if QT_VERSION >= 0x060000
-        QList<QScreen*> screens = QGuiApplication::screens();
-        if (screen < screens.count() && screens[screen]!=NULL) {
-            return screens[screen]->availableSize();
-        }
-#else
-        return QApplication::desktop()->availableGeometry(i).size();
-#endif
-    }
-
-    static QString convert(const QByteArray& str, const QString& codecName) {
-#if QT_VERSION >= 0x060000
-        std::optional<QStringConverter::Encoding> encoding = QStringConverter::encodingForName(codecName.toLatin1());
-        if (!encoding.has_value()) {
-            qWarning() << "RS::convert: unsupported text codec: " << codecName;
-            return str;
-        }
-        auto enc = QStringDecoder(encoding.value());
-        return enc(QByteArray(str));
-#else
-        QString enc = getEncoding(dwgCodePage);
-
-        // get the text codec:
-        QTextCodec* codec = QTextCodec::codecForName(enc.toLatin1());
-        if (codec!=NULL) {
-            mtextString = codec->toUnicode(mtext);
-        }
-        else {
-            qWarning() << "RDxfImporter::addMText: unsupported text codec: " << enc;
-        }
-#endif
-    }
+    static bool exactMatch(const QRegularExpression& rx, const QString& string);
+    static bool exactMatch(const QRegularExpression& rx, QRegularExpressionMatch& match, const QString& string);
+    static bool exactMatch(const QString& rxStr, const QString& string);
+    static int indexIn(const QRegularExpression& rx, QRegularExpressionMatch& match, const QString& string, int from = 0);
+    static QString capture(const QRegularExpression& rx, const QRegularExpressionMatch& match, int nth = 0);
+    static int matchedLength(const QRegularExpression& rx, const QRegularExpressionMatch& match);
+    static QRegularExpression createRegEpCI(const QString& str, bool regExp2 = false);
+    static void setUtf8Codec(QTextStream& ts);
+    static QString escape(const QString& plain);
+    static long long getScreenCount();
+    static QSize getAvailableGeometry(int screen);
+    static QString convert(const QByteArray& str, const QString& codecName);
 
     static const double PointTolerance;
     static const double AngleTolerance;

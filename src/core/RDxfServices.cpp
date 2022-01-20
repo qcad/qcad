@@ -55,7 +55,7 @@ void RDxfServices::fixDimensionLabel(QString& text, QString& uTol, QString& lTol
 
     // analyze and strip stacked text (tolerance) at end:
     QRegularExpression rxTolerance("\\\\S([^^]*)\\^([^;]*);$");
-#if QT_VERSION >= 0x060000
+#if QT_VERSION >= 0x050000
     QRegularExpressionMatch match = rxTolerance.match(text);
     if (match.hasMatch()) {
         uTol = match.captured(1);
@@ -106,7 +106,7 @@ void RDxfServices::detectVersion2Format(const QString& fileName) {
                 //qDebug() << "dxflib version: " << versionStr;
 
 
-#if QT_VERSION >= 0x060000
+#if QT_VERSION >= 0x050000
                 QRegularExpression re("(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)");
                 QRegularExpressionMatch match;
                 qsizetype idx = versionStr.indexOf(re, 0, &match);
@@ -2238,7 +2238,7 @@ QString RDxfServices::parseUnicode(const QString& str) {
     reg.setPattern("\\\\[Uu]\\+([0-9a-fA-F]{4})");
     bool ok = true;
     int uc = 0;
-#if QT_VERSION >= 0x060000
+#if QT_VERSION >= 0x050000
     qsizetype ucPos = 0;
     QRegularExpressionMatch match;
     while ((ucPos = ret.indexOf(reg, 0, &match)) != -1) {
@@ -2280,7 +2280,7 @@ void RDxfServices::autoFixLinetypePattern(RLinetypePattern& pattern) {
 int RDxfServices::getFileQCADVersion(const RDocument& doc) {
     QString fileVersionStr = doc.getVariable("QCADVersion", "").toString();
     QRegularExpression re("(\\d+)\\.(\\d+)\\.(\\d+)(?:\\.(\\d+))?");
-#if QT_VERSION >= 0x060000
+#if QT_VERSION >= 0x050000
     QRegularExpressionMatch match;
     qsizetype idx = fileVersionStr.indexOf(re, 0, &match);
     if (idx!=0) {

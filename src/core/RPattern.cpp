@@ -71,7 +71,7 @@ QList<QPair<QString, RPattern*> > RPattern::loadAllFrom(const QString& fileName)
 
         // name / description:
         if (line.at(0)=='*') {
-#if QT_VERSION >= 0x060000
+#if QT_VERSION >= 0x050000
             QRegularExpression rx("\\*([^,]*)(?:,\\s*(.*))?");
             QRegularExpressionMatch match;
             line.indexOf(rx, 0, &match);

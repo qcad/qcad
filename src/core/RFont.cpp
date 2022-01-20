@@ -206,7 +206,7 @@ bool RFont::load() {
 
             // read unicode:
             QRegularExpression rx("\\[([0-9A-Fa-f]{4,4})\\]\\s*(.*)?");
-#if QT_VERSION >= 0x060000
+#if QT_VERSION >= 0x050000
             QRegularExpressionMatch match;
             qsizetype idx = line.indexOf(rx, 0, &match);
             if (idx==0 && rx.captureCount()>0) {
@@ -250,7 +250,7 @@ bool RFont::load() {
 
                 if (!line.isEmpty()) {
                     QRegularExpression rx("(L|A|AR|PL|PLC) ([0-9,+-\\.e]*)");
-#if QT_VERSION >= 0x060000
+#if QT_VERSION >= 0x050000
                     QRegularExpressionMatch match;
                     if (line.indexOf(rx, 0, &match)==-1) {
                         continue;

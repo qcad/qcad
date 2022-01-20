@@ -358,3 +358,130 @@ int RS::compareAlphanumerical(const QString& s1, const QString& s2) {
 bool RS::lessThanAlphanumerical(const QString& s1, const QString& s2) {
     return RS::compareAlphanumerical(s1, s2)<0;
 }
+
+
+bool RS::exactMatch(const QRegularExpression& rx, const QString& string) {
+#if QT_VERSION >= 0x050000
+    QString pat = rx.pattern();
+    pat = "^" + pat + "$";
+    QRegularExpression rxExact(pat);
+    return rxExact.match(string).hasMatch();
+#else
+    return rx.exactMatch(string);
+#endif
+}
+
+bool RS::exactMatch(const QRegularExpression& rx, QRegularExpressionMatch& match, const QString& string) {
+#if QT_VERSION >= 0x050000
+    QString pat = rx.pattern();
+    pat = "^" + pat + "$";
+    QRegularExpression rxExact(pat);
+    match = rxExact.match(string);
+    return match.hasMatch();
+#else
+    return rx.exactMatch(string);
+#endif
+}
+
+bool RS::exactMatch(const QString& rxStr, const QString& string) {
+    QRegularExpression rx("^" + rxStr + "$");
+#if QT_VERSION >= 0x050000
+    return rx.match(string).hasMatch();
+#else
+    return rx.exactMatch(string);
+#endif
+}
+
+int RS::indexIn(const QRegularExpression& rx, QRegularExpressionMatch& match, const QString& string, int from) {
+#if QT_VERSION >= 0x050000
+    return (int)string.indexOf(rx, from, &match);
+#else
+    return rx.indexIn(string);
+#endif
+}
+
+QString RS::capture(const QRegularExpression& rx, const QRegularExpressionMatch& match, int nth) {
+#if QT_VERSION >= 0x050000
+    return match.captured(nth);
+#else
+    return rx.cap(nth);
+#endif
+}
+
+int RS::matchedLength(const QRegularExpression& rx, const QRegularExpressionMatch& match) {
+#if QT_VERSION >= 0x050000
+    return (int)match.capturedLength();
+#else
+    return rx.matchedLength();
+#endif
+}
+
+QRegularExpression RS::createRegEpCI(const QString& str, bool regExp2) {
+#if QT_VERSION >= 0x050000
+    return QRegularExpression(str, QRegularExpression::CaseInsensitiveOption);
+#else
+    if (regExp2) {
+        return QRegExp(str, Qt::CaseInsensitive, QRegExp::RegExp2);
+    }
+    else {
+        return QRegExp(str, Qt::CaseInsensitive);
+    }
+#endif
+}
+
+void RS::setUtf8Codec(QTextStream& ts) {
+#if QT_VERSION >= 0x060000
+    ts.setEncoding(QStringConverter::Utf8);
+#else
+    ts.setCodec("UTF-8");
+#endif
+}
+
+QString RS::escape(const QString& plain) {
+#if QT_VERSION >= 0x060000
+    return plain.toHtmlEscaped();
+#else
+    return Qt::escape(plain);
+#endif
+}
+
+long long RS::getScreenCount() {
+#if QT_VERSION >= 0x060000
+    return QGuiApplication::screens().count();
+#else
+    return QApplication::desktop()->screenCount();
+#endif
+}
+
+QSize RS::getAvailableGeometry(int screen) {
+#if QT_VERSION >= 0x060000
+    QList<QScreen*> screens = QGuiApplication::screens();
+    if (screen < screens.count() && screens[screen]!=NULL) {
+        return screens[screen]->availableSize();
+    }
+#else
+    return QApplication::desktop()->availableGeometry(screen).size();
+#endif
+}
+
+QString RS::convert(const QByteArray& str, const QString& codecName) {
+#if QT_VERSION >= 0x060000
+    std::optional<QStringConverter::Encoding> encoding = QStringConverter::encodingForName(codecName.toLatin1());
+    if (!encoding.has_value()) {
+        qWarning() << "RS::convert: unsupported text codec: " << codecName;
+        return str;
+    }
+    auto enc = QStringDecoder(encoding.value());
+    return enc(QByteArray(str));
+#else
+    // get the text codec:
+    QTextCodec* codec = QTextCodec::codecForName(codecName.toLatin1());
+    if (codec==NULL) {
+        qWarning() << "RDxfImporter::addMText: unsupported text codec: " << codecName;
+        return str;
+    }
+    else {
+        return codec->toUnicode(str);
+    }
+#endif
+}
