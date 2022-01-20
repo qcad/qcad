@@ -143,7 +143,7 @@ QString RTextRenderer::escNoOpStr = "%%";
 QRegularExpression RTextRenderer::escNoOp(escNoOpStr);
 QString RTextRenderer::rxUnicodeStr = "\\\\[Uu]\\+([0-9a-fA-F]{4})";
 QRegularExpression RTextRenderer::rxUnicode(rxUnicodeStr);
-// optional break at spaced for wrapped text:
+// optional break at space for wrapping text:
 // TODO: add tabs and other whitespace:
 QString RTextRenderer::rxOptionalBreakStr = "[ ]+";
 //QString RTextRenderer::rxOptionalBreakStr = "[_]+";
@@ -572,7 +572,7 @@ void RTextRenderer::render() {
         i++;
     }
 
-//    qDebug() << "literals:" << literals;
+//    qDebug() << "literals with space:" << literals;
 //    qDebug() << "formattings (after block):" << formattings;
     Q_ASSERT(formattings.length()==literals.length()-1);
 
