@@ -213,6 +213,10 @@ private:
     double dimscale;
     double dimtxt;
 
+    // TODO: add alignment (top, bottom, left, right)
+    // keep tolerance aligned when text, scale, etc. changes
+    // store alignement in DXF/DWG as custom property
+
     mutable QList<QList<double> > divisions;
     mutable bool joinFirstField;
 };

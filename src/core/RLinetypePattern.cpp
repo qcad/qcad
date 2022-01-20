@@ -366,7 +366,7 @@ QString RLinetypePattern::getLabel() const {
     QString desc = description;
     QString preview;
     if (!description.isEmpty()) {
-        int k = description.lastIndexOf(QRegularExpression("[^_\\. ]"));
+        int k = description.lastIndexOf(QRegExp("[^_\\. ]"));
         if (k!=-1) {
             desc = description.mid(0, k+1);
             preview = description.mid(k+1);

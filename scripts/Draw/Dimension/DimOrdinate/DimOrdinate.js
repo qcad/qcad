@@ -137,7 +137,12 @@ DimOrdinate.prototype.getOperation = function(preview) {
     }
 
     var doc = this.getDocument();
-    var entity = new RDimOrdinateEntity(doc, this.data);
+    var factor = this.getFactor();
+    var scaled_data = this.data;
+
+    scaled_data.setLinearFactor(factor);
+
+    var entity = new RDimOrdinateEntity(doc, scaled_data);
     if (!isEntity(entity)) {
         return undefined;
     }

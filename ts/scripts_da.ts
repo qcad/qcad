@@ -331,6 +331,41 @@ the preference changes to take effect.</source>
     </message>
 </context>
 <context>
+    <name>AddCentroidDialog</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/AddCentroidDialog.ui" line="+14"/>
+        <source>Add  point mass 2D Centroid</source>
+        <translation>Tilføj punktmasse 2D Centroid</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Position Y:</source>
+        <translation>Position Y:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+7"/>
+        <location line="+49"/>
+        <source>0.00</source>
+        <translation>0.00</translation>
+    </message>
+    <message>
+        <location line="-42"/>
+        <source>Position X:</source>
+        <translation>Stilling X:</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Point mass:</source>
+        <translation>Punktmasse:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Reset to &apos;Undefined&apos;</source>
+        <translation>Nulstilles til &apos;Udefineret&apos;</translation>
+    </message>
+</context>
+<context>
     <name>AddCustomPropertyDialog</name>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/AddCustomPropertyDialog.ui" line="+14"/>
@@ -6760,6 +6795,44 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
     </message>
 </context>
 <context>
+    <name>InfoAddCustomCentroid</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroid.js" line="+78"/>
+        <source>Position</source>
+        <translation>Position</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Specify position</source>
+        <translation>Angiv stilling</translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>2D point mass Centroid</source>
+        <translation>2D-punktmasse Centroid</translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <source>Undefined</source>
+        <translation>Udefineret</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroidInit.js" line="+19"/>
+        <source>Add &amp;custom 2D centroid</source>
+        <translation>Tilføj brugerdefineret 2D-centroid</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Create a customizable 2D Centroid marker</source>
+        <translation>Opret en brugerdefinerbar 2D Centroid-markør</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Creates a new point mass 2D Centroid marker customizable by dialog</source>
+        <translation>Opretter en ny punktmasse 2D Centroid-markør, der kan tilpasses via dialog</translation>
+    </message>
+</context>
+<context>
     <name>InfoAngle</name>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngle.js" line="+67"/>
@@ -6960,7 +7033,7 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
 <context>
     <name>InfoAreaCentroid</name>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroid.js" line="+118"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroid.js" line="+123"/>
         <source>No selection.</source>
         <translation>Intet valg.</translation>
     </message>
@@ -6974,7 +7047,7 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation type="vanished">Flere valg.</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Not implemented. Command terminated.</source>
         <translation>Ikke gennemført. Kommandoen er afsluttet.</translation>
     </message>
@@ -6983,7 +7056,7 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation type="vanished">Centroid area script af CVH</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+15"/>
         <source>Enclosed area:</source>
         <translation>Lukket område:</translation>
     </message>
@@ -7020,22 +7093,20 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation type="vanished">Enhedstype, der ikke understøttes.</translation>
     </message>
     <message>
-        <location line="-67"/>
+        <location line="-68"/>
         <source>Multiple entities in selection.</source>
         <translation>Flere enheder i udvælgelsen.</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Area centroid script (v0.31) by CVH</source>
-        <translation>Områdecentroid script (v0.31) af CVH</translation>
+        <translation type="vanished">Områdecentroid script (v0.31) af CVH</translation>
     </message>
     <message>
-        <location line="+34"/>
         <source>2D Centroid</source>
-        <translation>2D Centroid</translation>
+        <translation type="vanished">2D Centroid</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+43"/>
         <source>Centroid markers circle in selection. No results.</source>
         <translation>Centroid markeringer cirkel i udvælgelsen. Ingen resultater.</translation>
     </message>
@@ -7050,46 +7121,60 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation>Ingen resultater.</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Centroid point</source>
-        <translation>Centroidpunkt</translation>
+        <translation type="vanished">Centroidpunkt</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="-74"/>
+        <location line="+2"/>
+        <source>Area 2D Centroid script (v0.32) by CVH</source>
+        <translation>Område 2D Centroid script (v0.32) af CVH</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Arc sector mode</source>
+        <translation>Arc sektor-tilstand</translation>
+    </message>
+    <message>
+        <location line="+82"/>
+        <source>2D area Centroid</source>
+        <translation>2D-område Centroid</translation>
+    </message>
+    <message>
+        <location line="+40"/>
+        <location line="+6"/>
         <source>(Incl. approximations)</source>
         <translation>(Inkl. tilnærmelser)</translation>
     </message>
     <message>
-        <location line="+8"/>
-        <location line="+19"/>
+        <location line="+4"/>
         <source>Approximated centroid:</source>
         <translation>Tilnærmet centroid:</translation>
     </message>
     <message>
-        <location line="-19"/>
-        <location line="+19"/>
+        <location line="+0"/>
         <source>Centroid:</source>
         <translation>Centroid:</translation>
     </message>
     <message>
-        <location line="+193"/>
-        <location line="+563"/>
+        <location line="+207"/>
+        <location line="+578"/>
         <source>Encountered an unsupported polyline with custom widths</source>
         <translation>Opdagede en ikke understøttet polylinje med brugerdefinerede bredder</translation>
     </message>
     <message>
-        <location line="-478"/>
-        <location line="+581"/>
+        <location line="-488"/>
+        <location line="+596"/>
         <source>Encountered an unsupported polygon with custom widths</source>
         <translation>Opdagede en ikke understøttet polygon med brugerdefinerede bredder</translation>
     </message>
     <message>
-        <location line="+686"/>
+        <location line="+687"/>
         <source>Unhandled shape from hatch loop.</source>
         <translation>Ubehandlet form fra lukkeløkke.</translation>
     </message>
     <message>
-        <location line="+80"/>
+        <location line="+70"/>
         <source>Self-intersecting shape near (%1). No Results.</source>
         <translation>Selvskærende form i nærheden af (%1). Ingen resultater.</translation>
     </message>
@@ -7098,31 +7183,53 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation type="vanished">Tilføjer centroid for en valgt enhed.</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+11"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+19"/>
         <source>&amp;Area Centroid</source>
         <translation>&amp;Område centroid</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>Add 2D area centroid for a selected entity.</source>
-        <translation>Tilføj 2D-områdecentroid for en valgt enhed.</translation>
+        <location line="+8"/>
+        <source>Create an area 2D Centroid for a selected entity</source>
+        <translation>Opret et område 2D Centroid for en valgt enhed</translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>Creates a new uniform areal density 2D Centroid marker and value labels for a selected entity</source>
+        <translation>Opretter en ny 2D Centroid-markør med ensartet arealtæthed og værdimærkater for en valgt enhed</translation>
+    </message>
+    <message>
+        <source>Add 2D area centroid for a selected entity.</source>
+        <translation type="vanished">Tilføj 2D-områdecentroid for en valgt enhed.</translation>
+    </message>
+    <message>
         <source>Add 2D uniform density area centroid marker and values for a selected entity.</source>
-        <translation>Tilføj 2D-centroid-markør og værdier for et område med ensartet tæthed for en valgt enhed.</translation>
+        <translation type="vanished">Tilføj 2D-centroid-markør og værdier for et område med ensartet tæthed for en valgt enhed.</translation>
     </message>
 </context>
 <context>
     <name>InfoCentroids</name>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js" line="+232"/>
-        <location line="+1"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js" line="+52"/>
         <source>2D Centroid</source>
         <translation>2D Centroid</translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>Point mass</source>
+        <translation>Punktmasse</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Area</source>
+        <translation>Område</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Wire</source>
+        <translation>Wire</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>X position</source>
         <translation>X-position</translation>
     </message>
@@ -7133,13 +7240,59 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>Undefined</source>
+        <translation>Udefineret</translation>
+    </message>
+    <message>
+        <location line="+428"/>
+        <source>2D &amp;Centroids</source>
+        <translation>2D-centroider</translation>
+    </message>
+    <message>
+        <location line="-431"/>
         <source>Weighted</source>
         <translation>Vægtet</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-1"/>
         <source>Density</source>
         <translation>Densitet</translation>
+    </message>
+</context>
+<context>
+    <name>InfoCentroidsListener</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListener.js" line="+191"/>
+        <source>2D Centroids transaction listener active.</source>
+        <translation>2D Centroids transaktionslytter er aktiv.</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Deactivated/removed the 2D Centroids transaction listener.</source>
+        <translation>Deaktiverede/fjernede 2D Centroids-transaktionslytteren.</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <location line="+5"/>
+        <location line="+40"/>
+        <location line="+5"/>
+        <source>Syntax error: &apos;%1&apos; parse error</source>
+        <translation>Syntaksfejl: &quot;%1&quot; analyseringsfejl</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInit.js" line="+19"/>
+        <source>Centroid &amp;Listener</source>
+        <translation>Centroid Listener</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>(De-)Activate a transaction listener for 2D Centroids</source>
+        <translation>(De-)aktiverer en transaktionslytter for 2D-centrifuger</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>(De-)Activate a transaction listener for binding changes applied to 2D Centroid markers</source>
+        <translation>(De-)aktiverer en transaktionslytter for bindingsændringer, der anvendes på 2D Centroid-markører</translation>
     </message>
 </context>
 <context>
@@ -7299,7 +7452,7 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
 <context>
     <name>InfoSumCentroidsWeighted</name>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeighted.js" line="+94"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeighted.js" line="+105"/>
         <source>No selection.</source>
         <translation>Intet valg.</translation>
     </message>
@@ -7310,84 +7463,188 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
     </message>
     <message>
         <location line="+5"/>
-        <source>Centroids weighted sum script (v0.10b) by CVH</source>
-        <translation>Script til vægtet sum af Centroids (v0.10b) af CVH</translation>
+        <source>2D Centroids weighted sum script (v0.24) by CVH.</source>
+        <translation>2D Centroids vægtet sum script (v0.24) af CVH.</translation>
     </message>
     <message>
-        <location line="+14"/>
-        <source>2D Centroid</source>
-        <translation>2D Centroid</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Density</source>
-        <translation>Densitet</translation>
+        <location line="+38"/>
+        <source>Encountered a missing coordinate value.</source>
+        <translation>Der er fundet en manglende koordinatværdi.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>X position</source>
-        <translation>X-position</translation>
+        <source>Encountered an invalid coordinate value.</source>
+        <translation>Der blev fundet en ugyldig koordinatværdi.</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Y position</source>
-        <translation>Y-position</translation>
+        <location line="+8"/>
+        <location line="+11"/>
+        <location line="+10"/>
+        <source>Encountered a missing &apos;%1&apos; value.</source>
+        <translation>Der manglede en &quot;%1&quot;-værdi.</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Weighted</source>
-        <translation>Vægtet</translation>
+        <location line="-16"/>
+        <location line="+11"/>
+        <location line="+17"/>
+        <source>Encountered an invalid &apos;%1&apos; value.</source>
+        <translation>Der er fundet en ugyldig &quot;%1&quot;-værdi.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Encountered an unknown marker type.</source>
+        <translation>Der blev fundet en ukendt markørtype.</translation>
     </message>
     <message>
         <location line="+33"/>
-        <source>No centroid markers in selection.</source>
-        <translation>Ingen centroid-markører i udvælgelsen.</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>One marker selected, nothing to sum. Please verify selection.</source>
-        <translation>En markør er valgt, intet at summere. Kontroller venligst valget.</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Results in Zero.</source>
-        <translation>Resultater i nul.</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Total sum(%1):</source>
-        <translation>Samlet sum(%1):</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Weighted sum(%1):</source>
-        <translation>Vægtet sum(%1):</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Summed centroid position:</source>
-        <translation>Summen af centroidpositioner:</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+11"/>
-        <source>&amp;Sum Centroids Weighted</source>
-        <translation>&amp;Sum centroider vægtet</translation>
+        <source>No result.</source>
+        <translation>Intet resultat.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Sum selected 2D centroid markers weighted.</source>
-        <translation>Summen af udvalgte 2D centroid-markører vægtet.</translation>
+        <source>No 2D Centroid markers found in the selection.</source>
+        <translation>Der er ikke fundet nogen 2D Centroid-markører i markeringen.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Single marker selected, point mass = %1</source>
+        <translation>Enkelt markør valgt, punktmasse = %1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Density is undefined</source>
+        <translation>Densitet er udefineret</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Results in a division by zero.</source>
+        <translation>Resulterer i en division med nul.</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Results in a NaN value.</source>
+        <translation>Resulterer i en NaN-værdi.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Combined 2D Centroid</source>
+        <translation>Kombineret 2D-centroid</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Combined uniform point mass (%1):</source>
+        <translation>Kombineret ensartet punktmasse (%1):</translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>Combined point mass (%1):</source>
+        <translation>Kombineret punktmasse (%1):</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>All densities are undefined</source>
+        <translation>Alle tætheder er udefinerede</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Some densities are undefined</source>
+        <translation>Nogle tætheder er udefinerede</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>area (Informational):</source>
+        <translation>område (orienterende):</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>wire length (Informational):</source>
+        <translation>ledningslængde (oplysende):</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Combined centroid:</source>
+        <translation>Kombineret centroid:</translation>
+    </message>
+    <message>
+        <source>Centroids weighted sum script (v0.10b) by CVH</source>
+        <translation type="vanished">Script til vægtet sum af Centroids (v0.10b) af CVH</translation>
+    </message>
+    <message>
+        <source>2D Centroid</source>
+        <translation type="vanished">2D Centroid</translation>
+    </message>
+    <message>
+        <source>Density</source>
+        <translation type="vanished">Densitet</translation>
+    </message>
+    <message>
+        <source>X position</source>
+        <translation type="vanished">X-position</translation>
+    </message>
+    <message>
+        <source>Y position</source>
+        <translation type="vanished">Y-position</translation>
+    </message>
+    <message>
+        <source>Weighted</source>
+        <translation type="vanished">Vægtet</translation>
+    </message>
+    <message>
+        <source>No centroid markers in selection.</source>
+        <translation type="vanished">Ingen centroid-markører i udvælgelsen.</translation>
+    </message>
+    <message>
+        <source>One marker selected, nothing to sum. Please verify selection.</source>
+        <translation type="vanished">En markør er valgt, intet at summere. Kontroller venligst valget.</translation>
+    </message>
+    <message>
+        <source>Results in Zero.</source>
+        <translation type="vanished">Resultater i nul.</translation>
+    </message>
+    <message>
+        <source>Total sum(%1):</source>
+        <translation type="vanished">Samlet sum(%1):</translation>
+    </message>
+    <message>
+        <source>Weighted sum(%1):</source>
+        <translation type="vanished">Vægtet sum(%1):</translation>
+    </message>
+    <message>
+        <source>Summed centroid position:</source>
+        <translation type="vanished">Summen af centroidpositioner:</translation>
+    </message>
+    <message>
+        <source>&amp;Sum Centroids Weighted</source>
+        <translation type="vanished">&amp;Sum centroider vægtet</translation>
+    </message>
+    <message>
+        <source>Sum selected 2D centroid markers weighted.</source>
+        <translation type="vanished">Summen af udvalgte 2D centroid-markører vægtet.</translation>
+    </message>
+    <message>
         <source>Sum selected 2D centroid markers weighted by their individual custom density.</source>
-        <translation>Summen af udvalgte 2D-centroid-markører vægtet efter deres individuelle tilpassede tæthed.</translation>
+        <translation type="vanished">Summen af udvalgte 2D-centroid-markører vægtet efter deres individuelle tilpassede tæthed.</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+19"/>
+        <source>&amp;Sum 2D Centroids weighted</source>
+        <translation>Sum 2D centroider vægtet</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Combine selected 2D Centroid markers weighted</source>
+        <translation>Kombiner udvalgte 2D Centroid-markører vægtet</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Combines selected 2D Centroid markers, summing all properties weighted</source>
+        <translation>Kombinerer udvalgte 2D Centroid-markører og summerer alle egenskaber vægtet</translation>
     </message>
 </context>
 <context>
     <name>InfoWireCentroid</name>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroid.js" line="+117"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroid.js" line="+121"/>
         <source>No selection.</source>
         <translation>Intet valg.</translation>
     </message>
@@ -7397,27 +7654,24 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation>Vær venlig at foretage et valg først. Kommando afsluttet.</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Wire centroid script (v0.31) by CVH</source>
-        <translation>Script til trådcentroid (v0.31) af CVH</translation>
+        <translation type="vanished">Script til trådcentroid (v0.31) af CVH</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+12"/>
         <source>Length:</source>
         <translation>Længde:</translation>
     </message>
     <message>
-        <location line="+26"/>
         <source>2D Centroid</source>
-        <translation>2D Centroid</translation>
+        <translation type="vanished">2D Centroid</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Centroid markers circle in selection. No results.</source>
-        <translation>Centroid markeringer cirkel i udvælgelsen. Ingen resultater.</translation>
+        <translation type="vanished">Centroid markeringer cirkel i udvælgelsen. Ingen resultater.</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+35"/>
         <location line="+7"/>
         <source>Approximated length:</source>
         <translation>Omtrentlig længde:</translation>
@@ -7433,61 +7687,86 @@ BUG: Forstyrrer gruppegodstøbninger.</translation>
         <translation>Ingen resultater.</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Results in Zero.</source>
-        <translation>Resultater i nul.</translation>
+        <translation type="vanished">Resultater i nul.</translation>
+    </message>
+    <message>
+        <source>Centroid point</source>
+        <translation type="vanished">Centroidpunkt</translation>
+    </message>
+    <message>
+        <location line="-71"/>
+        <source>Wire 2D Centroid script (v0.32) by CVH</source>
+        <translation>Wire 2D Centroid script (v0.32) af CVH</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>2D Centroid markers circle in selection. No results.</source>
+        <translation>2D Centroid-markører cirkel i udvælgelsen. Ingen resultater.</translation>
+    </message>
+    <message>
+        <location line="+55"/>
+        <source>Results in a division by zero.</source>
+        <translation>Resulterer i en division med nul.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Centroid point</source>
-        <translation>Centroidpunkt</translation>
+        <source>2D wire Centroid</source>
+        <translation>2D-tråd Centroid</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+39"/>
         <source>Total length:</source>
         <translation>Samlet længde:</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
+        <location line="+6"/>
         <source>(Incl. approximations)</source>
         <translation>(Inkl. tilnærmelser)</translation>
     </message>
     <message>
-        <location line="+8"/>
-        <location line="+19"/>
+        <location line="+4"/>
         <source>Approximated centroid:</source>
         <translation>Tilnærmet centroid:</translation>
     </message>
     <message>
-        <location line="-19"/>
-        <location line="+19"/>
+        <location line="+0"/>
         <source>Centroid:</source>
         <translation>Centroid:</translation>
     </message>
     <message>
-        <location line="+116"/>
+        <location line="+125"/>
         <source>Encountered an unsupported polyline with custom widths</source>
         <translation>Opdagede en ikke understøttet polylinje med brugerdefinerede bredder</translation>
     </message>
     <message>
-        <location line="+101"/>
+        <location line="+105"/>
         <source>Encountered an unsupported polygon with custom widths</source>
         <translation>Opdagede en ikke understøttet polygon med brugerdefinerede bredder</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+11"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+19"/>
         <source>&amp;Wire Centroid</source>
         <translation>&amp;Tråd centroid</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>Add 2D wire centroid for a selection.</source>
-        <translation>Tilføj en 2D-tråds centroid til et valg.</translation>
+        <location line="+8"/>
+        <source>Create a wire 2D Centroid for a selection</source>
+        <translation>Opret en tråd 2D Centroid for et valg</translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>Creates a new uniform linear density 2D Centroid marker and value labels for a selection of entities</source>
+        <translation>Opretter en ny 2D Centroid-markør med ensartet lineær tæthed og værdimærkater for et udvalg af enheder</translation>
+    </message>
+    <message>
+        <source>Add 2D wire centroid for a selection.</source>
+        <translation type="vanished">Tilføj en 2D-tråds centroid til et valg.</translation>
+    </message>
+    <message>
         <source>Add 2D uniform density wire centroid marker and values for a selection of entities.</source>
-        <translation>Tilføj 2D-markør og værdier for en tråd med ensartet tæthed for et udvalg af enheder.</translation>
+        <translation type="vanished">Tilføj 2D-markør og værdier for en tråd med ensartet tæthed for et udvalg af enheder.</translation>
     </message>
 </context>
 <context>
@@ -13862,47 +14141,43 @@ vist i søgeresultaterne:</translation>
         <translation>Indsæt symbol</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+6"/>
         <source>Diameter</source>
         <translation>Diameter</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+4"/>
         <source>Arc</source>
         <translation>Arc</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Degree</source>
-        <translation>Uddannelse</translation>
+        <translation type="vanished">Uddannelse</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-5"/>
         <source>Plus/Minus</source>
         <translation>Plus/Minus</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Almost equal to</source>
-        <translation>Næsten lig med</translation>
+        <translation type="vanished">Næsten lig med</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Asymptotically equal to</source>
-        <translation>Asymptotisk lig med</translation>
+        <translation type="vanished">Asymptotisk lig med</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+23"/>
         <source>Pi</source>
         <translation>Pi</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Square root</source>
-        <translation>Kvadratrod</translation>
+        <translation type="vanished">Kvadratrod</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-3"/>
         <source>Phi</source>
         <translation>Phi</translation>
     </message>
@@ -13917,34 +14192,104 @@ vist i søgeresultaterne:</translation>
         <translation>Alt phi</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-5"/>
         <source>Ohm</source>
         <translation>Ohm</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>omega</source>
         <translation>omega</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-4"/>
         <source>Multiplication</source>
         <translation>Multiplikation</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-13"/>
         <source>Division</source>
         <translation>Afdeling</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+25"/>
         <source>Square</source>
         <translation>Firkantet</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-18"/>
         <source>Delta</source>
         <translation>Delta</translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <source>Degrees</source>
+        <translation>Grader</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Almost Equal</source>
+        <translation>Næsten lige meget</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Angle</source>
+        <translation>Vinkel</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Asymptotically Equal</source>
+        <translation>Asymptotisk lige</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Center Line</source>
+        <translation>Centerlinje</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Electrical Phase</source>
+        <translation>Elektrisk fase</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Identity</source>
+        <translation>Identitet</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Not Equal</source>
+        <translation>Ikke ligeværdig</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Omega</source>
+        <translation>Omega</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Property Line</source>
+        <translation>Ejendomsgrænse</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Subscript 2</source>
+        <translation>Indeks 2</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Square Root</source>
+        <translation>Kvadratrod</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Squared</source>
+        <translation>Kvadratisk</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cubed</source>
+        <translation>Cubed</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -13957,7 +14302,7 @@ vist i søgeresultaterne:</translation>
         <translation>Målt værdi</translation>
     </message>
     <message>
-        <location line="+137"/>
+        <location line="+151"/>
         <source>Left</source>
         <translation>Venstre</translation>
     </message>
@@ -14264,7 +14609,7 @@ vist i søgeresultaterne:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+980"/>
+        <location filename="../scripts/library.js" line="+982"/>
         <source>Objects</source>
         <translation>Genstande</translation>
     </message>

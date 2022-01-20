@@ -390,6 +390,41 @@ para que as mudanças de preferências entrem em vigor.</translation>
     </message>
 </context>
 <context>
+    <name>AddCentroidDialog</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/AddCentroidDialog.ui" line="+14"/>
+        <source>Add  point mass 2D Centroid</source>
+        <translation>Adicionar massa de pontos 2D Centroid</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Position Y:</source>
+        <translation>Posição Y:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+7"/>
+        <location line="+49"/>
+        <source>0.00</source>
+        <translation>0.00</translation>
+    </message>
+    <message>
+        <location line="-42"/>
+        <source>Position X:</source>
+        <translation>Posição X:</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Point mass:</source>
+        <translation>Aponte a massa:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Reset to &apos;Undefined&apos;</source>
+        <translation>Redefinido para &apos;Indefinido&apos;</translation>
+    </message>
+</context>
+<context>
     <name>AddCustomPropertyDialog</name>
     <message>
         <location filename="../scripts/Widgets/PropertyEditor/AddCustomPropertyDialog.ui" line="+14"/>
@@ -7504,6 +7539,44 @@ BUG: Interferes with group castings.</source>
     </message>
 </context>
 <context>
+    <name>InfoAddCustomCentroid</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroid.js" line="+78"/>
+        <source>Position</source>
+        <translation>Posição</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Specify position</source>
+        <translation>Especificar a posição</translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>2D point mass Centroid</source>
+        <translation>Massa de ponto 2D Centroid</translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <source>Undefined</source>
+        <translation>Indefinido</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroidInit.js" line="+19"/>
+        <source>Add &amp;custom 2D centroid</source>
+        <translation>Adicionar centróide 2D personalizado</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Create a customizable 2D Centroid marker</source>
+        <translation>Criar um marcador Centroid 2D personalizável</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Creates a new point mass 2D Centroid marker customizable by dialog</source>
+        <translation>Cria um novo marcador de ponto em massa 2D Centróide personalizável por diálogo</translation>
+    </message>
+</context>
+<context>
     <name>InfoAngle</name>
     <message>
         <location filename="../scripts/Information/InfoAngle/InfoAngle.js" line="+67"/>
@@ -7712,7 +7785,7 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>InfoAreaCentroid</name>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroid.js" line="+118"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroid.js" line="+123"/>
         <source>No selection.</source>
         <translation>Sem seleção.</translation>
     </message>
@@ -7726,7 +7799,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Seleção múltipla.</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>Not implemented. Command terminated.</source>
         <translation>Não implementado. Comando terminado.</translation>
     </message>
@@ -7735,7 +7808,7 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Roteiro da área Centroid por CVH</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+15"/>
         <source>Enclosed area:</source>
         <translation>Área fechada:</translation>
     </message>
@@ -7772,22 +7845,20 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Tipo de entidade não suportada.</translation>
     </message>
     <message>
-        <location line="-67"/>
+        <location line="-68"/>
         <source>Multiple entities in selection.</source>
         <translation>Múltiplas entidades em seleção.</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Area centroid script (v0.31) by CVH</source>
-        <translation>Área centroid script (v0.31) por CVH</translation>
+        <translation type="vanished">Área centroid script (v0.31) por CVH</translation>
     </message>
     <message>
-        <location line="+34"/>
         <source>2D Centroid</source>
-        <translation>2D Centroid</translation>
+        <translation type="vanished">2D Centroid</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+43"/>
         <source>Centroid markers circle in selection. No results.</source>
         <translation>Os marcadores centróides circulam na selecção. Sem resultados.</translation>
     </message>
@@ -7802,46 +7873,60 @@ BUG: Interferes with group castings.</source>
         <translation>Sem resultados.</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Centroid point</source>
-        <translation>Ponto centróide</translation>
+        <translation type="vanished">Ponto centróide</translation>
     </message>
     <message>
-        <location line="+49"/>
+        <location line="-74"/>
+        <location line="+2"/>
+        <source>Area 2D Centroid script (v0.32) by CVH</source>
+        <translation>Área 2D do script Centroid (v0.32) por CVH</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Arc sector mode</source>
+        <translation>Modo setorial arco</translation>
+    </message>
+    <message>
+        <location line="+82"/>
+        <source>2D area Centroid</source>
+        <translation>Área 2D Centroid</translation>
+    </message>
+    <message>
+        <location line="+40"/>
+        <location line="+6"/>
         <source>(Incl. approximations)</source>
         <translation>(Incl. aproximações)</translation>
     </message>
     <message>
-        <location line="+8"/>
-        <location line="+19"/>
+        <location line="+4"/>
         <source>Approximated centroid:</source>
         <translation>Centróide aproximado:</translation>
     </message>
     <message>
-        <location line="-19"/>
-        <location line="+19"/>
+        <location line="+0"/>
         <source>Centroid:</source>
         <translation>Centroid:</translation>
     </message>
     <message>
-        <location line="+193"/>
-        <location line="+563"/>
+        <location line="+207"/>
+        <location line="+578"/>
         <source>Encountered an unsupported polyline with custom widths</source>
         <translation>Encontrou uma polilinha sem suporte com larguras personalizadas</translation>
     </message>
     <message>
-        <location line="-478"/>
-        <location line="+581"/>
+        <location line="-488"/>
+        <location line="+596"/>
         <source>Encountered an unsupported polygon with custom widths</source>
         <translation>Encontrou um polígono sem suporte com larguras personalizadas</translation>
     </message>
     <message>
-        <location line="+686"/>
+        <location line="+687"/>
         <source>Unhandled shape from hatch loop.</source>
-        <translation>Forma livre do laço da escotilha.</translation>
+        <translation>Forma livre do laço da hachura.</translation>
     </message>
     <message>
-        <location line="+80"/>
+        <location line="+70"/>
         <source>Self-intersecting shape near (%1). No Results.</source>
         <translation>Forma auto-intersectante próxima de (%1). Sem resultados.</translation>
     </message>
@@ -7850,31 +7935,53 @@ BUG: Interferes with group castings.</source>
         <translation type="vanished">Adicionar centroid para uma entidade selecionada.</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+11"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoAreaCentroid/InfoAreaCentroidInit.js" line="+19"/>
         <source>&amp;Area Centroid</source>
         <translation>&amp;Área Centroid</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>Add 2D area centroid for a selected entity.</source>
-        <translation>Adicionar centróide de área 2D para uma entidade selecionada.</translation>
+        <location line="+8"/>
+        <source>Create an area 2D Centroid for a selected entity</source>
+        <translation>Criar uma área 2D Centroid para uma entidade seleccionada</translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>Creates a new uniform areal density 2D Centroid marker and value labels for a selected entity</source>
+        <translation>Cria um novo marcador de densidade areolar 2D uniforme e etiquetas de valor para uma entidade seleccionada</translation>
+    </message>
+    <message>
+        <source>Add 2D area centroid for a selected entity.</source>
+        <translation type="vanished">Adicionar centróide de área 2D para uma entidade selecionada.</translation>
+    </message>
+    <message>
         <source>Add 2D uniform density area centroid marker and values for a selected entity.</source>
-        <translation>Adicionar marcador de área de densidade uniforme 2D e valores para uma entidade selecionada.</translation>
+        <translation type="vanished">Adicionar marcador de área de densidade uniforme 2D e valores para uma entidade selecionada.</translation>
     </message>
 </context>
 <context>
     <name>InfoCentroids</name>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js" line="+232"/>
-        <location line="+1"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroids.js" line="+52"/>
         <source>2D Centroid</source>
         <translation>2D Centroid</translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>Point mass</source>
+        <translation>Ponto de massa</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Area</source>
+        <translation>Área</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Wire</source>
+        <translation>Fio</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>X position</source>
         <translation>Posição X</translation>
     </message>
@@ -7885,13 +7992,59 @@ BUG: Interferes with group castings.</source>
     </message>
     <message>
         <location line="+1"/>
+        <source>Undefined</source>
+        <translation>Indefinido</translation>
+    </message>
+    <message>
+        <location line="+428"/>
+        <source>2D &amp;Centroids</source>
+        <translation>2D Centroides</translation>
+    </message>
+    <message>
+        <location line="-431"/>
         <source>Weighted</source>
         <translation>Ponderado</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-1"/>
         <source>Density</source>
         <translation>Densidade</translation>
+    </message>
+</context>
+<context>
+    <name>InfoCentroidsListener</name>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListener.js" line="+191"/>
+        <source>2D Centroids transaction listener active.</source>
+        <translation>Ouvinte de transações 2D Centroids ativo.</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Deactivated/removed the 2D Centroids transaction listener.</source>
+        <translation>Desativado/removido o ouvinte de transações 2D Centroids.</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <location line="+5"/>
+        <location line="+40"/>
+        <location line="+5"/>
+        <source>Syntax error: &apos;%1&apos; parse error</source>
+        <translation>Erro de sintaxe: erro parse &apos;%1&apos;</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoCentroidsListener/InfoCentroidsListenerInit.js" line="+19"/>
+        <source>Centroid &amp;Listener</source>
+        <translation>Ouvinte do Centroid</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>(De-)Activate a transaction listener for 2D Centroids</source>
+        <translation>(Des)Ativar um ouvinte de transação para Centroids 2D</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>(De-)Activate a transaction listener for binding changes applied to 2D Centroid markers</source>
+        <translation>(Des)Ativar um ouvinte de transação para alterações vinculativas aplicadas a marcadores Centroid 2D</translation>
     </message>
 </context>
 <context>
@@ -8063,7 +8216,7 @@ BUG: Interferes with group castings.</source>
 <context>
     <name>InfoSumCentroidsWeighted</name>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeighted.js" line="+94"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeighted.js" line="+105"/>
         <source>No selection.</source>
         <translation>Sem seleção.</translation>
     </message>
@@ -8074,84 +8227,188 @@ BUG: Interferes with group castings.</source>
     </message>
     <message>
         <location line="+5"/>
-        <source>Centroids weighted sum script (v0.10b) by CVH</source>
-        <translation>Roteiro de soma ponderada de centróides (v0.10b) por CVH</translation>
+        <source>2D Centroids weighted sum script (v0.24) by CVH.</source>
+        <translation>2D Centroids roteiro de soma ponderada (v0.24) por CVH.</translation>
     </message>
     <message>
-        <location line="+14"/>
-        <source>2D Centroid</source>
-        <translation>2D Centroid</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Density</source>
-        <translation>Densidade</translation>
+        <location line="+38"/>
+        <source>Encountered a missing coordinate value.</source>
+        <translation>Encontrou um valor de coordenada em falta.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>X position</source>
-        <translation>Posição X</translation>
+        <source>Encountered an invalid coordinate value.</source>
+        <translation>Encontrou um valor de coordenada inválido.</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Y position</source>
-        <translation>Posição em Y</translation>
+        <location line="+8"/>
+        <location line="+11"/>
+        <location line="+10"/>
+        <source>Encountered a missing &apos;%1&apos; value.</source>
+        <translation>Encontramos um valor &quot;%1&quot; em falta.</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Weighted</source>
-        <translation>Ponderado</translation>
+        <location line="-16"/>
+        <location line="+11"/>
+        <location line="+17"/>
+        <source>Encountered an invalid &apos;%1&apos; value.</source>
+        <translation>Encontrado um valor &apos;%1&apos; inválido.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Encountered an unknown marker type.</source>
+        <translation>Encontrou um tipo de marcador desconhecido.</translation>
     </message>
     <message>
         <location line="+33"/>
-        <source>No centroid markers in selection.</source>
-        <translation>Sem marcadores centróides na selecção.</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>One marker selected, nothing to sum. Please verify selection.</source>
-        <translation>Um marcador seleccionado, nada a somar. Por favor, verifique a selecção.</translation>
-    </message>
-    <message>
-        <location line="+9"/>
-        <source>Results in Zero.</source>
-        <translation>Resultados em Zero.</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Total sum(%1):</source>
-        <translation>Soma total(%1):</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Weighted sum(%1):</source>
-        <translation>Soma ponderada (%1):</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Summed centroid position:</source>
-        <translation>Posição centróide somada:</translation>
-    </message>
-    <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+11"/>
-        <source>&amp;Sum Centroids Weighted</source>
-        <translation>&amp;Soma Centroides ponderada</translation>
+        <source>No result.</source>
+        <translation>Nenhum resultado.</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Sum selected 2D centroid markers weighted.</source>
-        <translation>Soma de marcadores centróides 2D selecionados, ponderados.</translation>
+        <source>No 2D Centroid markers found in the selection.</source>
+        <translation>Não foram encontrados marcadores Centroid 2D na selecção.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Single marker selected, point mass = %1</source>
+        <translation>Marcador único selecionado, massa do ponto = %1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Density is undefined</source>
+        <translation>A densidade é indefinida</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Results in a division by zero.</source>
+        <translation>Resulta em uma divisão por zero.</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Results in a NaN value.</source>
+        <translation>Resulta em um valor de NaN.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Combined 2D Centroid</source>
+        <translation>Centroid 2D combinado</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Combined uniform point mass (%1):</source>
+        <translation>Massa de pontos uniformes combinados (%1):</translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>Combined point mass (%1):</source>
+        <translation>Massa do ponto combinado (%1):</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>All densities are undefined</source>
+        <translation>Todas as densidades são indefinidas</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Some densities are undefined</source>
+        <translation>Algumas densidades são indefinidas</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>area (Informational):</source>
+        <translation>área (Informativa):</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>wire length (Informational):</source>
+        <translation>comprimento do fio (Informativo):</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Combined centroid:</source>
+        <translation>Centróide combinado:</translation>
+    </message>
+    <message>
+        <source>Centroids weighted sum script (v0.10b) by CVH</source>
+        <translation type="vanished">Roteiro de soma ponderada de centróides (v0.10b) por CVH</translation>
+    </message>
+    <message>
+        <source>2D Centroid</source>
+        <translation type="vanished">2D Centroid</translation>
+    </message>
+    <message>
+        <source>Density</source>
+        <translation type="vanished">Densidade</translation>
+    </message>
+    <message>
+        <source>X position</source>
+        <translation type="vanished">Posição X</translation>
+    </message>
+    <message>
+        <source>Y position</source>
+        <translation type="vanished">Posição em Y</translation>
+    </message>
+    <message>
+        <source>Weighted</source>
+        <translation type="vanished">Ponderado</translation>
+    </message>
+    <message>
+        <source>No centroid markers in selection.</source>
+        <translation type="vanished">Sem marcadores centróides na selecção.</translation>
+    </message>
+    <message>
+        <source>One marker selected, nothing to sum. Please verify selection.</source>
+        <translation type="vanished">Um marcador seleccionado, nada a somar. Por favor, verifique a selecção.</translation>
+    </message>
+    <message>
+        <source>Results in Zero.</source>
+        <translation type="vanished">Resultados em Zero.</translation>
+    </message>
+    <message>
+        <source>Total sum(%1):</source>
+        <translation type="vanished">Soma total(%1):</translation>
+    </message>
+    <message>
+        <source>Weighted sum(%1):</source>
+        <translation type="vanished">Soma ponderada (%1):</translation>
+    </message>
+    <message>
+        <source>Summed centroid position:</source>
+        <translation type="vanished">Posição centróide somada:</translation>
+    </message>
+    <message>
+        <source>&amp;Sum Centroids Weighted</source>
+        <translation type="vanished">&amp;Soma Centroides ponderada</translation>
+    </message>
+    <message>
+        <source>Sum selected 2D centroid markers weighted.</source>
+        <translation type="vanished">Soma de marcadores centróides 2D selecionados, ponderados.</translation>
+    </message>
+    <message>
         <source>Sum selected 2D centroid markers weighted by their individual custom density.</source>
-        <translation>Soma de marcadores centróides 2D selecionados, ponderados pela sua densidade personalizada individual.</translation>
+        <translation type="vanished">Soma de marcadores centróides 2D selecionados, ponderados pela sua densidade personalizada individual.</translation>
+    </message>
+    <message>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoSumCentroidsWeighted/InfoSumCentroidsWeightedInit.js" line="+19"/>
+        <source>&amp;Sum 2D Centroids weighted</source>
+        <translation>Soma 2D Centroides ponderada</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Combine selected 2D Centroid markers weighted</source>
+        <translation>Combinar marcadores Centróides 2D selecionados ponderados</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Combines selected 2D Centroid markers, summing all properties weighted</source>
+        <translation>Combina marcadores Centróides 2D selecionados, somando todas as propriedades ponderadas</translation>
     </message>
 </context>
 <context>
     <name>InfoWireCentroid</name>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroid.js" line="+117"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroid.js" line="+121"/>
         <source>No selection.</source>
         <translation>Sem seleção.</translation>
     </message>
@@ -8161,27 +8418,24 @@ BUG: Interferes with group castings.</source>
         <translation>Por favor, faça uma selecção primeiro. Comando terminado.</translation>
     </message>
     <message>
-        <location line="+5"/>
         <source>Wire centroid script (v0.31) by CVH</source>
-        <translation>Script de centróide de fio (v0.31) por CVH</translation>
+        <translation type="vanished">Script de centróide de fio (v0.31) por CVH</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+12"/>
         <source>Length:</source>
         <translation>Comprimento:</translation>
     </message>
     <message>
-        <location line="+26"/>
         <source>2D Centroid</source>
-        <translation>2D Centroid</translation>
+        <translation type="vanished">2D Centroid</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Centroid markers circle in selection. No results.</source>
-        <translation>Os marcadores centróides circulam na selecção. Sem resultados.</translation>
+        <translation type="vanished">Os marcadores centróides circulam na selecção. Sem resultados.</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+35"/>
         <location line="+7"/>
         <source>Approximated length:</source>
         <translation>Comprimento aproximado:</translation>
@@ -8197,61 +8451,86 @@ BUG: Interferes with group castings.</source>
         <translation>Sem resultados.</translation>
     </message>
     <message>
-        <location line="+14"/>
         <source>Results in Zero.</source>
-        <translation>Resultados em Zero.</translation>
+        <translation type="vanished">Resultados em Zero.</translation>
+    </message>
+    <message>
+        <source>Centroid point</source>
+        <translation type="vanished">Ponto centróide</translation>
+    </message>
+    <message>
+        <location line="-71"/>
+        <source>Wire 2D Centroid script (v0.32) by CVH</source>
+        <translation>Fio 2D de script Centroid (v0.32) por CVH</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>2D Centroid markers circle in selection. No results.</source>
+        <translation>Marcadores 2D Centroid em círculo na seleção. Sem resultados.</translation>
+    </message>
+    <message>
+        <location line="+55"/>
+        <source>Results in a division by zero.</source>
+        <translation>Resulta em uma divisão por zero.</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>Centroid point</source>
-        <translation>Ponto centróide</translation>
+        <source>2D wire Centroid</source>
+        <translation>Fio Centroid 2D</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+39"/>
         <source>Total length:</source>
         <translation>Comprimento total:</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
+        <location line="+6"/>
         <source>(Incl. approximations)</source>
         <translation>(Incl. aproximações)</translation>
     </message>
     <message>
-        <location line="+8"/>
-        <location line="+19"/>
+        <location line="+4"/>
         <source>Approximated centroid:</source>
         <translation>Centróide aproximado:</translation>
     </message>
     <message>
-        <location line="-19"/>
-        <location line="+19"/>
+        <location line="+0"/>
         <source>Centroid:</source>
         <translation>Centroid:</translation>
     </message>
     <message>
-        <location line="+116"/>
+        <location line="+125"/>
         <source>Encountered an unsupported polyline with custom widths</source>
         <translation>Encontrou uma polilinha sem suporte com larguras personalizadas</translation>
     </message>
     <message>
-        <location line="+101"/>
+        <location line="+105"/>
         <source>Encountered an unsupported polygon with custom widths</source>
         <translation>Encontrou um polígono sem suporte com larguras personalizadas</translation>
     </message>
     <message>
-        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+11"/>
+        <location filename="../scripts/Misc/MiscInformation/InfoCentroids/InfoWireCentroid/InfoWireCentroidInit.js" line="+19"/>
         <source>&amp;Wire Centroid</source>
         <translation>&amp;Fio Centroid</translation>
     </message>
     <message>
-        <location line="+6"/>
-        <source>Add 2D wire centroid for a selection.</source>
-        <translation>Adicionar centróide de fio 2D para uma seleção.</translation>
+        <location line="+8"/>
+        <source>Create a wire 2D Centroid for a selection</source>
+        <translation>Criar um Centroid 2D de fio para uma seleção</translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>Creates a new uniform linear density 2D Centroid marker and value labels for a selection of entities</source>
+        <translation>Cria um novo marcador de densidade linear uniforme 2D Centróide e etiquetas de valor para uma selecção de entidades</translation>
+    </message>
+    <message>
+        <source>Add 2D wire centroid for a selection.</source>
+        <translation type="vanished">Adicionar centróide de fio 2D para uma seleção.</translation>
+    </message>
+    <message>
         <source>Add 2D uniform density wire centroid marker and values for a selection of entities.</source>
-        <translation>Adicionar marcador de centróide de fio de densidade uniforme 2D e valores para uma seleção de entidades.</translation>
+        <translation type="vanished">Adicionar marcador de centróide de fio de densidade uniforme 2D e valores para uma seleção de entidades.</translation>
     </message>
 </context>
 <context>
@@ -15181,7 +15460,7 @@ nos resultados de busca:</translation>
     <message>
         <location line="+1"/>
         <source>Meter</source>
-        <translation>Medidor</translation>
+        <translation>Metro</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15426,47 +15705,43 @@ nos resultados de busca:</translation>
         <translation>Inserir Símbolo</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+6"/>
         <source>Diameter</source>
         <translation>Diâmetro</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+4"/>
         <source>Arc</source>
         <translation>Arco</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Degree</source>
-        <translation>Grau</translation>
+        <translation type="vanished">Grau</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-5"/>
         <source>Plus/Minus</source>
         <translation>Plus/Minus</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Almost equal to</source>
-        <translation>Quase igual a</translation>
+        <translation type="vanished">Quase igual a</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Asymptotically equal to</source>
-        <translation>Assintoticamente igual a</translation>
+        <translation type="vanished">Assintoticamente igual a</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+23"/>
         <source>Pi</source>
         <translation>Pi</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Square root</source>
-        <translation>Raiz quadrada</translation>
+        <translation type="vanished">Raiz quadrada</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-3"/>
         <source>Phi</source>
         <translation>Phi</translation>
     </message>
@@ -15481,34 +15756,104 @@ nos resultados de busca:</translation>
         <translation>Alt phi</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-5"/>
         <source>Ohm</source>
         <translation>Ohm</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>omega</source>
         <translation>omega</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-4"/>
         <source>Multiplication</source>
         <translation>Multiplicação</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-13"/>
         <source>Division</source>
         <translation>Divisão</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+25"/>
         <source>Square</source>
         <translation>Praça</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-18"/>
         <source>Delta</source>
         <translation>Delta</translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <source>Degrees</source>
+        <translation>Graus</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Almost Equal</source>
+        <translation>Quase igual a</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Angle</source>
+        <translation>Ângulo</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Asymptotically Equal</source>
+        <translation>Assintoticamente igual a</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Center Line</source>
+        <translation>Linha central</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Electrical Phase</source>
+        <translation>Fase Elétrica</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Identity</source>
+        <translation>Identidade</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Not Equal</source>
+        <translation>Não Igual</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Omega</source>
+        <translation>Ômega</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Property Line</source>
+        <translation>Linha de Imóveis</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Subscript 2</source>
+        <translation>Assinatura 2</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Square Root</source>
+        <translation>Raiz Quadrada</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Squared</source>
+        <translation>Squared</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cubed</source>
+        <translation>Cubo</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15521,7 +15866,7 @@ nos resultados de busca:</translation>
         <translation>Valor medido</translation>
     </message>
     <message>
-        <location line="+137"/>
+        <location line="+151"/>
         <source>Left</source>
         <translation>Esquerda</translation>
     </message>
@@ -15916,7 +16261,7 @@ nos resultados de busca:</translation>
 <context>
     <name>library</name>
     <message>
-        <location filename="../scripts/library.js" line="+980"/>
+        <location filename="../scripts/library.js" line="+982"/>
         <source>Objects</source>
         <translation>Objectos</translation>
     </message>
@@ -16204,7 +16549,7 @@ nos resultados de busca:</translation>
     <message>
         <location line="+0"/>
         <source>Hatch</source>
-        <translation>Escotilha</translation>
+        <translation>Hachura</translation>
     </message>
     <message>
         <location line="+2"/>

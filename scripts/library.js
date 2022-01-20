@@ -1717,6 +1717,22 @@ Array.prototype.filter = function(func, thisArg) {
 //    });
 //};
 
+Array.union = function(x, y) {
+    var i;
+    var obj = {};
+    for (i=x.length-1; i>=0; --i) {
+        obj[x[i]] = x[i];
+    }
+    for (i=y.length-1; i>=0; --i) {
+        obj[y[i]] = y[i];
+    }
+    var res = []
+    for (var k in obj) {
+        res.push(obj[k]);
+    }
+    return res;
+};
+
 /* Finds the intersection of two sorted arrays.
  *
  * \param a first array, must already be sorted

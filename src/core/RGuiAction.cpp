@@ -798,7 +798,7 @@ void RGuiAction::updateTransactionListener(RDocument* document, RTransaction* tr
                 undoText = "-";
             }
             undoText.replace("\t", " ");
-            t.replace(QRegularExpression("\\[[^\\]]*\\]"), "[" + undoText + "]");
+            t.replace(QRegExp("\\[[^\\]]*\\]"), "[" + undoText + "]");
             setText(t);
         }
     }
@@ -811,7 +811,7 @@ void RGuiAction::updateTransactionListener(RDocument* document, RTransaction* tr
                 redoText = "-";
             }
             redoText.replace("\t", " ");
-            t.replace(QRegularExpression("\\[[^\\]]*\\]"), "[" + redoText + "]");
+            t.replace(QRegExp("\\[[^\\]]*\\]"), "[" + redoText + "]");
             setText(t);
         }
     }

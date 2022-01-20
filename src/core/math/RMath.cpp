@@ -165,14 +165,18 @@ double RMath::eval(const QString& expression, bool* ok) {
 
     // 'correct' commas in numbers to points:
     if (RSettings::getNumberLocale().decimalPoint()==',') {
-        expr.replace(QRegularExpression("(\\d*),(\\d+)"), "\\1.\\2");
+        expr.replace(QRegExp("(\\d*),(\\d+)"), "\\1.\\2");
     }
 
     int idx = -1;
 
     // convert surveyor type angles (e.g. N10d30'12.5"E) to degrees:
+<<<<<<< HEAD
     QRegularExpression re = RS::createRegEpCI("[NESW]");
     if (expr.contains(re)) {
+=======
+    if (expr.contains(QRegExp("[NESW]", Qt::CaseInsensitive))) {
+>>>>>>> b74279236bbe75932edb4be14305cea21bc9387a
         // \b(?:(?:([NS])(?:([+-]?)(?:(?:(\d*\.?\d*)[d°])?(?:(\d*\.?\d*)')?(?:(\d*\.?\d*)")?|(\d*))([EW]))?)|([EW]))\b
         QRegularExpression re = RS::createRegEpCI(
             "\\b"                               // a word
