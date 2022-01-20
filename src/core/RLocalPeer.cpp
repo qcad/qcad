@@ -20,15 +20,7 @@
 #include <QDataStream>
 #include <QTime>
 
-#if QT_VERSION >= 0x050000
-#  include <QRegularExpression>
-#else
-#  include <QRegExp>
-#  ifndef QRegularExpression
-#    define QRegularExpression QRegExp
-#  endif
-#endif
-
+#include "RS.h"
 #include "RLocalPeer.h"
 
 #if defined(Q_OS_WIN)

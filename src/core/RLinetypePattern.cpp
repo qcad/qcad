@@ -406,8 +406,20 @@ bool RLinetypePattern::setPatternString(const QString& patternString) {
     screenScale = 1.0;
 
     QStringList parts;
-    QRegExp rx("\\[[^\\]]*\\]|A|([+-]?\\d+\\.?\\d*)|([+-]?\\d*\\.?\\d+)");
+    QRegularExpression rx("\\[[^\\]]*\\]|A|([+-]?\\d+\\.?\\d*)|([+-]?\\d*\\.?\\d+)");
 
+#if QT_VERSION >= 0x060000
+    int pos = 0;
+    QRegularExpressionMatch match;
+    while ((pos = patternString.indexOf(rx, pos, &match))!=-1) {
+        parts.append(match.captured(0));
+        int l = match.capturedLength();
+        if (l==0) {
+            break;
+        }
+        pos += l;
+    }
+#else
     int pos = 0;
     while ((pos = rx.indexIn(patternString, pos))!=-1) {
         parts.append(rx.cap(0));
@@ -417,6 +429,7 @@ bool RLinetypePattern::setPatternString(const QString& patternString) {
         }
         pos += l;
     }
+#endif
 
     if (parts.isEmpty()) {
         return false;
@@ -434,7 +447,7 @@ bool RLinetypePattern::setPatternString(const QString& patternString) {
                 return false;
             }
 
-            QRegExp rx(
+            QRegularExpression rx(
                 "\\["
                 "([^, ]*)"   // text
                 "[, ]*"
@@ -445,20 +458,40 @@ bool RLinetypePattern::setPatternString(const QString& patternString) {
                 "(?:[, ]*([SRXYA])[^=]*=(?:([+-]?\\d+\\.?\\d*|[+-]?\\d*\\.\\d+)))?"
                 "\\]"
             );
-            rx.setCaseSensitivity(Qt::CaseInsensitive);
 
+#if QT_VERSION >= 0x060000
+            QRegularExpressionMatch match;
+            rx.setPatternOptions(QRegularExpression::CaseInsensitiveOption);
+            part.indexOf(rx, 0, &match);
+#else
+            rx.setCaseSensitivity(Qt::CaseInsensitive);
             rx.indexIn(part);
+#endif
 
             int idx = dashes.length()-1;
+#if QT_VERSION >= 0x060000
+            QString text = match.captured(1);
+#else
             QString text = rx.cap(1);
+#endif
             if (text.startsWith("\"") && text.endsWith("\"")) {
                 text = text.mid(1, text.length()-2);
             }
             shapeTexts.insert(idx, text);
+#if QT_VERSION >= 0x060000
+            shapeTextStyles.insert(idx, match.captured(2));
+#else
             shapeTextStyles.insert(idx, rx.cap(2));
+#endif
+
             for (int k=3; k+1<=rx.captureCount(); k+=2) {
+#if QT_VERSION >= 0x060000
+                QString c = match.captured(k).toUpper();
+                double val = match.captured(k+1).toDouble();
+#else
                 QString c = rx.cap(k).toUpper();
                 double val = rx.cap(k+1).toDouble();
+#endif
 
                 if (c=="S") {
                     shapeScales.insert(idx, val);
@@ -812,7 +845,9 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(bool met
     }
 
     QTextStream ts(&file);
-    ts.setCodec("UTF-8");
+
+    RS::setUtf8Codec(ts);
+
     QString line;
     RLinetypePattern* ltPattern = NULL;;
 
@@ -837,10 +872,18 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(bool met
 
         // name / description:
         if (line.at(0)=='*') {
+#if QT_VERSION >= 0x060000
+            QRegularExpression rx("\\*([^,]*)(?:,\\s*(.*))?", QRegularExpression::CaseInsensitiveOption);
+            QRegularExpressionMatch match;
+            line.indexOf(rx, 0, &match);
+            QString name = match.captured(1);
+            QString description = match.captured(2);
+#else
             QRegExp rx("\\*([^,]*)(?:,\\s*(.*))?", Qt::CaseSensitive, QRegExp::RegExp2);
             rx.indexIn(line);
             QString name = rx.cap(1);
             QString description = rx.cap(2);
+#endif
             ltPattern = new RLinetypePattern(metric, name, description);
 
             // some patterns in the imperial pattern file are actually metric:

@@ -19,6 +19,7 @@
 
 #include <QFontDatabase>
 
+#include "RS.h"
 #include "RFontList.h"
 #include "RSettings.h"
 
