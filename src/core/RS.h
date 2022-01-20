@@ -24,13 +24,13 @@
 
 #include <QApplication>
 #include <QDebug>
-#include <QDesktopWidget>
+//#include <QDesktopWidget>
 #include <QEasingCurve>
 #include <QGuiApplication>
 #include <QPair>
 #include <QString>
 #include <QStringList>
-#include <QTextCodec>
+//#include <QTextCodec>
 #include <QVariant>
 
 #if QT_VERSION >= 0x060000
