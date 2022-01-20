@@ -156,7 +156,7 @@ struct DXFLIB_EXPORT DL_StyleData {
         italic(false) {
     }
 
-    bool operator==(const DL_StyleData& other) {
+    bool operator==(const DL_StyleData& other) const {
         // ignore lastHeightUsed:
         return (name==other.name &&
             flags==other.flags &&
