@@ -18,7 +18,9 @@
  */
 #include <QFileInfo>
 #include <QStringList>
+#if QT_VERSION < 0x060000
 #include <QTextCodec>
+#endif
 #include <QTextStream>
 
 #include "RArc.h"
@@ -132,7 +134,7 @@ bool RFont::load() {
     }
 
     QTextStream ts(&file);
-    ts.setCodec("UTF-8");
+    RS::setUtf8Codec(ts);
     QString line;
     int lineCount = 0;
     double scale = 1.0;
@@ -175,7 +177,14 @@ bool RFont::load() {
             } else if (identifier.toLower()=="name") {
                 names.append(value);
             } else if (identifier.toLower()=="encoding") {
+#if QT_VERSION >= 0x060000
+                std::optional<QStringConverter::Encoding> enc = QStringConverter::encodingForName(value.toUtf8());
+                if (enc.has_value()) {
+                    ts.setEncoding(enc.value());
+                }
+#else
                 ts.setCodec(QTextCodec::codecForName(value.toUtf8()));
+#endif
                 encoding = value;
             } else if (identifier.toLower()=="auxiliarylines") {
                 QStringList strs = value.split(",");
@@ -196,7 +205,20 @@ bool RFont::load() {
             QString shapeName;
 
             // read unicode:
-            QRegExp rx("\\[([0-9A-Fa-f]{4,4})\\]\\s*(.*)?");
+            QRegularExpression rx("\\[([0-9A-Fa-f]{4,4})\\]\\s*(.*)?");
+#if QT_VERSION >= 0x060000
+            QRegularExpressionMatch match;
+            qsizetype idx = line.indexOf(rx, 0, &match);
+            if (idx==0 && rx.captureCount()>0) {
+                int uCode = match.captured(1).toInt(0, 16);
+                ch = QChar(uCode);
+                if (rx.captureCount()>1) {
+                    shapeName = match.captured(2);
+                    shapeName = shapeName.trimmed();
+                    //qDebug() << "shapeName: " << shapeName;
+                }
+            }
+#else
             if (rx.indexIn(line)==0 && rx.captureCount()>0) {
                 int uCode = rx.cap(1).toInt(0, 16);
                 ch = QChar(uCode);
@@ -206,6 +228,7 @@ bool RFont::load() {
                     //qDebug() << "shapeName: " << shapeName;
                 }
             }
+#endif
 
             else {
                 // skip line:
@@ -226,13 +249,23 @@ bool RFont::load() {
                 line = ts.readLine();
 
                 if (!line.isEmpty()) {
-                    QRegExp rx("(L|A|AR|PL|PLC) ([0-9,+-\\.e]*)");
+                    QRegularExpression rx("(L|A|AR|PL|PLC) ([0-9,+-\\.e]*)");
+#if QT_VERSION >= 0x060000
+                    QRegularExpressionMatch match;
+                    if (line.indexOf(rx, 0, &match)==-1) {
+                        continue;
+                    }
+                    QString code = match.captured(1);
+                    //qDebug() << "code:" << code;
+                    coordsStr = match.captured(2);
+#else
                     if (rx.indexIn(line)==-1) {
                         continue;
                     }
                     QString code = rx.cap(1);
                     //qDebug() << "code:" << code;
                     coordsStr = rx.cap(2);
+#endif
                     //qDebug() << "coords:" << coordsStr;
                     //coordsStr = line.right(line.length()-2);
                     coords = coordsStr.split(',');

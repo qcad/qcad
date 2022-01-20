@@ -12,10 +12,13 @@ SUBDIRS = \
     gui \
     io
 
+lessThan(QT_MAJOR_VERSION, 6) {
+    SUBDIRS += scripting
+}
+
 !r_mobile {
     SUBDIRS += \
         customwidgets \
-        scripting \
         run
 }
 

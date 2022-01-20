@@ -21,6 +21,7 @@
 #include <QDebug>
 #include <QStringList>
 
+#include "RS.h"
 #include "RDebug.h"
 
 //FILE* RDebug::stream=stderr;

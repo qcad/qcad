@@ -16,6 +16,13 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+
+#include <QtGlobal>
+
+#if QT_VERSION >= 0x060000
+#include <QRandomGenerator>
+#endif
+
 #include "RBox.h"
 #include "RDebug.h"
 #include "RDocument.h"
@@ -274,7 +281,11 @@ void RDocument::init(bool beforeLoad) {
         setVariable("ColorSettings/ColorMode", RSettings::getStringValue("ColorSettings/ColorMode", "FullColor"));
         RColor col = RSettings::getColorValue("ColorSettings/BackgroundColor", RColor(QString("white")));
         QVariant v;
+#if QT_VERSION >= 0x060000
+        v.setValue(col);
+#else
         v.setValue<RColor>(col);
+#endif
         setVariable("ColorSettings/BackgroundColor", v);
 
         // printer page settings:
@@ -919,8 +930,13 @@ void RDocument::unsetCurrentViewport() {
 
 QString RDocument::getTempBlockName() const {
     do {
+#if QT_VERSION >= 0x060000
+        int p1 = QRandomGenerator::global()->generate() % 100000;
+        int p2 = QRandomGenerator::global()->generate() % 100000;
+#else
         int p1 = qrand() % 100000;
         int p2 = qrand() % 100000;
+#endif
         QString blockName = QString("A$C%1%2").arg(p1, 5, 10, QChar('0')).arg(p2, 5, 10, QChar('0'));
         if (!hasBlock(blockName)) {
             return blockName;
@@ -1629,7 +1645,7 @@ QSet<REntity::Id> RDocument::queryInfiniteEntities() const {
  */
 QSet<REntity::Id> RDocument::queryContainedEntities(const RBox& box) const {
     RSpatialIndex* si = getSpatialIndexForCurrentBlock();
-    QSet<REntity::Id> ret = si->queryContained(box).keys().toSet();
+    QSet<REntity::Id> ret = RS::toSet<REntity::Id>(si->queryContained(box).keys());
 
     // always exclude construction lines (XLine):
     ret.subtract(queryInfiniteEntities());
@@ -1670,7 +1686,7 @@ QSet<REntity::Id> RDocument::queryIntersectedShapesXYFast(const RBox& box, bool 
 
     RSpatialIndex* si = getSpatialIndexForBlock(getCurrentBlockId());
     //RDebug::startTimer(120);
-    QSet<REntity::Id> candidates = si->queryIntersected(box).keys().toSet();
+    QSet<REntity::Id> candidates = RS::toSet<REntity::Id>(si->queryIntersected(box).keys());
     //RDebug::stopTimer(120, "si->queryIntersected");
     candidates.unite(infinites);
 
@@ -1701,7 +1717,7 @@ QSet<REntity::Id> RDocument::queryIntersectedEntitiesXY(
         const RBox& box, bool checkBoundingBoxOnly, bool includeLockedLayers, RBlock::Id blockId,
         const QList<RS::EntityType>& filter, bool selectedOnly, RLayer::Id layerId) const {
 
-    return queryIntersectedEntitiesXYWithIndex(box, checkBoundingBoxOnly, includeLockedLayers, blockId, filter, selectedOnly, layerId).keys().toSet();
+    return RS::toSet<REntity::Id>(queryIntersectedEntitiesXYWithIndex(box, checkBoundingBoxOnly, includeLockedLayers, blockId, filter, selectedOnly, layerId).keys());
 }
 
 QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedEntitiesXYWithIndex(
@@ -1752,7 +1768,7 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
 
     bool onlyVisible = false;
 
-    QSet<RS::EntityType> filterSet = filter.toSet();
+    QSet<RS::EntityType> filterSet = RS::toSet<RS::EntityType>(filter);
     RBox boxExpanded = box;
     boxExpanded.c1.z = RMINDOUBLE;
     boxExpanded.c2.z = RMAXDOUBLE;
@@ -1799,7 +1815,13 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
     else {
         RSpatialIndex* si = getSpatialIndexForBlock(blockId);
         candidates = si->queryIntersected(boxExpanded);
-        candidates.unite(infinites);
+
+        //candidates.unite(infinites);
+
+        QMap<REntity::Id, QSet<int> >::iterator it;
+        for (it=infinites.begin(); it!=infinites.end(); it++) {
+            candidates.insert(it.key(), it.value());
+        }
     }
 
     RBox boxFlattened = box;
@@ -2787,7 +2809,7 @@ void RDocument::rebuildSpatialIndex() {
 
 
     if (!disableSpatialIndicesByBlock) {
-        QList<RBlock::Id> blockIds = queryAllBlocks().toList();
+        QList<RBlock::Id> blockIds = RS::toList<RBlock::Id>(queryAllBlocks());
         for (int i=0; i<blockIds.length(); i++) {
             RBlock::Id blockId = blockIds[i];
             RSpatialIndex* si = getSpatialIndexForBlock(blockId);

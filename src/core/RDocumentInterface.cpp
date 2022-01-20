@@ -2395,7 +2395,7 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
         }
     }
 
-    QList<RLayer::Id> changedLayerIdList = changedLayerIds.toList();
+    QList<RLayer::Id> changedLayerIdList = RS::toList<RLayer::Id>(changedLayerIds);
 
     // notify local listeners:
     if (!changedLayerIds.isEmpty()) {
