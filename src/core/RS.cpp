@@ -30,6 +30,12 @@
 const double RS::PointTolerance = 1.0e-9;
 const double RS::AngleTolerance = 1.0e-9;
 
+#if QT_VERSION >= 0x060000
+    const Qt::MouseButton RS::MiddleButton = Qt::MiddleButton;
+#else
+    const Qt::MouseButton RS::MiddleButton = Qt::MidButton;
+#endif
+
 /**
  * \return True if the two values are considered to be equal.
  * \param noTolerance True strict comparison of doubles.
@@ -277,15 +283,16 @@ QStringList RS::sortAlphanumerical(const QStringList& list) {
  * E.g. "abc123" -> "abc", "123"
  */
 QStringList RS::compareChunkify(const QString& s) {
-    static QRegExp rx("0x[0-9a-fA-F]*");
+    static QRegularExpression rx("0x[0-9a-fA-F]*");
 
     QStringList tz;
     bool nummerical = false;
     QString sLocal;
 
     if (s.startsWith("0x")) {
-        if (rx.indexIn(s)==0) {
-            int len = rx.matchedLength();
+        QRegularExpressionMatch match;
+        if (RS::indexIn(rx, match, s)==0) {
+            int len = RS::matchedLength(rx, match);
             sLocal = s.mid(len);
             nummerical = true;
             tz.append(s.left(len));
