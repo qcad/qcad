@@ -20,8 +20,8 @@ linux-* {
 greaterThan(QT_MAJOR_VERSION, 4) {
     cache()
     DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x000000
+    QT += printsupport
     lessThan(QT_MAJOR_VERSION, 6) {
-        QT += printsupport
         macx {
             QT += macextras
         }
@@ -29,6 +29,10 @@ greaterThan(QT_MAJOR_VERSION, 4) {
 }
 else {
     QT += webkit
+}
+
+greaterThan(QT_MAJOR_VERSION, 5) {
+    QT += qml
 }
 
 DEFINES += QCAD_DLL
