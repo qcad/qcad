@@ -44,13 +44,13 @@ void RDxfServices::reset() {
 void RDxfServices::fixVersion2String(QString& str) const {
     // correct stacked text
     // \S+0.1\-0.1; -> \S+0.1^-0.1;
-    QRegExp rx("\\\\S([^\\\\;]*)\\\\([^;]*);");
+    QRegularExpression rx("\\\\S([^\\\\;]*)\\\\([^;]*);");
     str.replace(rx, "\\S\\1^\\2;");
 }
 
 void RDxfServices::fixDimensionLabel(QString& text, QString& uTol, QString& lTol) const {
     // strip away initial vertical alignment, e.g. '\A1;'
-    QRegExp rxAlignment("^\\\\A(\\d+);");
+    QRegularExpression rxAlignment("^\\\\A(\\d+);");
     text.replace(rxAlignment, "");
 
     // analyze and strip stacked text (tolerance) at end:
@@ -150,7 +150,7 @@ void RDxfServices::detectVersion2Format(const QString& fileName) {
 
 QString RDxfServices::getSafeBlockName(QString& blockName) {
     QString ret = blockName;
-    ret.replace(QRegExp("[<>/\":;?*|,=`\\\\\n]"), "_");
+    ret.replace(QRegularExpression("[<>/\":;?*|,=`\\\\\n]"), "_");
     ret.replace(QChar(0x0083), "_");
     return ret;
 }
@@ -159,7 +159,7 @@ void RDxfServices::fixBlockName(QString& blockName) {
     // fix invalid block names (mainly from QCAD 2):
     if (!blockName.startsWith("*")) {
         QString oldBlockName = blockName;
-        blockName.replace(QRegExp("[<>/\":;?*|,=`\\\\\n]"), "_");
+        blockName.replace(QRegularExpression("[<>/\":;?*|,=`\\\\\n]"), "_");
         blockName.replace(QChar(0x0083), "_");
         version2BlockMapping.insert(oldBlockName, blockName);
     }
@@ -168,7 +168,7 @@ void RDxfServices::fixBlockName(QString& blockName) {
 void RDxfServices::fixLayerName(QString& layerName) {
     // fix invalid layer names (mainly from QCAD 2):
     QString oldLayerName = layerName;
-    layerName.replace(QRegExp("[<>/\":;?*|,=`\\\\\n]"), "_");
+    layerName.replace(QRegularExpression("[<>/\":;?*|,=`\\\\\n]"), "_");
     layerName.replace(QChar(0x0083), "_");
     version2LayerMapping.insert(oldLayerName, layerName);
 }

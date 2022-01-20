@@ -1551,7 +1551,7 @@ double RSettings::getDoubleValue(const QString& key, double defaultValue) {
     if (str.isEmpty()) {
         return defaultValue;
     }
-    else if (QRegExp("^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?$").exactMatch(str)) {
+    else if (RS::exactMatch(QRegularExpression("^[-+]?[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?$"), str)) {
         d = ret.toDouble();
     }
     else {
