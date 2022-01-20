@@ -115,7 +115,7 @@ QStringList RFileImporterRegistry::getFilterExtensions() {
         for (int i=0; i<filterStrings.count(); i++) {
             QString filterString = filterStrings[i];
             QRegularExpression rx("\\*\\.([^ )]*)");
-#if QT_VERSION >= 0x060000
+#if QT_VERSION >= 0x050000
             qsizetype pos = 0;
             QRegularExpressionMatch match;
             while ((pos = filterString.indexOf(rx, pos, &match)) != -1)  {

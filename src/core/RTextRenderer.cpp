@@ -309,7 +309,7 @@ void RTextRenderer::renderSimple() {
         bool found = true;
         QList<int> underlineOnOff;
         QRegularExpression rx(RTextRenderer::rxUnderline);
-#if QT_VERSION >= 0x060000
+#if QT_VERSION >= 0x050000
         QRegularExpressionMatch match;
         while (found) {
             found = false;

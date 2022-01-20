@@ -22,24 +22,28 @@
 
 #include "core_global.h"
 
-#include <QGuiApplication>
+#include <QApplication>
+#include <QDebug>
+#include <QDesktopWidget>
 #include <QEasingCurve>
+#include <QGuiApplication>
 #include <QPair>
 #include <QString>
 #include <QStringList>
+#include <QTextCodec>
 #include <QVariant>
 
 #if QT_VERSION >= 0x060000
 #include <QScreen>
 #endif
 
-#if QT_VERSION >= 0x060000
+#if QT_VERSION >= 0x050000
 #  include <QRegularExpression>
 #else
 #  include <QRegExp>
-#  ifndef QRegularExpression
-#    define QRegularExpression QRegExp
-#  endif
+//#  ifndef QRegularExpression
+//#    define QRegularExpression QRegExp
+//#  endif
 #endif
 
 #if QT_VERSION >= 0x060000
@@ -113,11 +117,14 @@ class RPropertyAttributes;
 //#define REASING_BEZIERSPLINE QEasingCurve::BezierSpline
 //#define REASING_TCBSPLINE QEasingCurve::TCBSpline
 
-#if QT_VERSION >= 0x060000
-#else
+#if QT_VERSION < 0x050000
+class QRegularExpressionMatch {
+};
+/*
 #  ifndef QRegularExpressionMatch
-#    define QRegularExpressionMatch void
+#    define QRegularExpressionMatch int
 #  endif
+*/
 #endif
 
 /**
@@ -765,7 +772,7 @@ public:
 
     // workarounds for Qt 6 QRegExp changes:
     static bool exactMatch(const QRegularExpression& rx, const QString& string) {
-#if QT_VERSION >= 0x060000
+#if QT_VERSION >= 0x050000
         return rx.match(string).hasMatch();
 #else
         return rx.exactMatch(string);
@@ -773,7 +780,7 @@ public:
     }
 
     static bool exactMatch(const QRegularExpression& rx, QRegularExpressionMatch& match, const QString& string) {
-#if QT_VERSION >= 0x060000
+#if QT_VERSION >= 0x050000
         match = rx.match(string);
         return match.hasMatch();
 #else
@@ -783,7 +790,7 @@ public:
 
     static bool exactMatch(const QString& rxStr, const QString& string) {
         QRegularExpression rx(rxStr);
-#if QT_VERSION >= 0x060000
+#if QT_VERSION >= 0x050000
         return rx.match(string).hasMatch();
 #else
         return rx.exactMatch(string);
@@ -791,7 +798,7 @@ public:
     }
 
     static int indexIn(const QRegularExpression& rx, QRegularExpressionMatch& match, const QString& string, int from = 0) {
-#if QT_VERSION >= 0x060000
+#if QT_VERSION >= 0x050000
         return (int)string.indexOf(rx, 0, &match);
 #else
         return rx.indexIn(string);
@@ -799,7 +806,7 @@ public:
     }
 
     static QString capture(const QRegularExpression& rx, const QRegularExpressionMatch& match, int nth = 0) {
-#if QT_VERSION >= 0x060000
+#if QT_VERSION >= 0x050000
         return match.captured(nth);
 #else
         return rx.cap(nth);
@@ -807,7 +814,7 @@ public:
     }
 
     static int matchedLength(const QRegularExpression& rx, const QRegularExpressionMatch& match) {
-#if QT_VERSION >= 0x060000
+#if QT_VERSION >= 0x050000
         return (int)match.capturedLength();
 #else
         return rx.matchedLength();
@@ -815,7 +822,7 @@ public:
     }
 
     static QRegularExpression createRegEpCI(const QString& str, bool regExp2 = false) {
-#if QT_VERSION >= 0x060000
+#if QT_VERSION >= 0x050000
         return QRegularExpression(str, QRegularExpression::CaseInsensitiveOption);
 #else
         if (regExp2) {
@@ -858,7 +865,7 @@ public:
             return screens[screen]->availableSize();
         }
 #else
-        return QApplication::desktop()->availableGeometry(i).size();
+        return QApplication::desktop()->availableGeometry(screen).size();
 #endif
     }
 
@@ -872,15 +879,14 @@ public:
         auto enc = QStringDecoder(encoding.value());
         return enc(QByteArray(str));
 #else
-        QString enc = getEncoding(dwgCodePage);
-
         // get the text codec:
-        QTextCodec* codec = QTextCodec::codecForName(enc.toLatin1());
-        if (codec!=NULL) {
-            mtextString = codec->toUnicode(mtext);
+        QTextCodec* codec = QTextCodec::codecForName(codecName.toLatin1());
+        if (codec==NULL) {
+            qWarning() << "RDxfImporter::addMText: unsupported text codec: " << codecName;
+            return str;
         }
         else {
-            qWarning() << "RDxfImporter::addMText: unsupported text codec: " << enc;
+            return codec->toUnicode(str);
         }
 #endif
     }
