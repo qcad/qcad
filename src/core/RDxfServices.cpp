@@ -19,15 +19,6 @@
 #include <QFileInfo>
 #include <QTemporaryFile>
 
-#if QT_VERSION >= 0x050000
-#  include <QRegularExpression>
-#else
-#  include <QRegExp>
-#  ifndef QRegularExpression
-#    define QRegularExpression QRegExp
-#  endif
-#endif
-
 #include "RDocument.h"
 #include "RDxfServices.h"
 #include "REllipse.h"
@@ -64,11 +55,18 @@ void RDxfServices::fixDimensionLabel(QString& text, QString& uTol, QString& lTol
 
     // analyze and strip stacked text (tolerance) at end:
     QRegularExpression rxTolerance("\\\\S([^^]*)\\^([^;]*);$");
+#if QT_VERSION >= 0x060000
     QRegularExpressionMatch match = rxTolerance.match(text);
     if (match.hasMatch()) {
         uTol = match.captured(1);
         lTol = match.captured(2);
     }
+#else
+    if (rxTolerance.indexIn(text)!=-1) {
+        uTol = rxTolerance.cap(1);
+        lTol = rxTolerance.cap(2);
+    }
+#endif
     text.replace(rxTolerance, "");
 
     // auto measurement is default (empty string):
@@ -106,6 +104,18 @@ void RDxfServices::detectVersion2Format(const QString& fileName) {
             if (comment.startsWith("dxflib ")) {
                 QString versionStr = comment.mid(7);
                 //qDebug() << "dxflib version: " << versionStr;
+
+
+#if QT_VERSION >= 0x060000
+                QRegularExpression re("(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)");
+                QRegularExpressionMatch match;
+                qsizetype idx = versionStr.indexOf(re, 0, &match);
+                if (idx==0) {
+                    dxflibMajorVersion = match.captured(1).toInt();
+                    dxflibMinorVersion = match.captured(2).toInt();
+                    dxflibPatchVersion = match.captured(3).toInt();
+                }
+#else
                 QRegExp re("(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)");
                 int idx = re.indexIn(versionStr);
                 if (idx==0) {
@@ -113,6 +123,7 @@ void RDxfServices::detectVersion2Format(const QString& fileName) {
                     dxflibMinorVersion = re.cap(2).toInt();
                     dxflibPatchVersion = re.cap(3).toInt();
                 }
+#endif
             }
         }
 
@@ -2223,11 +2234,22 @@ QString RDxfServices::escapeUnicode(const QString& str) {
 
 QString RDxfServices::parseUnicode(const QString& str) {
     QString ret = str;
-    QRegExp reg;
+    QRegularExpression reg;
     reg.setPattern("\\\\[Uu]\\+([0-9a-fA-F]{4})");
-    int ucPos = 0;
     bool ok = true;
     int uc = 0;
+#if QT_VERSION >= 0x060000
+    qsizetype ucPos = 0;
+    QRegularExpressionMatch match;
+    while ((ucPos = ret.indexOf(reg, 0, &match)) != -1) {
+        uc = match.captured(1).toInt(&ok, 16);
+        if (!ok) {
+            break;
+        }
+        ret.replace(ucPos, match.capturedLength(), QChar(uc));
+    }
+#else
+    int ucPos = 0;
     while ((ucPos = reg.indexIn(ret, 0)) != -1) {
         uc = reg.cap(1).toInt(&ok, 16);
         if (!ok) {
@@ -2235,6 +2257,7 @@ QString RDxfServices::parseUnicode(const QString& str) {
         }
         ret.replace(ucPos, reg.matchedLength(), QChar(uc));
     }
+#endif
     return ret;
 }
 
@@ -2256,7 +2279,21 @@ void RDxfServices::autoFixLinetypePattern(RLinetypePattern& pattern) {
 
 int RDxfServices::getFileQCADVersion(const RDocument& doc) {
     QString fileVersionStr = doc.getVariable("QCADVersion", "").toString();
-    QRegExp re("(\\d+)\\.(\\d+)\\.(\\d+)(?:\\.(\\d+))?");
+    QRegularExpression re("(\\d+)\\.(\\d+)\\.(\\d+)(?:\\.(\\d+))?");
+#if QT_VERSION >= 0x060000
+    QRegularExpressionMatch match;
+    qsizetype idx = fileVersionStr.indexOf(re, 0, &match);
+    if (idx!=0) {
+        return -1;
+    }
+    int fileVersionMajor = match.captured(1).toInt();
+    int fileVersionMinor = match.captured(2).toInt();
+    int fileVersionPatch = match.captured(3).toInt();
+    int fileVersionRev = 0;
+    if (re.captureCount()==4) {
+        fileVersionRev = match.captured(4).toInt();
+    }
+#else
     int idx = re.indexIn(fileVersionStr);
     if (idx!=0) {
         return -1;
@@ -2268,5 +2305,6 @@ int RDxfServices::getFileQCADVersion(const RDocument& doc) {
     if (re.captureCount()==4) {
         fileVersionRev = re.cap(4).toInt();
     }
+#endif
     return fileVersionMajor*100*100*100 + fileVersionMinor*100*100 + fileVersionPatch*100 + fileVersionRev;
 }
