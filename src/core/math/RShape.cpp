@@ -222,10 +222,10 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
     QList<RVector> empty;
 
     bool gotInfiniteShape = false;
-    if (typeid(shape1) == typeid(RXLine) ||
-        typeid(shape2) == typeid(RXLine) ||
-        typeid(shape1) == typeid(RRay) ||
-        typeid(shape2) == typeid(RRay)) {
+    if (shape1.getShapeType() == RShape::XLine ||
+        shape2.getShapeType() == RShape::XLine ||
+        shape1.getShapeType() == RShape::Ray ||
+        shape2.getShapeType() == RShape::Ray) {
 
         gotInfiniteShape = true;
     }
