@@ -169,7 +169,7 @@ int RFlowLayout::doLayout(const QRect& rect, bool testOnly) const {
             wid->setFixedWidth(wid->height());
         }
         int nextX = x + item->sizeHint().width() + spaceX;
-        if (nextX - spaceX > effectiveRect.right() && lineHeight > 0 || listModeItem) {
+        if ((nextX - spaceX > effectiveRect.right() && lineHeight > 0) || listModeItem) {
             x = effectiveRect.x();
             y = y + lineHeight + spaceY;
             nextX = x + item->sizeHint().width() + spaceX;

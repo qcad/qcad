@@ -2241,7 +2241,7 @@ QString RDxfServices::parseUnicode(const QString& str) {
 #if QT_VERSION >= 0x050000
     qsizetype ucPos = 0;
     QRegularExpressionMatch match;
-    while ((ucPos = ret.indexOf(reg, 0, &match)) != -1) {
+    while ((ucPos = (int)ret.indexOf(reg, 0, &match)) != -1) {
         uc = match.captured(1).toInt(&ok, 16);
         if (!ok) {
             break;

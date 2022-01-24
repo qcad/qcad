@@ -129,8 +129,15 @@ void RCharacterWidget::paintEvent(QPaintEvent *event) {
                 painter.fillRect(column * squareSize + 1, row * squareSize + 1,
                         squareSize, squareSize, QBrush(Qt::red));
 
+#if QT_VERSION >= 0x050B00
+            // Qt >= 5.11
+            int hAdvance = fontMetrics.horizontalAdvance(QChar(key));
+#else
+            int hAdvance = fontMetrics.width(QChar(key));
+#endif
+
             painter.drawText(column * squareSize + (squareSize / 2)
-                    - fontMetrics.horizontalAdvance(QChar(key)) / 2, row * squareSize + 4
+                    - hAdvance / 2, row * squareSize + 4
                     + fontMetrics.ascent(), QString(QChar(key)));
         }
     }
