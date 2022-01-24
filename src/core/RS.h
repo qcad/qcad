@@ -37,6 +37,11 @@
 #include <QScreen>
 #endif
 
+// Qt < 5.10
+#if QT_VERSION < 0x050A00
+#define qsizetype ssize_t
+#endif
+
 #if QT_VERSION >= 0x050000
 #  include <QRegularExpression>
 #else

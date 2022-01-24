@@ -159,7 +159,13 @@ void REventHandler::drawInfoLabel(QPainter* painter, const RTextLabel& textLabel
         QFont font = RSettings::getInfoLabelFont();
         font.setPointSizeF(font.pointSizeF()*graphicsView->getDevicePixelRatio());
         QFontMetrics fm(font);
-        int w = fm.horizontalAdvance(text)+10;
+#if QT_VERSION >= 0x050B00
+        // Qt >= 5.11
+        int hAdvance = fm.horizontalAdvance(text);
+#else
+        int hAdvance = fm.width(text);
+#endif
+        int w = hAdvance+10;
         int h = fm.height()+10;
         //fm.destroy();
         painter->setFont(font);
@@ -242,9 +248,15 @@ void REventHandler::drawSnapLabel(QPainter* painter, const RVector& pos, const R
     int offset = 5 * graphicsView->getDevicePixelRatio();
 
     if (!text.isEmpty()) {
+#if QT_VERSION >= 0x050B00
+        // Qt >= 5.11
+        int hAdvance = fm.horizontalAdvance(text);
+#else
+        int hAdvance = fm.width(text);
+#endif
         painter->drawText(
             p.x + offset, p.y + offset,
-            fm.horizontalAdvance(text)+10, fm.height()+10,
+            hAdvance+10, fm.height()+10,
             Qt::AlignHCenter | Qt::AlignVCenter,
             text, NULL);
     }
@@ -309,9 +321,15 @@ void REventHandler::drawSnapLabel(QPainter* painter, const RVector& pos, const R
     }
 
     if (!displayText.isEmpty()) {
+#if QT_VERSION >= 0x050B00
+        // Qt >= 5.11
+        int hAdvance = fm.horizontalAdvance(displayText);
+#else
+        int hAdvance = fm.width(displayText);
+#endif
         painter->drawText(
                     p.x + offset, p.y - 3*offset - fm.height(),
-                    fm.horizontalAdvance(displayText)+10, fm.height()+10,
+                    hAdvance+10, fm.height()+10,
                     Qt::AlignHCenter | Qt::AlignVCenter,
                     displayText, NULL);
     }
