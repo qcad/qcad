@@ -1279,6 +1279,7 @@ void RTextRenderer::render() {
 
         // optional break: backup data for roll back in case of auto wrap:
         if (optionalBreakText) {
+//            qDebug() << "optional break found";
 //            qDebug() << "back up roll back point:" << i+1;
             breakPointFormats = formats;
             breakPointCurrentFormat = currentFormat;
@@ -1544,6 +1545,12 @@ void RTextRenderer::render() {
         // end format block:
         //reg.setPattern(rxEndBlock);
         if (RS::exactMatch(rxEndBlock, formatting)) {
+            if (insertLineBreak) {
+                // we're inserting an automatic line break before this
+                // block, so don't pop formatting yet
+                // block will be repeated after line break:
+                continue;
+            }
             if (!currentFormat.isEmpty()) {
                 currentFormat.pop();
             }
