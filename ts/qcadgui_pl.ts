@@ -12,7 +12,7 @@
 <context>
     <name>REventHandler</name>
     <message>
-        <location filename="../src/gui/REventHandler.cpp" line="+195"/>
+        <location filename="../src/gui/REventHandler.cpp" line="+201"/>
         <source>Grid</source>
         <translation>Siatka</translation>
     </message>
@@ -60,7 +60,7 @@
 <context>
     <name>RMathLineEdit</name>
     <message>
-        <location filename="../src/gui/RMathLineEdit.cpp" line="+172"/>
+        <location filename="../src/gui/RMathLineEdit.cpp" line="+173"/>
         <source>Invalid</source>
         <translation>Nieprawidłowy</translation>
     </message>
