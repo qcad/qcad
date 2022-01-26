@@ -1600,7 +1600,7 @@ void RExporter::exportExplodable(const RExplodable& explodable, double offset) {
 }
 
 void RExporter::exportPainterPathSource(const RPainterPathSource& pathSource, double z) {
-    exportPainterPaths(pathSource.getPainterPaths(false, pixelSizeHint), z);
+    exportPainterPaths(pathSource.getPainterPaths(false, getCurrentPixelSizeHint()), z);
 }
 
 void RExporter::exportPainterPaths(const QList<RPainterPath>& paths, double z) {
