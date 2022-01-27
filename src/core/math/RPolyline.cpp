@@ -360,7 +360,7 @@ bool RPolyline::appendShapeTrim(const RShape& shape) {
         }
     }
 
-    appendShape(shape);
+    return appendShape(shape);
 }
 
 bool RPolyline::closeTrim() {
