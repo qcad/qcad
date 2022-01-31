@@ -33,7 +33,6 @@
 #include <QVariant>
 
 #if QT_VERSION >= 0x060000
-#include <QDesktopWidget>
 #include <QScreen>
 #endif
 

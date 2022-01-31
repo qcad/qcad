@@ -18,6 +18,7 @@
  */
 
 #include <QtGlobal>
+#include <QDesktopWidget>
 
 #include "RColor.h"
 #include "RGlobal.h"
