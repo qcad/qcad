@@ -24,7 +24,6 @@
 
 #include <QApplication>
 #include <QDebug>
-#include <QDesktopWidget>
 #include <QEasingCurve>
 #include <QGuiApplication>
 #include <QPair>
@@ -34,6 +33,7 @@
 #include <QVariant>
 
 #if QT_VERSION >= 0x060000
+#include <QDesktopWidget>
 #include <QScreen>
 #endif
 
