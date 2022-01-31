@@ -10,11 +10,13 @@ var credits =
                               "Misc > Import/Export > Draw from CSV<br>" +
                               "Misc > Information > Area Centroid<br>" +
                               "Misc > Information > Wire Centroid<br>" +
-                              "Misc > Information >  Sum Centroids Weighted<br>"
+                              "Misc > Information > Sum Centroids Weighted<br>"
                               ],
         [ "Dmitry Ponomarev", "Misc > Import/Export > Batch2Pdf visible layout blocks<br>" +
                               "Misc > Draw > Text Aligned Leader<br>" +
                               "Misc > Draw > Leader from Selected Text<br>"
+                              ],
+        [ "gmpowell71",       "Misc > Information > Bearing / Azimuth<br>"
                               ],
         [ "Matfie",           "Gear generator library item \"InvoluteSpur\"<br>"
                               ],
