@@ -39,7 +39,11 @@
 
 // Qt < 5.10
 #if QT_VERSION < 0x050A00
-#define qsizetype ssize_t
+#  ifdef ssize_t
+#    define qsizetype ssize_t
+#  else
+#    define qsizetype int
+#  endif
 #endif
 
 #if QT_VERSION >= 0x050000
