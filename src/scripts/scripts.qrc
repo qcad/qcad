@@ -1673,6 +1673,7 @@
     <file alias="scripts/Misc/MiscIO/MolImport/MolImport.svg">../../scripts/Misc/MiscIO/MolImport/MolImport.svg</file>
     <file alias="scripts/Misc/MiscIO/MolImport/MolImportInit.js">../../scripts/Misc/MiscIO/MolImport/MolImportInit.js</file>
     <file alias="scripts/Misc/MiscIO/MolImport/MolImporter.js">../../scripts/Misc/MiscIO/MolImport/MolImporter.js</file>
+    <file alias="scripts/Misc/MiscInformation/InfoBearing/InfoBearing.js">../../scripts/Misc/MiscInformation/InfoBearing/InfoBearing.js</file>
     <file alias="scripts/Misc/MiscInformation/InfoCentroids/Centroid-examples-v32.dxf">../../scripts/Misc/MiscInformation/InfoCentroids/Centroid-examples-v32.dxf</file>
     <file alias="scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/AddCentroidDialog.ui">../../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/AddCentroidDialog.ui</file>
     <file alias="scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroid-inverse.svg">../../scripts/Misc/MiscInformation/InfoCentroids/InfoAddCustomCentroid/InfoAddCustomCentroid-inverse.svg</file>
