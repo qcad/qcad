@@ -2235,6 +2235,7 @@
     <file alias="scripts/Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest04.js">../../scripts/Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest04.js</file>
     <file alias="scripts/Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest10.js">../../scripts/Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest10.js</file>
     <file alias="scripts/Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest11.js">../../scripts/Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest11.js</file>
+    <file alias="scripts/Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest12.js">../../scripts/Projection/IsometricProjection/IsoProject/Tests/IsoProjectTest12.js</file>
     <file alias="scripts/Projection/IsometricProjection/IsoProject/Tests/data/cube_arc.dxf">../../scripts/Projection/IsometricProjection/IsoProject/Tests/data/cube_arc.dxf</file>
     <file alias="scripts/Projection/IsometricProjection/IsoProject/Tests/data/cube_circle.dxf">../../scripts/Projection/IsometricProjection/IsoProject/Tests/data/cube_circle.dxf</file>
     <file alias="scripts/Projection/IsometricProjection/IsoProject/Tests/data/cube_ellipse.dxf">../../scripts/Projection/IsometricProjection/IsoProject/Tests/data/cube_ellipse.dxf</file>
@@ -2247,6 +2248,7 @@
     <file alias="scripts/Projection/IsometricProjection/IsoProject/Tests/required/IsoProjectTest04_000.dxf">../../scripts/Projection/IsometricProjection/IsoProject/Tests/required/IsoProjectTest04_000.dxf</file>
     <file alias="scripts/Projection/IsometricProjection/IsoProject/Tests/required/IsoProjectTest10_000.dxf">../../scripts/Projection/IsometricProjection/IsoProject/Tests/required/IsoProjectTest10_000.dxf</file>
     <file alias="scripts/Projection/IsometricProjection/IsoProject/Tests/required/IsoProjectTest11_000.dxf">../../scripts/Projection/IsometricProjection/IsoProject/Tests/required/IsoProjectTest11_000.dxf</file>
+    <file alias="scripts/Projection/IsometricProjection/IsoProject/Tests/required/IsoProjectTest12_000.dxf">../../scripts/Projection/IsometricProjection/IsoProject/Tests/required/IsoProjectTest12_000.dxf</file>
     <file alias="scripts/Projection/IsometricProjection/IsoProject/Top-inverse.svg">../../scripts/Projection/IsometricProjection/IsoProject/Top-inverse.svg</file>
     <file alias="scripts/Projection/IsometricProjection/IsoProject/Top.svg">../../scripts/Projection/IsometricProjection/IsoProject/Top.svg</file>
     <file alias="scripts/Projection/IsometricProjection/IsometricProjection.js">../../scripts/Projection/IsometricProjection/IsometricProjection.js</file>
