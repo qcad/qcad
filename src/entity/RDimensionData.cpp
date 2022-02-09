@@ -847,6 +847,7 @@ void RDimensionData::update() const {
         //qDebug() << "clear dim block name";
         dimBlockName = "";
     }
+    shapes.clear();
 }
 
 QString RDimensionData::getMeasurement(bool resolveAutoMeasurement) const {

@@ -143,6 +143,8 @@ public:
         Q_UNUSED(segment)
         Q_UNUSED(entityIds)
 
+        render();
+
         return shapes;
     }
 
