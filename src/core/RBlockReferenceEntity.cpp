@@ -272,17 +272,17 @@ QPair<QVariant, RPropertyAttributes> RBlockReferenceEntity::getProperty(
     } else if (propertyTypeId == PropertyPositionZ) {
         return qMakePair(QVariant(data.position.z), RPropertyAttributes());
     } else if (propertyTypeId == PropertyScaleX) {
-        return qMakePair(QVariant(data.scaleFactors.x), RPropertyAttributes());
+        return qMakePair(QVariant(data.scaleFactors.x), RPropertyAttributes(RPropertyAttributes::UnitLess));
     } else if (propertyTypeId == PropertyScaleY) {
-        return qMakePair(QVariant(data.scaleFactors.y), RPropertyAttributes());
+        return qMakePair(QVariant(data.scaleFactors.y), RPropertyAttributes(RPropertyAttributes::UnitLess));
     } else if (propertyTypeId == PropertyScaleZ) {
-        return qMakePair(QVariant(data.scaleFactors.z), RPropertyAttributes());
+        return qMakePair(QVariant(data.scaleFactors.z), RPropertyAttributes(RPropertyAttributes::UnitLess));
     } else if (propertyTypeId == PropertyRotation) {
         return qMakePair(QVariant(data.rotation),  RPropertyAttributes(RPropertyAttributes::Angle));
     } else if (propertyTypeId == PropertyColumnCount) {
-        return qMakePair(QVariant(data.columnCount), RPropertyAttributes());
+        return qMakePair(QVariant(data.columnCount), RPropertyAttributes(RPropertyAttributes::UnitLess));
     } else if (propertyTypeId == PropertyRowCount) {
-        return qMakePair(QVariant(data.rowCount), RPropertyAttributes());
+        return qMakePair(QVariant(data.rowCount), RPropertyAttributes(RPropertyAttributes::UnitLess));
     } else if (propertyTypeId == PropertyColumnSpacing) {
         return qMakePair(QVariant(data.columnSpacing), RPropertyAttributes());
     } else if (propertyTypeId == PropertyRowSpacing) {
