@@ -306,7 +306,6 @@ int main(int argc, char *argv[]) {
     RHatchEntity::init();
     RLineEntity::init();
     RPointEntity::init();
-    RPolylineEntity::init();
     RSolidEntity::init();
     RTraceEntity::init();
     RFaceEntity::init();
@@ -332,7 +331,8 @@ int main(int argc, char *argv[]) {
     // these are always stored in "QCAD3.ini/conf":
     RPluginLoader::loadPlugins(true);
 
-    // dimension initialization (properties) may depend on available plugins:
+    // initialization of entities whos properties may depend on available plugins:
+    RPolylineEntity::init();
     RDimensionEntity::init();
     RDimLinearEntity::init();
     RDimAlignedEntity::init();
