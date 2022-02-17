@@ -7,7 +7,6 @@ SUBDIRS = \
     InfoDistanceEE \
     InfoDistanceEP \
     InfoDistancePP \
-    InfoPolylineArea \
     InfoPosition \
     InfoPositionRel \
     InfoPositionPol \
