@@ -1360,10 +1360,6 @@
     <file alias="scripts/Information/InfoDistancePP/InfoDistancePPInit.js">../../scripts/Information/InfoDistancePP/InfoDistancePPInit.js</file>
     <file alias="scripts/Information/InfoDistancePP/Tests/InfoDistancePPTest00.js">../../scripts/Information/InfoDistancePP/Tests/InfoDistancePPTest00.js</file>
     <file alias="scripts/Information/InfoDistancePP/Tests/required/InfoDistancePPTest00_000.dxf">../../scripts/Information/InfoDistancePP/Tests/required/InfoDistancePPTest00_000.dxf</file>
-    <file alias="scripts/Information/InfoPolylineArea/InfoPolylineArea-inverse.svg">../../scripts/Information/InfoPolylineArea/InfoPolylineArea-inverse.svg</file>
-    <file alias="scripts/Information/InfoPolylineArea/InfoPolylineArea.js">../../scripts/Information/InfoPolylineArea/InfoPolylineArea.js</file>
-    <file alias="scripts/Information/InfoPolylineArea/InfoPolylineArea.svg">../../scripts/Information/InfoPolylineArea/InfoPolylineArea.svg</file>
-    <file alias="scripts/Information/InfoPolylineArea/InfoPolylineAreaInit.js">../../scripts/Information/InfoPolylineArea/InfoPolylineAreaInit.js</file>
     <file alias="scripts/Information/InfoPosition/InfoPosition-inverse.svg">../../scripts/Information/InfoPosition/InfoPosition-inverse.svg</file>
     <file alias="scripts/Information/InfoPosition/InfoPosition.js">../../scripts/Information/InfoPosition/InfoPosition.js</file>
     <file alias="scripts/Information/InfoPosition/InfoPosition.svg">../../scripts/Information/InfoPosition/InfoPosition.svg</file>
