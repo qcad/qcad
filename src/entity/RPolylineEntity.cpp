@@ -20,6 +20,7 @@
 #include "RMetaTypes.h"
 #include "RExporter.h"
 #include "RLine.h"
+#include "RPluginLoader.h"
 
 RPropertyTypeId RPolylineEntity::PropertyCustom;
 RPropertyTypeId RPolylineEntity::PropertyHandle;
@@ -119,8 +120,11 @@ void RPolylineEntity::init() {
     RPolylineEntity::PropertyOrientation.generateId(RPolylineEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Orientation"));
     RPolylineEntity::PropertyLength.generateId(RPolylineEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Length"));
     RPolylineEntity::PropertyTotalLength.generateId(RPolylineEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Total Length"));
-    RPolylineEntity::PropertyArea.generateId(RPolylineEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Area"));
-    RPolylineEntity::PropertyTotalArea.generateId(RPolylineEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Total Area"));
+
+    if (RPluginLoader::hasPlugin("PROTOOLS")) {
+        RPolylineEntity::PropertyArea.generateId(RPolylineEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Area"));
+        RPolylineEntity::PropertyTotalArea.generateId(RPolylineEntity::getRtti(), "", QT_TRANSLATE_NOOP("REntity", "Total Area"));
+    }
 
     RPolylineEntity::PropertyBaseAngle.generateId(RPolylineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Base Angle"));
     RPolylineEntity::PropertySize1.generateId(RPolylineEntity::getRtti(), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Size 1"));
