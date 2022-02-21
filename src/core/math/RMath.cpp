@@ -208,11 +208,11 @@ double RMath::eval(const QString& expression, bool* ok) {
             QString sign;
 
             // "E" or "W":
-            if (!RS::capture(re, match, 8).isEmpty()) {
-                if (RS::capture(re, match, 8).toUpper()=="E") {
+            if (!RS::captured(re, match, 8).isEmpty()) {
+                if (RS::captured(re, match, 8).toUpper()=="E") {
                     angle = 0.0;
                 }
-                else if (RS::capture(re, match, 8).toUpper()=="W") {
+                else if (RS::captured(re, match, 8).toUpper()=="W") {
                     angle = 180.0;
                 }
                 else {
@@ -225,22 +225,22 @@ double RMath::eval(const QString& expression, bool* ok) {
             }
             // "[NS]...[EW]":
             else {
-                bool north = RS::capture(re, match, 1).toUpper()=="N";
-                bool south = RS::capture(re, match, 1).toUpper()=="S";
-                sign = RS::capture(re, match, 2);
+                bool north = RS::captured(re, match, 1).toUpper()=="N";
+                bool south = RS::captured(re, match, 1).toUpper()=="S";
+                sign = RS::captured(re, match, 2);
                 double degrees = 0.0;
                 double minutes = 0.0;
                 double seconds = 0.0;
-                if (!RS::capture(re, match, 6).isEmpty()) {
-                    degrees = RS::capture(re, match, 6).toDouble(ok);
+                if (!RS::captured(re, match, 6).isEmpty()) {
+                    degrees = RS::captured(re, match, 6).toDouble(ok);
                 }
                 else {
-                    degrees = RS::capture(re, match, 3).toDouble(ok);
-                    minutes = RS::capture(re, match, 4).toDouble(ok);
-                    seconds = RS::capture(re, match, 5).toDouble(ok);
+                    degrees = RS::captured(re, match, 3).toDouble(ok);
+                    minutes = RS::captured(re, match, 4).toDouble(ok);
+                    seconds = RS::captured(re, match, 5).toDouble(ok);
                 }
-                bool east = RS::capture(re, match, 7).toUpper()=="E";
-                bool west = RS::capture(re, match, 7).toUpper()=="W";
+                bool east = RS::captured(re, match, 7).toUpper()=="E";
+                bool west = RS::captured(re, match, 7).toUpper()=="W";
 
                 double base = (north ? 90.0 : 270.0);
                 int dir = ((north && west) || (south && east) ? 1 : -1);
@@ -248,7 +248,7 @@ double RMath::eval(const QString& expression, bool* ok) {
             }
 
             expr.replace(
-                RS::capture(re, match),
+                RS::captured(re, match),
                 QString("%1%2").arg(sign).arg(angle, 0, 'g', 16)
             );
         } while(idx!=-1);
@@ -265,7 +265,7 @@ double RMath::eval(const QString& expression, bool* ok) {
             if (idx==-1) {
                 break;
             }
-            QString m = RS::capture(re, match, 1);
+            QString m = RS::captured(re, match, 1);
             expr.replace(
                 re,
                 QString("%1").arg(rad2deg(m.toDouble(ok)), 0, 'g', 16)
@@ -284,7 +284,7 @@ double RMath::eval(const QString& expression, bool* ok) {
             if (idx==-1) {
                 break;
             }
-            QString m = RS::capture(re, match, 1);
+            QString m = RS::captured(re, match, 1);
             expr.replace(
                 re,
                 QString("%1").arg(gra2deg(m.toDouble(ok)), 0, 'g', 16)
@@ -315,14 +315,14 @@ double RMath::eval(const QString& expression, bool* ok) {
             double degrees = 0.0;
             double minutes = 0.0;
             double seconds = 0.0;
-            degrees = RS::capture(re, match, 2).toDouble(ok);
-            minutes = RS::capture(re, match, 3).toDouble(ok);
-            seconds = RS::capture(re, match, 4).toDouble(ok);
+            degrees = RS::captured(re, match, 2).toDouble(ok);
+            minutes = RS::captured(re, match, 3).toDouble(ok);
+            seconds = RS::captured(re, match, 4).toDouble(ok);
 
             double angle = degrees + minutes/60.0 + seconds/3600.0;
 
             expr.replace(
-                RS::capture(re, match, 1),
+                RS::captured(re, match, 1),
                 QString("%1").arg(angle, 0, 'g', 16)
             );
         } while(idx!=-1);
@@ -375,8 +375,8 @@ double RMath::eval(const QString& expression, bool* ok) {
             if (idx==-1) {
                 break;
             }
-            QString numberString = RS::capture(re, match, 1);
-            QString fractionString = RS::capture(re, match, 2);
+            QString numberString = RS::captured(re, match, 1);
+            QString fractionString = RS::captured(re, match, 2);
             expr.replace(
                 re,
                 QString("(%1+%2)").arg(numberString).arg(fractionString)
@@ -394,13 +394,13 @@ double RMath::eval(const QString& expression, bool* ok) {
             if (idx==-1) {
                 break;
             }
-            QString feetString = RS::capture(re, match, 1);
+            QString feetString = RS::captured(re, match, 1);
             //qDebug() << "feetString:" << feetString;
             if (feetString.isEmpty()) {
                 feetString="0";
                 //qDebug() << "> feetString:" << feetString;
             }
-            QString inchString = RS::capture(re, match, 2);
+            QString inchString = RS::captured(re, match, 2);
             //qDebug() << "inchString:" << inchString;
             expr.replace(
                         re,
@@ -425,8 +425,8 @@ double RMath::eval(const QString& expression, bool* ok) {
             if (idx==-1) {
                 break;
             }
-            QString feetString = RS::capture(re, match, 1);
-            QString inchString = RS::capture(re, match, 2);
+            QString feetString = RS::captured(re, match, 1);
+            QString inchString = RS::captured(re, match, 2);
             expr.replace(
                         re,
                         QString("(%1*12%2%3)")
@@ -448,7 +448,7 @@ double RMath::eval(const QString& expression, bool* ok) {
             if (idx==-1) {
                 break;
             }
-            QString inchString = RS::capture(re, match, 1);
+            QString inchString = RS::captured(re, match, 1);
             expr.replace(
                         re,
                         QString("(%1)")

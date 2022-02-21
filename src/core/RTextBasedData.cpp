@@ -407,12 +407,12 @@ bool RTextBasedData::scale(const RVector& scaleFactors, const RVector& center) {
         int pos = 0;
         int c = 0;
         while ((pos = RS::indexIn(rx, match, txt, pos)) != -1) {
-            double h = RS::capture(rx, match, 1).toDouble();
+            double h = RS::captured(rx, match, 1).toDouble();
 
             foundInline = true;
 
             // tag to replace (e.g. "\H2.5;")
-            QString tag = RS::capture(rx, match, 0);
+            QString tag = RS::captured(rx, match, 0);
 
             // new tag (e.g. "\H5.0;")
             QString subTag = "\\H" + RUnit::doubleToStringDec(h*scaleFactors.x, 3) + ";";

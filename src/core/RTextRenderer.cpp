@@ -558,7 +558,7 @@ void RTextRenderer::render() {
     int i=1;
     QRegularExpressionMatch match;
     while ((pos = RS::indexIn(rxAllLocal, match, text, pos)) != -1) {
-        QString formatting = RS::capture(rxAllLocal, match, 1);
+        QString formatting = RS::captured(rxAllLocal, match, 1);
         //qDebug() << "formatting:" << formatting;
 
         // space is literal and also formatting (optional line break):
@@ -959,7 +959,7 @@ void RTextRenderer::render() {
 
                     // s==0: superscript, s==1: subscript:
                     for (int s=0; s<=1; ++s) {
-                        QString script = RS::capture(rxStackedText, match, s+1);
+                        QString script = RS::captured(rxStackedText, match, s+1);
                         if (script.isEmpty()) {
                             continue;
                         }
@@ -1059,8 +1059,8 @@ void RTextRenderer::render() {
 //                qDebug() << "after: lineBlockTransforms.length:" << lineBlockTransforms.length();
 
                 if (target==RichText) {
-                    QString super = RS::capture(rxStackedText, match, 1);
-                    QString sub = RS::capture(rxStackedText, match, 2);
+                    QString super = RS::captured(rxStackedText, match, 1);
+                    QString sub = RS::captured(rxStackedText, match, 2);
                     if (!super.isEmpty()) {
                         richText += QString("<span style=\"vertical-align:super;\">%1</span>").arg(super);
                     }
@@ -1308,7 +1308,7 @@ void RTextRenderer::render() {
         {
             QRegularExpressionMatch match;
             if (RS::exactMatch(rxUnicode, match, formatting)) {
-                textBlock += QChar(match.captured(1).toInt(0, 16));
+                textBlock += QChar(RS::captured(rxUnicode, match, 1).toInt(0, 16));
                 continue;
             }
         }
@@ -1428,12 +1428,12 @@ void RTextRenderer::render() {
             //reg.setPattern(rxFontChangeTtf);
             QRegularExpressionMatch match;
             if (RS::exactMatch(rxFontChangeTtf, match, formatting)) {
-                setBlockFont(match.captured(1));
+                setBlockFont(RS::captured(rxFontChangeTtf, match, 1));
                 for (int k=2; k<rxFontChangeTtf.captureCount()-1; k+=2) {
                     // code: i, b, c, p
-                    QString code = match.captured(k);
+                    QString code = RS::captured(rxFontChangeTtf, match, k);
                     // value: 0/1
-                    int value = match.captured(k+1).toInt();
+                    int value = RS::captured(rxFontChangeTtf, match, k+1).toInt();
 
                     if (code.toLower()=="b") {
                         setBlockBold(value!=0);
@@ -1469,7 +1469,7 @@ void RTextRenderer::render() {
             //reg.setPattern(rxFontChangeCad);
             QRegularExpressionMatch match;
             if (RS::exactMatch(rxFontChangeCad, match, formatting)) {
-                setBlockFont(match.captured(1));
+                setBlockFont(RS::captured(rxFontChangeCad, match, 1));
                 bool prevTtf = !getUseCadFont();
                 setUseCadFont(true);
                 if (xCursor>RS::PointTolerance) {
@@ -1497,16 +1497,16 @@ void RTextRenderer::render() {
             //reg.setPattern(rxHeightChange);
             QRegularExpressionMatch match;
             if (RS::exactMatch(rxHeightChange, match, formatting)) {
-                bool factor = match.captured(2)=="x";
+                bool factor = RS::captured(rxHeightChange, match, 2)=="x";
 
                 if (factor) {
                     if (!blockHeight.isEmpty()) {
-                        setBlockHeight(getBlockHeight() * match.captured(1).toDouble());
+                        setBlockHeight(getBlockHeight() * RS::captured(rxHeightChange, match, 1).toDouble());
                     }
                 }
                 else {
                     if (!blockHeight.isEmpty()) {
-                        setBlockHeight(match.captured(1).toDouble());
+                        setBlockHeight(RS::captured(rxHeightChange, match, 1).toDouble());
                     }
                 }
                 blockChangedHeightOrFont = true;
@@ -1597,7 +1597,7 @@ void RTextRenderer::render() {
             //reg.setPattern(rxColorChangeIndex);
             QRegularExpressionMatch match;
             if (RS::exactMatch(rxColorChangeIndex, match, formatting)) {
-                RColor blockColor = RColor::createFromCadIndex(match.captured(1));
+                RColor blockColor = RColor::createFromCadIndex(RS::captured(rxColorChangeIndex, match, 1));
                 //qDebug() << "block color:" << blockColor;
                 if (!currentFormat.isEmpty()) {
                     //qDebug() << "001";
@@ -1628,7 +1628,7 @@ void RTextRenderer::render() {
         //reg.setPattern(rxColorChangeCustom);
         QRegularExpressionMatch match;
         if (RS::exactMatch(rxColorChangeCustom, match, formatting)) {
-            RColor blockColor = RColor::createFromCadCustom(RS::capture(rxColorChangeCustom, match, 1));
+            RColor blockColor = RColor::createFromCadCustom(RS::captured(rxColorChangeCustom, match, 1));
             if (!currentFormat.isEmpty()) {
                 currentFormat.top().setForeground(blockColor);
                 fr.format = currentFormat.top();

@@ -783,7 +783,7 @@ public:
     static bool exactMatch(const QRegularExpression& rx, QRegularExpressionMatch& match, const QString& string);
     static bool exactMatch(const QString& rxStr, const QString& string);
     static int indexIn(const QRegularExpression& rx, QRegularExpressionMatch& match, const QString& string, int from = 0);
-    static QString capture(const QRegularExpression& rx, const QRegularExpressionMatch& match, int nth = 0);
+    static QString captured(const QRegularExpression& rx, const QRegularExpressionMatch& match, int nth = 0);
     static int matchedLength(const QRegularExpression& rx, const QRegularExpressionMatch& match);
     static QRegularExpression createRegEpCI(const QString& str, bool regExp2 = false);
     static void setUtf8Codec(QTextStream& ts);

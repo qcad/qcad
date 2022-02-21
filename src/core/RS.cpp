@@ -400,11 +400,11 @@ int RS::indexIn(const QRegularExpression& rx, QRegularExpressionMatch& match, co
 #if QT_VERSION >= 0x050000
     return (int)string.indexOf(rx, from, &match);
 #else
-    return rx.indexIn(string);
+    return rx.indexIn(string, from);
 #endif
 }
 
-QString RS::capture(const QRegularExpression& rx, const QRegularExpressionMatch& match, int nth) {
+QString RS::captured(const QRegularExpression& rx, const QRegularExpressionMatch& match, int nth) {
 #if QT_VERSION >= 0x050000
     return match.captured(nth);
 #else
