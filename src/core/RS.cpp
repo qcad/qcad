@@ -19,6 +19,9 @@
 
 #include <QtGlobal>
 #include <QDesktopWidget>
+#if QT_VERSION < 0x050000
+#include <QTextDocument>
+#endif
 
 #include "RColor.h"
 #include "RGlobal.h"
