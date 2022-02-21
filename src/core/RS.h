@@ -25,7 +25,6 @@
 #include <QApplication>
 #include <QDebug>
 #include <QEasingCurve>
-#include <QGuiApplication>
 #include <QPair>
 #include <QString>
 #include <QStringList>
@@ -47,11 +46,12 @@
 
 #if QT_VERSION >= 0x050000
 #  include <QRegularExpression>
+#  include <QGuiApplication>
 #else
 #  include <QRegExp>
-//#  ifndef QRegularExpression
-//#    define QRegularExpression QRegExp
-//#  endif
+#  ifndef QRegularExpression
+#    define QRegularExpression QRegExp
+#  endif
 #endif
 
 #if QT_VERSION >= 0x060000
