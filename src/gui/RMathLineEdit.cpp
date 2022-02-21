@@ -108,7 +108,11 @@ void RMathLineEdit::slotTextChanged(const QString& text) {
         error = "";
         QString str;
         //str.sprintf("%.6g%s",value,(const char*)RUnit::unitToSymbol(defaultUnit).toUtf8());
+#if QT_VERSION >= 0x050000
         str.asprintf("%.6g",value);
+#else
+        str.sprintf("%.6g",value);
+#endif
         setToolTip(str);
     }
 
@@ -167,7 +171,11 @@ void RMathLineEdit::slotTextChanged(const QString& text) {
                 lResult->setVisible(hasFormula);
                 QString l;
                 if (RMath::isNormal(displayedValue)) {
+#if QT_VERSION >= 0x050000
                     l.asprintf("%.3g", displayedValue);
+#else
+                    l.sprintf("%.3g", displayedValue);
+#endif
                 }
                 else {
                     l = tr("Invalid");
