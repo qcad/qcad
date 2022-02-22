@@ -217,12 +217,12 @@ Print.prototype.print = function(pdfFile, printerName, pdfVersion) {
         return false;
     }
 
-    for (var i=1; i<=printer.copyCount(); i++) {
-        if (i>1) {
-            printer.newPage();
-        }
+    //for (var i=1; i<=printer.copyCount(); i++) {
+        //if (i>1) {
+        //    printer.newPage();
+        //}
         this.printCurrentBlock(printer, painter);
-    }
+    //}
 
     painter.end();
     printer.destroy();
