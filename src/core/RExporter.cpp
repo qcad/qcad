@@ -535,7 +535,7 @@ void RExporter::exportIntListWithName(const QString& dictionaryName, const QStri
     Q_UNUSED(values)
 }
 
-void RExporter::exportEntities(bool allBlocks, bool undone) {
+void RExporter::exportEntities(bool allBlocks, bool undone, bool invisible) {
     QSet<REntity::Id> ids = document->queryAllEntities(undone, allBlocks);
 
     // 20110815: ordered export (TODO: optional?):
@@ -546,7 +546,7 @@ void RExporter::exportEntities(bool allBlocks, bool undone) {
     for (it=list.begin(); it!=list.end(); it++) {
         QSharedPointer<REntity> e = document->queryEntityDirect(*it);
         if (!e.isNull()) {
-            exportEntity(*e, false);
+            exportEntity(*e, false, true, false, invisible);
         }
     }
 }
@@ -658,7 +658,7 @@ void RExporter::exportView(RView::Id viewId) {
  *
  * \forceSelected Force selection, used to export entities as part of a selected block reference.
  */
-void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool forceSelected) {
+void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool forceSelected, bool invisible) {
     RDocument* doc = entity.getDocument();
     if (doc==NULL) {
         doc = document;
@@ -692,7 +692,7 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool
 
     // if this exporter exports a visual
     // representation of the drawing (scene, view, print)...
-    if (isVisualExporter()) {
+    if (isVisualExporter() && !invisible) {
         if (getCurrentViewport()!=NULL || getCurrentBlockRef()!=NULL) {
             // entity in viewport or block reference context, don't export invisible entities:
             skip = !isVisible(entity);

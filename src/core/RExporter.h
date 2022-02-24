@@ -162,10 +162,10 @@ public:
     virtual void exportView(RView::Id viewId);
     virtual void exportLinetype(RLinetype& /*linetype*/) {}
 
-    virtual void exportEntities(bool allBlocks = true, bool undone = false);
+    virtual void exportEntities(bool allBlocks = true, bool undone = false, bool invisible = false);
     virtual void exportEntities(const RBox& box);
     virtual void exportEntities(QSet<REntity::Id>& entityIds, bool allBlocks = true);
-    virtual void exportEntity(REntity& entity, bool preview = false, bool allBlocks = true, bool forceSelected = false);
+    virtual void exportEntity(REntity& entity, bool preview = false, bool allBlocks = true, bool forceSelected = false, bool invisible = false);
     virtual void exportEntity(REntity::Id entityId, bool allBlocks = true, bool forceSelected = false);
     virtual QSharedPointer<RLayer> getEntityLayer(REntity& entity);
     virtual bool isVisible(REntity& entity);

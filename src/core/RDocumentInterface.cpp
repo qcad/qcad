@@ -674,13 +674,13 @@ void RDocumentInterface::updateAllEntities() {
  * Regenerates all scenes attached to this document interface by exporting
  * the document into them.
  */
-void RDocumentInterface::regenerateScenes(bool undone) {
+void RDocumentInterface::regenerateScenes(bool undone, bool invisible) {
     if (!allowUpdate) {
         return;
     }
 
     for (int i=0; i<scenes.length(); i++) {
-        scenes[i]->regenerate(undone);
+        scenes[i]->regenerate(undone, invisible);
     }
 }
 
@@ -2459,7 +2459,15 @@ void RDocumentInterface::objectChangeEvent(RTransaction& transaction) {
 
     if (/*layerHasChanged ||*/ !changedLayerIds.isEmpty() || blockHasChanged || linetypeHasChanged) {
         if (allowRegeneration) {
-            regenerateScenes(true);
+            // this also regenerates the views:
+            if (!changedLayerIds.isEmpty()) {
+                // also export invisible entities (e.g. layer color changed of invisible layer):
+                regenerateScenes(false, true);
+            }
+            else {
+                regenerateScenes(false, false);
+            }
+            return;
         }
         else {
             regenerateScenes(entityIdsToRegenerate, false);

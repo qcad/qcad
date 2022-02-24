@@ -74,7 +74,7 @@ public:
      */
     virtual bool exportDocumentSettings() { return true; }
 
-    virtual void regenerate(bool undone = false);
+    virtual void regenerate(bool undone = false, bool invisible = false);
     virtual void regenerate(QSet<REntity::Id>& affectedEntities, bool updateViews);
     virtual void updateSelectionStatus(QSet<REntity::Id>& affectedEntities, bool updateViews);
     virtual void regenerateViews(bool force=false);

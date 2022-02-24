@@ -199,7 +199,7 @@ public:
 
     void updateAllEntities();
 
-    void regenerateScenes(bool undone = false);
+    void regenerateScenes(bool undone = false, bool invisible = false);
     void regenerateScenes(QSet<REntity::Id>& entityIds, bool updateViews);
     void regenerateScenes(REntity::Id entityId, bool updateViews);
 

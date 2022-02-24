@@ -1076,9 +1076,9 @@ void RGraphicsSceneQt::clearPreview() {
     previewDrawables.clear();
 }
 
-void RGraphicsSceneQt::exportEntities(bool allBlocks, bool undone) {
+void RGraphicsSceneQt::exportEntities(bool allBlocks, bool undone, bool invisible) {
     //RDebug::startTimer(100);
-    RGraphicsScene::exportEntities(allBlocks, undone);
+    RGraphicsScene::exportEntities(allBlocks, undone, invisible);
     //RDebug::stopTimer(100, "exportEntities");
 
     /*

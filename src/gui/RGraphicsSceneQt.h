@@ -73,7 +73,7 @@ public:
 
     virtual void clearPreview();
 
-    virtual void exportEntities(bool allBlocks = true, bool undone = false);
+    virtual void exportEntities(bool allBlocks = true, bool undone = false, bool invisible = false);
     void exportEntitiesThread(int threadId, QList<REntity::Id>& list, int start, int end);
     void exportEntityThread(int threadId, REntity::Id id);
 

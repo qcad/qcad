@@ -143,12 +143,12 @@ bool RGraphicsScene::isPreviewEmpty() {
  * of the scene. This is called if the scene changes fundamentally or when the
  * entities that are affected by an update are not known.
  */
-void RGraphicsScene::regenerate(bool undone) {
+void RGraphicsScene::regenerate(bool undone, bool invisible) {
     if (deleting) {
         return;
     }
 
-    exportEntities(false, undone);
+    exportEntities(false, undone, invisible);
     regenerateViews(true);
 }
 
