@@ -1073,6 +1073,7 @@
     <file alias="scripts/Misc/MiscBlock/BlockFixNames/BlockFixNames.js">../../scripts/Misc/MiscBlock/BlockFixNames/BlockFixNames.js</file>
     <file alias="scripts/Misc/MiscBlock/BlockListAttributes/BlockListAttributes.js">../../scripts/Misc/MiscBlock/BlockListAttributes/BlockListAttributes.js</file>
     <file alias="scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js">../../scripts/Misc/MiscBlock/BlockListExport/BlockListExport.js</file>
+    <file alias="scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js">../../scripts/Misc/MiscBlock/BlockRefExport/BlockRefExport.js</file>
     <file alias="scripts/Misc/MiscBlock/MiscBlock.js">../../scripts/Misc/MiscBlock/MiscBlock.js</file>
     <file alias="scripts/Misc/MiscDevelopment/DevDebug/DevDebug.js">../../scripts/Misc/MiscDevelopment/DevDebug/DevDebug.js</file>
     <file alias="scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell-inverse.svg">../../scripts/Misc/MiscDevelopment/EcmaScriptShell/EcmaScriptShell-inverse.svg</file>

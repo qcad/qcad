@@ -4,4 +4,5 @@ SUBDIRS = \
     dir \
     BlockFixNames \
     BlockListAttributes \
-    BlockListExport
+    BlockListExport \
+    BlockRefExport
