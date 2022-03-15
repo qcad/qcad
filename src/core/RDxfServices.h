@@ -24,6 +24,8 @@
 
 #include "dxf_global.h"
 
+#include <QColor>
+
 #include "RS.h"
 #include "RColor.h"
 #include "RLineweight.h"
@@ -151,6 +153,9 @@ public:
 
     static int getFileQCADVersion(const RDocument& doc);
 
+    static void initAci();
+    static int getAci(const RColor& col);
+
 private:
     bool version2GotDIMZIN;
     bool version2GotDIMAZIN;
@@ -163,6 +168,9 @@ private:
     QMap<QString, QString> version2LayerMapping;
     QMap<QString, QString> version2TextFonts;
     QMap<QString, QString> version2DimensionLabels;
+
+    static QMap<unsigned int, QRgb> aci;
+    static QMap<QRgb, unsigned int> revAci;
 
 #if QT_VERSION >= 0x060000
     QStringDecoder* codec;
