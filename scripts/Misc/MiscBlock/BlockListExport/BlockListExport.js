@@ -56,6 +56,7 @@ BlockListExport.prototype.beginEvent = function() {
 
     var block;
     var result = doc.queryAllBlocks();
+    result = doc.sortBlocks(result);
     for (var i=0; i<result.length; ++i) {
         var id = result[i];
         block = doc.queryBlock(id);
