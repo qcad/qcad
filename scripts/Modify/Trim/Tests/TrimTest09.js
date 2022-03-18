@@ -16,9 +16,10 @@ TrimTest09.prototype.test00 = function() {
     this.setUp();
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ShapeToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ShapeToolsPanel::ShapeRectanglePPButton');
-    this.setToolOption('ShapePolygonPP/Corners', '3');
     this.setToolOption('Shape/CreatePolyline', 'false');
     this.setToolOption('Shape/Fill', 'false');
+    this.setToolOption('Shape/RoundCorners', 'false');
+    this.setToolOption('Shape/Radius', '1');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(19.7, 20);

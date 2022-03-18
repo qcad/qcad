@@ -18,6 +18,8 @@ ShapeRectanglePPTest01.prototype.test00 = function() {
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ShapeToolsPanel::ShapeRectanglePPButton');
     this.setToolOption('Shape/CreatePolyline', 'true');
     this.setToolOption('Shape/Fill', 'true');
+    this.setToolOption('Shape/RoundCorners', 'false');
+    this.setToolOption('Shape/Radius', '1');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(10.2, 10);
@@ -29,9 +31,8 @@ ShapeRectanglePPTest01.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('Shape/CreatePolyline', 'false');
     this.setToolOption('Shape/Fill', 'true');
-    this.updateToolOptions();
-    this.setToolOption('Shape/CreatePolyline', 'false');
-    this.setToolOption('Shape/Fill', 'true');
+    this.setToolOption('Shape/RoundCorners', 'false');
+    this.setToolOption('Shape/Radius', '1');
     this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(29.8, 9.9);
@@ -43,9 +44,13 @@ ShapeRectanglePPTest01.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('Shape/CreatePolyline', 'false');
     this.setToolOption('Shape/Fill', 'false');
+    this.setToolOption('Shape/RoundCorners', 'false');
+    this.setToolOption('Shape/Radius', '1');
     this.updateToolOptions();
     this.setToolOption('Shape/CreatePolyline', 'false');
     this.setToolOption('Shape/Fill', 'false');
+    this.setToolOption('Shape/RoundCorners', 'false');
+    this.setToolOption('Shape/Radius', '1');
     this.updateToolOptions();
     var p = new RVector(45.4, 12.4);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.MidButton, 4, 0);
