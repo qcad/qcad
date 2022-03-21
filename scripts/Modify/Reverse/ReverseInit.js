@@ -9,5 +9,5 @@ function init(basePath) {
     action.setNoState();
     action.setGroupSortOrder(13450);
     action.setSortOrder(100);
-    action.setWidgetNames(["ModifyMenu", "ModifyToolBar", "!ModifyToolsPanel"]);
+    action.setWidgetNames(["ModifyMenu", "ModifyToolBar", "!ModifyToolsPanel", "ModifyMatrixPanel"]);
 }
