@@ -779,17 +779,53 @@ public:
     }
 
     // workarounds for Qt 6 QRegExp changes:
+    /**
+     * \nonscriptable
+     */
     static bool exactMatch(const QRegularExpression& rx, const QString& string);
+    /**
+     * \nonscriptable
+     */
     static bool exactMatch(const QRegularExpression& rx, QRegularExpressionMatch& match, const QString& string);
+    /**
+     * \nonscriptable
+     */
     static bool exactMatch(const QString& rxStr, const QString& string);
+    /**
+     * \nonscriptable
+     */
     static int indexIn(const QRegularExpression& rx, QRegularExpressionMatch& match, const QString& string, int from = 0);
+    /**
+     * \nonscriptable
+     */
     static QString captured(const QRegularExpression& rx, const QRegularExpressionMatch& match, int nth = 0);
+    /**
+     * \nonscriptable
+     */
     static int matchedLength(const QRegularExpression& rx, const QRegularExpressionMatch& match);
+    /**
+     * \nonscriptable
+     */
     static QRegularExpression createRegEpCI(const QString& str, bool regExp2 = false);
+    /**
+     * \nonscriptable
+     */
     static void setUtf8Codec(QTextStream& ts);
+    /**
+     * \nonscriptable
+     */
     static QString escape(const QString& plain);
+    /**
+     * \nonscriptable
+     */
     static long long getScreenCount();
+    /**
+     * \nonscriptable
+     */
     static QSize getAvailableGeometry(int screen);
+    /**
+     * \nonscriptable
+     */
     static QString convert(const QByteArray& str, const QString& codecName);
 
     static const double PointTolerance;

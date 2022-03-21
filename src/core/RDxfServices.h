@@ -105,10 +105,16 @@ public:
     void fixVersion2HatchData(QString& patternName, double& angle, double& scale, bool solid) const;
 
 #if QT_VERSION >= 0x060000
+    /**
+     * \nonscriptable
+     */
     QStringDecoder* getCodec() const {
         return codec;
     }
 
+    /**
+     * \nonscriptable
+     */
     void setCodec(QStringDecoder* codec) {
         this->codec = codec;
     }
