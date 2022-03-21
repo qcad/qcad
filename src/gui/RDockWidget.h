@@ -27,6 +27,8 @@
 
 #include "RFlowLayout.h"
 
+#define RDEFAULT_QT_WINDOWFLAGS Qt::WindowFlags()
+
 /**
  * \scriptable
  * \ingroup gui
@@ -36,8 +38,8 @@ class QCADGUI_EXPORT RDockWidget: public QDockWidget {
 Q_OBJECT
 
 public:
-    RDockWidget(const QString& title, QWidget* parent = NULL, Qt::WindowFlags flags = Qt::WindowFlags());
-    RDockWidget(QWidget* parent = NULL, Qt::WindowFlags flags = Qt::WindowFlags());
+    RDockWidget(const QString& title, QWidget* parent = NULL, Qt::WindowFlags flags = RDEFAULT_QT_WINDOWFLAGS);
+    RDockWidget(QWidget* parent = NULL, Qt::WindowFlags flags = RDEFAULT_QT_WINDOWFLAGS);
 
 signals:
     void shown();
