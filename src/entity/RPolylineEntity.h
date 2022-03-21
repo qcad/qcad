@@ -273,6 +273,10 @@ public:
         return data.getStartPoint();
     }
 
+    void relocateStartPoint(const RVector& p) {
+        data.relocateStartPoint(p);
+    }
+
     void setClosed(bool on) {
         data.setClosed(on);
     }
