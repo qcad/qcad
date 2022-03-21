@@ -388,6 +388,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="undone"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="invisible"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
         <arg type="RBox &amp;" typeName="RBox" name="box"
@@ -412,6 +414,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="bool" typeName="bool" name="allBlocks"
         hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="forceSelected"
+        hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="invisible"
         hasDefault="true" default="false" isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">

@@ -24,6 +24,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"gui_global.h"</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDockWidget&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QElapsedTimer&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMainWindow&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QKeyEvent&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QToolBar&gt;</cpp:file></cpp:include>
@@ -203,7 +204,7 @@
     <decl_stmt><decl><type><name>int</name></type> <name>disableCounter</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>QString</name></type> <name>keyLog</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>QTime</name></type> <name>keyTimeOut</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QElapsedTimer</name></type> <name>keyTimeOut</name></decl>;</decl_stmt>
 
 <comment type="line">//private:</comment>
 <comment type="line">//    bool objectWasDestroyed;</comment>

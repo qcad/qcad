@@ -3838,6 +3838,46 @@
     
     if( context->argumentCount() ==
     2 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->regenerateScenes(a0
+        ,
+    a1);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
             context->argument(0).isArray()
         ) /* type: QSet < REntity::Id > */
      && (

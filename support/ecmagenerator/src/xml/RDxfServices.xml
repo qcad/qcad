@@ -201,17 +201,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
-    <method name="getCodec" cppName="getCodec" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="QTextCodec *" isPureVirtual="false" />
-    </method>
-    <method name="setCodec" cppName="setCodec" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QTextCodec *" typeName="QTextCodec *"
-        name="codec" isConst="false" />
-      </variant>
-    </method>
     <method name="numberToColor24" cppName="numberToColor24"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
@@ -318,6 +307,17 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false">
         <arg type="RDocument &amp;" typeName="RDocument" name="doc"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="initAci" cppName="initAci" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getAci" cppName="getAci" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="RColor &amp;" typeName="RColor" name="col"
         isConst="true" />
       </variant>
     </method>

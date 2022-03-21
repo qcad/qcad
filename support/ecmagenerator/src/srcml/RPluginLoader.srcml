@@ -25,7 +25,9 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &lt; 0x060000</expr></cpp:if>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QScriptEngine&gt;</cpp:file></cpp:include>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPluginInterface.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPluginInfo.h"</cpp:file></cpp:include>
@@ -53,6 +55,7 @@
      */</comment>
     <function_decl><type><name>static</name> <name>void</name></type> <name>postInitPlugin</name><parameter_list>(<param><decl><type><name>QObject</name>*</type> <name>plugin</name></decl></param>, <param><decl><type><name><name>RPluginInterface</name>::<name>InitStatus</name></name></type> <name>status</name></decl></param>)</parameter_list>;</function_decl>
 
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &lt; 0x060000</expr></cpp:if>
     <comment type="block">/**
      * \nonscriptable
      */</comment>
@@ -62,6 +65,7 @@
      * \nonscriptable
      */</comment>
     <function_decl><type><name>static</name> <name>void</name></type> <name>initScriptExtensions</name><parameter_list>(<param><decl><type><name>QObject</name>*</type> <name>plugin</name></decl></param>, <param><decl><type><name>QScriptEngine</name>&amp;</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
     <function_decl><type><name>static</name> <name>void</name></type> <name>initTranslations</name><parameter_list>()</parameter_list>;</function_decl>
 

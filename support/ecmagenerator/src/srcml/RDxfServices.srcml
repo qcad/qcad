@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RDxfServices.h"><comment type="block">/**
  * Copyright (c) 2011-2018 by Andrew Mustun. All rights reserved.
- * 
+ *
  * This file is part of the QCAD project.
  *
  * QCAD is free software: you can redistribute it and/or modify
@@ -24,6 +24,8 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"dxf_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QColor&gt;</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RS.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RColor.h"</cpp:file></cpp:include>
@@ -103,6 +105,21 @@
 
     <function_decl><type><name>void</name></type> <name>fixVersion2HatchData</name><parameter_list>(<param><decl><type><name>QString</name>&amp;</type> <name>patternName</name></decl></param>, <param><decl><type><name>double</name>&amp;</type> <name>angle</name></decl></param>, <param><decl><type><name>double</name>&amp;</type> <name>scale</name></decl></param>, <param><decl><type><name>bool</name></type> <name>solid</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function><type><name>QStringDecoder</name>*</type> <name>getCodec</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>codec</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function><type><name>void</name></type> <name>setCodec</name><parameter_list>(<param><decl><type><name>QStringDecoder</name>*</type> <name>codec</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>this</name>-&gt;<name>codec</name> = <name>codec</name></expr>;</expr_stmt>
+    }</block></function>
+<cpp:else>#<cpp:directive>else</cpp:directive></cpp:else>
     <function><type><name>QTextCodec</name>*</type> <name>getCodec</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>codec</name></expr>;</return>
     }</block></function>
@@ -110,6 +127,7 @@
     <function><type><name>void</name></type> <name>setCodec</name><parameter_list>(<param><decl><type><name>QTextCodec</name>*</type> <name>codec</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>this</name>-&gt;<name>codec</name> = <name>codec</name></expr>;</expr_stmt>
     }</block></function>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
     <comment type="block">/**
      * \nonscriptable
@@ -142,6 +160,9 @@
 
     <function_decl><type><name>static</name> <name>int</name></type> <name>getFileQCADVersion</name><parameter_list>(<param><decl><type><name>const</name> <name>RDocument</name>&amp;</type> <name>doc</name></decl></param>)</parameter_list>;</function_decl>
 
+    <function_decl><type><name>static</name> <name>void</name></type> <name>initAci</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>int</name></type> <name>getAci</name><parameter_list>(<param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>col</name></decl></param>)</parameter_list>;</function_decl>
+
 </public><private>private:
     <decl_stmt><decl><type><name>bool</name></type> <name>version2GotDIMZIN</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>version2GotDIMAZIN</name></decl>;</decl_stmt>
@@ -155,7 +176,14 @@
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>version2TextFonts</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>version2DimensionLabels</name></decl>;</decl_stmt>
 
+    <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name>unsigned</name> <name>int</name></argument>, <argument><name>QRgb</name></argument>&gt;</argument_list></name></type> <name>aci</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name>QRgb</name></argument>, <argument><name>unsigned</name> <name>int</name></argument>&gt;</argument_list></name></type> <name>revAci</name></decl>;</decl_stmt>
+
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
+    <decl_stmt><decl><type><name>QStringDecoder</name>*</type> <name>codec</name></decl>;</decl_stmt>
+<cpp:else>#<cpp:directive>else</cpp:directive></cpp:else>
     <decl_stmt><decl><type><name>QTextCodec</name>*</type> <name>codec</name></decl>;</decl_stmt>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RDxfServices::Type</argument>)</argument_list></macro>

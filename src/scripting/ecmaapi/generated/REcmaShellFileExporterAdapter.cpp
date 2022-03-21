@@ -4263,7 +4263,7 @@
         
     
       void REcmaShellFileExporterAdapter::exportEntities(
-                bool allBlocks, bool undone
+                bool allBlocks, bool undone, bool invisible
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportEntities", engine);
@@ -4276,7 +4276,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=2*/
+                    || _q_function.property("length").toInt32()!=3*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RFileExporterAdapter::exportEntities";
@@ -4289,7 +4289,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RFileExporterAdapter::exportEntities(
-                            allBlocks, undone
+                            allBlocks, undone, invisible
                         );
 
                         // block recursion again:
@@ -4325,6 +4325,15 @@
         << qScriptValueFromValue(engine, 
 
         undone
+        )
+      
+
+
+
+    // type: bool, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        invisible
         )
       
                             )
@@ -4482,7 +4491,7 @@
         
     
       void REcmaShellFileExporterAdapter::exportEntity(
-                REntity & entity, bool preview, bool allBlocks, bool forceSelected
+                REntity & entity, bool preview, bool allBlocks, bool forceSelected, bool invisible
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportEntity", engine);
@@ -4495,7 +4504,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=4*/
+                    || _q_function.property("length").toInt32()!=5*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RFileExporterAdapter::exportEntity";
@@ -4508,7 +4517,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RFileExporterAdapter::exportEntity(
-                            entity, preview, allBlocks, forceSelected
+                            entity, preview, allBlocks, forceSelected, invisible
                         );
 
                         // block recursion again:
@@ -4562,6 +4571,15 @@
         << qScriptValueFromValue(engine, 
 
         forceSelected
+        )
+      
+
+
+
+    // type: bool, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        invisible
         )
       
                             )

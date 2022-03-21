@@ -106,6 +106,10 @@
                 qScriptValueFromValue(&engine, RS::AngleTolerance),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("MiddleButton",
+                qScriptValueFromValue(&engine, RS::MiddleButton),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
 
     // enum values:
     

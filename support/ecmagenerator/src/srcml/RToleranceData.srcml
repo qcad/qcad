@@ -214,6 +214,10 @@
     <decl_stmt><decl><type><name>double</name></type> <name>dimscale</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>dimtxt</name></decl>;</decl_stmt>
 
+    <comment type="line">// TODO: add alignment (top, bottom, left, right)</comment>
+    <comment type="line">// keep tolerance aligned when text, scale, etc. changes</comment>
+    <comment type="line">// store alignement in DXF/DWG as custom property</comment>
+
     <decl_stmt><decl><type><name>mutable</name> <name>QList<argument_list>&lt;<argument><name>QList<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>divisions</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>mutable</name> <name>bool</name></type> <name>joinFirstField</name></decl>;</decl_stmt>
 </private>}</block>;</class>

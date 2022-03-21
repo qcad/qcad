@@ -113,7 +113,6 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTemporaryFile&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTextCharFormat&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTextBrowser&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTextCodec&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTextEdit&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTextLayout&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QThread&gt;</cpp:file></cpp:include>
@@ -129,10 +128,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QVector&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QWheelEvent&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QWidget&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QXmlContentHandler&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QXmlResultItems&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QXmlStreamWriter&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QXmlQuery&gt;</cpp:file></cpp:include>
 
 <comment type="line">//#if !defined(Q_OS_ANDROID) &amp;&amp; !defined(Q_OS_IOS)</comment>
 <comment type="line">//#  if QT_VERSION &lt;= 0x050500</comment>
@@ -277,7 +273,6 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QTemporaryFile*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QTextCharFormat*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QTextBrowser*</argument>)</argument_list></macro>
-<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QTextCodec*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QTextEdit*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QTextLayout*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;QTextLayout&gt;</argument>)</argument_list></macro>
@@ -301,11 +296,7 @@
 <comment type="line">//#endif</comment>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QWheelEvent*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QWidget*</argument>)</argument_list></macro>
-<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QXmlQuery</argument>)</argument_list></macro>
-<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QXmlQuery*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QXmlStreamWriter*</argument>)</argument_list></macro>
-<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QXmlContentHandler*</argument>)</argument_list></macro>
-<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QXmlResultItems*</argument>)</argument_list></macro>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QFlags&lt;Qt::MouseButton&gt;</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QFlags&lt;Qt::KeyboardModifier&gt;</argument>)</argument_list></macro>
@@ -340,7 +331,6 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>_RMapIntSetInt</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>_RMapIntSetInt*</argument>)</argument_list></macro>
 
-<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QVector&lt;qreal&gt;</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QVector&lt;qreal&gt;*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QVector&lt;float&gt;</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QVector&lt;float&gt;*</argument>)</argument_list></macro>
@@ -363,9 +353,6 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>Qt::WindowFlags</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>Qt::WidgetAttribute</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>Qt::WidgetAttribute*</argument>)</argument_list></macro>
-<cpp:if>#<cpp:directive>if</cpp:directive> <expr>!<call><name>defined</name><argument_list>(<argument><expr><name>Q_OS_IOS</name></expr></argument>)</argument_list></call></expr></cpp:if>
-<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QPrinter::PaperSize</argument>)</argument_list></macro>
-<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QVariant::Type</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QAbstractItemView::ScrollHint</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QEasingCurve::Type</argument>)</argument_list></macro>
@@ -377,6 +364,27 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSet&lt;int&gt;*</argument>)</argument_list></macro>
 
 <comment type="line">//Q_DECLARE_METATYPE(QtScriptShell_QListView*)</comment>
+
+
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
+<cpp:else>#<cpp:directive>else</cpp:directive></cpp:else>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTextCodec&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QXmlContentHandler&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QXmlResultItems&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QXmlQuery&gt;</cpp:file></cpp:include>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QVector&lt;qreal&gt;</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QTextCodec*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QXmlQuery</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QXmlQuery*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QXmlContentHandler*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QXmlResultItems*</argument>)</argument_list></macro>
+
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr>!<call><name>defined</name><argument_list>(<argument><expr><name>Q_OS_IOS</name></expr></argument>)</argument_list></call></expr></cpp:if>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QPrinter::PaperSize</argument>)</argument_list></macro>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

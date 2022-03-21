@@ -20,7 +20,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString"
         name="autostartFile" hasDefault="true"
-        default="QString :: null" isConst="true" />
+        default="RDEFAULT_QSTRING" isConst="true" />
         <arg type="QStringList &amp;" typeName="QStringList"
         name="arguments" hasDefault="true"
         default="RDEFAULT_QSTRINGLIST" isConst="true" />

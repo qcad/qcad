@@ -121,12 +121,6 @@
         fixVersion2HatchData
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getCodec
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setCodec
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         numberToColor24
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -164,6 +158,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getFileQCADVersion
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        initAci
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAci
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

@@ -3,6 +3,11 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RVector" />
   <class_decl name="RPropertyAttributes" />
+  <class name="QRegularExpressionMatch"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false"
+  isScriptable="false" />
   <class name="RS" xsi:noNamespaceSchemaLocation="../class.xsd"
   isCopyable="false" hasShell="false" sharedPointerSupport="false"
   isQObject="false" hasStreamOperator="false" isAbstract="false"
@@ -571,5 +576,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" />
     <property name="AngleTolerance" type="double" isConst="true"
     isStatic="true" />
+    <property name="MiddleButton" type="Qt :: MouseButton"
+    isConst="true" isStatic="true" />
   </class>
 </unit>

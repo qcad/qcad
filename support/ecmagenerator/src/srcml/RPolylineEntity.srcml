@@ -274,6 +274,10 @@
         <return>return <expr><name>data</name>.<call><name>getStartPoint</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>relocateStartPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>relocateStartPoint</name><argument_list>(<argument><expr><name>p</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
     <function><type><name>void</name></type> <name>setClosed</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>data</name>.<call><name>setClosed</name><argument_list>(<argument><expr><name>on</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>

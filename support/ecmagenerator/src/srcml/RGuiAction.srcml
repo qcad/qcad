@@ -373,7 +373,7 @@
     <comment type="block">/**
      * Called when the action is triggered (e.g. a button is pressed or a menu chosen).
      */</comment>
-    <function_decl><type><name>bool</name></type> <name>slotTrigger</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>command</name> =<init> <expr><name><name>QString</name>::<name>null</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <decl_stmt><decl><type><name>bool</name></type> <name>slotTrigger</name><argument_list>(<argument><expr><name>const</name> <name>QString</name>&amp; <name>command</name> = <call><name>QString</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></decl>;</decl_stmt>
 
 <label><name>signals</name>:</label>
     <function_decl><type><name>void</name></type> <name>postTriggered</name><parameter_list>()</parameter_list>;</function_decl>

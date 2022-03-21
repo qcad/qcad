@@ -4771,7 +4771,7 @@
     
     
       void REcmaShellGraphicsViewImage::paintEntitiesThread(
-                int threadId, QList < REntity::Id > & list, int start, int end
+                int threadId, const QList < REntity::Id > & list, int start, int end
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::paintEntitiesThread", engine);

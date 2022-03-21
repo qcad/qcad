@@ -158,6 +158,10 @@
         <return>return <expr><call><name><name>RPolyline</name>::<name>getStartPoint</name></name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>relocateStartPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>RPolyline::relocateStartPoint</name><parameter_list>(<param><decl><type><name>p</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
     <function><type><name>void</name></type> <name>setClosed</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
         <constructor_decl><name>RPolyline::setClosed</name><parameter_list>(<param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>

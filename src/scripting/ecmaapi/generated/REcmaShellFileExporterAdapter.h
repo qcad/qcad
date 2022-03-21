@@ -358,6 +358,7 @@
       void exportEntities(
                 bool allBlocks
         = true, bool undone
+        = false, bool invisible
         = false
             );
         
@@ -375,6 +376,7 @@
                 REntity & entity, bool preview
         = false, bool allBlocks
         = true, bool forceSelected
+        = false, bool invisible
         = false
             );
         

@@ -760,14 +760,5 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QStringList" isPureVirtual="false" />
     </method>
-    <method name="slotTrigger" cppName="slotTrigger"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false">
-        <arg type="QString &amp;" typeName="QString" name="command"
-        hasDefault="true" default="QString :: null"
-        isConst="true" />
-      </variant>
-    </method>
   </class>
 </unit>

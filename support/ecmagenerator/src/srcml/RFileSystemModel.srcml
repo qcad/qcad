@@ -24,6 +24,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"gui_global.h"</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QFileSystemModel&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QFileIconProvider&gt;</cpp:file></cpp:include>
 
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QMODELINDEX</name> <name>QModelIndex</name>()</cpp:define>
 

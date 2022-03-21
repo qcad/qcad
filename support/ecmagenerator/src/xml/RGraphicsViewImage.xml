@@ -483,7 +483,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="QList &lt; REntity::Id &gt; &amp;"
         typeName="QList &lt; REntity::Id &gt;" name="list"
-        isConst="false" />
+        isConst="true" />
         <arg type="int" typeName="int" name="start"
         isConst="false" />
         <arg type="int" typeName="int" name="end"

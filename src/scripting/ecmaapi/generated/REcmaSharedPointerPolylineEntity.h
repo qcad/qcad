@@ -193,6 +193,9 @@
         getStartPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        relocateStartPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setClosed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

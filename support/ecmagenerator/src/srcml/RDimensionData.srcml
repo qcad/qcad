@@ -144,6 +144,8 @@
         <macro><name>Q_UNUSED</name><argument_list>(<argument>segment</argument>)</argument_list></macro>
         <macro><name>Q_UNUSED</name><argument_list>(<argument>entityIds</argument>)</argument_list></macro>
 
+        <constructor_decl><name>render</name><parameter_list>()</parameter_list>;</constructor_decl>
+
         <return>return <expr><name>shapes</name></expr>;</return>
     }</block></function>
 

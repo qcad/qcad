@@ -164,6 +164,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getStartPoint, "getStartPoint");
             
+            REcmaHelper::registerFunction(&engine, proto, relocateStartPoint, "relocateStartPoint");
+            
             REcmaHelper::registerFunction(&engine, proto, setClosed, "setClosed");
             
             REcmaHelper::registerFunction(&engine, proto, isClosed, "isClosed");
@@ -4230,6 +4232,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolylineEntity::getStartPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineEntity::relocateStartPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineEntity::relocateStartPoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::relocateStartPoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineEntity* self = 
+                        getSelf("relocateStartPoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPolylineEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->relocateStartPoint(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.relocateStartPoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::relocateStartPoint", context, engine);
             return result;
         }
          QScriptValue

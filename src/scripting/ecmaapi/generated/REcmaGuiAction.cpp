@@ -255,8 +255,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, getWidgetNames, "getWidgetNames");
             
-            REcmaHelper::registerFunction(&engine, proto, slotTrigger, "slotTrigger");
-            
         engine.setDefaultPrototype(
             qMetaTypeId<RGuiAction*>(), *proto);
 
@@ -6364,87 +6362,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGuiAction::getWidgetNames", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaGuiAction::slotTrigger
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaGuiAction::slotTrigger", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::slotTrigger";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGuiAction* self = 
-                        getSelf("slotTrigger", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        
-               self->slotTrigger();
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isString()
-        ) /* type: QString */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    QString
-                    a0 =
-                    (QString)
-                    
-                    context->argument( 0 ).
-                    toString();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        
-               self->slotTrigger(a0);
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.slotTrigger().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaGuiAction::slotTrigger", context, engine);
             return result;
         }
          QScriptValue REcmaGuiAction::toString

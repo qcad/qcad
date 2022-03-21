@@ -23,11 +23,43 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QApplication&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDebug&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QEasingCurve&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPair&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QStringList&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTextCodec&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QVariant&gt;</cpp:file></cpp:include>
+
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QScreen&gt;</cpp:file></cpp:include>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
+<comment type="line">// Qt &lt; 5.10</comment>
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &lt; 0x050A00</expr></cpp:if>
+<cpp:ifdef>#  <cpp:directive>ifdef</cpp:directive> <name>ssize_t</name></cpp:ifdef>
+<cpp:define>#    <cpp:directive>define</cpp:directive> <name>qsizetype</name> <name>ssize_t</name></cpp:define>
+<cpp:else>#  <cpp:directive>else</cpp:directive></cpp:else>
+<cpp:define>#    <cpp:directive>define</cpp:directive> <name>qsizetype</name> <name>int</name></cpp:define>
+<cpp:endif>#  <cpp:directive>endif</cpp:directive></cpp:endif>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x050000</expr></cpp:if>
+<cpp:include>#  <cpp:directive>include</cpp:directive> <cpp:file>&lt;QRegularExpression&gt;</cpp:file></cpp:include>
+<cpp:include>#  <cpp:directive>include</cpp:directive> <cpp:file>&lt;QGuiApplication&gt;</cpp:file></cpp:include>
+<cpp:else>#<cpp:directive>else</cpp:directive></cpp:else>
+<cpp:include>#  <cpp:directive>include</cpp:directive> <cpp:file>&lt;QRegExp&gt;</cpp:file></cpp:include>
+<cpp:ifndef>#  <cpp:directive>ifndef</cpp:directive> <name>QRegularExpression</name></cpp:ifndef>
+<cpp:define>#    <cpp:directive>define</cpp:directive> <name>QRegularExpression</name> <name>QRegExp</name></cpp:define>
+<cpp:endif>#  <cpp:directive>endif</cpp:directive></cpp:endif>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
+<cpp:ifndef>#  <cpp:directive>ifndef</cpp:directive> <name>qSort</name></cpp:ifndef>
+<cpp:define>#    <cpp:directive>define</cpp:directive> <name>qSort</name> <name>std</name>::sort</cpp:define>
+<cpp:endif>#  <cpp:directive>endif</cpp:directive></cpp:endif>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
 <class_decl>class <name>RVector</name>;</class_decl>
 <class_decl>class <name>RPropertyAttributes</name>;</class_decl>
@@ -93,6 +125,16 @@
 <comment type="line">//#define REASING_COSINECURVE QEasingCurve::CosineCurve</comment>
 <comment type="line">//#define REASING_BEZIERSPLINE QEasingCurve::BezierSpline</comment>
 <comment type="line">//#define REASING_TCBSPLINE QEasingCurve::TCBSpline</comment>
+
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &lt; 0x050000</expr></cpp:if>
+<class>class <name>QRegularExpressionMatch</name> <block>{<private type="default">
+</private>}</block>;</class>
+<comment type="block">/*
+#  ifndef QRegularExpressionMatch
+#    define QRegularExpressionMatch int
+#  endif
+*/</comment>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
 <comment type="block">/**
  * Class namespace for various global enums.
@@ -707,8 +749,90 @@
     <function_decl><type><name>static</name> <name>int</name></type> <name>compareAlphanumerical</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>s1</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>s2</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>lessThanAlphanumerical</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>s1</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>s2</name></decl></param>)</parameter_list>;</function_decl>
 
+    <comment type="line">// workaround for Qt 6 deprecating QList::toSet / QSet::toList:</comment>
+    <template>template<parameter_list>&lt;<param><type>class</type> <name>T</name></param>&gt;</parameter_list>
+    <function><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>T</name></argument>&gt;</argument_list></name></type> <name>unique</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>T</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>)</parameter_list> <block>{
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
+        <return>return <expr><call><name><name>RS</name>::<name>toList<argument_list>&lt;<argument><name>T</name></argument>&gt;</argument_list></name></name><argument_list>(<argument><expr><call><name><name>RS</name>::<name>toSet<argument_list>&lt;<argument><name>T</name></argument>&gt;</argument_list></name></name><argument_list>(<argument><expr><name>list</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+<cpp:else>#<cpp:directive>else</cpp:directive></cpp:else>
+        <return>return <expr><name>list</name>.<call><name>toSet</name><argument_list>()</argument_list></call>.<call><name>toList</name><argument_list>()</argument_list></call></expr>;</return>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+    }</block></function></template>
+
+    <comment type="line">// workaround for Qt 6 deprecating QList::toSet:</comment>
+    <template>template<parameter_list>&lt;<param><type>class</type> <name>T</name></param>&gt;</parameter_list>
+    <function><type><name>static</name> <name>QSet<argument_list>&lt;<argument><name>T</name></argument>&gt;</argument_list></name></type> <name>toSet</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>T</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>)</parameter_list> <block>{
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
+        <return>return <expr><call><name>QSet<argument_list>&lt;<argument><name>T</name></argument>&gt;</argument_list></name><argument_list>(<argument><expr><name>list</name>.<call><name>begin</name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><name>list</name>.<call><name>end</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+<cpp:else>#<cpp:directive>else</cpp:directive></cpp:else>
+        <return>return <expr><name>list</name>.<call><name>toSet</name><argument_list>()</argument_list></call></expr>;</return>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+    }</block></function></template>
+
+    <comment type="line">// workaround for Qt 6 deprecating QSet::toList:</comment>
+    <template>template<parameter_list>&lt;<param><type>class</type> <name>T</name></param>&gt;</parameter_list>
+    <function><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>T</name></argument>&gt;</argument_list></name></type> <name>toList</name><parameter_list>(<param><decl><type><name>const</name> <name>QSet<argument_list>&lt;<argument><name>T</name></argument>&gt;</argument_list></name>&amp;</type> <name>set</name></decl></param>)</parameter_list> <block>{
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &gt;= 0x060000</expr></cpp:if>
+        <return>return <expr><call><name>QList<argument_list>&lt;<argument><name>T</name></argument>&gt;</argument_list></name><argument_list>(<argument><expr><name>set</name>.<call><name>begin</name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><name>set</name>.<call><name>end</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+<cpp:else>#<cpp:directive>else</cpp:directive></cpp:else>
+        <return>return <expr><name>set</name>.<call><name>toList</name><argument_list>()</argument_list></call></expr>;</return>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+    }</block></function></template>
+
+    <comment type="line">// workarounds for Qt 6 QRegExp changes:</comment>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>exactMatch</name><parameter_list>(<param><decl><type><name>const</name> <name>QRegularExpression</name>&amp;</type> <name>rx</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>string</name></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>exactMatch</name><parameter_list>(<param><decl><type><name>const</name> <name>QRegularExpression</name>&amp;</type> <name>rx</name></decl></param>, <param><decl><type><name>QRegularExpressionMatch</name>&amp;</type> <name>match</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>string</name></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>exactMatch</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>rxStr</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>string</name></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>int</name></type> <name>indexIn</name><parameter_list>(<param><decl><type><name>const</name> <name>QRegularExpression</name>&amp;</type> <name>rx</name></decl></param>, <param><decl><type><name>QRegularExpressionMatch</name>&amp;</type> <name>match</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>string</name></decl></param>, <param><decl><type><name>int</name></type> <name>from</name> =<init> <expr>0</expr></init></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>captured</name><parameter_list>(<param><decl><type><name>const</name> <name>QRegularExpression</name>&amp;</type> <name>rx</name></decl></param>, <param><decl><type><name>const</name> <name>QRegularExpressionMatch</name>&amp;</type> <name>match</name></decl></param>, <param><decl><type><name>int</name></type> <name>nth</name> =<init> <expr>0</expr></init></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>int</name></type> <name>matchedLength</name><parameter_list>(<param><decl><type><name>const</name> <name>QRegularExpression</name>&amp;</type> <name>rx</name></decl></param>, <param><decl><type><name>const</name> <name>QRegularExpressionMatch</name>&amp;</type> <name>match</name></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>QRegularExpression</name></type> <name>createRegEpCI</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>str</name></decl></param>, <param><decl><type><name>bool</name></type> <name>regExp2</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>setUtf8Codec</name><parameter_list>(<param><decl><type><name>QTextStream</name>&amp;</type> <name>ts</name></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>escape</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>plain</name></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>long</name> <name>long</name></type> <name>getScreenCount</name><parameter_list>()</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>QSize</name></type> <name>getAvailableGeometry</name><parameter_list>(<param><decl><type><name>int</name></type> <name>screen</name></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>convert</name><parameter_list>(<param><decl><type><name>const</name> <name>QByteArray</name>&amp;</type> <name>str</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>codecName</name></decl></param>)</parameter_list>;</function_decl>
+
     <decl_stmt><decl><type><name>static</name> <name>const</name> <name>double</name></type> <name>PointTolerance</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>const</name> <name>double</name></type> <name>AngleTolerance</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>static</name> <name>const</name> <name><name>Qt</name>::<name>MouseButton</name></name></type> <name>MiddleButton</name></decl>;</decl_stmt>
 </public>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS*</argument>)</argument_list></macro>

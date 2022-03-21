@@ -13,15 +13,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QWidget *" typeName="QWidget *" name="parent"
         hasDefault="true" default="NULL" isConst="false" />
         <arg type="Qt::WindowFlags" typeName="Qt::WindowFlags"
-        name="flags" hasDefault="true" default="0"
-        isConst="false" />
+        name="flags" hasDefault="true"
+        default="RDEFAULT_QT_WINDOWFLAGS" isConst="false" />
       </variant>
       <variant>
         <arg type="QWidget *" typeName="QWidget *" name="parent"
         hasDefault="true" default="NULL" isConst="false" />
         <arg type="Qt::WindowFlags" typeName="Qt::WindowFlags"
-        name="flags" hasDefault="true" default="0"
-        isConst="false" />
+        name="flags" hasDefault="true"
+        default="RDEFAULT_QT_WINDOWFLAGS" isConst="false" />
       </variant>
     </constructor>
     <method name="showEvent" cppName="showEvent"

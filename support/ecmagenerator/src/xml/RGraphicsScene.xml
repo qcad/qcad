@@ -41,6 +41,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="undone"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="bool" typeName="bool" name="invisible"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
         <arg type="QSet &lt; REntity::Id &gt; &amp;"

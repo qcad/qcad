@@ -72,6 +72,7 @@
      */</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>postInit</name><parameter_list>(<param><decl><type><name><name>RPluginInterface</name>::<name>InitStatus</name></name></type> <name>status</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &lt; 0x060000</expr></cpp:if>
     <comment type="block">/**
      * Called whenever a new script engine is instantiated.
      * Implementations may register their own script extensions by making
@@ -80,6 +81,7 @@
      * \nonscriptable
      */</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>initScriptExtensions</name><parameter_list>(<param><decl><type><name>QScriptEngine</name>&amp;</type> <name>engine</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
     <comment type="block">/**
      * Called when the user chosen language changed.
