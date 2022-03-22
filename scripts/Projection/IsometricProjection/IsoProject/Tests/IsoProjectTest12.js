@@ -16,7 +16,7 @@ IsoProjectTest12.prototype.test00 = function() {
     this.setUp();
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ShapeToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ShapeToolsPanel::ShapeRectanglePPButton');
-    this.setToolOption('Shape/CreatePolyline', 'false');
+    this.setToolOption('Shape/CreatePolyline', 'true');
     this.setToolOption('Shape/Fill', 'false');
     this.setToolOption('Shape/RoundCorners', 'false');
     this.setToolOption('Shape/Radius', '1');
