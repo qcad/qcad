@@ -1071,7 +1071,11 @@ Print.getGlueMarginLeft = function(document) {
 
 Print.getDefaultPrintMarginLeft = function(document, paperUnit) {
     var pageRect = Print.getDefaultPageRect(document, paperUnit);
-    return pageRect.left().toFixed(4);
+    var ret = parseFloat(pageRect.left().toFixed(4));
+    if (!isNumber(ret)) {
+        return 0.0;
+    }
+    return ret;
 };
 
 Print.getGlueMarginTop = function(document) {
@@ -1080,7 +1084,11 @@ Print.getGlueMarginTop = function(document) {
 
 Print.getDefaultPrintMarginTop = function(document, paperUnit) {
     var pageRect = Print.getDefaultPageRect(document, paperUnit);
-    return pageRect.top().toFixed(4);
+    var ret = parseFloat(pageRect.top().toFixed(4));
+    if (!isNumber(ret)) {
+        return 0.0;
+    }
+    return ret;
 };
 
 Print.getGlueMarginRight = function(document) {
@@ -1090,7 +1098,11 @@ Print.getGlueMarginRight = function(document) {
 Print.getDefaultPrintMarginRight = function(document, paperUnit) {
     var paperRect = Print.getDefaultPaperRect(document, paperUnit);
     var pageRect = Print.getDefaultPageRect(document, paperUnit);
-    return (paperRect.right() - pageRect.right()).toFixed(4);
+    var ret = parseFloat((paperRect.right() - pageRect.right()).toFixed(4));
+    if (!isNumber(ret)) {
+        return 0.0;
+    }
+    return ret;
 };
 
 Print.getGlueMarginBottom = function(document) {
@@ -1100,7 +1112,11 @@ Print.getGlueMarginBottom = function(document) {
 Print.getDefaultPrintMarginBottom = function(document, paperUnit) {
     var paperRect = Print.getDefaultPaperRect(document, paperUnit);
     var pageRect = Print.getDefaultPageRect(document, paperUnit);
-    return (paperRect.bottom() - pageRect.bottom()).toFixed(4);
+    var ret = parseFloat((paperRect.bottom() - pageRect.bottom()).toFixed(4));
+    if (!isNumber(ret)) {
+        return 0.0;
+    }
+    return ret;
 };
 
 Print.getOffset = function(document) {
