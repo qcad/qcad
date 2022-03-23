@@ -165,6 +165,9 @@
         ;static  QScriptValue
         getAci
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getColor
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

@@ -69,6 +69,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setAngle, "setAngle");
             
+            REcmaHelper::registerFunction(&engine, proto, isScale, "isScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, setScale, "setScale");
+            
             REcmaHelper::registerFunction(&engine, proto, isInteger, "isInteger");
             
             REcmaHelper::registerFunction(&engine, proto, setInteger, "setInteger");
@@ -399,6 +403,123 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMathComboBox::setAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMathComboBox::isScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMathComboBox::isScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMathComboBox::isScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMathComboBox* self = 
+                        getSelf("isScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isScale();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMathComboBox.isScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMathComboBox::isScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMathComboBox::setScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMathComboBox::setScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMathComboBox::setScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMathComboBox* self = 
+                        getSelf("setScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: RS::Unit */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    RS::Unit
+                    a1 =
+                    (RS::Unit)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setScale(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMathComboBox.setScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMathComboBox::setScale", context, engine);
             return result;
         }
          QScriptValue

@@ -162,6 +162,7 @@
 
     <function_decl><type><name>static</name> <name>void</name></type> <name>initAci</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>int</name></type> <name>getAci</name><parameter_list>(<param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>col</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RColor</name></type> <name>getColor</name><parameter_list>(<param><decl><type><name>unsigned</name> <name>int</name></type> <name>index</name></decl></param>)</parameter_list>;</function_decl>
 
 </public><private>private:
     <decl_stmt><decl><type><name>bool</name></type> <name>version2GotDIMZIN</name></decl>;</decl_stmt>

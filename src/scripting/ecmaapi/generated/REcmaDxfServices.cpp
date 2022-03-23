@@ -146,6 +146,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getAci, "getAci");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getColor, "getColor");
+            
 
     // static properties:
     
@@ -2485,6 +2487,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDxfServices::getAci", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDxfServices::getColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDxfServices::getColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RColor'
+    RColor cppResult =
+        RDxfServices::
+       getColor(a0);
+        // return type: RColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDxfServices::getColor", context, engine);
             return result;
         }
          QScriptValue REcmaDxfServices::toString

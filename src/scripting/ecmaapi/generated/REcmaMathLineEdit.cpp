@@ -67,6 +67,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setAngle, "setAngle");
             
+            REcmaHelper::registerFunction(&engine, proto, isScale, "isScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, setScale, "setScale");
+            
             REcmaHelper::registerFunction(&engine, proto, isInteger, "isInteger");
             
             REcmaHelper::registerFunction(&engine, proto, setInteger, "setInteger");
@@ -354,6 +358,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMathLineEdit::setAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMathLineEdit::isScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMathLineEdit::isScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMathLineEdit::isScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMathLineEdit* self = 
+                        getSelf("isScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isScale();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMathLineEdit.isScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMathLineEdit::isScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMathLineEdit::setScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMathLineEdit::setScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMathLineEdit::setScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMathLineEdit* self = 
+                        getSelf("setScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setScale(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMathLineEdit.setScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMathLineEdit::setScale", context, engine);
             return result;
         }
          QScriptValue

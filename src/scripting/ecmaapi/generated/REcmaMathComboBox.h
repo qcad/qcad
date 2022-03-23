@@ -57,6 +57,12 @@
         setAngle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isInteger
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -279,6 +279,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getStringListValue, "getStringListValue");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getScaleList, "getScaleList");
+            
             REcmaHelper::registerFunction(&engine, &ctor, setValue, "setValue");
             
             REcmaHelper::registerFunction(&engine, &ctor, removeValue, "removeValue");
@@ -6100,6 +6102,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getStringListValue", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getScaleList
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getScaleList", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getScaleList";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::Unit */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::Unit
+                    a0 =
+                    (RS::Unit)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QStringList'
+    QStringList cppResult =
+        RSettings::
+       getScaleList(a0);
+        // return type: QStringList
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getScaleList().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getScaleList", context, engine);
             return result;
         }
          QScriptValue

@@ -736,6 +736,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="defaultValue" isConst="true" />
       </variant>
     </method>
+    <method name="getScaleList" cppName="getScaleList"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false">
+        <arg type="RS::Unit" typeName="RS::Unit" name="unit"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="setValue" cppName="setValue" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
