@@ -78,21 +78,26 @@ void RMathLineEdit::slotTextChanged(const QString& text) {
 
     // advanced cases (formulas, variables, functions, etc.):
     else {
-        RDocument* doc = NULL;
-        RMainWindow* appWin = RMainWindow::getMainWindow();
-        if (appWin!=NULL) {
-            doc = appWin->getDocument();
-        }
-
-        if (doc!=NULL) {
-            // this calls RMath::eval, so it's OK to call RMath::hasError after:
-            value = doc->eval(text);
+        if (scale) {
+            value = RMath::parseScale(text);
         }
         else {
-            value = RMath::eval(text);
+            RDocument* doc = NULL;
+            RMainWindow* appWin = RMainWindow::getMainWindow();
+            if (appWin!=NULL) {
+                doc = appWin->getDocument();
+            }
+
+            if (doc!=NULL) {
+                // this calls RMath::eval, so it's OK to call RMath::hasError after:
+                value = doc->eval(text);
+            }
+            else {
+                value = RMath::eval(text);
+            }
+            hasError = RMath::hasError();
+            hasFormula = true;
         }
-        hasError = RMath::hasError();
-        hasFormula = true;
     }
 
     if (hasError) {

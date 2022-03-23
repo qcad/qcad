@@ -25,6 +25,7 @@
 #include <QMetaType>
 #include <QComboBox>
 
+#include "RSettings.h"
 #include "RMath.h"
 #include "RMathLineEdit.h"
 
@@ -56,6 +57,19 @@ public:
     void setAngle(bool on) {
         getMathLineEdit()->setAngle(on);
     }
+
+    bool isScale() const {
+        return getMathLineEdit()->isScale();
+    }
+    void setScale(bool on, RS::Unit unit) {
+        getMathLineEdit()->setScale(on);
+
+        if (on) {
+            QStringList scales = RSettings::getScaleList(unit);
+            addItems(scales);
+        }
+    }
+
     bool isInteger() const {
         return getMathLineEdit()->isInteger();
     }
@@ -64,7 +78,20 @@ public:
     }
 
     void setValue(double v, int precision=6) {
-        getMathLineEdit()->setValue(v, precision);
+        if (isScale()) {
+            // find matching item:
+            for (int i=0; i<count(); i++) {
+                QString text = itemText(i);
+                double val = RMath::parseScale(text);
+                if (RMath::fuzzyCompare(val, v, 0.0001)) {
+                    setEditText(text);
+                    continue;
+                }
+            }
+        }
+        else {
+            getMathLineEdit()->setValue(v, precision);
+        }
     }
     double getValue() {
         return getMathLineEdit()->getValue();

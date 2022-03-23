@@ -37,6 +37,7 @@ Q_OBJECT
 
 // keep extra ';' in place for the benefit of ecmagenerator:
 Q_PROPERTY(bool angle READ isAngle WRITE setAngle);
+Q_PROPERTY(bool scale READ isScale WRITE setScale);
 Q_PROPERTY(bool integer READ isInteger WRITE setInteger);
 //Q_PROPERTY(double defaultValue READ getDefaultValue WRITE setDefaultValue);
 //Q_PROPERTY(int defaultUnit READ getDefaultUnit WRITE setDefaultUnit);
@@ -52,6 +53,14 @@ public:
     void setAngle(bool on) {
        angle = on;
     }
+
+    bool isScale() const {
+        return scale;
+    }
+    void setScale(bool on) {
+        scale = on;
+    }
+
     bool isInteger() const {
         return integer;
     }
@@ -107,6 +116,7 @@ signals:
 private:
     QPalette oriPalette;
     bool angle;
+    bool scale;
     bool integer;
     double value;
     //RS::Unit defaultUnit;
