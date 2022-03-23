@@ -472,15 +472,23 @@ PrintPreviewImpl.prototype.initUiOptions = function(resume, optionsToolBar) {
 };
 
 PrintPreviewImpl.prototype.initScaleCombo = function() {
+    var document = this.getDocument();
+    if (isNull(document)) {
+        return;
+    }
+
     var optionsToolBar = EAction.getOptionsToolBar();
     var scaleCombo = optionsToolBar.findChild("Scale");
     scaleCombo.blockSignals(true);
     var prev = scaleCombo.currentText;
     scaleCombo.clear();
-    var scales = this.getScales();
-    for (var i=0; i<scales.length; ++i) {
-        scaleCombo.addItem(scales[i]);
-    }
+
+    scaleCombo.setScale(true, document.getUnit())
+
+//    var scales = this.getScales();
+//    for (var i=0; i<scales.length; ++i) {
+//        scaleCombo.addItem(scales[i]);
+//    }
     scaleCombo.setEditText(prev);
     scaleCombo.blockSignals(false);
 };
