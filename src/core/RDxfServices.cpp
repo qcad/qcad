@@ -2842,3 +2842,12 @@ int RDxfServices::getAci(const RColor& col) {
     }
     return (int)revAci[key];
 }
+
+RColor RDxfServices::getColor(unsigned int index) {
+    initAci();
+
+    if (!aci.contains(index)) {
+        return RColor();
+    }
+    return RColor(QColor::fromRgb(aci[index]));
+}

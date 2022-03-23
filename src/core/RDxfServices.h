@@ -161,6 +161,7 @@ public:
 
     static void initAci();
     static int getAci(const RColor& col);
+    static RColor getColor(unsigned int index);
 
 private:
     bool version2GotDIMZIN;
