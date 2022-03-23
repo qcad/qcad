@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>731</width>
-    <height>46</height>
+    <height>50</height>
    </rect>
   </property>
   <layout class="QHBoxLayout">
@@ -198,7 +198,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QComboBox" name="Scale">
+    <widget class="RMathComboBox" name="Scale">
      <property name="minimumSize">
       <size>
        <width>90</width>
@@ -230,6 +230,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RMathComboBox</class>
+   <extends>QComboBox</extends>
+   <header>RMathComboBox.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections>
   <connection>
