@@ -32,17 +32,18 @@
 #include "RSnapReference.h"
 
 bool RSnapAuto::initialized = false;
+RSnapAuto::Modes RSnapAuto::modes = RSnapAuto::None;
 
-bool RSnapAuto::intersections = false;
-bool RSnapAuto::endPoints = false;
-bool RSnapAuto::middlePoints = false;
-bool RSnapAuto::centerPoints = false;
-bool RSnapAuto::perpendicular = false;
-bool RSnapAuto::tangential = false;
-bool RSnapAuto::referencePoints = false;
-bool RSnapAuto::gridPoints = false;
-bool RSnapAuto::pointsOnEntity = false;
-bool RSnapAuto::freePositioning = false;
+//bool RSnapAuto::intersections = false;
+//bool RSnapAuto::endPoints = false;
+//bool RSnapAuto::middlePoints = false;
+//bool RSnapAuto::centerPoints = false;
+//bool RSnapAuto::perpendicular = false;
+//bool RSnapAuto::tangential = false;
+//bool RSnapAuto::referencePoints = false;
+//bool RSnapAuto::gridPoints = false;
+//bool RSnapAuto::pointsOnEntity = false;
+//bool RSnapAuto::freePositioning = false;
 
 RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double range) {
     entityIds.clear();
@@ -92,7 +93,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
         foundEntities = true;
 
         // intersection
-        if (intersections) {
+        if (getIntersections()) {
             RSnapIntersection snapIntersection;
             lastSnap = snapIntersection.snap(position, view, ids, queryBox);
             if (lastSnap.isValid() && lastSnap.getDistanceTo2D(position) < range) {
@@ -106,9 +107,9 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
 
     // interrupted by mouse move:
     if (RMouseEvent::hasMouseMoved()) {
-        if (!freePositioning) {
+        if (!getFreePositioning()) {
             // no free positioning, try grid as fallback:
-            if (gridPoints) {
+            if (getGridPoints()) {
                 RSnapGrid snapGrid;
                 lastSnap = snapGrid.snap(position, view, range);
                 if (lastSnap.isValid() && lastSnap.getDistanceTo2D(position) < range) {
@@ -127,7 +128,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
     }
 
     // end points:
-    if (foundEntities && endPoints) {
+    if (foundEntities && getEndPoints()) {
         for (int k=0; k<idsList.size() && k<queryBoxList.size(); k++) {
             // query box and matching IDs cached from intersection snap:
             RBox queryBox = queryBoxList.at(k);
@@ -145,7 +146,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
     }
 
     // middle points:
-    if (foundEntities && middlePoints) {
+    if (foundEntities && getMiddlePoints()) {
         for (int k=0; k<idsList.size() && k<queryBoxList.size(); k++) {
             // query box and matching IDs cached from intersection snap:
             RBox queryBox = queryBoxList.at(k);
@@ -163,7 +164,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
     }
 
     // center points:
-    if (foundEntities && centerPoints) {
+    if (foundEntities && getCenterPoints()) {
         for (int k=0; k<idsList.size() && k<queryBoxList.size(); k++) {
             // query box and matching IDs cached from intersection snap:
             RBox queryBox = queryBoxList.at(k);
@@ -181,7 +182,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
     }
 
     // perpendicular:
-    if (foundEntities && perpendicular) {
+    if (foundEntities && getPerpendicular()) {
         for (int k=0; k<idsList.size() && k<queryBoxList.size(); k++) {
             // query box and matching IDs cached from intersection snap:
             RBox queryBox = queryBoxList.at(k);
@@ -199,7 +200,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
     }
 
     // tangential:
-    if (foundEntities && tangential) {
+    if (foundEntities && getTangential()) {
         for (int k=0; k<idsList.size() && k<queryBoxList.size(); k++) {
             // query box and matching IDs cached from intersection snap:
             RBox queryBox = queryBoxList.at(k);
@@ -217,7 +218,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
     }
 
     // reference points:
-    if (foundEntities && referencePoints) {
+    if (foundEntities && getReferencePoints()) {
         for (int k=0; k<idsList.size() && k<queryBoxList.size(); k++) {
             // query box and matching IDs cached from intersection snap:
             RBox queryBox = queryBoxList.at(k);
@@ -235,7 +236,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
     }
 
     // grid points:
-    if (gridPoints) {
+    if (getGridPoints()) {
         RSnapGrid snapGrid;
         lastSnap = snapGrid.snap(position, view, range);
         if (lastSnap.isValid() && lastSnap.getDistanceTo2D(position) < range) {
@@ -246,7 +247,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
     }
 
     // on entity snap is slow and almost never used:
-    if (foundEntities && pointsOnEntity) {
+    if (foundEntities && getPointsOnEntity()) {
         for (int k=0; k<idsList.size() && k<queryBoxList.size(); k++) {
             // query box and matching IDs cached from intersection snap:
             RBox queryBox = queryBoxList.at(k);
@@ -265,7 +266,7 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
     }
 
     // free:
-    if (freePositioning) {
+    if (getFreePositioning()) {
         lastSnap = position;
         status = RSnap::Free;
         return lastSnap;
@@ -279,16 +280,16 @@ void RSnapAuto::init(bool force) {
         return;
     }
 
-    intersections = RSettings::getBoolValue("AutoSnap/Intersections", true);
-    endPoints = RSettings::getBoolValue("AutoSnap/EndPoints", true);
-    middlePoints = RSettings::getBoolValue("AutoSnap/MiddlePoints", true);
-    centerPoints = RSettings::getBoolValue("AutoSnap/CenterPoints", false);
-    perpendicular = RSettings::getBoolValue("AutoSnap/Perpendicular", true);
-    tangential = RSettings::getBoolValue("AutoSnap/Tangential", true);
-    referencePoints = RSettings::getBoolValue("AutoSnap/ReferencePoints", true);
-    gridPoints = RSettings::getBoolValue("AutoSnap/GridPoints", true);
-    pointsOnEntity = RSettings::getBoolValue("AutoSnap/PointsOnEntity", false);
-    freePositioning = RSettings::getBoolValue("AutoSnap/FreePositioning", true);
+    setIntersections(RSettings::getBoolValue("AutoSnap/Intersections", true));
+    setEndPoints(RSettings::getBoolValue("AutoSnap/EndPoints", true));
+    setMiddlePoints(RSettings::getBoolValue("AutoSnap/MiddlePoints", true));
+    setCenterPoints(RSettings::getBoolValue("AutoSnap/CenterPoints", false));
+    setPerpendicular(RSettings::getBoolValue("AutoSnap/Perpendicular", true));
+    setTangential(RSettings::getBoolValue("AutoSnap/Tangential", true));
+    setReferencePoints(RSettings::getBoolValue("AutoSnap/ReferencePoints", true));
+    setGridPoints(RSettings::getBoolValue("AutoSnap/GridPoints", true));
+    setPointsOnEntity(RSettings::getBoolValue("AutoSnap/PointsOnEntity", false));
+    setFreePositioning(RSettings::getBoolValue("AutoSnap/FreePositioning", true));
 
     initialized = true;
 }
