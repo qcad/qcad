@@ -236,6 +236,8 @@ public:
     static QString getStringValue(const QString& key, const QString& defaultValue);
     static QStringList getStringListValue(const QString& key, const QStringList& defaultValue);
 
+    static QStringList getScaleList(const RS::Unit unit);
+
     /**
      * \nonscriptable
      */
